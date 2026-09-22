@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 1C — relevant SEC filing selection and history orchestration.
+Phase 1D — SEC Company Facts retrieval and faithful typed representation.
 
 ## Completed
 
@@ -34,12 +34,17 @@ Phase 1C — relevant SEC filing selection and history orchestration.
   files as soon as the requested annual coverage is available
 - Added explicit ambiguity handling for duplicate reporting periods
 - Added deterministic unit tests for selection and orchestration
+- Added complete Company Facts retrieval through the existing SEC client
+- Added immutable models for concepts and unit-tagged fact observations
+- Added explicit Company Facts validation while preserving optional context,
+  observation ordering, and repeated comparative facts
+- Added deterministic unit tests for Company Facts parsing and errors
 
 ## Next Step
 
-Review and validate Phase 1C against META before beginning Company Facts and
-XBRL financial-data retrieval. Fiscal-period classification, amendment
-precedence, and financial normalization are not implemented yet.
+Review and validate Phase 1D against META before implementing financial-concept
+and observation selection. Comparative-period resolution, fiscal-period
+classification, and financial normalization are not implemented yet.
 
 ## Current Repository Structure
 
@@ -57,6 +62,7 @@ valuation-platform/
 │       └── sec/
 │           ├── __init__.py
 │           ├── client.py
+│           ├── company_facts.py
 │           ├── filing_selection.py
 │           ├── submissions.py
 │           └── tickers.py
@@ -65,6 +71,7 @@ valuation-platform/
 │   └── sec/
 │       ├── __init__.py
 │       ├── test_client.py
+│       ├── test_company_facts.py
 │       ├── test_filing_selection.py
 │       ├── test_submissions.py
 │       └── test_tickers.py

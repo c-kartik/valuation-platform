@@ -1,6 +1,14 @@
-"""SEC data access, identity resolution, and filing selection."""
+"""SEC data access, filing selection, and Company Facts retrieval."""
 
 from .client import SECClient, SECClientError, SECRequestError, SECResponseError
+from .company_facts import (
+    CompanyFactsDataError,
+    SECCompanyFacts,
+    SECFactConcept,
+    SECFactObservation,
+    SECFactValue,
+    fetch_company_facts,
+)
 from .filing_selection import (
     FilingSelectionError,
     SelectedFilings,
@@ -24,10 +32,15 @@ from .tickers import (
 )
 
 __all__ = [
+    "CompanyFactsDataError",
+    "FilingSelectionError",
     "SECClient",
     "SECClientError",
+    "SECCompanyFacts",
     "SECCompanyIdentity",
-    "FilingSelectionError",
+    "SECFactConcept",
+    "SECFactObservation",
+    "SECFactValue",
     "SECFiling",
     "SECSubmissionHistoryFile",
     "SECRequestError",
@@ -38,6 +51,7 @@ __all__ = [
     "TickerDataError",
     "TickerNotFoundError",
     "TickerResolutionError",
+    "fetch_company_facts",
     "fetch_submission_history",
     "fetch_submissions",
     "load_and_select_filings",

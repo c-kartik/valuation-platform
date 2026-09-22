@@ -43,6 +43,9 @@ The SEC package separates transport from dataset interpretation:
 - `sec.filing_selection` keeps deterministic filing selection separate from
   history orchestration. The selector is network-free; the orchestrator fetches
   supplemental files in SEC order only until enough annual history is present.
+- `sec.company_facts` retrieves and validates every taxonomy, concept, unit, and
+  observation in the SEC Company Facts response without choosing financial
+  concepts or authoritative reporting periods.
 
 ```text
 SEC retrieval and submissions parsing
@@ -51,10 +54,20 @@ Incremental history orchestration
   ↓
 Pure filing selection
   ↓
-Later Company Facts / XBRL processing
+Company Facts retrieval
+  ↓
+Later fact and period selection
+  ↓
+Later financial normalization
 ```
 
 Selection currently uses exact 10-K and 10-Q forms and reporting dates. It does
 not classify fiscal quarters, apply amendment precedence, infer Q4, inspect
 financial facts, or perform financial normalization. Supplemental history files
 are never downloaded after the requested annual coverage has been satisfied.
+
+Company Facts observations preserve SEC ordering within each unit bucket,
+source accession and filing metadata, optional period context, and their
+JSON-decoded scalar values. Repeated and comparative observations remain intact
+for later selection; retrieval does not decide which concept or observation is
+authoritative.

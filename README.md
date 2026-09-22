@@ -21,7 +21,7 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1C — relevant SEC filing selection and history orchestration**
+**Phase 1D — SEC Company Facts retrieval and typed representation**
 
 Initial validation company: **META**
 
@@ -43,11 +43,14 @@ filing history in the main SEC submissions response. The main response also
 discovers supplemental history-file metadata; each supplemental file is fetched
 only when needed. A deterministic selector identifies the latest completed
 annual periods and subsequent interim filings without performing network access.
-Company Facts and financial normalization are later phases.
+Company Facts retrieval preserves every SEC taxonomy, concept, unit, and
+observation without selecting authoritative concepts or periods. Financial-fact
+selection and normalization are later phases.
 
 ```python
 from valuation_platform.sec import (
     SECClient,
+    fetch_company_facts,
     load_and_select_filings,
     resolve_ticker,
 )
@@ -55,6 +58,7 @@ from valuation_platform.sec import (
 client = SECClient("Valuation Platform your-email@example.com")
 identity = resolve_ticker("META", client)
 selected = load_and_select_filings(client, identity, annual_limit=5)
+company_facts = fetch_company_facts(client, identity)
 ```
 
 Run the deterministic unit tests with:
