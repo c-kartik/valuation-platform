@@ -2,10 +2,11 @@
 
 ## Current Milestone
 
-Milestone 0 — Development environment and repository setup.
+Phase 1 — SEC/XBRL historical financial data pipeline.
 
 ## Completed
 
+- Completed Milestone 0 — development environment and repository setup
 - Created GitHub repository
 - Cloned repository locally
 - Connected local repository to GitHub remote
