@@ -21,7 +21,7 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**SEC/XBRL historical financial data pipeline**
+**Phase 1A — SEC access foundation and ticker → CIK resolution**
 
 Initial validation company: **META**
 
@@ -31,4 +31,25 @@ See [`docs/project-status.md`](docs/project-status.md) for current progress and 
 
 Python 3.12 is used for the initial data and valuation modules.
 
-Detailed setup and usage instructions will be added as the project develops.
+Install the current runtime dependency with:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+SEC requests require an identifying User-Agent supplied by the caller. The SEC
+layer currently supports the official company ticker dataset only; submissions,
+Company Facts, and financial normalization are later phases.
+
+```python
+from valuation_platform.sec import SECClient, resolve_ticker
+
+client = SECClient("Valuation Platform your-email@example.com")
+identity = resolve_ticker("META", client)
+```
+
+Run the deterministic unit tests with:
+
+```bash
+PYTHONPATH=src python -m unittest discover -v
+```
