@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 1D — SEC Company Facts retrieval and faithful typed representation.
+Phase 1D is complete. Phase 1E has not started.
 
 ## Completed
 
@@ -39,12 +39,19 @@ Phase 1D — SEC Company Facts retrieval and faithful typed representation.
 - Added explicit Company Facts validation while preserving optional context,
   observation ordering, and repeated comparative facts
 - Added deterministic unit tests for Company Facts parsing and errors
+- Added a development-only cross-company Company Facts validation harness that
+  uses the production SEC APIs sequentially, reports per-stage failures without
+  stopping the run, and defaults to a repeatable 20-company corpus
+- Validated Company Facts across all 20 corpus companies: 11,181 concepts and
+  528,990 observations parsed with no failures
+- Added narrowly validated canonical decimal-string CIK support after XOM
+  exposed that live SEC representation, with mismatch regression coverage
 
 ## Next Step
 
-Review and validate Phase 1D against META before implementing financial-concept
-and observation selection. Comparative-period resolution, fiscal-period
-classification, and financial normalization are not implemented yet.
+Begin Phase 1E fact and period selection. Comparative-period resolution,
+fiscal-period classification, and financial normalization are not implemented
+yet.
 
 ## Current Repository Structure
 
@@ -56,6 +63,8 @@ valuation-platform/
 │   ├── architecture.md
 │   ├── financial-methodology.md
 │   └── project-status.md
+├── scripts/
+│   └── validate_company_facts.py
 ├── src/
 │   └── valuation_platform/
 │       ├── __init__.py
@@ -68,6 +77,7 @@ valuation-platform/
 │           └── tickers.py
 ├── tests/
 │   ├── __init__.py
+│   ├── test_validate_company_facts.py
 │   └── sec/
 │       ├── __init__.py
 │       ├── test_client.py

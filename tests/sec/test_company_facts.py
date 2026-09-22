@@ -276,6 +276,93 @@ class FetchCompanyFactsTests(TestCase):
         with self.assertRaisesRegex(CompanyFactsDataError, "does not match"):
             fetch_company_facts(self.client, self.company)
 
+    def test_integer_cik_remains_valid(self) -> None:
+        result = fetch_company_facts(self.client, self.company)
+
+        self.assertEqual(result.company.cik, 1326801)
+
+    def test_canonical_decimal_string_cik_is_normalized_and_compared(self) -> None:
+        self.client.get_json.return_value = {
+            **COMPANY_FACTS_RESPONSE,
+            "cik": "1326801",
+        }
+
+        result = fetch_company_facts(self.client, self.company)
+
+        self.assertEqual(result.company.cik, 1326801)
+
+    def test_xom_string_cik_response_shape_is_accepted(self) -> None:
+        company = SECCompanyIdentity(
+            ticker="XOM",
+            cik=2115436,
+            cik_padded="0002115436",
+            company_name="ExxonMobil Holdings Corp",
+            source_url="https://www.sec.gov/files/company_tickers.json",
+            retrieved_at=datetime(2026, 9, 23, tzinfo=timezone.utc),
+        )
+        self.client.get_json.return_value = {
+            "cik": "2115436",
+            "entityName": "Exxon Mobil Corporation",
+            "facts": {},
+        }
+
+        result = fetch_company_facts(self.client, company)
+
+        self.assertIs(result.company, company)
+        self.assertEqual(result.entity_name, "Exxon Mobil Corporation")
+        self.assertEqual(result.concepts, ())
+
+    def test_different_canonical_string_cik_fails_as_mismatch(self) -> None:
+        self.client.get_json.return_value = {
+            **COMPANY_FACTS_RESPONSE,
+            "cik": "2115436",
+        }
+
+        with self.assertRaisesRegex(CompanyFactsDataError, "does not match"):
+            fetch_company_facts(self.client, self.company)
+
+    def test_invalid_cik_representations_fail_explicitly(self) -> None:
+        invalid_ciks = [
+            "",
+            "02115436",
+            "0002115436",
+            " 2115436",
+            "2115436 ",
+            "+2115436",
+            "-2115436",
+            "2115436.0",
+            "2.115436e6",
+            "abc",
+            -1,
+            True,
+            2115436.0,
+            None,
+            [],
+            {},
+        ]
+
+        for invalid_cik in invalid_ciks:
+            with self.subTest(cik=invalid_cik):
+                self.client.get_json.return_value = {
+                    **COMPANY_FACTS_RESPONSE,
+                    "cik": invalid_cik,
+                }
+
+                with self.assertRaisesRegex(CompanyFactsDataError, "invalid CIK"):
+                    fetch_company_facts(self.client, self.company)
+
+    def test_canonical_string_zero_is_accepted_before_identity_comparison(self) -> None:
+        self.client.get_json.return_value = {
+            **COMPANY_FACTS_RESPONSE,
+            "cik": "0",
+        }
+
+        with self.assertRaisesRegex(
+            CompanyFactsDataError,
+            "CIK 0 does not match requested CIK 1326801",
+        ):
+            fetch_company_facts(self.client, self.company)
+
     def test_malformed_top_level_structure_fails_explicitly(self) -> None:
         malformed_payloads = [
             [],
