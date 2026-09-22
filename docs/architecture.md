@@ -28,7 +28,7 @@ Valuation Engine
 Valuation Outputs
 ```
 
-## Phase 1A SEC Boundary
+## Phase 1 SEC Boundary
 
 The SEC package separates transport from dataset interpretation:
 
@@ -36,6 +36,10 @@ The SEC package separates transport from dataset interpretation:
   and JSON decoding.
 - `sec.tickers` interprets the official SEC `company_tickers.json` dataset and
   returns a typed company identity with source metadata.
+- `sec.submissions` interprets recent filing metadata from the main SEC
+  submissions response while preserving each parallel-array row.
 
-Ticker resolution does not contain submissions retrieval, Company Facts access,
-XBRL normalization, derived financial calculations, or valuation logic.
+SEC retrieval and parsing do not perform filing selection, financial-period
+classification, Company Facts access, XBRL normalization, derived financial
+calculations, or valuation logic. Supplemental historical submission files are
+outside the Phase 1B scope.

@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 1A — SEC access foundation and ticker → CIK resolution.
+Phase 1B — SEC submissions retrieval and filing metadata.
 
 ## Completed
 
@@ -19,11 +19,17 @@ Phase 1A — SEC access foundation and ticker → CIK resolution.
 - Added exact ticker → SEC company identity resolution using the official SEC
   `company_tickers.json` dataset
 - Added deterministic unit tests for SEC transport and ticker resolution
+- Added typed recent-filing metadata retrieval from the official SEC
+  Submissions API
+- Added explicit validation for SEC parallel-array structure, required fields,
+  and filing dates
+- Added deterministic unit tests for submissions retrieval and parsing
 
 ## Next Step
 
-Review and validate Phase 1A against META, then begin the next incremental SEC
-retrieval capability. Submissions and Company Facts are not implemented yet.
+Review and validate Phase 1B against META, then define the next incremental SEC
+retrieval capability. Supplemental submission files and Company Facts are not
+implemented yet.
 
 ## Current Repository Structure
 
@@ -41,12 +47,14 @@ valuation-platform/
 │       └── sec/
 │           ├── __init__.py
 │           ├── client.py
+│           ├── submissions.py
 │           └── tickers.py
 ├── tests/
 │   ├── __init__.py
 │   └── sec/
 │       ├── __init__.py
 │       ├── test_client.py
+│       ├── test_submissions.py
 │       └── test_tickers.py
 ├── .gitignore
 └── requirements.txt
