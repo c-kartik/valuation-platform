@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 1B.1 — SEC supplemental submissions history support.
+Phase 1C — relevant SEC filing selection and history orchestration.
 
 ## Completed
 
@@ -28,13 +28,18 @@ Phase 1B.1 — SEC supplemental submissions history support.
 - Added explicit, on-demand retrieval and shared parsing for individual
   supplemental history files
 - Added deterministic unit tests for supplemental metadata and retrieval
+- Added a pure, deterministic selector for exact 10-K annual periods and exact
+  10-Q filings after the latest selected annual period
+- Added incremental history orchestration that stops retrieving supplemental
+  files as soon as the requested annual coverage is available
+- Added explicit ambiguity handling for duplicate reporting periods
+- Added deterministic unit tests for selection and orchestration
 
 ## Next Step
 
-Review and validate Phase 1B.1 against META before implementing filing and
-financial-period selection. Supplemental history files are discovered by the
-main request and fetched only when explicitly requested; Company Facts is not
-implemented yet.
+Review and validate Phase 1C against META before beginning Company Facts and
+XBRL financial-data retrieval. Fiscal-period classification, amendment
+precedence, and financial normalization are not implemented yet.
 
 ## Current Repository Structure
 
@@ -52,6 +57,7 @@ valuation-platform/
 │       └── sec/
 │           ├── __init__.py
 │           ├── client.py
+│           ├── filing_selection.py
 │           ├── submissions.py
 │           └── tickers.py
 ├── tests/
@@ -59,6 +65,7 @@ valuation-platform/
 │   └── sec/
 │       ├── __init__.py
 │       ├── test_client.py
+│       ├── test_filing_selection.py
 │       ├── test_submissions.py
 │       └── test_tickers.py
 ├── .gitignore

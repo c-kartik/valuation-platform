@@ -21,7 +21,7 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1B.1 — SEC supplemental submissions history support**
+**Phase 1C — relevant SEC filing selection and history orchestration**
 
 Initial validation company: **META**
 
@@ -41,23 +41,20 @@ SEC requests require an identifying User-Agent supplied by the caller. The SEC
 layer currently supports the official company ticker dataset and the recent
 filing history in the main SEC submissions response. The main response also
 discovers supplemental history-file metadata; each supplemental file is fetched
-only when explicitly requested. Company Facts and financial normalization are
-later phases.
+only when needed. A deterministic selector identifies the latest completed
+annual periods and subsequent interim filings without performing network access.
+Company Facts and financial normalization are later phases.
 
 ```python
 from valuation_platform.sec import (
     SECClient,
-    fetch_submission_history,
-    fetch_submissions,
+    load_and_select_filings,
     resolve_ticker,
 )
 
 client = SECClient("Valuation Platform your-email@example.com")
 identity = resolve_ticker("META", client)
-submissions = fetch_submissions(client, identity)
-
-if submissions.history_files:
-    older_filings = fetch_submission_history(client, submissions.history_files[0])
+selected = load_and_select_filings(client, identity, annual_limit=5)
 ```
 
 Run the deterministic unit tests with:

@@ -40,9 +40,21 @@ The SEC package separates transport from dataset interpretation:
   submissions response while preserving each parallel-array row. It also
   exposes supplemental history-file metadata and retrieves an individual
   supplemental file only when explicitly requested.
+- `sec.filing_selection` keeps deterministic filing selection separate from
+  history orchestration. The selector is network-free; the orchestrator fetches
+  supplemental files in SEC order only until enough annual history is present.
 
-SEC retrieval and parsing do not perform filing selection, financial-period
-classification, Company Facts access, XBRL normalization, derived financial
-calculations, or valuation logic. Supplemental historical submission files are
-discovered by the main submissions request but are not downloaded automatically.
-Later filing-selection logic will decide which history files are needed.
+```text
+SEC retrieval and submissions parsing
+  ↓
+Incremental history orchestration
+  ↓
+Pure filing selection
+  ↓
+Later Company Facts / XBRL processing
+```
+
+Selection currently uses exact 10-K and 10-Q forms and reporting dates. It does
+not classify fiscal quarters, apply amendment precedence, infer Q4, inspect
+financial facts, or perform financial normalization. Supplemental history files
+are never downloaded after the requested annual coverage has been satisfied.
