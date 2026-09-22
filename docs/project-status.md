@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 1B — SEC submissions retrieval and filing metadata.
+Phase 1B.1 — SEC supplemental submissions history support.
 
 ## Completed
 
@@ -24,11 +24,16 @@ Phase 1B — SEC submissions retrieval and filing metadata.
 - Added explicit validation for SEC parallel-array structure, required fields,
   and filing dates
 - Added deterministic unit tests for submissions retrieval and parsing
+- Added typed metadata for supplemental SEC submissions history files
+- Added explicit, on-demand retrieval and shared parsing for individual
+  supplemental history files
+- Added deterministic unit tests for supplemental metadata and retrieval
 
 ## Next Step
 
-Review and validate Phase 1B against META, then define the next incremental SEC
-retrieval capability. Supplemental submission files and Company Facts are not
+Review and validate Phase 1B.1 against META before implementing filing and
+financial-period selection. Supplemental history files are discovered by the
+main request and fetched only when explicitly requested; Company Facts is not
 implemented yet.
 
 ## Current Repository Structure

@@ -37,9 +37,12 @@ The SEC package separates transport from dataset interpretation:
 - `sec.tickers` interprets the official SEC `company_tickers.json` dataset and
   returns a typed company identity with source metadata.
 - `sec.submissions` interprets recent filing metadata from the main SEC
-  submissions response while preserving each parallel-array row.
+  submissions response while preserving each parallel-array row. It also
+  exposes supplemental history-file metadata and retrieves an individual
+  supplemental file only when explicitly requested.
 
 SEC retrieval and parsing do not perform filing selection, financial-period
 classification, Company Facts access, XBRL normalization, derived financial
 calculations, or valuation logic. Supplemental historical submission files are
-outside the Phase 1B scope.
+discovered by the main submissions request but are not downloaded automatically.
+Later filing-selection logic will decide which history files are needed.

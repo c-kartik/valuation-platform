@@ -3,8 +3,10 @@
 from .client import SECClient, SECClientError, SECRequestError, SECResponseError
 from .submissions import (
     SECFiling,
+    SECSubmissionHistoryFile,
     SECSubmissions,
     SubmissionsDataError,
+    fetch_submission_history,
     fetch_submissions,
 )
 from .tickers import (
@@ -20,6 +22,7 @@ __all__ = [
     "SECClientError",
     "SECCompanyIdentity",
     "SECFiling",
+    "SECSubmissionHistoryFile",
     "SECRequestError",
     "SECResponseError",
     "SECSubmissions",
@@ -27,6 +30,7 @@ __all__ = [
     "TickerDataError",
     "TickerNotFoundError",
     "TickerResolutionError",
+    "fetch_submission_history",
     "fetch_submissions",
     "resolve_ticker",
 ]
