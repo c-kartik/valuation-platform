@@ -25,10 +25,10 @@ The standardized historical schema should eventually include:
 
 Exact XBRL concept mappings will be documented as the SEC normalization pipeline is developed and validated.
 
-### Initial Annual Revenue and Operating Income Normalization
+### Initial Annual Direct Normalization
 
-The initial normalization scope covers direct annual Revenue and Operating
-Income values from selected exact 10-K filings. It does not cover interim
+The initial normalization scope covers direct annual Revenue, Operating Income,
+and Capex values from selected exact 10-K filings. It does not cover interim
 normalization or derived quarters.
 
 Revenue uses this ordered candidate policy:
@@ -40,10 +40,25 @@ Operating Income currently uses:
 
 1. `us-gaap:OperatingIncomeLoss`
 
-These policies were validated against five annual periods each for META,
-GOOGL, MSFT, AAPL, and COST. They are an initial evidence-based policy, not a
-claim of universal issuer coverage. `us-gaap:SalesRevenueNet` and issuer
-extensions are intentionally excluded pending selected-filing evidence.
+Capex is the cash expenditure to acquire property, plant and equipment and uses:
+
+1. `us-gaap:PaymentsToAcquirePropertyPlantAndEquipment`
+
+Capex is preserved as a positive expenditure magnitude. The later FCFF
+calculation will subtract it. PP&E additions, capital expenditures incurred but
+not yet paid, productive-asset purchases, acquisitions, intangible purchases,
+lease additions, and issuer extensions are not approved alternatives.
+
+META's 2022 and 2023 primary cash-flow presentation reports net PP&E purchases,
+while `PaymentsToAcquirePropertyPlantAndEquipment` reports gross purchases. The
+initial FCFF methodology intentionally uses the SEC fact's gross cash PP&E
+purchases and does not adjust it to reproduce the net presentation.
+
+The Revenue, Operating Income, and Capex policies were validated against five
+annual periods each for META, GOOGL, MSFT, AAPL, and COST. They are initial
+evidence-based policies, not a claim of universal issuer coverage.
+`us-gaap:SalesRevenueNet` and issuer extensions are intentionally excluded
+pending selected-filing evidence.
 
 An annual candidate must be a numeric, exact-USD, current duration whose end
 date equals the selected 10-K report date. The SEC observation's actual start
@@ -75,6 +90,16 @@ Each normalized value should preserve sufficient metadata to identify its source
 Derived values should record the calculation used to produce them.
 
 Missing values must not be silently invented.
+
+### D&A Research Status
+
+Direct `DepreciationDepletionAndAmortization` observations cover the selected
+META, AAPL, and COST periods, but not GOOGL or MSFT. A Revenue-style fallback is
+financially inappropriate because depreciation and amortization may be
+components rather than substitutes. Aggregation requires evidence that inputs
+are complete and non-overlapping, and useful issuer-extension facts observed in
+some filings are absent from Company Facts. D&A therefore requires a separate
+design and research milestone.
 
 ## FCFF
 

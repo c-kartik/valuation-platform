@@ -7,6 +7,7 @@ from valuation_platform.normalization import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
     FinancialMetric,
+    HistoricalPeriod,
     MissingHistoricalMetric,
     MissingReason,
     NormalizedHistoricalValue,
@@ -27,6 +28,7 @@ RETRIEVED_AT = datetime(2026, 1, 1, tzinfo=timezone.utc)
 RFC = "RevenueFromContractWithCustomerExcludingAssessedTax"
 REVENUES = "Revenues"
 OPERATING_INCOME = "OperatingIncomeLoss"
+CAPEX = "PaymentsToAcquirePropertyPlantAndEquipment"
 
 
 def make_filing(
@@ -202,6 +204,88 @@ class AnnualHistoricalNormalizationTests(TestCase):
         self.assertEqual(result.value, 40)
         self.assertEqual(result.chosen_source.concept, OPERATING_INCOME)
 
+    def test_capex_resolves_as_positive_magnitude_with_provenance(self) -> None:
+        result = metric_result(
+            make_input(make_selected(CAPEX, value=31_431_000_000)),
+            FinancialMetric.CAPEX,
+        )
+
+        self.assertIsInstance(result, NormalizedHistoricalValue)
+        assert isinstance(result, NormalizedHistoricalValue)
+        self.assertEqual(result.value, 31_431_000_000)
+        self.assertEqual(result.unit, "USD")
+        self.assertEqual(result.chosen_source.taxonomy, "us-gaap")
+        self.assertEqual(result.chosen_source.concept, CAPEX)
+        self.assertEqual(result.chosen_source.accession_number, "annual")
+
+    def test_zero_capex_is_valid(self) -> None:
+        result = metric_result(
+            make_input(make_selected(CAPEX, value=0)),
+            FinancialMetric.CAPEX,
+        )
+
+        self.assertIsInstance(result, NormalizedHistoricalValue)
+        assert isinstance(result, NormalizedHistoricalValue)
+        self.assertEqual(result.value, 0)
+
+    def test_unapproved_capex_concept_is_not_a_fallback(self) -> None:
+        result = metric_result(
+            make_input(make_selected("PaymentsToAcquireProductiveAssets", value=10)),
+            FinancialMetric.CAPEX,
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(
+            result.reason,
+            MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+        )
+
+    def test_invalid_capex_observations_are_missing(self) -> None:
+        cases = (
+            make_selected(
+                CAPEX,
+                relationship=ObservationRelationship.COMPARATIVE,
+                end=date(2024, 12, 31),
+            ),
+            make_selected(CAPEX, start=None),
+            make_selected(CAPEX, unit="EUR"),
+            make_selected(CAPEX, value="100"),
+            make_selected(CAPEX, value=True),
+        )
+
+        for observation in cases:
+            with self.subTest(observation=observation):
+                result = metric_result(
+                    make_input(observation), FinancialMetric.CAPEX
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(
+                    result.reason,
+                    MissingReason.NO_VALID_CURRENT_ANNUAL_OBSERVATION,
+                )
+
+    def test_capex_preserves_non_calendar_and_week_based_periods(self) -> None:
+        periods = (
+            (date(2024, 7, 1), date(2025, 6, 30)),
+            (date(2024, 9, 29), date(2025, 9, 27)),
+            (date(2022, 8, 29), date(2023, 9, 3)),
+        )
+
+        for start, end in periods:
+            with self.subTest(start=start, end=end):
+                result = metric_result(
+                    make_input(
+                        make_selected(CAPEX, start=start, end=end),
+                        filing=make_filing(report_date=end),
+                    ),
+                    FinancialMetric.CAPEX,
+                )
+                self.assertIsInstance(result, NormalizedHistoricalValue)
+                assert isinstance(result, NormalizedHistoricalValue)
+                self.assertEqual(result.period, HistoricalPeriod(start, end))
+
     def test_no_configured_concept_is_missing(self) -> None:
         result = metric_result(
             make_input(make_selected("OtherConcept")),
@@ -311,12 +395,25 @@ class AnnualHistoricalNormalizationTests(TestCase):
                 self.assertEqual(result.period.start, start)
                 self.assertEqual(result.period.end, end)
 
+    def test_missing_capex_does_not_prevent_other_metrics(self) -> None:
+        output = normalize_annual_financials(
+            make_input(
+                make_selected(RFC, value=100),
+                make_selected(OPERATING_INCOME, value=40),
+            )
+        )
+
+        revenue, operating_income, capex = output.annual[0].metrics
+        self.assertIsInstance(revenue, NormalizedHistoricalValue)
+        self.assertIsInstance(operating_income, NormalizedHistoricalValue)
+        self.assertIsInstance(capex, MissingHistoricalMetric)
+
     def test_missing_revenue_does_not_prevent_operating_income(self) -> None:
         output = normalize_annual_financials(
             make_input(make_selected(OPERATING_INCOME, value=40))
         )
 
-        revenue, operating_income = output.annual[0].metrics
+        revenue, operating_income, _ = output.annual[0].metrics
         self.assertIsInstance(revenue, MissingHistoricalMetric)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
 
@@ -348,7 +445,11 @@ class AnnualHistoricalNormalizationTests(TestCase):
         )
         self.assertEqual(
             tuple(item.metric for item in output.annual[0].metrics),
-            (FinancialMetric.REVENUE, FinancialMetric.OPERATING_INCOME),
+            (
+                FinancialMetric.REVENUE,
+                FinancialMetric.OPERATING_INCOME,
+                FinancialMetric.CAPEX,
+            ),
         )
 
     def test_output_owns_only_compact_copied_evidence(self) -> None:

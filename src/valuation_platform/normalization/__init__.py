@@ -2,6 +2,7 @@
 
 from .concepts import (
     ANNUAL_METRIC_POLICIES,
+    CAPEX_POLICY,
     OPERATING_INCOME_POLICY,
     REVENUE_POLICY,
     ConceptKey,
@@ -26,6 +27,7 @@ from .historical import (
 
 __all__ = [
     "ANNUAL_METRIC_POLICIES",
+    "CAPEX_POLICY",
     "OPERATING_INCOME_POLICY",
     "REVENUE_POLICY",
     "AmbiguityReason",

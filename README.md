@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.2 complete — annual Revenue and Operating Income normalization**
+**Phase 1F.3a complete — annual Revenue, Operating Income, and Capex normalization**
 
-Next milestone: **broaden financial normalization beyond the initial annual slice**
+Next milestone: **design D&A normalization**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -47,7 +47,7 @@ Company Facts retrieval preserves every SEC taxonomy, concept, unit, and
 observation. A pure fact selector associates observations with selected filing
 accessions and classifies structural period relationships without choosing
 authoritative financial concepts or inferring YTD/discrete semantics. The first
-normalization slice resolves annual Revenue and Operating Income with explicit
+normalization slice resolves annual Revenue, Operating Income, and Capex with explicit
 missing and ambiguity results while preserving SEC provenance. Interim periods
 and the remaining standardized financial metrics are not normalized yet.
 

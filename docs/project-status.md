@@ -2,8 +2,8 @@
 
 ## Current Milestone
 
-Phase 1F.2 is complete for annual Revenue and Operating Income. Broader
-financial normalization remains the next milestone.
+Phase 1F.3a is complete for annual Capex normalization. D&A design remains the
+next financial-normalization milestone.
 
 ## Completed
 
@@ -71,12 +71,22 @@ financial normalization remains the next milestone.
   statement mismatch
 - Confirmed GOOGL Revenue fallback behavior and retained equal COST Revenue
   observations as confirming provenance
+- Added direct annual Capex normalization using only
+  `PaymentsToAcquirePropertyPlantAndEquipment`, preserving positive expenditure
+  magnitudes and actual fiscal boundaries
+- Validated 25 annual Capex periods across META, GOOGL, MSFT, AAPL, and COST
+  alongside the existing 50 Revenue and Operating Income values
+- Confirmed that direct DDA covers META, AAPL, and COST but not GOOGL or MSFT;
+  a fallback is inappropriate, aggregation requires complete non-overlapping
+  evidence, and some relevant issuer-extension facts are absent from Company
+  Facts
 
 ## Next Step
 
-Broaden financial normalization beyond annual Revenue and Operating Income.
-Interim normalization, derived quarters, additional standardized metrics,
-issuer extensions, and broader concept-policy validation are not implemented.
+Design D&A normalization separately, including direct-versus-aggregated
+provenance and the limits of Company Facts issuer-extension coverage. Interim
+normalization, derived quarters, other standardized metrics, and issuer-
+extension retrieval are not implemented.
 
 ## Current Repository Structure
 
