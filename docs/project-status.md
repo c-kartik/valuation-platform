@@ -2,8 +2,8 @@
 
 ## Current Milestone
 
-Phase 1E is complete. The next milestone is Phase 1F financial normalization
-and concept mapping.
+Phase 1F.2 is complete for annual Revenue and Operating Income. Broader
+financial normalization remains the next milestone.
 
 ## Completed
 
@@ -57,12 +57,26 @@ and concept mapping.
   Company Facts source metadata rather than the full parsed observation graph
 - Added deterministic tests for calendar, non-calendar, 52/53-week, and interim
   period shapes, ambiguity, absence, provenance, ordering, and ownership
+- Added a pure top-level normalization package with stable metric identities
+  and ordered, metric-specific SEC concept policies
+- Added immutable annual normalized, missing, and ambiguous result models with
+  compact SEC provenance and no retained Company Facts graph
+- Added annual Revenue normalization using an evidence-based
+  `RevenueFromContractWithCustomerExcludingAssessedTax` → `Revenues` policy
+- Added annual Operating Income normalization using `OperatingIncomeLoss`
+- Preserved actual calendar, non-calendar, 52-week, and 53-week economic period
+  dates without inferring fiscal boundaries
+- Validated five annual periods each for META, GOOGL, MSFT, AAPL, and COST: all
+  50 Revenue/Operating Income values resolved, with no ambiguity or face-
+  statement mismatch
+- Confirmed GOOGL Revenue fallback behavior and retained equal COST Revenue
+  observations as confirming provenance
 
 ## Next Step
 
-Begin Phase 1F financial normalization and concept mapping. Authoritative
-financial concepts, concept fallbacks, derived quarters, and standardized
-financial fields are not implemented yet.
+Broaden financial normalization beyond annual Revenue and Operating Income.
+Interim normalization, derived quarters, additional standardized metrics,
+issuer extensions, and broader concept-policy validation are not implemented.
 
 ## Current Repository Structure
 
@@ -79,6 +93,10 @@ valuation-platform/
 ├── src/
 │   └── valuation_platform/
 │       ├── __init__.py
+│       ├── normalization/
+│       │   ├── __init__.py
+│       │   ├── concepts.py
+│       │   └── historical.py
 │       └── sec/
 │           ├── __init__.py
 │           ├── client.py
@@ -90,6 +108,9 @@ valuation-platform/
 ├── tests/
 │   ├── __init__.py
 │   ├── test_validate_company_facts.py
+│   ├── normalization/
+│   │   ├── __init__.py
+│   │   └── test_historical.py
 │   └── sec/
 │       ├── __init__.py
 │       ├── test_client.py

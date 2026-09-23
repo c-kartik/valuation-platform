@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1E complete — Company Facts observation/period selection**
+**Phase 1F.2 complete — annual Revenue and Operating Income normalization**
 
-Next milestone: **Phase 1F — financial normalization and concept mapping**
+Next milestone: **broaden financial normalization beyond the initial annual slice**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -46,8 +46,10 @@ annual periods and subsequent interim filings without performing network access.
 Company Facts retrieval preserves every SEC taxonomy, concept, unit, and
 observation. A pure fact selector associates observations with selected filing
 accessions and classifies structural period relationships without choosing
-authoritative financial concepts or inferring YTD/discrete semantics. Financial
-normalization remains a later phase.
+authoritative financial concepts or inferring YTD/discrete semantics. The first
+normalization slice resolves annual Revenue and Operating Income with explicit
+missing and ambiguity results while preserving SEC provenance. Interim periods
+and the remaining standardized financial metrics are not normalized yet.
 
 ```python
 from valuation_platform.sec import (
@@ -57,12 +59,14 @@ from valuation_platform.sec import (
     resolve_ticker,
     select_fact_observations,
 )
+from valuation_platform.normalization import normalize_annual_financials
 
 client = SECClient("Valuation Platform your-email@example.com")
 identity = resolve_ticker("META", client)
 selected = load_and_select_filings(client, identity, annual_limit=5)
 company_facts = fetch_company_facts(client, identity)
 selected_facts = select_fact_observations(selected, company_facts)
+annual_financials = normalize_annual_financials(selected_facts)
 ```
 
 Run the deterministic unit tests with:

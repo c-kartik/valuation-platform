@@ -61,7 +61,9 @@ Company Facts retrieval
   ↓
 Fact observation and structural period selection
   ↓
-Later financial normalization
+Annual financial normalization
+  ↓
+Later derived financial calculations
 ```
 
 Selection currently uses exact 10-K and 10-Q forms and reporting dates. It does
@@ -86,3 +88,30 @@ The selector does not label durations as annual, YTD, discrete quarter, or Q4,
 and it does not infer missing periods. Its compact output references selected
 filings and matched immutable observations without retaining the complete
 `SECCompanyFacts` observation graph.
+
+## Financial Normalization Boundary
+
+The top-level `normalization` package remains separate from SEC retrieval and
+structural fact selection:
+
+- `normalization.concepts` defines stable financial metric identities and
+  ordered, metric-specific SEC concept candidates.
+- `normalization.historical` resolves selected annual observations into typed
+  normalized, missing, or ambiguous results. It performs no network access and
+  does not retain the complete Company Facts or selected-observation graph.
+
+Annual normalization currently supports Revenue and Operating Income only. A
+candidate must be a numeric, exact-USD, current duration ending on the selected
+10-K report date. Actual observation start and end dates define the economic
+period, including non-calendar and 52/53-week fiscal years.
+
+Concept priority applies only after period validation. Equal lower-priority
+facts for the same unit and period remain as confirming provenance. Conflicting
+values and multiple valid USD periods return explicit ambiguity results.
+Structurally valid non-USD observations are unsupported and do not participate
+in period, priority, confirmation, or conflict resolution. Expected coverage
+gaps return explicit missing results.
+
+The normalization package does not infer interim period semantics, derive
+quarters, aggregate financial concepts, or calculate valuation inputs. Those
+remain separate later responsibilities.
