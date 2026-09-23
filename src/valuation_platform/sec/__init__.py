@@ -15,6 +15,15 @@ from .filing_selection import (
     load_and_select_filings,
     select_filings,
 )
+from .fact_selection import (
+    FactSelectionError,
+    FilingFactObservations,
+    ObservationPeriodType,
+    ObservationRelationship,
+    SelectedFactObservation,
+    SelectedFactObservations,
+    select_fact_observations,
+)
 from .submissions import (
     SECFiling,
     SECSubmissionHistoryFile,
@@ -33,7 +42,11 @@ from .tickers import (
 
 __all__ = [
     "CompanyFactsDataError",
+    "FactSelectionError",
     "FilingSelectionError",
+    "FilingFactObservations",
+    "ObservationPeriodType",
+    "ObservationRelationship",
     "SECClient",
     "SECClientError",
     "SECCompanyFacts",
@@ -47,6 +60,8 @@ __all__ = [
     "SECResponseError",
     "SECSubmissions",
     "SelectedFilings",
+    "SelectedFactObservation",
+    "SelectedFactObservations",
     "SubmissionsDataError",
     "TickerDataError",
     "TickerNotFoundError",
@@ -56,5 +71,6 @@ __all__ = [
     "fetch_submissions",
     "load_and_select_filings",
     "resolve_ticker",
+    "select_fact_observations",
     "select_filings",
 ]

@@ -2,7 +2,8 @@
 
 ## Current Milestone
 
-Phase 1D is complete. Phase 1E has not started.
+Phase 1E is complete. The next milestone is Phase 1F financial normalization
+and concept mapping.
 
 ## Completed
 
@@ -46,12 +47,22 @@ Phase 1D is complete. Phase 1E has not started.
   528,990 observations parsed with no failures
 - Added narrowly validated canonical decimal-string CIK support after XOM
   exposed that live SEC representation, with mismatch regression coverage
+- Added pure Company Facts observation selection anchored to selected filing
+  accessions, preserving annual/interim grouping and deterministic ordering
+- Added structural current, comparative, and after-report-date relationships,
+  plus instant/duration classification without YTD or discrete-quarter inference
+- Added explicit exact-observation ambiguity handling while preserving
+  same-end/different-start periods, multiple units, and legitimate absence
+- Added compact selection output that retains only matched observations and
+  Company Facts source metadata rather than the full parsed observation graph
+- Added deterministic tests for calendar, non-calendar, 52/53-week, and interim
+  period shapes, ambiguity, absence, provenance, ordering, and ownership
 
 ## Next Step
 
-Begin Phase 1E fact and period selection. Comparative-period resolution,
-fiscal-period classification, and financial normalization are not implemented
-yet.
+Begin Phase 1F financial normalization and concept mapping. Authoritative
+financial concepts, concept fallbacks, derived quarters, and standardized
+financial fields are not implemented yet.
 
 ## Current Repository Structure
 
@@ -72,6 +83,7 @@ valuation-platform/
 │           ├── __init__.py
 │           ├── client.py
 │           ├── company_facts.py
+│           ├── fact_selection.py
 │           ├── filing_selection.py
 │           ├── submissions.py
 │           └── tickers.py
@@ -82,6 +94,7 @@ valuation-platform/
 │       ├── __init__.py
 │       ├── test_client.py
 │       ├── test_company_facts.py
+│       ├── test_fact_selection.py
 │       ├── test_filing_selection.py
 │       ├── test_submissions.py
 │       └── test_tickers.py

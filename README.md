@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1D — SEC Company Facts retrieval and typed representation**
+**Phase 1E complete — Company Facts observation/period selection**
 
-Initial validation company: **META**
+Next milestone: **Phase 1F — financial normalization and concept mapping**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -44,8 +44,10 @@ discovers supplemental history-file metadata; each supplemental file is fetched
 only when needed. A deterministic selector identifies the latest completed
 annual periods and subsequent interim filings without performing network access.
 Company Facts retrieval preserves every SEC taxonomy, concept, unit, and
-observation without selecting authoritative concepts or periods. Financial-fact
-selection and normalization are later phases.
+observation. A pure fact selector associates observations with selected filing
+accessions and classifies structural period relationships without choosing
+authoritative financial concepts or inferring YTD/discrete semantics. Financial
+normalization remains a later phase.
 
 ```python
 from valuation_platform.sec import (
@@ -53,12 +55,14 @@ from valuation_platform.sec import (
     fetch_company_facts,
     load_and_select_filings,
     resolve_ticker,
+    select_fact_observations,
 )
 
 client = SECClient("Valuation Platform your-email@example.com")
 identity = resolve_ticker("META", client)
 selected = load_and_select_filings(client, identity, annual_limit=5)
 company_facts = fetch_company_facts(client, identity)
+selected_facts = select_fact_observations(selected, company_facts)
 ```
 
 Run the deterministic unit tests with:

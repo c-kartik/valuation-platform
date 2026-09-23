@@ -46,6 +46,9 @@ The SEC package separates transport from dataset interpretation:
 - `sec.company_facts` retrieves and validates every taxonomy, concept, unit, and
   observation in the SEC Company Facts response without choosing financial
   concepts or authoritative reporting periods.
+- `sec.fact_selection` is a pure, network-free layer that associates Company
+  Facts observations with selected filings by accession number. It preserves
+  only the matched observations and compact source metadata.
 
 ```text
 SEC retrieval and submissions parsing
@@ -56,7 +59,7 @@ Pure filing selection
   ↓
 Company Facts retrieval
   ↓
-Later fact and period selection
+Fact observation and structural period selection
   ↓
 Later financial normalization
 ```
@@ -71,3 +74,15 @@ source accession and filing metadata, optional period context, and their
 JSON-decoded scalar values. Repeated and comparative observations remain intact
 for later selection; retrieval does not decide which concept or observation is
 authoritative.
+
+Fact selection classifies an observation as current, comparative, or after the
+report date by comparing its end date with the selected filing's report date.
+It classifies `start=None` as instant and a dated start as duration. Same-end,
+different-start observations and observations in multiple units remain
+distinct. Exact duplicates of accession, taxonomy, concept, unit, start, and
+end fail explicitly.
+
+The selector does not label durations as annual, YTD, discrete quarter, or Q4,
+and it does not infer missing periods. Its compact output references selected
+filings and matched immutable observations without retaining the complete
+`SECCompanyFacts` observation graph.
