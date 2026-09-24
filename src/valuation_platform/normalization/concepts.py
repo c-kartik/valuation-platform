@@ -15,6 +15,7 @@ class FinancialMetric(str, Enum):
 
     REVENUE = "revenue"
     OPERATING_INCOME = "operating_income"
+    D_AND_A = "depreciation_and_amortization"
     CAPEX = "capex"
 
 
@@ -75,6 +76,16 @@ OPERATING_INCOME_POLICY = MetricConceptPolicy(
     candidates=(ConceptKey(taxonomy="us-gaap", name="OperatingIncomeLoss"),),
 )
 
+D_AND_A_POLICY = MetricConceptPolicy(
+    metric=FinancialMetric.D_AND_A,
+    candidates=(
+        ConceptKey(
+            taxonomy="us-gaap",
+            name="DepreciationDepletionAndAmortization",
+        ),
+    ),
+)
+
 CAPEX_POLICY = MetricConceptPolicy(
     metric=FinancialMetric.CAPEX,
     candidates=(
@@ -88,5 +99,6 @@ CAPEX_POLICY = MetricConceptPolicy(
 ANNUAL_METRIC_POLICIES: tuple[MetricConceptPolicy, ...] = (
     REVENUE_POLICY,
     OPERATING_INCOME_POLICY,
+    D_AND_A_POLICY,
     CAPEX_POLICY,
 )

@@ -28,8 +28,8 @@ Exact XBRL concept mappings will be documented as the SEC normalization pipeline
 ### Initial Annual Direct Normalization
 
 The initial normalization scope covers direct annual Revenue, Operating Income,
-and Capex values from selected exact 10-K filings. It does not cover interim
-normalization or derived quarters.
+Depreciation and Amortization (D&A), and Capex values from selected exact 10-K
+filings. It does not cover interim normalization or derived quarters.
 
 Revenue uses this ordered candidate policy:
 
@@ -39,6 +39,22 @@ Revenue uses this ordered candidate policy:
 Operating Income currently uses:
 
 1. `us-gaap:OperatingIncomeLoss`
+
+For FCFF, D&A means recurring depreciation of operating PP&E plus amortization
+of finite-lived intangible assets. Direct annual D&A uses exactly:
+
+1. `us-gaap:DepreciationDepletionAndAmortization`
+
+Depreciation and amortization component concepts are not equivalent fallbacks;
+they may become operands in a later derived layer only after completeness and
+non-overlap are established. Impairments, stock compensation, restructuring,
+unspecified other noncash charges, and unsupported finance-lease adjustments
+are excluded from this direct policy.
+
+Finance-lease amortization is not mechanically added to direct D&A. Broader
+finance-lease treatment is deferred until an integrated methodology addresses
+lease amortization, lease liabilities and debt, lease interest, and Capex
+consistently, avoiding an isolated lease adjustment that could distort FCFF.
 
 Capex is the cash expenditure to acquire property, plant and equipment and uses:
 
@@ -55,8 +71,12 @@ initial FCFF methodology intentionally uses the SEC fact's gross cash PP&E
 purchases and does not adjust it to reproduce the net presentation.
 
 The Revenue, Operating Income, and Capex policies were validated against five
-annual periods each for META, GOOGL, MSFT, AAPL, and COST. They are initial
-evidence-based policies, not a claim of universal issuer coverage.
+annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A was
+validated for all five selected periods of META, AAPL, and COST, producing
+15/25 direct coverage across the same corpus. MSFT requires separate derived
+component arithmetic that is not implemented, and GOOGL remains financially
+unresolved. These are initial evidence-based policies, not a claim of universal
+issuer coverage.
 `us-gaap:SalesRevenueNet` and issuer extensions are intentionally excluded
 pending selected-filing evidence.
 
@@ -93,14 +113,15 @@ Missing values must not be silently invented.
 
 ### D&A Research Status
 
-Direct `DepreciationDepletionAndAmortization` observations cover the selected
+Direct `DepreciationDepletionAndAmortization` normalization covers the selected
 META, AAPL, and COST periods, but not GOOGL or MSFT. A Revenue-style fallback is
 financially inappropriate because depreciation and amortization may be
-components rather than substitutes. Aggregation requires evidence that inputs
-are complete and non-overlapping, and useful issuer-extension facts observed in
-some filings are absent from Company Facts. Those facts can now be retrieved as
-structural evidence from an SEC-generated filing-level extracted XBRL instance,
-but no D&A selection or aggregation methodology has been approved.
+components rather than substitutes. MSFT has evidence supporting a future
+derived methodology, which is not implemented in the direct normalization
+layer. GOOGL remains unresolved because some periods combine impairment with
+depreciation or amortization and later periods do not establish complete
+amortization coverage. Filing-level XBRL remains an explicit research source
+and is not automatically connected to normalization.
 
 ## FCFF
 

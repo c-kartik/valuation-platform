@@ -28,6 +28,7 @@ RETRIEVED_AT = datetime(2026, 1, 1, tzinfo=timezone.utc)
 RFC = "RevenueFromContractWithCustomerExcludingAssessedTax"
 REVENUES = "Revenues"
 OPERATING_INCOME = "OperatingIncomeLoss"
+D_AND_A = "DepreciationDepletionAndAmortization"
 CAPEX = "PaymentsToAcquirePropertyPlantAndEquipment"
 
 
@@ -203,6 +204,107 @@ class AnnualHistoricalNormalizationTests(TestCase):
         assert isinstance(result, NormalizedHistoricalValue)
         self.assertEqual(result.value, 40)
         self.assertEqual(result.chosen_source.concept, OPERATING_INCOME)
+
+    def test_direct_d_and_a_resolves_with_exact_provenance(self) -> None:
+        result = metric_result(
+            make_input(make_selected(D_AND_A, value=18_616_000_000)),
+            FinancialMetric.D_AND_A,
+        )
+
+        self.assertIsInstance(result, NormalizedHistoricalValue)
+        assert isinstance(result, NormalizedHistoricalValue)
+        self.assertIs(result.metric, FinancialMetric.D_AND_A)
+        self.assertEqual(result.value, 18_616_000_000)
+        self.assertEqual(result.unit, "USD")
+        self.assertEqual(
+            result.period,
+            HistoricalPeriod(date(2025, 1, 1), date(2025, 12, 31)),
+        )
+        self.assertEqual(result.chosen_source.taxonomy, "us-gaap")
+        self.assertEqual(result.chosen_source.concept, D_AND_A)
+        self.assertEqual(result.chosen_source.accession_number, "annual")
+        self.assertEqual(result.confirming_sources, ())
+
+    def test_zero_direct_d_and_a_is_valid(self) -> None:
+        result = metric_result(
+            make_input(make_selected(D_AND_A, value=0)),
+            FinancialMetric.D_AND_A,
+        )
+
+        self.assertIsInstance(result, NormalizedHistoricalValue)
+        assert isinstance(result, NormalizedHistoricalValue)
+        self.assertEqual(result.value, 0)
+
+    def test_unapproved_d_and_a_concepts_are_not_fallbacks(self) -> None:
+        cases = (
+            ("us-gaap", "Depreciation"),
+            ("us-gaap", "AmortizationOfIntangibleAssets"),
+            (
+                "goog",
+                "DepreciationAndImpairmentOnDispositionOfPropertyAndEquipment",
+            ),
+            ("goog", "AmortizationAndImpairmentOfIntangibleAssets"),
+            ("msft", "DepreciationAmortizationAndOther"),
+            ("us-gaap", "FinanceLeaseRightOfUseAssetAmortization"),
+        )
+
+        for taxonomy, concept in cases:
+            with self.subTest(taxonomy=taxonomy, concept=concept):
+                result = metric_result(
+                    make_input(make_selected(concept, taxonomy=taxonomy)),
+                    FinancialMetric.D_AND_A,
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(
+                    result.reason,
+                    MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+                )
+
+    def test_invalid_direct_d_and_a_observations_are_missing(self) -> None:
+        cases = (
+            make_selected(
+                D_AND_A,
+                relationship=ObservationRelationship.COMPARATIVE,
+                end=date(2024, 12, 31),
+            ),
+            make_selected(D_AND_A, start=None),
+            make_selected(D_AND_A, unit="EUR"),
+            make_selected(D_AND_A, value="100"),
+            make_selected(D_AND_A, value=True),
+        )
+
+        for observation in cases:
+            with self.subTest(observation=observation):
+                result = metric_result(
+                    make_input(observation), FinancialMetric.D_AND_A
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(
+                    result.reason,
+                    MissingReason.NO_VALID_CURRENT_ANNUAL_OBSERVATION,
+                )
+
+    def test_direct_d_and_a_preserves_non_calendar_and_week_based_periods(self) -> None:
+        periods = (
+            (date(2024, 7, 1), date(2025, 6, 30)),
+            (date(2024, 9, 29), date(2025, 9, 27)),
+            (date(2022, 8, 29), date(2023, 9, 3)),
+        )
+
+        for start, end in periods:
+            with self.subTest(start=start, end=end):
+                result = metric_result(
+                    make_input(
+                        make_selected(D_AND_A, start=start, end=end),
+                        filing=make_filing(report_date=end),
+                    ),
+                    FinancialMetric.D_AND_A,
+                )
+                self.assertIsInstance(result, NormalizedHistoricalValue)
+                assert isinstance(result, NormalizedHistoricalValue)
+                self.assertEqual(result.period, HistoricalPeriod(start, end))
 
     def test_capex_resolves_as_positive_magnitude_with_provenance(self) -> None:
         result = metric_result(
@@ -403,17 +505,33 @@ class AnnualHistoricalNormalizationTests(TestCase):
             )
         )
 
-        revenue, operating_income, capex = output.annual[0].metrics
+        revenue, operating_income, d_and_a, capex = output.annual[0].metrics
         self.assertIsInstance(revenue, NormalizedHistoricalValue)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
+        self.assertIsInstance(d_and_a, MissingHistoricalMetric)
         self.assertIsInstance(capex, MissingHistoricalMetric)
+
+    def test_missing_d_and_a_does_not_prevent_other_direct_metrics(self) -> None:
+        output = normalize_annual_financials(
+            make_input(
+                make_selected(RFC, value=100),
+                make_selected(OPERATING_INCOME, value=40),
+                make_selected(CAPEX, value=20),
+            )
+        )
+
+        revenue, operating_income, d_and_a, capex = output.annual[0].metrics
+        self.assertIsInstance(revenue, NormalizedHistoricalValue)
+        self.assertIsInstance(operating_income, NormalizedHistoricalValue)
+        self.assertIsInstance(d_and_a, MissingHistoricalMetric)
+        self.assertIsInstance(capex, NormalizedHistoricalValue)
 
     def test_missing_revenue_does_not_prevent_operating_income(self) -> None:
         output = normalize_annual_financials(
             make_input(make_selected(OPERATING_INCOME, value=40))
         )
 
-        revenue, operating_income, _ = output.annual[0].metrics
+        revenue, operating_income, _, _ = output.annual[0].metrics
         self.assertIsInstance(revenue, MissingHistoricalMetric)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
 
@@ -448,6 +566,7 @@ class AnnualHistoricalNormalizationTests(TestCase):
             (
                 FinancialMetric.REVENUE,
                 FinancialMetric.OPERATING_INCOME,
+                FinancialMetric.D_AND_A,
                 FinancialMetric.CAPEX,
             ),
         )

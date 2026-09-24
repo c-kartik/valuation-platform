@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.3b.1 complete — on-demand filing-level extracted XBRL source layer**
+**Phase 1F.3b.3 complete — direct annual D&A normalization**
 
-Next milestone: **validate D&A methodology using filing-level XBRL evidence**
+Next milestone: **derived annual D&A for evidence-supported cases**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -50,8 +50,10 @@ XBRL instance for one selected filing. A pure fact selector associates Company
 Facts observations with selected filing
 accessions and classifies structural period relationships without choosing
 authoritative financial concepts or inferring YTD/discrete semantics. The first
-normalization slice resolves annual Revenue, Operating Income, and Capex with explicit
-missing and ambiguity results while preserving SEC provenance. Interim periods
+normalization slice resolves annual Revenue, Operating Income, direct D&A, and
+Capex with explicit missing and ambiguity results while preserving SEC
+provenance. Direct D&A currently covers the validated META, AAPL, and COST
+periods; derived D&A and unresolved issuers remain future work. Interim periods
 and the remaining standardized financial metrics are not normalized yet.
 
 ```python

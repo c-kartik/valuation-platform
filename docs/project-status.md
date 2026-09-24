@@ -2,8 +2,8 @@
 
 ## Current Milestone
 
-Phase 1F.3b.1 is complete for standalone filing-level extracted XBRL retrieval
-and structural parsing. D&A methodology remains unresolved.
+Phase 1F.3b.3 is complete for direct annual D&A normalization. Derived D&A and
+GOOGL's unresolved D&A evidence remain future work.
 
 ## Completed
 
@@ -92,12 +92,20 @@ and structural parsing. D&A methodology remains unresolved.
 - Live-validated exact nondimensional issuer-extension facts from the selected
   GOOGL 2021 and MSFT 2022 extracted instances, including dates, USD units, and
   decimals
+- Established an FCFF D&A definition that excludes impairment, stock
+  compensation, restructuring, unspecified other noncash items, and unsupported
+  lease adjustments from direct D&A
+- Added direct annual D&A normalization using only
+  `DepreciationDepletionAndAmortization` through the generic annual resolver
+- Validated direct D&A for all five selected META, AAPL, and COST periods:
+  15/25 direct coverage across the five-company corpus, with GOOGL and MSFT
+  returning typed missing results as intended
 
 ## Next Step
 
-Validate D&A financial methodology using the newly available filing-level facts,
-including direct-versus-aggregated provenance and completeness/non-overlap
-evidence. Interim normalization, derived quarters, other standardized metrics,
+Design and implement derived annual D&A for evidence-supported cases such as
+MSFT while preserving every operand and operation in provenance. GOOGL remains
+unresolved. Interim normalization, derived quarters, other standardized metrics,
 and automatic filing-level fallback behavior are not implemented.
 
 ## Current Repository Structure

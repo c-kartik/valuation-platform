@@ -111,11 +111,13 @@ structural fact selection:
   normalized, missing, or ambiguous results. It performs no network access and
   does not retain the complete Company Facts or selected-observation graph.
 
-Annual normalization currently supports direct Revenue, Operating Income, and
-Capex values. A candidate must be a numeric, exact-USD, current duration ending
-on the selected 10-K report date. Actual observation start and end dates define
-the economic period, including non-calendar and 52/53-week fiscal years. Capex
-uses the same generic direct-resolution path and remains a positive expenditure
+Annual normalization currently supports direct Revenue, Operating Income, D&A,
+and Capex values. A candidate must be a numeric, exact-USD, current duration
+ending on the selected 10-K report date. Actual observation start and end dates
+define the economic period, including non-calendar and 52/53-week fiscal years.
+D&A and Capex use the same generic direct-resolution path. D&A component
+aggregation remains a separate future derived concern; filing-level XBRL is not
+automatically connected to normalization. Capex remains a positive expenditure
 magnitude for later subtraction in FCFF.
 
 Concept priority applies only after period validation. Equal lower-priority
