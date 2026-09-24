@@ -98,8 +98,9 @@ META, AAPL, and COST periods, but not GOOGL or MSFT. A Revenue-style fallback is
 financially inappropriate because depreciation and amortization may be
 components rather than substitutes. Aggregation requires evidence that inputs
 are complete and non-overlapping, and useful issuer-extension facts observed in
-some filings are absent from Company Facts. D&A therefore requires a separate
-design and research milestone.
+some filings are absent from Company Facts. Those facts can now be retrieved as
+structural evidence from an SEC-generated filing-level extracted XBRL instance,
+but no D&A selection or aggregation methodology has been approved.
 
 ## FCFF
 

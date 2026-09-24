@@ -45,6 +45,30 @@ class SECClientTests(TestCase):
         with self.assertRaisesRegex(SECRequestError, "SEC request failed"):
             client.get_json("https://www.sec.gov/example.json")
 
+    def test_get_bytes_uses_shared_transport_behavior(self) -> None:
+        response = Mock()
+        response.content = b"<xbrl/>"
+        session = Mock()
+        session.get.return_value = response
+        client = SECClient(
+            "Valuation Platform contact@example.com",
+            timeout=7.5,
+            session=session,
+        )
+
+        result = client.get_bytes("https://www.sec.gov/example.xml")
+
+        self.assertEqual(result, b"<xbrl/>")
+        session.get.assert_called_once_with(
+            "https://www.sec.gov/example.xml",
+            headers={
+                "User-Agent": "Valuation Platform contact@example.com",
+                "Accept": "application/octet-stream",
+            },
+            timeout=7.5,
+        )
+        response.raise_for_status.assert_called_once_with()
+
     def test_invalid_json_is_wrapped_in_domain_error(self) -> None:
         response = Mock()
         response.json.side_effect = ValueError("invalid JSON")

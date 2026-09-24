@@ -2,8 +2,8 @@
 
 ## Current Milestone
 
-Phase 1F.3a is complete for annual Capex normalization. D&A design remains the
-next financial-normalization milestone.
+Phase 1F.3b.1 is complete for standalone filing-level extracted XBRL retrieval
+and structural parsing. D&A methodology remains unresolved.
 
 ## Completed
 
@@ -80,13 +80,25 @@ next financial-normalization milestone.
   a fallback is inappropriate, aggregation requires complete non-overlapping
   evidence, and some relevant issuer-extension facts are absent from Company
   Facts
+- Added explicit on-demand discovery and retrieval of the SEC-generated
+  extracted XBRL instance corresponding to a selected filing's primary document
+- Added immutable filing-level context, dimension, unit, and fact models that
+  preserve standard and issuer-extension concepts without financial selection
+- Added structural parsing for duration, instant, comparative, explicit- and
+  typed-dimensional contexts, simple and divided units, numeric, nil, and
+  nonnumeric facts
+- Kept filing-level XBRL separate from Company Facts selection and historical
+  normalization; Revenue, Operating Income, and Capex behavior is unchanged
+- Live-validated exact nondimensional issuer-extension facts from the selected
+  GOOGL 2021 and MSFT 2022 extracted instances, including dates, USD units, and
+  decimals
 
 ## Next Step
 
-Design D&A normalization separately, including direct-versus-aggregated
-provenance and the limits of Company Facts issuer-extension coverage. Interim
-normalization, derived quarters, other standardized metrics, and issuer-
-extension retrieval are not implemented.
+Validate D&A financial methodology using the newly available filing-level facts,
+including direct-versus-aggregated provenance and completeness/non-overlap
+evidence. Interim normalization, derived quarters, other standardized metrics,
+and automatic filing-level fallback behavior are not implemented.
 
 ## Current Repository Structure
 
@@ -113,6 +125,7 @@ valuation-platform/
 │           ├── company_facts.py
 │           ├── fact_selection.py
 │           ├── filing_selection.py
+│           ├── filing_xbrl.py
 │           ├── submissions.py
 │           └── tickers.py
 ├── tests/
@@ -127,6 +140,7 @@ valuation-platform/
 │       ├── test_company_facts.py
 │       ├── test_fact_selection.py
 │       ├── test_filing_selection.py
+│       ├── test_filing_xbrl.py
 │       ├── test_submissions.py
 │       └── test_tickers.py
 ├── .gitignore

@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.3a complete — annual Revenue, Operating Income, and Capex normalization**
+**Phase 1F.3b.1 complete — on-demand filing-level extracted XBRL source layer**
 
-Next milestone: **design D&A normalization**
+Next milestone: **validate D&A methodology using filing-level XBRL evidence**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -44,7 +44,10 @@ discovers supplemental history-file metadata; each supplemental file is fetched
 only when needed. A deterministic selector identifies the latest completed
 annual periods and subsequent interim filings without performing network access.
 Company Facts retrieval preserves every SEC taxonomy, concept, unit, and
-observation. A pure fact selector associates observations with selected filing
+observation. When Company Facts omits an issuer extension, an explicit on-demand
+source layer can retrieve and structurally parse the SEC-generated extracted
+XBRL instance for one selected filing. A pure fact selector associates Company
+Facts observations with selected filing
 accessions and classifies structural period relationships without choosing
 authoritative financial concepts or inferring YTD/discrete semantics. The first
 normalization slice resolves annual Revenue, Operating Income, and Capex with explicit

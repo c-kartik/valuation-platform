@@ -1,4 +1,4 @@
-"""HTTP transport for official SEC JSON resources."""
+"""HTTP transport for official SEC resources."""
 
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ class SECResponseError(SECClientError):
 
 
 class SECClient:
-    """Small reusable client for conservative access to SEC JSON endpoints."""
+    """Small reusable client for conservative access to SEC endpoints."""
 
     def __init__(
         self,
@@ -44,22 +44,30 @@ class SECClient:
 
     def get_json(self, url: str) -> Any:
         """Fetch one SEC resource and decode its JSON response."""
-        try:
-            response = self._session.get(
-                url,
-                headers={
-                    "User-Agent": self._user_agent,
-                    "Accept": "application/json",
-                },
-                timeout=self._timeout,
-            )
-            response.raise_for_status()
-        except requests.RequestException as exc:
-            raise SECRequestError(f"SEC request failed for {url}: {exc}") from exc
-
+        response = self._get_response(url, accept="application/json")
         try:
             return response.json()
         except (requests.exceptions.JSONDecodeError, ValueError) as exc:
             raise SECResponseError(
                 f"SEC response from {url} was not valid JSON"
             ) from exc
+
+    def get_bytes(self, url: str) -> bytes:
+        """Fetch one SEC resource as raw response bytes."""
+        response = self._get_response(url, accept="application/octet-stream")
+        return response.content
+
+    def _get_response(self, url: str, *, accept: str) -> requests.Response:
+        try:
+            response = self._session.get(
+                url,
+                headers={
+                    "User-Agent": self._user_agent,
+                    "Accept": accept,
+                },
+                timeout=self._timeout,
+            )
+            response.raise_for_status()
+        except requests.RequestException as exc:
+            raise SECRequestError(f"SEC request failed for {url}: {exc}") from exc
+        return response

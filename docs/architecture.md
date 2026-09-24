@@ -32,8 +32,8 @@ Valuation Outputs
 
 The SEC package separates transport from dataset interpretation:
 
-- `sec.client` handles GET requests, identifying headers, timeouts, HTTP errors,
-  and JSON decoding.
+- `sec.client` handles GET transport, identifying headers, timeouts, HTTP errors,
+  raw response retrieval, and JSON decoding.
 - `sec.tickers` interprets the official SEC `company_tickers.json` dataset and
   returns a typed company identity with source metadata.
 - `sec.submissions` interprets recent filing metadata from the main SEC
@@ -46,6 +46,10 @@ The SEC package separates transport from dataset interpretation:
 - `sec.company_facts` retrieves and validates every taxonomy, concept, unit, and
   observation in the SEC Company Facts response without choosing financial
   concepts or authoritative reporting periods.
+- `sec.filing_xbrl` discovers the SEC-generated extracted XBRL instance that
+  corresponds to a selected filing's primary document, retrieves it explicitly
+  on demand, and structurally preserves standard and issuer-extension facts,
+  contexts, units, and dimensions.
 - `sec.fact_selection` is a pure, network-free layer that associates Company
   Facts observations with selected filings by accession number. It preserves
   only the matched observations and compact source metadata.
@@ -76,6 +80,13 @@ source accession and filing metadata, optional period context, and their
 JSON-decoded scalar values. Repeated and comparative observations remain intact
 for later selection; retrieval does not decide which concept or observation is
 authoritative.
+
+Company Facts remains the primary standardized source. Filing-level extracted
+XBRL is a targeted fallback source when filing evidence needed for later
+methodology is absent from Company Facts. Retrieval is never automatic, and the
+filing-level output is not yet connected to fact selection or normalization.
+The parser consumes the SEC-generated XML instance rather than implementing an
+Inline XBRL processor or resolving schemas and linkbases.
 
 Fact selection classifies an observation as current, comparative, or after the
 report date by comparing its end date with the selected filing's report date.
