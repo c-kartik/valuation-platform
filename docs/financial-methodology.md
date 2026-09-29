@@ -52,10 +52,30 @@ Income Tax Expense is the reported GAAP provision or benefit and uses exactly:
 
 Both are historical accounting facts. The SEC-reported sign is preserved, so a
 tax benefit may be negative. Neither metric is the FCFF operating tax rate.
-Reported effective tax rate, cash taxes, and current/deferred tax components
-remain outside this normalization milestone. The eventual forecast operating
-tax rate remains a manually entered analytical assumption informed by, but not
-mechanically equal to, historical reported tax evidence.
+Cash taxes and current/deferred tax components remain outside this normalization
+milestone. The eventual forecast operating tax rate remains a manually entered
+analytical assumption informed by, but not mechanically equal to, historical
+reported tax evidence.
+
+Reported Effective Tax Rate is a derived historical accounting diagnostic:
+
+```text
+Reported ETR = Income Tax Expense / Pretax Income
+```
+
+It uses the already-normalized direct monetary results rather than selecting
+Company Facts concepts again. The ratio is calculated with a 34-digit local
+`Decimal` context, retained without presentation rounding, and expressed in
+unit `pure`. A negative pretax-income denominator retains the mathematical ratio
+with a `negative_denominator` diagnostic. A zero denominator returns typed
+missing, while any nonzero denominator is calculated without an arbitrary
+near-zero threshold. Negative tax benefits and rates above 100% retain their
+reported signs and magnitudes.
+
+`us-gaap:EffectiveIncomeTaxRateContinuingOperations` is validation evidence
+only. Its presentation-rounded percentage is not substituted for the calculated
+ratio or retained as confirming provenance. Reported ETR is not automatically
+used as the FCFF/NOPAT tax rate or as a forecast assumption.
 
 For FCFF, D&A means recurring depreciation of operating PP&E plus amortization
 of finite-lived intangible assets. Direct annual D&A uses exactly:
@@ -105,6 +125,12 @@ selected annual periods each across META, GOOGL, MSFT, AAPL, and COST. All 50
 values resolved directly and reproduced the selected filings' consolidated
 income-statement amounts. This evidence supports the initial policies but is
 not a claim of universal issuer coverage.
+
+The derived Reported ETR also resolved for all 25 periods and agreed with the
+SEC structured rate after normal filing-presentation rounding. All live periods
+had positive, nonzero pretax income and positive tax expense; negative, zero,
+near-zero, and above-100% cases are covered with synthetic tests rather than
+claimed as live observations.
 
 An annual candidate must be a numeric, exact-USD, current duration whose end
 date equals the selected 10-K report date. The SEC observation's actual start

@@ -21,7 +21,7 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.4a complete — direct annual Pretax Income and Income Tax Expense**
+**Phase 1F.4b complete — derived annual Reported Effective Tax Rate**
 
 Next milestone: **continue historical financial normalization**
 
@@ -51,13 +51,14 @@ Facts observations with selected filing
 accessions and classifies structural period relationships without choosing
 authoritative financial concepts or inferring YTD/discrete semantics. The first
 normalization slice resolves annual Revenue, Operating Income, Pretax Income,
-Income Tax Expense, D&A, and Capex with explicit missing and ambiguity results
-while preserving SEC provenance.
+Income Tax Expense, Reported Effective Tax Rate, D&A, and Capex with explicit
+missing and ambiguity results while preserving SEC provenance.
 D&A is direct for the validated META, AAPL, and COST periods and derived from an
 evidence-backed, CIK-scoped Company Facts policy for MSFT. GOOGL remains
 unresolved. Interim periods and the remaining standardized financial metrics
-are not normalized yet. Historical tax expense is a reported accounting fact;
-the forecast operating tax rate remains a separate manual assumption.
+are not normalized yet. Reported ETR is a historical accounting diagnostic
+derived from the normalized monetary facts; the forecast operating tax rate
+remains a separate manual assumption.
 
 ```python
 from valuation_platform.sec import (

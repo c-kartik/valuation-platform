@@ -2,9 +2,8 @@
 
 ## Current Milestone
 
-Phase 1F.4a is complete for direct annual Pretax Income and Income Tax Expense.
-Reported effective tax rate, operating tax-rate assumptions, and NOPAT remain
-future work.
+Phase 1F.4b is complete for derived annual Reported Effective Tax Rate.
+Operating tax-rate assumptions and NOPAT remain future work.
 
 ## Completed
 
@@ -119,14 +118,22 @@ future work.
 - Validated both tax-related metrics across five selected annual periods for
   META, GOOGL, MSFT, AAPL, and COST: 25/25 resolved for each, with no missing or
   ambiguous results and exact selected-filing face-statement agreement
+- Added derived annual Reported Effective Tax Rate from the direct normalized
+  Income Tax Expense and Pretax Income results
+- Added 34-digit `Decimal` division, ordered normalized-metric provenance,
+  explicit negative-denominator diagnostics, and typed zero-denominator results
+- Preserved negative and above-100% rates without clamping and applied no
+  arbitrary near-zero threshold
+- Validated Reported ETR for all 25 selected periods with agreement to SEC's
+  structured disclosed rate after normal presentation rounding
 
 ## Next Step
 
 Continue historical financial normalization while preserving direct/derived
-provenance and explicit coverage gaps. Reported ETR, cash taxes,
-current/deferred tax derivation, NOPAT, and the manually entered forecast
-operating tax-rate assumption are not implemented. GOOGL D&A remains
-unresolved, and interim normalization is still outside the current scope.
+provenance and explicit coverage gaps. Cash taxes, current/deferred tax
+derivation, NOPAT, and the manually entered forecast operating tax-rate
+assumption are not implemented. GOOGL D&A remains unresolved, and interim
+normalization is still outside the current scope.
 
 ## Current Repository Structure
 

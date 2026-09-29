@@ -17,6 +17,7 @@ class FinancialMetric(str, Enum):
     OPERATING_INCOME = "operating_income"
     PRETAX_INCOME = "pretax_income"
     INCOME_TAX_EXPENSE = "income_tax_expense"
+    REPORTED_EFFECTIVE_TAX_RATE = "reported_effective_tax_rate"
     D_AND_A = "depreciation_and_amortization"
     CAPEX = "capex"
 

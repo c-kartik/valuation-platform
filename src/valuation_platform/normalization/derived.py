@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import date
+from decimal import Decimal, localcontext
 
 from valuation_platform.sec.fact_selection import (
     FilingFactObservations,
@@ -17,6 +18,8 @@ from .models import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
     DerivationOperation,
+    DerivationDiagnostic,
+    DerivedMetricOperand,
     DerivedHistoricalValue,
     EvidenceSourceKind,
     FactEvidence,
@@ -24,6 +27,7 @@ from .models import (
     HistoricalPeriod,
     MissingHistoricalMetric,
     MissingReason,
+    NormalizedHistoricalValue,
 )
 
 
@@ -93,6 +97,50 @@ MSFT_D_AND_A_DERIVATION_POLICY = MetricDerivationPolicy(
 
 ANNUAL_DERIVATION_POLICIES: tuple[MetricDerivationPolicy, ...] = (
     MSFT_D_AND_A_DERIVATION_POLICY,
+)
+
+
+@dataclass(frozen=True)
+class NormalizedMetricDerivationPolicy:
+    """A derivation whose operands are already-normalized direct metrics."""
+
+    policy_id: str
+    metric: FinancialMetric
+    operation: DerivationOperation
+    operands: tuple[FinancialMetric, ...]
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.policy_id, str) or not self.policy_id:
+            raise DerivationPolicyError("Derivation policy ID must not be empty")
+        if not isinstance(self.metric, FinancialMetric):
+            raise DerivationPolicyError(
+                "Derivation policy metric must be a FinancialMetric"
+            )
+        if self.operation is not DerivationOperation.DIVIDE:
+            raise DerivationPolicyError(
+                "Normalized metric derivation operation must be DIVIDE"
+            )
+        if (
+            not isinstance(self.operands, tuple)
+            or len(self.operands) != 2
+            or not all(
+                isinstance(operand, FinancialMetric) for operand in self.operands
+            )
+            or len(set(self.operands)) != 2
+        ):
+            raise DerivationPolicyError(
+                "DIVIDE derivation policy must have two distinct metric operands"
+            )
+
+
+REPORTED_EFFECTIVE_TAX_RATE_POLICY = NormalizedMetricDerivationPolicy(
+    policy_id="annual_reported_effective_tax_rate_v1",
+    metric=FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+    operation=DerivationOperation.DIVIDE,
+    operands=(
+        FinancialMetric.INCOME_TAX_EXPENSE,
+        FinancialMetric.PRETAX_INCOME,
+    ),
 )
 
 
@@ -175,6 +223,124 @@ def derive_annual_metric(
         operands=tuple(
             _fact_evidence(selected, source_url) for selected in chosen_operands
         ),
+    )
+
+
+def derive_reported_effective_tax_rate(
+    filing_accession: str,
+    filing_report_date: date,
+    results: tuple[HistoricalMetricResult, ...],
+    policy: NormalizedMetricDerivationPolicy = REPORTED_EFFECTIVE_TAX_RATE_POLICY,
+) -> HistoricalMetricResult:
+    """Derive reported ETR from normalized tax expense and pretax income."""
+    by_metric = {result.metric: result for result in results}
+    operand_results = tuple(by_metric.get(metric) for metric in policy.operands)
+
+    ambiguous = tuple(
+        result
+        for result in operand_results
+        if isinstance(result, AmbiguousHistoricalMetric)
+    )
+    if ambiguous:
+        return AmbiguousHistoricalMetric(
+            metric=policy.metric,
+            reason=AmbiguityReason.INCOMPATIBLE_DERIVATION_OPERANDS,
+            candidates=tuple(
+                candidate
+                for result in ambiguous
+                for candidate in result.candidates
+            ),
+        )
+
+    if any(
+        result is None or isinstance(result, MissingHistoricalMetric)
+        for result in operand_results
+    ):
+        return MissingHistoricalMetric(
+            metric=policy.metric,
+            reason=MissingReason.MISSING_DERIVATION_OPERAND,
+            examined_concepts=(),
+        )
+
+    if not all(
+        isinstance(result, NormalizedHistoricalValue)
+        for result in operand_results
+    ):
+        return MissingHistoricalMetric(
+            metric=policy.metric,
+            reason=MissingReason.NO_VALID_DERIVATION_OPERANDS,
+            examined_concepts=(),
+        )
+
+    numerator, denominator = operand_results
+    assert isinstance(numerator, NormalizedHistoricalValue)
+    assert isinstance(denominator, NormalizedHistoricalValue)
+    operands = (numerator, denominator)
+    if any(operand.unit != "USD" for operand in operands):
+        return _incompatible_normalized_operands(policy, operands)
+    if (
+        numerator.period != denominator.period
+        or numerator.period.end != filing_report_date
+    ):
+        return _incompatible_normalized_operands(policy, operands)
+    if any(
+        operand.chosen_source.accession_number != filing_accession
+        for operand in operands
+    ):
+        return _incompatible_normalized_operands(policy, operands)
+    if not all(_is_numeric(operand.value) for operand in operands):
+        return MissingHistoricalMetric(
+            metric=policy.metric,
+            reason=MissingReason.NO_VALID_DERIVATION_OPERANDS,
+            examined_concepts=(),
+        )
+    if denominator.value == 0:
+        return MissingHistoricalMetric(
+            metric=policy.metric,
+            reason=MissingReason.ZERO_DERIVATION_DENOMINATOR,
+            examined_concepts=(),
+        )
+
+    with localcontext() as context:
+        context.prec = 34
+        value = Decimal(str(numerator.value)) / Decimal(str(denominator.value))
+    diagnostics = (
+        (DerivationDiagnostic.NEGATIVE_DENOMINATOR,)
+        if denominator.value < 0
+        else ()
+    )
+    return DerivedHistoricalValue(
+        metric=policy.metric,
+        value=value,
+        unit="pure",
+        period=numerator.period,
+        policy_id=policy.policy_id,
+        operation=policy.operation,
+        operands=(),
+        metric_operands=tuple(_metric_operand(operand) for operand in operands),
+        diagnostics=diagnostics,
+    )
+
+
+def _incompatible_normalized_operands(
+    policy: NormalizedMetricDerivationPolicy,
+    operands: tuple[NormalizedHistoricalValue, NormalizedHistoricalValue],
+) -> AmbiguousHistoricalMetric:
+    return AmbiguousHistoricalMetric(
+        metric=policy.metric,
+        reason=AmbiguityReason.INCOMPATIBLE_DERIVATION_OPERANDS,
+        candidates=tuple(operand.chosen_source for operand in operands),
+    )
+
+
+def _metric_operand(value: NormalizedHistoricalValue) -> DerivedMetricOperand:
+    return DerivedMetricOperand(
+        metric=value.metric,
+        value=value.value,
+        unit=value.unit,
+        period=value.period,
+        chosen_source=value.chosen_source,
+        confirming_sources=value.confirming_sources,
     )
 
 

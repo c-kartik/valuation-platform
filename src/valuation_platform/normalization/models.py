@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import date, datetime
+from decimal import Decimal
 from enum import Enum
 from typing import TypeAlias
 
@@ -19,6 +20,8 @@ class MissingReason(str, Enum):
     NO_CONFIGURED_CONCEPT_OBSERVATION = "no_configured_concept_observation"
     NO_VALID_CURRENT_ANNUAL_OBSERVATION = "no_valid_current_annual_observation"
     NO_VALID_DERIVATION_OPERANDS = "no_valid_derivation_operands"
+    MISSING_DERIVATION_OPERAND = "missing_derivation_operand"
+    ZERO_DERIVATION_DENOMINATOR = "zero_derivation_denominator"
 
 
 class AmbiguityReason(str, Enum):
@@ -40,6 +43,13 @@ class DerivationOperation(str, Enum):
     """Supported arithmetic operations for derived historical values."""
 
     ADD = "add"
+    DIVIDE = "divide"
+
+
+class DerivationDiagnostic(str, Enum):
+    """Analytical cautions attached to a valid derived value."""
+
+    NEGATIVE_DENOMINATOR = "negative_denominator"
 
 
 @dataclass(frozen=True)
@@ -83,16 +93,30 @@ class NormalizedHistoricalValue:
 
 
 @dataclass(frozen=True)
-class DerivedHistoricalValue:
-    """One resolved annual value calculated from approved SEC operands."""
+class DerivedMetricOperand:
+    """One resolved direct normalized metric used in a derivation."""
 
     metric: FinancialMetric
     value: int | float
     unit: str
     period: HistoricalPeriod
+    chosen_source: FactEvidence
+    confirming_sources: tuple[FactEvidence, ...]
+
+
+@dataclass(frozen=True)
+class DerivedHistoricalValue:
+    """One resolved annual value calculated from approved SEC operands."""
+
+    metric: FinancialMetric
+    value: int | float | Decimal
+    unit: str
+    period: HistoricalPeriod
     policy_id: str
     operation: DerivationOperation
     operands: tuple[FactEvidence, ...]
+    metric_operands: tuple[DerivedMetricOperand, ...] = ()
+    diagnostics: tuple[DerivationDiagnostic, ...] = ()
 
 
 @dataclass(frozen=True)

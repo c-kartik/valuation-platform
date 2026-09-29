@@ -1,19 +1,28 @@
 import gc
+from dataclasses import replace
 from datetime import date, datetime, timezone
+from decimal import Decimal
 from unittest import TestCase
 import weakref
 
 from valuation_platform.normalization import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
+    CAPEX_POLICY,
     DerivationOperation,
+    DerivationDiagnostic,
     DerivedHistoricalValue,
+    FactEvidence,
     EvidenceSourceKind,
     FinancialMetric,
     HistoricalPeriod,
+    INCOME_TAX_EXPENSE_POLICY,
     MissingHistoricalMetric,
     MissingReason,
     NormalizedHistoricalValue,
+    PRETAX_INCOME_POLICY,
+    REVENUE_POLICY,
+    derive_reported_effective_tax_rate,
     normalize_annual_financials,
 )
 from valuation_platform.sec.company_facts import SECFactObservation
@@ -117,6 +126,46 @@ def metric_result(
 ):
     result = normalize_annual_financials(selected)
     return next(item for item in result.annual[0].metrics if item.metric is metric)
+
+
+def make_normalized_value(
+    metric: FinancialMetric,
+    value: object,
+    *,
+    unit: str = "USD",
+    start: date = date(2025, 1, 1),
+    end: date = date(2025, 12, 31),
+    accession: str = "annual",
+    source_url: str = "facts-source",
+) -> NormalizedHistoricalValue:
+    concept = {
+        FinancialMetric.PRETAX_INCOME: PRETAX_INCOME,
+        FinancialMetric.INCOME_TAX_EXPENSE: INCOME_TAX_EXPENSE,
+    }[metric]
+    evidence = FactEvidence(
+        source_kind=EvidenceSourceKind.COMPANY_FACTS,
+        source_url=source_url,
+        taxonomy="us-gaap",
+        concept=concept,
+        value=value,  # type: ignore[arg-type]
+        unit=unit,
+        start=start,
+        end=end,
+        accession_number=accession,
+        observation_form="10-K",
+        observation_filed=date(2026, 2, 1),
+        fiscal_year=2025,
+        fiscal_period="FY",
+        frame="CY2025",
+    )
+    return NormalizedHistoricalValue(
+        metric=metric,
+        value=value,  # type: ignore[arg-type]
+        unit=unit,
+        period=HistoricalPeriod(start, end),
+        chosen_source=evidence,
+        confirming_sources=(),
+    )
 
 
 class AnnualHistoricalNormalizationTests(TestCase):
@@ -329,6 +378,371 @@ class AnnualHistoricalNormalizationTests(TestCase):
                     self.assertIsInstance(result, NormalizedHistoricalValue)
                     assert isinstance(result, NormalizedHistoricalValue)
                     self.assertEqual(result.period, HistoricalPeriod(start, end))
+
+    def test_reported_etr_derives_decimal_with_ordered_operand_provenance(self) -> None:
+        pretax = make_normalized_value(FinancialMetric.PRETAX_INCOME, 10)
+        tax = make_normalized_value(FinancialMetric.INCOME_TAX_EXPENSE, 1)
+        confirming_tax_source = replace(
+            tax.chosen_source,
+            source_url="confirming-facts-source",
+            frame=None,
+        )
+        tax = replace(tax, confirming_sources=(confirming_tax_source,))
+
+        result = derive_reported_effective_tax_rate(
+            "annual",
+            date(2025, 12, 31),
+            (pretax, tax),
+        )
+
+        self.assertIsInstance(result, DerivedHistoricalValue)
+        assert isinstance(result, DerivedHistoricalValue)
+        self.assertEqual(result.value, Decimal("0.1"))
+        self.assertIsInstance(result.value, Decimal)
+        self.assertEqual(result.unit, "pure")
+        self.assertIs(result.operation, DerivationOperation.DIVIDE)
+        self.assertEqual(result.operands, ())
+        self.assertEqual(result.diagnostics, ())
+        self.assertEqual(
+            tuple(operand.metric for operand in result.metric_operands),
+            (
+                FinancialMetric.INCOME_TAX_EXPENSE,
+                FinancialMetric.PRETAX_INCOME,
+            ),
+        )
+        numerator, denominator = result.metric_operands
+        self.assertEqual(
+            (
+                numerator.metric,
+                numerator.value,
+                numerator.unit,
+                numerator.period,
+            ),
+            (
+                FinancialMetric.INCOME_TAX_EXPENSE,
+                1,
+                "USD",
+                HistoricalPeriod(date(2025, 1, 1), date(2025, 12, 31)),
+            ),
+        )
+        self.assertEqual(
+            (
+                denominator.metric,
+                denominator.value,
+                denominator.unit,
+                denominator.period,
+            ),
+            (
+                FinancialMetric.PRETAX_INCOME,
+                10,
+                "USD",
+                HistoricalPeriod(date(2025, 1, 1), date(2025, 12, 31)),
+            ),
+        )
+        for operand, concept in (
+            (numerator, INCOME_TAX_EXPENSE),
+            (denominator, PRETAX_INCOME),
+        ):
+            source = operand.chosen_source
+            self.assertIs(source.source_kind, EvidenceSourceKind.COMPANY_FACTS)
+            self.assertEqual(source.source_url, "facts-source")
+            self.assertEqual(source.taxonomy, "us-gaap")
+            self.assertEqual(source.concept, concept)
+            self.assertEqual(source.value, operand.value)
+            self.assertEqual(source.unit, "USD")
+            self.assertEqual(source.start, date(2025, 1, 1))
+            self.assertEqual(source.end, date(2025, 12, 31))
+            self.assertEqual(source.accession_number, "annual")
+            self.assertEqual(source.observation_form, "10-K")
+            self.assertEqual(source.observation_filed, date(2026, 2, 1))
+            self.assertEqual(source.fiscal_year, 2025)
+            self.assertEqual(source.fiscal_period, "FY")
+            self.assertEqual(source.frame, "CY2025")
+        self.assertEqual(
+            numerator.confirming_sources,
+            (confirming_tax_source,),
+        )
+        self.assertEqual(denominator.confirming_sources, ())
+
+    def test_reported_etr_requires_both_configured_direct_policies(self) -> None:
+        selected = make_input(
+            make_selected(RFC, value=200),
+            make_selected(PRETAX_INCOME, value=100),
+            make_selected(INCOME_TAX_EXPENSE, value=20),
+            make_selected(CAPEX, value=30),
+        )
+        cases = (
+            (
+                (INCOME_TAX_EXPENSE_POLICY,),
+                (FinancialMetric.INCOME_TAX_EXPENSE,),
+            ),
+            (
+                (PRETAX_INCOME_POLICY,),
+                (FinancialMetric.PRETAX_INCOME,),
+            ),
+            (
+                (REVENUE_POLICY, CAPEX_POLICY),
+                (FinancialMetric.REVENUE, FinancialMetric.CAPEX),
+            ),
+        )
+
+        for policies, expected_metrics in cases:
+            with self.subTest(policies=policies):
+                output = normalize_annual_financials(selected, policies=policies)
+                self.assertEqual(
+                    tuple(result.metric for result in output.annual[0].metrics),
+                    expected_metrics,
+                )
+
+    def test_custom_policies_with_both_tax_operands_include_reported_etr(self) -> None:
+        output = normalize_annual_financials(
+            make_input(
+                make_selected(PRETAX_INCOME, value=100),
+                make_selected(INCOME_TAX_EXPENSE, value=20),
+            ),
+            policies=(PRETAX_INCOME_POLICY, INCOME_TAX_EXPENSE_POLICY),
+        )
+
+        pretax, tax, reported_etr = output.annual[0].metrics
+        self.assertIsInstance(pretax, NormalizedHistoricalValue)
+        self.assertIsInstance(tax, NormalizedHistoricalValue)
+        self.assertIsInstance(reported_etr, DerivedHistoricalValue)
+        assert isinstance(reported_etr, DerivedHistoricalValue)
+        self.assertEqual(reported_etr.value, Decimal("0.2"))
+        self.assertEqual(
+            tuple(result.metric for result in output.annual[0].metrics),
+            (
+                FinancialMetric.PRETAX_INCOME,
+                FinancialMetric.INCOME_TAX_EXPENSE,
+                FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+            ),
+        )
+
+    def test_custom_tax_policies_include_typed_missing_reported_etr(self) -> None:
+        output = normalize_annual_financials(
+            make_input(make_selected(PRETAX_INCOME, value=100)),
+            policies=(PRETAX_INCOME_POLICY, INCOME_TAX_EXPENSE_POLICY),
+        )
+
+        reported_etr = output.annual[0].metrics[-1]
+        self.assertIsInstance(reported_etr, MissingHistoricalMetric)
+        assert isinstance(reported_etr, MissingHistoricalMetric)
+        self.assertIs(
+            reported_etr.reason,
+            MissingReason.MISSING_DERIVATION_OPERAND,
+        )
+
+    def test_reported_etr_preserves_valid_extreme_values(self) -> None:
+        cases = (
+            (0, 100, Decimal("0")),
+            (-20, 100, Decimal("-0.2")),
+            (2, 1, Decimal("2")),
+            (1, 0.0001, Decimal("1E+4")),
+        )
+        for tax, pretax, expected in cases:
+            with self.subTest(tax=tax, pretax=pretax):
+                result = metric_result(
+                    make_input(
+                        make_selected(PRETAX_INCOME, value=pretax),
+                        make_selected(INCOME_TAX_EXPENSE, value=tax),
+                    ),
+                    FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+                )
+                self.assertIsInstance(result, DerivedHistoricalValue)
+                assert isinstance(result, DerivedHistoricalValue)
+                self.assertEqual(result.value, expected)
+                self.assertEqual(result.diagnostics, ())
+
+    def test_negative_pretax_income_has_diagnostic(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(PRETAX_INCOME, value=-100),
+                make_selected(INCOME_TAX_EXPENSE, value=20),
+            ),
+            FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+        )
+
+        self.assertIsInstance(result, DerivedHistoricalValue)
+        assert isinstance(result, DerivedHistoricalValue)
+        self.assertEqual(result.value, Decimal("-0.2"))
+        self.assertEqual(
+            result.diagnostics,
+            (DerivationDiagnostic.NEGATIVE_DENOMINATOR,),
+        )
+
+    def test_zero_pretax_income_is_typed_missing(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(PRETAX_INCOME, value=0),
+                make_selected(INCOME_TAX_EXPENSE, value=20),
+            ),
+            FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(result.reason, MissingReason.ZERO_DERIVATION_DENOMINATOR)
+
+    def test_missing_reported_etr_operand_is_typed_missing(self) -> None:
+        for observation in (
+            make_selected(PRETAX_INCOME, value=100),
+            make_selected(INCOME_TAX_EXPENSE, value=20),
+        ):
+            with self.subTest(concept=observation.concept):
+                result = metric_result(
+                    make_input(observation),
+                    FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(result.reason, MissingReason.MISSING_DERIVATION_OPERAND)
+
+    def test_ambiguous_reported_etr_operand_preserves_ambiguity(self) -> None:
+        cases = (
+            (
+                make_selected(PRETAX_INCOME, value=100),
+                make_selected(PRETAX_INCOME, value=90, start=date(2025, 2, 1)),
+                make_selected(INCOME_TAX_EXPENSE, value=20),
+            ),
+            (
+                make_selected(PRETAX_INCOME, value=100),
+                make_selected(INCOME_TAX_EXPENSE, value=20),
+                make_selected(INCOME_TAX_EXPENSE, value=19, start=date(2025, 2, 1)),
+            ),
+        )
+        for observations in cases:
+            with self.subTest(observations=observations):
+                result = metric_result(
+                    make_input(*observations),
+                    FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+                )
+                self.assertIsInstance(result, AmbiguousHistoricalMetric)
+                assert isinstance(result, AmbiguousHistoricalMetric)
+                self.assertIs(result.reason, AmbiguityReason.INCOMPATIBLE_DERIVATION_OPERANDS)
+                self.assertEqual(len(result.candidates), 2)
+
+    def test_reported_etr_rejects_mismatched_economic_periods(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(PRETAX_INCOME, value=100),
+                make_selected(INCOME_TAX_EXPENSE, value=20, start=date(2025, 2, 1)),
+            ),
+            FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+        )
+
+        self.assertIsInstance(result, AmbiguousHistoricalMetric)
+        assert isinstance(result, AmbiguousHistoricalMetric)
+        self.assertIs(result.reason, AmbiguityReason.INCOMPATIBLE_DERIVATION_OPERANDS)
+
+    def test_reported_etr_validates_normalized_operand_structure(self) -> None:
+        pretax = make_normalized_value(FinancialMetric.PRETAX_INCOME, 100)
+        cases = (
+            (
+                make_normalized_value(
+                    FinancialMetric.INCOME_TAX_EXPENSE,
+                    20,
+                    accession="other",
+                ),
+                pretax,
+            ),
+            (
+                make_normalized_value(
+                    FinancialMetric.INCOME_TAX_EXPENSE,
+                    20,
+                    unit="EUR",
+                ),
+                pretax,
+            ),
+        )
+        for numerator, denominator in cases:
+            with self.subTest(numerator=numerator):
+                result = derive_reported_effective_tax_rate(
+                    "annual",
+                    date(2025, 12, 31),
+                    (denominator, numerator),
+                )
+                self.assertIsInstance(result, AmbiguousHistoricalMetric)
+                assert isinstance(result, AmbiguousHistoricalMetric)
+                self.assertIs(result.reason, AmbiguityReason.INCOMPATIBLE_DERIVATION_OPERANDS)
+
+    def test_reported_etr_allows_independent_operand_source_urls(self) -> None:
+        result = derive_reported_effective_tax_rate(
+            "annual",
+            date(2025, 12, 31),
+            (
+                make_normalized_value(
+                    FinancialMetric.PRETAX_INCOME,
+                    100,
+                    source_url="pretax-source",
+                ),
+                make_normalized_value(
+                    FinancialMetric.INCOME_TAX_EXPENSE,
+                    20,
+                    source_url="tax-source",
+                ),
+            ),
+        )
+
+        self.assertIsInstance(result, DerivedHistoricalValue)
+        assert isinstance(result, DerivedHistoricalValue)
+        self.assertEqual(result.value, Decimal("0.2"))
+        self.assertEqual(
+            tuple(
+                operand.chosen_source.source_url
+                for operand in result.metric_operands
+            ),
+            ("tax-source", "pretax-source"),
+        )
+
+    def test_reported_etr_accepts_only_direct_normalized_operands(self) -> None:
+        direct_pretax = make_normalized_value(FinancialMetric.PRETAX_INCOME, 100)
+        derived_pretax = DerivedHistoricalValue(
+            metric=FinancialMetric.PRETAX_INCOME,
+            value=100,
+            unit="USD",
+            period=direct_pretax.period,
+            policy_id="synthetic",
+            operation=DerivationOperation.ADD,
+            operands=(direct_pretax.chosen_source,),
+        )
+        result = derive_reported_effective_tax_rate(
+            "annual",
+            date(2025, 12, 31),
+            (
+                derived_pretax,
+                make_normalized_value(FinancialMetric.INCOME_TAX_EXPENSE, 20),
+            ),
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(result.reason, MissingReason.NO_VALID_DERIVATION_OPERANDS)
+
+    def test_calculated_reported_etr_only_matches_disclosed_rate_after_rounding(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(PRETAX_INCOME, value=47_284_000_000),
+                make_selected(INCOME_TAX_EXPENSE, value=7_914_000_000),
+                make_selected(
+                    "EffectiveIncomeTaxRateContinuingOperations",
+                    value=0.167,
+                    unit="pure",
+                ),
+            ),
+            FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+        )
+
+        self.assertIsInstance(result, DerivedHistoricalValue)
+        assert isinstance(result, DerivedHistoricalValue)
+        self.assertNotEqual(result.value, Decimal("0.167"))
+        self.assertEqual(result.value.quantize(Decimal("0.001")), Decimal("0.167"))
+        self.assertEqual(
+            tuple(operand.metric for operand in result.metric_operands),
+            (
+                FinancialMetric.INCOME_TAX_EXPENSE,
+                FinancialMetric.PRETAX_INCOME,
+            ),
+        )
 
     def test_direct_d_and_a_resolves_with_exact_provenance(self) -> None:
         result = metric_result(
@@ -836,11 +1250,12 @@ class AnnualHistoricalNormalizationTests(TestCase):
             )
         )
 
-        revenue, operating_income, pretax, tax, d_and_a, capex = output.annual[0].metrics
+        revenue, operating_income, pretax, tax, etr, d_and_a, capex = output.annual[0].metrics
         self.assertIsInstance(revenue, NormalizedHistoricalValue)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
         self.assertIsInstance(pretax, MissingHistoricalMetric)
         self.assertIsInstance(tax, MissingHistoricalMetric)
+        self.assertIsInstance(etr, MissingHistoricalMetric)
         self.assertIsInstance(d_and_a, MissingHistoricalMetric)
         self.assertIsInstance(capex, MissingHistoricalMetric)
 
@@ -853,11 +1268,12 @@ class AnnualHistoricalNormalizationTests(TestCase):
             )
         )
 
-        revenue, operating_income, pretax, tax, d_and_a, capex = output.annual[0].metrics
+        revenue, operating_income, pretax, tax, etr, d_and_a, capex = output.annual[0].metrics
         self.assertIsInstance(revenue, NormalizedHistoricalValue)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
         self.assertIsInstance(pretax, MissingHistoricalMetric)
         self.assertIsInstance(tax, MissingHistoricalMetric)
+        self.assertIsInstance(etr, MissingHistoricalMetric)
         self.assertIsInstance(d_and_a, MissingHistoricalMetric)
         self.assertIsInstance(capex, NormalizedHistoricalValue)
 
@@ -866,7 +1282,7 @@ class AnnualHistoricalNormalizationTests(TestCase):
             make_input(make_selected(OPERATING_INCOME, value=40))
         )
 
-        revenue, operating_income, _, _, _, _ = output.annual[0].metrics
+        revenue, operating_income, _, _, _, _, _ = output.annual[0].metrics
         self.assertIsInstance(revenue, MissingHistoricalMetric)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
 
@@ -930,6 +1346,7 @@ class AnnualHistoricalNormalizationTests(TestCase):
                 FinancialMetric.OPERATING_INCOME,
                 FinancialMetric.PRETAX_INCOME,
                 FinancialMetric.INCOME_TAX_EXPENSE,
+                FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
                 FinancialMetric.D_AND_A,
                 FinancialMetric.CAPEX,
             ),

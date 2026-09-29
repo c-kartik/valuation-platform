@@ -21,6 +21,7 @@ from .derived import (
     MetricDerivationPolicy,
     applicable_derivation_policy,
     derive_annual_metric,
+    derive_reported_effective_tax_rate,
 )
 from .models import (
     AmbiguityReason,
@@ -53,15 +54,12 @@ def normalize_annual_financials(
     annual = tuple(
         HistoricalFilingResult(
             filing=bucket.filing,
-            metrics=tuple(
-                _resolve_with_derivation(
-                    bucket,
-                    policy,
-                    selected_facts.company.cik,
-                    selected_facts.source_url,
-                    derivation_policies,
-                )
-                for policy in policies
+            metrics=_resolve_filing_metrics(
+                bucket,
+                selected_facts.company.cik,
+                selected_facts.source_url,
+                policies,
+                derivation_policies,
             ),
         )
         for bucket in selected_facts.annual
@@ -72,6 +70,49 @@ def normalize_annual_financials(
         company_facts_retrieved_at=selected_facts.retrieved_at,
         annual=annual,
     )
+
+
+def _resolve_filing_metrics(
+    bucket: FilingFactObservations,
+    company_cik: int,
+    source_url: str,
+    policies: tuple[MetricConceptPolicy, ...],
+    derivation_policies: tuple[MetricDerivationPolicy, ...],
+) -> tuple[HistoricalMetricResult, ...]:
+    direct_results = tuple(
+        _resolve_with_derivation(
+            bucket,
+            policy,
+            company_cik,
+            source_url,
+            derivation_policies,
+        )
+        for policy in policies
+    )
+    configured_metrics = {policy.metric for policy in policies}
+    required_etr_metrics = {
+        FinancialMetric.PRETAX_INCOME,
+        FinancialMetric.INCOME_TAX_EXPENSE,
+    }
+    if not required_etr_metrics.issubset(configured_metrics):
+        return direct_results
+
+    filing = bucket.filing
+    if filing.report_date is None:
+        raise NormalizationError(
+            f"Annual filing {filing.accession_number!r} has no report date"
+        )
+    reported_etr = derive_reported_effective_tax_rate(
+        filing.accession_number,
+        filing.report_date,
+        direct_results,
+    )
+    ordered = []
+    for result in direct_results:
+        ordered.append(result)
+        if result.metric is FinancialMetric.INCOME_TAX_EXPENSE:
+            ordered.append(reported_etr)
+    return tuple(ordered)
 
 
 def _resolve_with_derivation(

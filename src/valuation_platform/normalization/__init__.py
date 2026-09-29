@@ -16,14 +16,19 @@ from .concepts import (
 from .derived import (
     ANNUAL_DERIVATION_POLICIES,
     MSFT_D_AND_A_DERIVATION_POLICY,
+    REPORTED_EFFECTIVE_TAX_RATE_POLICY,
     DerivationPolicyError,
     MetricDerivationPolicy,
+    NormalizedMetricDerivationPolicy,
+    derive_reported_effective_tax_rate,
 )
 from .historical import NormalizationError, normalize_annual_financials
 from .models import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
     DerivationOperation,
+    DerivationDiagnostic,
+    DerivedMetricOperand,
     DerivedHistoricalValue,
     EvidenceSourceKind,
     FactEvidence,
@@ -51,8 +56,10 @@ __all__ = [
     "ConceptKey",
     "ConceptPolicyError",
     "DerivationOperation",
+    "DerivationDiagnostic",
     "DerivationPolicyError",
     "DerivedHistoricalValue",
+    "DerivedMetricOperand",
     "EvidenceSourceKind",
     "FactEvidence",
     "FinancialMetric",
@@ -61,6 +68,7 @@ __all__ = [
     "HistoricalPeriod",
     "MetricConceptPolicy",
     "MetricDerivationPolicy",
+    "NormalizedMetricDerivationPolicy",
     "MissingHistoricalMetric",
     "MissingReason",
     "NormalizationError",
@@ -68,5 +76,7 @@ __all__ = [
     "NormalizedHistoricalValue",
     "ResolvedHistoricalValue",
     "MSFT_D_AND_A_DERIVATION_POLICY",
+    "REPORTED_EFFECTIVE_TAX_RATE_POLICY",
+    "derive_reported_effective_tax_rate",
     "normalize_annual_financials",
 ]

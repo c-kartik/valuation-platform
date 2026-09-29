@@ -115,9 +115,10 @@ structural fact selection:
   policies and their operands. It performs no network access.
 
 Annual normalization currently supports direct Revenue, Operating Income,
-Pretax Income, Income Tax Expense, D&A, and Capex values. Results use the
-deterministic order Revenue, Operating Income, Pretax Income, Income Tax
-Expense, D&A, then Capex. A candidate must be a numeric, exact-USD, current
+Pretax Income, Income Tax Expense, D&A, and Capex values, plus derived Reported
+Effective Tax Rate. Results use the deterministic order Revenue, Operating
+Income, Pretax Income, Income Tax Expense, Reported Effective Tax Rate, D&A,
+then Capex. A direct candidate must be a numeric, exact-USD, current
 duration ending on the selected 10-K report date. Actual observation start and
 end dates define the economic period, including non-calendar and 52/53-week
 fiscal years.
@@ -139,11 +140,21 @@ gaps return explicit missing results.
 
 Derived values preserve the operation and every ordered operand, including its
 source kind, source URL, taxonomy, concept, value, unit, period, and selected
-accession. The initial derived layer supports addition only. It does not provide
-a general expression engine, issuer-extension arithmetic, impairment or lease
-adjustments, or interim derivation.
+accession. The derived layer supports approved addition and division policies;
+it does not provide a general expression engine, issuer-extension arithmetic,
+impairment or lease adjustments, or interim derivation. MSFT D&A retains its
+existing fact operands. Reported ETR uses a
+minimal normalized-metric operand model so it can preserve both authoritative
+direct inputs without repeating Company Facts concept selection.
+
+Reported ETR divides normalized Income Tax Expense by normalized Pretax Income
+using a 34-digit local `Decimal` context and a dimensionless `pure` unit. Its
+operands must be direct, USD, accession- and period-compatible results. Operand
+source URLs remain independent. A negative denominator produces a valid ratio
+with an explicit diagnostic; a zero denominator produces a typed missing
+result. No near-zero threshold or presentation rounding is applied.
 
 The normalization package does not infer interim period semantics, derive
-quarters, aggregate financial concepts, calculate reported effective tax
-rates, determine forecast operating tax assumptions, or calculate valuation
-inputs. Those remain separate later responsibilities.
+quarters, aggregate financial concepts, determine forecast operating tax
+assumptions, or calculate valuation inputs. Those remain separate later
+responsibilities.
