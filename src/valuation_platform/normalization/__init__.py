@@ -11,23 +11,33 @@ from .concepts import (
     FinancialMetric,
     MetricConceptPolicy,
 )
-from .historical import (
+from .derived import (
+    ANNUAL_DERIVATION_POLICIES,
+    MSFT_D_AND_A_DERIVATION_POLICY,
+    DerivationPolicyError,
+    MetricDerivationPolicy,
+)
+from .historical import NormalizationError, normalize_annual_financials
+from .models import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
+    DerivationOperation,
+    DerivedHistoricalValue,
+    EvidenceSourceKind,
     FactEvidence,
     HistoricalFilingResult,
     HistoricalMetricResult,
     HistoricalPeriod,
     MissingHistoricalMetric,
     MissingReason,
-    NormalizationError,
     NormalizedHistoricalFinancials,
     NormalizedHistoricalValue,
-    normalize_annual_financials,
+    ResolvedHistoricalValue,
 )
 
 __all__ = [
     "ANNUAL_METRIC_POLICIES",
+    "ANNUAL_DERIVATION_POLICIES",
     "CAPEX_POLICY",
     "D_AND_A_POLICY",
     "OPERATING_INCOME_POLICY",
@@ -36,16 +46,23 @@ __all__ = [
     "AmbiguousHistoricalMetric",
     "ConceptKey",
     "ConceptPolicyError",
+    "DerivationOperation",
+    "DerivationPolicyError",
+    "DerivedHistoricalValue",
+    "EvidenceSourceKind",
     "FactEvidence",
     "FinancialMetric",
     "HistoricalFilingResult",
     "HistoricalMetricResult",
     "HistoricalPeriod",
     "MetricConceptPolicy",
+    "MetricDerivationPolicy",
     "MissingHistoricalMetric",
     "MissingReason",
     "NormalizationError",
     "NormalizedHistoricalFinancials",
     "NormalizedHistoricalValue",
+    "ResolvedHistoricalValue",
+    "MSFT_D_AND_A_DERIVATION_POLICY",
     "normalize_annual_financials",
 ]

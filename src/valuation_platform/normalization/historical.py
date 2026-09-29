@@ -2,11 +2,6 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from datetime import date, datetime
-from enum import Enum
-from typing import TypeAlias
-
 from valuation_platform.sec.company_facts import SECFactValue
 from valuation_platform.sec.fact_selection import (
     FilingFactObservations,
@@ -15,14 +10,30 @@ from valuation_platform.sec.fact_selection import (
     SelectedFactObservation,
     SelectedFactObservations,
 )
-from valuation_platform.sec.submissions import SECFiling
-from valuation_platform.sec.tickers import SECCompanyIdentity
-
 from .concepts import (
     ANNUAL_METRIC_POLICIES,
     ConceptKey,
     FinancialMetric,
     MetricConceptPolicy,
+)
+from .derived import (
+    ANNUAL_DERIVATION_POLICIES,
+    MetricDerivationPolicy,
+    applicable_derivation_policy,
+    derive_annual_metric,
+)
+from .models import (
+    AmbiguityReason,
+    AmbiguousHistoricalMetric,
+    EvidenceSourceKind,
+    FactEvidence,
+    HistoricalFilingResult,
+    HistoricalMetricResult,
+    HistoricalPeriod,
+    MissingHistoricalMetric,
+    MissingReason,
+    NormalizedHistoricalFinancials,
+    NormalizedHistoricalValue,
 )
 
 
@@ -30,109 +41,28 @@ class NormalizationError(Exception):
     """Raised when normalization input or configuration is structurally invalid."""
 
 
-class MissingReason(str, Enum):
-    """Expected reasons a selected filing has no normalized metric value."""
-
-    NO_CONFIGURED_CONCEPT_OBSERVATION = "no_configured_concept_observation"
-    NO_VALID_CURRENT_ANNUAL_OBSERVATION = "no_valid_current_annual_observation"
-
-
-class AmbiguityReason(str, Enum):
-    """Reasons available observations cannot produce one annual value."""
-
-    CONFLICTING_CONCEPT_VALUES = "conflicting_concept_values"
-    MULTIPLE_ANNUAL_PERIODS = "multiple_annual_periods"
-
-
-@dataclass(frozen=True)
-class HistoricalPeriod:
-    """The actual economic duration represented by a normalized value."""
-
-    start: date
-    end: date
-
-
-@dataclass(frozen=True)
-class FactEvidence:
-    """Compact SEC provenance for one candidate financial fact."""
-
-    taxonomy: str
-    concept: str
-    value: int | float
-    unit: str
-    start: date | None
-    end: date
-    accession_number: str
-    observation_form: str
-    observation_filed: date
-    fiscal_year: int | None
-    fiscal_period: str | None
-    frame: str | None
-
-
-@dataclass(frozen=True)
-class NormalizedHistoricalValue:
-    """One resolved standardized annual financial value."""
-
-    metric: FinancialMetric
-    value: int | float
-    unit: str
-    period: HistoricalPeriod
-    chosen_source: FactEvidence
-    confirming_sources: tuple[FactEvidence, ...]
-
-
-@dataclass(frozen=True)
-class MissingHistoricalMetric:
-    """A metric that has no usable observation in one selected filing."""
-
-    metric: FinancialMetric
-    reason: MissingReason
-    examined_concepts: tuple[ConceptKey, ...]
-
-
-@dataclass(frozen=True)
-class AmbiguousHistoricalMetric:
-    """A metric with competing observations that cannot be resolved safely."""
-
-    metric: FinancialMetric
-    reason: AmbiguityReason
-    candidates: tuple[FactEvidence, ...]
-
-
-HistoricalMetricResult: TypeAlias = (
-    NormalizedHistoricalValue | MissingHistoricalMetric | AmbiguousHistoricalMetric
-)
-
-
-@dataclass(frozen=True)
-class HistoricalFilingResult:
-    """Normalized metric results for one selected annual filing."""
-
-    filing: SECFiling
-    metrics: tuple[HistoricalMetricResult, ...]
-
-
-@dataclass(frozen=True)
-class NormalizedHistoricalFinancials:
-    """Compact annual financial history with company and SEC provenance."""
-
-    company: SECCompanyIdentity
-    company_facts_source_url: str
-    company_facts_retrieved_at: datetime
-    annual: tuple[HistoricalFilingResult, ...]
-
-
 def normalize_annual_financials(
     selected_facts: SelectedFactObservations,
     policies: tuple[MetricConceptPolicy, ...] = ANNUAL_METRIC_POLICIES,
+    derivation_policies: tuple[
+        MetricDerivationPolicy, ...
+    ] = ANNUAL_DERIVATION_POLICIES,
 ) -> NormalizedHistoricalFinancials:
     """Normalize configured metrics across selected annual filing buckets."""
     _validate_policies(policies)
     annual = tuple(
         HistoricalFilingResult(
             filing=bucket.filing,
-            metrics=tuple(_resolve_metric(bucket, policy) for policy in policies),
+            metrics=tuple(
+                _resolve_with_derivation(
+                    bucket,
+                    policy,
+                    selected_facts.company.cik,
+                    selected_facts.source_url,
+                    derivation_policies,
+                )
+                for policy in policies
+            ),
         )
         for bucket in selected_facts.annual
     )
@@ -144,9 +74,30 @@ def normalize_annual_financials(
     )
 
 
+def _resolve_with_derivation(
+    bucket: FilingFactObservations,
+    policy: MetricConceptPolicy,
+    company_cik: int,
+    source_url: str,
+    derivation_policies: tuple[MetricDerivationPolicy, ...],
+) -> HistoricalMetricResult:
+    direct = _resolve_metric(bucket, policy, source_url)
+    if not isinstance(direct, MissingHistoricalMetric):
+        return direct
+    derivation_policy = applicable_derivation_policy(
+        policy.metric,
+        company_cik,
+        derivation_policies,
+    )
+    if derivation_policy is None:
+        return direct
+    return derive_annual_metric(bucket, derivation_policy, source_url)
+
+
 def _resolve_metric(
     bucket: FilingFactObservations,
     policy: MetricConceptPolicy,
+    source_url: str,
 ) -> HistoricalMetricResult:
     filing = bucket.filing
     if filing.form != "10-K":
@@ -203,6 +154,7 @@ def _resolve_metric(
             policy.metric,
             AmbiguityReason.MULTIPLE_ANNUAL_PERIODS,
             usd_candidates,
+            source_url,
         )
 
     start, end = next(iter(periods))
@@ -250,6 +202,7 @@ def _resolve_metric(
             policy.metric,
             AmbiguityReason.CONFLICTING_CONCEPT_VALUES,
             (chosen, *confirming, *conflicting),
+            source_url,
         )
 
     observation = chosen.observation
@@ -258,8 +211,10 @@ def _resolve_metric(
         value=chosen_value,
         unit=observation.unit,
         period=HistoricalPeriod(start=start, end=end),
-        chosen_source=_fact_evidence(chosen),
-        confirming_sources=tuple(_fact_evidence(item) for item in confirming),
+        chosen_source=_fact_evidence(chosen, source_url),
+        confirming_sources=tuple(
+            _fact_evidence(item, source_url) for item in confirming
+        ),
     )
 
 
@@ -284,19 +239,27 @@ def _ambiguous(
     metric: FinancialMetric,
     reason: AmbiguityReason,
     candidates: tuple[SelectedFactObservation, ...],
+    source_url: str,
 ) -> AmbiguousHistoricalMetric:
     return AmbiguousHistoricalMetric(
         metric=metric,
         reason=reason,
-        candidates=tuple(_fact_evidence(selected) for selected in candidates),
+        candidates=tuple(
+            _fact_evidence(selected, source_url) for selected in candidates
+        ),
     )
 
 
-def _fact_evidence(selected: SelectedFactObservation) -> FactEvidence:
+def _fact_evidence(
+    selected: SelectedFactObservation,
+    source_url: str,
+) -> FactEvidence:
     observation = selected.observation
     if not _is_numeric(observation.value):
         raise NormalizationError("Financial fact evidence value is not numeric")
     return FactEvidence(
+        source_kind=EvidenceSourceKind.COMPANY_FACTS,
+        source_url=source_url,
         taxonomy=selected.taxonomy,
         concept=selected.concept,
         value=observation.value,

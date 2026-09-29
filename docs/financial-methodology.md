@@ -25,7 +25,7 @@ The standardized historical schema should eventually include:
 
 Exact XBRL concept mappings will be documented as the SEC normalization pipeline is developed and validated.
 
-### Initial Annual Direct Normalization
+### Initial Annual Normalization
 
 The initial normalization scope covers direct annual Revenue, Operating Income,
 Depreciation and Amortization (D&A), and Capex values from selected exact 10-K
@@ -71,12 +71,15 @@ initial FCFF methodology intentionally uses the SEC fact's gross cash PP&E
 purchases and does not adjust it to reproduce the net presentation.
 
 The Revenue, Operating Income, and Capex policies were validated against five
-annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A was
-validated for all five selected periods of META, AAPL, and COST, producing
-15/25 direct coverage across the same corpus. MSFT requires separate derived
-component arithmetic that is not implemented, and GOOGL remains financially
-unresolved. These are initial evidence-based policies, not a claim of universal
-issuer coverage.
+annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A covers all
+five selected periods of META, AAPL, and COST. For Microsoft CIK `789019` only,
+an evidence-backed derived policy adds same-period Company Facts observations
+for `us-gaap:Depreciation` and
+`us-gaap:AmortizationOfIntangibleAssets`. Direct D&A takes precedence, and a
+direct ambiguity is not replaced by derivation. Together, direct and approved-
+derived D&A provide 20/25 evidence-backed periods across the corpus. GOOGL
+remains financially unresolved. These are initial evidence-based policies, not
+a claim of universal issuer coverage.
 `us-gaap:SalesRevenueNet` and issuer extensions are intentionally excluded
 pending selected-filing evidence.
 
@@ -114,11 +117,12 @@ Missing values must not be silently invented.
 ### D&A Research Status
 
 Direct `DepreciationDepletionAndAmortization` normalization covers the selected
-META, AAPL, and COST periods, but not GOOGL or MSFT. A Revenue-style fallback is
-financially inappropriate because depreciation and amortization may be
-components rather than substitutes. MSFT has evidence supporting a future
-derived methodology, which is not implemented in the direct normalization
-layer. GOOGL remains unresolved because some periods combine impairment with
+META, AAPL, and COST periods. A Revenue-style fallback remains financially
+inappropriate because depreciation and amortization may be components rather
+than substitutes. MSFT's approved derived values preserve both reported
+components and their addition in provenance; the policy is restricted to CIK
+`789019` rather than generalized to every issuer exposing those concepts.
+GOOGL remains unresolved because some periods combine impairment with
 depreciation or amortization and later periods do not establish complete
 amortization coverage. Filing-level XBRL remains an explicit research source
 and is not automatically connected to normalization.

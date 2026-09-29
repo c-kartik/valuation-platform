@@ -2,8 +2,8 @@
 
 ## Current Milestone
 
-Phase 1F.3b.3 is complete for direct annual D&A normalization. Derived D&A and
-GOOGL's unresolved D&A evidence remain future work.
+Phase 1F.3b.5 is complete for direct and approved-derived annual D&A.
+GOOGL's D&A evidence remains unresolved.
 
 ## Completed
 
@@ -100,13 +100,22 @@ GOOGL's unresolved D&A evidence remain future work.
 - Validated direct D&A for all five selected META, AAPL, and COST periods:
   15/25 direct coverage across the five-company corpus, with GOOGL and MSFT
   returning typed missing results as intended
+- Added provenance-distinct derived historical values with ordered operands,
+  source identity, and an explicit addition operation
+- Added a Company Facts derivation policy scoped to Microsoft CIK `789019` for
+  `Depreciation` plus `AmortizationOfIntangibleAssets`
+- Preserved direct-first precedence and direct ambiguity while keeping derived
+  coverage gaps typed rather than exceptional
+- Validated all five selected MSFT periods as derived D&A, producing 20/25
+  evidence-backed D&A periods across META, GOOGL, MSFT, AAPL, and COST; GOOGL
+  remains unresolved
 
 ## Next Step
 
-Design and implement derived annual D&A for evidence-supported cases such as
-MSFT while preserving every operand and operation in provenance. GOOGL remains
-unresolved. Interim normalization, derived quarters, other standardized metrics,
-and automatic filing-level fallback behavior are not implemented.
+Continue historical financial normalization while preserving direct/derived
+provenance and explicit coverage gaps. GOOGL D&A remains unresolved. Interim
+normalization, derived quarters, other standardized metrics, and automatic
+filing-level fallback behavior are not implemented.
 
 ## Current Repository Structure
 
@@ -126,7 +135,9 @@ valuation-platform/
 │       ├── normalization/
 │       │   ├── __init__.py
 │       │   ├── concepts.py
-│       │   └── historical.py
+│       │   ├── derived.py
+│       │   ├── historical.py
+│       │   └── models.py
 │       └── sec/
 │           ├── __init__.py
 │           ├── client.py

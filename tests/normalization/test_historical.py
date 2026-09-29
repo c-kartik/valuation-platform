@@ -6,6 +6,9 @@ import weakref
 from valuation_platform.normalization import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
+    DerivationOperation,
+    DerivedHistoricalValue,
+    EvidenceSourceKind,
     FinancialMetric,
     HistoricalPeriod,
     MissingHistoricalMetric,
@@ -80,11 +83,12 @@ def make_input(
     *observations: SelectedFactObservation,
     filing: SECFiling | None = None,
     additional_filings: tuple[FilingFactObservations, ...] = (),
+    company_cik: int = 1,
 ) -> SelectedFactObservations:
     company = SECCompanyIdentity(
         ticker="TEST",
-        cik=1,
-        cik_padded="0000000001",
+        cik=company_cik,
+        cik_padded=f"{company_cik:010d}",
         company_name="Test Company",
         source_url="ticker-source",
         retrieved_at=RETRIEVED_AT,
@@ -123,6 +127,11 @@ class AnnualHistoricalNormalizationTests(TestCase):
         self.assertEqual(result.period.start, date(2025, 1, 1))
         self.assertEqual(result.period.end, date(2025, 12, 31))
         self.assertEqual(result.chosen_source.concept, RFC)
+        self.assertIs(
+            result.chosen_source.source_kind,
+            EvidenceSourceKind.COMPANY_FACTS,
+        )
+        self.assertEqual(result.chosen_source.source_url, "facts-source")
         self.assertEqual(result.chosen_source.accession_number, "annual")
         self.assertEqual(result.chosen_source.observation_form, "10-K")
         self.assertEqual(result.chosen_source.fiscal_year, 2025)
@@ -305,6 +314,212 @@ class AnnualHistoricalNormalizationTests(TestCase):
                 self.assertIsInstance(result, NormalizedHistoricalValue)
                 assert isinstance(result, NormalizedHistoricalValue)
                 self.assertEqual(result.period, HistoricalPeriod(start, end))
+
+    def test_msft_d_and_a_derives_from_approved_components(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected("Depreciation", value=22_000_000_000),
+                make_selected(
+                    "AmortizationOfIntangibleAssets",
+                    value=6_000_000_000,
+                ),
+                company_cik=789019,
+            ),
+            FinancialMetric.D_AND_A,
+        )
+
+        self.assertIsInstance(result, DerivedHistoricalValue)
+        assert isinstance(result, DerivedHistoricalValue)
+        self.assertEqual(result.value, 28_000_000_000)
+        self.assertEqual(result.unit, "USD")
+        self.assertEqual(
+            result.period,
+            HistoricalPeriod(date(2025, 1, 1), date(2025, 12, 31)),
+        )
+        self.assertEqual(result.policy_id, "msft_annual_d_and_a_v1")
+        self.assertIs(result.operation, DerivationOperation.ADD)
+        self.assertEqual(
+            tuple(operand.concept for operand in result.operands),
+            ("Depreciation", "AmortizationOfIntangibleAssets"),
+        )
+        self.assertTrue(
+            all(
+                operand.source_kind is EvidenceSourceKind.COMPANY_FACTS
+                and operand.source_url == "facts-source"
+                and operand.accession_number == "annual"
+                for operand in result.operands
+            )
+        )
+
+    def test_msft_derivation_requires_complete_valid_operands(self) -> None:
+        cases = (
+            (make_selected("Depreciation", value=10),),
+            (
+                make_selected("Depreciation", value=10),
+                make_selected("AmortizationOfIntangibleAssets", unit="EUR"),
+            ),
+            (
+                make_selected("Depreciation", value=10),
+                make_selected("AmortizationOfIntangibleAssets", value=True),
+            ),
+            (
+                make_selected("Depreciation", value=10),
+                make_selected("AmortizationOfIntangibleAssets", value="2"),
+            ),
+        )
+
+        for observations in cases:
+            with self.subTest(observations=observations):
+                result = metric_result(
+                    make_input(*observations, company_cik=789019),
+                    FinancialMetric.D_AND_A,
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(
+                    result.reason,
+                    MissingReason.NO_VALID_DERIVATION_OPERANDS,
+                )
+
+    def test_msft_derivation_preserves_ambiguous_operand_candidates(self) -> None:
+        depreciation_candidates = (
+            make_selected(
+                "Depreciation",
+                value=22,
+                start=date(2025, 1, 1),
+            ),
+            make_selected(
+                "Depreciation",
+                value=21,
+                start=date(2025, 2, 1),
+            ),
+        )
+        amortization = make_selected("AmortizationOfIntangibleAssets", value=6)
+
+        for ordered_candidates in (
+            depreciation_candidates,
+            tuple(reversed(depreciation_candidates)),
+        ):
+            with self.subTest(ordered_candidates=ordered_candidates):
+                result = metric_result(
+                    make_input(
+                        *ordered_candidates,
+                        amortization,
+                        company_cik=789019,
+                    ),
+                    FinancialMetric.D_AND_A,
+                )
+
+                self.assertIsInstance(result, AmbiguousHistoricalMetric)
+                assert isinstance(result, AmbiguousHistoricalMetric)
+                self.assertIs(
+                    result.reason,
+                    AmbiguityReason.INCOMPATIBLE_DERIVATION_OPERANDS,
+                )
+                self.assertEqual(
+                    {
+                        (candidate.concept, candidate.value, candidate.start)
+                        for candidate in result.candidates
+                    },
+                    {
+                        ("Depreciation", 22, date(2025, 1, 1)),
+                        ("Depreciation", 21, date(2025, 2, 1)),
+                    },
+                )
+
+    def test_msft_derivation_rejects_mismatched_economic_periods(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected("Depreciation", value=10),
+                make_selected(
+                    "AmortizationOfIntangibleAssets",
+                    value=2,
+                    start=date(2025, 2, 1),
+                ),
+                company_cik=789019,
+            ),
+            FinancialMetric.D_AND_A,
+        )
+
+        self.assertIsInstance(result, AmbiguousHistoricalMetric)
+        assert isinstance(result, AmbiguousHistoricalMetric)
+        self.assertIs(
+            result.reason,
+            AmbiguityReason.INCOMPATIBLE_DERIVATION_OPERANDS,
+        )
+        self.assertEqual(len(result.candidates), 2)
+
+    def test_direct_d_and_a_takes_precedence_for_msft_cik(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(D_AND_A, value=30),
+                make_selected("Depreciation", value=22),
+                make_selected("AmortizationOfIntangibleAssets", value=6),
+                company_cik=789019,
+            ),
+            FinancialMetric.D_AND_A,
+        )
+
+        self.assertIsInstance(result, NormalizedHistoricalValue)
+        assert isinstance(result, NormalizedHistoricalValue)
+        self.assertEqual(result.value, 30)
+        self.assertEqual(result.chosen_source.concept, D_AND_A)
+
+    def test_validated_issuer_ciks_keep_direct_d_and_a_behavior(self) -> None:
+        cases = (
+            (1326801, 18_616_000_000),
+            (320193, 11_698_000_000),
+            (909832, 2_426_000_000),
+        )
+
+        for cik, value in cases:
+            with self.subTest(cik=cik):
+                result = metric_result(
+                    make_input(
+                        make_selected(D_AND_A, value=value),
+                        company_cik=cik,
+                    ),
+                    FinancialMetric.D_AND_A,
+                )
+                self.assertIsInstance(result, NormalizedHistoricalValue)
+                assert isinstance(result, NormalizedHistoricalValue)
+                self.assertEqual(result.value, value)
+                self.assertEqual(result.chosen_source.concept, D_AND_A)
+
+    def test_direct_d_and_a_ambiguity_is_not_overridden(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(D_AND_A, value=30),
+                make_selected(D_AND_A, value=29, start=date(2025, 2, 1)),
+                make_selected("Depreciation", value=22),
+                make_selected("AmortizationOfIntangibleAssets", value=6),
+                company_cik=789019,
+            ),
+            FinancialMetric.D_AND_A,
+        )
+
+        self.assertIsInstance(result, AmbiguousHistoricalMetric)
+        assert isinstance(result, AmbiguousHistoricalMetric)
+        self.assertIs(result.reason, AmbiguityReason.MULTIPLE_ANNUAL_PERIODS)
+
+    def test_d_and_a_derivation_is_scoped_to_msft_cik(self) -> None:
+        components = (
+            make_selected("Depreciation", value=22),
+            make_selected("AmortizationOfIntangibleAssets", value=6),
+        )
+
+        for cik in (1, 1652044):
+            with self.subTest(cik=cik):
+                result = metric_result(
+                    make_input(*components, company_cik=cik),
+                    FinancialMetric.D_AND_A,
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(
+                    result.reason,
+                    MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+                )
 
     def test_capex_resolves_as_positive_magnitude_with_provenance(self) -> None:
         result = metric_result(

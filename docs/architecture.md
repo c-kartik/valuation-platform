@@ -107,18 +107,25 @@ structural fact selection:
 
 - `normalization.concepts` defines stable financial metric identities and
   ordered, metric-specific SEC concept candidates.
-- `normalization.historical` resolves selected annual observations into typed
-  normalized, missing, or ambiguous results. It performs no network access and
-  does not retain the complete Company Facts or selected-observation graph.
+- `normalization.models` defines immutable direct, derived, missing, and
+  ambiguous results with compact operand-level SEC provenance.
+- `normalization.historical` resolves direct observations first and orchestrates
+  an approved derivation only when the direct result is missing.
+- `normalization.derived` validates evidence-backed, CIK-scoped derivation
+  policies and their operands. It performs no network access.
 
 Annual normalization currently supports direct Revenue, Operating Income, D&A,
 and Capex values. A candidate must be a numeric, exact-USD, current duration
 ending on the selected 10-K report date. Actual observation start and end dates
 define the economic period, including non-calendar and 52/53-week fiscal years.
-D&A and Capex use the same generic direct-resolution path. D&A component
-aggregation remains a separate future derived concern; filing-level XBRL is not
-automatically connected to normalization. Capex remains a positive expenditure
-magnitude for later subtraction in FCFF.
+D&A and Capex use the same generic direct-resolution path. A direct D&A result
+takes precedence. When direct D&A is missing, an approved policy may produce a
+provenance-distinct derived value; direct ambiguity is never replaced by a
+derivation. The initial derived policy applies only to Microsoft CIK `789019`
+and adds same-period Company Facts observations for `Depreciation` and
+`AmortizationOfIntangibleAssets`. Filing-level XBRL is not automatically
+connected to normalization. Capex remains a positive expenditure magnitude for
+later subtraction in FCFF.
 
 Concept priority applies only after period validation. Equal lower-priority
 facts for the same unit and period remain as confirming provenance. Conflicting
@@ -126,6 +133,12 @@ values and multiple valid USD periods return explicit ambiguity results.
 Structurally valid non-USD observations are unsupported and do not participate
 in period, priority, confirmation, or conflict resolution. Expected coverage
 gaps return explicit missing results.
+
+Derived values preserve the operation and every ordered operand, including its
+source kind, source URL, taxonomy, concept, value, unit, period, and selected
+accession. The initial derived layer supports addition only. It does not provide
+a general expression engine, issuer-extension arithmetic, impairment or lease
+adjustments, or interim derivation.
 
 The normalization package does not infer interim period semantics, derive
 quarters, aggregate financial concepts, or calculate valuation inputs. Those
