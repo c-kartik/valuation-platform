@@ -21,7 +21,7 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.3b.5 complete — direct and approved-derived annual D&A**
+**Phase 1F.4a complete — direct annual Pretax Income and Income Tax Expense**
 
 Next milestone: **continue historical financial normalization**
 
@@ -50,12 +50,14 @@ XBRL instance for one selected filing. A pure fact selector associates Company
 Facts observations with selected filing
 accessions and classifies structural period relationships without choosing
 authoritative financial concepts or inferring YTD/discrete semantics. The first
-normalization slice resolves annual Revenue, Operating Income, D&A, and Capex
-with explicit missing and ambiguity results while preserving SEC provenance.
+normalization slice resolves annual Revenue, Operating Income, Pretax Income,
+Income Tax Expense, D&A, and Capex with explicit missing and ambiguity results
+while preserving SEC provenance.
 D&A is direct for the validated META, AAPL, and COST periods and derived from an
 evidence-backed, CIK-scoped Company Facts policy for MSFT. GOOGL remains
 unresolved. Interim periods and the remaining standardized financial metrics
-are not normalized yet.
+are not normalized yet. Historical tax expense is a reported accounting fact;
+the forecast operating tax rate remains a separate manual assumption.
 
 ```python
 from valuation_platform.sec import (

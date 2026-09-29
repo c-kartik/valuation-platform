@@ -2,8 +2,9 @@
 
 ## Current Milestone
 
-Phase 1F.3b.5 is complete for direct and approved-derived annual D&A.
-GOOGL's D&A evidence remains unresolved.
+Phase 1F.4a is complete for direct annual Pretax Income and Income Tax Expense.
+Reported effective tax rate, operating tax-rate assumptions, and NOPAT remain
+future work.
 
 ## Completed
 
@@ -109,13 +110,23 @@ GOOGL's D&A evidence remains unresolved.
 - Validated all five selected MSFT periods as derived D&A, producing 20/25
   evidence-backed D&A periods across META, GOOGL, MSFT, AAPL, and COST; GOOGL
   remains unresolved
+- Added direct annual Pretax Income normalization using only
+  `IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest`
+- Added direct annual Income Tax Expense normalization using only
+  `IncomeTaxExpenseBenefit`, preserving reported expense and benefit signs
+- Ordered normalized metrics as Revenue, Operating Income, Pretax Income,
+  Income Tax Expense, D&A, and Capex
+- Validated both tax-related metrics across five selected annual periods for
+  META, GOOGL, MSFT, AAPL, and COST: 25/25 resolved for each, with no missing or
+  ambiguous results and exact selected-filing face-statement agreement
 
 ## Next Step
 
 Continue historical financial normalization while preserving direct/derived
-provenance and explicit coverage gaps. GOOGL D&A remains unresolved. Interim
-normalization, derived quarters, other standardized metrics, and automatic
-filing-level fallback behavior are not implemented.
+provenance and explicit coverage gaps. Reported ETR, cash taxes,
+current/deferred tax derivation, NOPAT, and the manually entered forecast
+operating tax-rate assumption are not implemented. GOOGL D&A remains
+unresolved, and interim normalization is still outside the current scope.
 
 ## Current Repository Structure
 

@@ -31,6 +31,11 @@ RETRIEVED_AT = datetime(2026, 1, 1, tzinfo=timezone.utc)
 RFC = "RevenueFromContractWithCustomerExcludingAssessedTax"
 REVENUES = "Revenues"
 OPERATING_INCOME = "OperatingIncomeLoss"
+PRETAX_INCOME = (
+    "IncomeLossFromContinuingOperationsBeforeIncomeTaxes"
+    "ExtraordinaryItemsNoncontrollingInterest"
+)
+INCOME_TAX_EXPENSE = "IncomeTaxExpenseBenefit"
 D_AND_A = "DepreciationDepletionAndAmortization"
 CAPEX = "PaymentsToAcquirePropertyPlantAndEquipment"
 
@@ -213,6 +218,117 @@ class AnnualHistoricalNormalizationTests(TestCase):
         assert isinstance(result, NormalizedHistoricalValue)
         self.assertEqual(result.value, 40)
         self.assertEqual(result.chosen_source.concept, OPERATING_INCOME)
+
+    def test_pretax_income_resolves_with_selected_filing_provenance(self) -> None:
+        result = metric_result(
+            make_input(make_selected(PRETAX_INCOME, value=85_932_000_000)),
+            FinancialMetric.PRETAX_INCOME,
+        )
+
+        self.assertIsInstance(result, NormalizedHistoricalValue)
+        assert isinstance(result, NormalizedHistoricalValue)
+        self.assertEqual(result.value, 85_932_000_000)
+        self.assertEqual(result.unit, "USD")
+        self.assertEqual(result.period, HistoricalPeriod(date(2025, 1, 1), date(2025, 12, 31)))
+        self.assertEqual(result.chosen_source.taxonomy, "us-gaap")
+        self.assertEqual(result.chosen_source.concept, PRETAX_INCOME)
+        self.assertEqual(result.chosen_source.accession_number, "annual")
+        self.assertEqual(result.chosen_source.source_url, "facts-source")
+        self.assertIs(result.chosen_source.source_kind, EvidenceSourceKind.COMPANY_FACTS)
+
+    def test_pretax_income_preserves_zero_and_negative_values(self) -> None:
+        for value in (0, -100):
+            with self.subTest(value=value):
+                result = metric_result(
+                    make_input(make_selected(PRETAX_INCOME, value=value)),
+                    FinancialMetric.PRETAX_INCOME,
+                )
+                self.assertIsInstance(result, NormalizedHistoricalValue)
+                assert isinstance(result, NormalizedHistoricalValue)
+                self.assertEqual(result.value, value)
+
+    def test_unapproved_pretax_income_concept_is_not_a_fallback(self) -> None:
+        result = metric_result(
+            make_input(make_selected("IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments")),
+            FinancialMetric.PRETAX_INCOME,
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(result.reason, MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION)
+
+    def test_invalid_pretax_income_observations_are_missing(self) -> None:
+        cases = (
+            make_selected(PRETAX_INCOME, relationship=ObservationRelationship.COMPARATIVE, end=date(2024, 12, 31)),
+            make_selected(PRETAX_INCOME, start=None),
+            make_selected(PRETAX_INCOME, unit="EUR"),
+            make_selected(PRETAX_INCOME, value="100"),
+            make_selected(PRETAX_INCOME, value=True),
+        )
+        for observation in cases:
+            with self.subTest(observation=observation):
+                result = metric_result(make_input(observation), FinancialMetric.PRETAX_INCOME)
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(result.reason, MissingReason.NO_VALID_CURRENT_ANNUAL_OBSERVATION)
+
+    def test_income_tax_expense_preserves_expense_zero_and_benefit_signs(self) -> None:
+        for value in (25_474_000_000, 0, -5_021_000_000):
+            with self.subTest(value=value):
+                result = metric_result(
+                    make_input(make_selected(INCOME_TAX_EXPENSE, value=value)),
+                    FinancialMetric.INCOME_TAX_EXPENSE,
+                )
+                self.assertIsInstance(result, NormalizedHistoricalValue)
+                assert isinstance(result, NormalizedHistoricalValue)
+                self.assertEqual(result.value, value)
+                self.assertEqual(result.chosen_source.concept, INCOME_TAX_EXPENSE)
+                self.assertEqual(result.chosen_source.accession_number, "annual")
+
+    def test_unapproved_income_tax_concept_is_not_a_fallback(self) -> None:
+        result = metric_result(
+            make_input(make_selected("IncomeTaxExpenseBenefitContinuingOperations")),
+            FinancialMetric.INCOME_TAX_EXPENSE,
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(result.reason, MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION)
+
+    def test_invalid_income_tax_expense_observations_are_missing(self) -> None:
+        cases = (
+            make_selected(INCOME_TAX_EXPENSE, relationship=ObservationRelationship.COMPARATIVE, end=date(2024, 12, 31)),
+            make_selected(INCOME_TAX_EXPENSE, start=None),
+            make_selected(INCOME_TAX_EXPENSE, unit="EUR"),
+            make_selected(INCOME_TAX_EXPENSE, value="100"),
+            make_selected(INCOME_TAX_EXPENSE, value=True),
+        )
+        for observation in cases:
+            with self.subTest(observation=observation):
+                result = metric_result(make_input(observation), FinancialMetric.INCOME_TAX_EXPENSE)
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(result.reason, MissingReason.NO_VALID_CURRENT_ANNUAL_OBSERVATION)
+
+    def test_tax_metrics_preserve_non_calendar_and_week_based_periods(self) -> None:
+        periods = (
+            (date(2024, 7, 1), date(2025, 6, 30)),
+            (date(2024, 9, 29), date(2025, 9, 27)),
+            (date(2022, 8, 29), date(2023, 9, 3)),
+        )
+        for concept, metric in (
+            (PRETAX_INCOME, FinancialMetric.PRETAX_INCOME),
+            (INCOME_TAX_EXPENSE, FinancialMetric.INCOME_TAX_EXPENSE),
+        ):
+            for start, end in periods:
+                with self.subTest(metric=metric, start=start, end=end):
+                    result = metric_result(
+                        make_input(make_selected(concept, start=start, end=end), filing=make_filing(report_date=end)),
+                        metric,
+                    )
+                    self.assertIsInstance(result, NormalizedHistoricalValue)
+                    assert isinstance(result, NormalizedHistoricalValue)
+                    self.assertEqual(result.period, HistoricalPeriod(start, end))
 
     def test_direct_d_and_a_resolves_with_exact_provenance(self) -> None:
         result = metric_result(
@@ -720,9 +836,11 @@ class AnnualHistoricalNormalizationTests(TestCase):
             )
         )
 
-        revenue, operating_income, d_and_a, capex = output.annual[0].metrics
+        revenue, operating_income, pretax, tax, d_and_a, capex = output.annual[0].metrics
         self.assertIsInstance(revenue, NormalizedHistoricalValue)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
+        self.assertIsInstance(pretax, MissingHistoricalMetric)
+        self.assertIsInstance(tax, MissingHistoricalMetric)
         self.assertIsInstance(d_and_a, MissingHistoricalMetric)
         self.assertIsInstance(capex, MissingHistoricalMetric)
 
@@ -735,9 +853,11 @@ class AnnualHistoricalNormalizationTests(TestCase):
             )
         )
 
-        revenue, operating_income, d_and_a, capex = output.annual[0].metrics
+        revenue, operating_income, pretax, tax, d_and_a, capex = output.annual[0].metrics
         self.assertIsInstance(revenue, NormalizedHistoricalValue)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
+        self.assertIsInstance(pretax, MissingHistoricalMetric)
+        self.assertIsInstance(tax, MissingHistoricalMetric)
         self.assertIsInstance(d_and_a, MissingHistoricalMetric)
         self.assertIsInstance(capex, NormalizedHistoricalValue)
 
@@ -746,9 +866,36 @@ class AnnualHistoricalNormalizationTests(TestCase):
             make_input(make_selected(OPERATING_INCOME, value=40))
         )
 
-        revenue, operating_income, _, _ = output.annual[0].metrics
+        revenue, operating_income, _, _, _, _ = output.annual[0].metrics
         self.assertIsInstance(revenue, MissingHistoricalMetric)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
+
+    def test_missing_tax_metrics_do_not_prevent_other_metrics(self) -> None:
+        output = normalize_annual_financials(
+            make_input(
+                make_selected(RFC, value=100),
+                make_selected(OPERATING_INCOME, value=40),
+                make_selected(D_AND_A, value=10),
+                make_selected(CAPEX, value=20),
+            )
+        )
+        by_metric = {result.metric: result for result in output.annual[0].metrics}
+        self.assertIsInstance(by_metric[FinancialMetric.PRETAX_INCOME], MissingHistoricalMetric)
+        self.assertIsInstance(by_metric[FinancialMetric.INCOME_TAX_EXPENSE], MissingHistoricalMetric)
+        for metric in (FinancialMetric.REVENUE, FinancialMetric.OPERATING_INCOME, FinancialMetric.D_AND_A, FinancialMetric.CAPEX):
+            self.assertIsInstance(by_metric[metric], NormalizedHistoricalValue)
+
+    def test_each_missing_tax_metric_does_not_prevent_the_other(self) -> None:
+        cases = (
+            (PRETAX_INCOME, FinancialMetric.PRETAX_INCOME, FinancialMetric.INCOME_TAX_EXPENSE),
+            (INCOME_TAX_EXPENSE, FinancialMetric.INCOME_TAX_EXPENSE, FinancialMetric.PRETAX_INCOME),
+        )
+        for concept, present, missing in cases:
+            with self.subTest(present=present):
+                output = normalize_annual_financials(make_input(make_selected(concept, value=10)))
+                by_metric = {result.metric: result for result in output.annual[0].metrics}
+                self.assertIsInstance(by_metric[present], NormalizedHistoricalValue)
+                self.assertIsInstance(by_metric[missing], MissingHistoricalMetric)
 
     def test_metric_and_filing_order_is_deterministic(self) -> None:
         first = make_filing("first", date(2024, 12, 31))
@@ -781,6 +928,8 @@ class AnnualHistoricalNormalizationTests(TestCase):
             (
                 FinancialMetric.REVENUE,
                 FinancialMetric.OPERATING_INCOME,
+                FinancialMetric.PRETAX_INCOME,
+                FinancialMetric.INCOME_TAX_EXPENSE,
                 FinancialMetric.D_AND_A,
                 FinancialMetric.CAPEX,
             ),

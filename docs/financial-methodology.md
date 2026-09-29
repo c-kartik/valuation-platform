@@ -28,8 +28,9 @@ Exact XBRL concept mappings will be documented as the SEC normalization pipeline
 ### Initial Annual Normalization
 
 The initial normalization scope covers direct annual Revenue, Operating Income,
-Depreciation and Amortization (D&A), and Capex values from selected exact 10-K
-filings. It does not cover interim normalization or derived quarters.
+Pretax Income, Income Tax Expense, Depreciation and Amortization (D&A), and
+Capex values from selected exact 10-K filings. It does not cover interim
+normalization or derived quarters.
 
 Revenue uses this ordered candidate policy:
 
@@ -39,6 +40,22 @@ Revenue uses this ordered candidate policy:
 Operating Income currently uses:
 
 1. `us-gaap:OperatingIncomeLoss`
+
+Pretax Income is the reported continuing-operations income before income taxes
+and uses exactly:
+
+1. `us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest`
+
+Income Tax Expense is the reported GAAP provision or benefit and uses exactly:
+
+1. `us-gaap:IncomeTaxExpenseBenefit`
+
+Both are historical accounting facts. The SEC-reported sign is preserved, so a
+tax benefit may be negative. Neither metric is the FCFF operating tax rate.
+Reported effective tax rate, cash taxes, and current/deferred tax components
+remain outside this normalization milestone. The eventual forecast operating
+tax rate remains a manually entered analytical assumption informed by, but not
+mechanically equal to, historical reported tax evidence.
 
 For FCFF, D&A means recurring depreciation of operating PP&E plus amortization
 of finite-lived intangible assets. Direct annual D&A uses exactly:
@@ -82,6 +99,12 @@ remains financially unresolved. These are initial evidence-based policies, not
 a claim of universal issuer coverage.
 `us-gaap:SalesRevenueNet` and issuer extensions are intentionally excluded
 pending selected-filing evidence.
+
+The Pretax Income and Income Tax Expense policies were also validated for five
+selected annual periods each across META, GOOGL, MSFT, AAPL, and COST. All 50
+values resolved directly and reproduced the selected filings' consolidated
+income-statement amounts. This evidence supports the initial policies but is
+not a claim of universal issuer coverage.
 
 An annual candidate must be a numeric, exact-USD, current duration whose end
 date equals the selected 10-K report date. The SEC observation's actual start

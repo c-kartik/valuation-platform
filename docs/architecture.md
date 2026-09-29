@@ -114,10 +114,13 @@ structural fact selection:
 - `normalization.derived` validates evidence-backed, CIK-scoped derivation
   policies and their operands. It performs no network access.
 
-Annual normalization currently supports direct Revenue, Operating Income, D&A,
-and Capex values. A candidate must be a numeric, exact-USD, current duration
-ending on the selected 10-K report date. Actual observation start and end dates
-define the economic period, including non-calendar and 52/53-week fiscal years.
+Annual normalization currently supports direct Revenue, Operating Income,
+Pretax Income, Income Tax Expense, D&A, and Capex values. Results use the
+deterministic order Revenue, Operating Income, Pretax Income, Income Tax
+Expense, D&A, then Capex. A candidate must be a numeric, exact-USD, current
+duration ending on the selected 10-K report date. Actual observation start and
+end dates define the economic period, including non-calendar and 52/53-week
+fiscal years.
 D&A and Capex use the same generic direct-resolution path. A direct D&A result
 takes precedence. When direct D&A is missing, an approved policy may produce a
 provenance-distinct derived value; direct ambiguity is never replaced by a
@@ -141,5 +144,6 @@ a general expression engine, issuer-extension arithmetic, impairment or lease
 adjustments, or interim derivation.
 
 The normalization package does not infer interim period semantics, derive
-quarters, aggregate financial concepts, or calculate valuation inputs. Those
-remain separate later responsibilities.
+quarters, aggregate financial concepts, calculate reported effective tax
+rates, determine forecast operating tax assumptions, or calculate valuation
+inputs. Those remain separate later responsibilities.
