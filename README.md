@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.4b complete — derived annual Reported Effective Tax Rate**
+**Phase 1F.5a complete — annual instant balance-sheet normalization foundation**
 
-Next milestone: **continue historical financial normalization**
+Next milestone: **classify the remaining Operating NWC components**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -59,6 +59,11 @@ unresolved. Interim periods and the remaining standardized financial metrics
 are not normalized yet. Reported ETR is a historical accounting diagnostic
 derived from the normalized monetary facts; the forecast operating tax rate
 remains a separate manual assumption.
+The separate annual balance-sheet path currently normalizes operating
+receivables, inventory, trade accounts payable, and customer contract
+liabilities from current instant Company Facts observations. Missing balances
+remain distinct from zero. Broad other-current-asset and liability accounts,
+Operating NWC, and change in Operating NWC remain unresolved.
 
 ```python
 from valuation_platform.sec import (
@@ -68,7 +73,10 @@ from valuation_platform.sec import (
     resolve_ticker,
     select_fact_observations,
 )
-from valuation_platform.normalization import normalize_annual_financials
+from valuation_platform.normalization import (
+    normalize_annual_balance_sheets,
+    normalize_annual_financials,
+)
 
 client = SECClient("Valuation Platform your-email@example.com")
 identity = resolve_ticker("META", client)
@@ -76,6 +84,7 @@ selected = load_and_select_filings(client, identity, annual_limit=5)
 company_facts = fetch_company_facts(client, identity)
 selected_facts = select_fact_observations(selected, company_facts)
 annual_financials = normalize_annual_financials(selected_facts)
+annual_balance_sheets = normalize_annual_balance_sheets(selected_facts)
 ```
 
 Run the deterministic unit tests with:

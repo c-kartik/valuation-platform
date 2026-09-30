@@ -22,6 +22,9 @@ class MissingReason(str, Enum):
     NO_VALID_DERIVATION_OPERANDS = "no_valid_derivation_operands"
     MISSING_DERIVATION_OPERAND = "missing_derivation_operand"
     ZERO_DERIVATION_DENOMINATOR = "zero_derivation_denominator"
+    NO_VALID_CURRENT_INSTANT_OBSERVATION = (
+        "no_valid_current_instant_observation"
+    )
 
 
 class AmbiguityReason(str, Enum):
@@ -162,3 +165,38 @@ class NormalizedHistoricalFinancials:
     company_facts_source_url: str
     company_facts_retrieved_at: datetime
     annual: tuple[HistoricalFilingResult, ...]
+
+
+@dataclass(frozen=True)
+class NormalizedBalanceSheetValue:
+    """One resolved direct annual balance-sheet snapshot."""
+
+    metric: FinancialMetric
+    value: int | float
+    unit: str
+    balance_date: date
+    chosen_source: FactEvidence
+    confirming_sources: tuple[FactEvidence, ...]
+
+
+BalanceSheetMetricResult: TypeAlias = (
+    NormalizedBalanceSheetValue | MissingHistoricalMetric | AmbiguousHistoricalMetric
+)
+
+
+@dataclass(frozen=True)
+class AnnualBalanceSheetFilingResult:
+    """Normalized primitive balances for one selected annual filing."""
+
+    filing: SECFiling
+    metrics: tuple[BalanceSheetMetricResult, ...]
+
+
+@dataclass(frozen=True)
+class NormalizedAnnualBalanceSheets:
+    """Compact annual balance-sheet snapshots with SEC provenance."""
+
+    company: SECCompanyIdentity
+    company_facts_source_url: str
+    company_facts_retrieved_at: datetime
+    annual: tuple[AnnualBalanceSheetFilingResult, ...]

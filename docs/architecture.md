@@ -111,6 +111,9 @@ structural fact selection:
   ambiguous results with compact operand-level SEC provenance.
 - `normalization.historical` resolves direct observations first and orchestrates
   an approved derivation only when the direct result is missing.
+- `normalization.balance_sheet` separately resolves annual instant Company Facts
+  into primitive balance-sheet snapshots; it performs no retrieval or derived
+  Operating NWC calculation.
 - `normalization.derived` validates evidence-backed, CIK-scoped derivation
   policies and their operands. It performs no network access.
 
@@ -158,3 +161,22 @@ The normalization package does not infer interim period semantics, derive
 quarters, aggregate financial concepts, determine forecast operating tax
 assumptions, or calculate valuation inputs. Those remain separate later
 responsibilities.
+
+Annual balance-sheet normalization requires an exact selected 10-K accession,
+a current instant observation with no start date, an end equal to the filing
+report date, exact USD, and a numeric non-Boolean value. It preserves the actual
+balance date and compact Company Facts provenance. Zero is valid; absence stays
+typed missing. Conflicting eligible observations stay ambiguous.
+
+The initial deterministic order is Operating Receivables, Inventory, Trade
+Accounts Payable, then Customer Contract Liabilities. Evidence-backed
+issuer-scoped alternatives support COST `ReceivablesNetCurrent`, META
+`AccountsPayableTradeCurrent`, and COST `DeferredRevenueCurrent`. Concept
+priority never suppresses a second eligible approved concept; equal values are
+not confirmation unless a policy explicitly permits it. Filing-level XBRL
+remains explicit and is not automatically connected.
+
+Operating NWC and its change are not implemented. Research supports an eventual
+component-derived result rather than a Current Assets minus Current Liabilities
+shortcut. Broad other-current-asset and liability balances remain excluded
+pending classification because they mix operating and non-operating items.

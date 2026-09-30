@@ -146,6 +146,35 @@ rather than being selected silently. Non-USD observations are unsupported in
 this slice and do not participate when a valid USD candidate exists; if no
 valid USD candidate exists, the metric is missing.
 
+## Annual Balance-Sheet Primitives
+
+Balance-sheet primitives are point-in-time snapshots and use a separate instant
+normalization path. A candidate must belong to the selected 10-K accession, be
+current and instant with no start date, end on the selected report date, use
+exact USD, and contain a numeric non-Boolean value. Actual balance dates are
+preserved. Zero is a reported balance; an absent fact remains missing.
+
+The initial policies are:
+
+- Operating Receivables: `AccountsReceivableNetCurrent`, with
+  `ReceivablesNetCurrent` approved only for COST CIK `909832`.
+- Inventory: `InventoryNet` only.
+- Trade Accounts Payable: `AccountsPayableCurrent`, with
+  `AccountsPayableTradeCurrent` approved only for META CIK `1326801`.
+- Customer Contract Liabilities: `ContractWithCustomerLiabilityCurrent`, with
+  `DeferredRevenueCurrent` approved only for COST CIK `909832`.
+
+`AccountsNotesAndLoansReceivableNetCurrent`, AAPL vendor non-trade receivables,
+and broad other-current-asset or liability concepts are not approved fallbacks.
+The policies do not infer economically absent balances as zero and do not claim
+universal issuer coverage.
+
+Operating NWC will eventually be derived from classified operating components.
+Neither Operating NWC nor its year-over-year change is implemented. Cash,
+investments, debt, taxes, leases, and mixed residual balances remain outside
+this milestone, and the Current Assets minus Current Liabilities shortcut is
+not used.
+
 ## Source vs. Derived Values
 
 Values obtained directly from SEC filings should remain distinguishable from values calculated by the platform.

@@ -2,8 +2,8 @@
 
 ## Current Milestone
 
-Phase 1F.4b is complete for derived annual Reported Effective Tax Rate.
-Operating tax-rate assumptions and NOPAT remain future work.
+Phase 1F.5a is complete for the annual instant balance-sheet normalization
+foundation. Operating NWC and change in Operating NWC remain future work.
 
 ## Completed
 
@@ -126,14 +126,28 @@ Operating tax-rate assumptions and NOPAT remain future work.
   arbitrary near-zero threshold
 - Validated Reported ETR for all 25 selected periods with agreement to SEC's
   structured disclosed rate after normal presentation rounding
+- Added a separate annual instant balance-sheet normalization path with typed
+  resolved, missing, and ambiguous results and compact Company Facts provenance
+- Added primitive policies for Operating Receivables, Inventory, Trade Accounts
+  Payable, and Customer Contract Liabilities, including only the evidence-backed
+  CIK-scoped COST and META alternatives
+- Validated 25 selected annual periods across META, GOOGL, MSFT, AAPL, and COST:
+  Operating Receivables 25/25, Inventory 17/25, Trade Accounts Payable 25/25,
+  and Customer Contract Liabilities 24/25, with nine explicit missing results
+  and no ambiguity
+- Preserved META inventory as missing in all five periods, GOOGL inventory as
+  missing for 2023-2025, and META 2025 customer liabilities as missing rather
+  than substituting unsupported concepts or zero
+- Kept filing-level XBRL explicit/on demand and left broad current residuals,
+  Operating NWC, and change in Operating NWC unimplemented
 
 ## Next Step
 
-Continue historical financial normalization while preserving direct/derived
-provenance and explicit coverage gaps. Cash taxes, current/deferred tax
-derivation, NOPAT, and the manually entered forecast operating tax-rate
-assumption are not implemented. GOOGL D&A remains unresolved, and interim
-normalization is still outside the current scope.
+Classify the remaining operating current-asset and liability components before
+deriving Operating NWC. Broad residual accounts, tax and lease balances, the
+opening snapshot needed for a five-period change series, and change in Operating
+NWC remain unresolved. GOOGL D&A, NOPAT, interim normalization, and valuation
+also remain outside the current scope.
 
 ## Current Repository Structure
 
@@ -152,6 +166,7 @@ valuation-platform/
 │       ├── __init__.py
 │       ├── normalization/
 │       │   ├── __init__.py
+│       │   ├── balance_sheet.py
 │       │   ├── concepts.py
 │       │   ├── derived.py
 │       │   ├── historical.py
@@ -170,6 +185,7 @@ valuation-platform/
 │   ├── test_validate_company_facts.py
 │   ├── normalization/
 │   │   ├── __init__.py
+│   │   ├── test_balance_sheet.py
 │   │   └── test_historical.py
 │   └── sec/
 │       ├── __init__.py

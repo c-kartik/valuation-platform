@@ -20,6 +20,10 @@ class FinancialMetric(str, Enum):
     REPORTED_EFFECTIVE_TAX_RATE = "reported_effective_tax_rate"
     D_AND_A = "depreciation_and_amortization"
     CAPEX = "capex"
+    OPERATING_RECEIVABLES = "operating_receivables"
+    INVENTORY = "inventory"
+    TRADE_ACCOUNTS_PAYABLE = "trade_accounts_payable"
+    CUSTOMER_CONTRACT_LIABILITIES = "customer_contract_liabilities"
 
 
 @dataclass(frozen=True)
