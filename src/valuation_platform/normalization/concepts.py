@@ -21,9 +21,12 @@ class FinancialMetric(str, Enum):
     D_AND_A = "depreciation_and_amortization"
     CAPEX = "capex"
     OPERATING_RECEIVABLES = "operating_receivables"
+    VENDOR_NONTRADE_RECEIVABLES = "vendor_nontrade_receivables"
     INVENTORY = "inventory"
     TRADE_ACCOUNTS_PAYABLE = "trade_accounts_payable"
     CUSTOMER_CONTRACT_LIABILITIES = "customer_contract_liabilities"
+    EMPLOYEE_RELATED_LIABILITIES = "employee_related_liabilities"
+    MEMBER_REWARDS_LIABILITY = "member_rewards_liability"
 
 
 @dataclass(frozen=True)

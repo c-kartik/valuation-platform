@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.5a complete — annual instant balance-sheet normalization foundation**
+**Phase 1F.5c complete — additional annual Operating NWC primitives**
 
-Next milestone: **classify the remaining Operating NWC components**
+Next milestone: **research remaining filing-XBRL Operating NWC components**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -60,10 +60,12 @@ are not normalized yet. Reported ETR is a historical accounting diagnostic
 derived from the normalized monetary facts; the forecast operating tax rate
 remains a separate manual assumption.
 The separate annual balance-sheet path currently normalizes operating
-receivables, inventory, trade accounts payable, and customer contract
-liabilities from current instant Company Facts observations. Missing balances
-remain distinct from zero. Broad other-current-asset and liability accounts,
-Operating NWC, and change in Operating NWC remain unresolved.
+receivables, Apple vendor non-trade receivables, inventory, trade accounts
+payable, customer contract liabilities, employee-related liabilities for four
+validated issuers, and Costco member rewards from current instant Company Facts
+observations. Missing balances remain distinct from zero. Broad other-current-
+asset and liability accounts, Operating NWC, and change in Operating NWC remain
+unresolved.
 
 ```python
 from valuation_platform.sec import (

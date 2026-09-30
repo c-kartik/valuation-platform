@@ -29,6 +29,9 @@ RECEIVABLES = "AccountsReceivableNetCurrent"
 INVENTORY = "InventoryNet"
 PAYABLES = "AccountsPayableCurrent"
 CONTRACT_LIABILITIES = "ContractWithCustomerLiabilityCurrent"
+VENDOR_RECEIVABLES = "NontradeReceivablesCurrent"
+EMPLOYEE_LIABILITIES = "EmployeeRelatedLiabilitiesCurrent"
+MEMBER_REWARDS = "AccruedLiabilitiesCurrent"
 
 
 def make_filing(
@@ -287,6 +290,146 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
         self.assertEqual(cost_result.chosen_source.concept, "DeferredRevenueCurrent")
         self.assertIsInstance(other_result, MissingHistoricalMetric)
 
+    def test_apple_vendor_nontrade_receivables_are_cik_scoped(self) -> None:
+        apple_result = metric_result(
+            make_input(
+                make_selected(VENDOR_RECEIVABLES, value=33_180),
+                company_cik=320193,
+            ),
+            FinancialMetric.VENDOR_NONTRADE_RECEIVABLES,
+        )
+        other_result = metric_result(
+            make_input(make_selected(VENDOR_RECEIVABLES, value=33_180)),
+            FinancialMetric.VENDOR_NONTRADE_RECEIVABLES,
+        )
+
+        self.assertIsInstance(apple_result, NormalizedBalanceSheetValue)
+        assert isinstance(apple_result, NormalizedBalanceSheetValue)
+        self.assertEqual(apple_result.value, 33_180)
+        self.assertEqual(apple_result.chosen_source.concept, VENDOR_RECEIVABLES)
+        self.assertIsInstance(other_result, MissingHistoricalMetric)
+
+    def test_employee_related_liabilities_are_supported_for_approved_ciks(self) -> None:
+        for cik in (1326801, 1652044, 789019, 909832):
+            with self.subTest(cik=cik):
+                result = metric_result(
+                    make_input(
+                        make_selected(EMPLOYEE_LIABILITIES, value=7_151),
+                        company_cik=cik,
+                    ),
+                    FinancialMetric.EMPLOYEE_RELATED_LIABILITIES,
+                )
+                self.assertIsInstance(result, NormalizedBalanceSheetValue)
+                assert isinstance(result, NormalizedBalanceSheetValue)
+                self.assertEqual(result.chosen_source.concept, EMPLOYEE_LIABILITIES)
+
+    def test_apple_employee_related_liabilities_remain_missing(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(EMPLOYEE_LIABILITIES, value=7_151),
+                company_cik=320193,
+            ),
+            FinancialMetric.EMPLOYEE_RELATED_LIABILITIES,
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(
+            result.reason,
+            MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+        )
+
+    def test_cost_member_rewards_are_cik_scoped(self) -> None:
+        cost_result = metric_result(
+            make_input(
+                make_selected(MEMBER_REWARDS, value=2_677),
+                company_cik=909832,
+            ),
+            FinancialMetric.MEMBER_REWARDS_LIABILITY,
+        )
+        other_result = metric_result(
+            make_input(make_selected(MEMBER_REWARDS, value=2_677)),
+            FinancialMetric.MEMBER_REWARDS_LIABILITY,
+        )
+
+        self.assertIsInstance(cost_result, NormalizedBalanceSheetValue)
+        assert isinstance(cost_result, NormalizedBalanceSheetValue)
+        self.assertEqual(cost_result.value, 2_677)
+        self.assertEqual(cost_result.chosen_source.concept, MEMBER_REWARDS)
+        self.assertIsInstance(other_result, MissingHistoricalMetric)
+
+    def test_new_primitive_values_preserve_zero_negative_and_balance_date(self) -> None:
+        report_date = date(2023, 9, 3)
+        for value in (0, -10):
+            with self.subTest(value=value):
+                result = metric_result(
+                    make_input(
+                        make_selected(
+                            MEMBER_REWARDS,
+                            value=value,
+                            end=report_date,
+                        ),
+                        company_cik=909832,
+                        filing=make_filing(report_date=report_date),
+                    ),
+                    FinancialMetric.MEMBER_REWARDS_LIABILITY,
+                )
+                self.assertIsInstance(result, NormalizedBalanceSheetValue)
+                assert isinstance(result, NormalizedBalanceSheetValue)
+                self.assertEqual(result.value, value)
+                self.assertEqual(result.balance_date, report_date)
+
+    def test_new_primitive_structural_failures_are_ineligible(self) -> None:
+        cases = (
+            make_selected(
+                EMPLOYEE_LIABILITIES,
+                relationship=ObservationRelationship.COMPARATIVE,
+            ),
+            make_selected(EMPLOYEE_LIABILITIES, start=date(2025, 1, 1)),
+            make_selected(EMPLOYEE_LIABILITIES, end=date(2025, 12, 30)),
+            make_selected(EMPLOYEE_LIABILITIES, unit="EUR"),
+            make_selected(EMPLOYEE_LIABILITIES, value="100"),
+            make_selected(EMPLOYEE_LIABILITIES, value=True),
+        )
+        for observation in cases:
+            with self.subTest(observation=observation):
+                result = metric_result(
+                    make_input(observation, company_cik=1326801),
+                    FinancialMetric.EMPLOYEE_RELATED_LIABILITIES,
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(
+                    result.reason,
+                    MissingReason.NO_VALID_CURRENT_INSTANT_OBSERVATION,
+                )
+
+    def test_new_primitive_requires_selected_accession(self) -> None:
+        with self.assertRaisesRegex(
+            BalanceSheetNormalizationError,
+            "does not match filing accession",
+        ):
+            normalize_annual_balance_sheets(
+                make_input(
+                    make_selected(EMPLOYEE_LIABILITIES, accession="other"),
+                    company_cik=1326801,
+                )
+            )
+
+    def test_multiple_member_rewards_observations_are_ambiguous(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(MEMBER_REWARDS, value=10),
+                make_selected(MEMBER_REWARDS, value=11),
+                company_cik=909832,
+            ),
+            FinancialMetric.MEMBER_REWARDS_LIABILITY,
+        )
+
+        self.assertIsInstance(result, AmbiguousHistoricalMetric)
+        assert isinstance(result, AmbiguousHistoricalMetric)
+        self.assertEqual(tuple(item.value for item in result.candidates), (10, 11))
+
     def test_priority_does_not_hide_overlapping_approved_concepts(self) -> None:
         for values in ((10, 11), (10, 10)):
             with self.subTest(values=values):
@@ -329,9 +472,12 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
             tuple(result.metric for result in output.annual[0].metrics),
             (
                 FinancialMetric.OPERATING_RECEIVABLES,
+                FinancialMetric.VENDOR_NONTRADE_RECEIVABLES,
                 FinancialMetric.INVENTORY,
                 FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
                 FinancialMetric.CUSTOMER_CONTRACT_LIABILITIES,
+                FinancialMetric.EMPLOYEE_RELATED_LIABILITIES,
+                FinancialMetric.MEMBER_REWARDS_LIABILITY,
             ),
         )
         by_metric = {item.metric: item for item in output.annual[0].metrics}

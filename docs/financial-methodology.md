@@ -158,16 +158,34 @@ The initial policies are:
 
 - Operating Receivables: `AccountsReceivableNetCurrent`, with
   `ReceivablesNetCurrent` approved only for COST CIK `909832`.
+- Vendor Non-Trade Receivables:
+  `NontradeReceivablesCurrent`, approved only for Apple CIK `320193`.
 - Inventory: `InventoryNet` only.
 - Trade Accounts Payable: `AccountsPayableCurrent`, with
   `AccountsPayableTradeCurrent` approved only for META CIK `1326801`.
 - Customer Contract Liabilities: `ContractWithCustomerLiabilityCurrent`, with
   `DeferredRevenueCurrent` approved only for COST CIK `909832`.
+- Employee-Related Liabilities: `EmployeeRelatedLiabilitiesCurrent`, approved
+  for META CIK `1326801`, GOOGL CIK `1652044`, MSFT CIK `789019`, and COST CIK
+  `909832`. Apple remains missing rather than using a broad accrual caption.
+- Member Rewards Liability: `AccruedLiabilitiesCurrent`, approved only for COST
+  CIK `909832`, where selected filing evidence identifies the caption as member
+  rewards. The generic concept is not treated as member rewards for other
+  issuers.
 
-`AccountsNotesAndLoansReceivableNetCurrent`, AAPL vendor non-trade receivables,
-and broad other-current-asset or liability concepts are not approved fallbacks.
-The policies do not infer economically absent balances as zero and do not claim
-universal issuer coverage.
+`AccountsNotesAndLoansReceivableNetCurrent` and broad other-current-asset or
+liability concepts are not approved fallbacks. The policies do not infer
+economically absent balances as zero and do not claim universal issuer coverage.
+
+Across the 25-period corpus, live validation resolved Vendor Non-Trade
+Receivables 5/25 overall, covering all 5/5 applicable Apple periods with 20
+non-applicable periods typed missing. Employee-Related Liabilities resolved
+20/25 overall, covering all 20/20 applicable META, GOOGL, MSFT, and COST periods
+with five Apple periods typed missing. Member Rewards Liability resolved 5/25
+overall, covering all 5/5 applicable Costco periods with 20 non-applicable
+periods typed missing. No result was ambiguous. GOOGL accrued revenue share and
+Apple accrued distribution and marketing remain future filing-XBRL research
+candidates.
 
 Operating NWC will eventually be derived from classified operating components.
 Neither Operating NWC nor its year-over-year change is implemented. Cash,

@@ -168,15 +168,20 @@ report date, exact USD, and a numeric non-Boolean value. It preserves the actual
 balance date and compact Company Facts provenance. Zero is valid; absence stays
 typed missing. Conflicting eligible observations stay ambiguous.
 
-The initial deterministic order is Operating Receivables, Inventory, Trade
-Accounts Payable, then Customer Contract Liabilities. Evidence-backed
-issuer-scoped alternatives support COST `ReceivablesNetCurrent`, META
-`AccountsPayableTradeCurrent`, and COST `DeferredRevenueCurrent`. Concept
-priority never suppresses a second eligible approved concept; equal values are
-not confirmation unless a policy explicitly permits it. Filing-level XBRL
-remains explicit and is not automatically connected.
+The deterministic order is Operating Receivables, Vendor Non-Trade
+Receivables, Inventory, Trade Accounts Payable, Customer Contract Liabilities,
+Employee-Related Liabilities, then Member Rewards Liability. Evidence-backed
+issuer-scoped policies support COST `ReceivablesNetCurrent`, META
+`AccountsPayableTradeCurrent`, COST `DeferredRevenueCurrent`, Apple
+`NontradeReceivablesCurrent`, employee liabilities for META, GOOGL, MSFT, and
+COST, and COST `AccruedLiabilitiesCurrent` specifically as member rewards.
+Concept priority never suppresses a second eligible approved concept; equal
+values are not confirmation unless a policy explicitly permits it. Filing-level
+XBRL remains explicit and is not automatically connected.
 
 Operating NWC and its change are not implemented. Research supports an eventual
 component-derived result rather than a Current Assets minus Current Liabilities
 shortcut. Broad other-current-asset and liability balances remain excluded
 pending classification because they mix operating and non-operating items.
+GOOGL accrued revenue share and Apple accrued distribution and marketing remain
+future filing-XBRL research candidates.

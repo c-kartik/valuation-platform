@@ -29,6 +29,9 @@ from .models import (
 
 
 _META_CIK = 1326801
+_GOOGL_CIK = 1652044
+_MSFT_CIK = 789019
+_AAPL_CIK = 320193
 _COST_CIK = 909832
 
 
@@ -114,6 +117,16 @@ OPERATING_RECEIVABLES_POLICY = BalanceSheetMetricPolicy(
     ),
 )
 
+VENDOR_NONTRADE_RECEIVABLES_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.VENDOR_NONTRADE_RECEIVABLES,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "NontradeReceivablesCurrent"),
+            applicable_ciks=(_AAPL_CIK,),
+        ),
+    ),
+)
+
 INVENTORY_POLICY = BalanceSheetMetricPolicy(
     metric=FinancialMetric.INVENTORY,
     candidates=(
@@ -147,11 +160,34 @@ CUSTOMER_CONTRACT_LIABILITIES_POLICY = BalanceSheetMetricPolicy(
     ),
 )
 
+EMPLOYEE_RELATED_LIABILITIES_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.EMPLOYEE_RELATED_LIABILITIES,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "EmployeeRelatedLiabilitiesCurrent"),
+            applicable_ciks=(_META_CIK, _GOOGL_CIK, _MSFT_CIK, _COST_CIK),
+        ),
+    ),
+)
+
+MEMBER_REWARDS_LIABILITY_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.MEMBER_REWARDS_LIABILITY,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "AccruedLiabilitiesCurrent"),
+            applicable_ciks=(_COST_CIK,),
+        ),
+    ),
+)
+
 ANNUAL_BALANCE_SHEET_POLICIES: tuple[BalanceSheetMetricPolicy, ...] = (
     OPERATING_RECEIVABLES_POLICY,
+    VENDOR_NONTRADE_RECEIVABLES_POLICY,
     INVENTORY_POLICY,
     TRADE_ACCOUNTS_PAYABLE_POLICY,
     CUSTOMER_CONTRACT_LIABILITIES_POLICY,
+    EMPLOYEE_RELATED_LIABILITIES_POLICY,
+    MEMBER_REWARDS_LIABILITY_POLICY,
 )
 
 

@@ -2,8 +2,8 @@
 
 ## Current Milestone
 
-Phase 1F.5a is complete for the annual instant balance-sheet normalization
-foundation. Operating NWC and change in Operating NWC remain future work.
+Phase 1F.5c is complete for additional evidence-backed annual Operating NWC
+primitives. Operating NWC and change in Operating NWC remain future work.
 
 ## Completed
 
@@ -138,13 +138,25 @@ foundation. Operating NWC and change in Operating NWC remain future work.
 - Preserved META inventory as missing in all five periods, GOOGL inventory as
   missing for 2023-2025, and META 2025 customer liabilities as missing rather
   than substituting unsupported concepts or zero
+- Added Apple CIK-scoped Vendor Non-Trade Receivables from
+  `NontradeReceivablesCurrent` and validated 5/25 overall: all 5/5 applicable
+  Apple periods resolved and 20 non-applicable periods remained typed missing
+- Added `EmployeeRelatedLiabilitiesCurrent` only for META, GOOGL, MSFT, and
+  COST, validating 20/25 overall: all 20/20 applicable periods resolved and all
+  five Apple periods remained typed missing
+- Added Costco CIK-scoped Member Rewards Liability from
+  `AccruedLiabilitiesCurrent` and validated 5/25 overall: all 5/5 applicable
+  Costco periods resolved and 20 non-applicable periods remained typed missing,
+  without generalizing that broad concept to other issuers
+- No new primitive result was ambiguous
 - Kept filing-level XBRL explicit/on demand and left broad current residuals,
   Operating NWC, and change in Operating NWC unimplemented
 
 ## Next Step
 
-Classify the remaining operating current-asset and liability components before
-deriving Operating NWC. Broad residual accounts, tax and lease balances, the
+Research five-period filing-XBRL coverage for GOOGL accrued revenue share and
+Apple accrued distribution and marketing before completing the Operating NWC
+component methodology. Broad residual accounts, tax and lease balances, the
 opening snapshot needed for a five-period change series, and change in Operating
 NWC remain unresolved. GOOGL D&A, NOPAT, interim normalization, and valuation
 also remain outside the current scope.
