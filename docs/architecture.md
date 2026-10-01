@@ -120,6 +120,9 @@ structural fact selection:
   evidence for a future Operating NWC derivation. It performs no arithmetic.
 - `normalization.derived` validates evidence-backed, CIK-scoped derivation
   policies and their operands. It performs no network access.
+- `normalization.balance_sheet_derivation` resolves the narrowly approved META
+  trade-payables adjustment from already selected Company Facts and explicitly
+  supplied filing-XBRL evidence. It performs no retrieval or O-NWC arithmetic.
 
 Annual normalization currently supports direct Revenue, Operating Income,
 Pretax Income, Income Tax Expense, D&A, and Capex values, plus derived Reported
@@ -195,6 +198,21 @@ facts remain ambiguous even when only their context IDs differ.
 Concept priority never suppresses a second eligible approved concept; equal
 values are not confirmation unless a policy explicitly permits it. Filing-level
 XBRL remains explicit and targeted.
+
+META CIK `1326801` uses an explicit two-stage trade-payables derivation:
+combined PP&E payable minus separately accrued PP&E identifies PP&E included in
+trade AP; that amount is then subtracted from reported trade AP. Reported trade
+AP comes from Company Facts `AccountsPayableTradeCurrent`; separately accrued
+PP&E comes from filing-XBRL `PropertyAndEquipmentAccruedLiabilitiesCurrent`
+under the report-date-specific Facebook namespace. The combined Company Facts
+concept `CapitalExpendituresIncurredButNotYetPaid` is duration-shaped because it
+is presented as supplemental non-cash cash-flow information. It is accepted
+only as CIK-, concept-, selected-accession-, and full-fiscal-year-scoped
+derivation evidence. The filing bucket must expose exactly one distinct current
+FY duration ending on the selected report date; competing durations keep the
+operand unresolved rather than being ranked by frequency. The operand is never
+a direct instant balance-sheet value. Missing or ambiguous operands keep
+adjusted trade AP unresolved.
 
 Operating NWC and its change are not implemented. A separate completeness layer
 classifies required operating assets and liabilities, explicit exclusions,

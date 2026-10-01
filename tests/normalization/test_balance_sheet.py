@@ -9,9 +9,11 @@ from valuation_platform.normalization import (
     EvidenceSourceKind,
     FilingXBRLEvidence,
     FinancialMetric,
+    DerivedBalanceSheetValue,
     MissingHistoricalMetric,
     MissingReason,
     NormalizedBalanceSheetValue,
+    TRADE_ACCOUNTS_PAYABLE_POLICY,
     normalize_annual_balance_sheets,
 )
 from valuation_platform.sec.company_facts import SECFactObservation
@@ -44,7 +46,11 @@ EMPLOYEE_LIABILITIES = "EmployeeRelatedLiabilitiesCurrent"
 MEMBER_REWARDS = "AccruedLiabilitiesCurrent"
 ACCRUED_REVENUE_SHARE = "AccruedRevenueShare"
 ACCRUED_CUSTOMER_LIABILITIES = "AccruedCustomerLiabilitiesCurrent"
+ACCRUED_PP_AND_E = "PropertyAndEquipmentAccruedLiabilitiesCurrent"
+COMBINED_PP_AND_E = "CapitalExpendituresIncurredButNotYetPaid"
+META_TRADE_PAYABLES = "AccountsPayableTradeCurrent"
 GOOGLE_NAMESPACE = "http://www.google.com/20251231"
+META_NAMESPACE = "http://www.facebook.com/20251231"
 USD_NAMESPACE = "http://www.xbrl.org/2003/iso4217"
 
 
@@ -214,6 +220,350 @@ def make_prefixed_filing_xbrl(
 
 
 class AnnualBalanceSheetNormalizationTests(TestCase):
+    def test_meta_adjusted_trade_payables_preserve_two_stage_provenance(self) -> None:
+        selected = make_input(
+            make_selected("Revenues", value=1, start=date(2025, 1, 1)),
+            make_selected(META_TRADE_PAYABLES, value=8_894_000_000),
+            make_selected(COMBINED_PP_AND_E, value=9_331_000_000, start=date(2025, 1, 1)),
+            company_cik=1326801,
+        )
+        accrued = make_filing_xbrl_fact(
+            namespace=META_NAMESPACE,
+            concept=ACCRUED_PP_AND_E,
+            numeric_value=Decimal("4402000000"),
+            raw_value="4402000000",
+        )
+        result = metric_result(
+            selected,
+            FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+            filing_xbrl=(make_filing_xbrl(accrued, company_cik=1326801),),
+        )
+
+        self.assertIsInstance(result, DerivedBalanceSheetValue)
+        assert isinstance(result, DerivedBalanceSheetValue)
+        self.assertEqual(result.value, Decimal("3965000000"))
+        self.assertEqual(
+            tuple(operand.metric for operand in result.operands),
+            (
+                FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                FinancialMetric.PP_AND_E_PAYABLE_COMBINED,
+                FinancialMetric.ACCRUED_PP_AND_E_PURCHASES,
+            ),
+        )
+        self.assertEqual(
+            tuple(operand.value for operand in result.operands),
+            (8_894_000_000, 9_331_000_000, Decimal("4402000000")),
+        )
+        self.assertEqual(
+            tuple((operand.start, operand.end, operand.unit) for operand in result.operands),
+            (
+                (None, REPORT_DATE, "USD"),
+                (date(2025, 1, 1), REPORT_DATE, "USD"),
+                (None, REPORT_DATE, "USD"),
+            ),
+        )
+        self.assertIs(
+            result.operands[0].chosen_source.source_kind,
+            EvidenceSourceKind.COMPANY_FACTS,
+        )
+        self.assertIs(
+            result.operands[1].chosen_source.source_kind,
+            EvidenceSourceKind.COMPANY_FACTS,
+        )
+        self.assertIs(
+            result.operands[2].chosen_source.source_kind,
+            EvidenceSourceKind.FILING_XBRL,
+        )
+        reported_source = result.operands[0].chosen_source
+        combined_source = result.operands[1].chosen_source
+        accrued_source = result.operands[2].chosen_source
+        self.assertEqual(reported_source.source_url, "facts-source")
+        self.assertEqual(reported_source.taxonomy, "us-gaap")
+        self.assertEqual(reported_source.concept, META_TRADE_PAYABLES)
+        self.assertEqual(reported_source.accession_number, "annual")
+        self.assertEqual(reported_source.observation_form, "10-K")
+        self.assertEqual(reported_source.observation_filed, date(2026, 2, 1))
+        self.assertEqual(combined_source.source_url, "facts-source")
+        self.assertEqual(combined_source.taxonomy, "us-gaap")
+        self.assertEqual(result.operands[1].chosen_source.concept, COMBINED_PP_AND_E)
+        self.assertEqual(combined_source.accession_number, "annual")
+        self.assertEqual(combined_source.start, date(2025, 1, 1))
+        self.assertEqual(combined_source.end, REPORT_DATE)
+        self.assertEqual(accrued_source.source_url, "https://www.sec.gov/example_htm.xml")
+        self.assertEqual(accrued_source.namespace, META_NAMESPACE)
+        self.assertEqual(result.operands[2].chosen_source.concept, ACCRUED_PP_AND_E)
+        self.assertEqual(accrued_source.accession_number, "annual")
+        self.assertEqual(accrued_source.context_id, "current")
+        self.assertEqual(accrued_source.observation_form, "10-K")
+        self.assertEqual(accrued_source.observation_filed, date(2026, 2, 1))
+        self.assertEqual(accrued_source.filing_report_date, REPORT_DATE)
+        self.assertEqual(accrued_source.primary_document, "annual.htm")
+        self.assertEqual(accrued_source.retrieved_at, RETRIEVED_AT)
+        self.assertEqual(accrued_source.dimensions, ())
+        self.assertEqual(
+            tuple((step.name, step.value) for step in result.steps),
+            (
+                ("pp_and_e_in_trade_accounts_payable", Decimal("4929000000")),
+                ("adjusted_trade_accounts_payable", Decimal("3965000000")),
+            ),
+        )
+
+    def test_meta_unique_fiscal_year_period_allows_one_or_many_supporting_facts(
+        self,
+    ) -> None:
+        annual_start = date(2025, 1, 1)
+        for supporting in (
+            (make_selected("Revenues", start=annual_start),),
+            (
+                make_selected("Revenues", start=annual_start),
+                make_selected("OperatingIncomeLoss", start=annual_start),
+                make_selected("IncomeTaxExpenseBenefit", start=annual_start),
+            ),
+        ):
+            selected = make_input(
+                *supporting,
+                make_selected(META_TRADE_PAYABLES, value=100),
+                make_selected(COMBINED_PP_AND_E, value=50, start=annual_start),
+                company_cik=1326801,
+            )
+            accrued = make_filing_xbrl_fact(
+                namespace=META_NAMESPACE,
+                concept=ACCRUED_PP_AND_E,
+                numeric_value=Decimal("20"),
+                raw_value="20",
+            )
+
+            result = metric_result(
+                selected,
+                FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                filing_xbrl=(make_filing_xbrl(accrued, company_cik=1326801),),
+            )
+
+            self.assertIsInstance(result, DerivedBalanceSheetValue)
+            self.assertEqual(result.value, Decimal("70"))
+
+    def test_meta_partial_periods_cannot_outvote_full_fiscal_year(self) -> None:
+        annual_start = date(2025, 1, 1)
+        partial_start = date(2025, 7, 1)
+        selected = make_input(
+            make_selected("Revenues", start=annual_start),
+            make_selected("PartialOne", start=partial_start),
+            make_selected("PartialTwo", start=partial_start),
+            make_selected("PartialThree", start=partial_start),
+            make_selected(META_TRADE_PAYABLES, value=100),
+            make_selected(COMBINED_PP_AND_E, value=50, start=annual_start),
+            company_cik=1326801,
+        )
+        accrued = make_filing_xbrl_fact(
+            namespace=META_NAMESPACE,
+            concept=ACCRUED_PP_AND_E,
+            numeric_value=Decimal("20"),
+            raw_value="20",
+        )
+
+        result = metric_result(
+            selected,
+            FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+            filing_xbrl=(make_filing_xbrl(accrued, company_cik=1326801),),
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        self.assertEqual(result.reason, MissingReason.MISSING_DERIVATION_OPERAND)
+
+    def test_meta_competing_fiscal_year_periods_are_order_independent(self) -> None:
+        annual_start = date(2025, 1, 1)
+        partial_start = date(2025, 7, 1)
+        period_facts = (
+            make_selected("Revenues", start=annual_start),
+            make_selected("OperatingIncomeLoss", start=partial_start),
+        )
+        fixed = (
+            make_selected(META_TRADE_PAYABLES, value=100),
+            make_selected(COMBINED_PP_AND_E, value=50, start=annual_start),
+        )
+        accrued = make_filing_xbrl_fact(
+            namespace=META_NAMESPACE,
+            concept=ACCRUED_PP_AND_E,
+            numeric_value=Decimal("20"),
+            raw_value="20",
+        )
+        artifact = (make_filing_xbrl(accrued, company_cik=1326801),)
+
+        forward = metric_result(
+            make_input(*period_facts, *fixed, company_cik=1326801),
+            FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+            filing_xbrl=artifact,
+        )
+        reverse = metric_result(
+            make_input(*reversed(period_facts), *fixed, company_cik=1326801),
+            FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+            filing_xbrl=artifact,
+        )
+
+        self.assertIsInstance(forward, MissingHistoricalMetric)
+        self.assertEqual(forward, reverse)
+
+    def test_meta_derivation_requires_full_year_duration_and_all_operands(self) -> None:
+        base = (
+            make_selected("Revenues", value=1, start=date(2025, 1, 1)),
+            make_selected(META_TRADE_PAYABLES, value=100),
+        )
+        artifact = make_filing_xbrl(
+            make_filing_xbrl_fact(
+                namespace=META_NAMESPACE,
+                concept=ACCRUED_PP_AND_E,
+                numeric_value=Decimal("20"),
+                raw_value="20",
+            ),
+            company_cik=1326801,
+        )
+        cases = (
+            base,
+            (
+                *base,
+                make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1)),
+            ),
+            (
+                base[0],
+                make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1)),
+            ),
+            (*base, make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 7, 1))),
+            (*base, make_selected(COMBINED_PP_AND_E, value=True, start=date(2025, 1, 1))),
+            (*base, make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1), unit="EUR")),
+        )
+        artifacts = ((artifact,), (), (artifact,), (artifact,), (artifact,), (artifact,))
+        for observations, filing_xbrl in zip(cases, artifacts, strict=True):
+            result = metric_result(
+                make_input(*observations, company_cik=1326801),
+                FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                filing_xbrl=filing_xbrl,
+            )
+            self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_meta_derivation_preserves_operand_ambiguity_deterministically(self) -> None:
+        anchor = make_selected("Revenues", value=1, start=date(2025, 1, 1))
+        reported = make_selected(META_TRADE_PAYABLES, value=100)
+        combined = make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1))
+        accrued = make_filing_xbrl_fact(
+            namespace=META_NAMESPACE,
+            concept=ACCRUED_PP_AND_E,
+            numeric_value=Decimal("20"),
+            raw_value="20",
+            context_id="a",
+        )
+        cases = (
+            (
+                (anchor, reported, make_selected(META_TRADE_PAYABLES, value=101), combined),
+                (accrued,),
+            ),
+            (
+                (anchor, reported, combined, make_selected(COMBINED_PP_AND_E, value=51, start=date(2025, 1, 1))),
+                (accrued,),
+            ),
+            (
+                (anchor, reported, combined),
+                (
+                    accrued,
+                    make_filing_xbrl_fact(
+                        namespace=META_NAMESPACE,
+                        concept=ACCRUED_PP_AND_E,
+                        numeric_value=Decimal("21"),
+                        raw_value="21",
+                        context_id="b",
+                    ),
+                ),
+            ),
+        )
+        for observations, facts in cases:
+            forward = metric_result(
+                make_input(*observations, company_cik=1326801),
+                FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                filing_xbrl=(make_filing_xbrl(*facts, company_cik=1326801),),
+            )
+            reverse = metric_result(
+                make_input(*reversed(observations), company_cik=1326801),
+                FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                filing_xbrl=(make_filing_xbrl(*reversed(facts), company_cik=1326801),),
+            )
+            self.assertIsInstance(forward, AmbiguousHistoricalMetric)
+            self.assertEqual(forward, reverse)
+
+    def test_meta_derivation_is_cik_scoped_and_namespace_bound(self) -> None:
+        observations = (
+            make_selected("Revenues", value=1, start=date(2025, 1, 1)),
+            make_selected(META_TRADE_PAYABLES, value=100),
+            make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1)),
+        )
+        wrong_namespace = make_filing_xbrl_fact(
+            namespace="http://www.facebook.com/20241231",
+            concept=ACCRUED_PP_AND_E,
+        )
+        meta_result = metric_result(
+            make_input(*observations, company_cik=1326801),
+            FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+            filing_xbrl=(make_filing_xbrl(wrong_namespace, company_cik=1326801),),
+        )
+        other_result = metric_result(
+            make_input(*observations, company_cik=1652044),
+            FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+        )
+        self.assertIsInstance(meta_result, MissingHistoricalMetric)
+        self.assertNotIsInstance(other_result, DerivedBalanceSheetValue)
+
+    def test_meta_derivation_preserves_zero_and_negative_results(self) -> None:
+        cases = (
+            (100, 20, Decimal("20"), Decimal("100"), Decimal("0")),
+            (100, 10, Decimal("20"), Decimal("110"), Decimal("-10")),
+            (10, 100, Decimal("20"), Decimal("-70"), Decimal("80")),
+        )
+        for reported, combined, accrued, adjusted, intermediate in cases:
+            selected = make_input(
+                make_selected("Revenues", value=1, start=date(2025, 1, 1)),
+                make_selected(META_TRADE_PAYABLES, value=reported),
+                make_selected(COMBINED_PP_AND_E, value=combined, start=date(2025, 1, 1)),
+                company_cik=1326801,
+            )
+            fact = make_filing_xbrl_fact(
+                namespace=META_NAMESPACE,
+                concept=ACCRUED_PP_AND_E,
+                numeric_value=accrued,
+                raw_value=str(accrued),
+            )
+            result = metric_result(
+                selected,
+                FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                filing_xbrl=(make_filing_xbrl(fact, company_cik=1326801),),
+            )
+            self.assertIsInstance(result, DerivedBalanceSheetValue)
+            self.assertEqual(result.value, adjusted)
+            self.assertEqual(result.steps[0].value, intermediate)
+
+    def test_meta_accrued_pp_and_e_prefix_is_irrelevant(self) -> None:
+        selected = make_input(
+            make_selected("Revenues", value=1, start=date(2025, 1, 1)),
+            make_selected(META_TRADE_PAYABLES, value=100),
+            make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1)),
+            company_cik=1326801,
+        )
+        results = []
+        for prefix in ("meta", "arbitrary"):
+            content = f'''<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
+ xmlns:iso4217="{USD_NAMESPACE}" xmlns:{prefix}="{META_NAMESPACE}">
+<xbrli:context id="current"><xbrli:entity><xbrli:identifier scheme="http://www.sec.gov/CIK">1326801</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>2025-12-31</xbrli:instant></xbrli:period></xbrli:context>
+<xbrli:unit id="USD"><xbrli:measure>iso4217:USD</xbrli:measure></xbrli:unit>
+<{prefix}:{ACCRUED_PP_AND_E} contextRef="current" unitRef="USD" decimals="-6">20</{prefix}:{ACCRUED_PP_AND_E}>
+</xbrli:xbrl>'''.encode()
+            artifact = parse_filing_xbrl_instance(
+                content,
+                company=selected.company,
+                filing=selected.annual[0].filing,
+                source_url="https://www.sec.gov/meta.xml",
+                retrieved_at=RETRIEVED_AT,
+            )
+            results.append(metric_result(selected, FinancialMetric.TRADE_ACCOUNTS_PAYABLE, filing_xbrl=(artifact,)))
+        self.assertEqual(results[0], results[1])
+        self.assertIsInstance(results[0], DerivedBalanceSheetValue)
+
     def test_google_accrued_customer_liabilities_resolve_with_full_provenance(self) -> None:
         fact = make_filing_xbrl_fact(
             concept=ACCRUED_CUSTOMER_LIABILITIES,
@@ -822,13 +1172,14 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
                 self.assertEqual(result.confirming_sources, ())
 
     def test_meta_trade_payables_fallback_is_cik_scoped(self) -> None:
-        meta_result = metric_result(
+        meta_output = normalize_annual_balance_sheets(
             make_input(
                 make_selected("AccountsPayableTradeCurrent", value=8_894),
                 company_cik=1326801,
             ),
-            FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+            policies=(TRADE_ACCOUNTS_PAYABLE_POLICY,),
         )
+        meta_result = meta_output.annual[0].metrics[0]
         other_result = metric_result(
             make_input(make_selected("AccountsPayableTradeCurrent", value=8_894)),
             FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
@@ -1045,6 +1396,7 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
                 FinancialMetric.VENDOR_NONTRADE_RECEIVABLES,
                 FinancialMetric.INVENTORY,
                 FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                FinancialMetric.ACCRUED_PP_AND_E_PURCHASES,
                 FinancialMetric.CUSTOMER_CONTRACT_LIABILITIES,
                 FinancialMetric.EMPLOYEE_RELATED_LIABILITIES,
                 FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,

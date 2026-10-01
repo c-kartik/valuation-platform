@@ -11,6 +11,7 @@ from .concepts import FinancialMetric
 from .models import (
     AmbiguousHistoricalMetric,
     AnnualBalanceSheetFilingResult,
+    DerivedBalanceSheetValue,
     MissingHistoricalMetric,
     NormalizedAnnualBalanceSheets,
     NormalizedBalanceSheetValue,
@@ -167,7 +168,7 @@ class ResolvedOperatingNWCComponent:
     """One required component with a resolved normalized balance."""
 
     policy: OperatingNWCComponentPolicy
-    result: NormalizedBalanceSheetValue
+    result: NormalizedBalanceSheetValue | DerivedBalanceSheetValue
 
 
 @dataclass(frozen=True)
@@ -236,7 +237,7 @@ META_OPERATING_NWC_POLICY = OperatingNWCPolicy(
     components=(
         _component(OperatingNWCComponent.OPERATING_RECEIVABLES, _ASSET),
         _component(OperatingNWCComponent.VENDOR_NONTRADE_RECEIVABLES, _NOT_APPLICABLE),
-        _component(OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE, _UNRESOLVED),
+        _component(OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE, _LIABILITY),
         _component(OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES, _LIABILITY),
         _component(OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES, _LIABILITY),
         _component(
@@ -422,7 +423,7 @@ def evaluate_operating_nwc_completeness(
                 f"Annual balance-sheet result omits required configured metric "
                 f"{component.metric.value!r}"
             )
-        if isinstance(result, NormalizedBalanceSheetValue):
+        if isinstance(result, (NormalizedBalanceSheetValue, DerivedBalanceSheetValue)):
             resolved.append(ResolvedOperatingNWCComponent(component, result))
         elif isinstance(result, MissingHistoricalMetric):
             missing.append(MissingOperatingNWCComponent(component, result))

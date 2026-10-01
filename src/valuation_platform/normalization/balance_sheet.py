@@ -19,6 +19,11 @@ from valuation_platform.sec.filing_xbrl import FilingXBRLFact, SECFilingXBRL
 from valuation_platform.sec.submissions import SECFiling
 
 from .concepts import ConceptKey, FinancialMetric
+from .balance_sheet_derivation import (
+    META_ADJUSTED_TRADE_ACCOUNTS_PAYABLE_POLICY,
+    derive_meta_adjusted_trade_accounts_payable,
+    resolve_meta_combined_pp_and_e_payable,
+)
 from .models import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
@@ -47,6 +52,7 @@ class FilingXBRLNamespaceFamily(str, Enum):
     """Strict issuer namespace families approved for balance-sheet facts."""
 
     ALPHABET_GOOGLE = "alphabet_google"
+    META_FACEBOOK = "meta_facebook"
 
 
 @dataclass(frozen=True)
@@ -236,11 +242,27 @@ ACCRUED_CUSTOMER_LIABILITIES_POLICY = BalanceSheetMetricPolicy(
     ),
 )
 
+ACCRUED_PP_AND_E_PURCHASES_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.ACCRUED_PP_AND_E_PURCHASES,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey(
+                "meta-facebook",
+                "PropertyAndEquipmentAccruedLiabilitiesCurrent",
+            ),
+            applicable_ciks=(_META_CIK,),
+            source_kind=EvidenceSourceKind.FILING_XBRL,
+            filing_xbrl_namespace_family=FilingXBRLNamespaceFamily.META_FACEBOOK,
+        ),
+    ),
+)
+
 ANNUAL_BALANCE_SHEET_POLICIES: tuple[BalanceSheetMetricPolicy, ...] = (
     OPERATING_RECEIVABLES_POLICY,
     VENDOR_NONTRADE_RECEIVABLES_POLICY,
     INVENTORY_POLICY,
     TRADE_ACCOUNTS_PAYABLE_POLICY,
+    ACCRUED_PP_AND_E_PURCHASES_POLICY,
     CUSTOMER_CONTRACT_LIABILITIES_POLICY,
     EMPLOYEE_RELATED_LIABILITIES_POLICY,
     ACCRUED_REVENUE_SHARE_LIABILITY_POLICY,
@@ -264,18 +286,12 @@ def normalize_annual_balance_sheets(
         selected_facts.company.cik,
     )
     annual = tuple(
-        AnnualBalanceSheetFilingResult(
-            filing=bucket.filing,
-            metrics=tuple(
-                _resolve_metric(
-                    bucket,
-                    policy,
-                    selected_facts.company.cik,
-                    selected_facts.source_url,
-                    filing_xbrl_by_accession.get(bucket.filing.accession_number),
-                )
-                for policy in policies
-            ),
+        _normalize_filing(
+            bucket,
+            policies,
+            selected_facts.company.cik,
+            selected_facts.source_url,
+            filing_xbrl_by_accession.get(bucket.filing.accession_number),
         )
         for bucket in selected_facts.annual
     )
@@ -284,6 +300,54 @@ def normalize_annual_balance_sheets(
         company_facts_source_url=selected_facts.source_url,
         company_facts_retrieved_at=selected_facts.retrieved_at,
         annual=annual,
+    )
+
+
+def _normalize_filing(
+    bucket: FilingFactObservations,
+    policies: tuple[BalanceSheetMetricPolicy, ...],
+    company_cik: int,
+    source_url: str,
+    filing_xbrl: SECFilingXBRL | None,
+) -> AnnualBalanceSheetFilingResult:
+    metrics = tuple(
+        _resolve_metric(
+            bucket,
+            policy,
+            company_cik,
+            source_url,
+            filing_xbrl,
+        )
+        for policy in policies
+    )
+    configured = frozenset(policy.metric for policy in policies)
+    if (
+        company_cik == META_ADJUSTED_TRADE_ACCOUNTS_PAYABLE_POLICY.company_cik
+        and frozenset(
+            (
+                FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                FinancialMetric.ACCRUED_PP_AND_E_PURCHASES,
+            )
+        ).issubset(configured)
+    ):
+        combined = resolve_meta_combined_pp_and_e_payable(
+            bucket,
+            source_url,
+            company_cik,
+        )
+        adjusted = derive_meta_adjusted_trade_accounts_payable(
+            bucket.filing,
+            metrics,
+            combined,
+            company_cik,
+        )
+        metrics = tuple(
+            adjusted if item.metric is FinancialMetric.TRADE_ACCOUNTS_PAYABLE else item
+            for item in metrics
+        )
+    return AnnualBalanceSheetFilingResult(
+        filing=bucket.filing,
+        metrics=metrics,
     )
 
 
@@ -339,14 +403,19 @@ def _resolve_metric(
         )
 
     eligible = tuple(
-        selected
-        for selected in configured
-        if selected.relationship is ObservationRelationship.CURRENT
-        and selected.period_type is ObservationPeriodType.INSTANT
-        and selected.observation.start is None
-        and selected.observation.end == filing.report_date
-        and selected.observation.unit == "USD"
-        and _is_numeric(selected.observation.value)
+        sorted(
+            (
+                selected
+                for selected in configured
+                if selected.relationship is ObservationRelationship.CURRENT
+                and selected.period_type is ObservationPeriodType.INSTANT
+                and selected.observation.start is None
+                and selected.observation.end == filing.report_date
+                and selected.observation.unit == "USD"
+                and _is_numeric(selected.observation.value)
+            ),
+            key=_selected_fact_order_key,
+        )
     )
     eligible_xbrl = tuple(
         sorted(
@@ -501,6 +570,8 @@ def _namespace_matches(
     family = candidate.filing_xbrl_namespace_family
     if family is FilingXBRLNamespaceFamily.ALPHABET_GOOGLE:
         return namespace == f"http://www.google.com/{report_date:%Y%m%d}"
+    if family is FilingXBRLNamespaceFamily.META_FACEBOOK:
+        return namespace == f"http://www.facebook.com/{report_date:%Y%m%d}"
     return False
 
 
@@ -541,6 +612,21 @@ def _filing_xbrl_fact_order_key(fact: FilingXBRLFact) -> tuple[object, ...]:
         "" if fact.numeric_value is None else str(fact.numeric_value),
         "" if fact.raw_value is None else fact.raw_value,
         fact.context_id,
+    )
+
+
+def _selected_fact_order_key(
+    selected: SelectedFactObservation,
+) -> tuple[object, ...]:
+    observation = selected.observation
+    return (
+        selected.taxonomy,
+        selected.concept,
+        observation.unit,
+        "" if observation.start is None else observation.start.isoformat(),
+        observation.end.isoformat(),
+        str(observation.value),
+        observation.accession_number,
     )
 
 

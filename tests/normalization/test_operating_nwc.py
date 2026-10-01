@@ -11,6 +11,8 @@ from valuation_platform.normalization import (
     AmbiguousHistoricalMetric,
     AnnualBalanceSheetFilingResult,
     EvidenceSourceKind,
+    DerivationOperation,
+    DerivedBalanceSheetValue,
     FactEvidence,
     FinancialMetric,
     MissingHistoricalMetric,
@@ -142,6 +144,39 @@ def evaluate(
 
 
 class OperatingNWCCompletenessTests(TestCase):
+    def test_meta_policy_accepts_derived_adjusted_trade_payables(self) -> None:
+        metrics = tuple(
+            (
+                DerivedBalanceSheetValue(
+                    metric=component.metric,
+                    value=10,
+                    unit="USD",
+                    balance_date=REPORT_DATE,
+                    policy_id="meta_adjusted_trade_accounts_payable_v1",
+                    operation=DerivationOperation.SUBTRACT,
+                    operands=(),
+                    steps=(),
+                )
+                if component.metric is FinancialMetric.TRADE_ACCOUNTS_PAYABLE
+                else make_resolved(component.metric)
+            )
+            for component in META_OPERATING_NWC_POLICY.components
+            if component.metric is not None
+        )
+        result = evaluate(
+            AnnualBalanceSheetFilingResult(FILING, metrics),
+            META_OPERATING_NWC_POLICY,
+        )
+
+        trade_payables = next(
+            item
+            for item in result.resolved_required_components
+            if item.policy.component is OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE
+        )
+        self.assertIsInstance(trade_payables.result, DerivedBalanceSheetValue)
+        self.assertFalse(result.is_complete)
+        self.assertTrue(result.methodology_unresolved_components)
+
     def test_resolved_required_component_preserves_explicit_zero(self) -> None:
         component = required(
             OperatingNWCComponent.OPERATING_RECEIVABLES,
@@ -430,7 +465,7 @@ class OperatingNWCCompletenessTests(TestCase):
             1326801: (
                 (OperatingNWCComponent.OPERATING_RECEIVABLES, asset),
                 (OperatingNWCComponent.VENDOR_NONTRADE_RECEIVABLES, not_applicable),
-                (OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE, unresolved),
+                (OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE, liability),
                 (OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES, liability),
                 (OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES, liability),
                 (OperatingNWCComponent.ACCRUED_REVENUE_SHARE_LIABILITY, not_applicable),

@@ -24,6 +24,8 @@ class FinancialMetric(str, Enum):
     VENDOR_NONTRADE_RECEIVABLES = "vendor_nontrade_receivables"
     INVENTORY = "inventory"
     TRADE_ACCOUNTS_PAYABLE = "trade_accounts_payable"
+    PP_AND_E_PAYABLE_COMBINED = "pp_and_e_payable_combined"
+    ACCRUED_PP_AND_E_PURCHASES = "accrued_pp_and_e_purchases"
     CUSTOMER_CONTRACT_LIABILITIES = "customer_contract_liabilities"
     EMPLOYEE_RELATED_LIABILITIES = "employee_related_liabilities"
     MEMBER_REWARDS_LIABILITY = "member_rewards_liability"

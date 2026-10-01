@@ -48,6 +48,7 @@ class DerivationOperation(str, Enum):
 
     ADD = "add"
     DIVIDE = "divide"
+    SUBTRACT = "subtract"
 
 
 class DerivationDiagnostic(str, Enum):
@@ -208,8 +209,50 @@ class NormalizedBalanceSheetValue:
     confirming_sources: tuple[BalanceSheetFactEvidence, ...]
 
 
+@dataclass(frozen=True)
+class BalanceSheetDerivationOperand:
+    """One evidence-backed operand used by a balance-sheet derivation."""
+
+    metric: FinancialMetric
+    value: int | float | Decimal
+    unit: str
+    start: date | None
+    end: date
+    chosen_source: BalanceSheetFactEvidence
+    confirming_sources: tuple[BalanceSheetFactEvidence, ...]
+
+
+@dataclass(frozen=True)
+class BalanceSheetDerivationStep:
+    """One ordered arithmetic step retained in derived-balance provenance."""
+
+    name: str
+    operation: DerivationOperation
+    operand_names: tuple[str, str]
+    value: Decimal
+
+
+@dataclass(frozen=True)
+class DerivedBalanceSheetValue:
+    """One balance derived from approved primitive and special evidence."""
+
+    metric: FinancialMetric
+    value: Decimal
+    unit: str
+    balance_date: date
+    policy_id: str
+    operation: DerivationOperation
+    operands: tuple[BalanceSheetDerivationOperand, ...]
+    steps: tuple[BalanceSheetDerivationStep, ...]
+
+
+ResolvedBalanceSheetValue: TypeAlias = (
+    NormalizedBalanceSheetValue | DerivedBalanceSheetValue
+)
+
+
 BalanceSheetMetricResult: TypeAlias = (
-    NormalizedBalanceSheetValue | MissingHistoricalMetric | AmbiguousHistoricalMetric
+    ResolvedBalanceSheetValue | MissingHistoricalMetric | AmbiguousHistoricalMetric
 )
 
 

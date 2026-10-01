@@ -2,9 +2,9 @@
 
 ## Current Milestone
 
-Phase 1F.5g.1 is complete for GOOGL accrued customer liabilities from explicit
-selected-filing XBRL. Operating NWC arithmetic and change in Operating NWC
-remain future work; all five validation issuers remain incomplete.
+Phase 1F.5g.2 is complete for META adjusted trade accounts payable from a
+CIK-scoped, multi-source derivation. Operating NWC arithmetic and change in
+Operating NWC remain future work; all five validation issuers remain incomplete.
 
 ## Completed
 
@@ -172,6 +172,22 @@ remain future work; all five validation issuers remain incomplete.
 - Made accrued customer liabilities a required GOOGL operating-liability
   component while preserving unresolved trade-payables and residual-liability
   blockers, so GOOGL remains incomplete
+- Added a pure META CIK `1326801` derivation that subtracts PP&E included in
+  trade accounts payable using reported trade AP, combined unpaid PP&E, and
+  separately accrued PP&E evidence
+- Preserved duration-shaped `CapitalExpendituresIncurredButNotYetPaid` Company
+  Facts observations as special selected-accession/full-fiscal-year derivation
+  operands rather than direct instant balance-sheet values; the filing must
+  expose one distinct current FY duration, with competing periods unresolved
+- Used explicit filing XBRL for report-date-specific Facebook namespace
+  `PropertyAndEquipmentAccruedLiabilitiesCurrent`; normalization performs no
+  retrieval
+- Live-validated adjusted META trade AP for 2021–2025 at $2.071bn, $4.592bn,
+  $2.957bn, $3.142bn, and $3.965bn, with all five periods resolved and complete
+  three-fact/two-step provenance
+- Made derived adjusted trade AP the required META operating-liability evidence
+  without counting either PP&E operand separately; other accrued liabilities
+  remain unresolved, so META remains incomplete
 - Kept Apple accrued distribution and marketing unresolved at 1/5 exact
   selected-accession coverage and excluded broad residual liability captions
 - Added immutable Operating NWC component classifications distinct from
@@ -190,10 +206,8 @@ remain future work; all five validation issuers remain incomplete.
 
 ## Next Step
 
-Implement the separately supported META adjusted trade-accounts-payable
-derivation without broad residual formulas, then continue resolving issuer-
-specific Operating NWC blockers before implementing arithmetic only for periods
-that pass
+Resolve the remaining issuer-specific Operating NWC blockers without broad
+residual formulas before implementing arithmetic only for periods that pass
 the completeness policy. Apple distribution and marketing, mixed residual
 accounts, and historical PP&E-in-payables adjustments remain unresolved. The
 opening snapshot needed for a five-period change series, change in Operating

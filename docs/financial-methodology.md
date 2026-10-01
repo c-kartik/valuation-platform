@@ -207,6 +207,35 @@ GOOGL accrued customer liabilities resolved all 5/5 applicable periods from
 their original selected-filing XBRL artifacts at $3.505bn, $3.619bn, $4.140bn,
 $4.304bn, and $5.029bn for 2021–2025. These balances are not yet combined into
 an Operating NWC amount.
+
+META trade accounts payable uses a CIK-specific adjustment to exclude investing
+balances:
+
+```text
+PP&E in trade AP = combined PP&E payable - separately accrued PP&E
+Adjusted trade AP = reported trade AP - PP&E in trade AP
+```
+
+Reported trade AP is `us-gaap:AccountsPayableTradeCurrent` from Company Facts.
+Combined PP&E payable is
+`us-gaap:CapitalExpendituresIncurredButNotYetPaid` from Company Facts, and
+separately accrued PP&E is the filing-XBRL extension
+`PropertyAndEquipmentAccruedLiabilitiesCurrent`. The combined concept is tagged
+as a full-year duration because META presents it in supplemental non-cash
+investing and financing disclosures, but the filing wording identifies PP&E
+incurred and remaining in accounts payable and accrued current liabilities at
+the reporting date. It is accepted only as special META derivation evidence for
+the exact selected accession and actual fiscal-year duration. That duration is
+accepted only when other current FY facts in the selected filing expose one
+distinct period ending on the report date; competing periods remain unresolved.
+It is not a direct balance-sheet primitive. Generic instant eligibility is
+unchanged.
+
+The validated 2021–2025 adjusted trade AP values are $2.071bn, $4.592bn,
+$2.957bn, $3.142bn, and $3.965bn. All three source facts and both subtraction
+steps remain in provenance. The two PP&E operands are not separate O-NWC
+liabilities, preventing double counting. META remains incomplete because other
+accrued liabilities remain methodologically unresolved.
 Apple accrued distribution and marketing remains unresolved because exact
 selected-accession coverage is only 1/5; a later-filed comparative is not
 reassigned to an earlier accession.

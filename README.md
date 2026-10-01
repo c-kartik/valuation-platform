@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.5g.1 complete — GOOGL accrued customer liabilities**
+**Phase 1F.5g.2 complete — META adjusted trade accounts payable**
 
-Next milestone: **implement the separate META adjusted trade-payables derivation**
+Next milestone: **resolve remaining issuer-specific Operating NWC blockers**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -72,6 +72,11 @@ asset and liability accounts, Operating NWC, and change in Operating NWC remain
 unresolved. CIK-specific policies now classify researched components and report
 whether each annual period has complete evidence. This completeness layer does
 not calculate Operating NWC; all five validation issuers remain incomplete.
+For META only, reported trade accounts payable is adjusted through a pure,
+provenance-preserving derivation that removes PP&E payable evidence split across
+Company Facts and explicitly supplied filing XBRL. The duration-shaped combined
+PP&E disclosure remains special derivation evidence and does not weaken direct
+instant balance-sheet normalization.
 
 ```python
 from valuation_platform.sec import (
