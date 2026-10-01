@@ -2,9 +2,9 @@
 
 ## Current Milestone
 
-Phase 1F.5f is complete for issuer-specific Operating NWC component policies and
-annual evidence-completeness evaluation. Operating NWC arithmetic and change in
-Operating NWC remain future work; all five validation issuers remain incomplete.
+Phase 1F.5g.1 is complete for GOOGL accrued customer liabilities from explicit
+selected-filing XBRL. Operating NWC arithmetic and change in Operating NWC
+remain future work; all five validation issuers remain incomplete.
 
 ## Completed
 
@@ -163,6 +163,15 @@ Operating NWC remain future work; all five validation issuers remain incomplete.
 - Live-validated all five selected GOOGL accessions at $8.996bn, $8.370bn,
   $8.876bn, $9.802bn, and $10.864bn for 2021–2025, with no missing or ambiguous
   results
+- Added GOOGL CIK `1652044` Accrued Customer Liabilities from exact
+  `AccruedCustomerLiabilitiesCurrent` selected-filing XBRL facts, distinct from
+  customer contract liabilities and accrued revenue share
+- Live-validated all five original selected GOOGL accessions at $3.505bn,
+  $3.619bn, $4.140bn, $4.304bn, and $5.029bn for 2021–2025, with no missing or
+  ambiguous results
+- Made accrued customer liabilities a required GOOGL operating-liability
+  component while preserving unresolved trade-payables and residual-liability
+  blockers, so GOOGL remains incomplete
 - Kept Apple accrued distribution and marketing unresolved at 1/5 exact
   selected-accession coverage and excluded broad residual liability captions
 - Added immutable Operating NWC component classifications distinct from
@@ -181,8 +190,10 @@ Operating NWC remain future work; all five validation issuers remain incomplete.
 
 ## Next Step
 
-Resolve the remaining issuer-specific Operating NWC blockers without broad
-residual formulas, then implement arithmetic only for issuer-periods that pass
+Implement the separately supported META adjusted trade-accounts-payable
+derivation without broad residual formulas, then continue resolving issuer-
+specific Operating NWC blockers before implementing arithmetic only for periods
+that pass
 the completeness policy. Apple distribution and marketing, mixed residual
 accounts, and historical PP&E-in-payables adjustments remain unresolved. The
 opening snapshot needed for a five-period change series, change in Operating

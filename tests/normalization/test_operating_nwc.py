@@ -448,7 +448,7 @@ class OperatingNWCCompletenessTests(TestCase):
                 (OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES, liability),
                 (OperatingNWCComponent.ACCRUED_REVENUE_SHARE_LIABILITY, liability),
                 (OperatingNWCComponent.MEMBER_REWARDS_LIABILITY, not_applicable),
-                (OperatingNWCComponent.ACCRUED_CUSTOMER_LIABILITIES, unresolved),
+                (OperatingNWCComponent.ACCRUED_CUSTOMER_LIABILITIES, liability),
                 (OperatingNWCComponent.RESIDUAL_CURRENT_LIABILITIES, unresolved),
                 (OperatingNWCComponent.ACCRUED_PP_AND_E_PURCHASES, excluded),
                 (OperatingNWCComponent.OPERATING_LEASE_LIABILITIES, excluded),

@@ -81,6 +81,9 @@ _NORMALIZED_METRICS = {
     OperatingNWCComponent.ACCRUED_REVENUE_SHARE_LIABILITY: (
         FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY
     ),
+    OperatingNWCComponent.ACCRUED_CUSTOMER_LIABILITIES: (
+        FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES
+    ),
     OperatingNWCComponent.MEMBER_REWARDS_LIABILITY: (
         FinancialMetric.MEMBER_REWARDS_LIABILITY
     ),
@@ -260,7 +263,7 @@ GOOGL_OPERATING_NWC_POLICY = OperatingNWCPolicy(
         _component(OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES, _LIABILITY),
         _component(OperatingNWCComponent.ACCRUED_REVENUE_SHARE_LIABILITY, _LIABILITY),
         _component(OperatingNWCComponent.MEMBER_REWARDS_LIABILITY, _NOT_APPLICABLE),
-        _component(OperatingNWCComponent.ACCRUED_CUSTOMER_LIABILITIES, _UNRESOLVED),
+        _component(OperatingNWCComponent.ACCRUED_CUSTOMER_LIABILITIES, _LIABILITY),
         _component(OperatingNWCComponent.RESIDUAL_CURRENT_LIABILITIES, _UNRESOLVED),
         _component(OperatingNWCComponent.ACCRUED_PP_AND_E_PURCHASES, _EXCLUDED),
         _component(OperatingNWCComponent.OPERATING_LEASE_LIABILITIES, _EXCLUDED),

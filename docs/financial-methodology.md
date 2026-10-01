@@ -184,6 +184,11 @@ The initial policies are:
   separately from accounts payable, deferred revenue, and employee liabilities.
   The selected-accession fact must be nondimensional, non-nil, instant, exact
   USD, and end on the selected report date.
+- Accrued Customer Liabilities: filing-level issuer extension
+  `AccruedCustomerLiabilitiesCurrent`, approved only for GOOGL CIK `1652044`
+  under the Google issuer namespace dated to the selected 10-K report date. It
+  is an additional required operating current liability, distinct from both
+  `ContractWithCustomerLiabilityCurrent` and `AccruedRevenueShare`.
 
 `AccountsNotesAndLoansReceivableNetCurrent` and broad other-current-asset or
 liability concepts are not approved fallbacks. The policies do not infer
@@ -198,6 +203,10 @@ overall, covering all 5/5 applicable Costco periods with 20 non-applicable
 periods typed missing. No result was ambiguous. GOOGL accrued revenue share
 additionally resolved 5/5 applicable periods from exact selected-filing XBRL
 evidence: $8.996bn, $8.370bn, $8.876bn, $9.802bn, and $10.864bn for 2021–2025.
+GOOGL accrued customer liabilities resolved all 5/5 applicable periods from
+their original selected-filing XBRL artifacts at $3.505bn, $3.619bn, $4.140bn,
+$4.304bn, and $5.029bn for 2021–2025. These balances are not yet combined into
+an Operating NWC amount.
 Apple accrued distribution and marketing remains unresolved because exact
 selected-accession coverage is only 1/5; a later-filed comparative is not
 reassigned to an earlier accession.

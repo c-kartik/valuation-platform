@@ -177,15 +177,16 @@ absence stays typed missing. Conflicting eligible observations stay ambiguous.
 
 The deterministic order is Operating Receivables, Vendor Non-Trade
 Receivables, Inventory, Trade Accounts Payable, Customer Contract Liabilities,
-Employee-Related Liabilities, Accrued Revenue-Share Liability, then Member
-Rewards Liability. Evidence-backed
+Employee-Related Liabilities, Accrued Revenue-Share Liability, Accrued Customer
+Liabilities, then Member Rewards Liability. Evidence-backed
 issuer-scoped policies support COST `ReceivablesNetCurrent`, META
 `AccountsPayableTradeCurrent`, COST `DeferredRevenueCurrent`, Apple
 `NontradeReceivablesCurrent`, employee liabilities for META, GOOGL, MSFT, and
 COST, and COST `AccruedLiabilitiesCurrent` specifically as member rewards.
-GOOGL CIK `1652044` accrued revenue share uses filing XBRL only: exact local
-name `AccruedRevenueShare` under the Google issuer namespace whose date exactly
-matches the selected 10-K report date. It requires a nondimensional, non-nil
+GOOGL CIK `1652044` accrued revenue share and accrued customer liabilities use
+filing XBRL only: exact local names `AccruedRevenueShare` and
+`AccruedCustomerLiabilitiesCurrent` under the Google issuer namespace whose
+date exactly matches the selected 10-K report date. It requires a nondimensional, non-nil
 instant fact from the exact selected accession. Matching uses namespace URI and
 local name, never an XML prefix. Filing provenance retains the source URL, namespace, context,
 dimensions, decimals, nil state, raw value, and parsed value. Multiple eligible
@@ -208,6 +209,7 @@ prohibited because other-current captions mix operating and non-operating
 items. Operating-lease current liabilities are explicitly excluded from the
 initial policies while integrated lease treatment remains deferred. Apple
 accrued distribution and marketing remains unresolved because only one of five
-selected accessions contains the fact. GOOGL accrued revenue share is the only
-filing-XBRL-backed balance-sheet primitive currently normalized. Current
+selected accessions contains the fact. GOOGL accrued revenue share and accrued
+customer liabilities are the filing-XBRL-backed balance-sheet primitives
+currently normalized. Current
 policies keep META, GOOGL, MSFT, AAPL, and COST incomplete for numerical O-NWC.

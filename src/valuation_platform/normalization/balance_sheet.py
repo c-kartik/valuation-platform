@@ -222,6 +222,20 @@ ACCRUED_REVENUE_SHARE_LIABILITY_POLICY = BalanceSheetMetricPolicy(
     ),
 )
 
+ACCRUED_CUSTOMER_LIABILITIES_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("alphabet-google", "AccruedCustomerLiabilitiesCurrent"),
+            applicable_ciks=(_GOOGL_CIK,),
+            source_kind=EvidenceSourceKind.FILING_XBRL,
+            filing_xbrl_namespace_family=(
+                FilingXBRLNamespaceFamily.ALPHABET_GOOGLE
+            ),
+        ),
+    ),
+)
+
 ANNUAL_BALANCE_SHEET_POLICIES: tuple[BalanceSheetMetricPolicy, ...] = (
     OPERATING_RECEIVABLES_POLICY,
     VENDOR_NONTRADE_RECEIVABLES_POLICY,
@@ -230,6 +244,7 @@ ANNUAL_BALANCE_SHEET_POLICIES: tuple[BalanceSheetMetricPolicy, ...] = (
     CUSTOMER_CONTRACT_LIABILITIES_POLICY,
     EMPLOYEE_RELATED_LIABILITIES_POLICY,
     ACCRUED_REVENUE_SHARE_LIABILITY_POLICY,
+    ACCRUED_CUSTOMER_LIABILITIES_POLICY,
     MEMBER_REWARDS_LIABILITY_POLICY,
 )
 

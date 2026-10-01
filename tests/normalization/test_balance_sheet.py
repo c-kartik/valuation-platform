@@ -43,6 +43,7 @@ VENDOR_RECEIVABLES = "NontradeReceivablesCurrent"
 EMPLOYEE_LIABILITIES = "EmployeeRelatedLiabilitiesCurrent"
 MEMBER_REWARDS = "AccruedLiabilitiesCurrent"
 ACCRUED_REVENUE_SHARE = "AccruedRevenueShare"
+ACCRUED_CUSTOMER_LIABILITIES = "AccruedCustomerLiabilitiesCurrent"
 GOOGLE_NAMESPACE = "http://www.google.com/20251231"
 USD_NAMESPACE = "http://www.xbrl.org/2003/iso4217"
 
@@ -188,7 +189,10 @@ def make_filing_xbrl(
     )
 
 
-def make_prefixed_filing_xbrl(prefix: str) -> SECFilingXBRL:
+def make_prefixed_filing_xbrl(
+    prefix: str,
+    concept: str = ACCRUED_REVENUE_SHARE,
+) -> SECFilingXBRL:
     selected = make_input(company_cik=1652044)
     content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
@@ -198,7 +202,7 @@ def make_prefixed_filing_xbrl(prefix: str) -> SECFilingXBRL:
     <xbrli:period><xbrli:instant>2025-12-31</xbrli:instant></xbrli:period>
   </xbrli:context>
   <xbrli:unit id="USD"><xbrli:measure>iso4217:USD</xbrli:measure></xbrli:unit>
-  <{prefix}:AccruedRevenueShare contextRef="current" unitRef="USD" decimals="-6">10864000000</{prefix}:AccruedRevenueShare>
+  <{prefix}:{concept} contextRef="current" unitRef="USD" decimals="-6">10864000000</{prefix}:{concept}>
 </xbrli:xbrl>""".encode()
     return parse_filing_xbrl_instance(
         content,
@@ -210,6 +214,182 @@ def make_prefixed_filing_xbrl(prefix: str) -> SECFilingXBRL:
 
 
 class AnnualBalanceSheetNormalizationTests(TestCase):
+    def test_google_accrued_customer_liabilities_resolve_with_full_provenance(self) -> None:
+        fact = make_filing_xbrl_fact(
+            concept=ACCRUED_CUSTOMER_LIABILITIES,
+            numeric_value=Decimal("5029000000"),
+            raw_value="5029000000",
+        )
+        result = metric_result(
+            make_input(company_cik=1652044),
+            FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
+            filing_xbrl=(make_filing_xbrl(fact),),
+        )
+
+        self.assertIsInstance(result, NormalizedBalanceSheetValue)
+        assert isinstance(result, NormalizedBalanceSheetValue)
+        self.assertEqual(result.value, Decimal("5029000000"))
+        self.assertEqual(result.unit, "USD")
+        self.assertEqual(result.balance_date, REPORT_DATE)
+        self.assertEqual(result.confirming_sources, ())
+        self.assertIsInstance(result.chosen_source, FilingXBRLEvidence)
+        source = result.chosen_source
+        assert isinstance(source, FilingXBRLEvidence)
+        self.assertIs(source.source_kind, EvidenceSourceKind.FILING_XBRL)
+        self.assertEqual(source.namespace, GOOGLE_NAMESPACE)
+        self.assertEqual(source.concept, ACCRUED_CUSTOMER_LIABILITIES)
+        self.assertEqual(source.raw_value, "5029000000")
+        self.assertEqual(source.value, Decimal("5029000000"))
+        self.assertEqual(source.source_url, "https://www.sec.gov/example_htm.xml")
+        self.assertIsNone(source.start)
+        self.assertEqual(source.end, REPORT_DATE)
+        self.assertEqual(source.accession_number, "annual")
+        self.assertEqual(source.observation_form, "10-K")
+        self.assertEqual(source.observation_filed, date(2026, 2, 1))
+        self.assertEqual(source.filing_report_date, REPORT_DATE)
+        self.assertEqual(source.primary_document, "annual.htm")
+        self.assertEqual(source.retrieved_at, RETRIEVED_AT)
+        self.assertEqual(source.context_id, "current")
+        self.assertEqual(source.dimensions, ())
+        self.assertEqual(source.decimals, "-6")
+        self.assertFalse(source.is_nil)
+
+    def test_google_accrued_customer_liabilities_are_cik_scoped_and_not_substituted(self) -> None:
+        customer_fact = make_filing_xbrl_fact(
+            concept=ACCRUED_CUSTOMER_LIABILITIES,
+        )
+        non_google = metric_result(
+            make_input(company_cik=320193),
+            FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
+            filing_xbrl=(make_filing_xbrl(customer_fact, company_cik=320193),),
+        )
+        contract_fact = make_selected(CONTRACT_LIABILITIES, value=99)
+        no_substitution = metric_result(
+            make_input(contract_fact, company_cik=1652044),
+            FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
+        )
+
+        self.assertIsInstance(non_google, MissingHistoricalMetric)
+        self.assertIsInstance(no_substitution, MissingHistoricalMetric)
+        self.assertIs(
+            non_google.reason,
+            MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+        )
+        self.assertIs(
+            no_substitution.reason,
+            MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+        )
+
+    def test_google_accrued_customer_liabilities_share_filing_xbrl_safeguards(self) -> None:
+        dimension = FilingXBRLDimension(
+            dimension=FilingXBRLQName("http://example.com", "Axis"),
+            explicit_member=FilingXBRLQName("http://example.com", "Member"),
+            typed_member_xml=None,
+        )
+        eur = FilingXBRLUnit(
+            unit_id="EUR",
+            numerator_measures=(FilingXBRLQName(USD_NAMESPACE, "EUR"),),
+            denominator_measures=(),
+        )
+        cases = (
+            make_filing_xbrl_fact(
+                concept=ACCRUED_CUSTOMER_LIABILITIES,
+                accession="other",
+            ),
+            make_filing_xbrl_fact(
+                concept=ACCRUED_CUSTOMER_LIABILITIES,
+                end=date(2024, 12, 31),
+            ),
+            make_filing_xbrl_fact(
+                concept=ACCRUED_CUSTOMER_LIABILITIES,
+                namespace="http://www.google.com/20241231",
+            ),
+            make_filing_xbrl_fact(
+                concept=ACCRUED_CUSTOMER_LIABILITIES,
+                dimensions=(dimension,),
+            ),
+            make_filing_xbrl_fact(concept=ACCRUED_CUSTOMER_LIABILITIES, unit=eur),
+            make_filing_xbrl_fact(
+                concept=ACCRUED_CUSTOMER_LIABILITIES,
+                is_nil=True,
+                numeric_value=None,
+                raw_value=None,
+            ),
+            make_filing_xbrl_fact(
+                concept=ACCRUED_CUSTOMER_LIABILITIES,
+                numeric_value="10",
+            ),
+        )
+        for fact in cases:
+            with self.subTest(fact=fact):
+                result = metric_result(
+                    make_input(company_cik=1652044),
+                    FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
+                    filing_xbrl=(make_filing_xbrl(fact),),
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_google_accrued_customer_liability_prefix_is_irrelevant(self) -> None:
+        results = tuple(
+            metric_result(
+                make_input(company_cik=1652044),
+                FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
+                filing_xbrl=(
+                    make_prefixed_filing_xbrl(
+                        prefix,
+                        ACCRUED_CUSTOMER_LIABILITIES,
+                    ),
+                ),
+            )
+            for prefix in ("goog", "arbitrary")
+        )
+        self.assertEqual(results[0], results[1])
+        self.assertIsInstance(results[0], NormalizedBalanceSheetValue)
+
+    def test_google_accrued_customer_liability_zero_negative_and_ambiguity(self) -> None:
+        for value in (Decimal("0"), Decimal("-10")):
+            result = metric_result(
+                make_input(company_cik=1652044),
+                FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
+                filing_xbrl=(
+                    make_filing_xbrl(
+                        make_filing_xbrl_fact(
+                            concept=ACCRUED_CUSTOMER_LIABILITIES,
+                            numeric_value=value,
+                            raw_value=str(value),
+                        )
+                    ),
+                ),
+            )
+            self.assertIsInstance(result, NormalizedBalanceSheetValue)
+            self.assertEqual(result.value, value)
+
+        for values in (
+            ((Decimal("10"), "a"), (Decimal("11"), "b")),
+            ((Decimal("10"), "a"), (Decimal("10"), "equivalent")),
+        ):
+            facts = tuple(
+                make_filing_xbrl_fact(
+                    concept=ACCRUED_CUSTOMER_LIABILITIES,
+                    numeric_value=value,
+                    raw_value=str(value),
+                    context_id=context,
+                )
+                for value, context in values
+            )
+            forward = metric_result(
+                make_input(company_cik=1652044),
+                FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
+                filing_xbrl=(make_filing_xbrl(*facts),),
+            )
+            reverse = metric_result(
+                make_input(company_cik=1652044),
+                FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
+                filing_xbrl=(make_filing_xbrl(*reversed(facts)),),
+            )
+            self.assertIsInstance(forward, AmbiguousHistoricalMetric)
+            self.assertEqual(forward, reverse)
+
     def test_google_accrued_revenue_share_resolves_with_full_provenance(self) -> None:
         fact = make_filing_xbrl_fact()
         artifact = make_filing_xbrl(fact)
@@ -868,6 +1048,7 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
                 FinancialMetric.CUSTOMER_CONTRACT_LIABILITIES,
                 FinancialMetric.EMPLOYEE_RELATED_LIABILITIES,
                 FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+                FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
                 FinancialMetric.MEMBER_REWARDS_LIABILITY,
             ),
         )

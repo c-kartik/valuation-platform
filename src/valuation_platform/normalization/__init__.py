@@ -1,6 +1,7 @@
 """Normalize selected SEC facts into standardized financial metrics."""
 
 from .balance_sheet import (
+    ACCRUED_CUSTOMER_LIABILITIES_POLICY,
     ACCRUED_REVENUE_SHARE_LIABILITY_POLICY,
     ANNUAL_BALANCE_SHEET_POLICIES,
     CUSTOMER_CONTRACT_LIABILITIES_POLICY,
@@ -84,6 +85,7 @@ from .operating_nwc import (
 )
 
 __all__ = [
+    "ACCRUED_CUSTOMER_LIABILITIES_POLICY",
     "ACCRUED_REVENUE_SHARE_LIABILITY_POLICY",
     "AAPL_OPERATING_NWC_POLICY",
     "ANNUAL_BALANCE_SHEET_POLICIES",

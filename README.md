@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.5f complete — Operating NWC completeness architecture**
+**Phase 1F.5g.1 complete — GOOGL accrued customer liabilities**
 
-Next milestone: **resolve remaining issuer-specific Operating NWC blockers**
+Next milestone: **implement the separate META adjusted trade-payables derivation**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -63,8 +63,9 @@ The separate annual balance-sheet path currently normalizes operating
 receivables, Apple vendor non-trade receivables, inventory, trade accounts
 payable, customer contract liabilities, employee-related liabilities for four
 validated issuers, and Costco member rewards from current instant Company Facts
-observations. It also normalizes GOOGL accrued revenue share from explicitly
-supplied selected-filing XBRL artifacts. Company Facts remains the default;
+observations. It also normalizes GOOGL accrued revenue share and accrued customer
+liabilities from explicitly supplied selected-filing XBRL artifacts. Company
+Facts remains the default;
 filing XBRL is policy-driven and never fetched by normalization. Missing
 balances remain distinct from zero. Broad other-current-
 asset and liability accounts, Operating NWC, and change in Operating NWC remain
