@@ -27,6 +27,7 @@ class FinancialMetric(str, Enum):
     CUSTOMER_CONTRACT_LIABILITIES = "customer_contract_liabilities"
     EMPLOYEE_RELATED_LIABILITIES = "employee_related_liabilities"
     MEMBER_REWARDS_LIABILITY = "member_rewards_liability"
+    ACCRUED_REVENUE_SHARE_LIABILITY = "accrued_revenue_share_liability"
 
 
 @dataclass(frozen=True)

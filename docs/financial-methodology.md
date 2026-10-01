@@ -172,6 +172,14 @@ The initial policies are:
   CIK `909832`, where selected filing evidence identifies the caption as member
   rewards. The generic concept is not treated as member rewards for other
   issuers.
+- Accrued Revenue-Share Liability: filing-level issuer extension
+  `AccruedRevenueShare`, approved only for GOOGL CIK `1652044` under the
+  Google issuer namespace whose date exactly matches the selected 10-K report
+  date. It represents a current
+  operating obligation to distribution and network partners and is presented
+  separately from accounts payable, deferred revenue, and employee liabilities.
+  The selected-accession fact must be nondimensional, non-nil, instant, exact
+  USD, and end on the selected report date.
 
 `AccountsNotesAndLoansReceivableNetCurrent` and broad other-current-asset or
 liability concepts are not approved fallbacks. The policies do not infer
@@ -183,9 +191,16 @@ non-applicable periods typed missing. Employee-Related Liabilities resolved
 20/25 overall, covering all 20/20 applicable META, GOOGL, MSFT, and COST periods
 with five Apple periods typed missing. Member Rewards Liability resolved 5/25
 overall, covering all 5/5 applicable Costco periods with 20 non-applicable
-periods typed missing. No result was ambiguous. GOOGL accrued revenue share and
-Apple accrued distribution and marketing remain future filing-XBRL research
-candidates.
+periods typed missing. No result was ambiguous. GOOGL accrued revenue share
+additionally resolved 5/5 applicable periods from exact selected-filing XBRL
+evidence: $8.996bn, $8.370bn, $8.876bn, $9.802bn, and $10.864bn for 2021–2025.
+Apple accrued distribution and marketing remains unresolved because exact
+selected-accession coverage is only 1/5; a later-filed comparative is not
+reassigned to an earlier accession.
+
+Company Facts remains the primary balance-sheet source. Filing-level XBRL is
+used only by an explicit source policy and supplied to normalization on demand.
+Broad accrued and other-current-liability residuals remain excluded.
 
 Operating NWC will eventually be derived from classified operating components.
 Neither Operating NWC nor its year-over-year change is implemented. Cash,

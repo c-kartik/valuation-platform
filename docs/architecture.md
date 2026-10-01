@@ -111,9 +111,10 @@ structural fact selection:
   ambiguous results with compact operand-level SEC provenance.
 - `normalization.historical` resolves direct observations first and orchestrates
   an approved derivation only when the direct result is missing.
-- `normalization.balance_sheet` separately resolves annual instant Company Facts
-  into primitive balance-sheet snapshots; it performs no retrieval or derived
-  Operating NWC calculation.
+- `normalization.balance_sheet` separately resolves annual instant evidence
+  from explicit Company Facts or filing-XBRL policies into primitive
+  balance-sheet snapshots; parsed filing artifacts are supplied by the caller,
+  so it performs no retrieval or derived Operating NWC calculation.
 - `normalization.derived` validates evidence-backed, CIK-scoped derivation
   policies and their operands. It performs no network access.
 
@@ -165,23 +166,36 @@ responsibilities.
 Annual balance-sheet normalization requires an exact selected 10-K accession,
 a current instant observation with no start date, an end equal to the filing
 report date, exact USD, and a numeric non-Boolean value. It preserves the actual
-balance date and compact Company Facts provenance. Zero is valid; absence stays
-typed missing. Conflicting eligible observations stay ambiguous.
+balance date and source-specific compact provenance. Company Facts is the
+default source. A policy may instead explicitly require filing XBRL; the caller
+retrieves selected-filing artifacts and supplies them to the network-free
+normalizer. There is no automatic fallback or bulk retrieval. Zero is valid;
+absence stays typed missing. Conflicting eligible observations stay ambiguous.
 
 The deterministic order is Operating Receivables, Vendor Non-Trade
 Receivables, Inventory, Trade Accounts Payable, Customer Contract Liabilities,
-Employee-Related Liabilities, then Member Rewards Liability. Evidence-backed
+Employee-Related Liabilities, Accrued Revenue-Share Liability, then Member
+Rewards Liability. Evidence-backed
 issuer-scoped policies support COST `ReceivablesNetCurrent`, META
 `AccountsPayableTradeCurrent`, COST `DeferredRevenueCurrent`, Apple
 `NontradeReceivablesCurrent`, employee liabilities for META, GOOGL, MSFT, and
 COST, and COST `AccruedLiabilitiesCurrent` specifically as member rewards.
+GOOGL CIK `1652044` accrued revenue share uses filing XBRL only: exact local
+name `AccruedRevenueShare` under the Google issuer namespace whose date exactly
+matches the selected 10-K report date. It requires a nondimensional, non-nil
+instant fact from the exact selected accession. Matching uses namespace URI and
+local name, never an XML prefix. Filing provenance retains the source URL, namespace, context,
+dimensions, decimals, nil state, raw value, and parsed value. Multiple eligible
+facts remain ambiguous even when only their context IDs differ.
+
 Concept priority never suppresses a second eligible approved concept; equal
 values are not confirmation unless a policy explicitly permits it. Filing-level
-XBRL remains explicit and is not automatically connected.
+XBRL remains explicit and targeted.
 
 Operating NWC and its change are not implemented. Research supports an eventual
 component-derived result rather than a Current Assets minus Current Liabilities
 shortcut. Broad other-current-asset and liability balances remain excluded
 pending classification because they mix operating and non-operating items.
-GOOGL accrued revenue share and Apple accrued distribution and marketing remain
-future filing-XBRL research candidates.
+Apple accrued distribution and marketing remains unresolved because only one
+of five selected accessions contains the fact. GOOGL accrued revenue share is
+the only filing-XBRL-backed balance-sheet primitive currently normalized.

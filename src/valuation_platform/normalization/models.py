@@ -8,6 +8,7 @@ from decimal import Decimal
 from enum import Enum
 from typing import TypeAlias
 
+from valuation_platform.sec.filing_xbrl import FilingXBRLDimension
 from valuation_platform.sec.submissions import SECFiling
 from valuation_platform.sec.tickers import SECCompanyIdentity
 
@@ -84,6 +85,34 @@ class FactEvidence:
 
 
 @dataclass(frozen=True)
+class FilingXBRLEvidence:
+    """Compact provenance for one filing-level extracted XBRL fact."""
+
+    source_kind: EvidenceSourceKind
+    source_url: str
+    namespace: str
+    concept: str
+    raw_value: str | None
+    value: Decimal
+    unit: str
+    start: date | None
+    end: date
+    accession_number: str
+    observation_form: str
+    observation_filed: date
+    filing_report_date: date | None
+    primary_document: str
+    retrieved_at: datetime
+    context_id: str
+    dimensions: tuple[FilingXBRLDimension, ...]
+    decimals: str | None
+    is_nil: bool
+
+
+BalanceSheetFactEvidence: TypeAlias = FactEvidence | FilingXBRLEvidence
+
+
+@dataclass(frozen=True)
 class NormalizedHistoricalValue:
     """One resolved direct annual financial value."""
 
@@ -137,7 +166,7 @@ class AmbiguousHistoricalMetric:
 
     metric: FinancialMetric
     reason: AmbiguityReason
-    candidates: tuple[FactEvidence, ...]
+    candidates: tuple[BalanceSheetFactEvidence, ...]
 
 
 ResolvedHistoricalValue: TypeAlias = (
@@ -172,11 +201,11 @@ class NormalizedBalanceSheetValue:
     """One resolved direct annual balance-sheet snapshot."""
 
     metric: FinancialMetric
-    value: int | float
+    value: int | float | Decimal
     unit: str
     balance_date: date
-    chosen_source: FactEvidence
-    confirming_sources: tuple[FactEvidence, ...]
+    chosen_source: BalanceSheetFactEvidence
+    confirming_sources: tuple[BalanceSheetFactEvidence, ...]
 
 
 BalanceSheetMetricResult: TypeAlias = (

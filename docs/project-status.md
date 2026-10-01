@@ -2,8 +2,9 @@
 
 ## Current Milestone
 
-Phase 1F.5c is complete for additional evidence-backed annual Operating NWC
-primitives. Operating NWC and change in Operating NWC remain future work.
+Phase 1F.5d is complete for explicit filing-XBRL-backed annual balance-sheet
+normalization and GOOGL accrued revenue share. Operating NWC and change in
+Operating NWC remain future work.
 
 ## Completed
 
@@ -151,15 +152,28 @@ primitives. Operating NWC and change in Operating NWC remain future work.
 - No new primitive result was ambiguous
 - Kept filing-level XBRL explicit/on demand and left broad current residuals,
   Operating NWC, and change in Operating NWC unimplemented
+- Added an explicit Company Facts versus filing-XBRL source distinction to
+  annual balance-sheet policies while keeping normalization network-free
+- Added GOOGL CIK `1652044` Accrued Revenue-Share Liability from exact
+  `AccruedRevenueShare` filing-XBRL facts under the Google issuer namespace whose
+  date exactly matches the selected 10-K report date
+- Preserved filing-level namespace, source URL, context, dimensions, decimals,
+  nil state, raw value, parsed value, accession, and filing metadata in compact
+  normalized provenance; multiple eligible facts remain ambiguous
+- Live-validated all five selected GOOGL accessions at $8.996bn, $8.370bn,
+  $8.876bn, $9.802bn, and $10.864bn for 2021–2025, with no missing or ambiguous
+  results
+- Kept Apple accrued distribution and marketing unresolved at 1/5 exact
+  selected-accession coverage and excluded broad residual liability captions
 
 ## Next Step
 
-Research five-period filing-XBRL coverage for GOOGL accrued revenue share and
-Apple accrued distribution and marketing before completing the Operating NWC
-component methodology. Broad residual accounts, tax and lease balances, the
-opening snapshot needed for a five-period change series, and change in Operating
-NWC remain unresolved. GOOGL D&A, NOPAT, interim normalization, and valuation
-also remain outside the current scope.
+Resolve the remaining material Operating NWC component-classification gaps
+without broad residual formulas. Apple distribution and marketing remains
+unresolved, and broad residual accounts, tax and lease balances, the opening
+snapshot needed for a five-period change series, and change in Operating NWC
+remain outside the implemented scope. GOOGL D&A, NOPAT, interim normalization,
+and valuation also remain outside the current scope.
 
 ## Current Repository Structure
 

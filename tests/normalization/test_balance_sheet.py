@@ -1,4 +1,5 @@
 from datetime import date, datetime, timezone
+from decimal import Decimal
 from unittest import TestCase
 
 from valuation_platform.normalization import (
@@ -6,6 +7,7 @@ from valuation_platform.normalization import (
     AmbiguousHistoricalMetric,
     BalanceSheetNormalizationError,
     EvidenceSourceKind,
+    FilingXBRLEvidence,
     FinancialMetric,
     MissingHistoricalMetric,
     MissingReason,
@@ -20,6 +22,14 @@ from valuation_platform.sec.fact_selection import (
     SelectedFactObservations,
 )
 from valuation_platform.sec.submissions import SECFiling
+from valuation_platform.sec.filing_xbrl import (
+    FilingXBRLDimension,
+    FilingXBRLFact,
+    FilingXBRLQName,
+    FilingXBRLUnit,
+    SECFilingXBRL,
+    parse_filing_xbrl_instance,
+)
 from valuation_platform.sec.tickers import SECCompanyIdentity
 
 
@@ -32,6 +42,9 @@ CONTRACT_LIABILITIES = "ContractWithCustomerLiabilityCurrent"
 VENDOR_RECEIVABLES = "NontradeReceivablesCurrent"
 EMPLOYEE_LIABILITIES = "EmployeeRelatedLiabilitiesCurrent"
 MEMBER_REWARDS = "AccruedLiabilitiesCurrent"
+ACCRUED_REVENUE_SHARE = "AccruedRevenueShare"
+GOOGLE_NAMESPACE = "http://www.google.com/20251231"
+USD_NAMESPACE = "http://www.xbrl.org/2003/iso4217"
 
 
 def make_filing(
@@ -110,12 +123,389 @@ def make_input(
 def metric_result(
     selected: SelectedFactObservations,
     metric: FinancialMetric,
+    *,
+    filing_xbrl: tuple[SECFilingXBRL, ...] = (),
 ):
-    result = normalize_annual_balance_sheets(selected)
+    result = normalize_annual_balance_sheets(
+        selected,
+        filing_xbrl=filing_xbrl,
+    )
     return next(item for item in result.annual[0].metrics if item.metric is metric)
 
 
+def make_filing_xbrl_fact(
+    *,
+    namespace: str = GOOGLE_NAMESPACE,
+    concept: str = ACCRUED_REVENUE_SHARE,
+    accession: str = "annual",
+    start: date | None = None,
+    end: date = REPORT_DATE,
+    dimensions: tuple[FilingXBRLDimension, ...] = (),
+    numeric_value: object = Decimal("10864000000"),
+    raw_value: str | None = "10864000000",
+    unit: FilingXBRLUnit | None = None,
+    is_nil: bool = False,
+    context_id: str = "current",
+) -> FilingXBRLFact:
+    usd_unit = FilingXBRLUnit(
+        unit_id="USD",
+        numerator_measures=(FilingXBRLQName(USD_NAMESPACE, "USD"),),
+        denominator_measures=(),
+    )
+    return FilingXBRLFact(
+        namespace=namespace,
+        concept=concept,
+        context_id=context_id,
+        start=start,
+        end=end,
+        dimensions=dimensions,
+        unit_ref=(unit or usd_unit).unit_id,
+        unit=usd_unit if unit is None else unit,
+        raw_value=raw_value,
+        numeric_value=numeric_value,  # type: ignore[arg-type]
+        decimals="-6",
+        is_nil=is_nil,
+        accession_number=accession,
+        source_url="https://www.sec.gov/example_htm.xml",
+    )
+
+
+def make_filing_xbrl(
+    *facts: FilingXBRLFact,
+    company_cik: int = 1652044,
+    filing: SECFiling | None = None,
+) -> SECFilingXBRL:
+    selected = make_input(company_cik=company_cik, filing=filing)
+    filing_value = filing or make_filing()
+    return SECFilingXBRL(
+        company=selected.company,
+        filing=filing_value,
+        contexts=(),
+        units=(),
+        facts=facts,
+        source_url="https://www.sec.gov/example_htm.xml",
+        retrieved_at=RETRIEVED_AT,
+    )
+
+
+def make_prefixed_filing_xbrl(prefix: str) -> SECFilingXBRL:
+    selected = make_input(company_cik=1652044)
+    content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
+ xmlns:iso4217="{USD_NAMESPACE}" xmlns:{prefix}="{GOOGLE_NAMESPACE}">
+  <xbrli:context id="current">
+    <xbrli:entity><xbrli:identifier scheme="http://www.sec.gov/CIK">1652044</xbrli:identifier></xbrli:entity>
+    <xbrli:period><xbrli:instant>2025-12-31</xbrli:instant></xbrli:period>
+  </xbrli:context>
+  <xbrli:unit id="USD"><xbrli:measure>iso4217:USD</xbrli:measure></xbrli:unit>
+  <{prefix}:AccruedRevenueShare contextRef="current" unitRef="USD" decimals="-6">10864000000</{prefix}:AccruedRevenueShare>
+</xbrli:xbrl>""".encode()
+    return parse_filing_xbrl_instance(
+        content,
+        company=selected.company,
+        filing=selected.annual[0].filing,
+        source_url="https://www.sec.gov/example_htm.xml",
+        retrieved_at=RETRIEVED_AT,
+    )
+
+
 class AnnualBalanceSheetNormalizationTests(TestCase):
+    def test_google_accrued_revenue_share_resolves_with_full_provenance(self) -> None:
+        fact = make_filing_xbrl_fact()
+        artifact = make_filing_xbrl(fact)
+        result = metric_result(
+            make_input(company_cik=1652044),
+            FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+            filing_xbrl=(artifact,),
+        )
+
+        self.assertIsInstance(result, NormalizedBalanceSheetValue)
+        assert isinstance(result, NormalizedBalanceSheetValue)
+        self.assertEqual(result.value, Decimal("10864000000"))
+        self.assertEqual(result.unit, "USD")
+        self.assertEqual(result.balance_date, REPORT_DATE)
+        self.assertEqual(result.confirming_sources, ())
+        self.assertIsInstance(result.chosen_source, FilingXBRLEvidence)
+        source = result.chosen_source
+        assert isinstance(source, FilingXBRLEvidence)
+        self.assertIs(source.source_kind, EvidenceSourceKind.FILING_XBRL)
+        self.assertEqual(source.namespace, GOOGLE_NAMESPACE)
+        self.assertEqual(source.concept, ACCRUED_REVENUE_SHARE)
+        self.assertEqual(source.raw_value, "10864000000")
+        self.assertEqual(source.value, Decimal("10864000000"))
+        self.assertEqual(source.unit, "USD")
+        self.assertIsNone(source.start)
+        self.assertEqual(source.end, REPORT_DATE)
+        self.assertEqual(source.accession_number, "annual")
+        self.assertEqual(source.observation_form, "10-K")
+        self.assertEqual(source.observation_filed, date(2026, 2, 1))
+        self.assertEqual(source.filing_report_date, REPORT_DATE)
+        self.assertEqual(source.primary_document, "annual.htm")
+        self.assertEqual(source.retrieved_at, RETRIEVED_AT)
+        self.assertEqual(source.context_id, "current")
+        self.assertEqual(source.dimensions, ())
+        self.assertEqual(source.decimals, "-6")
+        self.assertFalse(source.is_nil)
+        self.assertEqual(source.source_url, "https://www.sec.gov/example_htm.xml")
+
+    def test_filing_xbrl_candidate_is_cik_scoped(self) -> None:
+        fact = make_filing_xbrl_fact()
+        artifact = make_filing_xbrl(fact, company_cik=320193)
+        result = metric_result(
+            make_input(company_cik=320193),
+            FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+            filing_xbrl=(artifact,),
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(
+            result.reason,
+            MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+        )
+
+    def test_filing_xbrl_namespace_matches_report_date(self) -> None:
+        accepted = make_filing_xbrl_fact(namespace=GOOGLE_NAMESPACE)
+        rejected_namespaces = (
+            "http://www.google.com/99999999",
+            "http://www.google.com/20241231",
+            "http://www.apple.com/20251231",
+        )
+        accepted_result = metric_result(
+            make_input(company_cik=1652044),
+            FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+            filing_xbrl=(make_filing_xbrl(accepted),),
+        )
+        self.assertIsInstance(accepted_result, NormalizedBalanceSheetValue)
+
+        for namespace in rejected_namespaces:
+            with self.subTest(namespace=namespace):
+                result = metric_result(
+                    make_input(company_cik=1652044),
+                    FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+                    filing_xbrl=(
+                        make_filing_xbrl(
+                            make_filing_xbrl_fact(namespace=namespace)
+                        ),
+                    ),
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_filing_xbrl_prefix_does_not_affect_semantic_matching(self) -> None:
+        results = tuple(
+            metric_result(
+                make_input(company_cik=1652044),
+                FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+                filing_xbrl=(make_prefixed_filing_xbrl(prefix),),
+            )
+            for prefix in ("goog", "arbitrary")
+        )
+
+        self.assertEqual(results[0], results[1])
+        self.assertIsInstance(results[0], NormalizedBalanceSheetValue)
+
+    def test_missing_filing_xbrl_artifact_is_typed_missing(self) -> None:
+        result = metric_result(
+            make_input(company_cik=1652044),
+            FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(
+            result.reason,
+            MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+        )
+
+    def test_filing_xbrl_artifact_company_mismatch_is_rejected(self) -> None:
+        artifact = make_filing_xbrl(
+            make_filing_xbrl_fact(),
+            company_cik=320193,
+        )
+
+        with self.assertRaisesRegex(
+            BalanceSheetNormalizationError,
+            "company does not match selected company",
+        ):
+            normalize_annual_balance_sheets(
+                make_input(company_cik=1652044),
+                filing_xbrl=(artifact,),
+            )
+
+    def test_filing_xbrl_artifact_metadata_mismatch_is_rejected(self) -> None:
+        mismatched_filing = SECFiling(
+            accession_number="annual",
+            form="10-K",
+            filing_date=date(2026, 2, 2),
+            report_date=REPORT_DATE,
+            primary_document="annual.htm",
+        )
+        artifact = make_filing_xbrl(
+            make_filing_xbrl_fact(),
+            filing=mismatched_filing,
+        )
+
+        with self.assertRaisesRegex(
+            BalanceSheetNormalizationError,
+            "filing metadata does not match selected filing",
+        ):
+            normalize_annual_balance_sheets(
+                make_input(company_cik=1652044),
+                filing_xbrl=(artifact,),
+            )
+
+    def test_duplicate_filing_xbrl_artifacts_are_rejected(self) -> None:
+        artifact = make_filing_xbrl(make_filing_xbrl_fact())
+
+        with self.assertRaisesRegex(
+            BalanceSheetNormalizationError,
+            "duplicate accession",
+        ):
+            normalize_annual_balance_sheets(
+                make_input(company_cik=1652044),
+                filing_xbrl=(artifact, artifact),
+            )
+
+    def test_different_accession_artifact_cannot_satisfy_selected_filing(self) -> None:
+        other_filing = make_filing(accession="other")
+        artifact = make_filing_xbrl(
+            make_filing_xbrl_fact(accession="other"),
+            filing=other_filing,
+        )
+        result = metric_result(
+            make_input(company_cik=1652044),
+            FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+            filing_xbrl=(artifact,),
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(
+            result.reason,
+            MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+        )
+
+    def test_filing_xbrl_structural_failures_are_ineligible(self) -> None:
+        eur_unit = FilingXBRLUnit(
+            unit_id="EUR",
+            numerator_measures=(FilingXBRLQName(USD_NAMESPACE, "EUR"),),
+            denominator_measures=(),
+        )
+        dimension = FilingXBRLDimension(
+            dimension=FilingXBRLQName("http://example.com", "Axis"),
+            explicit_member=FilingXBRLQName("http://example.com", "Member"),
+            typed_member_xml=None,
+        )
+        cases = (
+            make_filing_xbrl_fact(accession="other"),
+            make_filing_xbrl_fact(end=date(2024, 12, 31)),
+            make_filing_xbrl_fact(start=date(2025, 1, 1)),
+            make_filing_xbrl_fact(dimensions=(dimension,)),
+            make_filing_xbrl_fact(unit=eur_unit),
+            make_filing_xbrl_fact(is_nil=True, numeric_value=None, raw_value=None),
+            make_filing_xbrl_fact(numeric_value="10864000000"),
+            make_filing_xbrl_fact(numeric_value=True),
+        )
+        for fact in cases:
+            with self.subTest(fact=fact):
+                result = metric_result(
+                    make_input(company_cik=1652044),
+                    FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+                    filing_xbrl=(make_filing_xbrl(fact),),
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+                assert isinstance(result, MissingHistoricalMetric)
+                self.assertIs(
+                    result.reason,
+                    MissingReason.NO_VALID_CURRENT_INSTANT_OBSERVATION,
+                )
+
+    def test_filing_xbrl_zero_and_negative_values_are_preserved(self) -> None:
+        for value in (Decimal("0"), Decimal("-10")):
+            with self.subTest(value=value):
+                fact = make_filing_xbrl_fact(
+                    numeric_value=value,
+                    raw_value=str(value),
+                )
+                result = metric_result(
+                    make_input(company_cik=1652044),
+                    FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+                    filing_xbrl=(make_filing_xbrl(fact),),
+                )
+                self.assertIsInstance(result, NormalizedBalanceSheetValue)
+                assert isinstance(result, NormalizedBalanceSheetValue)
+                self.assertEqual(result.value, value)
+
+    def test_multiple_filing_xbrl_facts_are_ambiguous_without_overwrite(self) -> None:
+        first = make_filing_xbrl_fact(
+            numeric_value=Decimal("10"),
+            raw_value="10",
+            context_id="first",
+        )
+        second = make_filing_xbrl_fact(
+            numeric_value=Decimal("11"),
+            raw_value="11",
+            context_id="second",
+        )
+        equivalent = make_filing_xbrl_fact(
+            numeric_value=Decimal("10"),
+            raw_value="10",
+            context_id="equivalent-context",
+        )
+        for facts in ((first, second), (first, equivalent)):
+            with self.subTest(facts=facts):
+                forward = metric_result(
+                    make_input(company_cik=1652044),
+                    FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+                    filing_xbrl=(make_filing_xbrl(*facts),),
+                )
+                reverse = metric_result(
+                    make_input(company_cik=1652044),
+                    FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
+                    filing_xbrl=(make_filing_xbrl(*reversed(facts)),),
+                )
+                self.assertIsInstance(forward, AmbiguousHistoricalMetric)
+                self.assertIsInstance(reverse, AmbiguousHistoricalMetric)
+                self.assertEqual(forward, reverse)
+                assert isinstance(forward, AmbiguousHistoricalMetric)
+                self.assertEqual(len(forward.candidates), 2)
+
+    def test_company_facts_policies_do_not_use_filing_xbrl_automatically(self) -> None:
+        artifact = make_filing_xbrl(
+            make_filing_xbrl_fact(concept=INVENTORY),
+            company_cik=1652044,
+        )
+        result = metric_result(
+            make_input(company_cik=1652044),
+            FinancialMetric.INVENTORY,
+            filing_xbrl=(artifact,),
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_apple_distribution_and_marketing_remains_unsupported(self) -> None:
+        artifact = make_filing_xbrl(
+            make_filing_xbrl_fact(
+                namespace="http://www.apple.com/20250927",
+                concept="AccruedDistributionAndMarketingCurrent",
+            ),
+            company_cik=320193,
+        )
+        output = normalize_annual_balance_sheets(
+            make_input(company_cik=320193),
+            filing_xbrl=(artifact,),
+        )
+
+        self.assertNotIn(
+            "AccruedDistributionAndMarketingCurrent",
+            tuple(
+                candidate.name
+                for policy in output.annual[0].metrics
+                if isinstance(policy, MissingHistoricalMetric)
+                for candidate in policy.examined_concepts
+            ),
+        )
+
     def test_current_instant_receivable_resolves_with_provenance(self) -> None:
         result = metric_result(
             make_input(make_selected(RECEIVABLES, value=125)),
@@ -477,6 +867,7 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
                 FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
                 FinancialMetric.CUSTOMER_CONTRACT_LIABILITIES,
                 FinancialMetric.EMPLOYEE_RELATED_LIABILITIES,
+                FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
                 FinancialMetric.MEMBER_REWARDS_LIABILITY,
             ),
         )
