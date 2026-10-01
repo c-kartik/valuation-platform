@@ -115,6 +115,9 @@ structural fact selection:
   from explicit Company Facts or filing-XBRL policies into primitive
   balance-sheet snapshots; parsed filing artifacts are supplied by the caller,
   so it performs no retrieval or derived Operating NWC calculation.
+- `normalization.operating_nwc` defines issuer-specific component
+  classifications and evaluates whether one annual snapshot has sufficient
+  evidence for a future Operating NWC derivation. It performs no arithmetic.
 - `normalization.derived` validates evidence-backed, CIK-scoped derivation
   policies and their operands. It performs no network access.
 
@@ -192,10 +195,19 @@ Concept priority never suppresses a second eligible approved concept; equal
 values are not confirmation unless a policy explicitly permits it. Filing-level
 XBRL remains explicit and targeted.
 
-Operating NWC and its change are not implemented. Research supports an eventual
-component-derived result rather than a Current Assets minus Current Liabilities
-shortcut. Broad other-current-asset and liability balances remain excluded
-pending classification because they mix operating and non-operating items.
-Apple accrued distribution and marketing remains unresolved because only one
-of five selected accessions contains the fact. GOOGL accrued revenue share is
-the only filing-XBRL-backed balance-sheet primitive currently normalized.
+Operating NWC and its change are not implemented. A separate completeness layer
+classifies required operating assets and liabilities, explicit exclusions,
+issuer-specific non-applicability, and methodology-unresolved components. It
+groups underlying resolved, missing, and ambiguous normalized results without
+producing an amount. Explicit SEC zero remains resolved; missing evidence is
+not zero, and methodology uncertainty is distinct from missing SEC evidence.
+
+Research supports an eventual component-derived result rather than a Current
+Assets minus Current Liabilities shortcut. Broad residual formulas remain
+prohibited because other-current captions mix operating and non-operating
+items. Operating-lease current liabilities are explicitly excluded from the
+initial policies while integrated lease treatment remains deferred. Apple
+accrued distribution and marketing remains unresolved because only one of five
+selected accessions contains the fact. GOOGL accrued revenue share is the only
+filing-XBRL-backed balance-sheet primitive currently normalized. Current
+policies keep META, GOOGL, MSFT, AAPL, and COST incomplete for numerical O-NWC.

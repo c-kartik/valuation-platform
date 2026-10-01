@@ -2,9 +2,9 @@
 
 ## Current Milestone
 
-Phase 1F.5d is complete for explicit filing-XBRL-backed annual balance-sheet
-normalization and GOOGL accrued revenue share. Operating NWC and change in
-Operating NWC remain future work.
+Phase 1F.5f is complete for issuer-specific Operating NWC component policies and
+annual evidence-completeness evaluation. Operating NWC arithmetic and change in
+Operating NWC remain future work; all five validation issuers remain incomplete.
 
 ## Completed
 
@@ -165,15 +165,29 @@ Operating NWC remain future work.
   results
 - Kept Apple accrued distribution and marketing unresolved at 1/5 exact
   selected-accession coverage and excluded broad residual liability captions
+- Added immutable Operating NWC component classifications distinct from
+  normalized financial metric identities
+- Added CIK-specific META, GOOGL, MSFT, AAPL, and COST policies for required
+  operating assets and liabilities, exclusions, non-applicable components, and
+  methodology-unresolved balances
+- Added pure annual completeness evaluation that preserves resolved, missing,
+  and ambiguous normalized evidence without calculating an Operating NWC value
+- Preserved explicit SEC zero as resolved while keeping missing evidence,
+  issuer non-applicability, and methodology uncertainty as distinct states
+- Explicitly deferred and excluded operating-lease current liabilities under
+  the initial methodology; no lease arithmetic or capitalization was added
+- Confirmed all five issuer policies remain incomplete because material
+  component-classification or evidence blockers remain
 
 ## Next Step
 
-Resolve the remaining material Operating NWC component-classification gaps
-without broad residual formulas. Apple distribution and marketing remains
-unresolved, and broad residual accounts, tax and lease balances, the opening
-snapshot needed for a five-period change series, and change in Operating NWC
-remain outside the implemented scope. GOOGL D&A, NOPAT, interim normalization,
-and valuation also remain outside the current scope.
+Resolve the remaining issuer-specific Operating NWC blockers without broad
+residual formulas, then implement arithmetic only for issuer-periods that pass
+the completeness policy. Apple distribution and marketing, mixed residual
+accounts, and historical PP&E-in-payables adjustments remain unresolved. The
+opening snapshot needed for a five-period change series, change in Operating
+NWC, GOOGL D&A, NOPAT, interim normalization, and valuation remain outside the
+implemented scope.
 
 ## Current Repository Structure
 
@@ -196,7 +210,8 @@ valuation-platform/
 │       │   ├── concepts.py
 │       │   ├── derived.py
 │       │   ├── historical.py
-│       │   └── models.py
+│       │   ├── models.py
+│       │   └── operating_nwc.py
 │       └── sec/
 │           ├── __init__.py
 │           ├── client.py
@@ -212,7 +227,8 @@ valuation-platform/
 │   ├── normalization/
 │   │   ├── __init__.py
 │   │   ├── test_balance_sheet.py
-│   │   └── test_historical.py
+│   │   ├── test_historical.py
+│   │   └── test_operating_nwc.py
 │   └── sec/
 │       ├── __init__.py
 │       ├── test_client.py

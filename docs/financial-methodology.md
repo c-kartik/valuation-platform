@@ -157,7 +157,11 @@ preserved. Zero is a reported balance; an absent fact remains missing.
 The initial policies are:
 
 - Operating Receivables: `AccountsReceivableNetCurrent`, with
-  `ReceivablesNetCurrent` approved only for COST CIK `909832`.
+  `ReceivablesNetCurrent` approved only for COST CIK `909832`. Costco's balance
+  is retained as a required operating asset because it is substantially
+  operating receivables, but it is a mixed caption that also contains
+  tax-related amounts and is not a perfectly pure operating-working-capital
+  balance.
 - Vendor Non-Trade Receivables:
   `NontradeReceivablesCurrent`, approved only for Apple CIK `320193`.
 - Inventory: `InventoryNet` only.
@@ -202,11 +206,23 @@ Company Facts remains the primary balance-sheet source. Filing-level XBRL is
 used only by an explicit source policy and supplied to normalization on demand.
 Broad accrued and other-current-liability residuals remain excluded.
 
-Operating NWC will eventually be derived from classified operating components.
-Neither Operating NWC nor its year-over-year change is implemented. Cash,
-investments, debt, taxes, leases, and mixed residual balances remain outside
-this milestone, and the Current Assets minus Current Liabilities shortcut is
-not used.
+Operating NWC will eventually equal approved operating current assets minus
+approved operating current liabilities. Neither that arithmetic nor its
+year-over-year change is implemented. Instead, issuer-specific policies now
+classify required operating assets and liabilities, explicit exclusions,
+non-applicable components, and methodology-unresolved components. Completeness
+fails when a required component is missing or ambiguous or when a material
+component remains methodology-unresolved. A reported zero is resolved evidence;
+missing, non-applicable, and unresolved are separate states and never become
+zero.
+
+Broad residual formulas remain prohibited. Cash, investments, debt, taxes,
+accrued PP&E purchases, finance leases, and strategic component-purchase
+receivables are excluded from initial Operating NWC policies where applicable.
+Operating-lease current liabilities are also explicitly excluded while an
+integrated treatment of lease amortization, liabilities, interest, ROU assets,
+Capex, and FCFF remains deferred. The current policies intentionally leave all
+five validation issuers incomplete for numerical Operating NWC.
 
 ## Source vs. Derived Values
 
