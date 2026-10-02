@@ -1,15 +1,25 @@
+from dataclasses import replace
 from datetime import date, datetime, timezone
 from unittest import TestCase
+from unittest.mock import patch
+
+import valuation_platform.normalization.operating_nwc as operating_nwc_module
 
 from valuation_platform.normalization import (
+    AAPL_OPERATING_NWC_VALUATION_POLICY,
     AAPL_OPERATING_NWC_POLICY,
+    COST_OPERATING_NWC_VALUATION_POLICY,
     COST_OPERATING_NWC_POLICY,
+    GOOGL_OPERATING_NWC_VALUATION_POLICY,
     GOOGL_OPERATING_NWC_POLICY,
+    META_OPERATING_NWC_VALUATION_POLICY,
     META_OPERATING_NWC_POLICY,
+    MSFT_OPERATING_NWC_VALUATION_POLICY,
     MSFT_OPERATING_NWC_POLICY,
     AmbiguityReason,
     AmbiguousHistoricalMetric,
     AnnualBalanceSheetFilingResult,
+    BalanceSheetDerivationOperand,
     EvidenceSourceKind,
     DerivationOperation,
     DerivedBalanceSheetValue,
@@ -23,9 +33,16 @@ from valuation_platform.normalization import (
     OperatingNWCComponent,
     OperatingNWCComponentClassification,
     OperatingNWCComponentPolicy,
+    OperatingNWCPerimeterComponentPolicy,
+    OperatingNWCPerimeterSide,
+    OperatingNWCPerimeterTreatment,
     OperatingNWCPolicy,
+    OperatingNWCReadinessError,
+    OperatingNWCValuationPolicy,
     evaluate_operating_nwc_completeness,
+    evaluate_operating_nwc_readiness,
     operating_nwc_policy_for_cik,
+    operating_nwc_valuation_policy_for_cik,
 )
 from valuation_platform.sec.submissions import SECFiling
 from valuation_platform.sec.tickers import SECCompanyIdentity
@@ -42,7 +59,14 @@ FILING = SECFiling(
 )
 
 
-def make_evidence(metric: FinancialMetric, value: int = 10) -> FactEvidence:
+def make_evidence(
+    metric: FinancialMetric,
+    value: int = 10,
+    *,
+    balance_date: date = REPORT_DATE,
+    accession_number: str = "annual",
+    filing_date: date = date(2026, 2, 1),
+) -> FactEvidence:
     return FactEvidence(
         source_kind=EvidenceSourceKind.COMPANY_FACTS,
         source_url="facts-source",
@@ -51,11 +75,11 @@ def make_evidence(metric: FinancialMetric, value: int = 10) -> FactEvidence:
         value=value,
         unit="USD",
         start=None,
-        end=REPORT_DATE,
-        accession_number="annual",
+        end=balance_date,
+        accession_number=accession_number,
         observation_form="10-K",
-        observation_filed=date(2026, 2, 1),
-        fiscal_year=2025,
+        observation_filed=filing_date,
+        fiscal_year=balance_date.year,
         fiscal_period="FY",
         frame="CY2025Q4I",
     )
@@ -64,13 +88,23 @@ def make_evidence(metric: FinancialMetric, value: int = 10) -> FactEvidence:
 def make_resolved(
     metric: FinancialMetric,
     value: int = 10,
+    *,
+    balance_date: date = REPORT_DATE,
+    accession_number: str = "annual",
+    filing_date: date = date(2026, 2, 1),
 ) -> NormalizedBalanceSheetValue:
     return NormalizedBalanceSheetValue(
         metric=metric,
         value=value,
         unit="USD",
-        balance_date=REPORT_DATE,
-        chosen_source=make_evidence(metric, value),
+        balance_date=balance_date,
+        chosen_source=make_evidence(
+            metric,
+            value,
+            balance_date=balance_date,
+            accession_number=accession_number,
+            filing_date=filing_date,
+        ),
         confirming_sources=(),
     )
 
@@ -126,6 +160,19 @@ def make_balance_sheets(
     )
 
 
+def make_balance_sheet_series(
+    filing_results: tuple[AnnualBalanceSheetFilingResult, ...],
+    company_cik: int,
+) -> NormalizedAnnualBalanceSheets:
+    first = make_balance_sheets(filing_results[0], company_cik)
+    return NormalizedAnnualBalanceSheets(
+        company=first.company,
+        company_facts_source_url=first.company_facts_source_url,
+        company_facts_retrieved_at=first.company_facts_retrieved_at,
+        annual=filing_results,
+    )
+
+
 def evaluate(
     filing_result: AnnualBalanceSheetFilingResult,
     policy: OperatingNWCPolicy,
@@ -137,6 +184,42 @@ def evaluate(
         policy.company_cik if company_cik is None else company_cik,
     )
     return evaluate_operating_nwc_completeness(
+        balance_sheets,
+        filing_result,
+        policy,
+    )
+
+
+def perimeter_component(
+    component: OperatingNWCComponent,
+    side: OperatingNWCPerimeterSide,
+    treatment: OperatingNWCPerimeterTreatment,
+    metric: FinancialMetric | None = None,
+) -> OperatingNWCPerimeterComponentPolicy:
+    return OperatingNWCPerimeterComponentPolicy(
+        component=component,
+        side=side,
+        treatment=treatment,
+        mandatory=treatment in (
+            OperatingNWCPerimeterTreatment.REQUIRED,
+            OperatingNWCPerimeterTreatment.METHODOLOGY_BLOCKER,
+        ),
+        metric=metric,
+        rationale="Synthetic test policy",
+    )
+
+
+def evaluate_readiness(
+    filing_result: AnnualBalanceSheetFilingResult,
+    policy: OperatingNWCValuationPolicy,
+    *,
+    company_cik: int | None = None,
+):
+    balance_sheets = make_balance_sheets(
+        filing_result,
+        policy.company_cik if company_cik is None else company_cik,
+    )
+    return evaluate_operating_nwc_readiness(
         balance_sheets,
         filing_result,
         policy,
@@ -386,22 +469,28 @@ class OperatingNWCCompletenessTests(TestCase):
             )
 
     def test_filing_result_must_belong_to_balance_sheet_container(self) -> None:
+        component = required(
+            OperatingNWCComponent.OPERATING_RECEIVABLES,
+            OperatingNWCComponentClassification.OPERATING_ASSET,
+            FinancialMetric.OPERATING_RECEIVABLES,
+        )
+        policy = OperatingNWCPolicy("identity-test", 1326801, (component,))
         contained = AnnualBalanceSheetFilingResult(
             FILING,
             (make_resolved(FinancialMetric.OPERATING_RECEIVABLES),),
         )
         balance_sheets = make_balance_sheets(contained, 1326801)
-        external_filing = SECFiling(
-            accession_number="external-annual",
-            form="10-K",
-            filing_date=date(2025, 2, 1),
-            report_date=date(2024, 12, 31),
-            primary_document="external-annual.htm",
+
+        accepted = evaluate_operating_nwc_completeness(
+            balance_sheets,
+            contained,
+            policy,
         )
-        external_result = AnnualBalanceSheetFilingResult(
-            external_filing,
-            (make_resolved(FinancialMetric.OPERATING_RECEIVABLES),),
-        )
+        self.assertTrue(accepted.is_complete)
+
+        external_result = replace(contained)
+        self.assertEqual(external_result, contained)
+        self.assertIsNot(external_result, contained)
 
         with self.assertRaisesRegex(
             OperatingNWCCompletenessError,
@@ -410,7 +499,7 @@ class OperatingNWCCompletenessTests(TestCase):
             evaluate_operating_nwc_completeness(
                 balance_sheets,
                 external_result,
-                META_OPERATING_NWC_POLICY,
+                policy,
             )
 
     def test_duplicate_metric_results_are_rejected(self) -> None:
@@ -564,3 +653,613 @@ class OperatingNWCCompletenessTests(TestCase):
                 self.assertTrue(result.methodology_unresolved_components)
                 self.assertEqual(result.missing_required_components, ())
                 self.assertEqual(result.ambiguous_required_components, ())
+
+
+class OperatingNWCReadinessTests(TestCase):
+    def test_reconstruction_incomplete_can_be_valuation_ready(self) -> None:
+        metrics = tuple(
+            make_resolved(component.metric)
+            for component in COST_OPERATING_NWC_POLICY.components
+            if component.metric is not None
+        )
+        filing_result = AnnualBalanceSheetFilingResult(FILING, metrics)
+        balance_sheets = make_balance_sheets(filing_result, 909832)
+
+        reconstruction = evaluate_operating_nwc_completeness(
+            balance_sheets,
+            filing_result,
+            COST_OPERATING_NWC_POLICY,
+        )
+        readiness = evaluate_operating_nwc_readiness(
+            balance_sheets,
+            filing_result,
+            COST_OPERATING_NWC_VALUATION_POLICY,
+        )
+
+        self.assertFalse(reconstruction.is_complete)
+        self.assertTrue(reconstruction.methodology_unresolved_components)
+        self.assertTrue(readiness.is_ready)
+        self.assertTrue(readiness.configured_non_mandatory_components)
+        self.assertFalse(hasattr(readiness, "value"))
+        self.assertFalse(hasattr(readiness, "operating_nwc"))
+
+    def test_initial_issuer_readiness_states_are_conservative(self) -> None:
+        cases = (
+            (META_OPERATING_NWC_VALUATION_POLICY, True),
+            (GOOGL_OPERATING_NWC_VALUATION_POLICY, False),
+            (MSFT_OPERATING_NWC_VALUATION_POLICY, False),
+            (AAPL_OPERATING_NWC_VALUATION_POLICY, False),
+            (COST_OPERATING_NWC_VALUATION_POLICY, True),
+        )
+        for policy, expected in cases:
+            with self.subTest(policy=policy.policy_id):
+                metrics = tuple(
+                    make_resolved(component.metric)
+                    for component in policy.components
+                    if component.metric is not None
+                )
+                result = evaluate_readiness(
+                    AnnualBalanceSheetFilingResult(FILING, metrics),
+                    policy,
+                )
+
+                self.assertIs(result.is_ready, expected)
+                self.assertIs(bool(result.methodology_blockers), not expected)
+
+    def test_meta_period_readiness_preserves_2025_missing_contract_liability(
+        self,
+    ) -> None:
+        results = []
+        for year in range(2021, 2026):
+            filing = SECFiling(
+                accession_number=f"meta-{year}",
+                form="10-K",
+                filing_date=date(year + 1, 2, 1),
+                report_date=date(year, 12, 31),
+                primary_document=f"meta-{year}.htm",
+            )
+            metrics = []
+            for component in META_OPERATING_NWC_VALUATION_POLICY.components:
+                if component.metric is None:
+                    continue
+                if (
+                    year == 2025
+                    and component.metric
+                    is FinancialMetric.CUSTOMER_CONTRACT_LIABILITIES
+                ):
+                    metrics.append(make_missing(component.metric))
+                elif component.metric is FinancialMetric.TRADE_ACCOUNTS_PAYABLE:
+                    evidence = make_evidence(
+                        component.metric,
+                        balance_date=filing.report_date,
+                        accession_number=filing.accession_number,
+                        filing_date=filing.filing_date,
+                    )
+                    metrics.append(
+                        DerivedBalanceSheetValue(
+                            metric=component.metric,
+                            value=10,
+                            unit="USD",
+                            balance_date=filing.report_date,
+                            policy_id="meta_adjusted_trade_accounts_payable_v1",
+                            operation=DerivationOperation.SUBTRACT,
+                            operands=(
+                                BalanceSheetDerivationOperand(
+                                    metric=component.metric,
+                                    value=10,
+                                    unit="USD",
+                                    start=None,
+                                    end=filing.report_date,
+                                    chosen_source=evidence,
+                                    confirming_sources=(),
+                                ),
+                            ),
+                            steps=(),
+                        )
+                    )
+                else:
+                    metrics.append(
+                        make_resolved(
+                            component.metric,
+                            balance_date=filing.report_date,
+                            accession_number=filing.accession_number,
+                            filing_date=filing.filing_date,
+                        )
+                    )
+            results.append(AnnualBalanceSheetFilingResult(filing, tuple(metrics)))
+        balance_sheets = make_balance_sheet_series(tuple(results), 1326801)
+
+        readiness = tuple(
+            evaluate_operating_nwc_readiness(
+                balance_sheets,
+                filing_result,
+                META_OPERATING_NWC_VALUATION_POLICY,
+            )
+            for filing_result in balance_sheets.annual
+        )
+
+        self.assertEqual(
+            tuple(result.is_ready for result in readiness),
+            (True, True, True, True, False),
+        )
+        self.assertEqual(
+            tuple(
+                item.policy.component
+                for item in readiness[-1].missing_mandatory_components
+            ),
+            (OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,),
+        )
+        derived = next(
+            item
+            for item in readiness[0].resolved_mandatory_components
+            if item.policy.component is OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE
+        )
+        self.assertIsInstance(derived.result, DerivedBalanceSheetValue)
+
+    def test_all_five_cost_periods_are_ready(self) -> None:
+        results = tuple(
+            AnnualBalanceSheetFilingResult(
+                SECFiling(
+                    accession_number=f"cost-{year}",
+                    form="10-K",
+                    filing_date=date(year, 10, 1),
+                    report_date=date(year, 8, 31),
+                    primary_document=f"cost-{year}.htm",
+                ),
+                tuple(
+                    make_resolved(
+                        component.metric,
+                        balance_date=date(year, 8, 31),
+                        accession_number=f"cost-{year}",
+                        filing_date=date(year, 10, 1),
+                    )
+                    for component in COST_OPERATING_NWC_VALUATION_POLICY.components
+                    if component.metric is not None
+                ),
+            )
+            for year in range(2021, 2026)
+        )
+        balance_sheets = make_balance_sheet_series(results, 909832)
+
+        readiness = tuple(
+            evaluate_operating_nwc_readiness(
+                balance_sheets,
+                filing_result,
+                COST_OPERATING_NWC_VALUATION_POLICY,
+            )
+            for filing_result in results
+        )
+
+        self.assertTrue(all(result.is_ready for result in readiness))
+
+    def test_zero_missing_ambiguity_and_methodology_blocker_are_distinct(self) -> None:
+        asset = perimeter_component(
+            OperatingNWCComponent.OPERATING_RECEIVABLES,
+            OperatingNWCPerimeterSide.ASSET,
+            OperatingNWCPerimeterTreatment.REQUIRED,
+            FinancialMetric.OPERATING_RECEIVABLES,
+        )
+        liability = perimeter_component(
+            OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+            OperatingNWCPerimeterSide.LIABILITY,
+            OperatingNWCPerimeterTreatment.REQUIRED,
+            FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+        )
+        blocker = perimeter_component(
+            OperatingNWCComponent.RESIDUAL_CURRENT_LIABILITIES,
+            OperatingNWCPerimeterSide.LIABILITY,
+            OperatingNWCPerimeterTreatment.METHODOLOGY_BLOCKER,
+        )
+        policy = OperatingNWCValuationPolicy("test", "1", 1, (asset, liability, blocker))
+        filing_result = AnnualBalanceSheetFilingResult(
+            FILING,
+            (
+                make_resolved(FinancialMetric.OPERATING_RECEIVABLES, 0),
+                make_ambiguous(FinancialMetric.TRADE_ACCOUNTS_PAYABLE),
+            ),
+        )
+
+        result = evaluate_readiness(filing_result, policy)
+
+        self.assertFalse(result.is_ready)
+        self.assertEqual(result.resolved_mandatory_components[0].result.value, 0)
+        self.assertEqual(result.missing_mandatory_components, ())
+        self.assertEqual(len(result.ambiguous_mandatory_components), 1)
+        self.assertEqual(result.methodology_blockers, (blocker,))
+
+        missing_result = evaluate_readiness(
+            AnnualBalanceSheetFilingResult(
+                FILING,
+                (
+                    make_resolved(FinancialMetric.OPERATING_RECEIVABLES, 0),
+                    make_missing(FinancialMetric.TRADE_ACCOUNTS_PAYABLE),
+                ),
+            ),
+            policy,
+        )
+        self.assertEqual(len(missing_result.missing_mandatory_components), 1)
+
+    def test_out_of_perimeter_gap_does_not_block_readiness(self) -> None:
+        required_component = perimeter_component(
+            OperatingNWCComponent.OPERATING_RECEIVABLES,
+            OperatingNWCPerimeterSide.ASSET,
+            OperatingNWCPerimeterTreatment.REQUIRED,
+            FinancialMetric.OPERATING_RECEIVABLES,
+        )
+        outside = perimeter_component(
+            OperatingNWCComponent.RESIDUAL_CURRENT_LIABILITIES,
+            OperatingNWCPerimeterSide.LIABILITY,
+            OperatingNWCPerimeterTreatment.OUT_OF_PERIMETER,
+        )
+        policy = OperatingNWCValuationPolicy(
+            "test",
+            "perimeter-v1",
+            1,
+            (required_component, outside),
+        )
+
+        result = evaluate_readiness(
+            AnnualBalanceSheetFilingResult(
+                FILING,
+                (make_resolved(FinancialMetric.OPERATING_RECEIVABLES),),
+            ),
+            policy,
+        )
+
+        self.assertTrue(result.is_ready)
+        self.assertEqual(result.policy_id, "test")
+        self.assertEqual(result.policy_version, "perimeter-v1")
+        self.assertEqual(result.configured_non_mandatory_components, (outside,))
+
+    def test_readiness_rejects_wrong_company_and_external_filing(self) -> None:
+        filing_result = AnnualBalanceSheetFilingResult(
+            FILING,
+            tuple(
+                make_resolved(component.metric)
+                for component in COST_OPERATING_NWC_VALUATION_POLICY.components
+                if component.metric is not None
+            ),
+        )
+        wrong_company = make_balance_sheets(filing_result, 320193)
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "company does not match O-NWC valuation policy",
+        ):
+            evaluate_operating_nwc_readiness(
+                wrong_company,
+                filing_result,
+                COST_OPERATING_NWC_VALUATION_POLICY,
+            )
+
+        contained = make_balance_sheets(filing_result, 909832)
+        accepted = evaluate_operating_nwc_readiness(
+            contained,
+            filing_result,
+            COST_OPERATING_NWC_VALUATION_POLICY,
+        )
+        self.assertTrue(accepted.is_ready)
+
+        external = replace(filing_result)
+        self.assertEqual(external, filing_result)
+        self.assertIsNot(external, filing_result)
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "filing result does not belong",
+        ):
+            evaluate_operating_nwc_readiness(
+                contained,
+                external,
+                COST_OPERATING_NWC_VALUATION_POLICY,
+            )
+
+    def test_readiness_rejects_duplicate_or_absent_configured_metrics(self) -> None:
+        required_component = perimeter_component(
+            OperatingNWCComponent.OPERATING_RECEIVABLES,
+            OperatingNWCPerimeterSide.ASSET,
+            OperatingNWCPerimeterTreatment.REQUIRED,
+            FinancialMetric.OPERATING_RECEIVABLES,
+        )
+        policy = OperatingNWCValuationPolicy("test", "1", 1, (required_component,))
+
+        duplicate = AnnualBalanceSheetFilingResult(
+            FILING,
+            (
+                make_resolved(FinancialMetric.OPERATING_RECEIVABLES),
+                make_missing(FinancialMetric.OPERATING_RECEIVABLES),
+            ),
+        )
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "duplicate metric 'operating_receivables'",
+        ):
+            evaluate_readiness(duplicate, policy)
+
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "omits configured perimeter metric 'operating_receivables'",
+        ):
+            evaluate_readiness(AnnualBalanceSheetFilingResult(FILING, ()), policy)
+
+    def test_readiness_output_is_deterministic_and_policy_ordered(self) -> None:
+        policy = COST_OPERATING_NWC_VALUATION_POLICY
+        metrics = tuple(
+            make_resolved(component.metric)
+            for component in policy.components
+            if component.metric is not None
+        )
+        forward = evaluate_readiness(
+            AnnualBalanceSheetFilingResult(FILING, metrics),
+            policy,
+        )
+        reverse = evaluate_readiness(
+            AnnualBalanceSheetFilingResult(FILING, tuple(reversed(metrics))),
+            policy,
+        )
+
+        self.assertEqual(forward, reverse)
+        self.assertEqual(
+            tuple(item.policy.component for item in forward.resolved_mandatory_components),
+            tuple(
+                component.component
+                for component in policy.components
+                if component.metric is not None
+            ),
+        )
+
+    def test_perimeter_component_constructor_rejects_contradictory_states(self) -> None:
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "Required perimeter component must be mandatory",
+        ):
+            OperatingNWCPerimeterComponentPolicy(
+                component=OperatingNWCComponent.OPERATING_RECEIVABLES,
+                side=OperatingNWCPerimeterSide.ASSET,
+                treatment=OperatingNWCPerimeterTreatment.REQUIRED,
+                mandatory=False,
+                metric=FinancialMetric.OPERATING_RECEIVABLES,
+                rationale="Invalid required component",
+            )
+
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "Required perimeter component must be mandatory",
+        ):
+            OperatingNWCPerimeterComponentPolicy(
+                component=OperatingNWCComponent.OPERATING_RECEIVABLES,
+                side=OperatingNWCPerimeterSide.ASSET,
+                treatment=OperatingNWCPerimeterTreatment.REQUIRED,
+                mandatory=True,
+                metric=FinancialMetric.INVENTORY,
+                rationale="Invalid metric association",
+            )
+
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "Non-mandatory perimeter component cannot request",
+        ):
+            OperatingNWCPerimeterComponentPolicy(
+                component=OperatingNWCComponent.RESIDUAL_CURRENT_LIABILITIES,
+                side=OperatingNWCPerimeterSide.LIABILITY,
+                treatment=OperatingNWCPerimeterTreatment.OUT_OF_PERIMETER,
+                mandatory=False,
+                metric=FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                rationale="Invalid outside component",
+            )
+
+    def test_valuation_policy_constructor_rejects_duplicate_configuration(self) -> None:
+        receivables = perimeter_component(
+            OperatingNWCComponent.OPERATING_RECEIVABLES,
+            OperatingNWCPerimeterSide.ASSET,
+            OperatingNWCPerimeterTreatment.REQUIRED,
+            FinancialMetric.OPERATING_RECEIVABLES,
+        )
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "duplicate components",
+        ):
+            OperatingNWCValuationPolicy(
+                "duplicate-components",
+                "1",
+                1,
+                (receivables, receivables),
+            )
+
+        with patch.dict(
+            operating_nwc_module._NORMALIZED_METRICS,
+            {OperatingNWCComponent.INVENTORY: FinancialMetric.OPERATING_RECEIVABLES},
+        ):
+            inventory = perimeter_component(
+                OperatingNWCComponent.INVENTORY,
+                OperatingNWCPerimeterSide.ASSET,
+                OperatingNWCPerimeterTreatment.REQUIRED,
+                FinancialMetric.OPERATING_RECEIVABLES,
+            )
+            with self.assertRaisesRegex(
+                OperatingNWCReadinessError,
+                "duplicate configured metrics",
+            ):
+                OperatingNWCValuationPolicy(
+                    "duplicate-metrics",
+                    "1",
+                    1,
+                    (receivables, inventory),
+                )
+
+    def test_valuation_policy_registry_rejects_ambiguous_registrations(self) -> None:
+        duplicate_cik = replace(
+            META_OPERATING_NWC_VALUATION_POLICY,
+            policy_id="duplicate-meta-cik",
+        )
+        with patch.object(
+            operating_nwc_module,
+            "OPERATING_NWC_VALUATION_POLICIES",
+            (META_OPERATING_NWC_VALUATION_POLICY, duplicate_cik),
+        ):
+            with self.assertRaisesRegex(
+                OperatingNWCReadinessError,
+                "duplicate company CIKs",
+            ):
+                operating_nwc_valuation_policy_for_cik(1326801)
+
+        duplicate_identity = replace(
+            META_OPERATING_NWC_VALUATION_POLICY,
+            company_cik=999999,
+        )
+        with patch.object(
+            operating_nwc_module,
+            "OPERATING_NWC_VALUATION_POLICIES",
+            (META_OPERATING_NWC_VALUATION_POLICY, duplicate_identity),
+        ):
+            with self.assertRaisesRegex(
+                OperatingNWCReadinessError,
+                "duplicate policy ID/version",
+            ):
+                operating_nwc_valuation_policy_for_cik(1326801)
+
+    def test_valuation_policy_lookup_is_independent_of_registry_order(self) -> None:
+        with patch.object(
+            operating_nwc_module,
+            "OPERATING_NWC_VALUATION_POLICIES",
+            tuple(reversed(operating_nwc_module.OPERATING_NWC_VALUATION_POLICIES)),
+        ):
+            self.assertIs(
+                operating_nwc_valuation_policy_for_cik(1326801),
+                META_OPERATING_NWC_VALUATION_POLICY,
+            )
+
+    def test_builtin_policy_lookup_and_versioned_perimeters(self) -> None:
+        expected = {
+            1326801: (
+                (
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+                    OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
+                    OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES,
+                ),
+                (),
+                (
+                    OperatingNWCComponent.OTHER_ACCRUED_LIABILITIES,
+                    OperatingNWCComponent.ACCRUED_PP_AND_E_PURCHASES,
+                    OperatingNWCComponent.OPERATING_LEASE_LIABILITIES,
+                ),
+            ),
+            1652044: (
+                (
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
+                    OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES,
+                    OperatingNWCComponent.ACCRUED_REVENUE_SHARE_LIABILITY,
+                    OperatingNWCComponent.ACCRUED_CUSTOMER_LIABILITIES,
+                ),
+                (
+                    OperatingNWCComponent.INVENTORY,
+                    OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+                ),
+                (
+                    OperatingNWCComponent.RESIDUAL_CURRENT_LIABILITIES,
+                    OperatingNWCComponent.ACCRUED_PP_AND_E_PURCHASES,
+                    OperatingNWCComponent.OPERATING_LEASE_LIABILITIES,
+                ),
+            ),
+            789019: (
+                (
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCComponent.INVENTORY,
+                    OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
+                    OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES,
+                ),
+                (OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,),
+                (
+                    OperatingNWCComponent.COMPONENT_PURCHASE_RECEIVABLES,
+                    OperatingNWCComponent.RESIDUAL_CURRENT_LIABILITIES,
+                    OperatingNWCComponent.ACCRUED_PP_AND_E_PURCHASES,
+                    OperatingNWCComponent.OPERATING_LEASE_LIABILITIES,
+                ),
+            ),
+            320193: (
+                (
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCComponent.VENDOR_NONTRADE_RECEIVABLES,
+                    OperatingNWCComponent.INVENTORY,
+                    OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+                    OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
+                ),
+                (
+                    OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES,
+                    OperatingNWCComponent.DISTRIBUTION_AND_MARKETING_LIABILITY,
+                ),
+                (
+                    OperatingNWCComponent.RESIDUAL_CURRENT_LIABILITIES,
+                    OperatingNWCComponent.OPERATING_LEASE_LIABILITIES,
+                ),
+            ),
+            909832: (
+                (
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCComponent.INVENTORY,
+                    OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+                    OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
+                    OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES,
+                    OperatingNWCComponent.MEMBER_REWARDS_LIABILITY,
+                ),
+                (),
+                (
+                    OperatingNWCComponent.RESIDUAL_CURRENT_LIABILITIES,
+                    OperatingNWCComponent.OPERATING_LEASE_LIABILITIES,
+                ),
+            ),
+        }
+        for company_cik, (required, blockers, outside) in expected.items():
+            with self.subTest(company_cik=company_cik):
+                policy = operating_nwc_valuation_policy_for_cik(company_cik)
+                self.assertEqual(policy.version, "1")
+                self.assertEqual(
+                    tuple(
+                        component.component
+                        for component in policy.components
+                        if component.treatment
+                        is OperatingNWCPerimeterTreatment.REQUIRED
+                    ),
+                    required,
+                )
+                self.assertEqual(
+                    tuple(
+                        component.component
+                        for component in policy.components
+                        if component.treatment
+                        is OperatingNWCPerimeterTreatment.METHODOLOGY_BLOCKER
+                    ),
+                    blockers,
+                )
+                self.assertEqual(
+                    tuple(
+                        component.component
+                        for component in policy.components
+                        if component.treatment
+                        is OperatingNWCPerimeterTreatment.OUT_OF_PERIMETER
+                    ),
+                    outside,
+                )
+                asset_components = {
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCComponent.VENDOR_NONTRADE_RECEIVABLES,
+                    OperatingNWCComponent.INVENTORY,
+                    OperatingNWCComponent.COMPONENT_PURCHASE_RECEIVABLES,
+                }
+                self.assertTrue(
+                    all(
+                        component.side
+                        is (
+                            OperatingNWCPerimeterSide.ASSET
+                            if component.component in asset_components
+                            else OperatingNWCPerimeterSide.LIABILITY
+                        )
+                        for component in policy.components
+                    )
+                )
+
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "No Operating NWC valuation policy is configured",
+        ):
+            operating_nwc_valuation_policy_for_cik(999999)

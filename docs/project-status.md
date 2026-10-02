@@ -2,9 +2,9 @@
 
 ## Current Milestone
 
-Phase 1F.5g.2 is complete for META adjusted trade accounts payable from a
-CIK-scoped, multi-source derivation. Operating NWC arithmetic and change in
-Operating NWC remain future work; all five validation issuers remain incomplete.
+Phase 1F.5h.1 is complete for versioned Operating NWC valuation readiness.
+Strict reconstruction completeness remains separate. Operating NWC arithmetic
+and change in Operating NWC remain future work.
 
 ## Completed
 
@@ -203,16 +203,33 @@ Operating NWC remain future work; all five validation issuers remain incomplete.
   the initial methodology; no lease arithmetic or capitalization was added
 - Confirmed all five issuer policies remain incomplete because material
   component-classification or evidence blockers remain
+- Preserved strict reconstruction completeness as an audit diagnostic without
+  weakening its missing, ambiguous, unresolved, excluded, or not-applicable
+  classifications
+- Added immutable versioned issuer-specific valuation perimeters and a separate
+  pure readiness evaluator that preserves direct, derived, missing, and
+  ambiguous evidence without calculating Operating NWC
+- Made COST ready for all five selected annual periods and META ready for
+  2021–2024; META 2025 remains not ready because required customer contract
+  liabilities are typed missing
+- Kept GOOGL not ready for its trade-AP and inventory methodology decisions,
+  MSFT not ready for trade AP, and AAPL not ready for employee and distribution-
+  and-marketing liability decisions
+- Kept broad mixed residual captions visible as reconstruction limitations but
+  outside the initial valuation perimeters; omitted balances and movements are
+  not treated as zero and will remain absent from future arithmetic
+- Defined perimeter version changes around economic component or mandatory-
+  treatment changes rather than incidental code changes
 
 ## Next Step
 
-Resolve the remaining issuer-specific Operating NWC blockers without broad
-residual formulas before implementing arithmetic only for periods that pass
-the completeness policy. Apple distribution and marketing, mixed residual
-accounts, and historical PP&E-in-payables adjustments remain unresolved. The
-opening snapshot needed for a five-period change series, change in Operating
-NWC, GOOGL D&A, NOPAT, interim normalization, and valuation remain outside the
-implemented scope.
+Resolve the mandatory valuation-perimeter blockers without broad residual
+formulas, then implement arithmetic only for issuer-periods that pass readiness.
+Priority work is META 2025 customer contract liabilities, GOOGL and MSFT trade
+AP, GOOGL inventory treatment, and AAPL employee and distribution-and-marketing
+decisions. The opening snapshot needed for a five-period change series, change
+in Operating NWC, GOOGL D&A, NOPAT, interim normalization, and valuation remain
+outside the implemented scope.
 
 ## Current Repository Structure
 

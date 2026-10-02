@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.5g.2 complete — META adjusted trade accounts payable**
+**Phase 1F.5h.1 complete — Operating NWC valuation readiness**
 
-Next milestone: **resolve remaining issuer-specific Operating NWC blockers**
+Next milestone: **resolve mandatory O-NWC perimeter blockers before arithmetic**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -69,9 +69,13 @@ Facts remains the default;
 filing XBRL is policy-driven and never fetched by normalization. Missing
 balances remain distinct from zero. Broad other-current-
 asset and liability accounts, Operating NWC, and change in Operating NWC remain
-unresolved. CIK-specific policies now classify researched components and report
-whether each annual period has complete evidence. This completeness layer does
-not calculate Operating NWC; all five validation issuers remain incomplete.
+unresolved. Strict reconstruction policies continue to report whether each
+annual period has complete evidence. Separate versioned valuation-perimeter
+policies now determine whether the explicitly required components are ready for
+future arithmetic. COST is ready for all five selected periods; META is ready
+for 2021–2024 and remains blocked in 2025 by its missing required customer
+contract liability. GOOGL, MSFT, and AAPL retain explicit methodology blockers.
+Neither readiness layer calculates Operating NWC.
 For META only, reported trade accounts payable is adjusted through a pure,
 provenance-preserving derivation that removes PP&E payable evidence split across
 Company Facts and explicitly supplied filing XBRL. The duration-shaped combined

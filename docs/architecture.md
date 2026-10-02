@@ -115,9 +115,9 @@ structural fact selection:
   from explicit Company Facts or filing-XBRL policies into primitive
   balance-sheet snapshots; parsed filing artifacts are supplied by the caller,
   so it performs no retrieval or derived Operating NWC calculation.
-- `normalization.operating_nwc` defines issuer-specific component
-  classifications and evaluates whether one annual snapshot has sufficient
-  evidence for a future Operating NWC derivation. It performs no arithmetic.
+- `normalization.operating_nwc` preserves strict issuer-specific reconstruction
+  diagnostics and separately evaluates versioned valuation perimeters for
+  calculation readiness. Both paths are pure and perform no arithmetic.
 - `normalization.derived` validates evidence-backed, CIK-scoped derivation
   policies and their operands. It performs no network access.
 - `normalization.balance_sheet_derivation` resolves the narrowly approved META
@@ -214,12 +214,24 @@ operand unresolved rather than being ranked by frequency. The operand is never
 a direct instant balance-sheet value. Missing or ambiguous operands keep
 adjusted trade AP unresolved.
 
-Operating NWC and its change are not implemented. A separate completeness layer
+Operating NWC and its change are not implemented. A strict completeness layer
 classifies required operating assets and liabilities, explicit exclusions,
 issuer-specific non-applicability, and methodology-unresolved components. It
 groups underlying resolved, missing, and ambiguous normalized results without
 producing an amount. Explicit SEC zero remains resolved; missing evidence is
 not zero, and methodology uncertainty is distinct from missing SEC evidence.
+
+A separate valuation-readiness layer uses immutable, versioned, issuer-specific
+component perimeters. Each ordered perimeter entry identifies its asset or
+liability side and is either required evidence, an explicit methodology
+blocker, or outside the valuation perimeter. Issuer-inapplicable components are
+omitted from that issuer's valuation perimeter. Readiness inspects
+only configured required metrics, preserves direct or derived evidence, and
+does not infer a perimeter from whichever facts happen to resolve. Policy
+version `1` records the initial economic perimeter; changing the included
+components or their required treatment requires a new version, while incidental
+code changes do not. Reconstruction can remain incomplete while valuation
+readiness succeeds.
 
 Research supports an eventual component-derived result rather than a Current
 Assets minus Current Liabilities shortcut. Broad residual formulas remain
@@ -229,5 +241,8 @@ initial policies while integrated lease treatment remains deferred. Apple
 accrued distribution and marketing remains unresolved because only one of five
 selected accessions contains the fact. GOOGL accrued revenue share and accrued
 customer liabilities are the filing-XBRL-backed balance-sheet primitives
-currently normalized. Current
-policies keep META, GOOGL, MSFT, AAPL, and COST incomplete for numerical O-NWC.
+currently normalized. Strict reconstruction policies keep all five issuers
+incomplete. Under the initial valuation perimeters, COST is ready for all five
+selected periods, META is ready for 2021–2024 and blocked in 2025 by missing
+customer contract liabilities, and GOOGL, MSFT, and AAPL retain explicit
+methodology blockers. No numerical O-NWC is produced.

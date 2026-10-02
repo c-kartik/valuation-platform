@@ -246,13 +246,31 @@ Broad accrued and other-current-liability residuals remain excluded.
 
 Operating NWC will eventually equal approved operating current assets minus
 approved operating current liabilities. Neither that arithmetic nor its
-year-over-year change is implemented. Instead, issuer-specific policies now
-classify required operating assets and liabilities, explicit exclusions,
-non-applicable components, and methodology-unresolved components. Completeness
-fails when a required component is missing or ambiguous or when a material
-component remains methodology-unresolved. A reported zero is resolved evidence;
+year-over-year change is implemented. The methodology uses a hybrid distinction:
+strict reconstruction completeness asks whether the relevant operating current-
+account structure has been cleanly reconstructed, while valuation readiness
+asks whether every mandatory component in an explicitly approved issuer
+perimeter is usable for one period. A reported zero is resolved evidence;
 missing, non-applicable, and unresolved are separate states and never become
 zero.
+
+Initial versioned perimeters require the individually evidenced operating
+drivers selected for each issuer. Mixed residual captions can remain outside a
+valuation perimeter without automatically blocking readiness, but they remain
+visible reconstruction limitations. Their exclusion is not economically
+neutral: any excluded balance and its year-over-year movement will also be
+absent from eventual Operating NWC and change in Operating NWC. Historical and
+forecast methodology must therefore use the same perimeter. A perimeter version
+changes only when included components or mandatory treatment changes in a way
+that changes calculation semantics.
+
+COST is ready across all five selected periods under version `1`. META is ready
+for 2021–2024; 2025 is not ready because required customer contract liabilities
+are typed missing. GOOGL remains blocked by unresolved trade AP treatment and
+the inventory perimeter decision. MSFT remains blocked by trade AP treatment.
+AAPL remains blocked by employee-liability and distribution-and-marketing
+decisions. These are explicit methodology blockers, not invented missing SEC
+observations.
 
 Broad residual formulas remain prohibited. Cash, investments, debt, taxes,
 accrued PP&E purchases, finance leases, and strategic component-purchase
@@ -260,7 +278,9 @@ receivables are excluded from initial Operating NWC policies where applicable.
 Operating-lease current liabilities are also explicitly excluded while an
 integrated treatment of lease amortization, liabilities, interest, ROU assets,
 Capex, and FCFF remains deferred. The current policies intentionally leave all
-five validation issuers incomplete for numerical Operating NWC.
+five validation issuers reconstruction-incomplete. They do not all have the
+same valuation-readiness status, and neither readiness nor completeness performs
+numerical arithmetic.
 
 ## Source vs. Derived Values
 
