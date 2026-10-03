@@ -127,6 +127,11 @@ structural fact selection:
 - `normalization.balance_sheet_derivation` resolves the narrowly approved META
   trade-payables adjustment from already selected Company Facts and explicitly
   supplied filing-XBRL evidence. It performs no retrieval or O-NWC arithmetic.
+- `normalization.tax_evidence` normalizes caller-supplied, explicitly signed tax
+  reconciliation rows and validates rate or dollar bridge arithmetic. It keeps
+  raw XBRL values separate from filing-displayed signs and retains unresolved
+  evidence states. It has no retrieval, sign-scraping, operating-tax policy, or
+  NOPAT behavior.
 
 Annual normalization currently supports direct Revenue, Operating Income,
 Pretax Income, Income Tax Expense, D&A, and Capex values, plus derived Reported
@@ -172,6 +177,18 @@ The normalization package does not infer interim period semantics, derive
 quarters, aggregate financial concepts, determine forecast operating tax
 assumptions, or calculate valuation inputs. Those remain separate later
 responsibilities.
+
+Tax evidence accepts explicit sign authority from the original filing table or
+a reliable calculation relationship. Percentage-point rows retain their
+displayed rate and pretax denominator alongside the unrounded Decimal tax
+amount derived from them. Dollar rows retain their reported currency amount.
+Bridge validation reports exact, disclosed-rounding, unreconciled, or incomplete
+evidence status. Rounding tolerance conservatively counts the starting value,
+each displayed row, and reported total at the declared precision; it never
+creates a balancing row. Normalized rows validate their own source identity and
+rate/dollar arithmetic. Calculation-relationship sign authority requires an
+auditable rationale. Diagnostic income-base, pairing, and treatment
+classifications do not drive an adjusted-tax result.
 
 Annual balance-sheet normalization requires an exact selected 10-K accession,
 a current instant observation with no start date, an end equal to the filing

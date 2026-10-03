@@ -21,7 +21,7 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.5h.5 implemented — annual change in Operating NWC**
+**Phase 1F.6b in progress — signed tax-evidence normalization**
 
 Next milestone: **continue the remaining historical FCFF inputs**
 
@@ -65,10 +65,11 @@ payable, customer contract liabilities, employee-related liabilities for four
 validated issuers, and Costco member rewards from current instant Company Facts
 observations. It also normalizes GOOGL accrued revenue share and accrued customer
 liabilities from explicitly supplied selected-filing XBRL artifacts. Company
-Facts remains the default;
-filing XBRL is policy-driven and never fetched by normalization. Missing
-balances remain distinct from zero. Broad other-current-
-asset and liability accounts and change in Operating NWC remain unresolved.
+Facts remains the default; filing XBRL is policy-driven and never fetched by
+normalization. Missing balances remain distinct from zero. Broad other-current-
+asset and liability accounts remain unresolved. Annual Operating NWC levels
+and changes are implemented for ready META v2 and COST v1 periods; GOOGL, MSFT,
+and AAPL retain explicit methodology blockers.
 Strict reconstruction policies continue to report whether each
 annual period has complete evidence. Separate versioned valuation-perimeter
 policies now determine whether the explicitly required components are ready for
@@ -97,6 +98,11 @@ rather than presented as cash flow. Results use actual fiscal dates, exact
 provenance. Five current META or COST levels therefore produce four changes.
 Positive change means operating NWC increased; the future FCFF layer will
 subtract that amount. FCFF itself remains unimplemented.
+Signed tax-evidence normalization preserves filing-displayed signs separately
+from raw XBRL magnitudes and supports both rate and dollar reconciliations with
+arithmetic validation. Callers supply explicit sign evidence; unresolved source
+or methodology states remain visible. Operating-tax policy, NOPAT, and automatic
+forecast tax assumptions remain unimplemented.
 For META only, reported trade accounts payable is adjusted through a pure,
 provenance-preserving derivation that removes PP&E payable evidence split across
 Company Facts and explicitly supplied filing XBRL. The duration-shaped combined

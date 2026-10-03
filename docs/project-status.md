@@ -2,10 +2,11 @@
 
 ## Current Milestone
 
-Phase 1F.5h.5 implements annual change in Operating NWC from adjacent comparable
-calculated levels. META v2 and COST v1 each have five annual levels and four
-annual changes. Strict reconstruction completeness remains separate, and FCFF
-remains future work.
+Phase 1F.6b adds caller-driven signed tax-evidence normalization for rate and
+dollar reconciliation bridges. It validates bridge arithmetic and preserves
+unresolved source or methodology states. Sign evidence must be supplied from
+the filing table or a reliable relationship. Operating-tax policy, NOPAT, and
+FCFF remain future work.
 
 ## Completed
 
@@ -266,13 +267,24 @@ remains future work.
 - Live-validated META v2 annual ΔNWC at -$4.533bn, $2.270bn, $0.949bn, and
   $1.151bn and COST v1 at $1.897bn, -$1.146bn, -$0.471bn, and -$1.417bn for
   their four respective 2022–2025 fiscal periods
+- Added immutable caller-driven tax reconciliation evidence and bridge models
+  that preserve explicit filing-displayed signs separately from raw XBRL values
+- Supported both percentage-point rate bridges and reported dollar bridges,
+  exact Decimal rate dollarization, disclosed-precision validation, row order,
+  and typed evidence problems without synthetic residual rows
+- Kept diagnostic income-base, pairing, and proposed-treatment classifications
+  separate from operating-tax policy; operating tax, NOPAT, and forecast tax
+  assumptions remain unimplemented
 
 ## Next Step
 
-Continue the remaining historical FCFF inputs. GOOGL and MSFT trade AP, GOOGL
-inventory, and AAPL employee and distribution-and-marketing decisions remain
-O-NWC blockers. An earlier opening snapshot would be required to produce a
-change for the earliest displayed annual level. GOOGL D&A, NOPAT, interim
+Continue tax evidence and methodology work. The signed bridge layer is
+caller-driven because the repository has no reliable filing-table sign parser;
+automatic table extraction needs a separate technical design. Foreign/cross-
+border allocation, broad Other rows, combined SBC captions, and operating-income
+linkage still block operating-tax policy. GOOGL and MSFT trade AP, GOOGL
+inventory, and AAPL employee and distribution-and-marketing decisions also
+remain O-NWC blockers. GOOGL D&A, operating-tax policy, NOPAT, interim
 normalization, FCFF, and valuation remain outside the implemented scope.
 
 ## Current Repository Structure

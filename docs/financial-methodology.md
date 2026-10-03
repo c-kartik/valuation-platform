@@ -77,6 +77,26 @@ only. Its presentation-rounded percentage is not substituted for the calculated
 ratio or retained as confirming provenance. Reported ETR is not automatically
 used as the FCFF/NOPAT tax rate or as a forecast assumption.
 
+### Signed Tax Reconciliation Evidence
+
+The signed tax-evidence layer records what a selected filing's reconciliation
+reports. Each displayed sign requires explicit evidence from the filing table
+or a reliable calculation relationship; raw XBRL magnitude is retained
+separately and never determines that sign. Rate bridges preserve percentage
+points, pretax income, and the Decimal tax amount derived from the displayed
+rate. Dollar bridges preserve the filing's signed currency amounts. Both retain
+row order and validate against the reported ETR or provision using disclosed
+precision, without adding a synthetic balancing row. Because the evidence model
+does not identify which displayed terms were rounded, its tolerance conservatively
+counts the starting value, each row, and the reported total at the declared
+precision. Normalized rows enforce source identity and rate/dollar arithmetic;
+signs supported by a calculation relationship require an auditable rationale.
+
+Missing evidence, ambiguous signs, competing sources, conflicts, and unresolved
+methodology remain explicit. This layer does not approve operating-tax
+treatment, calculate operating tax or NOPAT, or populate a forecast tax
+assumption. Reported ETR remains an accounting diagnostic.
+
 For FCFF, D&A means recurring depreciation of operating PP&E plus amortization
 of finite-lived intangible assets. Direct annual D&A uses exactly:
 
