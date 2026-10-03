@@ -308,20 +308,15 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
             ),
         )
 
-    def test_meta_unique_fiscal_year_period_allows_one_or_many_supporting_facts(
-        self,
-    ) -> None:
+    def test_meta_target_period_is_not_invalidated_by_unrelated_durations(self) -> None:
         annual_start = date(2025, 1, 1)
-        for supporting in (
-            (make_selected("Revenues", start=annual_start),),
-            (
-                make_selected("Revenues", start=annual_start),
-                make_selected("OperatingIncomeLoss", start=annual_start),
-                make_selected("IncomeTaxExpenseBenefit", start=annual_start),
-            ),
-        ):
+        unrelated = (
+            make_selected("Revenues", start=annual_start),
+            make_selected("PaymentsOfDividendsCommonStock", start=date(2025, 10, 1)),
+        )
+        for observations in (unrelated, tuple(reversed(unrelated))):
             selected = make_input(
-                *supporting,
+                *observations,
                 make_selected(META_TRADE_PAYABLES, value=100),
                 make_selected(COMBINED_PP_AND_E, value=50, start=annual_start),
                 company_cik=1326801,
@@ -342,44 +337,50 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
             self.assertIsInstance(result, DerivedBalanceSheetValue)
             self.assertEqual(result.value, Decimal("70"))
 
-    def test_meta_partial_periods_cannot_outvote_full_fiscal_year(self) -> None:
-        annual_start = date(2025, 1, 1)
-        partial_start = date(2025, 7, 1)
-        selected = make_input(
-            make_selected("Revenues", start=annual_start),
-            make_selected("PartialOne", start=partial_start),
-            make_selected("PartialTwo", start=partial_start),
-            make_selected("PartialThree", start=partial_start),
-            make_selected(META_TRADE_PAYABLES, value=100),
-            make_selected(COMBINED_PP_AND_E, value=50, start=annual_start),
-            company_cik=1326801,
-        )
-        accrued = make_filing_xbrl_fact(
-            namespace=META_NAMESPACE,
-            concept=ACCRUED_PP_AND_E,
-            numeric_value=Decimal("20"),
-            raw_value="20",
-        )
+    def test_meta_target_period_does_not_assume_calendar_year_length(self) -> None:
+        for start, end in (
+            (date(2024, 9, 2), date(2025, 8, 31)),
+            (date(2024, 9, 29), date(2025, 9, 27)),
+        ):
+            filing = make_filing(report_date=end)
+            selected = make_input(
+                make_selected(META_TRADE_PAYABLES, value=100, end=end),
+                make_selected(COMBINED_PP_AND_E, value=50, start=start, end=end),
+                company_cik=1326801,
+                filing=filing,
+            )
+            accrued = make_filing_xbrl_fact(
+                namespace=f"http://www.facebook.com/{end:%Y%m%d}",
+                concept=ACCRUED_PP_AND_E,
+                end=end,
+                numeric_value=Decimal("20"),
+                raw_value="20",
+            )
 
-        result = metric_result(
-            selected,
-            FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
-            filing_xbrl=(make_filing_xbrl(accrued, company_cik=1326801),),
-        )
+            result = metric_result(
+                selected,
+                FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                filing_xbrl=(
+                    make_filing_xbrl(
+                        accrued,
+                        company_cik=1326801,
+                        filing=filing,
+                    ),
+                ),
+            )
 
-        self.assertIsInstance(result, MissingHistoricalMetric)
-        self.assertEqual(result.reason, MissingReason.MISSING_DERIVATION_OPERAND)
+            self.assertIsInstance(result, DerivedBalanceSheetValue)
+            self.assertEqual(result.value, Decimal("70"))
+            self.assertEqual(result.operands[1].start, start)
+            self.assertEqual(result.operands[1].end, end)
 
-    def test_meta_competing_fiscal_year_periods_are_order_independent(self) -> None:
-        annual_start = date(2025, 1, 1)
-        partial_start = date(2025, 7, 1)
-        period_facts = (
-            make_selected("Revenues", start=annual_start),
-            make_selected("OperatingIncomeLoss", start=partial_start),
+    def test_meta_competing_target_periods_are_ambiguous_and_order_independent(self) -> None:
+        target_facts = (
+            make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1)),
+            make_selected(COMBINED_PP_AND_E, value=20, start=date(2025, 10, 1)),
         )
         fixed = (
             make_selected(META_TRADE_PAYABLES, value=100),
-            make_selected(COMBINED_PP_AND_E, value=50, start=annual_start),
         )
         accrued = make_filing_xbrl_fact(
             namespace=META_NAMESPACE,
@@ -390,24 +391,27 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
         artifact = (make_filing_xbrl(accrued, company_cik=1326801),)
 
         forward = metric_result(
-            make_input(*period_facts, *fixed, company_cik=1326801),
+            make_input(*target_facts, *fixed, company_cik=1326801),
             FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
             filing_xbrl=artifact,
         )
         reverse = metric_result(
-            make_input(*reversed(period_facts), *fixed, company_cik=1326801),
+            make_input(*reversed(target_facts), *fixed, company_cik=1326801),
             FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
             filing_xbrl=artifact,
         )
 
-        self.assertIsInstance(forward, MissingHistoricalMetric)
+        self.assertIsInstance(forward, AmbiguousHistoricalMetric)
+        assert isinstance(forward, AmbiguousHistoricalMetric)
+        self.assertEqual(
+            forward.reason,
+            AmbiguityReason.INCOMPATIBLE_DERIVATION_OPERANDS,
+        )
+        self.assertEqual(len(forward.candidates), 2)
         self.assertEqual(forward, reverse)
 
-    def test_meta_derivation_requires_full_year_duration_and_all_operands(self) -> None:
-        base = (
-            make_selected("Revenues", value=1, start=date(2025, 1, 1)),
-            make_selected(META_TRADE_PAYABLES, value=100),
-        )
+    def test_meta_derivation_requires_valid_target_duration_and_all_operands(self) -> None:
+        base = (make_selected(META_TRADE_PAYABLES, value=100),)
         artifact = make_filing_xbrl(
             make_filing_xbrl_fact(
                 namespace=META_NAMESPACE,
@@ -424,14 +428,24 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
                 make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1)),
             ),
             (
-                base[0],
                 make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1)),
             ),
-            (*base, make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 7, 1))),
+            (*base, make_selected(COMBINED_PP_AND_E, value=50)),
+            (*base, make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1), relationship=ObservationRelationship.COMPARATIVE)),
+            (*base, make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1), end=date(2025, 12, 30))),
             (*base, make_selected(COMBINED_PP_AND_E, value=True, start=date(2025, 1, 1))),
             (*base, make_selected(COMBINED_PP_AND_E, value=50, start=date(2025, 1, 1), unit="EUR")),
         )
-        artifacts = ((artifact,), (), (artifact,), (artifact,), (artifact,), (artifact,))
+        artifacts = (
+            (artifact,),
+            (),
+            (artifact,),
+            (artifact,),
+            (artifact,),
+            (artifact,),
+            (artifact,),
+            (artifact,),
+        )
         for observations, filing_xbrl in zip(cases, artifacts, strict=True):
             result = metric_result(
                 make_input(*observations, company_cik=1326801),

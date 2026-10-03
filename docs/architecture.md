@@ -117,7 +117,9 @@ structural fact selection:
   so it performs no retrieval or derived Operating NWC calculation.
 - `normalization.operating_nwc` preserves strict issuer-specific reconstruction
   diagnostics and separately evaluates versioned valuation perimeters for
-  calculation readiness. Both paths are pure and perform no arithmetic.
+  calculation readiness. It calculates annual O-NWC levels only after readiness
+  succeeds, retaining ordered signed contributions and source results. The
+  module remains pure and network-free.
 - `normalization.derived` validates evidence-backed, CIK-scoped derivation
   policies and their operands. It performs no network access.
 - `normalization.balance_sheet_derivation` resolves the narrowly approved META
@@ -207,14 +209,16 @@ PP&E comes from filing-XBRL `PropertyAndEquipmentAccruedLiabilitiesCurrent`
 under the report-date-specific Facebook namespace. The combined Company Facts
 concept `CapitalExpendituresIncurredButNotYetPaid` is duration-shaped because it
 is presented as supplemental non-cash cash-flow information. It is accepted
-only as CIK-, concept-, selected-accession-, and full-fiscal-year-scoped
-derivation evidence. The filing bucket must expose exactly one distinct current
-FY duration ending on the selected report date; competing durations keep the
-operand unresolved rather than being ranked by frequency. The operand is never
-a direct instant balance-sheet value. Missing or ambiguous operands keep
-adjusted trade AP unresolved.
+only as CIK-, concept-, selected-accession-, and current-FY-scoped derivation
+evidence. Eligibility and ambiguity are evaluated only among observations of
+that configured target concept: an eligible duration must end on the selected
+report date, and its actual start and end dates are preserved. Unrelated
+duration facts do not define the operand's fiscal period, and no calendar-year
+length is assumed. The operand is never a direct instant balance-sheet value.
+Missing or ambiguous target evidence keeps adjusted trade AP unresolved.
 
-Operating NWC and its change are not implemented. A strict completeness layer
+Annual Operating NWC level calculation is implemented; its year-over-year
+change is not. A strict completeness layer
 classifies required operating assets and liabilities, explicit exclusions,
 issuer-specific non-applicability, and methodology-unresolved components. It
 groups underlying resolved, missing, and ambiguous normalized results without
@@ -248,5 +252,13 @@ currently normalized. Strict reconstruction policies keep all five issuers
 incomplete. META valuation policy v2 moves customer contract liabilities
 outside its stable measurable valuation perimeter; their balances and movements
 are omitted rather than treated as zero. META v2 and COST v1 are ready for all
-five selected periods, while GOOGL, MSFT, and AAPL retain explicit methodology
-blockers. No numerical O-NWC is produced.
+periods with complete required evidence, while GOOGL, MSFT, and AAPL retain
+explicit methodology blockers. Numerical O-NWC is produced only for ready
+policy-periods. Current live validation calculates META v2 and COST v1 for all
+five selected periods. Missing, ambiguous, or methodology-blocked periods
+return readiness details without a partial amount. Required asset balances
+contribute positively and required liability balances negatively using exact
+`Decimal` arithmetic; the source results retain their reported magnitudes and
+provenance. Readiness also requires every resolved mandatory result and its
+evidence to match the selected filing accession, report date, and exact USD
+unit.

@@ -109,9 +109,6 @@ def resolve_meta_combined_pp_and_e_payable(
     if not configured:
         return _missing_combined(MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION)
 
-    annual_period = _full_fiscal_year_period(bucket, filing.report_date)
-    if annual_period is None:
-        return _missing_combined(MissingReason.NO_VALID_DERIVATION_OPERANDS)
     eligible = tuple(
         sorted(
             (
@@ -120,7 +117,6 @@ def resolve_meta_combined_pp_and_e_payable(
                 if _is_valid_combined_operand(
                     selected,
                     filing.report_date,
-                    annual_period,
                 )
             ),
             key=_selected_order_key,
@@ -260,36 +256,15 @@ def derive_meta_adjusted_trade_accounts_payable(
     )
 
 
-def _full_fiscal_year_period(
-    bucket: FilingFactObservations,
-    report_date: date,
-) -> tuple[date, date] | None:
-    periods = {
-        (item.observation.start, item.observation.end)
-        for item in bucket.observations
-        if item.concept != _COMBINED_PP_AND_E_CONCEPT.name
-        and item.relationship is ObservationRelationship.CURRENT
-        and item.period_type is ObservationPeriodType.DURATION
-        and item.observation.start is not None
-        and item.observation.end == report_date
-        and item.observation.accession_number == bucket.filing.accession_number
-        and item.observation.form == "10-K"
-        and item.observation.fiscal_period == "FY"
-    }
-    return next(iter(periods)) if len(periods) == 1 else None
-
-
 def _is_valid_combined_operand(
     selected: SelectedFactObservation,
     report_date: date,
-    annual_period: tuple[date, date],
 ) -> bool:
     observation = selected.observation
     return (
         selected.relationship is ObservationRelationship.CURRENT
         and selected.period_type is ObservationPeriodType.DURATION
         and observation.start is not None
-        and (observation.start, observation.end) == annual_period
         and observation.end == report_date
         and observation.form == "10-K"
         and observation.fiscal_period == "FY"

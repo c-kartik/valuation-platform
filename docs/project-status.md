@@ -2,10 +2,10 @@
 
 ## Current Milestone
 
-Phase 1F.5h.3 is complete for META Operating NWC valuation-perimeter version 2.
-META v2 and COST v1 are valuation-ready for all five selected periods. Strict
-reconstruction completeness remains separate. Operating NWC arithmetic and
-change in Operating NWC remain future work.
+Phase 1F.5h.4 implements annual Operating NWC level calculation. Live validation
+calculates META v2 and COST v1 for all five selected periods. Strict
+reconstruction completeness remains separate. Change in Operating NWC remains
+future work.
 
 ## Completed
 
@@ -178,8 +178,9 @@ change in Operating NWC remain future work.
   separately accrued PP&E evidence
 - Preserved duration-shaped `CapitalExpendituresIncurredButNotYetPaid` Company
   Facts observations as special selected-accession/full-fiscal-year derivation
-  operands rather than direct instant balance-sheet values; the filing must
-  expose one distinct current FY duration, with competing periods unresolved
+  operands rather than direct instant balance-sheet values; eligibility is
+  evaluated only among target-concept observations, with multiple eligible
+  target periods unresolved and unrelated duration facts ignored
 - Used explicit filing XBRL for report-date-specific Facebook namespace
   `PropertyAndEquipmentAccruedLiabilitiesCurrent`; normalization performs no
   retrieval
@@ -231,19 +232,35 @@ change in Operating NWC remain future work.
   are omitted rather than treated as zero or economically irrelevant
 - Made META v2 the sole active default while retaining META v1 through explicit
   policy ID/version lookup and rejecting duplicate historical identities
-- Confirmed META v2 is valuation-ready for all five 2021–2025 periods while its
-  strict reconstruction result remains incomplete
+- Confirmed META v2 removes customer contract liabilities as a readiness blocker
+  while strict reconstruction remains incomplete; every remaining required
+  normalized component must still resolve for a period to calculate
 - Preserved COST v1 readiness and the existing GOOGL, MSFT, and AAPL blockers
+- Added pure annual Operating NWC level calculation as required operating assets
+  minus required operating liabilities for valuation-ready periods only
+- Added ordered `Decimal` component contributions that preserve positive source
+  balances, apply asset/liability signs separately, and retain complete direct
+  or derived normalized provenance
+- Kept missing, ambiguous, and methodology-blocked periods nonnumeric; no
+  partial result or zero substitution is produced
+- Corrected META's special combined unpaid-PP&E eligibility to consider only
+  observations of the configured target concept; unrelated duration facts no
+  longer create false period ambiguity, while competing target facts remain
+  deterministically ambiguous
+- Live-validated META v2 and COST v1 levels for all five selected periods, with
+  exact agreement between every result and its signed component contributions;
+  META 2021–2025 is $8.816bn, $4.283bn, $6.553bn, $7.502bn, and $8.653bn
+- Kept GOOGL, MSFT, and AAPL blocked
+- Preserved exact policy ID/version selection and kept out-of-perimeter evidence
+  outside arithmetic without treating it as economically zero
 
 ## Next Step
 
-Implement Operating NWC arithmetic only for issuer-periods that pass valuation
-readiness, initially META v2 and COST v1, while preserving each policy's exact
-historical and forecast perimeter. GOOGL and MSFT trade AP, GOOGL inventory,
-and AAPL employee and distribution-and-marketing decisions remain blockers.
-The opening snapshot needed for a five-period change series, change in Operating
-NWC, GOOGL D&A, NOPAT, interim normalization, and valuation remain outside the
-implemented scope.
+Implement annual change in Operating NWC using policy-consistent opening and
+closing levels. GOOGL and MSFT trade AP, GOOGL inventory,
+and AAPL employee and distribution-and-marketing decisions remain blockers. The
+opening snapshot needed for a five-period change series, GOOGL D&A, NOPAT,
+interim normalization, and valuation remain outside the implemented scope.
 
 ## Current Repository Structure
 

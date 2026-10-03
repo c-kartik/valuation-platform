@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import date
+from decimal import Decimal
 from enum import Enum
 
 from valuation_platform.sec.submissions import SECFiling
@@ -11,7 +13,9 @@ from .concepts import FinancialMetric
 from .models import (
     AmbiguousHistoricalMetric,
     AnnualBalanceSheetFilingResult,
+    BalanceSheetFactEvidence,
     DerivedBalanceSheetValue,
+    FilingXBRLEvidence,
     MissingHistoricalMetric,
     NormalizedAnnualBalanceSheets,
     NormalizedBalanceSheetValue,
@@ -31,6 +35,14 @@ class OperatingNWCCompletenessError(ValueError):
 
 class OperatingNWCReadinessError(ValueError):
     """Raised when an Operating NWC valuation-readiness input is invalid."""
+
+
+class OperatingNWCCalculationFormula(str, Enum):
+    """Supported arithmetic for one valuation-ready Operating NWC level."""
+
+    REQUIRED_ASSETS_MINUS_REQUIRED_LIABILITIES = (
+        "required_operating_assets_minus_required_operating_liabilities"
+    )
 
 
 class OperatingNWCComponentClassification(str, Enum):
@@ -380,6 +392,32 @@ class OperatingNWCReadinessResult:
             or self.ambiguous_mandatory_components
             or self.methodology_blockers
         )
+
+
+@dataclass(frozen=True)
+class OperatingNWCComponentContribution:
+    """One ordered resolved balance and its signed O-NWC contribution."""
+
+    component: OperatingNWCComponent
+    side: OperatingNWCPerimeterSide
+    source_result: NormalizedBalanceSheetValue | DerivedBalanceSheetValue
+    balance: Decimal
+    signed_contribution: Decimal
+
+
+@dataclass(frozen=True)
+class CalculatedOperatingNWC:
+    """Auditable annual Operating NWC level for one valuation-ready period."""
+
+    company_cik: int
+    balance_date: date
+    filing: SECFiling
+    policy_id: str
+    policy_version: str
+    amount: Decimal
+    unit: str
+    formula: OperatingNWCCalculationFormula
+    contributions: tuple[OperatingNWCComponentContribution, ...]
 
 
 def _component(
@@ -1178,6 +1216,7 @@ def evaluate_operating_nwc_readiness(
                 f"{component.metric.value!r}"
             )
         if isinstance(result, (NormalizedBalanceSheetValue, DerivedBalanceSheetValue)):
+            _validate_ready_balance_sheet_result(result, filing_result.filing)
             resolved.append(ResolvedOperatingNWCReadinessComponent(component, result))
         elif isinstance(result, MissingHistoricalMetric):
             missing.append(MissingOperatingNWCReadinessComponent(component, result))
@@ -1200,4 +1239,147 @@ def evaluate_operating_nwc_readiness(
         ambiguous_mandatory_components=tuple(ambiguous),
         methodology_blockers=tuple(blockers),
         configured_non_mandatory_components=tuple(non_mandatory),
+    )
+
+
+def _validate_ready_balance_sheet_result(
+    result: NormalizedBalanceSheetValue | DerivedBalanceSheetValue,
+    filing: SECFiling,
+) -> None:
+    """Require resolved mandatory evidence to belong to the selected filing."""
+    report_date = filing.report_date
+    if report_date is None:
+        raise OperatingNWCReadinessError(
+            "O-NWC readiness requires a selected filing report date"
+        )
+    if result.balance_date != report_date:
+        raise OperatingNWCReadinessError(
+            "Resolved O-NWC component balance date does not match selected filing"
+        )
+    if result.unit != "USD":
+        raise OperatingNWCReadinessError(
+            "Resolved O-NWC component must use exact USD"
+        )
+
+    if isinstance(result, NormalizedBalanceSheetValue):
+        evidence = (result.chosen_source, *result.confirming_sources)
+        for source in evidence:
+            _validate_ready_evidence(source, filing)
+            if (
+                source.value != result.value
+                or source.unit != result.unit
+                or source.end != result.balance_date
+            ):
+                raise OperatingNWCReadinessError(
+                    "Resolved O-NWC component evidence is internally inconsistent"
+                )
+        return
+
+    for operand in result.operands:
+        if operand.unit != "USD" or operand.end != report_date:
+            raise OperatingNWCReadinessError(
+                "Derived O-NWC operand does not match selected filing date or unit"
+            )
+        evidence = (operand.chosen_source, *operand.confirming_sources)
+        for source in evidence:
+            _validate_ready_evidence(source, filing)
+            if (
+                source.value != operand.value
+                or source.unit != operand.unit
+                or source.start != operand.start
+                or source.end != operand.end
+            ):
+                raise OperatingNWCReadinessError(
+                    "Derived O-NWC operand evidence is internally inconsistent"
+                )
+
+
+def _validate_ready_evidence(
+    evidence: BalanceSheetFactEvidence,
+    filing: SECFiling,
+) -> None:
+    """Validate one direct or filing-XBRL fact against the selected filing."""
+    if (
+        evidence.accession_number != filing.accession_number
+        or evidence.end != filing.report_date
+        or evidence.observation_form != filing.form
+        or evidence.unit != "USD"
+    ):
+        raise OperatingNWCReadinessError(
+            "Resolved O-NWC evidence does not belong to selected filing"
+        )
+    if isinstance(evidence, FilingXBRLEvidence) and (
+        evidence.filing_report_date != filing.report_date
+        or evidence.primary_document != filing.primary_document
+    ):
+        raise OperatingNWCReadinessError(
+            "Resolved filing-XBRL evidence does not match selected filing metadata"
+        )
+
+
+def _operating_nwc_decimal(value: int | float | Decimal) -> Decimal:
+    """Convert one normalized numeric balance without binary-float arithmetic."""
+    if isinstance(value, bool) or not isinstance(value, (int, float, Decimal)):
+        raise OperatingNWCReadinessError(
+            "Resolved O-NWC component must contain a numeric non-Boolean value"
+        )
+    converted = value if isinstance(value, Decimal) else Decimal(str(value))
+    if not converted.is_finite():
+        raise OperatingNWCReadinessError(
+            "Resolved O-NWC component must contain a finite value"
+        )
+    return converted
+
+
+def calculate_operating_nwc_level(
+    balance_sheets: NormalizedAnnualBalanceSheets,
+    filing_result: AnnualBalanceSheetFilingResult,
+    policy: OperatingNWCValuationPolicy,
+) -> CalculatedOperatingNWC | OperatingNWCReadinessResult:
+    """Calculate one ready annual O-NWC level or return its typed readiness failure."""
+    readiness = evaluate_operating_nwc_readiness(
+        balance_sheets,
+        filing_result,
+        policy,
+    )
+    if not readiness.is_ready:
+        return readiness
+    if filing_result.filing.report_date is None:
+        raise OperatingNWCReadinessError(
+            "O-NWC calculation requires a selected filing report date"
+        )
+
+    contributions: list[OperatingNWCComponentContribution] = []
+    for resolved in readiness.resolved_mandatory_components:
+        balance = _operating_nwc_decimal(resolved.result.value)
+        signed_contribution = (
+            balance
+            if resolved.policy.side is OperatingNWCPerimeterSide.ASSET
+            else -balance
+        )
+        contributions.append(
+            OperatingNWCComponentContribution(
+                component=resolved.policy.component,
+                side=resolved.policy.side,
+                source_result=resolved.result,
+                balance=balance,
+                signed_contribution=signed_contribution,
+            )
+        )
+
+    return CalculatedOperatingNWC(
+        company_cik=readiness.company_cik,
+        balance_date=filing_result.filing.report_date,
+        filing=filing_result.filing,
+        policy_id=readiness.policy_id,
+        policy_version=readiness.policy_version,
+        amount=sum(
+            (contribution.signed_contribution for contribution in contributions),
+            start=Decimal(0),
+        ),
+        unit="USD",
+        formula=(
+            OperatingNWCCalculationFormula.REQUIRED_ASSETS_MINUS_REQUIRED_LIABILITIES
+        ),
+        contributions=tuple(contributions),
     )

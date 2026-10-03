@@ -226,10 +226,12 @@ investing and financing disclosures, but the filing wording identifies PP&E
 incurred and remaining in accounts payable and accrued current liabilities at
 the reporting date. It is accepted only as special META derivation evidence for
 the exact selected accession and actual fiscal-year duration. That duration is
-accepted only when other current FY facts in the selected filing expose one
-distinct period ending on the report date; competing periods remain unresolved.
-It is not a direct balance-sheet primitive. Generic instant eligibility is
-unchanged.
+evaluated only against observations of the configured target concept: exactly
+one eligible current-FY duration ending on the selected report date resolves,
+while multiple eligible target observations remain ambiguous. Unrelated
+duration facts do not define its period, actual start and end dates are
+preserved, and no calendar-year length is assumed. It is not a direct
+balance-sheet primitive. Generic instant eligibility is unchanged.
 
 The validated 2021–2025 adjusted trade AP values are $2.071bn, $4.592bn,
 $2.957bn, $3.142bn, and $3.965bn. All three source facts and both subtraction
@@ -244,9 +246,10 @@ Company Facts remains the primary balance-sheet source. Filing-level XBRL is
 used only by an explicit source policy and supplied to normalization on demand.
 Broad accrued and other-current-liability residuals remain excluded.
 
-Operating NWC will eventually equal approved operating current assets minus
-approved operating current liabilities. Neither that arithmetic nor its
-year-over-year change is implemented. The methodology uses a hybrid distinction:
+Annual Operating NWC equals approved required operating current assets minus
+approved required operating current liabilities. Level arithmetic is
+implemented for valuation-ready periods; its year-over-year change is not. The
+methodology uses a hybrid distinction:
 strict reconstruction completeness asks whether the relevant operating current-
 account structure has been cleanly reconstructed, while valuation readiness
 asks whether every mandatory component in an explicitly approved issuer
@@ -280,8 +283,9 @@ forecast period. Their reported historical values remain normalized and are
 not changed or treated as zero. Their balances, and therefore their movements,
 will be absent from future META Operating NWC, change in Operating NWC, and FCFF
 under version `2`. This is a consistent perimeter choice, not proof that the
-excluded balance is economically irrelevant. META v2 is valuation-ready for
-all five selected periods while strict reconstruction remains incomplete.
+excluded balance is economically irrelevant. META v2 removes this perimeter
+blocker while strict reconstruction remains incomplete; each period must still
+resolve every remaining required normalized component.
 
 GOOGL remains blocked by unresolved trade AP treatment and the inventory
 perimeter decision. MSFT remains blocked by trade AP treatment. AAPL remains
@@ -297,6 +301,21 @@ Capex, and FCFF remains deferred. The current policies intentionally leave all
 five validation issuers reconstruction-incomplete. They do not all have the
 same valuation-readiness status, and neither readiness nor completeness performs
 numerical arithmetic.
+
+The calculator uses exact `Decimal` arithmetic without rounding. Required
+source balances preserve their reported magnitudes. Each asset has a positive
+signed contribution and each liability has a negative signed contribution;
+the stored source balance itself is not negated. Explicit zero is valid.
+Missing, ambiguous, or methodology-blocked periods do not produce partial
+amounts. Components outside the selected policy perimeter do not participate,
+and their omission does not mean their economic balance is zero. Results retain
+the selected filing, exact policy ID/version, ordered contributions, and each
+underlying direct or derived normalized result. Live validation calculates META
+v2 and COST v1 for all five selected periods. The META levels for 2021–2025 are
+$8.816bn, $4.283bn, $6.553bn, $7.502bn, and $8.653bn; the COST levels are
+-$8.063bn, -$6.166bn, -$7.312bn, -$7.783bn, and -$9.200bn. GOOGL, MSFT, and
+AAPL remain blocked. Historical and forecast calculations must
+continue to use the same issuer perimeter.
 
 ## Source vs. Derived Values
 

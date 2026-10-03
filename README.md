@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.5h.3 complete — META Operating NWC valuation perimeter v2**
+**Phase 1F.5h.4 implemented — annual Operating NWC levels**
 
-Next milestone: **implement O-NWC arithmetic for valuation-ready issuer-periods**
+Next milestone: **implement annual change in Operating NWC**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -68,16 +68,26 @@ liabilities from explicitly supplied selected-filing XBRL artifacts. Company
 Facts remains the default;
 filing XBRL is policy-driven and never fetched by normalization. Missing
 balances remain distinct from zero. Broad other-current-
-asset and liability accounts, Operating NWC, and change in Operating NWC remain
-unresolved. Strict reconstruction policies continue to report whether each
+asset and liability accounts and change in Operating NWC remain unresolved.
+Strict reconstruction policies continue to report whether each
 annual period has complete evidence. Separate versioned valuation-perimeter
 policies now determine whether the explicitly required components are ready for
 future arithmetic. META valuation policy v2 excludes customer contract
 liabilities from a stable measurable historical and forecast perimeter without
 changing their normalized values or treating them as zero. META v2 and COST v1
-are ready for all five selected periods. GOOGL, MSFT, and AAPL retain explicit
-methodology blockers.
-Neither readiness layer calculates Operating NWC.
+have no perimeter blocker from that decision; period readiness still requires
+every required normalized input. GOOGL, MSFT, and AAPL retain explicit
+methodology blockers. Annual Operating NWC levels now calculate for ready
+periods as required operating assets minus required operating liabilities.
+Component balances retain their reported positive magnitudes, while ordered
+calculation contributions apply the asset/liability sign and preserve the full
+normalized or derived provenance. Non-ready periods produce their typed
+readiness result rather than a partial amount.
+Live validation calculated COST v1 and META v2 for all five selected periods.
+For META's special combined unpaid-PP&E operand, eligibility and ambiguity are
+evaluated only among observations of that configured target concept; unrelated
+duration facts do not define its fiscal period. Actual start and end dates are
+preserved without calendar-year assumptions.
 For META only, reported trade accounts payable is adjusted through a pure,
 provenance-preserving derivation that removes PP&E payable evidence split across
 Company Facts and explicitly supplied filing XBRL. The duration-shaped combined
