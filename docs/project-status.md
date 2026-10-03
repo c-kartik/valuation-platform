@@ -2,10 +2,10 @@
 
 ## Current Milestone
 
-Phase 1F.5h.4 implements annual Operating NWC level calculation. Live validation
-calculates META v2 and COST v1 for all five selected periods. Strict
-reconstruction completeness remains separate. Change in Operating NWC remains
-future work.
+Phase 1F.5h.5 implements annual change in Operating NWC from adjacent comparable
+calculated levels. META v2 and COST v1 each have five annual levels and four
+annual changes. Strict reconstruction completeness remains separate, and FCFF
+remains future work.
 
 ## Completed
 
@@ -151,8 +151,8 @@ future work.
   Costco periods resolved and 20 non-applicable periods remained typed missing,
   without generalizing that broad concept to other issuers
 - No new primitive result was ambiguous
-- Kept filing-level XBRL explicit/on demand and left broad current residuals,
-  Operating NWC, and change in Operating NWC unimplemented
+- At the primitive-normalization milestone, kept filing-level XBRL explicit/on
+  demand and deferred broad current residuals, Operating NWC, and its change
 - Added an explicit Company Facts versus filing-XBRL source distinction to
   annual balance-sheet policies while keeping normalization network-free
 - Added GOOGL CIK `1652044` Accrued Revenue-Share Liability from exact
@@ -253,14 +253,27 @@ future work.
 - Kept GOOGL, MSFT, and AAPL blocked
 - Preserved exact policy ID/version selection and kept out-of-perimeter evidence
   outside arithmetic without treating it as economically zero
+- Added immutable annual ΔNWC results calculated as closing O-NWC minus opening
+  O-NWC using exact `Decimal` arithmetic without rounding
+- Required the same company CIK, exact policy ID/version, calculation formula,
+  and actual ordered component/side/normalized-metric perimeter so explicit
+  policy-definition changes cannot become economic working-capital movements
+- Preserved actual opening and closing fiscal dates and both complete calculated
+  O-NWC levels with their component-level SEC provenance
+- Added ordered adjacent-series calculation: five compatible annual levels
+  produce four changes, while reversed dates or an intervening policy change
+  fail explicitly rather than being sorted or skipped
+- Live-validated META v2 annual ΔNWC at -$4.533bn, $2.270bn, $0.949bn, and
+  $1.151bn and COST v1 at $1.897bn, -$1.146bn, -$0.471bn, and -$1.417bn for
+  their four respective 2022–2025 fiscal periods
 
 ## Next Step
 
-Implement annual change in Operating NWC using policy-consistent opening and
-closing levels. GOOGL and MSFT trade AP, GOOGL inventory,
-and AAPL employee and distribution-and-marketing decisions remain blockers. The
-opening snapshot needed for a five-period change series, GOOGL D&A, NOPAT,
-interim normalization, and valuation remain outside the implemented scope.
+Continue the remaining historical FCFF inputs. GOOGL and MSFT trade AP, GOOGL
+inventory, and AAPL employee and distribution-and-marketing decisions remain
+O-NWC blockers. An earlier opening snapshot would be required to produce a
+change for the earliest displayed annual level. GOOGL D&A, NOPAT, interim
+normalization, FCFF, and valuation remain outside the implemented scope.
 
 ## Current Repository Structure
 

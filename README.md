@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.5h.4 implemented — annual Operating NWC levels**
+**Phase 1F.5h.5 implemented — annual change in Operating NWC**
 
-Next milestone: **implement annual change in Operating NWC**
+Next milestone: **continue the remaining historical FCFF inputs**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -88,6 +88,15 @@ For META's special combined unpaid-PP&E operand, eligibility and ambiguity are
 evaluated only among observations of that configured target concept; unrelated
 duration facts do not define its fiscal period. Actual start and end dates are
 preserved without calendar-year assumptions.
+Annual change in Operating NWC is derived from adjacent comparable calculated
+levels as closing O-NWC minus opening O-NWC. Both levels must retain the same
+company, exact valuation policy ID/version and formula, and the same actual
+ordered component/side/normalized-metric perimeter; a perimeter change is rejected
+rather than presented as cash flow. Results use actual fiscal dates, exact
+`Decimal` arithmetic, and retain both complete level results and their SEC
+provenance. Five current META or COST levels therefore produce four changes.
+Positive change means operating NWC increased; the future FCFF layer will
+subtract that amount. FCFF itself remains unimplemented.
 For META only, reported trade accounts payable is adjusted through a pure,
 provenance-preserving derivation that removes PP&E payable evidence split across
 Company Facts and explicitly supplied filing XBRL. The duration-shaped combined

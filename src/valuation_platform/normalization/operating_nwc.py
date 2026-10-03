@@ -37,6 +37,10 @@ class OperatingNWCReadinessError(ValueError):
     """Raised when an Operating NWC valuation-readiness input is invalid."""
 
 
+class OperatingNWCChangeError(ValueError):
+    """Raised when two calculated O-NWC levels cannot produce a valid change."""
+
+
 class OperatingNWCCalculationFormula(str, Enum):
     """Supported arithmetic for one valuation-ready Operating NWC level."""
 
@@ -418,6 +422,23 @@ class CalculatedOperatingNWC:
     unit: str
     formula: OperatingNWCCalculationFormula
     contributions: tuple[OperatingNWCComponentContribution, ...]
+
+
+@dataclass(frozen=True)
+class CalculatedOperatingNWCChange:
+    """Annual change between comparable opening and closing O-NWC levels."""
+
+    company_cik: int
+    opening_balance_date: date
+    closing_balance_date: date
+    policy_id: str
+    policy_version: str
+    unit: str
+    opening_amount: Decimal
+    closing_amount: Decimal
+    change: Decimal
+    opening_level: CalculatedOperatingNWC
+    closing_level: CalculatedOperatingNWC
 
 
 def _component(
@@ -1382,4 +1403,113 @@ def calculate_operating_nwc_level(
             OperatingNWCCalculationFormula.REQUIRED_ASSETS_MINUS_REQUIRED_LIABILITIES
         ),
         contributions=tuple(contributions),
+    )
+
+
+def calculate_operating_nwc_change(
+    opening: CalculatedOperatingNWC,
+    closing: CalculatedOperatingNWC,
+) -> CalculatedOperatingNWCChange:
+    """Calculate closing O-NWC minus opening O-NWC without reordering inputs."""
+    _validate_calculated_operating_nwc_level(opening, "opening")
+    _validate_calculated_operating_nwc_level(closing, "closing")
+    if opening.company_cik != closing.company_cik:
+        raise OperatingNWCChangeError(
+            "O-NWC change requires levels for the same company CIK"
+        )
+    if opening.policy_id != closing.policy_id:
+        raise OperatingNWCChangeError(
+            "O-NWC change requires the same valuation policy ID"
+        )
+    if opening.policy_version != closing.policy_version:
+        raise OperatingNWCChangeError(
+            "O-NWC change requires the same valuation policy version"
+        )
+    if opening.formula != closing.formula:
+        raise OperatingNWCChangeError(
+            "O-NWC change requires the same calculation formula"
+        )
+    if _operating_nwc_perimeter_signature(
+        opening
+    ) != _operating_nwc_perimeter_signature(closing):
+        raise OperatingNWCChangeError(
+            "O-NWC change requires the same ordered calculation perimeter"
+        )
+    if opening.unit != closing.unit or opening.unit != "USD":
+        raise OperatingNWCChangeError(
+            "O-NWC change requires both levels to use exact USD"
+        )
+    if closing.balance_date <= opening.balance_date:
+        raise OperatingNWCChangeError(
+            "O-NWC change requires closing date after opening date"
+        )
+
+    return CalculatedOperatingNWCChange(
+        company_cik=opening.company_cik,
+        opening_balance_date=opening.balance_date,
+        closing_balance_date=closing.balance_date,
+        policy_id=opening.policy_id,
+        policy_version=opening.policy_version,
+        unit="USD",
+        opening_amount=opening.amount,
+        closing_amount=closing.amount,
+        change=closing.amount - opening.amount,
+        opening_level=opening,
+        closing_level=closing,
+    )
+
+
+def calculate_operating_nwc_changes(
+    levels: tuple[CalculatedOperatingNWC, ...],
+) -> tuple[CalculatedOperatingNWCChange, ...]:
+    """Calculate adjacent annual changes in the caller-supplied level order."""
+    if not isinstance(levels, tuple) or not all(
+        isinstance(level, CalculatedOperatingNWC) for level in levels
+    ):
+        raise OperatingNWCChangeError(
+            "O-NWC change series requires calculated O-NWC levels"
+        )
+    return tuple(
+        calculate_operating_nwc_change(opening, closing)
+        for opening, closing in zip(levels, levels[1:], strict=False)
+    )
+
+
+def _validate_calculated_operating_nwc_level(
+    level: CalculatedOperatingNWC,
+    role: str,
+) -> None:
+    """Validate cheap level invariants without repeating readiness validation."""
+    if not isinstance(level, CalculatedOperatingNWC):
+        raise OperatingNWCChangeError(
+            f"O-NWC change {role} input must be a calculated O-NWC level"
+        )
+    if level.filing.report_date != level.balance_date:
+        raise OperatingNWCChangeError(
+            f"O-NWC change {role} level date does not match its filing"
+        )
+    if not isinstance(level.amount, Decimal) or not level.amount.is_finite():
+        raise OperatingNWCChangeError(
+            f"O-NWC change {role} amount must be a finite Decimal"
+        )
+
+
+def _operating_nwc_perimeter_signature(
+    level: CalculatedOperatingNWC,
+) -> tuple[
+    tuple[
+        OperatingNWCComponent,
+        OperatingNWCPerimeterSide,
+        FinancialMetric,
+    ],
+    ...,
+]:
+    """Return the retained ordered economic perimeter for one calculated level."""
+    return tuple(
+        (
+            contribution.component,
+            contribution.side,
+            contribution.source_result.metric,
+        )
+        for contribution in level.contributions
     )

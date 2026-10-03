@@ -10,6 +10,7 @@ from valuation_platform.normalization import (
     AAPL_OPERATING_NWC_VALUATION_POLICY,
     AAPL_OPERATING_NWC_POLICY,
     CalculatedOperatingNWC,
+    CalculatedOperatingNWCChange,
     COST_OPERATING_NWC_VALUATION_POLICY,
     COST_OPERATING_NWC_POLICY,
     GOOGL_OPERATING_NWC_VALUATION_POLICY,
@@ -35,7 +36,9 @@ from valuation_platform.normalization import (
     NormalizedBalanceSheetValue,
     OperatingNWCCompletenessError,
     OperatingNWCCalculationFormula,
+    OperatingNWCChangeError,
     OperatingNWCComponent,
+    OperatingNWCComponentContribution,
     OperatingNWCComponentClassification,
     OperatingNWCComponentPolicy,
     OperatingNWCPerimeterComponentPolicy,
@@ -46,6 +49,8 @@ from valuation_platform.normalization import (
     OperatingNWCReadinessResult,
     OperatingNWCValuationPolicy,
     calculate_operating_nwc_level,
+    calculate_operating_nwc_change,
+    calculate_operating_nwc_changes,
     evaluate_operating_nwc_completeness,
     evaluate_operating_nwc_readiness,
     operating_nwc_policy_for_cik,
@@ -2094,3 +2099,452 @@ class OperatingNWCCalculationTests(TestCase):
                 self.assertIsInstance(result, OperatingNWCReadinessResult)
                 self.assertFalse(result.is_ready)
                 self.assertTrue(result.methodology_blockers)
+
+
+def make_calculated_level(
+    amount: Decimal,
+    balance_date: date,
+    *,
+    company_cik: int = 1326801,
+    policy_id: str = "meta_operating_nwc_valuation",
+    policy_version: str = "2",
+    unit: str = "USD",
+    contributions: tuple[OperatingNWCComponentContribution, ...] = (),
+) -> CalculatedOperatingNWC:
+    filing = SECFiling(
+        accession_number=f"{company_cik}-{balance_date.isoformat()}",
+        form="10-K",
+        filing_date=balance_date + timedelta(days=40),
+        report_date=balance_date,
+        primary_document=f"{company_cik}-{balance_date.year}.htm",
+    )
+    return CalculatedOperatingNWC(
+        company_cik=company_cik,
+        balance_date=balance_date,
+        filing=filing,
+        policy_id=policy_id,
+        policy_version=policy_version,
+        amount=amount,
+        unit=unit,
+        formula=(
+            OperatingNWCCalculationFormula.REQUIRED_ASSETS_MINUS_REQUIRED_LIABILITIES
+        ),
+        contributions=contributions,
+    )
+
+
+def make_change_contribution(
+    component: OperatingNWCComponent,
+    side: OperatingNWCPerimeterSide,
+    metric: FinancialMetric,
+    value: Decimal,
+    balance_date: date,
+) -> OperatingNWCComponentContribution:
+    source_result = make_resolved(
+        metric,
+        value,
+        balance_date=balance_date,
+        accession_number=f"annual-{balance_date.isoformat()}",
+        filing_date=balance_date + timedelta(days=40),
+    )
+    return OperatingNWCComponentContribution(
+        component=component,
+        side=side,
+        source_result=source_result,
+        balance=value,
+        signed_contribution=(
+            value if side is OperatingNWCPerimeterSide.ASSET else -value
+        ),
+    )
+
+
+class OperatingNWCChangeTests(TestCase):
+    def test_same_policy_identity_with_different_component_is_rejected(self) -> None:
+        opening_date = date(2024, 12, 31)
+        closing_date = date(2025, 12, 31)
+        opening = make_calculated_level(
+            Decimal("100"),
+            opening_date,
+            contributions=(
+                make_change_contribution(
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCPerimeterSide.ASSET,
+                    FinancialMetric.OPERATING_RECEIVABLES,
+                    Decimal("100"),
+                    opening_date,
+                ),
+            ),
+        )
+        closing = make_calculated_level(
+            Decimal("-40"),
+            closing_date,
+            contributions=(
+                make_change_contribution(
+                    OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+                    OperatingNWCPerimeterSide.LIABILITY,
+                    FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                    Decimal("40"),
+                    closing_date,
+                ),
+            ),
+        )
+
+        with self.assertRaisesRegex(
+            OperatingNWCChangeError, "ordered calculation perimeter"
+        ):
+            calculate_operating_nwc_change(opening, closing)
+
+    def test_component_side_and_normalized_metric_are_part_of_perimeter(self) -> None:
+        opening_date = date(2024, 12, 31)
+        closing_date = date(2025, 12, 31)
+        opening_contribution = make_change_contribution(
+            OperatingNWCComponent.OPERATING_RECEIVABLES,
+            OperatingNWCPerimeterSide.ASSET,
+            FinancialMetric.OPERATING_RECEIVABLES,
+            Decimal("100"),
+            opening_date,
+        )
+        opening = make_calculated_level(
+            Decimal("100"), opening_date, contributions=(opening_contribution,)
+        )
+        closing_base = make_change_contribution(
+            OperatingNWCComponent.OPERATING_RECEIVABLES,
+            OperatingNWCPerimeterSide.ASSET,
+            FinancialMetric.OPERATING_RECEIVABLES,
+            Decimal("110"),
+            closing_date,
+        )
+        closings = (
+            make_calculated_level(
+                Decimal("-110"),
+                closing_date,
+                contributions=(
+                    replace(
+                        closing_base,
+                        side=OperatingNWCPerimeterSide.LIABILITY,
+                        signed_contribution=Decimal("-110"),
+                    ),
+                ),
+            ),
+            make_calculated_level(
+                Decimal("110"),
+                closing_date,
+                contributions=(
+                    replace(
+                        closing_base,
+                        source_result=make_resolved(
+                            FinancialMetric.INVENTORY,
+                            Decimal("110"),
+                            balance_date=closing_date,
+                            accession_number="annual-2025-12-31",
+                            filing_date=closing_date + timedelta(days=40),
+                        ),
+                    ),
+                ),
+            ),
+        )
+
+        for closing in closings:
+            with self.subTest(contribution=closing.contributions[0]):
+                with self.assertRaisesRegex(
+                    OperatingNWCChangeError, "ordered calculation perimeter"
+                ):
+                    calculate_operating_nwc_change(opening, closing)
+
+    def test_same_perimeter_allows_different_values_and_annual_evidence(self) -> None:
+        opening_date = date(2024, 12, 31)
+        closing_date = date(2025, 12, 31)
+        opening = make_calculated_level(
+            Decimal("100"),
+            opening_date,
+            contributions=(
+                make_change_contribution(
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCPerimeterSide.ASSET,
+                    FinancialMetric.OPERATING_RECEIVABLES,
+                    Decimal("100"),
+                    opening_date,
+                ),
+            ),
+        )
+        closing = make_calculated_level(
+            Decimal("135"),
+            closing_date,
+            contributions=(
+                make_change_contribution(
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCPerimeterSide.ASSET,
+                    FinancialMetric.OPERATING_RECEIVABLES,
+                    Decimal("135"),
+                    closing_date,
+                ),
+            ),
+        )
+
+        result = calculate_operating_nwc_change(opening, closing)
+
+        self.assertEqual(result.change, Decimal("35"))
+        self.assertNotEqual(
+            result.opening_level.contributions[0].source_result.chosen_source,
+            result.closing_level.contributions[0].source_result.chosen_source,
+        )
+
+    def test_contribution_order_is_part_of_perimeter(self) -> None:
+        opening_date = date(2024, 12, 31)
+        closing_date = date(2025, 12, 31)
+
+        def perimeter(balance_date: date) -> tuple[OperatingNWCComponentContribution, ...]:
+            return (
+                make_change_contribution(
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCPerimeterSide.ASSET,
+                    FinancialMetric.OPERATING_RECEIVABLES,
+                    Decimal("100"),
+                    balance_date,
+                ),
+                make_change_contribution(
+                    OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+                    OperatingNWCPerimeterSide.LIABILITY,
+                    FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                    Decimal("40"),
+                    balance_date,
+                ),
+            )
+
+        opening = make_calculated_level(
+            Decimal("60"), opening_date, contributions=perimeter(opening_date)
+        )
+        closing = make_calculated_level(
+            Decimal("60"),
+            closing_date,
+            contributions=tuple(reversed(perimeter(closing_date))),
+        )
+
+        with self.assertRaisesRegex(
+            OperatingNWCChangeError, "ordered calculation perimeter"
+        ):
+            calculate_operating_nwc_change(opening, closing)
+
+    def test_series_rejects_same_identity_perimeter_change_in_middle(self) -> None:
+        dates = (date(2023, 12, 31), date(2024, 12, 31), date(2025, 12, 31))
+        levels = tuple(
+            make_calculated_level(
+                Decimal("100"),
+                balance_date,
+                contributions=(
+                    make_change_contribution(
+                        component,
+                        side,
+                        metric,
+                        Decimal("100"),
+                        balance_date,
+                    ),
+                ),
+            )
+            for balance_date, component, side, metric in (
+                (
+                    dates[0],
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCPerimeterSide.ASSET,
+                    FinancialMetric.OPERATING_RECEIVABLES,
+                ),
+                (
+                    dates[1],
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCPerimeterSide.ASSET,
+                    FinancialMetric.OPERATING_RECEIVABLES,
+                ),
+                (
+                    dates[2],
+                    OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+                    OperatingNWCPerimeterSide.LIABILITY,
+                    FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                ),
+            )
+        )
+
+        with self.assertRaisesRegex(
+            OperatingNWCChangeError, "ordered calculation perimeter"
+        ):
+            calculate_operating_nwc_changes(levels)
+
+    def test_positive_negative_zero_and_exact_decimal_changes(self) -> None:
+        cases = (
+            (Decimal("1.01"), Decimal("2.03"), Decimal("1.02")),
+            (Decimal("2.03"), Decimal("1.01"), Decimal("-1.02")),
+            (Decimal("1.01"), Decimal("1.01"), Decimal("0.00")),
+        )
+        for opening_amount, closing_amount, expected in cases:
+            with self.subTest(expected=expected):
+                opening = make_calculated_level(
+                    opening_amount,
+                    date(2024, 12, 31),
+                )
+                closing = make_calculated_level(
+                    closing_amount,
+                    date(2025, 12, 31),
+                )
+
+                result = calculate_operating_nwc_change(opening, closing)
+
+                self.assertIsInstance(result, CalculatedOperatingNWCChange)
+                self.assertEqual(result.change, expected)
+                self.assertIsInstance(result.change, Decimal)
+                self.assertEqual(result.opening_amount, opening_amount)
+                self.assertEqual(result.closing_amount, closing_amount)
+                self.assertIs(result.opening_level, opening)
+                self.assertIs(result.closing_level, closing)
+                self.assertEqual(result.company_cik, 1326801)
+                self.assertEqual(result.policy_id, "meta_operating_nwc_valuation")
+                self.assertEqual(result.policy_version, "2")
+                self.assertEqual(result.unit, "USD")
+
+    def test_incompatible_company_policy_version_and_unit_are_rejected(self) -> None:
+        opening = make_calculated_level(Decimal("1"), date(2024, 12, 31))
+        cases = (
+            make_calculated_level(
+                Decimal("2"),
+                date(2025, 12, 31),
+                company_cik=909832,
+            ),
+            make_calculated_level(
+                Decimal("2"),
+                date(2025, 12, 31),
+                policy_id="different-policy",
+            ),
+            make_calculated_level(
+                Decimal("2"),
+                date(2025, 12, 31),
+                policy_version="1",
+            ),
+            make_calculated_level(
+                Decimal("2"),
+                date(2025, 12, 31),
+                unit="EUR",
+            ),
+        )
+        for closing in cases:
+            with self.subTest(closing=closing):
+                with self.assertRaises(OperatingNWCChangeError):
+                    calculate_operating_nwc_change(opening, closing)
+
+    def test_level_amounts_must_be_finite_decimals(self) -> None:
+        opening = make_calculated_level(Decimal("1"), date(2024, 12, 31))
+        closing = make_calculated_level(Decimal("2"), date(2025, 12, 31))
+        for malformed in (
+            replace(opening, amount=1.0),
+            replace(opening, amount=Decimal("NaN")),
+            replace(closing, amount=Decimal("Infinity")),
+        ):
+            with self.subTest(amount=malformed.amount):
+                with self.assertRaises(OperatingNWCChangeError):
+                    calculate_operating_nwc_change(malformed, closing)
+
+    def test_meta_v1_and_v2_are_not_comparable(self) -> None:
+        opening = make_calculated_level(
+            Decimal("1"),
+            date(2024, 12, 31),
+            policy_version="1",
+        )
+        closing = make_calculated_level(
+            Decimal("2"),
+            date(2025, 12, 31),
+            policy_version="2",
+        )
+
+        with self.assertRaisesRegex(OperatingNWCChangeError, "policy version"):
+            calculate_operating_nwc_change(opening, closing)
+
+    def test_equal_reversed_and_malformed_level_dates_are_rejected(self) -> None:
+        earlier = make_calculated_level(Decimal("1"), date(2024, 12, 31))
+        later = make_calculated_level(Decimal("2"), date(2025, 12, 31))
+        equal = make_calculated_level(Decimal("2"), date(2024, 12, 31))
+        malformed = replace(
+            later,
+            filing=replace(later.filing, report_date=date(2025, 12, 30)),
+        )
+        for opening, closing in (
+            (earlier, equal),
+            (later, earlier),
+            (earlier, malformed),
+        ):
+            with self.subTest(opening=opening.balance_date, closing=closing.balance_date):
+                with self.assertRaises(OperatingNWCChangeError):
+                    calculate_operating_nwc_change(opening, closing)
+
+    def test_actual_non_calendar_and_week_based_dates_are_preserved(self) -> None:
+        opening = make_calculated_level(
+            Decimal("-7783000000"),
+            date(2024, 9, 1),
+            company_cik=909832,
+            policy_id="cost_operating_nwc_valuation",
+            policy_version="1",
+        )
+        closing = make_calculated_level(
+            Decimal("-9200000000"),
+            date(2025, 8, 31),
+            company_cik=909832,
+            policy_id="cost_operating_nwc_valuation",
+            policy_version="1",
+        )
+
+        result = calculate_operating_nwc_change(opening, closing)
+
+        self.assertEqual(result.opening_balance_date, date(2024, 9, 1))
+        self.assertEqual(result.closing_balance_date, date(2025, 8, 31))
+        self.assertEqual(result.change, Decimal("-1417000000"))
+
+    def test_five_levels_produce_four_ordered_adjacent_changes(self) -> None:
+        levels = tuple(
+            make_calculated_level(Decimal(amount), balance_date)
+            for amount, balance_date in (
+                ("8816000000", date(2021, 12, 31)),
+                ("4283000000", date(2022, 12, 31)),
+                ("6553000000", date(2023, 12, 31)),
+                ("7502000000", date(2024, 12, 31)),
+                ("8653000000", date(2025, 12, 31)),
+            )
+        )
+
+        results = calculate_operating_nwc_changes(levels)
+
+        self.assertEqual(len(results), 4)
+        self.assertEqual(
+            tuple(result.change for result in results),
+            (
+                Decimal("-4533000000"),
+                Decimal("2270000000"),
+                Decimal("949000000"),
+                Decimal("1151000000"),
+            ),
+        )
+        self.assertEqual(
+            tuple(result.opening_level for result in results),
+            levels[:-1],
+        )
+        self.assertEqual(
+            tuple(result.closing_level for result in results),
+            levels[1:],
+        )
+
+    def test_series_rejects_policy_change_and_does_not_sort(self) -> None:
+        levels = (
+            make_calculated_level(Decimal("1"), date(2023, 12, 31)),
+            make_calculated_level(Decimal("2"), date(2024, 12, 31)),
+            make_calculated_level(
+                Decimal("3"),
+                date(2025, 12, 31),
+                policy_version="3",
+            ),
+        )
+        with self.assertRaisesRegex(OperatingNWCChangeError, "policy version"):
+            calculate_operating_nwc_changes(levels)
+
+        reversed_levels = tuple(reversed(levels[:2]))
+        with self.assertRaisesRegex(OperatingNWCChangeError, "closing date"):
+            calculate_operating_nwc_changes(reversed_levels)
+
+    def test_series_with_fewer_than_two_levels_has_no_change(self) -> None:
+        self.assertEqual(calculate_operating_nwc_changes(()), ())
+        level = make_calculated_level(Decimal("1"), date(2025, 12, 31))
+        self.assertEqual(calculate_operating_nwc_changes((level,)), ())

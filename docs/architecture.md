@@ -118,8 +118,10 @@ structural fact selection:
 - `normalization.operating_nwc` preserves strict issuer-specific reconstruction
   diagnostics and separately evaluates versioned valuation perimeters for
   calculation readiness. It calculates annual O-NWC levels only after readiness
-  succeeds, retaining ordered signed contributions and source results. The
-  module remains pure and network-free.
+  succeeds, then derives adjacent annual changes only from levels with the same
+  company, exact policy ID/version and formula, and actual ordered calculation
+  perimeter. Level and change results retain their
+  complete source results. The module remains pure and network-free.
 - `normalization.derived` validates evidence-backed, CIK-scoped derivation
   policies and their operands. It performs no network access.
 - `normalization.balance_sheet_derivation` resolves the narrowly approved META
@@ -217,8 +219,8 @@ duration facts do not define the operand's fiscal period, and no calendar-year
 length is assumed. The operand is never a direct instant balance-sheet value.
 Missing or ambiguous target evidence keeps adjusted trade AP unresolved.
 
-Annual Operating NWC level calculation is implemented; its year-over-year
-change is not. A strict completeness layer
+Annual Operating NWC level and adjacent annual change calculations are
+implemented. A strict completeness layer
 classifies required operating assets and liabilities, explicit exclusions,
 issuer-specific non-applicability, and methodology-unresolved components. It
 groups underlying resolved, missing, and ambiguous normalized results without
@@ -262,3 +264,13 @@ contribute positively and required liability balances negatively using exact
 provenance. Readiness also requires every resolved mandatory result and its
 evidence to match the selected filing accession, report date, and exact USD
 unit.
+
+Annual change in Operating NWC is calculated as closing O-NWC minus opening
+O-NWC from two already calculated levels. The inputs must have the same company
+CIK, policy ID, policy version, calculation formula, actual ordered
+component/side/normalized-metric perimeter, and exact USD unit, with the closing date
+strictly after the opening date. Inputs are never sorted. Actual fiscal dates
+are preserved without assumptions about calendar years or year length. Each
+change retains both full level results, including their component-level SEC
+provenance. A policy/perimeter change raises a domain error instead of becoming
+an apparent working-capital movement.

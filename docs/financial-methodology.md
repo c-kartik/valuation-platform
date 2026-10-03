@@ -247,8 +247,10 @@ used only by an explicit source policy and supplied to normalization on demand.
 Broad accrued and other-current-liability residuals remain excluded.
 
 Annual Operating NWC equals approved required operating current assets minus
-approved required operating current liabilities. Level arithmetic is
-implemented for valuation-ready periods; its year-over-year change is not. The
+approved required operating current liabilities. Annual change in Operating
+NWC is derived as the closing annual level minus the opening annual level. A
+positive change is an increase in operating NWC; the future FCFF calculation
+will subtract it. No sign inversion is applied in the change calculation. The
 methodology uses a hybrid distinction:
 strict reconstruction completeness asks whether the relevant operating current-
 account structure has been cleanly reconstructed, while valuation readiness
@@ -316,6 +318,24 @@ $8.816bn, $4.283bn, $6.553bn, $7.502bn, and $8.653bn; the COST levels are
 -$8.063bn, -$6.166bn, -$7.312bn, -$7.783bn, and -$9.200bn. GOOGL, MSFT, and
 AAPL remain blocked. Historical and forecast calculations must
 continue to use the same issuer perimeter.
+
+Annual changes require the same company CIK, exact valuation policy ID and
+version, calculation formula, and actual ordered component/side/normalized-
+metric perimeter on both retained level results. Policy identity alone is not
+trusted when explicit policy objects are supplied. A perimeter change is not an economic
+working-capital cash flow and is rejected. Calculations use actual opening and
+closing fiscal dates, exact `Decimal` subtraction, and no annualization,
+interpolation, calendar-year assumption, or rounding. The result retains both
+complete O-NWC levels and their component-level provenance. Five currently
+validated annual levels produce four adjacent changes because the earliest
+level has no preceding opening level. ΔNWC is derived from normalized balances;
+it is not a directly reported SEC cash-flow fact.
+
+Live annual ΔNWC for META v2 is -$4.533bn, $2.270bn, $0.949bn, and
+$1.151bn for 2022–2025. COST v1 is $1.897bn, -$1.146bn, -$0.471bn, and
+-$1.417bn for its corresponding 2022–2025 fiscal periods. GOOGL, MSFT, and AAPL
+remain blocked before level calculation and therefore have no annual ΔNWC
+output.
 
 ## Source vs. Derived Values
 
