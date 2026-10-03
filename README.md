@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.5h.1 complete — Operating NWC valuation readiness**
+**Phase 1F.5h.3 complete — META Operating NWC valuation perimeter v2**
 
-Next milestone: **resolve mandatory O-NWC perimeter blockers before arithmetic**
+Next milestone: **implement O-NWC arithmetic for valuation-ready issuer-periods**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -72,9 +72,11 @@ asset and liability accounts, Operating NWC, and change in Operating NWC remain
 unresolved. Strict reconstruction policies continue to report whether each
 annual period has complete evidence. Separate versioned valuation-perimeter
 policies now determine whether the explicitly required components are ready for
-future arithmetic. COST is ready for all five selected periods; META is ready
-for 2021–2024 and remains blocked in 2025 by its missing required customer
-contract liability. GOOGL, MSFT, and AAPL retain explicit methodology blockers.
+future arithmetic. META valuation policy v2 excludes customer contract
+liabilities from a stable measurable historical and forecast perimeter without
+changing their normalized values or treating them as zero. META v2 and COST v1
+are ready for all five selected periods. GOOGL, MSFT, and AAPL retain explicit
+methodology blockers.
 Neither readiness layer calculates Operating NWC.
 For META only, reported trade accounts payable is adjusted through a pure,
 provenance-preserving derivation that removes PP&E payable evidence split across

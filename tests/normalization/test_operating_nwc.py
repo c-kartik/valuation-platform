@@ -13,6 +13,8 @@ from valuation_platform.normalization import (
     GOOGL_OPERATING_NWC_VALUATION_POLICY,
     GOOGL_OPERATING_NWC_POLICY,
     META_OPERATING_NWC_VALUATION_POLICY,
+    META_OPERATING_NWC_VALUATION_POLICY_V1,
+    META_OPERATING_NWC_VALUATION_POLICY_V2,
     META_OPERATING_NWC_POLICY,
     MSFT_OPERATING_NWC_VALUATION_POLICY,
     MSFT_OPERATING_NWC_POLICY,
@@ -43,6 +45,7 @@ from valuation_platform.normalization import (
     evaluate_operating_nwc_readiness,
     operating_nwc_policy_for_cik,
     operating_nwc_valuation_policy_for_cik,
+    operating_nwc_valuation_policy_for_id_and_version,
 )
 from valuation_platform.sec.submissions import SECFiling
 from valuation_platform.sec.tickers import SECCompanyIdentity
@@ -81,7 +84,7 @@ def make_evidence(
         observation_filed=filing_date,
         fiscal_year=balance_date.year,
         fiscal_period="FY",
-        frame="CY2025Q4I",
+        frame=None,
     )
 
 
@@ -706,7 +709,7 @@ class OperatingNWCReadinessTests(TestCase):
                 self.assertIs(result.is_ready, expected)
                 self.assertIs(bool(result.methodology_blockers), not expected)
 
-    def test_meta_period_readiness_preserves_2025_missing_contract_liability(
+    def test_meta_v2_all_periods_are_ready_without_contract_liability(
         self,
     ) -> None:
         results = []
@@ -722,13 +725,7 @@ class OperatingNWCReadinessTests(TestCase):
             for component in META_OPERATING_NWC_VALUATION_POLICY.components:
                 if component.metric is None:
                     continue
-                if (
-                    year == 2025
-                    and component.metric
-                    is FinancialMetric.CUSTOMER_CONTRACT_LIABILITIES
-                ):
-                    metrics.append(make_missing(component.metric))
-                elif component.metric is FinancialMetric.TRADE_ACCOUNTS_PAYABLE:
+                if component.metric is FinancialMetric.TRADE_ACCOUNTS_PAYABLE:
                     evidence = make_evidence(
                         component.metric,
                         balance_date=filing.report_date,
@@ -766,6 +763,18 @@ class OperatingNWCReadinessTests(TestCase):
                             filing_date=filing.filing_date,
                         )
                     )
+            contract_metric = FinancialMetric.CUSTOMER_CONTRACT_LIABILITIES
+            metrics.append(
+                make_missing(contract_metric)
+                if year == 2025
+                else make_resolved(
+                    contract_metric,
+                    value=year,
+                    balance_date=filing.report_date,
+                    accession_number=filing.accession_number,
+                    filing_date=filing.filing_date,
+                )
+            )
             results.append(AnnualBalanceSheetFilingResult(filing, tuple(metrics)))
         balance_sheets = make_balance_sheet_series(tuple(results), 1326801)
 
@@ -780,21 +789,74 @@ class OperatingNWCReadinessTests(TestCase):
 
         self.assertEqual(
             tuple(result.is_ready for result in readiness),
-            (True, True, True, True, False),
+            (True, True, True, True, True),
+        )
+        self.assertTrue(
+            all(
+                result.policy_id == "meta_operating_nwc_valuation"
+                and result.policy_version == "2"
+                for result in readiness
+            )
         )
         self.assertEqual(
             tuple(
-                item.policy.component
-                for item in readiness[-1].missing_mandatory_components
+                component.component
+                for component in readiness[-1].configured_non_mandatory_components
             ),
-            (OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,),
+            (
+                OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
+                OperatingNWCComponent.OTHER_ACCRUED_LIABILITIES,
+                OperatingNWCComponent.ACCRUED_PP_AND_E_PURCHASES,
+                OperatingNWCComponent.OPERATING_LEASE_LIABILITIES,
+            ),
         )
+        self.assertEqual(readiness[-1].missing_mandatory_components, ())
+        self.assertFalse(
+            any(
+                item.policy.component
+                is OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES
+                for result in readiness
+                for item in result.resolved_mandatory_components
+            )
+        )
+        contract_policy = readiness[-1].configured_non_mandatory_components[0]
+        self.assertIn("not treated as zero", contract_policy.rationale)
         derived = next(
             item
             for item in readiness[0].resolved_mandatory_components
             if item.policy.component is OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE
         )
         self.assertIsInstance(derived.result, DerivedBalanceSheetValue)
+
+        reconstruction = evaluate_operating_nwc_completeness(
+            balance_sheets,
+            balance_sheets.annual[0],
+            META_OPERATING_NWC_POLICY,
+        )
+        self.assertFalse(reconstruction.is_complete)
+        self.assertTrue(reconstruction.methodology_unresolved_components)
+
+    def test_meta_v2_still_requires_employee_liabilities(self) -> None:
+        metrics = []
+        for component in META_OPERATING_NWC_VALUATION_POLICY.components:
+            if component.metric is None:
+                continue
+            metrics.append(
+                make_missing(component.metric)
+                if component.metric is FinancialMetric.EMPLOYEE_RELATED_LIABILITIES
+                else make_resolved(component.metric)
+            )
+
+        result = evaluate_readiness(
+            AnnualBalanceSheetFilingResult(FILING, tuple(metrics)),
+            META_OPERATING_NWC_VALUATION_POLICY,
+        )
+
+        self.assertFalse(result.is_ready)
+        self.assertEqual(
+            tuple(item.policy.component for item in result.missing_mandatory_components),
+            (OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES,),
+        )
 
     def test_all_five_cost_periods_are_ready(self) -> None:
         results = tuple(
@@ -1101,6 +1163,28 @@ class OperatingNWCReadinessTests(TestCase):
             ):
                 operating_nwc_valuation_policy_for_cik(1326801)
 
+        duplicate_historical_identity = replace(
+            META_OPERATING_NWC_VALUATION_POLICY_V2,
+            company_cik=999999,
+        )
+        with patch.object(
+            operating_nwc_module,
+            "OPERATING_NWC_VALUATION_POLICY_VERSIONS",
+            (
+                META_OPERATING_NWC_VALUATION_POLICY_V1,
+                META_OPERATING_NWC_VALUATION_POLICY_V2,
+                duplicate_historical_identity,
+            ),
+        ):
+            with self.assertRaisesRegex(
+                OperatingNWCReadinessError,
+                "history contains duplicate policy ID/version",
+            ):
+                operating_nwc_valuation_policy_for_id_and_version(
+                    "meta_operating_nwc_valuation",
+                    "2",
+                )
+
         duplicate_identity = replace(
             META_OPERATING_NWC_VALUATION_POLICY,
             company_cik=999999,
@@ -1117,15 +1201,183 @@ class OperatingNWCReadinessTests(TestCase):
                 operating_nwc_valuation_policy_for_cik(1326801)
 
     def test_valuation_policy_lookup_is_independent_of_registry_order(self) -> None:
-        with patch.object(
-            operating_nwc_module,
-            "OPERATING_NWC_VALUATION_POLICIES",
-            tuple(reversed(operating_nwc_module.OPERATING_NWC_VALUATION_POLICIES)),
+        with (
+            patch.object(
+                operating_nwc_module,
+                "OPERATING_NWC_VALUATION_POLICIES",
+                tuple(
+                    reversed(operating_nwc_module.OPERATING_NWC_VALUATION_POLICIES)
+                ),
+            ),
+            patch.object(
+                operating_nwc_module,
+                "OPERATING_NWC_VALUATION_POLICY_VERSIONS",
+                tuple(
+                    reversed(
+                        operating_nwc_module.OPERATING_NWC_VALUATION_POLICY_VERSIONS
+                    )
+                ),
+            ),
         ):
             self.assertIs(
                 operating_nwc_valuation_policy_for_cik(1326801),
                 META_OPERATING_NWC_VALUATION_POLICY,
             )
+            self.assertIs(
+                operating_nwc_valuation_policy_for_id_and_version(
+                    "meta_operating_nwc_valuation",
+                    "2",
+                ),
+                META_OPERATING_NWC_VALUATION_POLICY_V2,
+            )
+
+    def test_active_policy_must_equal_its_versioned_definition(self) -> None:
+        without_meta_v2 = tuple(
+            policy
+            for policy in operating_nwc_module.OPERATING_NWC_VALUATION_POLICY_VERSIONS
+            if policy is not META_OPERATING_NWC_VALUATION_POLICY_V2
+        )
+        with patch.object(
+            operating_nwc_module,
+            "OPERATING_NWC_VALUATION_POLICY_VERSIONS",
+            without_meta_v2,
+        ):
+            with self.assertRaisesRegex(
+                OperatingNWCReadinessError,
+                "missing from policy history",
+            ):
+                operating_nwc_valuation_policy_for_cik(1326801)
+
+        contract_component = META_OPERATING_NWC_VALUATION_POLICY_V2.components[3]
+        mismatched_meta_v2 = replace(
+            META_OPERATING_NWC_VALUATION_POLICY_V2,
+            components=(
+                *META_OPERATING_NWC_VALUATION_POLICY_V2.components[:3],
+                replace(
+                    contract_component,
+                    treatment=OperatingNWCPerimeterTreatment.METHODOLOGY_BLOCKER,
+                    mandatory=True,
+                ),
+                *META_OPERATING_NWC_VALUATION_POLICY_V2.components[4:],
+            ),
+        )
+        mismatched_history = tuple(
+            mismatched_meta_v2
+            if policy is META_OPERATING_NWC_VALUATION_POLICY_V2
+            else policy
+            for policy in operating_nwc_module.OPERATING_NWC_VALUATION_POLICY_VERSIONS
+        )
+        with patch.object(
+            operating_nwc_module,
+            "OPERATING_NWC_VALUATION_POLICY_VERSIONS",
+            mismatched_history,
+        ):
+            with self.assertRaisesRegex(
+                OperatingNWCReadinessError,
+                "differs from its policy-history definition",
+            ):
+                operating_nwc_valuation_policy_for_id_and_version(
+                    "meta_operating_nwc_valuation",
+                    "2",
+                )
+
+    def test_meta_active_and_explicit_version_lookups(self) -> None:
+        self.assertIs(
+            META_OPERATING_NWC_VALUATION_POLICY,
+            META_OPERATING_NWC_VALUATION_POLICY_V2,
+        )
+        self.assertIs(
+            operating_nwc_valuation_policy_for_cik(1326801),
+            META_OPERATING_NWC_VALUATION_POLICY_V2,
+        )
+        self.assertIs(
+            operating_nwc_valuation_policy_for_id_and_version(
+                "meta_operating_nwc_valuation",
+                "1",
+            ),
+            META_OPERATING_NWC_VALUATION_POLICY_V1,
+        )
+        self.assertIs(
+            operating_nwc_valuation_policy_for_id_and_version(
+                "meta_operating_nwc_valuation",
+                "2",
+            ),
+            META_OPERATING_NWC_VALUATION_POLICY_V2,
+        )
+
+        with self.assertRaisesRegex(
+            OperatingNWCReadinessError,
+            "No Operating NWC valuation policy",
+        ):
+            operating_nwc_valuation_policy_for_id_and_version(
+                "meta_operating_nwc_valuation",
+                "999",
+            )
+
+    def test_meta_v1_complete_ordered_perimeter_is_preserved(self) -> None:
+        self.assertEqual(
+            tuple(
+                (
+                    component.component,
+                    component.side,
+                    component.treatment,
+                    component.mandatory,
+                    component.metric,
+                )
+                for component in META_OPERATING_NWC_VALUATION_POLICY_V1.components
+            ),
+            (
+                (
+                    OperatingNWCComponent.OPERATING_RECEIVABLES,
+                    OperatingNWCPerimeterSide.ASSET,
+                    OperatingNWCPerimeterTreatment.REQUIRED,
+                    True,
+                    FinancialMetric.OPERATING_RECEIVABLES,
+                ),
+                (
+                    OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+                    OperatingNWCPerimeterSide.LIABILITY,
+                    OperatingNWCPerimeterTreatment.REQUIRED,
+                    True,
+                    FinancialMetric.TRADE_ACCOUNTS_PAYABLE,
+                ),
+                (
+                    OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
+                    OperatingNWCPerimeterSide.LIABILITY,
+                    OperatingNWCPerimeterTreatment.REQUIRED,
+                    True,
+                    FinancialMetric.CUSTOMER_CONTRACT_LIABILITIES,
+                ),
+                (
+                    OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES,
+                    OperatingNWCPerimeterSide.LIABILITY,
+                    OperatingNWCPerimeterTreatment.REQUIRED,
+                    True,
+                    FinancialMetric.EMPLOYEE_RELATED_LIABILITIES,
+                ),
+                (
+                    OperatingNWCComponent.OTHER_ACCRUED_LIABILITIES,
+                    OperatingNWCPerimeterSide.LIABILITY,
+                    OperatingNWCPerimeterTreatment.OUT_OF_PERIMETER,
+                    False,
+                    None,
+                ),
+                (
+                    OperatingNWCComponent.ACCRUED_PP_AND_E_PURCHASES,
+                    OperatingNWCPerimeterSide.LIABILITY,
+                    OperatingNWCPerimeterTreatment.OUT_OF_PERIMETER,
+                    False,
+                    None,
+                ),
+                (
+                    OperatingNWCComponent.OPERATING_LEASE_LIABILITIES,
+                    OperatingNWCPerimeterSide.LIABILITY,
+                    OperatingNWCPerimeterTreatment.OUT_OF_PERIMETER,
+                    False,
+                    None,
+                ),
+            ),
+        )
 
     def test_builtin_policy_lookup_and_versioned_perimeters(self) -> None:
         expected = {
@@ -1133,11 +1385,11 @@ class OperatingNWCReadinessTests(TestCase):
                 (
                     OperatingNWCComponent.OPERATING_RECEIVABLES,
                     OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
-                    OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
                     OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES,
                 ),
                 (),
                 (
+                    OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
                     OperatingNWCComponent.OTHER_ACCRUED_LIABILITIES,
                     OperatingNWCComponent.ACCRUED_PP_AND_E_PURCHASES,
                     OperatingNWCComponent.OPERATING_LEASE_LIABILITIES,
@@ -1212,7 +1464,10 @@ class OperatingNWCReadinessTests(TestCase):
         for company_cik, (required, blockers, outside) in expected.items():
             with self.subTest(company_cik=company_cik):
                 policy = operating_nwc_valuation_policy_for_cik(company_cik)
-                self.assertEqual(policy.version, "1")
+                self.assertEqual(
+                    policy.version,
+                    "2" if company_cik == 1326801 else "1",
+                )
                 self.assertEqual(
                     tuple(
                         component.component

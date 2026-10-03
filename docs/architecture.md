@@ -228,10 +228,13 @@ blocker, or outside the valuation perimeter. Issuer-inapplicable components are
 omitted from that issuer's valuation perimeter. Readiness inspects
 only configured required metrics, preserves direct or derived evidence, and
 does not infer a perimeter from whichever facts happen to resolve. Policy
-version `1` records the initial economic perimeter; changing the included
-components or their required treatment requires a new version, while incidental
-code changes do not. Reconstruction can remain incomplete while valuation
-readiness succeeds.
+versions record distinct economic perimeters; changing included components or
+their required treatment requires a new version, while incidental code changes
+do not. One active registry preserves exactly one default policy per CIK, while
+a separate version-addressable registry retains historical definitions and
+rejects duplicate policy ID/version identities. META v2 is active; META v1
+remains available through explicit policy/version lookup. Reconstruction can
+remain incomplete while valuation readiness succeeds.
 
 Research supports an eventual component-derived result rather than a Current
 Assets minus Current Liabilities shortcut. Broad residual formulas remain
@@ -242,7 +245,8 @@ accrued distribution and marketing remains unresolved because only one of five
 selected accessions contains the fact. GOOGL accrued revenue share and accrued
 customer liabilities are the filing-XBRL-backed balance-sheet primitives
 currently normalized. Strict reconstruction policies keep all five issuers
-incomplete. Under the initial valuation perimeters, COST is ready for all five
-selected periods, META is ready for 2021–2024 and blocked in 2025 by missing
-customer contract liabilities, and GOOGL, MSFT, and AAPL retain explicit
-methodology blockers. No numerical O-NWC is produced.
+incomplete. META valuation policy v2 moves customer contract liabilities
+outside its stable measurable valuation perimeter; their balances and movements
+are omitted rather than treated as zero. META v2 and COST v1 are ready for all
+five selected periods, while GOOGL, MSFT, and AAPL retain explicit methodology
+blockers. No numerical O-NWC is produced.

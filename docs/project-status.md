@@ -2,9 +2,10 @@
 
 ## Current Milestone
 
-Phase 1F.5h.1 is complete for versioned Operating NWC valuation readiness.
-Strict reconstruction completeness remains separate. Operating NWC arithmetic
-and change in Operating NWC remain future work.
+Phase 1F.5h.3 is complete for META Operating NWC valuation-perimeter version 2.
+META v2 and COST v1 are valuation-ready for all five selected periods. Strict
+reconstruction completeness remains separate. Operating NWC arithmetic and
+change in Operating NWC remain future work.
 
 ## Completed
 
@@ -220,16 +221,29 @@ and change in Operating NWC remain future work.
   not treated as zero and will remain absent from future arithmetic
 - Defined perimeter version changes around economic component or mandatory-
   treatment changes rather than incidental code changes
+- Confirmed the selected META 2025 filing reports $1.080bn of total deferred
+  revenue but does not quantify an exact current-only amount; neither the total
+  balance nor qualitative timing disclosure is used as a substitute
+- Added META valuation policy v2 with operating receivables, adjusted trade AP,
+  and employee-related liabilities as required components
+- Kept customer contract liabilities normalized and visible but outside the
+  META v2 valuation perimeter for every period; excluded balances and movements
+  are omitted rather than treated as zero or economically irrelevant
+- Made META v2 the sole active default while retaining META v1 through explicit
+  policy ID/version lookup and rejecting duplicate historical identities
+- Confirmed META v2 is valuation-ready for all five 2021–2025 periods while its
+  strict reconstruction result remains incomplete
+- Preserved COST v1 readiness and the existing GOOGL, MSFT, and AAPL blockers
 
 ## Next Step
 
-Resolve the mandatory valuation-perimeter blockers without broad residual
-formulas, then implement arithmetic only for issuer-periods that pass readiness.
-Priority work is META 2025 customer contract liabilities, GOOGL and MSFT trade
-AP, GOOGL inventory treatment, and AAPL employee and distribution-and-marketing
-decisions. The opening snapshot needed for a five-period change series, change
-in Operating NWC, GOOGL D&A, NOPAT, interim normalization, and valuation remain
-outside the implemented scope.
+Implement Operating NWC arithmetic only for issuer-periods that pass valuation
+readiness, initially META v2 and COST v1, while preserving each policy's exact
+historical and forecast perimeter. GOOGL and MSFT trade AP, GOOGL inventory,
+and AAPL employee and distribution-and-marketing decisions remain blockers.
+The opening snapshot needed for a five-period change series, change in Operating
+NWC, GOOGL D&A, NOPAT, interim normalization, and valuation remain outside the
+implemented scope.
 
 ## Current Repository Structure
 

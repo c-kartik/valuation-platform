@@ -546,7 +546,7 @@ def _perimeter_component(
     )
 
 
-META_OPERATING_NWC_VALUATION_POLICY = OperatingNWCValuationPolicy(
+META_OPERATING_NWC_VALUATION_POLICY_V1 = OperatingNWCValuationPolicy(
     policy_id="meta_operating_nwc_valuation",
     version="1",
     company_cik=_META_CIK,
@@ -595,6 +595,61 @@ META_OPERATING_NWC_VALUATION_POLICY = OperatingNWCValuationPolicy(
         ),
     ),
 )
+
+
+META_OPERATING_NWC_VALUATION_POLICY_V2 = OperatingNWCValuationPolicy(
+    policy_id="meta_operating_nwc_valuation",
+    version="2",
+    company_cik=_META_CIK,
+    components=(
+        _perimeter_component(
+            OperatingNWCComponent.OPERATING_RECEIVABLES,
+            _PERIMETER_ASSET,
+            _REQUIRED,
+            "Core operating collection balance",
+        ),
+        _perimeter_component(
+            OperatingNWCComponent.TRADE_ACCOUNTS_PAYABLE,
+            _PERIMETER_LIABILITY,
+            _REQUIRED,
+            "Adjusted supplier payable excludes evidenced PP&E obligations",
+        ),
+        _perimeter_component(
+            OperatingNWCComponent.EMPLOYEE_RELATED_LIABILITIES,
+            _PERIMETER_LIABILITY,
+            _REQUIRED,
+            "Recurring employee-related operating accrual",
+        ),
+        _perimeter_component(
+            OperatingNWCComponent.CUSTOMER_CONTRACT_LIABILITIES,
+            _PERIMETER_LIABILITY,
+            _OUTSIDE,
+            "Genuine operating liability excluded to keep a stable measurable "
+            "perimeter; its balance and movement are omitted, not treated as zero",
+        ),
+        _perimeter_component(
+            OperatingNWCComponent.OTHER_ACCRUED_LIABILITIES,
+            _PERIMETER_LIABILITY,
+            _OUTSIDE,
+            "Mixed residual caption remains a reconstruction limitation",
+        ),
+        _perimeter_component(
+            OperatingNWCComponent.ACCRUED_PP_AND_E_PURCHASES,
+            _PERIMETER_LIABILITY,
+            _OUTSIDE,
+            "Investing obligation already reflected in adjusted trade AP",
+        ),
+        _perimeter_component(
+            OperatingNWCComponent.OPERATING_LEASE_LIABILITIES,
+            _PERIMETER_LIABILITY,
+            _OUTSIDE,
+            "Integrated lease methodology remains deferred",
+        ),
+    ),
+)
+
+# The unversioned public name always identifies the active META policy.
+META_OPERATING_NWC_VALUATION_POLICY = META_OPERATING_NWC_VALUATION_POLICY_V2
 
 
 GOOGL_OPERATING_NWC_VALUATION_POLICY = OperatingNWCValuationPolicy(
@@ -857,6 +912,15 @@ OPERATING_NWC_VALUATION_POLICIES: tuple[OperatingNWCValuationPolicy, ...] = (
     COST_OPERATING_NWC_VALUATION_POLICY,
 )
 
+OPERATING_NWC_VALUATION_POLICY_VERSIONS: tuple[OperatingNWCValuationPolicy, ...] = (
+    META_OPERATING_NWC_VALUATION_POLICY_V1,
+    META_OPERATING_NWC_VALUATION_POLICY_V2,
+    GOOGL_OPERATING_NWC_VALUATION_POLICY,
+    MSFT_OPERATING_NWC_VALUATION_POLICY,
+    AAPL_OPERATING_NWC_VALUATION_POLICY,
+    COST_OPERATING_NWC_VALUATION_POLICY,
+)
+
 
 def _validate_operating_nwc_valuation_policy_registry(
     policies: tuple[OperatingNWCValuationPolicy, ...],
@@ -874,7 +938,46 @@ def _validate_operating_nwc_valuation_policy_registry(
         )
 
 
-_validate_operating_nwc_valuation_policy_registry(OPERATING_NWC_VALUATION_POLICIES)
+def _validate_operating_nwc_valuation_policy_versions(
+    policies: tuple[OperatingNWCValuationPolicy, ...],
+) -> None:
+    """Reject duplicate policy/version identities in version history."""
+    identities = tuple((policy.policy_id, policy.version) for policy in policies)
+    if len(set(identities)) != len(identities):
+        raise OperatingNWCReadinessError(
+            "O-NWC valuation policy history contains duplicate policy ID/version"
+        )
+
+
+def _validate_operating_nwc_valuation_policy_registries(
+    active_policies: tuple[OperatingNWCValuationPolicy, ...],
+    versioned_policies: tuple[OperatingNWCValuationPolicy, ...],
+) -> None:
+    """Require every active policy to equal its one versioned definition."""
+    _validate_operating_nwc_valuation_policy_registry(active_policies)
+    _validate_operating_nwc_valuation_policy_versions(versioned_policies)
+    for active_policy in active_policies:
+        matches = tuple(
+            policy
+            for policy in versioned_policies
+            if policy.policy_id == active_policy.policy_id
+            and policy.version == active_policy.version
+        )
+        if not matches:
+            raise OperatingNWCReadinessError(
+                "Active O-NWC valuation policy is missing from policy history"
+            )
+        if matches[0] != active_policy:
+            raise OperatingNWCReadinessError(
+                "Active O-NWC valuation policy differs from its policy-history "
+                "definition"
+            )
+
+
+_validate_operating_nwc_valuation_policy_registries(
+    OPERATING_NWC_VALUATION_POLICIES,
+    OPERATING_NWC_VALUATION_POLICY_VERSIONS,
+)
 
 
 def operating_nwc_policy_for_cik(company_cik: int) -> OperatingNWCPolicy:
@@ -893,8 +996,9 @@ def operating_nwc_valuation_policy_for_cik(
     company_cik: int,
 ) -> OperatingNWCValuationPolicy:
     """Return the versioned valuation perimeter for an exact company CIK."""
-    _validate_operating_nwc_valuation_policy_registry(
-        OPERATING_NWC_VALUATION_POLICIES
+    _validate_operating_nwc_valuation_policy_registries(
+        OPERATING_NWC_VALUATION_POLICIES,
+        OPERATING_NWC_VALUATION_POLICY_VERSIONS,
     )
     matches = tuple(
         policy
@@ -904,6 +1008,28 @@ def operating_nwc_valuation_policy_for_cik(
     if not matches:
         raise OperatingNWCReadinessError(
             f"No Operating NWC valuation policy is configured for CIK {company_cik!r}"
+        )
+    return matches[0]
+
+
+def operating_nwc_valuation_policy_for_id_and_version(
+    policy_id: str,
+    version: str,
+) -> OperatingNWCValuationPolicy:
+    """Return one exact historical or active valuation-perimeter version."""
+    _validate_operating_nwc_valuation_policy_registries(
+        OPERATING_NWC_VALUATION_POLICIES,
+        OPERATING_NWC_VALUATION_POLICY_VERSIONS,
+    )
+    matches = tuple(
+        policy
+        for policy in OPERATING_NWC_VALUATION_POLICY_VERSIONS
+        if policy.policy_id == policy_id and policy.version == version
+    )
+    if not matches:
+        raise OperatingNWCReadinessError(
+            f"No Operating NWC valuation policy {policy_id!r} version "
+            f"{version!r} is configured"
         )
     return matches[0]
 

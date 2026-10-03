@@ -264,13 +264,29 @@ forecast methodology must therefore use the same perimeter. A perimeter version
 changes only when included components or mandatory treatment changes in a way
 that changes calculation semantics.
 
-COST is ready across all five selected periods under version `1`. META is ready
-for 2021–2024; 2025 is not ready because required customer contract liabilities
-are typed missing. GOOGL remains blocked by unresolved trade AP treatment and
-the inventory perimeter decision. MSFT remains blocked by trade AP treatment.
-AAPL remains blocked by employee-liability and distribution-and-marketing
-decisions. These are explicit methodology blockers, not invented missing SEC
-observations.
+COST is ready across all five selected periods under version `1`. META version
+`1` requires current customer contract liabilities and therefore is not ready
+for 2025. The selected 2025 filing reports $1.080bn of total deferred revenue
+but does not quantify the exact current portion; qualitative disclosure that
+most will be realized within one year does not support manufacturing that
+balance or substituting the total amount. Historical current balances were
+small relative to revenue, but that evidence is not proof of immateriality.
+
+META version `2` instead uses a stable measurable perimeter comprising
+operating receivables, adjusted trade accounts payable, and employee-related
+liabilities. Customer contract liabilities remain genuine operating
+liabilities, but are outside this valuation perimeter for every historical and
+forecast period. Their reported historical values remain normalized and are
+not changed or treated as zero. Their balances, and therefore their movements,
+will be absent from future META Operating NWC, change in Operating NWC, and FCFF
+under version `2`. This is a consistent perimeter choice, not proof that the
+excluded balance is economically irrelevant. META v2 is valuation-ready for
+all five selected periods while strict reconstruction remains incomplete.
+
+GOOGL remains blocked by unresolved trade AP treatment and the inventory
+perimeter decision. MSFT remains blocked by trade AP treatment. AAPL remains
+blocked by employee-liability and distribution-and-marketing decisions. These
+are explicit methodology blockers, not invented missing SEC observations.
 
 Broad residual formulas remain prohibited. Cash, investments, debt, taxes,
 accrued PP&E purchases, finance leases, and strategic component-purchase
