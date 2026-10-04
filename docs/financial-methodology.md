@@ -77,6 +77,34 @@ only. Its presentation-rounded percentage is not substituted for the calculated
 ratio or retained as confirming provenance. Reported ETR is not automatically
 used as the FCFF/NOPAT tax rate or as a forecast assumption.
 
+### Cash and Investments
+
+Historical normalization preserves gross reported liquidity and investment
+captions rather than deciding what is excess or available to equity holders.
+Cash and cash equivalents use
+`us-gaap:CashAndCashEquivalentsAtCarryingValue` for the validated META, GOOGL,
+MSFT, AAPL, and COST CIKs. The metric means the reported balance-sheet caption;
+it is not labeled unrestricted cash. Combined cash/restricted-cash facts and
+cash fair-value disclosures are not fallbacks.
+
+Short-term investments use issuer-scoped concepts. META, GOOGL, and AAPL use
+`us-gaap:MarketableSecuritiesCurrent`; META alone may fall back to
+`us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent` for its 2021 selected
+filing. MSFT and COST use `us-gaap:ShortTermInvestments`.
+`CashCashEquivalentsAndShortTermInvestments` is not a primitive and is not
+arithmetically decomposed. Apple CIK `320193` alone normalizes
+`us-gaap:MarketableSecuritiesNoncurrent` as long-term marketable securities.
+
+All three metrics use the existing exact selected-accession, current instant,
+report-date, USD, numeric non-Boolean rules. Missing is distinct from zero, and
+conflicting eligible concepts remain ambiguous. Restricted cash and restricted
+investments are not subtracted or normalized in this milestone. Non-marketable,
+equity-method, venture, and other strategic investments remain outside scope.
+No unrestricted-cash, excess-cash, universal liquid-assets subtotal, or
+enterprise-value-to-equity-value bridge is calculated. Those require later
+valuation policies and explicit treatment of restriction overlap, operating
+cash needs, liquidity discounts, and possible tax leakage.
+
 ### Signed Tax Reconciliation Evidence
 
 The signed tax-evidence layer records what a selected filing's reconciliation

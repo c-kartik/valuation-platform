@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.6c.5 — historical operating-tax methodology closure**
+**Phase 1F.7b — annual cash and investments normalization**
 
-Next milestone: **Phase 1F.7a — annual cash and investments normalization**
+Next milestone: **Phase 1F.8a — annual debt normalization research/design**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -70,6 +70,12 @@ normalization. Missing balances remain distinct from zero. Broad other-current-
 asset and liability accounts remain unresolved. Annual Operating NWC levels
 and changes are implemented for ready META v2 and COST v1 periods; GOOGL, MSFT,
 and AAPL retain explicit methodology blockers.
+The same annual balance-sheet path now preserves gross reported cash and cash
+equivalents and issuer-scoped short-term investments for all five validation
+issuers, plus Apple-only non-current marketable securities. These captions may
+contain restricted amounts. The platform does not yet calculate unrestricted
+or excess cash, normalize strategic/non-marketable investments, or produce a
+universal liquid-assets or enterprise-value-to-equity-value subtotal.
 Strict reconstruction policies continue to report whether each
 annual period has complete evidence. Separate versioned valuation-perimeter
 policies now determine whether the explicitly required components are ready for

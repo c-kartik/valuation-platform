@@ -240,10 +240,23 @@ retrieves selected-filing artifacts and supplies them to the network-free
 normalizer. There is no automatic fallback or bulk retrieval. Zero is valid;
 absence stays typed missing. Conflicting eligible observations stay ambiguous.
 
-The deterministic order is Operating Receivables, Vendor Non-Trade
-Receivables, Inventory, Trade Accounts Payable, Customer Contract Liabilities,
-Employee-Related Liabilities, Accrued Revenue-Share Liability, Accrued Customer
-Liabilities, then Member Rewards Liability. Evidence-backed
+The instant resolver also preserves three gross reported liquidity and
+investment primitives. `CashAndCashEquivalentsAtCarryingValue` supplies cash
+for the five validated CIKs. Short-term investments use CIK-scoped policies:
+`MarketableSecuritiesCurrent` for META, GOOGL, and AAPL, a META-only
+`AvailableForSaleSecuritiesDebtSecuritiesCurrent` fallback, and
+`ShortTermInvestments` for MSFT and COST. Apple alone uses
+`MarketableSecuritiesNoncurrent` for long-term marketable securities. These
+policies use Company Facts only. They do not retrieve filing XBRL, subtract
+restricted balances, include strategic/non-marketable investments, or derive a
+liquid-assets subtotal.
+
+The deterministic balance-sheet order is Operating Receivables, Vendor Non-Trade
+Receivables, Inventory, Trade Accounts Payable, Accrued PP&E Purchases,
+Customer Contract Liabilities, Employee-Related Liabilities, Accrued
+Revenue-Share Liability, Accrued Customer Liabilities, Member Rewards
+Liability, Cash and Cash Equivalents, Short-Term Investments, then Long-Term
+Marketable Securities. Evidence-backed
 issuer-scoped policies support COST `ReceivablesNetCurrent`, META
 `AccountsPayableTradeCurrent`, COST `DeferredRevenueCurrent`, Apple
 `NontradeReceivablesCurrent`, employee liabilities for META, GOOGL, MSFT, and

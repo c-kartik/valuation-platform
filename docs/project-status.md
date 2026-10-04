@@ -2,13 +2,13 @@
 
 ## Current Milestone
 
-Phase 1F.6c.5 closes the Phase 1 historical operating-tax methodology. Strict
-direct linkage permits a reconciliation adjustment only when its complete tax
-effect is explicitly linked to reported Operating Income or an exact filing-
-supported operating allocation. Historical operating tax and NOPAT are optional
-analytical outputs; unresolved history does not block manual forecast tax-rate
-entry, forecast FCFF, or DCF readiness. No production operating-tax amount,
-NOPAT, or FCFF is calculated.
+Phase 1F.7b implements gross reported annual cash and investment primitives.
+Cash and issuer-scoped short-term investments cover all 25 selected validation
+periods; Apple long-term marketable securities cover all five applicable
+periods. The results preserve reported balance-sheet classifications and SEC
+provenance. Restricted balances, strategic/non-marketable investments,
+unrestricted or excess cash, a liquid-assets subtotal, and the equity bridge
+remain outside this milestone.
 
 ## Completed
 
@@ -307,17 +307,31 @@ NOPAT, or FCFF is calculated.
   outputs while preserving reported tax expense, Reported ETR, signed bridge
   evidence, and typed readiness; a manual forecast tax-rate assumption keeps
   unresolved historical tax outside the DCF critical path
+- Added annual Cash and Cash Equivalents from exact selected-filing
+  `CashAndCashEquivalentsAtCarryingValue` observations for the five validation
+  issuers
+- Added CIK-scoped annual Short-Term Investments policies for META, GOOGL,
+  MSFT, AAPL, and COST, including the narrow META 2021 available-for-sale debt
+  fallback
+- Added Apple-only annual Long-Term Marketable Securities without treating
+  other issuers' strategic, non-marketable, or mixed investment captions as
+  equivalents
+- Preserved gross reported balances without subtracting restrictions or
+  deriving unrestricted, excess, or total liquid cash
+- Validated 25/25 cash values, 25/25 short-term investment values, and 5/5
+  applicable Apple long-term marketable-security values with no missing or
+  ambiguous results
 
 ## Next Step
 
-Begin Phase 1F.7a with annual cash and investments normalization. This is the
-next broadly applicable historical SEC input and is required for the later
-enterprise-value-to-equity-value bridge. It advances all validation issuers
-without weakening the unresolved issuer-specific GOOGL D&A or GOOGL/MSFT/AAPL
-Operating NWC methodology boundaries. Debt and diluted shares should follow;
-interim normalization and final standardized historical output remain later
-Phase 1 work. Historical operating-tax calculation and NOPAT remain optional
-and unimplemented, while forecast tax stays a manual valuation assumption.
+Begin Phase 1F.8a with annual debt normalization research/design, the next
+broadly applicable historical input for the enterprise-value-to-equity-value
+bridge. Restricted liquidity and strategic investments still require separate
+methodology before any universal cash-and-investments subtotal. Diluted shares,
+interim normalization, and final standardized historical output remain later
+Phase 1 work. GOOGL D&A and GOOGL/MSFT/AAPL Operating NWC remain known
+historical gaps; optional historical operating tax and NOPAT remain
+methodology-blocked without obstructing the manual forecast tax assumption.
 
 ## Current Repository Structure
 

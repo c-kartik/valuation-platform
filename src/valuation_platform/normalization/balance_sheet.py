@@ -257,6 +257,53 @@ ACCRUED_PP_AND_E_PURCHASES_POLICY = BalanceSheetMetricPolicy(
     ),
 )
 
+CASH_AND_CASH_EQUIVALENTS_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.CASH_AND_CASH_EQUIVALENTS,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "CashAndCashEquivalentsAtCarryingValue"),
+            applicable_ciks=(
+                _META_CIK,
+                _GOOGL_CIK,
+                _MSFT_CIK,
+                _AAPL_CIK,
+                _COST_CIK,
+            ),
+        ),
+    ),
+)
+
+SHORT_TERM_INVESTMENTS_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.SHORT_TERM_INVESTMENTS,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "MarketableSecuritiesCurrent"),
+            applicable_ciks=(_META_CIK, _GOOGL_CIK, _AAPL_CIK),
+        ),
+        BalanceSheetConceptCandidate(
+            ConceptKey(
+                "us-gaap",
+                "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+            ),
+            applicable_ciks=(_META_CIK,),
+        ),
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "ShortTermInvestments"),
+            applicable_ciks=(_MSFT_CIK, _COST_CIK),
+        ),
+    ),
+)
+
+LONG_TERM_MARKETABLE_SECURITIES_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.LONG_TERM_MARKETABLE_SECURITIES,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "MarketableSecuritiesNoncurrent"),
+            applicable_ciks=(_AAPL_CIK,),
+        ),
+    ),
+)
+
 ANNUAL_BALANCE_SHEET_POLICIES: tuple[BalanceSheetMetricPolicy, ...] = (
     OPERATING_RECEIVABLES_POLICY,
     VENDOR_NONTRADE_RECEIVABLES_POLICY,
@@ -268,6 +315,9 @@ ANNUAL_BALANCE_SHEET_POLICIES: tuple[BalanceSheetMetricPolicy, ...] = (
     ACCRUED_REVENUE_SHARE_LIABILITY_POLICY,
     ACCRUED_CUSTOMER_LIABILITIES_POLICY,
     MEMBER_REWARDS_LIABILITY_POLICY,
+    CASH_AND_CASH_EQUIVALENTS_POLICY,
+    SHORT_TERM_INVESTMENTS_POLICY,
+    LONG_TERM_MARKETABLE_SECURITIES_POLICY,
 )
 
 
@@ -514,7 +564,7 @@ def _resolve_metric(
         )
     return NormalizedBalanceSheetValue(
         metric=policy.metric,
-        value=value,
+        value=Decimal(value),
         unit=observation.unit,
         balance_date=observation.end,
         chosen_source=_fact_evidence(chosen, source_url),
@@ -766,7 +816,9 @@ def _validate_filing_xbrl(
 
 
 def _is_numeric(value: SECFactValue) -> bool:
-    return isinstance(value, (int, float)) and not isinstance(value, bool)
+    # Company Facts monetary balances are accepted only when SEC supplies an
+    # integer JSON number. Converting a binary float would not be exact.
+    return isinstance(value, int) and not isinstance(value, bool)
 
 
 def _validate_policies(

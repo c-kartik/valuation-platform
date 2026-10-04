@@ -6,6 +6,7 @@ from valuation_platform.normalization import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
     BalanceSheetNormalizationError,
+    CASH_AND_CASH_EQUIVALENTS_POLICY,
     EvidenceSourceKind,
     FilingXBRLEvidence,
     FinancialMetric,
@@ -49,6 +50,11 @@ ACCRUED_CUSTOMER_LIABILITIES = "AccruedCustomerLiabilitiesCurrent"
 ACCRUED_PP_AND_E = "PropertyAndEquipmentAccruedLiabilitiesCurrent"
 COMBINED_PP_AND_E = "CapitalExpendituresIncurredButNotYetPaid"
 META_TRADE_PAYABLES = "AccountsPayableTradeCurrent"
+CASH = "CashAndCashEquivalentsAtCarryingValue"
+MARKETABLE_CURRENT = "MarketableSecuritiesCurrent"
+META_MARKETABLE_FALLBACK = "AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+SHORT_TERM_INVESTMENTS = "ShortTermInvestments"
+MARKETABLE_NONCURRENT = "MarketableSecuritiesNoncurrent"
 GOOGLE_NAMESPACE = "http://www.google.com/20251231"
 META_NAMESPACE = "http://www.facebook.com/20251231"
 USD_NAMESPACE = "http://www.xbrl.org/2003/iso4217"
@@ -220,6 +226,200 @@ def make_prefixed_filing_xbrl(
 
 
 class AnnualBalanceSheetNormalizationTests(TestCase):
+    def test_reported_cash_resolves_with_exact_provenance_and_zero(self) -> None:
+        for value in (35_873_000_000, 0):
+            with self.subTest(value=value):
+                result = metric_result(
+                    make_input(
+                        make_selected(CASH, value=value),
+                        company_cik=1326801,
+                    ),
+                    FinancialMetric.CASH_AND_CASH_EQUIVALENTS,
+                )
+
+                self.assertIsInstance(result, NormalizedBalanceSheetValue)
+                assert isinstance(result, NormalizedBalanceSheetValue)
+                self.assertIsInstance(result.value, Decimal)
+                self.assertEqual(result.value, Decimal(value))
+                self.assertEqual(result.unit, "USD")
+                self.assertEqual(result.balance_date, REPORT_DATE)
+                self.assertEqual(result.chosen_source.taxonomy, "us-gaap")
+                self.assertEqual(result.chosen_source.concept, CASH)
+                self.assertEqual(result.chosen_source.accession_number, "annual")
+                self.assertEqual(result.chosen_source.source_url, "facts-source")
+                self.assertEqual(result.chosen_source.value, value)
+                self.assertIs(type(result.chosen_source.value), int)
+
+    def test_reported_cash_rejects_unapproved_and_structurally_invalid_facts(self) -> None:
+        cases = (
+            make_selected("CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"),
+            make_selected("CashAndCashEquivalentsFairValueDisclosure"),
+            make_selected("Cash"),
+            make_selected(CASH, relationship=ObservationRelationship.COMPARATIVE),
+            make_selected(CASH, start=date(2025, 1, 1)),
+            make_selected(CASH, end=date(2025, 12, 30)),
+            make_selected(CASH, unit="EUR"),
+            make_selected(CASH, value="100"),
+            make_selected(CASH, value=100.5),
+            make_selected(CASH, value=True),
+        )
+        for observation in cases:
+            with self.subTest(observation=observation):
+                result = normalize_annual_balance_sheets(
+                    make_input(observation, company_cik=1326801),
+                    policies=(CASH_AND_CASH_EQUIVALENTS_POLICY,),
+                ).annual[0].metrics[0]
+                self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_reported_cash_requires_selected_accession(self) -> None:
+        with self.assertRaisesRegex(
+            BalanceSheetNormalizationError,
+            "does not match filing accession",
+        ):
+            normalize_annual_balance_sheets(
+                make_input(
+                    make_selected(CASH, accession="other"),
+                    company_cik=1326801,
+                ),
+                policies=(CASH_AND_CASH_EQUIVALENTS_POLICY,),
+            )
+
+    def test_duplicate_eligible_cash_facts_are_ambiguous(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(CASH, value=10),
+                make_selected(CASH, value=11),
+                company_cik=1326801,
+            ),
+            FinancialMetric.CASH_AND_CASH_EQUIVALENTS,
+        )
+
+        self.assertIsInstance(result, AmbiguousHistoricalMetric)
+        assert isinstance(result, AmbiguousHistoricalMetric)
+        self.assertEqual(tuple(item.value for item in result.candidates), (10, 11))
+
+    def test_short_term_investment_concepts_are_cik_scoped(self) -> None:
+        cases = (
+            (1326801, MARKETABLE_CURRENT),
+            (1652044, MARKETABLE_CURRENT),
+            (789019, SHORT_TERM_INVESTMENTS),
+            (320193, MARKETABLE_CURRENT),
+            (909832, SHORT_TERM_INVESTMENTS),
+        )
+        for cik, concept in cases:
+            with self.subTest(cik=cik, concept=concept):
+                result = metric_result(
+                    make_input(make_selected(concept, value=123), company_cik=cik),
+                    FinancialMetric.SHORT_TERM_INVESTMENTS,
+                )
+                self.assertIsInstance(result, NormalizedBalanceSheetValue)
+                assert isinstance(result, NormalizedBalanceSheetValue)
+                self.assertIsInstance(result.value, Decimal)
+                self.assertEqual(result.value, Decimal("123"))
+                self.assertEqual(result.chosen_source.concept, concept)
+
+        rejected = metric_result(
+            make_input(
+                make_selected(META_MARKETABLE_FALLBACK, value=123),
+                company_cik=1652044,
+            ),
+            FinancialMetric.SHORT_TERM_INVESTMENTS,
+        )
+        self.assertIsInstance(rejected, MissingHistoricalMetric)
+
+    def test_meta_short_term_fallback_ignores_ineligible_primary(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(MARKETABLE_CURRENT, value=26_057, unit="EUR"),
+                make_selected(META_MARKETABLE_FALLBACK, value=31_397),
+                company_cik=1326801,
+            ),
+            FinancialMetric.SHORT_TERM_INVESTMENTS,
+        )
+
+        self.assertIsInstance(result, NormalizedBalanceSheetValue)
+        assert isinstance(result, NormalizedBalanceSheetValue)
+        self.assertIsInstance(result.value, Decimal)
+        self.assertEqual(result.value, Decimal("31397"))
+        self.assertEqual(result.chosen_source.value, 31_397)
+        self.assertIs(type(result.chosen_source.value), int)
+        self.assertEqual(result.chosen_source.concept, META_MARKETABLE_FALLBACK)
+
+    def test_meta_conflicting_short_term_concepts_are_deterministically_ambiguous(self) -> None:
+        observations = (
+            make_selected(MARKETABLE_CURRENT, value=26_057),
+            make_selected(META_MARKETABLE_FALLBACK, value=26_032),
+        )
+        results = tuple(
+            metric_result(
+                make_input(*ordered, company_cik=1326801),
+                FinancialMetric.SHORT_TERM_INVESTMENTS,
+            )
+            for ordered in (observations, tuple(reversed(observations)))
+        )
+
+        self.assertEqual(results[0], results[1])
+        self.assertIsInstance(results[0], AmbiguousHistoricalMetric)
+        assert isinstance(results[0], AmbiguousHistoricalMetric)
+        self.assertEqual(
+            tuple(item.concept for item in results[0].candidates),
+            (MARKETABLE_CURRENT, META_MARKETABLE_FALLBACK),
+        )
+
+    def test_combined_cash_and_short_term_investments_is_not_a_primitive(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected("CashCashEquivalentsAndShortTermInvestments"),
+                company_cik=789019,
+            ),
+            FinancialMetric.SHORT_TERM_INVESTMENTS,
+        )
+        self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_apple_long_term_marketable_securities_are_cik_scoped(self) -> None:
+        apple_result = metric_result(
+            make_input(
+                make_selected(MARKETABLE_NONCURRENT, value=77_723),
+                company_cik=320193,
+            ),
+            FinancialMetric.LONG_TERM_MARKETABLE_SECURITIES,
+        )
+        self.assertIsInstance(apple_result, NormalizedBalanceSheetValue)
+        assert isinstance(apple_result, NormalizedBalanceSheetValue)
+        self.assertIsInstance(apple_result.value, Decimal)
+        self.assertEqual(apple_result.value, Decimal("77723"))
+        self.assertEqual(apple_result.chosen_source.concept, MARKETABLE_NONCURRENT)
+
+        for cik, concept in (
+            (1326801, MARKETABLE_NONCURRENT),
+            (1652044, "OtherLongTermInvestments"),
+            (789019, "LongTermInvestments"),
+            (909832, MARKETABLE_NONCURRENT),
+        ):
+            with self.subTest(cik=cik, concept=concept):
+                result = metric_result(
+                    make_input(make_selected(concept), company_cik=cik),
+                    FinancialMetric.LONG_TERM_MARKETABLE_SECURITIES,
+                )
+                self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_apple_long_term_marketable_securities_preserve_zero_and_week_date(self) -> None:
+        report_date = date(2025, 9, 27)
+        result = metric_result(
+            make_input(
+                make_selected(MARKETABLE_NONCURRENT, value=0, end=report_date),
+                company_cik=320193,
+                filing=make_filing(report_date=report_date),
+            ),
+            FinancialMetric.LONG_TERM_MARKETABLE_SECURITIES,
+        )
+
+        self.assertIsInstance(result, NormalizedBalanceSheetValue)
+        assert isinstance(result, NormalizedBalanceSheetValue)
+        self.assertIsInstance(result.value, Decimal)
+        self.assertEqual(result.value, Decimal("0"))
+        self.assertEqual(result.balance_date, report_date)
+
     def test_meta_adjusted_trade_payables_preserve_two_stage_provenance(self) -> None:
         selected = make_input(
             make_selected("Revenues", value=1, start=date(2025, 1, 1)),
@@ -1058,7 +1258,8 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
 
         self.assertIsInstance(result, NormalizedBalanceSheetValue)
         assert isinstance(result, NormalizedBalanceSheetValue)
-        self.assertEqual(result.value, 125)
+        self.assertIsInstance(result.value, Decimal)
+        self.assertEqual(result.value, Decimal("125"))
         self.assertEqual(result.unit, "USD")
         self.assertEqual(result.balance_date, REPORT_DATE)
         self.assertEqual(result.confirming_sources, ())
@@ -1068,6 +1269,7 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
         self.assertEqual(source.taxonomy, "us-gaap")
         self.assertEqual(source.concept, RECEIVABLES)
         self.assertEqual(source.value, 125)
+        self.assertIs(type(source.value), int)
         self.assertEqual(source.unit, "USD")
         self.assertIsNone(source.start)
         self.assertEqual(source.end, REPORT_DATE)
@@ -1416,6 +1618,9 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
                 FinancialMetric.ACCRUED_REVENUE_SHARE_LIABILITY,
                 FinancialMetric.ACCRUED_CUSTOMER_LIABILITIES,
                 FinancialMetric.MEMBER_REWARDS_LIABILITY,
+                FinancialMetric.CASH_AND_CASH_EQUIVALENTS,
+                FinancialMetric.SHORT_TERM_INVESTMENTS,
+                FinancialMetric.LONG_TERM_MARKETABLE_SECURITIES,
             ),
         )
         by_metric = {item.metric: item for item in output.annual[0].metrics}

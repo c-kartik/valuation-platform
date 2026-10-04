@@ -31,6 +31,9 @@ class FinancialMetric(str, Enum):
     MEMBER_REWARDS_LIABILITY = "member_rewards_liability"
     ACCRUED_REVENUE_SHARE_LIABILITY = "accrued_revenue_share_liability"
     ACCRUED_CUSTOMER_LIABILITIES = "accrued_customer_liabilities"
+    CASH_AND_CASH_EQUIVALENTS = "cash_and_cash_equivalents"
+    SHORT_TERM_INVESTMENTS = "short_term_investments"
+    LONG_TERM_MARKETABLE_SECURITIES = "long_term_marketable_securities"
 
 
 @dataclass(frozen=True)
