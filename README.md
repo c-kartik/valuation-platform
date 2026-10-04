@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.6c.1 — operating-tax policy/readiness foundation**
+**Phase 1F.6c.5 — historical operating-tax methodology closure**
 
-Next milestone: **targeted operating-tax methodology closure using typed readiness blockers**
+Next milestone: **Phase 1F.7a — annual cash and investments normalization**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -104,9 +104,14 @@ arithmetic validation. Callers supply explicit sign evidence; unresolved source
 or methodology states remain visible. A pure operating-tax readiness layer now
 requires an exact versioned policy, complete row treatment, exclusive pairs,
 owned annual financial inputs, an evidenced statutory-rate anchor, and explicit
-currency/scale compatibility. It produces typed readiness only: all 25 current
-validation periods remain blocked by unresolved methodology, and operating-tax
-expense, NOPAT, and automatic forecast tax assumptions remain unimplemented.
+currency/scale compatibility. Historical operating-tax adjustments use strict
+direct linkage: a complete tax effect must be explicitly linked to reported
+Operating Income or have an exact filing-supported operating allocation. The
+current 25-period corpus may therefore remain methodology-blocked. Historical
+operating tax and NOPAT are optional analytical outputs; their absence does not
+block forecast FCFF or DCF readiness. The forecast operating tax rate remains a
+separate manually supplied assumption. Operating-tax expense and NOPAT remain
+unimplemented.
 For META only, reported trade accounts payable is adjusted through a pure,
 provenance-preserving derivation that removes PP&E payable evidence split across
 Company Facts and explicitly supplied filing XBRL. The duration-shaped combined

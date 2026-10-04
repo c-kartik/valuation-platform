@@ -115,6 +115,38 @@ adjustments remain valid evidence. The current 25 validation periods remain
 blocked by unresolved methodology. Operating-tax expense and NOPAT are not yet
 calculated, and the forecast operating tax rate remains a manual assumption.
 
+### Historical Operating-Tax Attribution
+
+Historical operating-tax methodology uses strict direct linkage. A complete
+jurisdictional or reconciliation adjustment may enter tax on reported Operating
+Income only when its tax effect is explicitly linked to income inside reported
+Operating Income or the filing supplies an exact reproducible operating
+allocation. Paired gross-tax and credit effects also require complete pair
+membership, evidence of a common regime and income base, and explicit Operating
+Income linkage. Any adjustment that does not meet these conditions remains
+`METHODOLOGY_UNRESOLVED`.
+
+A recurring caption, a state or foreign label, net presentation, or the absence
+of disclosed contamination does not establish operating attribution. The
+methodology also prohibits proportional allocation using Operating Income and
+Pretax Income, revenue or geographic allocation without a matching disclosed
+tax base, and applying a reconciliation percentage directly to Operating
+Income.
+
+Percentage-point reconciliation rows are first dollarized using their reported
+Pretax Income denominator. Because that denominator can include interest,
+investment, financing, and other non-operating income or expense, the resulting
+tax amount cannot generally be transferred to Operating Income. Missing
+historical operating tax is not estimated to complete a valuation.
+
+Historical operating tax and historical NOPAT are optional analytical outputs.
+Reported Income Tax Expense, Reported ETR, signed reconciliation evidence, and
+typed operating-tax readiness remain available even when strict linkage cannot
+produce an operating-tax amount. The current validation corpus may legitimately
+remain methodology-blocked. Forecast FCFF instead uses a separately entered
+forecast operating tax-rate assumption; historical operating-tax or NOPAT
+availability is not a prerequisite for forecast assumptions or DCF readiness.
+
 For FCFF, D&A means recurring depreciation of operating PP&E plus amortization
 of finite-lived intangible assets. Direct annual D&A uses exactly:
 
@@ -416,3 +448,10 @@ FCFF = NOPAT
        + D&A
        - Capital Expenditures
        - Change in Operating NWC
+```
+
+For forecast FCFF, the tax rate is a manual analytical assumption rather than
+an automatic substitution of Reported ETR or an estimate manufactured from
+methodology-blocked historical reconciliation rows. Historical operating tax
+and NOPAT may supplement analysis when strict direct linkage resolves, but are
+not required to run the forecast or DCF.

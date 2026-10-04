@@ -137,7 +137,8 @@ structural fact selection:
   explicit monetary scale, evidenced statutory-rate anchor, and exact immutable
   policy version. Guarded bridge-row decisions and exclusive pair definitions
   produce typed readiness or blockers without calculating operating tax or
-  NOPAT.
+  NOPAT. Historical operating tax and NOPAT are optional analytical outputs;
+  valuation may proceed with a separately supplied forecast tax-rate assumption.
 
 Annual normalization currently supports direct Revenue, Operating Income,
 Pretax Income, Income Tax Expense, D&A, and Capex values, plus derived Reported
@@ -209,6 +210,26 @@ Changing row treatment, pairing, allocation, supported periods, readiness,
 loss behavior, or future calculation semantics requires a new policy version.
 No active production-policy registry is introduced while no real issuer period
 has an approved complete policy.
+
+Historical operating-tax attribution uses strict direct linkage. A complete
+jurisdictional or reconciliation tax effect may enter tax on reported Operating
+Income only when the filing explicitly links it to income inside that measure
+or supplies an exact reproducible operating allocation. A paired gross-tax and
+credit effect additionally requires complete membership, a common evidenced
+regime and income base, and explicit Operating Income linkage. Otherwise the
+row remains methodology-unresolved. Recurring captions, state or foreign
+labels, net presentation, absence of disclosed contamination, proportional
+Operating Income/Pretax Income allocation, geographic or revenue allocation,
+and applying a reconciliation percentage directly to Operating Income do not
+satisfy this boundary.
+
+Rate-reconciliation percentages are dollarized using their original reported
+Pretax Income denominator. Because that denominator includes non-operating
+items, the resulting amount cannot generally be transferred to Operating
+Income. Missing historical operating tax is preserved rather than estimated.
+The forecast and valuation layers will accept a manual forecast operating tax
+rate independently, so unresolved historical operating tax or NOPAT does not
+block forecast FCFF or DCF readiness.
 
 Annual balance-sheet normalization requires an exact selected 10-K accession,
 a current instant observation with no start date, an end equal to the filing

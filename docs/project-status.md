@@ -2,11 +2,13 @@
 
 ## Current Milestone
 
-Phase 1F.6c.1 adds a pure operating-tax policy/readiness foundation above the
-signed tax-evidence layer. Exact versioned policies bind guarded row decisions,
-exclusive pairs, owned annual financial inputs, explicit currency/scale, and an
-evidenced statutory-rate anchor. The result is readiness only: no production
-operating-tax amount, NOPAT, or FCFF is calculated.
+Phase 1F.6c.5 closes the Phase 1 historical operating-tax methodology. Strict
+direct linkage permits a reconciliation adjustment only when its complete tax
+effect is explicitly linked to reported Operating Income or an exact filing-
+supported operating allocation. Historical operating tax and NOPAT are optional
+analytical outputs; unresolved history does not block manual forecast tax-rate
+entry, forecast FCFF, or DCF readiness. No production operating-tax amount,
+NOPAT, or FCFF is calculated.
 
 ## Completed
 
@@ -289,18 +291,33 @@ operating-tax amount, NOPAT, or FCFF is calculated.
   automated; the repository does not persist and replay all 25 full bridges.
 - Conservatively blocked zero/negative Operating Income, negative Pretax Income,
   and unresolved benefit realizability; explicit zero adjustments remain valid
+- Completed the 25-period first-ready screening and jurisdictional-attribution
+  methodology review without introducing a materiality waiver or forcing a real
+  issuer period ready
+- Adopted strict direct linkage for historical operating tax: complete state,
+  foreign, jurisdictional, and other reconciliation effects require explicit
+  reported-Operating-Income linkage or an exact reproducible operating
+  allocation; paired gross-tax and credit effects also require complete common-
+  base evidence
+- Rejected caption recurrence, state/foreign labels, net presentation, absence
+  of disclosed contamination, proportional Operating Income/Pretax Income
+  allocation, unsupported geographic or revenue allocation, and direct
+  application of reconciliation percentages to Operating Income
+- Made historical operating tax and historical NOPAT optional analytical
+  outputs while preserving reported tax expense, Reported ETR, signed bridge
+  evidence, and typed readiness; a manual forecast tax-rate assumption keeps
+  unresolved historical tax outside the DCF critical path
 
 ## Next Step
 
-Continue targeted operating-tax methodology work using the readiness layer's
-typed blockers. Foreign/cross-border allocation, broad Other rows, combined SBC
-captions, and operating-income linkage still block every current corpus period;
-GOOGL 2021 is the priority research case. The signed bridge remains
-caller-driven because reliable filing-table sign extraction needs a separate
-design. GOOGL and MSFT trade AP, GOOGL
-inventory, and AAPL employee and distribution-and-marketing decisions also
-remain O-NWC blockers. GOOGL D&A, operating-tax calculation, NOPAT, interim
-normalization, FCFF, and valuation remain outside the implemented scope.
+Begin Phase 1F.7a with annual cash and investments normalization. This is the
+next broadly applicable historical SEC input and is required for the later
+enterprise-value-to-equity-value bridge. It advances all validation issuers
+without weakening the unresolved issuer-specific GOOGL D&A or GOOGL/MSFT/AAPL
+Operating NWC methodology boundaries. Debt and diluted shares should follow;
+interim normalization and final standardized historical output remain later
+Phase 1 work. Historical operating-tax calculation and NOPAT remain optional
+and unimplemented, while forecast tax stays a manual valuation assumption.
 
 ## Current Repository Structure
 
