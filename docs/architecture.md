@@ -132,6 +132,12 @@ structural fact selection:
   raw XBRL values separate from filing-displayed signs and retains unresolved
   evidence states. It has no retrieval, sign-scraping, operating-tax policy, or
   NOPAT behavior.
+- `normalization.operating_tax` is a pure, network-free policy/readiness
+  boundary. It binds one owned annual financial result to its signed bridge,
+  explicit monetary scale, evidenced statutory-rate anchor, and exact immutable
+  policy version. Guarded bridge-row decisions and exclusive pair definitions
+  produce typed readiness or blockers without calculating operating tax or
+  NOPAT.
 
 Annual normalization currently supports direct Revenue, Operating Income,
 Pretax Income, Income Tax Expense, D&A, and Capex values, plus derived Reported
@@ -189,6 +195,20 @@ creates a balancing row. Normalized rows validate their own source identity and
 rate/dollar arithmetic. Calculation-relationship sign authority requires an
 auditable rationale. Diagnostic income-base, pairing, and treatment
 classifications do not drive an adjusted-tax result.
+
+Operating-tax readiness requires complete treatment of the exact bridge-row
+inventory. Row references combine bridge position with source and identity
+guards so repeated labels cannot be confused. Paired rows have complete,
+exclusive membership, and policy order does not determine their meaning. The
+boundary validates company, filing, accession, report date, economic period,
+currency, scale, and statutory-rate ownership. Zero or negative Operating
+Income, negative Pretax Income, and unresolved benefit realizability are
+conservatively blocked. No production issuer policy is registered yet; the
+current 25-period corpus remains methodology-blocked.
+Changing row treatment, pairing, allocation, supported periods, readiness,
+loss behavior, or future calculation semantics requires a new policy version.
+No active production-policy registry is introduced while no real issuer period
+has an approved complete policy.
 
 Annual balance-sheet normalization requires an exact selected 10-K accession,
 a current instant observation with no start date, an end equal to the filing

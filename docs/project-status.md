@@ -2,11 +2,11 @@
 
 ## Current Milestone
 
-Phase 1F.6b adds caller-driven signed tax-evidence normalization for rate and
-dollar reconciliation bridges. It validates bridge arithmetic and preserves
-unresolved source or methodology states. Sign evidence must be supplied from
-the filing table or a reliable relationship. Operating-tax policy, NOPAT, and
-FCFF remain future work.
+Phase 1F.6c.1 adds a pure operating-tax policy/readiness foundation above the
+signed tax-evidence layer. Exact versioned policies bind guarded row decisions,
+exclusive pairs, owned annual financial inputs, explicit currency/scale, and an
+evidenced statutory-rate anchor. The result is readiness only: no production
+operating-tax amount, NOPAT, or FCFF is calculated.
 
 ## Completed
 
@@ -275,16 +275,31 @@ FCFF remain future work.
 - Kept diagnostic income-base, pairing, and proposed-treatment classifications
   separate from operating-tax policy; operating tax, NOPAT, and forecast tax
   assumptions remain unimplemented
+- Added immutable operating-tax readiness policies, guarded bridge-row
+  decisions, explicit evidence requirements, and exclusive paired-row
+  membership without a generalized rule engine
+- Added company, selected-filing, accession, report-date, economic-period,
+  monetary-scale, statutory-anchor, and exact policy-version integrity checks
+- Added typed ready, missing, ambiguous, unsupported, policy-mismatch,
+  unreconciled, methodology-blocked, and loss-policy-blocked outcomes
+- Proved readiness with a fully evidenced synthetic case. Completed methodology
+  review leaves all 25 real validation periods blocked by unresolved
+  foreign/state allocation, combined or embedded SBC, Other-row, and
+  operating-income linkage decisions. Representative blocker regressions are
+  automated; the repository does not persist and replay all 25 full bridges.
+- Conservatively blocked zero/negative Operating Income, negative Pretax Income,
+  and unresolved benefit realizability; explicit zero adjustments remain valid
 
 ## Next Step
 
-Continue tax evidence and methodology work. The signed bridge layer is
-caller-driven because the repository has no reliable filing-table sign parser;
-automatic table extraction needs a separate technical design. Foreign/cross-
-border allocation, broad Other rows, combined SBC captions, and operating-income
-linkage still block operating-tax policy. GOOGL and MSFT trade AP, GOOGL
+Continue targeted operating-tax methodology work using the readiness layer's
+typed blockers. Foreign/cross-border allocation, broad Other rows, combined SBC
+captions, and operating-income linkage still block every current corpus period;
+GOOGL 2021 is the priority research case. The signed bridge remains
+caller-driven because reliable filing-table sign extraction needs a separate
+design. GOOGL and MSFT trade AP, GOOGL
 inventory, and AAPL employee and distribution-and-marketing decisions also
-remain O-NWC blockers. GOOGL D&A, operating-tax policy, NOPAT, interim
+remain O-NWC blockers. GOOGL D&A, operating-tax calculation, NOPAT, interim
 normalization, FCFF, and valuation remain outside the implemented scope.
 
 ## Current Repository Structure

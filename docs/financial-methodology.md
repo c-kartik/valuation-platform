@@ -97,6 +97,24 @@ methodology remain explicit. This layer does not approve operating-tax
 treatment, calculate operating tax or NOPAT, or populate a forecast tax
 assumption. Reported ETR remains an accounting diagnostic.
 
+### Operating-Tax Readiness
+
+The operating-tax readiness foundation evaluates whether signed tax evidence
+could support a future policy-adjusted tax on reported Operating Income. It
+requires an exact versioned issuer policy, an evidenced statutory starting
+rate, compatible normalized Operating Income and Pretax Income, explicit
+currency/scale conversion, complete row treatment, and complete exclusive
+membership for paired effects. Diagnostic treatment fields in tax evidence do
+not become approved policy automatically.
+
+No materiality waiver, foreign-credit allocation, combined-SBC estimate, or
+analytical EBIT adjustment is implemented. Zero or negative Operating Income,
+negative Pretax Income, and unresolved benefit realizability remain blocked;
+the system does not monetize losses or manufacture tax benefits. Explicit zero
+adjustments remain valid evidence. The current 25 validation periods remain
+blocked by unresolved methodology. Operating-tax expense and NOPAT are not yet
+calculated, and the forecast operating tax rate remains a manual assumption.
+
 For FCFF, D&A means recurring depreciation of operating PP&E plus amortization
 of finite-lived intangible assets. Direct annual D&A uses exactly:
 

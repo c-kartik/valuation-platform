@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.6b in progress — signed tax-evidence normalization**
+**Phase 1F.6c.1 — operating-tax policy/readiness foundation**
 
-Next milestone: **continue the remaining historical FCFF inputs**
+Next milestone: **targeted operating-tax methodology closure using typed readiness blockers**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -101,8 +101,12 @@ subtract that amount. FCFF itself remains unimplemented.
 Signed tax-evidence normalization preserves filing-displayed signs separately
 from raw XBRL magnitudes and supports both rate and dollar reconciliations with
 arithmetic validation. Callers supply explicit sign evidence; unresolved source
-or methodology states remain visible. Operating-tax policy, NOPAT, and automatic
-forecast tax assumptions remain unimplemented.
+or methodology states remain visible. A pure operating-tax readiness layer now
+requires an exact versioned policy, complete row treatment, exclusive pairs,
+owned annual financial inputs, an evidenced statutory-rate anchor, and explicit
+currency/scale compatibility. It produces typed readiness only: all 25 current
+validation periods remain blocked by unresolved methodology, and operating-tax
+expense, NOPAT, and automatic forecast tax assumptions remain unimplemented.
 For META only, reported trade accounts payable is adjusted through a pure,
 provenance-preserving derivation that removes PP&E payable evidence split across
 Company Facts and explicitly supplied filing XBRL. The duration-shaped combined
