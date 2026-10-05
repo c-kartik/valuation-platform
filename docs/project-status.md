@@ -10,6 +10,14 @@ preliminary security classification contains six supported-seed rows (five
 issuers), 38 operating-company candidates, and seven
 specialized-methodology candidates.
 
+Phase 1H.2 executed the current production pipeline for all 43 generic issuers.
+Forty-one reached standardized output, while GEV and SNDK failed at Company
+Facts parsing with the existing invalid-CIK validation error. The seven
+specialized issuers remained represented as explicit skips. XOM reached
+standardized output with zero selected annual periods; this and all typed
+missing or ambiguous results remain evidence for Phase 1H.3 rather than an
+automatic methodology conclusion.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -402,25 +410,45 @@ being inferred as zero.
 - Classified 38 securities as operating-company candidates and seven issuers
   as specialized-methodology candidates without assigning
   `GENERALIZATION_REQUIRED` before pipeline evidence exists
+- Added a deterministic development corpus runner that validates and consumes
+  the frozen snapshot, groups its 51 securities into 50 CIK-based issuer
+  records, uses GOOGL as Alphabet's single execution ticker, and retains GOOG
+  as a separate reporting row
+- Added explicit ticker-resolution, submissions, filing-selection, Company
+  Facts, filing-association, normalization, standardized-output, complete, and
+  specialized-skip stages with issuer-boundary exception capture
+- Added an ephemeral JSON result containing snapshot and commit identity,
+  selected annual dates, per-stage status, typed availability counts, and
+  per-measure direct/derived/calculated summaries
+- Live-attempted all 43 generic issuers: 41 reached standardized output, GEV
+  and SNDK failed at Company Facts parsing, and all seven specialized issuers
+  were preserved as explicit skips
+- Recorded 1,636 resolved, 1,673 missing, 24 ambiguous, 27
+  methodology-blocked, 40 not-comparable, and no unsupported, not-applicable,
+  or out-of-perimeter standardized measures across completed issuers
+- Preserved all five seed regressions and their 25 annual periods, including
+  GOOGL missing D&A, three derived GOOGL diluted-share periods,
+  GOOGL/MSFT/AAPL blocked O-NWC, and each seed's first non-comparable ΔNWC
+- Recorded XOM as completing the pipeline with zero selected annual periods;
+  no later comparative filing, zero, alias, or policy change was introduced
 
 ## Next Step
 
-Phase 1H.2 will consume the frozen snapshot CSV, regression-check the five seed
-issuers, run the current production historical pipeline once per operating
-candidate SEC issuer, and retain the seven specialized candidates in structured
-reporting without forcing them through the generic FCFF methodology. The
-Phase 2A assumptions model is implemented, but forecast, FCFF, DCF,
-equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
-intentionally paused through Phase 1H.
+Phase 1H.3 will inspect the Phase 1H.2 evidence and classify retrieval,
+filing-selection, concept-policy, issuer-extension, dimensional, derivation,
+methodology, and specialized-model failures without changing financial policy
+merely to increase coverage. The Phase 2A assumptions model is implemented,
+but forecast, FCFF, DCF, equity-bridge, per-share, reverse-DCF, scenario, and
+sensitivity work is intentionally paused through Phase 1H.
 
 ## Phase 1H Roadmap
 
 1. **Phase 1H.1 — Universe definition (complete):** froze the dated and sourced
    2026-10-02 S&P 500 Top 50 list, existing coverage, and preliminary
    specialized-methodology flags.
-2. **Phase 1H.2 — Automated corpus smoke test:** run the existing historical
-   pipeline across the corpus and collect typed results and failures before
-   attempting broad fixes.
+2. **Phase 1H.2 — Automated corpus smoke test (complete):** ran the existing
+   historical pipeline across all 43 generic issuers and preserved structured
+   typed results, stage failures, and seven specialized skips.
 3. **Phase 1H.3 — Failure taxonomy:** classify retrieval, filing-selection,
    concept-policy, issuer-extension, dimensional, derivation, methodology, and
    specialized-business-model issues.

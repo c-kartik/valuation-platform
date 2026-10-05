@@ -25,7 +25,7 @@ Current milestone:
 
 **Phase 1H — S&P 500 Top 50 universe expansion**
 
-Next step: **Phase 1H.2 — run the automated corpus smoke test**
+Next step: **Phase 1H.3 — classify smoke-test failures and typed gaps**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -49,6 +49,13 @@ included share classes. Five issuers are validated seeds, 38 are preliminary
 operating-company candidates, and seven are specialized-methodology candidates.
 See the accompanying [snapshot note](docs/universe/sp500-top-50-2026-10-02.md)
 for sources, classification rationale, and Phase 1H.2 execution waves.
+
+The Phase 1H.2 production smoke test attempted all 43 generic issuers. Forty-one
+reached standardized output, GEV and SNDK stopped at Company Facts parsing, and
+the seven specialized issuers were retained as explicit skips. All five seed
+issuers preserved their expected five-period typed behavior. XOM reached
+standardized output with no selected annual periods, which remains diagnostic
+evidence rather than an inferred value or automatic policy change.
 
 ## Development
 

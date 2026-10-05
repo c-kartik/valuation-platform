@@ -44,11 +44,15 @@ project tickers, and the two Alphabet share classes remain separate security
 rows tied to one SEC CIK. Future index changes require a new snapshot rather
 than mutation of this validation record.
 
-The next phase uses a small development corpus runner to pass each
+The development runner at `scripts/run_sp500_top50_smoke.py` passes each
 supported-seed and operating-company candidate issuer through the existing
 ticker, filing-selection, Company Facts, normalization, and standardized-output
-APIs. It records typed results and failures without adding databases, caches,
-or a parallel parsing implementation.
+APIs. Execution is grouped by SEC CIK, ordered by the frozen snapshot, and
+continues after issuer-level failures. The runner records explicit pipeline
+stages, selected annual dates, typed and per-measure statuses, and compact
+direct/derived/calculated counts in an ephemeral JSON artifact. It retains all
+security rows for reporting, marks specialized issuers as explicit skips, and
+does not add a parallel parser or persistent cache.
 
 Each constituent will be classified as `SUPPORTED`,
 `GENERALIZATION_REQUIRED`, or `SPECIALIZED_METHODOLOGY_REQUIRED`. Failures will
