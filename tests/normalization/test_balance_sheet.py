@@ -5,6 +5,8 @@ from unittest import TestCase
 from valuation_platform.normalization import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
+    BalanceSheetDerivationError,
+    GOOGL_CURRENT_PORTION_OF_LONG_TERM_DEBT_DERIVATION_POLICY,
     BalanceSheetNormalizationError,
     CASH_AND_CASH_EQUIVALENTS_POLICY,
     EvidenceSourceKind,
@@ -15,6 +17,7 @@ from valuation_platform.normalization import (
     MissingReason,
     NormalizedBalanceSheetValue,
     TRADE_ACCOUNTS_PAYABLE_POLICY,
+    derive_googl_debt,
     normalize_annual_balance_sheets,
 )
 from valuation_platform.sec.company_facts import SECFactObservation
@@ -55,6 +58,15 @@ MARKETABLE_CURRENT = "MarketableSecuritiesCurrent"
 META_MARKETABLE_FALLBACK = "AvailableForSaleSecuritiesDebtSecuritiesCurrent"
 SHORT_TERM_INVESTMENTS = "ShortTermInvestments"
 MARKETABLE_NONCURRENT = "MarketableSecuritiesNoncurrent"
+COMMERCIAL_PAPER = "CommercialPaper"
+SHORT_TERM_BORROWINGS = "OtherShortTermBorrowings"
+CURRENT_LONG_TERM_DEBT = "LongTermDebtCurrent"
+NONCURRENT_LONG_TERM_DEBT = "LongTermDebtNoncurrent"
+DEBT_AND_LEASES_TOTAL = "LongTermDebtAndCapitalLeaseObligationsIncludingCurrentMaturities"
+DEBT_AND_LEASES_NONCURRENT = "LongTermDebtAndCapitalLeaseObligations"
+FINANCE_LEASE_TOTAL = "FinanceLeaseLiability"
+FINANCE_LEASE_CURRENT = "FinanceLeaseLiabilityCurrent"
+DEBT_DISCOUNT_AND_COSTS = "DebtInstrumentUnamortizedDiscountPremiumAndDebtIssuanceCostsNet"
 GOOGLE_NAMESPACE = "http://www.google.com/20251231"
 META_NAMESPACE = "http://www.facebook.com/20251231"
 USD_NAMESPACE = "http://www.xbrl.org/2003/iso4217"
@@ -226,6 +238,380 @@ def make_prefixed_filing_xbrl(
 
 
 class AnnualBalanceSheetNormalizationTests(TestCase):
+    def test_public_googl_debt_derivation_validates_selected_filing(self) -> None:
+        accession = "0001652044-23-000016"
+        direct = MissingHistoricalMetric(
+            metric=FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+            reason=MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+            examined_concepts=(),
+        )
+
+        for filing in (
+            make_filing(accession=accession, form="10-Q"),
+            make_filing(accession=accession, report_date=None),
+        ):
+            with self.subTest(form=filing.form, report_date=filing.report_date):
+                bucket = make_input(
+                    company_cik=1652044,
+                    filing=filing,
+                ).annual[0]
+                with self.assertRaisesRegex(
+                    BalanceSheetDerivationError,
+                    "requires an exact 10-K with a report date",
+                ):
+                    derive_googl_debt(
+                        bucket,
+                        direct,
+                        "facts-source",
+                        1652044,
+                        GOOGL_CURRENT_PORTION_OF_LONG_TERM_DEBT_DERIVATION_POLICY,
+                    )
+
+        filing = make_filing(accession=accession)
+        bucket = make_input(
+            make_selected(DEBT_AND_LEASES_TOTAL, value=15_142, accession=accession),
+            make_selected(DEBT_AND_LEASES_NONCURRENT, value=14_701, accession=accession),
+            make_selected(FINANCE_LEASE_CURRENT, value=298, accession=accession),
+            make_selected(DEBT_DISCOUNT_AND_COSTS, value=143, accession=accession),
+            company_cik=1652044,
+            filing=filing,
+        ).annual[0]
+        result = derive_googl_debt(
+            bucket,
+            direct,
+            "facts-source",
+            1652044,
+            GOOGL_CURRENT_PORTION_OF_LONG_TERM_DEBT_DERIVATION_POLICY,
+        )
+
+        self.assertIsInstance(result, DerivedBalanceSheetValue)
+        self.assertEqual(result.value, Decimal("0"))
+
+    def test_direct_debt_primitives_resolve_as_decimal_with_exact_concepts(self) -> None:
+        cases = (
+            (1652044, FinancialMetric.COMMERCIAL_PAPER, COMMERCIAL_PAPER, 0),
+            (909832, FinancialMetric.SHORT_TERM_BORROWINGS, SHORT_TERM_BORROWINGS, 88_000_000),
+            (789019, FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT, CURRENT_LONG_TERM_DEBT, 2_749_000_000),
+            (1326801, FinancialMetric.LONG_TERM_DEBT_NONCURRENT, NONCURRENT_LONG_TERM_DEBT, 9_923_000_000),
+        )
+        for cik, metric, concept, value in cases:
+            with self.subTest(metric=metric):
+                result = metric_result(
+                    make_input(make_selected(concept, value=value), company_cik=cik),
+                    metric,
+                )
+                self.assertIsInstance(result, NormalizedBalanceSheetValue)
+                assert isinstance(result, NormalizedBalanceSheetValue)
+                self.assertEqual(result.value, Decimal(value))
+                self.assertIsInstance(result.value, Decimal)
+                self.assertEqual(result.chosen_source.concept, concept)
+                self.assertEqual(result.chosen_source.accession_number, "annual")
+
+    def test_commercial_paper_and_short_term_borrowings_are_issuer_scoped(self) -> None:
+        for cik in (1652044, 789019, 320193):
+            result = metric_result(
+                make_input(make_selected(COMMERCIAL_PAPER, value=0), company_cik=cik),
+                FinancialMetric.COMMERCIAL_PAPER,
+            )
+            self.assertIsInstance(result, NormalizedBalanceSheetValue)
+            self.assertEqual(result.value, Decimal("0"))
+        for cik in (1326801, 909832):
+            result = metric_result(
+                make_input(make_selected(COMMERCIAL_PAPER, value=1), company_cik=cik),
+                FinancialMetric.COMMERCIAL_PAPER,
+            )
+            self.assertIsInstance(result, MissingHistoricalMetric)
+
+        cost = metric_result(
+            make_input(make_selected(SHORT_TERM_BORROWINGS, value=88), company_cik=909832),
+            FinancialMetric.SHORT_TERM_BORROWINGS,
+        )
+        other = metric_result(
+            make_input(make_selected(SHORT_TERM_BORROWINGS, value=88), company_cik=320193),
+            FinancialMetric.SHORT_TERM_BORROWINGS,
+        )
+        absent = metric_result(
+            make_input(company_cik=909832),
+            FinancialMetric.SHORT_TERM_BORROWINGS,
+        )
+        self.assertIsInstance(cost, NormalizedBalanceSheetValue)
+        self.assertIsInstance(other, MissingHistoricalMetric)
+        self.assertIsInstance(absent, MissingHistoricalMetric)
+
+    def test_debt_primitives_reject_structurally_ineligible_values(self) -> None:
+        invalid = (
+            make_selected(CURRENT_LONG_TERM_DEBT, accession="other"),
+            make_selected(CURRENT_LONG_TERM_DEBT, end=date(2025, 12, 30)),
+            make_selected(CURRENT_LONG_TERM_DEBT, start=date(2025, 1, 1)),
+            make_selected(CURRENT_LONG_TERM_DEBT, unit="EUR"),
+            make_selected(CURRENT_LONG_TERM_DEBT, value="1"),
+            make_selected(CURRENT_LONG_TERM_DEBT, value=True),
+            make_selected(CURRENT_LONG_TERM_DEBT, value=1.0),
+            make_selected(
+                CURRENT_LONG_TERM_DEBT,
+                relationship=ObservationRelationship.COMPARATIVE,
+            ),
+        )
+        for observation in invalid:
+            with self.subTest(observation=observation):
+                if observation.observation.accession_number == "other":
+                    with self.assertRaisesRegex(
+                        BalanceSheetNormalizationError,
+                        "does not match filing accession",
+                    ):
+                        metric_result(
+                            make_input(observation, company_cik=789019),
+                            FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+                        )
+                else:
+                    result = metric_result(
+                        make_input(observation, company_cik=789019),
+                        FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+                    )
+                    self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_debt_subtotals_fair_values_and_lease_combined_facts_are_not_direct(self) -> None:
+        for concept in (
+            "LongTermDebt",
+            "LongTermDebtFairValue",
+            "LongTermDebtMaturitiesRepaymentsOfPrincipal",
+            DEBT_AND_LEASES_TOTAL,
+            DEBT_AND_LEASES_NONCURRENT,
+        ):
+            result = metric_result(
+                make_input(make_selected(concept), company_cik=789019),
+                FinancialMetric.LONG_TERM_DEBT_NONCURRENT,
+            )
+            self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_multiple_eligible_debt_facts_are_deterministically_ambiguous(self) -> None:
+        facts = (
+            make_selected(NONCURRENT_LONG_TERM_DEBT, value=10),
+            make_selected(NONCURRENT_LONG_TERM_DEBT, value=11),
+        )
+        results = tuple(
+            metric_result(
+                make_input(*ordered, company_cik=320193),
+                FinancialMetric.LONG_TERM_DEBT_NONCURRENT,
+            )
+            for ordered in (facts, tuple(reversed(facts)))
+        )
+        self.assertEqual(results[0], results[1])
+        self.assertIsInstance(results[0], AmbiguousHistoricalMetric)
+
+    def test_debt_primitives_preserve_noncalendar_and_week_based_dates(self) -> None:
+        for report_date in (date(2025, 6, 30), date(2025, 9, 27), date(2023, 9, 3)):
+            result = metric_result(
+                make_input(
+                    make_selected(NONCURRENT_LONG_TERM_DEBT, end=report_date),
+                    company_cik=320193,
+                    filing=make_filing(report_date=report_date),
+                ),
+                FinancialMetric.LONG_TERM_DEBT_NONCURRENT,
+            )
+            self.assertIsInstance(result, NormalizedBalanceSheetValue)
+            self.assertEqual(result.balance_date, report_date)
+
+    def test_googl_debt_derivations_preserve_formula_and_provenance(self) -> None:
+        filing = make_filing(
+            accession="0001652044-23-000016",
+            report_date=date(2022, 12, 31),
+        )
+        facts = (
+            make_selected(DEBT_AND_LEASES_TOTAL, value=15_142_000_000, accession=filing.accession_number, end=filing.report_date),
+            make_selected(DEBT_AND_LEASES_NONCURRENT, value=14_701_000_000, accession=filing.accession_number, end=filing.report_date),
+            make_selected(FINANCE_LEASE_TOTAL, value=2_142_000_000, accession=filing.accession_number, end=filing.report_date),
+            make_selected(FINANCE_LEASE_CURRENT, value=298_000_000, accession=filing.accession_number, end=filing.report_date),
+            make_selected(DEBT_DISCOUNT_AND_COSTS, value=143_000_000, accession=filing.accession_number, end=filing.report_date),
+        )
+        output = normalize_annual_balance_sheets(
+            make_input(*facts, company_cik=1652044, filing=filing)
+        )
+        by_metric = {item.metric: item for item in output.annual[0].metrics}
+        current = by_metric[FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT]
+        noncurrent = by_metric[FinancialMetric.LONG_TERM_DEBT_NONCURRENT]
+        self.assertIsInstance(current, DerivedBalanceSheetValue)
+        self.assertIsInstance(noncurrent, DerivedBalanceSheetValue)
+        assert isinstance(current, DerivedBalanceSheetValue)
+        assert isinstance(noncurrent, DerivedBalanceSheetValue)
+        self.assertEqual(current.value, Decimal("0"))
+        self.assertEqual(noncurrent.value, Decimal("12857000000"))
+        self.assertEqual(
+            current.policy_id,
+            "googl_current_portion_of_long_term_debt_v1",
+        )
+        self.assertEqual(
+            noncurrent.policy_id,
+            "googl_noncurrent_long_term_debt_v1",
+        )
+        self.assertTrue(current.steps)
+        self.assertTrue(noncurrent.steps)
+        self.assertEqual(
+            tuple(operand.name for operand in current.operands),
+            (DEBT_AND_LEASES_TOTAL, DEBT_AND_LEASES_NONCURRENT, FINANCE_LEASE_CURRENT, DEBT_DISCOUNT_AND_COSTS),
+        )
+        self.assertEqual(
+            tuple(operand.name for operand in noncurrent.operands),
+            (DEBT_AND_LEASES_NONCURRENT, FINANCE_LEASE_TOTAL, FINANCE_LEASE_CURRENT),
+        )
+        for operand in (*current.operands, *noncurrent.operands):
+            self.assertEqual(operand.chosen_source.source_url, "facts-source")
+            self.assertEqual(operand.chosen_source.accession_number, filing.accession_number)
+            self.assertEqual(operand.end, filing.report_date)
+            self.assertEqual(operand.unit, "USD")
+
+    def test_googl_validated_2021_through_2023_debt_identities(self) -> None:
+        cases = (
+            (
+                "0001652044-22-000019",
+                date(2021, 12, 31),
+                (15_086, 14_817, 2_086, 113, 156, 0),
+                (Decimal("0"), Decimal("12844")),
+            ),
+            (
+                "0001652044-23-000016",
+                date(2022, 12, 31),
+                (15_142, 14_701, 2_142, 298, 143, None),
+                (Decimal("0"), Decimal("12857")),
+            ),
+            (
+                "0001652044-24-000022",
+                date(2023, 12, 31),
+                (14_746, 13_253, 1_746, 363, 130, 1_000),
+                (Decimal("1000"), Decimal("11870")),
+            ),
+        )
+        for accession, report_date, values, expected in cases:
+            with self.subTest(accession=accession):
+                total, noncurrent_combined, lease_total, lease_current, discount, direct_current = values
+                filing = make_filing(accession=accession, report_date=report_date)
+                observations = [
+                    make_selected(DEBT_AND_LEASES_TOTAL, value=total, accession=accession, end=report_date),
+                    make_selected(DEBT_AND_LEASES_NONCURRENT, value=noncurrent_combined, accession=accession, end=report_date),
+                    make_selected(FINANCE_LEASE_TOTAL, value=lease_total, accession=accession, end=report_date),
+                    make_selected(FINANCE_LEASE_CURRENT, value=lease_current, accession=accession, end=report_date),
+                    make_selected(DEBT_DISCOUNT_AND_COSTS, value=discount, accession=accession, end=report_date),
+                ]
+                if direct_current is not None:
+                    observations.append(
+                        make_selected(CURRENT_LONG_TERM_DEBT, value=direct_current, accession=accession, end=report_date)
+                    )
+                output = normalize_annual_balance_sheets(
+                    make_input(*observations, company_cik=1652044, filing=filing)
+                )
+                by_metric = {item.metric: item for item in output.annual[0].metrics}
+                self.assertEqual(
+                    by_metric[FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT].value,
+                    expected[0],
+                )
+                self.assertEqual(
+                    by_metric[FinancialMetric.LONG_TERM_DEBT_NONCURRENT].value,
+                    expected[1],
+                )
+
+    def test_googl_debt_derivation_rejects_negative_operand_sign(self) -> None:
+        filing = make_filing(accession="0001652044-23-000016")
+        result = metric_result(
+            make_input(
+                make_selected(DEBT_AND_LEASES_TOTAL, value=15_142, accession=filing.accession_number),
+                make_selected(DEBT_AND_LEASES_NONCURRENT, value=14_701, accession=filing.accession_number),
+                make_selected(FINANCE_LEASE_CURRENT, value=298, accession=filing.accession_number),
+                make_selected(DEBT_DISCOUNT_AND_COSTS, value=-143, accession=filing.accession_number),
+                company_cik=1652044,
+                filing=filing,
+            ),
+            FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+        )
+        self.assertIsInstance(result, MissingHistoricalMetric)
+
+    def test_googl_debt_derivation_is_accession_and_cik_scoped(self) -> None:
+        facts = (
+            make_selected(DEBT_AND_LEASES_TOTAL, value=15_142),
+            make_selected(DEBT_AND_LEASES_NONCURRENT, value=14_701),
+            make_selected(FINANCE_LEASE_CURRENT, value=298),
+            make_selected(DEBT_DISCOUNT_AND_COSTS, value=143),
+        )
+        for selected in (
+            make_input(*facts, company_cik=1652044),
+            make_input(*facts, company_cik=320193),
+        ):
+            result = metric_result(
+                selected,
+                FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+            )
+            self.assertIsInstance(result, MissingHistoricalMetric)
+
+        filing = make_filing(accession="0001652044-23-000016")
+        with self.assertRaisesRegex(
+            BalanceSheetDerivationError,
+            "does not match selected filing",
+        ):
+            metric_result(
+                make_input(
+                    make_selected(DEBT_AND_LEASES_TOTAL, value=15_142, accession="other"),
+                    company_cik=1652044,
+                    filing=filing,
+                ),
+                FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+            )
+
+    def test_googl_debt_derivation_requires_every_unambiguous_operand(self) -> None:
+        filing = make_filing(accession="0001652044-23-000016")
+        fixed = (
+            make_selected(DEBT_AND_LEASES_TOTAL, value=15_142, accession=filing.accession_number),
+            make_selected(DEBT_AND_LEASES_NONCURRENT, value=14_701, accession=filing.accession_number),
+            make_selected(FINANCE_LEASE_CURRENT, value=298, accession=filing.accession_number),
+        )
+        missing = metric_result(
+            make_input(*fixed, company_cik=1652044, filing=filing),
+            FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+        )
+        ambiguous_facts = (
+            *fixed,
+            make_selected(DEBT_DISCOUNT_AND_COSTS, value=143, accession=filing.accession_number),
+            make_selected(DEBT_DISCOUNT_AND_COSTS, value=144, accession=filing.accession_number),
+        )
+        forward = metric_result(
+            make_input(*ambiguous_facts, company_cik=1652044, filing=filing),
+            FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+        )
+        reverse = metric_result(
+            make_input(*reversed(ambiguous_facts), company_cik=1652044, filing=filing),
+            FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+        )
+        self.assertIsInstance(missing, MissingHistoricalMetric)
+        self.assertIsInstance(forward, AmbiguousHistoricalMetric)
+        self.assertEqual(forward, reverse)
+
+    def test_googl_direct_debt_precedes_matching_derivation_and_conflict_is_ambiguous(self) -> None:
+        filing = make_filing(accession="0001652044-24-000022")
+        operands = (
+            make_selected(DEBT_AND_LEASES_TOTAL, value=14_746, accession=filing.accession_number),
+            make_selected(DEBT_AND_LEASES_NONCURRENT, value=13_253, accession=filing.accession_number),
+            make_selected(FINANCE_LEASE_CURRENT, value=363, accession=filing.accession_number),
+            make_selected(DEBT_DISCOUNT_AND_COSTS, value=130, accession=filing.accession_number),
+        )
+        matching = metric_result(
+            make_input(
+                *operands,
+                make_selected(CURRENT_LONG_TERM_DEBT, value=1_000, accession=filing.accession_number),
+                company_cik=1652044,
+                filing=filing,
+            ),
+            FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+        )
+        conflict = metric_result(
+            make_input(
+                *operands,
+                make_selected(CURRENT_LONG_TERM_DEBT, value=999, accession=filing.accession_number),
+                company_cik=1652044,
+                filing=filing,
+            ),
+            FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+        )
+        self.assertIsInstance(matching, NormalizedBalanceSheetValue)
+        self.assertIsInstance(conflict, AmbiguousHistoricalMetric)
+
     def test_reported_cash_resolves_with_exact_provenance_and_zero(self) -> None:
         for value in (35_873_000_000, 0):
             with self.subTest(value=value):
@@ -1621,6 +2007,10 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
                 FinancialMetric.CASH_AND_CASH_EQUIVALENTS,
                 FinancialMetric.SHORT_TERM_INVESTMENTS,
                 FinancialMetric.LONG_TERM_MARKETABLE_SECURITIES,
+                FinancialMetric.COMMERCIAL_PAPER,
+                FinancialMetric.SHORT_TERM_BORROWINGS,
+                FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+                FinancialMetric.LONG_TERM_DEBT_NONCURRENT,
             ),
         )
         by_metric = {item.metric: item for item in output.annual[0].metrics}

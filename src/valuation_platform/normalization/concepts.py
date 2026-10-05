@@ -34,6 +34,10 @@ class FinancialMetric(str, Enum):
     CASH_AND_CASH_EQUIVALENTS = "cash_and_cash_equivalents"
     SHORT_TERM_INVESTMENTS = "short_term_investments"
     LONG_TERM_MARKETABLE_SECURITIES = "long_term_marketable_securities"
+    COMMERCIAL_PAPER = "commercial_paper"
+    SHORT_TERM_BORROWINGS = "short_term_borrowings"
+    CURRENT_PORTION_OF_LONG_TERM_DEBT = "current_portion_of_long_term_debt"
+    LONG_TERM_DEBT_NONCURRENT = "long_term_debt_noncurrent"
 
 
 @dataclass(frozen=True)

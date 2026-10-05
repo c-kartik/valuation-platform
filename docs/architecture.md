@@ -233,7 +233,7 @@ block forecast FCFF or DCF readiness.
 
 Annual balance-sheet normalization requires an exact selected 10-K accession,
 a current instant observation with no start date, an end equal to the filing
-report date, exact USD, and a numeric non-Boolean value. It preserves the actual
+report date, exact USD, and an integer non-Boolean value. It preserves the actual
 balance date and source-specific compact provenance. Company Facts is the
 default source. A policy may instead explicitly require filing XBRL; the caller
 retrieves selected-filing artifacts and supplies them to the network-free
@@ -251,12 +251,27 @@ policies use Company Facts only. They do not retrieve filing XBRL, subtract
 restricted balances, include strategic/non-marketable investments, or derive a
 liquid-assets subtotal.
 
+The same resolver preserves four separate annual debt primitives from Company
+Facts: `CommercialPaper`, COST-only `OtherShortTermBorrowings`,
+`LongTermDebtCurrent`, and `LongTermDebtNoncurrent`. Values retain reported
+carrying-value classifications; the normalizer does not create current debt,
+total debt, or net debt subtotals. GOOGL CIK `1652044` has two explicit
+derivation policies restricted to its selected 2021–2023 10-K accessions. The
+current portion is combined debt and finance leases including current
+maturities, minus non-current combined debt and leases, current finance-lease
+liability, and unamortized discount/issuance costs. Non-current debt is the
+non-current combined balance minus total finance-lease liability net of its
+current portion. Every concept operand and arithmetic step is retained. A
+matching direct value wins; a direct/derived conflict is ambiguous. Outside the
+validated accessions, the derivations do not run.
+
 The deterministic balance-sheet order is Operating Receivables, Vendor Non-Trade
 Receivables, Inventory, Trade Accounts Payable, Accrued PP&E Purchases,
 Customer Contract Liabilities, Employee-Related Liabilities, Accrued
 Revenue-Share Liability, Accrued Customer Liabilities, Member Rewards
-Liability, Cash and Cash Equivalents, Short-Term Investments, then Long-Term
-Marketable Securities. Evidence-backed
+Liability, Cash and Cash Equivalents, Short-Term Investments, Long-Term
+Marketable Securities, Commercial Paper, Short-Term Borrowings, Current Portion
+of Long-Term Debt, then Non-Current Long-Term Debt. Evidence-backed
 issuer-scoped policies support COST `ReceivablesNetCurrent`, META
 `AccountsPayableTradeCurrent`, COST `DeferredRevenueCurrent`, Apple
 `NontradeReceivablesCurrent`, employee liabilities for META, GOOGL, MSFT, and

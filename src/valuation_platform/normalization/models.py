@@ -223,6 +223,23 @@ class BalanceSheetDerivationOperand:
 
 
 @dataclass(frozen=True)
+class BalanceSheetConceptDerivationOperand:
+    """One concept-specific source operand used by a balance-sheet derivation."""
+
+    name: str
+    value: Decimal
+    unit: str
+    start: date | None
+    end: date
+    chosen_source: FactEvidence
+
+
+BalanceSheetDerivedOperand: TypeAlias = (
+    BalanceSheetDerivationOperand | BalanceSheetConceptDerivationOperand
+)
+
+
+@dataclass(frozen=True)
 class BalanceSheetDerivationStep:
     """One ordered arithmetic step retained in derived-balance provenance."""
 
@@ -242,7 +259,7 @@ class DerivedBalanceSheetValue:
     balance_date: date
     policy_id: str
     operation: DerivationOperation
-    operands: tuple[BalanceSheetDerivationOperand, ...]
+    operands: tuple[BalanceSheetDerivedOperand, ...]
     steps: tuple[BalanceSheetDerivationStep, ...]
 
 

@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.7b — annual cash and investments normalization**
+**Phase 1F.8b — annual debt normalization**
 
-Next milestone: **Phase 1F.8a — annual debt normalization research/design**
+Next milestone: **Phase 1F.9a — annual diluted-shares research/design**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -76,6 +76,14 @@ issuers, plus Apple-only non-current marketable securities. These captions may
 contain restricted amounts. The platform does not yet calculate unrestricted
 or excess cash, normalize strategic/non-marketable investments, or produce a
 universal liquid-assets or enterprise-value-to-equity-value subtotal.
+It also preserves four separate gross debt primitives: Commercial Paper,
+COST-only Short-Term Borrowings, Current Portion of Long-Term Debt, and
+Non-Current Long-Term Debt. Direct values use selected-filing Company Facts at
+carrying value. Three validated GOOGL periods use explicit, accession-scoped
+identities to remove finance-lease balances from combined debt-and-lease facts;
+direct facts retain precedence and conflicts remain ambiguous. Missing debt is
+never inferred as zero. Total debt, net debt, lease capitalization, and the
+enterprise-value-to-equity-value bridge remain unimplemented.
 Strict reconstruction policies continue to report whether each
 annual period has complete evidence. Separate versioned valuation-perimeter
 policies now determine whether the explicitly required components are ready for

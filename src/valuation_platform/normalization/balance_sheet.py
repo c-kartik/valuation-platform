@@ -20,7 +20,10 @@ from valuation_platform.sec.submissions import SECFiling
 
 from .concepts import ConceptKey, FinancialMetric
 from .balance_sheet_derivation import (
+    GOOGL_CURRENT_PORTION_OF_LONG_TERM_DEBT_DERIVATION_POLICY,
+    GOOGL_NONCURRENT_LONG_TERM_DEBT_DERIVATION_POLICY,
     META_ADJUSTED_TRADE_ACCOUNTS_PAYABLE_POLICY,
+    derive_googl_debt,
     derive_meta_adjusted_trade_accounts_payable,
     resolve_meta_combined_pp_and_e_payable,
 )
@@ -304,6 +307,42 @@ LONG_TERM_MARKETABLE_SECURITIES_POLICY = BalanceSheetMetricPolicy(
     ),
 )
 
+COMMERCIAL_PAPER_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.COMMERCIAL_PAPER,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "CommercialPaper"),
+            applicable_ciks=(_GOOGL_CIK, _MSFT_CIK, _AAPL_CIK),
+        ),
+    ),
+)
+
+SHORT_TERM_BORROWINGS_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.SHORT_TERM_BORROWINGS,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "OtherShortTermBorrowings"),
+            applicable_ciks=(_COST_CIK,),
+        ),
+    ),
+)
+
+CURRENT_PORTION_OF_LONG_TERM_DEBT_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.CURRENT_PORTION_OF_LONG_TERM_DEBT,
+    candidates=(
+        BalanceSheetConceptCandidate(ConceptKey("us-gaap", "LongTermDebtCurrent")),
+    ),
+)
+
+LONG_TERM_DEBT_NONCURRENT_POLICY = BalanceSheetMetricPolicy(
+    metric=FinancialMetric.LONG_TERM_DEBT_NONCURRENT,
+    candidates=(
+        BalanceSheetConceptCandidate(
+            ConceptKey("us-gaap", "LongTermDebtNoncurrent")
+        ),
+    ),
+)
+
 ANNUAL_BALANCE_SHEET_POLICIES: tuple[BalanceSheetMetricPolicy, ...] = (
     OPERATING_RECEIVABLES_POLICY,
     VENDOR_NONTRADE_RECEIVABLES_POLICY,
@@ -318,6 +357,10 @@ ANNUAL_BALANCE_SHEET_POLICIES: tuple[BalanceSheetMetricPolicy, ...] = (
     CASH_AND_CASH_EQUIVALENTS_POLICY,
     SHORT_TERM_INVESTMENTS_POLICY,
     LONG_TERM_MARKETABLE_SECURITIES_POLICY,
+    COMMERCIAL_PAPER_POLICY,
+    SHORT_TERM_BORROWINGS_POLICY,
+    CURRENT_PORTION_OF_LONG_TERM_DEBT_POLICY,
+    LONG_TERM_DEBT_NONCURRENT_POLICY,
 )
 
 
@@ -395,6 +438,30 @@ def _normalize_filing(
             adjusted if item.metric is FinancialMetric.TRADE_ACCOUNTS_PAYABLE else item
             for item in metrics
         )
+    if (
+        company_cik
+        == GOOGL_CURRENT_PORTION_OF_LONG_TERM_DEBT_DERIVATION_POLICY.company_cik
+    ):
+        for derivation_policy in (
+            GOOGL_CURRENT_PORTION_OF_LONG_TERM_DEBT_DERIVATION_POLICY,
+            GOOGL_NONCURRENT_LONG_TERM_DEBT_DERIVATION_POLICY,
+        ):
+            if derivation_policy.metric not in configured:
+                continue
+            current = next(
+                item for item in metrics if item.metric is derivation_policy.metric
+            )
+            resolved = derive_googl_debt(
+                bucket,
+                current,
+                source_url,
+                company_cik,
+                derivation_policy,
+            )
+            metrics = tuple(
+                resolved if item.metric is derivation_policy.metric else item
+                for item in metrics
+            )
     return AnnualBalanceSheetFilingResult(
         filing=bucket.filing,
         metrics=metrics,

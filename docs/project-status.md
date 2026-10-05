@@ -2,13 +2,13 @@
 
 ## Current Milestone
 
-Phase 1F.7b implements gross reported annual cash and investment primitives.
-Cash and issuer-scoped short-term investments cover all 25 selected validation
-periods; Apple long-term marketable securities cover all five applicable
-periods. The results preserve reported balance-sheet classifications and SEC
-provenance. Restricted balances, strategic/non-marketable investments,
-unrestricted or excess cash, a liquid-assets subtotal, and the equity bridge
-remain outside this milestone.
+Phase 1F.8b implements four annual debt primitives at reported carrying value:
+Commercial Paper, COST-only Short-Term Borrowings, Current Portion of Long-Term
+Debt, and Non-Current Long-Term Debt. Direct selected-filing Company Facts are
+preferred. Narrow accession-scoped GOOGL identities provide one derived current
+and three derived non-current values after removing finance-lease balances.
+Total debt, net debt, lease capitalization, and the equity bridge remain outside
+this milestone.
 
 ## Completed
 
@@ -321,15 +321,32 @@ remain outside this milestone.
 - Validated 25/25 cash values, 25/25 short-term investment values, and 5/5
   applicable Apple long-term marketable-security values with no missing or
   ambiguous results
+- Added annual Commercial Paper using `CommercialPaper` for GOOGL, MSFT, and
+  AAPL, with 12 direct, 13 missing, and no ambiguous values across 25 periods
+- Added COST-only annual Short-Term Borrowings using
+  `OtherShortTermBorrowings`, resolving the evidenced 2022 balance while the
+  other 24 periods remain typed missing rather than inferred zero
+- Added direct annual Current Portion of Long-Term Debt using
+  `LongTermDebtCurrent` and Non-Current Long-Term Debt using
+  `LongTermDebtNoncurrent`
+- Added accession-scoped GOOGL 2021–2023 carrying-debt derivations that remove
+  finance-lease liabilities from combined debt-and-lease facts and retain all
+  Company Facts operands and arithmetic steps
+- Validated Current Portion of Long-Term Debt as 19 direct, 1 derived, and 5
+  missing; validated Non-Current Long-Term Debt as 21 direct, 3 derived, and 1
+  missing, with no ambiguity or value mismatch across the 25-period corpus
+- Kept commercial paper and short-term borrowings separate and prohibited
+  total debt, net debt, lease debt, maturity-principal, and fair-value
+  substitutions
 
 ## Next Step
 
-Begin Phase 1F.8a with annual debt normalization research/design, the next
-broadly applicable historical input for the enterprise-value-to-equity-value
-bridge. Restricted liquidity and strategic investments still require separate
-methodology before any universal cash-and-investments subtotal. Diluted shares,
-interim normalization, and final standardized historical output remain later
-Phase 1 work. GOOGL D&A and GOOGL/MSFT/AAPL Operating NWC remain known
+Begin Phase 1F.9a with annual diluted-shares research/design, the next required
+historical input for an eventual equity-value and per-share output. Restricted
+liquidity and strategic investments still require separate methodology before
+any universal cash-and-investments subtotal. Interim normalization and final
+standardized historical output remain later Phase 1 work. GOOGL D&A and
+GOOGL/MSFT/AAPL Operating NWC remain known
 historical gaps; optional historical operating tax and NOPAT remain
 methodology-blocked without obstructing the manual forecast tax assumption.
 

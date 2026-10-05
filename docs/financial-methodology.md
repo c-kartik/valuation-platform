@@ -96,7 +96,7 @@ arithmetically decomposed. Apple CIK `320193` alone normalizes
 `us-gaap:MarketableSecuritiesNoncurrent` as long-term marketable securities.
 
 All three metrics use the existing exact selected-accession, current instant,
-report-date, USD, numeric non-Boolean rules. Missing is distinct from zero, and
+report-date, USD, integer non-Boolean rules. Missing is distinct from zero, and
 conflicting eligible concepts remain ambiguous. Restricted cash and restricted
 investments are not subtracted or normalized in this milestone. Non-marketable,
 equity-method, venture, and other strategic investments remain outside scope.
@@ -104,6 +104,43 @@ No unrestricted-cash, excess-cash, universal liquid-assets subtotal, or
 enterprise-value-to-equity-value bridge is calculated. Those require later
 valuation policies and explicit treatment of restriction overlap, operating
 cash needs, liquidity discounts, and possible tax leakage.
+
+### Debt
+
+Annual debt normalization preserves four gross reported primitives at carrying
+value: `CommercialPaper`, COST CIK `909832` only
+`OtherShortTermBorrowings`, `LongTermDebtCurrent`, and
+`LongTermDebtNoncurrent`. The usual exact selected-accession, current instant,
+report-date, USD, integer non-Boolean rules apply. Explicit zero is evidence;
+absence and narrative immateriality remain missing.
+
+GOOGL CIK `1652044` uses two narrow Company Facts derivations for its selected
+2021–2023 filings. Current long-term debt equals
+`LongTermDebtAndCapitalLeaseObligationsIncludingCurrentMaturities` minus
+`LongTermDebtAndCapitalLeaseObligations`, minus
+`FinanceLeaseLiabilityCurrent`, minus
+`DebtInstrumentUnamortizedDiscountPremiumAndDebtIssuanceCostsNet`. Non-current
+long-term debt equals `LongTermDebtAndCapitalLeaseObligations` minus the
+non-current finance-lease liability, where that lease amount is
+`FinanceLeaseLiability` minus `FinanceLeaseLiabilityCurrent`. These identities
+reproduce the selected filings' debt-note carrying values without classifying
+finance leases as conventional funded debt. They are accession scoped,
+direct-first, and retain every operand; conflicting direct and derived evidence
+is ambiguous. In the current identity, the selected filings present the
+unamortized discount/issuance-cost fact as a positive contra amount, so it is
+subtracted once from the face-value debt remainder. The non-current combined
+balance already reflects that contra amount; its separate identity therefore
+removes only the non-current finance-lease balance and does not subtract the
+discount a second time.
+
+`LongTermDebt`, fair values, maturity-schedule principal, revolver availability,
+and combined debt-and-lease concepts are not direct substitutes. Notes, secured
+debt, convertible debt, and foreign-currency notes are not added separately to
+current/non-current carrying debt. Commercial paper is kept separate, and COST
+commercial paper is not substituted for its evidenced bank borrowing. No total
+debt or net debt is calculated. Finance and operating lease treatment remains
+deferred until Capex, lease amortization, lease interest, and lease liabilities
+can be handled consistently in FCFF and valuation.
 
 ### Signed Tax Reconciliation Evidence
 
@@ -249,7 +286,7 @@ valid USD candidate exists, the metric is missing.
 Balance-sheet primitives are point-in-time snapshots and use a separate instant
 normalization path. A candidate must belong to the selected 10-K accession, be
 current and instant with no start date, end on the selected report date, use
-exact USD, and contain a numeric non-Boolean value. Actual balance dates are
+exact USD, and contain an integer non-Boolean value. Actual balance dates are
 preserved. Zero is a reported balance; an absent fact remains missing.
 
 The initial policies are:
