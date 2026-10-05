@@ -15,8 +15,17 @@ Forty-one reached standardized output, while GEV and SNDK failed at Company
 Facts parsing with the existing invalid-CIK validation error. The seven
 specialized issuers remained represented as explicit skips. XOM reached
 standardized output with zero selected annual periods; this and all typed
-missing or ambiguous results remain evidence for Phase 1H.3 rather than an
-automatic methodology conclusion.
+missing or ambiguous results remained evidence rather than automatic
+methodology conclusions.
+
+Phase 1H.3 completed the root-cause analysis in
+`docs/universe/sp500-top-50-failure-taxonomy.md`. It reconciles all 3,400
+standardized measure states for the 40 five-period histories, inventories all
+24 ambiguities and 27 methodology blockers, diagnoses GEV/SNDK as one
+zero-padded Company Facts CIK schema case, and diagnoses XOM as a ticker/CIK
+registrant-succession case. The post-smoke issuer classification is two
+`SUPPORTED`, 41 `GENERALIZATION_REQUIRED`, and seven
+`SPECIALIZED_METHODOLOGY_REQUIRED`.
 
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
@@ -431,15 +440,25 @@ being inferred as zero.
   GOOGL/MSFT/AAPL blocked O-NWC, and each seed's first non-comparable ΔNWC
 - Recorded XOM as completing the pipeline with zero selected annual periods;
   no later comparative filing, zero, alias, or policy change was introduced
+- Classified all Phase 1H.2 results into an operational root-cause taxonomy,
+  reconciled the 17-measure coverage matrix, and preserved the complete
+  ambiguity and methodology-blocker inventories
+- Established that GEV and SNDK share a strict Company Facts representation
+  issue, while XOM requires official-evidence registrant-succession handling
+  rather than a filing-selector relaxation or ticker hardcode
+- Assigned all 50 issuers a post-smoke planning status: two `SUPPORTED`, 41
+  `GENERALIZATION_REQUIRED`, and seven
+  `SPECIALIZED_METHODOLOGY_REQUIRED`
 
 ## Next Step
 
-Phase 1H.3 will inspect the Phase 1H.2 evidence and classify retrieval,
-filing-selection, concept-policy, issuer-extension, dimensional, derivation,
-methodology, and specialized-model failures without changing financial policy
-merely to increase coverage. The Phase 2A assumptions model is implemented,
-but forecast, FCFF, DCF, equity-bridge, per-share, reverse-DCF, scenario, and
-sensitivity work is intentionally paused through Phase 1H.
+Phase 1H.4 will execute the ranked generalization waves recorded in
+`docs/universe/sp500-top-50-failure-taxonomy.md`: resolve shared schema and
+identity blockers first, then high-frequency low-risk standard facts, core
+FCFF flows, equity-bridge balances, and narrower filing-evidence or O-NWC
+policies. The Phase 2A assumptions model is implemented, but forecast, FCFF,
+DCF, equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
+intentionally paused through Phase 1H.
 
 ## Phase 1H Roadmap
 
@@ -449,9 +468,10 @@ sensitivity work is intentionally paused through Phase 1H.
 2. **Phase 1H.2 — Automated corpus smoke test (complete):** ran the existing
    historical pipeline across all 43 generic issuers and preserved structured
    typed results, stage failures, and seven specialized skips.
-3. **Phase 1H.3 — Failure taxonomy:** classify retrieval, filing-selection,
-   concept-policy, issuer-extension, dimensional, derivation, methodology, and
-   specialized-business-model issues.
+3. **Phase 1H.3 — Failure taxonomy (complete):** classified retrieval,
+   identity, filing-selection, schema, concept-policy, issuer-extension,
+   dimensional, derivation, period-association, methodology, and specialized
+   business-model issues and ranked the reusable backlog.
 4. **Phase 1H.4 — Generalization waves:** address high-frequency reusable gaps
    first, including concept variants, extension patterns, dimensions,
    non-calendar periods, acquisition accounting, debt/lease presentation, D&A

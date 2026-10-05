@@ -67,6 +67,15 @@ ambiguity remains explicit, methodology blockers remain visible, provenance is
 preserved, and later comparative filings do not silently replace original
 selected-accession evidence.
 
+Phase 1H.3 records root causes in
+`docs/universe/sp500-top-50-failure-taxonomy.md`. Identity generalization must
+continue to normalize only documented SEC representations and then enforce
+exact CIK equality. Registrant-successor or filing-owner relationships must be
+established from official SEC identifiers and filing metadata; fuzzy company
+names and issuer hardcodes are not identity evidence. Financial gaps remain
+typed until a reusable concept rule, complete derivation, or documented
+issuer-specific accounting policy is supported by filing evidence.
+
 ## Valuation Assumptions Boundary
 
 `valuation.assumptions` is independent from SEC retrieval and normalization.

@@ -25,7 +25,7 @@ Current milestone:
 
 **Phase 1H — S&P 500 Top 50 universe expansion**
 
-Next step: **Phase 1H.3 — classify smoke-test failures and typed gaps**
+Next step: **Phase 1H.4 — execute the ranked generalization waves**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -56,6 +56,14 @@ the seven specialized issuers were retained as explicit skips. All five seed
 issuers preserved their expected five-period typed behavior. XOM reached
 standardized output with no selected annual periods, which remains diagnostic
 evidence rather than an inferred value or automatic policy change.
+
+Phase 1H.3 classified the smoke evidence without changing production policy.
+Across the 50 issuers, two are currently `SUPPORTED`, 41 are
+`GENERALIZATION_REQUIRED`, and seven are
+`SPECIALIZED_METHODOLOGY_REQUIRED`. The [failure-taxonomy and root-cause
+artifact](docs/universe/sp500-top-50-failure-taxonomy.md) records the complete
+17-measure coverage matrix, all 24 ambiguities, schema and identity blockers,
+and the ranked Phase 1H.4 backlog.
 
 ## Development
 
