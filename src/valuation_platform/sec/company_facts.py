@@ -86,7 +86,7 @@ def _parse_company_facts(
     if not isinstance(payload, dict):
         raise CompanyFactsDataError("SEC Company Facts response must be an object")
 
-    returned_cik = _parse_returned_cik(payload.get("cik", _MISSING))
+    returned_cik = _parse_returned_cik(payload.get("cik", _MISSING), company)
     if returned_cik != company.cik:
         raise CompanyFactsDataError(
             f"SEC Company Facts CIK {returned_cik} does not match "
@@ -127,7 +127,7 @@ def _parse_company_facts(
     return entity_name, tuple(concepts)
 
 
-def _parse_returned_cik(value: Any) -> int:
+def _parse_returned_cik(value: Any, company: SECCompanyIdentity) -> int:
     if isinstance(value, int) and not isinstance(value, bool) and value >= 0:
         return value
 
@@ -136,6 +136,14 @@ def _parse_returned_cik(value: Any) -> int:
         and value
         and all("0" <= character <= "9" for character in value)
         and (value == "0" or value[0] != "0")
+    ):
+        return int(value)
+
+    if (
+        isinstance(value, str)
+        and len(value) == 10
+        and all("0" <= character <= "9" for character in value)
+        and value == company.cik_padded
     ):
         return int(value)
 

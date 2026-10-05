@@ -13,6 +13,16 @@ The analysis does not change a parser, selector, concept policy, financial
 methodology, or issuer result. A missing value is not zero. A possible concept
 match is evidence for research, not approval to normalize it.
 
+**Wave 1A follow-up:** commit `453751155fad5e82cdab0a507d311fe724b851a8`
+is the Phase 1H.3 baseline described by the tables below. Wave 1A subsequently
+implemented the exact padded-CIK schema fix without changing financial policy.
+A live rerun completed GEV and SNDK through standardized output with two annual
+periods each. The full corpus then completed all 43 generic attempts with zero
+failures and produced 1,663 resolved, 1,709 missing, 27 ambiguous, 27
+methodology-blocked, and 42 not-comparable states across 204 issuer-periods.
+The original Phase 1H.3 matrix remains below as the evidence baseline for the
+ranked backlog.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -43,17 +53,19 @@ Ticker resolution and filing selection are correct. GEV resolves to CIK
 `"0001996810"` and `"0002023554"`. SEC returns both as ten-digit,
 zero-padded strings.
 
-The parser currently accepts a nonnegative integer or a canonical unpadded
-decimal string, then requires equality with the requested CIK. It rejects a
-leading-zero string before equality is tested. The two failures are therefore
-one `COMPANY_FACTS_SCHEMA` issue, not issuer-specific problems.
+At the Phase 1H.3 baseline, the parser accepted a nonnegative integer or a
+canonical unpadded decimal string, then required equality with the requested
+CIK. It rejected a leading-zero string before equality was tested. The two
+failures were therefore one `COMPANY_FACTS_SCHEMA` issue, not issuer-specific
+problems.
 
-The narrow Phase 1H.4 candidate is to accept either the existing canonical
-decimal representation or an exact ten-digit ASCII-decimal representation
-equal to `company.cik_padded`, normalize it to an integer, and retain the
-existing equality check. Whitespace, signs, non-digits, arbitrary leading-zero
-forms, and mismatched CIKs must remain invalid. Other issuers can expose the
-same legal SEC representation, so the change belongs in the shared parser.
+Wave 1A implemented the narrow shared fix: the parser additionally accepts an
+exact ten-digit ASCII-decimal representation only when it equals
+`company.cik_padded`, normalizes it to the requested integer CIK, and retains
+the identity-equality check. Whitespace, signs, non-digits, arbitrary
+leading-zero forms, and mismatched CIKs remain invalid. Live GEV and SNDK runs
+both completed Company Facts, filing association, normalization, and
+standardized output without an issuer-specific branch.
 
 ### XOM: ticker/CIK succession
 
@@ -400,7 +412,7 @@ issuers have one post-smoke classification.
 
 | Priority | Root cause | Evidence / affected scope | Blocking scope | Candidate fix | Generalizability | Accounting risk |
 |---:|---|---|---|---|---|---|
-| 1 | `COMPANY_FACTS_SCHEMA` | GEV and SNDK; four selected periods | Entire issuer | Strict ten-digit padded-string CIK support with equality protection | High | Low |
+| 1 | `COMPANY_FACTS_SCHEMA` | GEV and SNDK; four selected periods | Entire issuer | **Implemented in Wave 1A:** strict ten-digit padded-string CIK support with equality protection | High | Low |
 | 2 | `TICKER_CIK_IDENTITY` | XOM; intended five-year history | Entire issuer | Design and validate deterministic SEC registrant-succession linkage; implement only if generalizable and ambiguity-safe | Medium-high | Medium |
 | 3 | `CONCEPT_POLICY` | Cash: 175 missing; 158 have exact eligible standard facts | One high-value balance | Generalize exact cash policy beyond seed CIKs | Very high | Low |
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | Revenue: 22 ambiguities across seven issuers | Core flow metric | Separate full-year selection from genuine concept-definition conflicts | High | Medium-high |
@@ -416,12 +428,11 @@ issuers have one post-smoke classification.
 
 ## Recommended Phase 1H.4 waves
 
-1. **Infrastructure/schema blockers:** first implement and test strict padded
-   Company Facts CIK normalization. Next complete and independently review the
-   registrant-succession identity-linkage design above. Implement generic
-   identity handling only if the resulting rule is deterministic,
-   generalizable, and ambiguity-safe; otherwise keep XOM unresolved. Re-run
-   GEV, SNDK, and XOM before touching financial policy.
+1. **Infrastructure/schema blockers:** Wave 1A completed and tested strict
+   padded Company Facts CIK normalization. Next complete and independently
+   review the registrant-succession identity-linkage design above. Implement
+   generic identity handling only if the resulting rule is deterministic,
+   generalizable, and ambiguity-safe; otherwise keep XOM unresolved.
 2. **High-frequency, low-risk standard facts:** generalize exact cash evidence;
    then separate revenue full-year period association from true concept
    conflicts and research pretax variants.

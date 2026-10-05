@@ -291,6 +291,45 @@ class FetchCompanyFactsTests(TestCase):
 
         self.assertEqual(result.company.cik, 1326801)
 
+    def test_exact_ten_digit_padded_cik_is_normalized_and_compared(self) -> None:
+        self.client.get_json.return_value = {
+            **COMPANY_FACTS_RESPONSE,
+            "cik": "0001326801",
+        }
+
+        result = fetch_company_facts(self.client, self.company)
+
+        self.assertIs(result.company, self.company)
+        self.assertEqual(result.company.cik, 1326801)
+
+    def test_gev_and_sndk_padded_cik_response_shapes_are_accepted(self) -> None:
+        cases = (
+            ("GEV", 1996810, "0001996810", "GE Vernova Inc."),
+            ("SNDK", 2023554, "0002023554", "Sandisk Corporation"),
+        )
+
+        for ticker, cik, cik_padded, entity_name in cases:
+            with self.subTest(ticker=ticker):
+                company = SECCompanyIdentity(
+                    ticker=ticker,
+                    cik=cik,
+                    cik_padded=cik_padded,
+                    company_name=entity_name,
+                    source_url="https://www.sec.gov/files/company_tickers.json",
+                    retrieved_at=datetime(2026, 10, 6, tzinfo=timezone.utc),
+                )
+                self.client.get_json.return_value = {
+                    "cik": cik_padded,
+                    "entityName": entity_name,
+                    "facts": {},
+                }
+
+                result = fetch_company_facts(self.client, company)
+
+                self.assertIs(result.company, company)
+                self.assertEqual(result.entity_name, entity_name)
+                self.assertEqual(result.concepts, ())
+
     def test_xom_string_cik_response_shape_is_accepted(self) -> None:
         company = SECCompanyIdentity(
             ticker="XOM",
@@ -320,6 +359,40 @@ class FetchCompanyFactsTests(TestCase):
 
         with self.assertRaisesRegex(CompanyFactsDataError, "does not match"):
             fetch_company_facts(self.client, self.company)
+
+    def test_wrong_or_noncanonical_padded_cik_fails_explicitly(self) -> None:
+        invalid_padded_ciks = (
+            "0001326802",
+            "001326801",
+            "00001326801",
+        )
+
+        for invalid_cik in invalid_padded_ciks:
+            with self.subTest(cik=invalid_cik):
+                self.client.get_json.return_value = {
+                    **COMPANY_FACTS_RESPONSE,
+                    "cik": invalid_cik,
+                }
+
+                with self.assertRaisesRegex(CompanyFactsDataError, "invalid CIK"):
+                    fetch_company_facts(self.client, self.company)
+
+    def test_matching_padded_field_cannot_bypass_integer_identity_check(self) -> None:
+        inconsistent_company = SECCompanyIdentity(
+            ticker="META",
+            cik=1326801,
+            cik_padded="0002115436",
+            company_name="Meta Platforms, Inc.",
+            source_url="https://www.sec.gov/files/company_tickers.json",
+            retrieved_at=datetime(2026, 10, 6, tzinfo=timezone.utc),
+        )
+        self.client.get_json.return_value = {
+            **COMPANY_FACTS_RESPONSE,
+            "cik": "0002115436",
+        }
+
+        with self.assertRaisesRegex(CompanyFactsDataError, "does not match"):
+            fetch_company_facts(self.client, inconsistent_company)
 
     def test_invalid_cik_representations_fail_explicitly(self) -> None:
         invalid_ciks = [

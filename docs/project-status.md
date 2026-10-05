@@ -27,6 +27,14 @@ registrant-succession case. The post-smoke issuer classification is two
 `SUPPORTED`, 41 `GENERALIZATION_REQUIRED`, and seven
 `SPECIALIZED_METHODOLOGY_REQUIRED`.
 
+Phase 1H.4 Wave 1A implemented the first shared schema fix. Company Facts now
+accepts an exact ten-digit padded CIK only when it equals the requested
+company's `cik_padded`; arbitrary leading-zero strings and identity mismatches
+remain invalid. Live reruns moved both GEV and SNDK through Company Facts and
+all later stages to standardized output, with two annual periods each. The
+full corpus rerun completed all 43 generic attempts with no stage failures and
+left every five-issuer seed result unchanged. No issuer hardcode was added.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -449,16 +457,21 @@ being inferred as zero.
 - Assigned all 50 issuers a post-smoke planning status: two `SUPPORTED`, 41
   `GENERALIZATION_REQUIRED`, and seven
   `SPECIALIZED_METHODOLOGY_REQUIRED`
+- Generalized Company Facts CIK parsing to accept the exact SEC ten-digit
+  padded representation only when it matches `company.cik_padded`, with no
+  GEV/SNDK-specific branch and with canonical/mismatch protections preserved
+- Live-reran GEV and SNDK through complete standardized output with two annual
+  periods each, then completed all 43 generic corpus attempts with no failures;
+  the five seed histories and typed states remained unchanged
 
 ## Next Step
 
-Phase 1H.4 will execute the ranked generalization waves recorded in
-`docs/universe/sp500-top-50-failure-taxonomy.md`: resolve shared schema and
-identity blockers first, then high-frequency low-risk standard facts, core
-FCFF flows, equity-bridge balances, and narrower filing-evidence or O-NWC
-policies. The Phase 2A assumptions model is implemented, but forecast, FCFF,
-DCF, equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
-intentionally paused through Phase 1H.
+Phase 1H.4 Wave 1B is next: complete and independently review the deterministic
+registrant-succession identity-linkage design required before any generic XOM
+resolver implementation. Cross-listing alone remains insufficient. The Phase
+2A assumptions model is implemented, but forecast, FCFF, DCF, equity-bridge,
+per-share, reverse-DCF, scenario, and sensitivity work is intentionally paused
+through Phase 1H.
 
 ## Phase 1H Roadmap
 
@@ -472,10 +485,11 @@ intentionally paused through Phase 1H.
    identity, filing-selection, schema, concept-policy, issuer-extension,
    dimensional, derivation, period-association, methodology, and specialized
    business-model issues and ranked the reusable backlog.
-4. **Phase 1H.4 — Generalization waves:** address high-frequency reusable gaps
-   first, including concept variants, extension patterns, dimensions,
-   non-calendar periods, acquisition accounting, debt/lease presentation, D&A
-   decomposition, and working-capital perimeters.
+4. **Phase 1H.4 — Generalization waves (in progress):** Wave 1A fixed exact
+   padded Company Facts CIK handling. Next, complete the registrant-succession
+   design gate before proceeding to high-frequency concept variants, extension
+   patterns, dimensions, non-calendar periods, acquisition accounting,
+   debt/lease presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
    `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.

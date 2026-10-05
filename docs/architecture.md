@@ -115,7 +115,11 @@ The SEC package separates transport from dataset interpretation:
   supplemental files in SEC order only until enough annual history is present.
 - `sec.company_facts` retrieves and validates every taxonomy, concept, unit, and
   observation in the SEC Company Facts response without choosing financial
-  concepts or authoritative reporting periods.
+  concepts or authoritative reporting periods. Its top-level identity parser
+  accepts a nonnegative integer CIK, a canonical unpadded decimal string, or an
+  exact ten-digit padded string equal to the requested company's
+  `cik_padded`; every accepted form is normalized to an integer before the
+  existing identity-equality check.
 - `sec.filing_xbrl` discovers the SEC-generated extracted XBRL instance that
   corresponds to a selected filing's primary document, retrieves it explicitly
   on demand, and structurally preserves standard and issuer-extension facts,
