@@ -173,6 +173,25 @@ and antidilutive securities are not separately added. A future value-per-share
 denominator requires a distinct policy for current shares, future dilution, and
 buybacks.
 
+### Standardized Historical Company Output
+
+The standardized annual output aligns actual fiscal-year duration measures with
+the selected filing's closing instant balances without treating those balances
+as durations. It preserves the selected accession, actual dates, exact units,
+direct/derived/calculated identity, compact SEC source references, and versioned
+Operating NWC policy metadata. Missing, ambiguous, not-comparable, and
+methodology-blocked states remain distinct. Exact `Decimal` values serialize as
+strings; millions, billions, percentages, and localized formatting are
+presentation concerns.
+
+Operating NWC and its change enter only from the existing approved calculation
+results. The first displayed period has no invented change without an opening
+level. Cash, investment, and debt primitives remain separate: the output does
+not create total cash, excess cash, total debt, net debt, or an equity bridge.
+Reported tax diagnostics remain available, but historical operating tax and
+NOPAT are not manufactured. Diluted Weighted-Average Shares remains the
+historical GAAP EPS denominator rather than a forecast valuation-share count.
+
 ### Signed Tax Reconciliation Evidence
 
 The signed tax-evidence layer records what a selected filing's reconciliation

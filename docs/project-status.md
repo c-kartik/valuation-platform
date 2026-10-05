@@ -2,12 +2,12 @@
 
 ## Current Milestone
 
-Phase 1F.9b implements annual Diluted Weighted-Average Shares as the historical
-GAAP diluted EPS denominator. Direct selected-filing Company Facts resolve 22
-of 25 validated periods. A narrow GOOGL filing-XBRL derivation adds Class A and
-Class C denominators for 2021–2023 without double-counting Class B, producing
-three derived results. Original selected-filing share basis is preserved; no
-current or forecast valuation-share policy is implemented.
+Phase 1G.2 implements the standardized annual company-history boundary. A pure
+period-centric assembler aligns selected-filing duration metrics with closing
+instant balances and existing Operating NWC/change results while preserving
+typed availability, exact Decimal values, compact provenance, and policy
+identity. It performs no forecast, FCFF, subtotal, equity-bridge, or valuation
+calculation.
 
 ## Completed
 
@@ -351,12 +351,29 @@ current or forecast valuation-share policy is implemented.
 - Kept basic shares, period-end shares, split-restated series, current fully
   diluted shares, forecast dilution, and future valuation-share policy outside
   this milestone
+- Added an immutable period-centric standardized company history with selected
+  filing references, actual fiscal durations, closing balance dates, and
+  deterministic top-level measure ordering
+- Added pure assembly and explicit serialization that preserve direct, derived,
+  calculated, missing, ambiguous, not-comparable, and methodology-blocked
+  outcomes; exact Decimal values serialize as strings
+- Aligned duration and instant results by company, accession, filing identity,
+  and report date, rejecting conflicting fiscal starts, duplicate periods,
+  unit mismatches, binary floats, and later-filing evidence
+- Exposed existing Operating NWC levels and changes without repeating their
+  arithmetic, retaining policy ID/version and component-level SEC references
+- Live-assembled five annual records for META, GOOGL, MSFT, AAPL, and COST;
+  standardized values matched their immediate normalized inputs while
+  preserving GOOGL blockers and derived shares, MSFT June periods, Apple
+  long-term securities, and COST's 53-week year
+- Kept cash, investment, and debt primitives separate and left historical
+  NOPAT, forecast assumptions, FCFF, equity bridges, valuation shares, and DCF
+  outside the standardized historical boundary
 
 ## Next Step
 
-Complete independent review of Phase 1F.9b. After approval, define the final
-standardized annual historical output boundary before expanding to interim
-support. Restricted liquidity and strategic investments still require separate
+Complete independent review of Phase 1G.2. The next milestone will be selected
+after that review. Restricted liquidity and strategic investments still require separate
 methodology before any universal cash-and-investments subtotal. GOOGL D&A and
 GOOGL/MSFT/AAPL Operating NWC remain known
 historical gaps; optional historical operating tax and NOPAT remain
@@ -385,6 +402,7 @@ valuation-platform/
 │       │   ├── diluted_shares.py
 │       │   ├── historical.py
 │       │   ├── models.py
+│       │   ├── output.py
 │       │   └── operating_nwc.py
 │       └── sec/
 │           ├── __init__.py
@@ -403,6 +421,7 @@ valuation-platform/
 │   │   ├── test_balance_sheet.py
 │   │   ├── test_diluted_shares.py
 │   │   ├── test_historical.py
+│   │   ├── test_output.py
 │   │   └── test_operating_nwc.py
 │   └── sec/
 │       ├── __init__.py

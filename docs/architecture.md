@@ -114,6 +114,10 @@ structural fact selection:
 - `normalization.diluted_shares` contains the narrow, pure GOOGL filing-XBRL
   derivation for selected 2021–2023 diluted EPS denominators. Filing artifacts
   are explicitly supplied by the caller; the module performs no retrieval.
+- `normalization.output` assembles already-normalized duration, instant,
+  Operating NWC, and change results into an immutable period-centric company
+  history. It is pure and network-free and validates consistency without
+  repeating financial calculations.
 - `normalization.balance_sheet` separately resolves annual instant evidence
   from explicit Company Facts or filing-XBRL policies into primitive
   balance-sheet snapshots; parsed filing artifacts are supplied by the caller,
@@ -189,6 +193,29 @@ impairment or lease adjustments, or interim derivation. MSFT D&A retains its
 existing fact operands. Reported ETR uses a
 minimal normalized-metric operand model so it can preserve both authoritative
 direct inputs without repeating Company Facts concept selection.
+
+### Standardized Historical Output
+
+The company-level historical boundary uses ordered annual records as its
+canonical representation. Each record retains one selected 10-K, its actual
+fiscal duration, its closing balance date, and ordered standardized measures.
+Resolved duration facts must agree on start/end dates and end on the filing
+report date. Instant facts remain explicitly instant and use that same closing
+date. Metric series are accessors over annual records rather than a second data
+store.
+
+Resolved values use exact `Decimal` objects and retain direct, derived, or
+calculated identity. Missing, ambiguous, not-comparable, and methodology-blocked
+states remain explicit. Compact provenance contains source kind, URL,
+accession, concept or namespace, and filing-XBRL context where applicable,
+without retaining raw Company Facts or filing-XBRL graphs. Serialization emits
+Decimal strings, ISO dates, stable enum values, and ordered arrays.
+
+Operating NWC levels and changes enter only as existing calculation or
+readiness results; the assembler performs no O-NWC arithmetic. Cash,
+investment, and debt primitives remain separate. This boundary introduces no
+historical NOPAT, financial subtotal, forecast, FCFF, equity bridge, or
+valuation calculation.
 
 Reported ETR divides normalized Income Tax Expense by normalized Pretax Income
 using a 34-digit local `Decimal` context and a dimensionless `pure` unit. Its

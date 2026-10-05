@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.9b — annual diluted weighted-average shares normalization**
+**Phase 1G.2 — standardized historical company output**
 
-Next step: independent review of **Phase 1F.9b**
+Next step: independent review of **Phase 1G.2**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -60,6 +60,12 @@ derivation that adds Class A and Class C denominators without double-counting
 Class B. Values retain the share basis of the original selected filing,
 including GOOGL 2021's pre-split basis. This historical metric is not a current
 or forecast fully diluted valuation-share policy.
+The standardized historical-output layer now assembles these annual duration
+results with fiscal-year-end cash, investment, debt, and calculated Operating
+NWC results in a period-centric company record. It preserves typed missing and
+ambiguity states, actual fiscal dates, compact SEC provenance, policy versions,
+and exact `Decimal` values serialized as strings. It does not calculate cash or
+debt subtotals, historical NOPAT, forecasts, FCFF, or valuation results.
 D&A is direct for the validated META, AAPL, and COST periods and derived from an
 evidence-backed, CIK-scoped Company Facts policy for MSFT. GOOGL remains
 unresolved. Interim periods and the remaining standardized financial metrics
