@@ -6,6 +6,37 @@ This document defines the financial concepts and calculation methodology used by
 
 Financial definitions should remain consistent across SEC normalization, historical analysis, forecasting, and valuation.
 
+## Operating-Company Methodology Scope
+
+The initial valuation framework is designed for ordinary operating companies:
+
+```text
+Revenue
+→ EBIT
+→ NOPAT
++ D&A
+− Capex
+− Change in Operating NWC
+= FCFF
+```
+
+This structure is appropriate for many technology, consumer, industrial,
+communications, healthcare, and other non-financial operating businesses. It
+is not automatically appropriate for every industry.
+
+For banks, deposits and wholesale funding are operating inputs, interest is a
+core operating result, conventional operating NWC is not comparable, and
+regulatory capital is central. Insurers require specialized treatment of
+reserves, claims, float, investment portfolios, underwriting economics, and
+regulatory capital. REITs and other specialized structures may also require
+dedicated normalization and valuation methods. Those methods are not defined
+in the current milestone, and such companies must not be forced into the
+generic FCFF framework.
+
+Historical support remains evidence-driven. A supported pipeline run need not
+resolve every metric: missing remains missing, ambiguity remains ambiguity,
+and methodology blockers remain explicit with filing provenance intact.
+
 ## Manual Forecast Assumptions
 
 The initial forecast design uses five explicit ordinal periods rather than

@@ -13,7 +13,9 @@ A full-stack equity valuation platform combining SEC financial data extraction, 
 - Support Bear / Base / Bull scenarios
 - Generate valuation sensitivity analysis
 
-Initial scope is US-listed non-financial companies.
+The initial methodology targets US-listed non-financial operating companies.
+Specialized financial and other structures will require separate methodology
+where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
@@ -21,11 +23,23 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 2A.2 — valuation assumptions model**
+**Phase 1H — S&P 50 universe expansion**
 
-Next step: independent review of **Phase 2A.2**
+Next step: **Phase 1H.1 — define the S&P 50 constituent snapshot and baseline classification**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
+
+The current historical standardized-output corpus contains five companies and
+25 annual periods: META, GOOGL, MSFT, AAPL, and COST, with five selected 10-K
+periods each. Validation means the production historical pipeline has been run
+and checked against filing evidence; it does not mean every metric resolves.
+Typed missing, derived, ambiguous, and methodology-blocked results remain valid
+outcomes.
+
+The next target is a defined S&P 50 snapshot, followed over time by broader
+S&P 500 coverage. Forecast and DCF calculation work is temporarily paused while
+the historical layer is stress-tested across that wider universe. The existing
+Phase 2A manual assumptions model remains available.
 
 ## Development
 

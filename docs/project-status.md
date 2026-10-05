@@ -2,13 +2,18 @@
 
 ## Current Milestone
 
-Phase 2A.2 implements the immutable manual valuation-assumptions boundary.
-Five explicit ordinal forecast periods store finite Decimal rates for revenue
-growth, operating margin, forecast tax, D&A, Capex, and change in Operating NWC.
-The company-bound set also stores one manual WACC and terminal-growth rate. It
-validates and serializes assumptions without populating them from history or
-calculating forecasts, FCFF, terminal value, DCF, an equity bridge, or per-share
-value.
+Phase 1H expands historical normalization beyond the original five-company
+corpus. The immediate target is a dated, sourced S&P 50 constituent snapshot;
+the purpose is to expose generalization and methodology gaps before forecast
+and DCF calculation work resumes.
+
+The current validated standardized-output corpus is five companies—META,
+GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
+10-K periods per company. Validation means the production historical pipeline
+was run and checked against expected filing evidence, not that every metric
+resolved. GOOGL D&A remains typed missing, GOOGL/MSFT/AAPL Operating NWC remains
+methodology-blocked, and missing debt primitives remain missing rather than
+being inferred as zero.
 
 ## Completed
 
@@ -388,11 +393,36 @@ value.
 
 ## Next Step
 
-Complete independent review of Phase 2A.2. After approval, design the pure
-forecast-calculation boundary that binds these assumptions to the latest
-standardized historical Revenue. Negative-EBIT tax treatment must be resolved
-before that calculator produces NOPAT for loss periods. Forecast FCFF, DCF,
-valuation shares, and the enterprise-to-equity bridge remain later milestones.
+Phase 1H.1 will define the exact S&P 50 constituent snapshot, record its date
+and source, identify the five already validated names, and preliminarily flag
+specialized financial or other structures. The Phase 2A assumptions model is
+implemented, but forecast, FCFF, DCF, equity-bridge, per-share, reverse-DCF,
+scenario, and sensitivity work is intentionally paused through Phase 1H.
+
+## Phase 1H Roadmap
+
+1. **Phase 1H.1 — Universe definition:** establish the dated and sourced S&P 50
+   list, existing coverage, and preliminary specialized-methodology flags.
+2. **Phase 1H.2 — Automated corpus smoke test:** run the existing historical
+   pipeline across the corpus and collect typed results and failures before
+   attempting broad fixes.
+3. **Phase 1H.3 — Failure taxonomy:** classify retrieval, filing-selection,
+   concept-policy, issuer-extension, dimensional, derivation, methodology, and
+   specialized-business-model issues.
+4. **Phase 1H.4 — Generalization waves:** address high-frequency reusable gaps
+   first, including concept variants, extension patterns, dimensions,
+   non-calendar periods, acquisition accounting, debt/lease presentation, D&A
+   decomposition, and working-capital perimeters.
+5. **Phase 1H.5 — S&P 50 validation pass:** assign every constituent
+   `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
+   `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.
+6. **Phase 1H.6 — Freeze historical normalization v1:** record supported scope
+   and exclusions, then resume Phase 2 forecast and DCF development.
+
+The near-term target is S&P 50 validation, the medium-term goal is broader
+S&P 500 coverage, and specialized financial methodologies remain separate
+long-term work. The repository does not currently claim S&P 50 or S&P 500
+support.
 
 ## Current Repository Structure
 

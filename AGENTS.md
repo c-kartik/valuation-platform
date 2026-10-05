@@ -6,17 +6,31 @@ Automated Equity Valuation Platform.
 
 The application will accept a US stock ticker, retrieve and normalize historical financial data primarily from SEC EDGAR/XBRL, accept manual forecast assumptions, and calculate an FCFF DCF.
 
-Initial scope is US-listed non-financial companies.
+The Phase 1H validation universe includes every constituent in the selected
+S&P 50 snapshot. Record and classify every constituent; do not omit financial
+or other specialized companies. The current generic methodology initially
+supports ordinary operating companies. Classify banks, insurers, REITs, and
+other structures that need dedicated treatment as
+`SPECIALIZED_METHODOLOGY_REQUIRED` rather than forcing them through the
+operating-company FCFF model.
 
 ## Current Phase
 
-Build the Python SEC/XBRL historical financial data pipeline:
+Phase 1H expands the operational Python SEC/XBRL historical pipeline from the
+five-company validation corpus (META, GOOGL, MSFT, AAPL, and COST) to a defined
+S&P 50 snapshot. Use corpus failures to improve normalization architecture and
+policies without inventing missing values or forcing coverage.
 
-Ticker → CIK → SEC EDGAR → XBRL / Company Facts → period selection → financial normalization → standardized Python output.
+Classify constituents as `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
+`SPECIALIZED_METHODOLOGY_REQUIRED`. During Phase 1H, prefer reusable,
+high-frequency normalization fixes over issuer-specific hacks. Use an
+issuer-specific policy only when filing evidence and accounting rationale
+support it, and never force a result to improve coverage statistics.
 
-Start with META. After META is reliable, validate against GOOGL, MSFT, and AAPL.
-
-Do not implement valuation UI or deployment infrastructure yet.
+Phase 2A manual assumptions are available, but forecast, FCFF, DCF, equity
+bridge, and per-share valuation work is paused throughout Phase 1H. Resume it
+only after Phase 1H.6 freezes historical normalization v1. Do not implement
+valuation UI or deployment infrastructure yet.
 
 ## Engineering Principles
 

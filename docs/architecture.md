@@ -28,6 +28,33 @@ Valuation Engine
 Valuation Outputs
 ```
 
+Before forecast and DCF development continues, Phase 1H will generalize the
+historical normalization boundary against a defined S&P 50 constituent
+snapshot. The intended sequence remains SEC/XBRL retrieval → normalization →
+standardized historical output → manual assumptions → future forecast and DCF;
+universe validation is now the gate between the existing assumptions model and
+further valuation-engine work.
+
+## Universe Validation Boundary
+
+Phase 1H uses a small development corpus runner to pass each constituent
+through the existing ticker, filing-selection, Company Facts, normalization,
+and standardized-output APIs. It records typed results and failures without
+adding databases, caches, or a parallel parsing implementation.
+
+Each constituent will be classified as `SUPPORTED`,
+`GENERALIZATION_REQUIRED`, or `SPECIALIZED_METHODOLOGY_REQUIRED`. Failures will
+be grouped into retrieval, filing-selection, concept-policy, issuer-extension,
+dimensional, derivation, methodology, and specialized-business-model classes.
+High-frequency generalizable problems take priority over issuer-specific
+policies. An issuer-specific policy is appropriate only when filing evidence
+and accounting treatment justify it.
+
+Coverage does not override evidence discipline: missing is not zero,
+ambiguity remains explicit, methodology blockers remain visible, provenance is
+preserved, and later comparative filings do not silently replace original
+selected-accession evidence.
+
 ## Valuation Assumptions Boundary
 
 `valuation.assumptions` is independent from SEC retrieval and normalization.
