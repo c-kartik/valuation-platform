@@ -29,7 +29,7 @@ Valuation Outputs
 ```
 
 Before forecast and DCF development continues, Phase 1H will generalize the
-historical normalization boundary against a defined S&P 50 constituent
+historical normalization boundary against a defined S&P 500 Top 50 constituent
 snapshot. The intended sequence remains SEC/XBRL retrieval → normalization →
 standardized historical output → manual assumptions → future forecast and DCF;
 universe validation is now the gate between the existing assumptions model and
@@ -37,10 +37,18 @@ further valuation-engine work.
 
 ## Universe Validation Boundary
 
-Phase 1H uses a small development corpus runner to pass each constituent
-through the existing ticker, filing-selection, Company Facts, normalization,
-and standardized-output APIs. It records typed results and failures without
-adding databases, caches, or a parallel parsing implementation.
+Phase 1H uses the immutable, dated snapshot at
+`docs/universe/sp500-top-50-2026-10-02.csv`: 51 index securities representing
+50 SEC issuers as of 2026-10-02. Source tickers remain distinct from canonical
+project tickers, and the two Alphabet share classes remain separate security
+rows tied to one SEC CIK. Future index changes require a new snapshot rather
+than mutation of this validation record.
+
+The next phase uses a small development corpus runner to pass each
+supported-seed and operating-company candidate issuer through the existing
+ticker, filing-selection, Company Facts, normalization, and standardized-output
+APIs. It records typed results and failures without adding databases, caches,
+or a parallel parsing implementation.
 
 Each constituent will be classified as `SUPPORTED`,
 `GENERALIZATION_REQUIRED`, or `SPECIALIZED_METHODOLOGY_REQUIRED`. Failures will

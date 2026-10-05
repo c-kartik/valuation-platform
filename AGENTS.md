@@ -6,11 +6,12 @@ Automated Equity Valuation Platform.
 
 The application will accept a US stock ticker, retrieve and normalize historical financial data primarily from SEC EDGAR/XBRL, accept manual forecast assumptions, and calculate an FCFF DCF.
 
-The Phase 1H validation universe includes every constituent in the selected
-S&P 50 snapshot. Record and classify every constituent; do not omit financial
-or other specialized companies. The current generic methodology initially
-supports ordinary operating companies. Classify banks, insurers, REITs, and
-other structures that need dedicated treatment as
+The Phase 1H validation universe includes every security in the frozen
+S&P 500 Top 50 Index snapshot at
+`docs/universe/sp500-top-50-2026-10-02.csv`. Record and classify every
+constituent; do not omit financial or other specialized companies. The current
+generic methodology initially supports ordinary operating companies. Classify
+banks, insurers, REITs, and other structures that need dedicated treatment as
 `SPECIALIZED_METHODOLOGY_REQUIRED` rather than forcing them through the
 operating-company FCFF model.
 
@@ -18,8 +19,8 @@ operating-company FCFF model.
 
 Phase 1H expands the operational Python SEC/XBRL historical pipeline from the
 five-company validation corpus (META, GOOGL, MSFT, AAPL, and COST) to a defined
-S&P 50 snapshot. Use corpus failures to improve normalization architecture and
-policies without inventing missing values or forcing coverage.
+S&P 500 Top 50 snapshot. Use corpus failures to improve normalization
+architecture and policies without inventing missing values or forcing coverage.
 
 Classify constituents as `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
 `SPECIALIZED_METHODOLOGY_REQUIRED`. During Phase 1H, prefer reusable,

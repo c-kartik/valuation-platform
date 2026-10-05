@@ -3,9 +3,12 @@
 ## Current Milestone
 
 Phase 1H expands historical normalization beyond the original five-company
-corpus. The immediate target is a dated, sourced S&P 50 constituent snapshot;
-the purpose is to expose generalization and methodology gaps before forecast
-and DCF calculation work resumes.
+corpus. Phase 1H.1 froze the S&P 500 Top 50 Index snapshot effective 2026-10-02
+at `docs/universe/sp500-top-50-2026-10-02.csv`. Its 51 securities represent 50
+unique SEC issuers because Alphabet has two included share classes. The
+preliminary security classification contains six supported-seed rows (five
+issuers), 38 operating-company candidates, and seven
+specialized-methodology candidates.
 
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
@@ -390,19 +393,31 @@ being inferred as zero.
   valuation shares, and the enterprise-to-equity bridge
 - Kept all forecast calculations, NOPAT, FCFF, discounting, terminal value, DCF,
   scenarios, sensitivity analysis, and reverse DCF unimplemented
+- Froze the dated and sourced 2026-10-02 S&P 500 Top 50 universe as 51
+  securities representing 50 SEC issuers, preserving both Alphabet share
+  classes and the explicit Invesco `BRK/B` to SEC/project `BRK-B` ticker mapping
+- Reconciled all five validated issuers to the snapshot and live-prechecked all
+  51 canonical project tickers through the existing SEC resolver with no
+  unresolved tickers
+- Classified 38 securities as operating-company candidates and seven issuers
+  as specialized-methodology candidates without assigning
+  `GENERALIZATION_REQUIRED` before pipeline evidence exists
 
 ## Next Step
 
-Phase 1H.1 will define the exact S&P 50 constituent snapshot, record its date
-and source, identify the five already validated names, and preliminarily flag
-specialized financial or other structures. The Phase 2A assumptions model is
-implemented, but forecast, FCFF, DCF, equity-bridge, per-share, reverse-DCF,
-scenario, and sensitivity work is intentionally paused through Phase 1H.
+Phase 1H.2 will consume the frozen snapshot CSV, regression-check the five seed
+issuers, run the current production historical pipeline once per operating
+candidate SEC issuer, and retain the seven specialized candidates in structured
+reporting without forcing them through the generic FCFF methodology. The
+Phase 2A assumptions model is implemented, but forecast, FCFF, DCF,
+equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
+intentionally paused through Phase 1H.
 
 ## Phase 1H Roadmap
 
-1. **Phase 1H.1 — Universe definition:** establish the dated and sourced S&P 50
-   list, existing coverage, and preliminary specialized-methodology flags.
+1. **Phase 1H.1 — Universe definition (complete):** froze the dated and sourced
+   2026-10-02 S&P 500 Top 50 list, existing coverage, and preliminary
+   specialized-methodology flags.
 2. **Phase 1H.2 — Automated corpus smoke test:** run the existing historical
    pipeline across the corpus and collect typed results and failures before
    attempting broad fixes.
@@ -413,16 +428,16 @@ scenario, and sensitivity work is intentionally paused through Phase 1H.
    first, including concept variants, extension patterns, dimensions,
    non-calendar periods, acquisition accounting, debt/lease presentation, D&A
    decomposition, and working-capital perimeters.
-5. **Phase 1H.5 — S&P 50 validation pass:** assign every constituent
+5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
    `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.
 6. **Phase 1H.6 — Freeze historical normalization v1:** record supported scope
    and exclusions, then resume Phase 2 forecast and DCF development.
 
-The near-term target is S&P 50 validation, the medium-term goal is broader
+The near-term target is S&P 500 Top 50 validation, the medium-term goal is broader
 S&P 500 coverage, and specialized financial methodologies remain separate
-long-term work. The repository does not currently claim S&P 50 or S&P 500
-support.
+long-term work. The repository does not currently claim S&P 500 Top 50 or
+broader S&P 500 support.
 
 ## Current Repository Structure
 
@@ -433,7 +448,10 @@ valuation-platform/
 ├── docs/
 │   ├── architecture.md
 │   ├── financial-methodology.md
-│   └── project-status.md
+│   ├── project-status.md
+│   └── universe/
+│       ├── sp500-top-50-2026-10-02.csv
+│       └── sp500-top-50-2026-10-02.md
 ├── scripts/
 │   └── validate_company_facts.py
 ├── src/

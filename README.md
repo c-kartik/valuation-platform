@@ -23,9 +23,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1H — S&P 50 universe expansion**
+**Phase 1H — S&P 500 Top 50 universe expansion**
 
-Next step: **Phase 1H.1 — define the S&P 50 constituent snapshot and baseline classification**
+Next step: **Phase 1H.2 — run the automated corpus smoke test**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -36,10 +36,19 @@ and checked against filing evidence; it does not mean every metric resolves.
 Typed missing, derived, ambiguous, and methodology-blocked results remain valid
 outcomes.
 
-The next target is a defined S&P 50 snapshot, followed over time by broader
-S&P 500 coverage. Forecast and DCF calculation work is temporarily paused while
-the historical layer is stress-tested across that wider universe. The existing
-Phase 2A manual assumptions model remains available.
+The next target is the frozen S&P 500 Top 50 snapshot, followed over time by
+broader S&P 500 coverage. Forecast and DCF calculation work is temporarily
+paused while the historical layer is stress-tested across that wider universe.
+The existing Phase 2A manual assumptions model remains available.
+
+Phase 1H.1 froze the official **S&P 500 Top 50 Index** universe effective
+2026-10-02 in
+[`docs/universe/sp500-top-50-2026-10-02.csv`](docs/universe/sp500-top-50-2026-10-02.csv).
+It contains 51 securities representing 50 SEC issuers because Alphabet has two
+included share classes. Five issuers are validated seeds, 38 are preliminary
+operating-company candidates, and seven are specialized-methodology candidates.
+See the accompanying [snapshot note](docs/universe/sp500-top-50-2026-10-02.md)
+for sources, classification rationale, and Phase 1H.2 execution waves.
 
 ## Development
 
