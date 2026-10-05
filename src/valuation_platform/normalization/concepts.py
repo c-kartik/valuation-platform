@@ -38,6 +38,7 @@ class FinancialMetric(str, Enum):
     SHORT_TERM_BORROWINGS = "short_term_borrowings"
     CURRENT_PORTION_OF_LONG_TERM_DEBT = "current_portion_of_long_term_debt"
     LONG_TERM_DEBT_NONCURRENT = "long_term_debt_noncurrent"
+    DILUTED_WEIGHTED_AVERAGE_SHARES = "diluted_weighted_average_shares"
 
 
 @dataclass(frozen=True)
@@ -63,6 +64,10 @@ class MetricConceptPolicy:
 
     metric: FinancialMetric
     candidates: tuple[ConceptKey, ...]
+    unit: str = "USD"
+    integer_only: bool = False
+    decimal_output: bool = False
+    required_observation_form: str | None = None
 
     def __post_init__(self) -> None:
         if not isinstance(self.metric, FinancialMetric):
@@ -78,6 +83,19 @@ class MetricConceptPolicy:
         if len(set(self.candidates)) != len(self.candidates):
             raise ConceptPolicyError(
                 f"Concept policy for {self.metric.value!r} has duplicate candidates"
+            )
+        if not isinstance(self.unit, str) or not self.unit:
+            raise ConceptPolicyError("Concept policy unit must not be empty")
+        if not isinstance(self.integer_only, bool):
+            raise ConceptPolicyError("Concept policy integer_only must be Boolean")
+        if not isinstance(self.decimal_output, bool):
+            raise ConceptPolicyError("Concept policy decimal_output must be Boolean")
+        if self.required_observation_form is not None and (
+            not isinstance(self.required_observation_form, str)
+            or not self.required_observation_form
+        ):
+            raise ConceptPolicyError(
+                "Concept policy required observation form must be nonempty"
             )
 
 
@@ -135,6 +153,20 @@ CAPEX_POLICY = MetricConceptPolicy(
     ),
 )
 
+DILUTED_WEIGHTED_AVERAGE_SHARES_POLICY = MetricConceptPolicy(
+    metric=FinancialMetric.DILUTED_WEIGHTED_AVERAGE_SHARES,
+    candidates=(
+        ConceptKey(
+            taxonomy="us-gaap",
+            name="WeightedAverageNumberOfDilutedSharesOutstanding",
+        ),
+    ),
+    unit="shares",
+    integer_only=True,
+    decimal_output=True,
+    required_observation_form="10-K",
+)
+
 ANNUAL_METRIC_POLICIES: tuple[MetricConceptPolicy, ...] = (
     REVENUE_POLICY,
     OPERATING_INCOME_POLICY,
@@ -142,4 +174,5 @@ ANNUAL_METRIC_POLICIES: tuple[MetricConceptPolicy, ...] = (
     INCOME_TAX_EXPENSE_POLICY,
     D_AND_A_POLICY,
     CAPEX_POLICY,
+    DILUTED_WEIGHTED_AVERAGE_SHARES_POLICY,
 )

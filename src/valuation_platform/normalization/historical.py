@@ -2,7 +2,11 @@
 
 from __future__ import annotations
 
+from datetime import date
+from decimal import Decimal
+
 from valuation_platform.sec.company_facts import SECFactValue
+from valuation_platform.sec.filing_xbrl import SECFilingXBRL
 from valuation_platform.sec.fact_selection import (
     FilingFactObservations,
     ObservationPeriodType,
@@ -22,6 +26,10 @@ from .derived import (
     applicable_derivation_policy,
     derive_annual_metric,
     derive_reported_effective_tax_rate,
+)
+from .diluted_shares import (
+    GOOGL_DILUTED_SHARES_DERIVATION_POLICY,
+    derive_googl_diluted_weighted_average_shares,
 )
 from .models import (
     AmbiguityReason,
@@ -48,9 +56,15 @@ def normalize_annual_financials(
     derivation_policies: tuple[
         MetricDerivationPolicy, ...
     ] = ANNUAL_DERIVATION_POLICIES,
+    *,
+    filing_xbrl: tuple[SECFilingXBRL, ...] = (),
 ) -> NormalizedHistoricalFinancials:
     """Normalize configured metrics across selected annual filing buckets."""
     _validate_policies(policies)
+    filing_xbrl_by_accession = _validate_filing_xbrl(
+        filing_xbrl,
+        selected_facts.company.cik,
+    )
     annual = tuple(
         HistoricalFilingResult(
             filing=bucket.filing,
@@ -60,6 +74,7 @@ def normalize_annual_financials(
                 selected_facts.source_url,
                 policies,
                 derivation_policies,
+                filing_xbrl_by_accession.get(bucket.filing.accession_number),
             ),
         )
         for bucket in selected_facts.annual
@@ -78,6 +93,7 @@ def _resolve_filing_metrics(
     source_url: str,
     policies: tuple[MetricConceptPolicy, ...],
     derivation_policies: tuple[MetricDerivationPolicy, ...],
+    filing_xbrl: SECFilingXBRL | None,
 ) -> tuple[HistoricalMetricResult, ...]:
     direct_results = tuple(
         _resolve_with_derivation(
@@ -86,6 +102,7 @@ def _resolve_filing_metrics(
             company_cik,
             source_url,
             derivation_policies,
+            filing_xbrl,
         )
         for policy in policies
     )
@@ -121,8 +138,17 @@ def _resolve_with_derivation(
     company_cik: int,
     source_url: str,
     derivation_policies: tuple[MetricDerivationPolicy, ...],
+    filing_xbrl: SECFilingXBRL | None,
 ) -> HistoricalMetricResult:
     direct = _resolve_metric(bucket, policy, source_url)
+    if policy.metric is FinancialMetric.DILUTED_WEIGHTED_AVERAGE_SHARES:
+        return derive_googl_diluted_weighted_average_shares(
+            bucket,
+            direct,
+            filing_xbrl,
+            company_cik,
+            GOOGL_DILUTED_SHARES_DERIVATION_POLICY,
+        )
     if not isinstance(direct, MissingHistoricalMetric):
         return direct
     derivation_policy = applicable_derivation_policy(
@@ -165,7 +191,11 @@ def _resolve_metric(
         if selected.relationship is ObservationRelationship.CURRENT
         and selected.period_type is ObservationPeriodType.DURATION
         and selected.observation.end == filing.report_date
-        and _is_numeric(selected.observation.value)
+        and _is_policy_numeric(selected.observation.value, policy)
+        and (
+            policy.required_observation_form is None
+            or selected.observation.form == policy.required_observation_form
+        )
     )
     if not period_candidates:
         return MissingHistoricalMetric(
@@ -174,12 +204,12 @@ def _resolve_metric(
             examined_concepts=policy.candidates,
         )
 
-    usd_candidates = tuple(
+    supported_candidates = tuple(
         selected
         for selected in period_candidates
-        if selected.observation.unit == "USD"
+        if selected.observation.unit == policy.unit
     )
-    if not usd_candidates:
+    if not supported_candidates:
         return MissingHistoricalMetric(
             metric=policy.metric,
             reason=MissingReason.NO_VALID_CURRENT_ANNUAL_OBSERVATION,
@@ -188,13 +218,13 @@ def _resolve_metric(
 
     periods = {
         (selected.observation.start, selected.observation.end)
-        for selected in usd_candidates
+        for selected in supported_candidates
     }
     if len(periods) > 1:
         return _ambiguous(
             policy.metric,
             AmbiguityReason.MULTIPLE_ANNUAL_PERIODS,
-            usd_candidates,
+            supported_candidates,
             source_url,
         )
 
@@ -205,9 +235,23 @@ def _resolve_metric(
             f"accession {filing.accession_number!r}"
         )
 
+    for candidate in policy.candidates:
+        same_concept = tuple(
+            selected
+            for selected in supported_candidates
+            if ConceptKey(selected.taxonomy, selected.concept) == candidate
+        )
+        if len(same_concept) > 1:
+            return _ambiguous(
+                policy.metric,
+                AmbiguityReason.CONFLICTING_CONCEPT_VALUES,
+                same_concept,
+                source_url,
+            )
+
     by_concept = {
         ConceptKey(selected.taxonomy, selected.concept): selected
-        for selected in usd_candidates
+        for selected in supported_candidates
     }
     chosen = next(
         (
@@ -223,7 +267,7 @@ def _resolve_metric(
         )
 
     chosen_value = chosen.observation.value
-    if not _is_numeric(chosen_value):
+    if not _is_policy_numeric(chosen_value, policy):
         raise NormalizationError("Chosen annual financial value is not numeric")
 
     confirming = []
@@ -249,7 +293,7 @@ def _resolve_metric(
     observation = chosen.observation
     return NormalizedHistoricalValue(
         metric=policy.metric,
-        value=chosen_value,
+        value=Decimal(chosen_value) if policy.decimal_output else chosen_value,
         unit=observation.unit,
         period=HistoricalPeriod(start=start, end=end),
         chosen_source=_fact_evidence(chosen, source_url),
@@ -286,8 +330,22 @@ def _ambiguous(
         metric=metric,
         reason=reason,
         candidates=tuple(
-            _fact_evidence(selected, source_url) for selected in candidates
+            _fact_evidence(selected, source_url)
+            for selected in sorted(candidates, key=_selected_order_key)
         ),
+    )
+
+
+def _selected_order_key(selected: SelectedFactObservation) -> tuple[object, ...]:
+    observation = selected.observation
+    return (
+        selected.taxonomy,
+        selected.concept,
+        observation.unit,
+        observation.start or date.min,
+        observation.end,
+        str(observation.value),
+        observation.accession_number,
     )
 
 
@@ -318,6 +376,38 @@ def _fact_evidence(
 
 def _is_numeric(value: SECFactValue) -> bool:
     return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def _is_policy_numeric(
+    value: SECFactValue,
+    policy: MetricConceptPolicy,
+) -> bool:
+    if policy.integer_only:
+        return isinstance(value, int) and not isinstance(value, bool)
+    return _is_numeric(value)
+
+
+def _validate_filing_xbrl(
+    filings: tuple[SECFilingXBRL, ...],
+    company_cik: int,
+) -> dict[str, SECFilingXBRL]:
+    if not isinstance(filings, tuple):
+        raise NormalizationError("Filing-XBRL input must be a tuple")
+    by_accession: dict[str, SECFilingXBRL] = {}
+    for filing_xbrl in filings:
+        if not isinstance(filing_xbrl, SECFilingXBRL):
+            raise NormalizationError("Filing-XBRL input contains an invalid artifact")
+        if filing_xbrl.company.cik != company_cik:
+            raise NormalizationError(
+                "Filing-XBRL company does not match selected company"
+            )
+        accession = filing_xbrl.filing.accession_number
+        if accession in by_accession:
+            raise NormalizationError(
+                f"Filing-XBRL input contains duplicate accession {accession!r}"
+            )
+        by_accession[accession] = filing_xbrl
+    return by_accession
 
 
 def _validate_policies(policies: tuple[MetricConceptPolicy, ...]) -> None:

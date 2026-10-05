@@ -2,13 +2,12 @@
 
 ## Current Milestone
 
-Phase 1F.8b implements four annual debt primitives at reported carrying value:
-Commercial Paper, COST-only Short-Term Borrowings, Current Portion of Long-Term
-Debt, and Non-Current Long-Term Debt. Direct selected-filing Company Facts are
-preferred. Narrow accession-scoped GOOGL identities provide one derived current
-and three derived non-current values after removing finance-lease balances.
-Total debt, net debt, lease capitalization, and the equity bridge remain outside
-this milestone.
+Phase 1F.9b implements annual Diluted Weighted-Average Shares as the historical
+GAAP diluted EPS denominator. Direct selected-filing Company Facts resolve 22
+of 25 validated periods. A narrow GOOGL filing-XBRL derivation adds Class A and
+Class C denominators for 2021–2023 without double-counting Class B, producing
+three derived results. Original selected-filing share basis is preserved; no
+current or forecast valuation-share policy is implemented.
 
 ## Completed
 
@@ -338,14 +337,27 @@ this milestone.
 - Kept commercial paper and short-term borrowings separate and prohibited
   total debt, net debt, lease debt, maturity-principal, and fair-value
   substitutions
+- Added annual Diluted Weighted-Average Shares from only
+  `WeightedAverageNumberOfDilutedSharesOutstanding`, requiring the selected
+  10-K's current duration, unit `shares`, integer non-Boolean input, and exact
+  `Decimal` output
+- Added a GOOGL CIK- and accession-scoped filing-XBRL derivation for selected
+  2021–2023 filings that adds the Class A denominator, which includes Class B
+  conversion, to the separate Class C denominator while retaining full
+  dimensional provenance
+- Validated 22 direct and three derived diluted-share periods with no missing,
+  ambiguity, or value mismatch; preserved GOOGL 2021 at 677,674,000 on the
+  original pre-split filing basis
+- Kept basic shares, period-end shares, split-restated series, current fully
+  diluted shares, forecast dilution, and future valuation-share policy outside
+  this milestone
 
 ## Next Step
 
-Begin Phase 1F.9a with annual diluted-shares research/design, the next required
-historical input for an eventual equity-value and per-share output. Restricted
-liquidity and strategic investments still require separate methodology before
-any universal cash-and-investments subtotal. Interim normalization and final
-standardized historical output remain later Phase 1 work. GOOGL D&A and
+Complete independent review of Phase 1F.9b. After approval, define the final
+standardized annual historical output boundary before expanding to interim
+support. Restricted liquidity and strategic investments still require separate
+methodology before any universal cash-and-investments subtotal. GOOGL D&A and
 GOOGL/MSFT/AAPL Operating NWC remain known
 historical gaps; optional historical operating tax and NOPAT remain
 methodology-blocked without obstructing the manual forecast tax assumption.
@@ -370,6 +382,7 @@ valuation-platform/
 │       │   ├── balance_sheet.py
 │       │   ├── concepts.py
 │       │   ├── derived.py
+│       │   ├── diluted_shares.py
 │       │   ├── historical.py
 │       │   ├── models.py
 │       │   └── operating_nwc.py
@@ -388,6 +401,7 @@ valuation-platform/
 │   ├── normalization/
 │   │   ├── __init__.py
 │   │   ├── test_balance_sheet.py
+│   │   ├── test_diluted_shares.py
 │   │   ├── test_historical.py
 │   │   └── test_operating_nwc.py
 │   └── sec/

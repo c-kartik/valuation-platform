@@ -21,7 +21,7 @@ The standardized historical schema should eventually include:
 - Change in operating net working capital
 - Cash and investments
 - Debt
-- Diluted shares outstanding
+- Diluted weighted-average shares
 
 Exact XBRL concept mappings will be documented as the SEC normalization pipeline is developed and validated.
 
@@ -141,6 +141,37 @@ commercial paper is not substituted for its evidenced bank borrowing. No total
 debt or net debt is calculated. Finance and operating lease treatment remains
 deferred until Capex, lease amortization, lease interest, and lease liabilities
 can be handled consistently in FCFF and valuation.
+
+### Diluted Weighted-Average Shares
+
+`DILUTED_WEIGHTED_AVERAGE_SHARES` is the GAAP diluted EPS denominator reported
+for a selected fiscal year. Direct normalization uses only
+`us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding`, exact unit `shares`,
+an integer non-Boolean Company Facts value, and the exact selected 10-K's current
+annual duration ending on its report date. Output is an exact `Decimal`; actual
+calendar, non-calendar, 52-week, and 53-week dates are preserved.
+
+Direct Company Facts resolves 22 of the 25 validated periods. GOOGL CIK
+`1652044` selected 2021–2023 filings use an approved filing-XBRL derivation:
+Class A diluted denominator plus Class C diluted denominator. The Class A
+calculation already assumes conversion of Class B, so Class B is not added
+again. Both operands must have the exact selected accession and annual period,
+standard diluted-share concept, shares unit, and approved class dimension; the
+Class C issuer-member namespace must match the selected report date. All
+operand dimensions and filing provenance are retained.
+
+Each value preserves the share basis reported in the original selected filing.
+GOOGL 2021 therefore remains 677,674,000 shares on its pre-20-for-1-split basis;
+later restated comparative facts do not replace it. No split-restated series is
+created. The 25-period validation produced 22 direct and three derived results,
+with no missing, ambiguity, or value mismatch.
+
+This metric is not basic weighted-average shares, period-end shares,
+treasury-stock-method incremental shares, or a current or forecast fully diluted
+valuation share count. RSUs, options, contingently issuable shares, convertibles,
+and antidilutive securities are not separately added. A future value-per-share
+denominator requires a distinct policy for current shares, future dilution, and
+buybacks.
 
 ### Signed Tax Reconciliation Evidence
 

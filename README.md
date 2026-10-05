@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1F.8b — annual debt normalization**
+**Phase 1F.9b — annual diluted weighted-average shares normalization**
 
-Next milestone: **Phase 1F.9a — annual diluted-shares research/design**
+Next step: independent review of **Phase 1F.9b**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -53,6 +53,13 @@ authoritative financial concepts or inferring YTD/discrete semantics. The first
 normalization slice resolves annual Revenue, Operating Income, Pretax Income,
 Income Tax Expense, Reported Effective Tax Rate, D&A, and Capex with explicit
 missing and ambiguity results while preserving SEC provenance.
+It also resolves annual Diluted Weighted-Average Shares as the reported GAAP
+EPS denominator. Twenty-two validated periods use the direct standard Company
+Facts concept; GOOGL 2021–2023 use a CIK- and accession-scoped filing-XBRL
+derivation that adds Class A and Class C denominators without double-counting
+Class B. Values retain the share basis of the original selected filing,
+including GOOGL 2021's pre-split basis. This historical metric is not a current
+or forecast fully diluted valuation-share policy.
 D&A is direct for the validated META, AAPL, and COST periods and derived from an
 evidence-backed, CIK-scoped Company Facts policy for MSFT. GOOGL remains
 unresolved. Interim periods and the remaining standardized financial metrics

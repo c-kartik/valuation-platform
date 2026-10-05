@@ -111,6 +111,9 @@ structural fact selection:
   ambiguous results with compact operand-level SEC provenance.
 - `normalization.historical` resolves direct observations first and orchestrates
   an approved derivation only when the direct result is missing.
+- `normalization.diluted_shares` contains the narrow, pure GOOGL filing-XBRL
+  derivation for selected 2021–2023 diluted EPS denominators. Filing artifacts
+  are explicitly supplied by the caller; the module performs no retrieval.
 - `normalization.balance_sheet` separately resolves annual instant evidence
   from explicit Company Facts or filing-XBRL policies into primitive
   balance-sheet snapshots; parsed filing artifacts are supplied by the caller,
@@ -144,10 +147,14 @@ Annual normalization currently supports direct Revenue, Operating Income,
 Pretax Income, Income Tax Expense, D&A, and Capex values, plus derived Reported
 Effective Tax Rate. Results use the deterministic order Revenue, Operating
 Income, Pretax Income, Income Tax Expense, Reported Effective Tax Rate, D&A,
-then Capex. A direct candidate must be a numeric, exact-USD, current
-duration ending on the selected 10-K report date. Actual observation start and
-end dates define the economic period, including non-calendar and 52/53-week
-fiscal years.
+then Capex, followed by Diluted Weighted-Average Shares. Monetary direct
+candidates must be numeric, exact-USD, current durations ending on the selected
+10-K report date. Actual observation start and end dates define the economic
+period, including non-calendar and 52/53-week fiscal years. Diluted
+Weighted-Average Shares instead requires the exact standard
+`WeightedAverageNumberOfDilutedSharesOutstanding` concept, unit `shares`, an
+integer non-Boolean Company Facts value, and the same selected-accession/current
+annual-duration boundary. Its normalized value is an exact `Decimal`.
 D&A and Capex use the same generic direct-resolution path. A direct D&A result
 takes precedence. When direct D&A is missing, an approved policy may produce a
 provenance-distinct derived value; direct ambiguity is never replaced by a
@@ -156,6 +163,16 @@ and adds same-period Company Facts observations for `Depreciation` and
 `AmortizationOfIntangibleAssets`. Filing-level XBRL is not automatically
 connected to normalization. Capex remains a positive expenditure magnitude for
 later subtraction in FCFF.
+
+GOOGL CIK `1652044` selected 2021–2023 filings provide only class-dimensional
+diluted denominators. When the nondimensional direct result is missing, the
+approved derivation adds the Class A denominator, which assumes Class B
+conversion, to the economically separate Class C denominator. Class B is not
+added again. The rule requires the exact selected accession, annual period,
+standard concept, shares unit, approved class axis/members, and report-date
+Google namespace for Class C. Direct results and direct ambiguity retain
+precedence. Original-filing share basis is preserved; no later comparative fact
+or automatic stock-split restatement replaces GOOGL 2021's pre-split result.
 
 Concept priority applies only after period validation. Equal lower-priority
 facts for the same unit and period remain as confirming provenance. Conflicting

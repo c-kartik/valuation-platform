@@ -118,7 +118,7 @@ class NormalizedHistoricalValue:
     """One resolved direct annual financial value."""
 
     metric: FinancialMetric
-    value: int | float
+    value: int | float | Decimal
     unit: str
     period: HistoricalPeriod
     chosen_source: FactEvidence
@@ -147,7 +147,7 @@ class DerivedHistoricalValue:
     period: HistoricalPeriod
     policy_id: str
     operation: DerivationOperation
-    operands: tuple[FactEvidence, ...]
+    operands: tuple[BalanceSheetFactEvidence, ...]
     metric_operands: tuple[DerivedMetricOperand, ...] = ()
     diagnostics: tuple[DerivationDiagnostic, ...] = ()
 

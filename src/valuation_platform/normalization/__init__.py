@@ -42,6 +42,7 @@ from .concepts import (
     ANNUAL_METRIC_POLICIES,
     CAPEX_POLICY,
     D_AND_A_POLICY,
+    DILUTED_WEIGHTED_AVERAGE_SHARES_POLICY,
     INCOME_TAX_EXPENSE_POLICY,
     OPERATING_INCOME_POLICY,
     PRETAX_INCOME_POLICY,
@@ -50,6 +51,12 @@ from .concepts import (
     ConceptPolicyError,
     FinancialMetric,
     MetricConceptPolicy,
+)
+from .diluted_shares import (
+    GOOGL_DILUTED_SHARES_DERIVATION_POLICY,
+    DilutedSharesDerivationError,
+    DilutedSharesDerivationPolicy,
+    derive_googl_diluted_weighted_average_shares,
 )
 from .derived import (
     ANNUAL_DERIVATION_POLICIES,
@@ -196,6 +203,10 @@ __all__ = [
     "GOOGL_CURRENT_PORTION_OF_LONG_TERM_DEBT_DERIVATION_POLICY",
     "GOOGL_NONCURRENT_LONG_TERM_DEBT_DERIVATION_POLICY",
     "D_AND_A_POLICY",
+    "DILUTED_WEIGHTED_AVERAGE_SHARES_POLICY",
+    "GOOGL_DILUTED_SHARES_DERIVATION_POLICY",
+    "DilutedSharesDerivationError",
+    "DilutedSharesDerivationPolicy",
     "INCOME_TAX_EXPENSE_POLICY",
     "INVENTORY_POLICY",
     "MEMBER_REWARDS_LIABILITY_POLICY",
@@ -312,6 +323,7 @@ __all__ = [
     "MSFT_D_AND_A_DERIVATION_POLICY",
     "REPORTED_EFFECTIVE_TAX_RATE_POLICY",
     "derive_reported_effective_tax_rate",
+    "derive_googl_diluted_weighted_average_shares",
     "derive_googl_debt",
     "derive_meta_adjusted_trade_accounts_payable",
     "calculate_operating_nwc_level",

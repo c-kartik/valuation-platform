@@ -1250,7 +1250,14 @@ class AnnualHistoricalNormalizationTests(TestCase):
             )
         )
 
-        revenue, operating_income, pretax, tax, etr, d_and_a, capex = output.annual[0].metrics
+        by_metric = {result.metric: result for result in output.annual[0].metrics}
+        revenue = by_metric[FinancialMetric.REVENUE]
+        operating_income = by_metric[FinancialMetric.OPERATING_INCOME]
+        pretax = by_metric[FinancialMetric.PRETAX_INCOME]
+        tax = by_metric[FinancialMetric.INCOME_TAX_EXPENSE]
+        etr = by_metric[FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE]
+        d_and_a = by_metric[FinancialMetric.D_AND_A]
+        capex = by_metric[FinancialMetric.CAPEX]
         self.assertIsInstance(revenue, NormalizedHistoricalValue)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
         self.assertIsInstance(pretax, MissingHistoricalMetric)
@@ -1268,7 +1275,14 @@ class AnnualHistoricalNormalizationTests(TestCase):
             )
         )
 
-        revenue, operating_income, pretax, tax, etr, d_and_a, capex = output.annual[0].metrics
+        by_metric = {result.metric: result for result in output.annual[0].metrics}
+        revenue = by_metric[FinancialMetric.REVENUE]
+        operating_income = by_metric[FinancialMetric.OPERATING_INCOME]
+        pretax = by_metric[FinancialMetric.PRETAX_INCOME]
+        tax = by_metric[FinancialMetric.INCOME_TAX_EXPENSE]
+        etr = by_metric[FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE]
+        d_and_a = by_metric[FinancialMetric.D_AND_A]
+        capex = by_metric[FinancialMetric.CAPEX]
         self.assertIsInstance(revenue, NormalizedHistoricalValue)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
         self.assertIsInstance(pretax, MissingHistoricalMetric)
@@ -1282,7 +1296,9 @@ class AnnualHistoricalNormalizationTests(TestCase):
             make_input(make_selected(OPERATING_INCOME, value=40))
         )
 
-        revenue, operating_income, _, _, _, _, _ = output.annual[0].metrics
+        by_metric = {result.metric: result for result in output.annual[0].metrics}
+        revenue = by_metric[FinancialMetric.REVENUE]
+        operating_income = by_metric[FinancialMetric.OPERATING_INCOME]
         self.assertIsInstance(revenue, MissingHistoricalMetric)
         self.assertIsInstance(operating_income, NormalizedHistoricalValue)
 
@@ -1349,6 +1365,7 @@ class AnnualHistoricalNormalizationTests(TestCase):
                 FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
                 FinancialMetric.D_AND_A,
                 FinancialMetric.CAPEX,
+                FinancialMetric.DILUTED_WEIGHTED_AVERAGE_SHARES,
             ),
         )
 
