@@ -21,9 +21,9 @@ The project is in the initial development phase.
 
 Current milestone:
 
-**Phase 1G.2 — standardized historical company output**
+**Phase 2A.2 — valuation assumptions model**
 
-Next step: independent review of **Phase 1G.2**
+Next step: independent review of **Phase 2A.2**
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
@@ -66,6 +66,14 @@ NWC results in a period-centric company record. It preserves typed missing and
 ambiguity states, actual fiscal dates, compact SEC provenance, policy versions,
 and exact `Decimal` values serialized as strings. It does not calculate cash or
 debt subtotals, historical NOPAT, forecasts, FCFF, or valuation results.
+The separate valuation package now defines immutable manual assumptions for
+five ordered explicit forecast periods. Rates use finite `Decimal` fractions;
+each year supplies revenue growth, operating margin, forecast tax rate, and
+D&A, Capex, and change in Operating NWC as percentages of revenue. One manual
+WACC and one terminal-growth rate are stored with the company CIK and latest
+historical filing anchor. This layer validates and serializes assumptions only:
+it does not populate them from history or calculate forecasts, FCFF, terminal
+value, DCF, an equity bridge, or value per share.
 D&A is direct for the validated META, AAPL, and COST periods and derived from an
 evidence-backed, CIK-scoped Company Facts policy for MSFT. GOOGL remains
 unresolved. Interim periods and the remaining standardized financial metrics

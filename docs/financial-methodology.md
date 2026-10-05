@@ -6,6 +6,33 @@ This document defines the financial concepts and calculation methodology used by
 
 Financial definitions should remain consistent across SEC normalization, historical analysis, forecasting, and valuation.
 
+## Manual Forecast Assumptions
+
+The initial forecast design uses five explicit ordinal periods rather than
+invented calendar dates. Each period is identified by an index from 1 through
+5 and a descriptive fiscal-year label, allowing calendar, June, September, and
+52/53-week issuers to use the same assumption model.
+
+All rates are manually supplied finite `Decimal` fractions. Each year contains
+revenue growth, operating margin, forecast tax rate, D&A as a percentage of
+revenue, Capex as a positive expenditure percentage of revenue, and change in
+Operating NWC as a percentage of revenue. Positive forecast ΔNWC will later be
+a use of cash; negative ΔNWC will be a source of cash. Direct ΔNWC assumptions
+avoid making unresolved historical O-NWC a forecast-readiness blocker.
+Rate inputs must already be finite `Decimal` instances; integers, floats,
+strings, and other numeric representations are rejected rather than coerced.
+
+The assumption set contains one constant manual WACC and one terminal-growth
+rate with terminal growth strictly below WACC. It does not calculate Gordon
+Growth terminal value. Historical reported ETR, tax expense, and operating-tax
+readiness do not populate the manual forecast tax rate. Loss-period tax
+treatment must be defined explicitly before a future forecast calculator can
+calculate NOPAT for negative EBIT.
+
+Historical diluted weighted-average shares are not a valuation-share policy.
+Valuation share count, cash/debt adjustments, and the enterprise-to-equity
+bridge remain separate future methodology decisions.
+
 ## Historical Financials
 
 Historical financial data should primarily come from official SEC EDGAR/XBRL filings.

@@ -2,12 +2,13 @@
 
 ## Current Milestone
 
-Phase 1G.2 implements the standardized annual company-history boundary. A pure
-period-centric assembler aligns selected-filing duration metrics with closing
-instant balances and existing Operating NWC/change results while preserving
-typed availability, exact Decimal values, compact provenance, and policy
-identity. It performs no forecast, FCFF, subtotal, equity-bridge, or valuation
-calculation.
+Phase 2A.2 implements the immutable manual valuation-assumptions boundary.
+Five explicit ordinal forecast periods store finite Decimal rates for revenue
+growth, operating margin, forecast tax, D&A, Capex, and change in Operating NWC.
+The company-bound set also stores one manual WACC and terminal-growth rate. It
+validates and serializes assumptions without populating them from history or
+calculating forecasts, FCFF, terminal value, DCF, an equity bridge, or per-share
+value.
 
 ## Completed
 
@@ -369,15 +370,29 @@ calculation.
 - Kept cash, investment, and debt primitives separate and left historical
   NOPAT, forecast assumptions, FCFF, equity bridges, valuation shares, and DCF
   outside the standardized historical boundary
+- Added a separate `valuation` package with immutable five-year manual
+  assumption models bound to company CIK, latest historical accession, and
+  fiscal-end date without retaining normalization or SEC objects
+- Required ordered forecast indices 1–5 and descriptive labels without
+  synthesizing future dates or assuming calendar fiscal years
+- Added strict finite-Decimal fraction validation for per-year revenue growth,
+  operating margin, forecast tax rate, D&A/revenue, Capex/revenue, and
+  ΔNWC/revenue, plus one manual WACC and terminal-growth rate
+- Chose direct ΔNWC as a percentage of revenue so unresolved historical O-NWC
+  does not block manual forward assumptions; no forecast O-NWC level is added
+- Added deterministic explicit serialization with Decimal strings and preserved
+  the boundary around manual forecast tax, unresolved loss-period tax policy,
+  valuation shares, and the enterprise-to-equity bridge
+- Kept all forecast calculations, NOPAT, FCFF, discounting, terminal value, DCF,
+  scenarios, sensitivity analysis, and reverse DCF unimplemented
 
 ## Next Step
 
-Complete independent review of Phase 1G.2. The next milestone will be selected
-after that review. Restricted liquidity and strategic investments still require separate
-methodology before any universal cash-and-investments subtotal. GOOGL D&A and
-GOOGL/MSFT/AAPL Operating NWC remain known
-historical gaps; optional historical operating tax and NOPAT remain
-methodology-blocked without obstructing the manual forecast tax assumption.
+Complete independent review of Phase 2A.2. After approval, design the pure
+forecast-calculation boundary that binds these assumptions to the latest
+standardized historical Revenue. Negative-EBIT tax treatment must be resolved
+before that calculator produces NOPAT for loss periods. Forecast FCFF, DCF,
+valuation shares, and the enterprise-to-equity bridge remain later milestones.
 
 ## Current Repository Structure
 
@@ -404,6 +419,9 @@ valuation-platform/
 │       │   ├── models.py
 │       │   ├── output.py
 │       │   └── operating_nwc.py
+│       ├── valuation/
+│       │   ├── __init__.py
+│       │   └── assumptions.py
 │       └── sec/
 │           ├── __init__.py
 │           ├── client.py
@@ -423,6 +441,9 @@ valuation-platform/
 │   │   ├── test_historical.py
 │   │   ├── test_output.py
 │   │   └── test_operating_nwc.py
+│   ├── valuation/
+│   │   ├── __init__.py
+│   │   └── test_assumptions.py
 │   └── sec/
 │       ├── __init__.py
 │       ├── test_client.py

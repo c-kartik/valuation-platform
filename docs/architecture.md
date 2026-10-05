@@ -28,6 +28,28 @@ Valuation Engine
 Valuation Outputs
 ```
 
+## Valuation Assumptions Boundary
+
+`valuation.assumptions` is independent from SEC retrieval and normalization.
+It defines one immutable manual assumption set bound only to a company CIK,
+the latest historical accession, and its fiscal-end date. Five explicit
+forecast periods use canonical indices 1–5 and descriptive fiscal-year labels;
+the module does not synthesize dates or assume a December year-end.
+
+Each period stores finite `Decimal` fractions for revenue growth, operating
+margin, forecast tax rate, D&A as a percentage of revenue, Capex as a
+percentage of revenue, and change in Operating NWC as a percentage of revenue.
+Rates must already be finite `Decimal` instances and are not coerced from
+integers, floats, strings, or other numeric representations.
+The set stores one constant manual WACC and one terminal-growth rate. Explicit
+serialization emits Decimal strings and preserves period order.
+
+This layer validates assumptions only. It does not inspect standardized
+history, populate assumptions, calculate forecast financials, define
+loss-period tax treatment, derive WACC, or calculate FCFF, terminal value, DCF,
+an equity bridge, or per-share value. A future forecast boundary will validate
+the historical anchor against `StandardizedHistoricalCompany`.
+
 ## Phase 1 SEC Boundary
 
 The SEC package separates transport from dataset interpretation:
