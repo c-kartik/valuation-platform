@@ -71,10 +71,29 @@ Phase 1H.3 records root causes in
 `docs/universe/sp500-top-50-failure-taxonomy.md`. Identity generalization must
 continue to normalize only documented SEC representations and then enforce
 exact CIK equality. Registrant-successor or filing-owner relationships must be
-established from official SEC identifiers and filing metadata; fuzzy company
-names and issuer hardcodes are not identity evidence. Financial gaps remain
-typed until a reusable concept rule, complete derivation, or documented
-issuer-specific accounting policy is supported by filing evidence.
+established from official SEC identifiers and explicit legal-continuity filing
+evidence; fuzzy company names and issuer hardcodes are not identity evidence.
+Financial gaps remain typed until a reusable concept rule, complete derivation,
+or documented issuer-specific accounting policy is supported by filing
+evidence.
+
+Phase 1H.4 Wave 1B defines the registrant-succession boundary in
+`docs/sec-identity-linkage.md`. Ticker resolution remains the authoritative
+`ticker -> current CIK` boundary. A future, separate `sec.registrant_history`
+layer could discover historical-CIK candidates, validate directed legal links,
+and build a bounded provenance-bearing chain only after current submissions are
+insufficient. Filing histories and Company Facts would be retrieved separately
+per actual registrant CIK; historical identities would never be rewritten to
+the current CIK.
+
+Implementation is currently **NO-GO**. SEC submissions cross-listing and
+filing-level DEI identities are useful candidate evidence but do not encode a
+stable directed predecessor/successor relationship. XOM's legal succession is
+explicit in official narrative filings, yet a generic ambiguity-safe parser
+for exact legal-role-to-CIK binding has not been established. Cross-listing,
+ticker equality, company-name similarity, and parent/subsidiary status remain
+insufficient, so production keeps XOM unresolved and no registrant-history
+module is present.
 
 ## Valuation Assumptions Boundary
 

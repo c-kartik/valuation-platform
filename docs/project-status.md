@@ -35,6 +35,16 @@ all later stages to standardized output, with two annual periods each. The
 full corpus rerun completed all 43 generic attempts with no stage failures and
 left every five-issuer seed result unchanged. No issuer hardcode was added.
 
+Phase 1H.4 Wave 1B completed the registrant-succession design in
+`docs/sec-identity-linkage.md`. Official XOM filings establish the human-reviewed
+edge from predecessor CIK 34088 to current successor CIK 2115436, effective
+2026-07-01. The design nevertheless reached **NO-GO** for a generic automated
+resolver: public structured SEC sources discover candidates but do not encode
+the directed legal edge, while the decisive relationship remains in variable
+narrative filing text. Cross-listing alone is explicitly rejected. No source
+or test code changed, no issuer mapping was added, and XOM remains unresolved
+in production.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -463,15 +473,23 @@ being inferred as zero.
 - Live-reran GEV and SNDK through complete standardized output with two annual
   periods each, then completed all 43 generic corpus attempts with no failures;
   the five seed histories and typed states remained unchanged
+- Completed the registrant-succession identity-linkage design with exact
+  terminology, official SEC evidence hierarchy, deterministic acceptance and
+  rejection gates, bounded chain semantics, provenance, Company Facts and
+  filing-selection interactions, and adversarial cases
+- Recorded a NO-GO decision for automated linkage because public structured SEC
+  sources do not encode the directed predecessor/successor CIK edge; retained
+  XOM as unresolved rather than adding a ticker, name, or issuer hardcode
 
 ## Next Step
 
-Phase 1H.4 Wave 1B is next: complete and independently review the deterministic
-registrant-succession identity-linkage design required before any generic XOM
-resolver implementation. Cross-listing alone remains insufficient. The Phase
-2A assumptions model is implemented, but forecast, FCFF, DCF, equity-bridge,
-per-share, reverse-DCF, scenario, and sensitivity work is intentionally paused
-through Phase 1H.
+Independently review the completed Phase 1H.4 Wave 1B design and its NO-GO
+decision. After review, keep XOM unresolved and proceed to the next general
+Wave 1 work item: widen the exact standard cash policy beyond the seed CIKs,
+with the existing structural eligibility and ambiguity rules unchanged. The
+Phase 2A assumptions model is implemented, but forecast, FCFF, DCF,
+equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
+intentionally paused through Phase 1H.
 
 ## Phase 1H Roadmap
 
@@ -486,10 +504,12 @@ through Phase 1H.
    dimensional, derivation, period-association, methodology, and specialized
    business-model issues and ranked the reusable backlog.
 4. **Phase 1H.4 — Generalization waves (in progress):** Wave 1A fixed exact
-   padded Company Facts CIK handling. Next, complete the registrant-succession
-   design gate before proceeding to high-frequency concept variants, extension
-   patterns, dimensions, non-calendar periods, acquisition accounting,
-   debt/lease presentation, D&A decomposition, and working-capital perimeters.
+   padded Company Facts CIK handling. Wave 1B completed the
+   registrant-succession design and reached NO-GO for automated linkage, leaving
+   XOM unresolved. After independent review, proceed to high-frequency concept
+   variants, beginning with exact standard cash, then extension patterns,
+   dimensions, non-calendar periods, acquisition accounting, debt/lease
+   presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
    `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.
@@ -511,6 +531,7 @@ valuation-platform/
 │   ├── architecture.md
 │   ├── financial-methodology.md
 │   ├── project-status.md
+│   ├── sec-identity-linkage.md
 │   └── universe/
 │       ├── sp500-top-50-2026-10-02.csv
 │       └── sp500-top-50-2026-10-02.md

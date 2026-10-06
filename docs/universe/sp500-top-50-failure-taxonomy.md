@@ -85,30 +85,25 @@ therefore correctly returns zero annual filings for current CIK 2115436. This
 is a `TICKER_CIK_IDENTITY` registrant-succession problem, not a reason to relax
 filing selection or hardcode XOM to CIK 34088.
 
-Phase 1H.4 must complete a registrant-succession identity-linkage design before
-resolver code is changed. The design must:
+Phase 1H.4 Wave 1B completed the detailed design in
+`docs/sec-identity-linkage.md`. The official 2026-07-01 Form 8-K12B explicitly
+identifies Exxon Mobil Corporation as predecessor, ExxonMobil Holdings as
+successor under Rule 12g-3(a), and 2026-07-01 as the effective date. The joint
+2026 10-Q corroborates both registrants, the one-for-one reorganization, and
+continuity of the consolidated business and reporting basis. Together they
+support the human-reviewed edge `34088 -> 2115436`.
 
-- begin with the current CIK from the official SEC ticker dataset;
-- use only official SEC evidence, including submissions metadata, filing
-  accession ownership, filing cover-page or inline-XBRL registrant identities,
-  and explicit predecessor/successor disclosures;
-- treat cross-listing as evidence to investigate, never as sufficient authority
-  to traverse to another CIK, because joint filings, multiple registrants, and
-  parent/subsidiary arrangements can also produce cross-listed filings;
-- require explicit authoritative succession, predecessor/successor status, or
-  an equivalently strong SEC-documented legal-continuity relationship before a
-  filing-owner CIK can supply historical continuity;
-- reject multiple plausible registrants or any linkage that cannot be
-  established deterministically as an explicit identity ambiguity or
-  unresolved result;
-- reject ticker equality as proof of continuity, protecting against unrelated
-  ticker reuse; and
-- remain reusable, without an `XOM -> 34088` mapping, fuzzy company-name
-  matching, or another issuer hardcode.
-
-Only after that design is independently reviewed should generic identity
-handling be implemented. If official SEC evidence cannot support a reliable
-general rule, XOM must remain unresolved.
+The implementation decision is nevertheless **NO-GO**. The structured
+submissions, archive, cover-page, and DEI evidence discover and bind candidate
+registrants but do not encode the directed legal edge. That direction remains
+in variable narrative filing text, for which no generic ambiguity-safe parser
+has been established. Cross-listing alone remains insufficient because it also
+occurs for joint filers, parent/subsidiary registrants, and co-obligors. The
+design therefore rejects ticker/name matching, multiple or conflicting
+candidates, unclear direction, inconsistent chronology, and incomplete
+evidence; it supports bounded, cycle-detected chains conceptually but does not
+authorize production traversal. XOM remains unresolved without an
+`XOM -> 34088` hardcode.
 
 ## Standardized measure coverage
 
@@ -413,7 +408,7 @@ issuers have one post-smoke classification.
 | Priority | Root cause | Evidence / affected scope | Blocking scope | Candidate fix | Generalizability | Accounting risk |
 |---:|---|---|---|---|---|---|
 | 1 | `COMPANY_FACTS_SCHEMA` | GEV and SNDK; four selected periods | Entire issuer | **Implemented in Wave 1A:** strict ten-digit padded-string CIK support with equality protection | High | Low |
-| 2 | `TICKER_CIK_IDENTITY` | XOM; intended five-year history | Entire issuer | Design and validate deterministic SEC registrant-succession linkage; implement only if generalizable and ambiguity-safe | Medium-high | Medium |
+| 2 | `TICKER_CIK_IDENTITY` | XOM; intended five-year history | Entire issuer | **Wave 1B NO-GO:** structured SEC evidence does not encode the directed legal edge; retain unresolved until a generic exact-CIK succession parser is independently supported | Medium | Medium-high |
 | 3 | `CONCEPT_POLICY` | Cash: 175 missing; 158 have exact eligible standard facts | One high-value balance | Generalize exact cash policy beyond seed CIKs | Very high | Low |
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | Revenue: 22 ambiguities across seven issuers | Core flow metric | Separate full-year selection from genuine concept-definition conflicts | High | Medium-high |
 | 5 | `CONCEPT_POLICY` | Pretax: 45 missing + one ambiguous; ETR mirrors it | Core flow and diagnostic | Research approved standard pretax variants and period rules | High | Medium |
@@ -429,10 +424,9 @@ issuers have one post-smoke classification.
 ## Recommended Phase 1H.4 waves
 
 1. **Infrastructure/schema blockers:** Wave 1A completed and tested strict
-   padded Company Facts CIK normalization. Next complete and independently
-   review the registrant-succession identity-linkage design above. Implement
-   generic identity handling only if the resulting rule is deterministic,
-   generalizable, and ambiguity-safe; otherwise keep XOM unresolved.
+   padded Company Facts CIK normalization. Wave 1B completed the
+   registrant-succession identity-linkage design and reached NO-GO for a generic
+   automated resolver; keep XOM unresolved and do not add a hardcoded link.
 2. **High-frequency, low-risk standard facts:** generalize exact cash evidence;
    then separate revenue full-year period association from true concept
    conflicts and research pretax variants.
