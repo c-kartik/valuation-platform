@@ -23,6 +23,14 @@ methodology-blocked, and 42 not-comparable states across 204 issuer-periods.
 The original Phase 1H.3 matrix remains below as the evidence baseline for the
 ranked backlog.
 
+**Wave 2 follow-up:** the exact standard
+`CashAndCashEquivalentsAtCarryingValue` policy now applies without a seed-CIK
+restriction. The post-Wave-1A live baseline contained 25 resolved and 179
+missing cash periods; Wave 2 produced 185 resolved, 19 missing, and no ambiguous
+cash periods. The 160 new resolutions moved aggregate corpus totals to 1,823
+resolved and 1,549 missing, while 27 ambiguous, 27 methodology-blocked, 42
+not-comparable, and all 3,468 total states remained unchanged.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -188,12 +196,24 @@ period. Stage failures and XOM's empty history have no measure denominator.
 
 ### Cash and investments
 
-The cash policy is intentionally scoped to the five seed CIKs. The exact
-standard `CashAndCashEquivalentsAtCarryingValue` fact is structurally eligible
-in 183 periods across 38 issuers. After the 25 seed resolutions, 158 currently
-missing issuer-periods already contain that same evidence. This is the clearest
-high-frequency, low-interpretation `CONCEPT_POLICY` generalization candidate.
-The remaining 17 missing periods need separate presentation research.
+At the Phase 1H.3 baseline, the cash policy was intentionally scoped to the five
+seed CIKs. The exact standard `CashAndCashEquivalentsAtCarryingValue` fact was
+structurally eligible in 183 periods across 38 issuers, leaving 158 eligible
+policy-scope misses after the 25 seed resolutions. Wave 2 removed only that CIK
+restriction. The current 204-period corpus resolves 185 periods across 39
+issuers: 25 seed periods plus 160 newly resolved periods across 34 issuers.
+SNDK contributes the two resolutions beyond the original 158 estimate because
+Wave 1A made its two-period Company Facts history available; GEV's two new
+periods remain missing.
+
+The remaining 19 missing periods are INTC (four), CVX (three), PG (five), GE
+(five), and GEV (two). All expose the broader standard
+`CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents`; PG also exposes
+`CashEquivalentsAtCarryingValue`, while GE exposes a further
+disposal-group-inclusive variant. Those captions are not silently treated as
+the approved gross cash-and-cash-equivalents primitive. Company Facts does not
+provide dimensions, no filing-XBRL or segment aggregation is performed, and
+multiple eligible selected-accession observations would remain ambiguous.
 
 The current short-term-investment candidates appear in 121 periods across 25
 issuers, including two periods with overlapping candidates, while only 25
@@ -409,7 +429,7 @@ issuers have one post-smoke classification.
 |---:|---|---|---|---|---|---|
 | 1 | `COMPANY_FACTS_SCHEMA` | GEV and SNDK; four selected periods | Entire issuer | **Implemented in Wave 1A:** strict ten-digit padded-string CIK support with equality protection | High | Low |
 | 2 | `TICKER_CIK_IDENTITY` | XOM; intended five-year history | Entire issuer | **Wave 1B NO-GO:** structured SEC evidence does not encode the directed legal edge; retain unresolved until a generic exact-CIK succession parser is independently supported | Medium | Medium-high |
-| 3 | `CONCEPT_POLICY` | Cash: 175 missing; 158 have exact eligible standard facts | One high-value balance | Generalize exact cash policy beyond seed CIKs | Very high | Low |
+| 3 | `CONCEPT_POLICY` | **Implemented in Wave 2:** 160 additional periods resolved; 19 broader-caption periods remain missing | One high-value balance | Keep broader restricted-cash and cash-equivalents-only captions unresolved pending separate evidence | Very high | Low |
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | Revenue: 22 ambiguities across seven issuers | Core flow metric | Separate full-year selection from genuine concept-definition conflicts | High | Medium-high |
 | 5 | `CONCEPT_POLICY` | Pretax: 45 missing + one ambiguous; ETR mirrors it | Core flow and diagnostic | Research approved standard pretax variants and period rules | High | Medium |
 | 6 | `CONCEPT_POLICY` / `ISSUER_EXTENSION` | Operating income: 35 missing across seven issuers | Core FCFF input | Filing-level face-statement concept inventory | Medium | High |
@@ -427,9 +447,10 @@ issuers have one post-smoke classification.
    padded Company Facts CIK normalization. Wave 1B completed the
    registrant-succession identity-linkage design and reached NO-GO for a generic
    automated resolver; keep XOM unresolved and do not add a hardcoded link.
-2. **High-frequency, low-risk standard facts:** generalize exact cash evidence;
-   then separate revenue full-year period association from true concept
-   conflicts and research pretax variants.
+2. **High-frequency, low-risk standard facts:** exact cash generalization is
+   implemented; retain the 19 broader-caption cases as typed missing, then
+   separate revenue full-year period association from true concept conflicts
+   and research pretax variants.
 3. **Core FCFF flows:** investigate operating-income face-statement evidence,
    D&A groups, and Capex variants. Approve only repeatable definitions with
    selected-accession evidence.

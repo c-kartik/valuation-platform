@@ -45,6 +45,25 @@ narrative filing text. Cross-listing alone is explicitly rejected. No source
 or test code changed, no issuer mapping was added, and XOM remains unresolved
 in production.
 
+Phase 1H.4 Wave 2 generalized the exact standard
+`us-gaap:CashAndCashEquivalentsAtCarryingValue` Company Facts policy by removing
+its five-seed-CIK restriction while preserving the existing selected-accession,
+current-instant, report-date, USD, integer, and ambiguity rules. A live corpus
+rerun increased cash coverage from 25 resolved / 179 missing / 0 ambiguous to
+185 resolved / 19 missing / 0 ambiguous across the 204 selected periods. The
+160 new resolutions span 34 issuers. The difference from the Phase 1H.3
+estimate of 158 is SNDK's two exact eligible periods, which became available
+after Wave 1A fixed its padded Company Facts CIK.
+
+The 19 remaining cash gaps are INTC (four periods), CVX (three), PG (five), GE
+(five), and GEV (two). Their selected filings expose broader restricted-cash
+captions; PG also uses `CashEquivalentsAtCarryingValue`, and GE has a
+disposal-group-inclusive caption. Wave 2 does not treat those concepts as the
+same primitive, derive unrestricted cash, consume filing XBRL, or combine cash
+with investments. Aggregate standardized states reconciled exactly to 1,823
+resolved, 1,549 missing, 27 ambiguous, 27 methodology-blocked, and 42
+not-comparable, with all 3,468 states and all other measure statuses unchanged.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -480,14 +499,16 @@ being inferred as zero.
 - Recorded a NO-GO decision for automated linkage because public structured SEC
   sources do not encode the directed predecessor/successor CIK edge; retained
   XOM as unresolved rather than adding a ticker, name, or issuer hardcode
+- Generalized the exact standard cash Company Facts policy beyond the seed CIKs,
+  resolving 160 additional issuer-periods without accepting broader
+  restricted-cash or combined cash-and-investment captions
 
 ## Next Step
 
-Independently review the completed Phase 1H.4 Wave 1B design and its NO-GO
-decision. After review, keep XOM unresolved and proceed to the next general
-Wave 1 work item: widen the exact standard cash policy beyond the seed CIKs,
-with the existing structural eligibility and ambiguity rules unchanged. The
-Phase 2A assumptions model is implemented, but forecast, FCFF, DCF,
+Independently review Phase 1H.4 Wave 2. Keep the 19 broader-caption cash periods
+typed missing, and proceed afterward to the next reusable generalization item:
+revenue period/concept conflicts. The Phase 2A assumptions model is
+implemented, but forecast, FCFF, DCF,
 equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
 intentionally paused through Phase 1H.
 
@@ -506,8 +527,9 @@ intentionally paused through Phase 1H.
 4. **Phase 1H.4 — Generalization waves (in progress):** Wave 1A fixed exact
    padded Company Facts CIK handling. Wave 1B completed the
    registrant-succession design and reached NO-GO for automated linkage, leaving
-   XOM unresolved. After independent review, proceed to high-frequency concept
-   variants, beginning with exact standard cash, then extension patterns,
+   XOM unresolved. Wave 2 generalized the exact standard cash policy, resolving
+   160 additional periods while leaving 19 broader-caption cases missing.
+   Continue with revenue period/concept conflicts, then extension patterns,
    dimensions, non-calendar periods, acquisition accounting, debt/lease
    presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent

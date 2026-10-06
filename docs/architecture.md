@@ -379,7 +379,12 @@ absence stays typed missing. Conflicting eligible observations stay ambiguous.
 
 The instant resolver also preserves three gross reported liquidity and
 investment primitives. `CashAndCashEquivalentsAtCarryingValue` supplies cash
-for the five validated CIKs. Short-term investments use CIK-scoped policies:
+for any issuer when the exact standard Company Facts observation satisfies the
+structural eligibility rules. The cash policy does not accept broader
+restricted-cash-inclusive captions, issuer extensions, or filing-XBRL facts.
+Company Facts does not expose context dimensions; the policy performs no
+dimensional aggregation, and repeated eligible observations remain ambiguous.
+Short-term investments use CIK-scoped policies:
 `MarketableSecuritiesCurrent` for META, GOOGL, and AAPL, a META-only
 `AvailableForSaleSecuritiesDebtSecuritiesCurrent` fallback, and
 `ShortTermInvestments` for MSFT and COST. Apple alone uses

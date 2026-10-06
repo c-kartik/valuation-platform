@@ -265,13 +265,6 @@ CASH_AND_CASH_EQUIVALENTS_POLICY = BalanceSheetMetricPolicy(
     candidates=(
         BalanceSheetConceptCandidate(
             ConceptKey("us-gaap", "CashAndCashEquivalentsAtCarryingValue"),
-            applicable_ciks=(
-                _META_CIK,
-                _GOOGL_CIK,
-                _MSFT_CIK,
-                _AAPL_CIK,
-                _COST_CIK,
-            ),
         ),
     ),
 )

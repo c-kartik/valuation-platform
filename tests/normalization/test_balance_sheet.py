@@ -90,6 +90,7 @@ def make_filing(
 def make_selected(
     concept: str,
     *,
+    taxonomy: str = "us-gaap",
     value: object = 1,
     accession: str = "annual",
     start: date | None = None,
@@ -98,7 +99,7 @@ def make_selected(
     relationship: ObservationRelationship = ObservationRelationship.CURRENT,
 ) -> SelectedFactObservation:
     return SelectedFactObservation(
-        taxonomy="us-gaap",
+        taxonomy=taxonomy,
         concept=concept,
         observation=SECFactObservation(
             unit=unit,
@@ -636,11 +637,30 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
                 self.assertEqual(result.chosen_source.value, value)
                 self.assertIs(type(result.chosen_source.value), int)
 
+    def test_standard_cash_policy_applies_beyond_seed_ciks(self) -> None:
+        for cik in (1045810, 310158, 1996810):
+            with self.subTest(cik=cik):
+                result = metric_result(
+                    make_input(
+                        make_selected(CASH, value=123),
+                        company_cik=cik,
+                    ),
+                    FinancialMetric.CASH_AND_CASH_EQUIVALENTS,
+                )
+
+                self.assertIsInstance(result, NormalizedBalanceSheetValue)
+                assert isinstance(result, NormalizedBalanceSheetValue)
+                self.assertEqual(result.value, Decimal("123"))
+                self.assertEqual(result.chosen_source.taxonomy, "us-gaap")
+                self.assertEqual(result.chosen_source.concept, CASH)
+
     def test_reported_cash_rejects_unapproved_and_structurally_invalid_facts(self) -> None:
         cases = (
             make_selected("CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"),
+            make_selected("CashEquivalentsAtCarryingValue"),
             make_selected("CashAndCashEquivalentsFairValueDisclosure"),
             make_selected("Cash"),
+            make_selected(CASH, taxonomy="example-extension"),
             make_selected(CASH, relationship=ObservationRelationship.COMPARATIVE),
             make_selected(CASH, start=date(2025, 1, 1)),
             make_selected(CASH, end=date(2025, 12, 30)),
@@ -671,18 +691,58 @@ class AnnualBalanceSheetNormalizationTests(TestCase):
             )
 
     def test_duplicate_eligible_cash_facts_are_ambiguous(self) -> None:
-        result = metric_result(
-            make_input(
-                make_selected(CASH, value=10),
-                make_selected(CASH, value=11),
-                company_cik=1326801,
-            ),
-            FinancialMetric.CASH_AND_CASH_EQUIVALENTS,
+        observations = (
+            make_selected(CASH, value=10),
+            make_selected(CASH, value=11),
+        )
+        results = tuple(
+            metric_result(
+                make_input(*ordered, company_cik=1045810),
+                FinancialMetric.CASH_AND_CASH_EQUIVALENTS,
+            )
+            for ordered in (observations, tuple(reversed(observations)))
         )
 
-        self.assertIsInstance(result, AmbiguousHistoricalMetric)
-        assert isinstance(result, AmbiguousHistoricalMetric)
-        self.assertEqual(tuple(item.value for item in result.candidates), (10, 11))
+        self.assertEqual(results[0], results[1])
+        self.assertIsInstance(results[0], AmbiguousHistoricalMetric)
+        assert isinstance(results[0], AmbiguousHistoricalMetric)
+        self.assertEqual(
+            tuple(item.value for item in results[0].candidates),
+            (10, 11),
+        )
+
+    def test_dimensional_filing_xbrl_cash_does_not_bypass_company_facts_policy(
+        self,
+    ) -> None:
+        dimension = FilingXBRLDimension(
+            dimension=FilingXBRLQName("http://example.com", "Axis"),
+            explicit_member=FilingXBRLQName("http://example.com", "Member"),
+            typed_member_xml=None,
+        )
+        fact = make_filing_xbrl_fact(
+            namespace="http://fasb.org/us-gaap/2025",
+            concept=CASH,
+            dimensions=(dimension,),
+            numeric_value=Decimal("123"),
+            raw_value="123",
+        )
+        result = metric_result(
+            make_input(company_cik=1045810),
+            FinancialMetric.CASH_AND_CASH_EQUIVALENTS,
+            filing_xbrl=(
+                make_filing_xbrl(
+                    fact,
+                    company_cik=1045810,
+                ),
+            ),
+        )
+
+        self.assertIsInstance(result, MissingHistoricalMetric)
+        assert isinstance(result, MissingHistoricalMetric)
+        self.assertIs(
+            result.reason,
+            MissingReason.NO_CONFIGURED_CONCEPT_OBSERVATION,
+        )
 
     def test_short_term_investment_concepts_are_cik_scoped(self) -> None:
         cases = (
