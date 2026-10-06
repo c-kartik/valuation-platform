@@ -252,6 +252,13 @@ Weighted-Average Shares instead requires the exact standard
 `WeightedAverageNumberOfDilutedSharesOutstanding` concept, unit `shares`, an
 integer non-Boolean Company Facts value, and the same selected-accession/current
 annual-duration boundary. Its normalized value is an exact `Decimal`.
+A current duration from a selected 10-K that ends on its report date does not,
+by itself, establish a full fiscal-year period. This remains true for a unique
+diluted weighted-average-share duration because a 10-K can also disclose Q4 or
+other shorter-period facts. The repository currently has no independent source
+that proves the fiscal-year start, so annual-vs-Q4 collisions remain typed
+ambiguity rather than being filtered by form, `fy`, `fp`, `frame`, duration
+length, calendar assumptions, diluted shares, or candidate consensus.
 D&A and Capex use the same generic direct-resolution path. A direct D&A result
 takes precedence. When direct D&A is missing, an approved policy may produce a
 provenance-distinct derived value; direct ambiguity is never replaced by a

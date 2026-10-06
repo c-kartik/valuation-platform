@@ -19,6 +19,7 @@ from valuation_platform.normalization import (
     INCOME_TAX_EXPENSE_POLICY,
     MissingHistoricalMetric,
     MissingReason,
+    NormalizationError,
     NormalizedHistoricalValue,
     PRETAX_INCOME_POLICY,
     REVENUE_POLICY,
@@ -47,6 +48,7 @@ PRETAX_INCOME = (
 INCOME_TAX_EXPENSE = "IncomeTaxExpenseBenefit"
 D_AND_A = "DepreciationDepletionAndAmortization"
 CAPEX = "PaymentsToAcquirePropertyPlantAndEquipment"
+DILUTED_SHARES = "WeightedAverageNumberOfDilutedSharesOutstanding"
 
 
 def make_filing(
@@ -1188,6 +1190,132 @@ class AnnualHistoricalNormalizationTests(TestCase):
         assert isinstance(result, AmbiguousHistoricalMetric)
         self.assertIs(result.reason, AmbiguityReason.MULTIPLE_ANNUAL_PERIODS)
         self.assertEqual(len(result.candidates), 2)
+
+    def test_q4_only_diluted_shares_does_not_establish_annual_period(self) -> None:
+        selected = make_input(
+            make_selected(RFC, value=100, start=date(2025, 1, 1)),
+            make_selected(RFC, value=25, start=date(2025, 10, 1)),
+            make_selected(
+                DILUTED_SHARES,
+                value=10,
+                unit="shares",
+                start=date(2025, 10, 1),
+            ),
+        )
+
+        result = metric_result(selected, FinancialMetric.REVENUE)
+
+        self.assertIsInstance(result, AmbiguousHistoricalMetric)
+        assert isinstance(result, AmbiguousHistoricalMetric)
+        self.assertIs(result.reason, AmbiguityReason.MULTIPLE_ANNUAL_PERIODS)
+        self.assertEqual(tuple(item.value for item in result.candidates), (100, 25))
+        self.assertNotEqual(getattr(result, "value", None), 25)
+
+    def test_unique_diluted_share_period_does_not_choose_revenue_period(self) -> None:
+        annual_start = date(2024, 7, 1)
+        report_date = date(2025, 6, 30)
+        filing = make_filing(report_date=report_date)
+        observations = (
+            make_selected(RFC, value=25, start=date(2025, 4, 1), end=report_date),
+            make_selected(REVENUES, value=100, start=annual_start, end=report_date),
+            make_selected(
+                DILUTED_SHARES,
+                value=10,
+                unit="shares",
+                start=annual_start,
+                end=report_date,
+            ),
+        )
+
+        results = []
+        for ordered in (observations, tuple(reversed(observations))):
+            with self.subTest(order=ordered):
+                result = metric_result(
+                    make_input(*ordered, filing=filing),
+                    FinancialMetric.REVENUE,
+                )
+                self.assertIsInstance(result, AmbiguousHistoricalMetric)
+                assert isinstance(result, AmbiguousHistoricalMetric)
+                self.assertIs(result.reason, AmbiguityReason.MULTIPLE_ANNUAL_PERIODS)
+                results.append(result)
+        self.assertEqual(results[0], results[1])
+
+    def test_diluted_shares_does_not_hide_full_year_concept_conflict(self) -> None:
+        selected = make_input(
+            make_selected(RFC, value=100),
+            make_selected(REVENUES, value=101),
+            make_selected(DILUTED_SHARES, value=10, unit="shares"),
+        )
+
+        result = metric_result(selected, FinancialMetric.REVENUE)
+
+        self.assertIsInstance(result, AmbiguousHistoricalMetric)
+        assert isinstance(result, AmbiguousHistoricalMetric)
+        self.assertIs(result.reason, AmbiguityReason.CONFLICTING_CONCEPT_VALUES)
+        self.assertEqual(tuple(item.value for item in result.candidates), (100, 101))
+
+    def test_multiple_diluted_share_periods_do_not_choose_annuality(self) -> None:
+        observations = (
+            make_selected(RFC, value=100, start=date(2025, 1, 1)),
+            make_selected(REVENUES, value=25, start=date(2025, 10, 1)),
+            make_selected(
+                DILUTED_SHARES,
+                value=10,
+                unit="shares",
+                start=date(2025, 1, 1),
+            ),
+            make_selected(
+                DILUTED_SHARES,
+                value=3,
+                unit="shares",
+                start=date(2025, 10, 1),
+            ),
+        )
+        results = tuple(
+            metric_result(make_input(*ordered), FinancialMetric.REVENUE)
+            for ordered in (observations, tuple(reversed(observations)))
+        )
+
+        self.assertEqual(results[0], results[1])
+        for result in results:
+            self.assertIsInstance(result, AmbiguousHistoricalMetric)
+            assert isinstance(result, AmbiguousHistoricalMetric)
+            self.assertIs(result.reason, AmbiguityReason.MULTIPLE_ANNUAL_PERIODS)
+
+    def test_wrong_accession_diluted_share_observation_is_rejected(self) -> None:
+        selected = make_input(
+            make_selected(RFC, value=100, start=date(2025, 1, 1)),
+            make_selected(RFC, value=25, start=date(2025, 10, 1)),
+            make_selected(
+                DILUTED_SHARES,
+                accession="other",
+                value=10,
+                unit="shares",
+                start=date(2025, 1, 1),
+            ),
+        )
+
+        with self.assertRaisesRegex(NormalizationError, "does not match filing"):
+            metric_result(selected, FinancialMetric.REVENUE)
+
+    def test_comparative_diluted_share_observation_does_not_choose_period(self) -> None:
+        selected = make_input(
+            make_selected(RFC, value=100, start=date(2025, 1, 1)),
+            make_selected(RFC, value=25, start=date(2025, 10, 1)),
+            make_selected(
+                DILUTED_SHARES,
+                value=10,
+                unit="shares",
+                start=date(2025, 1, 1),
+                relationship=ObservationRelationship.COMPARATIVE,
+            ),
+        )
+
+        result = metric_result(selected, FinancialMetric.REVENUE)
+
+        self.assertIsInstance(result, AmbiguousHistoricalMetric)
+        assert isinstance(result, AmbiguousHistoricalMetric)
+        self.assertIs(result.reason, AmbiguityReason.MULTIPLE_ANNUAL_PERIODS)
 
     def test_non_usd_candidate_does_not_conflict_with_usd_candidate(self) -> None:
         selected = make_input(

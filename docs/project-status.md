@@ -64,6 +64,24 @@ with investments. Aggregate standardized states reconciled exactly to 1,823
 resolved, 1,549 missing, 27 ambiguous, 27 methodology-blocked, and 42
 not-comparable, with all 3,468 states and all other measure statuses unchanged.
 
+Phase 1H.4 Wave 3 researched annual-period association and reached a blocked
+result. A selected 10-K can contain both fiscal-year and Q4 durations, and a
+unique current diluted-share duration ending on the report date does not prove
+annuality. The repository has no independent source that establishes the
+fiscal-year start, so no automatic period filter was added. The 11 full-year/Q4
+revenue collisions across JNJ, ABBV, GE, and ORCL remain typed ambiguity, as do
+JNJ pretax and downstream reported ETR, plus SNDK pretax, income-tax expense,
+and downstream reported ETR.
+
+The other 11 revenue ambiguities are genuine full-year concept conflicts: five
+WMT periods, one MA period, and five CVX periods. Filing presentation shows WMT
+net sales versus total revenues, MA gross versus net revenue, and CVX sales and
+other operating revenues versus revenues and other income. Those economic
+definitions differ, so Wave 3 adds no global or issuer-specific precedence and
+does not select by size or concept order. The corpus therefore remains at the
+Wave 2 baseline: 1,823 resolved, 1,549 missing, 27 ambiguous, 27
+methodology-blocked, and 42 not-comparable across 204 periods and 3,468 states.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -505,9 +523,9 @@ being inferred as zero.
 
 ## Next Step
 
-Independently review Phase 1H.4 Wave 2. Keep the 19 broader-caption cash periods
-typed missing, and proceed afterward to the next reusable generalization item:
-revenue period/concept conflicts. The Phase 2A assumptions model is
+Independently review the corrected Phase 1H.4 Wave 3 blocked outcome, then run a
+dedicated annual-period-evidence research/design sub-wave. Do not proceed to
+pretax variants until that shared period boundary is settled. The Phase 2A assumptions model is
 implemented, but forecast, FCFF, DCF,
 equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
 intentionally paused through Phase 1H.
@@ -528,8 +546,10 @@ intentionally paused through Phase 1H.
    padded Company Facts CIK handling. Wave 1B completed the
    registrant-succession design and reached NO-GO for automated linkage, leaving
    XOM unresolved. Wave 2 generalized the exact standard cash policy, resolving
-   160 additional periods while leaving 19 broader-caption cases missing.
-   Continue with revenue period/concept conflicts, then extension patterns,
+   160 additional periods while leaving 19 broader-caption cases missing. Wave
+   3 established that the repository lacks authoritative fiscal-year-start
+   evidence, so all 22 revenue ambiguities remain. Continue with a dedicated
+   annual-period-evidence design before pretax variants, then extension patterns,
    dimensions, non-calendar periods, acquisition accounting, debt/lease
    presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
