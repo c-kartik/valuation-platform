@@ -111,6 +111,26 @@ year, SNDK's non-calendar year, and valid year-quarter SEC DEI namespaces. No
 normalization integration was added, so all 22 revenue ambiguities and the Wave
 2 standardized corpus totals remain unchanged.
 
+Phase 1H.4 Wave 6 explicitly integrates typed annual-period results into annual
+normalization for Revenue, Pretax Income, and Income Tax Expense only. A
+resolved result filters CURRENT duration candidates to its exact `(start, end)`
+before ambiguity evaluation. Not-found, ambiguous, and unsupported results
+retain prior candidate behavior, while a data-error result stops normalization.
+Each filing result retains the annual-period outcome beside existing metric
+provenance; the standardized-output schema is unchanged.
+
+The full 204-period corpus rerun resolved 11 annual/Q4 Revenue ambiguities, JNJ
+Pretax Income and downstream Reported ETR, and SNDK Pretax Income, Income Tax
+Expense, and downstream Reported ETR. Revenue is now 193 resolved / 0 missing /
+11 ambiguous. The remaining conflicts are five WMT periods, one MA period, and
+five CVX periods whose competing concepts span the same authoritative annual
+period. Aggregate states reconcile to 1,839 resolved, 1,549 missing, 11
+ambiguous, 27 methodology-blocked, and 42 not-comparable across 3,468 states.
+All other measure states and the five-company seed metric results are unchanged;
+all 43 generic attempts completed and seven specialized issuers remained
+skipped. Seventy-five historical-normalization tests, 17 corpus-runner tests,
+304 normalization tests, and 461 tests overall pass.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -552,10 +572,10 @@ being inferred as zero.
 
 ## Next Step
 
-Independently review the Phase 1H.4 Wave 5 annual-period resolver. After review,
-integrate it into annual normalization in a separate sub-wave with targeted
-revenue, pretax, tax, and corpus validation. Do not proceed to pretax variants
-until that integration is independently reviewed. The Phase 2A assumptions model is
+Independently review the Phase 1H.4 Wave 6 annual-period normalization
+integration. After review, research the high-frequency standard Pretax Income
+concept variants behind the remaining 45 missing periods; do not add a fallback
+until semantic equivalence is established. The Phase 2A assumptions model is
 implemented, but forecast, FCFF, DCF,
 equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
 intentionally paused through Phase 1H.
@@ -579,9 +599,10 @@ intentionally paused through Phase 1H.
    160 additional periods while leaving 19 broader-caption cases missing. Wave
    3 rejected annual-looking heuristic evidence. Wave 4 found a standards-backed
    authority in the filing-XBRL DEI required context and documented a GO design.
-   Wave 5 implemented and validated the pure resolver without changing
-   normalization, so all 22 revenue ambiguities remain. Continue with a separate
-   annual-normalization integration before pretax variants, then extension patterns,
+   Wave 5 implemented and validated the pure resolver. Wave 6 integrates it for
+   Revenue, Pretax Income, and Income Tax Expense, resolving all known annual/Q4
+   collisions while retaining 11 same-period economic Revenue conflicts.
+   Continue with standard Pretax Income variants, then extension patterns,
    dimensions, non-calendar periods, acquisition accounting, debt/lease
    presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent

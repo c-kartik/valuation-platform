@@ -23,11 +23,8 @@ if str(SOURCE_ROOT) not in sys.path:
     sys.path.insert(0, str(SOURCE_ROOT))
 
 from valuation_platform.normalization import (  # noqa: E402
-    ANNUAL_BALANCE_SHEET_POLICIES,
     AmbiguousStandardizedMeasure,
     CalculatedOperatingNWC,
-    EvidenceSourceKind,
-    GOOGL_DILUTED_SHARES_DERIVATION_POLICY,
     HistoricalAvailability,
     OperatingNWCReadinessError,
     ResolvedHistoricalMeasure,
@@ -50,6 +47,7 @@ from valuation_platform.sec import (  # noqa: E402
     fetch_company_facts,
     fetch_filing_xbrl,
     load_and_select_filings,
+    resolve_annual_period,
     resolve_ticker,
     select_fact_observations,
 )
@@ -66,18 +64,6 @@ SPECIALIZED_CLASSIFICATION = "SPECIALIZED_METHODOLOGY_CANDIDATE"
 GENERIC_CLASSIFICATIONS = frozenset(
     {"SUPPORTED_SEED", "OPERATING_COMPANY_CANDIDATE"}
 )
-FILING_XBRL_CIKS = frozenset(
-    {
-        cik
-        for policy in ANNUAL_BALANCE_SHEET_POLICIES
-        for candidate in policy.candidates
-        if candidate.source_kind is EvidenceSourceKind.FILING_XBRL
-        for cik in candidate.applicable_ciks or ()
-    }
-    | {GOOGL_DILUTED_SHARES_DERIVATION_POLICY.company_cik}
-)
-
-
 class SmokeRunnerError(ValueError):
     """Raised when the frozen corpus or runner configuration is invalid."""
 
@@ -248,17 +234,15 @@ class ProductionCorpusPipeline:
         filings: SelectedFilings,
         selected_facts: SelectedFactObservations,
     ) -> NormalizedIssuerInputs:
-        filing_xbrl = (
-            tuple(
-                fetch_filing_xbrl(self._client, company, filing)
-                for filing in filings.annual
-            )
-            if company.cik in FILING_XBRL_CIKS
-            else ()
+        filing_xbrl = tuple(
+            fetch_filing_xbrl(self._client, company, filing)
+            for filing in filings.annual
         )
+        annual_periods = tuple(resolve_annual_period(item) for item in filing_xbrl)
         historical = normalize_annual_financials(
             selected_facts,
             filing_xbrl=filing_xbrl,
+            annual_periods=annual_periods,
         )
         balance_sheets = normalize_annual_balance_sheets(
             selected_facts,

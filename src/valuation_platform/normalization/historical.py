@@ -5,6 +5,14 @@ from __future__ import annotations
 from datetime import date
 from decimal import Decimal
 
+from valuation_platform.sec.annual_period import (
+    AmbiguousAnnualPeriod,
+    AnnualPeriodDataErrorResult,
+    AnnualPeriodNotFound,
+    AnnualPeriodResolution,
+    ResolvedAnnualPeriod,
+    UnsupportedAnnualPeriod,
+)
 from valuation_platform.sec.company_facts import SECFactValue
 from valuation_platform.sec.filing_xbrl import SECFilingXBRL
 from valuation_platform.sec.fact_selection import (
@@ -50,6 +58,15 @@ class NormalizationError(Exception):
     """Raised when normalization input or configuration is structurally invalid."""
 
 
+_ANNUAL_PERIOD_FILTER_METRICS = frozenset(
+    {
+        FinancialMetric.REVENUE,
+        FinancialMetric.PRETAX_INCOME,
+        FinancialMetric.INCOME_TAX_EXPENSE,
+    }
+)
+
+
 def normalize_annual_financials(
     selected_facts: SelectedFactObservations,
     policies: tuple[MetricConceptPolicy, ...] = ANNUAL_METRIC_POLICIES,
@@ -58,12 +75,17 @@ def normalize_annual_financials(
     ] = ANNUAL_DERIVATION_POLICIES,
     *,
     filing_xbrl: tuple[SECFilingXBRL, ...] = (),
+    annual_periods: tuple[AnnualPeriodResolution, ...] = (),
 ) -> NormalizedHistoricalFinancials:
     """Normalize configured metrics across selected annual filing buckets."""
     _validate_policies(policies)
     filing_xbrl_by_accession = _validate_filing_xbrl(
         filing_xbrl,
         selected_facts.company.cik,
+    )
+    annual_period_by_accession = _validate_annual_periods(
+        annual_periods,
+        selected_facts,
     )
     annual = tuple(
         HistoricalFilingResult(
@@ -75,6 +97,10 @@ def normalize_annual_financials(
                 policies,
                 derivation_policies,
                 filing_xbrl_by_accession.get(bucket.filing.accession_number),
+                annual_period_by_accession.get(bucket.filing.accession_number),
+            ),
+            annual_period=annual_period_by_accession.get(
+                bucket.filing.accession_number
             ),
         )
         for bucket in selected_facts.annual
@@ -94,7 +120,13 @@ def _resolve_filing_metrics(
     policies: tuple[MetricConceptPolicy, ...],
     derivation_policies: tuple[MetricDerivationPolicy, ...],
     filing_xbrl: SECFilingXBRL | None,
+    annual_period: AnnualPeriodResolution | None,
 ) -> tuple[HistoricalMetricResult, ...]:
+    if isinstance(annual_period, AnnualPeriodDataErrorResult):
+        raise NormalizationError(
+            "Annual-period evidence is internally invalid for accession "
+            f"{bucket.filing.accession_number!r}: {annual_period.reason}"
+        )
     direct_results = tuple(
         _resolve_with_derivation(
             bucket,
@@ -103,6 +135,7 @@ def _resolve_filing_metrics(
             source_url,
             derivation_policies,
             filing_xbrl,
+            annual_period,
         )
         for policy in policies
     )
@@ -139,8 +172,9 @@ def _resolve_with_derivation(
     source_url: str,
     derivation_policies: tuple[MetricDerivationPolicy, ...],
     filing_xbrl: SECFilingXBRL | None,
+    annual_period: AnnualPeriodResolution | None,
 ) -> HistoricalMetricResult:
-    direct = _resolve_metric(bucket, policy, source_url)
+    direct = _resolve_metric(bucket, policy, source_url, annual_period)
     if policy.metric is FinancialMetric.DILUTED_WEIGHTED_AVERAGE_SHARES:
         return derive_googl_diluted_weighted_average_shares(
             bucket,
@@ -165,6 +199,7 @@ def _resolve_metric(
     bucket: FilingFactObservations,
     policy: MetricConceptPolicy,
     source_url: str,
+    annual_period: AnnualPeriodResolution | None,
 ) -> HistoricalMetricResult:
     filing = bucket.filing
     if filing.form != "10-K":
@@ -197,6 +232,19 @@ def _resolve_metric(
             or selected.observation.form == policy.required_observation_form
         )
     )
+    if (
+        policy.metric in _ANNUAL_PERIOD_FILTER_METRICS
+        and isinstance(annual_period, ResolvedAnnualPeriod)
+    ):
+        period_candidates = tuple(
+            selected
+            for selected in period_candidates
+            if (
+                selected.observation.start,
+                selected.observation.end,
+            )
+            == (annual_period.start, annual_period.end)
+        )
     if not period_candidates:
         return MissingHistoricalMetric(
             metric=policy.metric,
@@ -407,6 +455,60 @@ def _validate_filing_xbrl(
                 f"Filing-XBRL input contains duplicate accession {accession!r}"
             )
         by_accession[accession] = filing_xbrl
+    return by_accession
+
+
+def _validate_annual_periods(
+    annual_periods: tuple[AnnualPeriodResolution, ...],
+    selected_facts: SelectedFactObservations,
+) -> dict[str, AnnualPeriodResolution]:
+    if not isinstance(annual_periods, tuple):
+        raise NormalizationError("Annual-period input must be a tuple")
+    supported_types = (
+        ResolvedAnnualPeriod,
+        AnnualPeriodNotFound,
+        AmbiguousAnnualPeriod,
+        UnsupportedAnnualPeriod,
+        AnnualPeriodDataErrorResult,
+    )
+    selected_by_accession = {
+        bucket.filing.accession_number: bucket.filing
+        for bucket in selected_facts.annual
+    }
+    by_accession: dict[str, AnnualPeriodResolution] = {}
+    for result in annual_periods:
+        if not isinstance(result, supported_types):
+            raise NormalizationError("Annual-period input contains an invalid result")
+        evidence = result.filing
+        accession = evidence.accession_number
+        if accession in by_accession:
+            raise NormalizationError(
+                f"Annual-period input contains duplicate accession {accession!r}"
+            )
+        filing = selected_by_accession.get(accession)
+        if filing is None:
+            raise NormalizationError(
+                f"Annual-period result does not match a selected accession {accession!r}"
+            )
+        if (
+            evidence.registrant_cik != selected_facts.company.cik
+            or evidence.form != filing.form
+            or evidence.report_date != filing.report_date
+            or evidence.filing_date != filing.filing_date
+            or evidence.primary_document != filing.primary_document
+        ):
+            raise NormalizationError(
+                f"Annual-period result does not match selected filing {accession!r}"
+            )
+        if isinstance(result, ResolvedAnnualPeriod) and (
+            result.evidence.registrant_cik != selected_facts.company.cik
+            or result.start >= result.end
+            or result.end != filing.report_date
+        ):
+            raise NormalizationError(
+                f"Resolved annual period does not match selected filing {accession!r}"
+            )
+        by_accession[accession] = result
     return by_accession
 
 

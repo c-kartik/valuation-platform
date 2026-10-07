@@ -9,6 +9,7 @@ from enum import Enum
 from typing import TypeAlias
 
 from valuation_platform.sec.filing_xbrl import FilingXBRLDimension
+from valuation_platform.sec.annual_period import AnnualPeriodResolution
 from valuation_platform.sec.submissions import SECFiling
 from valuation_platform.sec.tickers import SECCompanyIdentity
 
@@ -185,6 +186,7 @@ class HistoricalFilingResult:
 
     filing: SECFiling
     metrics: tuple[HistoricalMetricResult, ...]
+    annual_period: AnnualPeriodResolution | None = None
 
 
 @dataclass(frozen=True)

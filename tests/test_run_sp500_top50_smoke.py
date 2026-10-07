@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from types import SimpleNamespace
 import unittest
+from unittest.mock import call, patch
 
 from scripts.run_sp500_top50_smoke import (
     DEFAULT_SNAPSHOT,
@@ -418,6 +419,61 @@ class CorpusSmokeRunnerTests(unittest.TestCase):
         self.assertEqual(pipeline.resolve_company("AAA").cik, 1)
         self.assertEqual(pipeline.resolve_company("BBB").cik, 2)
         self.assertEqual(len(client.calls), 1)
+
+    def test_production_pipeline_supplies_resolved_annual_periods_to_normalization(self):
+        company = SECCompanyIdentity(
+            "AAA",
+            1,
+            "0000000001",
+            "A Inc.",
+            "ticker-source",
+            NOW,
+        )
+        first_filing = SimpleNamespace(accession_number="first")
+        second_filing = SimpleNamespace(accession_number="second")
+        filings = SimpleNamespace(annual=(first_filing, second_filing))
+        selected_facts = SimpleNamespace(company=company)
+        artifacts = (object(), object())
+        periods = (object(), object())
+        historical = object()
+        balance_sheets = object()
+        client = object()
+        pipeline = ProductionCorpusPipeline(client)  # type: ignore[arg-type]
+
+        with (
+            patch(
+                "scripts.run_sp500_top50_smoke.fetch_filing_xbrl",
+                side_effect=artifacts,
+            ) as fetch,
+            patch(
+                "scripts.run_sp500_top50_smoke.resolve_annual_period",
+                side_effect=periods,
+            ) as resolve,
+            patch(
+                "scripts.run_sp500_top50_smoke.normalize_annual_financials",
+                return_value=historical,
+            ) as normalize_historical,
+            patch(
+                "scripts.run_sp500_top50_smoke.normalize_annual_balance_sheets",
+                return_value=balance_sheets,
+            ),
+        ):
+            result = pipeline.normalize(company, filings, selected_facts)
+
+        self.assertEqual(
+            fetch.call_args_list,
+            [
+                call(client, company, first_filing),
+                call(client, company, second_filing),
+            ],
+        )
+        self.assertEqual(resolve.call_args_list, [call(item) for item in artifacts])
+        normalize_historical.assert_called_once_with(
+            selected_facts,
+            filing_xbrl=artifacts,
+            annual_periods=periods,
+        )
+        self.assertIs(result.historical, historical)
 
 
 if __name__ == "__main__":

@@ -27,6 +27,16 @@ from valuation_platform.normalization import (
     normalize_annual_financials,
 )
 from valuation_platform.sec.company_facts import SECFactObservation
+from valuation_platform.sec import (
+    AmbiguousAnnualPeriod,
+    AnnualPeriodDataErrorResult,
+    AnnualPeriodDEIEvidence,
+    AnnualPeriodEvidenceTuple,
+    AnnualPeriodFilingEvidence,
+    AnnualPeriodNotFound,
+    ResolvedAnnualPeriod,
+    UnsupportedAnnualPeriod,
+)
 from valuation_platform.sec.fact_selection import (
     FilingFactObservations,
     ObservationRelationship,
@@ -125,9 +135,73 @@ def make_input(
 def metric_result(
     selected: SelectedFactObservations,
     metric: FinancialMetric,
+    *,
+    annual_periods=(),
 ):
-    result = normalize_annual_financials(selected)
+    result = normalize_annual_financials(
+        selected,
+        annual_periods=annual_periods,
+    )
     return next(item for item in result.annual[0].metrics if item.metric is metric)
+
+
+def make_annual_period(
+    *,
+    start: date = date(2025, 1, 1),
+    end: date = date(2025, 12, 31),
+    accession: str = "annual",
+    company_cik: int = 1,
+) -> ResolvedAnnualPeriod:
+    filing = make_filing(accession=accession, report_date=end)
+    filing_evidence = AnnualPeriodFilingEvidence(
+        registrant_cik=company_cik,
+        accession_number=accession,
+        form=filing.form,
+        report_date=end,
+        filing_date=filing.filing_date,
+        primary_document=filing.primary_document,
+        source_url="filing-xbrl-source",
+        retrieved_at=RETRIEVED_AT,
+    )
+    evidence = AnnualPeriodEvidenceTuple(
+        entity_identifier_scheme="http://www.sec.gov/CIK",
+        entity_identifier_values=(f"{company_cik:010d}",),
+        registrant_cik=company_cik,
+        start=start,
+        end=end,
+        dimensions=(),
+        context_ids=("annual-context",),
+        dei_evidence=(
+            AnnualPeriodDEIEvidence("DocumentFiscalPeriodFocus", "FY", ()),
+            AnnualPeriodDEIEvidence("DocumentFiscalYearFocus", str(end.year), ()),
+            AnnualPeriodDEIEvidence("DocumentPeriodEndDate", end.isoformat(), ()),
+        ),
+    )
+    return ResolvedAnnualPeriod(filing=filing_evidence, evidence=evidence)
+
+
+def unresolved_annual_period(
+    result_type,
+    *,
+    accession: str = "annual",
+    end: date = date(2025, 12, 31),
+):
+    resolved = make_annual_period(accession=accession, end=end)
+    if result_type is AnnualPeriodNotFound:
+        return AnnualPeriodNotFound(resolved.filing, "not found")
+    if result_type is AmbiguousAnnualPeriod:
+        return AmbiguousAnnualPeriod(
+            resolved.filing,
+            (
+                resolved.evidence,
+                replace(resolved.evidence, start=date(2025, 2, 1)),
+            ),
+        )
+    if result_type is AnnualPeriodDataErrorResult:
+        return AnnualPeriodDataErrorResult(resolved.filing, "contradictory DEI")
+    if result_type is UnsupportedAnnualPeriod:
+        return UnsupportedAnnualPeriod(resolved.filing, "unsupported artifact")
+    raise AssertionError("Unsupported test result type")
 
 
 def make_normalized_value(
@@ -259,6 +333,183 @@ class AnnualHistoricalNormalizationTests(TestCase):
             (RFC, REVENUES),
         )
 
+    def test_authoritative_period_resolves_annual_and_q4_revenue_candidates(self) -> None:
+        annual_period = make_annual_period()
+        cases = (
+            (
+                make_selected(RFC, value=100),
+                make_selected(RFC, value=25, start=date(2025, 10, 1)),
+            ),
+            (
+                make_selected(RFC, value=100),
+                make_selected(REVENUES, value=25, start=date(2025, 10, 1)),
+            ),
+        )
+        for observations in cases:
+            with self.subTest(concepts=tuple(item.concept for item in observations)):
+                output = normalize_annual_financials(
+                    make_input(*observations),
+                    annual_periods=(annual_period,),
+                )
+                result = next(
+                    item
+                    for item in output.annual[0].metrics
+                    if item.metric is FinancialMetric.REVENUE
+                )
+
+                self.assertIsInstance(result, NormalizedHistoricalValue)
+                assert isinstance(result, NormalizedHistoricalValue)
+                self.assertEqual(result.value, 100)
+                self.assertEqual(result.period, HistoricalPeriod(date(2025, 1, 1), date(2025, 12, 31)))
+                self.assertIs(output.annual[0].annual_period, annual_period)
+                self.assertEqual(annual_period.evidence.context_ids, ("annual-context",))
+
+    def test_authoritative_period_preserves_true_revenue_concept_conflict(self) -> None:
+        result = metric_result(
+            make_input(
+                make_selected(RFC, value=100),
+                make_selected(REVENUES, value=101),
+                make_selected(REVENUES, value=25, start=date(2025, 10, 1)),
+            ),
+            FinancialMetric.REVENUE,
+            annual_periods=(make_annual_period(),),
+        )
+
+        self.assertIsInstance(result, AmbiguousHistoricalMetric)
+        assert isinstance(result, AmbiguousHistoricalMetric)
+        self.assertIs(result.reason, AmbiguityReason.CONFLICTING_CONCEPT_VALUES)
+        self.assertEqual(
+            tuple(candidate.concept for candidate in result.candidates),
+            (RFC, REVENUES),
+        )
+
+    def test_unresolved_annual_period_preserves_prior_revenue_ambiguity(self) -> None:
+        selected = make_input(
+            make_selected(RFC, value=100),
+            make_selected(RFC, value=25, start=date(2025, 10, 1)),
+        )
+        for result_type in (
+            AnnualPeriodNotFound,
+            AmbiguousAnnualPeriod,
+            UnsupportedAnnualPeriod,
+        ):
+            with self.subTest(result_type=result_type):
+                result = metric_result(
+                    selected,
+                    FinancialMetric.REVENUE,
+                    annual_periods=(unresolved_annual_period(result_type),),
+                )
+                self.assertIsInstance(result, AmbiguousHistoricalMetric)
+                assert isinstance(result, AmbiguousHistoricalMetric)
+                self.assertIs(result.reason, AmbiguityReason.MULTIPLE_ANNUAL_PERIODS)
+
+    def test_annual_period_data_error_stops_normalization(self) -> None:
+        with self.assertRaisesRegex(NormalizationError, "contradictory DEI"):
+            normalize_annual_financials(
+                make_input(make_selected(RFC, value=100)),
+                annual_periods=(
+                    unresolved_annual_period(AnnualPeriodDataErrorResult),
+                ),
+            )
+
+    def test_annual_period_input_must_belong_to_selected_company_and_filing(self) -> None:
+        selected = make_input(make_selected(RFC, value=100))
+        valid = make_annual_period()
+        cases = (
+            (valid, valid),
+            (replace(valid, filing=replace(valid.filing, registrant_cik=2)),),
+            (replace(valid, filing=replace(valid.filing, primary_document="other.htm")),),
+            (
+                replace(
+                    valid,
+                    evidence=replace(valid.evidence, end=date(2025, 12, 30)),
+                ),
+            ),
+            (make_annual_period(accession="other"),),
+        )
+        for annual_periods in cases:
+            with self.subTest(annual_periods=annual_periods):
+                with self.assertRaises(NormalizationError):
+                    normalize_annual_financials(
+                        selected,
+                        annual_periods=annual_periods,
+                    )
+
+    def test_authoritative_period_supports_noncalendar_and_53_week_years(self) -> None:
+        periods = (
+            (date(2024, 7, 1), date(2025, 6, 30)),
+            (date(2022, 8, 29), date(2023, 9, 3)),
+        )
+        for start, end in periods:
+            with self.subTest(start=start, end=end):
+                filing = make_filing(report_date=end)
+                result = metric_result(
+                    make_input(
+                        make_selected(RFC, value=100, start=start, end=end),
+                        make_selected(
+                            RFC,
+                            value=25,
+                            start=end.replace(month=max(1, end.month - 2)),
+                            end=end,
+                        ),
+                        filing=filing,
+                    ),
+                    FinancialMetric.REVENUE,
+                    annual_periods=(make_annual_period(start=start, end=end),),
+                )
+                self.assertIsInstance(result, NormalizedHistoricalValue)
+                assert isinstance(result, NormalizedHistoricalValue)
+                self.assertEqual(result.period, HistoricalPeriod(start, end))
+
+    def test_authoritative_period_filter_is_input_order_independent(self) -> None:
+        observations = (
+            make_selected(RFC, value=100),
+            make_selected(RFC, value=25, start=date(2025, 10, 1)),
+            make_selected(REVENUES, value=100),
+        )
+        annual_period = make_annual_period()
+
+        forward = normalize_annual_financials(
+            make_input(*observations),
+            annual_periods=(annual_period,),
+        )
+        reverse = normalize_annual_financials(
+            make_input(*reversed(observations)),
+            annual_periods=(annual_period,),
+        )
+
+        self.assertEqual(forward, reverse)
+
+    def test_authoritative_period_filter_is_limited_to_approved_metrics(self) -> None:
+        cases = (
+            (OPERATING_INCOME, FinancialMetric.OPERATING_INCOME, "USD"),
+            (D_AND_A, FinancialMetric.D_AND_A, "USD"),
+            (CAPEX, FinancialMetric.CAPEX, "USD"),
+            (
+                DILUTED_SHARES,
+                FinancialMetric.DILUTED_WEIGHTED_AVERAGE_SHARES,
+                "shares",
+            ),
+        )
+        for concept, metric, unit in cases:
+            with self.subTest(metric=metric):
+                result = metric_result(
+                    make_input(
+                        make_selected(concept, value=100, unit=unit),
+                        make_selected(
+                            concept,
+                            value=25,
+                            unit=unit,
+                            start=date(2025, 10, 1),
+                        ),
+                    ),
+                    metric,
+                    annual_periods=(make_annual_period(),),
+                )
+                self.assertIsInstance(result, AmbiguousHistoricalMetric)
+                assert isinstance(result, AmbiguousHistoricalMetric)
+                self.assertIs(result.reason, AmbiguityReason.MULTIPLE_ANNUAL_PERIODS)
+
     def test_operating_income_resolves(self) -> None:
         result = metric_result(
             make_input(make_selected(OPERATING_INCOME, value=40)),
@@ -380,6 +631,56 @@ class AnnualHistoricalNormalizationTests(TestCase):
                     self.assertIsInstance(result, NormalizedHistoricalValue)
                     assert isinstance(result, NormalizedHistoricalValue)
                     self.assertEqual(result.period, HistoricalPeriod(start, end))
+
+    def test_authoritative_period_filters_pretax_and_tax_before_etr(self) -> None:
+        annual_period = make_annual_period()
+        output = normalize_annual_financials(
+            make_input(
+                make_selected(PRETAX_INCOME, value=100),
+                make_selected(
+                    PRETAX_INCOME,
+                    value=30,
+                    start=date(2025, 10, 1),
+                ),
+                make_selected(INCOME_TAX_EXPENSE, value=20),
+                make_selected(
+                    INCOME_TAX_EXPENSE,
+                    value=6,
+                    start=date(2025, 10, 1),
+                ),
+            ),
+            annual_periods=(annual_period,),
+        )
+        by_metric = {item.metric: item for item in output.annual[0].metrics}
+
+        self.assertEqual(by_metric[FinancialMetric.PRETAX_INCOME].value, 100)
+        self.assertEqual(by_metric[FinancialMetric.INCOME_TAX_EXPENSE].value, 20)
+        self.assertEqual(
+            by_metric[FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE].value,
+            Decimal("0.2"),
+        )
+
+    def test_unresolved_period_and_same_period_tax_conflict_remain_ambiguous(self) -> None:
+        pretax = make_input(
+            make_selected(PRETAX_INCOME, value=100),
+            make_selected(PRETAX_INCOME, value=30, start=date(2025, 10, 1)),
+        )
+        unresolved = metric_result(
+            pretax,
+            FinancialMetric.PRETAX_INCOME,
+            annual_periods=(unresolved_annual_period(AnnualPeriodNotFound),),
+        )
+        same_period = metric_result(
+            make_input(
+                make_selected(INCOME_TAX_EXPENSE, value=20),
+                make_selected(INCOME_TAX_EXPENSE, value=21),
+            ),
+            FinancialMetric.INCOME_TAX_EXPENSE,
+            annual_periods=(make_annual_period(),),
+        )
+
+        self.assertIsInstance(unresolved, AmbiguousHistoricalMetric)
+        self.assertIsInstance(same_period, AmbiguousHistoricalMetric)
 
     def test_reported_etr_derives_decimal_with_ordered_operand_provenance(self) -> None:
         pretax = make_normalized_value(FinancialMetric.PRETAX_INCOME, 10)

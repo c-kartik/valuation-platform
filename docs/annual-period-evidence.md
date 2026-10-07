@@ -244,6 +244,14 @@ SEC transport, discovery, and artifact retrieval errors remain existing SEC or
 filing-XBRL errors; they are not evidence outcomes. Normalization must not turn
 an unavailable annual-period artifact into a guessed period.
 
+Wave 6 passes the typed result explicitly into annual normalization. Revenue,
+Pretax Income, and Income Tax Expense use an exact `(start, end)` filter only
+for `ANNUAL_PERIOD_RESOLVED`. Not-found, ambiguous, and unsupported results
+retain the previous ambiguity-safe candidate behavior. A data-error result
+raises `NormalizationError` rather than falling back as though authoritative
+evidence were merely absent. The filing-level normalization result retains the
+typed annual-period outcome beside the existing metric-fact provenance.
+
 ## Provenance
 
 A resolved period retains only compact evidence needed for audit:
@@ -273,9 +281,8 @@ research tools, but should not become required production provenance.
 
 ## Next step
 
-Independently review the pure `sec/annual_period.py` implementation and its
-network-free synthetic tests. Wave 5 validated it read-only against all 42
-filings in this artifact: 42 resolved, with zero not-found, ambiguous,
-unsupported, data-error, or period-mismatch outcomes. After review, a separate
-integration sub-wave may use the resolved period to filter annual normalization
-candidates; retrieval remains explicit and on demand.
+Independently review the Wave 6 normalization integration. Its corpus rerun
+resolved the 11 known annual/Q4 Revenue ambiguities and five related Pretax,
+Income Tax Expense, and downstream Reported ETR states without changing the 11
+same-period WMT/MA/CVX Revenue conflicts. Filing-XBRL retrieval remains explicit
+in orchestration, and normalization itself remains pure and network-free.

@@ -147,8 +147,7 @@ The SEC package separates transport from dataset interpretation:
   `SECFilingXBRL`. For an exact 10-K it validates the SEC CIK scheme and
   registrant, groups equivalent DEI required contexts by normalized semantic
   identity, and returns immutable resolved, not-found, ambiguous, unsupported,
-  or data-error results with compact provenance. It does not fetch artifacts or
-  alter normalization candidates.
+  or data-error results with compact provenance. It does not fetch artifacts.
 - `sec.fact_selection` is a pure, network-free layer that associates Company
   Facts observations with selected filings by accession number. It preserves
   only the matched observations and compact source metadata.
@@ -181,13 +180,23 @@ for later selection; retrieval does not decide which concept or observation is
 authoritative.
 
 Company Facts remains the primary standardized source. Filing-level extracted
-XBRL is a targeted fallback source when filing evidence needed for later
-methodology is absent from Company Facts. Retrieval is never automatic. The
-annual-period resolver can now interpret explicitly supplied filing-XBRL
-evidence, but its output is not yet connected to fact selection or
-normalization.
+XBRL is a targeted supporting source when filing evidence needed for selection
+or later methodology is absent from Company Facts. The corpus orchestration
+explicitly retrieves selected annual filing artifacts, resolves each annual
+period, and passes typed results into normalization; `historical.py` performs
+no retrieval and does not duplicate DEI parsing. Revenue, Pretax Income, and
+Income Tax Expense use exact resolved `(start, end)` dates before ambiguity
+evaluation. Other duration metrics retain their existing rules.
 The parser consumes the SEC-generated XML instance rather than implementing an
 Inline XBRL processor or resolving schemas and linkbases.
+
+`NormalizedHistoricalFinancials` retains the typed annual-period outcome on
+each filing result beside the existing metric provenance. Resolved evidence is
+therefore auditable through its filing accession, exact dates, contributing DEI
+context IDs, and source metadata without changing the standardized-output
+serialization contract. Not-found, ambiguous, and unsupported results preserve
+prior candidate behavior; annual-period data errors stop normalization with a
+`NormalizationError`.
 
 Fact selection classifies an observation as current, comparative, or after the
 report date by comparing its end date with the selected filing's report date.
@@ -268,19 +277,20 @@ required context as authoritative annual-period evidence: SEC staff guidance
 supporting EDGAR validation describes its dimensionless duration as matching
 the year of an annual submission, while the EDGAR Filer Manual and applicable
 filing requirements remain controlling. The context preserves the actual
-fiscal start and end. The design is recorded in `annual-period-evidence.md`;
-production has not implemented it yet, so current
-annual-vs-Q4 collisions remain typed ambiguity. Form, Company Facts `fy`/`fp`,
-frame, duration length, calendar assumptions, diluted shares, and candidate
-consensus remain insufficient standalone signals.
+fiscal start and end. The design is recorded in `annual-period-evidence.md`.
+Wave 6 applies a resolved exact period to Revenue, Pretax Income, and Income Tax
+Expense before ambiguity evaluation; nonresolved evidence never selects a
+period. Form, Company Facts `fy`/`fp`, frame, duration length, calendar
+assumptions, diluted shares, and candidate consensus remain insufficient
+standalone signals.
 D&A and Capex use the same generic direct-resolution path. A direct D&A result
 takes precedence. When direct D&A is missing, an approved policy may produce a
 provenance-distinct derived value; direct ambiguity is never replaced by a
 derivation. The initial derived policy applies only to Microsoft CIK `789019`
 and adds same-period Company Facts observations for `Depreciation` and
-`AmortizationOfIntangibleAssets`. Filing-level XBRL is not automatically
-connected to normalization. Capex remains a positive expenditure magnitude for
-later subtraction in FCFF.
+`AmortizationOfIntangibleAssets`. Filing-level XBRL is not used as a D&A operand
+or automatic concept fallback. Capex remains a positive expenditure magnitude
+for later subtraction in FCFF.
 
 GOOGL CIK `1652044` selected 2021–2023 filings provide only class-dimensional
 diluted denominators. When the nondimensional direct result is missing, the

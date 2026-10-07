@@ -53,6 +53,15 @@ and validates all 42 evidence-table filings, but does not integrate it with
 normalization. All current ambiguities and aggregate corpus totals therefore
 remain unchanged pending a separate integration and validation sub-wave.
 
+**Wave 6 follow-up:** corpus orchestration now supplies typed annual-period
+results explicitly to normalization. Exact resolved periods filter Revenue,
+Pretax Income, and Income Tax Expense only. The 11 JNJ/ABBV/GE/ORCL annual/Q4
+Revenue collisions resolved, as did JNJ Pretax/ETR and SNDK Pretax/Tax/ETR.
+Revenue is 193 resolved and 11 ambiguous across 204 periods. Aggregate totals
+are 1,839 resolved, 1,549 missing, 11 ambiguous, 27 methodology-blocked, and 42
+not-comparable across 3,468 states. The 11 remaining Revenue ambiguities are
+same-authoritative-period economic concept conflicts for WMT, MA, and CVX.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -65,7 +74,7 @@ remain unchanged pending a separate integration and validation sub-wave.
 | `ISSUER_EXTENSION` | Required evidence exists only in an issuer taxonomy or filing-level artifact | A research path for several missing statement facts; no repeatable extension family is approved yet |
 | `DIMENSIONAL_CONTEXT` | Facts require explicit member/context handling | No new standalone blocker proved by the Company Facts artifact; filing-XBRL research remains necessary |
 | `DERIVATION` | Direct evidence is absent and a complete, nonoverlapping derivation must be established | D&A components and downstream reported ETR |
-| `PERIOD_ASSOCIATION` | One accession contains multiple durations ending on the report date | Wave 3 rejected heuristic signals; Wave 4 found a GO design using the filing-XBRL DEI required context; Wave 5 implemented the pure resolver, pending normalization integration |
+| `PERIOD_ASSOCIATION` | One accession contains multiple durations ending on the report date | **Implemented for the known annual/Q4 class:** Wave 6 integrates the filing-XBRL DEI period for Revenue, Pretax Income, and Income Tax Expense; nonresolved evidence retains ambiguity-safe behavior |
 | `METHODOLOGY_BLOCKER` | Extraction works, but accounting treatment or valuation perimeter is unresolved | GOOGL, MSFT, and AAPL O-NWC |
 | `EXPECTED_TYPED_MISSING` | Filing evidence establishes economic absence or non-applicability under the approved methodology | Some debt or investment balances after filing confirmation; no corpus result is assigned this category merely because a fact is absent |
 | `OTHER` | A root cause does not fit the operational categories | None currently identified |
@@ -269,9 +278,9 @@ derivation. Ninety periods across 19 issuers remain missing.
 
 META and COST produce ten O-NWC levels and eight comparable changes. GOOGL,
 MSFT, and AAPL produce 15 methodology-blocked levels and 12 blocked changes.
-The 35 newly completed issuers have no valuation-perimeter policy, producing
-175 missing levels and 140 missing changes. Each of the 40 first periods is
-correctly not comparable.
+The issuers without a valuation-perimeter policy produce 179 missing levels and
+142 missing changes. Each of the 42 nonempty histories has one correctly
+not-comparable opening change period.
 
 Raw standard facts demonstrate why a universal residual formula is unsafe:
 `AccountsReceivableNetCurrent` is eligible in 166 periods,
@@ -284,7 +293,7 @@ excluded.
 
 ### Debt
 
-Current debt resolves in 114 periods and noncurrent debt in 138. Evidence for
+Current debt resolves in 116 periods and noncurrent debt in 140. Evidence for
 common unapproved variants is widespread:
 
 - `DebtCurrent` appears in 73 periods across 16 issuers.
@@ -305,7 +314,7 @@ fallback is proposed.
 
 ### Shares and core flow measures
 
-Diluted weighted-average shares resolve in 192/200 periods. V has no matching
+Diluted weighted-average shares resolve in 196/204 periods. V has no matching
 Company Facts fact in its five selected filings. MCD resolves two periods, but
 three later facts are floating values such as `751.8` in a `shares` unit and
 fail the integer/share-basis boundary. Both need filing-level scale and
@@ -313,19 +322,23 @@ presentation research. GOOGL's three A+C derivations and two direct periods
 remain unchanged; historical weighted-average shares remain distinct from the
 future DCF denominator.
 
-Income-tax expense resolves 200/200. Revenue has no missing periods, but 22
-ambiguities. Operating income is missing in 35 periods across LLY, JNJ, CVX,
-MRK, GE, KLAC, and IBM. Pretax income is missing in 45 periods and ambiguous in
-one; reported ETR mirrors that upstream state. Several missing pretax issuers
+Income-tax expense resolves 204/204. Revenue resolves 193/204 with no missing
+periods and 11 same-period concept ambiguities. Operating income is missing in
+35 periods across LLY, JNJ, CVX, MRK, GE, KLAC, and IBM. Pretax income is
+missing in 45 periods and ambiguous in none; reported ETR mirrors that upstream
+availability. Several missing pretax issuers
 report the standard minority-interest/equity-method variant, making it a
-candidate for explicit semantic research. Capex is missing in 55 periods; the
+candidate for explicit semantic research. Capex is missing in 57 periods; the
 common `PaymentsToAcquireProductiveAssets` and industry-specific PP&E concepts
 are broader or different from the approved gross PP&E cash-purchase definition
 and are not automatic fallbacks. No new sign defect was observed.
 
-## Ambiguity inventory
+## Wave 2 ambiguity inventory and Wave 6 disposition
 
-All 24 ambiguous outputs come from selected 10-K accessions. No amendment or
+The table records the 24 original Phase 1H.3 ambiguous outputs from selected
+10-K accessions. Wave 1A subsequently exposed three SNDK period-association
+ambiguities. Wave 6 resolves the 13 JNJ/ABBV/GE/ORCL rows and all three SNDK
+rows. The 11 WMT/MA/CVX Revenue rows below remain; no amendment or
 cross-accession collision is involved.
 
 | Issuer | Report date | Selected accession | Measure | Candidates | Candidate concepts | Result reason |
@@ -355,20 +368,17 @@ cross-accession collision is involved.
 | GE | 2024-12-31 | `0000040545-25-000015` | Revenue | 3 | Same three concept observations | `multiple_annual_periods` |
 | ORCL | 2022-05-31 | `0001564590-22-023675` | Revenue | 2 | `RevenueFromContractWithCustomerExcludingAssessedTax`; `Revenues` | `multiple_annual_periods` |
 
-The 11 WMT/MA/CVX cases are `CONCEPT_POLICY` conflicts. The JNJ, ABBV, GE,
-and ORCL cases are `PERIOD_ASSOCIATION` conflicts caused by same-end,
-different-start durations; the JNJ ETR ambiguity is a downstream `DERIVATION`
-result. All candidates use the selected accession and its official Company
-Facts URL; the table preserves the accession and concept provenance needed to
-reproduce each case. Company Facts does not retain dimensional context, so the
-evidence does not justify attributing these cases to dimensions.
+The 11 WMT/MA/CVX cases remain `CONCEPT_POLICY` conflicts. The JNJ, ABBV, GE,
+and ORCL `PERIOD_ASSOCIATION` cases and the downstream JNJ ETR result are now
+resolved using the authoritative DEI period. All candidates retain the selected
+accession and official Company Facts provenance.
 
 ## Methodology-blocked and expected missing
 
 All 27 methodology-blocked outputs are intentional O-NWC states: five levels
 and four changes each for GOOGL, MSFT, and AAPL. They are not parser or
-extraction failures. The first change for every one of the 40 histories is
-`NOT_COMPARABLE`, accounting for all 40 such states. `NOT_COMPARABLE` is its
+extraction failures. The first change for every one of the 42 nonempty histories
+is `NOT_COMPARABLE`, accounting for all 42 such states. `NOT_COMPARABLE` is its
 own standardized-output status and is not a missing result or a form of
 `EXPECTED_TYPED_MISSING`.
 
@@ -452,14 +462,14 @@ issuers have one post-smoke classification.
 | 1 | `COMPANY_FACTS_SCHEMA` | GEV and SNDK; four selected periods | Entire issuer | **Implemented in Wave 1A:** strict ten-digit padded-string CIK support with equality protection | High | Low |
 | 2 | `TICKER_CIK_IDENTITY` | XOM; intended five-year history | Entire issuer | **Wave 1B NO-GO:** structured SEC evidence does not encode the directed legal edge; retain unresolved until a generic exact-CIK succession parser is independently supported | Medium | Medium-high |
 | 3 | `CONCEPT_POLICY` | **Implemented in Wave 2:** 160 additional periods resolved; 19 broader-caption periods remain missing | One high-value balance | Keep broader restricted-cash and cash-equivalents-only captions unresolved pending separate evidence | Very high | Low |
-| 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Wave 5 resolver implemented:** 11 annual/Q4 collisions have authoritative DEI required-context evidence; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Integrate the reviewed resolver with annual normalization; preserve distinct concept economics and never select by size or order | High | Medium |
-| 5 | `CONCEPT_POLICY` | Pretax: 45 missing + two period ambiguities in the 204-period corpus; ETR mirrors upstream availability | Core flow and diagnostic | Research approved standard pretax variants only after the annual-period resolver is reviewed | High | Medium |
+| 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
+| 5 | `CONCEPT_POLICY` | Pretax: 45 missing and no remaining ambiguity in the 204-period corpus; ETR mirrors upstream availability | Core flow and diagnostic | Research approved standard pretax variants | High | Medium |
 | 6 | `CONCEPT_POLICY` / `ISSUER_EXTENSION` | Operating income: 35 missing across seven issuers | Core FCFF input | Filing-level face-statement concept inventory | Medium | High |
-| 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 90 missing across 19 issuers | Core FCFF input | Group combined concepts and complete component derivations | High | High |
-| 8 | `CONCEPT_POLICY` | Capex: 55 missing across 12 issuers | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
-| 9 | `CONCEPT_POLICY` | Short investments: 175 missing, 121 periods with candidate families; long investments: 195 missing, 60 candidate periods | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
-| 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 86 missing; noncurrent 62; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
-| 11 | `CONCEPT_POLICY` | Commercial paper 188 missing with 57 raw facts; short borrowings 199 with 16 raw facts | Equity bridge | Generalize exact concepts only where economically present | High | Medium |
+| 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 94 missing across the 204-period corpus | Core FCFF input | Group combined concepts and complete component derivations | High | High |
+| 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
+| 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
+| 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
+| 11 | `CONCEPT_POLICY` | Commercial paper 192 missing; short borrowings 203 missing | Equity bridge | Generalize exact concepts only where economically present | High | Medium |
 | 12 | `METHODOLOGY_BLOCKER` | 35 issuers without O-NWC policy; three blocked seed policies | O-NWC and change | Sector-clustered component research and versioned perimeters | Medium | Very high |
 | 13 | `CONCEPT_POLICY` / filing evidence | V five share gaps; MCD three scale/type gaps | Per-share history | Filing-XBRL denominator and scale validation | Low-medium | Medium |
 
@@ -472,9 +482,9 @@ issuers have one post-smoke classification.
 2. **High-frequency, low-risk standard facts:** exact cash generalization is
    implemented; retain the 19 broader-caption cases as typed missing. Wave 3
    rejected heuristic fiscal-year signals. Wave 4 found a GO design using the
-   filing-XBRL DEI required context; Wave 5 implemented and validated the pure
-   resolver. Preserve all 22 current revenue ambiguities until a separately
-   reviewed normalization integration lands, before pretax variants.
+   filing-XBRL DEI required context; Wave 5 implemented the pure resolver, and
+   Wave 6 integrated it for the three approved metrics. Preserve the 11
+   same-period Revenue concept conflicts and proceed to Pretax Income variants.
 3. **Core FCFF flows:** investigate operating-income face-statement evidence,
    D&A groups, and Capex variants. Approve only repeatable definitions with
    selected-accession evidence.
