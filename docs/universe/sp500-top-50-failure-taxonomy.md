@@ -48,9 +48,10 @@ the submission reporting period; the EDGAR Filer Manual and applicable filing
 requirements remain controlling.
 The rule was verified across 42 selected filings for nine issuers, including
 non-calendar and 52/53-week years, and is documented in
-`../annual-period-evidence.md`. This is a GO design, not a production change;
-all current ambiguities and aggregate corpus totals remain unchanged pending a
-separate implementation and validation sub-wave.
+`../annual-period-evidence.md`. Wave 5 implements the pure SEC-layer resolver
+and validates all 42 evidence-table filings, but does not integrate it with
+normalization. All current ambiguities and aggregate corpus totals therefore
+remain unchanged pending a separate integration and validation sub-wave.
 
 ## Operational taxonomy
 
@@ -64,7 +65,7 @@ separate implementation and validation sub-wave.
 | `ISSUER_EXTENSION` | Required evidence exists only in an issuer taxonomy or filing-level artifact | A research path for several missing statement facts; no repeatable extension family is approved yet |
 | `DIMENSIONAL_CONTEXT` | Facts require explicit member/context handling | No new standalone blocker proved by the Company Facts artifact; filing-XBRL research remains necessary |
 | `DERIVATION` | Direct evidence is absent and a complete, nonoverlapping derivation must be established | D&A components and downstream reported ETR |
-| `PERIOD_ASSOCIATION` | One accession contains multiple durations ending on the report date | Wave 3 rejected heuristic signals; Wave 4 found a GO design using the filing-XBRL DEI required context, pending implementation |
+| `PERIOD_ASSOCIATION` | One accession contains multiple durations ending on the report date | Wave 3 rejected heuristic signals; Wave 4 found a GO design using the filing-XBRL DEI required context; Wave 5 implemented the pure resolver, pending normalization integration |
 | `METHODOLOGY_BLOCKER` | Extraction works, but accounting treatment or valuation perimeter is unresolved | GOOGL, MSFT, and AAPL O-NWC |
 | `EXPECTED_TYPED_MISSING` | Filing evidence establishes economic absence or non-applicability under the approved methodology | Some debt or investment balances after filing confirmation; no corpus result is assigned this category merely because a fact is absent |
 | `OTHER` | A root cause does not fit the operational categories | None currently identified |
@@ -451,7 +452,7 @@ issuers have one post-smoke classification.
 | 1 | `COMPANY_FACTS_SCHEMA` | GEV and SNDK; four selected periods | Entire issuer | **Implemented in Wave 1A:** strict ten-digit padded-string CIK support with equality protection | High | Low |
 | 2 | `TICKER_CIK_IDENTITY` | XOM; intended five-year history | Entire issuer | **Wave 1B NO-GO:** structured SEC evidence does not encode the directed legal edge; retain unresolved until a generic exact-CIK succession parser is independently supported | Medium | Medium-high |
 | 3 | `CONCEPT_POLICY` | **Implemented in Wave 2:** 160 additional periods resolved; 19 broader-caption periods remain missing | One high-value balance | Keep broader restricted-cash and cash-equivalents-only captions unresolved pending separate evidence | Very high | Low |
-| 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Wave 4 GO design:** 11 annual/Q4 collisions have authoritative DEI required-context evidence; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Implement and validate the pure annual-period resolver; preserve distinct concept economics and never select by size or order | High | Medium |
+| 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Wave 5 resolver implemented:** 11 annual/Q4 collisions have authoritative DEI required-context evidence; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Integrate the reviewed resolver with annual normalization; preserve distinct concept economics and never select by size or order | High | Medium |
 | 5 | `CONCEPT_POLICY` | Pretax: 45 missing + two period ambiguities in the 204-period corpus; ETR mirrors upstream availability | Core flow and diagnostic | Research approved standard pretax variants only after the annual-period resolver is reviewed | High | Medium |
 | 6 | `CONCEPT_POLICY` / `ISSUER_EXTENSION` | Operating income: 35 missing across seven issuers | Core FCFF input | Filing-level face-statement concept inventory | Medium | High |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 90 missing across 19 issuers | Core FCFF input | Group combined concepts and complete component derivations | High | High |
@@ -471,8 +472,9 @@ issuers have one post-smoke classification.
 2. **High-frequency, low-risk standard facts:** exact cash generalization is
    implemented; retain the 19 broader-caption cases as typed missing. Wave 3
    rejected heuristic fiscal-year signals. Wave 4 found a GO design using the
-   filing-XBRL DEI required context; implement and validate it before pretax
-   variants. Preserve all 22 current revenue ambiguities until that change lands.
+   filing-XBRL DEI required context; Wave 5 implemented and validated the pure
+   resolver. Preserve all 22 current revenue ambiguities until a separately
+   reviewed normalization integration lands, before pretax variants.
 3. **Core FCFF flows:** investigate operating-income face-statement evidence,
    D&A groups, and Capex variants. Approve only repeatable definitions with
    selected-accession evidence.

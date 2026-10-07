@@ -94,11 +94,22 @@ eligible non-parenthetical duration-statement anchors independently matched the
 same period. No production filter was added in this research milestone, so the
 Wave 2 corpus totals and all 22 revenue ambiguities remain unchanged.
 
-Implementation must first extend filing-XBRL identity handling to preserve or
-validate the required `http://www.sec.gov/CIK` entity scheme. The resolver will
-group equivalent context IDs by normalized entity, dimensions, period, and DEI
-values; identical duplicates confirm, conflicting same-context DEI values are
-data errors, and different valid periods remain ambiguity.
+Phase 1H.4 Wave 5 implements the pure, network-free SEC-layer annual-period
+resolver. Filing-XBRL contexts now preserve the raw entity-identifier scheme;
+the resolver requires `http://www.sec.gov/CIK` plus a value matching the filing
+registrant. It groups equivalent context IDs by normalized entity, dimensions,
+period, and DEI values; identical duplicates confirm, conflicting same-context
+DEI values are data errors, and different valid periods remain ambiguity. Its
+immutable result types distinguish resolved, not-found, ambiguous, unsupported,
+and data-error outcomes while retaining all confirming context IDs and DEI
+provenance.
+
+Thirteen focused annual-period tests and 18 filing-XBRL tests pass. Read-only
+validation against the same 42 selected exact 10-Ks resolved all 42 and matched
+every Wave 4 start/end date, including JNJ's annual/Q4 collision, COST's 53-week
+year, SNDK's non-calendar year, and valid year-quarter SEC DEI namespaces. No
+normalization integration was added, so all 22 revenue ambiguities and the Wave
+2 standardized corpus totals remain unchanged.
 
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
@@ -541,10 +552,10 @@ being inferred as zero.
 
 ## Next Step
 
-Independently review the Phase 1H.4 Wave 4 annual-period-evidence design, then
-implement a narrow pure resolver over explicitly supplied filing XBRL and
-validate it before changing annual normalization. Do not proceed to pretax
-variants until that resolver is independently reviewed. The Phase 2A assumptions model is
+Independently review the Phase 1H.4 Wave 5 annual-period resolver. After review,
+integrate it into annual normalization in a separate sub-wave with targeted
+revenue, pretax, tax, and corpus validation. Do not proceed to pretax variants
+until that integration is independently reviewed. The Phase 2A assumptions model is
 implemented, but forecast, FCFF, DCF,
 equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
 intentionally paused through Phase 1H.
@@ -567,9 +578,10 @@ intentionally paused through Phase 1H.
    XOM unresolved. Wave 2 generalized the exact standard cash policy, resolving
    160 additional periods while leaving 19 broader-caption cases missing. Wave
    3 rejected annual-looking heuristic evidence. Wave 4 found a standards-backed
-   authority in the filing-XBRL DEI required context and documented a GO design;
-   production is still unchanged and all 22 revenue ambiguities remain. Continue
-   with the narrow annual-period resolver before pretax variants, then extension patterns,
+   authority in the filing-XBRL DEI required context and documented a GO design.
+   Wave 5 implemented and validated the pure resolver without changing
+   normalization, so all 22 revenue ambiguities remain. Continue with a separate
+   annual-normalization integration before pretax variants, then extension patterns,
    dimensions, non-calendar periods, acquisition accounting, debt/lease
    presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent

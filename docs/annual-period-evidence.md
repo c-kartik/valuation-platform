@@ -20,9 +20,10 @@ of the submission reporting period. It separately specifies
 provide the positive fiscal-year-period identity that Company Facts alone does
 not preserve.
 
-This milestone documents the rule. It does not change production selection or
-normalization, so the 22 revenue ambiguities and the Wave 2 corpus totals remain
-unchanged until a separately reviewed implementation sub-wave.
+Wave 4 documented the rule. Wave 5 implements it as a pure SEC-layer resolver
+over explicitly supplied filing-XBRL evidence. It does not change production
+selection or normalization, so the 22 revenue ambiguities and the Wave 2 corpus
+totals remain unchanged until a separately reviewed integration sub-wave.
 
 ## Problem
 
@@ -43,21 +44,19 @@ tested exact 10-Ks through the DEI required context.
 |---|---|---|---|
 | Company Facts | Accession-linked observations and their economic start/end dates | Does not carry DEI facts, context IDs, presentation roles, or an annual-context designation | Insufficient alone |
 | SEC submissions and filing index | Exact form, accession, filing date, report date, and available filing artifacts | Does not expose fiscal-year start | Identity/retrieval support only |
-| Extracted filing XBRL instance | Exact DEI facts, context IDs, entity-identifier value, duration dates, dimensions, and fact-to-context linkage; the current parser still needs scheme preservation or validation | Requires one explicit filing-artifact request | **Authoritative input after the identity prerequisite** |
+| Extracted filing XBRL instance | Exact DEI facts, context IDs, raw entity-identifier scheme and value, duration dates, dimensions, and fact-to-context linkage | Requires one explicit filing-artifact request | **Authoritative input** |
 | DEI required context | For an annual report, identifies the dimensionless duration matching the year of the submission reporting period | Must be complete, internally consistent, and unique | **Authoritative rule** |
 | Presentation linkbase | Identifies issuer presentation groups and concept order | Relates concepts, not individual facts or contexts; one concept may appear in several roles | Corroboration only |
 | Inline XBRL placement | Shows which individual tagged facts occur in primary statements and quarterly/note tables | HTML layout is issuer-authored and is not needed once the DEI context resolves | Audit corroboration |
 | SEC-generated `MetaLinks.json` / rendered reports | Classifies reports and records statement anchors with their `contextRef` | SEC-generated derivative whose JSON schema is not the rule's required source | Strong cross-check, not authority |
 
-The existing `sec.filing_xbrl` parser retains filing/company identity, source
-URL, retrieval timestamp, context ID, entity-identifier value, start/end,
-dimensions, and the DEI facts that reference each context. It does not retain
-the entity-identifier `scheme`. Before annual-period resolution is implemented,
-the parser must either preserve that scheme explicitly or validate it during
-parsing and retain a trusted normalized identity. The resolver must require the
-SEC scheme `http://www.sec.gov/CIK` and an identifier value equal to the actual
-filing registrant CIK; the value alone is not complete XBRL entity identity.
-No presentation-linkbase or Inline HTML parser is otherwise required.
+The `sec.filing_xbrl` parser retains filing/company identity, source URL,
+retrieval timestamp, context ID, the raw entity-identifier scheme and value,
+start/end, dimensions, and the DEI facts that reference each context. The
+Wave 5 resolver requires the exact SEC scheme `http://www.sec.gov/CIK` and an
+identifier value that normalizes to the actual filing registrant CIK; the value
+alone is not complete XBRL entity identity. No presentation-linkbase or Inline
+HTML parser is required.
 
 ## DEI findings
 
@@ -180,11 +179,11 @@ days, 52/53-week length, diluted shares, revenue, operating income, tax, or
 cross-concept voting. They may be consistent with the resolved period but do
 not prove it.
 
-## Proposed rule
+## Implemented SEC-layer rule
 
-A future pure annual-period resolver should accept an already selected filing
-and explicitly supplied `SECFilingXBRL`. It should resolve only when all of the
-following hold:
+The pure annual-period resolver accepts an already selected filing through an
+explicitly supplied `SECFilingXBRL`. It resolves only when all of the following
+hold:
 
 1. Company, accession, and filing metadata match exactly; the selected form is
    exactly `10-K` and has a report date.
@@ -226,7 +225,7 @@ candidates may be required to match that exact `(start, end)`.
 
 ## Failure and ambiguity model
 
-The implementation design should use explicit immutable outcomes:
+The implementation uses explicit immutable outcomes:
 
 - `ANNUAL_PERIOD_RESOLVED`: exactly one normalized eligible annual-period
   evidence tuple survives; equivalent contexts may confirm it.
@@ -247,7 +246,7 @@ an unavailable annual-period artifact into a guessed period.
 
 ## Provenance
 
-A resolved period should retain only compact evidence needed for audit:
+A resolved period retains only compact evidence needed for audit:
 
 - company CIK and selected accession;
 - selected filing form, report date, filing date, and primary document;
@@ -257,7 +256,7 @@ A resolved period should retain only compact evidence needed for audit:
 - all contributing raw context IDs;
 - context entity-identifier scheme and value, normalized registrant CIK,
   start, end, and normalized dimensions;
-- evidence kind `DEI_REQUIRED_CONTEXT` and resolution status.
+- typed resolution status.
 
 Presentation-role/anchor evidence may be recorded as optional corroboration in
 research tools, but should not become required production provenance.
@@ -274,9 +273,9 @@ research tools, but should not become required production provenance.
 
 ## Next step
 
-Implement a narrow, pure `sec/annual_period.py` layer over `SECFilingXBRL`,
-with synthetic network-free tests for resolution, missing DEI facts,
-conflicting contexts, dimensions, identity mismatch, wrong form, wrong report
-date, non-calendar years, and 52/53-week periods. Retrieval should remain
-explicit and on demand. After independent review, validate the resolver against
-the 42 filing corpus before using it to filter annual normalization candidates.
+Independently review the pure `sec/annual_period.py` implementation and its
+network-free synthetic tests. Wave 5 validated it read-only against all 42
+filings in this artifact: 42 resolved, with zero not-found, ambiguous,
+unsupported, data-error, or period-mismatch outcomes. After review, a separate
+integration sub-wave may use the resolved period to filter annual normalization
+candidates; retrieval remains explicit and on demand.

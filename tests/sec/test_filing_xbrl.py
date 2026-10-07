@@ -203,6 +203,26 @@ class FilingXBRLParserTests(TestCase):
         self.assertEqual(extension.accession_number, "0000000001-26-000001")
         self.assertEqual(extension.source_url, result.source_url)
 
+    def test_preserves_entity_identifier_scheme_and_value(self) -> None:
+        result = self.parse()
+        current = next(
+            context for context in result.contexts if context.context_id == "current"
+        )
+
+        self.assertEqual(
+            current.entity_identifier_scheme,
+            "http://www.sec.gov/CIK",
+        )
+        self.assertEqual(current.entity_identifier, "0000000001")
+
+        missing_scheme = FIXTURE.read_text().replace(
+            ' scheme="http://www.sec.gov/CIK"',
+            "",
+            1,
+        )
+        with self.assertRaisesRegex(FilingXBRLDataError, "identifier scheme"):
+            self.parse(missing_scheme.encode())
+
     def test_root_link_structural_element_is_not_parsed_as_a_fact(self) -> None:
         fixture = FIXTURE.read_text()
         fixture = fixture.replace(

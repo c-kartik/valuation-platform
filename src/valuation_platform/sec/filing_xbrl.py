@@ -58,6 +58,7 @@ class FilingXBRLContext:
     """Entity, period, and dimensional information for an XBRL context."""
 
     context_id: str
+    entity_identifier_scheme: str
     entity_identifier: str
     start: date | None
     end: date
@@ -319,6 +320,11 @@ def _parse_contexts(
         )
         if identifier is None or not (identifier.text or "").strip():
             raise FilingXBRLDataError(f"XBRL context {context_id!r} has no entity")
+        identifier_scheme = identifier.get("scheme")
+        if not isinstance(identifier_scheme, str) or not identifier_scheme:
+            raise FilingXBRLDataError(
+                f"XBRL context {context_id!r} has no entity identifier scheme"
+            )
         period = element.find(f"{{{XBRLI_NAMESPACE}}}period")
         if period is None:
             raise FilingXBRLDataError(f"XBRL context {context_id!r} has no period")
@@ -343,6 +349,7 @@ def _parse_contexts(
         contexts.append(
             FilingXBRLContext(
                 context_id=context_id,
+                entity_identifier_scheme=identifier_scheme,
                 entity_identifier=(identifier.text or "").strip(),
                 start=start,
                 end=end,

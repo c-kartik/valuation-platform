@@ -1,5 +1,19 @@
 """SEC data access, filing selection, and Company Facts retrieval."""
 
+from .annual_period import (
+    AmbiguousAnnualPeriod,
+    AnnualPeriodDataErrorResult,
+    AnnualPeriodDEIEvidence,
+    AnnualPeriodDEIFactOccurrence,
+    AnnualPeriodEvidenceTuple,
+    AnnualPeriodFilingEvidence,
+    AnnualPeriodNotFound,
+    AnnualPeriodResolution,
+    AnnualPeriodResolutionStatus,
+    ResolvedAnnualPeriod,
+    UnsupportedAnnualPeriod,
+    resolve_annual_period,
+)
 from .client import SECClient, SECClientError, SECRequestError, SECResponseError
 from .company_facts import (
     CompanyFactsDataError,
@@ -56,6 +70,15 @@ from .tickers import (
 )
 
 __all__ = [
+    "AmbiguousAnnualPeriod",
+    "AnnualPeriodDataErrorResult",
+    "AnnualPeriodDEIEvidence",
+    "AnnualPeriodDEIFactOccurrence",
+    "AnnualPeriodEvidenceTuple",
+    "AnnualPeriodFilingEvidence",
+    "AnnualPeriodNotFound",
+    "AnnualPeriodResolution",
+    "AnnualPeriodResolutionStatus",
     "CompanyFactsDataError",
     "FactSelectionError",
     "FilingSelectionError",
@@ -84,6 +107,7 @@ __all__ = [
     "SECRequestError",
     "SECResponseError",
     "SECSubmissions",
+    "ResolvedAnnualPeriod",
     "SelectedFilings",
     "SelectedFactObservation",
     "SelectedFactObservations",
@@ -91,6 +115,7 @@ __all__ = [
     "TickerDataError",
     "TickerNotFoundError",
     "TickerResolutionError",
+    "UnsupportedAnnualPeriod",
     "fetch_company_facts",
     "discover_extracted_xbrl",
     "fetch_filing_xbrl",
@@ -99,6 +124,7 @@ __all__ = [
     "load_and_select_filings",
     "parse_filing_xbrl_instance",
     "resolve_ticker",
+    "resolve_annual_period",
     "select_fact_observations",
     "select_filings",
 ]

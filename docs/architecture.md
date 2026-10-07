@@ -142,7 +142,13 @@ The SEC package separates transport from dataset interpretation:
 - `sec.filing_xbrl` discovers the SEC-generated extracted XBRL instance that
   corresponds to a selected filing's primary document, retrieves it explicitly
   on demand, and structurally preserves standard and issuer-extension facts,
-  contexts, units, and dimensions.
+  contexts, units, dimensions, and raw entity-identifier schemes and values.
+- `sec.annual_period` is a pure, network-free resolver over an already retrieved
+  `SECFilingXBRL`. For an exact 10-K it validates the SEC CIK scheme and
+  registrant, groups equivalent DEI required contexts by normalized semantic
+  identity, and returns immutable resolved, not-found, ambiguous, unsupported,
+  or data-error results with compact provenance. It does not fetch artifacts or
+  alter normalization candidates.
 - `sec.fact_selection` is a pure, network-free layer that associates Company
   Facts observations with selected filings by accession number. It preserves
   only the matched observations and compact source metadata.
@@ -176,8 +182,10 @@ authoritative.
 
 Company Facts remains the primary standardized source. Filing-level extracted
 XBRL is a targeted fallback source when filing evidence needed for later
-methodology is absent from Company Facts. Retrieval is never automatic, and the
-filing-level output is not yet connected to fact selection or normalization.
+methodology is absent from Company Facts. Retrieval is never automatic. The
+annual-period resolver can now interpret explicitly supplied filing-XBRL
+evidence, but its output is not yet connected to fact selection or
+normalization.
 The parser consumes the SEC-generated XML instance rather than implementing an
 Inline XBRL processor or resolving schemas and linkbases.
 
