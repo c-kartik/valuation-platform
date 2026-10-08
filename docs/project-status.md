@@ -131,6 +131,23 @@ all 43 generic attempts completed and seven specialized issuers remained
 skipped. Seventy-five historical-normalization tests, 17 corpus-runner tests,
 304 normalization tests, and 461 tests overall pass.
 
+Phase 1H.4 Wave 7 inventories all 45 remaining Pretax Income gaps in
+`docs/pretax-income-concepts.md` and reaches **PARTIAL GO FOR FURTHER
+RESEARCH/DESIGN ONLY** for one recurring standard concept. The concept
+`IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments`
+is an exact annual Company Facts observation in 33 periods across seven
+issuers, but its taxonomy definition excludes equity-method income or loss.
+It remains `NEEDS_MORE_RESEARCH` and is not approved for normalization: being
+the reported tax denominator does not prove equivalence to the current Pretax
+scope. Current filing-XBRL tooling does not preserve presentation roles or
+statement placement needed to make that evidence machine-checkable. The other
+12 gaps use issuer extensions across ORCL, MCD, and PG;
+domestic/foreign components and extension local-name matching remain
+unapproved. Structural candidate coverage is 33 periods, safe new resolutions
+are zero, and no production policy or corpus result changed. Independent review
+confirmed that numerical equality, tax-denominator status, and primary-statement
+placement are not sufficient evidence of semantic equivalence.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -572,10 +589,12 @@ being inferred as zero.
 
 ## Next Step
 
-Independently review the Phase 1H.4 Wave 6 annual-period normalization
-integration. After review, research the high-frequency standard Pretax Income
-concept variants behind the remaining 45 missing periods; do not add a fallback
-until semantic equivalence is established. The Phase 2A assumptions model is
+Begin Pretax presentation-evidence research/design. Investigate presentation-
+linkbase roles, generic primary-statement identification, fact placement, note-
+level equity-method evidence, and any additional filing-XBRL presentation
+metadata required. Validate all 33 structurally eligible candidate periods
+before proposing policy; keep the 12 issuer-extension periods out of that
+research. The Phase 2A assumptions model is
 implemented, but forecast, FCFF, DCF,
 equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
 intentionally paused through Phase 1H.
@@ -601,8 +620,12 @@ intentionally paused through Phase 1H.
    authority in the filing-XBRL DEI required context and documented a GO design.
    Wave 5 implemented and validated the pure resolver. Wave 6 integrates it for
    Revenue, Pretax Income, and Income Tax Expense, resolving all known annual/Q4
-   collisions while retaining 11 same-period economic Revenue conflicts.
-   Continue with standard Pretax Income variants, then extension patterns,
+   collisions while retaining 11 same-period economic Revenue conflicts. Wave
+   7 reaches PARTIAL GO for further research/design only: a 33-period standard
+   Pretax variant remains unapproved because its equity-method scope differs
+   and current tooling cannot machine-check presentation evidence. Twelve
+   issuer-extension Pretax periods remain unresolved. Continue with Pretax
+   presentation-evidence research, then extension patterns,
    dimensions, non-calendar periods, acquisition accounting, debt/lease
    presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
