@@ -80,6 +80,18 @@ submitted `Statement` roles and exact instance facts may classify placement,
 but cannot independently establish the required equity-method scope. SEC render
 artifacts remain corroboration only, and production policy remains unchanged.
 
+**Wave 9 follow-up:** the read-only diagnostic attempted all 33 frozen
+standard-concept periods and emitted one typed result per period. Exact filing,
+annual-period, fact, submitted-role, and renderer reconciliation completed with
+zero data errors. Every candidate occurs in exactly one submitted `Statement`
+role and in one to three `Disclosure` roles, producing 33
+`MULTIPLE_ROLE_MEMBERSHIP` results. MetaLinks and applicable R-files corroborate
+all 33. The separate semantic decision remains `NEEDS_MORE_RESEARCH`: the
+issuer matrix has direct `SEPARATE_NET_OF_TAX` evidence for AMZN and
+`INCLUDED_PRETAX` evidence for CVX, while MU, MA, CAT, PM, and LIN remain
+`UNRESOLVED`. No result is approved for normalization, safe new Pretax
+resolutions remain zero, and aggregate corpus totals remain unchanged.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |

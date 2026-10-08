@@ -157,6 +157,23 @@ and equity-method note evidence remains a separate semantic gate. The design
 does not change `PRETAX_INCOME_POLICY`, the current Pretax primitive, production
 models, or corpus results.
 
+Phase 1H.4 Wave 9 implements the development-only, read-only diagnostic and
+records its live results in `docs/pretax-presentation-evidence-results.md`. All
+33 frozen standard-concept candidate periods reconciled to the exact selected
+10-K, authoritative annual context, exact USD fact, submitted schemas and
+presentation linkbases, and SEC-renderer artifacts. Every candidate belongs to
+one submitted `Statement` role and one to three submitted `Disclosure` roles;
+all 33 therefore classify as `MULTIPLE_ROLE_MEMBERSHIP`. MetaLinks and an
+applicable R-file corroborated all 33, with zero presentation data errors.
+
+The evidence-pattern decision is **NEEDS_MORE_RESEARCH**. Statement membership
+is established but equity-method scope remains a separate semantic gate. The
+issuer matrix retains direct evidence of `SEPARATE_NET_OF_TAX` for AMZN and
+`INCLUDED_PRETAX` for CVX while MU, MA, CAT, PM, and LIN remain `UNRESOLVED`;
+these classifications do not approve any period. Safe new Pretax resolutions
+remain zero, and production policies, standardized outputs, and corpus totals
+are unchanged.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -598,12 +615,15 @@ being inferred as zero.
 
 ## Next Step
 
-Implement the read-only Pretax presentation-evidence diagnostic defined in
-`docs/pretax-presentation-evidence-design.md`. It must attempt all 33
-structurally eligible candidate periods, preserve submitted and renderer-
-derived evidence separately, and produce typed statement-membership and equity-
-method-scope results without changing normalization policy. Keep the 12 issuer-
-extension periods out of that pass. The Phase 2A assumptions model is
+Research exact-period equity-method note evidence for all seven standard-
+concept candidate issuers, prioritizing the unresolved MU, MA, CAT, PM, and LIN
+rows and verifying whether the known AMZN and CVX patterns remain stable across
+their other candidate periods. Preserve direct evidence as
+`INCLUDED_PRETAX`, `SEPARATE_PRETAX`, `SEPARATE_NET_OF_TAX`,
+`NO_MATERIAL_ACTIVITY_FOUND`, or `UNRESOLVED`; never infer absence from silence.
+Only a later separately reviewed design may propose production behavior if it
+finds a deterministic economic-equivalence rule. Keep the 12 issuer-extension
+periods outside this research pass. The Phase 2A assumptions model is
 implemented, but forecast, FCFF, DCF,
 equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
 intentionally paused through Phase 1H.
@@ -633,9 +653,11 @@ intentionally paused through Phase 1H.
    7 reaches PARTIAL GO for further research/design only: a 33-period standard
    Pretax variant remains unapproved because its equity-method scope differs.
    Wave 8 defines a read-only presentation-evidence diagnostic without changing
-   production policy. Twelve issuer-extension Pretax periods remain unresolved.
-   Implement and validate the 33-period diagnostic, then continue with extension
-   patterns, dimensions, non-calendar periods, acquisition accounting,
+   production policy. Wave 9 implements it and validates all 33 periods as
+   multiple-role members with statement membership established but equity-
+   method scope still unapproved. Twelve issuer-extension Pretax periods remain
+   unresolved. Complete exact-period equity-method scope research, then
+   continue with extension patterns, dimensions, non-calendar periods, acquisition accounting,
    debt/lease presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or

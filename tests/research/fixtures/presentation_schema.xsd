@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:link="http://www.xbrl.org/2003/linkbase">
+  <xsd:annotation><xsd:appinfo>
+    <link:roleType roleURI="http://example.com/role/income" id="income">
+      <link:definition>100100 - Statement - Consolidated Statements of Operations</link:definition>
+    </link:roleType>
+    <link:roleType roleURI="http://example.com/role/note" id="note">
+      <link:definition>210100 - Disclosure - Income Taxes (Details)</link:definition>
+    </link:roleType>
+  </xsd:appinfo></xsd:annotation>
+</xsd:schema>

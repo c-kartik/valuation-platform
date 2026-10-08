@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:presentationLink xlink:type="extended" xlink:role="http://example.com/role/income">
+    <link:loc xlink:type="locator" xlink:label="root" xlink:href="test.xsd#us-gaap_IncomeStatementAbstract"/>
+    <link:loc xlink:type="locator" xlink:label="subtotal" xlink:href="test.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"/>
+    <link:presentationArc xlink:type="arc" xlink:from="root" xlink:to="subtotal" order="12.5" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+  </link:presentationLink>
+</link:linkbase>

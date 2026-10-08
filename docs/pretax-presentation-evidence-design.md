@@ -147,8 +147,17 @@ behavior, and regression tests across all affected periods.
 
 ## Next step
 
-Implement the read-only 33-period diagnostic and its deterministic fixtures.
-Its first output should be a research inventory, not a policy change. Keep all
-12 issuer-extension periods outside this pass and preserve safe new Pretax
-resolutions at zero until a later reviewed decision explicitly authorizes
-production behavior.
+**Wave 9 result:** the read-only diagnostic and deterministic fixtures are now
+implemented. The live 33-period inventory is recorded in
+`pretax-presentation-evidence-results.md`. All 33 exact annual candidates occur
+in one submitted `Statement` role and one or more submitted `Disclosure` roles,
+so all classify as `MULTIPLE_ROLE_MEMBERSHIP`; SEC-renderer artifacts corroborate
+all 33. There were no typed data errors.
+
+The policy decision remains **NEEDS_MORE_RESEARCH**. Presentation membership
+does not close the equity-method semantic gate, safe new Pretax resolutions
+remain zero, and the 12 issuer-extension periods remain outside this pass.
+
+The next step is exact-period equity-method note-evidence research across the
+seven candidate issuers, followed by a separately reviewed production design
+only if a deterministic economic-equivalence rule is established.

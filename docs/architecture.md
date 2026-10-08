@@ -95,6 +95,24 @@ ticker equality, company-name similarity, and parent/subsidiary status remain
 insufficient, so production keeps XOM unresolved and no registrant-history
 module is present.
 
+## Development Research Boundary
+
+`valuation_platform.research.pretax_presentation` and
+`scripts/run_pretax_presentation_diagnostic.py` form a development-only,
+read-only evidence boundary. They are not imported by normalization or the S&P
+500 corpus runner. The command discovers artifacts from each exact selected SEC
+filing directory, while the module performs network-free parsing,
+reconciliation, classification, and deterministic serialization.
+
+The research model keeps filer-submitted schemas and presentation linkbases
+separate from SEC-renderer-derived Filing Summary, MetaLinks, and R-file
+evidence. It retains complete role definitions, all root-to-candidate paths,
+relationship order and preferred labels, exact annual facts and USD units,
+every directory filename and source URL, and typed errors. Presentation
+membership never changes `SECFilingXBRL`, normalization concepts or precedence,
+standardized schemas, or corpus behavior. Equity-method economic scope is a
+separate typed gate and silence never establishes no material activity.
+
 ## Valuation Assumptions Boundary
 
 `valuation.assumptions` is independent from SEC retrieval and normalization.

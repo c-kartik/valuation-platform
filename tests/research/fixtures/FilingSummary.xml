@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FilingSummary><MyReports><Report>
+  <Role>http://example.com/role/income</Role><ReportId>R1</ReportId>
+  <MenuCategory>Statements</MenuCategory><ShortName>Operations</ShortName>
+  <LongName>100100 - Statement - Consolidated Statements of Operations</LongName>
+  <HtmlFileName>R1.htm</HtmlFileName><XmlFileName>R1.xml</XmlFileName>
+</Report></MyReports></FilingSummary>
