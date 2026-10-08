@@ -148,6 +148,15 @@ are zero, and no production policy or corpus result changed. Independent review
 confirmed that numerical equality, tax-denominator status, and primary-statement
 placement are not sufficient evidence of semantic equivalence.
 
+Phase 1H.4 Wave 8 defines Pretax presentation-evidence research in
+`docs/pretax-presentation-evidence-design.md` and reaches **PARTIAL GO FOR A
+READ-ONLY RESEARCH DIAGNOSTIC**. Filer-submitted presentation roles can classify
+ordered `Statement` membership, while the extracted instance binds the exact
+fact and annual context. SEC render artifacts remain corroborating derivatives,
+and equity-method note evidence remains a separate semantic gate. The design
+does not change `PRETAX_INCOME_POLICY`, the current Pretax primitive, production
+models, or corpus results.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -589,12 +598,12 @@ being inferred as zero.
 
 ## Next Step
 
-Begin Pretax presentation-evidence research/design. Investigate presentation-
-linkbase roles, generic primary-statement identification, fact placement, note-
-level equity-method evidence, and any additional filing-XBRL presentation
-metadata required. Validate all 33 structurally eligible candidate periods
-before proposing policy; keep the 12 issuer-extension periods out of that
-research. The Phase 2A assumptions model is
+Implement the read-only Pretax presentation-evidence diagnostic defined in
+`docs/pretax-presentation-evidence-design.md`. It must attempt all 33
+structurally eligible candidate periods, preserve submitted and renderer-
+derived evidence separately, and produce typed statement-membership and equity-
+method-scope results without changing normalization policy. Keep the 12 issuer-
+extension periods out of that pass. The Phase 2A assumptions model is
 implemented, but forecast, FCFF, DCF,
 equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
 intentionally paused through Phase 1H.
@@ -622,12 +631,12 @@ intentionally paused through Phase 1H.
    Revenue, Pretax Income, and Income Tax Expense, resolving all known annual/Q4
    collisions while retaining 11 same-period economic Revenue conflicts. Wave
    7 reaches PARTIAL GO for further research/design only: a 33-period standard
-   Pretax variant remains unapproved because its equity-method scope differs
-   and current tooling cannot machine-check presentation evidence. Twelve
-   issuer-extension Pretax periods remain unresolved. Continue with Pretax
-   presentation-evidence research, then extension patterns,
-   dimensions, non-calendar periods, acquisition accounting, debt/lease
-   presentation, D&A decomposition, and working-capital perimeters.
+   Pretax variant remains unapproved because its equity-method scope differs.
+   Wave 8 defines a read-only presentation-evidence diagnostic without changing
+   production policy. Twelve issuer-extension Pretax periods remain unresolved.
+   Implement and validate the 33-period diagnostic, then continue with extension
+   patterns, dimensions, non-calendar periods, acquisition accounting,
+   debt/lease presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
    `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.

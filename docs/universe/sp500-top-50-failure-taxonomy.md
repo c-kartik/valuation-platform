@@ -75,6 +75,10 @@ domestic/foreign components and namespace-agnostic extension matching remain
 unapproved. The 33 periods are structural candidate coverage, safe new
 resolutions remain zero, and production results and Wave 6 totals are unchanged.
 Independent review confirmed the classification and the evidence boundary.
+Wave 8 documents a PARTIAL GO for a read-only presentation-evidence diagnostic:
+submitted `Statement` roles and exact instance facts may classify placement,
+but cannot independently establish the required equity-method scope. SEC render
+artifacts remain corroboration only, and production policy remains unchanged.
 
 ## Operational taxonomy
 
@@ -497,7 +501,7 @@ issuers have one post-smoke classification.
 | 2 | `TICKER_CIK_IDENTITY` | XOM; intended five-year history | Entire issuer | **Wave 1B NO-GO:** structured SEC evidence does not encode the directed legal edge; retain unresolved until a generic exact-CIK succession parser is independently supported | Medium | Medium-high |
 | 3 | `CONCEPT_POLICY` | **Implemented in Wave 2:** 160 additional periods resolved; 19 broader-caption periods remain missing | One high-value balance | Keep broader restricted-cash and cash-equivalents-only captions unresolved pending separate evidence | Very high | Low |
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
-| 5 | `CONCEPT_POLICY` | **Wave 7 PARTIAL GO for research/design only:** 33/45 missing periods have one unapproved standard equity-method-scope candidate; 12 use issuer extensions | Core flow and diagnostic | Research presentation-linkbase roles, statement membership, and note-level equity-method scope before proposing any fallback; keep extensions unresolved | High | Medium-high |
+| 5 | `CONCEPT_POLICY` | **Waves 7–8 PARTIAL GO for research only:** 33/45 missing periods have one unapproved standard equity-method-scope candidate; 12 use issuer extensions | Core flow and diagnostic | Run the 33-period read-only presentation diagnostic; require separate equity-method scope evidence before proposing any fallback; keep extensions unresolved | High | Medium-high |
 | 6 | `CONCEPT_POLICY` / `ISSUER_EXTENSION` | Operating income: 35 missing across seven issuers | Core FCFF input | Filing-level face-statement concept inventory | Medium | High |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 94 missing across the 204-period corpus | Core FCFF input | Group combined concepts and complete component derivations | High | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
@@ -519,9 +523,9 @@ issuers have one post-smoke classification.
    filing-XBRL DEI required context; Wave 5 implemented the pure resolver, and
    Wave 6 integrated it for the three approved metrics. Preserve the 11
    same-period Revenue concept conflicts. Wave 7 leaves the 33-period Pretax
-   variant `NEEDS_MORE_RESEARCH` and authorizes only presentation-evidence
-   research/design; no fallback implementation or precedence change is
-   approved, and the 12 extension periods remain unresolved.
+   variant `NEEDS_MORE_RESEARCH`. Wave 8 authorizes only a read-only 33-period
+   presentation-evidence diagnostic; no fallback implementation or precedence
+   change is approved, and the 12 extension periods remain unresolved.
 3. **Core FCFF flows:** investigate operating-income face-statement evidence,
    D&A groups, and Capex variants. Approve only repeatable definitions with
    selected-accession evidence.
