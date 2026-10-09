@@ -155,13 +155,16 @@ missing / 11 ambiguous / 27 methodology-blocked / 42 not-comparable across
 
 ## Recommended next milestone
 
-The next smallest milestone is **Operating Income derivation-evidence design**,
-not implementation. Freeze exact candidate equations for the 25
-LLY/JNJ/MRK/KLAC/IBM periods and test each component against the consolidated
-face statement, calculation linkbase, taxonomy definition, sign, completeness,
-and overlap. The design must decide an explicit GAAP operating perimeter for
-acquired IPR&D, restructuring, impairments, IP income, pension components, and
-other income/expense before approving any equation. CVX and GE require separate
-issuer/business-model perimeter research and must not be forced into the same
-derivation. Until that work reaches a reviewed GO decision, all 35 periods
-remain typed missing.
+Wave 14 completes that work in the
+[Operating Income component-derivation evidence design](operating-income-derivation-design.md).
+All 25 LLY/JNJ/MRK/KLAC/IBM periods are `DERIVATION_APPROVED` under exact-
+accession evidence. The design proves complete, non-overlapping face-statement
+equations and independent Pretax bridges, decides the disputed operating
+perimeter, and reaches PARTIAL GO for safe potential coverage of 25 periods.
+
+The next smallest milestone is an immutable, versioned curated-policy/model
+design for those exact 25 equations. It must freeze operands, signs, occurrence
+selection, evidence provenance, IBM's bounded whole-million rounding rule, and
+conservative failure behavior before implementation. CVX and GE remain outside
+that scope. Production remains unchanged and all 35 periods remain typed
+missing until a later implementation and live validation succeed.

@@ -113,10 +113,26 @@ zero, and all 35 periods remain missing.
 
 Component derivation is a separate methodology question. No derivation is
 approved until consolidated completeness, operating versus non-operating scope,
-signs, and non-overlap are established for every operand. In particular,
-acquired IPR&D, restructuring, impairments, IP income, pension components,
-interest, equity-affiliate income, and other income or expense cannot be
-silently included or excluded.
+signs, and non-overlap are established for every operand. Wave 14's
+[Operating Income derivation design](operating-income-derivation-design.md)
+establishes that evidence for the 25 exact LLY/JNJ/MRK/KLAC/IBM accessions and
+reaches PARTIAL GO for a future curated exact-accession policy. It defines
+Operating Income as consolidated continuing-operations revenue less the
+complete operating cost perimeter, including acquired IPR&D, restructuring,
+and operating-asset impairments, while excluding interest and reviewed other
+non-operating activity. IBM service cost remains embedded in operating
+expenses; its separately disclosed non-service pension components remain in
+Other and are excluded. IBM IP/custom-development income is operating only in
+the reviewed IBM perimeter.
+
+Each approved equation builds forward from Revenue or a separately reconciled
+Gross Profit and then bridges candidate Operating Income to Pretax through all
+excluded face-statement items. Pretax-minus-residual derivations remain
+prohibited. Issuer expense aggregates that mix operating and non-operating
+items are validation checkpoints, not Operating Income. The evidence approves
+no generic concept fallback, future filing, CVX equation, or GE equation, and
+production behavior remains unchanged pending a separately reviewed policy and
+model design.
 
 Pretax Income is the reported continuing-operations income before income taxes
 and uses exactly:

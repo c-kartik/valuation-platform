@@ -248,6 +248,26 @@ business/perimeter and segment-reconciliation research. No source, test, or
 policy changes were made, all 35 periods remain missing, and production counts
 remain unchanged.
 
+Phase 1H.4 Wave 14 completes the
+[Operating Income component-derivation evidence design](operating-income-derivation-design.md)
+for those 25 exact LLY/JNJ/MRK/KLAC/IBM periods and reaches **PARTIAL GO**. All
+25 are `DERIVATION_APPROVED`: each candidate starts from Revenue or an
+independently reconciled Gross Profit, includes a complete and non-overlapping
+operating-cost perimeter, and bridges through every separately reported
+non-operating item to Pretax. Twenty-two Pretax bridges reconcile exactly; IBM
+2022, 2023, and 2025 differ by only one displayed $1 million unit because its
+face statements round every independently reported line to whole millions.
+
+The reviewed perimeter includes acquired IPR&D, restructuring, operating-asset
+impairments, pension service cost, and IBM IP/custom-development income. It
+excludes interest, non-service pension components, and reviewed other
+non-operating activity. No generic cross-issuer concept rule is approved:
+changing concepts, issuer extensions, explicit row absence, LLY's differing-
+precision IPR&D occurrences, and IBM's rounding boundary require a curated
+exact-accession policy design. Safe potential coverage is 25 periods; CVX and
+GE remain outside the pass. Production code, tests, policies, and counts remain
+unchanged.
+
 The current validated standardized-output corpus contains 204 selected annual
 periods across the 43 generic issuer attempts. All 43 attempts complete through
 standardized output, while the seven specialized issuers remain explicit
@@ -689,15 +709,15 @@ are never inferred as zero.
 
 ## Next Step
 
-Design Operating Income derivation evidence for the 25 LLY/JNJ/MRK/KLAC/IBM
-periods identified by Wave 13. Freeze exact component equations and validate
-each operand's consolidated completeness, operating scope, sign, and non-
-overlap against face statements, calculation relationships, and taxonomy
-definitions. Keep CVX and GE in separate business/perimeter research and do not
-implement a derivation until a reviewed design reaches GO. The Phase 2A
-assumptions model is implemented, but forecast, FCFF, DCF, equity-bridge,
-per-share, reverse-DCF, scenario, and sensitivity work is intentionally paused
-through Phase 1H.
+Design the immutable, versioned curated Operating Income derivation policy and
+reviewed-evidence models for the 25 exact LLY/JNJ/MRK/KLAC/IBM equations
+approved by Wave 14. Freeze exact operand identities, required and explicitly
+absent rows, occurrence selection, signed arithmetic, IBM's $1 million
+rounding gate, full derivation provenance, serialization, direct-concept
+precedence, and missing/error behavior before implementation. Keep CVX and GE
+outside the policy. The Phase 2A assumptions model is implemented, but
+forecast, FCFF, DCF, equity-bridge, per-share, reverse-DCF, scenario, and
+sensitivity work is intentionally paused through Phase 1H.
 
 ## Phase 1H Roadmap
 
