@@ -124,6 +124,18 @@ ORCL/MCD/PG extension periods remain missing. Aggregate states are 1,855
 resolved, 1,533 missing, 11 ambiguous, 27 methodology-blocked, and 42
 not-comparable across the unchanged 3,468 total states.
 
+**Wave 13 follow-up:** the
+[Operating Income concept inventory](../operating-income-concepts.md) reconciles all 35
+missing Operating Income periods—five each for LLY, JNJ, CVX, MRK, GE, KLAC,
+and IBM—to exact selected accessions, authoritative annual periods, submitted
+income-statement roles, and SEC face statements. None reports a consolidated
+Operating Income subtotal; none has an exact Company Facts observation or an
+exact annual nondimensional filing-XBRL candidate. GE 2024 and 2025 have only
+dimensioned segment and reconciliation `OperatingIncomeLoss` facts. Direct
+policy expansion is NO-GO, safe coverage is zero, all 35 remain missing, and
+production totals are unchanged. Twenty-five LLY/JNJ/MRK/KLAC/IBM periods move
+to derivation-evidence design; CVX and GE require separate perimeter research.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -419,8 +431,10 @@ future DCF denominator.
 
 Income-tax expense resolves 204/204. Revenue resolves 193/204 with no missing
 periods and 11 same-period concept ambiguities. Operating income is missing in
-35 periods across LLY, JNJ, CVX, MRK, GE, KLAC, and IBM. Pretax income is
-missing in 45 periods and ambiguous in none; reported ETR mirrors that upstream
+35 periods across LLY, JNJ, CVX, MRK, GE, KLAC, and IBM. Wave 13 proves that
+none of those exact face statements reports a consolidated Operating Income
+subtotal. Pretax income is missing in 37 periods and ambiguous in none;
+reported ETR mirrors that upstream
 availability. Several missing pretax issuers
 report the standard minority-interest/equity-method variant, making it a
 candidate for explicit semantic research. Capex is missing in 57 periods; the
@@ -559,7 +573,7 @@ issuers have one post-smoke classification.
 | 3 | `CONCEPT_POLICY` | **Implemented in Wave 2:** 160 additional periods resolved; 19 broader-caption periods remain missing | One high-value balance | Keep broader restricted-cash and cash-equivalents-only captions unresolved pending separate evidence | Very high | Low |
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
-| 6 | `CONCEPT_POLICY` / `ISSUER_EXTENSION` | Operating income: 35 missing across seven issuers | Core FCFF input | Filing-level face-statement concept inventory | Medium | High |
+| 6 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 13 direct-policy NO-GO:** no consolidated face-statement Operating Income subtotal across 35 periods; two GE periods contain only dimensioned segment/reconciliation facts | Core FCFF input | Design exact component derivations for 25 LLY/JNJ/MRK/KLAC/IBM periods; keep CVX/GE in separate perimeter research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 94 missing across the 204-period corpus | Core FCFF input | Group combined concepts and complete component derivations | High | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
@@ -587,7 +601,10 @@ issuers have one post-smoke classification.
    an automated rule and approves only a curated, versioned exact-accession
    design with reviewed evidence and conservative defaults. Wave 12 implements
    and validates that narrow foundation for exactly the eight positives; all 25
-   controls and 12 extension periods remain unresolved.
+   controls and 12 extension periods remain unresolved. Wave 13 inventories all
+   35 Operating Income gaps, finds zero direct equivalents, and sends only the
+   25 LLY/JNJ/MRK/KLAC/IBM component patterns to derivation-evidence design;
+   CVX and GE retain separate perimeter risk.
 3. **Core FCFF flows:** investigate operating-income face-statement evidence,
    D&A groups, and Capex variants. Approve only repeatable definitions with
    selected-accession evidence.

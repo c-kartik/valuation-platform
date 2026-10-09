@@ -99,6 +99,25 @@ Operating Income currently uses:
 
 1. `us-gaap:OperatingIncomeLoss`
 
+Wave 13 reviews all 35 remaining gaps across LLY, JNJ, CVX, MRK, GE, KLAC,
+and IBM in [the Operating Income concept inventory](operating-income-concepts.md).
+None of the exact selected
+consolidated face statements reports an Operating Income, Income from
+Operations, or Operating Profit subtotal. None has an exact annual
+nondimensional filing-XBRL Operating Income fact or an exact selected-accession
+Company Facts observation. GE's 2024 and 2025 `OperatingIncomeLoss` facts are
+dimensioned segment and reconciliation facts, not a consolidated subtotal.
+Expense totals, gross profit, Pretax Income, segment profit, and component lines
+remain non-equivalent. The generic policy is unchanged, safe direct coverage is
+zero, and all 35 periods remain missing.
+
+Component derivation is a separate methodology question. No derivation is
+approved until consolidated completeness, operating versus non-operating scope,
+signs, and non-overlap are established for every operand. In particular,
+acquired IPR&D, restructuring, impairments, IP income, pension components,
+interest, equity-affiliate income, and other income or expense cannot be
+silently included or excluded.
+
 Pretax Income is the reported continuing-operations income before income taxes
 and uses exactly:
 

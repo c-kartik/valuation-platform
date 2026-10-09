@@ -229,6 +229,25 @@ exactly to 1,855 resolved, 1,533 missing, 11 ambiguous, 27
 methodology-blocked, and 42 not-comparable across 3,468 states; the only corpus
 changes are the eight Pretax and eight corresponding Reported ETR resolutions.
 
+Phase 1H.4 Wave 13 completes the exact selected-filing
+[Operating Income concept inventory](operating-income-concepts.md). All 35
+missing periods—five
+each for LLY, JNJ, CVX, MRK, GE, KLAC, and IBM—reconcile to their frozen
+selected accessions, authoritative annual periods, submitted income-statement
+roles, and SEC-rendered face statements. None reports a consolidated Operating
+Income subtotal, none has an exact Company Facts observation, and none has an
+exact annual nondimensional filing-XBRL Operating Income fact. GE 2024 and 2025
+contain only economically distinct dimensioned segment and reconciliation
+`OperatingIncomeLoss` facts.
+
+Wave 13 reaches **NO-GO FOR DIRECT CONCEPT-POLICY EXPANSION**. Safe potential
+direct coverage is zero. Twenty-five LLY/JNJ/MRK/KLAC/IBM periods have
+component patterns that require separate derivation-evidence design; CVX has no
+reported consolidated Operating Income, while GE requires separate
+business/perimeter and segment-reconciliation research. No source, test, or
+policy changes were made, all 35 periods remain missing, and production counts
+remain unchanged.
+
 The current validated standardized-output corpus contains 204 selected annual
 periods across the 43 generic issuer attempts. All 43 attempts complete through
 standardized output, while the seven specialized issuers remain explicit
@@ -670,11 +689,12 @@ are never inferred as zero.
 
 ## Next Step
 
-Research the 35 missing Operating Income periods across LLY, JNJ, CVX, MRK,
-GE, KLAC, and IBM using exact selected-filing face-statement evidence. Inventory
-the concepts, namespaces, contexts, dimensions, units, and presentation
-definitions before designing any policy; do not add issuer extensions or
-derivations until repeatable economic equivalence is established. The Phase 2A
+Design Operating Income derivation evidence for the 25 LLY/JNJ/MRK/KLAC/IBM
+periods identified by Wave 13. Freeze exact component equations and validate
+each operand's consolidated completeness, operating scope, sign, and non-
+overlap against face statements, calculation relationships, and taxonomy
+definitions. Keep CVX and GE in separate business/perimeter research and do not
+implement a derivation until a reviewed design reaches GO. The Phase 2A
 assumptions model is implemented, but forecast, FCFF, DCF, equity-bridge,
 per-share, reverse-DCF, scenario, and sensitivity work is intentionally paused
 through Phase 1H.
@@ -714,11 +734,15 @@ through Phase 1H.
    registry with mandatory provenance and conservative defaults. Wave 12
    implements that boundary for only the eight reviewed MA/CVX facts, preserves
    all confirming occurrences through Reported ETR and serialization, and
-   leaves all 25 controls and 12 issuer-extension periods unresolved. Next,
-   research the 35 missing Operating Income periods from exact selected-filing
-   face statements before continuing with extension patterns, dimensions,
-   non-calendar periods, acquisition accounting, debt/lease presentation, D&A
-   decomposition, and working-capital perimeters.
+   leaves all 25 controls and 12 issuer-extension periods unresolved. Wave 13
+   finds no consolidated face-statement Operating Income subtotal in any of 35
+   missing periods and rejects direct policy expansion; two GE periods contain
+   only dimensioned segment/reconciliation facts. Next, design and validate
+   component-derivation evidence for the 25 LLY/JNJ/MRK/KLAC/IBM periods while
+   keeping CVX and GE in separate perimeter research, then continue with other
+   extension patterns, dimensions, non-calendar periods, acquisition
+   accounting, debt/lease presentation, D&A decomposition, and working-capital
+   perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
    `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.
