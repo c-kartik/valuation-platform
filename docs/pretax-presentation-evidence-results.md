@@ -92,27 +92,34 @@ first context.
 
 ## Equity-method evidence matrix
 
-This matrix records only direct evidence already established. Silence remains
-`UNRESOLVED`; it is never converted to `NO_MATERIAL_ACTIVITY_FOUND`.
+This matrix originally recorded the evidence available at the end of Wave 9.
+Wave 10 completed the exact-period note review linked below; the classifications
+now reflect that evidence. Silence is never converted to
+`NO_MATERIAL_ACTIVITY_FOUND`.
 
 | Issuer | Candidate periods | Classification | Direct evidence | Decision |
 |---|---:|---|---|---|
-| AMZN | 5 | `SEPARATE_NET_OF_TAX` | The inspected 2025 filing presents equity-method activity net of tax below the tax line | `NEEDS_MORE_RESEARCH` across all five periods |
-| MU | 5 | `UNRESOLVED` | No direct equity-method scope evidence established | `NEEDS_MORE_RESEARCH` |
-| MA | 3 | `UNRESOLVED` | Tag transition supports presentation continuity, not economic scope | `NEEDS_MORE_RESEARCH` |
-| CVX | 5 | `INCLUDED_PRETAX` | The inspected 2025 filing states affiliate net income enters before-tax consolidated earnings | `NEEDS_MORE_RESEARCH` across all five periods |
-| CAT | 5 | `UNRESOLVED` | No direct equity-method scope evidence established | `NEEDS_MORE_RESEARCH` |
-| PM | 5 | `UNRESOLVED` | No direct equity-method scope evidence established | `NEEDS_MORE_RESEARCH` |
-| LIN | 5 | `UNRESOLVED` | No direct equity-method scope evidence established | `NEEDS_MORE_RESEARCH` |
+| AMZN | 5 | `SEPARATE_NET_OF_TAX` | All five filings bind investee activity to the separate net-of-tax statement line | Economically non-equivalent |
+| MU | 5 | `SEPARATE_NET_OF_TAX` | All five statements separately present equity in investee net income/loss after tax | Economically non-equivalent |
+| MA | 3 | `INCLUDED_PRETAX` | Each investment policy binds equity-method results to pretax statement lines | Issuer-specific evidence for later design |
+| CVX | 5 | `INCLUDED_PRETAX` | Each filing directly places affiliate earnings before consolidated tax | Issuer-specific evidence for later design |
+| CAT | 5 | `SEPARATE_NET_OF_TAX` | Each Statement 1 presents equity in unconsolidated affiliates after tax | Economically non-equivalent |
+| PM | 5 | `SEPARATE_NET_OF_TAX` | Each statement places the combined equity-investment line after the tax provision; exact notes bind equity-method effects to it | Economically non-equivalent |
+| LIN | 5 | `UNRESOLVED` | Corporate-investee income is after tax; partnership/LLC income enters Pretax | Stable mixed treatment; no single classification |
 
 ## Next milestone
 
-The next smallest milestone is research, not normalization implementation:
-complete exact-period equity-method note evidence for all seven candidate
-issuers, especially the five unresolved issuer rows, and test whether the AMZN
-and CVX patterns are stable across their remaining periods. Classify direct
-evidence as `INCLUDED_PRETAX`, `SEPARATE_PRETAX`, `SEPARATE_NET_OF_TAX`,
-`NO_MATERIAL_ACTIVITY_FOUND`, or `UNRESOLVED`; never infer absence from silence.
-Only after that inventory may a separate reviewed design decide whether any
-machine-checkable evidence pattern is economically equivalent to the current
-Pretax primitive.
+Wave 10 completes that research in
+[`pretax-equity-method-note-evidence.md`](pretax-equity-method-note-evidence.md).
+Across the same 33 exact accessions, direct filing evidence classifies eight
+periods as `INCLUDED_PRETAX` (MA and CVX), 20 as
+`SEPARATE_NET_OF_TAX` (AMZN, MU, CAT, and PM), and five LIN periods as
+`UNRESOLVED` because Linde directly reports mixed treatment by investee legal
+form. No period is `SEPARATE_PRETAX` or `NO_MATERIAL_ACTIVITY_FOUND`.
+
+The note research establishes manual exact-accession inclusion for eight periods,
+but no deterministic, machine-checkable economic-equivalence rule. The next
+smallest milestone is a separately reviewed design for representing that
+issuer-scoped evidence without narrative-text inference. Safe new production
+Pretax resolutions remain zero, and all 33 periods remain missing in the
+unchanged production corpus.

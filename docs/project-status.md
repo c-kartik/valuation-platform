@@ -174,6 +174,23 @@ these classifications do not approve any period. Safe new Pretax resolutions
 remain zero, and production policies, standardized outputs, and corpus totals
 are unchanged.
 
+Phase 1H.4 Wave 10 completes exact-period equity-method note research in
+`docs/pretax-equity-method-note-evidence.md` using the 33 frozen selected
+accessions. Direct filing evidence classifies eight periods as `INCLUDED_PRETAX`
+(MA three and CVX five), 20 as `SEPARATE_NET_OF_TAX` (AMZN, MU, CAT, and PM
+five each), and five as `UNRESOLVED` (LIN). Linde directly reports mixed
+treatment: corporate-investee income is after tax while partnership/LLC
+investee income enters Pretax. No period is `SEPARATE_PRETAX` or
+`NO_MATERIAL_ACTIVITY_FOUND`.
+
+The same candidate concept therefore has issuer-dependent economics. Manual
+exact-accession evidence establishes inclusion for eight periods, but no
+deterministic, machine-checkable economic-equivalence rule was established.
+Safe new production Pretax resolutions remain zero; `PRETAX_INCOME_POLICY`,
+the 159 resolved / 45 missing / 0 ambiguous Pretax corpus result, and all
+aggregate corpus totals remain unchanged. The 12 issuer-extension periods were
+excluded as required.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -615,15 +632,14 @@ being inferred as zero.
 
 ## Next Step
 
-Research exact-period equity-method note evidence for all seven standard-
-concept candidate issuers, prioritizing the unresolved MU, MA, CAT, PM, and LIN
-rows and verifying whether the known AMZN and CVX patterns remain stable across
-their other candidate periods. Preserve direct evidence as
-`INCLUDED_PRETAX`, `SEPARATE_PRETAX`, `SEPARATE_NET_OF_TAX`,
-`NO_MATERIAL_ACTIVITY_FOUND`, or `UNRESOLVED`; never infer absence from silence.
-Only a later separately reviewed design may propose production behavior if it
-finds a deterministic economic-equivalence rule. Keep the 12 issuer-extension
-periods outside this research pass. The Phase 2A assumptions model is
+Design and independently review whether exact-accession, issuer-scoped
+economic-scope evidence for the eight manually established `INCLUDED_PRETAX`
+periods can be represented deterministically without narrative-text inference.
+The design must specify evidence inputs, accession scope, ambiguity behavior,
+and regressions against the 20 separate-net-of-tax and five mixed-treatment
+periods. If no machine-checkable boundary can be stated, retain all 33 as typed
+missing and continue to the next Phase 1H.4 generalization topic. Keep the 12
+issuer-extension periods outside this design. The Phase 2A assumptions model is
 implemented, but forecast, FCFF, DCF,
 equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
 intentionally paused through Phase 1H.
@@ -655,8 +671,12 @@ intentionally paused through Phase 1H.
    Wave 8 defines a read-only presentation-evidence diagnostic without changing
    production policy. Wave 9 implements it and validates all 33 periods as
    multiple-role members with statement membership established but equity-
-   method scope still unapproved. Twelve issuer-extension Pretax periods remain
-   unresolved. Complete exact-period equity-method scope research, then
+   method scope still unapproved. Wave 10 completes exact-period note research:
+   eight periods are included in Pretax, 20 are separate net of tax, and five have
+   mixed treatment and remain unresolved. No machine-checkable equivalence rule
+   or production resolution is established. Twelve issuer-extension Pretax
+   periods remain unresolved. Complete the separately reviewed scope-evidence
+   design, then
    continue with extension patterns, dimensions, non-calendar periods, acquisition accounting,
    debt/lease presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
