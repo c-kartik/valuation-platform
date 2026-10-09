@@ -162,9 +162,14 @@ accession evidence. The design proves complete, non-overlapping face-statement
 equations and independent Pretax bridges, decides the disputed operating
 perimeter, and reaches PARTIAL GO for safe potential coverage of 25 periods.
 
-The next smallest milestone is an immutable, versioned curated-policy/model
-design for those exact 25 equations. It must freeze operands, signs, occurrence
-selection, evidence provenance, IBM's bounded whole-million rounding rule, and
-conservative failure behavior before implementation. CVX and GE remain outside
-that scope. Production remains unchanged and all 35 periods remain typed
-missing until a later implementation and live validation succeed.
+Wave 15 completes the immutable, versioned
+[curated derivation-policy design](operating-income-derivation-policy-design.md)
+for those exact 25 equations. It freezes ordered operands, exact source and
+occurrence selection, evidence provenance, IBM's validation-only whole-million
+rounding gate, direct-result precedence, downstream Operating Tax boundaries,
+and conservative failure behavior. CVX and GE remain outside that scope.
+
+The next milestone is narrow implementation and validation of
+`operating_income_component_derivation_v1`. Production remains unchanged and
+all 35 periods remain typed missing until that implementation and exact live
+reconciliation succeed.

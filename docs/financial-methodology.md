@@ -134,6 +134,27 @@ no generic concept fallback, future filing, CVX equation, or GE equation, and
 production behavior remains unchanged pending a separately reviewed policy and
 model design.
 
+Wave 15's
+[curated derivation-policy design](operating-income-derivation-policy-design.md)
+approves a production boundary, not production values. The proposed immutable
+`operating_income_component_derivation_v1` registry contains only the 25 exact
+reviewed CIK/accession/period equations. It preserves ordered signed operands,
+every confirming and reviewed-nonselected occurrence, calculation and Pretax-
+bridge evidence, and exact arithmetic. The generic `OperatingIncomeLoss`
+policy remains first. A direct ambiguity is never replaced; equal complete
+direct and derived values may confirm, while differing values remain
+ambiguous. Future, amended, unregistered, incomplete, dimensioned-only, nil,
+non-USD, or conflicting evidence cannot create a result.
+
+IBM's three one-million Pretax variances are validation-only consequences of
+independently reported whole-million face lines. The exact derived Operating
+Income is never rounded, plugged, or changed, and the reported/calculated
+values, signed variance, and scale remain provenance. The tolerance does not
+generalize beyond the five registered IBM filings. A future Operating Tax path
+may accept a derived Operating Income only with complete active-version policy
+provenance and all existing tax-policy gates; the derivation alone never
+approves tax allocation or NOPAT.
+
 Pretax Income is the reported continuing-operations income before income taxes
 and uses exactly:
 

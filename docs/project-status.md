@@ -268,6 +268,25 @@ exact-accession policy design. Safe potential coverage is 25 periods; CVX and
 GE remain outside the pass. Production code, tests, policies, and counts remain
 unchanged.
 
+Phase 1H.4 Wave 15 completes the
+[curated Operating Income derivation-policy design](operating-income-derivation-policy-design.md)
+and reaches **PARTIAL GO** for a later narrow implementation. The proposed
+immutable `operating_income_component_derivation_v1` registry contains only
+the 25 reviewed exact CIK/accession/period equations. It freezes ordered signed
+filing-XBRL operands, explicit row absence, exact-value and occurrence rules,
+reviewed lower-precision LLY evidence, independent Gross Profit and Pretax
+validation, direct-result precedence, complete provenance and serialization,
+and an Operating Tax compatibility boundary.
+
+IBM's three one-million Pretax differences remain validation-only signed
+variances at the filing's whole-million display scale; no derived value is
+rounded, normalized, or plugged. Equivalent occurrences may confirm only when
+their complete semantic signature and exact `Decimal` agree. Unexpected values
+remain ambiguous, structural evidence faults remain errors, and future,
+amended, or unregistered filings produce no derivation. The ten CVX/GE periods
+are frozen negative controls. No production code, test, policy, or corpus count
+changes in this design wave.
+
 The current validated standardized-output corpus contains 204 selected annual
 periods across the 43 generic issuer attempts. All 43 attempts complete through
 standardized output, while the seven specialized issuers remain explicit
@@ -709,13 +728,14 @@ are never inferred as zero.
 
 ## Next Step
 
-Design the immutable, versioned curated Operating Income derivation policy and
-reviewed-evidence models for the 25 exact LLY/JNJ/MRK/KLAC/IBM equations
-approved by Wave 14. Freeze exact operand identities, required and explicitly
-absent rows, occurrence selection, signed arithmetic, IBM's $1 million
-rounding gate, full derivation provenance, serialization, direct-concept
-precedence, and missing/error behavior before implementation. Keep CVX and GE
-outside the policy. The Phase 2A assumptions model is implemented, but
+Implement and validate the frozen
+`operating_income_component_derivation_v1` design for the 25 exact
+LLY/JNJ/MRK/KLAC/IBM equations. Add only the immutable models and registry,
+narrow resolver integration after the unchanged direct policy, complete
+provenance/output/serialization and Operating Tax support, focused
+25-positive/10-control regressions, targeted live validation, complete tests,
+and then a full corpus reconciliation. Keep CVX and GE outside the policy. The
+Phase 2A assumptions model is implemented, but
 forecast, FCFF, DCF, equity-bridge, per-share, reverse-DCF, scenario, and
 sensitivity work is intentionally paused through Phase 1H.
 
@@ -757,10 +777,13 @@ sensitivity work is intentionally paused through Phase 1H.
    leaves all 25 controls and 12 issuer-extension periods unresolved. Wave 13
    finds no consolidated face-statement Operating Income subtotal in any of 35
    missing periods and rejects direct policy expansion; two GE periods contain
-   only dimensioned segment/reconciliation facts. Next, design and validate
-   component-derivation evidence for the 25 LLY/JNJ/MRK/KLAC/IBM periods while
-   keeping CVX and GE in separate perimeter research, then continue with other
-   extension patterns, dimensions, non-calendar periods, acquisition
+   only dimensioned segment/reconciliation facts. Wave 14 approves exact
+   component-derivation evidence for all 25 LLY/JNJ/MRK/KLAC/IBM periods. Wave
+   15 freezes the immutable exact-accession policy/model, arithmetic, evidence,
+   provenance, serialization, Operating Tax, and regression design while
+   keeping CVX and GE as negative controls. Next, implement and validate that
+   narrow design, then continue with other extension patterns, dimensions,
+   non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital
    perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent

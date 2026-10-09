@@ -328,6 +328,20 @@ Expense before ambiguity evaluation; nonresolved evidence never selects a
 period. Form, Company Facts `fy`/`fp`, frame, duration length, calendar
 assumptions, diluted shares, and candidate consensus remain insufficient
 standalone signals.
+
+The Wave 15
+[curated Operating Income derivation-policy design](operating-income-derivation-policy-design.md)
+defines a future policy-specific boundary after the unchanged direct Operating
+Income resolver. It deliberately does not expand the generic derivation model
+into an expression engine. One frozen, versioned registry owns 25 exact
+LLY/JNJ/MRK/KLAC/IBM filing identities and ordered signed filing-XBRL operands.
+The future resolver must be pure and network-free, match exact selected-filing
+and authoritative-period identity, preserve all confirming and reviewed-
+nonselected occurrences, and emit derivation-specific policy provenance through
+standardized output, serialization, and Operating Tax readiness. CVX, GE,
+future filings, amendments, and unregistered equations remain outside the
+registry. No production behavior changes in the design wave.
+
 D&A and Capex use the same generic direct-resolution path. A direct D&A result
 takes precedence. When direct D&A is missing, an approved policy may produce a
 provenance-distinct derived value; direct ambiguity is never replaced by a

@@ -281,17 +281,17 @@ inherited.
 
 ## Implementation boundary and next milestone
 
-The next milestone is a production design for an immutable, versioned curated
-Operating Income derivation policy covering only these 25 facts/equations. It
-must specify exact CIK/accession/period/concept/unit operands, required and
-explicitly absent rows, occurrence selection, signed arithmetic, the IBM-only
-rounding gate, complete operand and calculation-evidence provenance,
-serialization, current direct-concept precedence, and failure behavior for
-missing, dimensioned, nil, duplicated, conflicting, amended, future, or
-unregistered evidence. It must not change generic `OPERATING_INCOME_POLICY` or
-admit CVX/GE.
+Wave 15 completes the separately reviewed
+[curated Operating Income derivation-policy design](operating-income-derivation-policy-design.md).
+It freezes `operating_income_component_derivation_v1` as an immutable registry
+for only these 25 exact CIK/accession/period equations, with ordered signed
+operands, exact filing-XBRL selection, reviewed alternate occurrences,
+validation-only IBM rounding gates, direct-result precedence, complete
+provenance, serialization, Operating Tax boundaries, and conservative failure
+behavior. It explicitly excludes CVX, GE, future filings, amendments, and
+unregistered evidence.
 
-Implementation should begin only after that policy/model design is reviewed.
-The expected potential outcome is 25 additional Operating Income resolutions,
+The next milestone is narrow implementation and validation of that approved
+design. The design target is 25 additional Operating Income resolutions,
 leaving the ten CVX/GE periods missing; production counts do not change until
-implementation and live corpus validation succeed.
+implementation tests and exact live corpus reconciliation succeed.
