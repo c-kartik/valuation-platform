@@ -341,6 +341,7 @@ def _metric_operand(value: NormalizedHistoricalValue) -> DerivedMetricOperand:
         period=value.period,
         chosen_source=value.chosen_source,
         confirming_sources=value.confirming_sources,
+        policy_provenance=value.policy_provenance,
     )
 
 

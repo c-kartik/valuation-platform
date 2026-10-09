@@ -107,19 +107,29 @@ now reflect that evidence. Silence is never converted to
 | PM | 5 | `SEPARATE_NET_OF_TAX` | Each statement places the combined equity-investment line after the tax provision; exact notes bind equity-method effects to it | Economically non-equivalent |
 | LIN | 5 | `UNRESOLVED` | Corporate-investee income is after tax; partnership/LLC income enters Pretax | Stable mixed treatment; no single classification |
 
-## Next milestone
+## Wave 12 production follow-up
 
-Wave 10 completes that research in
-[`pretax-equity-method-note-evidence.md`](pretax-equity-method-note-evidence.md).
-Across the same 33 exact accessions, direct filing evidence classifies eight
-periods as `INCLUDED_PRETAX` (MA and CVX), 20 as
-`SEPARATE_NET_OF_TAX` (AMZN, MU, CAT, and PM), and five LIN periods as
-`UNRESOLVED` because Linde directly reports mixed treatment by investee legal
-form. No period is `SEPARATE_PRETAX` or `NO_MATERIAL_ACTIVITY_FOUND`.
+Wave 10 completed the exact-period note research and Wave 11 approved only a
+curated exact-accession policy design. Wave 12 now implements that design for
+the eight `INCLUDED_PRETAX` MA/CVX facts. It does not convert the presentation
+diagnostic into automated discovery or change the generic Pretax concept
+policy.
 
-The note research establishes manual exact-accession inclusion for eight periods,
-but no deterministic, machine-checkable economic-equivalence rule. The next
-smallest milestone is a separately reviewed design for representing that
-issuer-scoped evidence without narrative-text inference. Safe new production
-Pretax resolutions remain zero, and all 33 periods remain missing in the
-unchanged production corpus.
+The production duplicate diagnostic confirmed that each MA eligible fact has
+three semantically identical same-context occurrences. Each CVX eligible fact
+has two semantically identical nondimensional occurrences plus distinct
+dimensioned facts that remain excluded. The curated resolver applies the same
+one-consistent-signature principle already used here: context IDs, exact-USD
+unit IDs, raw strings, and decimals may differ only when all normalized semantic
+fields and the exact `Decimal` value agree. Every original occurrence and its
+deterministic ordinal remains in provenance and serialization.
+
+Targeted live validation resolves all eight Pretax and all eight corresponding
+Reported ETR periods. The full 33-period regression resolves exactly the eight
+`ALLOW` facts and leaves all 25 controls missing; the 12 ORCL/MCD/PG extension
+periods remain unchanged. Full-corpus Pretax and Reported ETR each reconcile to
+167 resolved / 37 missing / 0 ambiguous. The complete suite passes 491 tests.
+
+The next milestone is selected-filing face-statement research for the 35
+missing Operating Income periods. It is research only; no new policy is yet
+approved.

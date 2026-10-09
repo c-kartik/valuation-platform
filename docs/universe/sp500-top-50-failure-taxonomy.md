@@ -113,6 +113,17 @@ current-concept precedence, and missing-by-default future/amended filings. No
 registry is implemented; safe new production resolutions and corpus totals
 remain unchanged.
 
+**Wave 12 follow-up:** the immutable `pretax_scope_equivalence_v1` policy now
+registers exactly the eight reviewed MA/CVX facts without changing the generic
+Pretax policy. Equivalent repeated nondimensional filing-XBRL occurrences
+confirm one value while retaining every original representation and ordinal;
+CVX's dimensioned occurrences remain excluded. Exactly eight Pretax and eight
+corresponding Reported ETR periods resolve. Pretax and Reported ETR each become
+167 resolved / 37 missing / 0 ambiguous. All 25 controls and all 12 excluded
+ORCL/MCD/PG extension periods remain missing. Aggregate states are 1,855
+resolved, 1,533 missing, 11 ambiguous, 27 methodology-blocked, and 42
+not-comparable across the unchanged 3,468 total states.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -327,8 +338,8 @@ derivation. Ninety periods across 19 issuers remain missing.
 
 ### Pretax Income
 
-Pretax Income has 45 typed-missing periods and no remaining known period-shape
-ambiguity after Wave 6. Thirty-three periods across AMZN, MU, MA, CVX, CAT, PM,
+Pretax Income now has 37 typed-missing periods and no remaining known
+period-shape ambiguity. Thirty-three periods across AMZN, MU, MA, CVX, CAT, PM,
 and LIN expose the exact annual standard concept
 `IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments`.
 Its formal scope excludes equity-method income or loss, unlike the current
@@ -345,16 +356,18 @@ LIN periods have mixed included and after-tax treatment and remain unresolved.
 The result rejects a global alias and supplies no machine-checkable generic
 rule. Wave 11 also rejects automated structured discovery but finds a curated,
 versioned exact-accession policy methodologically acceptable for the eight
-positives. All 33 remain production missing pending separate implementation
-and validation of that conservative boundary.
+positives. Wave 12 implements only those eight approvals. The 20
+separate-net-of-tax controls and five LIN mixed-treatment controls remain
+missing, while each resolved result retains the reviewed policy and all
+confirming filing-XBRL occurrence provenance.
 
 The remaining 12 periods are ORCL five, MCD five, and PG two. Their exact annual
 Pretax evidence is present only as selected-filing issuer extensions. The same
 local name across two issuer namespaces is not a reusable family, and Oracle
 uses a different extension family. Domestic and foreign Pretax components
-appear in 39 missing periods but are jurisdiction pieces, not direct
-substitutes. No missing value is treated as zero, no arithmetic derivation is
-approved, and production remains unchanged.
+appear in 39 candidate periods but are jurisdiction pieces, not direct
+substitutes. No missing value is treated as zero and no arithmetic derivation
+is approved. Production Pretax is 167 resolved / 37 missing / 0 ambiguous.
 
 ### Operating NWC
 
@@ -545,7 +558,7 @@ issuers have one post-smoke classification.
 | 2 | `TICKER_CIK_IDENTITY` | XOM; intended five-year history | Entire issuer | **Wave 1B NO-GO:** structured SEC evidence does not encode the directed legal edge; retain unresolved until a generic exact-CIK succession parser is independently supported | Medium | Medium-high |
 | 3 | `CONCEPT_POLICY` | **Implemented in Wave 2:** 160 additional periods resolved; 19 broader-caption periods remain missing | One high-value balance | Keep broader restricted-cash and cash-equivalents-only captions unresolved pending separate evidence | Very high | Low |
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
-| 5 | `CONCEPT_POLICY` | **Waves 7–11:** 8/33 standard-variant periods have manually approved included-Pretax evidence, 20 are separate net of tax, five have mixed treatment; 12 additional periods use issuer extensions | Core flow and diagnostic | Implement the reviewed versioned exact-accession policy foundation for only the eight positives; reject automated discovery and a generic alias, regress all 25 controls, and keep extensions unresolved | Medium | Medium-high |
+| 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `CONCEPT_POLICY` / `ISSUER_EXTENSION` | Operating income: 35 missing across seven issuers | Core FCFF input | Filing-level face-statement concept inventory | Medium | High |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 94 missing across the 204-period corpus | Core FCFF input | Group combined concepts and complete component derivations | High | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
@@ -572,9 +585,9 @@ issuers have one post-smoke classification.
    Wave 10 finds eight included-Pretax, 20 separate-net-of-tax, and five mixed-
    treatment periods but no machine-checkable equivalence rule. Wave 11 rejects
    an automated rule and approves only a curated, versioned exact-accession
-   design with reviewed evidence and conservative defaults. Implement and
-   validate that narrow foundation before any production change; the 12
-   extension periods remain unresolved.
+   design with reviewed evidence and conservative defaults. Wave 12 implements
+   and validates that narrow foundation for exactly the eight positives; all 25
+   controls and 12 extension periods remain unresolved.
 3. **Core FCFF flows:** investigate operating-income face-statement evidence,
    D&A groups, and Capex variants. Approve only repeatable definitions with
    selected-accession evidence.

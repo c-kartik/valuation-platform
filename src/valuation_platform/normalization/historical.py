@@ -39,6 +39,7 @@ from .diluted_shares import (
     GOOGL_DILUTED_SHARES_DERIVATION_POLICY,
     derive_googl_diluted_weighted_average_shares,
 )
+from .pretax_scope import apply_curated_pretax_scope_policy
 from .models import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
@@ -175,6 +176,15 @@ def _resolve_with_derivation(
     annual_period: AnnualPeriodResolution | None,
 ) -> HistoricalMetricResult:
     direct = _resolve_metric(bucket, policy, source_url, annual_period)
+    if policy.metric is FinancialMetric.PRETAX_INCOME:
+        direct = apply_curated_pretax_scope_policy(
+            bucket,
+            direct,
+            company_cik,
+            source_url,
+            annual_period,
+            filing_xbrl,
+        )
     if policy.metric is FinancialMetric.DILUTED_WEIGHTED_AVERAGE_SHARES:
         return derive_googl_diluted_weighted_average_shares(
             bucket,

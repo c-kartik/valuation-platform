@@ -209,13 +209,33 @@ no registry or source behavior: all 33 remain production missing, safe new
 Pretax resolutions remain zero, and Pretax remains 159 resolved / 45 missing /
 0 ambiguous.
 
-The current validated standardized-output corpus is five companies—META,
-GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
-10-K periods per company. Validation means the production historical pipeline
-was run and checked against expected filing evidence, not that every metric
-resolved. GOOGL D&A remains typed missing, GOOGL/MSFT/AAPL Operating NWC remains
-methodology-blocked, and missing debt primitives remain missing rather than
-being inferred as zero.
+Phase 1H.4 Wave 12 implements and validates that exact boundary. The immutable
+`pretax_scope_equivalence_v1` registry contains only the eight reviewed MA/CVX
+CIK-accession-period facts. The generic `PRETAX_INCOME_POLICY` remains
+unchanged and retains precedence. The curated resolver groups eligible
+nondimensional filing-XBRL occurrences by a complete semantic signature,
+allowing MA's three repeated occurrences and CVX's two repeated nondimensional
+occurrences to confirm one value while excluding CVX's dimensioned facts. It
+retains every occurrence, original representation, and deterministic ordinal
+through normalized Pretax, standardized-output schema version 2, serialization,
+and Reported ETR supporting-policy provenance.
+
+Focused validation passes 122 tests, the complete suite passes 491 tests, and
+targeted live normalization resolves exactly eight Pretax and eight Reported
+ETR periods. The full 204-period corpus produces Pretax and Reported ETR at
+167 resolved / 37 missing / 0 ambiguous each. All 25 controls and all 12
+ORCL/MCD/PG issuer-extension periods remain missing. Aggregate states reconcile
+exactly to 1,855 resolved, 1,533 missing, 11 ambiguous, 27
+methodology-blocked, and 42 not-comparable across 3,468 states; the only corpus
+changes are the eight Pretax and eight corresponding Reported ETR resolutions.
+
+The current validated standardized-output corpus contains 204 selected annual
+periods across the 43 generic issuer attempts. All 43 attempts complete through
+standardized output, while the seven specialized issuers remain explicit
+skips. Validation means the production historical pipeline was run and checked
+against expected filing evidence, not that every metric resolved; missing,
+ambiguous, methodology-blocked, and not-comparable states remain explicit and
+are never inferred as zero.
 
 ## Completed
 
@@ -650,17 +670,14 @@ being inferred as zero.
 
 ## Next Step
 
-Implement and validate the reviewed curated Pretax scope-policy foundation for
-the eight exact MA/CVX accessions. Add immutable versioned policy and reviewed-
-evidence provenance, keep the current approved concept first, preserve policy
-identity through standardized output and Reported ETR, and regress all 33
-candidate periods so the 20 separate-net-of-tax and five LIN mixed-treatment
-controls remain missing. Do not add the candidate to the generic
-`PRETAX_INCOME_POLICY`, extrapolate to future or amended filings, or include the
-12 issuer-extension periods. The Phase 2A assumptions model is implemented,
-but forecast, FCFF, DCF,
-equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
-intentionally paused through Phase 1H.
+Research the 35 missing Operating Income periods across LLY, JNJ, CVX, MRK,
+GE, KLAC, and IBM using exact selected-filing face-statement evidence. Inventory
+the concepts, namespaces, contexts, dimensions, units, and presentation
+definitions before designing any policy; do not add issuer extensions or
+derivations until repeatable economic equivalence is established. The Phase 2A
+assumptions model is implemented, but forecast, FCFF, DCF, equity-bridge,
+per-share, reverse-DCF, scenario, and sensitivity work is intentionally paused
+through Phase 1H.
 
 ## Phase 1H Roadmap
 
@@ -694,11 +711,14 @@ intentionally paused through Phase 1H.
    mixed treatment and remain unresolved. No machine-checkable equivalence rule
    or production resolution is established. Wave 11 rejects an automated rule
    but approves the design boundary for a curated, versioned exact-accession
-   registry with mandatory provenance and conservative defaults. No production
-   resolution is added. Twelve issuer-extension Pretax periods remain
-   unresolved. Implement and validate that curated foundation, then
-   continue with extension patterns, dimensions, non-calendar periods, acquisition accounting,
-   debt/lease presentation, D&A decomposition, and working-capital perimeters.
+   registry with mandatory provenance and conservative defaults. Wave 12
+   implements that boundary for only the eight reviewed MA/CVX facts, preserves
+   all confirming occurrences through Reported ETR and serialization, and
+   leaves all 25 controls and 12 issuer-extension periods unresolved. Next,
+   research the 35 missing Operating Income periods from exact selected-filing
+   face statements before continuing with extension patterns, dimensions,
+   non-calendar periods, acquisition accounting, debt/lease presentation, D&A
+   decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
    `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.
@@ -738,7 +758,8 @@ valuation-platform/
 │       │   ├── historical.py
 │       │   ├── models.py
 │       │   ├── output.py
-│       │   └── operating_nwc.py
+│       │   ├── operating_nwc.py
+│       │   └── pretax_scope.py
 │       ├── valuation/
 │       │   ├── __init__.py
 │       │   └── assumptions.py
@@ -760,7 +781,8 @@ valuation-platform/
 │   │   ├── test_diluted_shares.py
 │   │   ├── test_historical.py
 │   │   ├── test_output.py
-│   │   └── test_operating_nwc.py
+│   │   ├── test_operating_nwc.py
+│   │   └── test_pretax_scope.py
 │   ├── valuation/
 │   │   ├── __init__.py
 │   │   └── test_assumptions.py

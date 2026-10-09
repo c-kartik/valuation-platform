@@ -173,7 +173,8 @@ later comparative fact may repair a failed guard.
 
 ### Provenance-model impact
 
-The existing models cannot retain the full approval boundary without change:
+Wave 11 found that the then-existing models could not retain the full approval
+boundary without change:
 
 - `NormalizedHistoricalValue` stores direct fact evidence but no policy ID,
   version, economic-scope classification, or reviewed-evidence reference.
@@ -182,19 +183,19 @@ The existing models cannot retain the full approval boundary without change:
 - `DerivedMetricOperand`, used by Reported ETR, would lose the candidate's
   reviewed policy provenance.
 
-A later implementation therefore needs a provenance-bearing policy-approved
-historical result, or equivalent optional fields that cannot be mistaken for a
-generic direct concept mapping. It must retain policy ID/version, the exact
-entry key, `INCLUDED_PRETAX`, and reviewed evidence references through
-standardized output and into the Pretax operand of Reported ETR. The
-standardized schema version must be reviewed if serialization changes. A plain
-second concept in `PRETAX_INCOME_POLICY` is not an acceptable implementation.
+Wave 12 therefore adds a provenance-bearing policy-approved historical result
+that cannot be mistaken for a generic direct concept mapping. It retains policy
+ID/version, the exact entry key, `INCLUDED_PRETAX`, reviewed evidence
+references, and every confirming occurrence through standardized output and
+into the Pretax operand of Reported ETR. Serialization now uses standardized
+schema version 2. A plain second concept in `PRETAX_INCOME_POLICY` remains an
+unacceptable implementation.
 
 ### Reported ETR behavior
 
-When an exact registered candidate eventually resolves Pretax, Reported ETR
-continues to equal normalized Income Tax Expense divided by that normalized
-Pretax value. It must retain the policy-approved Pretax operand provenance.
+When an exact registered candidate resolves Pretax, Reported ETR continues to
+equal normalized Income Tax Expense divided by that normalized Pretax value. It
+retains the policy-approved Pretax operand provenance.
 Plausibility of the resulting ratio is diagnostic only and cannot approve or
 reject the entry. Missing or ambiguous Pretax continues to produce the existing
 downstream missing or ambiguous Reported ETR behavior.
@@ -202,9 +203,8 @@ downstream missing or ambiguous Reported ETR behavior.
 ## Complete 8-positive / 25-control regression matrix
 
 `AUTO NO-GO` means no approved structured separator exists. `ALLOW` describes
-the expected result of the proposed version-1 registry if implemented; it is
-not a current production result. `DENY` means the candidate must remain typed
-missing.
+the production result of the implemented version-1 registry. `DENY` means the
+candidate remains typed missing.
 
 | Issuer | CIK | Report date | Annual period | Accession | Wave 10 scope | Automated result | Registry v1 expected |
 |---|---:|---|---|---|---|---|---|
@@ -271,23 +271,38 @@ key weakens that result and is prohibited. The evidence supports only manual
 accession-specific decisions; it does not support automated economic-scope
 discovery.
 
-## Implementation boundary and exact next milestone
+## Wave 12 implementation outcome
 
-The smallest next milestone is **implementation of the reviewed curated-policy
-foundation**, not a generic concept fallback. It should:
+Wave 12 implements the reviewed curated-policy foundation, not a generic
+concept fallback:
 
-1. add immutable versioned policy and reviewed-evidence models plus the exact
-   eight-entry registry;
-2. add a distinct policy-approved Pretax result and preserve policy/evidence
-   provenance through standardized output and Reported ETR;
-3. apply current-concept-first and deny-by-default behavior without changing
-   the generic `PRETAX_INCOME_POLICY` candidate list;
-4. add deterministic regressions for all 33 rows, including exact-set checks,
-   malformed/missing/duplicate/non-USD/dimension/conflict/amendment cases; and
-5. live-rerun the corpus only after focused tests prove exactly eight new
-   Pretax resolutions, exactly eight corresponding Reported ETR resolutions,
-   and zero changes among the 25 controls or 12 excluded extension periods.
+1. immutable policy and reviewed-evidence models register exactly the eight
+   approved MA/CVX facts as `pretax_scope_equivalence_v1`;
+2. current-concept-first and deny-by-default behavior remains in force without
+   changing `PRETAX_INCOME_POLICY`;
+3. the resolver groups eligible nondimensional filing-XBRL occurrences by the
+   complete semantic signature. MA's three same-context occurrences and CVX's
+   two nondimensional occurrences therefore confirm one result; CVX's distinct
+   dimensioned facts remain excluded;
+4. every confirming occurrence is retained in deterministic order with a
+   one-based ordinal and its original context ID, unit ID, raw value, decimals,
+   nil status, dates, dimensions, and source metadata; policy identity and
+   reviewed evidence flow through standardized-output schema version 2 and the
+   Pretax operand of Reported ETR; and
+5. different eligible values remain ambiguous, while broken context links,
+   missing contexts, inconsistent entity/accession/source identity, bad unit
+   links, and nil/numeric collisions remain structural data errors.
 
-Until that separate milestone is implemented and validated, no Pretax result
-changes. Any future accession requires its own filing review and a new policy
-version.
+Focused validation passes 122 tests and the complete suite passes 491. The
+targeted live run resolves exactly eight Pretax and eight Reported ETR periods.
+The 33-period regression resolves all eight `ALLOW` rows and leaves all 25
+controls missing; all 12 excluded ORCL/MCD/PG extension periods also remain
+missing. Full-corpus Pretax and Reported ETR each reconcile to 167 resolved /
+37 missing / 0 ambiguous, and aggregate states reconcile to 1,855 resolved /
+1,533 missing / 11 ambiguous / 27 methodology-blocked / 42 not-comparable
+across 3,468 states.
+
+Any future accession still requires its own filing review and a new policy
+version. The exact next milestone is research of the 35 missing Operating
+Income periods using selected-filing face-statement evidence; production policy
+design or implementation is not yet authorized.

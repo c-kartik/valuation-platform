@@ -104,16 +104,27 @@ and uses exactly:
 
 1. `us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest`
 
-Wave 11 does not change that generic concept policy. Exact filing research
-supports the differently scoped standard candidate only for three MA and five
-CVX accessions where equity-method activity is directly evidenced inside
-consolidated Pretax. A future curated policy may approve those eight exact facts
-only, with full filing evidence, policy version, and conservative missing-by-
-default behavior. The same candidate remains non-equivalent in 20 reviewed
-periods and mixed in five LIN periods, so concept presence, issuer history,
-statement membership, ETR plausibility, or numerical size cannot establish
-equivalence. Until the curated policy is separately implemented and validated,
-all 33 remain typed missing.
+Wave 12 does not change that generic concept policy. The separately versioned
+`pretax_scope_equivalence_v1` policy approves the differently scoped standard
+candidate only for three MA and five CVX accessions where reviewed filing
+evidence establishes that equity-method activity is inside consolidated
+Pretax. Current-concept precedence remains intact, and exact CIK, accession,
+authoritative annual dates, taxonomy, concept, exact-USD unit, and approved
+classification must match. Future, amended, malformed, or unregistered filings
+remain missing.
+
+Equivalent repeated nondimensional filing-XBRL occurrences confirm one result
+only when their complete semantic signature and exact `Decimal` value agree.
+Every original context, unit ID, raw value, decimals value, nil status, and
+source reference remains in deterministic provenance. Dimensioned facts are
+excluded; different eligible values remain ambiguous; structural
+inconsistencies are data errors. The same candidate remains non-equivalent in
+20 reviewed periods and mixed in five LIN periods, so concept presence, issuer
+history, statement membership, ETR plausibility, or numerical size cannot
+establish equivalence. Live validation resolves only the eight registered
+periods, leaving all 25 controls and 12 issuer-extension periods missing.
+Pretax is now 167 resolved / 37 missing / 0 ambiguous across the 204-period
+corpus.
 
 Income Tax Expense is the reported GAAP provision or benefit and uses exactly:
 
@@ -145,6 +156,12 @@ reported signs and magnitudes.
 only. Its presentation-rounded percentage is not substituted for the calculated
 ratio or retained as confirming provenance. Reported ETR is not automatically
 used as the FCFF/NOPAT tax rate or as a forecast assumption.
+
+When the Pretax operand is policy-approved, Reported ETR retains that operand's
+policy ID, version, reviewed-evidence references, and complete ordered
+filing-XBRL occurrence provenance. Wave 12 therefore adds exactly the eight
+corresponding Reported ETR resolutions, producing 167 resolved / 37 missing /
+0 ambiguous Reported ETR periods without changing its calculation.
 
 ### Cash and Investments
 

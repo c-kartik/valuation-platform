@@ -13,15 +13,18 @@ from valuation_platform.normalization import (
     CalculatedOperatingNWC,
     CalculatedOperatingNWCChange,
     DerivedHistoricalValue,
+    DerivedMetricOperand,
     DerivationOperation,
     EvidenceSourceKind,
     FactEvidence,
+    FilingXBRLEvidence,
     FinancialMetric,
     HistoricalAvailability,
     HistoricalMeasure,
     HistoricalMeasureKind,
     HistoricalOutputError,
     HistoricalPeriod,
+    HistoricalPolicyProvenance,
     HistoricalResolutionKind,
     MissingHistoricalMetric,
     MissingReason,
@@ -37,8 +40,10 @@ from valuation_platform.normalization import (
     OperatingNWCPerimeterTreatment,
     OperatingNWCReadinessResult,
     ResolvedHistoricalMeasure,
+    ReviewedPolicyEvidence,
     UnavailableHistoricalMeasure,
     assemble_standardized_annual_history,
+    derive_reported_effective_tax_rate,
     standardized_history_to_dict,
 )
 from valuation_platform.sec import SECCompanyIdentity, SECFiling
@@ -981,6 +986,143 @@ class StandardizedOutputTests(unittest.TestCase):
             output = assemble_standardized_annual_history(historical, balances)
             self.assertEqual(output.annual[0].fiscal_start, start)
             self.assertEqual(output.annual[0].fiscal_end, end)
+
+    def test_curated_policy_and_etr_operand_provenance_serialize_in_schema_v2(self) -> None:
+        selected_filing = filing(
+            2025,
+            accession="0001326801-26-000001",
+        )
+        historical, balances = inputs((selected_filing,))
+        pretax = next(
+            item
+            for item in historical.annual[0].metrics
+            if item.metric is FinancialMetric.PRETAX_INCOME
+        )
+        tax = next(
+            item
+            for item in historical.annual[0].metrics
+            if item.metric is FinancialMetric.INCOME_TAX_EXPENSE
+        )
+        assert isinstance(pretax, NormalizedHistoricalValue)
+        assert isinstance(tax, NormalizedHistoricalValue)
+        xbrl_evidence = FilingXBRLEvidence(
+            EvidenceSourceKind.FILING_XBRL,
+            "xbrl-source",
+            "http://fasb.org/us-gaap/2025",
+            "PretaxCandidate",
+            "102",
+            Decimal(102),
+            "USD",
+            pretax.period.start,
+            pretax.period.end,
+            selected_filing.accession_number,
+            selected_filing.form,
+            selected_filing.filing_date,
+            selected_filing.report_date,
+            selected_filing.primary_document,
+            NOW,
+            "annual-context",
+            (),
+            "-6",
+            False,
+            "usd",
+            1,
+        )
+        confirming_xbrl_evidence = replace(
+            xbrl_evidence,
+            context_id="annual-context-confirming",
+            unit_ref="usd-confirming",
+            raw_value="102.0",
+            decimals="-3",
+            occurrence_ordinal=2,
+        )
+        policy = HistoricalPolicyProvenance(
+            "pretax_scope_equivalence",
+            "1",
+            "INCLUDED_PRETAX",
+            historical.company.cik,
+            selected_filing.accession_number,
+            selected_filing.report_date,
+            pretax.period.start,
+            pretax.period.end,
+            "us-gaap",
+            "PretaxCandidate",
+            "USD",
+            (
+                ReviewedPolicyEvidence(
+                    "test-evidence",
+                    "https://www.sec.gov/Archives/test.htm",
+                    "Note 1",
+                    "docs/pretax-equity-method-note-evidence.md",
+                    date(2026, 10, 9),
+                    "approved",
+                    "Exact filing evidence establishes included Pretax scope.",
+                    "Reviewed note-to-statement binding.",
+                ),
+            ),
+            (xbrl_evidence, confirming_xbrl_evidence),
+        )
+        pretax = replace(pretax, policy_provenance=policy)
+        etr = derive_reported_effective_tax_rate(
+            selected_filing.accession_number,
+            selected_filing.report_date,
+            (pretax, tax),
+        )
+        historical = replace_historical_metric(
+            historical,
+            0,
+            FinancialMetric.PRETAX_INCOME,
+            pretax,
+        )
+        historical = replace_historical_metric(
+            historical,
+            0,
+            FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE,
+            etr,
+        )
+
+        payload = standardized_history_to_dict(
+            assemble_standardized_annual_history(historical, balances)
+        )
+        self.assertEqual(payload["schema_version"], "2")
+        measures = {
+            item["measure"]: item for item in payload["annual"][0]["measures"]
+        }
+        pretax_payload = measures[FinancialMetric.PRETAX_INCOME.value]
+        self.assertEqual(
+            pretax_payload["policy"]["entry_key"]["accession_number"],
+            selected_filing.accession_number,
+        )
+        self.assertEqual(
+            pretax_payload["policy"]["reviewed_evidence"][0]["review_status"],
+            "approved",
+        )
+        etr_payload = measures[FinancialMetric.REPORTED_EFFECTIVE_TAX_RATE.value]
+        self.assertEqual(
+            etr_payload["supporting_policies"][0]["policy_id"],
+            "pretax_scope_equivalence",
+        )
+        self.assertEqual(
+            etr_payload["supporting_policies"][0]["filing_xbrl_evidence"][0][
+                "context_id"
+            ],
+            "annual-context",
+        )
+        self.assertEqual(
+            [
+                item["occurrence_ordinal"]
+                for item in etr_payload["supporting_policies"][0][
+                    "filing_xbrl_evidence"
+                ]
+            ],
+            [1, 2],
+        )
+        self.assertEqual(
+            etr_payload["supporting_policies"][0]["filing_xbrl_evidence"][1][
+                "raw_value"
+            ],
+            "102.0",
+        )
 
     def test_serialization_is_deterministic_and_uses_decimal_strings(self) -> None:
         historical, balances = inputs()

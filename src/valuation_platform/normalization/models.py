@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from datetime import date, datetime
 from decimal import Decimal
 from enum import Enum
+import re
 from typing import TypeAlias
 
 from valuation_platform.sec.filing_xbrl import FilingXBRLDimension
@@ -59,6 +60,89 @@ class DerivationDiagnostic(str, Enum):
 
 
 @dataclass(frozen=True)
+class ReviewedPolicyEvidence:
+    """One reviewed filing reference supporting a curated policy decision."""
+
+    evidence_id: str
+    source_url: str
+    filing_location: str
+    research_artifact: str
+    reviewed_on: date
+    review_status: str
+    rationale: str
+    content_digest: str
+
+    def __post_init__(self) -> None:
+        if (
+            not self.evidence_id
+            or not self.source_url.startswith("https://www.sec.gov/Archives/")
+            or not self.filing_location
+            or not self.research_artifact.startswith("docs/")
+            or self.review_status != "approved"
+            or not self.rationale
+            or not self.content_digest
+        ):
+            raise ValueError("Reviewed policy evidence is incomplete")
+
+
+@dataclass(frozen=True)
+class HistoricalPolicyProvenance:
+    """Versioned policy identity and reviewed evidence retained with a value."""
+
+    policy_id: str
+    policy_version: str
+    economic_scope: str
+    company_cik: int
+    accession_number: str
+    report_date: date
+    annual_start: date
+    annual_end: date
+    taxonomy: str
+    concept: str
+    unit: str
+    reviewed_evidence: tuple[ReviewedPolicyEvidence, ...]
+    filing_xbrl_evidence: tuple[FilingXBRLEvidence, ...]
+
+    def __post_init__(self) -> None:
+        if (
+            not self.policy_id
+            or not self.policy_version
+            or not self.economic_scope
+            or not isinstance(self.company_cik, int)
+            or isinstance(self.company_cik, bool)
+            or self.company_cik < 0
+            or re.fullmatch(r"[0-9]{10}-[0-9]{2}-[0-9]{6}", self.accession_number)
+            is None
+            or self.annual_start >= self.annual_end
+            or self.annual_end != self.report_date
+            or not self.taxonomy
+            or not self.concept
+            or not self.unit
+            or not self.reviewed_evidence
+            or not self.filing_xbrl_evidence
+        ):
+            raise ValueError("Historical policy provenance is incomplete")
+        for evidence in self.filing_xbrl_evidence:
+            if (
+                evidence.accession_number != self.accession_number
+                or evidence.start != self.annual_start
+                or evidence.end != self.annual_end
+                or evidence.concept != self.concept
+                or evidence.unit != self.unit
+                or evidence.dimensions
+                or evidence.unit_ref is None
+                or evidence.occurrence_ordinal is None
+            ):
+                raise ValueError("Policy filing-XBRL evidence does not match its key")
+        if tuple(
+            evidence.occurrence_ordinal for evidence in self.filing_xbrl_evidence
+        ) != tuple(range(1, len(self.filing_xbrl_evidence) + 1)):
+            raise ValueError(
+                "Policy filing-XBRL evidence ordinals must be consecutive"
+            )
+
+
+@dataclass(frozen=True)
 class HistoricalPeriod:
     """The actual economic duration represented by a normalized value."""
 
@@ -109,6 +193,8 @@ class FilingXBRLEvidence:
     dimensions: tuple[FilingXBRLDimension, ...]
     decimals: str | None
     is_nil: bool
+    unit_ref: str | None = None
+    occurrence_ordinal: int | None = None
 
 
 BalanceSheetFactEvidence: TypeAlias = FactEvidence | FilingXBRLEvidence
@@ -124,6 +210,7 @@ class NormalizedHistoricalValue:
     period: HistoricalPeriod
     chosen_source: FactEvidence
     confirming_sources: tuple[FactEvidence, ...]
+    policy_provenance: HistoricalPolicyProvenance | None = None
 
 
 @dataclass(frozen=True)
@@ -136,6 +223,7 @@ class DerivedMetricOperand:
     period: HistoricalPeriod
     chosen_source: FactEvidence
     confirming_sources: tuple[FactEvidence, ...]
+    policy_provenance: HistoricalPolicyProvenance | None = None
 
 
 @dataclass(frozen=True)

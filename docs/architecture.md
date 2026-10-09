@@ -114,20 +114,31 @@ standardized schemas, or corpus behavior. Equity-method economic scope is a
 separate typed gate and silence never establishes no material activity.
 
 Wave 11 rejects an automated Pretax scope rule but approves the architecture
-boundary for a future curated exact-accession registry. Such a registry must be
-an immutable, versioned normalization policy keyed by exact CIK, accession,
-report date, annual period, taxonomy, concept, unit, and reviewed economic-scope
-classification. It must retain official-filing evidence references separately
-from the executable approval and default every unregistered, future, or amended
-accession to missing. This is deterministic execution of manual research, not
-automated semantic discovery.
+boundary for a curated exact-accession registry. Wave 12 implements that
+boundary in `normalization.pretax_scope` as the immutable, versioned
+`pretax_scope_equivalence_v1` policy. Its eight entries match exact CIK,
+accession, report date, authoritative annual period, taxonomy, concept, unit,
+and reviewed economic-scope classification. Every unregistered, future, or
+amended accession remains missing. This is deterministic execution of manual
+research, not automated semantic discovery, and the recurring candidate was
+not added to `PRETAX_INCOME_POLICY`.
 
-The existing direct historical result and Reported ETR operand models do not
-retain a policy version or reviewed-evidence reference. A later implementation
-must add a distinct provenance-bearing policy-approved result (or equivalent
-unambiguous fields), carry that identity through standardized output and the
-Reported ETR operand, and review the output schema version. Adding the recurring
-candidate directly to `PRETAX_INCOME_POLICY` would violate this boundary.
+The curated resolver consumes the selected filing's filing-XBRL only after the
+generic approved Pretax concept remains unresolved. It excludes dimensioned
+facts and groups eligible nondimensional occurrences by their complete semantic
+signature. Repeated contexts, unit IDs that both normalize to exact USD, and
+raw or decimals representations that produce the same exact `Decimal` confirm
+one result; different eligible values remain ambiguous, while broken context,
+unit, entity, accession, period, or nil structure is a data error. The parser
+continues to preserve every occurrence.
+
+Policy identity, version, reviewed evidence, and every confirming filing-XBRL
+occurrence flow through the normalized Pretax result, standardized output, JSON
+serialization, and the Pretax operand of Reported ETR. Occurrences have stable
+one-based ordinals in deterministic order and retain their original context ID,
+unit ID, raw value, decimals, nil status, dates, dimensions, and source
+metadata. The expanded provenance is represented by standardized-output schema
+version 2.
 
 ## Valuation Assumptions Boundary
 

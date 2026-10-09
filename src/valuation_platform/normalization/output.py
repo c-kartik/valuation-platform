@@ -20,11 +20,13 @@ from .models import (
     FactEvidence,
     FilingXBRLEvidence,
     HistoricalMetricResult,
+    HistoricalPolicyProvenance,
     MissingHistoricalMetric,
     NormalizedAnnualBalanceSheets,
     NormalizedBalanceSheetValue,
     NormalizedHistoricalFinancials,
     NormalizedHistoricalValue,
+    ReviewedPolicyEvidence,
 )
 from .operating_nwc import (
     CalculatedOperatingNWC,
@@ -33,7 +35,7 @@ from .operating_nwc import (
 )
 
 
-SCHEMA_VERSION = "1"
+SCHEMA_VERSION = "2"
 
 
 class HistoricalOutputError(ValueError):
@@ -118,10 +120,38 @@ class HistoricalPolicyReference:
 
     policy_id: str
     version: str | None = None
+    economic_scope: str | None = None
+    company_cik: int | None = None
+    accession_number: str | None = None
+    report_date: date | None = None
+    annual_start: date | None = None
+    annual_end: date | None = None
+    taxonomy: str | None = None
+    concept: str | None = None
+    unit: str | None = None
+    reviewed_evidence: tuple[ReviewedPolicyEvidence, ...] = ()
+    filing_xbrl_evidence: tuple[FilingXBRLEvidence, ...] = ()
 
     def __post_init__(self) -> None:
         if not self.policy_id:
             raise HistoricalOutputError("Policy reference ID must not be empty")
+        detailed = (
+            self.company_cik,
+            self.accession_number,
+            self.report_date,
+            self.annual_start,
+            self.annual_end,
+            self.taxonomy,
+            self.concept,
+            self.unit,
+        )
+        if (self.economic_scope is None) != (not self.reviewed_evidence) or (
+            self.economic_scope is not None
+            and (any(item is None for item in detailed) or not self.filing_xbrl_evidence)
+        ):
+            raise HistoricalOutputError(
+                "Reviewed policy scope and evidence must be retained together"
+            )
 
 
 @dataclass(frozen=True)
@@ -154,6 +184,7 @@ class ResolvedHistoricalMeasure:
     resolution: HistoricalResolutionKind
     policy: HistoricalPolicyReference | None
     sources: tuple[HistoricalSourceReference, ...]
+    supporting_policies: tuple[HistoricalPolicyReference, ...] = ()
 
     @property
     def status(self) -> str:
@@ -480,11 +511,13 @@ def _map_duration_result(
         if isinstance(result, NormalizedHistoricalValue):
             sources = _sources_from_historical_direct(result, filing)
             resolution = HistoricalResolutionKind.DIRECT
-            policy = None
+            policy = _policy_reference(result.policy_provenance, filing)
+            supporting_policies = ()
         else:
             sources = _sources_from_historical_derived(result, filing)
             resolution = HistoricalResolutionKind.DERIVED
             policy = HistoricalPolicyReference(result.policy_id)
+            supporting_policies = _supporting_policy_references(result, filing)
         return ResolvedHistoricalMeasure(
             measure,
             kind,
@@ -496,6 +529,7 @@ def _map_duration_result(
             resolution,
             policy,
             sources,
+            supporting_policies,
         )
     if isinstance(result, MissingHistoricalMetric):
         return UnavailableHistoricalMeasure(
@@ -979,6 +1013,56 @@ def _sources_from_historical_derived(
     return tuple(_source_reference(item, filing) for item in evidence)
 
 
+def _policy_reference(
+    provenance: HistoricalPolicyProvenance | None,
+    filing: SECFiling,
+) -> HistoricalPolicyReference | None:
+    if provenance is None:
+        return None
+    for evidence in provenance.filing_xbrl_evidence:
+        _source_reference(evidence, filing)
+    return HistoricalPolicyReference(
+        policy_id=provenance.policy_id,
+        version=provenance.policy_version,
+        economic_scope=provenance.economic_scope,
+        company_cik=provenance.company_cik,
+        accession_number=provenance.accession_number,
+        report_date=provenance.report_date,
+        annual_start=provenance.annual_start,
+        annual_end=provenance.annual_end,
+        taxonomy=provenance.taxonomy,
+        concept=provenance.concept,
+        unit=provenance.unit,
+        reviewed_evidence=provenance.reviewed_evidence,
+        filing_xbrl_evidence=provenance.filing_xbrl_evidence,
+    )
+
+
+def _supporting_policy_references(
+    result: DerivedHistoricalValue,
+    filing: SECFiling,
+) -> tuple[HistoricalPolicyReference, ...]:
+    references = tuple(
+        reference
+        for operand in result.metric_operands
+        if (reference := _policy_reference(operand.policy_provenance, filing))
+        is not None
+    )
+    identities = tuple(
+        (
+            item.policy_id,
+            item.version,
+            item.economic_scope,
+            item.reviewed_evidence,
+            item.filing_xbrl_evidence,
+        )
+        for item in references
+    )
+    if len(set(identities)) != len(identities):
+        raise HistoricalOutputError("Derived metric repeats policy provenance")
+    return references
+
+
 def _sources_from_balance_direct(
     result: NormalizedBalanceSheetValue, filing: SECFiling
 ) -> tuple[HistoricalSourceReference, ...]:
@@ -1109,7 +1193,88 @@ def _serialize_policy(
 ) -> dict[str, object] | None:
     if policy is None:
         return None
-    return {"policy_id": policy.policy_id, "version": policy.version}
+    return {
+        "policy_id": policy.policy_id,
+        "version": policy.version,
+        "economic_scope": policy.economic_scope,
+        "entry_key": (
+            None
+            if policy.economic_scope is None
+            else {
+                "company_cik": policy.company_cik,
+                "accession_number": policy.accession_number,
+                "report_date": _date_string(policy.report_date),
+                "annual_start": _date_string(policy.annual_start),
+                "annual_end": _date_string(policy.annual_end),
+                "taxonomy": policy.taxonomy,
+                "concept": policy.concept,
+                "unit": policy.unit,
+                "economic_scope": policy.economic_scope,
+            }
+        ),
+        "reviewed_evidence": [
+            {
+                "evidence_id": item.evidence_id,
+                "source_url": item.source_url,
+                "filing_location": item.filing_location,
+                "research_artifact": item.research_artifact,
+                "reviewed_on": item.reviewed_on.isoformat(),
+                "review_status": item.review_status,
+                "rationale": item.rationale,
+                "content_digest": item.content_digest,
+            }
+            for item in policy.reviewed_evidence
+        ],
+        "filing_xbrl_evidence": [
+            _serialize_filing_xbrl_evidence(item)
+            for item in policy.filing_xbrl_evidence
+        ],
+    }
+
+
+def _serialize_filing_xbrl_evidence(
+    evidence: FilingXBRLEvidence,
+) -> dict[str, object]:
+    return {
+        "occurrence_ordinal": evidence.occurrence_ordinal,
+        "source_kind": evidence.source_kind.value,
+        "source_url": evidence.source_url,
+        "namespace": evidence.namespace,
+        "concept": evidence.concept,
+        "context_id": evidence.context_id,
+        "unit_ref": evidence.unit_ref,
+        "unit": evidence.unit,
+        "start": _date_string(evidence.start),
+        "end": evidence.end.isoformat(),
+        "dimensions": [
+            {
+                "dimension": {
+                    "namespace": item.dimension.namespace,
+                    "local_name": item.dimension.local_name,
+                },
+                "explicit_member": (
+                    None
+                    if item.explicit_member is None
+                    else {
+                        "namespace": item.explicit_member.namespace,
+                        "local_name": item.explicit_member.local_name,
+                    }
+                ),
+                "typed_member_xml": item.typed_member_xml,
+            }
+            for item in evidence.dimensions
+        ],
+        "raw_value": evidence.raw_value,
+        "numeric_value": str(evidence.value),
+        "decimals": evidence.decimals,
+        "is_nil": evidence.is_nil,
+        "accession_number": evidence.accession_number,
+        "observation_form": evidence.observation_form,
+        "observation_filed": evidence.observation_filed.isoformat(),
+        "filing_report_date": _date_string(evidence.filing_report_date),
+        "primary_document": evidence.primary_document,
+        "retrieved_at": evidence.retrieved_at.isoformat(),
+    }
 
 
 def _serialize_source(source: HistoricalSourceReference) -> dict[str, object]:
@@ -1140,6 +1305,9 @@ def _serialize_measure(item: StandardizedHistoricalMeasure) -> dict[str, object]
             "resolution": item.resolution.value,
             "value": str(item.value),
             "sources": [_serialize_source(source) for source in item.sources],
+            "supporting_policies": [
+                _serialize_policy(policy) for policy in item.supporting_policies
+            ],
         }
     if isinstance(item, UnavailableHistoricalMeasure):
         return {
