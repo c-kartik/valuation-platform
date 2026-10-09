@@ -104,6 +104,17 @@ and uses exactly:
 
 1. `us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest`
 
+Wave 11 does not change that generic concept policy. Exact filing research
+supports the differently scoped standard candidate only for three MA and five
+CVX accessions where equity-method activity is directly evidenced inside
+consolidated Pretax. A future curated policy may approve those eight exact facts
+only, with full filing evidence, policy version, and conservative missing-by-
+default behavior. The same candidate remains non-equivalent in 20 reviewed
+periods and mixed in five LIN periods, so concept presence, issuer history,
+statement membership, ETR plausibility, or numerical size cannot establish
+equivalence. Until the curated policy is separately implemented and validated,
+all 33 remain typed missing.
+
 Income Tax Expense is the reported GAAP provision or benefit and uses exactly:
 
 1. `us-gaap:IncomeTaxExpenseBenefit`

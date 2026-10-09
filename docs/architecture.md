@@ -113,6 +113,22 @@ membership never changes `SECFilingXBRL`, normalization concepts or precedence,
 standardized schemas, or corpus behavior. Equity-method economic scope is a
 separate typed gate and silence never establishes no material activity.
 
+Wave 11 rejects an automated Pretax scope rule but approves the architecture
+boundary for a future curated exact-accession registry. Such a registry must be
+an immutable, versioned normalization policy keyed by exact CIK, accession,
+report date, annual period, taxonomy, concept, unit, and reviewed economic-scope
+classification. It must retain official-filing evidence references separately
+from the executable approval and default every unregistered, future, or amended
+accession to missing. This is deterministic execution of manual research, not
+automated semantic discovery.
+
+The existing direct historical result and Reported ETR operand models do not
+retain a policy version or reviewed-evidence reference. A later implementation
+must add a distinct provenance-bearing policy-approved result (or equivalent
+unambiguous fields), carry that identity through standardized output and the
+Reported ETR operand, and review the output schema version. Adding the recurring
+candidate directly to `PRETAX_INCOME_POLICY` would violate this boundary.
+
 ## Valuation Assumptions Boundary
 
 `valuation.assumptions` is independent from SEC retrieval and normalization.

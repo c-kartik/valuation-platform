@@ -191,6 +191,24 @@ the 159 resolved / 45 missing / 0 ambiguous Pretax corpus result, and all
 aggregate corpus totals remain unchanged. The 12 issuer-extension periods were
 excluded as required.
 
+Phase 1H.4 Wave 11 completes the separately reviewed scope-evidence design in
+`docs/pretax-scope-evidence-design.md` and reaches **PARTIAL GO**. No automated
+structured-evidence rule separates the eight MA/CVX positives from the 20
+separate-net-of-tax and five LIN mixed-treatment controls: all 33 share the
+same candidate and multiple-role presentation pattern, while MA's tag
+transition and CVX's taxonomy/presentation mismatch require manually reviewed
+filing evidence.
+
+A curated, immutable `pretax_scope_equivalence_v1` registry is methodologically
+acceptable for the eight exact CIK/accession/period/concept facts, provided a
+later implementation retains policy version and reviewed evidence provenance,
+keeps the current approved concept first, and defaults every future, amended,
+or unregistered filing to missing. This is deterministic execution of manual
+research, not automated discovery or a generic concept fallback. Wave 11 adds
+no registry or source behavior: all 33 remain production missing, safe new
+Pretax resolutions remain zero, and Pretax remains 159 resolved / 45 missing /
+0 ambiguous.
+
 The current validated standardized-output corpus is five companies—META,
 GOOGL, MSFT, AAPL, and COST—and 25 annual periods, consisting of five selected
 10-K periods per company. Validation means the production historical pipeline
@@ -632,15 +650,15 @@ being inferred as zero.
 
 ## Next Step
 
-Design and independently review whether exact-accession, issuer-scoped
-economic-scope evidence for the eight manually established `INCLUDED_PRETAX`
-periods can be represented deterministically without narrative-text inference.
-The design must specify evidence inputs, accession scope, ambiguity behavior,
-and regressions against the 20 separate-net-of-tax and five mixed-treatment
-periods. If no machine-checkable boundary can be stated, retain all 33 as typed
-missing and continue to the next Phase 1H.4 generalization topic. Keep the 12
-issuer-extension periods outside this design. The Phase 2A assumptions model is
-implemented, but forecast, FCFF, DCF,
+Implement and validate the reviewed curated Pretax scope-policy foundation for
+the eight exact MA/CVX accessions. Add immutable versioned policy and reviewed-
+evidence provenance, keep the current approved concept first, preserve policy
+identity through standardized output and Reported ETR, and regress all 33
+candidate periods so the 20 separate-net-of-tax and five LIN mixed-treatment
+controls remain missing. Do not add the candidate to the generic
+`PRETAX_INCOME_POLICY`, extrapolate to future or amended filings, or include the
+12 issuer-extension periods. The Phase 2A assumptions model is implemented,
+but forecast, FCFF, DCF,
 equity-bridge, per-share, reverse-DCF, scenario, and sensitivity work is
 intentionally paused through Phase 1H.
 
@@ -674,9 +692,11 @@ intentionally paused through Phase 1H.
    method scope still unapproved. Wave 10 completes exact-period note research:
    eight periods are included in Pretax, 20 are separate net of tax, and five have
    mixed treatment and remain unresolved. No machine-checkable equivalence rule
-   or production resolution is established. Twelve issuer-extension Pretax
-   periods remain unresolved. Complete the separately reviewed scope-evidence
-   design, then
+   or production resolution is established. Wave 11 rejects an automated rule
+   but approves the design boundary for a curated, versioned exact-accession
+   registry with mandatory provenance and conservative defaults. No production
+   resolution is added. Twelve issuer-extension Pretax periods remain
+   unresolved. Implement and validate that curated foundation, then
    continue with extension patterns, dimensions, non-calendar periods, acquisition accounting,
    debt/lease presentation, D&A decomposition, and working-capital perimeters.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent

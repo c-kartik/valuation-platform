@@ -216,13 +216,20 @@ was established**. The exact economic-equivalence candidate count is 8, but
 the exact safe new production-resolution count is **0**. Production Pretax
 remains 159 resolved / 45 missing / 0 ambiguous.
 
+## Wave 11 disposition
+
+The separately reviewed design is recorded in
+[`pretax-scope-evidence-design.md`](pretax-scope-evidence-design.md). It rejects
+an automated structured-evidence rule because no non-circular structured signal
+separates the eight positives from all 25 controls. It finds a curated,
+immutable exact-accession policy methodologically acceptable only as
+deterministic execution of these manual filing conclusions, with versioned
+reviewed-evidence provenance and missing-by-default future/amended filings.
+Wave 11 does not implement that policy; all 33 remain production missing.
+
 ## Recommended next milestone
 
-The smallest next milestone is **design**, not normalization implementation:
-define and independently review whether exact-accession, issuer-scoped
-economic-scope evidence can be represented deterministically for the 8
-`INCLUDED_PRETAX` periods without narrative-text inference. The design must
-specify stable evidence inputs, ambiguity behavior, accession scope, and
-regressions against all 25 non-equivalent or mixed periods. If no
-machine-checkable boundary can be stated, retain all 33 as typed missing and
-move to the next Phase 1H.4 generalization topic.
+The smallest next milestone is implementation and focused validation of the
+reviewed curated-policy foundation for the eight exact MA/CVX accessions. It
+must not add a generic concept fallback or extrapolate beyond the reviewed
+entries, and all 25 controls must remain missing.

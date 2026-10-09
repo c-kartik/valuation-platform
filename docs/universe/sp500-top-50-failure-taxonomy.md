@@ -103,6 +103,16 @@ machine-checkable economic-equivalence rule was established; safe new
 production resolutions remain zero, and the 12 issuer-extension periods and
 all corpus totals remain unchanged.
 
+**Wave 11 follow-up:** `../pretax-scope-evidence-design.md` independently tests
+the eight positives against all 25 controls. No automated structured rule
+survives: the same concept and multiple-role presentation pattern spans
+included, separate-net-of-tax, and mixed economics. The design reaches PARTIAL
+GO for a curated immutable `pretax_scope_equivalence_v1` policy covering only
+the eight exact MA/CVX facts, with reviewed filing evidence, full-key matching,
+current-concept precedence, and missing-by-default future/amended filings. No
+registry is implemented; safe new production resolutions and corpus totals
+remain unchanged.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -333,7 +343,10 @@ issuer-specific evidence that equity-method activity enters the candidate
 Pretax amount; 20 (AMZN, MU, CAT, and PM) present it separately net of tax; and five
 LIN periods have mixed included and after-tax treatment and remain unresolved.
 The result rejects a global alias and supplies no machine-checkable generic
-rule. All 33 remain production missing pending a separate reviewed design.
+rule. Wave 11 also rejects automated structured discovery but finds a curated,
+versioned exact-accession policy methodologically acceptable for the eight
+positives. All 33 remain production missing pending separate implementation
+and validation of that conservative boundary.
 
 The remaining 12 periods are ORCL five, MCD five, and PG two. Their exact annual
 Pretax evidence is present only as selected-filing issuer extensions. The same
@@ -532,7 +545,7 @@ issuers have one post-smoke classification.
 | 2 | `TICKER_CIK_IDENTITY` | XOM; intended five-year history | Entire issuer | **Wave 1B NO-GO:** structured SEC evidence does not encode the directed legal edge; retain unresolved until a generic exact-CIK succession parser is independently supported | Medium | Medium-high |
 | 3 | `CONCEPT_POLICY` | **Implemented in Wave 2:** 160 additional periods resolved; 19 broader-caption periods remain missing | One high-value balance | Keep broader restricted-cash and cash-equivalents-only captions unresolved pending separate evidence | Very high | Low |
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
-| 5 | `CONCEPT_POLICY` | **Waves 7–10:** 8/33 standard-variant periods have manual included-Pretax evidence, 20 are separate net of tax, five have mixed treatment; 12 additional periods use issuer extensions | Core flow and diagnostic | Design whether exact-accession issuer-scoped evidence can be represented deterministically; reject a generic alias and keep extensions unresolved | Medium | Medium-high |
+| 5 | `CONCEPT_POLICY` | **Waves 7–11:** 8/33 standard-variant periods have manually approved included-Pretax evidence, 20 are separate net of tax, five have mixed treatment; 12 additional periods use issuer extensions | Core flow and diagnostic | Implement the reviewed versioned exact-accession policy foundation for only the eight positives; reject automated discovery and a generic alias, regress all 25 controls, and keep extensions unresolved | Medium | Medium-high |
 | 6 | `CONCEPT_POLICY` / `ISSUER_EXTENSION` | Operating income: 35 missing across seven issuers | Core FCFF input | Filing-level face-statement concept inventory | Medium | High |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 94 missing across the 204-period corpus | Core FCFF input | Group combined concepts and complete component derivations | High | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
@@ -557,9 +570,11 @@ issuers have one post-smoke classification.
    variant `NEEDS_MORE_RESEARCH`. Wave 8 authorizes only a read-only 33-period
    presentation-evidence diagnostic; Wave 9 establishes statement membership.
    Wave 10 finds eight included-Pretax, 20 separate-net-of-tax, and five mixed-
-   treatment periods but no machine-checkable equivalence rule. A separate
-   issuer-scoped evidence design is required before any fallback implementation
-   or precedence change; the 12 extension periods remain unresolved.
+   treatment periods but no machine-checkable equivalence rule. Wave 11 rejects
+   an automated rule and approves only a curated, versioned exact-accession
+   design with reviewed evidence and conservative defaults. Implement and
+   validate that narrow foundation before any production change; the 12
+   extension periods remain unresolved.
 3. **Core FCFF flows:** investigate operating-income face-statement evidence,
    D&A groups, and Capex variants. Approve only repeatable definitions with
    selected-accession evidence.
