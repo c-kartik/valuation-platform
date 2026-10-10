@@ -388,6 +388,19 @@ verified digests, original instance ordinals, consecutive confirming ordinals,
 separate support and ordered exclusion audit with exact numeric strings.
 Normalized-metric consumers can retain the supporting policy; ETR is unaffected.
 
+Wave 24's [timing-basis audit](depreciation-amortization-timing-audit.md)
+distinguishes implemented source provenance from economic recognition basis.
+Generic direct and MSFT component paths do not enforce income-expense versus
+generated-cost classification; Visa's reviewed entry has operating-expense
+support but no integrated NWC bridge. Schema 4's source kinds, sources and
+scope audit do not constitute a common timing-basis/FCFF-readiness contract.
+NWC level/change arithmetic uses reported book balances and has no D&A or EBIT
+compatibility gate; output does not repair that omission. No FCFF calculator
+exists. The next documentation-only design must separate per-period basis
+evidence and joint consumer readiness from normalization resolution; this is
+a proposed contract, not a schema or runtime change. Existing policies and
+serialization remain untouched.
+
 GOOGL CIK `1652044` selected 2021–2023 filings provide only class-dimensional
 diluted denominators. When the nondimensional direct result is missing, the
 approved derivation adds the Class A denominator, which assumes Class B

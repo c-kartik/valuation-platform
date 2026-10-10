@@ -845,10 +845,19 @@ automatically cash-consistent. Missing allocation/incentive bridges keep all
 three TXN periods further research; no equation or coverage is approved.
 Existing policies and counts are preserved, not retrospectively certified.
 
-Next: a documentation-only timing-basis compatibility audit of existing
-approved D&A policies and their Operating-NWC consumer contract, using retained
-evidence. Record impacts before proposing any versioned primitive/policy
-migration. Do not implement a sum or infer TXN allocations; further TXN work
+Wave 24 completes the [approved D&A timing-basis/consumer audit](depreciation-amortization-timing-audit.md).
+All three D&A families, five curated Visa identities, five active/six addressable
+NWC valuation policies and five reconstruction policies reconcile. Visa's
+expense basis is supported; generic/MSFT timing and all joint future FCFF
+bridges remain insufficiently evidenced. No approved numeric incompatibility
+is established. Book NWC/readiness has no D&A/EBIT timing linkage; no FCFF
+calculator exists. Approvals, corpus counts and source code remain unchanged.
+
+Next: documentation-only historical financial-input timing-basis and consumer-
+readiness contract design. Keep unknown basis explicit and normalization
+resolution separate from joint economic compatibility. Assess versioned
+provenance/readiness impacts before implementation or migration.
+Do not implement a sum or infer TXN allocations; further TXN work
 requires a genuine new expense/inventory and incentive bridge, not repeated
 concept research. TXN 2024–2025 absent intangible operands are not
 zero. Preserve Wave 20's five Visa entries and all 89 unapproved controls;
@@ -919,7 +928,9 @@ sensitivity work is intentionally paused through Phase 1H.
    Wave 22 closes reported TXN 2021–2023 asset-separation/sign questions but
    retains all three unresolved. Wave 23 clarifies new-acceptance expense basis
    and its NWC timing limitation without approving an equation. Next audit
-   existing-policy timing compatibility and consumer contract, then continue with other
+   existing-policy timing compatibility and consumer contract. Wave 24 completes
+   that audit without revoking approvals; next design explicit basis/evidence
+   and joint consumer-readiness contracts, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital

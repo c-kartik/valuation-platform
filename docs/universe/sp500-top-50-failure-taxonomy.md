@@ -477,6 +477,14 @@ changes needs a compatible cash-flow bridge; no generated-cost alternative
 or NWC adjustment is approved. Existing direct/MSFT/Visa policies are preserved,
 not retrospectively basis-certified. Next audit their timing-basis compatibility
 and Operating-NWC consumer contract; all counts remain unchanged.
+Wave 24's [completed compatibility audit](../depreciation-amortization-timing-audit.md)
+finds Visa's five expense-basis acceptances supported, but generic/MSFT timing
+and joint future FCFF compatibility insufficiently evidenced. No approved
+numerical economic incompatibility is demonstrated. Current book NWC/readiness
+does not validate EBIT/D&A recognition basis; no FCFF calculator exists.
+No normalization disposition or production count changes. Next design explicit
+period-level timing evidence and joint consumer-readiness contracts; do not
+revoke policies, infer allocations or conflate source kind with economic basis.
 
 ### Pretax Income
 
@@ -720,7 +728,7 @@ issuers have one post-smoke classification.
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
-| 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 23 NO-GO:** TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Audit existing-policy timing-basis compatibility and Operating-NWC consumer contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
+| 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 24 audit:** no approved numeric incompatibility established; TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Design timing-basis/evidence and joint consumer-readiness contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
@@ -764,7 +772,9 @@ issuers have one post-smoke classification.
    all 33 derivation periods with no approved equation. Wave 22 retains TXN
    2021–2023 unresolved after targeted evidence research. Wave 23 retains those
    outcomes after explicit expense-basis/NWC timing review. Next audit approved
-   policies' timing compatibility and Operating-NWC consumer contract.
+   policies' timing compatibility and Operating-NWC consumer contract. Wave 24
+   completes that audit; next design explicit period-level basis evidence and
+   joint consumer readiness, without a policy migration.
    Keep issuer-extension and
    lease-perimeter research separately gated.
    Then investigate Capex

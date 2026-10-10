@@ -815,6 +815,30 @@ authorized. See the [period decisions and impact assessment](depreciation-amorti
 
 ## FCFF
 
+### D&A timing audit — Wave 24
+
+The [implemented-policy/consumer audit](depreciation-amortization-timing-audit.md)
+reconciles three D&A families. Visa's five curated entries have established
+operating-expense scope; generic direct and MSFT component policies select
+reported annual Company Facts without enforcing income-versus-generated-cost
+basis. Their timing compatibility is insufficiently evidenced, not established
+incompatibility or grounds to revoke values. Source kind and numerical agreement
+do not certify timing basis. No approved family's numerical economic mismatch
+is established by this bounded audit.
+
+Operating NWC uses book balances and exact closing-minus-opening changes,
+without a D&A/incentive decomposition or EBIT/D&A linkage. Five active issuer
+perimeters and six addressable versions are reconciled: META omits inventory;
+GOOGL blocks its treatment; MSFT/AAPL/COST require reported inventory. Visa and
+TXN have no configured valuation perimeter. Readiness is not joint cash-flow
+compatibility, and no FCFF calculator currently consumes these values.
+
+Next design a period-level timing-basis/evidence and joint consumer-readiness
+contract, separately from current normalization states and book NWC. Unknown
+must remain unknown. No basis tags, readiness gate, inventory adjustment,
+primitive migration or forecast consistency check is implemented by this audit;
+all approvals and production counts remain unchanged.
+
 The core valuation methodology is unlevered free cash flow to the firm (FCFF).
 
 ```text
