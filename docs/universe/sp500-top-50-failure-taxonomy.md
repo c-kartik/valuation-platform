@@ -183,6 +183,19 @@ and aggregate states stay 1,880 / 1,508 / 11 / 27 / 42 across 3,468 states.
 The next reusable research target is the 94 missing D&A periods. Dedicated
 CVX affiliate and GE industrial carve-out/recast designs remain unapproved.
 
+**Wave 18 follow-up:** the
+[D&A inventory](../depreciation-amortization-concepts.md) and
+[machine-checkable evidence](../depreciation-amortization-inventory.json)
+reconcile exactly 94 frozen missing annual periods across 21 issuers. Primary
+research routing is 31 `CONCEPT_POLICY`, 33 `DERIVATION`, five
+`ISSUER_EXTENSION` and 25 `METHODOLOGY_BLOCKER`. Five Visa periods support
+bounded scope-equivalence design; the other 89 remain unapproved. PARTIAL GO
+is not a generic fallback, new component policy or production result. All
+1,374 inspected annual numeric occurrences retain their dimensional, unit,
+representation and selected-source distinctions. D&A remains 110 / 94 / 0;
+Operating Income remains 194 / 10 / 0 and aggregate remains 1,880 / 1,508 / 11 /
+27 / 42 across 3,468 states. No test suite or corpus rerun was performed.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -376,8 +389,12 @@ classification must be reviewed before widening policy.
 
 ### D&A
 
-D&A resolves in 110/200 periods: 105 direct and five through the approved MSFT
-derivation. Ninety periods across 19 issuers remain missing.
+At the original Phase 1H.3 baseline, D&A resolved in 110/200 periods: 105
+direct and five through the approved MSFT derivation. Ninety periods across
+19 issuers remained missing. Wave 1A added two GEV and two SNDK missing
+periods, giving the unchanged current D&A corpus **110 resolved / 94 missing /
+0 ambiguous across 204 periods**. The following Company Facts pattern counts
+are historical screening, not the Wave 18 filing-XBRL inventory.
 
 - `DepreciationAndAmortization` appears in 46 periods across ten issuers,
   including repeated gaps for V, LRCX, LIN, and VZ. Its relationship to the
@@ -394,6 +411,18 @@ derivation. Ninety periods across 19 issuers remain missing.
 - No repeatable issuer-extension D&A family was present in Company Facts for
   the missing issuers. Filing-level XBRL may provide evidence, but that remains
   explicit research. Impairment and lease amortization are not silently added.
+
+Wave 18 now inspects all 94 selected instances first and records complete
+context/namespace/unit/occurrence and submitted presentation/calculation
+evidence. Thirty-one periods expose nondimensional
+`DepreciationAndAmortization`; none exposes the current direct concept
+nondimensionally for the exact annual period. Filing evidence exposes AMD's
+changing extension pattern and broader GOOGL/TSLA/PM impairment captions,
+notwithstanding the earlier lack of a repeatable Company Facts extension
+family. Broad cash-flow add-backs, software/contract distinctions, embedded
+leases, rounded note values and GE's mixed-business perimeter require separate
+review. Only five Visa periods currently support safe potential scope-design
+coverage; 89 are unapproved. No period becomes zero or resolves in production.
 
 ### Pretax Income
 
@@ -637,7 +666,7 @@ issuers have one post-smoke classification.
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
-| 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 94 missing across the 204-period corpus | Core FCFF input | Group combined concepts and complete component derivations | High | High |
+| 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 18 inventoried:** D&A 94 missing across 21 issuers; five Visa scope-design candidates, 89 unapproved | Core FCFF input | Design exact scope-equivalence rules; separately prove component completeness and lease/impairment/accretion boundaries | High | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
@@ -675,8 +704,10 @@ issuers have one post-smoke classification.
    validates all 25 exact entries, preserves 169 direct results, and retains
    ten missing CVX/GE controls. Wave 17 completes their separate perimeter
    research with NO-GO; no coverage or production classification changes.
-3. **Core FCFF flows:** next inventory exact selected-filing D&A concepts and
-   complete component patterns for all 94 missing periods, then Capex
+3. **Core FCFF flows:** Wave 18 completes the exact 94-period D&A inventory.
+   Next design scoped evidence/acceptance rules with five Visa positives and
+   89 unapproved controls; keep component and lease-perimeter research gated.
+   Then investigate Capex
    variants. CVX/GE mixed-business designs remain separate. Approve only
    repeatable definitions with
    selected-accession evidence.

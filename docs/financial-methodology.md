@@ -706,6 +706,27 @@ depreciation or amortization and later periods do not establish complete
 amortization coverage. Filing-level XBRL remains an explicit research source
 and is not automatically connected to normalization.
 
+Wave 18's [exact selected-filing inventory](depreciation-amortization-concepts.md)
+reviews all 94 current gaps across 21 issuers. Cash-flow add-back membership
+does not establish the operating D&A primitive: impairment, accretion,
+financing/pension amortization, contract/incentive costs and discontinued
+activity require distinct treatment. Accumulated-amortization movements and
+future schedules are not current expense. Capitalized software can be a
+genuine operating amortization component, but must not overlap another
+intangible or depreciation operand. Missing amortization is never zero.
+
+Five Visa periods have supported potential scope-design coverage from their
+operating statement, asset notes and separately presented incentive/lease
+economics. No new direct concept or component policy is approved. Other
+combined concepts remain unapproved; equal values and submitted calculation
+arcs corroborate structure but do not establish economic equivalence. Known
+embedded lease expense is a scope-design question, not permission to add or
+subtract lease amounts, and not a retroactive redefinition of existing direct
+D&A. Integrated lease methodology remains deferred. The inventory's rounded
+corroborating note values never replace an exact direct source or create a
+generic production tolerance. Production D&A remains 110 resolved / 94
+missing / 0 ambiguous; no code, tests, policies or corpus behavior change.
+
 ## FCFF
 
 The core valuation methodology is unlevered free cash flow to the firm (FCFF).

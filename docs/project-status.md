@@ -336,6 +336,26 @@ aggregate states remain 1,880 / 1,508 / 11 / 27 / 42 across 3,468 states.
 Only additional selected-filing notes were retrieved; no production code,
 tests, policies, full test suite or corpus were changed or run.
 
+Phase 1H.4 Wave 18 completes the
+[D&A concept/component inventory](depreciation-amortization-concepts.md)
+and its [machine-checkable evidence](depreciation-amortization-inventory.json)
+for all 94 missing periods across 21 issuers. Every frozen CIK/accession/annual
+period matches selected filing-XBRL and explicit annual DEI evidence. The
+inventory retains 1,374 exact-period numeric occurrences, including dimensions,
+units, raw representations, deterministic ordinals, presentation/calculation
+relationships and selected statement/note sources. AVGO 2021's older DEI
+namespace is reviewed separately without changing the production resolver.
+
+Primary research categories reconcile to 31 `CONCEPT_POLICY`, 33 `DERIVATION`,
+five `ISSUER_EXTENSION` and 25 `METHODOLOGY_BLOCKER` periods. PARTIAL GO is for
+scope-evidence/policy design only: five Visa periods have supported potential
+coverage; 89 remain unapproved. Cash-flow impairment/accretion, embedded lease
+expense, incomplete amortization, financing/contract costs, source precision
+and mixed-business scope prevent a generic fallback or automatic MSFT-style
+sum. No production result changes: D&A stays 110 resolved / 94 missing / 0
+ambiguous, Operating Income 194 / 10 / 0 and aggregate 1,880 / 1,508 / 11 / 27 /
+42 across 3,468 states. No tests or corpus runs were performed.
+
 ## Completed
 
 - Completed Milestone 0 — development environment and repository setup
@@ -769,9 +789,12 @@ tests, policies, full test suite or corpus were changed or run.
 
 ## Next Step
 
-Research the exact selected-filing D&A concepts and complete component
-patterns for the 94 missing D&A periods in the failure-taxonomy backlog.
-Require completeness, scope and non-overlap evidence before any policy design.
+Design exact selected-filing D&A scope-equivalence evidence and acceptance
+rules, starting with Wave 18's five Visa positives and retaining the other 89
+gaps as unapproved controls. Decide combined-concept and embedded-lease
+compatibility explicitly before expanding coverage. Component completeness
+research for the 33 derivation and five AMD extension periods remains separate;
+do not generalize MSFT's two operands or approve a generic cash-flow fallback.
 Wave 17 leaves the ten CVX/GE Operating Income gaps unresolved; dedicated CVX
 energy/affiliate and GE industrial/insurance carve-out or common-perimeter
 recast research are separate, unapproved methodology paths. Preserve the
@@ -827,8 +850,10 @@ sensitivity work is intentionally paused through Phase 1H.
    Operating Income gaps to the ten CVX/GE controls. Wave 17 completes their
    business/perimeter research with NO-GO and zero additional coverage: CVX
    remains unresolved, GE requires specialized mixed-business treatment and
-   has no common five-period continuing perimeter. Next, inventory the 94
-   missing D&A periods, then continue with other
+   has no common five-period continuing perimeter. Wave 18 inventories all
+   94 D&A gaps across 21 issuers and reaches PARTIAL GO for scoped evidence
+   design with five Visa candidates, not production expansion. Next, design
+   exact D&A scope-equivalence acceptance rules, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital
