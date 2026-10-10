@@ -366,9 +366,15 @@ expense/inventory/preproduction containment and 2023 incentive netting lack a
 complete bridge. No equation is approved; matrix totals remain 0/19/14 and safe
 additional coverage zero. No other issuer or AMD period is reviewed anew.
 
-Next: explicit TXN manufacturing D&A expense-perimeter and operating-NWC timing
-methodology review, not implementation; preserve the five exact Visa entries
-and all 89 no-entry controls.
+Wave 23's [methodology review](depreciation-amortization-component-derivation-design.md#wave-23--txn-methodology-review)
+makes the new-acceptance expense timing basis explicit but does not establish
+the missing TXN allocation/netting bridges. All three remain further research;
+no equation or alternate generated-cost primitive is approved. Existing policy
+timing compatibility and book-inventory/FCFF consistency are not certified.
+
+Next: documentation-only timing-basis compatibility audit of existing approved
+D&A policies and the Operating-NWC consumer contract, not implementation;
+preserve the five exact Visa entries and all 89 no-entry controls.
 No generic combined-concept fallback, residual, lease adjustment or automatic
 scope approval is justified. Component
 completeness research for the 33 derivation and five AMD extension periods is a

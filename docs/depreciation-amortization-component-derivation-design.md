@@ -442,3 +442,121 @@ netting can meet the existing primitive without double counting. This requires
 an explicit reviewed methodology decision or missing quantitative disclosure,
 not another concept inventory or an automatic three-component sum. Until then,
 all three remain unresolved and production implementation is NO-GO.
+
+## Wave 23 — TXN methodology review
+
+Starting HEAD `cdf7d862cb00aa07a5427b3285e46db7d4aa443b`; clean `main`, one
+commit ahead of origin. Nothing is pushed. This is a methodology review of
+the three completed Wave 22 evidence sets, not a repeated concept inventory.
+All frozen identities and evidence references are preserved in the matrix's
+`txn_methodology_review`; original 33 rows and Wave 22 evidence are unchanged.
+
+### Basis decision and limitation
+
+**NO-GO for TXN component acceptance.** The earlier definition specified
+qualifying operating assets, but did not explicitly distinguish current asset
+depreciation generated from D&A recognized in income. For new derivation
+approvals, retain the existing expense-scope gate and make its target explicit:
+recurring qualifying expense recognized in consolidated continuing operating
+income for the selected annual period, net of demonstrated expense reductions.
+This is a documented acceptance-basis clarification, not a claim that earlier
+runtime policies already prove the timing distinction. The
+[methodology](financial-methodology.md#da-timing-basis--wave-23-methodology-decision)
+records the decision and its consumer limitations. No alternate generated-cost
+or cash-flow-adjustment primitive is approved merely to obtain TXN coverage.
+
+The candidate three asset categories are structurally distinct, with valid
+annual USD signs and explicit intangible zeros in 2022/2023. That establishes
+reported category separation, not an exhaustive operating-expense equation.
+Income acquisition amortization confirms one category and is not added twice.
+No new numerical equation, derived value, rounding treatment or operand is
+approved. All three retain `FURTHER_RESEARCH_REQUIRED`; missing quantities
+cannot be supplied by a methodology choice. Research totals remain 0 approved /
+19 further research / 14 methodology-blocked across 33, with zero new coverage.
+
+### Manufacturing inventory and recognition
+
+Reuse each selected R12 inventory/PP&E policy and primary Note 1 segment-cost
+allocation evidence retained in Wave 22. R12 states that inventory uses a
+currently adjusted standard-cost basis, with normal utilization of installed
+capacity; underutilization costs are expensed as incurred. Note 1 identifies
+depreciation among manufacturing costs allocated per unit and says it is not
+independently identifiable in segment results. These support the mechanism:
+eligible factory depreciation can enter manufactured inventory and later cost
+of revenue, whereas qualifying direct/underutilization expense can enter income
+currently. They do not quantify the respective depreciation amounts.
+
+Required missing information is an exact-period qualifying-cost bridge:
+opening inventory's D&A released to income, current qualifying costs directly
+expensed, current costs capitalized in inventory or elsewhere, and closing
+deferred D&A, with disposals/write-downs/preproduction/nonqualifying items
+separately treated. Total inventory increases/decreases, net PP&E movements,
+cash-flow adjustments and segment allocations cannot supply that bridge as
+residuals. A useful-life or basis policy alone cannot prove it either.
+
+**NWC consistency matters independently:** expense D&A plus unadjusted book
+inventory changes is not automatically a cash-consistent FCFF combination.
+Book changes may retain generated noncash depreciation in inventory. A
+generated-cost add-back with appropriately consistent book inventory changes
+is a possible alternative analytical design, not an approved primitive here;
+it would require aligned scope, incentive timing, tax and Capex treatment.
+Equally, an expense-basis add-back needs a proved compatible inventory/NWC
+bridge. Neither path is implemented or supported numerically for these rows.
+
+### Incentive basis and netting
+
+R12 in 2022/2023 distinguishes asset-related incentives (reduce asset carrying
+amount and depreciation over asset life) from specific activity incentives
+(offset related expense when incurred). The 395m/1,360m receivables are asset-
+basis adjustments, not annual D&A or cash receipts. The 2023 45m observation
+is a depreciation-expense reduction in cost of revenue, not permission to
+subtract 45m from 1,175m without proving whether that cash-flow line is already
+net and aligned to the same expense perimeter. Adding it back to gross up
+expense would instead change the basis and require explicit review. No
+2021 incentive amount, 2022 zero benefit or cash timing is inferred from
+silence. Government-assistance facts/receivables remain supporting evidence,
+not operands. Grant/tax-credit cash and tax effects are outside this acceptance.
+
+### Exact period conclusions
+
+| Period and frozen accession | Evidence-backed conclusion | Approval / precise missing bridge |
+| --- | --- | --- |
+| 2021-01-01–2021-12-31; 0000097476-22-000009 | Depreciation 755m, intangible amortization 142m and software amortization 57m remain valid category observations. Per-unit manufacturing costing and 104m Lehi integration/preproduction expense affect scope. | Further research; no complete expense-versus-inventory bridge or qualifying-D&A containment of preproduction charges. No inferred incentive adjustment. |
+| 2022-01-01–2022-12-31; 0000097476-23-000007 | Depreciation 925m, explicit intangible zero and software amortization 54m remain valid. Lehi incurred 257m preproduction costs; ongoing costs entered cost of revenue after production began in December 2022, not a demonstrated reclassification of historical charges. The 395m incentive receivable reduced asset basis. | Further research; missing inventory/expense allocation, preproduction containment and demonstrated incentive netting. Receivable is not depreciation or proof of zero annual expense benefit. |
+| 2023-01-01–2023-12-31; 0000097476-24-000007 | Depreciation 1,175m, explicit intangible zero and software amortization 63m remain valid. Incentive receivable 1,360m and 45m recognized depreciation reduction are distinct observations. | Further research; missing inventory/expense allocation and containment of the 45m reduction within the candidate depreciation fact. No gross-up or second subtraction. |
+
+### Existing-policy impact and evidence reuse
+
+Generic direct D&A, MSFT's approved derivation and Visa's five reviewed entries
+are preserved; no issuer is newly approved or reclassified. Their existing
+acceptances are not audited by this TXN-only review. Tightening runtime
+acceptance retrospectively could alter coverage, provenance/evidence models
+and consumer readiness; switching to a generated-cost basis could change
+historical/forecast comparability, NWC handling and incentive/Capex/tax treatment.
+Neither impact is quantified without a separately authorized audit; no claim
+of policy-wide basis equivalence or universal cash consistency is made.
+
+All selected-filing links, instances, notes, original occurrences and source
+digests from Wave 22 are reused; no additional SEC requests or unchanged-link
+revalidation is needed to decide these conceptual issues. R12 is the inventory
+and incentive-policy source; primary Note 1 is the allocation source; R21 and
+MD&A support Lehi timing; R3/R8 and submitted calculations establish signs and
+category structure. Review adds no newly measured evidence or production data.
+
+### Validation and next milestone
+
+Validate the three frozen CIK/accession/calendar-year identities, inherited
+evidence references/digests and occurrence records; original 33 rows and
+classification counts; all equations remain null; decision/matrix consistency,
+local links and `git diff --check`. No tests or corpus rerun. D&A stays
+115 resolved / 89 missing / 0 ambiguous; aggregate remains
+1,885 / 1,503 / 11 / 27 / 42 = 3,468, carried forward rather than remeasured.
+
+Smallest next milestone: **documentation-only D&A timing-basis compatibility
+audit of existing approved policies and their Operating-NWC consumer contract**,
+using retained evidence and without changing acceptances. Identify which
+accepted sources prove expense recognition versus generated cost or leave
+that distinction unspecified; record impacts before any primitive/policy
+migration. TXN remains evidence-blocked unless an exact expense/inventory and
+incentive bridge becomes available. Do not repeat its concept inventory, infer
+allocations, or implement a sum. Other issuer research and AMD remain gated.

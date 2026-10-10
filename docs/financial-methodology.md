@@ -764,6 +764,55 @@ conflict rules. No new materiality exception, residual, lease adjustment or
 primitive redefinition is authorized. Five Visa approvals, existing generic
 and MSFT policies, and current **115 / 89 / 0** D&A counts remain unchanged.
 
+### D&A timing basis — Wave 23 methodology decision
+
+The earlier primitive named qualifying asset classes but did not fully specify
+manufacturing capitalization timing. Wave 21 required an expense/inventory
+bridge and Wave 22 did not establish it. For **new scope/derivation approvals**,
+the reviewed target is recurring qualifying D&A **recognized in consolidated
+continuing operating income in the authoritative annual period**, after the
+related expense reductions actually recognized there. This makes the prior
+expense-scope acceptance gate explicit; it is not a change to runtime policies
+or retrospective certification of their timing basis. Asset depreciation
+generated in the period, cash-flow reconciliation adjustments and balance-sheet
+accumulated-depreciation movements are not automatically this expense measure.
+
+Manufacturing depreciation allocated to unsold inventory is deferred; its
+qualifying amount enters operating expense when inventory is sold, while
+qualifying directly expensed costs enter income in their recognition period.
+Current generated depreciation and expense can therefore differ. A complete
+bridge must distinguish opening inventory releases, current capitalization,
+closing deferral, directly expensed amounts and excluded charges without
+double counting. No allocation is inferred from total inventory movements.
+
+This expense basis is **not by itself an approved historical FCFF bridge**:
+the existing Operating NWC convention uses book closing-minus-opening levels.
+Book inventory can include noncash capitalized depreciation. Adding only
+income-expensed D&A while subtracting an unadjusted book inventory increase
+can retain that noncash investment in the apparent cash outflow. Conversely,
+adding generated depreciation alongside an expense-only inventory movement
+can overstate cash flow. An alternative generated-cost basis would require
+an explicit compatible EBIT/NWC/Capex/incentive design and versioned impact
+assessment, not a relabeling of the normalized expense primitive. Neither an
+inventory adjustment nor that alternative is approved or implemented here.
+Forecast and valuation work remains paused; normalized availability must not
+be mistaken for demonstrated manufacturing FCFF readiness.
+
+Asset-related incentives reduce depreciable basis and subsequent recognized
+expense under TXN's disclosed policy; activity-related incentives offset the
+related expense. Use an expense net of its demonstrated reductions, not gross
+depreciation plus a grant receivable. A reported incentive amount is not a new
+D&A operand or authority to subtract twice. Cash timing, tax treatment, Capex
+netting and operating-NWC classification require an integrated future review.
+
+**Impact:** TXN 2021–2023 remain further research with no approved equation.
+Generic direct, MSFT and five Visa policies and all production counts are
+preserved. This documentation review does not prove that every existing
+accepted amount is expense-basis aligned; a bounded basis/consumer audit is
+required before propagating this clarification into policies, schemas or FCFF.
+No automatic invalidation, blanket approval or zero-allocation assumption is
+authorized. See the [period decisions and impact assessment](depreciation-amortization-component-derivation-design.md#wave-23--txn-methodology-review).
+
 ## FCFF
 
 The core valuation methodology is unlevered free cash flow to the firm (FCFF).

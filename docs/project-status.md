@@ -836,10 +836,21 @@ bridge. Safe new coverage is zero; the 33-period matrix remains 0 approved /
 19 further research / 14 methodology-blocked. Production remains D&A 115/89/0
 and aggregate 1,885/1,503/11/27/42 = 3,468; no tests or corpus rerun.
 
-Next undertake an explicit TXN manufacturing D&A expense-perimeter and
-operating-NWC timing methodology review, limited to these three periods,
-before seeking an exact-accession equation. Do not silently broaden the
-primitive or implement a three-component sum. TXN 2024–2025 absent intangible operands are not
+Wave 23 completes the [TXN methodology review](depreciation-amortization-component-derivation-design.md#wave-23--txn-methodology-review).
+For new derivation approvals the target is qualifying recurring expense in
+consolidated continuing operating income, net of demonstrated expense
+reductions; this clarifies an incomplete timing specification, not runtime
+policy equivalence. Expense D&A plus unadjusted book inventory changes is not
+automatically cash-consistent. Missing allocation/incentive bridges keep all
+three TXN periods further research; no equation or coverage is approved.
+Existing policies and counts are preserved, not retrospectively certified.
+
+Next: a documentation-only timing-basis compatibility audit of existing
+approved D&A policies and their Operating-NWC consumer contract, using retained
+evidence. Record impacts before proposing any versioned primitive/policy
+migration. Do not implement a sum or infer TXN allocations; further TXN work
+requires a genuine new expense/inventory and incentive bridge, not repeated
+concept research. TXN 2024–2025 absent intangible operands are not
 zero. Preserve Wave 20's five Visa entries and all 89 unapproved controls;
 no generic sum, cash-flow fallback or isolated lease adjustment. The 14
 methodology-gated proposals, remaining research periods and five AMD extension
@@ -906,8 +917,9 @@ sensitivity work is intentionally paused through Phase 1H.
    those five entries with 89 unchanged controls. Wave 21 completes the 33-period
    component review with no approved equation (19 research / 14 methodology-gated).
    Wave 22 closes reported TXN 2021–2023 asset-separation/sign questions but
-   retains all three unresolved. Next review manufacturing expense-perimeter,
-   inventory timing and incentive netting explicitly, then continue with other
+   retains all three unresolved. Wave 23 clarifies new-acceptance expense basis
+   and its NWC timing limitation without approving an equation. Next audit
+   existing-policy timing compatibility and consumer contract, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital

@@ -1858,6 +1858,200 @@
       }
     ]
   },
+  "txn_methodology_review": {
+    "research_version": "wave23-txn-methodology-v1",
+    "starting_head": "cdf7d862cb00aa07a5427b3285e46db7d4aa443b",
+    "decision": "NO-GO",
+    "new_scope_acceptance_basis": "Recurring qualifying D&A recognized in consolidated continuing operating income for the selected annual period, net of demonstrated expense reductions.",
+    "basis_status": "Explicit clarification of the expense-scope acceptance gate for new derivations; not a runtime change or retrospective certification of approved policies.",
+    "alternative_generated_cost_basis_approved": false,
+    "book_inventory_nwc_cash_consistency_proven": false,
+    "existing_policy_timing_audit_completed": false,
+    "production_changes": false,
+    "new_sec_requests": 0,
+    "safe_new_coverage": 0,
+    "original_33_rows_unchanged": true,
+    "periods": [
+      {
+        "ticker": "TXN",
+        "cik": 97476,
+        "accession": "0000097476-22-000009",
+        "annual_start": "2021-01-01",
+        "annual_end": "2021-12-31",
+        "design_classification": "FURTHER_RESEARCH_REQUIRED",
+        "production_approval": false,
+        "approved_equation": null,
+        "approved_value_usd": null,
+        "evidence_refs": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/R8.htm",
+            "sha256": "69db0848c165b963eb5d4885f753641752222bb9b6d6f9c39a2d9488bd845b28",
+            "location": "R8.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/R12.htm",
+            "sha256": "3d0dbd2228a90ed3bd891ce67cf2221aa9d66109194ae8d44d8ac0c17f2c9ba5",
+            "location": "R12.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/R19.htm",
+            "sha256": "16e76050277d3e16a5914640076bd4535ef4494f410afb66d56da5d03928d4c9",
+            "location": "R19.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/R3.htm",
+            "sha256": "4f86f6e683f166d971e37c54e92bbb1af2b498621672e7424f82be237b69dcb3",
+            "location": "R3.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/R21.htm",
+            "sha256": "19dbce3ba6a1fb4b365c9a155a23db4cec40b5d200065f60c3cb307f6d897dc7",
+            "location": "R21.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231.htm",
+            "sha256": "d74354ab395519b4f54cad059dbe55a2d0275aa9407e2b4fca92193982946118",
+            "location": "primary selected 10-K: Note 1, Note 2 and MD&A"
+          }
+        ],
+        "occurrence_provenance_ref": "targeted_followup.periods[accession=0000097476-22-000009].supporting_facts_not_approved_operands",
+        "closed_gates": [
+          "Exact annual entity/context/ISO4217 USD/non-nil occurrence identity and submitted signs",
+          "Reported PP&E/software asset-category separation",
+          "Explicit 2022/2023 acquisition-intangible zeros, where applicable"
+        ],
+        "missing_gates": [
+          "Factory depreciation is allocated per unit and normal-capacity inventory costing defers costs; no quantitative expense-versus-inventory bridge is disclosed. Lehi integration/preproduction charges of USD 104m have no exhaustive qualifying-D&A split.",
+          "Separate reported asset and cash-flow categories do not establish exhaustive recurring operating expense coverage or exclude every capitalized/preproduction or impairment item. No residual, numerical equality or absence is accepted as completeness proof."
+        ],
+        "expense_inventory_bridge_proven": false,
+        "incentive_netting_bridge_proven": false,
+        "zero_incentive_amount_inferred": false,
+        "source_occurrences_changed": false,
+        "reused_calculation_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml",
+        "reused_calculation_sha256": "51bc606a19ba0524f8dba9e741dc411f5f43d194ea72c58ea3f6a654e82448b9"
+      },
+      {
+        "ticker": "TXN",
+        "cik": 97476,
+        "accession": "0000097476-23-000007",
+        "annual_start": "2022-01-01",
+        "annual_end": "2022-12-31",
+        "design_classification": "FURTHER_RESEARCH_REQUIRED",
+        "production_approval": false,
+        "approved_equation": null,
+        "approved_value_usd": null,
+        "evidence_refs": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/R8.htm",
+            "sha256": "ae65cfda9ae1ded72083f33a569eb75188e7861fb3f0106cb1804bdc4b520b0e",
+            "location": "R8.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/R12.htm",
+            "sha256": "96da6b5c45028a3ef74c9c228d9acf18412652178e976ec783512257829eecae",
+            "location": "R12.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/R19.htm",
+            "sha256": "66b604eaa2d1118930d9525157d3326b159ee1d3b1749f0e51d5256a7ec2dbed",
+            "location": "R19.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/R3.htm",
+            "sha256": "e29cc8d13f77a0ee6fe3cee40c2d748014351eafae89c2974e3ad60f14950b15",
+            "location": "R3.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/R21.htm",
+            "sha256": "7bdd8b7b57c3200bde8dc042c541fa0c58c1729d46982eaf53f6580576955221",
+            "location": "R21.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231.htm",
+            "sha256": "b753c19ef45e63d6a04ee9ef604fbf9ebff7fd9345a20b962b56ca18329e3bf5",
+            "location": "primary selected 10-K: Note 1, Note 2 and MD&A"
+          }
+        ],
+        "occurrence_provenance_ref": "targeted_followup.periods[accession=0000097476-23-000007].supporting_facts_not_approved_operands",
+        "closed_gates": [
+          "Exact annual entity/context/ISO4217 USD/non-nil occurrence identity and submitted signs",
+          "Reported PP&E/software asset-category separation",
+          "Explicit 2022/2023 acquisition-intangible zeros, where applicable"
+        ],
+        "missing_gates": [
+          "Factory depreciation is allocated per unit and normal-capacity inventory costing defers costs; no quantitative expense-versus-inventory bridge is disclosed. Lehi integration/preproduction charges of USD 257m moved into cost of revenue when production began in December 2022; qualifying-D&A containment is unquantified. USD 395m CHIPS receivable reduces asset basis, not a disclosed annual depreciation operand.",
+          "Separate reported asset and cash-flow categories do not establish exhaustive recurring operating expense coverage or exclude every capitalized/preproduction or impairment item. No residual, numerical equality or absence is accepted as completeness proof."
+        ],
+        "expense_inventory_bridge_proven": false,
+        "incentive_netting_bridge_proven": false,
+        "zero_incentive_amount_inferred": false,
+        "source_occurrences_changed": false,
+        "reused_calculation_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml",
+        "reused_calculation_sha256": "a5b9bf964456ccf8eea61ccd2cabf158ceffb396bad34f37e2d8e447fa5af4d4"
+      },
+      {
+        "ticker": "TXN",
+        "cik": 97476,
+        "accession": "0000097476-24-000007",
+        "annual_start": "2023-01-01",
+        "annual_end": "2023-12-31",
+        "design_classification": "FURTHER_RESEARCH_REQUIRED",
+        "production_approval": false,
+        "approved_equation": null,
+        "approved_value_usd": null,
+        "evidence_refs": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/R8.htm",
+            "sha256": "64ea9aa32a52fa6ac8ebb8dbc26ed240e77eb4ae5491ef8f1e88e704c17f6599",
+            "location": "R8.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/R12.htm",
+            "sha256": "ae3886a832a2c6509371e7a147cbcb9442e97fabe94f6ec9a31417d892c52a00",
+            "location": "R12.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/R19.htm",
+            "sha256": "fda4caf384c59f21c0302f570b699108d08b4a6a4048250a4bc8cbb78ddb5083",
+            "location": "R19.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/R3.htm",
+            "sha256": "9451b69fba38530b2d7d4c7f8e0a102f154498190f9ece6c09b5569e4dcad94b",
+            "location": "R3.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/R21.htm",
+            "sha256": "0fa52318bfcb23c71616d80ad9659121163113b70fcb52241d713d114534c403",
+            "location": "R21.htm"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231.htm",
+            "sha256": "360c81fa466c22be9a2b5388cca101bebe230a7fe17e2f49fe702860c80981a3",
+            "location": "primary selected 10-K: Note 1, Note 2 and MD&A"
+          }
+        ],
+        "occurrence_provenance_ref": "targeted_followup.periods[accession=0000097476-24-000007].supporting_facts_not_approved_operands",
+        "closed_gates": [
+          "Exact annual entity/context/ISO4217 USD/non-nil occurrence identity and submitted signs",
+          "Reported PP&E/software asset-category separation",
+          "Explicit 2022/2023 acquisition-intangible zeros, where applicable"
+        ],
+        "missing_gates": [
+          "Factory depreciation is allocated per unit and normal-capacity inventory costing defers costs; no quantitative expense-versus-inventory bridge is disclosed. Cost of revenue benefited from USD 45m CHIPS-related depreciation reduction; its containment/netting in the USD 1175m cash-flow depreciation line is not explicitly reconciled. USD 1360m incentive receivable is an asset-basis amount, not annual D&A.",
+          "Separate reported asset and cash-flow categories do not establish exhaustive recurring operating expense coverage or exclude every capitalized/preproduction or impairment item. No residual, numerical equality or absence is accepted as completeness proof."
+        ],
+        "expense_inventory_bridge_proven": false,
+        "incentive_netting_bridge_proven": false,
+        "zero_incentive_amount_inferred": false,
+        "source_occurrences_changed": false,
+        "reused_calculation_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml",
+        "reused_calculation_sha256": "5e00b02d22b5d8405005a01a841ae8c08fceec3a34a207e269c94cec55b7956e"
+      }
+    ],
+    "next_milestone": "Documentation-only timing-basis compatibility audit of existing approved D&A policies and Operating-NWC consumer contract; no policy migration or automatic TXN sum."
+  },
   "rows": [
     {
       "ticker": "AVGO",
