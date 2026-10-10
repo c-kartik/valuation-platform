@@ -1084,7 +1084,7 @@ class StandardizedOutputTests(unittest.TestCase):
         payload = standardized_history_to_dict(
             assemble_standardized_annual_history(historical, balances)
         )
-        self.assertEqual(payload["schema_version"], "3")
+        self.assertEqual(payload["schema_version"], "4")
         measures = {
             item["measure"]: item for item in payload["annual"][0]["measures"]
         }

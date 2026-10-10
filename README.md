@@ -114,7 +114,11 @@ it does not populate them from history or calculate forecasts, FCFF, terminal
 value, DCF, an equity bridge, or value per share.
 D&A is direct for the validated META, AAPL, and COST periods and derived from an
 evidence-backed, CIK-scoped Company Facts policy for MSFT. GOOGL remains
-unresolved. Interim periods and the remaining standardized financial metrics
+unresolved. Phase 1H.4 Wave 20 additionally accepts five exact Visa filings
+through the [reviewed curated D&A policy](docs/depreciation-amortization-scope-evidence-design.md#wave-20-implementation-and-verified-results):
+115 corpus periods resolve and 89 remain missing. This is not a generic fallback
+or component sum; schema 4 preserves full reviewed scope and occurrence/support
+provenance. Interim periods and the remaining standardized financial metrics
 are not normalized yet. Reported ETR is a historical accounting diagnostic
 derived from the normalized monetary facts; the forecast operating tax rate
 remains a separate manual assumption.

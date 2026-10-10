@@ -367,6 +367,20 @@ versioning, direct precedence, exact semantic confirmation, structural-error
 boundaries and complete occurrence/support serialization are specified.
 Production counts remain unchanged; no tests or corpus reruns.
 
+Phase 1H.4 Wave 20 implements the
+[five-entry curated D&A scope policy](depreciation-amortization-scope-evidence-design.md#wave-20-implementation-and-verified-results).
+Focused tests pass 200 checks; the complete suite passes 552 tests. All five
+selected Visa accessions resolve with two confirming occurrences each, exact
+reviewed artifact verification and separately typed asset-note support in
+schema 4. The full 94-period regression preserves all 89 no-entry controls.
+One corpus reconciliation confirms 43/43 generic completions, seven skips and
+204 periods: D&A is now **115 resolved / 89 missing / 0 ambiguous**. Aggregate
+states are **1,885 resolved / 1,503 missing / 11 ambiguous /
+27 methodology-blocked / 42 not-comparable**, totaling **3,468**. Exactly five
+D&A missing-to-resolved changes occur; all other metrics and execution states
+are unchanged. The research inventory and generic/MSFT policies are unchanged.
+No generic fallback, residual or lease adjustment is introduced.
+
 ## Completed
 
 - Completed Milestone 0 — development environment and repository setup
@@ -800,11 +814,10 @@ Production counts remain unchanged; no tests or corpus reruns.
 
 ## Next Step
 
-Implement Wave 19's five-entry curated D&A scope-equivalence foundation with
-exact identity/evidence validation, direct-first selection and full confirming
-occurrence/support provenance. Regress five accepted candidates and all 89
-no-entry controls; validate targeted results before full tests/corpus. No
-generic combined-concept fallback or lease adjustment. Component completeness
+Design D&A component-completeness/scope evidence for the 33 derivation periods,
+keeping AMD's five issuer-extension periods a separate gated pattern. Preserve
+Wave 20's five-entry curated policy and all 89 unapproved controls. No generic
+combined-concept fallback or lease adjustment. Component completeness
 research for the 33 derivation and five AMD extension periods remains separate;
 do not generalize MSFT's two operands or approve a generic cash-flow fallback.
 Wave 17 leaves the ten CVX/GE Operating Income gaps unresolved; dedicated CVX
@@ -865,8 +878,9 @@ sensitivity work is intentionally paused through Phase 1H.
    has no common five-period continuing perimeter. Wave 18 inventories all
    94 D&A gaps across 21 issuers and reaches PARTIAL GO for scoped evidence
    design with five Visa candidates, not production expansion. Wave 19 freezes
-   their curated scope-equivalence acceptance design; next implement only those
-   five entries with 89 unapproved controls, then continue with other
+   their curated scope-equivalence acceptance design; Wave 20 implements only
+   those five entries with 89 unchanged controls. Next design D&A component
+   completeness/scope, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital

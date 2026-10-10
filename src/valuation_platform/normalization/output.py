@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from datetime import date
 from decimal import Decimal
 from enum import Enum
+import json
 from typing import TypeAlias
 
 from valuation_platform.sec.submissions import SECFiling
@@ -16,6 +17,7 @@ from .models import (
     BalanceSheetFactEvidence,
     DerivedBalanceSheetValue,
     DerivedHistoricalValue,
+    DAndAScopeAudit,
     EvidenceSourceKind,
     FactEvidence,
     FilingXBRLEvidence,
@@ -36,7 +38,7 @@ from .operating_nwc import (
 )
 
 
-SCHEMA_VERSION = "3"
+SCHEMA_VERSION = "4"
 
 
 class HistoricalOutputError(ValueError):
@@ -132,6 +134,7 @@ class HistoricalPolicyReference:
     unit: str | None = None
     reviewed_evidence: tuple[ReviewedPolicyEvidence, ...] = ()
     filing_xbrl_evidence: tuple[FilingXBRLEvidence, ...] = ()
+    d_and_a_scope: DAndAScopeAudit | None = None
     operating_income_derivation: (
         OperatingIncomeDerivationPolicyProvenance | None
     ) = None
@@ -1057,6 +1060,16 @@ def _policy_reference(
 ) -> HistoricalPolicyReference | None:
     if provenance is None:
         return None
+    if provenance.policy_id == "d_and_a_scope_equivalence" or provenance.d_and_a_scope:
+        from .d_and_a_scope import (
+            DAndAScopePolicyError, validate_d_and_a_scope_provenance,
+        )
+        try:
+            validate_d_and_a_scope_provenance(provenance)
+        except DAndAScopePolicyError as exc:
+            raise HistoricalOutputError(str(exc)) from exc
+        for evidence in provenance.d_and_a_scope.supporting_facts:
+            _source_reference(evidence, filing)
     for evidence in provenance.filing_xbrl_evidence:
         _source_reference(evidence, filing)
     return HistoricalPolicyReference(
@@ -1073,6 +1086,7 @@ def _policy_reference(
         unit=provenance.unit,
         reviewed_evidence=provenance.reviewed_evidence,
         filing_xbrl_evidence=provenance.filing_xbrl_evidence,
+        d_and_a_scope=provenance.d_and_a_scope,
     )
 
 
@@ -1299,6 +1313,35 @@ def _serialize_policy(
                 policy.operating_income_derivation
             )
         ),
+        "d_and_a_scope": (
+            None if policy.d_and_a_scope is None
+            else _serialize_d_and_a_scope(policy.d_and_a_scope)
+        ),
+    }
+
+
+def _serialize_d_and_a_scope(audit: DAndAScopeAudit) -> dict[str, object]:
+    def exact(value):
+        if isinstance(value, Decimal):
+            return str(value)
+        if isinstance(value, (date,)):
+            return value.isoformat()
+        if isinstance(value, dict):
+            return {key: exact(item) for key, item in value.items()}
+        if isinstance(value, (tuple, list)):
+            return [exact(item) for item in value]
+        return value
+    return {
+        "reviewed_entry": json.loads(audit.reviewed_entry_json),
+        "verified_artifact_digests": [
+            {"source_url": url, "sha256": digest}
+            for url, digest in audit.verified_artifact_digests
+        ],
+        "confirming_original_ordinals": list(audit.confirming_original_ordinals),
+        "supporting_facts": [
+            _serialize_filing_xbrl_evidence(e) for e in audit.supporting_facts
+        ],
+        "occurrences": [exact(asdict(o)) for o in audit.occurrences],
     }
 
 

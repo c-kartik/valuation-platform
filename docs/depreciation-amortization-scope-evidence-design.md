@@ -8,8 +8,9 @@ curated, exact-accession acceptance for the five Visa candidates below.
 Automation may enforce reviewed entry eligibility; it cannot infer economic
 approval from a label, equal amounts, calculation arcs or cash-flow placement.
 
-This is design approval, not a production policy registration. All 94 periods
-remain missing. The [Wave 18 inventory](depreciation-amortization-inventory.json)
+Wave 19 was design approval, not production registration; all 94 periods
+were missing. Wave 20 implements only the five entries as verified below.
+The [Wave 18 inventory](depreciation-amortization-inventory.json)
 is unchanged, including its `production_policy_approval: false` fields.
 Its research baseline is `1990594ce96dd85f9929b0c312b05509e4692494`;
 this milestone starts at `c0b6aa467450816768022fd18ae60cacd43212c8`.
@@ -148,7 +149,7 @@ and all linkbase artifact URLs remain in the companion inventory.
 | `0001403161-25-000089` | [Summary of Significant Accounting Policies](https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R11.htm) | `3fc9ae7ff8367692532170bc1f070127be73562c1b9428ec209e73e186aede85` |
 | `0001403161-25-000089` | [Leases](https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R19.htm) | `36841640d85b26bd4c07a592f45587e4fecd569b23dea830e415463b8224581a` |
 
-## Proposed curated foundation (not implemented)
+## Frozen Wave 19 curated foundation (implemented in Wave 20)
 
 ### Immutable registry and reviewed evidence
 
@@ -400,3 +401,66 @@ five-by-two occurrences and reviewed raw-byte digests; supporting arithmetic/
 explicit precision; local documentation links and selected-directory SEC link
 identity; and `git diff --check`. No new SEC URLs, tests, production normalization
 or corpus rerun. Forecast/FCFF/DCF remains paused through Phase 1H.6.
+
+## Wave 20 implementation and verified results
+
+Implemented from clean main at `378d7ebe3ef26c272f37c4d6e5240f2460f5dbfc`,
+after pushing that validated design. The five-entry immutable policy ID is
+`d_and_a_scope_equivalence`, version `1`. Its source registry is separate from
+the unchanged Wave 18 research JSON; controls are no-entry, not fresh denials.
+The parser, generic D&A policy and Microsoft derivation are unchanged.
+
+The corpus pipeline retrieves only registered entries' required artifacts:
+the instance, schema/presentation/calculation files and five reviewed statement/
+notes. SHA-256 checks cover all nine sources per entry and re-parsing binds the
+supplied structural instance to its verified bytes. Missing or changed artifacts
+raise a structural policy error in this explicit verification boundary; absence
+of a supplied bundle never implies acceptance in normalization. Exact full
+filing/annual/QName/entity/USD identity gates candidate selection. A changed
+single eligible numeric value yields explicit curated-evidence-mismatch missing;
+differing eligible values stay ambiguous.
+
+Two nondimensional occurrences resolve each reported amount; original instance
+ordinals remain 202/505, 235/514, 225/499, 185/474 and 216/504 respectively.
+Each policy retains confirming ordinals 1/2, original representations, all
+reviewed locations/digests, two separately typed asset-support facts, submitted
+relationship definitions and ordered eligibility/exclusion audit. Schema 4
+preserves this complete support and exact Decimal serialization; no fake ADD
+derivation or component residual is emitted. Equal current direct values retain
+their chosen concept and the supporting curated policy. Downstream normalized-
+metric operands can retain the same policy support; Reported ETR has no D&A
+dependency and is unchanged.
+
+Validation on 2026-10-10:
+
+- Focused policy/normalization/output/prior-curated/corpus-interface tests:
+  **200 passed**, including 39 new D&A tests and the complete 94-row regression.
+- Inventory regression: **five approved Visa resolutions / 89 unchanged missing
+  controls**. Routing totals stay 31/33/5/25 in the historical research snapshot.
+- Targeted production normalization: all five exact selected accessions resolve
+  **804m / 861m / 943m / 1,034m / 1,220m**. Every other normalized metric is equal
+  to a same-input run without the curated bundles. Fifty-five retained SEC
+  resources were reused; one Company Facts request was made.
+- Complete suite run once: **552 passed**.
+- One production corpus run: **43/43 generic issuers complete**, zero failures,
+  seven specialized skips, 204 periods and 3,468 states.
+- D&A: repository-artifact baseline **110 resolved / 94 missing / 0 ambiguous**
+  becomes **115 / 89 / 0**; exactly five missing-to-resolved changes.
+- Aggregate: **1,885 resolved / 1,503 missing / 11 ambiguous /
+  27 methodology-blocked / 42 not-comparable**. All other measure states, 89
+  controls, issuer completion, frozen selections and specialized skips agree
+  with the baseline. Operating Income remains **194 / 10 / 0**; Pretax and
+  Reported ETR remain **167 / 37 / 0** each.
+- `compileall`, local documentation links and `git diff --check` pass.
+
+Lengthy validation logs/artifacts are outside the repository:
+`/tmp/da-wave20-focused.log`, `/tmp/da-wave20-full-tests.log`,
+`/tmp/da-wave20-targeted.log`, `/tmp/da-wave20-corpus-validation.log` and
+`/tmp/da-wave20-corpus.json`. The corpus reuses 288 retained resources and makes
+257 fresh requests; this validation-only reuse adds no production cache.
+
+Next milestone: D&A component-completeness/scope evidence design for the 33
+DERIVATION periods, with AMD's five extension periods a separate gated pattern.
+The 26 other combined-concept and 25 methodology-blocker controls are not
+approved by this implementation; lease/business/impairment research remains
+separate. Forecast/FCFF/DCF remains paused through Phase 1H.6.

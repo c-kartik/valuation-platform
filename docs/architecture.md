@@ -139,7 +139,7 @@ one-based ordinals in deterministic order and retain their original context ID,
 unit ID, raw value, decimals, nil status, dates, dimensions, and source
 metadata. The expanded provenance is represented by standardized-output schema
 version 2, extended by schema version 3 for curated Operating Income derivation
-provenance.
+provenance and schema version 4 for curated D&A scope/support audit.
 
 ## Valuation Assumptions Boundary
 
@@ -372,16 +372,21 @@ and adds same-period Company Facts observations for `Depreciation` and
 or automatic concept fallback. Capex remains a positive expenditure magnitude
 for later subtraction in FCFF.
 
-Wave 19 [designs](depreciation-amortization-scope-evidence-design.md), but does
-not implement, a five-entry curated D&A scope resolver at this boundary.
-The parser/generic resolver and existing D&A/MSFT policies remain unchanged.
+Wave 20 implements the [Wave 19 design](depreciation-amortization-scope-evidence-design.md)
+as `normalization.d_and_a_scope` and a separate five-entry source registry,
+not approval inferred from the research JSON. The corpus caller retrieves the
+nine required artifacts only for registered entries; normalization verifies
+their digests and re-parses the instance to bind supplied structural evidence
+to reviewed bytes. No SEC retrieval occurs inside the resolver and no parser,
+generic resolver or existing D&A/MSFT policy changes.
 Immutable exact-accession reviewed evidence gates reported-value acceptance;
 eligible semantic duplicates retain all occurrences and differing eligible
 values remain ambiguous. Supporting dimensional asset facts are separately
 typed review support, never inserted into candidate-only policy evidence or
-summed as derivation operands. Future output design uses versioned audit/support
-serialization (next schema 4) retaining original instance ordinals separately
-from consecutive confirming ordinals. Current production schemas are unchanged.
+summed as derivation operands. Schema 4 retains the full reviewed entry,
+verified digests, original instance ordinals, consecutive confirming ordinals,
+separate support and ordered exclusion audit with exact numeric strings.
+Normalized-metric consumers can retain the supporting policy; ETR is unaffected.
 
 GOOGL CIK `1652044` selected 2021–2023 filings provide only class-dimensional
 diluted denominators. When the nondimensional direct result is missing, the

@@ -1,5 +1,11 @@
 """Normalize selected SEC facts into standardized financial metrics."""
 
+from .d_and_a_scope import (
+    D_AND_A_SCOPE_EQUIVALENCE_POLICY, DAndAScopePolicyError,
+    VerifiedDAndAArtifacts, apply_curated_d_and_a_scope_policy,
+    d_and_a_scope_entry_for, verify_d_and_a_artifacts,
+)
+
 from .balance_sheet import (
     ACCRUED_PP_AND_E_PURCHASES_POLICY,
     ACCRUED_CUSTOMER_LIABILITIES_POLICY,
@@ -230,6 +236,12 @@ from .output import (
 )
 
 __all__ = [
+    "D_AND_A_SCOPE_EQUIVALENCE_POLICY",
+    "DAndAScopePolicyError",
+    "VerifiedDAndAArtifacts",
+    "apply_curated_d_and_a_scope_policy",
+    "d_and_a_scope_entry_for",
+    "verify_d_and_a_artifacts",
     "ACCRUED_PP_AND_E_PURCHASES_POLICY",
     "ACCRUED_CUSTOMER_LIABILITIES_POLICY",
     "ACCRUED_REVENUE_SHARE_LIABILITY_POLICY",

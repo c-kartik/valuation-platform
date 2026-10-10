@@ -196,6 +196,20 @@ representation and selected-source distinctions. D&A remains 110 / 94 / 0;
 Operating Income remains 194 / 10 / 0 and aggregate remains 1,880 / 1,508 / 11 /
 27 / 42 across 3,468 states. No test suite or corpus rerun was performed.
 
+**Wave 20 implementation:** the five-entry curated D&A policy resolves exactly
+five Visa periods; all 89 controls retain their baseline missing states and
+research routing. Current D&A is **115 resolved / 89 missing / 0 ambiguous**.
+Aggregate is **1,885 resolved / 1,503 missing / 11 ambiguous /
+27 methodology-blocked / 42 not-comparable** across **3,468** states. All other
+measure states, 43 generic completions, seven specialized skips and 204 annual
+periods are unchanged. Focused tests pass 200 checks; the full suite passes
+552 tests; targeted five-accession and one corpus reconciliation match exactly.
+Reviewed artifacts, confirming multiplicity and separate support/exclusion
+audit survive schema 4. See the
+[verified results](../depreciation-amortization-scope-evidence-design.md#wave-20-implementation-and-verified-results).
+Next design component-completeness/scope evidence for the 33 DERIVATION periods;
+AMD's five extension periods and lease/business controls remain separate.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -392,7 +406,7 @@ classification must be reviewed before widening policy.
 At the original Phase 1H.3 baseline, D&A resolved in 110/200 periods: 105
 direct and five through the approved MSFT derivation. Ninety periods across
 19 issuers remained missing. Wave 1A added two GEV and two SNDK missing
-periods, giving the unchanged current D&A corpus **110 resolved / 94 missing /
+periods, giving the pre-Wave-20 D&A corpus **110 resolved / 94 missing /
 0 ambiguous across 204 periods**. The following Company Facts pattern counts
 are historical screening, not the Wave 18 filing-XBRL inventory.
 
@@ -431,7 +445,8 @@ controls retain Wave 18 routing (26 CONCEPT_POLICY, 33 DERIVATION, five
 ISSUER_EXTENSION, 25 METHODOLOGY_BLOCKER), not fresh reviewed denials. Semantic
 duplicates confirm only after exact eligibility; conflicts remain ambiguous.
 Supporting asset notes and 2025 precision cannot become residual operands or
-lease adjustments. Next implement only the five-entry foundation.
+lease adjustments. Wave 20 implements only that five-entry foundation:
+115 resolved / 89 missing / 0 ambiguous; all controls stay missing.
 
 ### Pretax Income
 
@@ -675,7 +690,7 @@ issuers have one post-smoke classification.
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
-| 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 19 designed:** D&A five exact Visa curated acceptances, 89 no-entry controls; all 94 still production missing | Core FCFF input | Implement only the five-entry foundation; separately prove component completeness and lease/impairment/accretion boundaries | Narrow for v1 | High |
+| 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; 89 unchanged no-entry controls | Core FCFF input | Design component completeness for 33 derivation periods; extension/lease/impairment/accretion boundaries remain separately gated | Narrow for v1 | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
@@ -715,8 +730,9 @@ issuers have one post-smoke classification.
    research with NO-GO; no coverage or production classification changes.
 3. **Core FCFF flows:** Wave 18 completes the exact 94-period D&A inventory.
    Wave 19 freezes scoped acceptance for five exact Visa entries and 89
-   unapproved controls. Next implement that foundation; keep component and
-   lease-perimeter research gated.
+   unapproved controls. Wave 20 implements that foundation; next design
+   component completeness for 33 derivation periods. Keep issuer-extension and
+   lease-perimeter research separately gated.
    Then investigate Capex
    variants. CVX/GE mixed-business designs remain separate. Approve only
    repeatable definitions with

@@ -1,0 +1,1102 @@
+[
+  {
+    "filing": {
+      "accession_number": "0001403161-21-000060",
+      "form": "10-K",
+      "filing_date": "2021-11-18",
+      "report_date": "2021-09-30",
+      "primary_document": "v-20210930.htm"
+    },
+    "annual_start": "2020-10-01",
+    "annual_end": "2021-09-30",
+    "namespace": "http://fasb.org/us-gaap/2021-01-31",
+    "facts": [
+      {
+        "ordinal": 202,
+        "context_id": "ia9ffd445549f441e9121047e42233bae_D20201001-20210930",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "804000000",
+        "numeric_value": "804000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2021-01-31#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2020-10-01",
+          "end": "2021-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 505,
+        "context_id": "ia9ffd445549f441e9121047e42233bae_D20201001-20210930",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "804000000",
+        "numeric_value": "804000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2021-01-31#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2020-10-01",
+          "end": "2021-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 890,
+        "context_id": "i35c0d7bf0e0442b79d5f3217871fb536_D20201001-20210930",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "721000000",
+        "numeric_value": "721000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2021-01-31#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2020-10-01",
+          "end": "2021-09-30",
+          "dimensions": [
+            {
+              "dimension": {
+                "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                "local_name": "PropertyPlantAndEquipmentByTypeAxis"
+              },
+              "explicit_member": {
+                "namespace": "http://wwww.visa.com/20210930",
+                "local_name": "PropertyEquipmentAndTechnologyMember"
+              },
+              "typed_member_xml": null
+            }
+          ]
+        }
+      },
+      {
+        "ordinal": 944,
+        "context_id": "ia9ffd445549f441e9121047e42233bae_D20201001-20210930",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "83000000",
+        "numeric_value": "83000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2021-01-31#AmortizationOfIntangibleAssets",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2020-10-01",
+          "end": "2021-09-30",
+          "dimensions": []
+        }
+      }
+    ],
+    "presentation": [
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "definition": "1007008 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "sort_code": "1007008",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "LongName": "1007008 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R8.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "definition": "1003004 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "sort_code": "1003004",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "LongName": "1003004 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R4.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetail",
+        "definition": "2427414 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Detail)",
+        "sort_code": "2427414",
+        "role_type": "Disclosure",
+        "title": "Property, Equipment and Technology, Net - Additional Information (Detail)",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetail",
+            "ShortName": "Property, Equipment and Technology, Net - Additional Information (Detail)",
+            "LongName": "2427414 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Detail)",
+            "MenuCategory": "Details",
+            "HtmlFileName": "R61.htm"
+          }
+        ]
+      }
+    ],
+    "calculation": [
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "parent": "CostsAndExpenses",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_CostsAndExpenses",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "5",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930_cal.xml"
+      },
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "parent": "NetCashProvidedByUsedInOperatingActivities",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "4",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930_cal.xml"
+      }
+    ],
+    "artifacts": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930_htm.xml",
+        "sha256": "b1e94ff40fe7bfeab76db91eb318e7773e5d9a72b4061c1a47d53db67a915ed1"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930.xsd",
+        "sha256": "da649fd98310465cf77e5780f64de30f16720849daa6581dd299c888057f1b86"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930_cal.xml",
+        "sha256": "f72dafe04f1a1e4e027d87bc601b572dd361e7aea8fd597b57ff6cc18135e29f"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930_pre.xml",
+        "sha256": "4030a2ba7956cd53a9625270a7fa494df8537768d0cac5f81cd330055d0d9b61"
+      }
+    ],
+    "notes": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R8.htm",
+        "sha256": "c28f72373b0a27cb6e83c20ae1dd75f70fa50382ed8730272136cb981dba154b",
+        "location": "CONSOLIDATED STATEMENTS OF CASH FLOWS"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R15.htm",
+        "sha256": "7da518239e679b1c7cbe0da441ce0cadcdf5015c6846a8a84d1d69bb1cfbaab5",
+        "location": "Property, Equipment and Technology, Net"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R16.htm",
+        "sha256": "c3dc87158e3d49fa7ceaf58c0d3ed8d17f305eda8f1368a44705225a441ac004",
+        "location": "Intangible Assets and Goodwill"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R9.htm",
+        "sha256": "ac805ab3d1f20a592ae0f5d21a6838cbaf06f9ce474b8a5bccbe70851ea4ed9e",
+        "location": "Summary of Significant Accounting Policies"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R17.htm",
+        "sha256": "04a006ce65ab5ae458164b2c4cd1f55a6028a7f495e1cdad3cf828101685e46d",
+        "location": "Leases"
+      }
+    ]
+  },
+  {
+    "filing": {
+      "accession_number": "0001403161-22-000081",
+      "form": "10-K",
+      "filing_date": "2022-11-16",
+      "report_date": "2022-09-30",
+      "primary_document": "v-20220930.htm"
+    },
+    "annual_start": "2021-10-01",
+    "annual_end": "2022-09-30",
+    "namespace": "http://fasb.org/us-gaap/2022",
+    "facts": [
+      {
+        "ordinal": 235,
+        "context_id": "i501005a952cc4b068e83ae86d38ef829_D20211001-20220930",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "861000000",
+        "numeric_value": "861000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2022#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2021-10-01",
+          "end": "2022-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 514,
+        "context_id": "i501005a952cc4b068e83ae86d38ef829_D20211001-20220930",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "861000000",
+        "numeric_value": "861000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2022#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2021-10-01",
+          "end": "2022-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 946,
+        "context_id": "i4788adbeeed34295bb570accd9def2db_D20211001-20220930",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "771000000",
+        "numeric_value": "771000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2022#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2021-10-01",
+          "end": "2022-09-30",
+          "dimensions": [
+            {
+              "dimension": {
+                "namespace": "http://fasb.org/us-gaap/2022",
+                "local_name": "PropertyPlantAndEquipmentByTypeAxis"
+              },
+              "explicit_member": {
+                "namespace": "http://wwww.visa.com/20220930",
+                "local_name": "PropertyEquipmentAndTechnologyMember"
+              },
+              "typed_member_xml": null
+            }
+          ]
+        }
+      },
+      {
+        "ordinal": 1000,
+        "context_id": "i501005a952cc4b068e83ae86d38ef829_D20211001-20220930",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "90000000",
+        "numeric_value": "90000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2022#AmortizationOfIntangibleAssets",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2021-10-01",
+          "end": "2022-09-30",
+          "dimensions": []
+        }
+      }
+    ],
+    "presentation": [
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "definition": "0000009 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "sort_code": "0000009",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "LongName": "0000009 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R9.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "definition": "0000005 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "sort_code": "0000005",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "LongName": "0000005 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R5.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetail",
+        "definition": "0000066 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Detail)",
+        "sort_code": "0000066",
+        "role_type": "Disclosure",
+        "title": "Property, Equipment and Technology, Net - Additional Information (Detail)",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetail",
+            "ShortName": "Property, Equipment and Technology, Net - Additional Information (Detail)",
+            "LongName": "0000066 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Detail)",
+            "MenuCategory": "Details",
+            "HtmlFileName": "R66.htm"
+          }
+        ]
+      }
+    ],
+    "calculation": [
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "parent": "CostsAndExpenses",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CostsAndExpenses",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "5",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930_cal.xml"
+      },
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "parent": "NetCashProvidedByUsedInOperatingActivities",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "2",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930_cal.xml"
+      }
+    ],
+    "artifacts": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930_htm.xml",
+        "sha256": "46480fb12c4da2a0f6f2173941d6b89d5741981e6b8731696b624698e1866569"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930.xsd",
+        "sha256": "01ed373a297bbc04616a96bea0b81728b9f3cce482e781761ea1b0e205a1f66b"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930_cal.xml",
+        "sha256": "49f4244af6b0f8afa48206238ece9451baad4ef82ba27727104ecdd86721c758"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930_pre.xml",
+        "sha256": "633f05daa8e9e6ece5bfb2dca999ce05be472afec69ba8732562282b69e3a6f2"
+      }
+    ],
+    "notes": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R9.htm",
+        "sha256": "3b0d60601c8d2ebeb639817cf883bcea748274fffb8269a589f8859c518b5349",
+        "location": "CONSOLIDATED STATEMENTS OF CASH FLOWS"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R16.htm",
+        "sha256": "87d14fb66b531775ac1e2330133ebdc157de4259e349100ef5c3c78aa7548b7e",
+        "location": "Property, Equipment and Technology, Net"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R17.htm",
+        "sha256": "8acacdcc6651ba8a1b7d13de5875317912f639b97b1c304a500cb25c86b0b034",
+        "location": "Intangible Assets and Goodwill"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R10.htm",
+        "sha256": "7e62e3e8ed85734bedcadb37e0c0a4010b9afb036b44dbc9fd8d5f01ce7b271c",
+        "location": "Summary of Significant Accounting Policies"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R18.htm",
+        "sha256": "40a1779d86e52aa04bcd7d2312e2849cefe217cded862cc2436021c1c1a848b4",
+        "location": "Leases"
+      }
+    ]
+  },
+  {
+    "filing": {
+      "accession_number": "0001403161-23-000099",
+      "form": "10-K",
+      "filing_date": "2023-11-15",
+      "report_date": "2023-09-30",
+      "primary_document": "v-20230930.htm"
+    },
+    "annual_start": "2022-10-01",
+    "annual_end": "2023-09-30",
+    "namespace": "http://fasb.org/us-gaap/2023",
+    "facts": [
+      {
+        "ordinal": 225,
+        "context_id": "c-1",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "943000000",
+        "numeric_value": "943000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2023#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2022-10-01",
+          "end": "2023-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 499,
+        "context_id": "c-1",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "943000000",
+        "numeric_value": "943000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2023#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2022-10-01",
+          "end": "2023-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 940,
+        "context_id": "c-189",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "867000000",
+        "numeric_value": "867000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2023#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2022-10-01",
+          "end": "2023-09-30",
+          "dimensions": [
+            {
+              "dimension": {
+                "namespace": "http://fasb.org/us-gaap/2023",
+                "local_name": "PropertyPlantAndEquipmentByTypeAxis"
+              },
+              "explicit_member": {
+                "namespace": "http://wwww.visa.com/20230930",
+                "local_name": "PropertyEquipmentAndTechnologyMember"
+              },
+              "typed_member_xml": null
+            }
+          ]
+        }
+      },
+      {
+        "ordinal": 994,
+        "context_id": "c-1",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "76000000",
+        "numeric_value": "76000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2023#AmortizationOfIntangibleAssets",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2022-10-01",
+          "end": "2023-09-30",
+          "dimensions": []
+        }
+      }
+    ],
+    "presentation": [
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "definition": "0000009 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "sort_code": "0000009",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "LongName": "0000009 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R9.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "definition": "0000005 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "sort_code": "0000005",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "LongName": "0000005 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R5.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetail",
+        "definition": "9954507 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Detail)",
+        "sort_code": "9954507",
+        "role_type": "Disclosure",
+        "title": "Property, Equipment and Technology, Net - Additional Information (Detail)",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetail",
+            "ShortName": "Property, Equipment and Technology, Net - Additional Information (Detail)",
+            "LongName": "9954507 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Detail)",
+            "MenuCategory": "Details",
+            "HtmlFileName": "R66.htm"
+          }
+        ]
+      }
+    ],
+    "calculation": [
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "parent": "CostsAndExpenses",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_CostsAndExpenses",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "5",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930_cal.xml"
+      },
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "parent": "NetCashProvidedByUsedInOperatingActivities",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "2",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930_cal.xml"
+      }
+    ],
+    "artifacts": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930_htm.xml",
+        "sha256": "51bfa73767db58657ac9cfd3a27c3ac15789d093e7158b2a5b1d5b830cdf5ce8"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930.xsd",
+        "sha256": "1db0cb53aaa62415c40cadd0bdd14f2f67fba726fd87d360cfdbad35a90c9ceb"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930_cal.xml",
+        "sha256": "f309d68be548e10abb9171b0966bcd0c17853d5ab693c14631b2b2b11b1d6ccf"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930_pre.xml",
+        "sha256": "c185db0d3e42a9f6a589fe3797c923db4b7a2c4021409326ed9e8db116c21eba"
+      }
+    ],
+    "notes": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R9.htm",
+        "sha256": "96de42105506f8e95dae81e826789bd9e37533f82112cbbb3daff5b411b068fc",
+        "location": "CONSOLIDATED STATEMENTS OF CASH FLOWS"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R16.htm",
+        "sha256": "4bb2f4423967bb338b30a8e1fb99fbd8c6d4c6a8f8fa0414665186273f7d3ae5",
+        "location": "Property, Equipment and Technology, Net"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R17.htm",
+        "sha256": "5bc05f247a27bd102f119ebc71c8b38c8004314c79a720be030975b3cf94ac86",
+        "location": "Intangible Assets and Goodwill"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R10.htm",
+        "sha256": "e83387f6e00793e2475d16e7c72414eea2b944599150f38d59b471397d49f47f",
+        "location": "Summary of Significant Accounting Policies"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R18.htm",
+        "sha256": "2582305cd15c2c5e9555da56e9b8bb687cfc324a10bf6c2a30d7710872e62add",
+        "location": "Leases"
+      }
+    ]
+  },
+  {
+    "filing": {
+      "accession_number": "0001403161-24-000058",
+      "form": "10-K",
+      "filing_date": "2024-11-13",
+      "report_date": "2024-09-30",
+      "primary_document": "v-20240930.htm"
+    },
+    "annual_start": "2023-10-01",
+    "annual_end": "2024-09-30",
+    "namespace": "http://fasb.org/us-gaap/2024",
+    "facts": [
+      {
+        "ordinal": 185,
+        "context_id": "c-1",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "1034000000",
+        "numeric_value": "1034000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2024#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2023-10-01",
+          "end": "2024-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 474,
+        "context_id": "c-1",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "1034000000",
+        "numeric_value": "1034000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2024#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2023-10-01",
+          "end": "2024-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 901,
+        "context_id": "c-189",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "955000000",
+        "numeric_value": "955000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2024#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2023-10-01",
+          "end": "2024-09-30",
+          "dimensions": [
+            {
+              "dimension": {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "local_name": "PropertyPlantAndEquipmentByTypeAxis"
+              },
+              "explicit_member": {
+                "namespace": "http://wwww.visa.com/20240930",
+                "local_name": "PropertyEquipmentAndTechnologyMember"
+              },
+              "typed_member_xml": null
+            }
+          ]
+        }
+      },
+      {
+        "ordinal": 957,
+        "context_id": "c-1",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "79000000",
+        "numeric_value": "79000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2024#AmortizationOfIntangibleAssets",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2023-10-01",
+          "end": "2024-09-30",
+          "dimensions": []
+        }
+      }
+    ],
+    "presentation": [
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "definition": "9952157 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "sort_code": "9952157",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "LongName": "9952157 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R9.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "definition": "9952153 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "sort_code": "9952153",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "LongName": "9952153 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R5.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetail",
+        "definition": "9954504 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Detail)",
+        "sort_code": "9954504",
+        "role_type": "Disclosure",
+        "title": "Property, Equipment and Technology, Net - Additional Information (Detail)",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetail",
+            "ShortName": "Property, Equipment and Technology, Net - Additional Information (Detail)",
+            "LongName": "9954504 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Detail)",
+            "MenuCategory": "Details",
+            "HtmlFileName": "R66.htm"
+          }
+        ]
+      }
+    ],
+    "calculation": [
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "parent": "CostsAndExpenses",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2024/elts/us-gaap-2024.xsd#us-gaap_CostsAndExpenses",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2024/elts/us-gaap-2024.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "5",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930_cal.xml"
+      },
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "parent": "NetCashProvidedByUsedInOperatingActivities",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2024/elts/us-gaap-2024.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2024/elts/us-gaap-2024.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "2",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930_cal.xml"
+      }
+    ],
+    "artifacts": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930_htm.xml",
+        "sha256": "fb0696d8534c11aa099895642f5521002823278deb8572483ef0fee1d58866d5"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930.xsd",
+        "sha256": "93620748acbeb3e06fd924fa74dd689d95ee13440b4ca789b3e805c725b2b8cc"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930_cal.xml",
+        "sha256": "0005ada9ea35743c94b076b2dec58b5f4461e75f6e51723ebc9f9f9e81d6e47d"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930_pre.xml",
+        "sha256": "9716a611a5ce7cd9ccbaf08bfc82c0e79dc33d1a49842e01ee11d91004a03121"
+      }
+    ],
+    "notes": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R9.htm",
+        "sha256": "9640619c9453b264de415c3b04086a779892cceab78740b67ffc389fef990327",
+        "location": "CONSOLIDATED STATEMENTS OF CASH FLOWS"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R16.htm",
+        "sha256": "925f01ce13f6d2d949b5f00a4f22e796d5402930e03ea8d62a846490e3db201c",
+        "location": "Property, Equipment and Technology, Net"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R17.htm",
+        "sha256": "ffcd03c9df1b18a19b13e90f8d34b86d0c538925e54452dd6891377d0dd889b1",
+        "location": "Intangible Assets and Goodwill"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R10.htm",
+        "sha256": "e3feafdea01bd9da17d7dc4119225ec798e618dfc19e53825013399b2f6e7da3",
+        "location": "Summary of Significant Accounting Policies"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R18.htm",
+        "sha256": "f2f7c263a9603945348001ac4995b95d534f96d4b463b91f7f8ce7d9ce7dd9c8",
+        "location": "Leases"
+      }
+    ]
+  },
+  {
+    "filing": {
+      "accession_number": "0001403161-25-000089",
+      "form": "10-K",
+      "filing_date": "2025-11-06",
+      "report_date": "2025-09-30",
+      "primary_document": "v-20250930.htm"
+    },
+    "annual_start": "2024-10-01",
+    "annual_end": "2025-09-30",
+    "namespace": "http://fasb.org/us-gaap/2025",
+    "facts": [
+      {
+        "ordinal": 216,
+        "context_id": "c-1",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "1220000000",
+        "numeric_value": "1220000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2025#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2024-10-01",
+          "end": "2025-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 504,
+        "context_id": "c-1",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "1220000000",
+        "numeric_value": "1220000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2025#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2024-10-01",
+          "end": "2025-09-30",
+          "dimensions": []
+        }
+      },
+      {
+        "ordinal": 921,
+        "context_id": "c-200",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "1100000000",
+        "numeric_value": "1100000000",
+        "decimals": "-8",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2025#DepreciationAndAmortization",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2024-10-01",
+          "end": "2025-09-30",
+          "dimensions": [
+            {
+              "dimension": {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "local_name": "PropertyPlantAndEquipmentByTypeAxis"
+              },
+              "explicit_member": {
+                "namespace": "http://wwww.visa.com/20250930",
+                "local_name": "PropertyEquipmentAndTechnologyMember"
+              },
+              "typed_member_xml": null
+            }
+          ]
+        }
+      },
+      {
+        "ordinal": 971,
+        "context_id": "c-1",
+        "unit_ref": "usd",
+        "normalized_unit": "USD",
+        "raw_value": "78000000",
+        "numeric_value": "78000000",
+        "decimals": "-6",
+        "is_nil": false,
+        "concept_key": "http://fasb.org/us-gaap/2025#AmortizationOfIntangibleAssets",
+        "context": {
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001403161",
+          "start": "2024-10-01",
+          "end": "2025-09-30",
+          "dimensions": []
+        }
+      }
+    ],
+    "presentation": [
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "definition": "9952157 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "sort_code": "9952157",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "LongName": "9952157 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R9.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "definition": "9952153 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "sort_code": "9952153",
+        "role_type": "Statement",
+        "title": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+            "ShortName": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "LongName": "9952153 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R5.htm"
+          }
+        ]
+      },
+      {
+        "role_uri": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetails",
+        "definition": "9955543 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Details)",
+        "sort_code": "9955543",
+        "role_type": "Disclosure",
+        "title": "Property, Equipment and Technology, Net - Additional Information (Details)",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.xsd",
+        "reports": [
+          {
+            "Role": "http://wwww.visa.com/role/PropertyEquipmentandTechnologyNetAdditionalInformationDetails",
+            "ShortName": "Property, Equipment and Technology, Net - Additional Information (Details)",
+            "LongName": "9955543 - Disclosure - Property, Equipment and Technology, Net - Additional Information (Details)",
+            "MenuCategory": "Details",
+            "HtmlFileName": "R66.htm"
+          }
+        ]
+      }
+    ],
+    "calculation": [
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFOPERATIONS",
+        "parent": "CostsAndExpenses",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_CostsAndExpenses",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "5",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930_cal.xml"
+      },
+      {
+        "role": "http://wwww.visa.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS",
+        "parent": "NetCashProvidedByUsedInOperatingActivities",
+        "child": "DepreciationAndAmortization",
+        "parent_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+        "child_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_DepreciationAndAmortization",
+        "weight": "1.0",
+        "order": "2",
+        "preferred_label": null,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930_cal.xml"
+      }
+    ],
+    "artifacts": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930_htm.xml",
+        "sha256": "6656d5527225918d78f619ff716affcdea38d7526f60a07a6d0e1c3999227d8b"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.xsd",
+        "sha256": "2af1ebce2aa00142e788f9c7e59b470655cd1db950f7a9bd217365177a47e25e"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930_cal.xml",
+        "sha256": "a2cd3f31bf9df57566ce1eca525320b01936374b21f65e272d4a7264b44d30fd"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930_pre.xml",
+        "sha256": "ce27b52340e28423899e5ac498d2696daf6ae24cfda02ef80cde5f58579d72fb"
+      }
+    ],
+    "notes": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R9.htm",
+        "sha256": "196107563e584ab86c233eafb6ba42d8c080a2037b5da53bdb9fa5bf66441f8f",
+        "location": "CONSOLIDATED STATEMENTS OF CASH FLOWS"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R17.htm",
+        "sha256": "457e61964601e92e632ce9707ba8efed6d730ef537c097dfe692fb3f3a766db9",
+        "location": "Property, Equipment and Technology, Net"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R18.htm",
+        "sha256": "b025d70dc25c5fe011456d1d7ac8888cabcb48396e055e6e14b3761e94266e5e",
+        "location": "Intangible Assets and Goodwill"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R11.htm",
+        "sha256": "3fc9ae7ff8367692532170bc1f070127be73562c1b9428ec209e73e186aede85",
+        "location": "Summary of Significant Accounting Policies"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R19.htm",
+        "sha256": "36841640d85b26bd4c07a592f45587e4fecd569b23dea830e415463b8224581a",
+        "location": "Leases"
+      }
+    ]
+  }
+]

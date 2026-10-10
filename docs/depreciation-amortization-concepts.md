@@ -11,7 +11,13 @@ and the production-missing flags below remain unchanged. Asset perimeter,
 lease/incentive separation, 2025 precision, direct precedence and confirming
 occurrence/support provenance are now explicitly designed, not implemented.
 
-Phase 1H.4 Wave 18 researches **94 currently missing annual D&A periods across
+Wave 20 [implements and verifies](depreciation-amortization-scope-evidence-design.md#wave-20-implementation-and-verified-results)
+only those five curated entries. Current D&A is **115 resolved / 89 missing /
+0 ambiguous**. The 94-row JSON remains the immutable Wave 18 missing-period
+research snapshot, not a current availability report or automatic registry.
+All 89 controls remain unapproved and unchanged.
+
+Phase 1H.4 Wave 18 researches **94 then-missing annual D&A periods across
 21 issuers**, not all historical facts or all 204 corpus periods. The frozen
 identities come from the saved Phase 1H.3 exact-filing diagnostic plus the four
 GEV/SNDK periods enabled by Wave 1A, reconciled to the validated Wave 16 corpus.
@@ -336,8 +342,9 @@ Income **194 resolved / 10 missing / 0 ambiguous**, and aggregate **1,880 /
 1,508 / 11 / 27 / 42**, totaling **3,468** states. Research categories are not
 new standardized states or universe classifications.
 
-Next: implement the [Wave 19 curated design](depreciation-amortization-scope-evidence-design.md)
-for only the five exact Visa entries and regress all 89 no-entry controls.
+Next after [Wave 20 implementation](depreciation-amortization-scope-evidence-design.md#wave-20-implementation-and-verified-results):
+design component-completeness/scope evidence for the 33 derivation periods;
+preserve the five exact Visa entries and all 89 no-entry controls.
 No generic combined-concept fallback, residual, lease adjustment or automatic
 scope approval is justified. Component
 completeness research for the 33 derivation and five AMD extension periods is a

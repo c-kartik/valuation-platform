@@ -9,7 +9,9 @@ from enum import Enum
 import re
 from typing import TypeAlias
 
-from valuation_platform.sec.filing_xbrl import FilingXBRLDimension
+from valuation_platform.sec.filing_xbrl import (
+    FilingXBRLContext, FilingXBRLDimension, FilingXBRLFact,
+)
 from valuation_platform.sec.annual_period import AnnualPeriodResolution
 from valuation_platform.sec.submissions import SECFiling
 from valuation_platform.sec.tickers import SECCompanyIdentity
@@ -24,6 +26,7 @@ class MissingReason(str, Enum):
     NO_VALID_CURRENT_ANNUAL_OBSERVATION = "no_valid_current_annual_observation"
     NO_VALID_DERIVATION_OPERANDS = "no_valid_derivation_operands"
     MISSING_DERIVATION_OPERAND = "missing_derivation_operand"
+    CURATED_D_AND_A_EVIDENCE_MISMATCH = "curated_d_and_a_evidence_mismatch"
     ZERO_DERIVATION_DENOMINATOR = "zero_derivation_denominator"
     NO_VALID_CURRENT_INSTANT_OBSERVATION = (
         "no_valid_current_instant_observation"
@@ -86,6 +89,27 @@ class ReviewedPolicyEvidence:
 
 
 @dataclass(frozen=True)
+class DAndAOccurrenceAudit:
+    """Original instance ordering and an explicit curated eligibility decision."""
+
+    original_instance_ordinal: int
+    fact: FilingXBRLFact
+    context: FilingXBRLContext
+    disposition: str
+
+
+@dataclass(frozen=True)
+class DAndAScopeAudit:
+    """Immutable reviewed entry and separately typed support, not operands."""
+
+    reviewed_entry_json: str
+    verified_artifact_digests: tuple[tuple[str, str], ...]
+    confirming_original_ordinals: tuple[int, ...]
+    supporting_facts: tuple[FilingXBRLEvidence, ...]
+    occurrences: tuple[DAndAOccurrenceAudit, ...]
+
+
+@dataclass(frozen=True)
 class HistoricalPolicyProvenance:
     """Versioned policy identity and reviewed evidence retained with a value."""
 
@@ -102,6 +126,7 @@ class HistoricalPolicyProvenance:
     unit: str
     reviewed_evidence: tuple[ReviewedPolicyEvidence, ...]
     filing_xbrl_evidence: tuple[FilingXBRLEvidence, ...]
+    d_and_a_scope: DAndAScopeAudit | None = None
 
     def __post_init__(self) -> None:
         if (

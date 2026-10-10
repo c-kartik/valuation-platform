@@ -34,6 +34,8 @@ from valuation_platform.normalization import (  # noqa: E402
     calculate_operating_nwc_level,
     normalize_annual_balance_sheets,
     normalize_annual_financials,
+    d_and_a_scope_entry_for,
+    verify_d_and_a_artifacts,
     operating_nwc_valuation_policy_for_cik,
 )
 from valuation_platform.sec import (  # noqa: E402
@@ -239,10 +241,21 @@ class ProductionCorpusPipeline:
             for filing in filings.annual
         )
         annual_periods = tuple(resolve_annual_period(item) for item in filing_xbrl)
+        d_and_a_artifacts = tuple(
+            verify_d_and_a_artifacts(
+                entry,
+                {url: self._client.get_bytes(url) for url, _ in entry.artifact_digests},
+                instance,
+            )
+            for filing, instance, period in zip(filings.annual, filing_xbrl, annual_periods)
+            if (entry := d_and_a_scope_entry_for(company.cik, filing, period))
+            is not None
+        )
         historical = normalize_annual_financials(
             selected_facts,
             filing_xbrl=filing_xbrl,
             annual_periods=annual_periods,
+            d_and_a_artifacts=d_and_a_artifacts,
         )
         balance_sheets = normalize_annual_balance_sheets(
             selected_facts,

@@ -739,6 +739,17 @@ component or permit a generic tolerance. Acceptance is of the reported
 combined expense, never addition of those supporting notes. Other 89 periods
 remain unapproved; production policy and counts are unchanged.
 
+Wave 20 implements those five exact curated acceptances without changing the
+primitive, generic direct concept or MSFT derivation. Required reviewed bytes
+are checked against frozen source digests; a parsed-instance equality check
+binds filing-XBRL to the verified instance. Candidate facts remain distinct
+from two scope-support facts and are never replaced by component arithmetic.
+Policy version, reviewed scope, every confirming occurrence, original ordinals,
+raw/Decimal precision and support/exclusion audit survive output schema 4.
+Current D&A is **115 resolved / 89 missing / 0 ambiguous**; all 89 controls and
+other metrics are unchanged. See the
+[verified results](depreciation-amortization-scope-evidence-design.md#wave-20-implementation-and-verified-results).
+
 ## FCFF
 
 The core valuation methodology is unlevered free cash flow to the firm (FCFF).

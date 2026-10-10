@@ -40,6 +40,9 @@ from .diluted_shares import (
     derive_googl_diluted_weighted_average_shares,
 )
 from .pretax_scope import apply_curated_pretax_scope_policy
+from .d_and_a_scope import (
+    VerifiedDAndAArtifacts, apply_curated_d_and_a_scope_policy,
+)
 from .operating_income_derivation import (
     apply_curated_operating_income_derivation_policy,
 )
@@ -80,9 +83,13 @@ def normalize_annual_financials(
     *,
     filing_xbrl: tuple[SECFilingXBRL, ...] = (),
     annual_periods: tuple[AnnualPeriodResolution, ...] = (),
+    d_and_a_artifacts: tuple[VerifiedDAndAArtifacts, ...] = (),
 ) -> NormalizedHistoricalFinancials:
     """Normalize configured metrics across selected annual filing buckets."""
     _validate_policies(policies)
+    d_and_a_by_accession = {a.accession_number: a for a in d_and_a_artifacts}
+    if len(d_and_a_by_accession) != len(d_and_a_artifacts):
+        raise NormalizationError("Duplicate reviewed D&A artifact bundles")
     filing_xbrl_by_accession = _validate_filing_xbrl(
         filing_xbrl,
         selected_facts.company.cik,
@@ -102,6 +109,7 @@ def normalize_annual_financials(
                 derivation_policies,
                 filing_xbrl_by_accession.get(bucket.filing.accession_number),
                 annual_period_by_accession.get(bucket.filing.accession_number),
+                d_and_a_by_accession.get(bucket.filing.accession_number),
             ),
             annual_period=annual_period_by_accession.get(
                 bucket.filing.accession_number
@@ -125,6 +133,7 @@ def _resolve_filing_metrics(
     derivation_policies: tuple[MetricDerivationPolicy, ...],
     filing_xbrl: SECFilingXBRL | None,
     annual_period: AnnualPeriodResolution | None,
+    d_and_a_artifacts: VerifiedDAndAArtifacts | None,
 ) -> tuple[HistoricalMetricResult, ...]:
     if isinstance(annual_period, AnnualPeriodDataErrorResult):
         raise NormalizationError(
@@ -140,6 +149,7 @@ def _resolve_filing_metrics(
             derivation_policies,
             filing_xbrl,
             annual_period,
+            d_and_a_artifacts,
         )
         for policy in policies
     )
@@ -177,8 +187,14 @@ def _resolve_with_derivation(
     derivation_policies: tuple[MetricDerivationPolicy, ...],
     filing_xbrl: SECFilingXBRL | None,
     annual_period: AnnualPeriodResolution | None,
+    d_and_a_artifacts: VerifiedDAndAArtifacts | None,
 ) -> HistoricalMetricResult:
     direct = _resolve_metric(bucket, policy, source_url, annual_period)
+    if policy.metric is FinancialMetric.D_AND_A:
+        direct = apply_curated_d_and_a_scope_policy(
+            bucket, direct, company_cik, annual_period, filing_xbrl,
+            d_and_a_artifacts,
+        )
     if policy.metric is FinancialMetric.PRETAX_INCOME:
         direct = apply_curated_pretax_scope_policy(
             bucket,

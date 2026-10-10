@@ -472,6 +472,7 @@ class CorpusSmokeRunnerTests(unittest.TestCase):
             selected_facts,
             filing_xbrl=artifacts,
             annual_periods=periods,
+            d_and_a_artifacts=(),
         )
         self.assertIs(result.historical, historical)
 
