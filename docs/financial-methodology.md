@@ -839,6 +839,25 @@ must remain unknown. No basis tags, readiness gate, inventory adjustment,
 primitive migration or forecast consistency check is implemented by this audit;
 all approvals and production counts remain unchanged.
 
+### Financial timing-readiness design — Wave 25
+
+The [separate consumer contract](financial-timing-readiness-design.md) specifies
+exact-period basis/scope evidence and joint EBIT/D&A/book-NWC alignment. It
+proposes ready, unknown compatibility, demonstrated incompatibility, ambiguous
+evidence and input-unavailable outcomes independently from historical value
+resolution. Malformed linkage is an evaluation error, not an economic finding.
+Visa's five expense-basis acceptances remain supported but have no configured
+NWC perimeter; generic/MSFT basis remains insufficiently evidenced. No existing
+integrated FCFF bundle is certified, and no adjustment or primitive migration
+is approved. An expense-basis label alone never proves a cash-consistent bridge.
+
+Before Phase 1H.6 record these limitations in supported scope/exclusions, not
+as invented missing historical values or a requirement for universal FCFF
+readiness. Executable timing readiness is a valuation-boundary prerequisite
+after the freeze, alongside independent tax/Capex/forecast checks, not a new
+Phase 1H calculator. The next bounded historical milestone is the existing
+57-period missing-Capex concept inventory; timing-gate implementation is deferred.
+
 The core valuation methodology is unlevered free cash flow to the firm (FCFF).
 
 ```text

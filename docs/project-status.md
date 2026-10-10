@@ -853,10 +853,20 @@ bridges remain insufficiently evidenced. No approved numeric incompatibility
 is established. Book NWC/readiness has no D&A/EBIT timing linkage; no FCFF
 calculator exists. Approvals, corpus counts and source code remain unchanged.
 
-Next: documentation-only historical financial-input timing-basis and consumer-
-readiness contract design. Keep unknown basis explicit and normalization
-resolution separate from joint economic compatibility. Assess versioned
-provenance/readiness impacts before implementation or migration.
+Wave 25 completes the [financial timing-evidence/readiness contract design](financial-timing-readiness-design.md).
+It preserves resolved historical values independently from consumer unknowns;
+Visa's five expense-basis entries and generic/MSFT insufficient-evidence mapping
+are unchanged. Integrated FCFF compatibility remains unproved. The proposed
+gate distinguishes absent evidence, proved incompatibility, ambiguous evidence
+and unavailable inputs; no economic adjustment, schema or evaluator is approved
+for implementation during Phase 1H. Freeze scope must document the limitations;
+executable joint readiness belongs at the valuation boundary after 1H.6.
+
+Next bounded milestone: exact selected-filing Capex concept inventory for the
+57 missing periods recorded in the failure taxonomy. Freeze accession/period
+identities before research; keep it separate from policy implementation and
+deferred timing readiness. Production remains D&A 115/89/0 and aggregate
+1,885/1,503/11/27/42 = 3,468; no tests or corpus rerun in this design milestone.
 Do not implement a sum or infer TXN allocations; further TXN work
 requires a genuine new expense/inventory and incentive bridge, not repeated
 concept research. TXN 2024–2025 absent intangible operands are not
@@ -929,8 +939,9 @@ sensitivity work is intentionally paused through Phase 1H.
    retains all three unresolved. Wave 23 clarifies new-acceptance expense basis
    and its NWC timing limitation without approving an equation. Next audit
    existing-policy timing compatibility and consumer contract. Wave 24 completes
-   that audit without revoking approvals; next design explicit basis/evidence
-   and joint consumer-readiness contracts, then continue with other
+   that audit without revoking approvals; Wave 25 designs the separate
+   valuation-boundary timing contract. Next inventory the 57 missing Capex
+   periods, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital
@@ -939,7 +950,10 @@ sensitivity work is intentionally paused through Phase 1H.
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
    `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.
 6. **Phase 1H.6 — Freeze historical normalization v1:** record supported scope
-   and exclusions, then resume Phase 2 forecast and DCF development.
+   and exclusions, including timing-basis unknowns and lack of integrated FCFF
+   certification, then resume Phase 2 forecast and DCF development. The proposed
+   timing gate must precede FCFF consumption at that later valuation boundary;
+   universal timing readiness is not an added historical-freeze criterion.
 
 The near-term target is S&P 500 Top 50 validation, the medium-term goal is broader
 S&P 500 coverage, and specialized financial methodologies remain separate

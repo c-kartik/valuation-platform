@@ -401,6 +401,18 @@ evidence and joint consumer readiness from normalization resolution; this is
 a proposed contract, not a schema or runtime change. Existing policies and
 serialization remain untouched.
 
+Wave 25's [financial timing-readiness design](financial-timing-readiness-design.md)
+defines a separate proposed valuation-boundary gate, not a schema-4 extension
+or normalization-status replacement. It distinguishes economic basis from
+statement placement/source kind, preserves historical values when compatibility
+is unknown, and requires scoped joint EBIT/D&A/book-NWC evidence before timing
+readiness. Structural faults are errors; absent evidence is not demonstrated
+incompatibility. No inventory/incentive adjustment is approved.
+Phase 1H.6 must document unknowns and the exclusion of integrated FCFF
+certification; executable consumer readiness belongs after that freeze and
+before FCFF use. Existing NWC readiness remains component availability only.
+No evaluator, schema, registry or calculator is implemented by the design.
+
 GOOGL CIK `1652044` selected 2021–2023 filings provide only class-dimensional
 diluted denominators. When the nondimensional direct result is missing, the
 approved derivation adds the Class A denominator, which assumes Class B
