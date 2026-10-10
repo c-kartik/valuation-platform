@@ -867,9 +867,14 @@ Wave 26 completes the [selected-filing Capex inventory](capex-concepts.md) and
 17 component-derivation / three methodology-gated periods. Ten AMZN/LLY reported
 gross cash PP&E candidates support exact-period scope design; 47 remain
 unapproved, with no component equation or generic fallback approved.
-Next bounded milestone: design curated exact-accession scope acceptance for
-those ten candidates, retaining the other 47 as unapproved controls, separately
-from implementation and deferred timing readiness. Production remains Capex
+Wave 27 completes the [Capex scope-evidence acceptance design](capex-scope-evidence-design.md)
+and [57-row matrix](capex-scope-evidence-matrix.json): PARTIAL GO, five AMZN /
+five LLY exact-accession acceptances and 47 unapproved controls, not fresh
+economic denials. Immutable reviewed-byte evidence, exact operand identity,
+direct precedence, semantic duplicate/conflict rules and full provenance are
+specified; no generic fallback or incentive gross-up is approved.
+Next bounded milestone: implement only that ten-entry curated reported-value
+policy, retaining all 47 controls and deferred valuation readiness. Production remains Capex
 147/57/0, D&A 115/89/0 and aggregate 1,885/1,503/11/27/42 = 3,468;
 no tests or corpus rerun in this documentation-only milestone.
 Do not implement a sum or infer TXN allocations; further TXN work
@@ -946,8 +951,9 @@ sensitivity work is intentionally paused through Phase 1H.
    existing-policy timing compatibility and consumer contract. Wave 24 completes
    that audit without revoking approvals; Wave 25 designs the separate
    valuation-boundary timing contract. Wave 26 inventories the 57 missing Capex
-   periods; next design exact-accession scope acceptance for ten AMZN/LLY
-   candidates without a generic fallback, then continue with other
+   periods; Wave 27 designs exact-accession scope acceptance for ten AMZN/LLY
+   candidates without a generic fallback. Next implement only that reviewed
+   ten-entry policy, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital

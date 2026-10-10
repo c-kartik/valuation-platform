@@ -184,6 +184,15 @@ bind selected note evidence and exclusions; this research JSON is not a policy.
 
 ## Decision, validation and bounded next milestone
 
+Wave 27 completes the [scope-evidence design](capex-scope-evidence-design.md)
+and [57-row acceptance matrix](capex-scope-evidence-matrix.json): five AMZN and
+five LLY exact-period curated design acceptances; 47 `NO_ENTRY` controls retain
+their unresolved routing, not fresh economic denials. Acceptance preserves
+reported cash purchases without proceeds/incentive netting or an inferred
+pre-incentive gross-up. No generic fallback, equation or production change.
+The next bounded milestone is implementation of only those ten reviewed entries.
+The following Wave 26 decision remains the historical research conclusion.
+
 **PARTIAL GO:** design curated exact-accession cash-PP&E scope acceptance for
 the **ten AMZN/LLY candidates**, with the **47 other rows remaining unapproved**.
 The next milestone is that evidence-policy design only, not implementation or

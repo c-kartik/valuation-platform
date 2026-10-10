@@ -372,6 +372,19 @@ and adds same-period Company Facts observations for `Depreciation` and
 or automatic concept fallback. Capex remains a positive expenditure magnitude
 for later subtraction in FCFF.
 
+Wave 27's [Capex scope-evidence design](capex-scope-evidence-design.md) proposes
+a separate immutable ten-entry `capex_scope_equivalence_v1` resolver/manifest
+at historical composition, following curated D&A's reviewed-byte conventions.
+The parser, generic historical resolver and generic Capex policy stay unchanged.
+Selected instance re-parsing and mandatory statement/note/artifact digest checks
+bind exact filing/annual/QName/occurrence identities. Reported-value acceptance
+is not derivation; semantic duplicates preserve multiplicity and conflicting
+eligible values remain ambiguous. Direct selection retains precedence and equal
+curated confirmation provenance. Full review/support/exclusion audit must survive
+normalization, standardized output and versioned serialization; no schema or
+runtime changes occur in this documentation milestone. Integrated FCFF readiness
+is not established. Next implement only the ten reviewed entries.
+
 Wave 20 implements the [Wave 19 design](depreciation-amortization-scope-evidence-design.md)
 as `normalization.d_and_a_scope` and a separate five-entry source registry,
 not approval inferred from the research JSON. The corpus caller retrieves the

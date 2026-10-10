@@ -446,6 +446,19 @@ while `PaymentsToAcquirePropertyPlantAndEquipment` reports gross purchases. The
 initial FCFF methodology intentionally uses the SEC fact's gross cash PP&E
 purchases and does not adjust it to reproduce the net presentation.
 
+Wave 27's [curated scope-evidence design](capex-scope-evidence-design.md)
+approves potential exact-accession acceptance for five AMZN cash PP&E purchase
+facts tagged productive assets and five LLY facts tagged other PP&E. This is
+not a generic fallback or production approval. Separate selected cash-flow,
+accounting and PP&E evidence establishes the reported purchase perimeter, not
+numeric agreement. Gross cash purchases are not netted against separate
+disposal/incentive inflows; incentive reductions to asset costs do not authorize
+a hypothetical pre-incentive gross-up. No missing incentive allocation, software
+amount, capitalized interest or lease adjustment is invented. Acquisitions,
+noncash additions, unpaid purchases and financing principal remain outside
+these accepted reported operands. The primitive and current policy are unchanged;
+47 inventory controls remain unapproved, not fresh economic denials.
+
 The Revenue, Operating Income, and Capex policies were validated against five
 annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A covers all
 five selected periods of META, AAPL, and COST. For Microsoft CIK `789019` only,
@@ -855,8 +868,9 @@ Before Phase 1H.6 record these limitations in supported scope/exclusions, not
 as invented missing historical values or a requirement for universal FCFF
 readiness. Executable timing readiness is a valuation-boundary prerequisite
 after the freeze, alongside independent tax/Capex/forecast checks, not a new
-Phase 1H calculator. The next bounded historical milestone is the existing
-57-period missing-Capex concept inventory; timing-gate implementation is deferred.
+Phase 1H calculator. Waves 26–27 complete the 57-period Capex inventory and
+ten-entry scope acceptance design; next implement only those exact AMZN/LLY
+entries. Timing-gate implementation remains deferred.
 
 The core valuation methodology is unlevered free cash flow to the firm (FCFF).
 

@@ -1,0 +1,3488 @@
+{
+  "design_version": 1,
+  "starting_head": "052525309a4e0b46dfe047cdb6e67eaa6bfaad63",
+  "inventory_path": "docs/capex-inventory.json",
+  "inventory_sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6",
+  "policy_id": "capex_scope_equivalence",
+  "policy_version": 1,
+  "decision": "PARTIAL GO",
+  "counts": {
+    "CURATED_DESIGN_GO": 10,
+    "NO_ENTRY": 47
+  },
+  "current_production_capex": {
+    "resolved": 147,
+    "missing": 57,
+    "ambiguous": 0
+  },
+  "rows": [
+    {
+      "ticker": "NVDA",
+      "cik": 1045810,
+      "filing": {
+        "accession_number": "0001045810-22-000036",
+        "form": "10-K",
+        "filing_date": "2022-03-18",
+        "report_date": "2022-01-30",
+        "primary_document": "nvda-20220130.htm"
+      },
+      "annual_start": "2021-02-01",
+      "annual_end": "2022-01-30",
+      "identity_provenance": {
+        "ticker": "NVDA",
+        "cik": 1045810,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001045810.json",
+        "metadata_sha256": "a700c65f586670b6a56725f903900abc1b39a06110e7c30cf691d8ecb902e52d",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "NVDA",
+      "cik": 1045810,
+      "filing": {
+        "accession_number": "0001045810-23-000017",
+        "form": "10-K",
+        "filing_date": "2023-02-24",
+        "report_date": "2023-01-29",
+        "primary_document": "nvda-20230129.htm"
+      },
+      "annual_start": "2022-01-31",
+      "annual_end": "2023-01-29",
+      "identity_provenance": {
+        "ticker": "NVDA",
+        "cik": 1045810,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001045810.json",
+        "metadata_sha256": "a700c65f586670b6a56725f903900abc1b39a06110e7c30cf691d8ecb902e52d",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "NVDA",
+      "cik": 1045810,
+      "filing": {
+        "accession_number": "0001045810-24-000029",
+        "form": "10-K",
+        "filing_date": "2024-02-21",
+        "report_date": "2024-01-28",
+        "primary_document": "nvda-20240128.htm"
+      },
+      "annual_start": "2023-01-30",
+      "annual_end": "2024-01-28",
+      "identity_provenance": {
+        "ticker": "NVDA",
+        "cik": 1045810,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001045810.json",
+        "metadata_sha256": "a700c65f586670b6a56725f903900abc1b39a06110e7c30cf691d8ecb902e52d",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "NVDA",
+      "cik": 1045810,
+      "filing": {
+        "accession_number": "0001045810-25-000023",
+        "form": "10-K",
+        "filing_date": "2025-02-26",
+        "report_date": "2025-01-26",
+        "primary_document": "nvda-20250126.htm"
+      },
+      "annual_start": "2024-01-29",
+      "annual_end": "2025-01-26",
+      "identity_provenance": {
+        "ticker": "NVDA",
+        "cik": 1045810,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001045810.json",
+        "metadata_sha256": "a700c65f586670b6a56725f903900abc1b39a06110e7c30cf691d8ecb902e52d",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "NVDA",
+      "cik": 1045810,
+      "filing": {
+        "accession_number": "0001045810-26-000021",
+        "form": "10-K",
+        "filing_date": "2026-02-25",
+        "report_date": "2026-01-25",
+        "primary_document": "nvda-20260125.htm"
+      },
+      "annual_start": "2025-01-27",
+      "annual_end": "2026-01-25",
+      "identity_provenance": {
+        "ticker": "NVDA",
+        "cik": 1045810,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001045810.json",
+        "metadata_sha256": "a700c65f586670b6a56725f903900abc1b39a06110e7c30cf691d8ecb902e52d",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "filing": {
+        "accession_number": "0001018724-22-000005",
+        "form": "10-K",
+        "filing_date": "2022-02-04",
+        "report_date": "2021-12-31",
+        "primary_document": "amzn-20211231.htm"
+      },
+      "annual_start": "2021-01-01",
+      "annual_end": "2021-12-31",
+      "identity_provenance": {
+        "ticker": "AMZN",
+        "cik": 1018724,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001018724.json",
+        "metadata_sha256": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "61053000000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/amzn-20211231_htm.xml",
+      "instance_sha256": "c7c59c5e174bec14113759de8c08936e1680515d8f140df7e18488c187aadff8",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "i1c47188d91bf419ea3e135b738fc8996_D20210101-20211231",
+          "raw_value": "2021"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "i1c47188d91bf419ea3e135b738fc8996_D20210101-20211231",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentType",
+          "context_id": "i1c47188d91bf419ea3e135b738fc8996_D20210101-20211231",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "i1c47188d91bf419ea3e135b738fc8996_D20210101-20211231",
+          "raw_value": "2021-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 95,
+          "context_id": "i1c47188d91bf419ea3e135b738fc8996_D20210101-20211231",
+          "unit_ref": "usd",
+          "raw_value": "61053000000",
+          "numeric_value": "61053000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2021-01-31#PaymentsToAcquireProductiveAssets",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "i1c47188d91bf419ea3e135b738fc8996_D20210101-20211231": {
+          "context_id": "i1c47188d91bf419ea3e135b738fc8996_D20210101-20211231",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001018724",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2021-01-31#PaymentsToAcquireProductiveAssets": {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Productive Assets"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "1001003 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "1001003",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/amzn-20211231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "1001003 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Uncategorized",
+                  "HtmlFileName": "R3.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireProductiveAssets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_PaymentsToAcquireProductiveAssets",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/amzn-20211231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/index.json",
+          "sha256": "1007069094671f055ce11b95341e49d97a54a8b1c56fe1c3cc409127fe24696b",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/amzn-20211231_htm.xml",
+          "sha256": "c7c59c5e174bec14113759de8c08936e1680515d8f140df7e18488c187aadff8",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/amzn-20211231.xsd",
+          "sha256": "12608016b040499ae3bb5398c3e1179fa11e7e65d050a8b2218ff081bc0d9e56",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/amzn-20211231_pre.xml",
+          "sha256": "84447175add13405244452f809d58a082c115c3c324893af664a027dac384590",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/amzn-20211231_cal.xml",
+          "sha256": "e1d876abc43d2ec28fbab01009f88811d26260053615b2b16db6888f1cb73199",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/amzn-20211231_lab.xml",
+          "sha256": "5df8033beeaa9369b0ef4c5a72d8036f73bb1d03aca84ae936aa73f02991a8a0",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/FilingSummary.xml",
+          "sha256": "b95ab8ef4f0be5e5c97479f95359e4bdc987e1ca594fb6ba84511d2e4ccf4877",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/R3.htm",
+          "sha256": "690b031d178866865af507279ef5c7d921771647c38d37a3eed03166555506dd",
+          "retrieval": "HTTP_200"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/R3.htm",
+          "sha256": "690b031d178866865af507279ef5c7d921771647c38d37a3eed03166555506dd",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "1001003 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Uncategorized",
+            "HtmlFileName": "R3.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/R10.htm",
+          "sha256": "9f2992366011fec755e6966d329b26061c071ee5eedca5c00a33999e7ed6959d",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/DescriptionofBusinessAccountingPoliciesandSupplementalDisclosures",
+            "ShortName": "Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "LongName": "2101101 - Disclosure - Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R10.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/R12.htm",
+          "sha256": "0ba87811887d954a243413a9944fd3f02948671255e362a6ccd128f3baa74086",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "2129103 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R12.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+        "| Purchases of property and equipment",
+        "| Proceeds from property and equipment sales and incentives",
+        "| Acquisitions, net of cash acquired, and other",
+        "| Proceeds from short-term debt, and other",
+        "| Proceeds from long-term debt",
+        "| Principal repayments of finance leases"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "filing": {
+        "accession_number": "0001018724-23-000004",
+        "form": "10-K",
+        "filing_date": "2023-02-03",
+        "report_date": "2022-12-31",
+        "primary_document": "amzn-20221231.htm"
+      },
+      "annual_start": "2022-01-01",
+      "annual_end": "2022-12-31",
+      "identity_provenance": {
+        "ticker": "AMZN",
+        "cik": 1018724,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001018724.json",
+        "metadata_sha256": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "63645000000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231_htm.xml",
+      "instance_sha256": "5498e8887662599a2f016281778f86066d1c8aee8963ccbd91e6f837d117743a",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "i66a08f9a87424ace8d8c03c38fb30db9_D20220101-20221231",
+          "raw_value": "2022"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "i66a08f9a87424ace8d8c03c38fb30db9_D20220101-20221231",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentType",
+          "context_id": "i66a08f9a87424ace8d8c03c38fb30db9_D20220101-20221231",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "i66a08f9a87424ace8d8c03c38fb30db9_D20220101-20221231",
+          "raw_value": "2022-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 101,
+          "context_id": "i66a08f9a87424ace8d8c03c38fb30db9_D20220101-20221231",
+          "unit_ref": "usd",
+          "raw_value": "63645000000",
+          "numeric_value": "63645000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2022#PaymentsToAcquireProductiveAssets",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "i66a08f9a87424ace8d8c03c38fb30db9_D20220101-20221231": {
+          "context_id": "i66a08f9a87424ace8d8c03c38fb30db9_D20220101-20221231",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001018724",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2022#PaymentsToAcquireProductiveAssets": {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Productive Assets"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "0000003 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "0000003",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "0000003 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Statements",
+                  "HtmlFileName": "R3.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireProductiveAssets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PaymentsToAcquireProductiveAssets",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/index.json",
+          "sha256": "ae2d43acaa6b28d25c4a39d6617e122d7d16586439abada4f41a3ab415ac5943",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231_htm.xml",
+          "sha256": "5498e8887662599a2f016281778f86066d1c8aee8963ccbd91e6f837d117743a",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231.xsd",
+          "sha256": "c77c75aa233204bdf38f3aa6fbd01894ce4d0d207e1b5de48ed7f6cb4b215e15",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231_pre.xml",
+          "sha256": "4a0ed7b4debd3f3108c7b4e815d376300ed84c497b1c5079180b88062d25ba88",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231_cal.xml",
+          "sha256": "106d7792b92eec001fe42d3e345b4bca8c1fa839d159e7e71c794ed00b627a3a",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231_lab.xml",
+          "sha256": "e2e8821eee50090b2cd7d0d383d93dbf72080010ee5472863e157892fceadc1d",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/FilingSummary.xml",
+          "sha256": "b53b6bccfd613348d739b79c6c49b4ea3beed6163147c34b7dbfe068e0eda266",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/R3.htm",
+          "sha256": "d615fd070d097912f450af71ca988bd13e1845d41f8def6eb028032139abd526",
+          "retrieval": "HTTP_200"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/R3.htm",
+          "sha256": "d615fd070d097912f450af71ca988bd13e1845d41f8def6eb028032139abd526",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "0000003 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R3.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/R10.htm",
+          "sha256": "06d2c899d7fea3b76e67e765f4cb65ce490c453839384a2203c731b9f71e7b93",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/DescriptionofBusinessAccountingPoliciesandSupplementalDisclosures",
+            "ShortName": "Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "LongName": "0000010 - Disclosure - Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R10.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/R12.htm",
+          "sha256": "8b9712927cbb414573abf45897f48c299160f9a0f6e01bc9919b6fcfc5872076",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "0000012 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R12.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+        "| Purchases of property and equipment",
+        "| Proceeds from property and equipment sales and incentives",
+        "| Acquisitions, net of cash acquired, and other",
+        "| Proceeds from short-term debt, and other",
+        "| Proceeds from long-term debt",
+        "| Principal repayments of finance leases"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "filing": {
+        "accession_number": "0001018724-24-000008",
+        "form": "10-K",
+        "filing_date": "2024-02-02",
+        "report_date": "2023-12-31",
+        "primary_document": "amzn-20231231.htm"
+      },
+      "annual_start": "2023-01-01",
+      "annual_end": "2023-12-31",
+      "identity_provenance": {
+        "ticker": "AMZN",
+        "cik": 1018724,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001018724.json",
+        "metadata_sha256": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "52729000000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231_htm.xml",
+      "instance_sha256": "9027eeffc4883142d9e02691b69e85a4eed47d76417b0ac74de884e281f55265",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "c-1",
+          "raw_value": "2023"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "c-1",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentType",
+          "context_id": "c-1",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "c-1",
+          "raw_value": "2023-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 105,
+          "context_id": "c-1",
+          "unit_ref": "usd",
+          "raw_value": "52729000000",
+          "numeric_value": "52729000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2023#PaymentsToAcquireProductiveAssets",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "c-1": {
+          "context_id": "c-1",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001018724",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2023#PaymentsToAcquireProductiveAssets": {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Productive Assets"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "0000003 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "0000003",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "0000003 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Statements",
+                  "HtmlFileName": "R3.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireProductiveAssets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_PaymentsToAcquireProductiveAssets",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/index.json",
+          "sha256": "12aec7b222c86ce3b70ad71585d03b13231a35d432f50af5217a49012ce958a3",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231_htm.xml",
+          "sha256": "9027eeffc4883142d9e02691b69e85a4eed47d76417b0ac74de884e281f55265",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231.xsd",
+          "sha256": "ce9d0be91c3df689886210b652373caebe06834cdb4ca540ddf23317d94a9167",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231_pre.xml",
+          "sha256": "e1cc877df1bb87ffd6e5e4920b6bf20f8a192a130cd6ed62086de54c9c4daa96",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231_cal.xml",
+          "sha256": "ffcb49318b8fa71ca13a6fb800b7833f9546a930df0d2a04c8c989333f950bcd",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231_lab.xml",
+          "sha256": "833efac1f5c231013355519e1e9ab9feaf646d1b61a7da72515261a7a639019b",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/FilingSummary.xml",
+          "sha256": "45c2cae04c017cbd2bd55c0e01648cf0682a95613186db63449de4f005d2e8fe",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/R3.htm",
+          "sha256": "0795c9cb473a7520b1f58f2e6eab9a3f33cf67a2652825f98794fb03f964e62c",
+          "retrieval": "HTTP_200"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/R3.htm",
+          "sha256": "0795c9cb473a7520b1f58f2e6eab9a3f33cf67a2652825f98794fb03f964e62c",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "0000003 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R3.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/R10.htm",
+          "sha256": "1df070f08b117b23a96161d72bd5480f85d25dbba959fc79078c116b08a78ac1",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/DescriptionofBusinessAccountingPoliciesandSupplementalDisclosures",
+            "ShortName": "Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "LongName": "0000010 - Disclosure - Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R10.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/R12.htm",
+          "sha256": "0558c196997d941b48c4a7e4f5b209fe2d1afd04ab2f5c4eaf9dfe7ad4e32d1a",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "0000012 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R12.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+        "| Purchases of property and equipment",
+        "| Proceeds from property and equipment sales and incentives",
+        "| Acquisitions, net of cash acquired, non-marketable investments, and other",
+        "| Proceeds from short-term debt, and other",
+        "| Proceeds from long-term debt",
+        "| Principal repayments of finance leases"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "filing": {
+        "accession_number": "0001018724-25-000004",
+        "form": "10-K",
+        "filing_date": "2025-02-07",
+        "report_date": "2024-12-31",
+        "primary_document": "amzn-20241231.htm"
+      },
+      "annual_start": "2024-01-01",
+      "annual_end": "2024-12-31",
+      "identity_provenance": {
+        "ticker": "AMZN",
+        "cik": 1018724,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001018724.json",
+        "metadata_sha256": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "82999000000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231_htm.xml",
+      "instance_sha256": "0392736fc6a26fc654020f3d3ea5e493cb633c298b717a5b523ad5b4e2f8c4de",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "c-1",
+          "raw_value": "2024"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "c-1",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentType",
+          "context_id": "c-1",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "c-1",
+          "raw_value": "2024-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 123,
+          "context_id": "c-1",
+          "unit_ref": "usd",
+          "raw_value": "82999000000",
+          "numeric_value": "82999000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2024#PaymentsToAcquireProductiveAssets",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "c-1": {
+          "context_id": "c-1",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001018724",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2024#PaymentsToAcquireProductiveAssets": {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Productive Assets"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "9952151 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "9952151",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "9952151 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Statements",
+                  "HtmlFileName": "R3.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireProductiveAssets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2024/elts/us-gaap-2024.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2024/elts/us-gaap-2024.xsd#us-gaap_PaymentsToAcquireProductiveAssets",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/index.json",
+          "sha256": "460ea41c012e9105feef387dfc233f70a4b3e9639da4056b15420c67dbaf5374",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231_htm.xml",
+          "sha256": "0392736fc6a26fc654020f3d3ea5e493cb633c298b717a5b523ad5b4e2f8c4de",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.xsd",
+          "sha256": "481aacfbe18b1163d208c7175d79341a19d16535dc5d5af161d2f5128e69693e",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231_pre.xml",
+          "sha256": "edb16d726f204e876402f8fe7524c3728c742e85b0736ad692b125595dd09e56",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231_cal.xml",
+          "sha256": "a6c5d826a852cff4964834aa86b0c4b56283ba3f2fbac2e9d0e8bd20d8a11715",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231_lab.xml",
+          "sha256": "6eaf63e779a4bbb393aaf2454d8cf8cee2ed3705eaeee52b66b64b24cc4d84c8",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/FilingSummary.xml",
+          "sha256": "72d0ddea6c2b5ad62dec9123aef2c57858456a442cf485ce51dda3f95acdcdb2",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/R3.htm",
+          "sha256": "dcd28a4c0e57c344862f3cd4fe240c4ddb5d20209df040c278f30211e4095706",
+          "retrieval": "HTTP_200"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/R3.htm",
+          "sha256": "dcd28a4c0e57c344862f3cd4fe240c4ddb5d20209df040c278f30211e4095706",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "9952151 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R3.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/R10.htm",
+          "sha256": "c4ca9fffbc1de2c9ebca1f4e0b87da4085569a5626e188d672ad1af705076f5a",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/DescriptionofBusinessAccountingPoliciesandSupplementalDisclosures",
+            "ShortName": "Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "LongName": "9952158 - Disclosure - Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R10.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/R12.htm",
+          "sha256": "88da40c406e1631592e431839d23f4691bb913268d8755c5a41ee0c9cca2af75",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "9952160 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R12.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+        "| Purchases of property and equipment",
+        "| Proceeds from property and equipment sales and incentives",
+        "| Acquisitions, net of cash acquired, non-marketable investments, and other",
+        "| Proceeds from short-term debt, and other",
+        "| Proceeds from long-term debt",
+        "| Principal repayments of finance leases"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "filing": {
+        "accession_number": "0001018724-26-000004",
+        "form": "10-K",
+        "filing_date": "2026-02-06",
+        "report_date": "2025-12-31",
+        "primary_document": "amzn-20251231.htm"
+      },
+      "annual_start": "2025-01-01",
+      "annual_end": "2025-12-31",
+      "identity_provenance": {
+        "ticker": "AMZN",
+        "cik": 1018724,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0001018724.json",
+        "metadata_sha256": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "131819000000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+      "instance_sha256": "ac1eb8406f629570bcec12889950eb646dba42bb5f325fdc18415df13f85138b",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "c-1",
+          "raw_value": "2025"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "c-1",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentType",
+          "context_id": "c-1",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "c-1",
+          "raw_value": "2025-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 135,
+          "context_id": "c-1",
+          "unit_ref": "usd",
+          "raw_value": "131819000000",
+          "numeric_value": "131819000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2025#PaymentsToAcquireProductiveAssets",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "c-1": {
+          "context_id": "c-1",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0001018724",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2025#PaymentsToAcquireProductiveAssets": {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Productive Assets"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "9952151 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "9952151",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "9952151 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Statements",
+                  "HtmlFileName": "R3.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireProductiveAssets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_PaymentsToAcquireProductiveAssets",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/index.json",
+          "sha256": "61f90f9803710aee3812f9ab5eaae0ab7ff27e70349b3d9b77ef1c6a9510c5c7",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+          "sha256": "ac1eb8406f629570bcec12889950eb646dba42bb5f325fdc18415df13f85138b",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.xsd",
+          "sha256": "7ab0e8f7714d02d3f56c1c8017b640f44edbfe41b32689387522be46ccd8db55",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_pre.xml",
+          "sha256": "9b4aa885b17efee4630f237d78ad397790b3e3b26a7f26342f77effe27cc1ef0",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_cal.xml",
+          "sha256": "0218c615344f15541ea2b3380dc3a07a70ad04463d55cdf9a7b35b6c8242eb83",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_lab.xml",
+          "sha256": "c8f823c74f52795831d8ee0a0dc12e405bffadb8814de41d96844babe9c4ad72",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/FilingSummary.xml",
+          "sha256": "00cfdb367118a302063abb2d689102039aa2528f0e231ada81b83ed1d549c891",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/R3.htm",
+          "sha256": "3d14ddb9c153614e3446437f31dd5312f2e77ae18023c707af52c9b67d906628",
+          "retrieval": "HTTP_200"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/R3.htm",
+          "sha256": "3d14ddb9c153614e3446437f31dd5312f2e77ae18023c707af52c9b67d906628",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "9952151 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R3.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/R10.htm",
+          "sha256": "270082b0cf8bdef12e8a6ced1ecb3c4520dfc349de9e70af653d8cbcc29d4db5",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/DescriptionofBusinessAccountingPoliciesandSupplementalDisclosures",
+            "ShortName": "Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "LongName": "9952158 - Disclosure - Description of Business, Accounting Policies, and Supplemental Disclosures",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R10.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/R12.htm",
+          "sha256": "e2a917de95d5912962f252eadbb139d88761123f8a848566003a846529c93be1",
+          "retrieval": "HTTP_200",
+          "report": {
+            "Role": "http://www.amazon.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "9952160 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R12.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+        "| Purchases of property and equipment",
+        "| Proceeds from property and equipment sales and incentives",
+        "| Acquisitions, net of cash acquired, non-marketable investments, and other, net",
+        "| Proceeds from short-term debt, and other",
+        "| Proceeds from long-term debt",
+        "| Principal repayments of finance leases"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "LLY",
+      "cik": 59478,
+      "filing": {
+        "accession_number": "0000059478-22-000068",
+        "form": "10-K",
+        "filing_date": "2022-02-23",
+        "report_date": "2021-12-31",
+        "primary_document": "lly-20211231.htm"
+      },
+      "annual_start": "2021-01-01",
+      "annual_end": "2021-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "d3ee6f097753ec1e6c1abf4682e9d9af355542c30631c39edc127fffdb8531b7"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "1309800000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_htm.xml",
+      "instance_sha256": "7123097dbc6f8ca8f5cc3930034cf5be307a6cce25fd90cb4017ca876f585bc3",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "i22de8effd1e0473ea9e6b2ebf9fa4dfd_D20210101-20211231",
+          "raw_value": "2021"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "i22de8effd1e0473ea9e6b2ebf9fa4dfd_D20210101-20211231",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentType",
+          "context_id": "i22de8effd1e0473ea9e6b2ebf9fa4dfd_D20210101-20211231",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "i22de8effd1e0473ea9e6b2ebf9fa4dfd_D20210101-20211231",
+          "raw_value": "2021-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 400,
+          "context_id": "i22de8effd1e0473ea9e6b2ebf9fa4dfd_D20210101-20211231",
+          "unit_ref": "usd",
+          "raw_value": "1309800000",
+          "numeric_value": "1309800000",
+          "decimals": "-5",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2021-01-31#PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "i22de8effd1e0473ea9e6b2ebf9fa4dfd_D20210101-20211231": {
+          "context_id": "i22de8effd1e0473ea9e6b2ebf9fa4dfd_D20210101-20211231",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0000059478",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2021-01-31#PaymentsToAcquireOtherPropertyPlantAndEquipment": {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Other Property, Plant, and Equipment"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "1007009 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "1007009",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "1007009 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Statements",
+                  "HtmlFileName": "R9.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/index.json",
+          "sha256": "858016f796991d93679d370235204efb82fb6a66f55fe27f19cb1a7eb60c73f0",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_htm.xml",
+          "sha256": "7123097dbc6f8ca8f5cc3930034cf5be307a6cce25fd90cb4017ca876f585bc3",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231.xsd",
+          "sha256": "4ec003f449bb19005e0f88dd92180c2b3963ac5d27c5da2cd77679fb060a2820",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_pre.xml",
+          "sha256": "a1460ba7d60f4770cfbaafc0d604436269ce0c857d28c982dac0aff3b3dc2adb",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_cal.xml",
+          "sha256": "831d6933828459f61400c61ab7fa0234e3744dbd616ddd88177e606612ed73b2",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_lab.xml",
+          "sha256": "9121b199458cd8383254686bbf55afe03d8ad837f8f17aec6dc0416d7d3f9f73",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/FilingSummary.xml",
+          "sha256": "e2f969f7ff8002e3975200f7f713bc5c521b8a37b7095268df3c9404c34579a4",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R9.htm",
+          "sha256": "46166f9276e88787caff4dba9990b4ee55cf5a991418d206fc917b68abe02fab",
+          "retrieval": "REUSED_CACHE"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R9.htm",
+          "sha256": "46166f9276e88787caff4dba9990b4ee55cf5a991418d206fc917b68abe02fab",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "1007009 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R9.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R11.htm",
+          "sha256": "62176db279ad528349efcfdada05bd76ba6cf447e8df72a2a2180261bdac1c60",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandard",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standard",
+            "LongName": "2101101 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standard",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R11.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R19.htm",
+          "sha256": "86fce7762b2b5bfbdd037e1c75546f5c2912e164e751f1db6e5018bf5ab5bed2",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "2144109 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R19.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Other changes in operating assets and liabilities, net of acquisitions and divestitures:",
+        "| Purchases of property and equipment",
+        "| Proceeds from sales and maturities of short-term investments",
+        "| Proceeds from sales of noncurrent investments",
+        "| Cash paid for acquisitions, net of cash acquired (Note 3)",
+        "| Proceeds from issuance of long-term debt"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "LLY",
+      "cik": 59478,
+      "filing": {
+        "accession_number": "0000059478-23-000082",
+        "form": "10-K",
+        "filing_date": "2023-02-22",
+        "report_date": "2022-12-31",
+        "primary_document": "lly-20221231.htm"
+      },
+      "annual_start": "2022-01-01",
+      "annual_end": "2022-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "d3ee6f097753ec1e6c1abf4682e9d9af355542c30631c39edc127fffdb8531b7"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "1854300000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_htm.xml",
+      "instance_sha256": "0eb5adf13c2df229a1a15e42e8b03de7c349b95f36f337e5e0fdd9c7b6f7fb9e",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "i095cf5e171c244d4957ecbd3f0e77a2d_D20220101-20221231",
+          "raw_value": "2022"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "i095cf5e171c244d4957ecbd3f0e77a2d_D20220101-20221231",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentType",
+          "context_id": "i095cf5e171c244d4957ecbd3f0e77a2d_D20220101-20221231",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "i095cf5e171c244d4957ecbd3f0e77a2d_D20220101-20221231",
+          "raw_value": "2022-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 364,
+          "context_id": "i095cf5e171c244d4957ecbd3f0e77a2d_D20220101-20221231",
+          "unit_ref": "usd",
+          "raw_value": "1854300000",
+          "numeric_value": "1854300000",
+          "decimals": "-5",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2022#PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "i095cf5e171c244d4957ecbd3f0e77a2d_D20220101-20221231": {
+          "context_id": "i095cf5e171c244d4957ecbd3f0e77a2d_D20220101-20221231",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0000059478",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2022#PaymentsToAcquireOtherPropertyPlantAndEquipment": {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Other Property, Plant, and Equipment"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "0000009 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "0000009",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "0000009 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Statements",
+                  "HtmlFileName": "R9.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/index.json",
+          "sha256": "ee985125475590789495babe9baf9b58f1f37061e1ffb9b8d9a415f6ad13a646",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_htm.xml",
+          "sha256": "0eb5adf13c2df229a1a15e42e8b03de7c349b95f36f337e5e0fdd9c7b6f7fb9e",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231.xsd",
+          "sha256": "d0eb1dce06b659ba0cffa53a49fa1dc01d989f44167de03edc438397209cfd40",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_pre.xml",
+          "sha256": "9da5cef7d79e31ae5457d89a3a4c2f2c7b1c9c56153f39b06f0ca59276c8d5a4",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_cal.xml",
+          "sha256": "c00394bf109fc21b0ebfe8f2bb57309e871a5254301a1b06d9559016c62c9eba",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_lab.xml",
+          "sha256": "aad8813c020f8c918baf4ef92e140c0a975bbc3470e1dff0718685776ce93adc",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/FilingSummary.xml",
+          "sha256": "cc0b71f32fa38270bd8658f6c079e4b5d618e413d834fe49aba5fbf8e361c68e",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R9.htm",
+          "sha256": "ed4b82885492644faf9bcd039d77371578d33abee0e58d6caabbece1a7d5f96e",
+          "retrieval": "REUSED_CACHE"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R9.htm",
+          "sha256": "ed4b82885492644faf9bcd039d77371578d33abee0e58d6caabbece1a7d5f96e",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "0000009 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R9.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R10.htm",
+          "sha256": "79348a959ba3b3a5e57b4778d55b7e76768750b40bb063bd80ef4cfa90c91137",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandards",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "LongName": "0000010 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R10.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R18.htm",
+          "sha256": "1427a88223cb6e043ceb650c5b8b80acf20b88ed000a11b0e3da98902d56bfb8",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "0000018 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R18.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Other changes in operating assets and liabilities, net of acquisitions and divestitures:",
+        "| Purchases of property and equipment",
+        "| Proceeds from sales and maturities of short-term investments",
+        "| Proceeds from sales of noncurrent investments",
+        "| Cash paid for acquisitions, net of cash acquired (Note 3)",
+        "| Proceeds from issuance of long-term debt"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "LLY",
+      "cik": 59478,
+      "filing": {
+        "accession_number": "0000059478-24-000065",
+        "form": "10-K",
+        "filing_date": "2024-02-21",
+        "report_date": "2023-12-31",
+        "primary_document": "lly-20231231.htm"
+      },
+      "annual_start": "2023-01-01",
+      "annual_end": "2023-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "d3ee6f097753ec1e6c1abf4682e9d9af355542c30631c39edc127fffdb8531b7"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "3447600000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_htm.xml",
+      "instance_sha256": "f4759574a8abfc4aae9f4eee3994d1cd3bb141456e7515bdf6a0175cc964d7da",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "c-1",
+          "raw_value": "2023"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "c-1",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentType",
+          "context_id": "c-1",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "c-1",
+          "raw_value": "2023-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 365,
+          "context_id": "c-1",
+          "unit_ref": "usd",
+          "raw_value": "3447600000",
+          "numeric_value": "3447600000",
+          "decimals": "-5",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2023#PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "c-1": {
+          "context_id": "c-1",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0000059478",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2023#PaymentsToAcquireOtherPropertyPlantAndEquipment": {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Other Property, Plant, and Equipment"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "0000009 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "0000009",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "0000009 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Statements",
+                  "HtmlFileName": "R9.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/index.json",
+          "sha256": "ef461a99e8775dad8d041a98d92f7ccc1e3d2b7e245f9d6d518dd064b7a96048",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_htm.xml",
+          "sha256": "f4759574a8abfc4aae9f4eee3994d1cd3bb141456e7515bdf6a0175cc964d7da",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231.xsd",
+          "sha256": "2b0e0b68438f4ba85e8f4ab275a0533b07eb7143224ba3b5cba258f87be98422",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_pre.xml",
+          "sha256": "4e54d8979943e0111bddb18b5c0a989b2b8cd8f00b4151770c058208dca6fd23",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_cal.xml",
+          "sha256": "4eee27ae94cca7fcc4f03dc2fee05a6df5690b55f4952106170cb280754a3590",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_lab.xml",
+          "sha256": "4861b4b1415c167160939ea74bdf927a04683c9a53d3c46d0698a506fb251ed3",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/FilingSummary.xml",
+          "sha256": "b124729c902a32c2a40132929d45738e1ac790630a298a6f15751544f4550883",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R9.htm",
+          "sha256": "d13f889aee418a6a9b87491bb0678ecfe1bdf97ffa9d774442f8e6a6e6bc5117",
+          "retrieval": "REUSED_CACHE"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R9.htm",
+          "sha256": "d13f889aee418a6a9b87491bb0678ecfe1bdf97ffa9d774442f8e6a6e6bc5117",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "0000009 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R9.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R10.htm",
+          "sha256": "c15305215e40b9ed024bdbe41b9f3456a021bc28b939ebc84f0aadd58f74e39b",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandards",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "LongName": "0000010 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R10.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R18.htm",
+          "sha256": "0587a1820c70e726292dd91ade4dd5f921755535afa3d037ea785c69c4fbef7a",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "0000018 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R18.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Other changes in operating assets and liabilities, net of acquisitions and divestitures:",
+        "| Purchases of property and equipment",
+        "| Proceeds from sales and maturities of short-term investments",
+        "| Proceeds from sales of and distributions from noncurrent investments",
+        "| Proceeds from sale of product rights",
+        "| Cash paid for acquisitions, net of cash acquired (Note 3)",
+        "| Proceeds from issuance of long-term debt"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "LLY",
+      "cik": 59478,
+      "filing": {
+        "accession_number": "0000059478-25-000067",
+        "form": "10-K",
+        "filing_date": "2025-02-19",
+        "report_date": "2024-12-31",
+        "primary_document": "lly-20241231.htm"
+      },
+      "annual_start": "2024-01-01",
+      "annual_end": "2024-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "d3ee6f097753ec1e6c1abf4682e9d9af355542c30631c39edc127fffdb8531b7"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "5057800000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_htm.xml",
+      "instance_sha256": "dfb1c3f422dd840f7bf5dc3874de8315ed8c3d9e2460e60d5ba9010b8578fb8b",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "c-1",
+          "raw_value": "2024"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "c-1",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentType",
+          "context_id": "c-1",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "c-1",
+          "raw_value": "2024-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 384,
+          "context_id": "c-1",
+          "unit_ref": "usd",
+          "raw_value": "5057800000",
+          "numeric_value": "5057800000",
+          "decimals": "-5",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2024#PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "c-1": {
+          "context_id": "c-1",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0000059478",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2024#PaymentsToAcquireOtherPropertyPlantAndEquipment": {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Other Property, Plant, and Equipment"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "9952157 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "9952157",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "9952157 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Statements",
+                  "HtmlFileName": "R9.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2024/elts/us-gaap-2024.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2024/elts/us-gaap-2024.xsd#us-gaap_PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/index.json",
+          "sha256": "ed645d64c1c072bb04690a492b25a8a79ed8091b576387298bb32d44a2500a62",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_htm.xml",
+          "sha256": "dfb1c3f422dd840f7bf5dc3874de8315ed8c3d9e2460e60d5ba9010b8578fb8b",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231.xsd",
+          "sha256": "c45366e25c62ce8d2febdcc93699236dd45e0bd0e996254a76c771cb3b376008",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_pre.xml",
+          "sha256": "98b970fda95ebb60fde0f74c67814dbc174a6a631fa7b3595341762b84ee7694",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_cal.xml",
+          "sha256": "8edf48300e2eb8d069e4500477920b6efd0fd0a3a0c96616253725b04cd3d99f",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_lab.xml",
+          "sha256": "11572ec09778357315f2feeef6541e0bb4427518f79f07058674b211f74c2d14",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/FilingSummary.xml",
+          "sha256": "cb1eefd3af67a55452c61f1ea7317c19f1610c175298c418dbc0551793186284",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R9.htm",
+          "sha256": "4afd98c74da2833ce4dc48d7e17e6ac632c045d3d6f0c3d31668556b9e2dd818",
+          "retrieval": "REUSED_CACHE"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R9.htm",
+          "sha256": "4afd98c74da2833ce4dc48d7e17e6ac632c045d3d6f0c3d31668556b9e2dd818",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "9952157 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R9.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R10.htm",
+          "sha256": "114c962ac5cb43384bd383d012fdac2dd7afd12126d9e5cd3d019ee6358b2432",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandards",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "LongName": "9952158 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R10.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R18.htm",
+          "sha256": "019adb55d4431116eea05d71ac9acc96bc27172b59fb864aa7501f18d8798e68",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "9952166 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R18.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Other changes in operating assets and liabilities, net of acquisitions and divestitures:",
+        "| Purchases of property and equipment",
+        "| Proceeds from sales and maturities of short-term investments",
+        "| Proceeds from sales of and distributions from noncurrent investments",
+        "| Proceeds from sale of product rights",
+        "| Cash paid for acquisitions, net of cash acquired",
+        "| Proceeds from issuance of long-term debt"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "LLY",
+      "cik": 59478,
+      "filing": {
+        "accession_number": "0000059478-26-000013",
+        "form": "10-K",
+        "filing_date": "2026-02-12",
+        "report_date": "2025-12-31",
+        "primary_document": "lly-20251231.htm"
+      },
+      "annual_start": "2025-01-01",
+      "annual_end": "2025-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "d3ee6f097753ec1e6c1abf4682e9d9af355542c30631c39edc127fffdb8531b7"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "design_disposition": "CURATED_DESIGN_GO",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "scope_classification": "GROSS_CASH_PPE_EQUIVALENT",
+      "expected_value_usd": "7841000000",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_htm.xml",
+      "instance_sha256": "8294c5cfb8f2e61b64f23121fc8c79439a20e1084b026cf23c94143dbe834078",
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "c-1",
+          "raw_value": "2025"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "c-1",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentType",
+          "context_id": "c-1",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "c-1",
+          "raw_value": "2025-12-31"
+        }
+      ],
+      "operand_occurrences": [
+        {
+          "ordinal": 314,
+          "context_id": "c-1",
+          "unit_ref": "usd",
+          "raw_value": "7841000000",
+          "numeric_value": "7841000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "normalized_unit": "USD",
+          "concept_key": "http://fasb.org/us-gaap/2025#PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "structurally_eligible_nondimensional_usd": true,
+          "scope_disposition": "PRIMARY_CANDIDATE"
+        }
+      ],
+      "contexts": {
+        "c-1": {
+          "context_id": "c-1",
+          "entity_identifier_scheme": "http://www.sec.gov/CIK",
+          "entity_identifier": "0000059478",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": []
+        }
+      },
+      "units": {
+        "usd": {
+          "unit_id": "usd",
+          "numerator_measures": [
+            {
+              "namespace": "http://www.xbrl.org/2003/iso4217",
+              "local_name": "USD"
+            }
+          ],
+          "denominator_measures": []
+        }
+      },
+      "operand_concept_metadata": {
+        "http://fasb.org/us-gaap/2025#PaymentsToAcquireOtherPropertyPlantAndEquipment": {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+          "labels": [
+            {
+              "role": "http://www.xbrl.org/2003/role/label",
+              "text": "Payments to Acquire Other Property, Plant, and Equipment"
+            }
+          ],
+          "presentation_roles": [
+            {
+              "role_uri": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "definition": "9952157 - Statement - Consolidated Statements of Cash Flows",
+              "sort_code": "9952157",
+              "role_type": "Statement",
+              "title": "Consolidated Statements of Cash Flows",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.xsd",
+              "reports": [
+                {
+                  "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+                  "ShortName": "Consolidated Statements of Cash Flows",
+                  "LongName": "9952157 - Statement - Consolidated Statements of Cash Flows",
+                  "MenuCategory": "Statements",
+                  "HtmlFileName": "R9.htm"
+                }
+              ]
+            }
+          ],
+          "calculation_relationships": [
+            {
+              "role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+              "parent": "NetCashProvidedByUsedInInvestingActivities",
+              "child": "PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_PaymentsToAcquireOtherPropertyPlantAndEquipment",
+              "weight": "-1.0",
+              "order": "1",
+              "preferred_label": null,
+              "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_cal.xml"
+            }
+          ],
+          "taxonomy": "us-gaap"
+        }
+      },
+      "mandatory_artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/index.json",
+          "sha256": "97963e357c13675d1b1f1353ff46975b0e57950ca8bcc05330422c97e688c555",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_htm.xml",
+          "sha256": "8294c5cfb8f2e61b64f23121fc8c79439a20e1084b026cf23c94143dbe834078",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.xsd",
+          "sha256": "def0cd59173cc889b23323e3dc84ad0868df4b5b98f5f1aad73f96e8439aa7b4",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_pre.xml",
+          "sha256": "9f428d3a2463415f4cfa2ca4a314e63e28f827ab5c20bb85abd9fd9e1ae235b5",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_cal.xml",
+          "sha256": "4860214a395aa356d1bdd396341b722a999f7bd3c28b4c549bdbc0fd09e7a9c8",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_lab.xml",
+          "sha256": "a359f78b5c45d326d95d3892805f14cd61269daf2c623a879680eba1a04af7ba",
+          "retrieval": "HTTP_200"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/FilingSummary.xml",
+          "sha256": "705157d8e32d846baf13d774d571f142a71ae706a9005949dbcf57e792e8f225",
+          "retrieval": "REUSED_CACHE"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R9.htm",
+          "sha256": "9fba79e4e98d3b1065f33589e7ab6e3e4641eaed0f4e232ddb8dc9fb965f35de",
+          "retrieval": "REUSED_CACHE"
+        }
+      ],
+      "reviewed_evidence": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R9.htm",
+          "sha256": "9fba79e4e98d3b1065f33589e7ab6e3e4641eaed0f4e232ddb8dc9fb965f35de",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows",
+            "LongName": "9952157 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "HtmlFileName": "R9.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R10.htm",
+          "sha256": "b5d9f50fb524ccea6546478967944318cb533d9591410199d44790c24358bc9e",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandards",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "LongName": "9952158 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R10.htm"
+          }
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R18.htm",
+          "sha256": "b50b99ffffd98db532a4d908aaf29313aa187c256cf0433cf0a076fbe3e041f1",
+          "retrieval": "REUSED_CACHE",
+          "report": {
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment",
+            "LongName": "9952166 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "HtmlFileName": "R18.htm"
+          }
+        }
+      ],
+      "cashflow_captions": [
+        "| Other changes in operating assets and liabilities, net of acquisitions and divestitures:",
+        "| Purchases of property and equipment",
+        "| Proceeds from sales of and distributions from noncurrent investments",
+        "| Proceeds from sale of product rights",
+        "| Cash paid for acquisitions, net of cash acquired",
+        "| Proceeds from issuance of long-term debt"
+      ],
+      "review_milestone": "Phase 1H.4 Wave 27",
+      "review_date": "2026-10-11",
+      "scope_rationale": "Selected consolidated cash purchases of PP&E, supported by selected accounting and PP&E notes; no lease/acquisition/noncash/proceeds adjustment.",
+      "incentive_treatment": "Preserve reported gross purchase cash; no netting of separate proceeds/incentive inflows or inferred pre-incentive gross-up.",
+      "approved_derivation_equation": null
+    },
+    {
+      "ticker": "V",
+      "cik": 1403161,
+      "filing": {
+        "accession_number": "0001403161-21-000060",
+        "form": "10-K",
+        "filing_date": "2021-11-18",
+        "report_date": "2021-09-30",
+        "primary_document": "v-20210930.htm"
+      },
+      "annual_start": "2020-10-01",
+      "annual_end": "2021-09-30",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "V",
+      "cik": 1403161,
+      "filing": {
+        "accession_number": "0001403161-22-000081",
+        "form": "10-K",
+        "filing_date": "2022-11-16",
+        "report_date": "2022-09-30",
+        "primary_document": "v-20220930.htm"
+      },
+      "annual_start": "2021-10-01",
+      "annual_end": "2022-09-30",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "V",
+      "cik": 1403161,
+      "filing": {
+        "accession_number": "0001403161-23-000099",
+        "form": "10-K",
+        "filing_date": "2023-11-15",
+        "report_date": "2023-09-30",
+        "primary_document": "v-20230930.htm"
+      },
+      "annual_start": "2022-10-01",
+      "annual_end": "2023-09-30",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "V",
+      "cik": 1403161,
+      "filing": {
+        "accession_number": "0001403161-24-000058",
+        "form": "10-K",
+        "filing_date": "2024-11-13",
+        "report_date": "2024-09-30",
+        "primary_document": "v-20240930.htm"
+      },
+      "annual_start": "2023-10-01",
+      "annual_end": "2024-09-30",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "V",
+      "cik": 1403161,
+      "filing": {
+        "accession_number": "0001403161-25-000089",
+        "form": "10-K",
+        "filing_date": "2025-11-06",
+        "report_date": "2025-09-30",
+        "primary_document": "v-20250930.htm"
+      },
+      "annual_start": "2024-10-01",
+      "annual_end": "2025-09-30",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "LRCX",
+      "cik": 707549,
+      "filing": {
+        "accession_number": "0000707549-22-000107",
+        "form": "10-K",
+        "filing_date": "2022-08-24",
+        "report_date": "2022-06-26",
+        "primary_document": "lrcx-20220626.htm"
+      },
+      "annual_start": "2021-06-28",
+      "annual_end": "2022-06-26",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "LRCX",
+      "cik": 707549,
+      "filing": {
+        "accession_number": "0000707549-23-000102",
+        "form": "10-K",
+        "filing_date": "2023-08-15",
+        "report_date": "2023-06-25",
+        "primary_document": "lrcx-20230625.htm"
+      },
+      "annual_start": "2022-06-27",
+      "annual_end": "2023-06-25",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "LRCX",
+      "cik": 707549,
+      "filing": {
+        "accession_number": "0000707549-24-000106",
+        "form": "10-K",
+        "filing_date": "2024-08-29",
+        "report_date": "2024-06-30",
+        "primary_document": "lrcx-20240630.htm"
+      },
+      "annual_start": "2023-06-26",
+      "annual_end": "2024-06-30",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "LRCX",
+      "cik": 707549,
+      "filing": {
+        "accession_number": "0000707549-25-000075",
+        "form": "10-K",
+        "filing_date": "2025-08-11",
+        "report_date": "2025-06-29",
+        "primary_document": "lrcx-20250629.htm"
+      },
+      "annual_start": "2024-07-01",
+      "annual_end": "2025-06-29",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "LRCX",
+      "cik": 707549,
+      "filing": {
+        "accession_number": "0000707549-26-000037",
+        "form": "10-K",
+        "filing_date": "2026-08-07",
+        "report_date": "2026-06-28",
+        "primary_document": "lrcx-20260628.htm"
+      },
+      "annual_start": "2025-06-30",
+      "annual_end": "2026-06-28",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-22-000019",
+        "form": "10-K",
+        "filing_date": "2022-02-24",
+        "report_date": "2021-12-31",
+        "primary_document": "cvx-20211231.htm"
+      },
+      "annual_start": "2021-01-01",
+      "annual_end": "2021-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "8827bdc0d1a1861ce026f40168ef50bd9defa0a1fb53c057b587e955498f5256"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-23-000009",
+        "form": "10-K",
+        "filing_date": "2023-02-23",
+        "report_date": "2022-12-31",
+        "primary_document": "cvx-20221231.htm"
+      },
+      "annual_start": "2022-01-01",
+      "annual_end": "2022-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "8827bdc0d1a1861ce026f40168ef50bd9defa0a1fb53c057b587e955498f5256"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-24-000013",
+        "form": "10-K",
+        "filing_date": "2024-02-26",
+        "report_date": "2023-12-31",
+        "primary_document": "cvx-20231231.htm"
+      },
+      "annual_start": "2023-01-01",
+      "annual_end": "2023-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "8827bdc0d1a1861ce026f40168ef50bd9defa0a1fb53c057b587e955498f5256"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-25-000009",
+        "form": "10-K",
+        "filing_date": "2025-02-21",
+        "report_date": "2024-12-31",
+        "primary_document": "cvx-20241231.htm"
+      },
+      "annual_start": "2024-01-01",
+      "annual_end": "2024-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "8827bdc0d1a1861ce026f40168ef50bd9defa0a1fb53c057b587e955498f5256"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-26-000078",
+        "form": "10-K",
+        "filing_date": "2026-02-24",
+        "report_date": "2025-12-31",
+        "primary_document": "cvx-20251231.htm"
+      },
+      "annual_start": "2025-01-01",
+      "annual_end": "2025-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_OPERATING_INCOME_FILING_IDENTITY",
+        "document": "docs/operating-income-concepts.md",
+        "retained_submission_sha256": "8827bdc0d1a1861ce026f40168ef50bd9defa0a1fb53c057b587e955498f5256"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "MRK",
+      "cik": 310158,
+      "filing": {
+        "accession_number": "0000310158-22-000003",
+        "form": "10-K",
+        "filing_date": "2022-02-25",
+        "report_date": "2021-12-31",
+        "primary_document": "mrk-20211231.htm"
+      },
+      "annual_start": "2021-01-01",
+      "annual_end": "2021-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "MRK",
+      "cik": 310158,
+      "filing": {
+        "accession_number": "0001628280-23-005061",
+        "form": "10-K",
+        "filing_date": "2023-02-24",
+        "report_date": "2022-12-31",
+        "primary_document": "mrk-20221231.htm"
+      },
+      "annual_start": "2022-01-01",
+      "annual_end": "2022-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "GE",
+      "cik": 40545,
+      "filing": {
+        "accession_number": "0000040545-24-000027",
+        "form": "10-K",
+        "filing_date": "2024-02-02",
+        "report_date": "2023-12-31",
+        "primary_document": "ge-20231231.htm"
+      },
+      "annual_start": "2023-01-01",
+      "annual_end": "2023-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "METHODOLOGY_BLOCKER",
+      "scope_disposition": "BUSINESS_AND_ASSET_PERIMETER_GATED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "GE",
+      "cik": 40545,
+      "filing": {
+        "accession_number": "0000040545-25-000015",
+        "form": "10-K",
+        "filing_date": "2025-02-03",
+        "report_date": "2024-12-31",
+        "primary_document": "ge-20241231.htm"
+      },
+      "annual_start": "2024-01-01",
+      "annual_end": "2024-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "METHODOLOGY_BLOCKER",
+      "scope_disposition": "BUSINESS_AND_ASSET_PERIMETER_GATED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "GE",
+      "cik": 40545,
+      "filing": {
+        "accession_number": "0000040545-26-000008",
+        "form": "10-K",
+        "filing_date": "2026-01-29",
+        "report_date": "2025-12-31",
+        "primary_document": "ge-20251231.htm"
+      },
+      "annual_start": "2025-01-01",
+      "annual_end": "2025-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "METHODOLOGY_BLOCKER",
+      "scope_disposition": "BUSINESS_AND_ASSET_PERIMETER_GATED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "HD",
+      "cik": 354950,
+      "filing": {
+        "accession_number": "0000354950-22-000070",
+        "form": "10-K",
+        "filing_date": "2022-03-23",
+        "report_date": "2022-01-30",
+        "primary_document": "hd-20220130.htm"
+      },
+      "annual_start": "2021-02-01",
+      "annual_end": "2022-01-30",
+      "identity_provenance": {
+        "ticker": "HD",
+        "cik": 354950,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000354950.json",
+        "metadata_sha256": "672ac7e954322732f26d909249186bfb4fef4157085d1f61634d447b2ccf0fba",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "HD",
+      "cik": 354950,
+      "filing": {
+        "accession_number": "0000354950-23-000059",
+        "form": "10-K",
+        "filing_date": "2023-03-15",
+        "report_date": "2023-01-29",
+        "primary_document": "hd-20230129.htm"
+      },
+      "annual_start": "2022-01-31",
+      "annual_end": "2023-01-29",
+      "identity_provenance": {
+        "ticker": "HD",
+        "cik": 354950,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000354950.json",
+        "metadata_sha256": "672ac7e954322732f26d909249186bfb4fef4157085d1f61634d447b2ccf0fba",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "HD",
+      "cik": 354950,
+      "filing": {
+        "accession_number": "0000354950-24-000062",
+        "form": "10-K",
+        "filing_date": "2024-03-13",
+        "report_date": "2024-01-28",
+        "primary_document": "hd-20240128.htm"
+      },
+      "annual_start": "2023-01-30",
+      "annual_end": "2024-01-28",
+      "identity_provenance": {
+        "ticker": "HD",
+        "cik": 354950,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000354950.json",
+        "metadata_sha256": "672ac7e954322732f26d909249186bfb4fef4157085d1f61634d447b2ccf0fba",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "HD",
+      "cik": 354950,
+      "filing": {
+        "accession_number": "0000354950-25-000085",
+        "form": "10-K",
+        "filing_date": "2025-03-21",
+        "report_date": "2025-02-02",
+        "primary_document": "hd-20250202.htm"
+      },
+      "annual_start": "2024-01-29",
+      "annual_end": "2025-02-02",
+      "identity_provenance": {
+        "ticker": "HD",
+        "cik": 354950,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000354950.json",
+        "metadata_sha256": "672ac7e954322732f26d909249186bfb4fef4157085d1f61634d447b2ccf0fba",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "HD",
+      "cik": 354950,
+      "filing": {
+        "accession_number": "0001628280-26-019436",
+        "form": "10-K",
+        "filing_date": "2026-03-18",
+        "report_date": "2026-02-01",
+        "primary_document": "hd-20260201.htm"
+      },
+      "annual_start": "2025-02-03",
+      "annual_end": "2026-02-01",
+      "identity_provenance": {
+        "ticker": "HD",
+        "cik": 354950,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000354950.json",
+        "metadata_sha256": "672ac7e954322732f26d909249186bfb4fef4157085d1f61634d447b2ccf0fba",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "GEV",
+      "cik": 1996810,
+      "filing": {
+        "accession_number": "0001996810-25-000011",
+        "form": "10-K",
+        "filing_date": "2025-02-06",
+        "report_date": "2024-12-31",
+        "primary_document": "gev-20241231.htm"
+      },
+      "annual_start": "2024-01-01",
+      "annual_end": "2024-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "GEV",
+      "cik": 1996810,
+      "filing": {
+        "accession_number": "0001996810-26-000015",
+        "form": "10-K",
+        "filing_date": "2026-01-29",
+        "report_date": "2025-12-31",
+        "primary_document": "gev-20251231.htm"
+      },
+      "annual_start": "2025-01-01",
+      "annual_end": "2025-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "QCOM",
+      "cik": 804328,
+      "filing": {
+        "accession_number": "0001728949-21-000076",
+        "form": "10-K",
+        "filing_date": "2021-11-03",
+        "report_date": "2021-09-26",
+        "primary_document": "qcom-20210926.htm"
+      },
+      "annual_start": "2020-09-28",
+      "annual_end": "2021-09-26",
+      "identity_provenance": {
+        "ticker": "QCOM",
+        "cik": 804328,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000804328.json",
+        "metadata_sha256": "996cee944eb4104581c31991760bb1aaac103d56d5bedf75d99ada1c0497a39f",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "QCOM",
+      "cik": 804328,
+      "filing": {
+        "accession_number": "0000804328-22-000021",
+        "form": "10-K",
+        "filing_date": "2022-11-02",
+        "report_date": "2022-09-25",
+        "primary_document": "qcom-20220925.htm"
+      },
+      "annual_start": "2021-09-27",
+      "annual_end": "2022-09-25",
+      "identity_provenance": {
+        "ticker": "QCOM",
+        "cik": 804328,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000804328.json",
+        "metadata_sha256": "996cee944eb4104581c31991760bb1aaac103d56d5bedf75d99ada1c0497a39f",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "QCOM",
+      "cik": 804328,
+      "filing": {
+        "accession_number": "0000804328-23-000055",
+        "form": "10-K",
+        "filing_date": "2023-11-01",
+        "report_date": "2023-09-24",
+        "primary_document": "qcom-20230924.htm"
+      },
+      "annual_start": "2022-09-26",
+      "annual_end": "2023-09-24",
+      "identity_provenance": {
+        "ticker": "QCOM",
+        "cik": 804328,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000804328.json",
+        "metadata_sha256": "996cee944eb4104581c31991760bb1aaac103d56d5bedf75d99ada1c0497a39f",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "QCOM",
+      "cik": 804328,
+      "filing": {
+        "accession_number": "0000804328-24-000075",
+        "form": "10-K",
+        "filing_date": "2024-11-06",
+        "report_date": "2024-09-29",
+        "primary_document": "qcom-20240929.htm"
+      },
+      "annual_start": "2023-09-25",
+      "annual_end": "2024-09-29",
+      "identity_provenance": {
+        "ticker": "QCOM",
+        "cik": 804328,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000804328.json",
+        "metadata_sha256": "996cee944eb4104581c31991760bb1aaac103d56d5bedf75d99ada1c0497a39f",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "QCOM",
+      "cik": 804328,
+      "filing": {
+        "accession_number": "0000804328-25-000085",
+        "form": "10-K",
+        "filing_date": "2025-11-05",
+        "report_date": "2025-09-28",
+        "primary_document": "qcom-20250928.htm"
+      },
+      "annual_start": "2024-09-30",
+      "annual_end": "2025-09-28",
+      "identity_provenance": {
+        "ticker": "QCOM",
+        "cik": 804328,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000804328.json",
+        "metadata_sha256": "996cee944eb4104581c31991760bb1aaac103d56d5bedf75d99ada1c0497a39f",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "VZ",
+      "cik": 732712,
+      "filing": {
+        "accession_number": "0000732712-22-000008",
+        "form": "10-K",
+        "filing_date": "2022-02-11",
+        "report_date": "2021-12-31",
+        "primary_document": "vz-20211231.htm"
+      },
+      "annual_start": "2021-01-01",
+      "annual_end": "2021-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "VZ",
+      "cik": 732712,
+      "filing": {
+        "accession_number": "0000732712-23-000012",
+        "form": "10-K",
+        "filing_date": "2023-02-10",
+        "report_date": "2022-12-31",
+        "primary_document": "vz-20221231.htm"
+      },
+      "annual_start": "2022-01-01",
+      "annual_end": "2022-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "VZ",
+      "cik": 732712,
+      "filing": {
+        "accession_number": "0000732712-24-000010",
+        "form": "10-K",
+        "filing_date": "2024-02-09",
+        "report_date": "2023-12-31",
+        "primary_document": "vz-20231231.htm"
+      },
+      "annual_start": "2023-01-01",
+      "annual_end": "2023-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "VZ",
+      "cik": 732712,
+      "filing": {
+        "accession_number": "0000732712-25-000006",
+        "form": "10-K",
+        "filing_date": "2025-02-12",
+        "report_date": "2024-12-31",
+        "primary_document": "vz-20241231.htm"
+      },
+      "annual_start": "2024-01-01",
+      "annual_end": "2024-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "VZ",
+      "cik": 732712,
+      "filing": {
+        "accession_number": "0000732712-26-000007",
+        "form": "10-K",
+        "filing_date": "2026-02-17",
+        "report_date": "2025-12-31",
+        "primary_document": "vz-20251231.htm"
+      },
+      "annual_start": "2025-01-01",
+      "annual_end": "2025-12-31",
+      "identity_provenance": {
+        "kind": "COMMITTED_D_AND_A_FILING_IDENTITY",
+        "document": "docs/depreciation-amortization-inventory.json"
+      },
+      "classification": "DERIVATION",
+      "scope_disposition": "COMPONENT_SCOPE_UNPROVED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "PEP",
+      "cik": 77476,
+      "filing": {
+        "accession_number": "0000077476-22-000010",
+        "form": "10-K",
+        "filing_date": "2022-02-10",
+        "report_date": "2021-12-25",
+        "primary_document": "pep-20211225.htm"
+      },
+      "annual_start": "2020-12-27",
+      "annual_end": "2021-12-25",
+      "identity_provenance": {
+        "ticker": "PEP",
+        "cik": 77476,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000077476.json",
+        "metadata_sha256": "7635c5ba59064225fd65ee22f928bdb2c5ecafecd04f9fc56837da270d33edae",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "PEP",
+      "cik": 77476,
+      "filing": {
+        "accession_number": "0000077476-23-000007",
+        "form": "10-K",
+        "filing_date": "2023-02-09",
+        "report_date": "2022-12-31",
+        "primary_document": "pep-20221231.htm"
+      },
+      "annual_start": "2021-12-26",
+      "annual_end": "2022-12-31",
+      "identity_provenance": {
+        "ticker": "PEP",
+        "cik": 77476,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000077476.json",
+        "metadata_sha256": "7635c5ba59064225fd65ee22f928bdb2c5ecafecd04f9fc56837da270d33edae",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "PEP",
+      "cik": 77476,
+      "filing": {
+        "accession_number": "0000077476-24-000008",
+        "form": "10-K",
+        "filing_date": "2024-02-09",
+        "report_date": "2023-12-30",
+        "primary_document": "pep-20231230.htm"
+      },
+      "annual_start": "2023-01-01",
+      "annual_end": "2023-12-30",
+      "identity_provenance": {
+        "ticker": "PEP",
+        "cik": 77476,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000077476.json",
+        "metadata_sha256": "7635c5ba59064225fd65ee22f928bdb2c5ecafecd04f9fc56837da270d33edae",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "PEP",
+      "cik": 77476,
+      "filing": {
+        "accession_number": "0000077476-25-000007",
+        "form": "10-K",
+        "filing_date": "2025-02-04",
+        "report_date": "2024-12-28",
+        "primary_document": "pep-20241228.htm"
+      },
+      "annual_start": "2023-12-31",
+      "annual_end": "2024-12-28",
+      "identity_provenance": {
+        "ticker": "PEP",
+        "cik": 77476,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000077476.json",
+        "metadata_sha256": "7635c5ba59064225fd65ee22f928bdb2c5ecafecd04f9fc56837da270d33edae",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    },
+    {
+      "ticker": "PEP",
+      "cik": 77476,
+      "filing": {
+        "accession_number": "0000077476-26-000007",
+        "form": "10-K",
+        "filing_date": "2026-02-03",
+        "report_date": "2025-12-27",
+        "primary_document": "pep-20251227.htm"
+      },
+      "annual_start": "2024-12-29",
+      "annual_end": "2025-12-27",
+      "identity_provenance": {
+        "ticker": "PEP",
+        "cik": 77476,
+        "metadata_url": "https://data.sec.gov/submissions/CIK0000077476.json",
+        "metadata_sha256": "7635c5ba59064225fd65ee22f928bdb2c5ecafecd04f9fc56837da270d33edae",
+        "selection_basis": "Unique non-amended 10-K for each report end frozen in saved production baseline; missing historical accession manifest is not reconstructed by fresh latest-five selection.",
+        "http_status": 200
+      },
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "design_disposition": "NO_ENTRY",
+      "production_policy_approval": false,
+      "fresh_economic_denial": false,
+      "control_review_basis": "Retained Wave 26 unresolved routing; not freshly reviewed or an issuer-period economic denial in Wave 27."
+    }
+  ]
+}
