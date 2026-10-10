@@ -170,6 +170,19 @@ occurrence and validation provenance survives schema 3 serialization and
 Operating Tax supporting inputs; no tax policy is automatically ready. See
 [verified results](../operating-income-derivation-policy-design.md#wave-16-implementation-and-verified-results).
 
+**Wave 17 follow-up:** the
+[CVX/GE business-perimeter research](../operating-income-cvx-ge-perimeter.md)
+matches all ten frozen selected filings and reaches NO-GO for additional
+Operating Income coverage. CVX's five periods remain
+`BUSINESS_PERIMETER_UNRESOLVED`; GE's five require specialized consolidated
+industrial/insurance treatment, and its common five-period continuing series
+is not comparable after portfolio separations and accounting changes. These
+are research findings, not new production states or universe execution
+classifications. All ten remain missing; Operating Income stays 194 / 10 / 0
+and aggregate states stay 1,880 / 1,508 / 11 / 27 / 42 across 3,468 states.
+The next reusable research target is the 94 missing D&A periods. Dedicated
+CVX affiliate and GE industrial carve-out/recast designs remain unapproved.
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -487,6 +500,10 @@ policy/model boundary, including occurrence conflicts, arithmetic, provenance,
 serialization, IBM validation, and Operating Tax gates; it adds no result.
 Wave 16 implements that boundary and resolves those exact 25 periods, leaving
 only five CVX and five GE Operating Income gaps for separate perimeter research.
+Wave 17 completes that research with zero safe additional coverage: five CVX
+business-perimeter gaps and five GE mixed industrial/insurance methodology
+gaps remain missing. No generic subtotal, segment-profit substitution or
+common-five-year recast is approved.
 
 ## Wave 2 ambiguity inventory and Wave 6 disposition
 
@@ -619,7 +636,7 @@ issuers have one post-smoke classification.
 | 3 | `CONCEPT_POLICY` | **Implemented in Wave 2:** 160 additional periods resolved; 19 broader-caption periods remain missing | One high-value balance | Keep broader restricted-cash and cash-equivalents-only captions unresolved pending separate evidence | Very high | Low |
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
-| 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; ten CVX/GE periods remain controls | Core FCFF input | Preserve the frozen v1 policy and research CVX/GE business/perimeter evidence separately | Medium | Very high |
+| 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 94 missing across the 204-period corpus | Core FCFF input | Group combined concepts and complete component derivations | High | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
@@ -656,10 +673,12 @@ issuers have one post-smoke classification.
    exact-accession policy/model, selection, arithmetic, failure, provenance,
    serialization, Operating Tax, and regression design. Wave 16 implements and
    validates all 25 exact entries, preserves 169 direct results, and retains
-   ten missing CVX/GE controls. Separate business/perimeter research remains
-   the next Operating Income milestone.
-3. **Core FCFF flows:** investigate operating-income face-statement evidence,
-   D&A groups, and Capex variants. Approve only repeatable definitions with
+   ten missing CVX/GE controls. Wave 17 completes their separate perimeter
+   research with NO-GO; no coverage or production classification changes.
+3. **Core FCFF flows:** next inventory exact selected-filing D&A concepts and
+   complete component patterns for all 94 missing periods, then Capex
+   variants. CVX/GE mixed-business designs remain separate. Approve only
+   repeatable definitions with
    selected-accession evidence.
 4. **Equity-bridge balances:** generalize investments, commercial paper,
    borrowings, and debt with explicit overlap, lease, and absence rules.

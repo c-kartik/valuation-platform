@@ -178,7 +178,17 @@ ambiguous / 27 methodology-blocked / 42 not-comparable across 3,468 states.
 No new direct concept is approved. See the
 [implementation results](operating-income-derivation-policy-design.md#wave-16-implementation-and-verified-results).
 
-The next milestone is separate business/perimeter research for the ten CVX/GE
-periods. Their Wave 13 classifications and missing production states remain
-unchanged; labels, segment facts and numerical residuals still cannot establish
-consolidated Operating Income.
+Wave 17 completes the separate
+[CVX/GE business-perimeter research](operating-income-cvx-ge-perimeter.md)
+for all ten frozen periods. It reaches NO-GO: five CVX periods are
+`BUSINESS_PERIMETER_UNRESOLVED`; five GE periods require specialized treatment
+of the consolidated industrial/insurance perimeter, and the GE common
+five-period series is not comparable after portfolio and accounting changes.
+These are follow-up research classifications, not replacements for this
+historical Wave 13 direct-concept inventory or production-state changes.
+Safe additional coverage is zero; all ten remain missing. Labels, segment
+facts and numerical residuals still cannot establish consolidated Operating
+Income. The recommended next milestone is exact selected-filing D&A
+concept/component evidence inventory for the 94 missing periods, while any
+CVX affiliate policy or GE industrial carve-out/recast remains a separate,
+unapproved methodology research path.

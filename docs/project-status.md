@@ -317,6 +317,25 @@ the prior validated corpus. Pretax and Reported ETR each remain 167 resolved /
 37 missing / 0 ambiguous. Compile checks and `git diff --check` pass.
 See the [Wave 16 evidence/results record](operating-income-derivation-policy-design.md#wave-16-implementation-and-verified-results).
 
+Phase 1H.4 Wave 17 completes the
+[CVX/GE business-perimeter research](operating-income-cvx-ge-perimeter.md)
+for exactly ten frozen selected filings (five per issuer). All five CVX periods
+are `BUSINESS_PERIMETER_UNRESOLVED`: mixed-tax equity-affiliate earnings and
+incomplete Other/benefit allocations do not establish a complete consolidated
+operating equation. All five GE periods are research-classified
+`SPECIALIZED_METHODOLOGY_REQUIRED` for the mixed industrial/insurance
+consolidated perimeter; the selected five-period series is also not comparable
+on a common continuing-business basis after HealthCare/Vernova separations and
+insurance-accounting changes. Segment profit is not a substitute.
+
+The decision is NO-GO, with zero safe additional coverage. These research
+classifications do not change production states or reclassify universe
+execution: all ten remain missing, 43 generic issuers execute and seven are
+skipped. Operating Income remains 194 resolved / 10 missing / 0 ambiguous;
+aggregate states remain 1,880 / 1,508 / 11 / 27 / 42 across 3,468 states.
+Only additional selected-filing notes were retrieved; no production code,
+tests, policies, full test suite or corpus were changed or run.
+
 ## Completed
 
 - Completed Milestone 0 — development environment and repository setup
@@ -750,11 +769,13 @@ See the [Wave 16 evidence/results record](operating-income-derivation-policy-des
 
 ## Next Step
 
-Research the ten remaining CVX/GE Operating Income periods separately, using
-exact selected-filing business/perimeter and consolidated-scope evidence.
-Neither segment-profit substitution nor an unreviewed component derivation is
-approved. Preserve the completed 25-entry Operating Income policy and all
-typed missing controls while investigating those boundaries. The
+Research the exact selected-filing D&A concepts and complete component
+patterns for the 94 missing D&A periods in the failure-taxonomy backlog.
+Require completeness, scope and non-overlap evidence before any policy design.
+Wave 17 leaves the ten CVX/GE Operating Income gaps unresolved; dedicated CVX
+energy/affiliate and GE industrial/insurance carve-out or common-perimeter
+recast research are separate, unapproved methodology paths. Preserve the
+completed 25-entry Operating Income policy and all typed missing controls. The
 Phase 2A assumptions model is implemented, but
 forecast, FCFF, DCF, equity-bridge, per-share, reverse-DCF, scenario, and
 sensitivity work is intentionally paused through Phase 1H.
@@ -803,8 +824,11 @@ sensitivity work is intentionally paused through Phase 1H.
    provenance, serialization, Operating Tax, and regression design while
    keeping CVX and GE as negative controls. Wave 16 implements and validates
    all 25 exact derivations, retaining all 169 direct results and reducing
-   Operating Income gaps to the ten CVX/GE controls. Next, research those
-   business/perimeter boundaries separately, then continue with other
+   Operating Income gaps to the ten CVX/GE controls. Wave 17 completes their
+   business/perimeter research with NO-GO and zero additional coverage: CVX
+   remains unresolved, GE requires specialized mixed-business treatment and
+   has no common five-period continuing perimeter. Next, inventory the 94
+   missing D&A periods, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital
