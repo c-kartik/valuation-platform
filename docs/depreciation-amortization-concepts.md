@@ -359,8 +359,16 @@ freshly reviewed denials; AMD's five extension periods stay separately gated.
 Current production remains Wave 20 D&A **115 / 89 / 0** and aggregate
 **1,885 / 1,503 / 11 / 27 / 42 = 3,468**; the Wave 18 counts above are historical.
 
-Next: targeted TXN 2021–2023 completeness/expense-scope closure, not
-implementation; preserve the five exact Visa entries and all 89 no-entry controls.
+Wave 22's [targeted TXN follow-up](depreciation-amortization-component-derivation-design.md#wave-22--targeted-txn-completeness-follow-up)
+confirms reported software/PP&E separation, exact annual component signs and
+explicit 2022/2023 intangible zeros. All three remain further research: factory
+expense/inventory/preproduction containment and 2023 incentive netting lack a
+complete bridge. No equation is approved; matrix totals remain 0/19/14 and safe
+additional coverage zero. No other issuer or AMD period is reviewed anew.
+
+Next: explicit TXN manufacturing D&A expense-perimeter and operating-NWC timing
+methodology review, not implementation; preserve the five exact Visa entries
+and all 89 no-entry controls.
 No generic combined-concept fallback, residual, lease adjustment or automatic
 scope approval is justified. Component
 completeness research for the 33 derivation and five AMD extension periods is a

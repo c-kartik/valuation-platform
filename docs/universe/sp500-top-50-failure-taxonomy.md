@@ -461,6 +461,13 @@ inventory or corpus was repeated. AMD's five extensions remain separately
 gated, the other 61 inventory periods are not new reviewed denials, and all
 five Visa approvals remain. Safe additional coverage is zero. Next is targeted
 TXN 2021–2023 completeness/expense-scope closure, not a generic sum or policy.
+Wave 22 completes that [targeted evidence follow-up](../depreciation-amortization-component-derivation-design.md#wave-22--targeted-txn-completeness-follow-up):
+software/PP&E asset separation and annual signs/explicit zeros are supported;
+all three remain further research because expense/inventory/preproduction
+allocation and the 2023 incentive netting bridge are incomplete. No equation,
+policy or production state changes. The 33-period disposition remains 0/19/14,
+with zero safe new coverage. Next is an explicit TXN manufacturing D&A
+expense-perimeter and operating-NWC timing methodology review.
 
 ### Pretax Income
 
@@ -704,7 +711,7 @@ issuers have one post-smoke classification.
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
-| 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 21 NO-GO:** 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Target TXN 2021–2023 completeness/expense-scope closure; AMD and lease/impairment/accretion boundaries remain separately gated | No additional approval | High |
+| 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 22 NO-GO:** TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Explicit TXN manufacturing expense-perimeter/inventory timing and incentive-netting review; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
@@ -745,8 +752,10 @@ issuers have one post-smoke classification.
 3. **Core FCFF flows:** Wave 18 completes the exact 94-period D&A inventory.
    Wave 19 freezes scoped acceptance for five exact Visa entries and 89
    unapproved controls. Wave 20 implements that foundation; Wave 21 reviews
-   all 33 derivation periods with no approved equation. Next close TXN
-   2021–2023 completeness/expense-scope evidence. Keep issuer-extension and
+   all 33 derivation periods with no approved equation. Wave 22 retains TXN
+   2021–2023 unresolved after targeted evidence research. Next review its
+   manufacturing expense perimeter, inventory timing and incentive netting.
+   Keep issuer-extension and
    lease-perimeter research separately gated.
    Then investigate Capex
    variants. CVX/GE mixed-business designs remain separate. Approve only

@@ -309,7 +309,7 @@ every confirming occurrence, reviewed selection/exclusion and scope proof,
 exact coefficients and arithmetic through normalized/output/serialization
 provenance; supporting notes never silently become operands.
 
-Smallest next milestone: **TXN 2021–2023 targeted completeness/expense-scope
+Wave 21's next milestone was **TXN 2021–2023 targeted completeness/expense-scope
 closure**, not implementation. Use its explicitly reported three categories
 and zero observations to prove software/PP&E disjointness, exhaustive finite-
 asset coverage and manufacturing/inventory plus grant-netting alignment to
@@ -337,3 +337,108 @@ Production counts are carried forward, **not remeasured**: D&A **115 resolved /
 204 annual periods and other measure states remain unchanged. No code,
 tests, policies, schemas, source inventory or corpus artifacts change. No
 tests or corpus rerun. Forecast/FCFF/DCF remains paused through Phase 1H.6.
+
+## Wave 22 — targeted TXN completeness follow-up
+
+**NO-GO for implementation; zero safe new periods.** The three frozen periods
+remain `FURTHER_RESEARCH_REQUIRED`. The matrix's `targeted_followup.periods`
+records exact identities, original occurrence ordinals/context/unit/raw values,
+new selected-filing evidence digests and submitted calculation relationships.
+Its original 33 rows are unchanged: **0 approved / 19 further research /
+14 methodology-blocked**. Other issuers, TXN 2024–2025 and AMD are outside
+this follow-up; five Visa approvals and production remain unchanged.
+
+| Annual period | Frozen accession | Depreciation / acquisition-intangible / software amortization, USD millions | Decision and precise remaining gap |
+| --- | --- | --- | --- |
+| 2021-01-01–2021-12-31 | 0000097476-22-000009 | 755 / 142 / 57 | Further research: per-unit factory depreciation and normal-capacity inventory costing do not disclose current-expense versus inventory containment; 104m Lehi integration/preproduction charges have no exhaustive qualifying-D&A split. |
+| 2022-01-01–2022-12-31 | 0000097476-23-000007 | 925 / explicit 0 / 54 | Further research: same expense/inventory gap; 257m Lehi preproduction charges transitioned into cost of revenue when production began in December 2022. The 395m CHIPS receivable reduces asset basis, not a disclosed annual depreciation operand. |
+| 2023-01-01–2023-12-31 | 0000097476-24-000007 | 1,175 / explicit 0 / 63 | Further research: same factory/inventory allocation gap; cost of revenue benefited from a 45m CHIPS-related depreciation reduction, without an explicit containment/netting bridge to the 1,175m cash-flow depreciation line. |
+
+### What the additional evidence establishes
+
+All three filings consolidate subsidiaries and eliminate intercompany items.
+The selected annual nondimensional facts use CIK 0000097476, exact calendar
+dates, non-nil numeric values and exact ISO 4217 USD (`usd`); decimals are -6.
+Each component has one eligible current-year occurrence. Matrix records retain
+the full taxonomy namespace and original context IDs: 2021 US-GAAP
+2021-01-31, 2022 US-GAAP 2022, 2023 US-GAAP 2023. Occurrence ordinals for
+depreciation/intangible/software are 224/227/230, 238/241/244 and 240/243/246.
+The acquisition-income counterparts are 59, 61 and 63. Their 2022/2023 zeros
+are actual numeric observations, not inferred from missing facts or dashes.
+
+The accounting note specifies straight-line PP&E depreciation, acquisition
+intangibles amortization and capitalized software-license amortization over
+the license period. Software licenses appear as a separate asset (85m, 152m,
+223m), outside PP&E net (5,141m, 6,876m, 9,999m). Submitted balance-sheet
+calculation arcs separately include those assets. This supports reported
+asset-category separation, closing the earlier software/PP&E containment gap.
+It does not by itself prove exhaustive recurring operating-expense coverage.
+
+The cash-flow calculation role gives `Depreciation`,
+`AmortizationOfIntangibleAssets` and `CapitalizedComputerSoftwareAmortization1`
+separate +1 coefficients. The income calculation gives
+`AmortizationOfAcquisitionCosts` -1 into operating income; its 142m/0/0 matches
+the acquisition-intangible category and is supporting evidence, **not a fourth
+operand**. Different QNames are not collapsed as duplicate facts. Original
+annual contexts, unit links, values and all confirming support occurrences are
+retained; instant software/PP&E balances and incentive receivables are not
+annual D&A operands. No D&A equation, derived total or rounding tolerance is
+approved. Calculation relationships establish reported signs, not economic
+completeness. No residual reconstruction is used.
+
+### Why scope remains unresolved
+
+Note 1 says centralized manufacturing costs, including depreciation, are
+allocated to segments per unit; depreciation is consequently not separately
+identifiable in segment results. Note 2 uses normal installed factory capacity
+for inventory costing and expenses underutilization as incurred. Neither note
+quantifies how the cash-flow categories align with current operating expense,
+inventory deferral/release or preproduction costs. Lehi's 2021 expected start
+date does not override the 2022 filing's actual December 2022 start.
+
+The 2023 government-incentive note identifies a 1,360m receivable and asset-
+basis reduction plus a 45m reduction of depreciation expense in cost of
+revenue. Neither 1,360m nor 2022's 395m is annual D&A. Do not add/subtract 45m
+without proving its containment in the reported depreciation operand.
+Previously reviewed leases remain separately gated; operating lease cost is
+not automatically added. Impairment policies and goodwill reviews do not
+prove absence of all PP&E impairment or accelerated/preproduction charges.
+No accretion or additional qualifying amortization is newly established;
+absence of such a caption is not proof of zero or exhaustive coverage.
+
+### Selected evidence and provenance
+
+Existing R8 cash-flow, R12 accounting and R19 lease evidence is reused. Only
+the following selected-file material was added for these gaps; all nine URLs
+returned HTTP 200. SHA-256 fingerprints and report roles are in the matrix.
+Primary filing locations are Note 1 (segment allocation), Note 2 (asset,
+inventory and incentive policies), balance-sheet software asset caption and
+MD&A (Lehi timing/acquisition charges). R21 supplies supplemental asset,
+integration-charge and other-income/expense detail. R3 confirms income signs.
+
+| Period | Income | Supplemental note | Primary selected 10-K |
+| --- | --- | --- | --- |
+| 2021 | [R3](https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/R3.htm) | [R21](https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/R21.htm) | [2021 10-K](https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231.htm) |
+| 2022 | [R3](https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/R3.htm) | [R21](https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/R21.htm) | [2022 10-K](https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231.htm) |
+| 2023 | [R3](https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/R3.htm) | [R21](https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/R21.htm) | [2023 10-K](https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231.htm) |
+
+The cached selected instances and calculation linkbases were inspected without
+changing parsing or production. Annual component facts and distinct asset
+calculation paths are reproducible from their original source records; no
+statement arithmetic is offered as proof of primitive completeness.
+
+### Decision, validation and smallest next milestone
+
+Three exact identities reconciled to the frozen inventory; original 33 rows,
+classification totals and null equations are preserved. New evidence is tied
+to each selected directory; local documentation links and `git diff --check`
+are validated. No tests or corpus rerun; production counts above are carried
+forward, not remeasured.
+
+Next: **explicit TXN manufacturing D&A expense-perimeter and operating-NWC
+timing methodology review**, limited to these three periods. Establish whether
+and how current EBIT expense, capitalized/inventory depreciation and incentive
+netting can meet the existing primitive without double counting. This requires
+an explicit reviewed methodology decision or missing quantitative disclosure,
+not another concept inventory or an automatic three-component sum. Until then,
+all three remain unresolved and production implementation is NO-GO.

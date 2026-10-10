@@ -828,11 +828,18 @@ AMD's five extension periods remain outside this pass. Safe new coverage is zero
 
 ## Next Step
 
-Complete targeted TXN 2021–2023 D&A completeness/expense-scope closure after
-[Wave 21's NO-GO](depreciation-amortization-component-derivation-design.md#implementation-boundary-and-next-milestone):
-prove software/PP&E disjointness, exhaustive finite-asset coverage and
-manufacturing/inventory plus grant-netting alignment before approving an
-exact-accession equation. TXN 2024–2025 absent intangible operands are not
+Wave 22 completes [targeted TXN 2021–2023 evidence research](depreciation-amortization-component-derivation-design.md#wave-22--targeted-txn-completeness-follow-up).
+Reported software/PP&E asset separation, signs and explicit zero operands are
+confirmed, but all three remain further research: no exhaustive current-expense
+versus inventory/preproduction bridge, and no explicit 2023 incentive netting
+bridge. Safe new coverage is zero; the 33-period matrix remains 0 approved /
+19 further research / 14 methodology-blocked. Production remains D&A 115/89/0
+and aggregate 1,885/1,503/11/27/42 = 3,468; no tests or corpus rerun.
+
+Next undertake an explicit TXN manufacturing D&A expense-perimeter and
+operating-NWC timing methodology review, limited to these three periods,
+before seeking an exact-accession equation. Do not silently broaden the
+primitive or implement a three-component sum. TXN 2024–2025 absent intangible operands are not
 zero. Preserve Wave 20's five Visa entries and all 89 unapproved controls;
 no generic sum, cash-flow fallback or isolated lease adjustment. The 14
 methodology-gated proposals, remaining research periods and five AMD extension
@@ -898,7 +905,9 @@ sensitivity work is intentionally paused through Phase 1H.
    their curated scope-equivalence acceptance design; Wave 20 implements only
    those five entries with 89 unchanged controls. Wave 21 completes the 33-period
    component review with no approved equation (19 research / 14 methodology-gated).
-   Next close TXN 2021–2023 completeness/expense-scope evidence, then continue with other
+   Wave 22 closes reported TXN 2021–2023 asset-separation/sign questions but
+   retains all three unresolved. Next review manufacturing expense-perimeter,
+   inventory timing and incentive netting explicitly, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital

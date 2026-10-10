@@ -28,6 +28,1836 @@
   "other_inventory_rows_not_reviewed_in_this_pass": 61,
   "amd_extension_rows_separately_gated": 5,
   "visa_approved_entries_preserved": 5,
+  "targeted_followup": {
+    "research_version": "wave22-txn-completeness-v1",
+    "starting_head": "215cf1fb69cd05d3645ec1f76088644feba5cb6f",
+    "reviewed_periods": 3,
+    "approved": 0,
+    "further_research_required": 3,
+    "methodology_blocked": 0,
+    "safe_new_coverage": 0,
+    "decision": "NO-GO",
+    "all_other_30_rows_unchanged": true,
+    "next_milestone": "Explicit TXN manufacturing D&A expense-perimeter and operating-NWC timing methodology review; no implementation or automatic three-component sum.",
+    "periods": [
+      {
+        "ticker": "TXN",
+        "cik": 97476,
+        "accession": "0000097476-22-000009",
+        "annual_start": "2021-01-01",
+        "annual_end": "2021-12-31",
+        "research_version": "wave22-txn-completeness-v1",
+        "decision": "FURTHER_RESEARCH_REQUIRED",
+        "approved_equation": null,
+        "safe_new_coverage": 0,
+        "new_selected_filing_evidence": [
+          {
+            "ticker": "TXN",
+            "accession": "0000097476-22-000009",
+            "annual_start": "2021-01-01",
+            "annual_end": "2021-12-31",
+            "report": {
+              "Role": "http://www.ti.com/role/ConsolidatedStatementsofIncome",
+              "ShortName": "Consolidated Statements of Income",
+              "LongName": "1001003 - Statement - Consolidated Statements of Income",
+              "MenuCategory": "Uncategorized",
+              "HtmlFileName": "R3.htm"
+            },
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/R3.htm",
+            "sha256": "4f86f6e683f166d971e37c54e92bbb1af2b498621672e7424f82be237b69dcb3",
+            "status": "200"
+          },
+          {
+            "ticker": "TXN",
+            "accession": "0000097476-22-000009",
+            "annual_start": "2021-01-01",
+            "annual_end": "2021-12-31",
+            "report": {
+              "Role": "http://www.ti.com/role/Supplementalfinancialinformation",
+              "ShortName": "Supplemental financial information",
+              "LongName": "2162111 - Disclosure - Supplemental financial information",
+              "MenuCategory": "Notes",
+              "HtmlFileName": "R21.htm"
+            },
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/R21.htm",
+            "sha256": "19dbce3ba6a1fb4b365c9a155a23db4cec40b5d200065f60c3cb307f6d897dc7",
+            "status": "200"
+          },
+          {
+            "accession": "0000097476-22-000009",
+            "annual_end": "2021-12-31",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231.htm",
+            "sha256": "d74354ab395519b4f54cad059dbe55a2d0275aa9407e2b4fca92193982946118",
+            "status": "200"
+          }
+        ],
+        "reviewed_locations": [
+          "R3 current consolidated income column",
+          "R21 supplemental financial information: PP&E, acquisition-related integration charges and other income/expense",
+          "Primary filing Note 1 segment cost allocation and asset presentation; Note 2 inventory, asset and government-incentive policies; MD&A acquisition charges and Lehi production timing"
+        ],
+        "closed_questions": [
+          "Exact annual nondimensional CIK/USD/non-nil component facts and all original occurrences are confirmed; acquisition amortization zeros in 2022/2023 are explicit observations.",
+          "Capitalized software licenses are a separate balance-sheet asset outside PP&E; software and acquisition-related intangible amortization are separate cash-flow lines with +1 calculation weights.",
+          "Income-statement acquisition amortization has -1 operating-income calculation weight and confirms the cash-flow intangible category; it is not an additional operand."
+        ],
+        "remaining_blockers": [
+          "Factory depreciation is allocated per unit and normal-capacity inventory costing defers costs; no quantitative expense-versus-inventory bridge is disclosed. Lehi integration/preproduction charges of USD 104m have no exhaustive qualifying-D&A split.",
+          "Separate reported asset and cash-flow categories do not establish exhaustive recurring operating expense coverage or exclude every capitalized/preproduction or impairment item. No residual, numerical equality or absence is accepted as completeness proof."
+        ],
+        "supporting_facts_not_approved_operands": [
+          {
+            "ordinal": 59,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "AmortizationOfAcquisitionCosts",
+            "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "142000000",
+            "numeric_value": "142000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 151,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+            "start": null,
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "7858000000",
+            "numeric_value": "7858000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 153,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+            "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+            "start": null,
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "2717000000",
+            "numeric_value": "2717000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 155,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+            "start": null,
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "5141000000",
+            "numeric_value": "5141000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 161,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "CapitalizedComputerSoftwareNet",
+            "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+            "start": null,
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "85000000",
+            "numeric_value": "85000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 224,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "Depreciation",
+            "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "755000000",
+            "numeric_value": "755000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 227,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "AmortizationOfIntangibleAssets",
+            "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "142000000",
+            "numeric_value": "142000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 230,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "CapitalizedComputerSoftwareAmortization1",
+            "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "57000000",
+            "numeric_value": "57000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 245,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "IncreaseDecreaseInInventories",
+            "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "-45000000",
+            "numeric_value": "-45000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "ib3834142227a4c99b4dac39e5bf32290_D20210101-20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 430,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+            "start": null,
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "5141000000",
+            "numeric_value": "5141000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 1532,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+            "start": null,
+            "end": "2021-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "7858000000",
+            "numeric_value": "7858000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-22-000009",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_htm.xml",
+            "context": {
+              "context_id": "iffb762d97a8744d9a9493aa89e2de9a6_I20211231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2021-12-31",
+              "dimensions": []
+            }
+          }
+        ],
+        "submitted_calculation_evidence": {
+          "accession": "0000097476-22-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml",
+          "sha256": "51bc606a19ba0524f8dba9e741dc411f5f43d194ea72c58ea3f6a654e82448b9",
+          "relationships": [
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofIncome",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_OperatingIncomeLoss",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_AmortizationOfAcquisitionCosts",
+              "weight": "-1.0",
+              "order": "4",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedBalanceSheets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_PropertyPlantAndEquipmentNet",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+              "weight": "-1.0",
+              "order": "2",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedBalanceSheets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_Assets",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_PropertyPlantAndEquipmentNet",
+              "weight": "1.0",
+              "order": "2",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedBalanceSheets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_Assets",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_CapitalizedComputerSoftwareNet",
+              "weight": "1.0",
+              "order": "4",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_Depreciation",
+              "weight": "1.0",
+              "order": "2",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_AmortizationOfIntangibleAssets",
+              "weight": "1.0",
+              "order": "3",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_CapitalizedComputerSoftwareAmortization1",
+              "weight": "1.0",
+              "order": "4",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd#us-gaap_IncreaseDecreaseInInventories",
+              "weight": "-1.0",
+              "order": "9",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747622000009/txn-20211231_cal.xml"
+            }
+          ]
+        },
+        "reconciliation_checks": {
+          "software_asset_separate_from_ppe": true,
+          "cashflow_component_weights": [
+            1,
+            1,
+            1
+          ],
+          "income_acquisition_amortization_weight": -1,
+          "expense_inventory_and_preproduction_alignment_proven": false,
+          "exhaustive_primitive_coverage_proven": false,
+          "approved_equation_recalculation": "not applicable: no equation approved",
+          "rounding_tolerance_approved": null
+        }
+      },
+      {
+        "ticker": "TXN",
+        "cik": 97476,
+        "accession": "0000097476-23-000007",
+        "annual_start": "2022-01-01",
+        "annual_end": "2022-12-31",
+        "research_version": "wave22-txn-completeness-v1",
+        "decision": "FURTHER_RESEARCH_REQUIRED",
+        "approved_equation": null,
+        "safe_new_coverage": 0,
+        "new_selected_filing_evidence": [
+          {
+            "ticker": "TXN",
+            "accession": "0000097476-23-000007",
+            "annual_start": "2022-01-01",
+            "annual_end": "2022-12-31",
+            "report": {
+              "Role": "http://www.ti.com/role/ConsolidatedStatementsofIncome",
+              "ShortName": "Consolidated Statements of Income",
+              "LongName": "0000003 - Statement - Consolidated Statements of Income",
+              "MenuCategory": "Statements",
+              "HtmlFileName": "R3.htm"
+            },
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/R3.htm",
+            "sha256": "e29cc8d13f77a0ee6fe3cee40c2d748014351eafae89c2974e3ad60f14950b15",
+            "status": "200"
+          },
+          {
+            "ticker": "TXN",
+            "accession": "0000097476-23-000007",
+            "annual_start": "2022-01-01",
+            "annual_end": "2022-12-31",
+            "report": {
+              "Role": "http://www.ti.com/role/Supplementalfinancialinformation",
+              "ShortName": "Supplemental financial information",
+              "LongName": "0000021 - Disclosure - Supplemental financial information",
+              "MenuCategory": "Notes",
+              "HtmlFileName": "R21.htm"
+            },
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/R21.htm",
+            "sha256": "7bdd8b7b57c3200bde8dc042c541fa0c58c1729d46982eaf53f6580576955221",
+            "status": "200"
+          },
+          {
+            "accession": "0000097476-23-000007",
+            "annual_end": "2022-12-31",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231.htm",
+            "sha256": "b753c19ef45e63d6a04ee9ef604fbf9ebff7fd9345a20b962b56ca18329e3bf5",
+            "status": "200"
+          }
+        ],
+        "reviewed_locations": [
+          "R3 current consolidated income column",
+          "R21 supplemental financial information: PP&E, acquisition-related integration charges and other income/expense",
+          "Primary filing Note 1 segment cost allocation and asset presentation; Note 2 inventory, asset and government-incentive policies; MD&A acquisition charges and Lehi production timing"
+        ],
+        "closed_questions": [
+          "Exact annual nondimensional CIK/USD/non-nil component facts and all original occurrences are confirmed; acquisition amortization zeros in 2022/2023 are explicit observations.",
+          "Capitalized software licenses are a separate balance-sheet asset outside PP&E; software and acquisition-related intangible amortization are separate cash-flow lines with +1 calculation weights.",
+          "Income-statement acquisition amortization has -1 operating-income calculation weight and confirms the cash-flow intangible category; it is not an additional operand."
+        ],
+        "remaining_blockers": [
+          "Factory depreciation is allocated per unit and normal-capacity inventory costing defers costs; no quantitative expense-versus-inventory bridge is disclosed. Lehi integration/preproduction charges of USD 257m moved into cost of revenue when production began in December 2022; qualifying-D&A containment is unquantified. USD 395m CHIPS receivable reduces asset basis, not a disclosed annual depreciation operand.",
+          "Separate reported asset and cash-flow categories do not establish exhaustive recurring operating expense coverage or exclude every capitalized/preproduction or impairment item. No residual, numerical equality or absence is accepted as completeness proof."
+        ],
+        "supporting_facts_not_approved_operands": [
+          {
+            "ordinal": 61,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "AmortizationOfAcquisitionCosts",
+            "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "0",
+            "numeric_value": "0",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 165,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+            "start": null,
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "9950000000",
+            "numeric_value": "9950000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 167,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+            "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+            "start": null,
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "3074000000",
+            "numeric_value": "3074000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 169,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+            "start": null,
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "6876000000",
+            "numeric_value": "6876000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 175,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "CapitalizedComputerSoftwareNet",
+            "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+            "start": null,
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "152000000",
+            "numeric_value": "152000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 238,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "Depreciation",
+            "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "925000000",
+            "numeric_value": "925000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 241,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "AmortizationOfIntangibleAssets",
+            "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "0",
+            "numeric_value": "0",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 244,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "CapitalizedComputerSoftwareAmortization1",
+            "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "54000000",
+            "numeric_value": "54000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 259,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "IncreaseDecreaseInInventories",
+            "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "847000000",
+            "numeric_value": "847000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "i90373ef003a04577a849b41320023514_D20220101-20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 512,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+            "start": null,
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "6876000000",
+            "numeric_value": "6876000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 570,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "GovernmentAssistanceAmountCumulativeNoncurrent",
+            "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+            "start": null,
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "395000000",
+            "numeric_value": "395000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 1604,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+            "start": null,
+            "end": "2022-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "9950000000",
+            "numeric_value": "9950000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-23-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_htm.xml",
+            "context": {
+              "context_id": "if071fc5651924854b4c8a93913b7cd0e_I20221231",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2022-12-31",
+              "dimensions": []
+            }
+          }
+        ],
+        "submitted_calculation_evidence": {
+          "accession": "0000097476-23-000007",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml",
+          "sha256": "a5b9bf964456ccf8eea61ccd2cabf158ceffb396bad34f37e2d8e447fa5af4d4",
+          "relationships": [
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofIncome",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_OperatingIncomeLoss",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AmortizationOfAcquisitionCosts",
+              "weight": "-1.0",
+              "order": "4",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedBalanceSheets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentNet",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+              "weight": "-1.0",
+              "order": "2",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedBalanceSheets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Assets",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_PropertyPlantAndEquipmentNet",
+              "weight": "1.0",
+              "order": "2",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedBalanceSheets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Assets",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CapitalizedComputerSoftwareNet",
+              "weight": "1.0",
+              "order": "4",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_Depreciation",
+              "weight": "1.0",
+              "order": "2",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_AmortizationOfIntangibleAssets",
+              "weight": "1.0",
+              "order": "3",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_CapitalizedComputerSoftwareAmortization1",
+              "weight": "1.0",
+              "order": "4",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd#us-gaap_IncreaseDecreaseInInventories",
+              "weight": "-1.0",
+              "order": "9",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747623000007/txn-20221231_cal.xml"
+            }
+          ]
+        },
+        "reconciliation_checks": {
+          "software_asset_separate_from_ppe": true,
+          "cashflow_component_weights": [
+            1,
+            1,
+            1
+          ],
+          "income_acquisition_amortization_weight": -1,
+          "expense_inventory_and_preproduction_alignment_proven": false,
+          "exhaustive_primitive_coverage_proven": false,
+          "approved_equation_recalculation": "not applicable: no equation approved",
+          "rounding_tolerance_approved": null
+        }
+      },
+      {
+        "ticker": "TXN",
+        "cik": 97476,
+        "accession": "0000097476-24-000007",
+        "annual_start": "2023-01-01",
+        "annual_end": "2023-12-31",
+        "research_version": "wave22-txn-completeness-v1",
+        "decision": "FURTHER_RESEARCH_REQUIRED",
+        "approved_equation": null,
+        "safe_new_coverage": 0,
+        "new_selected_filing_evidence": [
+          {
+            "ticker": "TXN",
+            "accession": "0000097476-24-000007",
+            "annual_start": "2023-01-01",
+            "annual_end": "2023-12-31",
+            "report": {
+              "Role": "http://www.ti.com/role/ConsolidatedStatementsofIncome",
+              "ShortName": "Consolidated Statements of Income",
+              "LongName": "0000003 - Statement - Consolidated Statements of Income",
+              "MenuCategory": "Statements",
+              "HtmlFileName": "R3.htm"
+            },
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/R3.htm",
+            "sha256": "9451b69fba38530b2d7d4c7f8e0a102f154498190f9ece6c09b5569e4dcad94b",
+            "status": "200"
+          },
+          {
+            "ticker": "TXN",
+            "accession": "0000097476-24-000007",
+            "annual_start": "2023-01-01",
+            "annual_end": "2023-12-31",
+            "report": {
+              "Role": "http://www.ti.com/role/Supplementalfinancialinformation",
+              "ShortName": "Supplemental financial information",
+              "LongName": "0000021 - Disclosure - Supplemental financial information",
+              "MenuCategory": "Notes",
+              "HtmlFileName": "R21.htm"
+            },
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/R21.htm",
+            "sha256": "0fa52318bfcb23c71616d80ad9659121163113b70fcb52241d713d114534c403",
+            "status": "200"
+          },
+          {
+            "accession": "0000097476-24-000007",
+            "annual_end": "2023-12-31",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231.htm",
+            "sha256": "360c81fa466c22be9a2b5388cca101bebe230a7fe17e2f49fe702860c80981a3",
+            "status": "200"
+          }
+        ],
+        "reviewed_locations": [
+          "R3 current consolidated income column",
+          "R21 supplemental financial information: PP&E, acquisition-related integration charges and other income/expense",
+          "Primary filing Note 1 segment cost allocation and asset presentation; Note 2 inventory, asset and government-incentive policies; MD&A acquisition charges and Lehi production timing"
+        ],
+        "closed_questions": [
+          "Exact annual nondimensional CIK/USD/non-nil component facts and all original occurrences are confirmed; acquisition amortization zeros in 2022/2023 are explicit observations.",
+          "Capitalized software licenses are a separate balance-sheet asset outside PP&E; software and acquisition-related intangible amortization are separate cash-flow lines with +1 calculation weights.",
+          "Income-statement acquisition amortization has -1 operating-income calculation weight and confirms the cash-flow intangible category; it is not an additional operand."
+        ],
+        "remaining_blockers": [
+          "Factory depreciation is allocated per unit and normal-capacity inventory costing defers costs; no quantitative expense-versus-inventory bridge is disclosed. Cost of revenue benefited from USD 45m CHIPS-related depreciation reduction; its containment/netting in the USD 1175m cash-flow depreciation line is not explicitly reconciled. USD 1360m incentive receivable is an asset-basis amount, not annual D&A.",
+          "Separate reported asset and cash-flow categories do not establish exhaustive recurring operating expense coverage or exclude every capitalized/preproduction or impairment item. No residual, numerical equality or absence is accepted as completeness proof."
+        ],
+        "supporting_facts_not_approved_operands": [
+          {
+            "ordinal": 63,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "AmortizationOfAcquisitionCosts",
+            "context_id": "c-1",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "0",
+            "numeric_value": "0",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-1",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 167,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "13268000000",
+            "numeric_value": "13268000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 169,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "3269000000",
+            "numeric_value": "3269000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 171,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "9999000000",
+            "numeric_value": "9999000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 177,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "CapitalizedComputerSoftwareNet",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "223000000",
+            "numeric_value": "223000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 240,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "Depreciation",
+            "context_id": "c-1",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "1175000000",
+            "numeric_value": "1175000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-1",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 243,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "AmortizationOfIntangibleAssets",
+            "context_id": "c-1",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "0",
+            "numeric_value": "0",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-1",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 246,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "CapitalizedComputerSoftwareAmortization1",
+            "context_id": "c-1",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "63000000",
+            "numeric_value": "63000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-1",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 261,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "IncreaseDecreaseInInventories",
+            "context_id": "c-1",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "1242000000",
+            "numeric_value": "1242000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-1",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 471,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "9999000000",
+            "numeric_value": "9999000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 526,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "GovernmentAssistanceAmountCumulative",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "1360000000",
+            "numeric_value": "1360000000",
+            "decimals": "-7",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 527,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "GovernmentAssistanceAmountCumulativeCurrent",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "497000000",
+            "numeric_value": "497000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 528,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "GovernmentAssistanceAmountCumulativeNoncurrent",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "859000000",
+            "numeric_value": "859000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 529,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "GovernmentAssistanceAmount",
+            "context_id": "c-1",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "45000000",
+            "numeric_value": "45000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-1",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 1579,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "GovernmentAssistanceAmountCumulativeCurrent",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "497000000",
+            "numeric_value": "497000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 1596,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "13268000000",
+            "numeric_value": "13268000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          },
+          {
+            "ordinal": 1611,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "concept": "GovernmentAssistanceAmountCumulativeNoncurrent",
+            "context_id": "c-6",
+            "start": null,
+            "end": "2023-12-31",
+            "dimensions": [],
+            "unit_ref": "usd",
+            "unit": {
+              "unit_id": "usd",
+              "numerator_measures": [
+                {
+                  "namespace": "http://www.xbrl.org/2003/iso4217",
+                  "local_name": "USD"
+                }
+              ],
+              "denominator_measures": []
+            },
+            "raw_value": "859000000",
+            "numeric_value": "859000000",
+            "decimals": "-6",
+            "is_nil": false,
+            "accession_number": "0000097476-24-000007",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_htm.xml",
+            "context": {
+              "context_id": "c-6",
+              "entity_identifier_scheme": "http://www.sec.gov/CIK",
+              "entity_identifier": "0000097476",
+              "start": null,
+              "end": "2023-12-31",
+              "dimensions": []
+            }
+          }
+        ],
+        "submitted_calculation_evidence": {
+          "accession": "0000097476-24-000007",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml",
+          "sha256": "5e00b02d22b5d8405005a01a841ae8c08fceec3a34a207e269c94cec55b7956e",
+          "relationships": [
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofIncome",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_OperatingIncomeLoss",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_AmortizationOfAcquisitionCosts",
+              "weight": "-1.0",
+              "order": "4",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedBalanceSheets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_Assets",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_PropertyPlantAndEquipmentNet",
+              "weight": "1.0",
+              "order": "2",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedBalanceSheets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_Assets",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_CapitalizedComputerSoftwareNet",
+              "weight": "1.0",
+              "order": "4",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedBalanceSheets",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_PropertyPlantAndEquipmentNet",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+              "weight": "-1.0",
+              "order": "2",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_Depreciation",
+              "weight": "1.0",
+              "order": "2",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_AmortizationOfIntangibleAssets",
+              "weight": "1.0",
+              "order": "3",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_CapitalizedComputerSoftwareAmortization1",
+              "weight": "1.0",
+              "order": "4",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml"
+            },
+            {
+              "role": "http://www.ti.com/role/ConsolidatedStatementsofCashFlows",
+              "parent_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities",
+              "child_href": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd#us-gaap_IncreaseDecreaseInInventories",
+              "weight": "-1.0",
+              "order": "9",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/txn-20231231_cal.xml"
+            }
+          ]
+        },
+        "reconciliation_checks": {
+          "software_asset_separate_from_ppe": true,
+          "cashflow_component_weights": [
+            1,
+            1,
+            1
+          ],
+          "income_acquisition_amortization_weight": -1,
+          "expense_inventory_and_preproduction_alignment_proven": false,
+          "exhaustive_primitive_coverage_proven": false,
+          "approved_equation_recalculation": "not applicable: no equation approved",
+          "rounding_tolerance_approved": null
+        }
+      }
+    ]
+  },
   "rows": [
     {
       "ticker": "AVGO",
