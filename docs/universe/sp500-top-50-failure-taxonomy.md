@@ -424,6 +424,15 @@ leases, rounded note values and GE's mixed-business perimeter require separate
 review. Only five Visa periods currently support safe potential scope-design
 coverage; 89 are unapproved. No period becomes zero or resolves in production.
 
+Wave 19's [scope-evidence design](../depreciation-amortization-scope-evidence-design.md)
+reaches PARTIAL GO for five exact Visa curated entries; no generic automated
+combined-concept approval. All 94 remain production missing. The 89 no-entry
+controls retain Wave 18 routing (26 CONCEPT_POLICY, 33 DERIVATION, five
+ISSUER_EXTENSION, 25 METHODOLOGY_BLOCKER), not fresh reviewed denials. Semantic
+duplicates confirm only after exact eligibility; conflicts remain ambiguous.
+Supporting asset notes and 2025 precision cannot become residual operands or
+lease adjustments. Next implement only the five-entry foundation.
+
 ### Pretax Income
 
 Pretax Income now has 37 typed-missing periods and no remaining known
@@ -666,7 +675,7 @@ issuers have one post-smoke classification.
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
-| 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 18 inventoried:** D&A 94 missing across 21 issuers; five Visa scope-design candidates, 89 unapproved | Core FCFF input | Design exact scope-equivalence rules; separately prove component completeness and lease/impairment/accretion boundaries | High | High |
+| 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 19 designed:** D&A five exact Visa curated acceptances, 89 no-entry controls; all 94 still production missing | Core FCFF input | Implement only the five-entry foundation; separately prove component completeness and lease/impairment/accretion boundaries | Narrow for v1 | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
@@ -705,8 +714,9 @@ issuers have one post-smoke classification.
    ten missing CVX/GE controls. Wave 17 completes their separate perimeter
    research with NO-GO; no coverage or production classification changes.
 3. **Core FCFF flows:** Wave 18 completes the exact 94-period D&A inventory.
-   Next design scoped evidence/acceptance rules with five Visa positives and
-   89 unapproved controls; keep component and lease-perimeter research gated.
+   Wave 19 freezes scoped acceptance for five exact Visa entries and 89
+   unapproved controls. Next implement that foundation; keep component and
+   lease-perimeter research gated.
    Then investigate Capex
    variants. CVX/GE mixed-business designs remain separate. Approve only
    repeatable definitions with

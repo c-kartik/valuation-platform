@@ -2,6 +2,15 @@
 
 ## Decision and frozen scope
 
+Wave 19 follow-up: the
+[scope-evidence design](depreciation-amortization-scope-evidence-design.md)
+reviews and approves design acceptance for the five exact Visa candidates.
+It rejects generic automated concept equivalence and keeps all 89 other rows
+unapproved, not freshly reviewed economic denials. The immutable Wave 18 JSON
+and the production-missing flags below remain unchanged. Asset perimeter,
+lease/incentive separation, 2025 precision, direct precedence and confirming
+occurrence/support provenance are now explicitly designed, not implemented.
+
 Phase 1H.4 Wave 18 researches **94 currently missing annual D&A periods across
 21 issuers**, not all historical facts or all 204 corpus periods. The frozen
 identities come from the saved Phase 1H.3 exact-filing diagnostic plus the four
@@ -327,12 +336,10 @@ Income **194 resolved / 10 missing / 0 ambiguous**, and aggregate **1,880 /
 1,508 / 11 / 27 / 42**, totaling **3,468** states. Research categories are not
 new standardized states or universe classifications.
 
-Next: design exact selected-filing D&A scope-equivalence evidence and acceptance
-rules, starting with the five Visa positives and keeping all 89 other gaps as
-unapproved controls. Decide combined-concept and lease perimeter compatibility
-explicitly before expanding that positive set. Freeze direct-first precedence,
-authoritative periods, deterministic confirming/nonselected provenance,
-source precision and future/amended/unregistered missing defaults. Component
+Next: implement the [Wave 19 curated design](depreciation-amortization-scope-evidence-design.md)
+for only the five exact Visa entries and regress all 89 no-entry controls.
+No generic combined-concept fallback, residual, lease adjustment or automatic
+scope approval is justified. Component
 completeness research for the 33 derivation and five AMD extension periods is a
 separate gated workstream, not an automatic generalization of MSFT's two operands.
 Forecast/FCFF/DCF remains paused through Phase 1H.6.

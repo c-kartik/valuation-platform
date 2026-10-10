@@ -356,6 +356,17 @@ sum. No production result changes: D&A stays 110 resolved / 94 missing / 0
 ambiguous, Operating Income 194 / 10 / 0 and aggregate 1,880 / 1,508 / 11 / 27 /
 42 across 3,468 states. No tests or corpus runs were performed.
 
+Phase 1H.4 Wave 19 completes the
+[D&A scope-evidence acceptance design](depreciation-amortization-scope-evidence-design.md).
+PARTIAL GO approves a five-entry exact-accession Visa design, not a generic
+combined-concept rule or production registration. Asset/finite-lived notes,
+separate incentive/lease treatment and operating presentation establish scope;
+2025's rounded property disclosure is corroboration, never a residual operand.
+All 89 controls remain unapproved, not freshly reviewed denials. Immutable
+versioning, direct precedence, exact semantic confirmation, structural-error
+boundaries and complete occurrence/support serialization are specified.
+Production counts remain unchanged; no tests or corpus reruns.
+
 ## Completed
 
 - Completed Milestone 0 — development environment and repository setup
@@ -789,10 +800,11 @@ ambiguous, Operating Income 194 / 10 / 0 and aggregate 1,880 / 1,508 / 11 / 27 /
 
 ## Next Step
 
-Design exact selected-filing D&A scope-equivalence evidence and acceptance
-rules, starting with Wave 18's five Visa positives and retaining the other 89
-gaps as unapproved controls. Decide combined-concept and embedded-lease
-compatibility explicitly before expanding coverage. Component completeness
+Implement Wave 19's five-entry curated D&A scope-equivalence foundation with
+exact identity/evidence validation, direct-first selection and full confirming
+occurrence/support provenance. Regress five accepted candidates and all 89
+no-entry controls; validate targeted results before full tests/corpus. No
+generic combined-concept fallback or lease adjustment. Component completeness
 research for the 33 derivation and five AMD extension periods remains separate;
 do not generalize MSFT's two operands or approve a generic cash-flow fallback.
 Wave 17 leaves the ten CVX/GE Operating Income gaps unresolved; dedicated CVX
@@ -852,8 +864,9 @@ sensitivity work is intentionally paused through Phase 1H.
    remains unresolved, GE requires specialized mixed-business treatment and
    has no common five-period continuing perimeter. Wave 18 inventories all
    94 D&A gaps across 21 issuers and reaches PARTIAL GO for scoped evidence
-   design with five Visa candidates, not production expansion. Next, design
-   exact D&A scope-equivalence acceptance rules, then continue with other
+   design with five Visa candidates, not production expansion. Wave 19 freezes
+   their curated scope-equivalence acceptance design; next implement only those
+   five entries with 89 unapproved controls, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital

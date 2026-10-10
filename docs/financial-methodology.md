@@ -727,6 +727,18 @@ corroborating note values never replace an exact direct source or create a
 generic production tolerance. Production D&A remains 110 resolved / 94
 missing / 0 ambiguous; no code, tests, policies or corpus behavior change.
 
+Wave 19's [curated acceptance design](depreciation-amortization-scope-evidence-design.md)
+approves design-only equivalence for five exact Visa combined D&A facts.
+Property/technology and finite-lived intangible expense descriptions plus
+consolidated operating presentation establish scope; incentive amortization,
+impairment/accretion-inclusive substitutes and lease adjustments are excluded.
+Later lease-note silence is not zero finance-lease expense. 2025's $1.1 billion
+property disclosure corroborates the exact $1.220 billion combined fact only
+at its submitted precision; it does not establish a $42 million residual
+component or permit a generic tolerance. Acceptance is of the reported
+combined expense, never addition of those supporting notes. Other 89 periods
+remain unapproved; production policy and counts are unchanged.
+
 ## FCFF
 
 The core valuation methodology is unlevered free cash flow to the firm (FCFF).

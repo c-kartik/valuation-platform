@@ -372,6 +372,17 @@ and adds same-period Company Facts observations for `Depreciation` and
 or automatic concept fallback. Capex remains a positive expenditure magnitude
 for later subtraction in FCFF.
 
+Wave 19 [designs](depreciation-amortization-scope-evidence-design.md), but does
+not implement, a five-entry curated D&A scope resolver at this boundary.
+The parser/generic resolver and existing D&A/MSFT policies remain unchanged.
+Immutable exact-accession reviewed evidence gates reported-value acceptance;
+eligible semantic duplicates retain all occurrences and differing eligible
+values remain ambiguous. Supporting dimensional asset facts are separately
+typed review support, never inserted into candidate-only policy evidence or
+summed as derivation operands. Future output design uses versioned audit/support
+serialization (next schema 4) retaining original instance ordinals separately
+from consecutive confirming ordinals. Current production schemas are unchanged.
+
 GOOGL CIK `1652044` selected 2021–2023 filings provide only class-dimensional
 diluted denominators. When the nondimensional direct result is missing, the
 approved derivation adds the Class A denominator, which assumes Class B
