@@ -295,6 +295,28 @@ against expected filing evidence, not that every metric resolved; missing,
 ambiguous, methodology-blocked, and not-comparable states remain explicit and
 are never inferred as zero.
 
+Phase 1H.4 Wave 16 implements and validates
+`operating_income_component_derivation_v1` for exactly the 25 reviewed
+LLY/JNJ/MRK/KLAC/IBM equations. The generic direct policy remains first;
+filing-XBRL operands, exact identities, ordered signed arithmetic, every
+confirming occurrence and reviewed nonselected evidence remain mandatory.
+IBM's exact signed rounding variances are validation gates only. Standardized
+output schema 3 and Operating Tax supporting-input serialization retain the
+complete immutable provenance; no tax policy becomes ready automatically.
+
+Validation: 163 focused tests and 513 complete-suite tests pass. Targeted live
+validation resolves all 25 positives and keeps all ten CVX/GE controls missing.
+The full 43-issuer run completes with seven specialized skips, 204 periods and
+3,468 measure states. Operating Income is **194 resolved / 10 missing / 0
+ambiguous** (169 direct, 25 derived). Aggregate states are **1,880 resolved /
+1,508 missing / 11 ambiguous / 27 methodology-blocked / 42 not-comparable**.
+Same-input comparisons preserve all 169 direct Operating Income results, all
+25 seed annual financial results and 1,428 other financial results. All
+non-Operating-Income metric states, execution stages and selected periods match
+the prior validated corpus. Pretax and Reported ETR each remain 167 resolved /
+37 missing / 0 ambiguous. Compile checks and `git diff --check` pass.
+See the [Wave 16 evidence/results record](operating-income-derivation-policy-design.md#wave-16-implementation-and-verified-results).
+
 ## Completed
 
 - Completed Milestone 0 — development environment and repository setup
@@ -728,13 +750,11 @@ are never inferred as zero.
 
 ## Next Step
 
-Implement and validate the frozen
-`operating_income_component_derivation_v1` design for the 25 exact
-LLY/JNJ/MRK/KLAC/IBM equations. Add only the immutable models and registry,
-narrow resolver integration after the unchanged direct policy, complete
-provenance/output/serialization and Operating Tax support, focused
-25-positive/10-control regressions, targeted live validation, complete tests,
-and then a full corpus reconciliation. Keep CVX and GE outside the policy. The
+Research the ten remaining CVX/GE Operating Income periods separately, using
+exact selected-filing business/perimeter and consolidated-scope evidence.
+Neither segment-profit substitution nor an unreviewed component derivation is
+approved. Preserve the completed 25-entry Operating Income policy and all
+typed missing controls while investigating those boundaries. The
 Phase 2A assumptions model is implemented, but
 forecast, FCFF, DCF, equity-bridge, per-share, reverse-DCF, scenario, and
 sensitivity work is intentionally paused through Phase 1H.
@@ -781,8 +801,11 @@ sensitivity work is intentionally paused through Phase 1H.
    component-derivation evidence for all 25 LLY/JNJ/MRK/KLAC/IBM periods. Wave
    15 freezes the immutable exact-accession policy/model, arithmetic, evidence,
    provenance, serialization, Operating Tax, and regression design while
-   keeping CVX and GE as negative controls. Next, implement and validate that
-   narrow design, then continue with other extension patterns, dimensions,
+   keeping CVX and GE as negative controls. Wave 16 implements and validates
+   all 25 exact derivations, retaining all 169 direct results and reducing
+   Operating Income gaps to the ten CVX/GE controls. Next, research those
+   business/perimeter boundaries separately, then continue with other
+   extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital
    perimeters.

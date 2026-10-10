@@ -40,6 +40,9 @@ from .diluted_shares import (
     derive_googl_diluted_weighted_average_shares,
 )
 from .pretax_scope import apply_curated_pretax_scope_policy
+from .operating_income_derivation import (
+    apply_curated_operating_income_derivation_policy,
+)
 from .models import (
     AmbiguityReason,
     AmbiguousHistoricalMetric,
@@ -182,6 +185,14 @@ def _resolve_with_derivation(
             direct,
             company_cik,
             source_url,
+            annual_period,
+            filing_xbrl,
+        )
+    if policy.metric is FinancialMetric.OPERATING_INCOME:
+        direct = apply_curated_operating_income_derivation_policy(
+            bucket,
+            direct,
+            company_cik,
             annual_period,
             filing_xbrl,
         )

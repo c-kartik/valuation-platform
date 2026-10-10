@@ -138,7 +138,8 @@ serialization, and the Pretax operand of Reported ETR. Occurrences have stable
 one-based ordinals in deterministic order and retain their original context ID,
 unit ID, raw value, decimals, nil status, dates, dimensions, and source
 metadata. The expanded provenance is represented by standardized-output schema
-version 2.
+version 2, extended by schema version 3 for curated Operating Income derivation
+provenance.
 
 ## Valuation Assumptions Boundary
 
@@ -331,16 +332,36 @@ standalone signals.
 
 The Wave 15
 [curated Operating Income derivation-policy design](operating-income-derivation-policy-design.md)
-defines a future policy-specific boundary after the unchanged direct Operating
-Income resolver. It deliberately does not expand the generic derivation model
+defines the policy-specific boundary, implemented in Wave 16 after the unchanged
+direct Operating Income resolver. It deliberately does not expand the generic derivation model
 into an expression engine. One frozen, versioned registry owns 25 exact
 LLY/JNJ/MRK/KLAC/IBM filing identities and ordered signed filing-XBRL operands.
-The future resolver must be pure and network-free, match exact selected-filing
-and authoritative-period identity, preserve all confirming and reviewed-
-nonselected occurrences, and emit derivation-specific policy provenance through
+`normalization.operating_income_derivation` is pure and network-free. It matches
+exact selected-filing and authoritative-period identity, preserves all confirming and reviewed-
+nonselected occurrences, and emits derivation-specific policy provenance through
 standardized output, serialization, and Operating Tax readiness. CVX, GE,
 future filings, amendments, and unregistered equations remain outside the
-registry. No production behavior changes in the design wave.
+registry. The generic derivation model, filing-XBRL parser and Operating Income
+concept policy remain unchanged.
+
+Frozen entry, operand, validation and provenance models reject invalid policy
+identities, mutable containers, duplicate terms and overlapping calculation
+concepts. One exact USD semantic value may have multiple confirming occurrence
+representations. Structural linkage faults are errors; unexpected values are
+ambiguity. Direct ambiguity is final, incomplete derivation preserves a direct
+result, and equal complete paths retain direct-primary supporting provenance.
+Differing complete paths retain both the direct sources and full derived
+policy in standardized ambiguity.
+
+Schema 3 serializes exact Decimal strings, ordered signed contributions,
+entity/context/unit identity, every occurrence, nonselected reasons and
+validation gates. Output and Operating Tax revalidate complete provenance
+against the active exact registry rather than accepting an arbitrary generic
+derived value. Operating Tax supporting-financial-input serialization preserves
+that reference without authorizing a tax allocation. Wave 16 resolves exactly
+25 new Operating Income periods; all other metric states and issuer execution
+remain unchanged. See the
+[verified results](operating-income-derivation-policy-design.md#wave-16-implementation-and-verified-results).
 
 D&A and Capex use the same generic direct-resolution path. A direct D&A result
 takes precedence. When direct D&A is missing, an approved policy may produce a

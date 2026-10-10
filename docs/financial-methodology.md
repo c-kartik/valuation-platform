@@ -95,11 +95,11 @@ Revenue uses this ordered candidate policy:
 1. `us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax`
 2. `us-gaap:Revenues`
 
-Operating Income currently uses:
+Direct Operating Income uses:
 
 1. `us-gaap:OperatingIncomeLoss`
 
-Wave 13 reviews all 35 remaining gaps across LLY, JNJ, CVX, MRK, GE, KLAC,
+Wave 13 reviewed all 35 then-remaining gaps across LLY, JNJ, CVX, MRK, GE, KLAC,
 and IBM in [the Operating Income concept inventory](operating-income-concepts.md).
 None of the exact selected
 consolidated face statements reports an Operating Income, Income from
@@ -109,7 +109,7 @@ Company Facts observation. GE's 2024 and 2025 `OperatingIncomeLoss` facts are
 dimensioned segment and reconciliation facts, not a consolidated subtotal.
 Expense totals, gross profit, Pretax Income, segment profit, and component lines
 remain non-equivalent. The generic policy is unchanged, safe direct coverage is
-zero, and all 35 periods remain missing.
+zero, and all 35 periods remained missing at that research baseline.
 
 Component derivation is a separate methodology question. No derivation is
 approved until consolidated completeness, operating versus non-operating scope,
@@ -131,12 +131,12 @@ excluded face-statement items. Pretax-minus-residual derivations remain
 prohibited. Issuer expense aggregates that mix operating and non-operating
 items are validation checkpoints, not Operating Income. The evidence approves
 no generic concept fallback, future filing, CVX equation, or GE equation, and
-production behavior remains unchanged pending a separately reviewed policy and
+Wave 16 implements only the separately reviewed exact-accession policy and
 model design.
 
 Wave 15's
 [curated derivation-policy design](operating-income-derivation-policy-design.md)
-approves a production boundary, not production values. The proposed immutable
+approves the production boundary implemented in Wave 16. The immutable
 `operating_income_component_derivation_v1` registry contains only the 25 exact
 reviewed CIK/accession/period equations. It preserves ordered signed operands,
 every confirming and reviewed-nonselected occurrence, calculation and Pretax-
@@ -150,10 +150,22 @@ IBM's three one-million Pretax variances are validation-only consequences of
 independently reported whole-million face lines. The exact derived Operating
 Income is never rounded, plugged, or changed, and the reported/calculated
 values, signed variance, and scale remain provenance. The tolerance does not
-generalize beyond the five registered IBM filings. A future Operating Tax path
-may accept a derived Operating Income only with complete active-version policy
+generalize beyond the five registered IBM filings. The Operating Tax path
+accepts a derived Operating Income only with complete active-version policy
 provenance and all existing tax-policy gates; the derivation alone never
 approves tax allocation or NOPAT.
+
+Wave 16 verifies all 25 registered forward component equations and independent
+Pretax bridges. Operating Income is 194 resolved (169 direct and 25 derived) /
+10 missing / 0 ambiguous. CVX and GE remain missing; no integrated-energy,
+segment-profit or business-perimeter assumption is added. KLAC's 2023 absence
+is a reviewed face-row completeness assertion, not an inferred zero: its
+non-face USD-zero impairment occurrence is retained as nonselected evidence
+and is not consumed by arithmetic. LLY's lower-precision occurrences likewise
+cannot replace the exact approved face facts. Tax-policy readiness gates are
+unchanged; derived Operating Income alone is insufficient for Operating Tax or
+NOPAT. The [verified results](operating-income-derivation-policy-design.md#wave-16-implementation-and-verified-results)
+record the exact positive/control and corpus reconciliation.
 
 Pretax Income is the reported continuing-operations income before income taxes
 and uses exactly:

@@ -156,6 +156,20 @@ only, and defaults future, amended, unregistered, incomplete, or conflicting
 evidence to no result. The ten CVX/GE periods remain negative controls. This
 design wave changes no production counts.
 
+**Wave 16 follow-up:** the curated Operating Income derivation policy is now
+implemented for exactly the 25 approved accessions. All 25 resolve and all ten
+CVX/GE controls remain missing. Operating Income is 194 resolved / 10 missing /
+0 ambiguous (169 direct, 25 derived); aggregate states are 1,880 resolved /
+1,508 missing / 11 ambiguous / 27 methodology-blocked / 42 not-comparable.
+The denominator remains 204 periods / 3,468 states, with 43/43 generic issuers
+complete and seven specialized skips. All direct OI results, 25 seed annual
+financial results, non-OI metric states and execution stages remain unchanged.
+The 163 focused and 513 complete tests, exact 25-positive/10-control live run,
+full corpus, compile checks and `git diff --check` pass. Full ordered policy,
+occurrence and validation provenance survives schema 3 serialization and
+Operating Tax supporting inputs; no tax policy is automatically ready. See
+[verified results](../operating-income-derivation-policy-design.md#wave-16-implementation-and-verified-results).
+
 ## Operational taxonomy
 
 | Category | Meaning | Observed evidence |
@@ -450,8 +464,8 @@ remain unchanged; historical weighted-average shares remain distinct from the
 future DCF denominator.
 
 Income-tax expense resolves 204/204. Revenue resolves 193/204 with no missing
-periods and 11 same-period concept ambiguities. Operating income is missing in
-35 periods across LLY, JNJ, CVX, MRK, GE, KLAC, and IBM. Wave 13 proves that
+periods and 11 same-period concept ambiguities. Operating income was missing in
+35 periods across LLY, JNJ, CVX, MRK, GE, KLAC, and IBM before Wave 16. Wave 13 proves that
 none of those exact face statements reports a consolidated Operating Income
 subtotal. Pretax income is missing in 37 periods and ambiguous in none;
 reported ETR mirrors that upstream
@@ -468,9 +482,11 @@ patterns, with acquired IPR&D, restructuring, operating-asset impairments,
 pension service cost, and IBM IP/custom-development income inside the reviewed
 operating perimeter; interest, non-service pension components, and reviewed
 other non-operating activity remain outside. They are potential—not current—
-coverage until implemented. Wave 15 now freezes the versioned exact-accession
+coverage at the Wave 14 baseline. Wave 15 freezes the versioned exact-accession
 policy/model boundary, including occurrence conflicts, arithmetic, provenance,
 serialization, IBM validation, and Operating Tax gates; it adds no result.
+Wave 16 implements that boundary and resolves those exact 25 periods, leaving
+only five CVX and five GE Operating Income gaps for separate perimeter research.
 
 ## Wave 2 ambiguity inventory and Wave 6 disposition
 
@@ -603,7 +619,7 @@ issuers have one post-smoke classification.
 | 3 | `CONCEPT_POLICY` | **Implemented in Wave 2:** 160 additional periods resolved; 19 broader-caption periods remain missing | One high-value balance | Keep broader restricted-cash and cash-equivalents-only captions unresolved pending separate evidence | Very high | Low |
 | 4 | `CONCEPT_POLICY` / `PERIOD_ASSOCIATION` | **Implemented in Wave 6:** all known annual/Q4 collisions resolved; 11 genuine full-year conflicts remain for WMT, MA, and CVX | Core flow metric | Preserve distinct concept economics and never select by size or order | High | Medium |
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
-| 6 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 15 PARTIAL GO:** immutable exact-accession policy/model design freezes 25 approved LLY/JNJ/MRK/KLAC/IBM equations; ten CVX/GE periods remain controls | Core FCFF input | Implement and validate `operating_income_component_derivation_v1` exactly; keep CVX/GE unresolved | Medium | Very high |
+| 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; ten CVX/GE periods remain controls | Core FCFF input | Preserve the frozen v1 policy and research CVX/GE business/perimeter evidence separately | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | D&A: 94 missing across the 204-period corpus | Core FCFF input | Group combined concepts and complete component derivations | High | High |
 | 8 | `CONCEPT_POLICY` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Validate productive-asset and industry PP&E concepts against definition | Medium-high | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
@@ -638,8 +654,10 @@ issuers have one post-smoke classification.
    component equations after complete Revenue-to-Operating-Income and
    Operating-Income-to-Pretax reconciliation. Wave 15 freezes the curated
    exact-accession policy/model, selection, arithmetic, failure, provenance,
-   serialization, Operating Tax, and regression design; implementation and
-   production behavior remain the next milestone.
+   serialization, Operating Tax, and regression design. Wave 16 implements and
+   validates all 25 exact entries, preserves 169 direct results, and retains
+   ten missing CVX/GE controls. Separate business/perimeter research remains
+   the next Operating Income milestone.
 3. **Core FCFF flows:** investigate operating-income face-statement evidence,
    D&A groups, and Capex variants. Approve only repeatable definitions with
    selected-accession evidence.

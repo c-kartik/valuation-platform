@@ -148,7 +148,7 @@ The inventory reconciles exactly seven issuers × five periods. All rows use the
 five frozen selected accessions and the authoritative annual start/end dates.
 All 35 submitted income-statement roles and renderer links were retrieved and
 matched; the filing directory indexes independently contain each linked
-statement and filing location. Production remains Operating Income 169 resolved
+statement and filing location. The Wave 13 baseline was Operating Income 169 resolved
 / 35 missing / 0 ambiguous and aggregate states remain 1,855 resolved / 1,533
 missing / 11 ambiguous / 27 methodology-blocked / 42 not-comparable across
 3,468 states.
@@ -169,7 +169,16 @@ occurrence selection, evidence provenance, IBM's validation-only whole-million
 rounding gate, direct-result precedence, downstream Operating Tax boundaries,
 and conservative failure behavior. CVX and GE remain outside that scope.
 
-The next milestone is narrow implementation and validation of
-`operating_income_component_derivation_v1`. Production remains unchanged and
-all 35 periods remain typed missing until that implementation and exact live
-reconciliation succeed.
+Wave 16 implements and validates `operating_income_component_derivation_v1`
+for exactly those 25 approved accessions. Targeted validation is 25 derived /
+ten missing controls; production Operating Income is now 194 resolved / 10
+missing / 0 ambiguous. All 169 direct results and the original seed corpus
+remain unchanged. Aggregate states are 1,880 resolved / 1,508 missing / 11
+ambiguous / 27 methodology-blocked / 42 not-comparable across 3,468 states.
+No new direct concept is approved. See the
+[implementation results](operating-income-derivation-policy-design.md#wave-16-implementation-and-verified-results).
+
+The next milestone is separate business/perimeter research for the ten CVX/GE
+periods. Their Wave 13 classifications and missing production states remain
+unchanged; labels, segment facts and numerical residuals still cannot establish
+consolidated Operating Income.

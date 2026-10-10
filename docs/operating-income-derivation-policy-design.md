@@ -18,8 +18,9 @@ is **PARTIAL GO**:
 The proposed stable identity is policy ID
 `operating_income_component_derivation` and version `1`, serialized as
 `operating_income_component_derivation_v1`. This wave changes no source code,
-test, production policy, or corpus result. Operating Income therefore remains
-169 resolved / 35 missing / 0 ambiguous.
+test, production policy, or corpus result in Wave 15. Its baseline was
+169 resolved / 35 missing / 0 ambiguous. Wave 16 implements this boundary;
+see [verified implementation results](#wave-16-implementation-and-verified-results).
 
 ## Immutable policy and evidence model
 
@@ -252,7 +253,7 @@ same fields. Serialization must:
 
 ## Downstream Operating Tax boundary
 
-The current Operating Tax readiness path accepts only direct normalized
+At the Wave 15 baseline, the Operating Tax readiness path accepted only direct normalized
 Operating Income with the approved `us-gaap:OperatingIncomeLoss` source. A
 later implementation may accept a derived Operating Income only when it carries
 complete `operating_income_component_derivation_v1` provenance and the active
@@ -371,7 +372,7 @@ The five-company seed corpus and every non-Operating-Income metric must remain
 unchanged. A full live corpus rerun is permitted only after focused and complete
 tests pass.
 
-## Expected future reconciliation and next milestone
+## Wave 15 expected reconciliation
 
 If a later implementation passes the regression matrix and live evidence, the
 design target is Operating Income 194 resolved / 10 missing / 0 ambiguous. The
@@ -380,10 +381,72 @@ missing / 11 ambiguous / 27 methodology-blocked / 42 not-comparable, with the
 total fixed at 3,468 states. These are design targets, not current production
 counts.
 
-The exact next milestone is implementation and validation of
+The Wave 15 next milestone was implementation and validation of
 `operating_income_component_derivation_v1`: add the immutable models and
 25-entry registry, narrow resolver integration after the unchanged direct
 policy, provenance/output/serialization and Operating Tax support, focused
 regressions, targeted 25-positive/10-control live validation, complete tests,
 and only then a full corpus reconciliation. CVX/GE research remains separate
 and must not be folded into that implementation.
+
+## Wave 16 implementation and verified results
+
+Wave 16 implements `operating_income_component_derivation_v1` in
+`normalization.operating_income_derivation`, after the unchanged generic
+`OPERATING_INCOME_POLICY`. The frozen registry contains exactly the 25 entries
+above, five per approved issuer. Filing-XBRL is required for every numeric
+calculation and validation operand; Company Facts cannot fill an absent
+operand. No CVX/GE, future, amended, or unregistered equation is added.
+
+All confirming occurrences retain deterministic one-based ordinals, raw and
+exact numeric values, decimals, context/unit IDs, entity identifiers, dates,
+dimensions, accession and source metadata. Registered LLY precision alternates
+are retained separately with `REVIEWED_NON_FACE_PRECISION`. In KLAC's selected
+2023 filing, the face/calculation impairment row is absent as reviewed, while
+the instance also contains a nondimensional `GoodwillImpairmentLoss` note fact
+of exact USD `0`, decimals `-3`. This exact non-face occurrence is retained
+with `REVIEWED_NON_FACE_ABSENCE`; it is not a zero operand or an extra term.
+Any unregistered occurrence value still prevents resolution.
+
+Frozen derivation provenance retains ordered definitions and signed
+contributions, the reviewed instance/face/calculation references, relevant
+reviewed IBM note links, and reported/calculated validation values. IBM retains
+its exact signed variances and whole-million scale; facts outside the reviewed
+display scale cannot use that gate. No derived Operating Income is adjusted.
+Direct evidence survives an absent or incomplete derivation. Equal complete
+paths retain direct-primary/derived-confirming provenance; a differing direct
+value retains ambiguity and the complete derived policy reference.
+
+Standardized-output schema **3** serializes the complete new policy shape with
+exact Decimal strings, occurrences, nonselected reasons and reviewed evidence.
+JSON round-trip tests cover derived-primary and direct-primary confirmation.
+Operating Tax validates the entire operand/validation set against the active
+registry, rejects stripped or incompatible provenance, and retains the full
+result in readiness and supporting-financial-input serialization. Existing tax
+policies, statutory-anchor, bridge, allocation and regime gates are unchanged;
+the new Operating Income result alone never makes a tax policy ready.
+
+Validation on 2026-10-10, before documentation updates:
+
+| Check | Verified result |
+|---|---|
+| Focused normalization/output/Pretax/Operating Tax tests | 163 passed |
+| Targeted live selected filings | 25 approved derivations / 10 missing CVX/GE controls |
+| Independent frozen manifest comparison | 25 exact CIK/accession/report/annual identities and values match |
+| Complete test suite | 513 passed |
+| Operating Income | 194 resolved / 10 missing / 0 ambiguous; 169 direct + 25 derived |
+| Aggregate | 1,880 resolved / 1,508 missing / 11 ambiguous / 27 methodology-blocked / 42 not-comparable |
+| Execution / denominator | 43/43 complete, seven specialized skips, 204 periods, 3,468 states |
+| Same-input direct-only regression | All 169 direct OI results, 25 seed annual financial results and 1,428 other financial results unchanged |
+| Prior validated corpus comparison | All non-OI metric states/resolution kinds, issuer stages and selected periods unchanged |
+
+The live artifacts and targeted diagnostics are outside the repository at
+`/tmp/oi_targeted_validation.json`,
+`/tmp/valuation-platform-wave16-final-corpus.json`, and
+`/tmp/valuation-platform-wave16-regression.json`. They are ephemeral validation
+artifacts, not production caches. Compile checks and `git diff --check` pass.
+
+The next milestone is separate exact-selected-filing business/perimeter
+research for the ten remaining CVX/GE Operating Income periods. No equation,
+segment consolidation, derivation, or production policy for either issuer is
+approved by Wave 16. Phase 1H.4 remains open; valuation work remains paused.

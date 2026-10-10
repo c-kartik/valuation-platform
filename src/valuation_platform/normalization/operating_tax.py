@@ -17,6 +17,7 @@ from valuation_platform.sec.tickers import SECCompanyIdentity
 from .concepts import FinancialMetric
 from .models import (
     AmbiguousHistoricalMetric,
+    DerivedHistoricalValue,
     EvidenceSourceKind,
     FactEvidence,
     HistoricalFilingResult,
@@ -24,6 +25,13 @@ from .models import (
     NormalizedHistoricalFinancials,
     NormalizedHistoricalValue,
     ResolvedHistoricalValue,
+)
+from .operating_income_derivation import (
+    OPERATING_INCOME_DERIVATION_POLICY_ID,
+    OPERATING_INCOME_DERIVATION_POLICY_VERSION,
+    operating_income_derivation_entry_for,
+    validate_operating_income_derivation_provenance,
+    OperatingIncomeDerivationPolicyError,
 )
 
 
@@ -431,6 +439,24 @@ class OperatingTaxReadinessResult:
     def is_ready(self) -> bool:
         return self.status is OperatingTaxReadinessStatus.READY
 
+    def serialize_financial_inputs(self) -> dict[str, object]:
+        """Serialize supporting financial inputs without stripping their policies.
+
+        This is not a tax-policy approval or a serializer for the tax bridge.
+        """
+        from .output import _map_duration_result, _serialize_measure
+
+        return {
+            metric.value: (
+                None if value is None
+                else _serialize_measure(_map_duration_result(value, self.filing, metric))
+            )
+            for metric, value in (
+                (FinancialMetric.OPERATING_INCOME, self.operating_income),
+                (FinancialMetric.PRETAX_INCOME, self.pretax_income),
+            )
+        }
+
 
 def evaluate_operating_tax_readiness(
     context: OperatingTaxReadinessContext,
@@ -675,14 +701,17 @@ def _validate_financial_inputs(
 ) -> None:
     report_date = context.filing_result.filing.report_date
     accession = context.filing_result.filing.accession_number
-    for metric, value in (
-        (FinancialMetric.OPERATING_INCOME, operating_income),
-        (FinancialMetric.PRETAX_INCOME, pretax_income),
-    ):
-        if not isinstance(value, NormalizedHistoricalValue):
-            raise OperatingTaxReadinessError(
-                "Operating Income and Pretax Income must be direct normalized values"
-            )
+    if isinstance(operating_income, DerivedHistoricalValue):
+        _validate_derived_operating_income(context, operating_income)
+    elif not isinstance(operating_income, NormalizedHistoricalValue):
+        raise OperatingTaxReadinessError(
+            "Operating Income must be direct or an approved curated derivation"
+        )
+    if not isinstance(pretax_income, NormalizedHistoricalValue):
+        raise OperatingTaxReadinessError(
+            "Pretax Income must be a direct normalized value"
+        )
+    for metric, value in ((FinancialMetric.PRETAX_INCOME, pretax_income),):
         if value.unit != "USD" or value.period.end != report_date:
             raise OperatingTaxReadinessError("financial input unit or period is incompatible")
         _validate_financial_evidence(
@@ -702,6 +731,55 @@ def _validate_financial_inputs(
                 accession,
                 report_date,
             )
+    if isinstance(operating_income, NormalizedHistoricalValue):
+        if operating_income.unit != "USD" or operating_income.period.end != report_date:
+            raise OperatingTaxReadinessError("financial input unit or period is incompatible")
+        _validate_financial_evidence(
+            context,
+            FinancialMetric.OPERATING_INCOME,
+            operating_income,
+            operating_income.chosen_source,
+            accession,
+            report_date,
+        )
+        for confirming in operating_income.confirming_sources:
+            _validate_financial_evidence(
+                context,
+                FinancialMetric.OPERATING_INCOME,
+                operating_income,
+                confirming,
+                accession,
+                report_date,
+            )
+        for provenance in operating_income.supporting_derivation_policies:
+            try:
+                validate_operating_income_derivation_provenance(provenance)
+            except OperatingIncomeDerivationPolicyError as exc:
+                raise OperatingTaxReadinessError(str(exc)) from exc
+            if (
+                provenance.policy_id != OPERATING_INCOME_DERIVATION_POLICY_ID
+                or provenance.policy_version
+                != OPERATING_INCOME_DERIVATION_POLICY_VERSION
+                or provenance.company_cik != context.financials.company.cik
+                or provenance.accession_number != accession
+                or provenance.report_date != report_date
+                or provenance.annual_start != operating_income.period.start
+                or provenance.annual_end != operating_income.period.end
+                or provenance.unit != operating_income.unit
+                or provenance.calculated_value
+                != Decimal(str(operating_income.value))
+                or operating_income_derivation_entry_for(
+                    provenance.company_cik,
+                    provenance.accession_number,
+                    provenance.report_date,
+                    provenance.annual_start,
+                    provenance.annual_end,
+                )
+                is None
+            ):
+                raise OperatingTaxReadinessError(
+                    "direct Operating Income supporting policy is incompatible"
+                )
     if operating_income.period != pretax_income.period:
         raise OperatingTaxReadinessError(
             "Operating Income and Pretax Income periods do not match"
@@ -710,6 +788,79 @@ def _validate_financial_inputs(
         pretax_income.value
     ):
         raise OperatingTaxReadinessError("financial inputs must be numeric and non-Boolean")
+
+
+def _validate_derived_operating_income(
+    context: OperatingTaxReadinessContext,
+    value: DerivedHistoricalValue,
+) -> None:
+    provenance = value.derivation_provenance
+    filing = context.filing_result.filing
+    company = context.financials.company
+    if (
+        value.metric is not FinancialMetric.OPERATING_INCOME
+        or value.policy_id != OPERATING_INCOME_DERIVATION_POLICY_ID
+        or value.policy_version != OPERATING_INCOME_DERIVATION_POLICY_VERSION
+        or value.unit != "USD"
+        or provenance is None
+        or provenance.policy_id != value.policy_id
+        or provenance.policy_version != value.policy_version
+        or provenance.company_cik != company.cik
+        or provenance.accession_number != filing.accession_number
+        or provenance.report_date != filing.report_date
+        or provenance.annual_start != value.period.start
+        or provenance.annual_end != value.period.end
+        or provenance.unit != value.unit
+        or provenance.calculated_value != value.value
+        or operating_income_derivation_entry_for(
+            company.cik,
+            filing.accession_number,
+            filing.report_date,
+            value.period.start,
+            value.period.end,
+        )
+        is None
+    ):
+        raise OperatingTaxReadinessError(
+            "derived Operating Income lacks an active exact policy identity"
+        )
+    if not provenance.operands or not provenance.validations or not all(
+        item.passed for item in provenance.validations
+    ):
+        raise OperatingTaxReadinessError(
+            "derived Operating Income policy provenance is incomplete"
+        )
+    try:
+        validate_operating_income_derivation_provenance(provenance)
+    except OperatingIncomeDerivationPolicyError as exc:
+        raise OperatingTaxReadinessError(str(exc)) from exc
+    expected_sources = tuple(
+        operand.occurrences[0] for operand in provenance.operands
+        if operand.coefficient is not None
+    )
+    if value.operands != expected_sources:
+        raise OperatingTaxReadinessError("derived Operating Income output operands are incomplete")
+    for operand in provenance.operands:
+        for evidence in (
+            *operand.occurrences,
+            *operand.reviewed_nonselected_occurrences,
+        ):
+            if (
+                evidence.source_kind is not EvidenceSourceKind.FILING_XBRL
+                or evidence.accession_number != filing.accession_number
+                or evidence.observation_form != "10-K"
+                or evidence.observation_filed != filing.filing_date
+                or evidence.filing_report_date != filing.report_date
+                or evidence.start != value.period.start
+                or evidence.end != value.period.end
+                or evidence.unit != "USD"
+                or evidence.dimensions
+                or evidence.is_nil
+                or evidence.occurrence_ordinal is None
+            ):
+                raise OperatingTaxReadinessError(
+                    "derived Operating Income operand evidence is incompatible"
+                )
 
 
 def _validate_financial_evidence(

@@ -291,7 +291,17 @@ provenance, serialization, Operating Tax boundaries, and conservative failure
 behavior. It explicitly excludes CVX, GE, future filings, amendments, and
 unregistered evidence.
 
-The next milestone is narrow implementation and validation of that approved
-design. The design target is 25 additional Operating Income resolutions,
-leaving the ten CVX/GE periods missing; production counts do not change until
-implementation tests and exact live corpus reconciliation succeed.
+Wave 16 implements and validates that exact boundary. All 25 approved equations
+resolve with exact ordered contributions, complete occurrence/evidence
+provenance, independent validation gates and unadjusted IBM Operating Income.
+The ten CVX/GE controls remain missing. Operating Income is 194 resolved / 10
+missing / 0 ambiguous; all 169 existing direct results are unchanged. The
+full corpus is 1,880 resolved / 1,508 missing / 11 ambiguous / 27
+methodology-blocked / 42 not-comparable across 3,468 states. Focused tests
+(163), complete tests (513), targeted live validation and same-input
+direct/seed regressions pass. See the
+[complete implementation results](operating-income-derivation-policy-design.md#wave-16-implementation-and-verified-results).
+
+The next milestone is separate exact-selected-filing business/perimeter
+research for CVX and GE. This reviewed economic perimeter and its exact
+25-accession registry do not authorize either issuer's derivation.

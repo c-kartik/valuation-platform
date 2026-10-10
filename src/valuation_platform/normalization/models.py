@@ -195,6 +195,168 @@ class FilingXBRLEvidence:
     is_nil: bool
     unit_ref: str | None = None
     occurrence_ordinal: int | None = None
+    entity_identifier_scheme: str | None = None
+    entity_identifier: str | None = None
+
+
+@dataclass(frozen=True)
+class OperatingIncomeOperandEvidence:
+    """One ordered reviewed operand and all of its filing occurrences."""
+
+    ordinal: int
+    operand_id: str
+    economic_role: str
+    namespace: str
+    concept: str
+    expected_value: Decimal | None
+    coefficient: Decimal | None
+    contribution: Decimal | None
+    occurrences: tuple[FilingXBRLEvidence, ...]
+    reviewed_nonselected_occurrences: tuple[FilingXBRLEvidence, ...] = ()
+    absence_reviewed: bool = False
+    reviewed_nonselected_reasons: tuple[str, ...] = ()
+
+    def __post_init__(self) -> None:
+        if (
+            not isinstance(self.occurrences, tuple)
+            or not isinstance(self.reviewed_nonselected_occurrences, tuple)
+            or not isinstance(self.reviewed_nonselected_reasons, tuple)
+            or len(self.reviewed_nonselected_reasons) != len(self.reviewed_nonselected_occurrences)
+            or any(not item for item in self.reviewed_nonselected_reasons)
+            or not isinstance(self.ordinal, int)
+            or isinstance(self.ordinal, bool)
+            or self.ordinal < 1
+            or not self.operand_id
+            or not self.economic_role
+            or not self.namespace
+            or not self.concept
+        ):
+            raise ValueError("Operating Income operand evidence is incomplete")
+        if self.absence_reviewed:
+            if any(
+                item is not None
+                for item in (
+                    self.expected_value,
+                    self.coefficient,
+                    self.contribution,
+                )
+            ) or self.occurrences:
+                raise ValueError("Reviewed absence cannot contain numeric evidence")
+            if tuple(
+                item.occurrence_ordinal
+                for item in self.reviewed_nonselected_occurrences
+            ) != tuple(range(1, len(self.reviewed_nonselected_occurrences) + 1)):
+                raise ValueError("Reviewed absence occurrence order is invalid")
+            return
+        if (
+            self.expected_value is None
+            or not self.expected_value.is_finite()
+            or self.coefficient not in (Decimal("1"), Decimal("-1"), None)
+            or (
+                self.coefficient is None
+                and self.contribution is not None
+            )
+            or (
+                self.coefficient is not None
+                and self.contribution
+                != self.coefficient * self.expected_value
+            )
+            or not self.occurrences
+        ):
+            raise ValueError("Operating Income operand arithmetic is invalid")
+        for collection in (
+            self.occurrences,
+            self.reviewed_nonselected_occurrences,
+        ):
+            if tuple(item.occurrence_ordinal for item in collection) != tuple(
+                range(1, len(collection) + 1)
+            ):
+                raise ValueError("Operating Income occurrence order is invalid")
+
+
+@dataclass(frozen=True)
+class OperatingIncomeValidationEvidence:
+    """One exact filing-arithmetic validation retained with a derivation."""
+
+    validation_id: str
+    reported_operand_id: str
+    calculated_value: Decimal
+    reported_value: Decimal
+    variance: Decimal
+    expected_variance: Decimal
+    display_scale: Decimal
+    passed: bool
+
+    def __post_init__(self) -> None:
+        if (
+            not self.validation_id
+            or not self.reported_operand_id
+            or not all(
+                isinstance(item, Decimal) and item.is_finite()
+                for item in (
+                    self.calculated_value,
+                    self.reported_value,
+                    self.variance,
+                    self.expected_variance,
+                    self.display_scale,
+                )
+            )
+            or self.display_scale <= 0
+            or self.variance != self.calculated_value - self.reported_value
+            or self.passed != (self.variance == self.expected_variance)
+        ):
+            raise ValueError("Operating Income validation evidence is invalid")
+
+
+@dataclass(frozen=True)
+class OperatingIncomeDerivationPolicyProvenance:
+    """Complete curated-policy provenance for one Operating Income result."""
+
+    policy_id: str
+    policy_version: str
+    company_cik: int
+    accession_number: str
+    report_date: date
+    annual_start: date
+    annual_end: date
+    formula_id: str
+    perimeter_id: str
+    unit: str
+    calculated_value: Decimal
+    reviewed_evidence: tuple[ReviewedPolicyEvidence, ...]
+    operands: tuple[OperatingIncomeOperandEvidence, ...]
+    validations: tuple[OperatingIncomeValidationEvidence, ...]
+
+    def __post_init__(self) -> None:
+        if (
+            not self.policy_id
+            or not self.policy_version
+            or not isinstance(self.company_cik, int)
+            or isinstance(self.company_cik, bool)
+            or self.company_cik < 0
+            or re.fullmatch(r"[0-9]{10}-[0-9]{2}-[0-9]{6}", self.accession_number)
+            is None
+            or self.annual_start >= self.annual_end
+            or self.annual_end != self.report_date
+            or not self.formula_id
+            or not self.perimeter_id
+            or self.unit != "USD"
+            or not isinstance(self.calculated_value, Decimal)
+            or not self.calculated_value.is_finite()
+            or not self.reviewed_evidence
+            or not self.operands
+            or not self.validations
+            or not all(isinstance(items, tuple) for items in (
+                self.reviewed_evidence, self.operands, self.validations,
+            ))
+            or not all(item.passed for item in self.validations)
+        ):
+            raise ValueError("Operating Income derivation provenance is incomplete")
+        ordinals = tuple(item.ordinal for item in self.operands)
+        if ordinals != tuple(range(1, len(self.operands) + 1)):
+            raise ValueError("Operating Income operand ordinals must be consecutive")
+        if len({item.operand_id for item in self.operands}) != len(self.operands):
+            raise ValueError("Operating Income operand identities must be unique")
 
 
 BalanceSheetFactEvidence: TypeAlias = FactEvidence | FilingXBRLEvidence
@@ -211,6 +373,9 @@ class NormalizedHistoricalValue:
     chosen_source: FactEvidence
     confirming_sources: tuple[FactEvidence, ...]
     policy_provenance: HistoricalPolicyProvenance | None = None
+    supporting_derivation_policies: tuple[
+        OperatingIncomeDerivationPolicyProvenance, ...
+    ] = ()
 
 
 @dataclass(frozen=True)
@@ -239,6 +404,8 @@ class DerivedHistoricalValue:
     operands: tuple[BalanceSheetFactEvidence, ...]
     metric_operands: tuple[DerivedMetricOperand, ...] = ()
     diagnostics: tuple[DerivationDiagnostic, ...] = ()
+    policy_version: str | None = None
+    derivation_provenance: OperatingIncomeDerivationPolicyProvenance | None = None
 
 
 @dataclass(frozen=True)
@@ -257,6 +424,7 @@ class AmbiguousHistoricalMetric:
     metric: FinancialMetric
     reason: AmbiguityReason
     candidates: tuple[BalanceSheetFactEvidence, ...]
+    supporting_derivation_policies: tuple[OperatingIncomeDerivationPolicyProvenance, ...] = ()
 
 
 ResolvedHistoricalValue: TypeAlias = (

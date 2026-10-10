@@ -987,7 +987,7 @@ class StandardizedOutputTests(unittest.TestCase):
             self.assertEqual(output.annual[0].fiscal_start, start)
             self.assertEqual(output.annual[0].fiscal_end, end)
 
-    def test_curated_policy_and_etr_operand_provenance_serialize_in_schema_v2(self) -> None:
+    def test_curated_policy_and_etr_operand_provenance_serialize_in_schema_v3(self) -> None:
         selected_filing = filing(
             2025,
             accession="0001326801-26-000001",
@@ -1084,7 +1084,7 @@ class StandardizedOutputTests(unittest.TestCase):
         payload = standardized_history_to_dict(
             assemble_standardized_annual_history(historical, balances)
         )
-        self.assertEqual(payload["schema_version"], "2")
+        self.assertEqual(payload["schema_version"], "3")
         measures = {
             item["measure"]: item for item in payload["annual"][0]["measures"]
         }

@@ -26,6 +26,7 @@ from .models import (
     NormalizedBalanceSheetValue,
     NormalizedHistoricalFinancials,
     NormalizedHistoricalValue,
+    OperatingIncomeDerivationPolicyProvenance,
     ReviewedPolicyEvidence,
 )
 from .operating_nwc import (
@@ -35,7 +36,7 @@ from .operating_nwc import (
 )
 
 
-SCHEMA_VERSION = "2"
+SCHEMA_VERSION = "3"
 
 
 class HistoricalOutputError(ValueError):
@@ -131,6 +132,9 @@ class HistoricalPolicyReference:
     unit: str | None = None
     reviewed_evidence: tuple[ReviewedPolicyEvidence, ...] = ()
     filing_xbrl_evidence: tuple[FilingXBRLEvidence, ...] = ()
+    operating_income_derivation: (
+        OperatingIncomeDerivationPolicyProvenance | None
+    ) = None
 
     def __post_init__(self) -> None:
         if not self.policy_id:
@@ -145,6 +149,21 @@ class HistoricalPolicyReference:
             self.concept,
             self.unit,
         )
+        if self.operating_income_derivation is not None:
+            if (
+                self.economic_scope is not None
+                or any(item is not None for item in detailed)
+                or self.reviewed_evidence
+                or self.filing_xbrl_evidence
+                or self.version
+                != self.operating_income_derivation.policy_version
+                or self.policy_id
+                != self.operating_income_derivation.policy_id
+            ):
+                raise HistoricalOutputError(
+                    "Operating Income derivation reference is inconsistent"
+                )
+            return
         if (self.economic_scope is None) != (not self.reviewed_evidence) or (
             self.economic_scope is not None
             and (any(item is None for item in detailed) or not self.filing_xbrl_evidence)
@@ -234,6 +253,7 @@ class AmbiguousStandardizedMeasure:
     opening_date: date | None
     policy: HistoricalPolicyReference | None
     candidates: tuple[HistoricalSourceReference, ...]
+    supporting_policies: tuple[HistoricalPolicyReference, ...] = ()
 
     @property
     def status(self) -> HistoricalAvailability:
@@ -512,11 +532,21 @@ def _map_duration_result(
             sources = _sources_from_historical_direct(result, filing)
             resolution = HistoricalResolutionKind.DIRECT
             policy = _policy_reference(result.policy_provenance, filing)
-            supporting_policies = ()
+            supporting_policies = tuple(
+                _operating_income_derivation_reference(item, filing)
+                for item in result.supporting_derivation_policies
+            )
         else:
             sources = _sources_from_historical_derived(result, filing)
             resolution = HistoricalResolutionKind.DERIVED
-            policy = HistoricalPolicyReference(result.policy_id)
+            policy = (
+                _operating_income_derivation_reference(
+                    result.derivation_provenance,
+                    filing,
+                )
+                if result.derivation_provenance is not None
+                else HistoricalPolicyReference(result.policy_id)
+            )
             supporting_policies = _supporting_policy_references(result, filing)
         return ResolvedHistoricalMeasure(
             measure,
@@ -553,6 +583,8 @@ def _map_duration_result(
             None,
             None,
             _canonical_ambiguous_sources(result.candidates, filing),
+            tuple(_operating_income_derivation_reference(item, filing)
+                  for item in result.supporting_derivation_policies),
         )
     raise HistoricalOutputError("Historical metric result has an invalid type")
 
@@ -1007,7 +1039,13 @@ def _sources_from_historical_direct(
 def _sources_from_historical_derived(
     result: DerivedHistoricalValue, filing: SECFiling
 ) -> tuple[HistoricalSourceReference, ...]:
-    evidence: list[BalanceSheetFactEvidence] = list(result.operands)
+    evidence: list[BalanceSheetFactEvidence] = []
+    if result.derivation_provenance is not None:
+        for operand in result.derivation_provenance.operands:
+            evidence.extend(operand.occurrences)
+            evidence.extend(operand.reviewed_nonselected_occurrences)
+    else:
+        evidence.extend(result.operands)
     for operand in result.metric_operands:
         evidence.extend((operand.chosen_source, *operand.confirming_sources))
     return tuple(_source_reference(item, filing) for item in evidence)
@@ -1035,6 +1073,31 @@ def _policy_reference(
         unit=provenance.unit,
         reviewed_evidence=provenance.reviewed_evidence,
         filing_xbrl_evidence=provenance.filing_xbrl_evidence,
+    )
+
+
+def _operating_income_derivation_reference(
+    provenance: OperatingIncomeDerivationPolicyProvenance,
+    filing: SECFiling,
+) -> HistoricalPolicyReference:
+    from .operating_income_derivation import (
+        OperatingIncomeDerivationPolicyError,
+        validate_operating_income_derivation_provenance,
+    )
+    try:
+        validate_operating_income_derivation_provenance(provenance)
+    except OperatingIncomeDerivationPolicyError as exc:
+        raise HistoricalOutputError(str(exc)) from exc
+    for operand in provenance.operands:
+        for evidence in (
+            *operand.occurrences,
+            *operand.reviewed_nonselected_occurrences,
+        ):
+            _source_reference(evidence, filing)
+    return HistoricalPolicyReference(
+        policy_id=provenance.policy_id,
+        version=provenance.policy_version,
+        operating_income_derivation=provenance,
     )
 
 
@@ -1229,6 +1292,88 @@ def _serialize_policy(
             _serialize_filing_xbrl_evidence(item)
             for item in policy.filing_xbrl_evidence
         ],
+        "operating_income_derivation": (
+            None
+            if policy.operating_income_derivation is None
+            else _serialize_operating_income_derivation(
+                policy.operating_income_derivation
+            )
+        ),
+    }
+
+
+def _serialize_operating_income_derivation(
+    provenance: OperatingIncomeDerivationPolicyProvenance,
+) -> dict[str, object]:
+    return {
+        "policy_id": provenance.policy_id,
+        "policy_version": provenance.policy_version,
+        "entry_key": {
+            "company_cik": provenance.company_cik,
+            "accession_number": provenance.accession_number,
+            "report_date": provenance.report_date.isoformat(),
+            "annual_start": provenance.annual_start.isoformat(),
+            "annual_end": provenance.annual_end.isoformat(),
+        },
+        "formula_id": provenance.formula_id,
+        "perimeter_id": provenance.perimeter_id,
+        "unit": provenance.unit,
+        "calculated_value": str(provenance.calculated_value),
+        "reviewed_evidence": [
+            {
+                "evidence_id": item.evidence_id,
+                "source_url": item.source_url,
+                "filing_location": item.filing_location,
+                "research_artifact": item.research_artifact,
+                "reviewed_on": item.reviewed_on.isoformat(),
+                "review_status": item.review_status,
+                "rationale": item.rationale,
+                "content_digest": item.content_digest,
+            }
+            for item in provenance.reviewed_evidence
+        ],
+        "operands": [
+            {
+                "ordinal": item.ordinal,
+                "operand_id": item.operand_id,
+                "economic_role": item.economic_role,
+                "namespace": item.namespace,
+                "concept": item.concept,
+                "expected_value": (
+                    None if item.expected_value is None else str(item.expected_value)
+                ),
+                "coefficient": (
+                    None if item.coefficient is None else str(item.coefficient)
+                ),
+                "contribution": (
+                    None if item.contribution is None else str(item.contribution)
+                ),
+                "absence_reviewed": item.absence_reviewed,
+                "reviewed_nonselected_reasons": list(item.reviewed_nonselected_reasons),
+                "occurrences": [
+                    _serialize_filing_xbrl_evidence(evidence)
+                    for evidence in item.occurrences
+                ],
+                "reviewed_nonselected_occurrences": [
+                    _serialize_filing_xbrl_evidence(evidence)
+                    for evidence in item.reviewed_nonselected_occurrences
+                ],
+            }
+            for item in provenance.operands
+        ],
+        "validations": [
+            {
+                "validation_id": item.validation_id,
+                "reported_operand_id": item.reported_operand_id,
+                "calculated_value": str(item.calculated_value),
+                "reported_value": str(item.reported_value),
+                "variance": str(item.variance),
+                "expected_variance": str(item.expected_variance),
+                "display_scale": str(item.display_scale),
+                "passed": item.passed,
+            }
+            for item in provenance.validations
+        ],
     }
 
 
@@ -1237,6 +1382,8 @@ def _serialize_filing_xbrl_evidence(
 ) -> dict[str, object]:
     return {
         "occurrence_ordinal": evidence.occurrence_ordinal,
+        "entity_identifier_scheme": evidence.entity_identifier_scheme,
+        "entity_identifier": evidence.entity_identifier,
         "source_kind": evidence.source_kind.value,
         "source_url": evidence.source_url,
         "namespace": evidence.namespace,
@@ -1325,4 +1472,5 @@ def _serialize_measure(item: StandardizedHistoricalMeasure) -> dict[str, object]
         "candidates": [
             _serialize_source(source) for source in item.candidates
         ],
+        "supporting_policies": [_serialize_policy(policy) for policy in item.supporting_policies],
     }
