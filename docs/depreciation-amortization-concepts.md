@@ -17,6 +17,12 @@ only those five curated entries. Current D&A is **115 resolved / 89 missing /
 research snapshot, not a current availability report or automatic registry.
 All 89 controls remain unapproved and unchanged.
 
+Wave 21 [reviews component completeness](depreciation-amortization-component-derivation-design.md)
+for all 33 derivation rows: **0 approved / 19 further research / 14
+methodology-blocked** research outcomes. No new equation or production
+approval; AMD extensions stay separate. Next is targeted TXN 2021–2023
+completeness/expense-scope closure, not implementation.
+
 Phase 1H.4 Wave 18 researches **94 then-missing annual D&A periods across
 21 issuers**, not all historical facts or all 204 corpus periods. The frozen
 identities come from the saved Phase 1H.3 exact-filing diagnostic plus the four
@@ -342,9 +348,19 @@ Income **194 resolved / 10 missing / 0 ambiguous**, and aggregate **1,880 /
 1,508 / 11 / 27 / 42**, totaling **3,468** states. Research categories are not
 new standardized states or universe classifications.
 
-Next after [Wave 20 implementation](depreciation-amortization-scope-evidence-design.md#wave-20-implementation-and-verified-results):
-design component-completeness/scope evidence for the 33 derivation periods;
-preserve the five exact Visa entries and all 89 no-entry controls.
+Wave 21's [component-completeness design](depreciation-amortization-component-derivation-design.md)
+and [33-period matrix](depreciation-amortization-component-derivation-matrix.json)
+review all 33 derivation identities without changing this frozen inventory.
+**NO-GO for derivation implementation: 0 approved / 19 further research /
+14 methodology-blocked** research outcomes; safe new coverage is zero. Known
+mixed leases/impairment, software containment, precision distinctions and
+manufacturing/grant scope remain gates. The other 61 inventory rows are not
+freshly reviewed denials; AMD's five extension periods stay separately gated.
+Current production remains Wave 20 D&A **115 / 89 / 0** and aggregate
+**1,885 / 1,503 / 11 / 27 / 42 = 3,468**; the Wave 18 counts above are historical.
+
+Next: targeted TXN 2021–2023 completeness/expense-scope closure, not
+implementation; preserve the five exact Visa entries and all 89 no-entry controls.
 No generic combined-concept fallback, residual, lease adjustment or automatic
 scope approval is justified. Component
 completeness research for the 33 derivation and five AMD extension periods is a

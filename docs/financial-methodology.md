@@ -750,6 +750,20 @@ Current D&A is **115 resolved / 89 missing / 0 ambiguous**; all 89 controls and
 other metrics are unchanged. See the
 [verified results](depreciation-amortization-scope-evidence-design.md#wave-20-implementation-and-verified-results).
 
+Wave 21's [component-completeness review](depreciation-amortization-component-derivation-design.md)
+does not approve any new equation: 33 periods reconcile to 0 approved,
+19 further-research and 14 methodology-blocked research outcomes. These are
+not standardized state changes. A reported `Depreciation` QName can include
+impairment (GEV 2024 explicitly includes 108m); software may already be in
+equipment (ABBV) or finite intangibles (GEV); manufacturing inventory and
+grant-netting need an expense-scope bridge. Insignificant lease costs are not
+zero. Earlier comparative disclosures never become current operands.
+Same-concept rounded notes remain separate representations; their submitted
+precision can corroborate, never establish complete scope or relax runtime
+conflict rules. No new materiality exception, residual, lease adjustment or
+primitive redefinition is authorized. Five Visa approvals, existing generic
+and MSFT policies, and current **115 / 89 / 0** D&A counts remain unchanged.
+
 ## FCFF
 
 The core valuation methodology is unlevered free cash flow to the firm (FCFF).

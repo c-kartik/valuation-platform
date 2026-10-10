@@ -381,6 +381,20 @@ D&A missing-to-resolved changes occur; all other metrics and execution states
 are unchanged. The research inventory and generic/MSFT policies are unchanged.
 No generic fallback, residual or lease adjustment is introduced.
 
+Phase 1H.4 Wave 21 completes the
+[D&A component-completeness design](depreciation-amortization-component-derivation-design.md)
+and its [33-period matrix](depreciation-amortization-component-derivation-matrix.json).
+All exact Wave 18 derivation identities reconcile: six issuers with five
+periods, GEV two and PM one. Decision: **NO-GO for derivation implementation**;
+**0 approved / 19 further research / 14 methodology-blocked** research outcomes.
+Documented software containment, rounded observations, manufacturing/grant
+scope, embedded leases and GEV's 2024 impairment prevent a safe equation.
+Only 23 specific selected-filing lease-note gaps were retrieved; committed
+statement/asset evidence was reused. No production policy, code, tests,
+inventory or corpus changes; no tests/corpus rerun. The five Visa approvals,
+all 89 missing controls and the Wave 20 counts above remain unchanged.
+AMD's five extension periods remain outside this pass. Safe new coverage is zero.
+
 ## Completed
 
 - Completed Milestone 0 — development environment and repository setup
@@ -814,12 +828,15 @@ No generic fallback, residual or lease adjustment is introduced.
 
 ## Next Step
 
-Design D&A component-completeness/scope evidence for the 33 derivation periods,
-keeping AMD's five issuer-extension periods a separate gated pattern. Preserve
-Wave 20's five-entry curated policy and all 89 unapproved controls. No generic
-combined-concept fallback or lease adjustment. Component completeness
-research for the 33 derivation and five AMD extension periods remains separate;
-do not generalize MSFT's two operands or approve a generic cash-flow fallback.
+Complete targeted TXN 2021–2023 D&A completeness/expense-scope closure after
+[Wave 21's NO-GO](depreciation-amortization-component-derivation-design.md#implementation-boundary-and-next-milestone):
+prove software/PP&E disjointness, exhaustive finite-asset coverage and
+manufacturing/inventory plus grant-netting alignment before approving an
+exact-accession equation. TXN 2024–2025 absent intangible operands are not
+zero. Preserve Wave 20's five Visa entries and all 89 unapproved controls;
+no generic sum, cash-flow fallback or isolated lease adjustment. The 14
+methodology-gated proposals, remaining research periods and five AMD extension
+periods remain separate; do not generalize MSFT's two operands.
 Wave 17 leaves the ten CVX/GE Operating Income gaps unresolved; dedicated CVX
 energy/affiliate and GE industrial/insurance carve-out or common-perimeter
 recast research are separate, unapproved methodology paths. Preserve the
@@ -879,8 +896,9 @@ sensitivity work is intentionally paused through Phase 1H.
    94 D&A gaps across 21 issuers and reaches PARTIAL GO for scoped evidence
    design with five Visa candidates, not production expansion. Wave 19 freezes
    their curated scope-equivalence acceptance design; Wave 20 implements only
-   those five entries with 89 unchanged controls. Next design D&A component
-   completeness/scope, then continue with other
+   those five entries with 89 unchanged controls. Wave 21 completes the 33-period
+   component review with no approved equation (19 research / 14 methodology-gated).
+   Next close TXN 2021–2023 completeness/expense-scope evidence, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital
