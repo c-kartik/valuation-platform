@@ -1,7 +1,15 @@
 # MSFT analyst-input treatment decision memo
 
 2026-10-12; starting HEAD `f3e67e6db5b306bc0283af1a04d138266fd0bb02`.
-**Proposed for user review, not approved analyst policy or executable behavior.**
+Original recommendations below were proposed for review. **Subsequent user
+acceptance, 2026-10-12:** SBC recognized-expense cost proxy counted once,
+consolidated reported CFO reference, separate narrow cash PP&E and reported cash
+taxes are accepted for the limited historical-input scope. Lease cash-service is
+accepted in principle, with precise restricted coverage/future applicability
+conditional. No tax rate, calculation or consumption approval is granted.
+The [two-period acceptance checklist](msft-treatment-acceptance-checklist.md)
+is authoritative for current statuses; the options below preserve the original
+decision rationale, not new executable policy.
 The user authorized designing an additional analyst path, not performing its
 economic adjustments. Phase 2 remains postponed. Preserve the reported-only
 baseline, frozen-v1 outputs/blockers, NWC scenarios, cash-flow bundles and sidecars.
@@ -205,10 +213,12 @@ cannot retain acquisition-driven growth benefits by assumption.
 
 ## Acceptance, stopping point and smallest next Phase 1 milestone
 
-All recommendations are **proposed_pending_review** in prose, not new registered
-policy IDs or executable enums. Facts remain SEC-reported; scope selection is
-analyst classification; SBC expense-as-economic-cost is an explicitly proposed
-proxy; tax rate remains a missing analyst input. Unknown disclosures stay null.
+The subsequent user approval supersedes the blanket proposed-pending-review
+status, only as specified in the [acceptance checklist](msft-treatment-acceptance-checklist.md).
+These are prose decisions, not registered policy IDs or executable enums.
+Facts remain SEC-reported; scope selection is analyst classification; SBC
+expense-as-economic-cost is an accepted labeled proxy, not cash evidence;
+tax rate remains a missing analyst input. Unknown disclosures stay null.
 No confidence/materiality threshold manufactures approval.
 
 User choices: accept/reject the SBC proxy; lease cash-service versus whole
@@ -219,12 +229,12 @@ Record acceptance author/date, exact two periods, chosen treatment/version,
 evidence references, proxy limitations, unpopulated required inputs and permitted
 use. Any override retains the prior decision, never changes the pinned baseline.
 
-**Stop after this memo. Smallest next Phase 1 milestone, conditional on user
-review:** record one two-period analyst-treatment acceptance/input checklist
-covering those choices, accepted proxies, still-missing data and applicable
-future-consumer checks. No economic calculator, new annotation cycle, broad SEC
-search or automatic blocker removal. Only a later explicit authorization can
-implement an analyst path or calculations; Phase 2 remains postponed.
+The then-next acceptance checklist is now completed. **Stop for the precise
+restricted lease-perimeter decision** documented there; no new calculator,
+annotation cycle, broad SEC search or automatic blocker removal. The pilot is
+closed only for two-period historical input preparation, not completeness or
+future consumer readiness. Only later explicit authorization can implement
+calculations; Phase 2 remains postponed.
 
 Validation: frozen identities/input points/precision and bundle/sidecar evidence
 references checked against retained registries and original-body metadata;

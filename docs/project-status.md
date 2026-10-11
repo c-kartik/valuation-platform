@@ -2,7 +2,26 @@
 
 ## Current Milestone
 
-Latest completed milestone: **bounded MSFT analyst-treatment decision memo**,
+Latest completed milestone: **MSFT FY2025–2026 treatment acceptance/input
+checklist**, documentation-only Phase 1. [User-approved treatments](msft-treatment-acceptance-checklist.md)
+accept recognized SBC expense as a labeled cost proxy counted once, consolidated
+reported CFO history, separate narrow cash PP&E and reported cash taxes. No
+operating-tax rate is approved. Lease cash-service is accepted in principle;
+the three Note 13 cash-payment classes define a restricted perimeter, with
+comprehensive coverage, borrowing-interest overlap and future-consumer
+consistency unresolved. No sum or economic adjustment is authorized.
+This closes the MSFT pilot **only for two-period reported-input preparation with
+explicit accepted/conditional choices**, not complete NWC, reinvestment, interest
+or FCFF readiness. Frozen-v1, schemas, values, bundles, sidecars and blockers
+unchanged; baseline **1,905/1,483/11/27/42 = 3,468** carried forward.
+Identities, retained evidence/digests, precision, status consistency and local
+links checked; diff check passes. No SEC requests, tests or corpus rerun.
+**Stop pending review.** Single next Phase 1 milestone: user decision accepting
+the precise restricted lease-service perimeter and exclusions, or explicitly
+requiring unavailable comprehensive coverage. No new annotation/research cycle;
+Phase 2 remains postponed.
+
+Previously completed milestone: **bounded MSFT analyst-treatment decision memo**,
 documentation only, Phase 1. [Proposed recommendations](msft-analyst-treatment-decision.md)
 use reported consolidated CFO as historical input basis, recognized SBC expense
 as an explicitly accepted economic-cost proxy counted once, a consistently

@@ -543,3 +543,44 @@ Smallest conditional next **Phase 1** milestone: record one two-period analyst
 treatment acceptance/input checklist and its limitations, no calculator or new
 annotation cycle. Do not begin further implementation/research or resume Phase 2
 without new authority.
+
+## User-accepted historical input treatments, 2026-10-12
+
+The [single FY2025–2026 checklist](../msft-treatment-acceptance-checklist.md)
+completes the then-next milestone and supersedes only the prior pending-review
+statuses. Original conflicts, options, sources and recommendations above remain
+the decision history. The user accepts the recognized SBC expense cost proxy
+once, consolidated reported CFO as historical reference, narrow cash PP&E as a
+separate input and reported cash taxes. Outstanding awards and acquisition/
+intangible spending remain separate; neither complete reinvestment nor an
+operating-tax rate is approved.
+
+Lease cash-service is accepted in principle. The precise proposed operand
+definition is Note 13 operating-lease cash and finance-lease interest cash
+(already in CFO), plus separately reported financing cash finance-lease
+principal. No total or adjustment is produced. Expense/amortization and noncash
+ROU additions are not additional cash payments; borrowing interest stays outside
+the lease bucket with uncertain overlap/capitalization. Variable/short-term and
+nonlease cash coverage is unproved. A user decision must explicitly accept the
+limited reported-cash perimeter/exclusions before future applicability is
+claimed. A whole financing convention is not silently substituted.
+
+Rationale: useful reported historical inputs do not require complete book-NWC
+reconstruction, but do not recover acquisition/FX/reclassification/timing
+allocations or organic comparability. Future expense, principal, asset investment
+and debt treatment must avoid charging the same lease obligation twice.
+Future tax assumptions require a justified basis and explicit accepted entry.
+All provenance, precision and occurrences stay pinned to the two selected
+filings; no earlier-period extension or estimate is introduced.
+
+Validation: exact accessions/annual contexts, retained original-body digests,
+bundle points/precision, links and decision consistency checked; diff check
+passes. Source, schemas, reported registry/sidecars and partial scenarios remain
+byte-identical. No SEC requests, tests/corpus or calculations. Frozen-v1 NWC and
+other blockers remain unchanged; production **1905/1483/11/27/42 = 3468**.
+
+The Phase 1 pilot closes only as two-period reported-input preparation with
+accepted/conditional treatments. No complete cash interest, NWC, investment or
+FCFF certification. No remaining implementation is required for that scope.
+Stop for one bounded user decision on the restricted lease perimeter; do not
+launch further research or Phase 2.
