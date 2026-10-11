@@ -2,7 +2,21 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 38**, five Visa curated Capex v3
+Latest completed milestone: **Phase 1H.4 Wave 39**, documentation-only
+[QCOM scope research](capex-qcom-scope.md) and
+[five-row supplement](capex-qcom-scope-inventory.json). All five exact selected
+periods retain `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`: cash purchase values
+and separate acquisitions are evidenced, but a complete eligible PP&E/software
+cash perimeter is not. NO-GO for acceptance/derivation; zero safe additional
+coverage. Fifty-nine current SEC response bodies retain typed verified digests;
+ten historical report fingerprints differ and remain explicitly unverified,
+not replaced on extracted-text equality. Frozen inventory/policies unchanged.
+Production carried forward: Capex 167/37/0, aggregate 1,905/1,483/11/27/42 = 3,468.
+No tests or corpus rerun. Reopen QCOM only for new exact-period completeness
+evidence. Next bounded milestone: documentation-only scope research for five
+frozen HD cash PP&E candidates, without transferring Visa/QCOM conclusions.
+
+Previously completed milestone: **Phase 1H.4 Wave 38**, five Visa curated Capex v3
 entries implemented and [validated](capex-visa-scope-evidence-results.md).
 Immutable v1/v2 registries, fifteen prior approvals and all 147 direct results
 are unchanged. The original 57 identities reconcile to five new Visa results,

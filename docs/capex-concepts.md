@@ -1,5 +1,15 @@
 # Capex selected-filing concept and component inventory
 
+Wave 39 [QCOM scope research](capex-qcom-scope.md) and
+[five-row supplement](capex-qcom-scope-inventory.json) retain all five frozen
+`CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED` outcomes. Cash values are verified,
+but complete cash PP&E/operational-software scope is unproved: zero safe
+additional coverage or equations. Fifty-nine fresh original response bodies
+are retained; historical report fingerprints are preserved separately, not
+promoted through matching extracted text. Frozen 57-row inventory and production
+remain unchanged. Next research only five frozen HD cash PP&E scope candidates;
+reopen QCOM only with new complete cash-scope evidence, not repeated broad search.
+
 Wave 38 [implements and validates](capex-visa-scope-evidence-results.md) only the
 five reviewed Visa v3 entries. Current Capex is **167/37/0**, aggregate
 **1,905/1,483/11/27/42 = 3,468**. The frozen 57-row research inventory is unchanged:
