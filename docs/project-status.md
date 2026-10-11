@@ -2,7 +2,27 @@
 
 ## Current Milestone
 
-Latest completed milestone: **isolated MSFT FY2025–2026 reported cash-flow input
+Latest completed milestone: **bounded MSFT FY2025–2026 cash-interest completeness
+review**, documentation-only Phase 1. [Two-period conclusions](msft-alternative-historical-cash-flow-inputs.md#cash-interest-completeness-review)
+retain debt cash 1600m/1500m (rounded) and finance-lease cash 1372m/2547m as
+separate disclosed inputs. Item 7 positively establishes finance-lease interest
+and debt-interest capitalization effects on recognized aggregate expense
+2385m/3051m; it is not debt-only, gross-incurred interest or cash paid.
+No certified debt/lease cash sum, gross/net capitalization basis or complete
+cash/accrual bridge. Operating-lease cash is not a disclosed interest split;
+tax-position interest remains separately tax-scoped. **HOLD for all-in cash
+interest**, not a declaration of incompatibility. Bounded research closes with
+precise evidence gaps, not another broad issuer search.
+Both frozen identities, four original-byte hashes/metadata, primary-note/Item 7
+assertions, occurrences/precision, supported lease arithmetic, links and diff
+checks pass. No SEC requests, tests, full suite, corpus or implementation changes;
+immutable bundles, frozen schema 5, NWC blockers/scenarios and production
+1,905/1,483/11/27/42 = 3,468 states remain unchanged.
+**Single next Phase 1 milestone:** design additive MSFT cash-interest scope/unknown
+annotations for the same two bundles, preserving v1, with no totals, estimates,
+tax-shield calculation or valuation approval. Phase 2 remains postponed.
+
+Previously completed milestone: **isolated MSFT FY2025–2026 reported cash-flow input
 bundles**, strictly Phase 1. [Reviewed registry](company-data-preparation/msft-reported-cash-flow-bundles.json)
 and [implemented boundary](msft-alternative-historical-cash-flow-inputs.md#implemented-isolated-reported-input-bundles)
 package 37/38 scoped reported inputs, 42/43 confirming occurrences and 10/9

@@ -303,7 +303,67 @@ to starting HEAD. No SEC request or corpus rerun; full suite not repeated becaus
 no existing shared implementation changed. Historical schema 5 and production
 1,905/1,483/11/27/42 = 3,468 states remain the carried-forward frozen baseline.
 
-Smallest next **Phase 1** milestone: bounded cash-interest perimeter/completeness
+Then-next **Phase 1** milestone (completed below): bounded cash-interest perimeter/completeness
 review for the same two periods, specifically debt/finance-lease overlap and
 capitalized-interest evidence. Retain unknowns if disclosure cannot support
 separation; no adjusted subtotal, broad research or Phase 2 resumption.
+
+## Cash-interest completeness review
+
+Original conflict: `InterestPaid` could be read as all-in cash interest; debt,
+lease, operating-lease cost, capitalization and tax-position interest have
+different disclosed scopes and recognition bases. The
+[bounded two-period review](../msft-alternative-historical-cash-flow-inputs.md#cash-interest-completeness-review)
+uses the same exact selected accessions, four original-body digests and existing
+annual/instant contexts, with no SEC refresh or bundle mutation.
+
+Findings: FY2025 debt cash **1600m (-8)**, finance-lease cash **1372m (-6)**,
+aggregate recognized interest expense **2385m (-6)** and finance-lease interest
+cost **1417m (-6)**. FY2026 equivalents **1500m (-8)**, **2547m**, **3051m** and
+**2547m**. Notes 10/13 separately describe senior unsecured debt and lease
+liabilities; keep those cash inputs separately classified. A mutual-exclusion
+cash reconciliation is not supplied, so neither zero overlap nor an all-in sum
+is certified. FY2026 debt cash cannot contain the whole larger disclosed lease
+cash amount; this is not proof of the remaining allocation or a summation rule.
+
+Additional retained evidence: both Item 7 *Other Income (Expense), Net* comparison
+paragraphs identify finance-lease interest and higher capitalization of debt
+interest as drivers of recognized interest expense. This positively establishes
+lease-related effects and capitalization reducing current recognized expense;
+the aggregate is not debt-only or gross-incurred interest. Do not add the full
+Note 13 cost to it, infer cash from expense or compute capitalization by residual.
+The cost-to-profit/loss/cash allocation remains unbridged.
+
+Operating-lease cash **4931m/6443m** is not a reported interest split; costs
+**5524m/6968m** are distinct. Finance principal **2283m/3101m**, ROU amortization
+**3408m/5403m**, noncash asset additions and future imputed discount amounts are
+not current interest cash. Note 1's separate lease/non-lease policy has equipment
+exceptions; no undisclosed component is assumed zero. Tax-position interest
+expense **1300m/1400m** and closing accrual **8200m/9400m**, all `decimals=-8`,
+are net of tax benefits under Note 12 and outside the debt/lease expense category.
+They are research observations, not cash inputs or new bundle registrations.
+
+Resolution/rationale: retain all individually supported v1 inputs unchanged;
+**HOLD for complete all-in interest**. Capitalization is evidenced but its expense
+and cash amounts are unquantified; cash disclosures' gross/net capitalization
+basis, debt/lease cash overlap, hedge/short-term coverage, operating-lease interest
+split and tax-interest cash allocation remain unknown. Expense/cash lease equality
+in FY2026 does not resolve completeness. Unknown compatibility is not proved
+incompatibility; no arbitrary materiality or estimated allocation is introduced.
+
+Proposed packaging only: additive scope annotations tied to Item 7 and exact
+note/occurrence provenance, plus separate granular unknowns for capitalization
+amounts/cash basis/overlap/operating split. Never edit immutable v1 descriptors,
+remove `all_in_cash_interest`, add an interest tax shield or approve valuation use.
+
+Validation: identities, four original-byte hashes/metadata, note/Item 7 assertions,
+QNames and all eligible numeric occurrences/contexts/units/signs/precision checked.
+Lease cost component sums and the disclosed 45m/0m cost-versus-cash differences
+checked as diagnostics only. Relevant links/diff check pass. No code, tests,
+registry/manifest, schema, policy, frozen output or prior-scenario changes; no
+SEC requests or corpus rerun. Production baseline remains 1905/1483/11/27/42.
+
+Smallest next **Phase 1** milestone: design additive cash-interest scope/unknown
+annotations for only these two reviewed bundles, preserving v1. Completeness
+research is closed unless new explicit issuer evidence supplies the missing
+cash population, capitalization basis/amounts and cash/accrual bridge.

@@ -252,9 +252,152 @@ Prior shared NWC source/models/bundles and frozen validation/evidence are
 byte-identical to starting HEAD. No SEC request or corpus rerun. No full-suite
 rerun is justified by an existing shared implementation change: none occurred.
 
-**Single next Phase 1 milestone:** bounded MSFT FY2025–2026 **cash-interest
+**Then-next Phase 1 milestone (completed below):** bounded MSFT FY2025–2026 **cash-interest
 perimeter/completeness review**: determine what retained evidence establishes
 about debt-interest/finance-lease overlap and capitalized-interest scope, or
 retain the precise unknown. No automatic combination, adjusted subtotal or
 valuation consumption; no broad issuer research cycle. Stop this milestone
 after the validated bundle commit; Phase 2 remains postponed.
+
+## Cash-interest completeness review
+
+### Conflict, evidence boundary and decision
+
+The generic `InterestPaid` name could be mistaken for complete interest cash;
+the note actually describes debt interest. Separately disclosed finance-lease
+cash and expense, operating-lease cash, capitalization and tax-position interest
+make cash/expense substitutions or sums unsafe. **GO for retaining each reported
+input in its disclosed scope; HOLD for a complete all-in cash-interest amount.**
+No cash sum, interest tax shield, adjusted subtotal or consumption approval.
+
+This review reuses the four original bodies/digests and two frozen identities
+listed above. FY2025 is accession `0000950170-25-100235`, annual
+2024-07-01–2025-06-30; FY2026 `0001193125-26-323660`, annual
+2025-07-01–2026-06-30. No later comparative replaces selected evidence. Annual
+and closing context IDs, namespace aliases `g`/`m`, USD units and root-child
+ordinal convention are those above. All numeric rows below are nondimensional,
+non-nil `U_USD` facts; values in millions, positive expense/payment magnitudes.
+`decimals=-6` unless `-8` is shown; positive cash payment tags display as outflows.
+
+The **additional essential evidence was already retained**: Item 7, *Other Income
+(Expense), Net*, respective FY2025-versus-FY2024 / FY2026-versus-FY2025 discussion.
+Both primary bodies explicitly identify higher debt-interest capitalization and
+finance-lease interest as drivers of the recognized interest-expense line.
+These passages establish accounting effects, not capitalized amounts or cash
+allocations. Locators: paragraph beginning “Interest expense decreased primarily”
+(FY2025) / “Interest expense increased primarily” (FY2026), in the primary URLs
+above. Notes 1, 3, 6, 10, 12 and 13 supply the remaining scope evidence. There is
+no missing selected-filing body requiring another SEC retrieval.
+
+| Input / exact concept | FY2025 value / ordinal | FY2026 value / ordinal | Review classification and included/excluded scope |
+| --- | --- | --- | --- |
+| g:InterestPaid | 1600 (-8) / 1643 | 1500 (-8) / 1651 | **Cash paid for debt interest**, Note 10; rounded debt-scoped disclosure, not accrued expense. Note 10 discusses commercial paper/long-term debt (2025) and senior unsecured obligations; it does not state an all-borrowing/lease/capitalized-interest cash perimeter or gross/net capitalization basis. No commercial-paper, coupon, hedge or capitalized-interest allocation approved. |
+| g:InterestExpenseNonoperating | 2385 / 896 | 3051 / 907 | **Recognized accrued aggregate interest expense**, Note 3 / Item 7. Item 7 demonstrates finance-lease interest effects and capitalization reducing recognized debt-interest expense. Not gross interest incurred, not debt-only expense and not cash paid. Adding the full lease expense to this aggregate is not justified. |
+| g:FinanceLeaseInterestPaymentOnLiability | 1372 / 1854 | 2547 / 1891 | **Finance-lease interest cash**, Note 13, caption operating cash flows from finance leases under cash paid for amounts included in measurement of lease liabilities. Distinct from financing principal and noncash additions; not certified total lease-related cash or a capitalized-interest allocation. |
+| g:FinanceLeaseInterestExpense | 1417 / 1844 | 2547 / 1881 | **Finance-lease interest cost/expense**, Note 13; separate from ROU amortization and cash paid. Reported cost does not provide a gross-incurred/capitalized/recognized/cash bridge. FY2026 equality to cash is not a completeness proof. |
+| g:OperatingLeasePayments | 4931 / 1851 | 6443 / 1888 | **Operating-lease cash**, Note 13, amounts included in measurement of lease liabilities. Whole payment disclosure, not a separately reported interest component or necessarily all variable/non-lease cash. Do not label it interest or infer an analytical split. |
+| g:OperatingLeaseCost | 5524 / 1838 | 6968 / 1875 | **Operating-lease cost**, Note 13; Note 1 describes straight-line lease expense and generally separate lease/non-lease components, with equipment exceptions. Not cash paid or separately recognized financing interest. |
+| g:FinanceLeasePrincipalPayments | 2283 / 1857 | 3101 / 1894 | **Financing cash principal**, Note 13, excluded from interest cash; not an additional interest operand. |
+| g:FinanceLeaseRightOfUseAssetAmortization | 3408 / 1841 | 5403 / 1878 | **Noncash ROU amortization**, Note 13, excluded from interest cash. |
+| m:FinanceLeaseCost | 4825 / 1847 | 7950 / 1884 | **Total finance-lease cost**, Note 13, includes amortization and interest; not a second expense or cash operand. |
+| g:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability | 20511 / 1863 | 24608 / 1900 | **Noncash lease additions**, Note 13; not cash interest, accrued interest expense or a financing-principal payment. Operating-lease noncash additions 7826m/4555m (1860/1897) likewise are not cash interest. |
+| g:UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense | 1300 (-8) / 1786 | 1400 (-8) / 1820 | **Tax-position interest expense net of income-tax benefits**, Note 12's narrower caption despite the generic combined tag. Note 1 places tax-position interest/penalties in income tax expense. Not debt/lease interest or cash paid; no cash amount inferred from it. Research observation only, not added to registered bundles. |
+| g:UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued | 8200 (-8) / 1783 | 9400 (-8) / 1817 | **Closing tax-position accrued interest**, Note 12, net of tax benefits; instant contexts above. Stock, not annual cash paid or a cash bridge. Generic tag is broader than the note's reported scope. Research observation only. |
+
+Text-block locators in the verified instances: Note 1
+`SignificantAccountingPoliciesTextBlock` 831/838; Note 6
+`PropertyPlantAndEquipmentDisclosureTextBlock` 1349/1363; Note 10
+`DebtDisclosureTextBlock` 1503/1516; Note 12 `IncomeTaxDisclosureTextBlock`
+1654/1662; Note 13 `LesseeOperatingAndFinanceLeasesTextBlock` 1831/1868.
+These blocks use each selected annual context. The existing matrix supplies
+Note 3's exact numeric interest-expense occurrence; Item 7's primary-body prose
+provides the additional inclusion/capitalization evidence, not a new numeric fact.
+
+### Overlap, capitalization and completeness decisions
+
+**Both periods:** Note 10 senior unsecured debt and Note 13 lease liabilities
+are separately described populations; neither cash caption explicitly says it
+includes the other. The supported source labels are distinct debt/finance-lease
+cash, not two interchangeable total-interest observations. However, no explicit
+mutual-exclusion reconciliation of the cash disclosures is provided. Numerical
+partial overlap, hedge-settlement coverage and the all-in cash boundary remain
+unquantified. Do not add them as a certified total or assert a zero overlap.
+FY2026 finance-lease interest cash (2547m) exceeds the rounded debt-cash point
+(1500m); treating the debt disclosure as already containing the **entire**
+finance-lease payment is inconsistent with the reported amounts. This diagnostic
+does not determine partial overlap, create a rounding interval or approve a sum.
+
+**Accrued expense overlap is positively evidenced:** the Item 7 explanations
+show that the Note 3 interest-expense line is affected by finance-lease interest.
+The previous warning not to assume a complete mapping is now refined: its
+lease-related scope is evidenced, but the full Note 13 cost-to-Note 3 allocation
+is not reconciled. It is not safe to add the disclosed lease cost a second time.
+Noncash debt discounts, issuance costs, exchange premiums and hedge adjustments
+appear in Note 10's debt carrying values; balances do not establish current
+expense amortization or cash settlements, and no residual bridge is proposed.
+
+**Capitalization is real, not an absent-zero assumption:** both Item 7 passages
+attribute part of the interest-expense change to higher capitalization of debt
+interest expense. Recognized aggregate expense therefore reflects that reduction
+relative to pre-capitalization expense. But no eligible standalone quantified
+capitalized-interest fact or expense-to-cash bridge was found in these complete
+selected primary/instance bodies or Notes 1/3/6/10/13. Neither Note 10's cash
+caption nor the lease cash table specifies cash paid gross or net of capitalized
+interest. Capitalized **expense**, capitalized **cash paid**, unpaid interest and
+cash-flow placement are separate unknowns. PP&E cash purchases/creditor balances
+cannot establish their amounts or allocation. Do not call the debt cash number
+gross, net, expensed-only, capitalization-inclusive or capitalization-exclusive.
+
+**Operating leases:** the single reported cost/payment is not a disclosed cash
+interest split. Future maturity-table imputed interest is a discount between
+undiscounted payments and closing lease liabilities, not current-period interest
+cash. Weighted-average rates, balances or cost/cash differences cannot supply a
+verified split. Equipment lease/non-lease exceptions further limit cash-component
+completeness. No inferred operating-lease interest or omitted component is zero.
+
+Accounting context: [FASB ASU 2016-02 Section A](https://storage.fasb.org/ASU%202016-02_Section%20A.pdf),
+ASC 842-20-25-5/25-6 and 45-5, distinguishes finance-lease cost components and
+cash principal/interest from operating single-cost/cash presentation. Paragraph
+50-4's cost disclosures can include amounts capitalized under other Topics;
+therefore a lease-cost disclosure alone does not quantify its profit/loss share.
+These accounting requirements contextualize the issuer's captions; they do not
+prove MSFT-specific overlap, cash capitalization or operating interest amounts.
+The previously cited Statement 95 capitalized-interest classification guidance
+likewise does not establish the issuer's actual cash allocation.
+
+### Supported arithmetic, proposed packaging and stopping boundary
+
+Checks only: finance-lease amortization plus interest cost reproduces total cost
+**3408 + 1417 = 4825m** and **5403 + 2547 = 7950m**. Disclosed lease cost-minus-cash
+interest points are **45m / 0m**; those differences are not estimated interest
+payables, capitalization, timing allocations or a cash bridge. No debt/lease
+cash sum or gross-incurred-interest residual was calculated.
+
+**No change to immutable registered v1 bundles:** retain debt cash, lease cash,
+recognized aggregate expense, noncash facts and `all_in_cash_interest=None`.
+Justified proposed **additive annotation contract**, requiring a separate design:
+record Item 7's demonstrated finance-lease/capitalization effects on aggregate
+expense; explicitly separate unknown cash-overlap, capitalized-expense amount,
+capitalized-cash amount, cash disclosure gross/net basis and operating-lease
+interest split. Link tax-position interest as a separately scoped research fact,
+not debt/lease cash or an automatic bundle addition. Preserve original v1 bytes,
+identities, values/roles, submitted precision and all prior decisions.
+
+Reopening completeness requires explicit issuer evidence of cash-interest
+population/overlap and gross/net capitalization basis, quantified capitalized
+cost/cash and a complete expense/accrual/noncash/cash bridge. An accounting rule,
+matching amounts, another copy of the same selected filing or later comparative
+cannot supply it. This **closes the bounded research question with durable
+unknowns**, not an open-ended issuer search or demonstrated incompatibility.
+
+Validation: two frozen identities, four original-byte hashes/lengths/retrieval
+metadata, annual/instant contexts, QNames, units, nil/dimensions, precision and
+all current eligible interest/lease/tax-interest occurrences checked against
+retained bodies; Item 7/notes assertions checked in primary text. Supported
+cost/cash arithmetic, relevant local links and diff check pass. No new SEC
+requests, tests, full suite, corpus, code, registry, schema or frozen-v1 changes.
+
+**Single next Phase 1 milestone:** design the **additive MSFT cash-interest
+scope/unknown annotation contract** for these two bundles, preserving immutable
+v1 and carrying this review's established expense effects and precise unknowns.
+No new totals, allocations, default estimates or consumption approval.
