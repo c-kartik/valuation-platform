@@ -44,6 +44,21 @@ NWC/ΔNWC or valuation calculation exists. Complete-NWC and valuation-consumptio
 flags remain false. Frozen schema 5, policies, blockers and partial NWC scenario
 serialization are unchanged. See the [evidence/design](msft-alternative-historical-cash-flow-inputs.md#implemented-isolated-reported-input-bundles).
 
+`analyst/aapl_cash_flow_inputs.py` reuses these immutable models and source
+validators in an isolated opt-in adapter; shared implementation is unchanged.
+The separately SHA-256-pinned [AAPL registry](company-data-preparation/aapl-reported-cash-flow-bundle.json)
+registers only `aapl-reported-cash-flow-fy2025`, version 1, under contract
+`reviewed-aapl-reported-cash-flow-inputs`. It uses the same reported-input schema
+shape but a distinct closed serialization contract, with its own verified
+registry and receipts. MSFT serialization bytes/registrations remain unchanged.
+Twenty-one inputs retain twenty-six confirming occurrences and eleven explicit
+unknowns. Ten reported reconciliation terms reproduce CFO only. SBC expense is
+a distinct note role, not a second add-back/economic cost; fixed operating-lease
+cash keeps decimals −8, variable lease cost stays expense and ROU additions
+stay noncash. No comparative bundles, automatic MSFT treatment transfer, totals,
+readiness approval or integration with frozen historical outputs. See the
+[AAPL evidence and packaging decision](aapl-alternative-historical-cash-flow-inputs.md#implemented-isolated-fy2025-reported-input-bundle).
+
 The [MSFT cash-interest annotation design](msft-cash-interest-scope-annotation-design.md)
 now has an **implemented isolated** independent sidecar for only the same two
 bundles. Reuse Period/Artifact/Receipt/Occurrence without changing them; pin the

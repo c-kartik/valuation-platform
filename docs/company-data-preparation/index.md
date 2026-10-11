@@ -19,6 +19,12 @@ output or partial NWC scenarios. Cash, accrued, noncash and reconciliation roles
 remain distinct; explicit unavailable/unresolved inputs carry no amounts.
 No other issuer record receives new cash-flow review or approval by analogy.
 
+The separately reviewed [AAPL FY2025 reported-input bundle](AAPL.md#implemented-fy2025-reported-input-bundle)
+now reuses the immutable machinery under its own pinned registration and
+serialization contract. It does not inherit MSFT analyst treatments; its
+comparative columns are evidence, not registered bundles. This issuer-specific
+addition changes no register mapping or historical support classification.
+
 The [MSFT-only cash-interest sidecar design](../msft-cash-interest-scope-annotation-design.md)
 now has an [isolated implementation](../../src/valuation_platform/analyst/cash_interest_annotations.py)
 and [two-set registry](msft-cash-interest-annotations.json), not a replacement of

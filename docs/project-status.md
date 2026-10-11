@@ -2,7 +2,24 @@
 
 ## Current Milestone
 
-Latest completed milestone: **bounded AAPL FY2025 alternative reported cash-flow
+Latest completed milestone: **one isolated AAPL FY2025 reported-input bundle**.
+[Results and provenance](aapl-alternative-historical-cash-flow-inputs.md#implemented-isolated-fy2025-reported-input-bundle)
+record twenty-one inputs/twenty-six confirming occurrences and eleven explicit
+null unknowns. CFO, PP&E cash, net cash taxes, SBC expense/add-back and rounded
+fixed operating-lease cash remain distinct; only the ten-term reported CFO
+reconciliation is computed. Own immutable version-1 registry/serialization
+contract; existing shared models, MSFT contracts and analyst scenarios unchanged.
+No comparative bundles, inferred zeros, MSFT treatment transfer, economic totals
+or valuation consumption. Frozen baseline **1,905/1,483/11/27/42 = 3,468** and
+NWC blockers preserved. **15 focused / 127 relevant analyst tests passed**
+(127 includes the new 15); MSFT serialized-byte preservation, compileall, local
+links and diff check pass. No full-suite rerun because shared code is unchanged.
+No SEC requests or corpus rerun; Phase 2 postponed.
+Next Phase 1 milestone: **one bounded AAPL analyst-treatment decision memo**,
+using retained evidence to distinguish proposed choices from unavailable
+disclosures and permitted partial-data use. Stop after this implementation.
+
+Previously completed milestone: **bounded AAPL FY2025 alternative reported cash-flow
 input review**, documentation-only Phase 1, plus MSFT restricted-dataset
 acceptance. The [AAPL matrix](aapl-alternative-historical-cash-flow-inputs.md)
 verifies the selected 2025 accession, annual/ comparative contexts and reported

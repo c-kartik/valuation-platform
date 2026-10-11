@@ -1,0 +1,383 @@
+{
+  "artifact_manifest_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+  "artifact_manifest_sha256": "8b7dd48e6408fb84af1493acfba3136d4a7671fc8bb1147c339015da80990542",
+  "inventory_path": "docs/analyst-operating-nwc-inventory.json",
+  "inventory_sha256": "ef68344fe6d523cb55f5478eb03045fa984f067e07b2b37e6687011cd5a4d1b6",
+  "contract": "reviewed-aapl-reported-cash-flow-inputs",
+  "version": "1",
+  "review_author": "Repository reviewed AAPL FY2025 cash-flow evidence milestone",
+  "reviewed_on": "2026-10-12",
+  "evidence_reference": "docs/aapl-alternative-historical-cash-flow-inputs.md",
+  "bundles": [
+    {
+      "bundle_id": "aapl-reported-cash-flow-fy2025",
+      "period": {
+        "cik": 320193,
+        "accession": "0000320193-25-000079",
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "form": "10-K",
+      "annual_context_id": "c-1",
+      "artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "accession": "0000320193-25-000079",
+          "representation": "sec_response_body_bytes",
+          "digest_type": "sha256_sec_response_body_bytes",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "byte_length": 1520319,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "http_status": 200,
+          "retrieval_mode": "targeted_blocked_nwc_evidence_gap"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+          "accession": "0000320193-25-000079",
+          "representation": "sec_response_body_bytes",
+          "digest_type": "sha256_sec_response_body_bytes",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "byte_length": 1416841,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "http_status": 200,
+          "retrieval_mode": "targeted_blocked_nwc_evidence_gap"
+        }
+      ],
+      "inputs": [
+        {
+          "input_id": "NetIncomeLoss",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "112010000000",
+          "decimals": "-6",
+          "ordinals": [
+            321,
+            336,
+            484,
+            613
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_income",
+          "location_and_scope": "Consolidated statements and CFO starting accrued income; confirming occurrences count once."
+        },
+        {
+          "input_id": "DepreciationDepletionAndAmortization",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "11698000000",
+          "decimals": "-6",
+          "ordinals": [
+            487
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO noncash D&A add-back; not an additional payment or timing certification."
+        },
+        {
+          "input_id": "ShareBasedCompensation",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "12863000000",
+          "decimals": "-6",
+          "ordinals": [
+            490
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO noncash SBC add-back only; separate expense role below is not a second economic cost or add-back."
+        },
+        {
+          "input_id": "OtherNoncashIncomeExpense",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "89000000",
+          "decimals": "-6",
+          "ordinals": [
+            493
+          ],
+          "display_multiplier": -1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO Other noncash: raw positive, displayed subtraction; unallocated."
+        },
+        {
+          "input_id": "IncreaseDecreaseInAccountsReceivable",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "6682000000",
+          "decimals": "-6",
+          "ordinals": [
+            496
+          ],
+          "display_multiplier": -1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO accounts receivable change; raw asset increase reverses displayed cash sign."
+        },
+        {
+          "input_id": "IncreaseDecreaseInOtherReceivables",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "347000000",
+          "decimals": "-6",
+          "ordinals": [
+            499
+          ],
+          "display_multiplier": -1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO vendor non-trade receivable change; not customer AR."
+        },
+        {
+          "input_id": "IncreaseDecreaseInInventories",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "-1400000000",
+          "decimals": "-6",
+          "ordinals": [
+            502
+          ],
+          "display_multiplier": -1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO inventory change; raw negative becomes positive displayed cash effect."
+        },
+        {
+          "input_id": "IncreaseDecreaseInOtherOperatingAssets",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "9197000000",
+          "decimals": "-6",
+          "ordinals": [
+            505
+          ],
+          "display_multiplier": -1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO current/noncurrent mixed assets; no component allocation."
+        },
+        {
+          "input_id": "IncreaseDecreaseInAccountsPayable",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "902000000",
+          "decimals": "-6",
+          "ordinals": [
+            508
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO reported AP change, not proof of operating-only closing AP."
+        },
+        {
+          "input_id": "IncreaseDecreaseInOtherOperatingLiabilities",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "-11076000000",
+          "decimals": "-6",
+          "ordinals": [
+            511
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO current/noncurrent mixed liabilities; no employee/distribution/tax allocation."
+        },
+        {
+          "input_id": "NetCashProvidedByUsedInOperatingActivities",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "111482000000",
+          "decimals": "-6",
+          "ordinals": [
+            514
+          ],
+          "display_multiplier": 1,
+          "kind": "cash_subtotal",
+          "location_and_scope": "Consolidated reported CFO subtotal only; no organic/unlevered/adjusted operating-only certification."
+        },
+        {
+          "input_id": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "12715000000",
+          "decimals": "-6",
+          "ordinals": [
+            526
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Consolidated investing cash PP&E purchases, not complete reinvestment or accrual additions."
+        },
+        {
+          "input_id": "PaymentsForProceedsFromOtherInvestingActivities",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "1480000000",
+          "decimals": "-6",
+          "ordinals": [
+            529
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Consolidated investing Other displayed net outflow; no acquisition/intangible allocation or gross purchase completeness."
+        },
+        {
+          "input_id": "IncomeTaxesPaidNet",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "43369000000",
+          "decimals": "-6",
+          "ordinals": [
+            565
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Supplemental corporate cash income taxes net; not operating-tax rate or employee tax withholding."
+        },
+        {
+          "input_id": "IncomeTaxExpenseBenefit",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "20719000000",
+          "decimals": "-6",
+          "ordinals": [
+            318,
+            920,
+            948
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Income statement/Note 7 tax provision; accrued expense, not cash taxes or approved operating-tax assumption."
+        },
+        {
+          "input_id": "AllocatedShareBasedCompensationExpense",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "12863000000",
+          "decimals": "-6",
+          "ordinals": [
+            1185
+          ],
+          "display_multiplier": 1,
+          "kind": "noncash_expense",
+          "location_and_scope": "Note 11 recognized SBC expense; distinct from CFO add-back, not an approved cost proxy or second economic cost."
+        },
+        {
+          "input_id": "OperatingLeasePayments",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "2100000000",
+          "decimals": "-8",
+          "ordinals": [
+            1023
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Note 8 rounded fixed operating-lease cash; limited disclosed coverage, not total lease cash or an extra deduction from CFO."
+        },
+        {
+          "input_id": "OperatingLeaseCost",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "2100000000",
+          "decimals": "-8",
+          "ordinals": [
+            1017
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Note 8 rounded fixed operating-lease cost; not payment evidence despite equal reported points."
+        },
+        {
+          "input_id": "VariableLeaseCost",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "16100000000",
+          "decimals": "-8",
+          "ordinals": [
+            1020
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Note 8 rounded variable lease cost, not annual variable cash payment."
+        },
+        {
+          "input_id": "RightofUseAssetsObtainedinExchangeforOperatingandFinanceLeaseLiabilities",
+          "namespace": "http://www.apple.com/20250927",
+          "value_usd": "2800000000",
+          "decimals": "-8",
+          "ordinals": [
+            1026
+          ],
+          "display_multiplier": 1,
+          "kind": "noncash_addition",
+          "location_and_scope": "Note 8 rounded combined noncash ROU additions; not cash PP&E or finance principal."
+        },
+        {
+          "input_id": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "value_usd": "5960000000",
+          "decimals": "-6",
+          "ordinals": [
+            535
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Face financing employee-tax withholding cash; not corporate tax, additional SBC cost or rounded Note 11 remittance."
+        }
+      ],
+      "unknowns": [
+        {
+          "input_id": "cash_interest",
+          "status": "unavailable",
+          "reason": "No separately disclosed annual cash interest; debt terms, rates or accrued expense do not provide a cash bridge."
+        },
+        {
+          "input_id": "complete_lease_cash_coverage",
+          "status": "unresolved_scope",
+          "reason": "Fixed operating cash only; variable/nonlease cash, finance interest/principal and capitalization/overlap are not established."
+        },
+        {
+          "input_id": "finance_lease_interest_cash",
+          "status": "unavailable",
+          "reason": "No isolated eligible annual finance-lease interest cash disclosure."
+        },
+        {
+          "input_id": "finance_lease_principal_cash",
+          "status": "unavailable",
+          "reason": "No isolated eligible annual finance-lease principal cash disclosure."
+        },
+        {
+          "input_id": "acquisition_only_cash_purchases",
+          "status": "unresolved_scope",
+          "reason": "Investing Other does not isolate acquisition cash; no residual allocation."
+        },
+        {
+          "input_id": "intangible_only_cash_purchases",
+          "status": "unresolved_scope",
+          "reason": "Investing Other does not isolate intangible cash or prove zero."
+        },
+        {
+          "input_id": "complete_reinvestment",
+          "status": "unresolved_scope",
+          "reason": "Narrow PP&E cash and mixed Other do not prove complete non-overlapping investment."
+        },
+        {
+          "input_id": "operating_only_cash_tax",
+          "status": "unresolved_scope",
+          "reason": "Reported cash taxes/provision and Ireland notes do not establish operating/recurring cash-tax allocation."
+        },
+        {
+          "input_id": "complete_operating_nwc",
+          "status": "unresolved_scope",
+          "reason": "Employee/distribution and investing-in-AP allocations remain blocked; partial scenario unchanged."
+        },
+        {
+          "input_id": "acquisition_fx_reclassification_cash_bridge",
+          "status": "unresolved_scope",
+          "reason": "No complete cash/organic comparability bridge approved."
+        },
+        {
+          "input_id": "joint_timing_compatibility",
+          "status": "unresolved_scope",
+          "reason": "No integrated EBIT/D&A/NWC/tax/lease readiness approval."
+        }
+      ],
+      "cfo_terms": [
+        "NetIncomeLoss",
+        "DepreciationDepletionAndAmortization",
+        "ShareBasedCompensation",
+        "OtherNoncashIncomeExpense",
+        "IncreaseDecreaseInAccountsReceivable",
+        "IncreaseDecreaseInOtherReceivables",
+        "IncreaseDecreaseInInventories",
+        "IncreaseDecreaseInOtherOperatingAssets",
+        "IncreaseDecreaseInAccountsPayable",
+        "IncreaseDecreaseInOtherOperatingLiabilities"
+      ],
+      "limitations": [
+        "FY2025 only; comparative columns and earlier frozen filings are not registered bundles.",
+        "Reported consolidated cash scope only; no totals or economic adjustments beyond reproducing reported CFO.",
+        "SBC expense and reconciliation add-back are distinct source roles, not independent economic costs; no MSFT treatment transfer.",
+        "Fixed operating-lease cash rounded at decimals -8; variable cost is expense, combined ROU additions noncash; no total lease cash.",
+        "Cash interest and acquisition/intangible allocations remain unknown, never zero; no complete NWC or valuation consumption."
+      ]
+    }
+  ]
+}

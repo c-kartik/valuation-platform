@@ -234,3 +234,43 @@ schema/scenario changes. Frozen baseline **1905/1483/11/27/42 = 3468** retained.
 Smallest next Phase 1 milestone: one isolated FY2025 reported-input bundle with
 explicit interest/lease/investment unknowns; no automatic treatment transfer,
 economic calculation or comparative registration. Stop after this review.
+
+## Implemented FY2025 reported-input bundle
+
+2026-10-12: the previously proposed data-only packaging is now implemented in
+[one exact reviewed registry](aapl-reported-cash-flow-bundle.json) and
+[isolated adapter](../../src/valuation_platform/analyst/aapl_cash_flow_inputs.py).
+Original conflict: incomplete book NWC and cash scope prevented treating partial
+balances as a complete cash investment bridge. Chosen resolution is separate
+reported-input packaging, not reconstructing or approving missing allocations.
+Exact selected accession/annual period remain as reviewed above. Explicit
+version-1 identity `aapl-reported-cash-flow-fy2025` and contract
+`reviewed-aapl-reported-cash-flow-inputs` pin the inventory, original-body
+manifest, two response digests and retrieval receipts. No comparative registration.
+
+Twenty-one facts retain twenty-six eligible occurrences. Net income confirms
+four times (321/336/484/613), tax provision three (318/920/948), counted once;
+the [matrix](../aapl-alternative-historical-cash-flow-inputs.md#implemented-isolated-fy2025-reported-input-bundle)
+transparently corrects its omitted confirming occurrences, not financial values.
+CFO 111,482m, PP&E cash 12,715m, cash taxes 43,369m and distinct SBC expense/
+add-back 12,863m remain reported inputs. Fixed lease cash 2,100m preserves −8
+precision; variable lease cost 16,100m remains accrued expense, combined ROU
+2,800m noncash addition. Investing Other 1,480m remains mixed. No SBC treatment
+proxy or MSFT lease convention is implicitly accepted.
+
+Eleven unknowns carry null/status/rationale, including interest, full lease and
+finance cash, acquisition/intangible allocations and readiness. Ten source
+terms reproduce reported CFO only; no subtraction of partial ΔNWC, interest
+total or adjusted cash calculation. Separate serialization retains raw facts,
+all occurrences/precision, source roles, typed original-byte digests and receipt
+metadata; altered or incomplete evidence rejects. No new sidecar framework.
+
+Validation: **15 focused / 127 relevant analyst tests passed** (127 includes the
+15 new tests), exact original MSFT serialization hashes preserved; compileall,
+local links and diff check pass. Shared code is unchanged, so no full-suite
+rerun. Original evidence,
+all existing scenarios/bundles/sidecars and frozen v1 policies/values/blockers
+remain unchanged. No SEC request or corpus rerun. Phase 1 only; no complete-NWC
+or valuation approval. The next bounded milestone is an AAPL analyst-treatment
+decision memo disposing of the finite unavailable-disclosure/choice list, not
+indefinite source research. Stop after packaging.

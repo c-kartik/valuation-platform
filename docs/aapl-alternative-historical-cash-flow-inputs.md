@@ -42,7 +42,7 @@ signs. Reconciliation items are not extra cash inputs or cash-based NWC componen
 
 | Exact concept / source role | FY2025 displayed amount | Occurrence(s) | Scope / restriction |
 | --- | ---: | --- | --- |
-| `NetIncomeLoss` | +112,010 | 321, 336, **484** | Accrual income; 484 is cash-flow opening amount; confirming other statements count once |
+| `NetIncomeLoss` | +112,010 | 321, 336, **484**, 613 | Accrual income; 484 is cash-flow opening amount; other statements/Note 3 EPS confirm, count once |
 | `DepreciationDepletionAndAmortization` | +11,698 | 487 | Noncash reported reconciliation add-back, not a second addition to CFO or timing certification |
 | `ShareBasedCompensation` | +12,863 | 490 | Noncash CFO reconciliation; separate recognized expense `AllocatedShareBasedCompensationExpense` 1185 confirms 12,863, Note 11 |
 | `OtherNoncashIncomeExpense` | −89 | 493 | Raw +89; displayed subtraction. Mixed noncash reconciliation, no unsupported allocation |
@@ -56,7 +56,7 @@ signs. Reconciliation items are not extra cash inputs or cash-based NWC componen
 | `PaymentsToAcquirePropertyPlantAndEquipment` | −12,715 | 526 | Raw +12,715 investing payment; separate narrow cash PP&E, not complete reinvestment |
 | `PaymentsForProceedsFromOtherInvestingActivities` | −1,480 | 529 | Raw +1,480, investing “Other”; no approved acquisition/intangible breakdown or gross-purchase completeness |
 | `IncomeTaxesPaidNet` | −43,369 | 565 | Supplemental cash payment; reported net tax, not rate or operating-only tax |
-| `IncomeTaxExpenseBenefit` | +20,719 | 318 | Accrued tax provision, not cash; Note 7 tax table 892 and rate reconciliation 926 |
+| `IncomeTaxExpenseBenefit` | +20,719 | 318, 920, 948 | Accrued tax provision, not cash; Note 7 tax table 892 and rate reconciliation 926 confirm, count once |
 | Cash interest | **Unavailable** | No separate cash-interest fact/caption found | Note 9 debt 1082 gives terms, rates and principal; none supplies annual cash paid. No expense/rate × debt proxy approved |
 | `OperatingLeasePayments` | 2,100 payment magnitude | 1023; **−8** | Note 8 fixed operating-lease cash only; no separately displayed lease row on face CFO |
 | `OperatingLeaseCost` / `VariableLeaseCost` | 2,100 / 16,100 expense | 1017 / 1020; **−8** | Fixed operating cost and variable lease cost, not proof of equivalent cash payments |
@@ -143,3 +143,48 @@ Smallest next Phase 1 milestone: implement **one isolated FY2025 reported-input
 bundle** containing supported facts and explicit interest/lease/investment
 unknowns, without economic treatments or comparative registration. No new
 annotation framework or broad research. Stop after this review.
+
+## Implemented isolated FY2025 reported-input bundle
+
+2026-10-12: the then-next data packaging milestone is complete. The
+[immutable version-1 registry](company-data-preparation/aapl-reported-cash-flow-bundle.json)
+has SHA-256 `d185b995c566d6bfb3b165627283b5ab52edc8ead1e62332d3d9458d0667b747`.
+Only `aapl-reported-cash-flow-fy2025` is registered, under contract
+`reviewed-aapl-reported-cash-flow-inputs`; schema shape
+`reported-cash-flow-input-bundle-v1` is separate from historical schema 5 and
+the existing analyst NWC scenario. [Adapter](../src/valuation_platform/analyst/aapl_cash_flow_inputs.py)
+reuses the unchanged immutable reported models/source validators. Explicit load
+verifies the frozen inventory/manifest, original bytes/digests/receipts and every
+eligible occurrence; separate serialize/deserialize rechecks the exact review.
+
+Twenty-one inputs retain **twenty-six occurrences** and eleven null unknowns.
+Binding corrected this prose matrix's previously incomplete occurrence lists:
+net income also confirms in Note 3 EPS at ordinal 613; tax provision also
+confirms at 920/948. No value, sign or scope changed. Confirmations count once.
+SBC expense and CFO add-back retain different roles and only the add-back is a
+reconciliation term. Cash PP&E, cash taxes and fixed lease cash remain separate;
+no implied extra deduction or accepted economic cost proxy. Rounded −8 lease
+payments/costs and noncash additions survive serialization with original raw
+representations. Unknowns explicitly cover cash interest, lease coverage and
+finance cash, acquisition/intangible allocation, reinvestment, operating taxes,
+NWC, acquisition/FX/reclassification bridge and integrated timing.
+
+Only the documented ten-term reported CFO check is performed; no new totals,
+adjustments or valuation interface. Complete-NWC/valuation flags stay false.
+Comparatives are not registrations. Original scenarios/MSFT bundles/sidecars,
+frozen schemas, policies, evidence and blockers are byte-preserved. Tests cover
+source identities/provenance failures, precision, roles, unknowns, closed
+serialization, reconciliation and MSFT serialized-byte preservation.
+
+Verified results: **15 new focused tests passed; 127 relevant analyst tests
+passed (including those 15)**. Shared implementation did not change, so no
+full-suite rerun was required. Original MSFT serialized SHA-256 identities
+match; all tracked files outside this milestone are byte-identical to starting
+HEAD. Local links, compileall and `git diff --check` pass. No SEC requests or
+corpus rerun; frozen baseline remains **1905/1483/11/27/42 = 3468**.
+
+Next Phase 1 milestone: **one bounded AAPL analyst-treatment decision memo**,
+using retained evidence to distinguish permissible partial-input use from
+unavailable interest/lease/investment disclosures; any SBC/lease/tax choices
+remain proposed for review. No broad research, default proxy or new annotation
+cycle. Stop after this implementation; Phase 2 remains postponed.
