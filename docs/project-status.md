@@ -2,7 +2,21 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 40**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 41**, documentation-only
+[MRK scope research](capex-mrk-scope.md) and
+[two-row supplement](capex-mrk-scope-inventory.json). Both frozen 2021–2022
+periods retain `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`: internal-use software
+versus cloud-service capitalization and separate acquisition/Organon cash are
+evidenced; exhaustive cash PP&E scope and any justified perimeter bridge are not.
+NO-GO for acceptance/derivation, zero safe coverage. All 26 original bodies were
+reused with verified typed digests; no new SEC requests or evidence refresh.
+Prior issuer decisions and frozen inventory/policies unchanged. Production
+carried forward: Capex 167/37/0, aggregate 1,905/1,483/11/27/42 = 3,468.
+No tests or corpus rerun. Reopen MRK only for new exact-period scope evidence.
+Next bounded milestone: documentation-only component/perimeter research for
+five frozen VZ other-productive-asset cash periods, including licenses/intangibles.
+
+Previously completed milestone: **Phase 1H.4 Wave 40**, documentation-only
 [HD scope research](capex-hd-scope.md) and
 [five-row supplement](capex-hd-scope-inventory.json). All five retain
 `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`: software/construction capitalization

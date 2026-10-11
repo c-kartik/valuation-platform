@@ -1,5 +1,15 @@
 # Capex selected-filing concept and component inventory
 
+Wave 41 [MRK research](capex-mrk-scope.md) and
+[two-row supplement](capex-mrk-scope-inventory.json) retain 2021–2022
+`CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`. Continuing-operation cash candidates
+and specific software/cloud, acquisition/R&D, lease and Organon disclosures do
+not prove exhaustive eligible PP&E cash scope. NO-GO, zero safe additional
+coverage/equations. Twenty-six original bodies reused, typed digests verified;
+zero SEC requests. Frozen inventory, prior issuer decisions and production
+unchanged. Next: five frozen VZ other-productive-asset cash component/perimeter
+periods; no broad repeat research of prior unresolved issuers.
+
 Wave 40 [HD scope research](capex-hd-scope.md) and
 [five-row supplement](capex-hd-scope-inventory.json) retain five frozen
 `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED` outcomes. Explicit cash, software
