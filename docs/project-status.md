@@ -2,7 +2,22 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 44**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 45**, documentation-only
+[GE Capex perimeter research](capex-ge-perimeter.md) and
+[three-row supplement](capex-ge-scope-inventory.json). All three retain
+`METHODOLOGY_BLOCKER` / `BUSINESS_AND_ASSET_PERIMETER_GATED`; consolidated
+continuing PP&E/software cash is not an evidenced industrial-only perimeter.
+NO-GO, zero safe new coverage/equations. Forty-two verified bodies: thirty-nine
+reused, three primary-filing retrievals. Current Capex research pass closes:
+57 original identities = 20 curated approvals + 37 unapproved (17 concept,
+17 derivation, 3 methodology). The 147 direct results remain separate/unchanged.
+Production remains Capex 167/37/0 and aggregate 1,905/1,483/11/27/42 = 3,468;
+no tests or corpus rerun. Prior issuer decisions and policies unchanged.
+Next bounded milestone: consolidate remaining Phase 1H.4 failure priorities and
+evidence-exhausted exclusions across measures, then select one reusable task
+before Phase 1H.5 validation. This does not close Phase 1H.4 or authorize freeze.
+
+Previously completed milestone: **Phase 1H.4 Wave 44**, documentation-only
 [GEV cash/perimeter research](capex-gev-cash-perimeter.md) and
 [two-row supplement](capex-gev-scope-inventory.json). Both retain `DERIVATION` /
 `COMPONENT_SCOPE_UNPROVED`; reported cash additions combine PP&E/internal-use

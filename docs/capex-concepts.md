@@ -1,5 +1,16 @@
 # Capex selected-filing concept and component inventory
 
+Wave 45 [GE Capex perimeter research](capex-ge-perimeter.md) and
+[three-row supplement](capex-ge-scope-inventory.json) retain three methodology
+blockers. Continuing insurance and filing-specific separation/recast scope prevent
+unsupported industrial-only acceptance; cash/software components are incomplete.
+NO-GO, zero safe new coverage. Current bounded Capex issuer research pass closes:
+57 identities = 20 implemented curated approvals + 37 unapproved (17 concept,
+17 derivation, 3 methodology). All 147 direct results remain separate/unchanged.
+Forty-two verified bodies; frozen inventory, prior decisions and production unchanged.
+Next consolidate remaining Phase 1H.4 priorities/exclusions before Phase 1H.5;
+do not repeat blocked issuer research without the specified new cash-scope evidence.
+
 Wave 44 [GEV cash/perimeter research](capex-gev-cash-perimeter.md) and
 [two-row supplement](capex-gev-scope-inventory.json) retain `DERIVATION` /
 `COMPONENT_SCOPE_UNPROVED` for both frozen periods. Cash additions are evidenced,
