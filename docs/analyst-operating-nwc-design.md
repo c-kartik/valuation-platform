@@ -348,3 +348,33 @@ SEC requests, full-suite or corpus rerun. Register maintenance is now a
 Next bounded milestone: one explicit AAPL FY2025 partial-bundle review using
 retained evidence, with unknown AP allocation and employee/distribution
 limitations exposed. No estimates, earlier-period extension or Phase 2 restart.
+
+## Reviewed AAPL FY2025 partial bundle
+
+The preceding MSFT milestone's bounded next step is completed by the
+[AAPL record](company-data-preparation/AAPL.md#reviewed-fy2025-partial-input-bundle)
+and [explicit version-1 input](company-data-preparation/aapl-analyst-nwc-bundle.json).
+GO only for the documented narrow **reported-driver partial scenario**, not
+complete NWC or certified operating AP. The exact FY2025 selected accession and
+actual annual period bind two retained statement/instance bodies and six numeric
+occurrences: five included balances plus known-but-omitted distribution evidence.
+The unchanged evaluator yields **−240m**, retaining submitted `decimals=-6`.
+
+Whole AP is transparent diagnostic input; unknown investing contamination is
+not approved as zero. Employee accruals remain unquantified; distribution and
+marketing **8,919m** is reported but outside the narrow perimeter, not unknown.
+Explicit classifications and original reported evidence survive serialization;
+requiring an unknown allocation makes the expanded result unavailable. No
+default estimates, expanded distribution equation or later-comparative backfill.
+
+One reviewed level supplies **no ΔNWC**: no opening bundle; opening unavailable,
+amount absent. Acquisition/FX/noncash/reclassification and integrated financial
+timing remain unproved. Complete-NWC/FCFF/cash-certification flags remain false;
+historical values, policies and blockers unchanged. The test-only adapter invokes
+existing models/serialization; no production loader or source change.
+**57 relevant tests passed**; evidence, links, compileall and diff checks pass.
+No SEC requests, full suite or corpus rerun; Phase 2 remains postponed.
+
+Next bounded milestone: one retained-evidence GOOGL FY2024 partial-bundle review,
+with consistent inventory omission and rounded PP&E-in-AP scope explicit; no
+conditional FY2025 allocation approval, period extension or cash/FCFF readiness.

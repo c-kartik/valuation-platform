@@ -2,7 +2,24 @@
 
 ## Current Milestone
 
-Latest completed milestone: **reviewed explicit MSFT FY2025–2026 partial analyst
+Latest completed milestone: **reviewed explicit AAPL FY2025 narrow reported-driver
+partial bundle**. [Detailed register review](company-data-preparation/AAPL.md#reviewed-fy2025-partial-input-bundle)
+and [version-1 input](company-data-preparation/aapl-analyst-nwc-bundle.json) bind
+one frozen 10-K period, two original-body digests and six exact occurrences.
+Existing evaluator yields **−240m** from five included balances; known 8,919m
+distribution/marketing is retained but explicitly omitted. Employee/investing-in-AP
+allocations stay unknown; no operating-only AP, complete NWC or FCFF certification.
+No opening bundle or ΔNWC; scope/precision/comparability limitations remain explicit.
+**57 relevant tests passed** (41 foundation + eight MSFT + eight AAPL), covering
+identity/evidence failures, omissions, unknown inputs and serialization.
+Provenance, local links, compileall and diff checks passed. No production source
+change, SEC request, full suite or corpus rerun. Frozen v1, AAPL blockers and
+1,905/1,483/11/27/42 = 3,468 states unchanged. Phase 2 remains postponed.
+Single next milestone: review one explicit GOOGL FY2024 partial bundle using
+retained evidence; expose inventory omission and rounded PP&E-in-AP scope without
+approving the conditional FY2025 allocation, cash ΔNWC or period extension.
+
+Previously completed milestone: **reviewed explicit MSFT FY2025–2026 partial analyst
 NWC input bundles**. [Detailed record](company-data-preparation/MSFT.md#reviewed-fy20252026-partial-input-bundles)
 and [version-1 inputs](company-data-preparation/msft-analyst-nwc-bundles.json)
 bind two frozen 10-K periods, four retained original-body digests and twelve

@@ -1,0 +1,333 @@
+{
+  "bundle_contract": "reviewed-aapl-fy2025-partial-nwc-input",
+  "version": "1",
+  "reviewed_on": "2026-10-11",
+  "review_author": "repository retained-evidence review (not an external analyst approval)",
+  "decision": "GO_FOR_EXPLICIT_NARROW_REPORTED_DRIVER_ONLY",
+  "scenario_id": "aapl-fy2025-reviewed-narrow-reported-driver",
+  "perimeter_id": "aapl-ar-vendor-inventory-whole-ap-current-deferred",
+  "inventory_path": "docs/analyst-operating-nwc-inventory.json",
+  "inventory_sha256": "ef68344fe6d523cb55f5478eb03045fa984f067e07b2b37e6687011cd5a4d1b6",
+  "artifact_manifest_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+  "artifact_manifest_sha256": "8b7dd48e6408fb84af1493acfba3136d4a7671fc8bb1147c339015da80990542",
+  "limitations": [
+    "Explicit partial reported-driver perimeter, not complete Operating NWC or approved operating-only AP.",
+    "Employee accruals and investing-in-AP allocation are unquantified; no default estimates or inferred zeros.",
+    "Known distribution/marketing accrual is omitted by the documented narrow perimeter, not unknown or zero.",
+    "Other operating balances may be omitted; gross captions do not establish immateriality or uncertainty bounds.",
+    "Submitted decimals -6 indicate rounded reported points; exact Decimal arithmetic is not unrounded economic certainty.",
+    "Only one annual level is reviewed: no opening bundle, approved movement, earlier/future extension, frozen-v1 change or FCFF readiness."
+  ],
+  "unresolved_effects": [
+    "Acquisition/disposal allocations are unbridged, not assumed zero.",
+    "FX, noncash and cross-perimeter reclassification movements lack a component-complete cash reconciliation.",
+    "Investing obligations within AP remain unquantified; whole AP is a diagnostic driver, not certified operating AP.",
+    "Book inventory, EBIT, tax, D&A, Capex and lease timing compatibility is unproved."
+  ],
+  "omissions": [
+    {
+      "component_id": "employee_accruals",
+      "coefficient": -1,
+      "scope_keys": [
+        "employee_accruals"
+      ],
+      "status": "unquantified",
+      "rationale": "Employee current cash accrual is not separately isolated in reviewed retained evidence. Narrow perimeter omission is explicit; share-based compensation or mixed-liability residual is not a substitute."
+    },
+    {
+      "component_id": "distribution_marketing",
+      "coefficient": -1,
+      "scope_keys": [
+        "distribution_marketing"
+      ],
+      "status": "reported_amount_outside_perimeter",
+      "rationale": "Note 6 reports 8,919m accrued distribution and marketing for FY2025. The documented narrow perimeter omits it consistently; this known balance is retained as reported evidence, not relabeled unknown or included by default.",
+      "reported_evidence": {
+        "component_id": "AccruedDistributionAndMarketingCurrent",
+        "coefficient": -1,
+        "scope_keys": [
+          "AccruedDistributionAndMarketingCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "8919000000",
+        "rationale": "Note 6 exact closing distribution/marketing accrual; retained outside the selected narrow calculation.",
+        "occurrences": [
+          {
+            "namespace": "http://www.apple.com/20250927",
+            "concept": "AccruedDistributionAndMarketingCurrent",
+            "context_id": "c-20",
+            "context": {
+              "entity": "0000320193",
+              "start": null,
+              "end": "2025-09-27",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "8919000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 880
+          }
+        ]
+      }
+    },
+    {
+      "component_id": "investing_in_ap_correction",
+      "coefficient": 1,
+      "scope_keys": [
+        "investing_in_ap_correction"
+      ],
+      "status": "unquantified",
+      "rationale": "No exact FY2025 investing-in-AP allocation is established. No positive correction is supplied, and none is assumed zero. An operating-only AP scenario requires a separately evidenced allocation and currently cannot compute."
+    },
+    {
+      "component_id": "mixed_other_current_assets",
+      "coefficient": 1,
+      "scope_keys": [
+        "other_current_assets"
+      ],
+      "status": "mixed_scope_unallocated",
+      "rationale": "Other-current assets remain outside the narrow perimeter; book balances and absent disclosures do not establish a complete operating allocation."
+    },
+    {
+      "component_id": "remaining_other_current_liabilities",
+      "coefficient": -1,
+      "scope_keys": [
+        "remaining_other_current_liabilities"
+      ],
+      "status": "mixed_scope_unallocated",
+      "rationale": "Remaining mixed other-current obligations are omitted, not employee accruals by subtraction. Distribution is a disclosed subcaption, not an additional whole-caption subtraction; no overlap is introduced."
+    },
+    {
+      "component_id": "cash_investments_funding_and_income_taxes",
+      "coefficient": 1,
+      "scope_keys": [
+        "cash_investments_funding_and_income_taxes"
+      ],
+      "status": "outside_operating_perimeter",
+      "rationale": "Cash/marketable investments, borrowing principal and separately modeled income taxes are outside this narrow operating-driver perimeter; no tax cash bridge is provided."
+    },
+    {
+      "component_id": "leases_and_noncurrent_balances",
+      "coefficient": 1,
+      "scope_keys": [
+        "leases_and_noncurrent_balances"
+      ],
+      "status": "outside_partial_current_perimeter",
+      "rationale": "Lease balances await integrated treatment; noncurrent operating balances are outside the chosen current-book perimeter, not certified irrelevant to eventual FCFF."
+    }
+  ],
+  "bundle": {
+    "period": {
+      "cik": 320193,
+      "accession": "0000320193-25-000079",
+      "annual_start": "2024-09-29",
+      "annual_end": "2025-09-27"
+    },
+    "form": "10-K",
+    "primary_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+    "instance_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+    "artifacts": [
+      {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+        "accession": "0000320193-25-000079",
+        "representation": "sec_response_body_bytes",
+        "digest_type": "sha256_sec_response_body_bytes",
+        "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+        "byte_length": 1520319
+      },
+      {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+        "accession": "0000320193-25-000079",
+        "representation": "sec_response_body_bytes",
+        "digest_type": "sha256_sec_response_body_bytes",
+        "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+        "byte_length": 1416841
+      }
+    ],
+    "operands": [
+      {
+        "component_id": "AccountsReceivableNetCurrent",
+        "coefficient": 1,
+        "scope_keys": [
+          "AccountsReceivableNetCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "39777000000",
+        "rationale": "Reported net customer receivables on the consolidated balance sheet; no other-current asset residual added.",
+        "occurrences": [
+          {
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "concept": "AccountsReceivableNetCurrent",
+            "context_id": "c-20",
+            "context": {
+              "entity": "0000320193",
+              "start": null,
+              "end": "2025-09-27",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "39777000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 370
+          }
+        ]
+      },
+      {
+        "component_id": "NontradeReceivablesCurrent",
+        "coefficient": 1,
+        "scope_keys": [
+          "NontradeReceivablesCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "33180000000",
+        "rationale": "Vendor non-trade receivables arise from component sales to manufacturing vendors; gains reduce product cost of sales, supporting supply-chain scope rather than investment classification.",
+        "occurrences": [
+          {
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "concept": "NontradeReceivablesCurrent",
+            "context_id": "c-20",
+            "context": {
+              "entity": "0000320193",
+              "start": null,
+              "end": "2025-09-27",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "33180000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 372
+          }
+        ]
+      },
+      {
+        "component_id": "InventoryNet",
+        "coefficient": 1,
+        "scope_keys": [
+          "InventoryNet"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "5718000000",
+        "rationale": "Consolidated book inventories, FIFO; inventory expense/capitalization timing is not bridged to cash investment.",
+        "occurrences": [
+          {
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "concept": "InventoryNet",
+            "context_id": "c-20",
+            "context": {
+              "entity": "0000320193",
+              "start": null,
+              "end": "2025-09-27",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "5718000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 374
+          }
+        ]
+      },
+      {
+        "component_id": "AccountsPayableCurrent",
+        "coefficient": -1,
+        "scope_keys": [
+          "AccountsPayableCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "69860000000",
+        "rationale": "Subtract whole reported AP in this narrow reported-driver perimeter only. Unknown investing-in-AP contamination remains unresolved; this does not certify operating AP.",
+        "occurrences": [
+          {
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "concept": "AccountsPayableCurrent",
+            "context_id": "c-20",
+            "context": {
+              "entity": "0000320193",
+              "start": null,
+              "end": "2025-09-27",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "69860000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 390
+          }
+        ]
+      },
+      {
+        "component_id": "ContractWithCustomerLiabilityCurrent",
+        "coefficient": -1,
+        "scope_keys": [
+          "ContractWithCustomerLiabilityCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "9055000000",
+        "rationale": "Subtract separately presented current deferred revenue, not total current/noncurrent deferred revenue or revenue recognized in the year.",
+        "occurrences": [
+          {
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "concept": "ContractWithCustomerLiabilityCurrent",
+            "context_id": "c-20",
+            "context": {
+              "entity": "0000320193",
+              "start": null,
+              "end": "2025-09-27",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "9055000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 394
+          }
+        ]
+      }
+    ],
+    "statement_locations": [
+      "Consolidated Balance Sheets: current AR, vendor non-trade receivables, inventories, AP and deferred revenue.",
+      "Note 1 \u2014 Summary of Significant Accounting Policies: FIFO inventory and accounting context.",
+      "Vendor Non-Trade Receivables disclosure: component sales to manufacturing vendors and cost-of-sales treatment.",
+      "Note 2 \u2014 Revenue: deferred revenue recognition, without replacing the current balance with total deferred revenue.",
+      "Note 6 \u2014 Supplemental Financial Statement Information: income taxes, distribution/marketing and remaining mixed liabilities.",
+      "Lease note and Consolidated Statements of Cash Flows: scope/timing cross-checks only, not an exhaustive cash bridge."
+    ],
+    "note_assertions": [
+      "The Company has non-trade receivables from certain of its manufacturing vendors resulting from the sale of components to these vendors who manufacture subassemblies or assemble final products for the Company.",
+      "Inventories are measured using the first-in, first-out method.",
+      "Other Current Liabilities 2025 2024 Income taxes payable $ 13,016 $ 26,601 Accrued distribution and marketing 8,919 7,679 Other current liabilities 44,452 44,024 Total other current liabilities $ 66,387 $ 78,304"
+    ],
+    "expected_partial_usd": "-240000000",
+    "omitted_gross_caption_exposure_usd": {
+      "other_current_assets": "14585000000",
+      "other_current_liabilities": "66387000000"
+    },
+    "opening_bundle": null,
+    "expected_change_status": "opening_unavailable",
+    "expected_change_usd": null
+  },
+  "estimates": [],
+  "manual_inputs": [],
+  "external_inputs": []
+}
