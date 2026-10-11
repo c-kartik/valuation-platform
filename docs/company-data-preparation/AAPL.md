@@ -318,3 +318,25 @@ preparation**, not complete NWC/interest/lease cash/reinvestment or FCFF readine
 Single next Phase 1 milestone: record one FY2025 acceptance/input checklist and
 its remaining disclosure limits; no new annotation cycle or broad research.
 Stop after this decision memo.
+
+## Accepted FY2025 treatments and qualified pilot closure
+
+2026-10-12: explicit user approval is recorded in the
+[single acceptance/input checklist](../aapl-treatment-acceptance-checklist.md).
+This supersedes pending statuses above, preserving the original options and
+evidence. Accepted: consolidated reported CFO historical reference, separate
+narrow cash PP&E, labeled SBC expense cost proxy counted once, reported cash
+taxes and only the rounded fixed operating-lease dataset. No organic-cash,
+complete-reinvestment, comprehensive lease convention or future operating-tax
+basis/rate is approved. SBC source roles remain distinct; no duplicate charge
+or actual economic adjustment. Outstanding awards remain separate.
+
+Cash interest, acquisition/intangible allocations and additional lease coverage
+stay unknown. Original NWC blocks, partial scenario limitations and future timing
+gates persist. All reported/scenario bundle bytes, receipts and precision remain
+unchanged. This closes the FY2025 preparation pilot **only for qualified
+historical inputs**, not financial completeness or valuation readiness.
+Validation: approved-choice/checklist consistency, exact identity/registry hash,
+source links and diff check. No SEC requests, tests/corpus or implementation.
+No further AAPL research is required for this scope; next authorized work is
+the independently reviewed Alphabet FY2024 data path.

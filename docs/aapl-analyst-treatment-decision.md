@@ -1,7 +1,12 @@
 # AAPL FY2025 analyst-input treatment decision memo
 
 2026-10-12; starting HEAD `93a294d2cf5697c233e9997c0f517ec20e71ecb2`.
-**All recommendations are proposed pending user review.** This is a bounded
+Original recommendations below were proposed for review. **Subsequent user
+acceptance, 2026-10-12:** the [FY2025 acceptance checklist](aapl-treatment-acceptance-checklist.md)
+records consolidated CFO/narrow PP&E, SBC expense cost proxy once, reported cash
+taxes and restricted rounded fixed-lease dataset acceptance. Cash interest and
+investment allocations stay unknown; no future tax basis/rate or valuation
+consumption is approved. The original options/rationale remain below. This is a bounded
 Phase 1 decision memo, not an economic calculation, policy implementation or
 valuation-consumption approval. MSFT acceptance is not AAPL acceptance.
 
@@ -96,10 +101,11 @@ annotation/research cycle. Original facts/unknowns must remain; proxy acceptance
 cannot manufacture issuer completeness. No complete NWC, interest, lease cash,
 reinvestment, FCFF readiness or new supported-company status follows.
 
-Smallest subsequent Phase 1 milestone: **one FY2025 acceptance/input checklist**
-after user review, recording accepted/rejected choices and unavailable-disclosure
-limits. No new sidecar framework, source implementation or valuation calculation.
-Stop after this memo; Phase 2 remains postponed.
+The then-next FY2025 acceptance/input checklist is completed; the pilot is closed
+only for qualified historical-input preparation. Unknowns and all original
+blockers persist. Next authorized work is the independent
+[Alphabet FY2024 evidence review](googl-alternative-historical-cash-flow-inputs.md),
+not AAPL source changes or numerical treatments. Phase 2 remains postponed.
 
 Validation: registry identity/points/roles/precision and pinned source references,
 recommendation-versus-disclosure distinctions, established methodological

@@ -2,7 +2,30 @@
 
 ## Current Milestone
 
-Latest completed milestone: **bounded AAPL FY2025 analyst-treatment decision
+Latest completed milestone: **AAPL FY2025 acceptance and independent Alphabet
+FY2024 reported cash-flow evidence review**, documentation-only Phase 1.
+[AAPL acceptance](aapl-treatment-acceptance-checklist.md) closes its pilot only for
+qualified historical preparation: consolidated CFO/narrow PP&E, SBC cost proxy
+once, reported cash taxes and restricted rounded fixed-lease dataset. No tax
+basis/rate, completeness or valuation readiness; unknowns/NWC/timing persist.
+
+[Alphabet matrix](googl-alternative-historical-cash-flow-inputs.md) verifies CFO
+125,299m, cash PP&E 52,535m, rounded tax cash 27,400m, separate SBC precision,
+three lease payment classes and combined acquisition/intangible cash. No
+automatic treatment transfer, total, organic or complete reinvestment claim.
+Missing cash borrowing interest, allocations and separate D&A issue persist.
+Both original bodies/digests verify; **instance retrieval timestamp/status are
+unrecorded**, explicitly a future packaging prerequisite, not fabricated data.
+Exact identities, facts, all three reported CFO columns, provenance, relevant
+links and diff check validated. No SEC requests, tests/corpus or artifact/source
+changes; baseline **1,905/1,483/11/27/42 = 3,468** retained.
+
+Single next Phase 1 milestone: **bounded exact Alphabet FY2024 instance receipt-
+provenance recovery/verification before bundle implementation**, preserving old
+evidence history and mandatory receipt checks. No broad research/annotation
+cycle. Stop after this review; Phase 2 remains postponed.
+
+Previously completed milestone: **bounded AAPL FY2025 analyst-treatment decision
 memo**, documentation-only Phase 1. [Recommendations pending user review](aapl-analyst-treatment-decision.md)
 retain consolidated reported CFO and separate narrow cash PP&E; propose SBC
 recognized-expense economic-cost proxy once; preserve reported cash taxes with

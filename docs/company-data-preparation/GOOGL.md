@@ -209,3 +209,48 @@ missing D&A and baseline 1,905/1,483/11/27/42 = 3,468 remain unchanged.
 The bounded bundle-review pass is complete. Remaining practical valuation-use
 obstacles and **one decision milestone**, not another issuer-research cycle, are
 in the [cross-issuer decision summary](../analyst-operating-nwc-design.md#remaining-obstacles-and-bounded-valuation-use-decision).
+
+## FY2024 alternative reported cash-flow evidence review
+
+2026-10-12; [exact evidence/input matrix](../googl-alternative-historical-cash-flow-inputs.md).
+Original inventory/supplier-AP scope conflicts and missing D&A remain. Considered
+book reconstruction versus preserving consolidated reported CFO; PARTIAL GO for
+separate reported-input preparation design only. No MSFT/AAPL analyst treatment
+or new Alphabet bundle is approved. Identity stays selected accession
+0001652044-25-000014, 2024-01-01–2024-12-31, nondimensional c-1.
+
+Verified CFO 125,299m reproduces thirteen statement terms; PP&E cash 52,535m is
+narrow investment, not complete reinvestment. Rounded tax cash 27,400m (−8) is
+distinct from provision 19,697m. CFO SBC add-back 22,785m (−6) and note expense
+22,800m (−8) preserve different source precision, not equal exact values or two
+costs. Independent SBC/lease/tax choices remain for review, no rate or proxy.
+
+Note 4 separates operating lease cash 3,425m, finance interest cash 31m (both
+operating) and finance principal 405m (financing, already inside face debt
+repayments 12,701m). Noncash ROU additions and variable expense are separate;
+total variable/nonlease cash and borrowing interest remain unproved. Note 7
+interest expense 268m is net of capitalized expense 194m, not cash. Combined
+acquisition/intangible payment 2,931m remains unallocated; Character note cash
+and asset recognition are not a complete bridge or residual allocation.
+
+CFO reported asset/liability changes exclude acquisition effects, but acquired
+operations enter consolidation from acquisition date. Reported CFO reproduction
+does not need missing inventory or complete closing AP/3.2bn-creditor
+reconstruction; it does not certify organic trends, cash ΔNWC or timing. The
+PP&E depreciation reconciliation 15,311m does not resolve the separate D&A
+primitive: all five missing D&A states and original NWC blockers persist.
+Comparative annual columns remain supporting evidence, not registered bundles.
+
+Two retained original bodies/hashes/lengths verify source identity. Primary
+receipt records timestamp/status; the reused extracted-instance record has
+**unrecorded retrieval time/HTTP status**. Do not fabricate a receipt or imply
+it meets the existing reported-bundle loader requirements. Exact-instance
+receipt provenance must be recovered/verified before any implementation.
+Preserve old body/digest/history if a separately authorized refresh is needed.
+
+Validation: exact annual identity/QNames/occurrences, precision/unit/scope,
+thirteen-term CFO and both comparative statement columns, references/links and
+diff check. No SEC requests, tests/corpus, source/evidence/scenario changes;
+baseline **1905/1483/11/27/42 = 3468** unchanged. Single next Phase 1 milestone:
+bounded receipt-provenance recovery for this exact instance, not broad issuer
+research or altered acceptance rules. Stop after this review.
