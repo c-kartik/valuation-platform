@@ -207,6 +207,19 @@ capitalized-lease-input methodology review, not repeated acquisition inventory
 or a whole-lease residual deduction. Production remains Capex 157/47/0 and
 aggregate 1,895/1,493/11/27/42 = 3,468, carried forward without a rerun.
 
+Wave 30 completes the [bounded CVX methodology review](capex-cvx-acquisition-perimeter.md).
+The existing cash PP&E cost basis admits evidenced cash construction/development
+and proved mineral-property costs, including capitalized service/lease inputs
+within that PP&E component. It does not admit all exploration, lease cash or
+noncash additions. The independently reported PP&E cash component supports
+five exact-accession reported-value scope designs, superseding Wave 29's pending
+methodology gate. No lease/mineral equation is supported: destination/overlap
+allocation remains unavailable, not a residual or zero. The supplement is now
+version 2 with the version-1 decision/digest preserved. The frozen 57-row
+inventory and Wave 27 matrix remain unchanged; historical flags/routes are not
+rewritten. No runtime coverage changes. Next design the five exact CVX
+evidence acceptances, with 42 other current gaps outside the pass.
+
 Wave 27 completes the [scope-evidence design](capex-scope-evidence-design.md)
 and [57-row acceptance matrix](capex-scope-evidence-matrix.json): five AMZN and
 five LLY exact-period curated design acceptances; 47 `NO_ENTRY` controls retain

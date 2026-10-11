@@ -1,6 +1,112 @@
 # CVX cash-PP&E acquisition/perimeter review
 
-## Decision and scope
+## Current decision: Wave 30 methodology review
+
+Wave 30 starts at `16454c508cdce7e05be08fa11e043eed3ff6d293`, clean
+`main`, eight commits ahead of origin; no push. **PARTIAL GO for five
+exact-accession reported-value scope designs; no derivation, generic fallback
+or production approval.** The historical Wave 29 decision below is superseded
+for potential design coverage only. Its decision and original commit/path/digest
+are preserved in the supplement, not silently rewritten.
+
+### Methodological eligibility versus available amounts
+
+The existing primitive is cash expenditure to acquire PP&E, not a hypothetical
+materials-only purchase measure. Construction/development of recognized PP&E
+is eligible; a construction input's origin as a service or rented piece of
+equipment does not by itself make its capitalized cash cost ineligible.
+This clarifies the existing asset-and-cash perimeter, **not** inclusion of all
+exploration, leases, intangible rights or investments.
+
+| Item | Methodological treatment | Retained evidence / amount availability |
+| --- | --- | --- |
+| Development wells and related plant/equipment | Cash acquisition/construction within recognized PP&E is eligible; unpaid/noncash additions are not. | Each R10 describes the successful-efforts PP&E cost basis; R12 independently reports annual cash PP&E with noncash movements excluded. |
+| Proved mineral interests in crude-oil/natural-gas properties | Eligible within this selected depletable PP&E property perimeter when acquired for cash outside a business combination. PP&E is not restricted to non-depletable machinery; this is not generic intangible/right acceptance. | R10 expressly places these costs in the PP&E policy and describes subsequent depletion. A separate mineral cash amount is not established; no mineral-only equation. |
+| Capitalized exploratory wells | Eligible cash costs while recognized within this evidenced PP&E perimeter, including qualifying pending-reserve assessments under the stated policy. | R10 distinguishes capitalized wells from other exploratory costs; R12 separately reports current dry-hole expenditure. No retrospective success-only adjustment or well-level split. |
+| Expensed exploration, current dry holes, prior-year write-offs | Not additional cash PP&E operands. A prior-year write-off is not current investment cash. | R12's split and R10's policy support exclusion of the separate expense/dry-hole components. No total dry-hole expense or book-additions residual. |
+| Operating-lease services capitalized into another PP&E asset | Eligible only as already included in the evidenced PP&E cash cost component; not acquisition of a ROU asset or a separate lease Capex policy. | R14 distinguishes incurred expense/capitalized costs and actual investing cash, without allocating that cash to the PP&E component. No separate ADD/SUBTRACT operand. |
+| Lease cash in other destinations | Investing classification alone does not establish PP&E eligibility; operating cash is not added either. | Exact investing cash is available, but its PP&E destination/overlap is not separately quantified. Do not assume all of it belongs inside or outside PP&E. |
+| Noncash operating/finance ROU additions and ARO recognition | Excluded from cash Capex even if the asset appears in PP&E. | R14 describes assets exchanged for new/modified liabilities; R10 describes ARO recognition, and R12 excludes noncash movements. |
+| Finance-lease principal, acquired fair-value PP&E, business consideration, affiliate investments | Separate financing/acquisition/investment treatment; not substitutes or additions to this cash PP&E operand. | R7/R12/R14 and the acquisition notes establish separate lines and transaction nature. Never convert net acquisition cash into a positive PP&E payment. |
+
+**Why five reported-value candidates, but zero equations:** R12 independently
+reports the whole PP&E cash component, not a mixed productive-assets total whose
+eligible part must be inferred. R10's cost policy, R27's separate book basis,
+the explicit noncash exclusion and separate acquisition/other cash categories
+support that perimeter. Under this clarification, capitalized cash inputs within
+the reported PP&E component do not require removal merely because they originated
+as services, rentals or mineral-property acquisition. A decomposition is not
+needed to preserve this complete, independently reported component.
+
+The separate lease disclosure is **not** assigned wholly to PP&E. Its unknown
+allocation remains a real limitation for a lease-adjusted, mineral-only or
+materials-only derivation: no such equation is approved. If a later consumer
+requires that split, these 36 reports exhaust the available evidence; an explicit
+exact-period destination/overlap allocation would be needed. Numerical agreement,
+residuals, incurred lease costs or assumed zeros cannot provide it.
+Software/intangible or incentive silence is not zero. Acceptance does not add
+separate intangible purchases, reconstruct pre-incentive cash, or approve the
+broad productive-assets aggregate. No subcost allocation is invented.
+
+### Per-period decisions and lease evidence
+
+Amounts are USD millions; frozen accessions/contexts/ordinals remain those in
+the original five-period table and JSON.
+
+| Year | PP&E cash | Investing operating-lease cash | Noncash ROU additions: operating / finance | Finance-lease principal | Wave 30 decision |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 2021 | 7,515 | 398 | 1,063 / 60 | 193 | `EXACT_ACCESSION_ACCEPTANCE_CANDIDATE` |
+| 2022 | 10,349 | 467 | 1,807 / 3 | 44 | `EXACT_ACCESSION_ACCEPTANCE_CANDIDATE` |
+| 2023 | 14,788 | 713 | 2,556 / 233 | 42 | `EXACT_ACCESSION_ACCEPTANCE_CANDIDATE` |
+| 2024 | 15,544 | 979 | 2,205 / 40 | 67 | `EXACT_ACCESSION_ACCEPTANCE_CANDIDATE` |
+| 2025 | 16,830 | 881 | 2,845 / 971 | 136 | `EXACT_ACCESSION_ACCEPTANCE_CANDIDATE` |
+
+R14's current-year ROU footnotes establish noncash additions, not cash operands
+or a subtraction from R12. Investing-lease/principal facts retain exact annual
+contexts, units and ordinals. Total lease costs incurred mix expense and
+capitalization and are not interchangeable with cash/noncash additions.
+The five PP&E cash values are unchanged; exact statement checks corroborate
+them but do not prove their economic scope.
+
+### Impact, remaining gates and bounded next milestone
+
+No primitive change is proposed and no production policy is altered. This does
+not retrospectively recertify every generic observation or unresolved issuer.
+
+| Current policy family | Impact |
+| --- | --- |
+| Generic standard cash PP&E | Concept, precedence, value and provenance unchanged; no productive-assets/oil-gas fallback; cash construction is not book additions. |
+| META gross-versus-net facts | Gross cash remains unnetted against proceeds; no restatement. |
+| Ten AMZN/LLY curated entries | Existing reported acquisition/construction cash preserved; no mineral generalization, lease adjustment, interest adjustment or incentive gross-up. |
+| CVX | Five potential exact-accession designs only; runtime approval stays false and all five remain missing. |
+| Future FCFF consumers | Lease, depletion/write-off, EBIT, affiliate and timing compatibility is not certified. |
+
+The supplement is now `wave30-cvx-capex-methodology-v2`: five
+`EXACT_PERIOD_SCOPE_EQUIVALENT` candidates, five historical Wave 29 decisions
+retained, zero approved equations. The frozen Wave 26 inventory, Wave 27
+acceptance matrix and 36-body fixture/digests are unchanged. Five candidates
+plus 42 other current gaps reconcile to 47 production missing periods; the
+other gaps are not fresh denials. Production remains Capex 157/47/0 and
+aggregate 1,895/1,493/11/27/42 = 3,468, carried forward without a rerun.
+
+Wave 30 validation: five unique frozen identities and all immutable fact,
+context, occurrence and value fields match Wave 29; five selected-instance
+digests and all 36 retained response-body digests verify. Five exact statement
+checks, five candidate decisions, zero equations and zero production approvals
+reconcile. All 71 local links across the six reviewed documentation files
+resolve; `git diff --check` passes. No source, policy, schema, evidence-body or
+test files changed; no tests or corpus rerun.
+
+**One bounded next milestone:** documentation-only design of the five-entry
+CVX exact-accession reported-cash-PP&E scope-evidence contract. Freeze operand
+and reviewed evidence identities, exclusions, direct precedence,
+duplicate/conflict and conservative failure rules, immutable versioning and
+full provenance/serialization. No implementation, future/amended approval,
+lease/mineral derivation or broad research. No new SEC retrieval was needed.
+The allocation blocker for adjusted equations is recorded, not a request to
+repeat exhausted research.
+
+## Wave 29 decision and scope (historical)
 
 Phase 1H.4 Wave 29 starts at
 `7fa04cf60df284b7a6338c3896b63535fe9ed90a`, clean `main`, seven commits
@@ -176,7 +282,7 @@ pass. No source, policy, schema or tests changed; no tests/corpus were run.
 Production counts are carried forward, not remeasured: Capex **157/47/0**;
 aggregate **1,895/1,493/11/27/42**, total **3,468**; 43 completions/seven skips.
 
-**One bounded next milestone:** a documentation-only CVX Capex methodology
+**Wave 29 next milestone (completed by Wave 30 above):** a documentation-only CVX Capex methodology
 decision on reported cash construction/development/mineral costs and capitalized
 lease inputs, using these five exact note sets. Decide whether the existing
 primitive admits the reported component without an unsupported adjustment.

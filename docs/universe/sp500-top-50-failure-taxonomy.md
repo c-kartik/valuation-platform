@@ -618,6 +618,21 @@ incompatibility. The frozen 57-row inventory/acceptance matrix and production
 counts remain unchanged. Next decide this exact CVX cost perimeter against the
 current primitive; the other 42 gaps and GE methodology remain outside the pass.
 
+Wave 30's [methodology review](../capex-cvx-acquisition-perimeter.md) clears
+the methodological cost-perimeter question: selected recognized PP&E cash
+development/construction and proved mineral-property costs are eligible;
+capitalized cash lease/service inputs are not noncash ROU additions. The
+independently reported PP&E cash component supports five exact-accession
+reported-value scope designs. The supplement now records five
+`EXACT_PERIOD_SCOPE_EQUIVALENT` / `EXACT_ACCESSION_ACCEPTANCE_CANDIDATE`
+research decisions while preserving Wave 29's history. No production enum,
+generic policy, primitive expansion or approved equation. Unknown mineral/lease
+destination/overlap prevents adjusted derivations, not preservation of the
+independently evidenced complete PP&E cash component. No numeric residual or
+missing-as-zero. Capex remains 157/47/0; five potential designs plus 42 other
+current gaps (not newly reviewed here) reconcile to 47 missing. Next design only the five
+exact-accession evidence acceptances; other gaps and FCFF readiness stay gated.
+
 Wave 14 proves complete component derivations for the 25 LLY/JNJ/MRK/KLAC/IBM
 periods without using Pretax as a residual. All 25 are approved research
 patterns, with acquired IPR&D, restructuring, operating-asset impairments,
@@ -767,7 +782,7 @@ issuers have one post-smoke classification.
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 24 audit:** no approved numeric incompatibility established; TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Design timing-basis/evidence and joint consumer-readiness contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
-| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 47 missing across the 204-period corpus | Core FCFF input | Wave 29 reviewed five CVX periods with zero approval; next decide development/mineral and capitalized-lease cost perimeter, keeping other 42 gaps separate | No additional approval | High |
+| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 47 missing across the 204-period corpus | Core FCFF input | Wave 30 supports five CVX reported-value scope designs, no adjusted equations; next design exact evidence acceptance, keeping other 42 gaps separate | Five potential designs, zero runtime approval | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
 | 11 | `CONCEPT_POLICY` | Commercial paper 192 missing; short borrowings 203 missing | Equity bridge | Generalize exact concepts only where economically present | High | Medium |
@@ -819,8 +834,9 @@ issuers have one post-smoke classification.
    all 57 Capex gaps; Wave 27 designs curated scope acceptance for ten AMZN/LLY
    candidates. Wave 28 implements those ten entries with 47 unchanged controls
    and no generic fallback. Wave 29 reviews five CVX acquisition/perimeter sets
-   without approval; next decide development/mineral and capitalized-lease-input
-   treatment against the current cash PP&E primitive, without inferred allocations.
+   without approval. Wave 30 clarifies development/mineral and capitalized-lease
+   treatment; next design five exact CVX reported-value entries, without inferred
+   allocations or adjusted equations.
    CVX/GE mixed-business designs remain separate. Approve only
    repeatable definitions with
    selected-accession evidence.

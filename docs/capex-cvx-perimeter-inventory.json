@@ -1,7 +1,7 @@
 {
-  "research_version": "wave29-cvx-capex-perimeter-v1",
-  "starting_head": "7fa04cf60df284b7a6338c3896b63535fe9ed90a",
-  "scope": "Documentation-only supplement; does not mutate frozen Wave 26 inventory, Wave 27 matrix or runtime policy.",
+  "research_version": "wave30-cvx-capex-methodology-v2",
+  "starting_head": "16454c508cdce7e05be08fa11e043eed3ff6d293",
+  "scope": "Documentation-only CVX methodology review supplement; five reported-value candidates for later exact-accession design, not production approvals.",
   "frozen_inventory": "capex-inventory.json",
   "frozen_inventory_sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6",
   "period_count": 5,
@@ -9,11 +9,11 @@
     "CONCEPT_POLICY": 5
   },
   "perimeter_decision_counts": {
-    "UNRESOLVED_METHODOLOGY_BLOCKER": 5
+    "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE": 5
   },
-  "safe_potential_new_coverage": 0,
+  "safe_potential_new_coverage": 5,
   "approved_derivations": 0,
-  "decision": "NO_GO_FOR_CVX_ACCEPTANCE_OR_DERIVATION_PENDING_NARROW_PERIMETER_REVIEW",
+  "decision": "PARTIAL_GO_FOR_FIVE_EXACT_ACCESSION_REPORTED_VALUE_SCOPE_DESIGNS_NO_DERIVATION_OR_GENERIC_FALLBACK",
   "production_counts_carried_forward_not_remeasured": {
     "capex": {
       "resolved": 157,
@@ -76,11 +76,11 @@
       "instance_sha256": "ca74d207ae08730138143784e176c75cbde91ea552f2aae5a47287104b893053",
       "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/00491c59daa5ba83edd703e28e24b234d31dee17e0dbcf01dbef908068b867b2.bin",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "perimeter_decision": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
       "production_status": "missing",
       "production_policy_approval": false,
-      "safe_potential_scope_design": false,
+      "safe_potential_scope_design": true,
       "approved_derivation_equation": null,
       "candidate_cash_ppe_value_usd": "7515000000",
       "statement_check_not_capex_derivation": {
@@ -573,13 +573,48 @@
         "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R27.htm",
         "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R38.htm"
       ],
-      "unresolved_questions": [
-        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
-        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
-        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
-      ],
+      "unresolved_questions": [],
       "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
-      "unknown_not_demonstrated_incompatible": true
+      "unknown_not_demonstrated_incompatible": true,
+      "wave29_review": {
+        "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+        "safe_potential_scope_design": false,
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "unresolved_questions": [
+          "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+          "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+          "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+        ]
+      },
+      "remaining_design_gates": [
+        "A separate immutable exact-accession scope-evidence acceptance design is required before implementing any policy entry.",
+        "Independent mineral/lease adjustment amounts and integrated FCFF compatibility remain unproved and are not acceptance operands."
+      ],
+      "methodology_review": {
+        "eligible_scope_established": true,
+        "reported_component_amount_established": true,
+        "reported_component_acceptance_candidate": true,
+        "approved_derivation_equation": null,
+        "primitive_change": false,
+        "scope_basis": "R10 identifies the PP&E successful-efforts/development/mineral-property cost basis. R12 separately reports the complete PP&E cash component and excludes noncash movements; R7 and acquisition notes separate business combinations. R14 distinguishes incurred capitalized lease costs, actual investing cash, noncash ROU additions and financing principal.",
+        "supporting_urls": [
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R10.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R12.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R14.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R7.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R27.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R38.htm"
+        ],
+        "investing_operating_lease_cash_usd": "398000000",
+        "investing_lease_cash_destination_within_ppe_usd": null,
+        "lease_adjustment_approved": false,
+        "finance_lease_principal_cash_usd": "193000000",
+        "noncash_operating_rou_additions_usd": "1063000000",
+        "noncash_finance_rou_additions_usd": "60000000",
+        "noncash_rou_evidence_location": "R14.htm, footnote to right-of-use assets; not eligible annual cash operands.",
+        "mineral_or_lease_separate_derivation_amounts_sufficient": false,
+        "reason_no_split_required_for_reported_value": "A construction/service cost already within recognized cash PP&E is not an ineligible lease asset addition. Acceptance preserves the selected full PP&E cash component, without assuming any allocation of the separate lease disclosure."
+      }
     },
     {
       "ticker": "CVX",
@@ -627,11 +662,11 @@
       "instance_sha256": "01fe10d8942274ff8dbc4f2014d946059525a2a74f002512f6533ff3a05baf5d",
       "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/ec829e09b872d5a7f405fbf1b14e3edc49524e0c6399a873b82b7f7762b83214.bin",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "perimeter_decision": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
       "production_status": "missing",
       "production_policy_approval": false,
-      "safe_potential_scope_design": false,
+      "safe_potential_scope_design": true,
       "approved_derivation_equation": null,
       "candidate_cash_ppe_value_usd": "10349000000",
       "statement_check_not_capex_derivation": {
@@ -1088,13 +1123,48 @@
         "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R27.htm",
         "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R38.htm"
       ],
-      "unresolved_questions": [
-        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
-        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
-        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
-      ],
+      "unresolved_questions": [],
       "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
-      "unknown_not_demonstrated_incompatible": true
+      "unknown_not_demonstrated_incompatible": true,
+      "wave29_review": {
+        "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+        "safe_potential_scope_design": false,
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "unresolved_questions": [
+          "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+          "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+          "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+        ]
+      },
+      "remaining_design_gates": [
+        "A separate immutable exact-accession scope-evidence acceptance design is required before implementing any policy entry.",
+        "Independent mineral/lease adjustment amounts and integrated FCFF compatibility remain unproved and are not acceptance operands."
+      ],
+      "methodology_review": {
+        "eligible_scope_established": true,
+        "reported_component_amount_established": true,
+        "reported_component_acceptance_candidate": true,
+        "approved_derivation_equation": null,
+        "primitive_change": false,
+        "scope_basis": "R10 identifies the PP&E successful-efforts/development/mineral-property cost basis. R12 separately reports the complete PP&E cash component and excludes noncash movements; R7 and acquisition notes separate business combinations. R14 distinguishes incurred capitalized lease costs, actual investing cash, noncash ROU additions and financing principal.",
+        "supporting_urls": [
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R10.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R12.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R14.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R7.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R27.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R38.htm"
+        ],
+        "investing_operating_lease_cash_usd": "467000000",
+        "investing_lease_cash_destination_within_ppe_usd": null,
+        "lease_adjustment_approved": false,
+        "finance_lease_principal_cash_usd": "44000000",
+        "noncash_operating_rou_additions_usd": "1807000000",
+        "noncash_finance_rou_additions_usd": "3000000",
+        "noncash_rou_evidence_location": "R14.htm, footnote to right-of-use assets; not eligible annual cash operands.",
+        "mineral_or_lease_separate_derivation_amounts_sufficient": false,
+        "reason_no_split_required_for_reported_value": "A construction/service cost already within recognized cash PP&E is not an ineligible lease asset addition. Acceptance preserves the selected full PP&E cash component, without assuming any allocation of the separate lease disclosure."
+      }
     },
     {
       "ticker": "CVX",
@@ -1142,11 +1212,11 @@
       "instance_sha256": "c9442973f5372dde03e202c25a19e7a436c535933b4a4ceaa0e8759d2fd38790",
       "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/38bcf4692d2dc2dbf3e832b03bf4a3f632ae7c3dd573b2402d7ed70b44d2a3aa.bin",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "perimeter_decision": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
       "production_status": "missing",
       "production_policy_approval": false,
-      "safe_potential_scope_design": false,
+      "safe_potential_scope_design": true,
       "approved_derivation_equation": null,
       "candidate_cash_ppe_value_usd": "14788000000",
       "statement_check_not_capex_derivation": {
@@ -1604,13 +1674,48 @@
         "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R38.htm",
         "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R39.htm"
       ],
-      "unresolved_questions": [
-        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
-        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
-        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
-      ],
+      "unresolved_questions": [],
       "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
-      "unknown_not_demonstrated_incompatible": true
+      "unknown_not_demonstrated_incompatible": true,
+      "wave29_review": {
+        "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+        "safe_potential_scope_design": false,
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "unresolved_questions": [
+          "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+          "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+          "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+        ]
+      },
+      "remaining_design_gates": [
+        "A separate immutable exact-accession scope-evidence acceptance design is required before implementing any policy entry.",
+        "Independent mineral/lease adjustment amounts and integrated FCFF compatibility remain unproved and are not acceptance operands."
+      ],
+      "methodology_review": {
+        "eligible_scope_established": true,
+        "reported_component_amount_established": true,
+        "reported_component_acceptance_candidate": true,
+        "approved_derivation_equation": null,
+        "primitive_change": false,
+        "scope_basis": "R10 identifies the PP&E successful-efforts/development/mineral-property cost basis. R12 separately reports the complete PP&E cash component and excludes noncash movements; R7 and acquisition notes separate business combinations. R14 distinguishes incurred capitalized lease costs, actual investing cash, noncash ROU additions and financing principal.",
+        "supporting_urls": [
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R10.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R12.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R14.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R7.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R27.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R38.htm"
+        ],
+        "investing_operating_lease_cash_usd": "713000000",
+        "investing_lease_cash_destination_within_ppe_usd": null,
+        "lease_adjustment_approved": false,
+        "finance_lease_principal_cash_usd": "42000000",
+        "noncash_operating_rou_additions_usd": "2556000000",
+        "noncash_finance_rou_additions_usd": "233000000",
+        "noncash_rou_evidence_location": "R14.htm, footnote to right-of-use assets; not eligible annual cash operands.",
+        "mineral_or_lease_separate_derivation_amounts_sufficient": false,
+        "reason_no_split_required_for_reported_value": "A construction/service cost already within recognized cash PP&E is not an ineligible lease asset addition. Acceptance preserves the selected full PP&E cash component, without assuming any allocation of the separate lease disclosure."
+      }
     },
     {
       "ticker": "CVX",
@@ -1658,11 +1763,11 @@
       "instance_sha256": "de9314aaf8a5e710d1b82a7e5b4530c6e7d3a607e8c5286ffa44f545cfe79315",
       "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/33b9f9ed28b3b3833c9b8e0d98b5e3d605b467e3ad6e73907cafb9f17fcbe330.bin",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "perimeter_decision": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
       "production_status": "missing",
       "production_policy_approval": false,
-      "safe_potential_scope_design": false,
+      "safe_potential_scope_design": true,
       "approved_derivation_equation": null,
       "candidate_cash_ppe_value_usd": "15544000000",
       "statement_check_not_capex_derivation": {
@@ -2119,13 +2224,48 @@
         "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R27.htm",
         "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R38.htm"
       ],
-      "unresolved_questions": [
-        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
-        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
-        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
-      ],
+      "unresolved_questions": [],
       "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
-      "unknown_not_demonstrated_incompatible": true
+      "unknown_not_demonstrated_incompatible": true,
+      "wave29_review": {
+        "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+        "safe_potential_scope_design": false,
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "unresolved_questions": [
+          "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+          "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+          "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+        ]
+      },
+      "remaining_design_gates": [
+        "A separate immutable exact-accession scope-evidence acceptance design is required before implementing any policy entry.",
+        "Independent mineral/lease adjustment amounts and integrated FCFF compatibility remain unproved and are not acceptance operands."
+      ],
+      "methodology_review": {
+        "eligible_scope_established": true,
+        "reported_component_amount_established": true,
+        "reported_component_acceptance_candidate": true,
+        "approved_derivation_equation": null,
+        "primitive_change": false,
+        "scope_basis": "R10 identifies the PP&E successful-efforts/development/mineral-property cost basis. R12 separately reports the complete PP&E cash component and excludes noncash movements; R7 and acquisition notes separate business combinations. R14 distinguishes incurred capitalized lease costs, actual investing cash, noncash ROU additions and financing principal.",
+        "supporting_urls": [
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R10.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R12.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R14.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R7.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R27.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R38.htm"
+        ],
+        "investing_operating_lease_cash_usd": "979000000",
+        "investing_lease_cash_destination_within_ppe_usd": null,
+        "lease_adjustment_approved": false,
+        "finance_lease_principal_cash_usd": "67000000",
+        "noncash_operating_rou_additions_usd": "2205000000",
+        "noncash_finance_rou_additions_usd": "40000000",
+        "noncash_rou_evidence_location": "R14.htm, footnote to right-of-use assets; not eligible annual cash operands.",
+        "mineral_or_lease_separate_derivation_amounts_sufficient": false,
+        "reason_no_split_required_for_reported_value": "A construction/service cost already within recognized cash PP&E is not an ineligible lease asset addition. Acceptance preserves the selected full PP&E cash component, without assuming any allocation of the separate lease disclosure."
+      }
     },
     {
       "ticker": "CVX",
@@ -2173,11 +2313,11 @@
       "instance_sha256": "383742ba0900c6bad8fbea17085f2854a2264ca1d3673de71654c94b76ddbe98",
       "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/e8f9f71d87d6dbb773640b7e6fbfd2e0282b811e098165676c833b7ba229c560.bin",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "perimeter_decision": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
       "production_status": "missing",
       "production_policy_approval": false,
-      "safe_potential_scope_design": false,
+      "safe_potential_scope_design": true,
       "approved_derivation_equation": null,
       "candidate_cash_ppe_value_usd": "16830000000",
       "statement_check_not_capex_derivation": {
@@ -2682,13 +2822,76 @@
         "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R27.htm",
         "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R38.htm"
       ],
-      "unresolved_questions": [
-        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
-        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
-        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
-      ],
+      "unresolved_questions": [],
       "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
-      "unknown_not_demonstrated_incompatible": true
+      "unknown_not_demonstrated_incompatible": true,
+      "wave29_review": {
+        "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+        "safe_potential_scope_design": false,
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "unresolved_questions": [
+          "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+          "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+          "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+        ]
+      },
+      "remaining_design_gates": [
+        "A separate immutable exact-accession scope-evidence acceptance design is required before implementing any policy entry.",
+        "Independent mineral/lease adjustment amounts and integrated FCFF compatibility remain unproved and are not acceptance operands."
+      ],
+      "methodology_review": {
+        "eligible_scope_established": true,
+        "reported_component_amount_established": true,
+        "reported_component_acceptance_candidate": true,
+        "approved_derivation_equation": null,
+        "primitive_change": false,
+        "scope_basis": "R10 identifies the PP&E successful-efforts/development/mineral-property cost basis. R12 separately reports the complete PP&E cash component and excludes noncash movements; R7 and acquisition notes separate business combinations. R14 distinguishes incurred capitalized lease costs, actual investing cash, noncash ROU additions and financing principal.",
+        "supporting_urls": [
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R10.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R12.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R14.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R7.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R27.htm",
+          "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R38.htm"
+        ],
+        "investing_operating_lease_cash_usd": "881000000",
+        "investing_lease_cash_destination_within_ppe_usd": null,
+        "lease_adjustment_approved": false,
+        "finance_lease_principal_cash_usd": "136000000",
+        "noncash_operating_rou_additions_usd": "2845000000",
+        "noncash_finance_rou_additions_usd": "971000000",
+        "noncash_rou_evidence_location": "R14.htm, footnote to right-of-use assets; not eligible annual cash operands.",
+        "mineral_or_lease_separate_derivation_amounts_sufficient": false,
+        "reason_no_split_required_for_reported_value": "A construction/service cost already within recognized cash PP&E is not an ineligible lease asset addition. Acceptance preserves the selected full PP&E cash component, without assuming any allocation of the separate lease disclosure."
+      }
     }
-  ]
+  ],
+  "previous_review": {
+    "research_version": "wave29-cvx-capex-perimeter-v1",
+    "commit": "16454c508cdce7e05be08fa11e043eed3ff6d293",
+    "path": "docs/capex-cvx-perimeter-inventory.json",
+    "sha256": "70cb1ee56ded46363d0bf27a5c21076251ec1d97c4f421c2aee295a2380dd6f1",
+    "decision": "NO_GO_PENDING_METHODOLOGY_REVIEW",
+    "perimeter_decision_counts": {
+      "UNRESOLVED_METHODOLOGY_BLOCKER": 5
+    },
+    "safe_potential_new_coverage": 0
+  },
+  "approved_new_production_resolutions": 0,
+  "evidence_fixture": {
+    "path": "evidence/cvx-capex-perimeter-response-bodies.json",
+    "sha256": "432a69e88ee82ba1f57060c2ce85968393d4774625d8e3659bcf55050a5fc271",
+    "body_count": 36,
+    "unchanged": true,
+    "new_sec_requests": 0
+  },
+  "methodology": {
+    "primitive_change_proposed": false,
+    "basis": "Reported gross cash acquisition/construction of recognized consolidated PP&E; no hypothetical pure-materials or pre-incentive reconstruction.",
+    "eligible": "Cash development wells, related plant/equipment and proved mineral-property interests in the selected PP&E cost perimeter; cash construction inputs, including capitalized lease services, only as included in that reported cash component.",
+    "excluded": "Expensed exploration/current dry holes; noncash ARO/ROU and unpaid additions; lease financing principal; business-combination consideration/fair-value assets; affiliate investments and separate intangibles; no proceeds netting.",
+    "reported_component_acceptance": "All costs within the evidenced cash PP&E perimeter are eligible; separate mineral/lease subamounts are not needed to preserve that independently reported complete component.",
+    "separate_lease_or_mineral_equation": "Not approved: exact destination/overlap amounts are not separately established; no whole-lease subtraction, inferred zero, residual or additive adjustment.",
+    "integrated_fcff_readiness": "Unproved; historical value scope does not certify lease, depletion, EBIT, affiliate or timing compatibility."
+  }
 }

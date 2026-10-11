@@ -466,6 +466,26 @@ reviewed-body refresh do not change the economic definition or gross cash
 treatment. The generic concept policy remains unchanged; all 47 controls remain
 unapproved. Future integrated FCFF/lease/incentive readiness is not certified.
 
+Wave 30's [CVX methodology review](capex-cvx-acquisition-perimeter.md) clarifies
+the existing cash PP&E cost basis without changing the primitive or runtime
+policies. Cash construction/development of recognized PP&E is eligible, not
+just purchases of finished equipment. For these selected CVX statements it
+includes capitalized well/development costs and proved mineral-property
+interests within the disclosed depletable PP&E perimeter, not generic intangible
+rights or all exploration. Separate expensed exploration/dry holes, noncash
+ARO/ROU recognition, unpaid additions, financing principal, affiliate investments
+and business-combination consideration are not substitute cash PP&E operands.
+
+Capitalized lease/service inputs within an independently evidenced reported
+PP&E cash cost component need not be stripped out to manufacture a materials-only
+measure. A separate investing-lease cash line does not establish destination
+or overlap and cannot be added/subtracted without that evidence. Five CVX
+reported-value scope-design candidates are supported; zero lease/mineral
+component equations are approved. No allocation is invented or generic concept
+added. Generic, META gross-cash and ten AMZN/LLY curated policies are unchanged,
+not retrospectively recertified. Historical scope support does not establish
+integrated FCFF/lease/depletion/timing readiness.
+
 The Revenue, Operating Income, and Capex policies were validated against five
 annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A covers all
 five selected periods of META, AAPL, and COST. For Microsoft CIK `789019` only,
