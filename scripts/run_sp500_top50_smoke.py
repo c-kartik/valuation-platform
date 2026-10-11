@@ -22,6 +22,9 @@ SOURCE_ROOT = PROJECT_ROOT / "src"
 if str(SOURCE_ROOT) not in sys.path:
     sys.path.insert(0, str(SOURCE_ROOT))
 
+from valuation_platform.normalization.capex_scope import (  # noqa: E402
+    capex_scope_entry_for, verify_capex_artifacts,
+)
 from valuation_platform.normalization import (  # noqa: E402
     AmbiguousStandardizedMeasure,
     CalculatedOperatingNWC,
@@ -256,6 +259,15 @@ class ProductionCorpusPipeline:
             filing_xbrl=filing_xbrl,
             annual_periods=annual_periods,
             d_and_a_artifacts=d_and_a_artifacts,
+            capex_artifacts=tuple(
+                verify_capex_artifacts(
+                    entry,
+                    {url: self._client.get_bytes(url) for url, _ in entry.artifact_digests},
+                    instance,
+                )
+                for filing, instance, period in zip(filings.annual, filing_xbrl, annual_periods)
+                if (entry := capex_scope_entry_for(company.cik, filing, period)) is not None
+            ),
         )
         balance_sheets = normalize_annual_balance_sheets(
             selected_facts,

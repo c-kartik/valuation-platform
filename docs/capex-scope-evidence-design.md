@@ -3,6 +3,10 @@
 ## Decision and economic boundary
 
 Phase 1H.4 Wave 27 starts at `052525309a4e0b46dfe047cdb6e67eaa6bfaad63`.
+Wave 28 now implements this ten-entry foundation with explicit LLY representation
+correction and an authorized AMZN evidence refresh; see
+[verified implementation/results](capex-scope-evidence-results.md). The Wave 27
+matrix remains a frozen research snapshot, not the executable evidence registry.
 **PARTIAL GO:** approve curated acceptance design for the ten exact AMZN/LLY
 periods in the [acceptance matrix](capex-scope-evidence-matrix.json).
 Five AMZN and five LLY entries are `CURATED_DESIGN_GO`, classified
@@ -194,3 +198,69 @@ other state or issuer-execution changes. This is not a measured result.
 Design validation checks 57 exact inventory identities, all ten operand/evidence
 copies, counts, retained-byte provenance, local links and `git diff --check`.
 No tests or corpus rerun; no production code, policies or inventory modifications.
+
+## Wave 28 implementation attempt: representation correction and blocked validation
+
+This section records the historical blockers, subsequently resolved by the
+authorized evidence refresh in [Wave 28 results](capex-scope-evidence-results.md).
+
+The ten-entry implementation is uncommitted and not validated for production.
+Focused checks pass (158 tests, including ten positives / 47 unchanged controls),
+but targeted validation is blocked. No full suite or corpus reconciliation has
+run; the production baseline above is not replaced by the conditional target.
+
+The five LLY directory-index hashes in the historical Wave 26/27 inventory/matrix
+describe retained UTF-8 `json.dumps(parsed_object)` bytes with default separators,
+no indentation and no trailing newline. They do **not** describe original SEC
+response bodies. The saved objects' key order makes sorted and unsorted default
+serialization identical; the evidence establishes the bytes, not which optional
+sort flag was used. Original SEC response bodies were retrieved independently
+and their parsed JSON matches the retained objects, but their byte hashes differ.
+
+The uncommitted runtime registry retains the exact old serialized text and hash,
+labeled `sha256_retained_reserialized_json_utf8_bytes`, in an explicit correction
+audit. Its mandatory URL hash now requires `sha256_sec_response_body_bytes`.
+The original response-body fixture preserves bytes as base64, not regenerated
+JSON. Both representations are independently hashed and byte-count checked;
+only afterward is parsed equality checked. Hash equality is never inferred
+from parsed equality. Review facts, values, identities and scope are unchanged.
+The historical research inventory and design matrix remain unchanged snapshots;
+the correction is a transparent delta in the unpublished runtime registry, not
+a silent mutation of a published policy version.
+
+| LLY accession | Retained JSON SHA-256 | Original response-body SHA-256 | Retained / response bytes |
+| --- | --- | --- | ---: |
+| `0000059478-22-000068` | `858016f796991d93679d370235204efb82fb6a66f55fe27f19cb1a7eb60c73f0` | `0149695203760e7d01fc89e2eee08e18e66af90f39ee8eeccdf990ed938212da` | 15161 / 14143 |
+| `0000059478-23-000082` | `ee985125475590789495babe9baf9b58f1f37061e1ffb9b8d9a415f6ad13a646` | `a9e4f89284614558e1be5c40f173c863f6ff494792067151b15175a335c59d29` | 13391 / 12478 |
+| `0000059478-24-000065` | `ef461a99e8775dad8d041a98d92f7ccc1e3d2b7e245f9d6d518dd064b7a96048` | `786a0bca7cba5e97c617a2c36fb47647e9588c13e4dbdc7167071417b04ff75f` | 13635 / 12708 |
+| `0000059478-25-000067` | `ed645d64c1c072bb04690a492b25a8a79ed8091b576387298bb32d44a2500a62` | `1f183c0d52cd33ffb654b860c62f67e622f221f784b9e90a9c911140729ac1bf` | 13738 / 12804 |
+| `0000059478-26-000013` | `97963e357c13675d1b1f1353ff46975b0e57950ca8bcc05330422c97e688c555` | `d0e2ec46b324e0f0a0c53f2a05424eda95e0c250290c2a842603ac19aff8fcbc` | 12312 / 11476 |
+
+Targeted validation then found a **separate 15-artifact AMZN blocker**: R3.htm
+(cash flow), R10.htm (accounting policy) and R12.htm (PP&E) for all five selected
+accessions currently return bytes different from their reviewed fingerprints.
+All 15 extracted report texts equal the retained Wave 26 review texts exactly.
+For the first accounting-policy report, requests with Accept `*/*`,
+`application/octet-stream` and `text/html` returned the same current body/hash;
+that check did not recover the reviewed byte representation. Retained AMZN
+records contain parsed text and hashes, not the original HTML bytes, and no
+matching raw cache files were found. Other registered artifact hashes matched.
+Text equality cannot certify the missing original HTML bytes or bypass the
+reviewed-byte contract. No AMZN hash, acceptance rule or expected value was
+changed. The precise remaining gap is recovery of those reviewed HTML bodies,
+or a separately authorized, explicit review/versioned evidence refresh of the
+current 15 rendered bodies preserving the old audit records. Until addressed,
+do not run the full suite/corpus, claim ten live resolutions or commit Wave 28.
+
+## Wave 28 completed implementation
+
+The authorized 15-artifact AMZN refresh independently reconfirms scope and
+retains unavailable-old-body status and fingerprints separately from approved
+new response bodies. Strict byte checks remain in force. Ten positive / 47
+control regression, ten-accession validation, 160 focused tests, 569 full-suite
+tests and one corpus reconciliation pass. Capex is 157/47/0; aggregate is
+1,895/1,493/11/27/42 = 3,468, with all other states/execution unchanged.
+Schema 5 preserves the separate Capex audit and full correction/refresh histories.
+Next research the five CVX cash PP&E components' acquisition/asset containment;
+do not approve aggregate spending or infer component absence. See
+[results and next boundary](capex-scope-evidence-results.md#next-bounded-milestone).

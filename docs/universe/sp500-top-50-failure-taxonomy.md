@@ -600,6 +600,15 @@ addition or acquisition substitution. Next implement only the ten-entry curated
 policy with exact reviewed-byte provenance and conservative conflict handling.
 Production metrics and generic Capex policy remain unchanged.
 
+Wave 28 [implements the exact ten AMZN/LLY entries](../capex-scope-evidence-results.md).
+Live Capex is **157 resolved / 47 missing / zero ambiguous**; aggregate is
+**1,895 / 1,493 / 11 / 27 / 42 = 3,468**. All 47 controls remain missing,
+with other measure states and 43 completions / seven skips unchanged.
+Schema 5 retains the policy audit, explicit LLY representation correction and
+authorized AMZN reviewed-body refresh; no generic fallback or semantic change.
+Next research five frozen CVX cash PP&E component perimeters and acquisition
+containment. The other 42 gaps and GE methodology work remain outside that pass.
+
 Wave 14 proves complete component derivations for the 25 LLY/JNJ/MRK/KLAC/IBM
 periods without using Pretax as a residual. All 25 are approved research
 patterns, with acquired IPR&D, restructuring, operating-asset impairments,
@@ -749,7 +758,7 @@ issuers have one post-smoke classification.
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 24 audit:** no approved numeric incompatibility established; TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Design timing-basis/evidence and joint consumer-readiness contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
-| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 57 missing across the 204-period corpus | Core FCFF input | Wave 27 design complete; implement ten AMZN/LLY exact-period scope acceptances, keep 47 unapproved | Medium-high | High |
+| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 47 missing across the 204-period corpus | Core FCFF input | Wave 28 complete; research five CVX cash PP&E component perimeters, keeping other 42 gaps separate | Medium-high | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
 | 11 | `CONCEPT_POLICY` | Commercial paper 192 missing; short borrowings 203 missing | Equity bridge | Generalize exact concepts only where economically present | High | Medium |
@@ -799,8 +808,8 @@ issuers have one post-smoke classification.
    lease-perimeter research separately gated.
    Wave 25 designs the valuation-boundary readiness contract. Wave 26 inventories
    all 57 Capex gaps; Wave 27 designs curated scope acceptance for ten AMZN/LLY
-   candidates. Next implement those ten entries, with 47 unapproved controls
-   and no generic fallback.
+   candidates. Wave 28 implements those ten entries with 47 unchanged controls
+   and no generic fallback. Next research five CVX cash PP&E component perimeters.
    CVX/GE mixed-business designs remain separate. Approve only
    repeatable definitions with
    selected-accession evidence.

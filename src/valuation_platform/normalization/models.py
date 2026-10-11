@@ -27,6 +27,7 @@ class MissingReason(str, Enum):
     NO_VALID_DERIVATION_OPERANDS = "no_valid_derivation_operands"
     MISSING_DERIVATION_OPERAND = "missing_derivation_operand"
     CURATED_D_AND_A_EVIDENCE_MISMATCH = "curated_d_and_a_evidence_mismatch"
+    CURATED_CAPEX_EVIDENCE_MISMATCH = "curated_capex_evidence_mismatch"
     ZERO_DERIVATION_DENOMINATOR = "zero_derivation_denominator"
     NO_VALID_CURRENT_INSTANT_OBSERVATION = (
         "no_valid_current_instant_observation"
@@ -110,6 +111,26 @@ class DAndAScopeAudit:
 
 
 @dataclass(frozen=True)
+class CapexOccurrenceAudit:
+    """Original instance ordering and an explicit curated eligibility decision."""
+
+    original_instance_ordinal: int
+    fact: FilingXBRLFact
+    context: FilingXBRLContext
+    disposition: str
+
+
+@dataclass(frozen=True)
+class CapexScopeAudit:
+    """Immutable reviewed entry and separately typed support, not operands."""
+
+    reviewed_entry_json: str
+    verified_artifact_digests: tuple[tuple[str, str], ...]
+    confirming_original_ordinals: tuple[int, ...]
+    supporting_facts: tuple[FilingXBRLEvidence, ...]
+    occurrences: tuple[CapexOccurrenceAudit, ...]
+
+@dataclass(frozen=True)
 class HistoricalPolicyProvenance:
     """Versioned policy identity and reviewed evidence retained with a value."""
 
@@ -127,6 +148,7 @@ class HistoricalPolicyProvenance:
     reviewed_evidence: tuple[ReviewedPolicyEvidence, ...]
     filing_xbrl_evidence: tuple[FilingXBRLEvidence, ...]
     d_and_a_scope: DAndAScopeAudit | None = None
+    capex_scope: CapexScopeAudit | None = None
 
     def __post_init__(self) -> None:
         if (

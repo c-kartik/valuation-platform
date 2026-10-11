@@ -385,6 +385,20 @@ normalization, standardized output and versioned serialization; no schema or
 runtime changes occur in this documentation milestone. Integrated FCFF readiness
 is not established. Next implement only the ten reviewed entries.
 
+Wave 28 implements schema 5's separate Capex audit.
+Its [representation correction](capex-scope-evidence-design.md#wave-28-implementation-attempt-representation-correction-and-blocked-validation)
+distinguishes original SEC response-body digests from retained reserialized JSON
+digests, preserving both representations and verifying each before comparison.
+Raw response-body checks remain mandatory; a parsed-content match never replaces
+them. Fifteen unavailable-original AMZN renderer bodies were explicitly refreshed
+and independently re-reviewed, preserving the old fingerprints/status rather
+than inferring byte equality from text. Original refreshed bodies are retained
+losslessly with URL/accession/retrieval metadata. The strict manifest verification
+and instance re-parse pass for ten registered filings; full output provenance
+retains representation correction and refresh audit records. See
+[verified results](capex-scope-evidence-results.md). No generic parser/resolver
+or semantic acceptance change; integrated FCFF readiness remains unproved.
+
 Wave 20 implements the [Wave 19 design](depreciation-amortization-scope-evidence-design.md)
 as `normalization.d_and_a_scope` and a separate five-entry source registry,
 not approval inferred from the research JSON. The corpus caller retrieves the

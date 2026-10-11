@@ -473,6 +473,7 @@ class CorpusSmokeRunnerTests(unittest.TestCase):
             filing_xbrl=artifacts,
             annual_periods=periods,
             d_and_a_artifacts=(),
+            capex_artifacts=(),
         )
         self.assertIs(result.historical, historical)
 

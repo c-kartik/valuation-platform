@@ -184,6 +184,13 @@ bind selected note evidence and exclusions; this research JSON is not a policy.
 
 ## Decision, validation and bounded next milestone
 
+Wave 28 [implements the ten-entry policy](capex-scope-evidence-results.md):
+Capex 157 resolved / 47 missing / zero ambiguous, with exactly ten new results
+and other measure states unchanged. The inventory remains a frozen baseline;
+its potential flags are not an executable registry. Explicit response-body
+correction/refresh histories remain separate from scope approval. Next research
+five CVX cash PP&E components' acquisition/asset containment, not aggregate mapping.
+
 Wave 27 completes the [scope-evidence design](capex-scope-evidence-design.md)
 and [57-row acceptance matrix](capex-scope-evidence-matrix.json): five AMZN and
 five LLY exact-period curated design acceptances; 47 `NO_ENTRY` controls retain

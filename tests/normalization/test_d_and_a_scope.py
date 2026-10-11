@@ -316,7 +316,7 @@ class DAndAScopeTests(unittest.TestCase):
         balance = normalize_annual_balance_sheets(selected)
         output = assemble_standardized_annual_history(history, balance)
         payload = json.loads(json.dumps(standardized_history_to_dict(output)))
-        self.assertEqual(payload["schema_version"], "4")
+        self.assertEqual(payload["schema_version"], "5")
         m = next(m for m in payload["annual"][0]["measures"]
                  if m["measure"] == FinancialMetric.D_AND_A.value)
         p = m["policy"]

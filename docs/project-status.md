@@ -873,10 +873,18 @@ five LLY exact-accession acceptances and 47 unapproved controls, not fresh
 economic denials. Immutable reviewed-byte evidence, exact operand identity,
 direct precedence, semantic duplicate/conflict rules and full provenance are
 specified; no generic fallback or incentive gross-up is approved.
-Next bounded milestone: implement only that ten-entry curated reported-value
-policy, retaining all 47 controls and deferred valuation readiness. Production remains Capex
-147/57/0, D&A 115/89/0 and aggregate 1,885/1,503/11/27/42 = 3,468;
-no tests or corpus rerun in this documentation-only milestone.
+Wave 28 completes the [ten-entry curated Capex policy](capex-scope-evidence-results.md),
+including independently verified LLY response/retained-JSON fingerprints and
+an explicitly authorized 15-artifact AMZN refresh preserving old unverified
+fingerprints. No acceptance relaxation. Focused tests: 160; complete suite: 569;
+ten positive / 47 control regression and ten-accession targeted validation pass.
+One corpus reconciliation yields Capex 157/47/0, D&A 115/89/0 and aggregate
+1,895/1,493/11/27/42 = 3,468. Other measure states, 43 generic completions and
+seven specialized skips are unchanged; schema 5 retains the Capex audit.
+Next bounded milestone: selected-filing research of the five frozen CVX cash
+PP&E components' acquisition/asset containment. Keep the other 42 Capex gaps,
+generic policy and deferred valuation readiness outside this pass. No aggregate
+productive-assets fallback, affiliate/dry-hole inclusion or residual derivation.
 Do not implement a sum or infer TXN allocations; further TXN work
 requires a genuine new expense/inventory and incentive bridge, not repeated
 concept research. TXN 2024–2025 absent intangible operands are not
@@ -953,7 +961,8 @@ sensitivity work is intentionally paused through Phase 1H.
    valuation-boundary timing contract. Wave 26 inventories the 57 missing Capex
    periods; Wave 27 designs exact-accession scope acceptance for ten AMZN/LLY
    candidates without a generic fallback. Next implement only that reviewed
-   ten-entry policy, then continue with other
+   ten-entry policy. Wave 28 completes it with exactly ten new Capex resolutions;
+   next research five CVX cash PP&E component perimeters, then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital

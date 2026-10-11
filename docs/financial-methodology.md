@@ -439,7 +439,7 @@ Capex is the cash expenditure to acquire property, plant and equipment and uses:
 Capex is preserved as a positive expenditure magnitude. The later FCFF
 calculation will subtract it. PP&E additions, capital expenditures incurred but
 not yet paid, productive-asset purchases, acquisitions, intangible purchases,
-lease additions, and issuer extensions are not approved alternatives.
+lease additions, and issuer extensions are not approved generic alternatives.
 
 META's 2022 and 2023 primary cash-flow presentation reports net PP&E purchases,
 while `PaymentsToAcquirePropertyPlantAndEquipment` reports gross purchases. The
@@ -458,6 +458,13 @@ amount, capitalized interest or lease adjustment is invented. Acquisitions,
 noncash additions, unpaid purchases and financing principal remain outside
 these accepted reported operands. The primitive and current policy are unchanged;
 47 inventory controls remain unapproved, not fresh economic denials.
+
+Wave 28 implements only those ten exact curated reported-value acceptances;
+[verified results](capex-scope-evidence-results.md) are Capex 157/47/0 with no
+other measure-state changes. Explicit LLY representation correction and AMZN
+reviewed-body refresh do not change the economic definition or gross cash
+treatment. The generic concept policy remains unchanged; all 47 controls remain
+unapproved. Future integrated FCFF/lease/incentive readiness is not certified.
 
 The Revenue, Operating Income, and Capex policies were validated against five
 annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A covers all
@@ -869,8 +876,9 @@ as invented missing historical values or a requirement for universal FCFF
 readiness. Executable timing readiness is a valuation-boundary prerequisite
 after the freeze, alongside independent tax/Capex/forecast checks, not a new
 Phase 1H calculator. Waves 26–27 complete the 57-period Capex inventory and
-ten-entry scope acceptance design; next implement only those exact AMZN/LLY
-entries. Timing-gate implementation remains deferred.
+ten-entry scope acceptance design; Wave 28 implements those exact AMZN/LLY
+entries. Next research five CVX cash PP&E component perimeters; timing-gate
+implementation remains deferred.
 
 The core valuation methodology is unlevered free cash flow to the firm (FCFF).
 

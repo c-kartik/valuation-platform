@@ -18,6 +18,7 @@ from .models import (
     DerivedBalanceSheetValue,
     DerivedHistoricalValue,
     DAndAScopeAudit,
+    CapexScopeAudit,
     EvidenceSourceKind,
     FactEvidence,
     FilingXBRLEvidence,
@@ -38,7 +39,7 @@ from .operating_nwc import (
 )
 
 
-SCHEMA_VERSION = "4"
+SCHEMA_VERSION = "5"
 
 
 class HistoricalOutputError(ValueError):
@@ -135,6 +136,7 @@ class HistoricalPolicyReference:
     reviewed_evidence: tuple[ReviewedPolicyEvidence, ...] = ()
     filing_xbrl_evidence: tuple[FilingXBRLEvidence, ...] = ()
     d_and_a_scope: DAndAScopeAudit | None = None
+    capex_scope: CapexScopeAudit | None = None
     operating_income_derivation: (
         OperatingIncomeDerivationPolicyProvenance | None
     ) = None
@@ -1060,6 +1062,12 @@ def _policy_reference(
 ) -> HistoricalPolicyReference | None:
     if provenance is None:
         return None
+    if provenance.policy_id == "capex_scope_equivalence" or provenance.capex_scope:
+        from .capex_scope import CapexScopePolicyError, validate_capex_scope_provenance
+        try:
+            validate_capex_scope_provenance(provenance)
+        except CapexScopePolicyError as exc:
+            raise HistoricalOutputError(str(exc)) from exc
     if provenance.policy_id == "d_and_a_scope_equivalence" or provenance.d_and_a_scope:
         from .d_and_a_scope import (
             DAndAScopePolicyError, validate_d_and_a_scope_provenance,
@@ -1087,6 +1095,7 @@ def _policy_reference(
         reviewed_evidence=provenance.reviewed_evidence,
         filing_xbrl_evidence=provenance.filing_xbrl_evidence,
         d_and_a_scope=provenance.d_and_a_scope,
+        capex_scope=provenance.capex_scope,
     )
 
 
@@ -1316,6 +1325,10 @@ def _serialize_policy(
         "d_and_a_scope": (
             None if policy.d_and_a_scope is None
             else _serialize_d_and_a_scope(policy.d_and_a_scope)
+        ),
+        "capex_scope": (
+            None if policy.capex_scope is None
+            else _serialize_d_and_a_scope(policy.capex_scope)
         ),
     }
 

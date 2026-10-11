@@ -117,11 +117,17 @@ evidence-backed, CIK-scoped Company Facts policy for MSFT. GOOGL remains
 unresolved. Phase 1H.4 Wave 20 additionally accepts five exact Visa filings
 through the [reviewed curated D&A policy](docs/depreciation-amortization-scope-evidence-design.md#wave-20-implementation-and-verified-results):
 115 corpus periods resolve and 89 remain missing. This is not a generic fallback
-or component sum; schema 4 preserves full reviewed scope and occurrence/support
+or component sum; schema 4 introduced full reviewed scope and occurrence/support
 provenance. Interim periods and the remaining standardized financial metrics
 are not normalized yet. Reported ETR is a historical accounting diagnostic
 derived from the normalized monetary facts; the forecast operating tax rate
 remains a separate manual assumption.
+Wave 28 adds only ten exact AMZN/LLY [curated Capex acceptances](docs/capex-scope-evidence-results.md),
+bringing Capex to 157 resolved / 47 missing / zero ambiguous. Schema 5 preserves
+the complete Capex review/occurrence audit and explicit evidence-representation
+correction/refresh histories. The generic policy and 47 controls are unchanged;
+aggregate is 1,895/1,493/11/27/42 across 3,468 states. This does not certify
+future integrated FCFF readiness or resume valuation work.
 The separate annual balance-sheet path currently normalizes operating
 receivables, Apple vendor non-trade receivables, inventory, trade accounts
 payable, customer contract liabilities, employee-related liabilities for four
