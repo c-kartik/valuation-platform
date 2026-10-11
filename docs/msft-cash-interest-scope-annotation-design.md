@@ -3,7 +3,8 @@
 ## Decision and preservation boundary
 
 **GO for an isolated, nonnumeric annotation sidecar for only FY2025–2026.**
-This is a Phase 1 historical-data preparation design, not implemented behavior.
+This is the original Phase 1 historical-data preparation design; the completed
+implementation is recorded below without superseding its preservation rules.
 The [completed cash-interest review](msft-alternative-historical-cash-flow-inputs.md#cash-interest-completeness-review)
 is the evidence authority. It supports separately reported inputs, not complete
 all-in cash interest. No further broad issuer research is scheduled.
@@ -221,10 +222,64 @@ tests or corpus rerun; frozen **1905/1483/11/27/42 = 3468** remains unchanged.
 | Acquisition/intangible/other investing and organic cash | Reported combined spending and consolidated scope; selected versus recast reconciliation distinguished. | Complete separation, continuing-only and component acquisition/FX/reclassification allocations require additional disclosure; assumptions would be labeled alternatives, never reported facts. |
 | Joint timing readiness | Existing D&A/EBIT/NWC limitations and reported cash scope are documented. | Integrated compatibility is unproved; retained numerical agreement cannot certify it. Future use requires the separate timing contract and explicit analyst decisions. |
 
-**Single next Phase 1 milestone:** implement this isolated two-set annotation
+**Then-next Phase 1 milestone (implemented below):** implement this isolated two-set annotation
 contract and focused binding/serialization/preservation tests, with no new totals,
 research or numeric inputs. That closes the current packaging sequence. After
 implementation, report the remaining finite blocker ledger for user disposition
 (accept explicitly limited data, authorize specific analyst judgments, or hold
 for unavailable disclosure); do not automatically launch another annotation or
 issuer-research milestone. Phase 2 stays postponed.
+
+## Implemented isolated version-1 sidecars
+
+[Module](../src/valuation_platform/analyst/cash_interest_annotations.py),
+[reviewed registry](company-data-preparation/msft-cash-interest-annotations.json)
+and [focused tests](../tests/analyst/test_cash_interest_annotations.py) implement
+exactly the two designed sets. Registry original file-byte SHA-256:
+`5d01dfc0880fa38f7d421f7ee75fb7ed57e6b346f9984e2ec979d0a124d719bc`.
+This is a local registry digest, not a new SEC response digest. Version/schema
+and parent pins are those above. No shared model/parent serializer changes.
+
+`load_msft_annotations(annotation_id, parent)` requires an explicit parent;
+it never retrieves evidence, loads a default annotation or registers by ticker.
+Immutable models reuse Period/Artifact through the parent and Receipt/Occurrence/
+ReportedInput for exact evidence bindings. Each set has eleven annotations,
+ten null unknowns, seven primary/note locators, two research-only tax-interest
+occurrences and four nonnumeric relationships. Assertions retain controlled
+claims, typed subjects, classifications, rationale and evidence references.
+Source roles, submitted decimals and all confirmations remain in snapshots.
+
+Pinned primary text offsets under `html-text-nodes-whitespace-v1` mean HTML
+parser text nodes with whitespace collapsed, not a layout/visibility renderer
+or a new hashed representation. Note locators must also agree with the exact
+selected instance text block/context/ordinal. Item 7's full selected-year
+paragraph is independently bound to its primary offset and original digest.
+Research facts are revalidated against all eligible original-instance occurrences;
+the closing tax accrual stays instant and is not a registered cash input.
+
+`serialize` emits only the separate sidecar envelope, original receipt references,
+input snapshots/locators and annotations; original bodies are not copied into
+or substituted for parent serialization. `deserialize(payload, parent)` verifies
+the exact pinned registry, parent model/receipts/raw bodies and complete reviewed
+view. The parent module's exact builders are reused read-only, not generalized.
+`attach(payloads, parent)` reports validated/not_provided/invalid/conflicting,
+with identities/reasons and no valid subset for a failed attachment. Multiple
+attachments require explicit selection, not merging or last-write-wins.
+Unknown issue amounts are always null; all four prohibition flags stay false.
+
+Validation: **24 focused tests and 142 relevant existing tests passed**.
+The latter cover reported cash-flow bundles, analyst NWC, reviewed MSFT/AAPL/
+Alphabet scenarios and Operating-NWC policies. Parent serialized SHA-256 remains
+FY2025 `1d8f27c0f40d31cb31e2f592013416189b1c92b5d68f45fcd98d9e0456aacfad`,
+FY2026 `2dc19075d695bac0fe4755732f70cafbab7dd5b0e055b77c857f949e0cfd08ba`,
+recorded before implementation. Parent source/registry/schema, inventory/manifest,
+original evidence, NWC scenarios and frozen validation artifacts are unchanged.
+Compileall, identities/registry mapping, local links and diff check pass.
+No SEC requests or corpus rerun; full suite not repeated because existing shared
+implementation is unchanged. Frozen production 1905/1483/11/27/42 stays fixed.
+
+**Stop for user disposition:** this closes the annotation implementation sequence.
+The [finite decision table](company-data-preparation/MSFT.md#post-implementation-finite-disposition)
+separates choices from unavailable disclosure and conditional future data work.
+No further research/implementation is scheduled before that review. No adjusted
+calculation or Phase 2 authority is implied.

@@ -419,7 +419,62 @@ unavailable issuer disclosures into verified facts. No such decisions are made
 here. [Blocker disposition](../msft-cash-interest-scope-annotation-design.md#finite-blocker-disposition-and-next-milestone)
 records reopening requirements and distinguishes uncertainty from incompatibility.
 
-Single next **Phase 1** milestone: implement only the two-set sidecar with
+Then-next **Phase 1** milestone (implemented below): implement only the two-set sidecar with
 focused binding/serialization/preservation tests. Then report the finite ledger
 for user disposition rather than schedule another automatic annotation/research
 cycle. Phase 2 remains postponed; no adjusted calculation or consumption approval.
+
+## Implemented cash-interest scope sidecars
+
+Original conflict and reviewed treatment remain as recorded above: generic
+debt-interest labels, lease/cash/accrual overlap and capitalization gaps must not
+imply a complete interest number. The [isolated module](../../src/valuation_platform/analyst/cash_interest_annotations.py)
+now implements the [reviewed design](../msft-cash-interest-scope-annotation-design.md#implemented-isolated-version-1-sidecars)
+with the [separate immutable registry](msft-cash-interest-annotations.json), only
+FY2025/FY2026 version-1 sets. No parent edits or reinterpretation of prior results.
+
+Chosen packaging: eleven exact existing input snapshots per set, ten explicit
+null unknowns bound to `all_in_cash_interest`, seven verified note/Item 7 text
+references, two research-only tax observations and four nonnumeric relationships.
+Bindings preserve original filing/accession/period, namespace/context/entity,
+unit/dimensions/nil, all ordered occurrences, raw values/decimals/signs, original
+response receipts/typed digests and review provenance. Debt cash and finance-lease
+cash remain separate; Item 7 lease/capitalization effects supplement conservative
+v1 labels without quantifying unknowns. No cost/cash equality grants completeness.
+
+Only explicit load/deserialize with the verified parent can construct a valid
+sidecar. Missing means not provided, not defaults; invalid/conflicting attachments
+carry diagnostics and no approved subset. Independent serialization stores no
+replacement bodies, estimates, zero allocations, total or adjustment operator.
+Complete-interest, summation, NWC-completeness and consumption flags stay false.
+Unknown compatibility is still not demonstrated incompatibility.
+
+Validation: **24 focused tests**, **142 relevant existing tests**, compileall,
+local links and diff check pass. Both original parent serialized digests match
+the pre-edit snapshots; parent source/registry, inventory/manifest/original bodies,
+NWC bundles and frozen validation files are byte-identical to starting HEAD.
+No shared implementation changes, SEC requests, full suite or corpus rerun.
+Frozen schema 5 and 1905/1483/11/27/42 = 3468 remain unchanged.
+
+## Post-implementation finite disposition
+
+This closes the bounded reported-input/annotation packaging sequence. The table
+is **for user review, not an approved treatment or new work authorization**.
+Choosing a limited perimeter is an analyst decision, not proof missing disclosures
+exist. No materiality threshold, numerical estimate or implicit zero is offered.
+
+| Category / blocker | Options or permissible handling | Recommendation / remaining limitation |
+| --- | --- | --- |
+| User decision: historical preparation perimeter | Keep separate consolidated reported inputs and partial NWC; or explicitly authorize a separately labeled analyst perimeter/assumptions contract. | Keep reported-only, partial preparation now. CFO bypasses book-NWC reconstruction but does not certify unlevered or operating-only cash. No adjusted subtotal authorized. |
+| User decision: SBC, leases and cash-tax treatment | Retain separate facts without adjustments; or commission a bounded methodology decision defining economic cost/dilution, lease/debt perimeter and tax treatment. | Retain facts now; defer numerical treatments until explicitly reviewed. Never count SBC cost and dilution twice or treat tax provision/withholding as cash tax. No treatment is selected here. |
+| Unavailable disclosure: interest completeness | Keep debt/lease cash separate and ten issue amounts null; reopen only on explicit population, gross/net capitalization and complete cash/accrual evidence. | No all-in total. Capitalization/lease-expense effects are known, but amounts, overlap, borrowing/hedge coverage, operating split and tax-interest cash are not proved. Expense, maturity discounts or residuals cannot fill gaps. |
+| Unavailable disclosure: complete NWC and accrual PP&E | Retain existing partial levels/capital-creditor exclusions and reported cash PP&E; any authorized assumptions must be separate from facts. | Keep blockers. Missing operating allocations, inventory/acquisition/FX/timing effects and complete additions bridge cannot be recovered by annotation. The 19.8bn creditor movement is book-scenario evidence, not cash correction. |
+| Unavailable disclosure: acquisition/intangible/organic/continuing-only cash | Retain reported combined investing and consolidated cash scope; no unsupported component allocations. | No acquisition-only/organic/continuing-only certification. Additional scope/amount evidence is required; a book balance or generic concept cannot supply it. |
+| Unavailable evidence plus user judgment: operating-only cash tax and joint timing | Preserve cash/provision/deferred distinctions and unknown integrated compatibility; select a future consumption basis only by explicit review. | No tax shield, inferred operating-tax allocation or integrated EBIT/D&A/NWC compatibility. The timing-readiness contract remains a future boundary prerequisite, not implemented approval. |
+| Remaining data implementation | None for the authorized two-bundle/sidecar packaging pass. A user-approved assumption/perimeter choice may require a new isolated provenance contract later. | Stop here for disposition. No automatic next issuer review, annotation iteration, calculator or Phase 2 start; no conditional work is begun now. |
+
+Retained evidence already establishes reported facts, their identity/precision,
+selected-versus-recast CFO checks, lease/noncash roles, and the supported creditor
+scenario effects. Those data tasks are implemented. Broader financial scope
+cannot be made complete by repeating the same evidence or adding annotation
+versions. Await the user's disposition before any further research/implementation.

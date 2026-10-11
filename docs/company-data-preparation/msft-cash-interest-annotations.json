@@ -1,0 +1,2002 @@
+{
+  "contract": "reviewed-msft-cash-interest-scope-annotations",
+  "version": "1",
+  "sets": [
+    {
+      "annotation_id": "msft-cash-interest-scope-fy2025",
+      "version": "1",
+      "parent": {
+        "bundle_id": "msft-reported-cash-flow-fy2025",
+        "version": "1",
+        "registry_sha256": "c3c35e020066f0887d9d8fe493f975afe9e6f0ea4b1785d2f341691ebb49d993",
+        "period": {
+          "cik": 789019,
+          "accession": "0000950170-25-100235",
+          "annual_start": "2024-07-01",
+          "annual_end": "2025-06-30",
+          "form": "10-K"
+        },
+        "artifacts": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+            "accession": "0000950170-25-100235",
+            "representation": "sec_response_body_bytes",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+            "byte_length": 8158178,
+            "retrieved_at_utc": "2026-10-11T17:12:52.749714+00:00",
+            "http_status": 200,
+            "retrieval_mode": "targeted_blocked_nwc_evidence_gap"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630_htm.xml",
+            "accession": "0000950170-25-100235",
+            "representation": "sec_response_body_bytes",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+            "byte_length": 10533273,
+            "retrieved_at_utc": "2026-10-11T17:12:53.373746+00:00",
+            "http_status": 200,
+            "retrieval_mode": "targeted_blocked_nwc_evidence_gap"
+          }
+        ]
+      },
+      "review_author": "Repository reviewed MSFT cash-interest scope milestone",
+      "reviewed_on": "2026-10-12",
+      "evidence_reference": "docs/msft-alternative-historical-cash-flow-inputs.md#cash-interest-completeness-review",
+      "evidence": [
+        {
+          "evidence_id": "lease_policy",
+          "section": "Note 1 Significant Accounting Policies",
+          "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+          "locator": "We have lease agreements with lease and non-lease components, which are generally accounted for separately.",
+          "primary_offset": 255291,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://fasb.org/us-gaap/2024",
+          "text_block_concept": "SignificantAccountingPoliciesTextBlock",
+          "text_block_context": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+          "text_block_ordinal": 831
+        },
+        {
+          "evidence_id": "tax_policy",
+          "section": "Note 1 Income Taxes",
+          "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+          "locator": "Income tax expense includes U.S. and international income taxes, and interest and penalties on uncertain tax positions.",
+          "primary_offset": 245660,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://fasb.org/us-gaap/2024",
+          "text_block_concept": "SignificantAccountingPoliciesTextBlock",
+          "text_block_context": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+          "text_block_ordinal": 831
+        },
+        {
+          "evidence_id": "debt_cash",
+          "section": "Note 10 Debt",
+          "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+          "locator": "Cash paid for interest on our debt",
+          "primary_offset": 283270,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://fasb.org/us-gaap/2024",
+          "text_block_concept": "DebtDisclosureTextBlock",
+          "text_block_context": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+          "text_block_ordinal": 1503
+        },
+        {
+          "evidence_id": "lease_cost",
+          "section": "Note 13 Leases",
+          "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+          "locator": "The components of lease expense were as follows:",
+          "primary_offset": 293278,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://www.microsoft.com/20250630",
+          "text_block_concept": "LesseeOperatingAndFinanceLeasesTextBlock",
+          "text_block_context": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+          "text_block_ordinal": 1831
+        },
+        {
+          "evidence_id": "lease_cash",
+          "section": "Note 13 Leases",
+          "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+          "locator": "Cash paid for amounts included in the measurement of lease liabilities:",
+          "primary_offset": 293712,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://www.microsoft.com/20250630",
+          "text_block_concept": "LesseeOperatingAndFinanceLeasesTextBlock",
+          "text_block_context": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+          "text_block_ordinal": 1831
+        },
+        {
+          "evidence_id": "tax_position_interest",
+          "section": "Note 12 Income Taxes",
+          "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+          "locator": "interest expense related to uncertain tax positions",
+          "primary_offset": 289557,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://fasb.org/us-gaap/2024",
+          "text_block_concept": "IncomeTaxDisclosureTextBlock",
+          "text_block_context": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+          "text_block_ordinal": 1654
+        },
+        {
+          "evidence_id": "aggregate_expense_effects",
+          "section": "Item 7 Other Income (Expense), Net; current-year comparison",
+          "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+          "locator": "Interest expense decreased primarily due to maturities of commercial paper and higher capitalization of debt interest expense, offset in part by higher finance lease interest expense.",
+          "primary_offset": 195003,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": null,
+          "text_block_concept": null,
+          "text_block_context": null,
+          "text_block_ordinal": null
+        }
+      ],
+      "research": [
+        {
+          "evidence_id": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense",
+          "subject": {
+            "kind": "research_only",
+            "identity": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense"
+          },
+          "occurrence": {
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "concept": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense",
+            "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+            "entity_cik": 789019,
+            "start": "2024-07-01",
+            "end": "2025-06-30",
+            "unit_id": "U_USD",
+            "raw_value": "1300000000",
+            "decimals": "-8",
+            "ordinal": 1786,
+            "normalized_unit": "USD",
+            "dimensions": [],
+            "nil": false
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "evidence_ids": [
+            "tax_position_interest",
+            "tax_policy"
+          ],
+          "rationale": "Note 12 tax-position interest net of income-tax benefits; expense or closing accrual, not cash or a parent input."
+        },
+        {
+          "evidence_id": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued",
+          "subject": {
+            "kind": "research_only",
+            "identity": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued"
+          },
+          "occurrence": {
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "concept": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued",
+            "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+            "entity_cik": 789019,
+            "start": null,
+            "end": "2025-06-30",
+            "unit_id": "U_USD",
+            "raw_value": "8200000000",
+            "decimals": "-8",
+            "ordinal": 1783,
+            "normalized_unit": "USD",
+            "dimensions": [],
+            "nil": false
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "evidence_ids": [
+            "tax_position_interest",
+            "tax_policy"
+          ],
+          "rationale": "Note 12 tax-position interest net of income-tax benefits; expense or closing accrual, not cash or a parent input."
+        }
+      ],
+      "annotations": [
+        {
+          "assertion_id": "scope_InterestPaid",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "InterestPaid"
+          },
+          "binding": {
+            "input_id": "InterestPaid",
+            "kind": "cash_payment",
+            "source_kind": "sec_reported",
+            "value_usd": "1600000000",
+            "display_multiplier": -1,
+            "location_and_scope": "Note 10 Debt explicitly **cash paid for interest on debt**. Retain narrow scope despite generic tag; not total all-in interest or interest expense.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "InterestPaid",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "1600000000",
+                "decimals": "-8",
+                "ordinal": 1643,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "InterestPaid_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 10 debt-interest cash payment; neither all-in nor a certified gross/net-capitalization amount.",
+          "evidence_ids": [
+            "debt_cash"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeaseInterestPaymentOnLiability",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeaseInterestPaymentOnLiability"
+          },
+          "binding": {
+            "input_id": "FinanceLeaseInterestPaymentOnLiability",
+            "kind": "cash_payment",
+            "source_kind": "sec_reported",
+            "value_usd": "1372000000",
+            "display_multiplier": -1,
+            "location_and_scope": "Note 13 operating cash flow; keep separately identified from debt-interest disclosure. Equality to FY2026 expense does not establish general cash/accrual equivalence.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "FinanceLeaseInterestPaymentOnLiability",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "1372000000",
+                "decimals": "-6",
+                "ordinal": 1854,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "FinanceLeaseInterestPaymentOnLiability_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 finance-lease liability-measurement cash, reported operating cash flow; separate from debt cash and principal.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_InterestExpenseNonoperating",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "InterestExpenseNonoperating"
+          },
+          "binding": {
+            "input_id": "InterestExpenseNonoperating",
+            "kind": "accrued_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "2385000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 3 Other income (expense): accrued non-operating interest expense; do not substitute for cash paid or assume all lease/capitalized interest included.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "InterestExpenseNonoperating",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "2385000000",
+                "decimals": "-6",
+                "ordinal": 896,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "InterestExpenseNonoperating_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 3 recognized accrued aggregate; Item 7 establishes finance-lease effects and reduction from debt-interest capitalization, not their amounts.",
+          "evidence_ids": [
+            "aggregate_expense_effects"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeaseInterestExpense",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeaseInterestExpense"
+          },
+          "binding": {
+            "input_id": "FinanceLeaseInterestExpense",
+            "kind": "accrued_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "1417000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 expense; do not conflate with cash debt interest.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "FinanceLeaseInterestExpense",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "1417000000",
+                "decimals": "-6",
+                "ordinal": 1844,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "FinanceLeaseInterestExpense_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 finance-lease interest cost; not cash, not a proved full profit/loss allocation or second addition to aggregate expense.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_OperatingLeasePayments",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "OperatingLeasePayments"
+          },
+          "binding": {
+            "input_id": "OperatingLeasePayments",
+            "kind": "cash_payment",
+            "source_kind": "sec_reported",
+            "value_usd": "4931000000",
+            "display_multiplier": -1,
+            "location_and_scope": "Note 13 operating cash outflows already inside CFO; not additional cash PP&E.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "OperatingLeasePayments",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "4931000000",
+                "decimals": "-6",
+                "ordinal": 1851,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "OperatingLeasePayments_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 whole operating-lease liability-measurement cash; no reported interest split or all-variable/non-lease completeness.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_OperatingLeaseCost",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "OperatingLeaseCost"
+          },
+          "binding": {
+            "input_id": "OperatingLeaseCost",
+            "kind": "accrued_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "5524000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 expense, distinct from cash operating payments.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "OperatingLeaseCost",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "5524000000",
+                "decimals": "-6",
+                "ordinal": 1838,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "OperatingLeaseCost_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 accrued single lease cost, not separate interest cash. Note 1 equipment lease/non-lease exceptions retained.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeasePrincipalPayments",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeasePrincipalPayments"
+          },
+          "binding": {
+            "input_id": "FinanceLeasePrincipalPayments",
+            "kind": "cash_payment",
+            "source_kind": "sec_reported",
+            "value_usd": "2283000000",
+            "display_multiplier": -1,
+            "location_and_scope": "Note 13 financing outflow, not investing cash PP&E.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "FinanceLeasePrincipalPayments",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "2283000000",
+                "decimals": "-6",
+                "ordinal": 1857,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "FinanceLeasePrincipalPayments_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 financing cash principal; not interest.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeaseRightOfUseAssetAmortization",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeaseRightOfUseAssetAmortization"
+          },
+          "binding": {
+            "input_id": "FinanceLeaseRightOfUseAssetAmortization",
+            "kind": "noncash_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "3408000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 noncash expense; no separate add-back atop reported CFO.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "FinanceLeaseRightOfUseAssetAmortization",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "3408000000",
+                "decimals": "-6",
+                "ordinal": 1841,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "FinanceLeaseRightOfUseAssetAmortization_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 noncash amortization; not interest cash.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeaseCost",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeaseCost"
+          },
+          "binding": {
+            "input_id": "FinanceLeaseCost",
+            "kind": "accrued_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "4825000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 issuer-extension total expense = amortization + interest; not an additional operand.",
+            "occurrences": [
+              {
+                "namespace": "http://www.microsoft.com/20250630",
+                "concept": "FinanceLeaseCost",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "4825000000",
+                "decimals": "-6",
+                "ordinal": 1847,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "FinanceLeaseCost_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Issuer-extension total lease cost; includes amortization and interest; not another operand.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability"
+          },
+          "binding": {
+            "input_id": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+            "kind": "noncash_addition",
+            "source_kind": "sec_reported",
+            "value_usd": "7826000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 noncash lease asset additions; excluded from cash purchases.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "7826000000",
+                "decimals": "-6",
+                "ordinal": 1860,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Noncash asset/liability addition, not paid interest.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability"
+          },
+          "binding": {
+            "input_id": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+            "kind": "noncash_addition",
+            "source_kind": "sec_reported",
+            "value_usd": "20511000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 noncash lease asset additions; not cash Capex or principal paid.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "concept": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "entity_cik": 789019,
+                "start": "2024-07-01",
+                "end": "2025-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "20511000000",
+                "decimals": "-6",
+                "ordinal": 1863,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "claim": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Noncash asset/liability addition, not paid interest.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        }
+      ],
+      "unknowns": [
+        {
+          "issue_id": "debt_lease_cash_overlap",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "distinct disclosed populations, no certified numerical mutual-exclusion reconciliation.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving debt_lease_cash_overlap with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "capitalized_interest_expense_amount",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestExpenseNonoperating"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "capitalization is evidenced; amount not quantified.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving capitalized_interest_expense_amount with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "capitalized_interest_cash_amount",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "no quantified paid/capitalized allocation or cash-flow placement bridge.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving capitalized_interest_cash_amount with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "debt_cash_capitalization_basis",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "Note 10 gross/net or inclusion/exclusion basis not stated.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving debt_cash_capitalization_basis with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "finance_lease_cash_capitalization_basis",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "lease cash gross/net capitalization basis not stated.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving finance_lease_cash_capitalization_basis with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "operating_lease_interest_cash_split",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "OperatingLeasePayments"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "OperatingLeaseCost"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "no annual cash split, not inferable from rates, maturity discounts or balances.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving operating_lease_interest_cash_split with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "tax_position_interest_cash",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "research_only",
+              "identity": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense"
+            },
+            {
+              "kind": "research_only",
+              "identity": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "expense/accrual net of tax benefits is not cash.",
+          "evidence_ids": [
+            "tax_position_interest",
+            "tax_policy"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving tax_position_interest_cash with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "interest_expense_accrual_noncash_cash_bridge",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "InterestExpenseNonoperating"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "no complete expense, capitalization, payable, amortization and cash bridge.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving interest_expense_accrual_noncash_cash_bridge with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "borrowing_hedge_cash_coverage",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "commercial-paper/coupon/hedge cash allocations and all-borrowing coverage not established.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving borrowing_hedge_cash_coverage with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "finance_lease_cost_profit_loss_allocation",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestExpenseNonoperating"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseCost"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "cost-to-recognized-aggregate allocation is unquantified, despite evidenced lease-related effects.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving finance_lease_cost_profit_loss_allocation with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        }
+      ],
+      "relations": [
+        {
+          "relation_id": "debt_lease_cash",
+          "subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "claim": "overlap_unquantified",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash"
+          ]
+        },
+        {
+          "relation_id": "aggregate_lease_cost",
+          "subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestExpenseNonoperating"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            }
+          ],
+          "claim": "lease_effect_evidenced_full_allocation_unknown",
+          "evidence_ids": [
+            "aggregate_expense_effects",
+            "lease_cost"
+          ]
+        },
+        {
+          "relation_id": "lease_cash_cost",
+          "subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            }
+          ],
+          "claim": "different_recognition_bases",
+          "evidence_ids": [
+            "lease_cash",
+            "lease_cost"
+          ]
+        },
+        {
+          "relation_id": "lease_cost_components",
+          "subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseCost"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseRightOfUseAssetAmortization"
+            }
+          ],
+          "claim": "reported_component_relationship",
+          "evidence_ids": [
+            "lease_cost"
+          ]
+        }
+      ],
+      "limitations": [
+        "Reported scope only; unknown compatibility is not demonstrated incompatibility.",
+        "No certified interest total, summation, adjustment, allocation, estimate or inferred zero.",
+        "Reported decimals remain rounding, not economically exact amounts or invented intervals.",
+        "Preserve immutable parents, NWC blockers and frozen-v1 behavior; no valuation approval."
+      ],
+      "certified_interest_total": false,
+      "summation_authorized": false,
+      "valuation_consumption_approved": false,
+      "is_complete_operating_nwc": false
+    },
+    {
+      "annotation_id": "msft-cash-interest-scope-fy2026",
+      "version": "1",
+      "parent": {
+        "bundle_id": "msft-reported-cash-flow-fy2026",
+        "version": "1",
+        "registry_sha256": "c3c35e020066f0887d9d8fe493f975afe9e6f0ea4b1785d2f341691ebb49d993",
+        "period": {
+          "cik": 789019,
+          "accession": "0001193125-26-323660",
+          "annual_start": "2025-07-01",
+          "annual_end": "2026-06-30",
+          "form": "10-K"
+        },
+        "artifacts": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "accession": "0001193125-26-323660",
+            "representation": "sec_response_body_bytes",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+            "byte_length": 8585612,
+            "retrieved_at_utc": "2026-10-11T17:12:54.079847+00:00",
+            "http_status": 200,
+            "retrieval_mode": "targeted_blocked_nwc_evidence_gap"
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630_htm.xml",
+            "accession": "0001193125-26-323660",
+            "representation": "sec_response_body_bytes",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+            "byte_length": 10948157,
+            "retrieved_at_utc": "2026-10-11T17:12:54.747914+00:00",
+            "http_status": 200,
+            "retrieval_mode": "targeted_blocked_nwc_evidence_gap"
+          }
+        ]
+      },
+      "review_author": "Repository reviewed MSFT cash-interest scope milestone",
+      "reviewed_on": "2026-10-12",
+      "evidence_reference": "docs/msft-alternative-historical-cash-flow-inputs.md#cash-interest-completeness-review",
+      "evidence": [
+        {
+          "evidence_id": "lease_policy",
+          "section": "Note 1 Significant Accounting Policies",
+          "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+          "locator": "We have lease agreements with lease and non-lease components, which are generally accounted for separately.",
+          "primary_offset": 264296,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://fasb.org/us-gaap/2025",
+          "text_block_concept": "SignificantAccountingPoliciesTextBlock",
+          "text_block_context": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+          "text_block_ordinal": 838
+        },
+        {
+          "evidence_id": "tax_policy",
+          "section": "Note 1 Income Taxes",
+          "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+          "locator": "Income tax expense includes U.S. and international income taxes, and interest and penalties on uncertain tax positions.",
+          "primary_offset": 252214,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://fasb.org/us-gaap/2025",
+          "text_block_concept": "SignificantAccountingPoliciesTextBlock",
+          "text_block_context": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+          "text_block_ordinal": 838
+        },
+        {
+          "evidence_id": "debt_cash",
+          "section": "Note 10 Debt",
+          "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+          "locator": "Cash paid for interest on our debt",
+          "primary_offset": 290057,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://fasb.org/us-gaap/2025",
+          "text_block_concept": "DebtDisclosureTextBlock",
+          "text_block_context": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+          "text_block_ordinal": 1516
+        },
+        {
+          "evidence_id": "lease_cost",
+          "section": "Note 13 Leases",
+          "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+          "locator": "The components of lease expense were as follows:",
+          "primary_offset": 302307,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://www.microsoft.com/20260630",
+          "text_block_concept": "LesseeOperatingAndFinanceLeasesTextBlock",
+          "text_block_context": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+          "text_block_ordinal": 1868
+        },
+        {
+          "evidence_id": "lease_cash",
+          "section": "Note 13 Leases",
+          "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+          "locator": "Cash paid for amounts included in the measurement of lease liabilities:",
+          "primary_offset": 302761,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://www.microsoft.com/20260630",
+          "text_block_concept": "LesseeOperatingAndFinanceLeasesTextBlock",
+          "text_block_context": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+          "text_block_ordinal": 1868
+        },
+        {
+          "evidence_id": "tax_position_interest",
+          "section": "Note 12 Income Taxes",
+          "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+          "locator": "interest expense related to uncertain tax positions",
+          "primary_offset": 298852,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": "http://fasb.org/us-gaap/2025",
+          "text_block_concept": "IncomeTaxDisclosureTextBlock",
+          "text_block_context": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+          "text_block_ordinal": 1662
+        },
+        {
+          "evidence_id": "aggregate_expense_effects",
+          "section": "Item 7 Other Income (Expense), Net; current-year comparison",
+          "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+          "locator": "Interest expense increased primarily due to higher finance lease interest expense, offset in part by higher capitalization of debt interest expense.",
+          "primary_offset": 199596,
+          "extraction_version": "html-text-nodes-whitespace-v1",
+          "text_block_namespace": null,
+          "text_block_concept": null,
+          "text_block_context": null,
+          "text_block_ordinal": null
+        }
+      ],
+      "research": [
+        {
+          "evidence_id": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense",
+          "subject": {
+            "kind": "research_only",
+            "identity": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense"
+          },
+          "occurrence": {
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "concept": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense",
+            "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+            "entity_cik": 789019,
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "unit_id": "U_USD",
+            "raw_value": "1400000000",
+            "decimals": "-8",
+            "ordinal": 1820,
+            "normalized_unit": "USD",
+            "dimensions": [],
+            "nil": false
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "evidence_ids": [
+            "tax_position_interest",
+            "tax_policy"
+          ],
+          "rationale": "Note 12 tax-position interest net of income-tax benefits; expense or closing accrual, not cash or a parent input."
+        },
+        {
+          "evidence_id": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued",
+          "subject": {
+            "kind": "research_only",
+            "identity": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued"
+          },
+          "occurrence": {
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "concept": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued",
+            "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+            "entity_cik": 789019,
+            "start": null,
+            "end": "2026-06-30",
+            "unit_id": "U_USD",
+            "raw_value": "9400000000",
+            "decimals": "-8",
+            "ordinal": 1817,
+            "normalized_unit": "USD",
+            "dimensions": [],
+            "nil": false
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "evidence_ids": [
+            "tax_position_interest",
+            "tax_policy"
+          ],
+          "rationale": "Note 12 tax-position interest net of income-tax benefits; expense or closing accrual, not cash or a parent input."
+        }
+      ],
+      "annotations": [
+        {
+          "assertion_id": "scope_InterestPaid",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "InterestPaid"
+          },
+          "binding": {
+            "input_id": "InterestPaid",
+            "kind": "cash_payment",
+            "source_kind": "sec_reported",
+            "value_usd": "1500000000",
+            "display_multiplier": -1,
+            "location_and_scope": "Note 10 Debt explicitly **cash paid for interest on debt**. Retain narrow scope despite generic tag; not total all-in interest or interest expense.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "InterestPaid",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "1500000000",
+                "decimals": "-8",
+                "ordinal": 1651,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "InterestPaid_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 10 debt-interest cash payment; neither all-in nor a certified gross/net-capitalization amount.",
+          "evidence_ids": [
+            "debt_cash"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeaseInterestPaymentOnLiability",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeaseInterestPaymentOnLiability"
+          },
+          "binding": {
+            "input_id": "FinanceLeaseInterestPaymentOnLiability",
+            "kind": "cash_payment",
+            "source_kind": "sec_reported",
+            "value_usd": "2547000000",
+            "display_multiplier": -1,
+            "location_and_scope": "Note 13 operating cash flow; keep separately identified from debt-interest disclosure. Equality to FY2026 expense does not establish general cash/accrual equivalence.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "FinanceLeaseInterestPaymentOnLiability",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "2547000000",
+                "decimals": "-6",
+                "ordinal": 1891,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "FinanceLeaseInterestPaymentOnLiability_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 finance-lease liability-measurement cash, reported operating cash flow; separate from debt cash and principal.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_InterestExpenseNonoperating",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "InterestExpenseNonoperating"
+          },
+          "binding": {
+            "input_id": "InterestExpenseNonoperating",
+            "kind": "accrued_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "3051000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 3 Other income (expense): accrued non-operating interest expense; do not substitute for cash paid or assume all lease/capitalized interest included.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "InterestExpenseNonoperating",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "3051000000",
+                "decimals": "-6",
+                "ordinal": 907,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "InterestExpenseNonoperating_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 3 recognized accrued aggregate; Item 7 establishes finance-lease effects and reduction from debt-interest capitalization, not their amounts.",
+          "evidence_ids": [
+            "aggregate_expense_effects"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeaseInterestExpense",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeaseInterestExpense"
+          },
+          "binding": {
+            "input_id": "FinanceLeaseInterestExpense",
+            "kind": "accrued_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "2547000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 expense; do not conflate with cash debt interest.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "FinanceLeaseInterestExpense",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "2547000000",
+                "decimals": "-6",
+                "ordinal": 1881,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "FinanceLeaseInterestExpense_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 finance-lease interest cost; not cash, not a proved full profit/loss allocation or second addition to aggregate expense.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_OperatingLeasePayments",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "OperatingLeasePayments"
+          },
+          "binding": {
+            "input_id": "OperatingLeasePayments",
+            "kind": "cash_payment",
+            "source_kind": "sec_reported",
+            "value_usd": "6443000000",
+            "display_multiplier": -1,
+            "location_and_scope": "Note 13 operating cash outflows already inside CFO; not additional cash PP&E.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "OperatingLeasePayments",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "6443000000",
+                "decimals": "-6",
+                "ordinal": 1888,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "OperatingLeasePayments_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 whole operating-lease liability-measurement cash; no reported interest split or all-variable/non-lease completeness.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_OperatingLeaseCost",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "OperatingLeaseCost"
+          },
+          "binding": {
+            "input_id": "OperatingLeaseCost",
+            "kind": "accrued_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "6968000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 expense, distinct from cash operating payments.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "OperatingLeaseCost",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "6968000000",
+                "decimals": "-6",
+                "ordinal": 1875,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "OperatingLeaseCost_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 accrued single lease cost, not separate interest cash. Note 1 equipment lease/non-lease exceptions retained.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeasePrincipalPayments",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeasePrincipalPayments"
+          },
+          "binding": {
+            "input_id": "FinanceLeasePrincipalPayments",
+            "kind": "cash_payment",
+            "source_kind": "sec_reported",
+            "value_usd": "3101000000",
+            "display_multiplier": -1,
+            "location_and_scope": "Note 13 financing outflow, not investing cash PP&E.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "FinanceLeasePrincipalPayments",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "3101000000",
+                "decimals": "-6",
+                "ordinal": 1894,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "FinanceLeasePrincipalPayments_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 financing cash principal; not interest.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeaseRightOfUseAssetAmortization",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeaseRightOfUseAssetAmortization"
+          },
+          "binding": {
+            "input_id": "FinanceLeaseRightOfUseAssetAmortization",
+            "kind": "noncash_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "5403000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 noncash expense; no separate add-back atop reported CFO.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "FinanceLeaseRightOfUseAssetAmortization",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "5403000000",
+                "decimals": "-6",
+                "ordinal": 1878,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "FinanceLeaseRightOfUseAssetAmortization_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Note 13 noncash amortization; not interest cash.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_FinanceLeaseCost",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "FinanceLeaseCost"
+          },
+          "binding": {
+            "input_id": "FinanceLeaseCost",
+            "kind": "accrued_expense",
+            "source_kind": "sec_reported",
+            "value_usd": "7950000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 issuer-extension total expense = amortization + interest; not an additional operand.",
+            "occurrences": [
+              {
+                "namespace": "http://www.microsoft.com/20260630",
+                "concept": "FinanceLeaseCost",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "7950000000",
+                "decimals": "-6",
+                "ordinal": 1884,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "FinanceLeaseCost_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Issuer-extension total lease cost; includes amortization and interest; not another operand.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability"
+          },
+          "binding": {
+            "input_id": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+            "kind": "noncash_addition",
+            "source_kind": "sec_reported",
+            "value_usd": "4555000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 noncash lease asset additions; excluded from cash purchases.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "4555000000",
+                "decimals": "-6",
+                "ordinal": 1897,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Noncash asset/liability addition, not paid interest.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        },
+        {
+          "assertion_id": "scope_RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "subject": {
+            "kind": "reported_input",
+            "identity": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability"
+          },
+          "binding": {
+            "input_id": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+            "kind": "noncash_addition",
+            "source_kind": "sec_reported",
+            "value_usd": "24608000000",
+            "display_multiplier": 1,
+            "location_and_scope": "Note 13 noncash lease asset additions; not cash Capex or principal paid.",
+            "occurrences": [
+              {
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "concept": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "entity_cik": 789019,
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "unit_id": "U_USD",
+                "raw_value": "24608000000",
+                "decimals": "-6",
+                "ordinal": 1900,
+                "normalized_unit": "USD",
+                "dimensions": [],
+                "nil": false
+              }
+            ]
+          },
+          "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "claim": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability_reviewed_scope",
+          "state": "evidence_supported",
+          "rationale": "Noncash asset/liability addition, not paid interest.",
+          "evidence_ids": [
+            "lease_cost",
+            "lease_cash",
+            "lease_policy"
+          ]
+        }
+      ],
+      "unknowns": [
+        {
+          "issue_id": "debt_lease_cash_overlap",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "distinct disclosed populations, no certified numerical mutual-exclusion reconciliation.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving debt_lease_cash_overlap with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "capitalized_interest_expense_amount",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestExpenseNonoperating"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "capitalization is evidenced; amount not quantified.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving capitalized_interest_expense_amount with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "capitalized_interest_cash_amount",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "no quantified paid/capitalized allocation or cash-flow placement bridge.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving capitalized_interest_cash_amount with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "debt_cash_capitalization_basis",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "Note 10 gross/net or inclusion/exclusion basis not stated.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving debt_cash_capitalization_basis with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "finance_lease_cash_capitalization_basis",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "lease cash gross/net capitalization basis not stated.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving finance_lease_cash_capitalization_basis with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "operating_lease_interest_cash_split",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "OperatingLeasePayments"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "OperatingLeaseCost"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "no annual cash split, not inferable from rates, maturity discounts or balances.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving operating_lease_interest_cash_split with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "tax_position_interest_cash",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "research_only",
+              "identity": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense"
+            },
+            {
+              "kind": "research_only",
+              "identity": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "expense/accrual net of tax benefits is not cash.",
+          "evidence_ids": [
+            "tax_position_interest",
+            "tax_policy"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving tax_position_interest_cash with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "interest_expense_accrual_noncash_cash_bridge",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "InterestExpenseNonoperating"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "state": "unavailable_disclosure",
+          "reason": "no complete expense, capitalization, payable, amortization and cash bridge.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving interest_expense_accrual_noncash_cash_bridge with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "borrowing_hedge_cash_coverage",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "commercial-paper/coupon/hedge cash allocations and all-borrowing coverage not established.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving borrowing_hedge_cash_coverage with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        },
+        {
+          "issue_id": "finance_lease_cost_profit_loss_allocation",
+          "subject": {
+            "kind": "bundle_unknown",
+            "identity": "all_in_cash_interest"
+          },
+          "affected_subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestExpenseNonoperating"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseCost"
+            }
+          ],
+          "state": "unresolved_scope",
+          "reason": "cost-to-recognized-aggregate allocation is unquantified, despite evidenced lease-related effects.",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash",
+            "lease_cost",
+            "lease_policy",
+            "aggregate_expense_effects"
+          ],
+          "reopening_requirement": "Explicit selected-period issuer disclosure resolving finance_lease_cost_profit_loss_allocation with quantified scope and a complete non-overlapping cash/accrual bridge; numerical agreement or another copy is insufficient.",
+          "value_usd": null
+        }
+      ],
+      "relations": [
+        {
+          "relation_id": "debt_lease_cash",
+          "subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestPaid"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            }
+          ],
+          "claim": "overlap_unquantified",
+          "evidence_ids": [
+            "debt_cash",
+            "lease_cash"
+          ]
+        },
+        {
+          "relation_id": "aggregate_lease_cost",
+          "subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "InterestExpenseNonoperating"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            }
+          ],
+          "claim": "lease_effect_evidenced_full_allocation_unknown",
+          "evidence_ids": [
+            "aggregate_expense_effects",
+            "lease_cost"
+          ]
+        },
+        {
+          "relation_id": "lease_cash_cost",
+          "subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestPaymentOnLiability"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            }
+          ],
+          "claim": "different_recognition_bases",
+          "evidence_ids": [
+            "lease_cash",
+            "lease_cost"
+          ]
+        },
+        {
+          "relation_id": "lease_cost_components",
+          "subjects": [
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseCost"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseInterestExpense"
+            },
+            {
+              "kind": "reported_input",
+              "identity": "FinanceLeaseRightOfUseAssetAmortization"
+            }
+          ],
+          "claim": "reported_component_relationship",
+          "evidence_ids": [
+            "lease_cost"
+          ]
+        }
+      ],
+      "limitations": [
+        "Reported scope only; unknown compatibility is not demonstrated incompatibility.",
+        "No certified interest total, summation, adjustment, allocation, estimate or inferred zero.",
+        "Reported decimals remain rounding, not economically exact amounts or invented intervals.",
+        "Preserve immutable parents, NWC blockers and frozen-v1 behavior; no valuation approval."
+      ],
+      "certified_interest_total": false,
+      "summation_authorized": false,
+      "valuation_consumption_approved": false,
+      "is_complete_operating_nwc": false
+    }
+  ]
+}

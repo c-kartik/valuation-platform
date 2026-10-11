@@ -45,7 +45,7 @@ flags remain false. Frozen schema 5, policies, blockers and partial NWC scenario
 serialization are unchanged. See the [evidence/design](msft-alternative-historical-cash-flow-inputs.md#implemented-isolated-reported-input-bundles).
 
 The [MSFT cash-interest annotation design](msft-cash-interest-scope-annotation-design.md)
-adds a **proposed, not implemented** independent sidecar for only the same two
+now has an **implemented isolated** independent sidecar for only the same two
 bundles. Reuse Period/Artifact/Receipt/Occurrence without changing them; pin the
 parent registry and all input/evidence identities. New contract/schema version 1
 is separate from bundle version 1 and historical schema 5. Eleven input
@@ -55,9 +55,14 @@ research occurrences are evidence, not extra bundle inputs. Serialization requir
 the verified parent/original bodies; missing or conflicting annotations cannot
 rewrite historical resolution or grant certification/summation/consumption.
 No numerical annotation evaluator, adjustment formula or readiness approval is
-defined. One bounded sidecar implementation closes this packaging pass; the
+defined. `analyst/cash_interest_annotations.py` and the separately byte-pinned
+[annotation registry](company-data-preparation/msft-cash-interest-annotations.json)
+implement the design without shared model/parent changes. Explicit load requires
+the verified parent; separate deserialize rechecks original evidence and all
+reviewed bindings. Attachment diagnostics distinguish absent, invalid and
+conflicting sets without partial approval. This closes this packaging pass; the
 remaining disclosure/judgment ledger is for user disposition, not automatic
-ongoing research. Existing models, registries and serializations are unchanged.
+ongoing research. Existing parent models, registries and serializations are unchanged.
 
 ### Isolated analyst working-capital boundary
 

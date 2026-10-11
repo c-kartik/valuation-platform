@@ -406,5 +406,7 @@ The [completed additive annotation design](msft-cash-interest-scope-annotation-d
 specifies separate immutable identities, evidence/occurrence binding, reported
 precision, granular unknowns, conservative missing/conflict behavior and separate
 serialization. It does not change this review, registered inputs or approvals.
-Next is one bounded data-only implementation; the design's finite blocker ledger
-requires user disposition afterward, not another automatic issuer search.
+The [bounded data-only implementation](msft-cash-interest-scope-annotation-design.md#implemented-isolated-version-1-sidecars)
+is complete and preserves all reported inputs/evidence. The finite blocker ledger
+now requires user disposition, not another automatic issuer search or annotation
+milestone. No completeness or consumption approval follows from implementation.

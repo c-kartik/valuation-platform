@@ -2,7 +2,26 @@
 
 ## Current Milestone
 
-Latest completed milestone: **MSFT FY2025–2026 additive cash-interest scope/unknown
+Latest completed milestone: **two immutable MSFT FY2025–2026 cash-interest
+annotation sidecars**, isolated Phase 1 implementation. [Implementation](msft-cash-interest-scope-annotation-design.md#implemented-isolated-version-1-sidecars)
+and [registry](company-data-preparation/msft-cash-interest-annotations.json)
+retain eleven exact input bindings, ten null unknowns, seven note/Item 7
+locators, two research-only tax facts and four nonnumeric relationships per set.
+Independent version-1 schema/registry; explicit verified parent required.
+Absent/malformed/conflicting attachments cannot modify reported values, infer
+zero or authorize summation/certification/consumption. No new amounts/calculator.
+Validation: **24 focused and 142 relevant existing tests pass**, including
+evidence/precision/conflict/serialization and parent serialized-byte preservation.
+Compileall, exact two-set mapping, provenance, local links and diff check pass.
+Parent source/registry/evidence, schemas, NWC blockers/scenarios and frozen-v1
+artifacts unchanged; baseline **1,905/1,483/11/27/42 = 3,468** is carried forward.
+No SEC requests or corpus rerun; no full-suite repeat because no existing shared
+implementation changed. **Packaging sequence complete. Stop for user review**
+of the [finite MSFT disposition table](company-data-preparation/MSFT.md#post-implementation-finite-disposition).
+No further research or implementation starts automatically. Phase 2 remains
+postponed; any later data milestone is conditional on that disposition.
+
+Previously completed milestone: **MSFT FY2025–2026 additive cash-interest scope/unknown
 annotation design**, documentation only. The [separate contract](msft-cash-interest-scope-annotation-design.md)
 binds only the two immutable v1 reported bundles: eleven existing input
 annotations and ten granular unknowns per period, plus research-only tax-interest

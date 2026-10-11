@@ -20,11 +20,17 @@ remain distinct; explicit unavailable/unresolved inputs carry no amounts.
 No other issuer record receives new cash-flow review or approval by analogy.
 
 The [MSFT-only cash-interest sidecar design](../msft-cash-interest-scope-annotation-design.md)
-is proposed additive preparation, not implemented replacement of those bundles.
+now has an [isolated implementation](../../src/valuation_platform/analyst/cash_interest_annotations.py)
+and [two-set registry](msft-cash-interest-annotations.json), not a replacement of
+those bundles. Twenty-two input annotations and twenty null unknowns are bound
+to the exact two periods; missing/invalid/conflicting sidecars cannot alter
+reported values or grant approval. Parent serialization/evidence is unchanged.
 Exact input/evidence binding, reported rounding and ten granular unknowns per
 set preserve the separate debt/lease cash scopes. No annotated total or summation
 authority; no implication that other issuers received review. Its finite blocker
 ledger separates available evidence from analyst decisions and undisclosed data.
+The bounded packaging pass is closed; further work awaits user disposition of
+the [MSFT decision table](MSFT.md#post-implementation-finite-disposition).
 
 ## Shared measure contracts and provenance
 
