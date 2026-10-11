@@ -254,3 +254,65 @@ with unknown-required-input and interval handling, serialization and focused
 synthetic/retained-evidence tests. No default estimates, v1 blocker removal,
 cash-adjusted ΔNWC or valuation engine. Phase 2 timing-gate/forecast start stays
 postponed until explicitly resumed; no broader issuer research is implied.
+
+## Implemented isolated foundation
+
+This subsequent milestone implements the bounded foundation in
+[`analyst/nwc.py`](../src/valuation_platform/analyst/nwc.py), not the earlier
+research conclusions as production policies. Frozen v1 evidence, schema 5,
+registries and blockers remain unchanged. The
+[preparation register](company-data-preparation/index.md) contains 40 issuer
+records / 680 measure rows, with one Alphabet file covering GOOG/GOOGL. It carries
+forward evidence/counts and marks unreviewed details, not fresh financial review.
+
+Every scenario supplies its own identity/version/perimeter, actual CIK/accession/
+annual period, ordered signed components, scope keys, treatments, rationale,
+limitations and unresolved effects. Every omission needs explicit classification
+provenance; required unknown inputs produce `input_unavailable`, not zero or a
+silently available subtotal. Valid competing values produce `ambiguous_evidence`.
+Available amounts are **always `partial_perimeter`**, never complete Operating
+NWC; `is_complete_operating_nwc` and `fcff_ready` remain false. Caller classifications
+and scope assertions are recorded, not automatically approved economically.
+
+Reported evidence verifies original-body representation/hash and binds every
+eligible confirming/competing instant occurrence and actual FY context to retained
+instance bytes. Different equivalent context/unit IDs and raw precision can
+confirm; omitted eligible occurrences, broken links, nil collisions, non-USD
+selected units or value/source mismatches reject. Dimensioned source facts do
+not conflict with consolidated facts. SEC-supported derivations require explicit
+same-period operands/coefficient arithmetic; they cannot use estimates as SEC
+facts. No retrieval or new parser/normalization policy is added to historical v1.
+
+Classification, numerical estimates, manual and external input kinds remain
+separate. No estimates/input values are populated by the register or foundation.
+Explicit overrides retain original/superseded provenance and their changed amount;
+unselected competing overrides remain ambiguous. Mixed-caption ceilings reject
+out-of-range allocations. Decimal interval arithmetic keeps declared dependencies
+and conservative enclosures, never estimates covariance or calls a range tight.
+Rounded reported points retain raw/Decimal/decimals and submitted-precision
+diagnostics; the evaluator invents no economic uncertainty interval or tolerance.
+
+`change` requires identical issuer/scenario/version/perimeter and ordered component
+treatment/scope with exactly adjacent actual fiscal boundaries. First openings
+are unavailable; required missing values prevent changes. The available outcome
+is `partial_book_movement`, retains both levels and all unresolved effects, and
+always has `cash_investment_certified=False`. No acquisition/FX/reclassification/
+timing correction or forecast consumption is implemented. Schema `1` is a
+separate analyst namespace: scenarios and evaluations preserve exact decimals,
+dates, provenance, occurrences and verified body bytes. Round-trip reconstruction
+rechecks model/source linkage and recomputes evaluation summaries; it cannot
+upgrade completeness/readiness. It is not standardized historical schema 5.
+
+Validation: **41 focused / 640 full-suite tests passed**; all 15 retained sums and
+12 adjacent movements reproduce, MSFT FY2025/FY2026 partial adjustments preserve
+the **19,800m effect**, without earlier-year or FCFF approval. Mapping checks cover
+all 40 register files/17 measures, with source references and frozen-validation
+digest. Compileall and staged `git diff --check` pass. No SEC requests or corpus
+rerun; existing source/registry/output files and baseline 1,905/1,483/11/27/42
+remain untouched. Logs are in `/tmp/analyst-nwc-focused.log` and
+`/tmp/analyst-nwc-full-suite.log`.
+
+**Next bounded milestone:** review and publish explicit MSFT FY2025–2026 partial
+scenario input bundles, with classified omissions and retained evidence. No
+default/earlier-year estimates, cash bridge or automatic policy readiness. Phase
+2 remains postponed; the future joint timing contract still gates consumption.

@@ -9,10 +9,33 @@ and issuer exclusions persist; no integrated FCFF bundle is certified.
 The [timing-readiness boundary](financial-timing-readiness-design.md) must be
 implemented separately from historical resolution before forecast use of
 historical ratios or FCFF consumption. Phase 2 is subsequently postponed.
-The next additive [analyst-NWC foundation](analyst-operating-nwc-design.md) uses
-its own scenario/assumption identities and provenance, not mutations of schema
-5 or active v1 policies. Neither this design nor the freeze implements a
-readiness model, analyst evaluator or valuation calculator.
+The additive [analyst-NWC foundation](analyst-operating-nwc-design.md#implemented-isolated-foundation)
+now uses its own scenario/assumption identities and provenance, not mutations of
+schema 5 or active v1 policies. The [company preparation register](company-data-preparation/index.md)
+covers all forty generalization-required issuers without fresh financial review.
+No joint timing-readiness model or valuation calculator is implemented.
+
+### Isolated analyst working-capital boundary
+
+`analyst/nwc.py` is independent of SEC retrieval and historical normalization:
+immutable Period/Amount/Artifact/Occurrence/Evidence/Component/Scenario models,
+pure `evaluate` and `change`, separate analyst schema `1` and scenario/evaluation
+serialization. No active policy registry, implicit scenario, forecast consumer
+or historical-output mutation. Raw original SEC artifact digests are verified;
+reported instant occurrences and FY contexts are bound to retained instance
+bytes, including source root-child ordinals, units and all confirming/competing
+eligible occurrences. Review rationale and explicit scope keys remain caller
+responsibilities; structural checks do not establish economic completeness.
+
+Numerical results are always partial perimeters, never complete NWC or FCFF
+certification. Unknown required operands prevent an amount; omitted components
+require classification provenance. Explicit estimates/manual/external inputs,
+override ancestry, submitted precision and unresolved effects remain distinct.
+Intervals retain dependencies and conservative enclosure, not invented covariance.
+Delta requires adjacent actual dates and identical issuer/scenario/version/ordered
+perimeter, retains both results, and is only partial book movement. Acquisition,
+FX, reclassification and timing questions remain exposed, not adjusted away.
+Deserialization verifies original bytes and recomputes supplied summaries.
 
 The Automated Equity Valuation Platform will be built incrementally, beginning with a Python financial data and valuation core before adding a web application.
 

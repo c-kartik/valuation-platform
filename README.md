@@ -27,10 +27,12 @@ Current milestone:
 
 **Phase 1H.6 — historical-normalization-v1 scope freeze (complete)**
 
-Phase 2 remains postponed. Next step: **isolated analyst Operating-NWC
-scenario/assumption-provenance foundation** under the
-[AAPL/MSFT/GOOGL design](docs/analyst-operating-nwc-design.md), without changing
-the frozen baseline or removing blockers. The timing-readiness valuation
+Phase 2 remains postponed. The isolated analyst Operating-NWC foundation and
+[forty-issuer preparation register](docs/company-data-preparation/index.md)
+are implemented without changing frozen values or removing blockers.
+Next: **review explicit MSFT FY2025–2026 partial scenario input bundles** under
+the [implemented contract](docs/analyst-operating-nwc-design.md#implemented-isolated-foundation).
+No estimates or complete NWC/FCFF certification are implied. The timing-readiness valuation
 boundary remains required before historical-ratio forecast or FCFF consumption.
 No integrated FCFF bundle is certified; the existing Phase 2A manual assumptions
 model remains available. Valuation UI/deployment remain out of scope.

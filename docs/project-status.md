@@ -2,7 +2,24 @@
 
 ## Current Milestone
 
-Latest completed milestone: **post-freeze analyst Operating NWC methodology/design
+Latest completed milestone: **isolated analyst-NWC scenario/provenance foundation
+and company preparation register**. [Forty-issuer register](company-data-preparation/index.md)
+tracks all seventeen measures, carried-forward evidence/states and unreviewed
+details; Alphabet has one GOOG/GOOGL record. AAPL/MSFT/GOOGL retain detailed
+limitations and no approved estimates. [Implemented boundary](analyst-operating-nwc-design.md#implemented-isolated-foundation)
+provides immutable explicit scenarios, verified reported occurrences, labeled
+omissions/overrides/ranges, partial book results and separate serialization.
+No complete NWC/FCFF certification or automatic blocker removal.
+**41 focused tests / 640 complete-suite tests passed**; fifteen retained driver
+sums/twelve changes and MSFT's 19,800m effect reconcile. Register identities,
+measure counts and evidence links checked; compileall and diff checks passed.
+No SEC request/corpus rerun; schema 5, historical v1 sources/registries/evidence
+and all baseline states remain unchanged. Phase 2 remains postponed.
+Next bounded milestone: review and publish explicit MSFT FY2025–2026 partial
+scenario input bundles with classified omissions and retained provenance; no
+earlier-period estimates, cash bridge or forecast consumption.
+
+Previously completed milestone: **post-freeze analyst Operating NWC methodology/design
 for AAPL/MSFT/GOOGL**, [decision/contract](analyst-operating-nwc-design.md) and
 [fifteen-period inventory](analyst-operating-nwc-inventory.json). **Phase 2 remains
 postponed by explicit direction.** Frozen historical v1 and all current blockers
@@ -1089,9 +1106,11 @@ AMD's five extension periods remain outside this pass. Safe new coverage is zero
 
 ## Next Step
 
-Current next step: **isolated analyst Operating-NWC scenario/provenance foundation**
-under the [three-issuer design](analyst-operating-nwc-design.md). Phase 2 remains
-postponed; this additive layer cannot overwrite frozen facts or remove blockers.
+Current next step: **review and publish explicit MSFT FY2025–2026 partial
+scenario input bundles**, using the [implemented isolated evaluator](analyst-operating-nwc-design.md#implemented-isolated-foundation).
+Classify omissions and retain provenance; no default/earlier-period estimates,
+cash ΔNWC approval or forecast consumption. Phase 2 remains postponed; this
+additive layer cannot overwrite frozen facts or remove blockers.
 The eventual financial timing-readiness boundary remains required under the
 [existing design](financial-timing-readiness-design.md), not implemented here.
 The [historical v1 freeze](historical-normalization-v1-freeze.md) completes Phase

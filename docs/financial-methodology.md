@@ -23,6 +23,18 @@ omissions without certifying immateriality. No existing blocker is removed or
 historical value changed. Book changes are not cash investment without exact
 acquisition/FX/noncash/reclassification bridges and joint timing readiness.
 
+The isolated analyst foundation is now implemented; see
+[behavior and verified results](analyst-operating-nwc-design.md#implemented-isolated-foundation).
+It returns partial-perimeter book amounts only, with no amount for missing
+required evidence or unresolved eligible conflicts. Explicit omissions require
+classification provenance. Estimates, finite Decimal ranges/dependencies and
+overrides are labeled, never defaulted; reported rounded amounts retain submitted
+precision without invented tolerances. Adjacent same-perimeter book changes keep
+unresolved cash/timing effects and cannot certify FCFF. The MSFT 2025–2026
+19,800m movement effect is a tested partial-perimeter sensitivity, not approval
+of earlier years or complete operating cash investment. Frozen policies and all
+27 blocked states remain unchanged. Phase 2 remains postponed.
+
 ## Operating-Company Methodology Scope
 
 The initial valuation framework is designed for ordinary operating companies:
