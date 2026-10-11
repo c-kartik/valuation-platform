@@ -6,6 +6,13 @@ record for GOOG/GOOGL. The other ten issuers remain in that authoritative matrix
 not omitted from universe validation. This is preparation, not fresh SEC review,
 new support certification or a replacement for historical normalization v1.
 
+Current preparation is a **Phase 1 blocker-resolution extension** after the
+qualified v1 freeze; Phase 2 remains postponed. The
+[MSFT reported cash-flow review](../msft-alternative-historical-cash-flow-inputs.md)
+adds a separate data path, not a replacement NWC policy or adjusted cash-flow
+calculator. Preparation does not authorize forecasting, FCFF, DCF, WACC,
+terminal value or sensitivities; preserve frozen outputs and prior decisions.
+
 ## Shared measure contracts and provenance
 
 ### Standing maintenance requirement

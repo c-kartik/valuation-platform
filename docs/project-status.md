@@ -2,7 +2,30 @@
 
 ## Current Milestone
 
-Latest completed milestone: **reviewed Alphabet FY2024 rounded partial analyst-NWC
+Latest completed milestone: **MSFT FY2025–2026 alternative reported historical
+cash-flow input review**, strictly within the **Phase 1 blocker-resolution
+extension**. [Evidence/input matrix](msft-alternative-historical-cash-flow-inputs.md)
+supports PARTIAL GO for isolated reported inputs: CFO 136,162m/182,935m and cash
+PP&E purchases 64,551m/115,948m, with distinct interest, tax, lease, SBC, investing
+and noncash disclosures. Both complete reported CFO bridges reconcile.
+FY2026 recasts FY2025 adjustment lines by cancelling −4,720m/+4,720m; selected
+FY2025 sources are preserved. Debt cash interest is rounded and debt-scoped;
+cash taxes are not expense taxes; cash purchases are not accrual/lease additions.
+No adjusted subtotal, complete NWC or FCFF approval. Existing MSFT blockers and
+partial bundles remain. Four retained original bodies, identities, occurrences,
+precision, arithmetic, provenance and local links validated; diff check passes.
+No new SEC requests, production changes, tests or corpus rerun. Frozen baseline
+1,905/1,483/11/27/42 = 3,468 unchanged. Authoritative methodological references
+inform proposed labels; SBC economics, tax/interest/lease and acquisition cash
+treatments require explicit review before adjusted use, not estimates now.
+**Single next Phase 1 milestone:** isolated two-period MSFT reported cash-flow
+input bundles/provenance contract, with separate scoped facts and unknowns,
+no adjusted calculation, period extension or blocker removal. Phase 2 remains
+postponed, including forecasts, FCFF, DCF, WACC, terminal value and sensitivities.
+This supersedes the immediately preceding pilot valuation-input decision as
+the next task; prior partial-scenario results and limitations are retained.
+
+Previously completed milestone: **reviewed Alphabet FY2024 rounded partial analyst-NWC
 bundle**. [Detailed register](company-data-preparation/GOOGL.md#reviewed-fy2024-partial-input-bundle)
 and [version-1 input](company-data-preparation/googl-analyst-nwc-bundle.json) bind
 one frozen 10-K period and two original bodies. Six included instant facts plus

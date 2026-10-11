@@ -438,7 +438,7 @@ historical diluted weighted-average shares are not that denominator. The
 forecast/FCFF/DCF workflow remains postponed. Those later valuation inputs are
 outside this NWC review, not silently certified by successful arithmetic.
 
-**One next bounded decision milestone:** an **MSFT FY2025–2026 pilot
+**Prior proposed next decision (superseded by Phase 1 data preparation):** an **MSFT FY2025–2026 pilot
 valuation-input acceptance decision** using this retained evidence and the
 existing timing contract. Decide whether the expressly narrowed operating
 perimeter could be authorized for a pilot, enumerate indispensable unresolved
@@ -449,3 +449,17 @@ compatibility, replace frozen policies, implement forecasts/FCFF or start broad
 SEC research. Choosing MSFT uses the sole reviewed adjacent pair; it does not
 presume that the pair is sufficient or authorize Phase 2 resumption. AAPL and
 Alphabet remain diagnostic-only without another automatic bundle/research queue.
+
+## Phase 1 blocker-resolution extension
+
+The [MSFT alternative reported cash-flow review](msft-alternative-historical-cash-flow-inputs.md)
+supersedes the pilot valuation-input decision as the next work direction.
+Reported consolidated CFO can be prepared without reconstructing complete NWC;
+it does not supply complete Operating NWC or certify the partial book movement.
+Keep these bundles and frozen blockers unchanged. Do not subtract partial ΔNWC
+or add D&A/SBC again to reported CFO. Separate cash/expense taxes, debt/lease
+interest, cash PP&E, capital creditors and noncash lease additions with their
+actual scopes and precision. No adjusted cash-flow calculation is approved.
+The next bounded milestone is an isolated two-period reported-input/provenance
+contract, **Phase 1 only**. Phase 2 and valuation-boundary consumption remain
+postponed; the timing-readiness design is unchanged.

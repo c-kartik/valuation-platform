@@ -182,8 +182,65 @@ explicit omissions and self-contained serialization retain provenance. Relevant
 local links and `git diff --check` pass. No SEC requests, source changes, full
 suite or corpus rerun; frozen v1 and baseline counts remain unchanged.
 
-Smallest next milestone: review one explicit **AAPL FY2025 partial scenario
+Then-next milestone (subsequently completed): review one explicit **AAPL FY2025 partial scenario
 bundle** from retained evidence, including employee/distribution omissions and
 unknown investing-in-AP allocation. No numerical estimate, other-period
 extension, cash bridge or automatic readiness approval is authorized by this
 MSFT review. Phase 2 remains postponed.
+
+## Alternative reported historical cash-flow input review
+
+The [two-period evidence matrix](../msft-alternative-historical-cash-flow-inputs.md)
+adds a **Phase 1 data-preparation path**, not a replacement NWC equation.
+Original conflict: mixed current balances and incomplete acquisition/FX/noncash
+bridges prevent complete NWC and cash certification of the partial book movement.
+Reported consolidated CFO avoids reconstructing those balances for the reported
+cash subtotal itself. Selected FY2025/FY2026 CFO is 136,162m/182,935m; cash PP&E
+64,551m/115,948m. Both complete cash-flow statement reconciliations reproduce CFO.
+
+Exact accessions `0000950170-25-100235` / `0001193125-26-323660`, July–June annual
+contexts, original primary/instance bodies and typed digests are unchanged.
+The matrix binds every proposed fact to QName, unit, precision, nil/dimension
+scope and retained occurrence ordinals; Notes 1/3/6/10/12/13/14 support labels.
+Facts are SEC-reported; sign conversion/statement sums are evidence-backed
+checks; operating-versus-economic classifications are analyst judgments.
+No numerical estimate or new manual/external input was approved.
+
+Chosen resolution: **PARTIAL GO for separate reported input preparation**.
+Debt cash interest 1.6bn/1.5bn is rounded and debt-scoped, not expense interest
+2,385m/3,051m or all-in lease interest. Cash taxes 28.7bn/21,188m are distinct
+from provision 21,795m/32,185m and deferred cash-flow adjustments. Preserve lease
+operating cash, finance interest, financing principal and noncash additions
+separately. Preserve SBC 11,974m/12,405m and its tax/withholding facts; do not
+automatically treat the noncash add-back as economically free compensation.
+The combined acquisition/intangible/other line 5,978m/1,743m cannot be labeled
+acquisition-only. PP&E creditors 6.9bn/26.7bn remain stocks, not cash purchases.
+
+Important comparability evidence: FY2026 Note 1 recasts prior cash-flow
+presentation. FY2025 D&A-and-other falls from selected 34,153m to comparative
+29,433m; displayed investment/derivative loss adjustment rises 609m to 5,329m.
+The cancelling 4,720m shifts leave CFO unchanged. Do not replace selected sources
+or certify the component trend from unchanged totals. The FY2026 cash-flow
+deferred-tax/credit adjustment 14,189m is not the Note 12 deferred provision
+14,424m. Roles and scopes remain distinct, not normalized away.
+
+Considered but **not approved**: using partial book ΔNWC as cash investment,
+adding D&A/SBC again to CFO, constructing accrual Capex from cash + creditor
+movement + leases, substituting interest expense for cash interest, or applying
+unreviewed tax/SBC/lease adjustments. Their completeness is not established.
+Material economic-treatment judgments require explicit user review before any
+future adjusted-use contract; no arbitrary materiality threshold or default
+allocation. Discontinued, organic acquisition and component-specific FX cash
+allocations remain unproved, not zero. Existing timing gate and frozen MSFT
+NWC/D&A/Capex policies are unaffected; no readiness or support upgrade.
+
+Validation: two frozen identities, four original-body hashes/lengths, scoped
+occurrences, note assertions, raw/display signs, precision, CFO sums, lease
+expense sums, disclosed tax-jurisdiction sum, 19,800m creditor movement and
+recast cancellation checked. Local links/diff check pass. No new SEC request,
+code/test/policy change, test suite or corpus rerun. Frozen-v1 baseline unchanged.
+
+Single next **Phase 1** milestone: isolated reported cash-flow input bundles and
+provenance contract for these two periods, preserving separate scoped facts and
+unknowns; no adjusted subtotal or valuation consumer. Earlier NWC bundle decisions
+remain in this record; Phase 2 remains postponed.

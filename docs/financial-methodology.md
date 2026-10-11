@@ -1,5 +1,18 @@
 # Financial Methodology
 
+## Current Phase 1 preparation boundary
+
+Historical-normalization v1 is frozen with qualified scope; Phase 2 is still
+postponed. The [MSFT alternative reported cash-flow review](msft-alternative-historical-cash-flow-inputs.md)
+approves only preparation of separately scoped reported historical inputs.
+Reported consolidated CFO is not EBIT, Operating NWC, ΔNWC or an adjusted
+unlevered subtotal. Its indirect reconciliation already includes reported
+working-capital and noncash effects: no second partial ΔNWC deduction or D&A/SBC
+add-back. Cash debt interest, lease interest, accrued interest expense, cash tax,
+tax provision, cash PP&E and capital creditors remain distinct. No primitive,
+frozen policy or timing-readiness contract is changed; economic adjustments
+require a separately reviewed contract, not numerical agreement or assumed zeros.
+
 ## Purpose
 
 This document defines the financial concepts and calculation methodology used by the valuation platform.

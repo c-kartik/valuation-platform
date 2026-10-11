@@ -28,10 +28,16 @@ high-frequency normalization fixes over issuer-specific hacks. Use an
 issuer-specific policy only when filing evidence and accounting rationale
 support it, and never force a result to improve coverage statistics.
 
-Phase 2A manual assumptions are available, but forecast, FCFF, DCF, equity
-bridge, and per-share valuation work is paused throughout Phase 1H. Resume it
-only after Phase 1H.6 freezes historical normalization v1. Do not implement
-valuation UI or deployment infrastructure yet.
+Phase 1H.6 has frozen historical normalization v1 with qualified coverage.
+Current work remains a Phase 1 blocker-resolution extension: historical data
+preparation, evidence review and explicitly isolated analyst input contracts.
+Freeze completion is necessary but is not authority to start Phase 2.
+Phase 2 remains postponed: do not implement FCFF, forecasting, DCF, WACC,
+terminal value, sensitivities, equity/per-share valuation, valuation UI or
+deployment infrastructure. Existing Phase 2A assumption models do not authorize
+consumption of incomplete historical inputs. Preserve frozen-v1 schemas,
+policies, values and blockers; reported cash-flow input preparation must remain
+separate from adjusted cash-flow calculations and valuation readiness.
 
 ## Engineering Principles
 
