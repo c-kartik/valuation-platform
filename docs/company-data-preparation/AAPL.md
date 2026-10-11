@@ -274,3 +274,47 @@ remain unchanged. No SEC request or corpus rerun. Phase 1 only; no complete-NWC
 or valuation approval. The next bounded milestone is an AAPL analyst-treatment
 decision memo disposing of the finite unavailable-disclosure/choice list, not
 indefinite source research. Stop after packaging.
+
+## Proposed analyst-treatment decisions — pending review
+
+2026-10-12; [bounded AAPL decision memo](../aapl-analyst-treatment-decision.md).
+Original conflicts remain incomplete NWC, financing/lease cash coverage and
+unallocated investment. Considered complete reconstruction/economic adjustment
+versus qualified reported preparation; recommend the latter without inferring
+missing cash or importing MSFT's approvals. This supersedes the prior next-task
+placeholder, not source decisions, bundles or frozen blockers.
+
+Propose consolidated CFO 111,482m as reported historical reference and cash PP&E
+12,715m as a separate narrow input, not organic cash or complete reinvestment.
+Investing Other 1,480m stays visible/unallocated. Recommend recognized SBC
+12,863m as an explicitly labeled economic-cost proxy counted once, pending user
+review: expense and CFO add-back remain separate source roles, not two costs.
+Outstanding awards and employee-tax financing remain separate; no numerical
+neutralization or other adjustment is performed. Retain cash taxes 43,369m;
+future operating-tax basis/value remains unpopulated and separately justified.
+
+Propose accepting **only fixed operating-lease reported cash 2,100m at −8
+precision**, not MSFT's three-class convention. Variable lease cost is not cash;
+noncash ROU additions are not cash investment. Full lease/nonlease and finance
+cash coverage remains unknown. Cash interest stays explicitly unavailable: no
+expense/rate-based estimate, overlap allocation or zero is proposed. Permitted
+use is separate source inspection/packaging, not economic totals or consumption.
+
+Rationale: reported CFO does not need complete opening book NWC, omitted
+employee/distribution allocations or a PP&E-creditor reconstruction to reproduce
+its subtotal. That does not establish organic/cash comparability, resolve
+acquisition/FX/reclassification effects, approve timing compatibility or remove
+the existing NWC policy blocks. Future consumer requirements are conditional on
+the actual claimed scope and recorded in the memo; no automatic gate waiver.
+
+Validation: exact one-period registry, source references, precision/role facts,
+decision consistency, established valuation references, links and diff check.
+No SEC requests, tests/corpus, source/evidence/bundle/scenario changes. Baseline
+**1905/1483/11/27/42 = 3468** carried forward. All recommendations pending user
+review; no AAPL approval inferred from MSFT.
+
+The FY2025 pilot may close **after acceptance only for qualified historical-input
+preparation**, not complete NWC/interest/lease cash/reinvestment or FCFF readiness.
+Single next Phase 1 milestone: record one FY2025 acceptance/input checklist and
+its remaining disclosure limits; no new annotation cycle or broad research.
+Stop after this decision memo.

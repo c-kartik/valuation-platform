@@ -2,7 +2,26 @@
 
 ## Current Milestone
 
-Latest completed milestone: **one isolated AAPL FY2025 reported-input bundle**.
+Latest completed milestone: **bounded AAPL FY2025 analyst-treatment decision
+memo**, documentation-only Phase 1. [Recommendations pending user review](aapl-analyst-treatment-decision.md)
+retain consolidated reported CFO and separate narrow cash PP&E; propose SBC
+recognized-expense economic-cost proxy once; preserve reported cash taxes with
+no operating-tax rate; propose only the rounded fixed operating-lease dataset,
+not a complete cash-service convention. Cash interest and acquisition/intangible
+allocations remain unknown, with no invented proxy or zero. No MSFT approval
+transfer, completeness claim, adjusted calculation or blocker removal.
+
+Registry points/roles/precision, evidence references, proposed decision boundaries,
+established methodological references, local links and diff check validated.
+Source, evidence, frozen-v1 and all bundles/scenarios unchanged. No SEC requests,
+tests or corpus rerun. Baseline **1,905/1,483/11/27/42 = 3,468** carried forward.
+The pilot can close after acceptance **only for qualified one-period historical
+input preparation**, not economic consumption or valuation readiness. **Stop for
+user review.** Single next Phase 1 milestone: one FY2025 treatment-acceptance/input
+checklist recording choices and durable disclosure limits; no new sidecar,
+research cycle or numerical implementation. Phase 2 remains postponed.
+
+Previously completed milestone: **one isolated AAPL FY2025 reported-input bundle**.
 [Results and provenance](aapl-alternative-historical-cash-flow-inputs.md#implemented-isolated-fy2025-reported-input-bundle)
 record twenty-one inputs/twenty-six confirming occurrences and eleven explicit
 null unknowns. CFO, PP&E cash, net cash taxes, SBC expense/add-back and rounded
