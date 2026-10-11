@@ -2,7 +2,27 @@
 
 ## Current Milestone
 
-Latest completed milestone: **AAPL FY2025 acceptance and independent Alphabet
+Latest completed milestone: **Alphabet FY2024 exact-instance provenance repair**.
+[Verification and refresh history](googl-alternative-historical-cash-flow-inputs.md#exact-instance-provenance-repair--authorized-refresh)
+record unrecoverable original timestamp/status after bounded retained-record
+inspection, followed by one user-authorized exact SEC instance refresh. HTTP 200,
+actual receipt UTC 2026-10-11T21:10:46.050735+00:00; response is byte-for-byte
+identical to the original (same 2,703,015-byte body/SHA-256). New receipt is a
+separate retrieval event, not recovered original metadata. Additive retained
+evidence links the original body/null fields and preserves old artifacts.
+
+Thirty relevant facts/identity/context/unit/precision and all three reported CFO
+bridges independently revalidated; existing Artifact/Receipt validation accepts
+the new receipt. Links and diff check pass. No source, policy, schema or bundle
+implementation; no full suite/corpus. Baseline **1,905/1,483/11/27/42 = 3,468**
+unchanged. Original NWC, D&A, cash-scope and timing limitations remain.
+Single next Phase 1 milestone: **one isolated Alphabet FY2024 reported-input
+bundle**, explicitly bound to the refreshed instance receipt and retained primary
+body, preserving original metadata-gap history, unknowns and rounded source roles.
+No comparative registrations, transferred analyst treatments or economic
+calculation. Stop after evidence repair; Phase 2 postponed.
+
+Previously completed milestone: **AAPL FY2025 acceptance and independent Alphabet
 FY2024 reported cash-flow evidence review**, documentation-only Phase 1.
 [AAPL acceptance](aapl-treatment-acceptance-checklist.md) closes its pilot only for
 qualified historical preparation: consolidated CFO/narrow PP&E, SBC cost proxy

@@ -254,3 +254,36 @@ diff check. No SEC requests, tests/corpus, source/evidence/scenario changes;
 baseline **1905/1483/11/27/42 = 3468** unchanged. Single next Phase 1 milestone:
 bounded receipt-provenance recovery for this exact instance, not broad issuer
 research or altered acceptance rules. Stop after this review.
+
+## FY2024 instance receipt repair — refresh, not recovered metadata
+
+2026-10-12: original conflict was missing retrieval timestamp/HTTP status for
+the retained exact selected instance, despite verified body identity. Inspected
+manifests, cache diagnostics/logs and original research scripts; none bound
+those original fields to the body. Cache reuse explicitly stored null fields;
+file times, expected fetch behavior and current availability are not proof.
+Considered original-metadata recovery versus authorized exact-instance refresh;
+chose refresh only after this bounded recovery check failed.
+
+[Additive refresh record](../evidence/googl-fy2024-instance-provenance-refresh.json)
+binds the exact 0001652044-25-000014 instance to HTTP 200 and actual UTC receipt
+2026-10-11T21:10:46.050735+00:00. Original-response representation/typed digest,
+length, request/response metadata and full retained body are explicit. It links
+the original artifact and unresolved original receipt fields without editing
+the old manifest, evidence, hashes or partial scenario.
+
+Both bodies are byte-identical, SHA-256
+3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3,
+2,703,015 bytes. This is a new retrieval event, not evidence of original time/
+status; no substantive/representational change. [Independent verification](../googl-alternative-historical-cash-flow-inputs.md#exact-instance-provenance-repair--authorized-refresh)
+checked exact identity/annual context, 30 facts/QNames/occurrences/units/raw
+values/precision and three reported CFO reconciliations. New metadata conforms
+to existing receipt validators; no implementation/registration or totals.
+
+The packaging receipt prerequisite is resolved by explicit refreshed evidence;
+cash-interest and coverage/allocations remain unknown, original NWC blockers,
+five missing D&A periods and future timing gates persist. Existing source/
+policies/schemas/bundles remain byte-identical. Links/diff check pass; one exact
+SEC request, no full suite/corpus rerun. Next bounded Phase 1 milestone: one
+FY2024 reported-input bundle using the separate refresh receipt while retaining
+original history, precision/role distinctions and unknowns. Stop after repair.

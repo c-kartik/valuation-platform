@@ -147,3 +147,55 @@ actual retained retrieval metadata, or transparently refresh only that selected
 instance if essential under the existing receipt contract, preserving the old
 body/digest/history. Do not weaken metadata requirements or manufacture a receipt.
 No broader financial research/annotation cycle. Stop after this review.
+
+## Exact-instance provenance repair — authorized refresh
+
+Completed 2026-10-12 local date; **refresh, not recovery of original metadata**.
+Inspected the original retained manifest, D&A inventory entry, cached-body
+diagnostic `/tmp/da-wave18/0001652044-25-000014.json`, related note records,
+`/tmp/analyst-nwc-research.log`, and the retained research scripts/cache. The
+NWC script explicitly assigned `None` to receipt time/status when reusing a
+cached body; the earlier D&A fetch/cache code retained bodies/hashes but no
+body-bound receipt timestamp/status. No inspected record recovered those fields.
+File modification dates, fetch-code expectations and present availability were
+not used as original-receipt proof.
+
+User-authorized **one exact URL GET**, no redirects or broad retrieval, returned
+HTTP **200**. Actual receipt time **2026-10-11T21:10:46.050735+00:00** is UTC
+(2026-10-12 in the project timezone), not a backdated original receipt.
+The additive [refresh evidence](evidence/googl-fy2024-instance-provenance-refresh.json)
+retains request-start/receipt times, response status/headers, exact accession/URL,
+representation `sec_response_body_bytes`, digest type
+`sha256_sec_response_body_bytes`, length and gzip/base64 original body.
+Evidence-file SHA-256:
+`1047e612f28d9da2e2974f687c61b858524b7ad168ebc0d8cc4c1118903e368b`.
+
+The refreshed response is **byte-for-byte identical**, 2,703,015 bytes, to the
+original retained instance; both have SHA-256
+`3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3`.
+There is no substantive or representational body change. The new retrieval
+event supplies new metadata; equality does not retroactively recover old
+metadata. The original manifest/body, null receipt fields and all fingerprints
+remain unchanged and explicitly linked from the additive record.
+
+Independent parsing of the refreshed bytes verified selected CIK, non-amended
+10-K/FY identity, 2024-01-01–2024-12-31 context, exact taxonomy/concepts, normalized
+USD, no dimensions/nil, occurrence positions, raw values and precision for
+**30 relevant facts**: thirteen CFO operands, CFO/PP&E, investment, SBC/tax,
+interest/capitalization and lease/noncash disclosures. All three annual reported
+CFO statement bridges reproduce; no adjusted subtotal or new total. A new
+receipt conforms to the existing immutable `Artifact`/`Receipt` validators using
+actual refresh metadata; no model change or bundle registration was made.
+
+This resolves **only the future packaging receipt prerequisite** via a separately
+identified refresh. Source uncertainty, cash-interest/lease/investment scope,
+SBC precision differences, D&A/NWC and timing limitations persist. No complete
+financial coverage or analyst/valuation approval. Primary statement evidence and
+all existing bundles/scenarios/frozen-v1 artifacts remain unchanged. Links and
+`git diff --check` pass; no full suite or corpus rerun.
+
+Single next Phase 1 milestone: **one isolated Alphabet FY2024 reported-input
+bundle**, using the explicit new instance receipt and unchanged primary evidence,
+with source roles/rounding and all unknowns preserved. Retain the separate
+original-metadata gap/history and do not implicitly register comparative years
+or import another issuer's analyst treatments. Stop after this evidence repair.
