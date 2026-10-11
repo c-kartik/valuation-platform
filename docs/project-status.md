@@ -2,7 +2,22 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.5 — S&P 500 Top 50 historical coverage
+Latest completed milestone: **Phase 1H.6 — historical-normalization-v1 scope
+freeze**. [Frozen contract, versions, exclusions and artifact digests](historical-normalization-v1-freeze.md).
+**Phase 1H complete with qualified scope, not complete Top 50 support.**
+Baseline remains 50 issuers / 51 securities; 2 supported / 40 generalization /
+8 specialized; execution 43 completions / seven skips; 204 × 17 = 3,468 states,
+1,905/1,483/11/27/42. Capex 167/37/0 = 147 direct + 20 curated.
+Schema 5 and immutable exact-accession policies are frozen without production
+changes. XOM has no history; GEV/SNDK two periods each; GE's specialized
+classification remains separate from execution. No integrated FCFF certification.
+Next: **Phase 2 — implement the bounded financial timing-readiness valuation
+boundary** from the existing design, before historical-ratio forecast/FCFF use;
+no FCFF calculator or invented adjustments. Phase 2A assumptions already exist.
+Counts, versions, retained evidence bytes and links verified; no SEC requests,
+tests or corpus rerun. No push or tag.
+
+Previously completed milestone: **Phase 1H.5 — S&P 500 Top 50 historical coverage
 validation**, documentation-only [all-company matrix](universe/phase-1h5-issuer-validation.md)
 and [machine-checkable evidence/decisions](universe/phase-1h5-issuer-validation.json).
 All 50 CIKs / 51 security entries reconcile: **2 SUPPORTED / 40
@@ -1058,8 +1073,13 @@ AMD's five extension periods remain outside this pass. Safe new coverage is zero
 
 ## Next Step
 
-Current next step: **Phase 1H.6 — freeze historical normalization v1**, preserving
-the [Phase 1H.5 validated scope and exclusions](universe/phase-1h5-issuer-validation.md).
+Current next step: **Phase 2 — implement the bounded financial timing-readiness
+valuation boundary** under the [existing design](financial-timing-readiness-design.md).
+The [historical v1 freeze](historical-normalization-v1-freeze.md) completes Phase
+1H with qualified scope. Keep historical resolution independent from readiness;
+no integrated FCFF certification, new economic adjustments or FCFF calculator.
+The gate precedes forecast consumption of historical ratios and FCFF use;
+independent forecast-anchor, consumer-convention and tax/Capex checks remain.
 The [Wave 46 exit plan](phase-1h-generalization-exit-plan.md) was executed by
 this validation pass, not an unfulfilled coverage mandate. The chronological
 Wave 22–45 notes below preserve historical research routing, not pending tasks.
@@ -1261,6 +1281,10 @@ sensitivity work is intentionally paused through Phase 1H.
    certification, then resume Phase 2 forecast and DCF development. The proposed
    timing gate must precede FCFF consumption at that later valuation boundary;
    universal timing readiness is not an added historical-freeze criterion.
+   **Complete:** [historical v1 contract and evidence digests](historical-normalization-v1-freeze.md)
+   freeze qualified scope, schema 5, exact policies and typed exclusions.
+   Phase 2 resumes with the bounded timing-readiness boundary, not a claim of
+   universal forecast/FCFF readiness or a full Top 50 supported universe.
 
 The near-term target is S&P 500 Top 50 validation, the medium-term goal is broader
 S&P 500 coverage, and specialized financial methodologies remain separate

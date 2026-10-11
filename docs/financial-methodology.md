@@ -6,6 +6,15 @@ This document defines the financial concepts and calculation methodology used by
 
 Financial definitions should remain consistent across SEC normalization, historical analysis, forecasting, and valuation.
 
+Phase 1H.6 completes the [qualified historical v1 freeze](historical-normalization-v1-freeze.md)
+without redefining any primitive or certifying integrated FCFF compatibility.
+Resolved historical values and unknown timing readiness remain independent.
+The [timing-evidence contract](financial-timing-readiness-design.md) is the next
+bounded Phase 2 implementation: it must gate historical-ratio forecast and FCFF
+consumption, without invented inventory allocations, incentive adjustments or
+automatic certification of manual assumptions. Independent tax, Capex and
+forecast-consistency checks still apply; no FCFF calculator is added here.
+
 ## Operating-Company Methodology Scope
 
 The initial valuation framework is designed for ordinary operating companies:

@@ -19,27 +19,32 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-The project is in the initial development phase.
+**Phase 1H complete with qualified scope: historical normalization v1 frozen.**
+See the [frozen contract and artifact digests](docs/historical-normalization-v1-freeze.md)
+and [all-issuer validation](docs/universe/phase-1h5-issuer-validation.md).
 
 Current milestone:
 
-**Phase 1H — S&P 500 Top 50 universe expansion**
+**Phase 1H.6 — historical-normalization-v1 scope freeze (complete)**
 
-Next step: **Phase 1H.4 — execute the ranked generalization waves**
+Next step: **Phase 2 — implement the bounded financial timing-readiness
+valuation boundary**, before historical-ratio forecast or FCFF consumption.
+No integrated FCFF bundle is certified; the existing Phase 2A manual assumptions
+model remains available. Valuation UI/deployment remain out of scope.
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 
-The current historical standardized-output corpus contains five companies and
-25 annual periods: META, GOOGL, MSFT, AAPL, and COST, with five selected 10-K
-periods each. Validation means the production historical pipeline has been run
-and checked against filing evidence; it does not mean every metric resolves.
-Typed missing, derived, ambiguous, and methodology-blocked results remain valid
-outcomes.
+The frozen corpus has 43 generic completions and seven specialized execution
+skips, 204 periods × 17 measures = 3,468 states: 1,905 resolved / 1,483 missing /
+11 ambiguous / 27 methodology-blocked / 42 not-comparable. All 50 issuers / 51
+securities are classified: 2 SUPPORTED (META/COST), 40 GENERALIZATION_REQUIRED,
+8 SPECIALIZED_METHODOLOGY_REQUIRED. GE's specialized classification does not
+remove its retained generic execution. XOM has no selected history; GEV/SNDK
+have two periods each. Missing is not zero, and execution is not support.
 
-The next target is the frozen S&P 500 Top 50 snapshot, followed over time by
-broader S&P 500 coverage. Forecast and DCF calculation work is temporarily
-paused while the historical layer is stress-tested across that wider universe.
-The existing Phase 2A manual assumptions model remains available.
+Broader coverage is deferred, not claimed. Exact-accession curated approvals
+do not extend implicitly to future/amended filings. Historical support does
+not establish joint EBIT/D&A/book-NWC timing compatibility or full FCFF readiness.
 
 Phase 1H.1 froze the official **S&P 500 Top 50 Index** universe effective
 2026-10-02 in
@@ -58,7 +63,7 @@ standardized output with no selected annual periods, which remains diagnostic
 evidence rather than an inferred value or automatic policy change.
 
 Phase 1H.3 classified the smoke evidence without changing production policy.
-Across the 50 issuers, two are currently `SUPPORTED`, 41 are
+At that historical smoke stage, two were `SUPPORTED`, 41 were
 `GENERALIZATION_REQUIRED`, and seven are
 `SPECIALIZED_METHODOLOGY_REQUIRED`. The [failure-taxonomy and root-cause
 artifact](docs/universe/sp500-top-50-failure-taxonomy.md) records the complete

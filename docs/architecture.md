@@ -2,6 +2,14 @@
 
 ## Overview
 
+Phase 1H.6 completes the [qualified historical-normalization-v1 freeze](historical-normalization-v1-freeze.md):
+schema 5, implemented policy versions, exact selected-filing rules and provenance
+are fixed at the referenced implementation snapshot. Typed unresolved states
+and issuer exclusions persist; no integrated FCFF bundle is certified.
+Next implement the [timing-readiness boundary](financial-timing-readiness-design.md)
+separately from historical resolution, before forecast use of historical ratios
+or FCFF consumption. This freeze implements no readiness model or calculator.
+
 The Automated Equity Valuation Platform will be built incrementally, beginning with a Python financial data and valuation core before adding a web application.
 
 The system should maintain clear boundaries between data retrieval, financial normalization, derived calculations, and valuation logic.
@@ -28,12 +36,11 @@ Valuation Engine
 Valuation Outputs
 ```
 
-Before forecast and DCF development continues, Phase 1H will generalize the
-historical normalization boundary against a defined S&P 500 Top 50 constituent
-snapshot. The intended sequence remains SEC/XBRL retrieval → normalization →
+Phase 1H has validated and frozen qualified historical scope against the defined
+S&P 500 Top 50 constituent snapshot. The intended sequence remains SEC/XBRL retrieval → normalization →
 standardized historical output → manual assumptions → future forecast and DCF;
-universe validation is now the gate between the existing assumptions model and
-further valuation-engine work.
+the historical freeze is complete, while independent consumer-readiness gates
+remain between historical/manual inputs and future valuation calculations.
 
 ## Universe Validation Boundary
 
