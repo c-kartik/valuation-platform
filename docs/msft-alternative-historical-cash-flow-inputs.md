@@ -202,9 +202,59 @@ recast comparatives cannot overwrite selected history; omitted allocation stays
 unknown; serialization retains every occurrence, artifact representation and
 analyst label. Arithmetic success must not enable complete-NWC/readiness flags.
 
-**Single next Phase 1 milestone:** implement an isolated, explicit two-period
+**Then-next Phase 1 milestone (implemented below):** implement an isolated, explicit two-period
 MSFT **reported cash-flow input bundle and provenance contract**, preserving CFO,
 cash PP&E, debt-interest, lease, cash-tax, expense-tax and SBC as separate scoped
 inputs with this reconciliation evidence and unknowns. No default estimates,
 adjusted subtotal, extension to other periods, blocker removal, forecast or
 valuation consumer. Phase 2 remains postponed.
+
+## Implemented isolated reported input bundles
+
+The [reviewed version-1 registry](company-data-preparation/msft-reported-cash-flow-bundles.json)
+and `analyst/cash_flow_inputs.py` now package only these two periods on explicit
+request. Immutable generic models reuse the existing analyst Period/Artifact
+without changing them. Exact registry bytes, frozen inventory and retained
+manifest hashes are pinned; primary/instance original bytes and retrieval
+metadata are verified. No SEC request, generic fallback or production integration.
+
+FY2025 contains **37 reported inputs / 42 confirming occurrences / 10 explicit
+unknowns**; FY2026 **38 / 43 / 9**. The one additional FY2025 unknown explicitly
+marks the broader `DeferredIncomeTaxesAndTaxCredits` concept as not reported
+here; its absence does not infer zero credits or replace the reported deferred
+tax expense/benefit. Other unknowns preserve complete NWC, accrual-additions/cash
+bridge, all-in interest, operating-only cash tax, acquisition-only purchases,
+discontinued cash, component acquisition/FX/reclassification, SBC economic
+treatment and joint timing questions. No estimates/manual allocations are added.
+
+Reported CFO/cash PP&E remain **136162m/64551m** and **182935m/115948m** separately.
+Original numeric points, raw/display signs, exact annual versus closing contexts,
+all occurrence ordinals/representations and `decimals=-6/-8` survive the separate
+`reported-cash-flow-input-bundle-v1` serialization. Artifacts appear once each;
+their gzip/base64 encoding does not change the digest representation.
+Deserialization rejects changed values, roles, scope labels, precision,
+unknowns, metadata, identity or approval flags; it verifies original bodies and
+recomputes the fourteen-term reported CFO bridge. Equal confirmations are not
+summed; dimensioned NI remains excluded. Recast comparatives stay referenced
+here as comparability evidence, not current bundle inputs or frozen replacements.
+
+Both statement checks pass; no adjusted subtotal, CFO-minus-Capex, NWC change
+or valuation calculator is provided. Complete-NWC and consumption flags are
+false. These data classifications preserve scope, not economic adjustment
+authority. Frozen historical v1 and prior analyst scenarios remain unchanged.
+
+Implementation validation: **22 focused / 120 relevant existing tests pass**;
+four verified originals, 75 inputs / 85 confirming occurrences, both statement
+bridges, explicit unknowns, exact review binding, invalid evidence, serialized
+scope/precision/metadata and corrupt compressed-body rejection covered.
+Compileall, identity/mapping checks, local links/anchors and diff check pass.
+Prior shared NWC source/models/bundles and frozen validation/evidence are
+byte-identical to starting HEAD. No SEC request or corpus rerun. No full-suite
+rerun is justified by an existing shared implementation change: none occurred.
+
+**Single next Phase 1 milestone:** bounded MSFT FY2025–2026 **cash-interest
+perimeter/completeness review**: determine what retained evidence establishes
+about debt-interest/finance-lease overlap and capitalized-interest scope, or
+retain the precise unknown. No automatic combination, adjusted subtotal or
+valuation consumption; no broad issuer research cycle. Stop this milestone
+after the validated bundle commit; Phase 2 remains postponed.

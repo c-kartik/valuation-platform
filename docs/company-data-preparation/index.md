@@ -13,6 +13,12 @@ adds a separate data path, not a replacement NWC policy or adjusted cash-flow
 calculator. Preparation does not authorize forecasting, FCFF, DCF, WACC,
 terminal value or sensitivities; preserve frozen outputs and prior decisions.
 
+The [implemented MSFT reported bundles](MSFT.md#implemented-reported-cash-flow-input-bundles)
+use a separate registered input/serialization contract, not frozen historical
+output or partial NWC scenarios. Cash, accrued, noncash and reconciliation roles
+remain distinct; explicit unavailable/unresolved inputs carry no amounts.
+No other issuer record receives new cash-flow review or approval by analogy.
+
 ## Shared measure contracts and provenance
 
 ### Standing maintenance requirement

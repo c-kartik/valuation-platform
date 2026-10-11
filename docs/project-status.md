@@ -2,7 +2,32 @@
 
 ## Current Milestone
 
-Latest completed milestone: **MSFT FY2025–2026 alternative reported historical
+Latest completed milestone: **isolated MSFT FY2025–2026 reported cash-flow input
+bundles**, strictly Phase 1. [Reviewed registry](company-data-preparation/msft-reported-cash-flow-bundles.json)
+and [implemented boundary](msft-alternative-historical-cash-flow-inputs.md#implemented-isolated-reported-input-bundles)
+package 37/38 scoped reported inputs, 42/43 confirming occurrences and 10/9
+explicit unknowns. CFO 136,162m/182,935m and cash PP&E 64,551m/115,948m remain
+separate; both fourteen-term reported CFO checks pass. Immutable original-byte
+evidence/retrieval receipts, exact identities, raw/display signs, decimals and
+scope labels survive separate schema `reported-cash-flow-input-bundle-v1`.
+Only two bundles registered; registry/inventory/manifest hashes are pinned.
+Deserialization rechecks evidence, all reviewed fields and statement arithmetic.
+No default estimate, inferred zero, adjusted subtotal, CFO-minus-Capex calculation,
+historical policy change or valuation consumer. Frozen schema 5, values/blockers,
+partial NWC bundles and 1,905/1,483/11/27/42 = 3,468 remain unchanged.
+No SEC requests or corpus rerun; Phase 2 remains postponed.
+Validation: **22 focused tests and 120 relevant existing tests passed** (analyst
+NWC foundation, three reviewed issuer bundle sets and Operating-NWC policies).
+Compileall, exact registry mapping, original-body/occurrence binding, serialization,
+local links/anchors and diff checks pass. Prior NWC models/bundles, frozen validation
+artifacts and retained evidence are byte-identical to starting HEAD. Full suite
+not rerun: no existing shared implementation changed; the new module is isolated.
+**Single next Phase 1 milestone:** bounded same-period MSFT cash-interest
+perimeter/completeness review (debt/finance-lease overlap and capitalized-interest
+evidence), retaining explicit unknowns wherever not established. No adjusted
+subtotal, implicit combination or broad issuer research cycle.
+
+Previously completed milestone: **MSFT FY2025–2026 alternative reported historical
 cash-flow input review**, strictly within the **Phase 1 blocker-resolution
 extension**. [Evidence/input matrix](msft-alternative-historical-cash-flow-inputs.md)
 supports PARTIAL GO for isolated reported inputs: CFO 136,162m/182,935m and cash

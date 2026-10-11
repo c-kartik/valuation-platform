@@ -15,6 +15,35 @@ schema 5 or active v1 policies. The [company preparation register](company-data-
 covers all forty generalization-required issuers without fresh financial review.
 No joint timing-readiness model or valuation calculator is implemented.
 
+### Isolated reported cash-flow input boundary
+
+`analyst/cash_flow_inputs.py` provides immutable reported-input, occurrence,
+retrieval-receipt, unknown-input and bundle models, reusing existing immutable
+analyst `Period`/`Artifact` without modifying them. It has no retrieval,
+historical-normalizer integration, adjusted subtotal or valuation consumer.
+The [version-1 reviewed registry](company-data-preparation/msft-reported-cash-flow-bundles.json)
+registers only two explicitly requested MSFT FY2025/FY2026 bundles; its bytes
+are SHA-256 pinned. New registrations require a new reviewed contract, never
+a ticker fallback or implicit future/amended filing extension.
+
+`load_msft_bundle(bundle_id)` verifies frozen inventory/manifest hashes and
+original response bodies, metadata, exact selected annual/closing contexts,
+QNames, normalized USD, raw values, decimals and every eligible occurrence.
+Reported cash payments, accrued expenses/income, noncash expense/additions,
+book balances and reconciliation items retain different roles. Unknowns carry
+`None`, status and rationale, never inferred zeros. Scope labels are reviewed
+classifications, not proof of operating-only completeness.
+
+Separate schema `reported-cash-flow-input-bundle-v1` serializes original bodies
+once per artifact (gzip/base64 storage; original bytes are hashed), retrieval
+metadata, full occurrences, signs/precision, unknowns, limitations and review
+provenance. Deserialization verifies the exact registry, original bodies and
+all fields, then recomputes the reported CFO reconciliation. This boolean
+statement check is the only aggregation; no CFO-minus-Capex, adjusted cash flow,
+NWC/ΔNWC or valuation calculation exists. Complete-NWC and valuation-consumption
+flags remain false. Frozen schema 5, policies, blockers and partial NWC scenario
+serialization are unchanged. See the [evidence/design](msft-alternative-historical-cash-flow-inputs.md#implemented-isolated-reported-input-bundles).
+
 ### Isolated analyst working-capital boundary
 
 `analyst/nwc.py` is independent of SEC retrieval and historical normalization:

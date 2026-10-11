@@ -240,7 +240,70 @@ expense sums, disclosed tax-jurisdiction sum, 19,800m creditor movement and
 recast cancellation checked. Local links/diff check pass. No new SEC request,
 code/test/policy change, test suite or corpus rerun. Frozen-v1 baseline unchanged.
 
-Single next **Phase 1** milestone: isolated reported cash-flow input bundles and
+Then-next **Phase 1** milestone (implemented below): isolated reported cash-flow input bundles and
 provenance contract for these two periods, preserving separate scoped facts and
 unknowns; no adjusted subtotal or valuation consumer. Earlier NWC bundle decisions
 remain in this record; Phase 2 remains postponed.
+
+## Implemented reported cash-flow input bundles
+
+Original conflict remains: mixed NWC captions and unproved cash/timing bridges
+prevent a complete operating-only NWC result. Chosen packaging follows the
+[alternative input review](../msft-alternative-historical-cash-flow-inputs.md#implemented-isolated-reported-input-bundles):
+keep reported consolidated cash-flow inputs separate from the partial book
+scenario, not substitute a reconstructed NWC or silently remove blockers.
+The [immutable reviewed registry](msft-reported-cash-flow-bundles.json) contains
+only `msft-reported-cash-flow-fy2025` / `msft-reported-cash-flow-fy2026`, version 1;
+explicit loader requests do not extend to earlier, future or amended filings.
+
+Available data: 37/38 individually scoped reported inputs, including CFO
+136,162m/182,935m, cash PP&E 64,551m/115,948m, debt cash interest, non-operating
+interest expense, cash taxes/provision/deferred adjustments, capital-creditor
+stocks, acquisition/intangible/other cash purchases, SBC and tax/withholding
+facts, separate lease cash/expense/noncash facts, cash FX and all fourteen
+reported CFO reconciliation terms. Cash PP&E is not netted against CFO.
+Reconciliation adjustments are not pure D&A or complete reconstructed NWC.
+
+Provenance: four existing primary/instance original bodies, typed SHA-256,
+lengths, retrieval timestamps/status/mode, exact CIK/accessions, annual dates,
+QNames, source roles, USD units, raw/display signs, decimals and **42/43 eligible
+confirming occurrences**. Registry, frozen inventory and retained manifest hashes
+are verified. Source models preserve every confirmation once economically;
+dimensioned net-income occurrences remain excluded. Selected FY2025 values are
+not replaced by FY2026 recasts. The review document retains comparative evidence.
+Separate serialization includes original bodies once each and verifies all
+reviewed descriptors plus the CFO statement check on restore.
+
+Ten/nine explicit unknowns carry `None` and rationale, not omitted-zero inputs:
+complete NWC; accrual PP&E/cash bridge; all-in interest; operating-only cash tax;
+acquisition-only purchases; discontinued cash allocation; component acquisition/
+FX/reclassification effects; SBC economics; joint timing compatibility. FY2025
+also marks the broader deferred-tax/credit concept unavailable, without inferring
+credits. All cash/accrual/noncash distinctions, rounded precision and economic
+judgments from the preceding review remain. No analyst numerical estimates,
+manual allocations, external inputs or normalization policy approvals are added.
+
+Considered and rejected packaging alternatives: combining cash debt interest
+with lease interest as a certified total; replacing cash tax with expense tax;
+adding creditors or noncash leases to cash PP&E; adding SBC/D&A or subtracting
+partial ΔNWC again from CFO; interpreting acquisition/intangible cash as
+acquisition-only. Preserve facts and unknowns until a separate supported review.
+Model and serializer completeness/readiness flags remain false; arithmetic
+success is reported-statement consistency, not economic/FCFF certification.
+
+Validation: **22 focused tests pass**, covering exact registrations/periods,
+all 75 packaged observations with 85 confirming occurrences, both fourteen-term
+CFO bridges, unknowns, cash/accrual/lease/SBC distinctions, precision, recasts,
+immutable models, invalid context/unit/nil/identity/value evidence, metadata and
+compressed-body failures, serialization and false approval flags. **120 relevant
+existing tests pass** across analyst NWC and Operating-NWC policies. Compileall,
+registry mapping, local links/anchors and diff check pass. Existing NWC source,
+partial bundles, frozen validation/inventory and retained bodies are byte-identical
+to starting HEAD. No SEC request or corpus rerun; full suite not repeated because
+no existing shared implementation changed. Historical schema 5 and production
+1,905/1,483/11/27/42 = 3,468 states remain the carried-forward frozen baseline.
+
+Smallest next **Phase 1** milestone: bounded cash-interest perimeter/completeness
+review for the same two periods, specifically debt/finance-lease overlap and
+capitalized-interest evidence. Retain unknowns if disclosure cannot support
+separation; no adjusted subtotal, broad research or Phase 2 resumption.
