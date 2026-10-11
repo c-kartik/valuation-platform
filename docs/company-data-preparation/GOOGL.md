@@ -7,8 +7,10 @@ CIK `1652044`; securities GOOGL, GOOG; **GENERALIZATION_REQUIRED**.
 Frozen history: **5 periods**; selected ends: 2021-12-31, 2022-12-31, 2023-12-31, 2024-12-31, 2025-12-31.
 Pipeline stage: `complete`; completion `True` is not support.
 Original selected-accession SEC Company Facts / policy-directed filing-XBRL;
-no retrieval or new filing review in preparation. Exact metadata not present in
-compact matrix remains unreviewed; use underlying linked research, not inference.
+initial register preparation added no retrieval or new filing review. The bounded
+FY2024 NWC bundle review below now binds exact operands to retained evidence;
+other metadata absent from the compact matrix remains unreviewed. Do not extend
+this review to other measures or periods; use linked evidence, not inference.
 
 ## All seventeen measures
 
@@ -30,7 +32,7 @@ review where not documented. No absent balance is certified as zero.
 | `long_term_debt_noncurrent` | 5/0/0/0/0 | derived 3, direct 2 | v1 snapshot/shared contracts; [evidence](../financial-methodology.md); retain source/precision and comparability limits. Assumptions/manual/external: none supplied. |
 | `long_term_marketable_securities` | 0/5/0/0/0 | none | v1 snapshot/shared contracts; [evidence](../financial-methodology.md); unresolved source details unreviewed. Assumptions/manual/external: none supplied. |
 | `operating_income` | 5/0/0/0/0 | direct 5 | v1 snapshot/shared contracts; [evidence](../operating-income-concepts.md); retain source/precision and comparability limits. Assumptions/manual/external: none supplied. |
-| `operating_nwc` | 0/0/0/5/0 | none | blocked issuer v1; [evidence](../financial-methodology.md); unresolved source details unreviewed. Assumptions/manual/external: none supplied. |
+| `operating_nwc` | 0/0/0/5/0 | none | blocked issuer v1; [methodology](../financial-methodology.md); [separate FY2024 partial review](#reviewed-fy2024-partial-input-bundle) below. No historical estimates/manual inputs; analyst note transcription is separately labeled. |
 | `pretax_income` | 5/0/0/0/0 | direct 5 | v1 snapshot/shared contracts; [evidence](../pretax-income-concepts.md); retain source/precision and comparability limits. Assumptions/manual/external: none supplied. |
 | `reported_effective_tax_rate` | 5/0/0/0/0 | derived 5 | v1 snapshot/shared contracts; [evidence](../pretax-income-concepts.md); retain source/precision and comparability limits. Assumptions/manual/external: none supplied. |
 | `revenue` | 5/0/0/0/0 | direct 5 | v1 snapshot/shared contracts; [evidence](../financial-methodology.md); retain source/precision and comparability limits. Assumptions/manual/external: none supplied. |
@@ -77,6 +79,133 @@ not a new company completeness review or approved estimate.
 Reuse frozen issuer/measure counts and linked verified research. Source identity,
 arithmetic and provenance must be validated before any future policy/scenario use;
 unreviewed detail is not evidence of correctness. Register mapping/state/link
-checks passed; no fresh issuer financial review, SEC request or corpus run.
-Remaining task: choose one explicit evidence/scenario
+checks passed at initialization; that milestone added no fresh issuer financial
+review, SEC request or corpus run. Its prior next task was to choose one explicit evidence/scenario
 gap, not blanket company approval. Phase 2 forecast/valuation stays postponed.
+
+## Reviewed FY2024 partial input bundle
+
+Review date 2026-10-11; starting commit `73adc9557ba352dee09401c583f3d826b9832fb4`.
+**GO only for explicitly labeled rounded partial-scenario use.** No complete
+Operating NWC, cash ΔNWC or FCFF certification. This one Alphabet issuer record
+covers GOOG/GOOGL; neither security creates another filing/level. Prior research
+and frozen `googl_operating_nwc_valuation` v1 blockers remain unchanged.
+
+Original conflicts: separately disclosed inventory disappears into a mixed
+other-current caption in later periods; supplier AP includes investing credit;
+customer accruals sit inside a broader accrued-liability caption. Considered
+treatments: whole-AP diagnostic; subtract the explicitly isolated closing PP&E
+credit from AP; or reconstruct all inventory/other operating allocations. Choose
+only the **documented narrow perimeter with the supported rounded AP exclusion**.
+Inventory is consistently omitted, not inferred zero. The remainder of AP is not
+certified entirely operating; broader reconstruction lacks evidence. No parent
+accrued caption is stacked with its isolated customer-liability component.
+
+The [explicit version-1 bundle](googl-analyst-nwc-bundle.json) and
+[source-binding/reproducibility tests](../../tests/analyst/test_googl_bundle.py)
+follow existing [MSFT](MSFT.md#reviewed-fy20252026-partial-input-bundles) and
+[AAPL](AAPL.md#reviewed-fy2025-partial-input-bundle) conventions: immutable model
+inputs, typed original-body hashes, explicit classifications/limitations, separate
+analyst serialization and no automatic production loader or policy approval.
+Exact identity: CIK **1652044**, non-amended selected 10-K accession
+**0001652044-25-000014**, FY **2024-01-01–2024-12-31**. Two retained original
+statement/instance bodies are reused; unchanged inventory/manifest hashes bind
+their retrieval provenance. No SEC requests or amended/later-comparative selection.
+
+| Contribution / treatment | Reported USD m | Source occurrence / context / decimals |
+| --- | ---: | --- |
+| Net AR, add | 52,340 | 450 / c-9 instant / -6 |
+| Whole AP, subtract once | 7,987 | 470 / c-9 instant / -6 |
+| Current deferred revenue, subtract | 5,036 | 478 / c-9 instant / -6 |
+| Compensation/benefits, subtract | 15,069 | 472 / c-9 instant / -6 |
+| Accrued revenue share, subtract | 9,802 | 476 / c-9 instant / -6 |
+| Isolated accrued customer liabilities, subtract | 4,304 | 1448 / c-9 instant / -6 |
+| Rounded additional PP&E in AP, add back | 3,200 | 1459 / c-1 **duration** / -8 |
+| Separate accrued PP&E, retain but omit | 7,104 | 1446 / c-9 instant / -6 |
+
+All observations are non-nil/nondimensional USD (`usd`), entity `0001652044`.
+Instant observations end 2024-12-31. Full namespaces, raw values, ordinals,
+contexts, units and digests are retained in the bundle. Google extensions identify
+revenue-share/customer/separate PP&E accruals; other listed concepts use us-gaap
+2024. Evidence: consolidated balance sheet; accrued-expenses/other-current-
+liabilities table and footnote (2); revenue, cash-flow, lease, derivative and
+acquisition/reclassification context. Labels or numeric agreement alone do not
+approve scope.
+
+### Rounded note input and actual source representation
+
+Footnote (2) expressly says **additional** PP&E purchases of **$3.2 billion as of
+December 31, 2024 were included in accounts payable**; the table's separate
+7,104m accrued PP&E is not that AP balance. The current inline fact is
+`us-gaap:CapitalExpendituresIncurredButNotYetPaid`, ID `f-1104`, displayed `3.2`,
+scale `9`, decimals `-8`. Extracted instance ordinal **1459** has raw
+`3200000000`, unit `usd`, context **c-1: 2024-01-01–2024-12-31**, not an instant.
+Its closing economic scope comes from the explicit note, not its duration tag.
+The 2.8bn FY2023 comparative is not a reviewed opening operand.
+
+The unchanged evaluator's native SEC-reported model verifies only instant facts.
+Do **not** fabricate a closing `Occurrence` or label a duration fact as instant.
+The adapter independently verifies both original bodies, actual XML fact/context/
+unit/ordinal and inline value/scale/precision plus the complete closing-scope
+sentence. It then supplies an explicit **`manual_input`**, `precision="rounded"`,
+with reviewer/date/rationale and note-to-closing interpretation assumptions.
+This is reviewed transcription of a reported rounded value, **not an estimated
+allocation**. Actual duration-occurrence and inline/scope metadata are serialized
+in evidence references, with both verified bodies; `occurrences=()` is deliberate.
+No production parser/schema change or generic duration-to-stock inference.
+
+Consequently `assumption_dependent=True` exposes the manual note interpretation;
+it is not silently relabeled automatically SEC-resolved. Generic deserialization
+rechecks model/provenance/digests and recomputes arithmetic; reviewed note binding
+is enforced by the bundle adapter, not a new native duration verifier. No new
+manual input is automatically accepted merely because it has a source reference.
+
+Equation at reported precision: **52,340 − 7,987 − 5,036 − 15,069 − 9,802 −
+4,304 + 3,200 = 13,342m**; unadjusted driver = 10,142m. AP after this known
+rounded exclusion = **4,787m**, not certified pure operating AP. Available outcome
+is `partial_perimeter`; complete-NWC/FCFF flags false. Exact Decimal arithmetic
+on disclosed points does **not** establish an economic amount precise to 1m:
+the adjustment is rounded to 0.1bn and that source precision remains attached.
+No fabricated uncertainty interval or unrounded amount is introduced.
+
+### Omissions and continuing limitations
+
+- Inventory is unquantified and explicitly outside the narrow perimeter.
+  Earlier 1,170m/2,670m balances and FY2024 other-current assets **15,714m** do not
+  establish current inventory, zero absence, or an approved current allocation.
+- Mixed other-current assets include investment/derivative collateral as well
+  as possible operating balances. The gross caption is exposure, not an estimate
+  of excluded operating investment or a net uncertainty bound.
+- Accrued expenses/other-current liabilities **51,228m** include the separately
+  selected customer balance, fines, PP&E, taxes, leases and mixed obligations.
+  Do not subtract this parent caption again. Separate 7,104m PP&E evidence is
+  retained outside the calculation, never added to or subtracted from AP's 3.2bn
+  correction. Fines/settlements require consistency with recurring EBIT treatment.
+- Remaining supplier AP scope stays unproved after the known exclusion; a
+  required additional allocation or inventory amount gives `input_unavailable`,
+  not a default estimate. Cash/investments/funding/taxes and leases/noncurrent
+  balances remain outside this partial perimeter under existing methodology.
+- Acquisition/disposal, FX, noncash movements and cross-perimeter recasts are
+  unbridged. Cash-flow operating rows explicitly exclude acquisition effects;
+  balance movements are not independently certified cash investment. One level
+  supplies **no ΔNWC**: opening bundle absent, `opening_unavailable`, no amount,
+  `cash_investment_certified=False`.
+- Alphabet's D&A remains missing; integrated EBIT/tax/D&A/Capex/inventory/lease
+  timing remains unproved. Unknown readiness is not proven incompatibility.
+  Neither the conditional FY2025 6,213m stock proposal nor any other-period
+  allocation is approved. Phase 2 remains postponed.
+
+Validation: **66 relevant tests passed** (41 foundation + eight MSFT + eight AAPL
+and nine Alphabet). One frozen identity, two original-body digests, six included
+instant facts, one excluded instant fact and one actual duration-tagged note
+verified. Inline/extracted precision and scope reconcile; scenario/evaluation
+serialization retain manual classification, assumptions, duration metadata,
+omissions and rounded diagnostics. Identity/amendment/comparative, source/hash,
+context/unit/nil, precision/concept/scope and missing-input failures reject.
+Links, compileall and diff checks pass; no production source changes, SEC
+requests, full suite or corpus rerun. All seventeen frozen rows, NWC blockers,
+missing D&A and baseline 1,905/1,483/11/27/42 = 3,468 remain unchanged.
+
+The bounded bundle-review pass is complete. Remaining practical valuation-use
+obstacles and **one decision milestone**, not another issuer-research cycle, are
+in the [cross-issuer decision summary](../analyst-operating-nwc-design.md#remaining-obstacles-and-bounded-valuation-use-decision).

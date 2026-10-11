@@ -1,0 +1,393 @@
+{
+  "bundle_contract": "reviewed-googl-fy2024-partial-nwc-input",
+  "version": "1",
+  "reviewed_on": "2026-10-11",
+  "review_author": "repository retained-evidence review (not an external analyst approval)",
+  "decision": "GO_FOR_EXPLICIT_ROUNDED_PARTIAL_SCENARIO_ONLY",
+  "scenario_id": "googl-fy2024-reviewed-rounded-ap-partial",
+  "perimeter_id": "googl-ar-ap-current-contract-compensation-revenue-share-customer-excluding-inventory",
+  "inventory_path": "docs/analyst-operating-nwc-inventory.json",
+  "inventory_sha256": "ef68344fe6d523cb55f5478eb03045fa984f067e07b2b37e6687011cd5a4d1b6",
+  "artifact_manifest_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+  "artifact_manifest_sha256": "8b7dd48e6408fb84af1493acfba3136d4a7671fc8bb1147c339015da80990542",
+  "limitations": [
+    "Explicit partial perimeter, not complete Operating NWC or certified operating-only remaining AP.",
+    "Inventory and other-current asset completeness remain unresolved; omission is not zero or immateriality.",
+    "PP&E-in-AP uses a source-verified explicit manual note input at rounded decimals -8; its source fact is duration-tagged, not invented as an instant occurrence.",
+    "The evaluator manual-input flag denotes explicit note interpretation/transcription, not a numerical allocation estimate; no unrounded economic certainty or fabricated interval.",
+    "Only one annual level: no opening bundle, Delta NWC, other-period extension, frozen-v1 blocker removal or FCFF readiness."
+  ],
+  "unresolved_effects": [
+    "Acquisition/disposal component allocations lack an exhaustive cash bridge.",
+    "FX, noncash and cross-perimeter reclassifications/recasts remain unresolved.",
+    "Remaining supplier AP composition and omitted inventory/other operating balances are unproved.",
+    "EBIT/taxes, D&A, Capex, inventory and lease timing compatibility is unproved; Alphabet D&A remains missing."
+  ],
+  "omissions": [
+    {
+      "component_id": "inventory",
+      "coefficient": 1,
+      "scope_keys": [
+        "inventory"
+      ],
+      "status": "unquantified",
+      "rationale": "Exclude inventory consistently under the documented narrow perimeter; missing separate FY2024 disclosure is not zero. Earlier reported balances and gross other-current assets do not establish this period inventory allocation."
+    },
+    {
+      "component_id": "other_current_assets",
+      "coefficient": 1,
+      "scope_keys": [
+        "other_current_assets"
+      ],
+      "status": "mixed_scope_unallocated",
+      "rationale": "Mixed other-current assets include investment/derivative collateral and possible operating balances; exclude the caption, not a guessed residual. Inventory is a subset scope warning, not a separately added zero."
+    },
+    {
+      "component_id": "separate_accrued_ppe",
+      "coefficient": 1,
+      "scope_keys": [
+        "separate_accrued_ppe"
+      ],
+      "status": "reported_separate_caption_outside_perimeter",
+      "rationale": "The 7,104m accrued PP&E balance is in accrued expenses/other current liabilities, separate from additional 3.2bn PP&E in AP. It is not subtracted from AP, added to the AP correction or treated as a second operating contribution.",
+      "reported_evidence": {
+        "component_id": "AccruedPurchasesOfPropertyAndEquipmentCurrent",
+        "coefficient": 1,
+        "scope_keys": [
+          "AccruedPurchasesOfPropertyAndEquipmentCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "7104000000",
+        "rationale": "Separate accrued PP&E caption, retained only as excluded evidence.",
+        "occurrences": [
+          {
+            "namespace": "http://www.google.com/20241231",
+            "concept": "AccruedPurchasesOfPropertyAndEquipmentCurrent",
+            "context_id": "c-9",
+            "context": {
+              "entity": "0001652044",
+              "start": null,
+              "end": "2024-12-31",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "7104000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 1446
+          }
+        ]
+      }
+    },
+    {
+      "component_id": "remaining_accrued_liabilities",
+      "coefficient": -1,
+      "scope_keys": [
+        "remaining_accrued_liabilities"
+      ],
+      "status": "mixed_scope_unallocated",
+      "rationale": "Do not subtract the whole accrued-expenses caption alongside its isolated customer component. Fines, tax, lease and other obligations remain outside the chosen perimeter without declaring every remaining item non-operating."
+    },
+    {
+      "component_id": "unidentified_supplier_scope",
+      "coefficient": 1,
+      "scope_keys": [
+        "unidentified_supplier_scope"
+      ],
+      "status": "unquantified",
+      "rationale": "The documented 3.2bn correction does not prove all remaining AP operating. No further investing/supplier allocation is inferred or defaulted to zero."
+    },
+    {
+      "component_id": "cash_investments_funding_tax_leases_noncurrent",
+      "coefficient": 1,
+      "scope_keys": [
+        "cash_investments_funding_tax_leases_noncurrent"
+      ],
+      "status": "outside_partial_perimeter",
+      "rationale": "Cash/investments, funding and separately modeled income taxes lie outside narrow working capital; leases await integrated treatment and noncurrent operating balances remain explicitly outside."
+    }
+  ],
+  "bundle": {
+    "period": {
+      "cik": 1652044,
+      "accession": "0001652044-25-000014",
+      "annual_start": "2024-01-01",
+      "annual_end": "2024-12-31"
+    },
+    "form": "10-K",
+    "primary_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+    "instance_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231_htm.xml",
+    "artifacts": [
+      {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+        "accession": "0001652044-25-000014",
+        "representation": "sec_response_body_bytes",
+        "digest_type": "sha256_sec_response_body_bytes",
+        "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+        "byte_length": 2528455
+      },
+      {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231_htm.xml",
+        "accession": "0001652044-25-000014",
+        "representation": "sec_response_body_bytes",
+        "digest_type": "sha256_sec_response_body_bytes",
+        "sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3",
+        "byte_length": 2703015
+      }
+    ],
+    "operands": [
+      {
+        "component_id": "AccountsReceivableNetCurrent",
+        "coefficient": 1,
+        "scope_keys": [
+          "AccountsReceivableNetCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "52340000000",
+        "rationale": "Reported consolidated customer AR net of allowance; no other-current asset residual added.",
+        "occurrences": [
+          {
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "concept": "AccountsReceivableNetCurrent",
+            "context_id": "c-9",
+            "context": {
+              "entity": "0001652044",
+              "start": null,
+              "end": "2024-12-31",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "52340000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 450
+          }
+        ]
+      },
+      {
+        "component_id": "AccountsPayableCurrent",
+        "coefficient": -1,
+        "scope_keys": [
+          "AccountsPayableCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "7987000000",
+        "rationale": "Subtract reported AP once; add back only the separately evidenced rounded PP&E-in-AP amount, leaving remaining supplier scope unproved.",
+        "occurrences": [
+          {
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "concept": "AccountsPayableCurrent",
+            "context_id": "c-9",
+            "context": {
+              "entity": "0001652044",
+              "start": null,
+              "end": "2024-12-31",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "7987000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 470
+          }
+        ]
+      },
+      {
+        "component_id": "ContractWithCustomerLiabilityCurrent",
+        "coefficient": -1,
+        "scope_keys": [
+          "ContractWithCustomerLiabilityCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "5036000000",
+        "rationale": "Subtract current deferred revenue, not noncurrent balances or revenue backlog.",
+        "occurrences": [
+          {
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "concept": "ContractWithCustomerLiabilityCurrent",
+            "context_id": "c-9",
+            "context": {
+              "entity": "0001652044",
+              "start": null,
+              "end": "2024-12-31",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "5036000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 478
+          }
+        ]
+      },
+      {
+        "component_id": "EmployeeRelatedLiabilitiesCurrent",
+        "coefficient": -1,
+        "scope_keys": [
+          "EmployeeRelatedLiabilitiesCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "15069000000",
+        "rationale": "Subtract accrued compensation and benefits as the documented narrow employee-liability driver; not stock-compensation expense.",
+        "occurrences": [
+          {
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "concept": "EmployeeRelatedLiabilitiesCurrent",
+            "context_id": "c-9",
+            "context": {
+              "entity": "0001652044",
+              "start": null,
+              "end": "2024-12-31",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "15069000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 472
+          }
+        ]
+      },
+      {
+        "component_id": "AccruedRevenueShare",
+        "coefficient": -1,
+        "scope_keys": [
+          "AccruedRevenueShare"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "9802000000",
+        "rationale": "Subtract the separately reported accrued revenue share, not an inferred cash-flow amount.",
+        "occurrences": [
+          {
+            "namespace": "http://www.google.com/20241231",
+            "concept": "AccruedRevenueShare",
+            "context_id": "c-9",
+            "context": {
+              "entity": "0001652044",
+              "start": null,
+              "end": "2024-12-31",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "9802000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 476
+          }
+        ]
+      },
+      {
+        "component_id": "AccruedCustomerLiabilitiesCurrent",
+        "coefficient": -1,
+        "scope_keys": [
+          "AccruedCustomerLiabilitiesCurrent"
+        ],
+        "evidence_kind": "reported",
+        "value_usd": "4304000000",
+        "rationale": "Subtract only isolated accrued customer liabilities within the broader accrued caption; do not also subtract its whole parent caption.",
+        "occurrences": [
+          {
+            "namespace": "http://www.google.com/20241231",
+            "concept": "AccruedCustomerLiabilitiesCurrent",
+            "context_id": "c-9",
+            "context": {
+              "entity": "0001652044",
+              "start": null,
+              "end": "2024-12-31",
+              "dimensions": []
+            },
+            "unit_id": "usd",
+            "unit": [
+              "iso4217:USD"
+            ],
+            "raw_value": "4304000000",
+            "decimals": "-6",
+            "nil": "false",
+            "occurrence_ordinal": 1448
+          }
+        ]
+      }
+    ],
+    "rounded_note_input": {
+      "component_id": "reviewed_ppe_in_ap_note",
+      "coefficient": 1,
+      "scope_keys": [
+        "reviewed_ppe_in_ap_note"
+      ],
+      "evidence_kind": "manual_input",
+      "precision": "rounded",
+      "value_usd": "3200000000",
+      "displayed_value": "3.2",
+      "displayed_unit": "USD billion",
+      "inline_scale": "9",
+      "closing_basis": "2024-12-31",
+      "rationale": "Explicitly transcribed rounded additional PP&E purchases included in AP as of closing. The source XBRL context is annual-duration; closing scope is established by the note, not a fabricated instant fact.",
+      "assumptions": [
+        "Explicit reviewed note-to-closing interpretation at disclosed rounded precision, not an estimated allocation or generic stock inference.",
+        "Use the disclosed 3.2bn rounded point only; no invented unrounded value, numerical uncertainty interval, zero inventory or residual supplier allocation."
+      ],
+      "source_occurrence": {
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "concept": "CapitalExpendituresIncurredButNotYetPaid",
+        "context_id": "c-1",
+        "context": {
+          "entity": "0001652044",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": []
+        },
+        "unit_id": "usd",
+        "unit": [
+          "iso4217:USD"
+        ],
+        "raw_value": "3200000000",
+        "decimals": "-8",
+        "nil": "false",
+        "occurrence_ordinal": 1459,
+        "source_fact_id": "f-1104"
+      },
+      "scope_assertion": "Additional property and equipment purchases of $ 2.8 billion and $ 3.2 billion as of December 31, 2023 and 2024, respectively, were included in accounts payable."
+    },
+    "note_assertions": [
+      "Accrued purchases of property and equipment (2) 4,679 7,104 Accrued customer liabilities 4,140 4,304"
+    ],
+    "statement_locations": [
+      "Consolidated Balance Sheets: AR, AP, compensation/benefits, revenue share and current deferred revenue.",
+      "Accrued Expenses and Other Current Liabilities table and footnote (2): isolated customer/PPE accruals plus additional rounded PP&E purchases in AP.",
+      "Cash-flow statements and notes: acquisition exclusions, FX/reclassifications, leases and mixed asset/liability context; no exhaustive cash bridge."
+    ],
+    "expected_unadjusted_driver_usd": "10142000000",
+    "expected_partial_usd": "13342000000",
+    "expected_ap_after_known_exclusion_usd": "4787000000",
+    "omitted_gross_caption_exposure_usd": {
+      "other_current_assets": "15714000000",
+      "accrued_expenses_other_current_liabilities": "51228000000"
+    },
+    "opening_bundle": null,
+    "expected_change_status": "opening_unavailable",
+    "expected_change_usd": null
+  },
+  "estimates": [],
+  "external_inputs": [],
+  "manual_inputs": [
+    "reviewed_ppe_in_ap_note"
+  ]
+}

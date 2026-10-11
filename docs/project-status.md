@@ -2,7 +2,27 @@
 
 ## Current Milestone
 
-Latest completed milestone: **reviewed explicit AAPL FY2025 narrow reported-driver
+Latest completed milestone: **reviewed Alphabet FY2024 rounded partial analyst-NWC
+bundle**. [Detailed register](company-data-preparation/GOOGL.md#reviewed-fy2024-partial-input-bundle)
+and [version-1 input](company-data-preparation/googl-analyst-nwc-bundle.json) bind
+one frozen 10-K period and two original bodies. Six included instant facts plus
+the rounded 3.2bn PP&E-in-AP note yield **13,342m at reported precision**.
+The note is duration-tagged; explicit source-verified `manual_input` with rounded
+precision/interpretation provenance preserves that fact, never inventing an
+instant occurrence. Separate 7,104m accrued PP&E is retained but excluded.
+Inventory and remaining AP scope unresolved; no opening/ΔNWC or NWC/FCFF certification.
+**66 relevant tests passed** (57 existing + nine Alphabet), including provenance,
+note precision/scope, failures, omissions and scenario/evaluation serialization.
+Links, compileall and diff checks pass. No production source changes, SEC requests,
+full suite or corpus rerun; frozen v1 and 1,905/1,483/11/27/42 = 3,468 unchanged.
+The bounded three-issuer bundle pass is complete. [Remaining obstacles/decision](analyst-operating-nwc-design.md#remaining-obstacles-and-bounded-valuation-use-decision)
+retain **diagnostic-only use / HOLD for forecast/FCFF consumption**; Phase 2 postponed.
+Single next milestone: **MSFT FY2025–2026 pilot valuation-input acceptance decision**
+under the existing timing contract, defining allowed perimeter, indispensable
+missing inputs/assumption authority and cash/timing gates. No default estimates,
+automatic approval, valuation code or broad research cycle.
+
+Previously completed milestone: **reviewed explicit AAPL FY2025 narrow reported-driver
 partial bundle**. [Detailed register review](company-data-preparation/AAPL.md#reviewed-fy2025-partial-input-bundle)
 and [version-1 input](company-data-preparation/aapl-analyst-nwc-bundle.json) bind
 one frozen 10-K period, two original-body digests and six exact occurrences.

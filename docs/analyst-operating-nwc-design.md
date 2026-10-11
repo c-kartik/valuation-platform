@@ -378,3 +378,74 @@ No SEC requests, full suite or corpus rerun; Phase 2 remains postponed.
 Next bounded milestone: one retained-evidence GOOGL FY2024 partial-bundle review,
 with consistent inventory omission and rounded PP&E-in-AP scope explicit; no
 conditional FY2025 allocation approval, period extension or cash/FCFF readiness.
+
+## Reviewed Alphabet FY2024 partial bundle
+
+The [Alphabet review](company-data-preparation/GOOGL.md#reviewed-fy2024-partial-input-bundle)
+and [explicit version-1 input](company-data-preparation/googl-analyst-nwc-bundle.json)
+complete the bounded bundle pass. GO only for a labeled rounded partial scenario:
+**13,342m**, versus a 10,142m unadjusted driver. Inventory and remaining supplier
+scope remain unknown; no complete NWC/FCFF or opening/ΔNWC certification.
+
+Retained footnote (2) supports 3.2bn additional PP&E in AP at closing, separate
+from the 7,104m accrued-PP&E caption. Its actual numeric source is
+`CapitalExpendituresIncurredButNotYetPaid`, ordinal 1459, context c-1 **annual
+duration**, inline 3.2 × 10^9, decimals −8. The existing SEC model accepts instant
+observations only. The test adapter therefore independently binds body/fact/
+context/inline precision and explicit closing scope, then uses the **existing
+manual-input kind**, `precision="rounded"`, with explicit interpretation
+assumptions. No invented instant `Occurrence`, automatic stock inference or
+parser/schema/policy change. Both original bodies and actual source metadata
+survive references/serialization. `assumption_dependent=True` makes this manual
+note interpretation visible; it is not an estimated allocation or unrounded
+economic value. The evaluator supplies no invented rounding interval.
+
+Six included instant facts, one excluded separate-PPE fact and the duration note
+are retained; the whole accrued-liability parent is not subtracted beside its
+customer component. Missing inventory/additional AP scope stays unknown; the
+FY2025 conditional proposal remains unapproved. **66 relevant tests passed**;
+evidence, precision, serialization, links, compileall and diff checks pass.
+No SEC requests, production source changes, full suite or corpus rerun. Frozen
+v1 values/policies/blockers unchanged; Phase 2 remains postponed.
+
+## Remaining obstacles and bounded valuation-use decision
+
+These are carried-forward limitations, **not fresh AAPL/MSFT financial review**
+or new estimates/approvals. Four explicit adjusted/partial levels exist across
+three issuers; only MSFT has an adjacent pair, and that pair is book arithmetic,
+not certified cash operating investment. Existing reported-driver diagnostics
+over longer histories do not extend bundle acceptance.
+
+| Issuer / reviewed inputs | Obstacles to practical valuation use |
+| --- | --- |
+| [AAPL FY2025](company-data-preparation/AAPL.md#reviewed-fy2025-partial-input-bundle): −240m partial | Whole AP still has unknown investing contamination; employee accruals unknown; known 8,919m distribution omitted; mixed operating balances unallocated. No reviewed opening/ΔNWC. Generic D&A timing evidence and integrated tax/lease/inventory treatment are not supplied by NWC review. |
+| [MSFT FY2025–2026](company-data-preparation/MSFT.md#reviewed-fy20252026-partial-input-bundles): −28,245m/−21,353m; +6,892m book movement | Only two selected PP&E-in-AP allocations supported; earlier periods unknown. Mixed operating/strategic-component/contract-cost balances omitted; no component-complete acquisition/FX/reclassification cash bridge. MSFT D&A basis and integrated inventory/Capex/tax/lease timing remain unproved. |
+| Alphabet FY2024: 13,342m at reported precision | Inventory and residual AP scope unknown; rounded manually interpreted closing note; other operating balances omitted. No opening/ΔNWC, missing D&A and no integrated timing proof; FY2025 conditional allocation unapproved. |
+
+Shared obstacles: no approved complete valuation-input perimeter or numerical
+estimates for omissions, no default base case, no approved acquisition/FX/noncash
+corrections, and no integrated FCFF readiness. Income taxes, leases, book inventory
+and D&A must be handled once and consistently with EBIT/Capex. Historical schema
+5 resolution is distinct from analyst scenario availability and from the
+[valuation-boundary timing gate](financial-timing-readiness-design.md).
+Current result: **diagnostic partial use only; HOLD for forecast/FCFF consumption**.
+No arbitrary materiality threshold, primitive redefinition or requirement of
+universal 100% historical coverage is introduced.
+
+These bundles also do not establish forecast assumptions, valuation-date
+cash/debt/equity-bridge completeness or a point-in-time share denominator;
+historical diluted weighted-average shares are not that denominator. The
+forecast/FCFF/DCF workflow remains postponed. Those later valuation inputs are
+outside this NWC review, not silently certified by successful arithmetic.
+
+**One next bounded decision milestone:** an **MSFT FY2025–2026 pilot
+valuation-input acceptance decision** using this retained evidence and the
+existing timing contract. Decide whether the expressly narrowed operating
+perimeter could be authorized for a pilot, enumerate indispensable unresolved
+inputs/assumptions and cash/timing gates, and specify review ownership and
+acceptance/rejection criteria. Document HOLD wherever evidence or explicit
+analyst authority is absent. Do not invent numbers, retrospectively certify
+compatibility, replace frozen policies, implement forecasts/FCFF or start broad
+SEC research. Choosing MSFT uses the sole reviewed adjacent pair; it does not
+presume that the pair is sufficient or authorize Phase 2 resumption. AAPL and
+Alphabet remain diagnostic-only without another automatic bundle/research queue.

@@ -39,7 +39,10 @@ must come from linked inventories; missing compact-corpus metadata stays unrevie
 - SEC-supported derivation: approved formula and operands; never an estimate.
 - Analyst classification/estimate: separate scenario and reviewed assumptions;
   no estimates have been approved/populated by preparation.
-- Manual inputs: none supplied here; future overrides need explicit provenance.
+- Manual inputs: none in the initial register/frozen historical outputs. The
+  subsequent Alphabet FY2024 bundle includes an explicit source-verified rounded
+  note transcription, not an allocation estimate; future overrides still need
+  explicit provenance.
 - External data: none supplied here; valuation reference links are methodology,
   not issuer input values.
 
@@ -56,6 +59,16 @@ v3 (Visa). Registries remain exact-accession only. No future/amended extension.
 
 Unknown compatibility is not incompatibility; an analyst subtotal cannot remove
 normalization blockers or certify FCFF. [Timing contract](../financial-timing-readiness-design.md).
+
+Reviewed bundles are opt-in preparation, not automatic policies/defaults:
+[MSFT pair](MSFT.md#reviewed-fy20252026-partial-input-bundles),
+[AAPL single level](AAPL.md#reviewed-fy2025-partial-input-bundle), and
+[Alphabet single rounded level](GOOGL.md#reviewed-fy2024-partial-input-bundle).
+The Alphabet duration-tagged note is not fabricated as an instant SEC fact;
+manual interpretation, raw source metadata and rounded precision remain explicit.
+[Practical-use obstacles and one bounded decision](../analyst-operating-nwc-design.md#remaining-obstacles-and-bounded-valuation-use-decision)
+keep all three diagnostic-only, without another broad research queue or new
+AAPL/MSFT financial approvals.
 
 ## Issuer records
 
