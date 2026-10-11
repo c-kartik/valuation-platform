@@ -1,0 +1,567 @@
+{
+  "artifact_manifest_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+  "artifact_manifest_sha256": "8b7dd48e6408fb84af1493acfba3136d4a7671fc8bb1147c339015da80990542",
+  "inventory_path": "docs/analyst-operating-nwc-inventory.json",
+  "inventory_sha256": "ef68344fe6d523cb55f5478eb03045fa984f067e07b2b37e6687011cd5a4d1b6",
+  "contract": "reviewed-googl-reported-cash-flow-inputs",
+  "version": "1",
+  "review_author": "Repository reviewed Alphabet FY2024 reported cash-flow milestone",
+  "reviewed_on": "2026-10-12",
+  "evidence_reference": "docs/googl-alternative-historical-cash-flow-inputs.md",
+  "refresh_manifest_path": "docs/evidence/googl-fy2024-instance-provenance-refresh.json",
+  "refresh_manifest_sha256": "1047e612f28d9da2e2974f687c61b858524b7ad168ebc0d8cc4c1118903e368b",
+  "evidence_history": {
+    "original_instance": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231_htm.xml",
+      "accession": "0001652044-25-000014",
+      "representation": "sec_response_body_bytes",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3",
+      "byte_length": 2703015,
+      "retrieved_at_utc": null,
+      "http_status": null,
+      "retrieval_mode": "reused_retained_original_body"
+    },
+    "original_metadata_status": "original_retrieval_metadata_unrecoverable_from_inspected_records",
+    "receipt_selection": "explicit_authorized_refresh_not_recovered_original_metadata",
+    "body_comparison": "byte_identical",
+    "original_body_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+    "refresh_body_reference": "docs/evidence/googl-fy2024-instance-provenance-refresh.json"
+  },
+  "bundles": [
+    {
+      "bundle_id": "googl-reported-cash-flow-fy2024",
+      "period": {
+        "cik": 1652044,
+        "accession": "0001652044-25-000014",
+        "annual_start": "2024-01-01",
+        "annual_end": "2024-12-31"
+      },
+      "form": "10-K",
+      "annual_context_id": "c-1",
+      "artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+          "accession": "0001652044-25-000014",
+          "representation": "sec_response_body_bytes",
+          "digest_type": "sha256_sec_response_body_bytes",
+          "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+          "byte_length": 2528455,
+          "retrieved_at_utc": "2026-10-11T17:12:59.460685+00:00",
+          "http_status": 200,
+          "retrieval_mode": "targeted_blocked_nwc_evidence_gap"
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231_htm.xml",
+          "accession": "0001652044-25-000014",
+          "representation": "sec_response_body_bytes",
+          "digest_type": "sha256_sec_response_body_bytes",
+          "sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3",
+          "byte_length": 2703015,
+          "retrieved_at_utc": "2026-10-11T21:10:46.050735+00:00",
+          "http_status": 200,
+          "retrieval_mode": "authorized_exact_instance_provenance_refresh"
+        }
+      ],
+      "inputs": [
+        {
+          "input_id": "NetIncomeLoss",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "100118000000",
+          "decimals": "-6",
+          "ordinals": [
+            571,
+            580,
+            682,
+            692
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_income",
+          "location_and_scope": "Consolidated net income; CFO starting accrual observation, every confirmation counted once."
+        },
+        {
+          "input_id": "Depreciation",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "15311000000",
+          "decimals": "-6",
+          "ordinals": [
+            695
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO PP&E depreciation add-back only; not complete D&A primitive or timing certification."
+        },
+        {
+          "input_id": "ShareBasedCompensation",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "22785000000",
+          "decimals": "-6",
+          "ordinals": [
+            698
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO SBC add-back at decimals -6; not the rounded note expense or a second economic cost."
+        },
+        {
+          "input_id": "DeferredIncomeTaxesAndTaxCredits",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "-5257000000",
+          "decimals": "-6",
+          "ordinals": [
+            701
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO deferred-tax adjustment; distinct from Note 14 deferred provision."
+        },
+        {
+          "input_id": "DebtAndEquitySecuritiesGainLoss",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "2671000000",
+          "decimals": "-6",
+          "ordinals": [
+            704
+          ],
+          "display_multiplier": -1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO gain on securities: raw gain positive, displayed subtraction."
+        },
+        {
+          "input_id": "OtherNoncashIncomeExpense",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "-3419000000",
+          "decimals": "-6",
+          "ordinals": [
+            707
+          ],
+          "display_multiplier": -1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO Other noncash: raw negative, displayed addition; no residual amortization."
+        },
+        {
+          "input_id": "IncreaseDecreaseInAccountsReceivable",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "5891000000",
+          "decimals": "-6",
+          "ordinals": [
+            710
+          ],
+          "display_multiplier": -1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO customer AR asset-change sign reversed; acquisition effects excluded from changes."
+        },
+        {
+          "input_id": "IncreaseDecreaseInIncomeTaxes",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "-2418000000",
+          "decimals": "-6",
+          "ordinals": [
+            713
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO income-tax change, not cash tax payment."
+        },
+        {
+          "input_id": "IncreaseDecreaseInOtherOperatingAssets",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "1397000000",
+          "decimals": "-6",
+          "ordinals": [
+            716
+          ],
+          "display_multiplier": -1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO mixed other assets, raw asset change sign reversed."
+        },
+        {
+          "input_id": "IncreaseDecreaseInAccountsPayable",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "359000000",
+          "decimals": "-6",
+          "ordinals": [
+            719
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO AP change, not proof of closing operating-only AP."
+        },
+        {
+          "input_id": "IncreaseDecreaseInAccruedLiabilities",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "-1161000000",
+          "decimals": "-6",
+          "ordinals": [
+            722
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO mixed accrued liability change."
+        },
+        {
+          "input_id": "IncreaseDecreaseInAccruedRevenueShare",
+          "namespace": "http://www.google.com/20241231",
+          "value_usd": "1059000000",
+          "decimals": "-6",
+          "ordinals": [
+            725
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO accrued revenue-share change."
+        },
+        {
+          "input_id": "IncreaseDecreaseInContractWithCustomerLiability",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "1043000000",
+          "decimals": "-6",
+          "ordinals": [
+            728
+          ],
+          "display_multiplier": 1,
+          "kind": "reported_reconciliation_item",
+          "location_and_scope": "CFO deferred revenue change."
+        },
+        {
+          "input_id": "NetCashProvidedByUsedInOperatingActivities",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "125299000000",
+          "decimals": "-6",
+          "ordinals": [
+            731
+          ],
+          "display_multiplier": 1,
+          "kind": "cash_subtotal",
+          "location_and_scope": "Consolidated reported CFO only, not organic/unlevered/adjusted operating-only cash."
+        },
+        {
+          "input_id": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "52535000000",
+          "decimals": "-6",
+          "ordinals": [
+            734
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Investing PP&E cash purchases, not complete reinvestment."
+        },
+        {
+          "input_id": "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+          "namespace": "http://www.google.com/20241231",
+          "value_usd": "2931000000",
+          "decimals": "-6",
+          "ordinals": [
+            749
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Combined acquisitions net of cash and intangible purchases; no complete allocation or Character residual."
+        },
+        {
+          "input_id": "PaymentsForProceedsFromOtherInvestingActivities",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "2667000000",
+          "decimals": "-6",
+          "ordinals": [
+            752
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Net investing Other, not complete gross reinvestment."
+        },
+        {
+          "input_id": "IncomeTaxesPaidNet",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "27400000000",
+          "decimals": "-8",
+          "ordinals": [
+            1954
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Note 14 rounded cash taxes net of refunds, not operating-only tax or approved rate."
+        },
+        {
+          "input_id": "AllocatedShareBasedCompensationExpense",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "22800000000",
+          "decimals": "-8",
+          "ordinals": [
+            1821
+          ],
+          "display_multiplier": 1,
+          "kind": "noncash_expense",
+          "location_and_scope": "Note 13 rounded SBC expense at decimals -8; distinct point from CFO add-back, no difference adjustment or accepted cost proxy."
+        },
+        {
+          "input_id": "IncomeTaxExpenseBenefit",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "19697000000",
+          "decimals": "-6",
+          "ordinals": [
+            568,
+            1881
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Accrued income-tax provision, distinct from cash and CFO deferred reconciliation."
+        },
+        {
+          "input_id": "DeferredIncomeTaxExpenseBenefit",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "-5256000000",
+          "decimals": "-6",
+          "ordinals": [
+            1878
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Note 14 deferred tax provision -5256m, not CFO -5257m; no adjustment."
+        },
+        {
+          "input_id": "InterestExpenseNonoperating",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "268000000",
+          "decimals": "-6",
+          "ordinals": [
+            1556
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Note 7 recognized interest expense net of capitalized interest, not cash paid."
+        },
+        {
+          "input_id": "InterestCostsCapitalized",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "194000000",
+          "decimals": "-6",
+          "ordinals": [
+            1580
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Note 7 capitalized interest costs, not cash capitalization disclosure or cash-interest proxy."
+        },
+        {
+          "input_id": "OperatingLeasePayments",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "3425000000",
+          "decimals": "-6",
+          "ordinals": [
+            1332
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Note 4 operating lease liability-measurement cash; already operating CFO; nonlease/variable coverage unproved."
+        },
+        {
+          "input_id": "FinanceLeaseInterestPaymentOnLiability",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "31000000",
+          "decimals": "-6",
+          "ordinals": [
+            1335
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Note 4 finance-lease interest cash, already operating CFO; borrowing cash overlap unknown."
+        },
+        {
+          "input_id": "FinanceLeasePrincipalPayments",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "405000000",
+          "decimals": "-6",
+          "ordinals": [
+            1338
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Note 4 finance-lease principal cash, financing; included in face debt repayments, not additional to them."
+        },
+        {
+          "input_id": "OperatingLeaseCost",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "3304000000",
+          "decimals": "-6",
+          "ordinals": [
+            1283
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Note 4 operating lease cost, not an extra cash payment."
+        },
+        {
+          "input_id": "FinanceLeaseRightOfUseAssetAmortization",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "413000000",
+          "decimals": "-6",
+          "ordinals": [
+            1286
+          ],
+          "display_multiplier": 1,
+          "kind": "noncash_expense",
+          "location_and_scope": "Note 4 finance ROU amortization, noncash, not complete D&A."
+        },
+        {
+          "input_id": "FinanceLeaseInterestExpense",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "31000000",
+          "decimals": "-6",
+          "ordinals": [
+            1289
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Note 4 finance interest expense, not cash equivalence proof."
+        },
+        {
+          "input_id": "VariableLeaseCost",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "1425000000",
+          "decimals": "-6",
+          "ordinals": [
+            1295
+          ],
+          "display_multiplier": 1,
+          "kind": "accrued_expense",
+          "location_and_scope": "Note 4 variable lease expense, not variable cash paid."
+        },
+        {
+          "input_id": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "2510000000",
+          "decimals": "-6",
+          "ordinals": [
+            1341
+          ],
+          "display_multiplier": 1,
+          "kind": "noncash_addition",
+          "location_and_scope": "Noncash operating ROU additions, not cash PP&E."
+        },
+        {
+          "input_id": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "313000000",
+          "decimals": "-6",
+          "ordinals": [
+            1344
+          ],
+          "display_multiplier": 1,
+          "kind": "noncash_addition",
+          "location_and_scope": "Noncash finance ROU additions, not principal cash or PP&E purchases."
+        },
+        {
+          "input_id": "RepaymentsOfDebtAndCapitalLeaseObligations",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "value_usd": "12701000000",
+          "decimals": "-6",
+          "ordinals": [
+            770
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Face financing repayments of debt include finance principal; do not sum them."
+        },
+        {
+          "input_id": "NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+          "namespace": "http://www.google.com/20241231",
+          "value_usd": "12190000000",
+          "decimals": "-6",
+          "ordinals": [
+            758
+          ],
+          "display_multiplier": -1,
+          "kind": "cash_payment",
+          "location_and_scope": "Net financing award activity cash, not SBC compensation expense or corporate cash tax."
+        }
+      ],
+      "unknowns": [
+        {
+          "input_id": "borrowing_cash_interest",
+          "status": "unavailable",
+          "reason": "No eligible separately disclosed annual borrowing cash interest; no expense/rate proxy."
+        },
+        {
+          "input_id": "complete_lease_cash_coverage",
+          "status": "unresolved_scope",
+          "reason": "Liability-measurement payments exclude unproved variable/nonlease coverage; no certified total."
+        },
+        {
+          "input_id": "borrowing_lease_cash_overlap",
+          "status": "unresolved_scope",
+          "reason": "Borrowing interest cash not established; no mutual-exclusion or combined total approval."
+        },
+        {
+          "input_id": "cash_interest_capitalization_basis",
+          "status": "unresolved_scope",
+          "reason": "Capitalized expense is known but annual paid/capitalized cash and gross/net basis not established."
+        },
+        {
+          "input_id": "acquisition_only_cash_purchases",
+          "status": "unresolved_scope",
+          "reason": "Combined line and rounded Character note do not provide a complete non-overlapping cash bridge."
+        },
+        {
+          "input_id": "intangible_only_cash_purchases",
+          "status": "unresolved_scope",
+          "reason": "Combined cash line unallocated; no residual or zero intangible cash."
+        },
+        {
+          "input_id": "complete_reinvestment",
+          "status": "unresolved_scope",
+          "reason": "PP&E cash, combined purchases and net Other do not establish complete gross reinvestment."
+        },
+        {
+          "input_id": "operating_only_cash_tax",
+          "status": "unresolved_scope",
+          "reason": "Rounded corporate cash taxes and provision do not supply recurring operating-tax allocation or approved rate."
+        },
+        {
+          "input_id": "complete_depreciation_and_amortization",
+          "status": "unresolved_scope",
+          "reason": "PP&E depreciation reconciliation does not resolve frozen missing D&A primitive."
+        },
+        {
+          "input_id": "complete_operating_nwc",
+          "status": "unresolved_scope",
+          "reason": "Inventory and supplier-AP scope remain blocked; rounded partial scenario unchanged."
+        },
+        {
+          "input_id": "acquisition_fx_reclassification_cash_bridge",
+          "status": "unresolved_scope",
+          "reason": "Operating balance changes exclude acquisitions but reported CFO includes acquired operations; no complete organic/comparability bridge."
+        },
+        {
+          "input_id": "joint_timing_compatibility",
+          "status": "unresolved_scope",
+          "reason": "Integrated EBIT/D&A/NWC/tax/lease timing remains unproved."
+        }
+      ],
+      "cfo_terms": [
+        "NetIncomeLoss",
+        "Depreciation",
+        "ShareBasedCompensation",
+        "DeferredIncomeTaxesAndTaxCredits",
+        "DebtAndEquitySecuritiesGainLoss",
+        "OtherNoncashIncomeExpense",
+        "IncreaseDecreaseInAccountsReceivable",
+        "IncreaseDecreaseInIncomeTaxes",
+        "IncreaseDecreaseInOtherOperatingAssets",
+        "IncreaseDecreaseInAccountsPayable",
+        "IncreaseDecreaseInAccruedLiabilities",
+        "IncreaseDecreaseInAccruedRevenueShare",
+        "IncreaseDecreaseInContractWithCustomerLiability"
+      ],
+      "limitations": [
+        "Only selected FY2024; GOOG/GOOGL one issuer, comparative columns not registrations.",
+        "Explicit refreshed receipt preserves original metadata gap/history; equality does not recover old retrieval time/status.",
+        "SBC 22785m reconciliation and 22800m rounded expense are distinct; no numerical difference adjustment or transferred analyst approval.",
+        "PP&E depreciation is not complete D&A; frozen D&A/NWC/timing limits persist.",
+        "Finance principal is embedded in debt repayments; no interest/lease/investment totals or double deductions.",
+        "No complete NWC, reinvestment, organic cash, analyst proxy, FCFF or valuation-consumption certification."
+      ]
+    }
+  ]
+}

@@ -151,3 +151,12 @@ unreviewed company disclosures or turn GENERALIZATION_REQUIRED into SUPPORTED.
 | VZ | 732712 | 5 | [VZ](VZ.md) |
 | PEP | 77476 | 5 | [PEP](PEP.md) |
 | MCD | 63908 | 5 | [MCD](MCD.md) |
+
+## Alphabet isolated reported-input registration
+
+The [FY2024 implementation](GOOGL.md#implemented-fy2024-reported-input-bundle)
+adds one opt-in reported history using an explicit refreshed instance receipt.
+Original null retrieval metadata remains separately preserved. This is packaging,
+not fresh coverage classification or analyst treatment approval; all 40 issuer
+records and the frozen register mapping remain unchanged. Comparative years,
+complete D&A/NWC and future consumer readiness are not approved.

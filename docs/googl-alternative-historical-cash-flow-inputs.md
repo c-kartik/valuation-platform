@@ -199,3 +199,39 @@ bundle**, using the explicit new instance receipt and unchanged primary evidence
 with source roles/rounding and all unknowns preserved. Retain the separate
 original-metadata gap/history and do not implicitly register comparative years
 or import another issuer's analyst treatments. Stop after this evidence repair.
+
+## Implemented isolated FY2024 reported-input bundle
+
+The [pinned registry](company-data-preparation/googl-reported-cash-flow-bundle.json)
+(SHA-256 `97ca73213b6bb46dfdaec67f930d3abd0cfbd6d1a17e50047998c0b2764f509f`)
+registers only `googl-reported-cash-flow-fy2024`, version 1, exact selected
+accession/annual identity above. The opt-in adapter reuses unchanged reported
+models and the exact annual builder. It verifies both original manifest and
+explicit refresh manifest, original/refreshed body equality, receipts and every
+eligible annual occurrence. Separate closed serialization retains refreshed
+receipt metadata and original null timestamp/status history; neither event is
+silently substituted for the other.
+
+34 inputs retain 38 confirming occurrences and raw/displayed signs. Besides the
+matrix, retained reported facts include finance-lease ROU amortization 413m and
+stock-award-related financing payments 12,190m; neither is an economic adjustment.
+Thirteen terms reproduce reported CFO 125,299m. Tax provision/deferred expense,
+capitalized interest, lease expense/cash/noncash additions and financing debt
+repayments remain separate roles. Finance principal 405m is embedded in debt
+repayments, not additional. SBC 22,785m add-back and 22,800m note expense remain
+separate, with decimals −6/−8 respectively. No cost proxy is accepted.
+
+Twelve explicit null unknowns preserve borrowing cash interest, complete lease
+coverage, borrowing/lease overlap, cash-interest capitalization basis,
+acquisition-only and intangible-only payments, complete reinvestment,
+operating-only cash tax, complete D&A/NWC, acquisition/FX/reclassification bridge
+and joint timing compatibility. Comparative columns are supporting evidence only.
+
+Validation: 10 focused tests and 137 relevant analyst tests pass; original
+receipt/history tampering, evidence pins, roles/precision/occurrences, null
+unknowns, serialization and reported CFO reconciliation tested. Existing MSFT
+serialized-byte hashes are unchanged; AAPL and other analyst preservation tests
+pass. Compileall, local links and diff check pass. Original artifacts, shared
+schemas/models, scenarios, sidecars and frozen-v1 are unchanged. No SEC request,
+full suite or corpus rerun. Next: one bounded independent Alphabet treatment
+memo pending user review; no total, adjusted subtotal, FCFF or consumption approval.

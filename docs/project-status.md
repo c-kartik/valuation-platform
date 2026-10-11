@@ -2,7 +2,24 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Alphabet FY2024 exact-instance provenance repair**.
+Latest completed milestone: **isolated Alphabet FY2024 reported-input bundle**.
+[Implementation and validation](googl-alternative-historical-cash-flow-inputs.md#implemented-isolated-fy2024-reported-input-bundle)
+retain 34 reported inputs, 38 confirming occurrences, 12 explicit unknowns and
+the thirteen-term reported CFO bridge. One exact annual registration uses the
+authorized refreshed instance receipt; serialization separately preserves the
+original body's null receipt fields and history. SBC 22,785m add-back and rounded
+22,800m expense remain distinct; no numerical adjustment or analyst proxy.
+Focused tests: 10 passed; relevant analyst tests: 137 passed. Compileall, local
+links and diff check pass. No shared model, frozen-v1, policy, existing bundle,
+scenario or sidecar changes; no SEC request/full-suite/corpus rerun.
+Baseline **1905/1483/11/27/42 = 3468** unchanged, not rerun.
+Single next Phase 1 milestone: **bounded Alphabet analyst-treatment decision
+memo**, independently assessing permitted reported-input use, SBC precision,
+restricted leases/embedded financing principal, taxes and unavailable interest/
+investment allocation. Recommendations require user review, not valuation
+readiness or another broad research cycle. Phase 2 remains postponed.
+
+Previously completed milestone: **Alphabet FY2024 exact-instance provenance repair**.
 [Verification and refresh history](googl-alternative-historical-cash-flow-inputs.md#exact-instance-provenance-repair--authorized-refresh)
 record unrecoverable original timestamp/status after bounded retained-record
 inspection, followed by one user-authorized exact SEC instance refresh. HTTP 200,

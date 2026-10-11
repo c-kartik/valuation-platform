@@ -287,3 +287,34 @@ policies/schemas/bundles remain byte-identical. Links/diff check pass; one exact
 SEC request, no full suite/corpus rerun. Next bounded Phase 1 milestone: one
 FY2024 reported-input bundle using the separate refresh receipt while retaining
 original history, precision/role distinctions and unknowns. Stop after repair.
+
+## Implemented FY2024 reported-input bundle
+
+Original conflict: reported-CFO preparation had valid numeric evidence but no
+original instance receipt time/status; refreshed receipt repaired packaging,
+not original history or financial scope. Chosen resolution is an isolated
+[version-1 registry](googl-reported-cash-flow-bundle.json) and opt-in adapter,
+using unchanged reusable reported models. [Evidence and implementation](../googl-alternative-historical-cash-flow-inputs.md#implemented-isolated-fy2024-reported-input-bundle)
+links exact selected 0001652044-25-000014, 2024 annual facts and original bodies.
+
+34 inputs/38 occurrences and 12 null unknowns preserve distinctions between
+cash, accrual, reconciliation and noncash roles. Only FY2024 is registered;
+GOOG/GOOGL remain one issuer. Comparative years are not extended approvals.
+Serialization explicitly binds the refreshed instance receipt while retaining
+original null fields/body identity. Original evidence is not rewritten.
+
+SBC add-back 22,785m and rounded expense 22,800m are distinct reported inputs,
+not adjustments or two costs. Cash taxes remain rounded reported taxes; no rate
+or operating-only treatment. Three lease cash classes remain restricted;
+finance principal 405m is already in financing debt repayments. No summation
+permission, complete lease/borrowing-interest certification or transfer of
+MSFT/AAPL treatments. Combined acquisition/intangible cash has no supported
+allocation. CFO depreciation is not complete D&A; five frozen D&A gaps, existing
+NWC blockers, partial scenario and timing gates remain unchanged.
+
+Validation: 10 focused/137 relevant analyst tests, reported thirteen-term CFO
+bridge, evidence/receipt-history pins, precision, unknowns and serialization;
+compileall, local links and diff check. Existing models/bundles/scenarios/sidecars
+and frozen-v1 preserved; no SEC/full-suite/corpus. Packaging resolves only the
+receipt prerequisite. Next bounded Phase 1 milestone: independent analyst
+input-treatment memo, proposed pending review; no valuation readiness.

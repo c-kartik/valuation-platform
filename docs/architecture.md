@@ -824,3 +824,19 @@ are preserved without assumptions about calendar years or year length. Each
 change retains both full level results, including their component-level SEC
 provenance. A policy/perimeter change raises a domain error instead of becoming
 an apparent working-capital movement.
+
+## Alphabet FY2024 opt-in reported inputs
+
+`analyst/googl_cash_flow_inputs.py` adds only the SHA-pinned
+[Alphabet registry](company-data-preparation/googl-reported-cash-flow-bundle.json).
+It delegates construction to the unchanged annual reported builder/models;
+no frozen-v1 schema or shared behavior changes. The separate
+`reviewed-googl-reported-cash-flow-inputs` serialization contract uses the
+reported-input v1 shape plus mandatory `evidence_history`: original instance
+receipt gap, explicit refreshed receipt selection and verified byte identity.
+Pinned manifests and actual refreshed original bytes are checked at load and
+round trip; unknown or conflicting history/receipts fail conservatively.
+Only FY2024 is registered. Raw precision/roles/confirmations and explicit null
+unknowns survive serialization. Reported CFO bridge validation is not an
+adjusted subtotal or economic calculation. Existing AAPL/MSFT contracts and
+sidecars are unchanged. See [implementation evidence](googl-alternative-historical-cash-flow-inputs.md#implemented-isolated-fy2024-reported-input-bundle).
