@@ -1,5 +1,19 @@
 # Capex selected-filing concept and component inventory
 
+Wave 33 completes the [five-period NVDA combined-scope research](capex-nvda-combined-scope.md)
+and [research inventory supplement](capex-nvda-combined-inventory.json).
+All five retain `DERIVATION` / `COMPONENT_SCOPE_UNPROVED`; zero direct acceptance
+or complete cash equation is supported. The first two extensions remain
+separately gated; three standard productive-assets tags are not fallbacks.
+Separate intangible book classes, noncash additions, leases, financing principal
+and acquisition/Groq payments do not establish the missing PP&E cash split.
+Fifty-five selected original response bodies are retained with typed digests;
+ten unavailable-old renderer fingerprints remain explicitly unverifiable rather
+than overwritten. The frozen 57-row inventory and its classifications/approval
+flags remain unchanged; this supplement extends research, not production.
+Capex remains 162/42/0, aggregate 1,900/1,488/11/27/42 = 3,468; no tests or corpus.
+Next research only the five frozen LRCX combined Capex/intangible periods.
+
 Wave 32 [implements and validates](capex-cvx-scope-evidence-results.md) exactly
 five CVX reported-value acceptances under additive v2, preserving ten v1
 approvals and all 147 direct results. Current Capex is 162/42/0; the 57-row

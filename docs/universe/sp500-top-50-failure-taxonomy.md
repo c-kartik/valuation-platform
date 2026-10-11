@@ -1,5 +1,16 @@
 # S&P 500 Top 50 failure taxonomy
 
+Wave 33 [NVDA scope research](../capex-nvda-combined-scope.md) reconciles five
+frozen periods in a [separate supplement](../capex-nvda-combined-inventory.json).
+All retain `DERIVATION` / `COMPONENT_SCOPE_UNPROVED`, zero safe additional
+coverage; two extensions are separately gated. Selected note book classes,
+noncash additions, financing/lease flows and separate acquisition/Groq cash do
+not establish an exhaustive PP&E-only cash split. Unknown allocation is not
+zero or proved absence of PP&E. Fifty-five original bodies have typed digests;
+ten unavailable-old renderer fingerprints remain separately unverifiable.
+Production and the 57-row frozen inventory are unchanged; no tests or corpus.
+Next research only five LRCX combined capital-expenditure/intangible periods.
+
 Latest verified production follow-up: **Wave 32** adds five exact CVX Capex
 v2 resolutions. [Results](../capex-cvx-scope-evidence-results.md) reconcile Capex
 **162/42/0** and aggregate **1,900/1,488/11/27/42 = 3,468**, with all 147 direct
@@ -807,7 +818,7 @@ issuers have one post-smoke classification.
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 24 audit:** no approved numeric incompatibility established; TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Design timing-basis/evidence and joint consumer-readiness contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
-| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 42 missing across the 204-period corpus | Core FCFF input | Wave 32 implements five CVX v2 entries; all ten v1/direct results preserved. Next research five NVDA combined-asset cash-component gaps | No generic fallback or approved additional equation | High |
+| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 42 missing across the 204-period corpus | Core FCFF input | Wave 32 implements five CVX v2 entries; all ten v1/direct results preserved. Wave 33 retains five NVDA component gaps; next research only five LRCX combined cash-component periods | No generic fallback or approved additional equation | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
 | 11 | `CONCEPT_POLICY` | Commercial paper 192 missing; short borrowings 203 missing | Equity bridge | Generalize exact concepts only where economically present | High | Medium |
@@ -865,6 +876,9 @@ issuers have one post-smoke classification.
    Wave 31 designs those five entries as a disjoint immutable v2 set; Wave 32
    implements and validates it without altering v1/direct results. Next research
    only five NVDA PP&E/intangible cash-component gaps, separately gating extensions.
+   Wave 33 completes that research with zero new acceptance/equation: all five
+   lack an exhaustive exact-period cash split. Next research only five LRCX
+   combined-component periods; keep NVDA unresolved absent genuine new evidence.
    CVX/GE mixed-business designs remain separate. Approve only
    repeatable definitions with
    selected-accession evidence.

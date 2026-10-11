@@ -2,7 +2,21 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 32**, the
+Latest completed milestone: **Phase 1H.4 Wave 33**, the documentation-only
+[NVDA combined Capex scope research](capex-nvda-combined-scope.md) and
+[five-row supplement](capex-nvda-combined-inventory.json). All five frozen
+periods retain `DERIVATION` / `COMPONENT_SCOPE_UNPROVED`, with zero safe additional
+coverage or approved equation. Two issuer extensions remain separately gated.
+The selected statements/notes distinguish intangible classes, noncash additions,
+leases and separate acquisition/Groq cash but do not exhaust the PP&E-only cash
+split. Fifty-five original bodies have typed digests; ten unavailable old
+renderer fingerprints are preserved separately from newly reviewed bodies.
+Production, frozen inventory and existing approvals are unchanged; no tests or
+corpus rerun. Next bounded milestone: documentation-only component-completeness
+research for the five frozen LRCX combined Capex/intangible periods. Do not
+reopen NVDA without genuinely new exact-period cash-allocation evidence.
+
+Latest production milestone: **Phase 1H.4 Wave 32**, the
 [five-entry CVX curated Capex v2 implementation](capex-cvx-scope-evidence-results.md).
 Verified production: Capex **162 resolved / 42 missing / 0 ambiguous**;
 aggregate **1,900 resolved / 1,488 missing / 11 ambiguous / 27 methodology-blocked /
@@ -12,9 +26,8 @@ Capex results, ten immutable v1 approvals, 42 controls, other measures,
 and 583 complete tests and five targeted artifact checks were reused; after a
 bounded successful SEC connectivity check, the resumed corpus gate passed.
 No generic fallback, adjustment equation or FCFF-readiness approval was added.
-Next bounded milestone: documentation-only PP&E cash-component completeness
-research for the five frozen NVDA Capex periods, with the first two issuer
-extensions separately gated; do not derive from residuals or matching totals.
+Its bounded NVDA follow-up is completed in Wave 33 above; no new cash equation
+or scope acceptance is supported by matching totals, balances or residuals.
 
 Phase 1H expands historical normalization beyond the original five-company
 corpus. Phase 1H.1 froze the S&P 500 Top 50 Index snapshot effective 2026-10-02
@@ -1017,8 +1030,10 @@ sensitivity work is intentionally paused through Phase 1H.
    not any adjusted equation. Wave 31 designs only the five exact CVX entries
    under a disjoint immutable v2 catalog, preserving v1. Wave 32 implements and
    validates exactly those five entries, retaining all direct/v1 results.
-   Next research completeness and cash/asset scope for only the five frozen
-   NVDA combined PP&E/intangible Capex periods, with extensions separately gated.
+   Wave 33 completes that research for the five frozen NVDA combined PP&E/
+   intangible Capex periods: all remain component-scope unproved, zero coverage,
+   with extensions separately gated. Next research only five LRCX combined
+   cash-component periods; do not infer intangible payments from book residuals.
    Then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
