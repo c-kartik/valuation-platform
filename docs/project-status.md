@@ -2,7 +2,26 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 46**, documentation-only
+Latest completed milestone: **Phase 1H.5 — S&P 500 Top 50 historical coverage
+validation**, documentation-only [all-company matrix](universe/phase-1h5-issuer-validation.md)
+and [machine-checkable evidence/decisions](universe/phase-1h5-issuer-validation.json).
+All 50 CIKs / 51 security entries reconcile: **2 SUPPORTED / 40
+GENERALIZATION_REQUIRED / 8 SPECIALIZED_METHODOLOGY_REQUIRED**. GE is explicitly
+reassessed for consolidated industrial/insurance scope; its existing generic
+execution remains unchanged. Classification is not execution dispatch: **43
+generic completions / seven specialized skips**, 204 periods × 17 measures =
+3,468 states, **1,905/1,483/11/27/42**. META/COST support is historical core scope,
+not full-field or integrated FCFF certification. XOM has zero periods; GEV/SNDK
+two each; original selected-accession and separation limits remain explicit.
+Capex stays 167/37/0; 57 original gaps = 20 curated approvals + 37 unapproved.
+No new policy, SEC request, test or corpus rerun. Original validated corpus bytes
+are retained with explicit digest/run provenance; all counts and links verified.
+**Ready for Phase 1H.6 with explicit limitations, not yet frozen.** Single next
+milestone: freeze historical normalization v1 supported scope, policy/provenance
+contracts and exclusions. Valuation remains paused until that freeze; joint
+timing readiness must precede later FCFF consumption.
+
+Previously completed milestone: **Phase 1H.4 Wave 46**, documentation-only
 [generalization exit consolidation](phase-1h-generalization-exit-plan.md).
 **Proceed to Phase 1H.5 with documented exclusions; no further implementation
 or issuer research is an essential prerequisite.** All 17 measure rows reconcile
@@ -1039,8 +1058,10 @@ AMD's five extension periods remain outside this pass. Safe new coverage is zero
 
 ## Next Step
 
-Current next step: **Phase 1H.5 — S&P 500 Top 50 validation pass**, as specified
-in the [Wave 46 exit plan](phase-1h-generalization-exit-plan.md). The chronological
+Current next step: **Phase 1H.6 — freeze historical normalization v1**, preserving
+the [Phase 1H.5 validated scope and exclusions](universe/phase-1h5-issuer-validation.md).
+The [Wave 46 exit plan](phase-1h-generalization-exit-plan.md) was executed by
+this validation pass, not an unfulfilled coverage mandate. The chronological
 Wave 22–45 notes below preserve historical research routing, not pending tasks.
 Reopen exhausted issuer work only on its specified new evidence. No additional
 coverage implementation is required before validation.
@@ -1232,6 +1253,9 @@ sensitivity work is intentionally paused through Phase 1H.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
    `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.
+   **Complete:** 2 supported / 40 generalization / 8 specialized issuer decisions;
+   all fifty companies / fifty-one security mappings and production counts
+   reconcile. Eight specialized decisions do not change the seven execution skips.
 6. **Phase 1H.6 — Freeze historical normalization v1:** record supported scope
    and exclusions, including timing-basis unknowns and lack of integrated FCFF
    certification, then resume Phase 2 forecast and DCF development. The proposed

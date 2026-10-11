@@ -1,0 +1,3798 @@
+{
+  "validation_version": "phase-1h5-historical-validation-v1",
+  "starting_head": "095d31c725d0c1221775c8c7bae19ad0958b8fd6",
+  "frozen_universe_sha256": "acfb12f6b3d5ac051093a3b88e9aac30972fa6a4c114843e65e87815366bcbcc",
+  "source_corpus": {
+    "original_path": "/tmp/capex-wave38-corpus.json",
+    "representation": "original_runner_json_utf8_bytes",
+    "digest_type": "sha256_original_runner_json_bytes",
+    "sha256": "3d12d3e8a8f2212e70c478a8c8f12fd35eb9f94a550b07ba04d07548092d2f3b",
+    "byte_length": 128331,
+    "run_timestamp": "2026-10-11T12:10:44.715513+00:00",
+    "reported_repository_commit": "fc1feaa409ed7aa720cb7e030a4becdf9d71189a",
+    "reported_repository_dirty": true,
+    "validation_reference": "../capex-visa-scope-evidence-results.md",
+    "storage_encoding": "gzip_base64",
+    "original_body_gzip_base64": "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",
+    "limitation": "Retained implementation-run artifact reports pre-commit HEAD and dirty state; not claimed to be a fresh clean-HEAD run. Documentation-only descendants preserve validated production behavior."
+  },
+  "classification_counts": {
+    "GENERALIZATION_REQUIRED": 40,
+    "SUPPORTED": 2,
+    "SPECIALIZED_METHODOLOGY_REQUIRED": 8
+  },
+  "production_reconciliation": {
+    "issuer_count": 50,
+    "security_count": 51,
+    "generic_completions": 43,
+    "specialized_execution_skips": 7,
+    "annual_periods": 204,
+    "measure_count": 17,
+    "state_counts": {
+      "resolved": 1905,
+      "missing": 1483,
+      "not_comparable": 42,
+      "methodology_blocked": 27,
+      "ambiguous": 11
+    },
+    "total_states": 3468,
+    "measure_status_counts": {
+      "capex:missing": 37,
+      "cash_and_cash_equivalents:resolved": 185,
+      "change_in_operating_nwc:missing": 142,
+      "change_in_operating_nwc:not_comparable": 42,
+      "commercial_paper:missing": 192,
+      "current_portion_of_long_term_debt:resolved": 116,
+      "depreciation_and_amortization:resolved": 115,
+      "diluted_weighted_average_shares:resolved": 196,
+      "income_tax_expense:resolved": 204,
+      "long_term_debt_noncurrent:resolved": 140,
+      "long_term_marketable_securities:missing": 199,
+      "operating_income:resolved": 194,
+      "operating_nwc:missing": 179,
+      "pretax_income:resolved": 167,
+      "reported_effective_tax_rate:resolved": 167,
+      "revenue:resolved": 193,
+      "short_term_borrowings:missing": 203,
+      "short_term_investments:missing": 179,
+      "capex:resolved": 167,
+      "change_in_operating_nwc:methodology_blocked": 12,
+      "commercial_paper:resolved": 12,
+      "long_term_marketable_securities:resolved": 5,
+      "operating_nwc:methodology_blocked": 15,
+      "short_term_investments:resolved": 25,
+      "pretax_income:missing": 37,
+      "reported_effective_tax_rate:missing": 37,
+      "depreciation_and_amortization:missing": 89,
+      "long_term_debt_noncurrent:missing": 64,
+      "change_in_operating_nwc:resolved": 8,
+      "current_portion_of_long_term_debt:missing": 88,
+      "operating_nwc:resolved": 10,
+      "diluted_weighted_average_shares:missing": 8,
+      "cash_and_cash_equivalents:missing": 19,
+      "revenue:ambiguous": 11,
+      "operating_income:missing": 10,
+      "short_term_borrowings:resolved": 1
+    }
+  },
+  "freeze_readiness": "READY_FOR_PHASE_1H6_WITH_EXPLICIT_LIMITATIONS_NOT_YET_FROZEN",
+  "rows": [
+    {
+      "cik": 1045810,
+      "company_name": "NVIDIA Corp",
+      "source_tickers": [
+        "NVDA"
+      ],
+      "project_tickers": [
+        "NVDA"
+      ],
+      "execution_ticker": "NVDA",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-01-30",
+        "2023-01-29",
+        "2024-01-28",
+        "2025-01-26",
+        "2026-01-25"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "capex:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: capex:missing=5, change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 320193,
+      "company_name": "Apple Inc",
+      "source_tickers": [
+        "AAPL"
+      ],
+      "project_tickers": [
+        "AAPL"
+      ],
+      "execution_ticker": "AAPL",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-09-25",
+        "2022-09-24",
+        "2023-09-30",
+        "2024-09-28",
+        "2025-09-27"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 70,
+        "missing": 5,
+        "ambiguous": 0,
+        "methodology_blocked": 9,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:methodology_blocked": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:resolved": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:resolved": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:methodology_blocked": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:resolved": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "commercial_paper:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "long_term_marketable_securities:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5,
+        "short_term_investments:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:methodology_blocked": 4,
+        "operating_nwc:methodology_blocked": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:methodology_blocked=4, operating_nwc:methodology_blocked=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Existing book Operating-NWC methodology remains blocked; integrated D&A/EBIT/inventory cash-timing compatibility unproved.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 789019,
+      "company_name": "Microsoft Corp",
+      "source_tickers": [
+        "MSFT"
+      ],
+      "project_tickers": [
+        "MSFT"
+      ],
+      "execution_ticker": "MSFT",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 62,
+        "missing": 13,
+        "ambiguous": 0,
+        "methodology_blocked": 9,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:methodology_blocked": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 3,
+        "commercial_paper:resolved": 2,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:methodology_blocked": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:resolved": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "commercial_paper:direct": 2,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:derived": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5,
+        "short_term_investments:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:methodology_blocked": 4,
+        "operating_nwc:methodology_blocked": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:methodology_blocked=4, operating_nwc:methodology_blocked=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Existing book Operating-NWC methodology remains blocked; integrated D&A/EBIT/inventory cash-timing compatibility unproved.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1018724,
+      "company_name": "Amazon.com Inc",
+      "source_tickers": [
+        "AMZN"
+      ],
+      "project_tickers": [
+        "AMZN"
+      ],
+      "execution_ticker": "AMZN",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 45,
+        "missing": 39,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5, pretax_income:missing=5, reported_effective_tax_rate:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1652044,
+      "company_name": "Alphabet Inc",
+      "source_tickers": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "project_tickers": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "execution_ticker": "GOOGL",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 60,
+        "missing": 15,
+        "ambiguous": 0,
+        "methodology_blocked": 9,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:methodology_blocked": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:resolved": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:methodology_blocked": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:resolved": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "commercial_paper:direct": 5,
+        "current_portion_of_long_term_debt:derived": 1,
+        "current_portion_of_long_term_debt:direct": 4,
+        "diluted_weighted_average_shares:derived": 3,
+        "diluted_weighted_average_shares:direct": 2,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:derived": 3,
+        "long_term_debt_noncurrent:direct": 2,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5,
+        "short_term_investments:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:methodology_blocked": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:methodology_blocked": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:methodology_blocked=4, depreciation_and_amortization:missing=5, operating_nwc:methodology_blocked=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Existing book Operating-NWC methodology remains blocked; integrated D&A/EBIT/inventory cash-timing compatibility unproved.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1730168,
+      "company_name": "Broadcom Inc",
+      "source_tickers": [
+        "AVGO"
+      ],
+      "project_tickers": [
+        "AVGO"
+      ],
+      "execution_ticker": "AVGO",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-10-31",
+        "2022-10-30",
+        "2023-10-29",
+        "2024-11-03",
+        "2025-11-02"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 4,
+        "long_term_debt_noncurrent:resolved": 1,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 1,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1326801,
+      "company_name": "Meta Platforms Inc",
+      "source_tickers": [
+        "META"
+      ],
+      "project_tickers": [
+        "META"
+      ],
+      "execution_ticker": "META",
+      "classification": "SUPPORTED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 63,
+        "missing": 21,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:not_comparable": 1,
+        "change_in_operating_nwc:resolved": 4,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 1,
+        "long_term_debt_noncurrent:resolved": 4,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:resolved": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:resolved": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "change_in_operating_nwc:calculated": 4,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 4,
+        "operating_income:direct": 5,
+        "operating_nwc:calculated": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5,
+        "short_term_investments:direct": 5
+      },
+      "material_core_gaps": {},
+      "rationale": "Five selected annual periods; all material core historical measures resolved, with four comparable NWC changes and one expected opening not-comparable state. Support is historical core scope only; unresolved ancillary debt/investment categories remain explicit, not assumed zero.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 723125,
+      "company_name": "Micron Technology Inc",
+      "source_tickers": [
+        "MU"
+      ],
+      "project_tickers": [
+        "MU"
+      ],
+      "execution_ticker": "MU",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-09-01",
+        "2023-08-31",
+        "2024-08-29",
+        "2025-08-28",
+        "2026-09-03"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 35,
+        "missing": 49,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "operating_income:direct": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5, pretax_income:missing=5, reported_effective_tax_rate:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1318605,
+      "company_name": "Tesla Inc",
+      "source_tickers": [
+        "TSLA"
+      ],
+      "project_tickers": [
+        "TSLA"
+      ],
+      "execution_ticker": "TSLA",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 2488,
+      "company_name": "Advanced Micro Devices Inc",
+      "source_tickers": [
+        "AMD"
+      ],
+      "project_tickers": [
+        "AMD"
+      ],
+      "execution_ticker": "AMD",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 47,
+        "missing": 37,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 3,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 2,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1067983,
+      "company_name": "Berkshire Hathaway Inc",
+      "source_tickers": [
+        "BRK/B"
+      ],
+      "project_tickers": [
+        "BRK-B"
+      ],
+      "execution_ticker": "BRK-B",
+      "classification": "SPECIALIZED_METHODOLOGY_REQUIRED",
+      "pipeline_stage": "specialized_skipped",
+      "pipeline_completed": false,
+      "history_period_count": 0,
+      "selected_annual_end_dates": [],
+      "expected_history_target": null,
+      "history_assessment": "not_evaluated_specialized_skip",
+      "typed_status_counts": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "measure_status_counts": {},
+      "measure_resolution_counts": {},
+      "material_core_gaps": {},
+      "rationale": "Frozen universe identifies financial/conglomerate business requiring dedicated methodology; generic execution intentionally skipped. No generic measure/history denominator or inference of absent filings.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "History not evaluated by generic runner; zero recorded generic periods is not evidence of no SEC history."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "sp500-top-50-2026-10-02.md"
+      ]
+    },
+    {
+      "cik": 59478,
+      "company_name": "Eli Lilly & Co",
+      "source_tickers": [
+        "LLY"
+      ],
+      "project_tickers": [
+        "LLY"
+      ],
+      "execution_ticker": "LLY",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:derived": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 19617,
+      "company_name": "JPMorgan Chase & Co",
+      "source_tickers": [
+        "JPM"
+      ],
+      "project_tickers": [
+        "JPM"
+      ],
+      "execution_ticker": "JPM",
+      "classification": "SPECIALIZED_METHODOLOGY_REQUIRED",
+      "pipeline_stage": "specialized_skipped",
+      "pipeline_completed": false,
+      "history_period_count": 0,
+      "selected_annual_end_dates": [],
+      "expected_history_target": null,
+      "history_assessment": "not_evaluated_specialized_skip",
+      "typed_status_counts": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "measure_status_counts": {},
+      "measure_resolution_counts": {},
+      "material_core_gaps": {},
+      "rationale": "Frozen universe identifies bank/investment-bank business requiring dedicated methodology; generic execution intentionally skipped. No generic measure/history denominator or inference of absent filings.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "History not evaluated by generic runner; zero recorded generic periods is not evidence of no SEC history."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "sp500-top-50-2026-10-02.md"
+      ]
+    },
+    {
+      "cik": 2115436,
+      "company_name": "ExxonMobil Holdings Corp",
+      "source_tickers": [
+        "XOM"
+      ],
+      "project_tickers": [
+        "XOM"
+      ],
+      "execution_ticker": "XOM",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 0,
+      "selected_annual_end_dates": [],
+      "expected_history_target": 5,
+      "history_assessment": "empty",
+      "typed_status_counts": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "measure_status_counts": {},
+      "measure_resolution_counts": {},
+      "material_core_gaps": {},
+      "rationale": "Generic execution completes but strict current-CIK association yields empty history; predecessor succession is not established by approved generic evidence. No material historical coverage.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Five-year target unavailable; no hardcoded predecessor traversal."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "sp500-top-50-failure-taxonomy.md#xom-tickercik-succession"
+      ]
+    },
+    {
+      "cik": 200406,
+      "company_name": "Johnson & Johnson",
+      "source_tickers": [
+        "JNJ"
+      ],
+      "project_tickers": [
+        "JNJ"
+      ],
+      "execution_ticker": "JNJ",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-01-02",
+        "2023-01-01",
+        "2023-12-31",
+        "2024-12-29",
+        "2025-12-28"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 55,
+        "missing": 29,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:derived": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1403161,
+      "company_name": "Visa Inc",
+      "source_tickers": [
+        "V"
+      ],
+      "project_tickers": [
+        "V"
+      ],
+      "execution_ticker": "V",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-09-30",
+        "2022-09-30",
+        "2023-09-30",
+        "2024-09-30",
+        "2025-09-30"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:missing": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "diluted_weighted_average_shares:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, diluted_weighted_average_shares:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 50863,
+      "company_name": "Intel Corp",
+      "source_tickers": [
+        "INTC"
+      ],
+      "project_tickers": [
+        "INTC"
+      ],
+      "execution_ticker": "INTC",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:missing": 4,
+        "cash_and_cash_equivalents:resolved": 1,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 1,
+        "current_portion_of_long_term_debt:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "cash_and_cash_equivalents:missing": 4,
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: cash_and_cash_equivalents:missing=4, change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 104169,
+      "company_name": "Walmart Inc",
+      "source_tickers": [
+        "WMT"
+      ],
+      "project_tickers": [
+        "WMT"
+      ],
+      "execution_ticker": "WMT",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-01-31",
+        "2023-01-31",
+        "2024-01-31",
+        "2025-01-31",
+        "2026-01-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 45,
+        "missing": 34,
+        "ambiguous": 5,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:ambiguous": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5,
+        "revenue:ambiguous": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5, revenue:ambiguous=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Genuine Revenue economic conflicts retained; no arbitrary winner or annual/Q4 heuristic.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1551152,
+      "company_name": "AbbVie Inc",
+      "source_tickers": [
+        "ABBV"
+      ],
+      "project_tickers": [
+        "ABBV"
+      ],
+      "execution_ticker": "ABBV",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1141391,
+      "company_name": "Mastercard Inc",
+      "source_tickers": [
+        "MA"
+      ],
+      "project_tickers": [
+        "MA"
+      ],
+      "execution_ticker": "MA",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 49,
+        "missing": 34,
+        "ambiguous": 1,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:ambiguous": 1,
+        "revenue:resolved": 4,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 4
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5,
+        "revenue:ambiguous": 1
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5, revenue:ambiguous=1. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Genuine Revenue economic conflicts retained; no arbitrary winner or annual/Q4 heuristic.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 858877,
+      "company_name": "Cisco Systems Inc",
+      "source_tickers": [
+        "CSCO"
+      ],
+      "project_tickers": [
+        "CSCO"
+      ],
+      "execution_ticker": "CSCO",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-07-30",
+        "2023-07-29",
+        "2024-07-27",
+        "2025-07-26",
+        "2026-07-25"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 55,
+        "missing": 29,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 707549,
+      "company_name": "Lam Research Corp",
+      "source_tickers": [
+        "LRCX"
+      ],
+      "project_tickers": [
+        "LRCX"
+      ],
+      "execution_ticker": "LRCX",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-06-26",
+        "2023-06-25",
+        "2024-06-30",
+        "2025-06-29",
+        "2026-06-28"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 43,
+        "missing": 41,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 1,
+        "current_portion_of_long_term_debt:resolved": 4,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 1,
+        "long_term_debt_noncurrent:resolved": 4,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 4,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 4,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "capex:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: capex:missing=5, change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1321655,
+      "company_name": "Palantir Technologies Inc",
+      "source_tickers": [
+        "PLTR"
+      ],
+      "project_tickers": [
+        "PLTR"
+      ],
+      "execution_ticker": "PLTR",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 4,
+        "long_term_debt_noncurrent:resolved": 1,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 1,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 6951,
+      "company_name": "Applied Materials Inc",
+      "source_tickers": [
+        "AMAT"
+      ],
+      "project_tickers": [
+        "AMAT"
+      ],
+      "execution_ticker": "AMAT",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-10-31",
+        "2022-10-30",
+        "2023-10-29",
+        "2024-10-27",
+        "2025-10-26"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 49,
+        "missing": 35,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 3,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:missing": 3,
+        "depreciation_and_amortization:resolved": 2,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 2,
+        "depreciation_and_amortization:direct": 2,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 3,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=3, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 93410,
+      "company_name": "Chevron Corp",
+      "source_tickers": [
+        "CVX"
+      ],
+      "project_tickers": [
+        "CVX"
+      ],
+      "execution_ticker": "CVX",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 37,
+        "missing": 42,
+        "ambiguous": 5,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:missing": 3,
+        "cash_and_cash_equivalents:resolved": 2,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:missing": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:ambiguous": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 2,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5
+      },
+      "material_core_gaps": {
+        "cash_and_cash_equivalents:missing": 3,
+        "change_in_operating_nwc:missing": 4,
+        "operating_income:missing": 5,
+        "operating_nwc:missing": 5,
+        "revenue:ambiguous": 5
+      },
+      "rationale": "Material core historical gaps remain: cash_and_cash_equivalents:missing=3, change_in_operating_nwc:missing=4, operating_income:missing=5, operating_nwc:missing=5, revenue:ambiguous=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Genuine Revenue economic conflicts retained; no arbitrary winner or annual/Q4 heuristic.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 909832,
+      "company_name": "Costco Wholesale Corp",
+      "source_tickers": [
+        "COST"
+      ],
+      "project_tickers": [
+        "COST"
+      ],
+      "execution_ticker": "COST",
+      "classification": "SUPPORTED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-08-28",
+        "2023-09-03",
+        "2024-09-01",
+        "2025-08-31",
+        "2026-08-30"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 70,
+        "missing": 14,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:not_comparable": 1,
+        "change_in_operating_nwc:resolved": 4,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:resolved": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 4,
+        "short_term_borrowings:resolved": 1,
+        "short_term_investments:resolved": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "change_in_operating_nwc:calculated": 4,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "operating_nwc:calculated": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5,
+        "short_term_borrowings:direct": 1,
+        "short_term_investments:direct": 5
+      },
+      "material_core_gaps": {},
+      "rationale": "Five selected annual periods; all material core historical measures resolved, with four comparable NWC changes and one expected opening not-comparable state. Support is historical core scope only; unresolved ancillary debt/investment categories remain explicit, not assumed zero.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 18230,
+      "company_name": "Caterpillar Inc",
+      "source_tickers": [
+        "CAT"
+      ],
+      "project_tickers": [
+        "CAT"
+      ],
+      "execution_ticker": "CAT",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5, pretax_income:missing=5, reported_effective_tax_rate:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 310158,
+      "company_name": "Merck & Co Inc",
+      "source_tickers": [
+        "MRK"
+      ],
+      "project_tickers": [
+        "MRK"
+      ],
+      "execution_ticker": "MRK",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 48,
+        "missing": 36,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:missing": 2,
+        "capex:resolved": 3,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 3,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:derived": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "capex:missing": 2,
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: capex:missing=2, change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 70858,
+      "company_name": "Bank of America Corp",
+      "source_tickers": [
+        "BAC"
+      ],
+      "project_tickers": [
+        "BAC"
+      ],
+      "execution_ticker": "BAC",
+      "classification": "SPECIALIZED_METHODOLOGY_REQUIRED",
+      "pipeline_stage": "specialized_skipped",
+      "pipeline_completed": false,
+      "history_period_count": 0,
+      "selected_annual_end_dates": [],
+      "expected_history_target": null,
+      "history_assessment": "not_evaluated_specialized_skip",
+      "typed_status_counts": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "measure_status_counts": {},
+      "measure_resolution_counts": {},
+      "material_core_gaps": {},
+      "rationale": "Frozen universe identifies bank/investment-bank business requiring dedicated methodology; generic execution intentionally skipped. No generic measure/history denominator or inference of absent filings.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "History not evaluated by generic runner; zero recorded generic periods is not evidence of no SEC history."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "sp500-top-50-2026-10-02.md"
+      ]
+    },
+    {
+      "cik": 80424,
+      "company_name": "Procter & Gamble Co/The",
+      "source_tickers": [
+        "PG"
+      ],
+      "project_tickers": [
+        "PG"
+      ],
+      "execution_ticker": "PG",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 2,
+        "pretax_income:resolved": 3,
+        "reported_effective_tax_rate:missing": 2,
+        "reported_effective_tax_rate:resolved": 3,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 3,
+        "reported_effective_tax_rate:derived": 3,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "cash_and_cash_equivalents:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 2,
+        "reported_effective_tax_rate:missing": 2
+      },
+      "rationale": "Material core historical gaps remain: cash_and_cash_equivalents:missing=5, change_in_operating_nwc:missing=4, operating_nwc:missing=5, pretax_income:missing=2, reported_effective_tax_rate:missing=2. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 731766,
+      "company_name": "UnitedHealth Group Inc",
+      "source_tickers": [
+        "UNH"
+      ],
+      "project_tickers": [
+        "UNH"
+      ],
+      "execution_ticker": "UNH",
+      "classification": "SPECIALIZED_METHODOLOGY_REQUIRED",
+      "pipeline_stage": "specialized_skipped",
+      "pipeline_completed": false,
+      "history_period_count": 0,
+      "selected_annual_end_dates": [],
+      "expected_history_target": null,
+      "history_assessment": "not_evaluated_specialized_skip",
+      "typed_status_counts": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "measure_status_counts": {},
+      "measure_resolution_counts": {},
+      "material_core_gaps": {},
+      "rationale": "Frozen universe identifies insurance/managed-care business requiring dedicated methodology; generic execution intentionally skipped. No generic measure/history denominator or inference of absent filings.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "History not evaluated by generic runner; zero recorded generic periods is not evidence of no SEC history."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "sp500-top-50-2026-10-02.md"
+      ]
+    },
+    {
+      "cik": 21344,
+      "company_name": "Coca-Cola Co/The",
+      "source_tickers": [
+        "KO"
+      ],
+      "project_tickers": [
+        "KO"
+      ],
+      "execution_ticker": "KO",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 51,
+        "missing": 33,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 2,
+        "current_portion_of_long_term_debt:resolved": 3,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 2,
+        "long_term_debt_noncurrent:resolved": 3,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 3,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 3,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 40545,
+      "company_name": "General Electric Co",
+      "source_tickers": [
+        "GE"
+      ],
+      "project_tickers": [
+        "GE"
+      ],
+      "execution_ticker": "GE",
+      "classification": "SPECIALIZED_METHODOLOGY_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 27,
+        "missing": 57,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:missing": 3,
+        "capex:resolved": 2,
+        "cash_and_cash_equivalents:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:missing": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 2,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "capex:missing": 3,
+        "cash_and_cash_equivalents:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_income:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Consolidated continuing industrial and run-off insurance exposure requires specialized mixed-business methodology; selected periods change with HealthCare/Vernova separations. Successful generic execution does not support industrial-only FCFF. Prior GENERALIZATION_REQUIRED planning classification is reassessed here, not a production dispatch change.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "No stable five-period common industrial operating perimeter; no later-recast substitution or unsupported consolidated-to-industrial allocation.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "../operating-income-cvx-ge-perimeter.md",
+        "../capex-ge-perimeter.md"
+      ]
+    },
+    {
+      "cik": 1413329,
+      "company_name": "Philip Morris International Inc",
+      "source_tickers": [
+        "PM"
+      ],
+      "project_tickers": [
+        "PM"
+      ],
+      "execution_ticker": "PM",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 33,
+        "missing": 51,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 2,
+        "depreciation_and_amortization:resolved": 3,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "depreciation_and_amortization:direct": 3,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "operating_income:direct": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 2,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=2, operating_nwc:missing=5, pretax_income:missing=5, reported_effective_tax_rate:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 354950,
+      "company_name": "Home Depot Inc/The",
+      "source_tickers": [
+        "HD"
+      ],
+      "project_tickers": [
+        "HD"
+      ],
+      "execution_ticker": "HD",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-01-30",
+        "2023-01-29",
+        "2024-01-28",
+        "2025-02-02",
+        "2026-02-01"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "cash_and_cash_equivalents:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "capex:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: capex:missing=5, change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1065280,
+      "company_name": "Netflix Inc",
+      "source_tickers": [
+        "NFLX"
+      ],
+      "project_tickers": [
+        "NFLX"
+      ],
+      "execution_ticker": "NFLX",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 319201,
+      "company_name": "KLA Corp",
+      "source_tickers": [
+        "KLAC"
+      ],
+      "project_tickers": [
+        "KLAC"
+      ],
+      "execution_ticker": "KLAC",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 47,
+        "missing": 37,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 3,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 2,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "operating_income:derived": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 97476,
+      "company_name": "Texas Instruments Inc",
+      "source_tickers": [
+        "TXN"
+      ],
+      "project_tickers": [
+        "TXN"
+      ],
+      "execution_ticker": "TXN",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1996810,
+      "company_name": "GE Vernova Inc",
+      "source_tickers": [
+        "GEV"
+      ],
+      "project_tickers": [
+        "GEV"
+      ],
+      "execution_ticker": "GEV",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 2,
+      "selected_annual_end_dates": [
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "short",
+      "typed_status_counts": {
+        "resolved": 12,
+        "missing": 21,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:missing": 2,
+        "cash_and_cash_equivalents:missing": 2,
+        "change_in_operating_nwc:missing": 1,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 2,
+        "current_portion_of_long_term_debt:missing": 2,
+        "depreciation_and_amortization:missing": 2,
+        "diluted_weighted_average_shares:resolved": 2,
+        "income_tax_expense:resolved": 2,
+        "long_term_debt_noncurrent:missing": 2,
+        "long_term_marketable_securities:missing": 2,
+        "operating_income:resolved": 2,
+        "operating_nwc:missing": 2,
+        "pretax_income:resolved": 2,
+        "reported_effective_tax_rate:resolved": 2,
+        "revenue:resolved": 2,
+        "short_term_borrowings:missing": 2,
+        "short_term_investments:missing": 2
+      },
+      "measure_resolution_counts": {
+        "diluted_weighted_average_shares:direct": 2,
+        "income_tax_expense:direct": 2,
+        "operating_income:direct": 2,
+        "pretax_income:direct": 2,
+        "reported_effective_tax_rate:derived": 2,
+        "revenue:direct": 2
+      },
+      "material_core_gaps": {
+        "capex:missing": 2,
+        "cash_and_cash_equivalents:missing": 2,
+        "change_in_operating_nwc:missing": 1,
+        "depreciation_and_amortization:missing": 2,
+        "operating_nwc:missing": 2
+      },
+      "rationale": "Material core historical gaps remain: capex:missing=2, cash_and_cash_equivalents:missing=2, change_in_operating_nwc:missing=1, depreciation_and_amortization:missing=2, operating_nwc:missing=2. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Only 2 selected current-registrant annual periods; five-year target unavailable; no predecessor reconstruction.",
+        "2024 combined/carve-out and April 2 spin-off perimeter differs from hypothetical standalone history.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "../capex-gev-cash-perimeter.md"
+      ]
+    },
+    {
+      "cik": 886982,
+      "company_name": "Goldman Sachs Group Inc/The",
+      "source_tickers": [
+        "GS"
+      ],
+      "project_tickers": [
+        "GS"
+      ],
+      "execution_ticker": "GS",
+      "classification": "SPECIALIZED_METHODOLOGY_REQUIRED",
+      "pipeline_stage": "specialized_skipped",
+      "pipeline_completed": false,
+      "history_period_count": 0,
+      "selected_annual_end_dates": [],
+      "expected_history_target": null,
+      "history_assessment": "not_evaluated_specialized_skip",
+      "typed_status_counts": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "measure_status_counts": {},
+      "measure_resolution_counts": {},
+      "material_core_gaps": {},
+      "rationale": "Frozen universe identifies bank/investment-bank business requiring dedicated methodology; generic execution intentionally skipped. No generic measure/history denominator or inference of absent filings.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "History not evaluated by generic runner; zero recorded generic periods is not evidence of no SEC history."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "sp500-top-50-2026-10-02.md"
+      ]
+    },
+    {
+      "cik": 2023554,
+      "company_name": "Sandisk Corp",
+      "source_tickers": [
+        "SNDK"
+      ],
+      "project_tickers": [
+        "SNDK"
+      ],
+      "execution_ticker": "SNDK",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 2,
+      "selected_annual_end_dates": [
+        "2025-06-27",
+        "2026-07-03"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "short",
+      "typed_status_counts": {
+        "resolved": 20,
+        "missing": 13,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 2,
+        "cash_and_cash_equivalents:resolved": 2,
+        "change_in_operating_nwc:missing": 1,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 2,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:missing": 2,
+        "diluted_weighted_average_shares:resolved": 2,
+        "income_tax_expense:resolved": 2,
+        "long_term_debt_noncurrent:resolved": 2,
+        "long_term_marketable_securities:missing": 2,
+        "operating_income:resolved": 2,
+        "operating_nwc:missing": 2,
+        "pretax_income:resolved": 2,
+        "reported_effective_tax_rate:resolved": 2,
+        "revenue:resolved": 2,
+        "short_term_borrowings:missing": 2,
+        "short_term_investments:missing": 2
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 2,
+        "cash_and_cash_equivalents:direct": 2,
+        "current_portion_of_long_term_debt:direct": 2,
+        "diluted_weighted_average_shares:direct": 2,
+        "income_tax_expense:direct": 2,
+        "long_term_debt_noncurrent:direct": 2,
+        "operating_income:direct": 2,
+        "pretax_income:direct": 2,
+        "reported_effective_tax_rate:derived": 2,
+        "revenue:direct": 2
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 1,
+        "depreciation_and_amortization:missing": 2,
+        "operating_nwc:missing": 2
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=1, depreciation_and_amortization:missing=2, operating_nwc:missing=2. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Only 2 selected current-registrant annual periods; five-year target unavailable; no predecessor reconstruction.",
+        "Post-separation selected history only; no WDC predecessor comparability certification.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 1341439,
+      "company_name": "Oracle Corp",
+      "source_tickers": [
+        "ORCL"
+      ],
+      "project_tickers": [
+        "ORCL"
+      ],
+      "execution_ticker": "ORCL",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2022-05-31",
+        "2023-05-31",
+        "2024-05-31",
+        "2025-05-31",
+        "2026-05-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 30,
+        "missing": 54,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "operating_income:direct": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5, pretax_income:missing=5, reported_effective_tax_rate:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 72971,
+      "company_name": "Wells Fargo & Co",
+      "source_tickers": [
+        "WFC"
+      ],
+      "project_tickers": [
+        "WFC"
+      ],
+      "execution_ticker": "WFC",
+      "classification": "SPECIALIZED_METHODOLOGY_REQUIRED",
+      "pipeline_stage": "specialized_skipped",
+      "pipeline_completed": false,
+      "history_period_count": 0,
+      "selected_annual_end_dates": [],
+      "expected_history_target": null,
+      "history_assessment": "not_evaluated_specialized_skip",
+      "typed_status_counts": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "measure_status_counts": {},
+      "measure_resolution_counts": {},
+      "material_core_gaps": {},
+      "rationale": "Frozen universe identifies bank/investment-bank business requiring dedicated methodology; generic execution intentionally skipped. No generic measure/history denominator or inference of absent filings.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "History not evaluated by generic runner; zero recorded generic periods is not evidence of no SEC history."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "sp500-top-50-2026-10-02.md"
+      ]
+    },
+    {
+      "cik": 895421,
+      "company_name": "Morgan Stanley",
+      "source_tickers": [
+        "MS"
+      ],
+      "project_tickers": [
+        "MS"
+      ],
+      "execution_ticker": "MS",
+      "classification": "SPECIALIZED_METHODOLOGY_REQUIRED",
+      "pipeline_stage": "specialized_skipped",
+      "pipeline_completed": false,
+      "history_period_count": 0,
+      "selected_annual_end_dates": [],
+      "expected_history_target": null,
+      "history_assessment": "not_evaluated_specialized_skip",
+      "typed_status_counts": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "measure_status_counts": {},
+      "measure_resolution_counts": {},
+      "material_core_gaps": {},
+      "rationale": "Frozen universe identifies bank/investment-bank business requiring dedicated methodology; generic execution intentionally skipped. No generic measure/history denominator or inference of absent filings.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "History not evaluated by generic runner; zero recorded generic periods is not evidence of no SEC history."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md",
+        "sp500-top-50-2026-10-02.md"
+      ]
+    },
+    {
+      "cik": 1707925,
+      "company_name": "Linde PLC",
+      "source_tickers": [
+        "LIN"
+      ],
+      "project_tickers": [
+        "LIN"
+      ],
+      "execution_ticker": "LIN",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 39,
+        "missing": 45,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 1,
+        "current_portion_of_long_term_debt:resolved": 4,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 4,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5, pretax_income:missing=5, reported_effective_tax_rate:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 51143,
+      "company_name": "International Business Machines Corp",
+      "source_tickers": [
+        "IBM"
+      ],
+      "project_tickers": [
+        "IBM"
+      ],
+      "execution_ticker": "IBM",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 45,
+        "missing": 39,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:derived": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 804328,
+      "company_name": "QUALCOMM Inc",
+      "source_tickers": [
+        "QCOM"
+      ],
+      "project_tickers": [
+        "QCOM"
+      ],
+      "execution_ticker": "QCOM",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-09-26",
+        "2022-09-25",
+        "2023-09-24",
+        "2024-09-29",
+        "2025-09-28"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "capex:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: capex:missing=5, change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 732712,
+      "company_name": "Verizon Communications Inc",
+      "source_tickers": [
+        "VZ"
+      ],
+      "project_tickers": [
+        "VZ"
+      ],
+      "execution_ticker": "VZ",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "capex:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "depreciation_and_amortization:missing": 5,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: capex:missing=5, change_in_operating_nwc:missing=4, depreciation_and_amortization:missing=5, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 77476,
+      "company_name": "PepsiCo Inc",
+      "source_tickers": [
+        "PEP"
+      ],
+      "project_tickers": [
+        "PEP"
+      ],
+      "execution_ticker": "PEP",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 45,
+        "missing": 39,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "cash_and_cash_equivalents:direct": 5,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 5,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "pretax_income:direct": 5,
+        "reported_effective_tax_rate:derived": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "capex:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "operating_nwc:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: capex:missing=5, change_in_operating_nwc:missing=4, operating_nwc:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    },
+    {
+      "cik": 63908,
+      "company_name": "McDonald's Corp",
+      "source_tickers": [
+        "MCD"
+      ],
+      "project_tickers": [
+        "MCD"
+      ],
+      "execution_ticker": "MCD",
+      "classification": "GENERALIZATION_REQUIRED",
+      "pipeline_stage": "complete",
+      "pipeline_completed": true,
+      "history_period_count": 5,
+      "selected_annual_end_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "expected_history_target": 5,
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "typed_status_counts": {
+        "resolved": 39,
+        "missing": 45,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "measure_status_counts": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 3,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:missing": 3,
+        "diluted_weighted_average_shares:resolved": 2,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "measure_resolution_counts": {
+        "capex:direct": 5,
+        "cash_and_cash_equivalents:direct": 5,
+        "current_portion_of_long_term_debt:direct": 2,
+        "depreciation_and_amortization:direct": 5,
+        "diluted_weighted_average_shares:direct": 2,
+        "income_tax_expense:direct": 5,
+        "long_term_debt_noncurrent:direct": 5,
+        "operating_income:direct": 5,
+        "revenue:direct": 5
+      },
+      "material_core_gaps": {
+        "change_in_operating_nwc:missing": 4,
+        "diluted_weighted_average_shares:missing": 3,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5
+      },
+      "rationale": "Material core historical gaps remain: change_in_operating_nwc:missing=4, diluted_weighted_average_shares:missing=3, operating_nwc:missing=5, pretax_income:missing=5, reported_effective_tax_rate:missing=5. Pipeline completion does not satisfy support criteria.",
+      "provenance_and_comparability_limits": [
+        "Compact runner evidence provides selected annual end dates and aggregate measure states, not individual context/occurrence digests; linked implementation and research evidence remains authoritative. No fresh filing retrieval or economic-absence certification.",
+        "Historical resolution does not certify future FCFF timing or point-in-time valuation share denominator.",
+        "Opening NWC change is NOT_COMPARABLE, not missing or zero; selected original-accession basis is not silently replaced by later comparatives."
+      ],
+      "evidence_references": [
+        "../phase-1h-generalization-exit-plan.md",
+        "../capex-visa-scope-evidence-results.md",
+        "sp500-top-50-failure-taxonomy.md",
+        "../financial-timing-readiness-design.md"
+      ]
+    }
+  ]
+}

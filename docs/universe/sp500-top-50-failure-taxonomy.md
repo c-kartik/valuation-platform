@@ -1,5 +1,19 @@
 # S&P 500 Top 50 failure taxonomy
 
+**Phase 1H.5 complete:** [current all-company validation matrix](phase-1h5-issuer-validation.md)
+and [machine-checkable evidence](phase-1h5-issuer-validation.json) supersede the
+historical post-smoke issuer classifications below. **2 SUPPORTED / 40
+GENERALIZATION_REQUIRED / 8 SPECIALIZED_METHODOLOGY_REQUIRED = 50 issuers**,
+51 security mappings. GE's mixed industrial/insurance perimeter is specialized
+for full-company support, but its generic execution and historical states remain.
+Thus 43 generic completions and seven specialized execution skips are unchanged.
+Current corpus: 204 periods / 3,468 states = **1,905/1,483/11/27/42**;
+Capex **167/37/0**, original inventory 20 approvals + 37 unapproved. Empty XOM
+and short GEV/SNDK histories, selected-accession/recast boundaries, genuine
+ambiguities and unknown FCFF timing remain explicit. Ready for **Phase 1H.6
+scope freeze**, not already frozen or universally FCFF-ready. No policy, SEC,
+test or corpus changes; current source bytes/digest and all decisions retained.
+
 Wave 46 [generalization exit plan](../phase-1h-generalization-exit-plan.md)
 reconciles the latest 204-period corpus: **1,905 resolved / 1,483 missing /
 11 ambiguous / 27 methodology-blocked / 42 not-comparable = 3,468**, 43 generic
@@ -882,6 +896,12 @@ not relabeled wholesale: unresolved cases remain missing until filing evidence
 establishes the correct category.
 
 ## Issuer-level post-smoke classification
+
+**Historical planning distribution.** Current Phase 1H.5 reassessment is in the
+[validated issuer matrix](phase-1h5-issuer-validation.md): GE moves to specialized
+consolidated methodology support; resolved annual-association/schema/curated
+improvements replace stale gap rationales. Do not use this historical table as
+current classification or equate pipeline success with supported financial scope.
 
 `SUPPORTED` requires expected history and no material technical or policy gap
 in core standardized output. The classification is a Phase 1H planning result;
