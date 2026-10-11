@@ -8,6 +8,26 @@ new support certification or a replacement for historical normalization v1.
 
 ## Shared measure contracts and provenance
 
+### Standing maintenance requirement
+
+As required by [AGENTS.md](../../AGENTS.md), any milestone changing retrieval,
+filing/period selection, sorting/classification, normalization, derivation or
+valuation-input preparation must update each affected issuer record in that
+same milestone. Update this index when shared contracts or issuer mapping change.
+This applies to documentation/input preparation as well as executable changes.
+
+Each update must explain the original conflict, exact sources/evidence,
+considered treatments, chosen resolution/rationale, affected periods/policies,
+validation and unresolved limitations. Distinguish facts, SEC-supported
+derivations, analyst classifications/estimates, manual inputs and external data.
+Preserve superseded decisions with their date/version and replacement reference;
+link detailed evidence, mark unreviewed details, and explain limitations relevant
+to eventual valuation use. Preparation is not fresh review or readiness approval.
+
+The [MSFT bundle review](MSFT.md#reviewed-fy20252026-partial-input-bundles)
+applies this requirement to two exact periods without changing other records'
+carried-forward financial conclusions.
+
 Every record tracks all 17 measures, frozen history, retained execution/retrieval
 outcomes, normalization/source kinds, policy references, unresolved states,
 assumption/external-input status and validation tasks. Counts are carried forward,

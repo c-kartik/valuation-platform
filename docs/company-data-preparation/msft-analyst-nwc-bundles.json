@@ -1,0 +1,555 @@
+{
+  "bundle_contract": "reviewed-msft-partial-nwc-inputs",
+  "version": "1",
+  "reviewed_on": "2026-10-11",
+  "review_author": "repository retained-evidence review (not an external analyst approval)",
+  "decision": "GO_FOR_EXPLICIT_PARTIAL_SCENARIOS_ONLY",
+  "scenario_id": "msft-reviewed-ppe-ap-partial",
+  "perimeter_id": "msft-ar-inventory-operating-ap-current-contract-compensation",
+  "comparison_scenario_id": "msft-whole-ap-driver-comparison",
+  "comparison_perimeter_id": "msft-ar-inventory-whole-ap-current-contract-compensation",
+  "inventory_path": "docs/analyst-operating-nwc-inventory.json",
+  "inventory_sha256": "ef68344fe6d523cb55f5478eb03045fa984f067e07b2b37e6687011cd5a4d1b6",
+  "artifact_manifest_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+  "artifact_manifest_sha256": "8b7dd48e6408fb84af1493acfba3136d4a7671fc8bb1147c339015da80990542",
+  "limitations": [
+    "Explicit partial perimeter: omitted operating balances may be material; no complete Operating NWC certification.",
+    "Reported points preserve submitted precision; PP&E-in-AP decimals -8 are rounded, not exact economic allocations.",
+    "No default estimates, numerical residual allocations, earlier-period extension or frozen-v1 blocker removal.",
+    "Whole-AP variant is a diagnostic comparator, not an alternative approved operating-AP treatment."
+  ],
+  "unresolved_effects": [
+    "Acquisition/disposal component allocations and carried-forward effects are unbridged; not assumed zero.",
+    "FX translation and noncash movements lack an exhaustive component-level cash bridge.",
+    "Reclassifications across the selected perimeter and later comparative restatements are unbridged.",
+    "Inventory/contract-cost recognition, EBIT/D&A/Capex and lease timing compatibility remain unproved."
+  ],
+  "omissions": [
+    {
+      "component_id": "mixed_other_current_assets",
+      "scope_keys": [
+        "other_current_assets"
+      ],
+      "rationale": "Explicit narrow omission, not zero: server-component receivables, current customer financing, contract costs and other balances require component classification and timing review; no residual allocation approved."
+    },
+    {
+      "component_id": "mixed_other_current_liabilities",
+      "scope_keys": [
+        "other_current_liabilities"
+      ],
+      "rationale": "Explicit narrow omission, not zero: mixed obligations including derivative and lease balances remain unallocated; other operating accruals may be omitted."
+    },
+    {
+      "component_id": "cash_investments_and_financing",
+      "scope_keys": [
+        "cash_investments_and_borrowings"
+      ],
+      "rationale": "Cash, marketable/strategic investments and interest-bearing funding lie outside operating working capital. Supplier-restricted investments do not become customer receivables."
+    },
+    {
+      "component_id": "income_tax_balances",
+      "scope_keys": [
+        "income_tax_balances"
+      ],
+      "rationale": "Exclude separately modeled income taxes; no cash-tax bridge or tax rate treatment is supplied."
+    },
+    {
+      "component_id": "lease_balances",
+      "scope_keys": [
+        "lease_balances"
+      ],
+      "rationale": "Lease balances remain outside this partial perimeter pending integrated EBIT/D&A/Capex/lease methodology; not evidence of zero lease obligations."
+    },
+    {
+      "component_id": "noncurrent_operating_balances",
+      "scope_keys": [
+        "noncurrent_operating_balances"
+      ],
+      "rationale": "This is a current-book perimeter; noncurrent contract and operating balances are excluded explicitly, not certified irrelevant to FCFF."
+    }
+  ],
+  "bundles": [
+    {
+      "period": {
+        "cik": 789019,
+        "accession": "0000950170-25-100235",
+        "annual_start": "2024-07-01",
+        "annual_end": "2025-06-30"
+      },
+      "form": "10-K",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630_htm.xml",
+      "artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+          "accession": "0000950170-25-100235",
+          "representation": "sec_response_body_bytes",
+          "digest_type": "sha256_sec_response_body_bytes",
+          "sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+          "byte_length": 8158178
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630_htm.xml",
+          "accession": "0000950170-25-100235",
+          "representation": "sec_response_body_bytes",
+          "digest_type": "sha256_sec_response_body_bytes",
+          "sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+          "byte_length": 10533273
+        }
+      ],
+      "operands": [
+        {
+          "component_id": "AccountsReceivableNetCurrent",
+          "coefficient": 1,
+          "scope_keys": [
+            "AccountsReceivableNetCurrent"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "69905000000",
+          "rationale": "Balance-sheet customer receivables net of allowance; excludes separately disclosed server-component and financing receivables in mixed other-current assets.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "concept": "AccountsReceivableNetCurrent",
+              "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2025-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "69905000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 613
+            }
+          ]
+        },
+        {
+          "component_id": "InventoryNet",
+          "coefficient": 1,
+          "scope_keys": [
+            "InventoryNet"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "938000000",
+          "rationale": "Reported consolidated book inventories; retain capitalization/expense timing uncertainty, not a cash-flow proxy.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "concept": "InventoryNet",
+              "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2025-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "938000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 615
+            }
+          ]
+        },
+        {
+          "component_id": "AccountsPayableCurrent",
+          "coefficient": -1,
+          "scope_keys": [
+            "AccountsPayableCurrent"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "27724000000",
+          "rationale": "Subtract reported supplier AP once, then separately remove the explicitly identified PP&E-in-AP investing obligation; remaining AP is a narrow candidate, not proof of exhaustive purity.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "concept": "AccountsPayableCurrent",
+              "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2025-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "27724000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 637
+            }
+          ]
+        },
+        {
+          "component_id": "ContractWithCustomerLiabilityCurrent",
+          "coefficient": -1,
+          "scope_keys": [
+            "ContractWithCustomerLiabilityCurrent"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "64555000000",
+          "rationale": "Subtract current unearned revenue once; customer revenue timing, excluding separately reported noncurrent unearned revenue.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2025-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "64555000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 647
+            }
+          ]
+        },
+        {
+          "component_id": "EmployeeRelatedLiabilitiesCurrent",
+          "coefficient": -1,
+          "scope_keys": [
+            "EmployeeRelatedLiabilitiesCurrent"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "13709000000",
+          "rationale": "Subtract balance-sheet accrued compensation; not share-based compensation expense or unrecognized future awards.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "concept": "EmployeeRelatedLiabilitiesCurrent",
+              "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2025-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "13709000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 643
+            }
+          ]
+        },
+        {
+          "component_id": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+          "coefficient": 1,
+          "scope_keys": [
+            "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "6900000000",
+          "rationale": "Note 6 explicitly reports purchases of PP&E remaining in accounts payable at closing. Add back to the negative AP contribution once; no cash purchase or acquisition allocation inferred.",
+          "occurrences": [
+            {
+              "namespace": "http://www.microsoft.com/20250630",
+              "concept": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+              "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2025-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "6900000000",
+              "decimals": "-8",
+              "nil": "false",
+              "occurrence_ordinal": 1370
+            }
+          ]
+        }
+      ],
+      "statement_locations": [
+        "Consolidated Balance Sheets: current receivables, inventories, AP, accrued compensation and short-term unearned revenue.",
+        "Note 1: receivables/server-component facilitation and customer financing; inventories and accounting policies.",
+        "Note 6 \u2014 Property and Equipment: purchases remaining in accounts payable.",
+        "Consolidated Statements of Cash Flows and Note 7 \u2014 Business Combinations: cross-checks only, no component-complete cash bridge."
+      ],
+      "expected_whole_ap_usd": "-35145000000",
+      "expected_adjusted_partial_usd": "-28245000000",
+      "expected_adjusted_ap_usd": "20824000000",
+      "omitted_gross_caption_exposure_usd": {
+        "other_current_assets": "25723000000",
+        "other_current_liabilities": "25020000000"
+      },
+      "note_assertion": "As of June 30, 2025, 2024, and 2023, purchases of property and equipment remaining in accounts payable were $ 6.9 billion, $ 4.3 billion, and $ 3.8 billion, respectively."
+    },
+    {
+      "period": {
+        "cik": 789019,
+        "accession": "0001193125-26-323660",
+        "annual_start": "2025-07-01",
+        "annual_end": "2026-06-30"
+      },
+      "form": "10-K",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630_htm.xml",
+      "artifacts": [
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "accession": "0001193125-26-323660",
+          "representation": "sec_response_body_bytes",
+          "digest_type": "sha256_sec_response_body_bytes",
+          "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+          "byte_length": 8585612
+        },
+        {
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630_htm.xml",
+          "accession": "0001193125-26-323660",
+          "representation": "sec_response_body_bytes",
+          "digest_type": "sha256_sec_response_body_bytes",
+          "sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "byte_length": 10948157
+        }
+      ],
+      "operands": [
+        {
+          "component_id": "AccountsReceivableNetCurrent",
+          "coefficient": 1,
+          "scope_keys": [
+            "AccountsReceivableNetCurrent"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "80876000000",
+          "rationale": "Balance-sheet customer receivables net of allowance; excludes separately disclosed server-component and financing receivables in mixed other-current assets.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "concept": "AccountsReceivableNetCurrent",
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2026-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "80876000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 620
+            }
+          ]
+        },
+        {
+          "component_id": "InventoryNet",
+          "coefficient": 1,
+          "scope_keys": [
+            "InventoryNet"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "1397000000",
+          "rationale": "Reported consolidated book inventories; retain capitalization/expense timing uncertainty, not a cash-flow proxy.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "concept": "InventoryNet",
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2026-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "1397000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 622
+            }
+          ]
+        },
+        {
+          "component_id": "AccountsPayableCurrent",
+          "coefficient": -1,
+          "scope_keys": [
+            "AccountsPayableCurrent"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "42416000000",
+          "rationale": "Subtract reported supplier AP once, then separately remove the explicitly identified PP&E-in-AP investing obligation; remaining AP is a narrow candidate, not proof of exhaustive purity.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "concept": "AccountsPayableCurrent",
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2026-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "42416000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 644
+            }
+          ]
+        },
+        {
+          "component_id": "ContractWithCustomerLiabilityCurrent",
+          "coefficient": -1,
+          "scope_keys": [
+            "ContractWithCustomerLiabilityCurrent"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "72965000000",
+          "rationale": "Subtract current unearned revenue once; customer revenue timing, excluding separately reported noncurrent unearned revenue.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2026-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "72965000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 652
+            }
+          ]
+        },
+        {
+          "component_id": "EmployeeRelatedLiabilitiesCurrent",
+          "coefficient": -1,
+          "scope_keys": [
+            "EmployeeRelatedLiabilitiesCurrent"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "14945000000",
+          "rationale": "Subtract balance-sheet accrued compensation; not share-based compensation expense or unrecognized future awards.",
+          "occurrences": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "concept": "EmployeeRelatedLiabilitiesCurrent",
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2026-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "14945000000",
+              "decimals": "-6",
+              "nil": "false",
+              "occurrence_ordinal": 648
+            }
+          ]
+        },
+        {
+          "component_id": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+          "coefficient": 1,
+          "scope_keys": [
+            "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable"
+          ],
+          "evidence_kind": "reported",
+          "treatment": "required",
+          "value_usd": "26700000000",
+          "rationale": "Note 6 explicitly reports purchases of PP&E remaining in accounts payable at closing. Add back to the negative AP contribution once; no cash purchase or acquisition allocation inferred.",
+          "occurrences": [
+            {
+              "namespace": "http://www.microsoft.com/20260630",
+              "concept": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "context": {
+                "entity": "0000789019",
+                "start": null,
+                "end": "2026-06-30",
+                "dimensions": []
+              },
+              "unit_id": "U_USD",
+              "unit": [
+                "iso4217:USD"
+              ],
+              "raw_value": "26700000000",
+              "decimals": "-8",
+              "nil": "false",
+              "occurrence_ordinal": 1384
+            }
+          ]
+        }
+      ],
+      "statement_locations": [
+        "Consolidated Balance Sheets: current receivables, inventories, AP, accrued compensation and short-term unearned revenue.",
+        "Note 1: receivables/server-component facilitation and customer financing; inventories and accounting policies.",
+        "Note 6 \u2014 Property and Equipment: purchases remaining in accounts payable.",
+        "Consolidated Statements of Cash Flows and Note 7 \u2014 Business Combinations: cross-checks only, no component-complete cash bridge."
+      ],
+      "expected_whole_ap_usd": "-48053000000",
+      "expected_adjusted_partial_usd": "-21353000000",
+      "expected_adjusted_ap_usd": "15716000000",
+      "omitted_gross_caption_exposure_usd": {
+        "other_current_assets": "48594000000",
+        "other_current_liabilities": "26738000000"
+      },
+      "note_assertion": "As of June 30, 2026, 2025, and 2024, purchases of property and equipment remaining in accounts payable were $ 26.7 billion, $ 6.9 billion, and $ 4.3 billion, respectively."
+    }
+  ],
+  "expected_movement_usd": {
+    "whole_ap": "-12908000000",
+    "adjusted_partial": "6892000000",
+    "ppe_ap_exclusion_effect": "19800000000"
+  },
+  "estimates": [],
+  "external_inputs": [],
+  "manual_inputs": []
+}

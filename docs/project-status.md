@@ -2,7 +2,26 @@
 
 ## Current Milestone
 
-Latest completed milestone: **isolated analyst-NWC scenario/provenance foundation
+Latest completed milestone: **reviewed explicit MSFT FY2025–2026 partial analyst
+NWC input bundles**. [Detailed record](company-data-preparation/MSFT.md#reviewed-fy20252026-partial-input-bundles)
+and [version-1 inputs](company-data-preparation/msft-analyst-nwc-bundles.json)
+bind two frozen 10-K periods, four retained original-body digests and twelve
+occurrences; Note 6 supports PP&E-in-AP exclusions of 6,900m/26,700m. Existing pure
+evaluator yields partial levels −28,245m/−21,353m and +6,892m adjacent book movement,
+versus −12,908m whole-AP diagnostic: +19,800m effect at submitted precision.
+Explicit omissions, scope judgments and unresolved acquisition/FX/reclassification/
+timing effects remain; no complete NWC, cash bridge or FCFF certification.
+**49 relevant tests passed** (41 existing + eight bundle tests), provenance,
+arithmetic, precision, serialization and local links validated; diff check passed.
+No production source changes, SEC requests, full suite or corpus rerun. Frozen v1
+and 1,905/1,483/11/27/42 = 3,468 states unchanged; MSFT v1 blockers remain.
+AGENTS.md and the [register index](company-data-preparation/index.md#standing-maintenance-requirement)
+now require affected issuer records to be updated in every data-preparation
+milestone, retaining prior decisions and evidence. Phase 2 stays postponed.
+Single next milestone: review one explicit AAPL FY2025 partial bundle from retained
+evidence; expose unknown AP/employee/distribution scope, no estimates or extension.
+
+Previously completed milestone: **isolated analyst-NWC scenario/provenance foundation
 and company preparation register**. [Forty-issuer register](company-data-preparation/index.md)
 tracks all seventeen measures, carried-forward evidence/states and unreviewed
 details; Alphabet has one GOOG/GOOGL record. AAPL/MSFT/GOOGL retain detailed

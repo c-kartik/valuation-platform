@@ -316,3 +316,35 @@ remain untouched. Logs are in `/tmp/analyst-nwc-focused.log` and
 scenario input bundles, with classified omissions and retained evidence. No
 default/earlier-year estimates, cash bridge or automatic policy readiness. Phase
 2 remains postponed; the future joint timing contract still gates consumption.
+
+## Reviewed MSFT partial bundles
+
+The preceding foundation's next milestone is now completed by the
+[detailed MSFT review](company-data-preparation/MSFT.md#reviewed-fy20252026-partial-input-bundles)
+and [explicit version-1 input bundles](company-data-preparation/msft-analyst-nwc-bundles.json).
+These are opt-in input artifacts, **not** historical policies, defaults, a new
+schema or automatic loader. The test adapter constructs existing immutable
+models; the production evaluator is unchanged. Four original statement/instance
+byte digests and twelve exact selected occurrences bind two frozen 10-K periods.
+Analyst omission classifications have author/date/rationale and evidence;
+no estimates, manual or external numerical inputs are introduced.
+
+GO only for partial AR/inventory/AP/current-contract/compensation scenarios with
+the Note 6 PP&E-in-AP exclusion. Whole AP remains a separately identified
+diagnostic comparator. Adjusted levels −28,245m/−21,353m produce +6,892m book
+movement, versus −12,908m without exclusion; **+19,800m effect at reported
+precision**. Omitted gross other-current captions are not zero or immaterial.
+PP&E source decimals −8 and core −6 are retained, not upgraded to economic
+certainty. Required unknown allocations remain unavailable if an expanded
+perimeter is selected. No FY2024 opening or earlier-period adjustment is supplied.
+
+Both outputs remain partial/non-ready; acquisition, FX, reclassification,
+inventory/contract-cost and integrated EBIT/D&A/Capex/tax/lease timing bridges
+are unproved, not declared incompatible. Historical blockers and frozen values
+remain intact. **49 relevant tests passed**; no production source changes,
+SEC requests, full-suite or corpus rerun. Register maintenance is now a
+[standing same-milestone requirement](company-data-preparation/index.md#standing-maintenance-requirement).
+
+Next bounded milestone: one explicit AAPL FY2025 partial-bundle review using
+retained evidence, with unknown AP allocation and employee/distribution
+limitations exposed. No estimates, earlier-period extension or Phase 2 restart.

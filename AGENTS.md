@@ -80,6 +80,21 @@ Keep these files current when relevant decisions are made:
 
 Repository documentation is the source of truth for project state and decisions.
 
+### Standing company-preparation maintenance requirement
+
+Any change to retrieval, filing/period selection, sorting/classification,
+normalization, derivation, or valuation-input preparation must update affected
+issuer records in `docs/company-data-preparation/` in the same milestone, and
+the register index when its shared contracts or mapping are affected.
+
+Records must explain the original conflict, exact sources/evidence, considered
+treatments, chosen resolution and rationale, affected periods/policies,
+validation, and unresolved limitations. Distinguish SEC-reported facts,
+SEC-supported derivations, analyst classifications/estimates, manual inputs and
+external data. Preserve prior decisions when superseded and link to detailed
+evidence rather than duplicating it. Mark unreviewed details explicitly; records
+must support eventual valuation use without implying unsupported readiness.
+
 ## Development Workflow
 
 For each milestone:
