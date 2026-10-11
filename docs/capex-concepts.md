@@ -220,6 +220,15 @@ inventory and Wave 27 matrix remain unchanged; historical flags/routes are not
 rewritten. No runtime coverage changes. Next design the five exact CVX
 evidence acceptances, with 42 other current gaps outside the pass.
 
+Wave 31 completes that [CVX acceptance design](capex-cvx-scope-evidence-design.md)
+with a [five-entry matrix and 57-identity regression manifest](capex-cvx-scope-evidence-matrix.json).
+Five exact reported-value designs use additive immutable policy v2 alongside
+the ten unchanged v1 approvals; 42 controls remain unapproved, not fresh denials.
+No generic fallback, derivation, policy implementation or production-count
+change. Original evidence and research snapshots remain unchanged. Next
+implement only the five CVX entries with direct/v1 preservation and incremental
+validation; do not reopen broad research or infer lease/mineral allocations.
+
 Wave 27 completes the [scope-evidence design](capex-scope-evidence-design.md)
 and [57-row acceptance matrix](capex-scope-evidence-matrix.json): five AMZN and
 five LLY exact-period curated design acceptances; 47 `NO_ENTRY` controls retain

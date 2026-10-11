@@ -399,6 +399,20 @@ retains representation correction and refresh audit records. See
 [verified results](capex-scope-evidence-results.md). No generic parser/resolver
 or semantic acceptance change; integrated FCFF readiness remains unproved.
 
+Wave 31's [CVX acceptance design](capex-cvx-scope-evidence-design.md) proposes
+an additive immutable `capex_scope_equivalence_v2` set of five CVX entries
+alongside unchanged v1's ten AMZN/LLY entries. Exact filing/annual identity
+dispatch in an explicit published-policy catalog selects one version; overlapping
+active registrations and unknown versions fail validation. No latest-version
+fallback or silent v1 rewrite/relabeling. Extend only curated Capex entry/manifest
+selection and provenance validation at composition; generic policy, selection
+and parser remain unchanged. Schema 5's existing audit represents v2 without
+new field meanings; v1's entry and serialized audit remain unchanged. Required
+verified raw instance/schema/presentation/FilingSummary and reviewed notes bind
+scope; ancillary unavailable calculation/label originals are not v2 gates or
+scope proof, and no v1 mandatory evidence is dropped. This is design only;
+next implement the five-entry extension with 5/10/42 and direct-value regressions.
+
 Wave 20 implements the [Wave 19 design](depreciation-amortization-scope-evidence-design.md)
 as `normalization.d_and_a_scope` and a separate five-entry source registry,
 not approval inferred from the research JSON. The corpus caller retrieves the

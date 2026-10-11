@@ -904,10 +904,20 @@ allocation is unproved and exhausted in the retained evidence, so no adjusted
 equation is approved or broad research repeated. The primitive is clarified,
 not expanded; existing policies, counts and the 36-body evidence are unchanged.
 The updated supplement preserves Wave 29's decision and immutable digest.
-Next bounded milestone: documentation-only five-entry CVX scope-evidence
-acceptance design, with exact identity/provenance, exclusions, precedence and
-conservative occurrence/failure rules. No implementation or future/amended
-acceptance; keep the other 42 gaps and valuation readiness outside that pass.
+Wave 31 completes the [five-entry CVX scope acceptance design](capex-cvx-scope-evidence-design.md)
+and [machine-checkable matrix](capex-cvx-scope-evidence-matrix.json). PARTIAL GO:
+five exact reported-value designs, ten unchanged published AMZN/LLY approvals,
+42 unapproved controls, 147 existing direct results preserved. Proposed v2 is
+a disjoint immutable five-entry set alongside v1, with exact published-catalog
+dispatch; no v1 relabeling or evidence mutation. Typed mandatory raw-body
+evidence, selected-instance re-parsing, conservative occurrence/conflict and
+direct-precedence rules, complete schema-5 provenance and regression gates are
+specified. No generic fallback or mineral/lease equation. Production remains
+Capex 157/47/0 and aggregate 1,895/1,493/11/27/42 = 3,468; no tests or corpus run.
+Next bounded milestone: implement only the five CVX v2 entries and exact catalog,
+then focused 5/10/42 and direct-preservation checks, targeted live validation,
+one complete suite and one corpus reconciliation. Stop on any other state,
+provenance or issuer-execution change; keep other gaps and readiness outside it.
 Do not implement a sum or infer TXN allocations; further TXN work
 requires a genuine new expense/inventory and incentive bridge, not repeated
 concept research. TXN 2024–2025 absent intangible operands are not
@@ -987,7 +997,9 @@ sensitivity work is intentionally paused through Phase 1H.
    ten-entry policy. Wave 28 completes it with exactly ten new Capex resolutions;
    Wave 29 completes five CVX acquisition/perimeter reviews with no new approval;
    Wave 30 clarifies that perimeter and supports five reported-value designs,
-   not any adjusted equation. Next design only the five exact CVX entries.
+   not any adjusted equation. Wave 31 designs only the five exact CVX entries
+   under a disjoint immutable v2 catalog, preserving v1. Next implement and
+   incrementally validate that five-entry extension.
    Then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition

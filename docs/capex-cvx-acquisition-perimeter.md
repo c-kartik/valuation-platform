@@ -1,5 +1,13 @@
 # CVX cash-PP&E acquisition/perimeter review
 
+Wave 31 completes the [five-entry exact-accession scope design](capex-cvx-scope-evidence-design.md)
+and [acceptance matrix](capex-cvx-scope-evidence-matrix.json), using the unchanged
+Wave 30 methodology/supplement below. Five CVX designs form disjoint immutable
+v2 alongside the ten unchanged v1 approvals, with 42 unapproved controls.
+No production approval or equation; counts remain unchanged. Next implement
+only that reviewed five-entry contract with incremental validation, not another
+methodology or allocation research pass.
+
 ## Current decision: Wave 30 methodology review
 
 Wave 30 starts at `16454c508cdce7e05be08fa11e043eed3ff6d293`, clean

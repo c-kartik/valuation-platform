@@ -633,6 +633,15 @@ missing-as-zero. Capex remains 157/47/0; five potential designs plus 42 other
 current gaps (not newly reviewed here) reconcile to 47 missing. Next design only the five
 exact-accession evidence acceptances; other gaps and FCFF readiness stay gated.
 
+Wave 31 completes the [CVX acceptance contract](../capex-cvx-scope-evidence-design.md)
+and [five-entry/57-identity matrix](../capex-cvx-scope-evidence-matrix.json).
+Five CVX v2 designs + ten unchanged v1 approvals + 42 unapproved controls;
+zero new runtime approvals and no adjusted equation. The additive immutable
+catalog preserves v1 provenance, generic/direct values and conservative
+evidence failures. Current Capex/aggregate states are unchanged. Next implement
+only these five entries, validating direct preservation and the complete
+inventory cohorts before targeted/full/corpus gates; no broad scope expansion.
+
 Wave 14 proves complete component derivations for the 25 LLY/JNJ/MRK/KLAC/IBM
 periods without using Pretax as a residual. All 25 are approved research
 patterns, with acquired IPR&D, restructuring, operating-asset impairments,
@@ -782,7 +791,7 @@ issuers have one post-smoke classification.
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 24 audit:** no approved numeric incompatibility established; TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Design timing-basis/evidence and joint consumer-readiness contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
-| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 47 missing across the 204-period corpus | Core FCFF input | Wave 30 supports five CVX reported-value scope designs, no adjusted equations; next design exact evidence acceptance, keeping other 42 gaps separate | Five potential designs, zero runtime approval | High |
+| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 47 missing across the 204-period corpus | Core FCFF input | Wave 31 completes five CVX v2 designs; next implement with unchanged ten v1 approvals, 42 controls and direct results | Five potential designs, zero runtime approval | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
 | 11 | `CONCEPT_POLICY` | Commercial paper 192 missing; short borrowings 203 missing | Equity bridge | Generalize exact concepts only where economically present | High | Medium |
@@ -837,6 +846,8 @@ issuers have one post-smoke classification.
    without approval. Wave 30 clarifies development/mineral and capitalized-lease
    treatment; next design five exact CVX reported-value entries, without inferred
    allocations or adjusted equations.
+   Wave 31 designs those five entries as a disjoint immutable v2 set; next
+   implement and incrementally validate it without altering v1/direct results.
    CVX/GE mixed-business designs remain separate. Approve only
    repeatable definitions with
    selected-accession evidence.

@@ -1,5 +1,15 @@
 # Capex scope-evidence acceptance design
 
+Wave 31 adds the [CVX exact-accession acceptance design](capex-cvx-scope-evidence-design.md)
+and [five-entry matrix](capex-cvx-scope-evidence-matrix.json). Proposed
+`capex_scope_equivalence_v2` is a disjoint five-CVX-entry approval set alongside
+published v1's ten AMZN/LLY entries, not a replacement or v1 mutation. Exact
+catalog dispatch preserves old v1 values/provenance and evidence correction/
+refresh records. Five new designs + ten existing approvals + 42 unapproved
+controls reconcile to 57 inventory identities. Generic/direct policies and
+production remain unchanged. The Wave 27 design/snapshot below stays historical;
+next implement only the five CVX entries under the new contract.
+
 ## Decision and economic boundary
 
 Phase 1H.4 Wave 27 starts at `052525309a4e0b46dfe047cdb6e67eaa6bfaad63`.
