@@ -1,5 +1,14 @@
 # S&P 500 Top 50 failure taxonomy
 
+Latest verified production milestone: **Wave 38**
+[Visa v3 implementation](../capex-visa-scope-evidence-results.md). Capex is
+**167/37/0**; aggregate **1,905/1,483/11/27/42 = 3,468**. Five Visa missing states
+resolve; fifteen prior curated approvals, 147 direct results, 37 unapproved
+controls and every other measure/execution state are unchanged. Remaining
+controls comprise 17 concept-policy, 17 derivation and three methodology-blocker
+inventory periods; these are not newly reviewed denials. Next bounded milestone:
+documentation-only scope research for the five frozen QCOM Capex periods.
+
 Wave 37 [Visa v3 scope design](../capex-visa-scope-evidence-design.md) and
 [matrix](../capex-visa-scope-evidence-matrix.json) freeze five design approvals,
 fifteen unchanged v1/v2 runtime approvals and 37 unapproved controls: 57 unique
@@ -48,7 +57,7 @@ ten unavailable-old renderer fingerprints remain separately unverifiable.
 Production and the 57-row frozen inventory are unchanged; no tests or corpus.
 Next research only five LRCX combined capital-expenditure/intangible periods.
 
-Latest verified production follow-up: **Wave 32** adds five exact CVX Capex
+Historical verified production follow-up: **Wave 32** adds five exact CVX Capex
 v2 resolutions. [Results](../capex-cvx-scope-evidence-results.md) reconcile Capex
 **162/42/0** and aggregate **1,900/1,488/11/27/42 = 3,468**, with all 147 direct
 results, ten v1 approvals, 42 controls, other measure states and 43/seven
@@ -855,7 +864,7 @@ issuers have one post-smoke classification.
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 24 audit:** no approved numeric incompatibility established; TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Design timing-basis/evidence and joint consumer-readiness contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
-| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 42 missing across the 204-period corpus | Core FCFF input | Wave 37 designs five Visa v3 entries alongside fifteen immutable v1/v2 approvals; next implement only that exact contract. NVDA/LRCX component gaps remain | No generic fallback or approved additional equation | High |
+| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 37 missing across the 204-period corpus | Core FCFF input | Wave 38 validates five Visa v3 entries while preserving fifteen v1/v2 approvals and 147 direct results; next research only five QCOM cash PP&E scope controls. NVDA/LRCX component gaps remain | No generic fallback or approved additional equation | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
 | 11 | `CONCEPT_POLICY` | Commercial paper 192 missing; short borrowings 203 missing | Equity bridge | Generalize exact concepts only where economically present | High | Medium |

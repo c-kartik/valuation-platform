@@ -1,5 +1,11 @@
 # Visa exact-accession Capex scope acceptance design
 
+Implementation follow-up: [Wave 38 verified results](capex-visa-scope-evidence-results.md)
+publish only these five entries as v3. The frozen design matrix and its evidence
+remain unchanged. All fifteen v1/v2 approvals and 147 direct results survive
+unchanged; five/fifteen/37 and the complete corpus reconcile. The following
+Wave 37 design-time counts and decisions are historical, not current production.
+
 Phase 1H.4 Wave 37; starting HEAD
 `578530a79712ed89bd8cc4328df2979e88b6059a`, clean `main`, fifteen ahead
 of origin. Documentation-only; no push, SEC retrieval, tests or corpus rerun.

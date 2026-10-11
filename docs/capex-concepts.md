@@ -1,5 +1,13 @@
 # Capex selected-filing concept and component inventory
 
+Wave 38 [implements and validates](capex-visa-scope-evidence-results.md) only the
+five reviewed Visa v3 entries. Current Capex is **167/37/0**, aggregate
+**1,905/1,483/11/27/42 = 3,468**. The frozen 57-row research inventory is unchanged:
+five Visa resolutions, fifteen unchanged v1/v2 approvals and 37 unapproved
+controls; all 147 direct results are separately unchanged. Controls are not
+freshly reviewed denials. No generic fallback or adjustment equation. Next:
+documentation-only cash PP&E scope research for five frozen QCOM periods.
+
 Wave 37 [Visa scope design](capex-visa-scope-evidence-design.md) freezes five
 additive v3 reported-value designs, fifteen unchanged v1/v2 approvals and 37
 unapproved controls in its [matrix](capex-visa-scope-evidence-matrix.json).

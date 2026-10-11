@@ -65,7 +65,7 @@ class CVXSelectionTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256(e.reviewed_entry_json.encode()).hexdigest(), r['canonical_reviewed_entry_sha256'])
 
     def test_57_identity_five_ten_42_regression(self):
-        counts = {'1':0,'2':0,'missing':0}
+        counts = {'1':0,'2':0,'3':0,'missing':0}
         for row in INVENTORY:
             b,x,p,a = fixture(row)
             entry = published_capex_scope_entry_for(x.company.cik,b.filing,p)
@@ -82,7 +82,7 @@ class CVXSelectionTests(unittest.TestCase):
             else:
                 self.assertIsInstance(result,MissingHistoricalMetric)
                 counts['missing'] += 1
-        self.assertEqual(counts, {'1':10,'2':5,'missing':42})
+        self.assertEqual(counts, {'1':10,'2':5,'3':5,'missing':37})
 
     def test_serialization_and_unknown_version_rejection(self):
         selected = SelectedFactObservations(self.instance.company,'company-facts',NOW,(self.bucket,),())

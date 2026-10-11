@@ -433,6 +433,17 @@ correction/refresh history and direct provenance. This is design only, no catalo
 schema, registry or runtime mutation; its five/fifteen/37 matrix protects 147
 direct results separately. No generic fallback, equation, cache or FCFF consumer.
 
+Wave 38 [implements and validates](capex-visa-scope-evidence-results.md) that
+five-entry v3 in a separate immutable runtime registry and Visa-specific policy
+models. The published catalog now contains disjoint v1/v2/v3; old registry bytes,
+validators and default v1 identity remain unchanged. Existing composition and
+historical dispatch already select exact published entries. Visa applies strict
+typed raw-response SHA-256/length checks, support namespace checks and structural
+nil/raw-numeric validation without changing the parser or generic Capex policy.
+Schema 5 already carries the complete ordered occurrence, review, artifact and
+support/exclusion audit; published-version validation now recognizes v3 with no
+schema change. No generic fallback, adjustment equation or new caching system.
+
 Wave 20 implements the [Wave 19 design](depreciation-amortization-scope-evidence-design.md)
 as `normalization.d_and_a_scope` and a separate five-entry source registry,
 not approval inferred from the research JSON. The corpus caller retrieves the

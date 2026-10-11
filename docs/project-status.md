@@ -2,7 +2,21 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 37**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 38**, five Visa curated Capex v3
+entries implemented and [validated](capex-visa-scope-evidence-results.md).
+Immutable v1/v2 registries, fifteen prior approvals and all 147 direct results
+are unchanged. The original 57 identities reconcile to five new Visa results,
+fifteen prior approvals and 37 unchanged unapproved controls. Capex is
+**167 resolved / 37 missing / 0 ambiguous**; aggregate is
+**1,905/1,483/11/27/42 = 3,468**. All other measures, 43 issuer completions and
+seven specialized skips are unchanged. Focused tests: 47 passed; complete suite:
+599 passed once. Five retained-accession checks and one corpus gate passed;
+65 mandatory Visa response bodies remain byte-verified, with schema-5 provenance.
+No generic fallback, adjustment equation, primitive expansion or FCFF readiness
+approval. Next bounded milestone: documentation-only scope research for the
+five frozen QCOM Capex periods, using the existing cash PP&E primitive.
+
+Previously completed milestone: **Phase 1H.4 Wave 37**, documentation-only
 [Visa scope acceptance design](capex-visa-scope-evidence-design.md) and
 [machine-checkable matrix](capex-visa-scope-evidence-matrix.json).
 PARTIAL GO for five additive `capex_scope_equivalence_v3` reported-value designs,

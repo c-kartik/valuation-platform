@@ -518,6 +518,15 @@ perimeter, with no software/acquisition adjustment, generic fallback or runtime
 approval. Existing direct and curated results and consumer-readiness boundaries
 remain unchanged. Next implement only that reviewed exact-entry contract.
 
+Wave 38 [verified implementation](capex-visa-scope-evidence-results.md) publishes
+only the five reviewed Visa v3 entries: Capex **167/37/0**, aggregate
+**1,905/1,483/11/27/42 = 3,468**. The economic primitive is unchanged; evidenced
+capitalized operational software is within these exact cash PP&E/technology
+perimeters, not a generic intangible/software approval. No cash split, residual,
+acquisition adjustment or gross-up is introduced. All 147 direct and fifteen
+v1/v2 results remain unchanged, not retrospectively scope-recertified. Historical
+value resolution does not establish integrated FCFF timing readiness.
+
 The Revenue, Operating Income, and Capex policies were validated against five
 annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A covers all
 five selected periods of META, AAPL, and COST. For Microsoft CIK `789019` only,

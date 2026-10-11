@@ -287,13 +287,58 @@ class CVXCapexScopePolicy(CapexScopePolicy):
 CAPEX_SCOPE_V2_POLICY = CVXCapexScopePolicy(CAPEX_SCOPE_POLICY_ID, '2',
     tuple(CVXCapexScopePolicyEntry(**_v2_fields(r)) for r in _V2_RECORDS))
 
+_V3_RECORDS = json.loads(Path(__file__).with_name('capex_scope_v3_registry.json').read_text())
+
+
+@dataclass(frozen=True)
+class VisaCapexScopePolicyEntry(CapexScopePolicyEntry):
+    """Only five published Visa records; no change to v1/v2 validators."""
+    def __post_init__(self):
+        canonical = next((r for r in _V3_RECORDS
+                          if r['filing']['accession_number'] == self.accession_number), None)
+        if canonical is None or any(getattr(self, k) != v for k, v in _v2_fields(canonical).items()):
+            raise CapexScopePolicyError('Incomplete or unpublished Visa v3 entry')
+        prefix = ('https://www.sec.gov/Archives/edgar/data/1403161/'
+                  + self.accession_number.replace('-', '') + '/')
+        if (type(self.company_cik) is not int or self.company_cik != 1403161
+                or self.form != '10-K' or not self.annual_start < self.annual_end == self.report_date
+                or self.taxonomy != 'us-gaap' or self.concept != 'PaymentsToAcquireProductiveAssets'
+                or self.unit != 'USD' or self.economic_scope != CAPEX_SCOPE_CLASSIFICATION
+                or not isinstance(self.expected_value, Decimal)
+                or not self.expected_value.is_finite() or self.expected_value <= 0
+                or canonical['policy_version'] != '3' or not canonical['production_policy_approval']
+                or len(self.reviewed_evidence) != 7 or len({e.evidence_id for e in self.reviewed_evidence}) != 7
+                or any(e.review_status != 'approved' or not e.rationale for e in self.reviewed_evidence)
+                or len(self.artifact_digests) != 13
+                or any(not u.startswith(prefix) or not re.fullmatch(r'[0-9a-f]{64}', h)
+                       for u, h in self.artifact_digests)
+                or (self.instance_url, self.instance_digest) not in self.artifact_digests
+                or any(a['representation'] != 'sec_response_body_bytes'
+                       or type(a['byte_length']) is not int or a['byte_length'] <= 0
+                       for a in canonical['mandatory_artifacts'])):
+            raise CapexScopePolicyError('Incomplete Visa raw evidence or scope review')
+        _validate_representation_records(canonical)
+
+
+@dataclass(frozen=True)
+class VisaCapexScopePolicy(CapexScopePolicy):
+    def __post_init__(self):
+        if (self.policy_id != CAPEX_SCOPE_POLICY_ID or self.version != '3'
+                or type(self.entries) is not tuple or len(self.entries) != 5
+                or self.entries != tuple(VisaCapexScopePolicyEntry(**_v2_fields(r)) for r in _V3_RECORDS)):
+            raise CapexScopePolicyError('Invalid immutable Visa v3 policy')
+
+
+CAPEX_SCOPE_V3_POLICY = VisaCapexScopePolicy(CAPEX_SCOPE_POLICY_ID, '3',
+    tuple(VisaCapexScopePolicyEntry(**_v2_fields(r)) for r in _V3_RECORDS))
+
 
 @dataclass(frozen=True)
 class CapexScopePolicyCatalog:
     policies: tuple[CapexScopePolicy, ...]
 
     def __post_init__(self):
-        if self.policies != (CAPEX_SCOPE_EQUIVALENCE_POLICY, CAPEX_SCOPE_V2_POLICY):
+        if self.policies != (CAPEX_SCOPE_EQUIVALENCE_POLICY, CAPEX_SCOPE_V2_POLICY, CAPEX_SCOPE_V3_POLICY):
             raise CapexScopePolicyError('Unpublished Capex catalog')
         keys = [(e.company_cik, e.accession_number, e.annual_start, e.annual_end)
                 for p in self.policies for e in p.entries]
@@ -301,7 +346,7 @@ class CapexScopePolicyCatalog:
             raise CapexScopePolicyError('Overlapping active Capex entries')
 
 
-CAPEX_SCOPE_POLICY_CATALOG = CapexScopePolicyCatalog((CAPEX_SCOPE_EQUIVALENCE_POLICY, CAPEX_SCOPE_V2_POLICY))
+CAPEX_SCOPE_POLICY_CATALOG = CapexScopePolicyCatalog((CAPEX_SCOPE_EQUIVALENCE_POLICY, CAPEX_SCOPE_V2_POLICY, CAPEX_SCOPE_V3_POLICY))
 
 
 def published_capex_scope_policy_for(company_cik, filing, annual_period):
@@ -350,10 +395,11 @@ def verify_capex_artifacts(entry, artifacts: Mapping[str, bytes],
     if digests != entry.artifact_digests:
         raise CapexScopePolicyError("Missing or changed selected Capex reviewed artifact")
     _validate_representation_records(json.loads(entry.reviewed_entry_json), artifacts)
-    if isinstance(entry, CVXCapexScopePolicyEntry):
+    if isinstance(entry, (CVXCapexScopePolicyEntry, VisaCapexScopePolicyEntry)):
         for a in json.loads(entry.reviewed_entry_json)['mandatory_artifacts']:
             if len(artifacts[a['source_url']]) != a['byte_length']:
-                raise CapexScopePolicyError('Changed CVX raw artifact byte length')
+                label = 'Visa' if isinstance(entry, VisaCapexScopePolicyEntry) else 'CVX'
+                raise CapexScopePolicyError(f'Changed {label} raw artifact byte length')
     parsed = parse_filing_xbrl_instance(
         artifacts[entry.instance_url], company=filing_xbrl.company,
         filing=filing_xbrl.filing, source_url=entry.instance_url,
@@ -417,7 +463,7 @@ def apply_curated_capex_scope_policy(
     nil_statuses = {}
     support_matches = {s: [] for s in entry.support}
     v2_support_keys = {(s['namespace'], s['concept']) for s in
-        json.loads(entry.reviewed_entry_json)['support_occurrences']} if isinstance(entry, CVXCapexScopePolicyEntry) else set()
+        json.loads(entry.reviewed_entry_json)['support_occurrences']} if isinstance(entry, (CVXCapexScopePolicyEntry, VisaCapexScopePolicyEntry)) else set()
     for ordinal, f in enumerate(filing_xbrl.facts):
         if ((f.namespace, f.concept) not in v2_support_keys
                 and not re.search(r"purchases|payments|capital|property|equipment|lease|acquis|proceeds|incentive", f.concept, re.I)):
@@ -443,17 +489,18 @@ def apply_curated_capex_scope_policy(
         relevant_support = any(f.namespace == s.namespace and f.concept == s.concept
                                and f.dimensions == s.dimensions for s in entry.support)
         if (entity and period and (concept or relevant_support)
-                and (not isinstance(entry, CVXCapexScopePolicyEntry)
+                and (not isinstance(entry, (CVXCapexScopePolicyEntry, VisaCapexScopePolicyEntry))
                      or (not f.dimensions and (_usd(f) or f.unit is None)))):
-            if isinstance(entry, CVXCapexScopePolicyEntry) and concept and not f.dimensions:
+            if isinstance(entry, (CVXCapexScopePolicyEntry, VisaCapexScopePolicyEntry)) and concept and not f.dimensions:
+                label = 'Visa' if isinstance(entry, VisaCapexScopePolicyEntry) else 'CVX'
                 if f.is_nil and (f.numeric_value is not None or f.raw_value not in (None, '')):
-                    raise CapexScopePolicyError('Contradictory CVX nil representation')
+                    raise CapexScopePolicyError(f'Contradictory {label} nil representation')
                 if not f.is_nil:
                     try:
                         if Decimal(f.raw_value) != f.numeric_value:
-                            raise CapexScopePolicyError('Inconsistent CVX raw numeric representation')
+                            raise CapexScopePolicyError(f'Inconsistent {label} raw numeric representation')
                     except (TypeError, ArithmeticError, ValueError) as exc:
-                        raise CapexScopePolicyError('Malformed CVX raw numeric representation') from exc
+                        raise CapexScopePolicyError(f'Malformed {label} raw numeric representation') from exc
             if not f.is_nil and (f.unit_ref is None or f.unit is None):
                 raise CapexScopePolicyError("Missing Capex numeric unit linkage")
             signature = (f.namespace, f.concept, f.start, f.end, f.dimensions,
@@ -558,10 +605,11 @@ def validate_capex_scope_provenance(provenance):
         raise CapexScopePolicyError("Lost Capex confirming occurrence multiplicity")
     for index, (o, e) in enumerate(zip(eligible, provenance.filing_xbrl_evidence), 1):
         f, c = o.fact, o.context
-        if policy.version == '2' and (e.occurrence_ordinal != index or e.is_nil != f.is_nil
+        if policy.version in ('2', '3') and (e.occurrence_ordinal != index or e.is_nil != f.is_nil
                 or e.entity_identifier != c.entity_identifier
                 or e.entity_identifier_scheme != c.entity_identifier_scheme):
-            raise CapexScopePolicyError('Changed CVX confirming occurrence provenance')
+            label = 'Visa' if policy.version == '3' else 'CVX'
+            raise CapexScopePolicyError(f'Changed {label} confirming occurrence provenance')
         if (f.namespace != entry.namespace or f.concept != entry.concept
                 or f.numeric_value != entry.expected_value or f.is_nil
                 or f.dimensions or not _usd(f)
