@@ -2,7 +2,21 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 39**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 40**, documentation-only
+[HD scope research](capex-hd-scope.md) and
+[five-row supplement](capex-hd-scope-inventory.json). All five retain
+`CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`: software/construction capitalization
+and separate cash/acquisition/lease/noncash lines are evidenced, but exhaustive
+eligible cash purchase scope is not. NO-GO for acceptance/derivation, zero safe
+coverage. Fifty-eight current response bodies have typed verified digests;
+historical report hashes are preserved separately, not certified from extracted
+text equality. Frozen inventory and policies unchanged; QCOM not reopened.
+Production carried forward: Capex 167/37/0, aggregate 1,905/1,483/11/27/42 = 3,468.
+No tests or corpus rerun. Next bounded milestone: documentation-only scope
+research for two frozen MRK Capex periods (2021–2022), including acquisition/IPR&D cash
+separation. Reopen HD only for new exact-period completeness evidence.
+
+Previously completed milestone: **Phase 1H.4 Wave 39**, documentation-only
 [QCOM scope research](capex-qcom-scope.md) and
 [five-row supplement](capex-qcom-scope-inventory.json). All five exact selected
 periods retain `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`: cash purchase values

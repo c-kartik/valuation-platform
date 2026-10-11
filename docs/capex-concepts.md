@@ -1,5 +1,14 @@
 # Capex selected-filing concept and component inventory
 
+Wave 40 [HD scope research](capex-hd-scope.md) and
+[five-row supplement](capex-hd-scope-inventory.json) retain five frozen
+`CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED` outcomes. Explicit cash, software
+capitalization and lease/noncash/acquisition disclosures are not an exhaustive
+eligible cash-purchase scope bridge. NO-GO, zero new safe coverage or equations.
+Fifty-eight current bodies retain typed digests, separately from historical
+fingerprints. Frozen inventory, production and QCOM outcomes remain unchanged.
+Next: documentation-only scope research for two frozen MRK Capex periods (2021–2022).
+
 Wave 39 [QCOM scope research](capex-qcom-scope.md) and
 [five-row supplement](capex-qcom-scope-inventory.json) retain all five frozen
 `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED` outcomes. Cash values are verified,
