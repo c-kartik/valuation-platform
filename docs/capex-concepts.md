@@ -1,5 +1,15 @@
 # Capex selected-filing concept and component inventory
 
+Wave 35 [Visa technology-perimeter research](capex-visa-technology-perimeter.md)
+and [five-row supplement](capex-visa-technology-inventory.json) evidence the
+reported property/equipment/technology cash totals, but retain all five
+`CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED` periods unapproved. Zero safe
+additional coverage or equations. Purchased/developed software eligibility
+requires a bounded methodology review; an exclusion would need an unproved
+complete cash split. Acquisition fair values, unpaid purchases, ROU additions
+and D&A approval do not resolve it. Next: that five-period methodology review.
+Frozen inventory, existing approvals and production remain unchanged.
+
 Wave 34 completes [LRCX component-completeness research](capex-lrcx-component-completeness.md)
 and its [five-row supplement](capex-lrcx-component-inventory.json). All five
 retain `DERIVATION` / `COMPONENT_SCOPE_UNPROVED`; no exhaustive intangible cash

@@ -2,7 +2,21 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 34**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 35**, documentation-only
+[Visa Capex technology research](capex-visa-technology-perimeter.md) and
+[five-row supplement](capex-visa-technology-inventory.json). All five retain
+`CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`, zero approved additional coverage
+or equations. Consolidated cash purchases are evidenced, but the purchased/
+developed software asset perimeter needs an explicit current-primitive
+methodology decision; no complete cash split supports an exclusion. Acquisition
+and book values, noncash lease additions and D&A approvals are not cash operands.
+Sixty-five original bodies retain typed digests; historical unverified discovery
+fingerprints remain separate. Production and frozen inventory unchanged; no
+tests or corpus rerun. Next bounded milestone: methodology review of these
+five Visa technology perimeters with explicit existing-policy impact assessment,
+not a primitive change to force coverage or broader issuer research.
+
+Previously completed milestone: **Phase 1H.4 Wave 34**, documentation-only
 [LRCX component-completeness research](capex-lrcx-component-completeness.md)
 and [five-row supplement](capex-lrcx-component-inventory.json). All five retain
 `DERIVATION` / `COMPONENT_SCOPE_UNPROVED`; NO-GO for direct acceptance or a
