@@ -1,5 +1,12 @@
 # Visa Capex cash technology/software perimeter
 
+Wave 37 completes the [Visa v3 scope design](capex-visa-scope-evidence-design.md)
+and [five/fifteen/37 acceptance matrix](capex-visa-scope-evidence-matrix.json).
+Five reported-value designs coexist with unchanged v1/v2; 147 direct results
+are separately protected. All retained original artifacts remain mandatory;
+no primitive expansion, fallback, equation or runtime approval. Next implement
+only the five-entry contract after its incremental validation gates.
+
 Wave 36's [methodology review](capex-visa-software-methodology.md) resolves the
 bounded eligibility question: evidenced capitalized operational software within
 Visa's reported property/equipment/technology cash perimeter is eligible under

@@ -510,6 +510,14 @@ candidates are supported, zero equations or runtime approvals; the 147 direct
 and fifteen curated results/policies are unchanged, not retrospectively
 recertified. Unknown integrated FCFF compatibility remains a separate boundary.
 
+Wave 37's [Visa scope design](capex-visa-scope-evidence-design.md) freezes those
+five exact reported-value candidates as additive v3 designs alongside immutable
+v1/v2. It implements no new economic interpretation: mandatory original-byte
+evidence and reviewed exclusions enforce the Wave 36 cash PP&E/technology
+perimeter, with no software/acquisition adjustment, generic fallback or runtime
+approval. Existing direct and curated results and consumer-readiness boundaries
+remain unchanged. Next implement only that reviewed exact-entry contract.
+
 The Revenue, Operating Income, and Capex policies were validated against five
 annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A covers all
 five selected periods of META, AAPL, and COST. For Microsoft CIK `789019` only,

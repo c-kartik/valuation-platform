@@ -1,5 +1,13 @@
 # Capex selected-filing concept and component inventory
 
+Wave 37 [Visa scope design](capex-visa-scope-evidence-design.md) freezes five
+additive v3 reported-value designs, fifteen unchanged v1/v2 approvals and 37
+unapproved controls in its [matrix](capex-visa-scope-evidence-matrix.json).
+The 147 direct results are assessed separately. No runtime approval or primitive
+expansion; exact evidence, occurrences, failure and schema-5 audit rules apply.
+Next implement only five Visa v3 entries; production and frozen research remain
+unchanged until all focused, targeted and corpus gates pass.
+
 Wave 36 [Visa methodology review](capex-visa-software-methodology.md) clarifies
 eligibility of evidenced capitalized operational software within the selected
 PP&E/technology cash cost perimeter. Five exact reported-value scope designs

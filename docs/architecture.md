@@ -419,6 +419,20 @@ changing v1 audit identity. [Verified results](capex-cvx-scope-evidence-results.
 preserve all 147 direct results, ten v1 approvals and 42 controls; only five CVX
 missing states resolve. No new cache, generic parser/policy change or FCFF consumer.
 
+Wave 37's [Visa acceptance design](capex-visa-scope-evidence-design.md) proposes
+disjoint immutable `capex_scope_equivalence_v3` with exactly five entries alongside
+unchanged ten-entry v1/five-entry v2. Extend only the explicit curated catalog,
+registered-artifact composition and published-version audit validation; not the
+parser, generic policy/selection or old registry validators. All thirteen original
+artifacts per entry have typed SEC-response digests/lengths, including submitted
+calculation/label bodies available for Visa; ancillary historical index hashes
+are never promoted to verified bytes. Schema 5's existing Capex audit meanings
+retain every confirming occurrence, canonical entry/review record and ordered
+support/exclusion through serialization. Preserve old policy IDs/versions,
+correction/refresh history and direct provenance. This is design only, no catalog,
+schema, registry or runtime mutation; its five/fifteen/37 matrix protects 147
+direct results separately. No generic fallback, equation, cache or FCFF consumer.
+
 Wave 20 implements the [Wave 19 design](depreciation-amortization-scope-evidence-design.md)
 as `normalization.d_and_a_scope` and a separate five-entry source registry,
 not approval inferred from the research JSON. The corpus caller retrieves the

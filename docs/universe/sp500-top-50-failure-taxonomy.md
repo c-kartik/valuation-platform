@@ -1,5 +1,13 @@
 # S&P 500 Top 50 failure taxonomy
 
+Wave 37 [Visa v3 scope design](../capex-visa-scope-evidence-design.md) and
+[matrix](../capex-visa-scope-evidence-matrix.json) freeze five design approvals,
+fifteen unchanged v1/v2 runtime approvals and 37 unapproved controls: 57 unique
+inventory identities. All 147 direct Capex results are a separate preservation
+cohort. No production change, generic fallback, adjustment equation or fresh
+control denial. Next implement only five Visa entries under exact evidence,
+occurrence/precedence/provenance and incremental reconciliation gates.
+
 Wave 36 [Visa methodology review](../capex-visa-software-methodology.md) supports
 five exact `CONCEPT_POLICY` / `EXACT_PERIOD_SCOPE_EQUIVALENT` design candidates
 under the existing evidenced cash PP&E/technology cost perimeter. No general
@@ -847,7 +855,7 @@ issuers have one post-smoke classification.
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 24 audit:** no approved numeric incompatibility established; TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Design timing-basis/evidence and joint consumer-readiness contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
-| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 42 missing across the 204-period corpus | Core FCFF input | Wave 32 implements five CVX v2 entries; all v1/direct results preserved. Waves 33/34 retain NVDA/LRCX component gaps; Wave 36 supports five Visa scope-design candidates; next design that exact contract | No generic fallback or approved additional equation | High |
+| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 42 missing across the 204-period corpus | Core FCFF input | Wave 37 designs five Visa v3 entries alongside fifteen immutable v1/v2 approvals; next implement only that exact contract. NVDA/LRCX component gaps remain | No generic fallback or approved additional equation | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
 | 11 | `CONCEPT_POLICY` | Commercial paper 192 missing; short borrowings 203 missing | Equity bridge | Generalize exact concepts only where economically present | High | Medium |

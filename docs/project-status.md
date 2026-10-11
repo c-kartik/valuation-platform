@@ -2,7 +2,23 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 36**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 37**, documentation-only
+[Visa scope acceptance design](capex-visa-scope-evidence-design.md) and
+[machine-checkable matrix](capex-visa-scope-evidence-matrix.json).
+PARTIAL GO for five additive `capex_scope_equivalence_v3` reported-value designs,
+alongside unchanged ten-entry v1 and five-entry v2. Five/fifteen/37 reconciles
+the original 57 inventory identities; 147 direct results are separate.
+All 65 original artifacts and 35 entry-associated reviews are mandatory;
+unverified discovery fingerprints remain ancillary. Exact matching, conservative
+failure, confirming occurrences, precedence and schema-5 provenance are specified.
+No generic fallback, primitive expansion, equation or production approval.
+Production remains Capex 162/42/0, aggregate 1,900/1,488/11/27/42 = 3,468.
+Next bounded milestone: implement only five Visa v3 entries with focused/57-row
+checks, targeted live validation, then one full suite and one corpus gate;
+preserve fifteen approvals, 147 direct results and all other states/execution.
+No tests, corpus, SEC retrieval or runtime changes in this design milestone.
+
+Previously completed milestone: **Phase 1H.4 Wave 36**, documentation-only
 [Visa software methodology review](capex-visa-software-methodology.md).
 PARTIAL GO for five exact-accession reported-value scope designs: the evidenced
 capitalized operational software cost perimeter is eligible under existing
