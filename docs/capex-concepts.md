@@ -1,5 +1,14 @@
 # Capex selected-filing concept and component inventory
 
+Wave 44 [GEV cash/perimeter research](capex-gev-cash-perimeter.md) and
+[two-row supplement](capex-gev-scope-inventory.json) retain `DERIVATION` /
+`COMPONENT_SCOPE_UNPROVED` for both frozen periods. Cash additions are evidenced,
+but complete PP&E/qualifying-software cash scope and any equation are not.
+Operational software is not rejected solely by intangible book placement; the
+2024 combined/carve-out perimeter is not reconstructed as standalone cash.
+NO-GO, zero safe coverage; thirty-two verified original bodies. Frozen inventory,
+prior decisions and production unchanged. Next: three frozen GE Capex periods.
+
 Wave 43 [PEP component/perimeter research](capex-pep-component-perimeter.md) and
 [five-row supplement](capex-pep-scope-inventory.json) retain five frozen
 `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED` outcomes. Two equivalent occurrences

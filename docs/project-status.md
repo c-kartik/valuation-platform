@@ -2,7 +2,20 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 43**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 44**, documentation-only
+[GEV cash/perimeter research](capex-gev-cash-perimeter.md) and
+[two-row supplement](capex-gev-scope-inventory.json). Both retain `DERIVATION` /
+`COMPONENT_SCOPE_UNPROVED`; reported cash additions combine PP&E/internal-use
+software without exhaustive eligible cash mapping. The 2024 spin-off and parent
+cash caveats are retained separately from historical value validity. NO-GO,
+zero safe new coverage or equations. Thirty-two verified original bodies:
+twenty reused, twelve targeted retrievals. Production remains Capex 167/37/0;
+aggregate 1,905/1,483/11/27/42 = 3,468. No tests or corpus rerun.
+Next bounded milestone: three frozen GE Capex cash/perimeter periods, no
+predecessor reconstruction or specialized implementation. Reopen GEV only with
+new complete cash-scope evidence. Prior issuer decisions unchanged.
+
+Previously completed milestone: **Phase 1H.4 Wave 43**, documentation-only
 [PEP component/perimeter research](capex-pep-component-perimeter.md) and
 [five-row supplement](capex-pep-scope-inventory.json). All five retain
 `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`: exact annual cash spending and
