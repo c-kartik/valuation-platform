@@ -493,6 +493,23 @@ all 147 direct results and ten v1 approvals preserved. The primitive and scope
 decision above are unchanged: no mineral/lease adjustment, business-acquisition
 operand, generic fallback or integrated FCFF-compatibility certification.
 
+Wave 36's [Visa software review](capex-visa-software-methodology.md) clarifies
+the existing asset-and-cash cost perimeter: purchased and internally developed
+capitalized operational software is eligible within the exact evidenced Visa
+property/equipment/technology cash purchase component. Independently selected
+cash-flow, accounting, property and separate intangible/acquisition evidence
+establish that scope; book grouping, capitalization, labels or matching amounts
+alone do not. This is not a tangible-materials-only measure or an expansion to
+all software, subscriptions, hosting, purchased rights or business acquisitions.
+Acquisition-origin technology affects asset balances; actual business-purchase
+cash remains a separate excluded line, not an adjustment to ordinary purchases.
+Preliminary-stage expense, unpaid/noncash additions, ROU additions and financing
+principal are not added. No software split, acquisition allocation, incentive
+gross-up or proceeds netting is invented. Five exact Visa scope-design
+candidates are supported, zero equations or runtime approvals; the 147 direct
+and fifteen curated results/policies are unchanged, not retrospectively
+recertified. Unknown integrated FCFF compatibility remains a separate boundary.
+
 The Revenue, Operating Income, and Capex policies were validated against five
 annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A covers all
 five selected periods of META, AAPL, and COST. For Microsoft CIK `789019` only,

@@ -1,5 +1,14 @@
 # Capex selected-filing concept and component inventory
 
+Wave 36 [Visa methodology review](capex-visa-software-methodology.md) clarifies
+eligibility of evidenced capitalized operational software within the selected
+PP&E/technology cash cost perimeter. Five exact reported-value scope designs
+are supported, zero equations or production approvals. The updated
+[supplement](capex-visa-technology-inventory.json) retains historical Wave 35
+decisions and unchanged fact/evidence provenance. No generic fallback or broad
+intangible expansion; existing 147 direct/fifteen curated results are unchanged,
+not newly recertified. Next: five-entry Visa scope contract design only.
+
 Wave 35 [Visa technology-perimeter research](capex-visa-technology-perimeter.md)
 and [five-row supplement](capex-visa-technology-inventory.json) evidence the
 reported property/equipment/technology cash totals, but retain all five

@@ -1,6 +1,6 @@
 {
-  "research_version": "wave35-visa-capex-component-completeness-v1",
-  "starting_head": "362c6d22631b9a873153cb0c26d0ef273df6490d",
+  "research_version": "wave36-visa-capex-software-methodology-v2",
+  "starting_head": "6f55c21fa68ee161ad51f0cd021cf2d72d4446d1",
   "frozen_inventory": "capex-inventory.json",
   "frozen_inventory_sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6",
   "period_count": 5,
@@ -8,11 +8,11 @@
     "CONCEPT_POLICY": 5
   },
   "scope_disposition_counts": {
-    "SCOPE_RESEARCH_REQUIRED": 5
+    "EXACT_PERIOD_SCOPE_EQUIVALENT": 5
   },
   "approved_derivations": 0,
-  "safe_potential_new_coverage": 0,
-  "decision": "NO_GO_FOR_CURRENT_ACCEPTANCE_PARTIAL_GO_FOR_BOUNDED_TECHNOLOGY_METHODOLOGY_REVIEW",
+  "safe_potential_new_coverage": 5,
+  "decision": "PARTIAL_GO_FOR_FIVE_EXACT_ACCESSION_REPORTED_VALUE_SCOPE_DESIGNS_NO_PRODUCTION_APPROVAL",
   "evidence_fixture": "evidence/visa-capex-response-bodies.json",
   "evidence_artifact_count": 65,
   "production_counts_carried_forward_not_remeasured": {
@@ -75,8 +75,8 @@
       "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/v-20210930_htm.xml",
       "instance_sha256": "b1e94ff40fe7bfeab76db91eb318e7773e5d9a72b4061c1a47d53db67a915ed1",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "safe_potential_new_coverage": 0,
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "safe_potential_new_coverage": 1,
       "production_policy_approval": false,
       "approved_derivation_equation": null,
       "primary_occurrences": [
@@ -3350,7 +3350,72 @@
           "reason": "Discovery metadata only; exact identities and original instance/relationships verified without this body. Preserve frozen fingerprint, do not relabel as verified response bytes."
         }
       ],
-      "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      "remaining_blocker": "No remaining methodology blocker for this exact reported operand. Scope-evidence contract design, immutable versioning, exact evidence/occurrence validation and production implementation remain unapproved. No technology-only equation or integrated FCFF compatibility established.",
+      "historical_wave35_decision": {
+        "classification": "CONCEPT_POLICY",
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "safe_potential_new_coverage": 0,
+        "production_policy_approval": false,
+        "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      },
+      "safe_potential_scope_design": true,
+      "potential_reported_value_usd": "705000000",
+      "methodology_review": {
+        "status": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
+        "economic_classification": "GROSS_CASH_PPE_EQUIVALENT",
+        "scope": "Complete reported consolidated property/equipment/technology cash component. The evidenced operational software class is eligible within existing PP&E cost scope; no materials-only split required.",
+        "acquisition_origin": "Acquisition-origin technology is recorded in asset balances; business purchase cash is a separate excluded line, not added or allocated by acquired fair values.",
+        "evidence_assertions": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R10.htm",
+            "sha256": "f1b95da41a7e552aafcad4378ec6e8cd976127f70af4ce3e0d0a49caa0a50569",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Business consideration and PPA asset recognition are separate from ordinary cash purchase operand."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R15.htm",
+            "sha256": "7da518239e679b1c7cbe0da441ce0cadcdf5015c6846a8a84d1d69bb1cfbaab5",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Explicit operational technology class alongside land/buildings/equipment; corroborates capitalized asset perimeter, not cash amounts from book balances."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R16.htm",
+            "sha256": "c3dc87158e3d49fa7ceaf58c0d3ed8d17f305eda8f1368a44705225a441ac004",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Customer relationships/trade names/reacquired rights are a separate asset perimeter; not implicitly approved as PP&E."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R17.htm",
+            "sha256": "04a006ce65ab5ae458164b2c4cd1f55a6028a7f495e1cdad3cf828101685e46d",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "ROU in other assets and separate lease treatment; no noncash lease or financing addition."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R8.htm",
+            "sha256": "c28f72373b0a27cb6e83c20ae1dd75f70fa50382ed8730272136cb981dba154b",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Exact consolidated annual reported purchase cash; separate acquisition/investment cash and unpaid-purchase schedule; no residual or disposal netting."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316121000060/R9.htm",
+            "sha256": "ac805ab3d1f20a592ae0f5d21a6838cbaf06f9ce474b8a5bccbe70851ea4ed9e",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Capitalized purchased/developed technology asset cost within property/equipment/technology; preliminary-stage costs expensed; acquired technology measured at fair value, not annual purchase cash."
+            ]
+          }
+        ]
+      }
     },
     {
       "ticker": "V",
@@ -3396,8 +3461,8 @@
       "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/v-20220930_htm.xml",
       "instance_sha256": "46480fb12c4da2a0f6f2173941d6b89d5741981e6b8731696b624698e1866569",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "safe_potential_new_coverage": 0,
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "safe_potential_new_coverage": 1,
       "production_policy_approval": false,
       "approved_derivation_equation": null,
       "primary_occurrences": [
@@ -6815,7 +6880,72 @@
           "reason": "Discovery metadata only; exact identities and original instance/relationships verified without this body. Preserve frozen fingerprint, do not relabel as verified response bytes."
         }
       ],
-      "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      "remaining_blocker": "No remaining methodology blocker for this exact reported operand. Scope-evidence contract design, immutable versioning, exact evidence/occurrence validation and production implementation remain unapproved. No technology-only equation or integrated FCFF compatibility established.",
+      "historical_wave35_decision": {
+        "classification": "CONCEPT_POLICY",
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "safe_potential_new_coverage": 0,
+        "production_policy_approval": false,
+        "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      },
+      "safe_potential_scope_design": true,
+      "potential_reported_value_usd": "970000000",
+      "methodology_review": {
+        "status": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
+        "economic_classification": "GROSS_CASH_PPE_EQUIVALENT",
+        "scope": "Complete reported consolidated property/equipment/technology cash component. The evidenced operational software class is eligible within existing PP&E cost scope; no materials-only split required.",
+        "acquisition_origin": "Acquisition-origin technology is recorded in asset balances; business purchase cash is a separate excluded line, not added or allocated by acquired fair values.",
+        "evidence_assertions": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R10.htm",
+            "sha256": "7e62e3e8ed85734bedcadb37e0c0a4010b9afb036b44dbc9fd8d5f01ce7b271c",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Capitalized purchased/developed technology asset cost within property/equipment/technology; preliminary-stage costs expensed; acquired technology measured at fair value, not annual purchase cash."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R11.htm",
+            "sha256": "d635548f2070b4d97aa10f7723d4f00683152a2fb7566ebcd8501da58332586f",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Business consideration and PPA asset recognition are separate from ordinary cash purchase operand."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R16.htm",
+            "sha256": "87d14fb66b531775ac1e2330133ebdc157de4259e349100ef5c3c78aa7548b7e",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Explicit operational technology class alongside land/buildings/equipment; corroborates capitalized asset perimeter, not cash amounts from book balances."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R17.htm",
+            "sha256": "8acacdcc6651ba8a1b7d13de5875317912f639b97b1c304a500cb25c86b0b034",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Customer relationships/trade names/reacquired rights are a separate asset perimeter; not implicitly approved as PP&E."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R18.htm",
+            "sha256": "40a1779d86e52aa04bcd7d2312e2849cefe217cded862cc2436021c1c1a848b4",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "ROU in other assets and separate lease treatment; no noncash lease or financing addition."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316122000081/R9.htm",
+            "sha256": "3b0d60601c8d2ebeb639817cf883bcea748274fffb8269a589f8859c518b5349",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Exact consolidated annual reported purchase cash; separate acquisition/investment cash and unpaid-purchase schedule; no residual or disposal netting."
+            ]
+          }
+        ]
+      }
     },
     {
       "ticker": "V",
@@ -6861,8 +6991,8 @@
       "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930_htm.xml",
       "instance_sha256": "51bfa73767db58657ac9cfd3a27c3ac15789d093e7158b2a5b1d5b830cdf5ce8",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "safe_potential_new_coverage": 0,
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "safe_potential_new_coverage": 1,
       "production_policy_approval": false,
       "approved_derivation_equation": null,
       "primary_occurrences": [
@@ -10244,7 +10374,72 @@
           "reason": "Discovery metadata only; exact identities and original instance/relationships verified without this body. Preserve frozen fingerprint, do not relabel as verified response bytes."
         }
       ],
-      "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      "remaining_blocker": "No remaining methodology blocker for this exact reported operand. Scope-evidence contract design, immutable versioning, exact evidence/occurrence validation and production implementation remain unapproved. No technology-only equation or integrated FCFF compatibility established.",
+      "historical_wave35_decision": {
+        "classification": "CONCEPT_POLICY",
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "safe_potential_new_coverage": 0,
+        "production_policy_approval": false,
+        "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      },
+      "safe_potential_scope_design": true,
+      "potential_reported_value_usd": "1059000000",
+      "methodology_review": {
+        "status": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
+        "economic_classification": "GROSS_CASH_PPE_EQUIVALENT",
+        "scope": "Complete reported consolidated property/equipment/technology cash component. The evidenced operational software class is eligible within existing PP&E cost scope; no materials-only split required.",
+        "acquisition_origin": "Acquisition-origin technology is recorded in asset balances; business purchase cash is a separate excluded line, not added or allocated by acquired fair values.",
+        "evidence_assertions": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R10.htm",
+            "sha256": "e83387f6e00793e2475d16e7c72414eea2b944599150f38d59b471397d49f47f",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Capitalized purchased/developed technology asset cost within property/equipment/technology; preliminary-stage costs expensed; acquired technology measured at fair value, not annual purchase cash."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R11.htm",
+            "sha256": "3617ce5702623a41982eeea34624f54e53d1ae795976cac8dedcae4b9b0bb140",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Business consideration and PPA asset recognition are separate from ordinary cash purchase operand."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R16.htm",
+            "sha256": "4bb2f4423967bb338b30a8e1fb99fbd8c6d4c6a8f8fa0414665186273f7d3ae5",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Explicit operational technology class alongside land/buildings/equipment; corroborates capitalized asset perimeter, not cash amounts from book balances."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R17.htm",
+            "sha256": "5bc05f247a27bd102f119ebc71c8b38c8004314c79a720be030975b3cf94ac86",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Customer relationships/trade names/reacquired rights are a separate asset perimeter; not implicitly approved as PP&E."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R18.htm",
+            "sha256": "2582305cd15c2c5e9555da56e9b8bb687cfc324a10bf6c2a30d7710872e62add",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "ROU in other assets and separate lease treatment; no noncash lease or financing addition."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/R9.htm",
+            "sha256": "96de42105506f8e95dae81e826789bd9e37533f82112cbbb3daff5b411b068fc",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Exact consolidated annual reported purchase cash; separate acquisition/investment cash and unpaid-purchase schedule; no residual or disposal netting."
+            ]
+          }
+        ]
+      }
     },
     {
       "ticker": "V",
@@ -10290,8 +10485,8 @@
       "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/v-20240930_htm.xml",
       "instance_sha256": "fb0696d8534c11aa099895642f5521002823278deb8572483ef0fee1d58866d5",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "safe_potential_new_coverage": 0,
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "safe_potential_new_coverage": 1,
       "production_policy_approval": false,
       "approved_derivation_equation": null,
       "primary_occurrences": [
@@ -13493,7 +13688,72 @@
           "reason": "Discovery metadata only; exact identities and original instance/relationships verified without this body. Preserve frozen fingerprint, do not relabel as verified response bytes."
         }
       ],
-      "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      "remaining_blocker": "No remaining methodology blocker for this exact reported operand. Scope-evidence contract design, immutable versioning, exact evidence/occurrence validation and production implementation remain unapproved. No technology-only equation or integrated FCFF compatibility established.",
+      "historical_wave35_decision": {
+        "classification": "CONCEPT_POLICY",
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "safe_potential_new_coverage": 0,
+        "production_policy_approval": false,
+        "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      },
+      "safe_potential_scope_design": true,
+      "potential_reported_value_usd": "1257000000",
+      "methodology_review": {
+        "status": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
+        "economic_classification": "GROSS_CASH_PPE_EQUIVALENT",
+        "scope": "Complete reported consolidated property/equipment/technology cash component. The evidenced operational software class is eligible within existing PP&E cost scope; no materials-only split required.",
+        "acquisition_origin": "Acquisition-origin technology is recorded in asset balances; business purchase cash is a separate excluded line, not added or allocated by acquired fair values.",
+        "evidence_assertions": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R10.htm",
+            "sha256": "e3feafdea01bd9da17d7dc4119225ec798e618dfc19e53825013399b2f6e7da3",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Capitalized purchased/developed technology asset cost within property/equipment/technology; preliminary-stage costs expensed; acquired technology measured at fair value, not annual purchase cash."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R11.htm",
+            "sha256": "44a5093512ed3c69bf1480f37e468b8c60ac81b965b5c3f9e36d3b636bb90dab",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Business consideration and PPA asset recognition are separate from ordinary cash purchase operand."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R16.htm",
+            "sha256": "925f01ce13f6d2d949b5f00a4f22e796d5402930e03ea8d62a846490e3db201c",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Explicit operational technology class alongside land/buildings/equipment; corroborates capitalized asset perimeter, not cash amounts from book balances."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R17.htm",
+            "sha256": "ffcd03c9df1b18a19b13e90f8d34b86d0c538925e54452dd6891377d0dd889b1",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Customer relationships/trade names/reacquired rights are a separate asset perimeter; not implicitly approved as PP&E."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R18.htm",
+            "sha256": "f2f7c263a9603945348001ac4995b95d534f96d4b463b91f7f8ce7d9ce7dd9c8",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "ROU in other assets and separate lease treatment; no noncash lease or financing addition."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/R9.htm",
+            "sha256": "9640619c9453b264de415c3b04086a779892cceab78740b67ffc389fef990327",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Exact consolidated annual reported purchase cash; separate acquisition/investment cash and unpaid-purchase schedule; no residual or disposal netting."
+            ]
+          }
+        ]
+      }
     },
     {
       "ticker": "V",
@@ -13539,8 +13799,8 @@
       "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930_htm.xml",
       "instance_sha256": "6656d5527225918d78f619ff716affcdea38d7526f60a07a6d0e1c3999227d8b",
       "classification": "CONCEPT_POLICY",
-      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
-      "safe_potential_new_coverage": 0,
+      "scope_disposition": "EXACT_PERIOD_SCOPE_EQUIVALENT",
+      "safe_potential_new_coverage": 1,
       "production_policy_approval": false,
       "approved_derivation_equation": null,
       "primary_occurrences": [
@@ -16562,7 +16822,100 @@
           "reason": "Discovery metadata only; exact identities and original instance/relationships verified without this body. Preserve frozen fingerprint, do not relabel as verified response bytes."
         }
       ],
-      "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      "remaining_blocker": "No remaining methodology blocker for this exact reported operand. Scope-evidence contract design, immutable versioning, exact evidence/occurrence validation and production implementation remain unapproved. No technology-only equation or integrated FCFF compatibility established.",
+      "historical_wave35_decision": {
+        "classification": "CONCEPT_POLICY",
+        "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+        "safe_potential_new_coverage": 0,
+        "production_policy_approval": false,
+        "remaining_blocker": "Reported consolidated property/equipment/technology cash is evidenced, but purchased/developed software cash is not separately quantified. Existing PP&E primitive needs an explicit bounded technology asset-perimeter decision before composite acceptance; if exclusion is required, no complete cash split is evidenced. Acquisition fair values and book changes are not cash operands."
+      },
+      "safe_potential_scope_design": true,
+      "potential_reported_value_usd": "1482000000",
+      "methodology_review": {
+        "status": "EXACT_ACCESSION_ACCEPTANCE_CANDIDATE",
+        "economic_classification": "GROSS_CASH_PPE_EQUIVALENT",
+        "scope": "Complete reported consolidated property/equipment/technology cash component. The evidenced operational software class is eligible within existing PP&E cost scope; no materials-only split required.",
+        "acquisition_origin": "Acquisition-origin technology is recorded in asset balances; business purchase cash is a separate excluded line, not added or allocated by acquired fair values.",
+        "evidence_assertions": [
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R11.htm",
+            "sha256": "3fc9ae7ff8367692532170bc1f070127be73562c1b9428ec209e73e186aede85",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Capitalized purchased/developed technology asset cost within property/equipment/technology; preliminary-stage costs expensed; acquired technology measured at fair value, not annual purchase cash."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R12.htm",
+            "sha256": "52e1ae4280ac80feb54154659c107628b581ac92f31a9b910c77aa4f5247c367",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Business consideration and PPA asset recognition are separate from ordinary cash purchase operand."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R17.htm",
+            "sha256": "457e61964601e92e632ce9707ba8efed6d730ef537c097dfe692fb3f3a766db9",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Explicit operational technology class alongside land/buildings/equipment; corroborates capitalized asset perimeter, not cash amounts from book balances."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R18.htm",
+            "sha256": "b025d70dc25c5fe011456d1d7ac8888cabcb48396e055e6e14b3761e94266e5e",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Customer relationships/trade names/reacquired rights are a separate asset perimeter; not implicitly approved as PP&E."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R19.htm",
+            "sha256": "36841640d85b26bd4c07a592f45587e4fecd569b23dea830e415463b8224581a",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "ROU in other assets and separate lease treatment; no noncash lease or financing addition."
+            ]
+          },
+          {
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/R9.htm",
+            "sha256": "196107563e584ab86c233eafb6ba42d8c080a2037b5da53bdb9fa5bf66441f8f",
+            "digest_type": "sha256_sec_response_body_bytes",
+            "assertions": [
+              "Exact consolidated annual reported purchase cash; separate acquisition/investment cash and unpaid-purchase schedule; no residual or disposal netting."
+            ]
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "historical_wave35": {
+    "commit": "6f55c21fa68ee161ad51f0cd021cf2d72d4446d1",
+    "inventory_sha256": "e4569aeea32ff8017dc93c6ebef3f02b1a7391b88403276fe504b44177463c0b",
+    "research_version": "wave35-visa-capex-component-completeness-v1",
+    "starting_head": "362c6d22631b9a873153cb0c26d0ef273df6490d",
+    "decision": "NO_GO_FOR_CURRENT_ACCEPTANCE_PARTIAL_GO_FOR_BOUNDED_TECHNOLOGY_METHODOLOGY_REVIEW",
+    "scope_disposition_counts": {
+      "SCOPE_RESEARCH_REQUIRED": 5
+    },
+    "safe_potential_new_coverage": 0
+  },
+  "methodology_decision": {
+    "interpretation": "CLARIFICATION_OF_EXISTING_CASH_PPE_ASSET_AND_COST_PERIMETER",
+    "primitive_expansion": false,
+    "generic_fallback": false,
+    "approved_adjustment_equations": 0,
+    "eligible_software": "Purchased and internally developed operational software only within the exact evidenced consolidated property/equipment/technology cash purchase and capitalized asset perimeter.",
+    "excluded": "Expensed costs, separate acquired-business consideration and fair values, customer/trade-name/right purchases, subscriptions/hosting absent PP&E scope proof, unpaid/noncash additions, ROU additions and financing principal are not additional operands.",
+    "current_policy_impact": {
+      "direct_results": 147,
+      "v1_approvals": 10,
+      "v2_approvals": 5,
+      "demonstrated_production_changes": 0,
+      "retrospective_all_issuer_scope_certification": false,
+      "integrated_fcff_readiness_proved": false
+    },
+    "evidence_refresh": false
+  }
 }

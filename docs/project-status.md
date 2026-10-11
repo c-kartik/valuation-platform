@@ -2,7 +2,21 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 35**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 36**, documentation-only
+[Visa software methodology review](capex-visa-software-methodology.md).
+PARTIAL GO for five exact-accession reported-value scope designs: the evidenced
+capitalized operational software cost perimeter is eligible under existing
+cash PP&E methodology, not a general software/intangible expansion. The updated
+[five-row supplement](capex-visa-technology-inventory.json) preserves Wave 35's
+decisions and all operands/evidence. Five candidates, zero equations/production
+approvals; no acquisition fair-value adjustment or missing-as-zero. Existing
+147 direct and fifteen curated results remain unchanged, not retrospectively
+recertified. No tests, corpus, new SEC retrieval or evidence refresh.
+Next bounded milestone: documentation-only design of five Visa exact-accession
+scope entries alongside immutable v1/v2, with five/fifteen/37 inventory and
+147 direct-preservation gates. No implementation or consumer-readiness approval.
+
+Previously completed milestone: **Phase 1H.4 Wave 35**, documentation-only
 [Visa Capex technology research](capex-visa-technology-perimeter.md) and
 [five-row supplement](capex-visa-technology-inventory.json). All five retain
 `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`, zero approved additional coverage

@@ -1,5 +1,16 @@
 # Visa Capex cash technology/software perimeter
 
+Wave 36's [methodology review](capex-visa-software-methodology.md) resolves the
+bounded eligibility question: evidenced capitalized operational software within
+Visa's reported property/equipment/technology cash perimeter is eligible under
+the existing primitive, not a software/intangible expansion. Five exact reported
+values are now scope-design candidates, with zero equations or production
+approvals. The updated [supplement](capex-visa-technology-inventory.json) retains
+Wave 35 decisions and evidence unchanged. Existing 147 direct and fifteen
+curated results are unaffected, not retrospectively recertified. Next design
+only the five-entry Visa scope contract. The Wave 35 record below is historical;
+its eligibility gate is superseded for potential design coverage only.
+
 Phase 1H.4 Wave 35; starting HEAD
 `362c6d22631b9a873153cb0c26d0ef273df6490d`, clean `main`, thirteen ahead
 of origin. Documentation-only; no push, policy change, tests or corpus rerun.
