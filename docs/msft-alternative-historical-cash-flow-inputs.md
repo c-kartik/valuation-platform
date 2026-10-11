@@ -397,7 +397,14 @@ retained bodies; Item 7/notes assertions checked in primary text. Supported
 cost/cash arithmetic, relevant local links and diff check pass. No new SEC
 requests, tests, full suite, corpus, code, registry, schema or frozen-v1 changes.
 
-**Single next Phase 1 milestone:** design the **additive MSFT cash-interest
+**Then-next Phase 1 milestone (design completed):** design the **additive MSFT cash-interest
 scope/unknown annotation contract** for these two bundles, preserving immutable
 v1 and carrying this review's established expense effects and precise unknowns.
 No new totals, allocations, default estimates or consumption approval.
+
+The [completed additive annotation design](msft-cash-interest-scope-annotation-design.md)
+specifies separate immutable identities, evidence/occurrence binding, reported
+precision, granular unknowns, conservative missing/conflict behavior and separate
+serialization. It does not change this review, registered inputs or approvals.
+Next is one bounded data-only implementation; the design's finite blocker ledger
+requires user disposition afterward, not another automatic issuer search.

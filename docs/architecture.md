@@ -44,6 +44,21 @@ NWC/ΔNWC or valuation calculation exists. Complete-NWC and valuation-consumptio
 flags remain false. Frozen schema 5, policies, blockers and partial NWC scenario
 serialization are unchanged. See the [evidence/design](msft-alternative-historical-cash-flow-inputs.md#implemented-isolated-reported-input-bundles).
 
+The [MSFT cash-interest annotation design](msft-cash-interest-scope-annotation-design.md)
+adds a **proposed, not implemented** independent sidecar for only the same two
+bundles. Reuse Period/Artifact/Receipt/Occurrence without changing them; pin the
+parent registry and all input/evidence identities. New contract/schema version 1
+is separate from bundle version 1 and historical schema 5. Eleven input
+annotations and ten explicit unknowns per set retain cash/accrual distinctions,
+precision, overlap/capitalization uncertainties and source locators. Tax-interest
+research occurrences are evidence, not extra bundle inputs. Serialization requires
+the verified parent/original bodies; missing or conflicting annotations cannot
+rewrite historical resolution or grant certification/summation/consumption.
+No numerical annotation evaluator, adjustment formula or readiness approval is
+defined. One bounded sidecar implementation closes this packaging pass; the
+remaining disclosure/judgment ledger is for user disposition, not automatic
+ongoing research. Existing models, registries and serializations are unchanged.
+
 ### Isolated analyst working-capital boundary
 
 `analyst/nwc.py` is independent of SEC retrieval and historical normalization:

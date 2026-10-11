@@ -19,6 +19,13 @@ output or partial NWC scenarios. Cash, accrued, noncash and reconciliation roles
 remain distinct; explicit unavailable/unresolved inputs carry no amounts.
 No other issuer record receives new cash-flow review or approval by analogy.
 
+The [MSFT-only cash-interest sidecar design](../msft-cash-interest-scope-annotation-design.md)
+is proposed additive preparation, not implemented replacement of those bundles.
+Exact input/evidence binding, reported rounding and ten granular unknowns per
+set preserve the separate debt/lease cash scopes. No annotated total or summation
+authority; no implication that other issuers received review. Its finite blocker
+ledger separates available evidence from analyst decisions and undisclosed data.
+
 ## Shared measure contracts and provenance
 
 ### Standing maintenance requirement

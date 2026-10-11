@@ -363,7 +363,63 @@ checked as diagnostics only. Relevant links/diff check pass. No code, tests,
 registry/manifest, schema, policy, frozen output or prior-scenario changes; no
 SEC requests or corpus rerun. Production baseline remains 1905/1483/11/27/42.
 
-Smallest next **Phase 1** milestone: design additive cash-interest scope/unknown
+Then-next **Phase 1** milestone (completed below): design additive cash-interest scope/unknown
 annotations for only these two reviewed bundles, preserving v1. Completeness
 research is closed unless new explicit issuer evidence supplies the missing
 cash population, capitalization basis/amounts and cash/accrual bridge.
+
+## Additive cash-interest scope annotation design
+
+Conflict: existing immutable labels are intentionally narrow; without separate
+review annotations a consumer could mistake debt `InterestPaid` for all-in cash,
+double count lease cost, treat rounded points as exact, or infer unreported
+capitalized/cash amounts. Editing v1 labels or registering an interest sum was
+considered and rejected. The [sidecar design](../msft-cash-interest-scope-annotation-design.md)
+preserves the parent and records refined classifications alongside it.
+
+Only `msft-cash-interest-scope-fy2025` and `msft-cash-interest-scope-fy2026` are
+proposed under contract `reviewed-msft-cash-interest-scope-annotations` version 1,
+schema `cash-interest-scope-annotations-v1`; both reference the exact existing
+bundle/version/accession/annual period. No sidecar models or registry are yet
+implemented. Original four bodies and typed digests, exact namespaces, contexts,
+units, raw/display signs and every occurrence remain authoritative.
+
+Chosen treatment/rationale: eleven existing inputs per period receive separate
+cash/accrual/noncash scope annotations. Debt cash remains 1600m/1500m at `-8`,
+lease interest cash 1372m/2547m at `-6`; no sum. Both recognized expense lines
+retain Item 7's evidenced lease/capitalization effects without allocating their
+amounts. The ten issue IDs per set split overlap, capitalized expense/cash,
+debt/lease gross-net basis, operating-lease split, tax-interest cash, complete
+cash/accrual bridge, borrowing/hedge coverage and cost-to-profit/loss allocation.
+Every unknown stays null; `all_in_cash_interest` remains unchanged in v1.
+Note 12 tax-position annual expense/closing accrual are separately bound research
+evidence, not new bundle inputs or tax-interest cash. Submitted precision is not
+economic exactness, and matching FY2026 expense/cash does not prove completeness.
+
+Separate serialization carries review metadata/locators and exact parent/evidence
+bindings. Missing annotations mean not provided, not approved defaults; invalid
+or conflicting sets fail as attachments without invalidating reported historical
+values. No last-write-wins or silent partial acceptance. Certification,
+summation and valuation-consumption flags are fixed false. A new review version
+cannot mutate pinned parents or implicitly extend earlier/future/amended periods.
+
+Validation: both parent identities, 22 input mappings, 20 issue IDs, four
+research-only tax-interest occurrences, points/precision/roles/signs, source
+references and original-byte digests, version consistency, local links and diff
+check validated. Documentation only: no SEC requests/tests/corpus, source/schema/
+registry changes, estimates or blocker removal; frozen production unchanged.
+
+Remaining obstacles are finite: retained evidence already resolves reported
+input identities, scope labels, cash/noncash distinctions, selected/recast CFO
+and capital-creditor scenario effects. It does not quantify interest overlap,
+capitalization, mixed-NWC allocations, cash tax operating scope, acquisition/
+organic cash separation or joint timing bridges. Analyst decisions may choose
+an explicitly limited perimeter and SBC/lease/tax treatments, but cannot turn
+unavailable issuer disclosures into verified facts. No such decisions are made
+here. [Blocker disposition](../msft-cash-interest-scope-annotation-design.md#finite-blocker-disposition-and-next-milestone)
+records reopening requirements and distinguishes uncertainty from incompatibility.
+
+Single next **Phase 1** milestone: implement only the two-set sidecar with
+focused binding/serialization/preservation tests. Then report the finite ledger
+for user disposition rather than schedule another automatic annotation/research
+cycle. Phase 2 remains postponed; no adjusted calculation or consumption approval.

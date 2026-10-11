@@ -2,7 +2,28 @@
 
 ## Current Milestone
 
-Latest completed milestone: **bounded MSFT FY2025–2026 cash-interest completeness
+Latest completed milestone: **MSFT FY2025–2026 additive cash-interest scope/unknown
+annotation design**, documentation only. The [separate contract](msft-cash-interest-scope-annotation-design.md)
+binds only the two immutable v1 reported bundles: eleven existing input
+annotations and ten granular unknowns per period, plus research-only tax-interest
+evidence. Exact parent/registry/period/input/occurrence and original-body identities
+are mandatory. Separate schema/version, review locators, cash/accrual/noncash
+roles and reported rounding survive serialization; missing/invalid/conflicting
+attachments cannot alter parent values, infer zero, remove blockers or authorize
+a total. All certification/summation/consumption flags remain false.
+No model, registry, schema, policy or bundle implementation changed. Frozen-v1
+baseline **1,905/1,483/11/27/42 = 3,468** and Phase 2 postponement remain.
+Validation: two frozen identities, 22 input mappings, 20 issue IDs, four
+research-only tax occurrences, precision/roles, pinned digests/body references,
+version consistency, local links and diff check. No SEC requests/tests/corpus.
+**Single next Phase 1 milestone:** implement only this isolated two-set sidecar
+and focused binding/serialization/preservation tests. This closes the current
+packaging sequence; the [finite blocker ledger](msft-cash-interest-scope-annotation-design.md#finite-blocker-disposition-and-next-milestone)
+separates retained-evidence resolutions, analyst decisions and unavailable
+disclosures. After implementation, request disposition of remaining limitations,
+not another automatic annotation/research cycle or Phase 2 start.
+
+Previously completed milestone: **bounded MSFT FY2025–2026 cash-interest completeness
 review**, documentation-only Phase 1. [Two-period conclusions](msft-alternative-historical-cash-flow-inputs.md#cash-interest-completeness-review)
 retain debt cash 1600m/1500m (rounded) and finance-lease cash 1372m/2547m as
 separate disclosed inputs. Item 7 positively establishes finance-lease interest
