@@ -2,7 +2,24 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 45**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 46**, documentation-only
+[generalization exit consolidation](phase-1h-generalization-exit-plan.md).
+**Proceed to Phase 1H.5 with documented exclusions; no further implementation
+or issuer research is an essential prerequisite.** All 17 measure rows reconcile
+to 1,905 resolved / 1,483 missing / 11 ambiguous / 27 methodology-blocked /
+42 not-comparable = 3,468 states across 204 periods, 43 completions and seven
+specialized skips. Capex research is closed: 57 = 20 curated + 37 unapproved
+(17 concept, 17 derivation, 3 methodology); 147 direct results separate/unchanged.
+Debt variants and share-scale research remain bounded deferred options, not exit
+requirements. No 100% coverage or universal FCFF readiness criterion is added.
+Pipeline completion is not supported-company status; XOM's empty history and
+GEV/SNDK's two-period histories remain explicit limitations.
+Single next milestone: **Phase 1H.5 — S&P 500 Top 50 validation pass**, reassessing
+all 51 security rows / 50 issuers, classifying support and documenting typed
+exclusions. This pass and Phase 1H.6 freeze are not yet complete; valuation remains
+paused. No SEC requests, code/policy changes, tests or corpus rerun in Wave 46.
+
+Previously completed milestone: **Phase 1H.4 Wave 45**, documentation-only
 [GE Capex perimeter research](capex-ge-perimeter.md) and
 [three-row supplement](capex-ge-scope-inventory.json). All three retain
 `METHODOLOGY_BLOCKER` / `BUSINESS_AND_ASSET_PERIMETER_GATED`; consolidated
@@ -1022,6 +1039,12 @@ AMD's five extension periods remain outside this pass. Safe new coverage is zero
 
 ## Next Step
 
+Current next step: **Phase 1H.5 — S&P 500 Top 50 validation pass**, as specified
+in the [Wave 46 exit plan](phase-1h-generalization-exit-plan.md). The chronological
+Wave 22–45 notes below preserve historical research routing, not pending tasks.
+Reopen exhausted issuer work only on its specified new evidence. No additional
+coverage implementation is required before validation.
+
 Wave 22 completes [targeted TXN 2021–2023 evidence research](depreciation-amortization-component-derivation-design.md#wave-22--targeted-txn-completeness-follow-up).
 Reported software/PP&E asset separation, signs and explicit zero operands are
 confirmed, but all three remain further research: no exhaustive current-expense
@@ -1201,11 +1224,11 @@ sensitivity work is intentionally paused through Phase 1H.
    intangible Capex periods: all remain component-scope unproved, zero coverage,
    with extensions separately gated. Next research only five LRCX combined
    cash-component periods; do not infer intangible payments from book residuals.
-   Then continue with other
-   extension patterns, dimensions,
-   non-calendar periods, acquisition
-   accounting, debt/lease presentation, D&A decomposition, and working-capital
-   perimeters.
+   Waves 34–45 finish the bounded remaining Capex issuer pass, including Visa
+   v3 acceptance/implementation and unresolved QCOM, HD, MRK, VZ, PEP, GEV and
+   GE research. Wave 46 consolidates coverage and exclusions and recommends
+   proceeding to Phase 1H.5. Broader extension, debt/lease, D&A and working-capital
+   improvements are deferred backlog, not an open-ended pre-validation sequence.
 5. **Phase 1H.5 — S&P 500 Top 50 validation pass:** assign every constituent
    `SUPPORTED`, `GENERALIZATION_REQUIRED`, or
    `SPECIALIZED_METHODOLOGY_REQUIRED` and document unresolved typed states.

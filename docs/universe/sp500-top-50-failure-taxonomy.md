@@ -1,5 +1,17 @@
 # S&P 500 Top 50 failure taxonomy
 
+Wave 46 [generalization exit plan](../phase-1h-generalization-exit-plan.md)
+reconciles the latest 204-period corpus: **1,905 resolved / 1,483 missing /
+11 ambiguous / 27 methodology-blocked / 42 not-comparable = 3,468**, 43 generic
+pipeline completions and seven specialized skips. **Proceed to Phase 1H.5 with
+documented exclusions; no essential implementation/research prerequisite.**
+Capex pass closed: 57 = 20 curated + 37 unapproved (17 concept, 17 derivation,
+3 methodology). Debt variants/share-scale research are deferred bounded options.
+No blanket expected-missing relabeling, pipeline-to-supported promotion, 100%
+coverage requirement or universal FCFF certification. Single next milestone:
+Phase 1H.5 all-constituent validation; then a separate 1H.6 scope freeze.
+No code/policy/SEC/test/corpus changes in this consolidation.
+
 Wave 45 [GE Capex perimeter research](../capex-ge-perimeter.md) and
 [three-row supplement](../capex-ge-scope-inventory.json) retain three
 `METHODOLOGY_BLOCKER` / `BUSINESS_AND_ASSET_PERIMETER_GATED` controls. No industrial-
@@ -430,6 +442,12 @@ authorize production traversal. XOM remains unresolved without an
 `XOM -> 34088` hardcode.
 
 ## Standardized measure coverage
+
+**Historical Phase 1H.3 snapshot, not current coverage.** The current reconciled
+17-row / 204-period table is in the
+[Wave 46 exit plan](../phase-1h-generalization-exit-plan.md#current-production-reconciliation).
+The historical table and issuer frequencies below preserve their original
+denominator and must not be used as the latest production or support assessment.
 
 The denominator is 200 issuer-periods: 40 completed issuers with five annual
 periods. XOM, GEV, SNDK, and specialized issuers do not contribute measures.
@@ -927,6 +945,11 @@ Reconciliation: two `SUPPORTED`, 41 `GENERALIZATION_REQUIRED`, and seven
 issuers have one post-smoke classification.
 
 ## Ranked generalization backlog
+
+After Wave 46 this is a historical priority/evidence backlog, not a mandatory
+pre-validation queue. Current essential-versus-deferred disposition is in the
+[exit decision matrix](../phase-1h-generalization-exit-plan.md#measure-family-decision-matrix).
+Phase 1H.5 is next; unresolved fields and methodology gates remain explicit.
 
 | Priority | Root cause | Evidence / affected scope | Blocking scope | Candidate fix | Generalizability | Accounting risk |
 |---:|---|---|---|---|---|---|
