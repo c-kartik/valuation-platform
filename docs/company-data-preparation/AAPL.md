@@ -193,3 +193,44 @@ Smallest next milestone: review one explicit **GOOGL FY2024 partial bundle** usi
 retained evidence, with inventory omitted consistently and the rounded PP&E-in-AP
 note assessed under the existing design. Do not approve the conditional FY2025
 stock allocation, earlier-period extension, cash ΔNWC or Phase 2 restart.
+
+## FY2025 alternative reported cash-flow input review
+
+2026-10-12; [exact evidence/input matrix](../aapl-alternative-historical-cash-flow-inputs.md).
+Original conflict remains incomplete employee/distribution and supplier-AP
+allocation for book NWC. Considered complete reconstruction versus preservation
+of consolidated reported CFO. Choose **PARTIAL GO for data-only packaging design**:
+reported CFO needs no reconstructed opening NWC, employee/distribution split or
+PP&E-creditor allocation to reproduce its subtotal. This is not removal of those
+blockers or approval of MSFT's economic treatments for AAPL.
+
+Selected FY2025 accession 0000320193-25-000079, 2024-09-29–2025-09-27,
+nondimensional annual context c-1; two retained original bodies/digests verified.
+The reported CFO reconciliation reproduces 111,482m; separate cash PP&E 12,715m,
+net cash taxes 43,369m and SBC expense/add-back 12,863m are supported. Mixed
+investing Other 1,480m remains unallocated. Note 8 fixed operating-lease cash
+2,100m is rounded at −8; variable lease expense 16,100m is not cash. Noncash
+ROU additions 2,800m are not investment payments. Cash borrowing interest and
+separate finance-lease interest/principal cash are not established. No zero,
+expense-to-cash proxy, residual acquisition allocation or total is supplied.
+
+FY2024/FY2023 annual comparative observations in this selected filing reproduce
+their reported CFO columns, but are not new registered bundles or substitutes
+for original selected filings. AAPL has five frozen history periods; the existing
+reviewed partial scenario remains FY2025 only. Prior 53-week and note-reclassification
+boundaries persist. No comparative ΔNWC or cash comparability is approved.
+
+Proposed future choices: separately register only supported reported inputs and
+explicit unknowns; review AAPL-specific SBC, lease and tax treatments separately
+before any economic use. Corporate cash taxes, tax provision and employee-tax
+financing are distinct; Ireland/escrow-related notes do not establish a complete
+recurring cash-tax bridge. Acquisition/intangible reinvestment, FX/reclassification
+and integrated timing remain unproved. No complete NWC/FCFF certification.
+
+Validation: selected identity/contexts, typed original-body hashes and lengths,
+numeric occurrence/unit/precision/sign evidence, three displayed CFO column sums,
+local links and diff check pass. No SEC requests, tests/corpus, source/policy/
+schema/scenario changes. Frozen baseline **1905/1483/11/27/42 = 3468** retained.
+Smallest next Phase 1 milestone: one isolated FY2025 reported-input bundle with
+explicit interest/lease/investment unknowns; no automatic treatment transfer,
+economic calculation or comparative registration. Stop after this review.

@@ -5,8 +5,9 @@ Original recommendations below were proposed for review. **Subsequent user
 acceptance, 2026-10-12:** SBC recognized-expense cost proxy counted once,
 consolidated reported CFO reference, separate narrow cash PP&E and reported cash
 taxes are accepted for the limited historical-input scope. Lease cash-service is
-accepted in principle, with precise restricted coverage/future applicability
-conditional. No tax rate, calculation or consumption approval is granted.
+accepted in principle; subsequent acceptance of the precise restricted reported
+dataset permits historical preparation only. Future modeling applicability
+remains unapproved. No tax rate, calculation or consumption approval is granted.
 The [two-period acceptance checklist](msft-treatment-acceptance-checklist.md)
 is authoritative for current statuses; the options below preserve the original
 decision rationale, not new executable policy.
@@ -229,8 +230,11 @@ Record acceptance author/date, exact two periods, chosen treatment/version,
 evidence references, proxy limitations, unpopulated required inputs and permitted
 use. Any override retains the prior decision, never changes the pinned baseline.
 
-The then-next acceptance checklist is now completed. **Stop for the precise
-restricted lease-perimeter decision** documented there; no new calculator,
+The then-next acceptance checklist and restricted reported-dataset decision are
+now completed: user acceptance 2026-10-12 permits separate historical preparation
+only, not totals, adjustments or valuation consumption. All coverage/overlap
+unknowns and future modeling restrictions persist. No further lease research,
+new calculator,
 annotation cycle, broad SEC search or automatic blocker removal. The pilot is
 closed only for two-period historical input preparation, not completeness or
 future consumer readiness. Only later explicit authorization can implement

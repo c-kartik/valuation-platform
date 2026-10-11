@@ -584,3 +584,21 @@ accepted/conditional treatments. No complete cash interest, NWC, investment or
 FCFF certification. No remaining implementation is required for that scope.
 Stop for one bounded user decision on the restricted lease perimeter; do not
 launch further research or Phase 2.
+
+## Restricted lease dataset acceptance and preparation-pilot closure
+
+2026-10-12: the user now accepts the [restricted reported dataset](../msft-treatment-acceptance-checklist.md),
+superseding the pending dataset decision above. OperatingLeasePayments and
+FinanceLeaseInterestPaymentOnLiability are already in CFO;
+FinanceLeasePrincipalPayments are financing cash outside CFO. Exact inputs,
+periods, occurrences, rounded precision and original-body provenance remain
+unchanged. Coverage is only disclosed payments included in lease-liability
+measurement; additional coverage and borrowing-interest overlap remain unknown.
+Acceptance is separate historical-input preparation, not permission for totals,
+adjustments or valuation consumption. No modeling convention is made executable.
+
+The two-period preparation pilot is closed within that scope. Original NWC
+blockers, partial scenarios, all unknowns, reported bundles and sidecars persist.
+No further lease research is needed. Validation reused pinned evidence and
+checked acceptance consistency/links/diff; no SEC request, tests or corpus.
+Next work is the separately authorized AAPL review, not another MSFT annotation.

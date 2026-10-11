@@ -13,7 +13,7 @@ calculator or valuation-consumption authorization. Phase 2 remains postponed.
 | Historical reference | Accepted consolidated reported CFO | Not organic, adjusted or operating-company-only cash flow; no partial ΔNWC subtraction or repeated D&A/SBC addition. |
 | Investment | Accepted separate evidenced cash PP&E input | Not complete reinvestment. Combined acquisition/intangible/other cash spending stays visible and unallocated; no assumed zero or residual allocation. |
 | Taxes | Accepted reported cash-tax data | No operating-tax rate or basis approved. A future analyst entry requires justified scope, source and explicit acceptance; no second tax on already after-tax CFO. |
-| Leases | Cash-service convention accepted **in principle**; restricted operand definition below | Future consumption remains conditional on explicit acceptance of the restricted coverage and consistent expense/investment/debt treatment. Not certified total lease cash or combined interest. Borrowing cash remains separate. |
+| Leases | Restricted reported dataset **accepted**, 2026-10-12; cash-service modeling direction remains in principle only | Acceptance permits separate historical-input preparation, not totals, adjustments or valuation consumption. Coverage is limited to disclosed liability-measurement payments; additional coverage and borrowing-interest overlap remain unknown. |
 
 The [decision memo](msft-analyst-treatment-decision.md) preserves the original
 options, rationale and authoritative methodological references. Acceptance of
@@ -56,7 +56,7 @@ leases and Note 14 SBC, rather than replacing sources with this summary.
 
 ## Precise lease convention and conditional boundary
 
-The proposed **restricted cash-service operand perimeter** includes only:
+The accepted **restricted reported cash-service dataset** includes only:
 `OperatingLeasePayments`, `FinanceLeaseInterestPaymentOnLiability`, and
 `FinanceLeasePrincipalPayments` reported in Note 13 as cash paid for amounts
 included in measurement of lease liabilities. Both lease classes are in scope;
@@ -77,11 +77,12 @@ lease/nonlease components generally but combines certain equipment/vehicle
 components. Their cash allocations and overlap with reported payments/CFO are
 unavailable; no separate amount or zero is inferred.
 
-**Outstanding decision:** explicitly accept this limited reported-cash perimeter
-with unallocated service-cost coverage, or require comprehensive lease-service
-cash coverage, which retained disclosures cannot establish. The recommendation
-is the limited perimeter, clearly labeled; the user's in-principle approval does
-not silently approve comprehensive coverage or a financing-policy alternative.
+**Subsequent user acceptance, 2026-10-12:** the limited reported dataset is now
+accepted for separate historical-input preparation, with the cash-flow locations
+and unknown coverage above. This supersedes the prior pending dataset decision,
+not its limitations. It does not approve comprehensive lease cash, a numerical
+modeling convention, financing-policy alternative or valuation consumption.
+No further lease research is required for this closed preparation scope.
 
 Any future consumer must specify its starting basis and ensure lease expense,
 cash interest/principal, asset investment and debt are treated consistently.
@@ -103,7 +104,7 @@ or justified assumption, uncertainty and affected treatment; no defaults.
 | Requirement | FY2025–2026 disposition |
 | --- | --- |
 | Operating-tax assumption | Absent. Future basis and any rate require explicit justified acceptance; tax provision, cash tax and tax-interest accrual are distinct. |
-| Lease applicability | Conditional restricted-perimeter decision above; unavailable coverage cannot be manufactured. |
+| Lease applicability | Restricted dataset accepted for separate preparation only; future modeling/consumption remains unapproved, unavailable coverage cannot be manufactured. |
 | Organic/acquisition/intangible investment | Unallocated. Any future organic claim needs independent allocation evidence and growth-consistent treatment. |
 | Acquisition, FX, reclassification and timing | Unresolved for comparable/adjusted economic use. Not required to reproduce consolidated reported CFO; not thereby eliminated or zero. |
 | Complete book NWC / all-in cash interest | Existing blockers retained. Partial NWC scenarios and their capital-creditor movements are not complete cash-flow bridges. |
@@ -113,7 +114,9 @@ This **closes the MSFT Phase 1 pilot only as two-period reported historical-inpu
 preparation with accepted choices and explicit conditional boundaries**. No
 claim of complete NWC, cash interest, reinvestment, organic comparability or FCFF
 readiness follows. No further data implementation is required for this scope.
-Smallest subsequent Phase 1 milestone: **one user decision on the restricted
-lease-service perimeter and its stated exclusions**; stop pending that review,
-without another research/annotation cycle. Frozen-v1 and all bundles/sidecars
-remain unchanged. Production baseline remains **1905/1483/11/27/42 = 3468**.
+The then-next restricted-dataset decision is completed. The two-period
+preparation pilot is closed; no further lease research/annotation cycle.
+The next bounded Phase 1 task is the separately authorized
+[AAPL FY2025 reported-input review](aapl-alternative-historical-cash-flow-inputs.md),
+not further MSFT implementation. Frozen-v1 and all bundles/sidecars remain
+unchanged. Production baseline remains **1905/1483/11/27/42 = 3468**.

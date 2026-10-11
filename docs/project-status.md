@@ -2,7 +2,31 @@
 
 ## Current Milestone
 
-Latest completed milestone: **MSFT FY2025–2026 treatment acceptance/input
+Latest completed milestone: **bounded AAPL FY2025 alternative reported cash-flow
+input review**, documentation-only Phase 1, plus MSFT restricted-dataset
+acceptance. The [AAPL matrix](aapl-alternative-historical-cash-flow-inputs.md)
+verifies the selected 2025 accession, annual/ comparative contexts and reported
+CFO reconciliation. CFO 111,482m, narrow cash PP&E 12,715m, net cash taxes 43,369m
+and SBC expense/add-back 12,863m are supported; cash interest, complete lease cash
+and acquisition/intangible allocations remain unknown. Comparative columns are
+not newly registered periods/bundles. PARTIAL GO only for separate reported-input
+packaging; MSFT analyst choices do not automatically apply to AAPL.
+
+The user accepts [MSFT's restricted reported lease dataset](msft-treatment-acceptance-checklist.md)
+for separate preparation only: operating payments/finance interest already in
+CFO, finance principal outside CFO. Additional coverage/borrowing overlap stay
+unknown. Its two-period preparation pilot is closed; no totals, adjustments,
+modeling consumption approval or further lease research.
+
+Two AAPL original-response hashes/lengths, exact observations, all three source
+CFO column sums, references/local links and diff check validated. No SEC requests,
+tests/corpus, production or existing bundle/scenario changes. Frozen baseline
+**1,905/1,483/11/27/42 = 3,468** and NWC blockers unchanged. Single next Phase 1
+milestone: **one isolated AAPL FY2025 reported-input bundle with explicit
+interest/lease/investment unknowns**, no comparative registration or economic
+treatment. Stop after this review; Phase 2 remains postponed.
+
+Previously completed milestone: **MSFT FY2025–2026 treatment acceptance/input
 checklist**, documentation-only Phase 1. [User-approved treatments](msft-treatment-acceptance-checklist.md)
 accept recognized SBC expense as a labeled cost proxy counted once, consolidated
 reported CFO history, separate narrow cash PP&E and reported cash taxes. No
