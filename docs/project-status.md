@@ -2,7 +2,21 @@
 
 ## Current Milestone
 
-Latest completed milestone: **isolated Alphabet FY2024 reported-input bundle**.
+Latest completed milestone: **Alphabet FY2024 analyst-treatment decision memo**.
+[Proposed recommendations](googl-analyst-treatment-decision.md) independently
+recommend consolidated reported CFO, separate narrow PP&E, rounded recognized
+SBC expense as a labeled cost proxy once, reported taxes without an operating
+rate and restricted lease dataset preparation only. No cash-interest proxy,
+investment allocation, lease modeling convention or completeness approval.
+All recommendations remain **proposed pending user review**. Existing D&A/NWC
+blockers, receipt history, timing gates and immutable bundles remain unchanged.
+Registry identity/hash, source/precision/reference consistency, local links and
+diff check validated; no SEC requests, tests or corpus rerun. Phase 2 postponed.
+Single next Phase 1 milestone: **user review and one FY2024 treatment-acceptance/
+input checklist**, closing only qualified historical preparation if accepted;
+not financial completeness, numerical adjustment or valuation readiness.
+
+Previously completed milestone: **isolated Alphabet FY2024 reported-input bundle**.
 [Implementation and validation](googl-alternative-historical-cash-flow-inputs.md#implemented-isolated-fy2024-reported-input-bundle)
 retain 34 reported inputs, 38 confirming occurrences, 12 explicit unknowns and
 the thirteen-term reported CFO bridge. One exact annual registration uses the

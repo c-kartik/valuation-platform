@@ -1,5 +1,37 @@
 # GOOGL — company data preparation
 
+## Proposed FY2024 analyst-treatment decision
+
+2026-10-12: [bounded decision memo](../googl-analyst-treatment-decision.md)
+records recommendations **pending user review**, not imported MSFT/AAPL approvals.
+Original conflicts: reported CFO is not organic/unlevered cash; rounded note SBC
+expense 22,800m differs in precision/role from the 22,785m add-back; lease classes
+have incomplete coverage and finance principal is embedded in debt repayments;
+borrowing cash interest and investment allocations are unavailable. Existing
+inventory/AP, complete D&A and timing gaps remain separate unresolved issues.
+
+Chosen recommendation, not approved policy: consolidated reported CFO reference
+and separate narrow PP&E; rounded recognized SBC expense as labeled cost proxy
+once while retaining the exact add-back for reconciliation; reported cash taxes
+without future operating rate; three restricted lease payment classes without
+a service/financing modeling convention. No cash-interest proxy, residual
+allocation or implied zero. Rationale and considered source/precision tradeoff
+are in the memo and [retained evidence](../googl-alternative-historical-cash-flow-inputs.md).
+Current scope remains inspection/serialization and reported reconciliation only.
+
+Only accession 0001652044-25-000014, 2024-01-01–2024-12-31, version-1 reported
+bundle is affected by this prose review. Its facts, 12 null unknowns, receipt
+refresh/original gap and all earlier decisions remain unchanged. No comparative
+registration, numerical treatment, frozen-v1 blocker removal or completeness.
+Future economic use needs explicit analyst acceptance and a separately authorized
+consistent consumer contract; unknown compatibility is not certified readiness.
+
+Validation: exact registry hash/identity, points/roles/precision and reference
+mapping, proposed-status consistency, local links and diff check; no SEC/tests/
+corpus or source changes. Next: user review and one acceptance/input checklist,
+then qualified FY2024 preparation closure only if accepted. No further research
+or implementation starts before that review.
+
 CIK `1652044`; securities GOOGL, GOOG; **GENERALIZATION_REQUIRED**.
 
 ## Sources, history and retrieval
