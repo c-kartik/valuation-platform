@@ -410,8 +410,14 @@ and parser remain unchanged. Schema 5's existing audit represents v2 without
 new field meanings; v1's entry and serialized audit remain unchanged. Required
 verified raw instance/schema/presentation/FilingSummary and reviewed notes bind
 scope; ancillary unavailable calculation/label originals are not v2 gates or
-scope proof, and no v1 mandatory evidence is dropped. This is design only;
-next implement the five-entry extension with 5/10/42 and direct-value regressions.
+scope proof, and no v1 mandatory evidence is dropped. Wave 32 implements this
+catalog in `normalization.capex_scope`, with a separate five-entry v2 runtime
+registry, explicit historical/corpus dispatch and published-version provenance
+validation. The v1 default entry API and registry remain unchanged. Schema 5
+retains full v2 evidence, support/exclusion audit and ordered occurrences without
+changing v1 audit identity. [Verified results](capex-cvx-scope-evidence-results.md)
+preserve all 147 direct results, ten v1 approvals and 42 controls; only five CVX
+missing states resolve. No new cache, generic parser/policy change or FCFF consumer.
 
 Wave 20 implements the [Wave 19 design](depreciation-amortization-scope-evidence-design.md)
 as `normalization.d_and_a_scope` and a separate five-entry source registry,

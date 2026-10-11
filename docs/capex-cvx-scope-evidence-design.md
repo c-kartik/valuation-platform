@@ -1,5 +1,12 @@
 # CVX exact-accession Capex scope acceptance
 
+Wave 32 now [implements and validates this contract](capex-cvx-scope-evidence-results.md):
+five v2 resolutions, ten unchanged v1 approvals, 42 missing controls and all
+147 direct results preserved. Current Capex is 162/42/0 and aggregate is
+1,900/1,488/11/27/42 = 3,468. The Wave 31 matrix and design-only approval flags
+below remain the frozen design snapshot; the separate runtime registry publishes
+the five reviewed production approvals, not automatic execution of research flags.
+
 ## Decision and frozen boundary
 
 Phase 1H.4 Wave 31 starts at `b333a144163a9ccdaefe6bfcd118fcb8bde700e2`,

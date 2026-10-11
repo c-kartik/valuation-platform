@@ -2,6 +2,20 @@
 
 ## Current Milestone
 
+Latest completed milestone: **Phase 1H.4 Wave 32**, the
+[five-entry CVX curated Capex v2 implementation](capex-cvx-scope-evidence-results.md).
+Verified production: Capex **162 resolved / 42 missing / 0 ambiguous**;
+aggregate **1,900 resolved / 1,488 missing / 11 ambiguous / 27 methodology-blocked /
+42 not-comparable**, total **3,468** across 204 annual periods. All 147 direct
+Capex results, ten immutable v1 approvals, 42 controls, other measures,
+43 generic completions and seven specialized skips are unchanged. The 31 focused
+and 583 complete tests and five targeted artifact checks were reused; after a
+bounded successful SEC connectivity check, the resumed corpus gate passed.
+No generic fallback, adjustment equation or FCFF-readiness approval was added.
+Next bounded milestone: documentation-only PP&E cash-component completeness
+research for the five frozen NVDA Capex periods, with the first two issuer
+extensions separately gated; do not derive from residuals or matching totals.
+
 Phase 1H expands historical normalization beyond the original five-company
 corpus. Phase 1H.1 froze the S&P 500 Top 50 Index snapshot effective 2026-10-02
 at `docs/universe/sp500-top-50-2026-10-02.csv`. Its 51 securities represent 50
@@ -914,10 +928,13 @@ evidence, selected-instance re-parsing, conservative occurrence/conflict and
 direct-precedence rules, complete schema-5 provenance and regression gates are
 specified. No generic fallback or mineral/lease equation. Production remains
 Capex 157/47/0 and aggregate 1,895/1,493/11/27/42 = 3,468; no tests or corpus run.
-Next bounded milestone: implement only the five CVX v2 entries and exact catalog,
-then focused 5/10/42 and direct-preservation checks, targeted live validation,
-one complete suite and one corpus reconciliation. Stop on any other state,
-provenance or issuer-execution change; keep other gaps and readiness outside it.
+Wave 32 completes that five-entry extension and published catalog with
+[verified results](capex-cvx-scope-evidence-results.md). V1 identity/evidence and
+all 147 direct results are preserved. Exactly five CVX missing states resolve;
+Capex is 162/42/0 and aggregate is 1,900/1,488/11/27/42 = 3,468. The 42 controls,
+other measures, completion and skips remain unchanged. Next research only the
+five NVDA combined-asset cash-component gaps; keep other gaps and readiness
+outside that bounded pass.
 Do not implement a sum or infer TXN allocations; further TXN work
 requires a genuine new expense/inventory and incentive bridge, not repeated
 concept research. TXN 2024–2025 absent intangible operands are not
@@ -998,8 +1015,10 @@ sensitivity work is intentionally paused through Phase 1H.
    Wave 29 completes five CVX acquisition/perimeter reviews with no new approval;
    Wave 30 clarifies that perimeter and supports five reported-value designs,
    not any adjusted equation. Wave 31 designs only the five exact CVX entries
-   under a disjoint immutable v2 catalog, preserving v1. Next implement and
-   incrementally validate that five-entry extension.
+   under a disjoint immutable v2 catalog, preserving v1. Wave 32 implements and
+   validates exactly those five entries, retaining all direct/v1 results.
+   Next research completeness and cash/asset scope for only the five frozen
+   NVDA combined PP&E/intangible Capex periods, with extensions separately gated.
    Then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition

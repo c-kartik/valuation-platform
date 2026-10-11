@@ -23,7 +23,7 @@ if str(SOURCE_ROOT) not in sys.path:
     sys.path.insert(0, str(SOURCE_ROOT))
 
 from valuation_platform.normalization.capex_scope import (  # noqa: E402
-    capex_scope_entry_for, verify_capex_artifacts,
+    published_capex_scope_entry_for as capex_scope_entry_for, verify_capex_artifacts,
 )
 from valuation_platform.normalization import (  # noqa: E402
     AmbiguousStandardizedMeasure,

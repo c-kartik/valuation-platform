@@ -226,9 +226,100 @@ CAPEX_SCOPE_EQUIVALENCE_POLICY = CapexScopePolicy(
     CAPEX_SCOPE_POLICY_ID, CAPEX_SCOPE_POLICY_VERSION,
     tuple(_entry(r) for r in json.loads(Path(__file__).with_name('capex_scope_registry.json').read_text())),
 )
+_V2_RECORDS = json.loads(Path(__file__).with_name('capex_scope_v2_registry.json').read_text())
+
+
+def _v2_fields(r):
+    f = r['filing']
+    return dict(company_cik=r['cik'], accession_number=f['accession_number'],
+        form=f['form'], filed=date.fromisoformat(f['filing_date']),
+        primary_document=f['primary_document'], report_date=date.fromisoformat(f['report_date']),
+        annual_start=date.fromisoformat(r['annual_start']), annual_end=date.fromisoformat(r['annual_end']),
+        namespace=r['namespace'], taxonomy=r['taxonomy'], concept=r['concept'], unit=r['normalized_unit'],
+        economic_scope=r['scope_classification'], expected_value=Decimal(r['expected_value_usd']),
+        instance_url=r['source_url'], instance_digest=r['instance_sha256'],
+        reviewed_evidence=tuple(ReviewedPolicyEvidence(a['evidence_id'], a['source_url'],
+            a['location'], a['research_artifact'], date.fromisoformat(a['review_date']),
+            a['review_status'], a['rationale'], a['sha256']) for a in r['reviewed_evidence']),
+        artifact_digests=_digests(r), reviewed_entry_json=json.dumps(r, sort_keys=True, separators=(',', ':')),
+        metric=FinancialMetric.CAPEX, support=())
+
+
+@dataclass(frozen=True)
+class CVXCapexScopePolicyEntry(CapexScopePolicyEntry):
+    """Only the five independently reviewed v2 records, never research flags."""
+    def __post_init__(self):
+        canonical = next((r for r in _V2_RECORDS
+                          if r['filing']['accession_number'] == self.accession_number), None)
+        if canonical is None or any(getattr(self, k) != v for k, v in _v2_fields(canonical).items()):
+            raise CapexScopePolicyError('Incomplete or unpublished CVX v2 entry')
+        if type(self.company_cik) is not int or not isinstance(self.expected_value, Decimal):
+            raise CapexScopePolicyError('Invalid CVX entry types')
+        prefix = ('https://www.sec.gov/Archives/edgar/data/93410/'
+                  + self.accession_number.replace('-', '') + '/')
+        if (self.company_cik != 93410 or self.form != '10-K'
+                or not self.annual_start < self.annual_end == self.report_date
+                or not self.expected_value.is_finite() or self.expected_value <= 0
+                or canonical['policy_version'] != '2' or not canonical['production_policy_approval']
+                or len(self.reviewed_evidence) != (8 if self.annual_end.year == 2023 else 7)
+                or len({e.evidence_id for e in self.reviewed_evidence}) != len(self.reviewed_evidence)
+                or any(e.review_status != 'approved' or not e.rationale for e in self.reviewed_evidence)
+                or any(not u.startswith(prefix) or not re.fullmatch(r'[0-9a-f]{64}', h)
+                       for u, h in self.artifact_digests)
+                or (self.instance_url, self.instance_digest) not in self.artifact_digests
+                or any(a['representation'] != 'sec_response_body_bytes'
+                       or type(a['byte_length']) is not int or a['byte_length'] <= 0
+                       for a in canonical['mandatory_artifacts'])):
+            raise CapexScopePolicyError('Incomplete CVX raw evidence or scope review')
+        _validate_representation_records(canonical)
+
+
+@dataclass(frozen=True)
+class CVXCapexScopePolicy(CapexScopePolicy):
+    def __post_init__(self):
+        if (self.policy_id != CAPEX_SCOPE_POLICY_ID or self.version != '2'
+                or type(self.entries) is not tuple
+                or self.entries != tuple(CVXCapexScopePolicyEntry(**_v2_fields(r)) for r in _V2_RECORDS)
+                or len(self.entries) != 5):
+            raise CapexScopePolicyError('Invalid immutable CVX v2 policy')
+
+
+CAPEX_SCOPE_V2_POLICY = CVXCapexScopePolicy(CAPEX_SCOPE_POLICY_ID, '2',
+    tuple(CVXCapexScopePolicyEntry(**_v2_fields(r)) for r in _V2_RECORDS))
+
+
+@dataclass(frozen=True)
+class CapexScopePolicyCatalog:
+    policies: tuple[CapexScopePolicy, ...]
+
+    def __post_init__(self):
+        if self.policies != (CAPEX_SCOPE_EQUIVALENCE_POLICY, CAPEX_SCOPE_V2_POLICY):
+            raise CapexScopePolicyError('Unpublished Capex catalog')
+        keys = [(e.company_cik, e.accession_number, e.annual_start, e.annual_end)
+                for p in self.policies for e in p.entries]
+        if len(keys) != len(set(keys)):
+            raise CapexScopePolicyError('Overlapping active Capex entries')
+
+
+CAPEX_SCOPE_POLICY_CATALOG = CapexScopePolicyCatalog((CAPEX_SCOPE_EQUIVALENCE_POLICY, CAPEX_SCOPE_V2_POLICY))
+
+
+def published_capex_scope_policy_for(company_cik, filing, annual_period):
+    matches = tuple(p for p in CAPEX_SCOPE_POLICY_CATALOG.policies
+                    if capex_scope_entry_for(company_cik, filing, annual_period, p) is not None)
+    if len(matches) > 1:
+        raise CapexScopePolicyError('Overlapping published Capex entries')
+    return matches[0] if matches else CAPEX_SCOPE_EQUIVALENCE_POLICY
+
+
+def published_capex_scope_entry_for(company_cik, filing, annual_period):
+    return capex_scope_entry_for(company_cik, filing, annual_period,
+        published_capex_scope_policy_for(company_cik, filing, annual_period))
+
+
 def capex_scope_entry_for(company_cik, filing, annual_period,
                           policy=CAPEX_SCOPE_EQUIVALENCE_POLICY):
-    if policy != CAPEX_SCOPE_EQUIVALENCE_POLICY:
+    if policy not in CAPEX_SCOPE_POLICY_CATALOG.policies:
         raise CapexScopePolicyError("Unpublished Capex version or reviewed evidence")
     if not isinstance(annual_period, ResolvedAnnualPeriod):
         return None
@@ -259,6 +350,10 @@ def verify_capex_artifacts(entry, artifacts: Mapping[str, bytes],
     if digests != entry.artifact_digests:
         raise CapexScopePolicyError("Missing or changed selected Capex reviewed artifact")
     _validate_representation_records(json.loads(entry.reviewed_entry_json), artifacts)
+    if isinstance(entry, CVXCapexScopePolicyEntry):
+        for a in json.loads(entry.reviewed_entry_json)['mandatory_artifacts']:
+            if len(artifacts[a['source_url']]) != a['byte_length']:
+                raise CapexScopePolicyError('Changed CVX raw artifact byte length')
     parsed = parse_filing_xbrl_instance(
         artifacts[entry.instance_url], company=filing_xbrl.company,
         filing=filing_xbrl.filing, source_url=entry.instance_url,
@@ -321,8 +416,11 @@ def apply_curated_capex_scope_policy(
     eligible, audit, support = [], [], []
     nil_statuses = {}
     support_matches = {s: [] for s in entry.support}
+    v2_support_keys = {(s['namespace'], s['concept']) for s in
+        json.loads(entry.reviewed_entry_json)['support_occurrences']} if isinstance(entry, CVXCapexScopePolicyEntry) else set()
     for ordinal, f in enumerate(filing_xbrl.facts):
-        if not re.search(r"purchases|payments|capital|property|equipment|lease|acquis|proceeds|incentive", f.concept, re.I):
+        if ((f.namespace, f.concept) not in v2_support_keys
+                and not re.search(r"purchases|payments|capital|property|equipment|lease|acquis|proceeds|incentive", f.concept, re.I)):
             continue
         c = contexts.get(f.context_id)
         if c is None:
@@ -344,7 +442,18 @@ def apply_curated_capex_scope_policy(
                   else "EXCLUDED_NIL" if f.is_nil else "ELIGIBLE")
         relevant_support = any(f.namespace == s.namespace and f.concept == s.concept
                                and f.dimensions == s.dimensions for s in entry.support)
-        if entity and period and (concept or relevant_support):
+        if (entity and period and (concept or relevant_support)
+                and (not isinstance(entry, CVXCapexScopePolicyEntry)
+                     or (not f.dimensions and (_usd(f) or f.unit is None)))):
+            if isinstance(entry, CVXCapexScopePolicyEntry) and concept and not f.dimensions:
+                if f.is_nil and (f.numeric_value is not None or f.raw_value not in (None, '')):
+                    raise CapexScopePolicyError('Contradictory CVX nil representation')
+                if not f.is_nil:
+                    try:
+                        if Decimal(f.raw_value) != f.numeric_value:
+                            raise CapexScopePolicyError('Inconsistent CVX raw numeric representation')
+                    except (TypeError, ArithmeticError, ValueError) as exc:
+                        raise CapexScopePolicyError('Malformed CVX raw numeric representation') from exc
             if not f.is_nil and (f.unit_ref is None or f.unit is None):
                 raise CapexScopePolicyError("Missing Capex numeric unit linkage")
             signature = (f.namespace, f.concept, f.start, f.end, f.dimensions,
@@ -419,11 +528,13 @@ def apply_curated_capex_scope_policy(
 def validate_capex_scope_provenance(provenance):
     """Reject incomplete, foreign or reordered audit payloads at output boundary."""
     audit = provenance.capex_scope
-    entry = next((e for e in CAPEX_SCOPE_EQUIVALENCE_POLICY.entries
-                  if e.accession_number == provenance.accession_number), None)
+    policy = next((p for p in CAPEX_SCOPE_POLICY_CATALOG.policies
+                   if p.version == provenance.policy_version), None)
+    entry = next((e for e in policy.entries
+                  if e.accession_number == provenance.accession_number), None) if policy else None
     if (entry is None or audit is None
             or provenance.policy_id != CAPEX_SCOPE_POLICY_ID
-            or provenance.policy_version != CAPEX_SCOPE_POLICY_VERSION
+            or policy is None
             or provenance.economic_scope != entry.economic_scope
             or provenance.company_cik != entry.company_cik
             or provenance.report_date != entry.report_date
@@ -445,8 +556,12 @@ def validate_capex_scope_provenance(provenance):
             or not eligible or audit.supporting_facts
             or len(eligible) != len(provenance.filing_xbrl_evidence)):
         raise CapexScopePolicyError("Lost Capex confirming occurrence multiplicity")
-    for o, e in zip(eligible, provenance.filing_xbrl_evidence):
+    for index, (o, e) in enumerate(zip(eligible, provenance.filing_xbrl_evidence), 1):
         f, c = o.fact, o.context
+        if policy.version == '2' and (e.occurrence_ordinal != index or e.is_nil != f.is_nil
+                or e.entity_identifier != c.entity_identifier
+                or e.entity_identifier_scheme != c.entity_identifier_scheme):
+            raise CapexScopePolicyError('Changed CVX confirming occurrence provenance')
         if (f.namespace != entry.namespace or f.concept != entry.concept
                 or f.numeric_value != entry.expected_value or f.is_nil
                 or f.dimensions or not _usd(f)

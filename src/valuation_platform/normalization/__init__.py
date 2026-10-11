@@ -1,8 +1,10 @@
 """Normalize selected SEC facts into standardized financial metrics."""
 
 from .capex_scope import (
-    CAPEX_SCOPE_EQUIVALENCE_POLICY, CapexScopePolicyError, VerifiedCapexArtifacts,
+    CAPEX_SCOPE_EQUIVALENCE_POLICY, CAPEX_SCOPE_V2_POLICY, CAPEX_SCOPE_POLICY_CATALOG,
+    CapexScopePolicyError, VerifiedCapexArtifacts,
     apply_curated_capex_scope_policy, capex_scope_entry_for, verify_capex_artifacts,
+    published_capex_scope_entry_for, published_capex_scope_policy_for,
 )
 
 from .d_and_a_scope import (
@@ -451,6 +453,10 @@ __all__ = [
     "standardized_history_to_dict",
     "UnavailableHistoricalMeasure",
     "CAPEX_SCOPE_EQUIVALENCE_POLICY",
+    "CAPEX_SCOPE_V2_POLICY",
+    "CAPEX_SCOPE_POLICY_CATALOG",
+    "published_capex_scope_entry_for",
+    "published_capex_scope_policy_for",
     "CapexScopePolicyError",
     "VerifiedCapexArtifacts",
     "apply_curated_capex_scope_policy",

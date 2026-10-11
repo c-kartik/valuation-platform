@@ -486,6 +486,13 @@ added. Generic, META gross-cash and ten AMZN/LLY curated policies are unchanged,
 not retrospectively recertified. Historical scope support does not establish
 integrated FCFF/lease/depletion/timing readiness.
 
+Wave 32 implements only the five reviewed CVX reported-value acceptances as
+disjoint immutable curated Capex v2 alongside unchanged ten-entry v1. The
+[verified results](capex-cvx-scope-evidence-results.md) are Capex 162/42/0, with
+all 147 direct results and ten v1 approvals preserved. The primitive and scope
+decision above are unchanged: no mineral/lease adjustment, business-acquisition
+operand, generic fallback or integrated FCFF-compatibility certification.
+
 The Revenue, Operating Income, and Capex policies were validated against five
 annual periods each for META, GOOGL, MSFT, AAPL, and COST. Direct D&A covers all
 five selected periods of META, AAPL, and COST. For Microsoft CIK `789019` only,

@@ -1,5 +1,11 @@
 # CVX cash-PP&E acquisition/perimeter review
 
+Wave 32 [implements the five reviewed acceptances](capex-cvx-scope-evidence-results.md)
+as disjoint curated v2, preserving v1/direct results and the methodology below.
+Capex is now 162/42/0. No allocation or adjusted equation was approved; integrated
+FCFF compatibility remains unknown. The next bounded pass concerns NVDA's five
+combined-asset cash-component gaps, not repeated CVX perimeter research.
+
 Wave 31 completes the [five-entry exact-accession scope design](capex-cvx-scope-evidence-design.md)
 and [acceptance matrix](capex-cvx-scope-evidence-matrix.json), using the unchanged
 Wave 30 methodology/supplement below. Five CVX designs form disjoint immutable

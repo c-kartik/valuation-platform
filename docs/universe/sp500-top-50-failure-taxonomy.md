@@ -1,5 +1,12 @@
 # S&P 500 Top 50 failure taxonomy
 
+Latest verified production follow-up: **Wave 32** adds five exact CVX Capex
+v2 resolutions. [Results](../capex-cvx-scope-evidence-results.md) reconcile Capex
+**162/42/0** and aggregate **1,900/1,488/11/27/42 = 3,468**, with all 147 direct
+results, ten v1 approvals, 42 controls, other measure states and 43/seven
+completion/skip counts unchanged. Historical matrices below remain their stated
+baselines. Remaining Capex controls are unapproved, not freshly reviewed denials.
+
 ## Scope and evidence
 
 This artifact records the Phase 1H.3 analysis of the production smoke test at
@@ -642,6 +649,15 @@ evidence failures. Current Capex/aggregate states are unchanged. Next implement
 only these five entries, validating direct preservation and the complete
 inventory cohorts before targeted/full/corpus gates; no broad scope expansion.
 
+Wave 32 completes that implementation and all gates, including the resumed
+corpus after bounded SEC connectivity verification. Only five CVX missing
+states resolve. Published v2 contains five entries, not a rewrite of ten-entry
+v1; complete raw-artifact and schema-5 provenance remain mandatory. The 42
+remaining missing controls retain research routes: 22 concept-policy, 17
+derivation and three methodology-blocker periods. Next research the five NVDA
+combined PP&E/intangible cash-component gaps, with its first two extensions
+separately gated. No generic fallback, residual equation or automatic scope rule.
+
 Wave 14 proves complete component derivations for the 25 LLY/JNJ/MRK/KLAC/IBM
 periods without using Pretax as a residual. All 25 are approved research
 patterns, with acquired IPR&D, restructuring, operating-asset impairments,
@@ -791,7 +807,7 @@ issuers have one post-smoke classification.
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 24 audit:** no approved numeric incompatibility established; TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Design timing-basis/evidence and joint consumer-readiness contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
-| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 47 missing across the 204-period corpus | Core FCFF input | Wave 31 completes five CVX v2 designs; next implement with unchanged ten v1 approvals, 42 controls and direct results | Five potential designs, zero runtime approval | High |
+| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 42 missing across the 204-period corpus | Core FCFF input | Wave 32 implements five CVX v2 entries; all ten v1/direct results preserved. Next research five NVDA combined-asset cash-component gaps | No generic fallback or approved additional equation | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
 | 11 | `CONCEPT_POLICY` | Commercial paper 192 missing; short borrowings 203 missing | Equity bridge | Generalize exact concepts only where economically present | High | Medium |
@@ -846,8 +862,9 @@ issuers have one post-smoke classification.
    without approval. Wave 30 clarifies development/mineral and capitalized-lease
    treatment; next design five exact CVX reported-value entries, without inferred
    allocations or adjusted equations.
-   Wave 31 designs those five entries as a disjoint immutable v2 set; next
-   implement and incrementally validate it without altering v1/direct results.
+   Wave 31 designs those five entries as a disjoint immutable v2 set; Wave 32
+   implements and validates it without altering v1/direct results. Next research
+   only five NVDA PP&E/intangible cash-component gaps, separately gating extensions.
    CVX/GE mixed-business designs remain separate. Approve only
    repeatable definitions with
    selected-accession evidence.

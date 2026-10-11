@@ -1,5 +1,12 @@
 # Capex selected-filing concept and component inventory
 
+Wave 32 [implements and validates](capex-cvx-scope-evidence-results.md) exactly
+five CVX reported-value acceptances under additive v2, preserving ten v1
+approvals and all 147 direct results. Current Capex is 162/42/0; the 57-row
+research snapshot below remains frozen: five v2 + ten v1 + 42 unapproved
+controls. No generic fallback or equation. Next research only the five NVDA
+combined PP&E/intangible cash-component gaps; extensions remain separately gated.
+
 ## Decision and frozen scope
 
 Phase 1H.4 Wave 26; starting HEAD

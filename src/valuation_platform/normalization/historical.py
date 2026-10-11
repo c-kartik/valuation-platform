@@ -40,7 +40,8 @@ from .diluted_shares import (
     derive_googl_diluted_weighted_average_shares,
 )
 from .pretax_scope import apply_curated_pretax_scope_policy
-from .capex_scope import VerifiedCapexArtifacts, apply_curated_capex_scope_policy
+from .capex_scope import (VerifiedCapexArtifacts, apply_curated_capex_scope_policy,
+                         published_capex_scope_policy_for)
 from .d_and_a_scope import (
     VerifiedDAndAArtifacts, apply_curated_d_and_a_scope_policy,
 )
@@ -202,6 +203,7 @@ def _resolve_with_derivation(
     if policy.metric is FinancialMetric.CAPEX:
         direct = apply_curated_capex_scope_policy(
             bucket, direct, company_cik, annual_period, filing_xbrl, capex_artifacts,
+            policy=published_capex_scope_policy_for(company_cik, bucket.filing, annual_period),
         )
     if policy.metric is FinancialMetric.D_AND_A:
         direct = apply_curated_d_and_a_scope_policy(
