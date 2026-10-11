@@ -881,10 +881,21 @@ ten positive / 47 control regression and ten-accession targeted validation pass.
 One corpus reconciliation yields Capex 157/47/0, D&A 115/89/0 and aggregate
 1,895/1,493/11/27/42 = 3,468. Other measure states, 43 generic completions and
 seven specialized skips are unchanged; schema 5 retains the Capex audit.
-Next bounded milestone: selected-filing research of the five frozen CVX cash
-PP&E components' acquisition/asset containment. Keep the other 42 Capex gaps,
-generic policy and deferred valuation readiness outside this pass. No aggregate
-productive-assets fallback, affiliate/dry-hole inclusion or residual derivation.
+Wave 29 completes the [five-period CVX Capex acquisition/perimeter review](capex-cvx-acquisition-perimeter.md)
+and [exact evidence supplement](capex-cvx-perimeter-inventory.json). Separate
+business-combination cash/stock consideration, noncash acquired PP&E,
+investment/dry-hole components and proceeds are identified. All five remain
+scope-research gaps: capitalized construction/development/mineral and lease
+inputs require an explicit decision against the existing primitive. NO-GO for
+acceptance or derivation; zero safe additional coverage, not proved economic
+incompatibility. The frozen inventory, acceptance matrix and policies remain
+unchanged. Thirty-six retained original report bodies and five instance hashes
+were verified; no SEC retrieval, tests or corpus rerun. Production remains
+Capex 157/47/0 and aggregate 1,895/1,493/11/27/42 = 3,468.
+Next bounded milestone: documentation-only CVX cash construction/development,
+mineral-interest and capitalized-lease-input methodology review. Do not invent
+an allocation or subtract all investing lease payments. Keep the other 42
+Capex gaps, generic policy and deferred valuation readiness outside that pass.
 Do not implement a sum or infer TXN allocations; further TXN work
 requires a genuine new expense/inventory and incentive bridge, not repeated
 concept research. TXN 2024–2025 absent intangible operands are not
@@ -962,7 +973,9 @@ sensitivity work is intentionally paused through Phase 1H.
    periods; Wave 27 designs exact-accession scope acceptance for ten AMZN/LLY
    candidates without a generic fallback. Next implement only that reviewed
    ten-entry policy. Wave 28 completes it with exactly ten new Capex resolutions;
-   next research five CVX cash PP&E component perimeters, then continue with other
+   Wave 29 completes five CVX acquisition/perimeter reviews with no new approval;
+   next decide the cash construction/development/mineral and capitalized-lease
+   cost perimeter against the existing primitive. Then continue with other
    extension patterns, dimensions,
    non-calendar periods, acquisition
    accounting, debt/lease presentation, D&A decomposition, and working-capital

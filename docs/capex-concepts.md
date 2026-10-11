@@ -27,8 +27,10 @@ are not silently reclassified or included as gaps.
 ## Primitive and classification rules
 
 The existing [primitive](financial-methodology.md) is **gross cash expenditure
-to acquire PP&E**, a positive magnitude for later subtraction. Production still
-accepts only `us-gaap:PaymentsToAcquirePropertyPlantAndEquipment`.
+to acquire PP&E**, a positive magnitude for later subtraction. The generic
+policy accepts only `us-gaap:PaymentsToAcquirePropertyPlantAndEquipment`.
+The ten AMZN/LLY exact-accession curated acceptances were subsequently
+implemented in Wave 28; this inventory is the frozen Wave 26 research baseline.
 Cash paid is not book additions, unpaid Capex, noncash leases, acquired assets
 in a business combination, intangible purchases, or disposal proceeds.
 Internal-use software and technology need asset/cash-perimeter evidence;
@@ -61,7 +63,7 @@ authorize universal mapping.
 | NVDA | 5 | Purchases explicitly combine PP&E and intangibles. First two extension facts and later productive-assets facts do not supply an exhaustive PP&E-only cash split. Unpaid Capex and finance-lease principal remain separate support. |
 | V | 5 | Purchases combine property/equipment/technology, with purchased and developed software in the asset note. D&A scope acceptance is not approval of this Capex cash/software perimeter. |
 | LRCX | 5 | Cash-flow capital expenditures and intangible assets are combined. Accrued purchases and inventory-to-equipment transfers cannot reconstruct an absent complete cash split. |
-| CVX | 5 | Supplemental cash-flow note disaggregates PP&E additions excluding noncash movements, investment additions, dry-hole spending and other assets/liabilities. PP&E component is promising, but complete acquisition/asset containment remains unapproved. Aggregate and affiliate-inclusive capital/exploratory spending are not primitive-equivalent. |
+| CVX | 5 | Wave 29 distinguishes business-acquisition consideration, noncash fair-value additions, investment/dry-hole components and proceeds. Reported PP&E cash components remain unapproved: development/mineral and capitalized-lease cost perimeter needs an explicit methodology decision, not an inferred allocation. Aggregate and affiliate-inclusive spending remain unsuitable substitutes. See the five-row supplement below. |
 | MRK | 2 | 2021/2022 productive-assets capital expenditures need a complete cash perimeter; accounting policy places internal-use software in PP&E but cloud implementation elsewhere. Later direct periods stay unchanged. |
 | GE | 3 | PP&E/internal-use software aggregate and industrial/insurance/separation scope are gated by existing business-perimeter research. Separate dispositions are not netted and later recasts are not substituted. |
 | HD | 5 | Capital expenditures coexist with capitalized construction/software/interest. Reviewed accounting note does not establish a complete pure PP&E cash perimeter for the broad tag; noncash expenditures are not added. |
@@ -188,8 +190,22 @@ Wave 28 [implements the ten-entry policy](capex-scope-evidence-results.md):
 Capex 157 resolved / 47 missing / zero ambiguous, with exactly ten new results
 and other measure states unchanged. The inventory remains a frozen baseline;
 its potential flags are not an executable registry. Explicit response-body
-correction/refresh histories remain separate from scope approval. Next research
-five CVX cash PP&E components' acquisition/asset containment, not aggregate mapping.
+correction/refresh histories remain separate from scope approval.
+
+Wave 29 completes the [five-period CVX acquisition/perimeter review](capex-cvx-acquisition-perimeter.md)
+and [machine-checkable supplement](capex-cvx-perimeter-inventory.json).
+All five frozen identities and reported PP&E components are preserved;
+36 retained original report bodies have explicitly typed, verified digests.
+The frozen Wave 26 JSON and its SHA-256 remain unchanged so the historical
+Wave 27 acceptance matrix is not silently rebound. This supplement extends
+the research inventory without changing its 37/17/3 routes or ten historical
+potential flags. Five CVX scope gaps remain unresolved, zero new acceptance
+or derivation is approved, and the other 42 current gaps were not reviewed.
+NO-GO for CVX production coverage now; unknown scope is not proved
+incompatibility. Next: a bounded CVX cash construction/development/mineral and
+capitalized-lease-input methodology review, not repeated acquisition inventory
+or a whole-lease residual deduction. Production remains Capex 157/47/0 and
+aggregate 1,895/1,493/11/27/42 = 3,468, carried forward without a rerun.
 
 Wave 27 completes the [scope-evidence design](capex-scope-evidence-design.md)
 and [57-row acceptance matrix](capex-scope-evidence-matrix.json): five AMZN and

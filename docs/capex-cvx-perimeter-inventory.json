@@ -1,0 +1,2694 @@
+{
+  "research_version": "wave29-cvx-capex-perimeter-v1",
+  "starting_head": "7fa04cf60df284b7a6338c3896b63535fe9ed90a",
+  "scope": "Documentation-only supplement; does not mutate frozen Wave 26 inventory, Wave 27 matrix or runtime policy.",
+  "frozen_inventory": "capex-inventory.json",
+  "frozen_inventory_sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6",
+  "period_count": 5,
+  "classification_counts": {
+    "CONCEPT_POLICY": 5
+  },
+  "perimeter_decision_counts": {
+    "UNRESOLVED_METHODOLOGY_BLOCKER": 5
+  },
+  "safe_potential_new_coverage": 0,
+  "approved_derivations": 0,
+  "decision": "NO_GO_FOR_CVX_ACCEPTANCE_OR_DERIVATION_PENDING_NARROW_PERIMETER_REVIEW",
+  "production_counts_carried_forward_not_remeasured": {
+    "capex": {
+      "resolved": 157,
+      "missing": 47,
+      "ambiguous": 0
+    },
+    "aggregate": {
+      "resolved": 1895,
+      "missing": 1493,
+      "ambiguous": 11,
+      "methodology_blocked": 27,
+      "not_comparable": 42
+    },
+    "total_states": 3468
+  },
+  "rows": [
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-22-000019",
+        "form": "10-K",
+        "filing_date": "2022-02-24",
+        "report_date": "2021-12-31",
+        "primary_document": "cvx-20211231.htm"
+      },
+      "annual_start": "2021-01-01",
+      "annual_end": "2021-12-31",
+      "annual_context_ids": [
+        "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231"
+      ],
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "raw_value": "2021"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentType",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2021q4",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "raw_value": "2021-12-31"
+        }
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+      "instance_digest_type": "sha256_sec_response_body_bytes",
+      "instance_sha256": "ca74d207ae08730138143784e176c75cbde91ea552f2aae5a47287104b893053",
+      "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/00491c59daa5ba83edd703e28e24b234d31dee17e0dbcf01dbef908068b867b2.bin",
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "production_status": "missing",
+      "production_policy_approval": false,
+      "safe_potential_scope_design": false,
+      "approved_derivation_equation": null,
+      "candidate_cash_ppe_value_usd": "7515000000",
+      "statement_check_not_capex_derivation": {
+        "equation": "reported_PP&E + investment_additions + current_year_dry_holes + other_assets_liabilities = cash_flow_capital_expenditures",
+        "values_usd": [
+          "7515000000",
+          "460000000",
+          "83000000",
+          "-2000000",
+          "8056000000"
+        ],
+        "difference_usd": "0",
+        "rounding_tolerance_usd": "0"
+      },
+      "candidate_occurrence_ordinals": [
+        714
+      ],
+      "exact_annual_occurrences": [
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "CashAcquiredFromAcquisition",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "0",
+          "numeric_value": "0",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 312,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "8056000000",
+          "numeric_value": "8056000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 315,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "ProceedsFromSaleOfProductiveAssets",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "1791000000",
+          "numeric_value": "1791000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 318,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "7515000000",
+          "numeric_value": "7515000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 714,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "PaymentsToAcquireInterestInSubsidiariesAndAffiliates",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "460000000",
+          "numeric_value": "460000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 717,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "ResultsOfOperationsDryHoleCosts",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "83000000",
+          "numeric_value": "83000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 720,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://www.chevron.com/20211231",
+          "concept": "PaymentsToAcquireOtherProductiveAssetsLiabilities",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "-2000000",
+          "numeric_value": "-2000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 723,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "8056000000",
+          "numeric_value": "8056000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 726,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "PaymentsToAcquireEquipmentOnLease",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "64000000",
+          "numeric_value": "64000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 732,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "OperatingLeasePayments",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "1670000000",
+          "numeric_value": "1670000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 822,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "OperatingLeasePaymentsUse",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "398000000",
+          "numeric_value": "398000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 825,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "concept": "FinanceLeasePrincipalPayments",
+          "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "193000000",
+          "numeric_value": "193000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-22-000019",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231_htm.xml",
+          "ordinal": 831,
+          "context": {
+            "context_id": "idd436c1bb1314e08bd5fd6d1285101ad_D20210101-20211231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        }
+      ],
+      "candidate_presentation_and_calculation": {
+        "namespace": "http://fasb.org/us-gaap/2021-01-31",
+        "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+        "labels": [
+          {
+            "role": "http://www.xbrl.org/2003/role/label",
+            "text": "Payments to Acquire Oil and Gas Property and Equipment"
+          }
+        ],
+        "presentation_roles": [
+          {
+            "role_uri": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsSummaryofInformationDetails",
+            "definition": "240094003 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+            "sort_code": "240094003",
+            "role_type": "Disclosure",
+            "title": "Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/cvx-20211231.xsd",
+            "reports": [
+              {
+                "Role": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsSummaryofInformationDetails",
+                "ShortName": "Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+                "LongName": "240094003 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+                "MenuCategory": "Details",
+                "HtmlFileName": "R64.htm"
+              }
+            ]
+          }
+        ],
+        "calculation_relationships": [],
+        "taxonomy": "us-gaap"
+      },
+      "report_body_file": "evidence/cvx-capex-perimeter-response-bodies.json",
+      "reviewed_report_urls": [
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R7.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R10.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R12.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R14.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R24.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R27.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/R38.htm"
+      ],
+      "unresolved_questions": [
+        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+      ],
+      "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
+      "unknown_not_demonstrated_incompatible": true
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-23-000009",
+        "form": "10-K",
+        "filing_date": "2023-02-23",
+        "report_date": "2022-12-31",
+        "primary_document": "cvx-20221231.htm"
+      },
+      "annual_start": "2022-01-01",
+      "annual_end": "2022-12-31",
+      "annual_context_ids": [
+        "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231"
+      ],
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "raw_value": "2022"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentType",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2022",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "raw_value": "2022-12-31"
+        }
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+      "instance_digest_type": "sha256_sec_response_body_bytes",
+      "instance_sha256": "01fe10d8942274ff8dbc4f2014d946059525a2a74f002512f6533ff3a05baf5d",
+      "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/ec829e09b872d5a7f405fbf1b14e3edc49524e0c6399a873b82b7f7762b83214.bin",
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "production_status": "missing",
+      "production_policy_approval": false,
+      "safe_potential_scope_design": false,
+      "approved_derivation_equation": null,
+      "candidate_cash_ppe_value_usd": "10349000000",
+      "statement_check_not_capex_derivation": {
+        "equation": "reported_PP&E + investment_additions + current_year_dry_holes + other_assets_liabilities = cash_flow_capital_expenditures",
+        "values_usd": [
+          "10349000000",
+          "1147000000",
+          "309000000",
+          "169000000",
+          "11974000000"
+        ],
+        "difference_usd": "0",
+        "rounding_tolerance_usd": "0"
+      },
+      "candidate_occurrence_ordinals": [
+        698
+      ],
+      "exact_annual_occurrences": [
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "2862000000",
+          "numeric_value": "2862000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 304,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "11974000000",
+          "numeric_value": "11974000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 307,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "ProceedsFromSaleOfProductiveAssets",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "2635000000",
+          "numeric_value": "2635000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 310,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "10349000000",
+          "numeric_value": "10349000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 698,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "PaymentsToAcquireInterestInSubsidiariesAndAffiliates",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "1147000000",
+          "numeric_value": "1147000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 701,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "ResultsOfOperationsDryHoleCosts",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "309000000",
+          "numeric_value": "309000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 704,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://www.chevron.com/20221231",
+          "concept": "PaymentsToAcquireOtherProductiveAssetsLiabilities",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "169000000",
+          "numeric_value": "169000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 707,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "11974000000",
+          "numeric_value": "11974000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 710,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "OperatingLeasePayments",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "1892000000",
+          "numeric_value": "1892000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 784,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "OperatingLeasePaymentsUse",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "467000000",
+          "numeric_value": "467000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 787,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "concept": "FinanceLeasePrincipalPayments",
+          "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "44000000",
+          "numeric_value": "44000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-23-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231_htm.xml",
+          "ordinal": 793,
+          "context": {
+            "context_id": "i3cd5a5d08ac0405882d3e0768d20dc50_D20220101-20221231",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        }
+      ],
+      "candidate_presentation_and_calculation": {
+        "namespace": "http://fasb.org/us-gaap/2022",
+        "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+        "labels": [
+          {
+            "role": "http://www.xbrl.org/2003/role/label",
+            "text": "Payments to Acquire Oil and Gas Property and Equipment"
+          }
+        ],
+        "presentation_roles": [
+          {
+            "role_uri": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsSummaryofInformationDetails",
+            "definition": "0000064 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+            "sort_code": "0000064",
+            "role_type": "Disclosure",
+            "title": "Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231.xsd",
+            "reports": [
+              {
+                "Role": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsSummaryofInformationDetails",
+                "ShortName": "Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+                "LongName": "0000064 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+                "MenuCategory": "Details",
+                "HtmlFileName": "R64.htm"
+              }
+            ]
+          }
+        ],
+        "calculation_relationships": [],
+        "taxonomy": "us-gaap"
+      },
+      "report_body_file": "evidence/cvx-capex-perimeter-response-bodies.json",
+      "reviewed_report_urls": [
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R7.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R10.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R12.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R14.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R24.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R27.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/R38.htm"
+      ],
+      "unresolved_questions": [
+        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+      ],
+      "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
+      "unknown_not_demonstrated_incompatible": true
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-24-000013",
+        "form": "10-K",
+        "filing_date": "2024-02-26",
+        "report_date": "2023-12-31",
+        "primary_document": "cvx-20231231.htm"
+      },
+      "annual_start": "2023-01-01",
+      "annual_end": "2023-12-31",
+      "annual_context_ids": [
+        "c-1"
+      ],
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "c-1",
+          "raw_value": "2023"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "c-1",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentType",
+          "context_id": "c-1",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2023",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "c-1",
+          "raw_value": "2023-12-31"
+        }
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+      "instance_digest_type": "sha256_sec_response_body_bytes",
+      "instance_sha256": "c9442973f5372dde03e202c25a19e7a436c535933b4a4ceaa0e8759d2fd38790",
+      "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/38bcf4692d2dc2dbf3e832b03bf4a3f632ae7c3dd573b2402d7ed70b44d2a3aa.bin",
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "production_status": "missing",
+      "production_policy_approval": false,
+      "safe_potential_scope_design": false,
+      "approved_derivation_equation": null,
+      "candidate_cash_ppe_value_usd": "14788000000",
+      "statement_check_not_capex_derivation": {
+        "equation": "reported_PP&E + investment_additions + current_year_dry_holes + other_assets_liabilities = cash_flow_capital_expenditures",
+        "values_usd": [
+          "14788000000",
+          "690000000",
+          "326000000",
+          "25000000",
+          "15829000000"
+        ],
+        "difference_usd": "0",
+        "rounding_tolerance_usd": "0"
+      },
+      "candidate_occurrence_ordinals": [
+        723
+      ],
+      "exact_annual_occurrences": [
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "-55000000",
+          "numeric_value": "-55000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 329,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "15829000000",
+          "numeric_value": "15829000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 332,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "ProceedsFromSaleOfProductiveAssets",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "669000000",
+          "numeric_value": "669000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 335,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "14788000000",
+          "numeric_value": "14788000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 723,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "PaymentsToAcquireInterestInSubsidiariesAndAffiliates",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "690000000",
+          "numeric_value": "690000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 726,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "ResultsOfOperationsDryHoleCosts",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "326000000",
+          "numeric_value": "326000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 729,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://www.chevron.com/20231231",
+          "concept": "PaymentsToAcquireOtherProductiveAssetsLiabilities",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "25000000",
+          "numeric_value": "25000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 732,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "15829000000",
+          "numeric_value": "15829000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 735,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "OperatingLeasePayments",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "2271000000",
+          "numeric_value": "2271000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 809,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "OperatingLeasePaymentsUse",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "713000000",
+          "numeric_value": "713000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 812,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "concept": "FinanceLeasePrincipalPayments",
+          "context_id": "c-1",
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "42000000",
+          "numeric_value": "42000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-24-000013",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231_htm.xml",
+          "ordinal": 818,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        }
+      ],
+      "candidate_presentation_and_calculation": {
+        "namespace": "http://fasb.org/us-gaap/2023",
+        "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+        "labels": [
+          {
+            "role": "http://www.xbrl.org/2003/role/label",
+            "text": "Payments to Acquire Oil and Gas Property and Equipment"
+          }
+        ],
+        "presentation_roles": [
+          {
+            "role_uri": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsSummaryofInformationDetails",
+            "definition": "9954495 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+            "sort_code": "9954495",
+            "role_type": "Disclosure",
+            "title": "Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/cvx-20231231.xsd",
+            "reports": [
+              {
+                "Role": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsSummaryofInformationDetails",
+                "ShortName": "Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+                "LongName": "9954495 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Summary of Information (Details)",
+                "MenuCategory": "Details",
+                "HtmlFileName": "R67.htm"
+              }
+            ]
+          }
+        ],
+        "calculation_relationships": [],
+        "taxonomy": "us-gaap"
+      },
+      "report_body_file": "evidence/cvx-capex-perimeter-response-bodies.json",
+      "reviewed_report_urls": [
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R7.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R10.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R12.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R14.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R24.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R27.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R38.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/R39.htm"
+      ],
+      "unresolved_questions": [
+        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+      ],
+      "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
+      "unknown_not_demonstrated_incompatible": true
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-25-000009",
+        "form": "10-K",
+        "filing_date": "2025-02-21",
+        "report_date": "2024-12-31",
+        "primary_document": "cvx-20241231.htm"
+      },
+      "annual_start": "2024-01-01",
+      "annual_end": "2024-12-31",
+      "annual_context_ids": [
+        "c-1"
+      ],
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "c-1",
+          "raw_value": "2024"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "c-1",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentType",
+          "context_id": "c-1",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "c-1",
+          "raw_value": "2024-12-31"
+        }
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+      "instance_digest_type": "sha256_sec_response_body_bytes",
+      "instance_sha256": "de9314aaf8a5e710d1b82a7e5b4530c6e7d3a607e8c5286ffa44f545cfe79315",
+      "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/33b9f9ed28b3b3833c9b8e0d98b5e3d605b467e3ad6e73907cafb9f17fcbe330.bin",
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "production_status": "missing",
+      "production_policy_approval": false,
+      "safe_potential_scope_design": false,
+      "approved_derivation_equation": null,
+      "candidate_cash_ppe_value_usd": "15544000000",
+      "statement_check_not_capex_derivation": {
+        "equation": "reported_PP&E + investment_additions + current_year_dry_holes + other_assets_liabilities = cash_flow_capital_expenditures",
+        "values_usd": [
+          "15544000000",
+          "573000000",
+          "331000000",
+          "0",
+          "16448000000"
+        ],
+        "difference_usd": "0",
+        "rounding_tolerance_usd": "0"
+      },
+      "candidate_occurrence_ordinals": [
+        736
+      ],
+      "exact_annual_occurrences": [
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "0",
+          "numeric_value": "0",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 333,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "16448000000",
+          "numeric_value": "16448000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 336,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "ProceedsFromSaleOfProductiveAssets",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "7704000000",
+          "numeric_value": "7704000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 339,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "15544000000",
+          "numeric_value": "15544000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 736,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "PaymentsToAcquireInterestInSubsidiariesAndAffiliates",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "573000000",
+          "numeric_value": "573000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 739,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "ResultsOfOperationsDryHoleCosts",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "331000000",
+          "numeric_value": "331000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 742,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://www.chevron.com/20241231",
+          "concept": "PaymentsToAcquireOtherProductiveAssetsLiabilities",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "0",
+          "numeric_value": "0",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 745,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "16448000000",
+          "numeric_value": "16448000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 748,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "OperatingLeasePayments",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "2468000000",
+          "numeric_value": "2468000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 823,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "OperatingLeasePaymentsUse",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "979000000",
+          "numeric_value": "979000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 826,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "FinanceLeasePrincipalPayments",
+          "context_id": "c-1",
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "67000000",
+          "numeric_value": "67000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-25-000009",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231_htm.xml",
+          "ordinal": 832,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        }
+      ],
+      "candidate_presentation_and_calculation": {
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+        "labels": [
+          {
+            "role": "http://www.xbrl.org/2003/role/label",
+            "text": "Payments to Acquire Oil and Gas Property and Equipment"
+          }
+        ],
+        "presentation_roles": [
+          {
+            "role_uri": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsScheduleofInformationDetails",
+            "definition": "9955535 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Schedule of Information (Details)",
+            "sort_code": "9955535",
+            "role_type": "Disclosure",
+            "title": "Information Relating to the Consolidated Statement of Cash Flows - Schedule of Information (Details)",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231.xsd",
+            "reports": [
+              {
+                "Role": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsScheduleofInformationDetails",
+                "ShortName": "Information Relating to the Consolidated Statement of Cash Flows - Schedule of Information (Details)",
+                "LongName": "9955535 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Schedule of Information (Details)",
+                "MenuCategory": "Details",
+                "HtmlFileName": "R69.htm"
+              }
+            ]
+          }
+        ],
+        "calculation_relationships": [],
+        "taxonomy": "us-gaap"
+      },
+      "report_body_file": "evidence/cvx-capex-perimeter-response-bodies.json",
+      "reviewed_report_urls": [
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R7.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R10.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R12.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R14.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R24.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R27.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/R38.htm"
+      ],
+      "unresolved_questions": [
+        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+      ],
+      "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
+      "unknown_not_demonstrated_incompatible": true
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "filing": {
+        "accession_number": "0000093410-26-000078",
+        "form": "10-K",
+        "filing_date": "2026-02-24",
+        "report_date": "2025-12-31",
+        "primary_document": "cvx-20251231.htm"
+      },
+      "annual_start": "2025-01-01",
+      "annual_end": "2025-12-31",
+      "annual_context_ids": [
+        "c-1"
+      ],
+      "annual_dei_evidence": [
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentFiscalYearFocus",
+          "context_id": "c-1",
+          "raw_value": "2025"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentFiscalPeriodFocus",
+          "context_id": "c-1",
+          "raw_value": "FY"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentType",
+          "context_id": "c-1",
+          "raw_value": "10-K"
+        },
+        {
+          "namespace": "http://xbrl.sec.gov/dei/2025",
+          "concept": "DocumentPeriodEndDate",
+          "context_id": "c-1",
+          "raw_value": "2025-12-31"
+        }
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+      "instance_digest_type": "sha256_sec_response_body_bytes",
+      "instance_sha256": "383742ba0900c6bad8fbea17085f2854a2264ca1d3673de71654c94b76ddbe98",
+      "retained_instance_path_at_review": "/tmp/operating-income-sec-cache/e8f9f71d87d6dbb773640b7e6fbfd2e0282b811e098165676c833b7ba229c560.bin",
+      "classification": "CONCEPT_POLICY",
+      "scope_disposition": "SCOPE_RESEARCH_REQUIRED",
+      "perimeter_decision": "UNRESOLVED_METHODOLOGY_BLOCKER",
+      "production_status": "missing",
+      "production_policy_approval": false,
+      "safe_potential_scope_design": false,
+      "approved_derivation_equation": null,
+      "candidate_cash_ppe_value_usd": "16830000000",
+      "statement_check_not_capex_derivation": {
+        "equation": "reported_PP&E + investment_additions + current_year_dry_holes + other_assets_liabilities = cash_flow_capital_expenditures",
+        "values_usd": [
+          "16830000000",
+          "225000000",
+          "292000000",
+          "0",
+          "17347000000"
+        ],
+        "difference_usd": "0",
+        "rounding_tolerance_usd": "0"
+      },
+      "candidate_occurrence_ordinals": [
+        753
+      ],
+      "exact_annual_occurrences": [
+        {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "-1056000000",
+          "numeric_value": "-1056000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 346,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://www.chevron.com/20251231",
+          "concept": "PaymentsToAcquireCommonStockDuringAcquisition",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "2225000000",
+          "numeric_value": "2225000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 349,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "17347000000",
+          "numeric_value": "17347000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 352,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "ProceedsFromSaleOfProductiveAssets",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "1826000000",
+          "numeric_value": "1826000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 355,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "16830000000",
+          "numeric_value": "16830000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 753,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "PaymentsToAcquireInterestInSubsidiariesAndAffiliates",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "225000000",
+          "numeric_value": "225000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 756,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://www.chevron.com/20251231",
+          "concept": "PaymentsForCurrentYearDryHoleExpenditures",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "292000000",
+          "numeric_value": "292000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 759,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://www.chevron.com/20251231",
+          "concept": "PaymentsToAcquireOtherProductiveAssetsLiabilities",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "0",
+          "numeric_value": "0",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 762,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "PaymentsToAcquireProductiveAssets",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "17347000000",
+          "numeric_value": "17347000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 765,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "OperatingLeasePayments",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "2838000000",
+          "numeric_value": "2838000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 840,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "OperatingLeasePaymentsUse",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "881000000",
+          "numeric_value": "881000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 843,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        },
+        {
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "FinanceLeasePrincipalPayments",
+          "context_id": "c-1",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "dimensions": [],
+          "unit_ref": "usd",
+          "unit": {
+            "unit_id": "usd",
+            "numerator_measures": [
+              {
+                "namespace": "http://www.xbrl.org/2003/iso4217",
+                "local_name": "USD"
+              }
+            ],
+            "denominator_measures": []
+          },
+          "raw_value": "136000000",
+          "numeric_value": "136000000",
+          "decimals": "-6",
+          "is_nil": false,
+          "accession_number": "0000093410-26-000078",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_htm.xml",
+          "ordinal": 849,
+          "context": {
+            "context_id": "c-1",
+            "entity_identifier_scheme": "http://www.sec.gov/CIK",
+            "entity_identifier": "0000093410",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "dimensions": []
+          },
+          "normalized_unit": "USD",
+          "eligible_nondimensional_exact_annual_usd": true
+        }
+      ],
+      "candidate_presentation_and_calculation": {
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "concept": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+        "labels": [
+          {
+            "role": "http://www.xbrl.org/2003/role/label",
+            "text": "Payments to Acquire Oil and Gas Property and Equipment"
+          }
+        ],
+        "presentation_roles": [
+          {
+            "role_uri": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsScheduleofInformationDetails",
+            "definition": "9955535 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Schedule of Information (Details)",
+            "sort_code": "9955535",
+            "role_type": "Disclosure",
+            "title": "Information Relating to the Consolidated Statement of Cash Flows - Schedule of Information (Details)",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.xsd",
+            "reports": [
+              {
+                "Role": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsScheduleofInformationDetails",
+                "ShortName": "Information Relating to the Consolidated Statement of Cash Flows - Schedule of Information (Details)",
+                "LongName": "9955535 - Disclosure - Information Relating to the Consolidated Statement of Cash Flows - Schedule of Information (Details)",
+                "MenuCategory": "Details",
+                "HtmlFileName": "R66.htm"
+              }
+            ]
+          }
+        ],
+        "calculation_relationships": [
+          {
+            "role": "http://www.chevron.com/role/InformationRelatingtotheConsolidatedStatementofCashFlowsScheduleofInformationDetails",
+            "parent": "PaymentsToAcquireProductiveAssets",
+            "child": "PaymentsToAcquireOilAndGasPropertyAndEquipment",
+            "parent_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_PaymentsToAcquireProductiveAssets",
+            "child_href": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd#us-gaap_PaymentsToAcquireOilAndGasPropertyAndEquipment",
+            "weight": "1.0",
+            "order": "1",
+            "preferred_label": null,
+            "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231_cal.xml"
+          }
+        ],
+        "taxonomy": "us-gaap"
+      },
+      "report_body_file": "evidence/cvx-capex-perimeter-response-bodies.json",
+      "reviewed_report_urls": [
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R7.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R10.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R12.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R14.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R24.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R27.htm",
+        "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R38.htm"
+      ],
+      "unresolved_questions": [
+        "Treatment of cash construction/development and mineral-interest costs within current PP&E purchase primitive, without redefining it for coverage.",
+        "Investing operating-lease payments versus capitalized costs: destination/overlap is not allocated to the reported PP&E component; no whole-lease subtraction is supported.",
+        "No independently exhaustive intangible/software or incentive split; absence does not establish zero."
+      ],
+      "acquisition_containment": "Business-acquisition consideration separately presented; acquired fair-value PP&E is not a cash purchase operand. No residual subtraction.",
+      "unknown_not_demonstrated_incompatible": true
+    }
+  ]
+}
