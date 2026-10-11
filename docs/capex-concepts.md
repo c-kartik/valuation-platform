@@ -1,5 +1,15 @@
 # Capex selected-filing concept and component inventory
 
+Wave 42 [VZ component/perimeter research](capex-vz-component-perimeter.md) and
+[five-row supplement](capex-vz-scope-inventory.json) retain five frozen
+`DERIVATION` / `COMPONENT_SCOPE_UNPROVED` outcomes. Cash explicitly includes
+capitalized software, while licenses/business cash and certain noncash purchases
+are separately evidenced; complete eligible cash scope or a cash-component
+equation is not. NO-GO, zero safe additional coverage. Seventy typed original
+bodies retained (fifty reused, twenty targeted retrievals). Frozen research,
+production and prior issuer decisions unchanged. Next: five PEP component/
+perimeter periods; no scope inference from software book balances or residuals.
+
 Wave 41 [MRK research](capex-mrk-scope.md) and
 [two-row supplement](capex-mrk-scope-inventory.json) retain 2021–2022
 `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`. Continuing-operation cash candidates

@@ -1,5 +1,16 @@
 # S&P 500 Top 50 failure taxonomy
 
+Wave 42 [VZ component/perimeter research](../capex-vz-component-perimeter.md) and
+[five-row supplement](../capex-vz-scope-inventory.json) retain five
+`DERIVATION` / `COMPONENT_SCOPE_UNPROVED` controls. Explicit software inclusion,
+network purpose, separate spectrum/acquisition cash and noncash-financing
+exclusions do not exhaust eligible cash purchases or prove a component equation.
+NO-GO, zero safe new coverage; unknown scope is not demonstrated incompatibility.
+Seventy originals verified (fifty reused, twenty targeted retrievals); production,
+methodology and prior outcomes unchanged. No tests or corpus rerun. Next: five
+frozen PEP component/perimeter periods, without reopening prior issuers absent
+new completeness evidence.
+
 Wave 41 [MRK scope research](../capex-mrk-scope.md) and
 [two-row supplement](../capex-mrk-scope-inventory.json) retain two 2021–2022
 `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED` controls. Eligible software and
@@ -894,7 +905,7 @@ issuers have one post-smoke classification.
 | 5 | `CONCEPT_POLICY` | **Implemented in Wave 12:** 8/33 standard-variant periods resolve under the reviewed exact-accession policy; 20 separate-net-of-tax and five mixed-treatment controls plus 12 issuer-extension periods remain missing | Core flow and diagnostic | Preserve the frozen v1 registry, full occurrence provenance, current-concept precedence, and missing-by-default future/amended filings | Medium | Medium-high |
 | 6 | `DERIVATION` / `CONCEPT_POLICY` | **Implemented in Wave 16:** 25 exact LLY/JNJ/MRK/KLAC/IBM derivations resolve; **Wave 17 NO-GO:** ten CVX/GE periods remain missing | Core FCFF input | Preserve v1; CVX affiliate scope and GE industrial/insurance carve-out or recast require separate methodology research | Medium | Very high |
 | 7 | `DERIVATION` / `CONCEPT_POLICY` | **Wave 20 implemented:** five exact Visa D&A acceptances; **Wave 24 audit:** no approved numeric incompatibility established; TXN three remain research; 33 proposals = 19 research + 14 methodology-gated; all 89 controls unchanged | Core FCFF input | Design timing-basis/evidence and joint consumer-readiness contract; AMD and lease/impairment/accretion boundaries separately gated | No additional approval | High |
-| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 37 missing across the 204-period corpus | Core FCFF input | Wave 41 retains two MRK controls with cash-scope/perimeter gaps; next research only five VZ other-productive-asset cash component/perimeter periods. Prior issuer gaps remain; twenty curated approvals and 147 direct results are unchanged | No generic fallback or approved additional equation | High |
+| 8 | `CONCEPT_POLICY` / `DERIVATION` / `METHODOLOGY_BLOCKER` | Capex: 37 missing across the 204-period corpus | Core FCFF input | Wave 42 retains five VZ controls with cash component/perimeter gaps; next research only five PEP periods. Prior issuer gaps remain; twenty curated approvals and 147 direct results are unchanged | No generic fallback or approved additional equation | High |
 | 9 | `CONCEPT_POLICY` | Short investments: 179 missing; long investments: 199 missing | Equity bridge | Evidence-backed current/noncurrent investment policies | High | Medium-high |
 | 10 | `CONCEPT_POLICY` / `DERIVATION` | Current debt 88 missing; noncurrent 64; widespread combined variants | Equity bridge | Carrying-value, lease, and overlap-aware variants | High | High |
 | 11 | `CONCEPT_POLICY` | Commercial paper 192 missing; short borrowings 203 missing | Equity bridge | Generalize exact concepts only where economically present | High | Medium |

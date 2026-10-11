@@ -2,7 +2,20 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 41**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 42**, documentation-only
+[VZ component/perimeter research](capex-vz-component-perimeter.md) and
+[five-row supplement](capex-vz-scope-inventory.json). All five retain
+`DERIVATION` / `COMPONENT_SCOPE_UNPROVED`: cash/software inclusion and specific
+spectrum/acquisition/lease/noncash exclusions are evidenced, but exhaustive
+eligible cash scope and any non-overlapping equation are not. NO-GO, zero safe
+additional coverage. Seventy original bodies retain typed verified digests:
+fifty reused and twenty specific-gap retrievals. Frozen inventory, methodology,
+policies and prior issuer decisions unchanged. Production carried forward:
+Capex 167/37/0, aggregate 1,905/1,483/11/27/42 = 3,468; no tests or corpus rerun.
+Next bounded milestone: documentation-only component/perimeter research for
+five frozen PEP periods. Reopen VZ only with new complete cash-scope evidence.
+
+Previously completed milestone: **Phase 1H.4 Wave 41**, documentation-only
 [MRK scope research](capex-mrk-scope.md) and
 [two-row supplement](capex-mrk-scope-inventory.json). Both frozen 2021–2022
 periods retain `CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`: internal-use software
