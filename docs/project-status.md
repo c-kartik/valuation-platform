@@ -2,7 +2,28 @@
 
 ## Current Milestone
 
-Latest completed milestone: **two immutable MSFT FY2025–2026 cash-interest
+Latest completed milestone: **bounded MSFT analyst-treatment decision memo**,
+documentation only, Phase 1. [Proposed recommendations](msft-analyst-treatment-decision.md)
+use reported consolidated CFO as historical input basis, recognized SBC expense
+as an explicitly accepted economic-cost proxy counted once, a consistently
+applied lease cash-service convention, separate reported taxes/unpopulated
+analyst operating-tax assumption, and narrow evidenced cash PP&E with combined
+investment retained unallocated. These are proposed pending user review, not
+registered policies, numerical adjustments or consumption approval.
+Complete book NWC is unnecessary to reproduce reported CFO; cash-interest
+completeness, organic cash/investment separation and integrated compatibility
+are not thereby proved. Missing disclosures remain unknown, not zero or waived.
+Primary methodological references, two frozen identities, reported points/
+precision, evidence references, internal consistency, local links and diff check
+validated. No SEC requests, tests/corpus, source/schema/policy/bundle/sidecar
+changes. Baseline **1,905/1,483/11/27/42 = 3,468** unchanged.
+**Stop for user review.** Smallest subsequent Phase 1 milestone, conditional on
+that review: one two-period analyst-treatment acceptance/input checklist,
+recording accepted choices/proxies, required missing inputs and future-consumer
+checks. No automatic calculator, research/annotation cycle or blocker removal;
+Phase 2 stays postponed.
+
+Previously completed milestone: **two immutable MSFT FY2025–2026 cash-interest
 annotation sidecars**, isolated Phase 1 implementation. [Implementation](msft-cash-interest-scope-annotation-design.md#implemented-isolated-version-1-sidecars)
 and [registry](company-data-preparation/msft-cash-interest-annotations.json)
 retain eleven exact input bindings, ten null unknowns, seven note/Item 7

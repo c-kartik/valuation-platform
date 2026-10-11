@@ -478,3 +478,68 @@ selected-versus-recast CFO checks, lease/noncash roles, and the supported credit
 scenario effects. Those data tasks are implemented. Broader financial scope
 cannot be made complete by repeating the same evidence or adding annotation
 versions. Await the user's disposition before any further research/implementation.
+
+## Proposed analyst-treatment decision memo
+
+The user subsequently authorized **designing an analyst input path alongside
+the unchanged reported baseline**. The [bounded memo](../msft-analyst-treatment-decision.md)
+answers the preceding finite disposition without implementing numerical treatment
+or approving valuation. All recommendations are proposed pending user review.
+
+Original conflicts: compensation is a real cost despite the CFO noncash add-back;
+lease cash/debt classifications must be consistent; reported cash/provision tax
+is not operating tax; book-NWC reconstruction and organic investment allocations
+are incomplete. Exact FY2025/FY2026 bundles, sidecars and retained statement/note
+evidence remain authoritative; no new issuer evidence is claimed.
+
+Considered alternatives and proposed resolutions:
+
+- **SBC:** recommend annual recognized-expense economic-cost proxy, counted once;
+  preserve reported add-back/expense facts. A cash-basis treatment would neutralize
+  the add-back once, an income basis would not deduct it again. This is not cash
+  replacement-wage evidence. Outstanding award claims remain distinct; no second
+  charge for the same cost through buybacks, withholding or future dilution.
+- **Leases/interest:** recommend a separately accepted lease cash-service perimeter
+  for the limited profile. Keep payments already in CFO; finance principal stays
+  a separate later service-payment candidate. Noncash additions are not cash.
+  Do not simultaneously charge the same lease obligation as financing debt in
+  a future bridge. Whole financing treatment is the alternative, not an isolated
+  adjustment. Borrowing cash remains rounded/debt-scoped; overlap/capitalization
+  and all-in interest remain unresolved, with no sum or tax shield.
+- **Taxes:** retain reported cash taxes for historical cash scope. Propose a
+  separate normalized operating-tax-rate assumption with evidence/jurisdiction
+  or explicit proxy rationale; no number/default/forecast schedule. User must
+  approve its basis and any value before use. No second tax on after-tax CFO or
+  unsupported conversion of provision/withholding into operating cash tax.
+- **NWC/timing:** recommend consolidated reported CFO as the alternative historical
+  input basis. It does not require complete opening book NWC, the capital-creditor
+  adjustment or inventory-D&A allocation to reproduce the reported subtotal.
+  Preserve partial NWC/blockers; no partial ΔNWC subtraction or repeated D&A/SBC
+  addition. Acquisition/FX/recast effects still matter for trend/organic claims;
+  the future timing gate is not automatically passed or waived.
+- **Investment:** recommend narrowly evidenced cash PP&E only as that input,
+  with combined acquisition/intangible/other spending separately unallocated.
+  No implicit software/intangible zero or complete organic reinvestment claim.
+  Acquisition exclusion must not retain acquisition-driven growth by assumption.
+
+Rationale: the cash-input profile permits useful historical data preparation
+without pretending that unresolved bookkeeping allocations have been recovered.
+Primary NYU valuation references distinguish compensation cost, lease consistency,
+tax bases and acquisition-growth consistency; FASB tagging guidance corroborates
+cash categories, not completeness. The memo marks policy judgment/proxies apart
+from issuer facts and future calculations. Historical schema 5, policy versions,
+37/38-input reported bundles, 11/10-per-set sidecars, their bytes/values/evidence
+and NWC scenarios remain unchanged. No approval flags are enabled.
+
+Validation: two frozen identities, retained-registry points/precision, occurrence
+and original-body references, policy/uncertainty distinctions, methodology
+references, local links and diff check. No tests/corpus, SEC requests or source/
+schema/policy changes; production **1905/1483/11/27/42 = 3468** remains frozen.
+
+Stopping point: await acceptance/rejection of SBC proxy, lease convention,
+consolidated cash-history scope, narrow PP&E scope and operating-tax assumption
+basis. Any numerical tax input and missing disclosure remains explicitly absent.
+Smallest conditional next **Phase 1** milestone: record one two-period analyst
+treatment acceptance/input checklist and its limitations, no calculator or new
+annotation cycle. Do not begin further implementation/research or resume Phase 2
+without new authority.
