@@ -1,5 +1,15 @@
 # Capex selected-filing concept and component inventory
 
+Wave 34 completes [LRCX component-completeness research](capex-lrcx-component-completeness.md)
+and its [five-row supplement](capex-lrcx-component-inventory.json). All five
+retain `DERIVATION` / `COMPONENT_SCOPE_UNPROVED`; no exhaustive intangible cash
+operand or complete PP&E cash equation is established. Acquired fair values,
+unpaid purchases, inventory transfers, leases and book software balances do
+not provide that split. Sixty-two original bodies have typed digests; five
+unverified historical discovery fingerprints remain separately labeled.
+Zero additional coverage; frozen inventory and production unchanged. Next:
+five Visa cash-technology/software and PP&E perimeter controls, research only.
+
 Wave 33 completes the [five-period NVDA combined-scope research](capex-nvda-combined-scope.md)
 and [research inventory supplement](capex-nvda-combined-inventory.json).
 All five retain `DERIVATION` / `COMPONENT_SCOPE_UNPROVED`; zero direct acceptance

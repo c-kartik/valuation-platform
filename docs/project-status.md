@@ -2,7 +2,20 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 33**, the documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 34**, documentation-only
+[LRCX component-completeness research](capex-lrcx-component-completeness.md)
+and [five-row supplement](capex-lrcx-component-inventory.json). All five retain
+`DERIVATION` / `COMPONENT_SCOPE_UNPROVED`; NO-GO for direct acceptance or a
+complete cash equation, zero safe additional coverage. Selected asset,
+lease/commitment and acquisition notes do not establish the intangible cash
+split. Sixty-two original bodies are retained with typed digests; historical
+unverified discovery fingerprints remain separate. Existing approvals,
+frozen inventory and production unchanged; no tests or corpus rerun.
+Next bounded milestone: documentation-only research of five frozen Visa Capex
+cash-technology/software and PP&E perimeter controls. D&A approvals do not
+approve their cash scope. Reopen LRCX only with new exact-period cash evidence.
+
+Previously completed milestone: **Phase 1H.4 Wave 33**, the documentation-only
 [NVDA combined Capex scope research](capex-nvda-combined-scope.md) and
 [five-row supplement](capex-nvda-combined-inventory.json). All five frozen
 periods retain `DERIVATION` / `COMPONENT_SCOPE_UNPROVED`, with zero safe additional
