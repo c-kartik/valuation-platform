@@ -2,7 +2,20 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.4 Wave 42**, documentation-only
+Latest completed milestone: **Phase 1H.4 Wave 43**, documentation-only
+[PEP component/perimeter research](capex-pep-component-perimeter.md) and
+[five-row supplement](capex-pep-scope-inventory.json). All five retain
+`CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED`: exact annual cash spending and
+software-in-PP&E scope are evidenced, but exhaustive eligible purchase cash
+and any non-overlapping equation are not. NO-GO; zero safe additional coverage.
+Seventy reviewed original bodies have typed verified digests; historical
+fingerprints remain separate. Frozen inventory, methodology, policies and prior
+issuer decisions unchanged. Production carried forward: Capex 167/37/0;
+aggregate 1,905/1,483/11/27/42 = 3,468. No tests or corpus rerun.
+Next bounded milestone: documentation-only cash/perimeter research for two
+frozen GEV Capex periods. Reopen PEP only with new complete cash-scope evidence.
+
+Previously completed milestone: **Phase 1H.4 Wave 42**, documentation-only
 [VZ component/perimeter research](capex-vz-component-perimeter.md) and
 [five-row supplement](capex-vz-scope-inventory.json). All five retain
 `DERIVATION` / `COMPONENT_SCOPE_UNPROVED`: cash/software inclusion and specific

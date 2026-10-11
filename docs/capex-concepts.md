@@ -1,5 +1,16 @@
 # Capex selected-filing concept and component inventory
 
+Wave 43 [PEP component/perimeter research](capex-pep-component-perimeter.md) and
+[five-row supplement](capex-pep-scope-inventory.json) retain five frozen
+`CONCEPT_POLICY` / `SCOPE_RESEARCH_REQUIRED` outcomes. Two equivalent occurrences
+per annual candidate confirm one cash value, not two operands. Internal-use
+software is explicitly in PP&E; acquisition/intangible cash, lease/noncash and
+proceeds disclosures do not exhaust the reported productive-asset cash perimeter.
+NO-GO, zero safe additional coverage or approved equations. Seventy reviewed
+original response bodies have typed verified digests. Frozen 57-row inventory,
+prior issuer decisions and production unchanged. Next: two GEV cash/perimeter
+periods; PEP requires new complete cash-scope evidence before reopening.
+
 Wave 42 [VZ component/perimeter research](capex-vz-component-perimeter.md) and
 [five-row supplement](capex-vz-scope-inventory.json) retain five frozen
 `DERIVATION` / `COMPONENT_SCOPE_UNPROVED` outcomes. Cash explicitly includes
