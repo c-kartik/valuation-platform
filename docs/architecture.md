@@ -6,9 +6,13 @@ Phase 1H.6 completes the [qualified historical-normalization-v1 freeze](historic
 schema 5, implemented policy versions, exact selected-filing rules and provenance
 are fixed at the referenced implementation snapshot. Typed unresolved states
 and issuer exclusions persist; no integrated FCFF bundle is certified.
-Next implement the [timing-readiness boundary](financial-timing-readiness-design.md)
-separately from historical resolution, before forecast use of historical ratios
-or FCFF consumption. This freeze implements no readiness model or calculator.
+The [timing-readiness boundary](financial-timing-readiness-design.md) must be
+implemented separately from historical resolution before forecast use of
+historical ratios or FCFF consumption. Phase 2 is subsequently postponed.
+The next additive [analyst-NWC foundation](analyst-operating-nwc-design.md) uses
+its own scenario/assumption identities and provenance, not mutations of schema
+5 or active v1 policies. Neither this design nor the freeze implements a
+readiness model, analyst evaluator or valuation calculator.
 
 The Automated Equity Valuation Platform will be built incrementally, beginning with a Python financial data and valuation core before adding a web application.
 

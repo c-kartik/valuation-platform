@@ -9,11 +9,19 @@ Financial definitions should remain consistent across SEC normalization, histori
 Phase 1H.6 completes the [qualified historical v1 freeze](historical-normalization-v1-freeze.md)
 without redefining any primitive or certifying integrated FCFF compatibility.
 Resolved historical values and unknown timing readiness remain independent.
-The [timing-evidence contract](financial-timing-readiness-design.md) is the next
-bounded Phase 2 implementation: it must gate historical-ratio forecast and FCFF
+The [timing-evidence contract](financial-timing-readiness-design.md) remains a
+required future Phase 2 boundary: it must gate historical-ratio forecast and FCFF
 consumption, without invented inventory allocations, incentive adjustments or
 automatic certification of manual assumptions. Independent tax, Capex and
 forecast-consistency checks still apply; no FCFF calculator is added here.
+
+Phase 2 is subsequently postponed. The [analyst Operating-NWC design](analyst-operating-nwc-design.md)
+adds a separate, explicitly labeled scenario/assumption layer for the frozen
+AAPL/MSFT/GOOGL histories. Reported driver subtotals, evidence-backed partial
+adjustments and analyst estimates remain distinct; narrowed perimeters disclose
+omissions without certifying immateriality. No existing blocker is removed or
+historical value changed. Book changes are not cash investment without exact
+acquisition/FX/noncash/reclassification bridges and joint timing readiness.
 
 ## Operating-Company Methodology Scope
 

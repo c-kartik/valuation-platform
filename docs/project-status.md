@@ -2,7 +2,23 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Phase 1H.6 — historical-normalization-v1 scope
+Latest completed milestone: **post-freeze analyst Operating NWC methodology/design
+for AAPL/MSFT/GOOGL**, [decision/contract](analyst-operating-nwc-design.md) and
+[fifteen-period inventory](analyst-operating-nwc-inventory.json). **Phase 2 remains
+postponed by explicit direction.** Frozen historical v1 and all current blockers
+are unchanged. GO for a separate assumption/scenario layer, not automatic
+normalized NWC or cash ΔNWC approval. AAPL employee/distribution allocations,
+earlier MSFT supplier AP, and GOOGL AP/inventory completeness remain uncertain;
+specific later PP&E-in-AP disclosures support partial adjustments only.
+Thirty-four response bodies/digests retained (five reused/29 targeted retrievals);
+15 driver sums/12 adjacent movements verified, not certified cash investment.
+No production policies, schemas or code changed; no full tests/corpus rerun.
+Next bounded implementation: isolated analyst-NWC scenario/assumption-provenance
+models and pure reported-driver/override evaluator, without default estimates
+or blocker removal. Timing readiness is still required before eventual forecast
+historical-ratio/FCFF consumption, but Phase 2 start is not authorized here.
+
+Previously completed milestone: **Phase 1H.6 — historical-normalization-v1 scope
 freeze**. [Frozen contract, versions, exclusions and artifact digests](historical-normalization-v1-freeze.md).
 **Phase 1H complete with qualified scope, not complete Top 50 support.**
 Baseline remains 50 issuers / 51 securities; 2 supported / 40 generalization /
@@ -1073,8 +1089,11 @@ AMD's five extension periods remain outside this pass. Safe new coverage is zero
 
 ## Next Step
 
-Current next step: **Phase 2 — implement the bounded financial timing-readiness
-valuation boundary** under the [existing design](financial-timing-readiness-design.md).
+Current next step: **isolated analyst Operating-NWC scenario/provenance foundation**
+under the [three-issuer design](analyst-operating-nwc-design.md). Phase 2 remains
+postponed; this additive layer cannot overwrite frozen facts or remove blockers.
+The eventual financial timing-readiness boundary remains required under the
+[existing design](financial-timing-readiness-design.md), not implemented here.
 The [historical v1 freeze](historical-normalization-v1-freeze.md) completes Phase
 1H with qualified scope. Keep historical resolution independent from readiness;
 no integrated FCFF certification, new economic adjustments or FCFF calculator.
@@ -1283,8 +1302,9 @@ sensitivity work is intentionally paused through Phase 1H.
    universal timing readiness is not an added historical-freeze criterion.
    **Complete:** [historical v1 contract and evidence digests](historical-normalization-v1-freeze.md)
    freeze qualified scope, schema 5, exact policies and typed exclusions.
-   Phase 2 resumes with the bounded timing-readiness boundary, not a claim of
-   universal forecast/FCFF readiness or a full Top 50 supported universe.
+   Phase 2 remains postponed by the subsequent explicit direction. The bounded
+   analyst-NWC layer is separate post-freeze work; eventual Phase 2 consumption
+   still requires timing readiness, not universal historical field coverage.
 
 The near-term target is S&P 500 Top 50 validation, the medium-term goal is broader
 S&P 500 coverage, and specialized financial methodologies remain separate
