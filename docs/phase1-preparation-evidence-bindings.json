@@ -1,0 +1,2485 @@
+{
+  "version": "preparation-evidence-binding-v1",
+  "scope": "Phase 1 accounting only; no financial consumer approved",
+  "disposition_sha256": "a7ed84b4b41595dcf0386c2cc99ce0d67e8d045721b8050c291e566d96d3e6d4",
+  "validation_sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089",
+  "corpus_sha256": "3d12d3e8a8f2212e70c478a8c8f12fd35eb9f94a550b07ba04d07548092d2f3b",
+  "policy_references": [
+    "src/valuation_platform/normalization/concepts.py",
+    "src/valuation_platform/normalization/balance_sheet.py",
+    "src/valuation_platform/normalization/derived.py",
+    "src/valuation_platform/normalization/diluted_shares.py",
+    "src/valuation_platform/normalization/operating_nwc.py"
+  ],
+  "frozen_contract": {
+    "path": "docs/historical-normalization-v1-freeze.md",
+    "sha256_repository_file_bytes": "9b77db98acba8d30ab160f05156eb9c408a0e97dbaba3059a7c03828c68bc306"
+  },
+  "policy_reference_hashes": {
+    "src/valuation_platform/normalization/concepts.py": "80ad34e6ff72b842d4609630b76f5428fd491deae8802450b9b948275ea09aac",
+    "src/valuation_platform/normalization/balance_sheet.py": "69ed41ea7368da0e1b61ba5b77c7e1bf774080937356992f6d69970f0b6bf211",
+    "src/valuation_platform/normalization/derived.py": "c733eb5d3beec2c3f6b99e97e575c49b93e686042cab4cc08c6a5ec67c633f99",
+    "src/valuation_platform/normalization/diluted_shares.py": "9ca431073389373f2fe528fcd0151b702e9a27a538a609e6e07b1b7258dd86ac",
+    "src/valuation_platform/normalization/operating_nwc.py": "d0b660fe603ab5379a1688e772fb78cfc007d38b5d630540f512106fae3f9373"
+  },
+  "counts": {
+    "PASS": 40
+  },
+  "financial_sufficiency_counts": {
+    "NOT_ASSESSED": 40
+  },
+  "selected_periods": 189,
+  "rows": [
+    {
+      "ticker": "NVDA",
+      "cik": 1045810,
+      "record": "company-data-preparation/NVDA.md",
+      "record_sha256": "ffe896013bcc506394285cc29c0e8720c463d6d6e76819595735d5fa0802717b",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-01-30",
+        "2023-01-29",
+        "2024-01-28",
+        "2025-01-26",
+        "2026-01-25"
+      ],
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/NVDA.md",
+          "sha256": "ffe896013bcc506394285cc29c0e8720c463d6d6e76819595735d5fa0802717b"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "AAPL",
+      "cik": 320193,
+      "record": "company-data-preparation/AAPL.md",
+      "record_sha256": "a0b9ee8d5e1601c0bc5deb4d0244ac4ac57d3955f0f992a6dfa854bb9e757770",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-09-25",
+        "2022-09-24",
+        "2023-09-30",
+        "2024-09-28",
+        "2025-09-27"
+      ],
+      "states": {
+        "resolved": 70,
+        "missing": 5,
+        "ambiguous": 0,
+        "methodology_blocked": 9,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [
+        {
+          "id": "aapl-reported-cash-flow-fy2025",
+          "period": {
+            "cik": 320193,
+            "accession": "0000320193-25-000079",
+            "annual_start": "2024-09-29",
+            "annual_end": "2025-09-27"
+          },
+          "registry": "company-data-preparation/aapl-reported-cash-flow-bundle.json",
+          "binding": "PASS",
+          "input_count": 21,
+          "occurrences": 26,
+          "unknown_count": 11,
+          "financial_sufficiency": "NOT_ASSESSED"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/AAPL.md",
+          "sha256": "a0b9ee8d5e1601c0bc5deb4d0244ac4ac57d3955f0f992a6dfa854bb9e757770"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "MSFT",
+      "cik": 789019,
+      "record": "company-data-preparation/MSFT.md",
+      "record_sha256": "30b5c352562f523fb68ab65ef185c29131f11b5d652111cd4e848f5c1ff86b7f",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "states": {
+        "resolved": 62,
+        "missing": 13,
+        "ambiguous": 0,
+        "methodology_blocked": 9,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [
+        {
+          "id": "msft-reported-cash-flow-fy2025",
+          "period": {
+            "cik": 789019,
+            "accession": "0000950170-25-100235",
+            "annual_start": "2024-07-01",
+            "annual_end": "2025-06-30"
+          },
+          "registry": "company-data-preparation/msft-reported-cash-flow-bundles.json",
+          "binding": "PASS",
+          "input_count": 37,
+          "occurrences": 42,
+          "unknown_count": 10,
+          "financial_sufficiency": "NOT_ASSESSED"
+        },
+        {
+          "id": "msft-reported-cash-flow-fy2026",
+          "period": {
+            "cik": 789019,
+            "accession": "0001193125-26-323660",
+            "annual_start": "2025-07-01",
+            "annual_end": "2026-06-30"
+          },
+          "registry": "company-data-preparation/msft-reported-cash-flow-bundles.json",
+          "binding": "PASS",
+          "input_count": 38,
+          "occurrences": 43,
+          "unknown_count": 9,
+          "financial_sufficiency": "NOT_ASSESSED"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/MSFT.md",
+          "sha256": "30b5c352562f523fb68ab65ef185c29131f11b5d652111cd4e848f5c1ff86b7f"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "record": "company-data-preparation/AMZN.md",
+      "record_sha256": "7b26374ae05be416871c6ec16c09333216d609ea70a422a7cd880e41703c1830",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 45,
+        "missing": 39,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/AMZN.md",
+          "sha256": "7b26374ae05be416871c6ec16c09333216d609ea70a422a7cd880e41703c1830"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "GOOGL",
+      "cik": 1652044,
+      "record": "company-data-preparation/GOOGL.md",
+      "record_sha256": "b26781ae2ede93d370ef5cd9b8af7a5f17784018c6e3d9477a6234024ecc15f4",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 60,
+        "missing": 15,
+        "ambiguous": 0,
+        "methodology_blocked": 9,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [
+        {
+          "id": "googl-reported-cash-flow-fy2024",
+          "period": {
+            "cik": 1652044,
+            "accession": "0001652044-25-000014",
+            "annual_start": "2024-01-01",
+            "annual_end": "2024-12-31"
+          },
+          "registry": "company-data-preparation/googl-reported-cash-flow-bundle.json",
+          "binding": "PASS",
+          "input_count": 34,
+          "occurrences": 38,
+          "unknown_count": 12,
+          "financial_sufficiency": "NOT_ASSESSED"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/GOOGL.md",
+          "sha256": "b26781ae2ede93d370ef5cd9b8af7a5f17784018c6e3d9477a6234024ecc15f4"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "AVGO",
+      "cik": 1730168,
+      "record": "company-data-preparation/AVGO.md",
+      "record_sha256": "ea529f552481fe1a6c783a1e6aa0709105852d7cb92b3e306673cb3782bb1934",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-10-31",
+        "2022-10-30",
+        "2023-10-29",
+        "2024-11-03",
+        "2025-11-02"
+      ],
+      "states": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/AVGO.md",
+          "sha256": "ea529f552481fe1a6c783a1e6aa0709105852d7cb92b3e306673cb3782bb1934"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        },
+        {
+          "path": "docs/depreciation-amortization-component-derivation-matrix.json",
+          "sha256": "44dea59ab50d762b96080e974c5e188490d318b8f349e678f25ae75cc3bbacc9"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "MU",
+      "cik": 723125,
+      "record": "company-data-preparation/MU.md",
+      "record_sha256": "7d8c40d14756c25d18f4ccade30d7605b352285a9002151bf31045e3587e20c3",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-09-01",
+        "2023-08-31",
+        "2024-08-29",
+        "2025-08-28",
+        "2026-09-03"
+      ],
+      "states": {
+        "resolved": 35,
+        "missing": 49,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/MU.md",
+          "sha256": "7d8c40d14756c25d18f4ccade30d7605b352285a9002151bf31045e3587e20c3"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "TSLA",
+      "cik": 1318605,
+      "record": "company-data-preparation/TSLA.md",
+      "record_sha256": "9886fe517e9084f8d55a1248bbd4bbc41855b3e9f9ffcdd2be9f1316ab44ea47",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/TSLA.md",
+          "sha256": "9886fe517e9084f8d55a1248bbd4bbc41855b3e9f9ffcdd2be9f1316ab44ea47"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "AMD",
+      "cik": 2488,
+      "record": "company-data-preparation/AMD.md",
+      "record_sha256": "c51c5d361ffe5602e4a29f281821a2aa33d942bea750d7b347c492a650e36d8e",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "states": {
+        "resolved": 47,
+        "missing": 37,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/AMD.md",
+          "sha256": "c51c5d361ffe5602e4a29f281821a2aa33d942bea750d7b347c492a650e36d8e"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "LLY",
+      "cik": 59478,
+      "record": "company-data-preparation/LLY.md",
+      "record_sha256": "b838e4e07373afbdf4495ced62a0f9c95e0837896ec7eed77ea7d06bbd8ab8a7",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/LLY.md",
+          "sha256": "b838e4e07373afbdf4495ced62a0f9c95e0837896ec7eed77ea7d06bbd8ab8a7"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "XOM",
+      "cik": 2115436,
+      "record": "company-data-preparation/XOM.md",
+      "record_sha256": "9968afd6cf08967cc4b35c6a2955ebe021637d78a01ce61415c2121a1db7dab4",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 0,
+      "annual_ends": [],
+      "states": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/XOM.md",
+          "sha256": "9968afd6cf08967cc4b35c6a2955ebe021637d78a01ce61415c2121a1db7dab4"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "JNJ",
+      "cik": 200406,
+      "record": "company-data-preparation/JNJ.md",
+      "record_sha256": "0c67c169d52359670987a3820d0e0a2e24ba1941378de759f2c8cd93aed2bbec",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-01-02",
+        "2023-01-01",
+        "2023-12-31",
+        "2024-12-29",
+        "2025-12-28"
+      ],
+      "states": {
+        "resolved": 55,
+        "missing": 29,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/JNJ.md",
+          "sha256": "0c67c169d52359670987a3820d0e0a2e24ba1941378de759f2c8cd93aed2bbec"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "V",
+      "cik": 1403161,
+      "record": "company-data-preparation/V.md",
+      "record_sha256": "652a0af748316c3999ce087c0ef99ade1cc50105227dd34ef90ccc1f3407e48d",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-09-30",
+        "2022-09-30",
+        "2023-09-30",
+        "2024-09-30",
+        "2025-09-30"
+      ],
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/V.md",
+          "sha256": "652a0af748316c3999ce087c0ef99ade1cc50105227dd34ef90ccc1f3407e48d"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "INTC",
+      "cik": 50863,
+      "record": "company-data-preparation/INTC.md",
+      "record_sha256": "5db98c79a3b9c52497dcf7dc79dabfa71fda1c6fd9f15b564dbf1a21c4912cc5",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "states": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/INTC.md",
+          "sha256": "5db98c79a3b9c52497dcf7dc79dabfa71fda1c6fd9f15b564dbf1a21c4912cc5"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        },
+        {
+          "path": "docs/depreciation-amortization-component-derivation-matrix.json",
+          "sha256": "44dea59ab50d762b96080e974c5e188490d318b8f349e678f25ae75cc3bbacc9"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "WMT",
+      "cik": 104169,
+      "record": "company-data-preparation/WMT.md",
+      "record_sha256": "bafbbb30ab41b24a8a76254b717dc65cd52650a26f88e2c75a59c6c9e6406807",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-01-31",
+        "2023-01-31",
+        "2024-01-31",
+        "2025-01-31",
+        "2026-01-31"
+      ],
+      "states": {
+        "resolved": 45,
+        "missing": 34,
+        "ambiguous": 5,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/WMT.md",
+          "sha256": "bafbbb30ab41b24a8a76254b717dc65cd52650a26f88e2c75a59c6c9e6406807"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "ABBV",
+      "cik": 1551152,
+      "record": "company-data-preparation/ABBV.md",
+      "record_sha256": "26f0a695f71a3e5c58ae31ff165c6bf037a1fb69f470ba5379208f052b41b8a6",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/ABBV.md",
+          "sha256": "26f0a695f71a3e5c58ae31ff165c6bf037a1fb69f470ba5379208f052b41b8a6"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        },
+        {
+          "path": "docs/depreciation-amortization-component-derivation-matrix.json",
+          "sha256": "44dea59ab50d762b96080e974c5e188490d318b8f349e678f25ae75cc3bbacc9"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "MA",
+      "cik": 1141391,
+      "record": "company-data-preparation/MA.md",
+      "record_sha256": "91317c56523c3c1eaecf43acf22cebc966bb1f1e05fc95286120ee7d1b9ddb44",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 49,
+        "missing": 34,
+        "ambiguous": 1,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/MA.md",
+          "sha256": "91317c56523c3c1eaecf43acf22cebc966bb1f1e05fc95286120ee7d1b9ddb44"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "CSCO",
+      "cik": 858877,
+      "record": "company-data-preparation/CSCO.md",
+      "record_sha256": "9339f259f31de5306468f1d0e67e882e4d71a3db0d4f4176ff7f60e325814543",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-07-30",
+        "2023-07-29",
+        "2024-07-27",
+        "2025-07-26",
+        "2026-07-25"
+      ],
+      "states": {
+        "resolved": 55,
+        "missing": 29,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/CSCO.md",
+          "sha256": "9339f259f31de5306468f1d0e67e882e4d71a3db0d4f4176ff7f60e325814543"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "LRCX",
+      "cik": 707549,
+      "record": "company-data-preparation/LRCX.md",
+      "record_sha256": "c79a443c4013997fd526ede3206815f69e51cb0703851ed1f5a4a1b24d4ebc0d",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-06-26",
+        "2023-06-25",
+        "2024-06-30",
+        "2025-06-29",
+        "2026-06-28"
+      ],
+      "states": {
+        "resolved": 43,
+        "missing": 41,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/LRCX.md",
+          "sha256": "c79a443c4013997fd526ede3206815f69e51cb0703851ed1f5a4a1b24d4ebc0d"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "PLTR",
+      "cik": 1321655,
+      "record": "company-data-preparation/PLTR.md",
+      "record_sha256": "21e751fcb6a702c8626b6b67e8cd379348d432f69e1f402479d614a0074edec7",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/PLTR.md",
+          "sha256": "21e751fcb6a702c8626b6b67e8cd379348d432f69e1f402479d614a0074edec7"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "AMAT",
+      "cik": 6951,
+      "record": "company-data-preparation/AMAT.md",
+      "record_sha256": "20cc88d1812c343c7a3b90a805da3e011403f7487018a9da7f61b331a53b31e1",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-10-31",
+        "2022-10-30",
+        "2023-10-29",
+        "2024-10-27",
+        "2025-10-26"
+      ],
+      "states": {
+        "resolved": 49,
+        "missing": 35,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/AMAT.md",
+          "sha256": "20cc88d1812c343c7a3b90a805da3e011403f7487018a9da7f61b331a53b31e1"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "record": "company-data-preparation/CVX.md",
+      "record_sha256": "8a439b03495144b5c7cdaefd7c5d8cdee0dd188add769611a588297071abe8eb",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 37,
+        "missing": 42,
+        "ambiguous": 5,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/CVX.md",
+          "sha256": "8a439b03495144b5c7cdaefd7c5d8cdee0dd188add769611a588297071abe8eb"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "CAT",
+      "cik": 18230,
+      "record": "company-data-preparation/CAT.md",
+      "record_sha256": "65d9877c1b8a76ffab294a7a9fde4ea633a160ca4ab5632b53394b78cc79935a",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/CAT.md",
+          "sha256": "65d9877c1b8a76ffab294a7a9fde4ea633a160ca4ab5632b53394b78cc79935a"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "MRK",
+      "cik": 310158,
+      "record": "company-data-preparation/MRK.md",
+      "record_sha256": "9f29a638ef8b9f503a5a5cdf9fc7704f1c9c325ed1c5713df7004d7549ca8501",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 48,
+        "missing": 36,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/MRK.md",
+          "sha256": "9f29a638ef8b9f503a5a5cdf9fc7704f1c9c325ed1c5713df7004d7549ca8501"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        },
+        {
+          "path": "docs/depreciation-amortization-component-derivation-matrix.json",
+          "sha256": "44dea59ab50d762b96080e974c5e188490d318b8f349e678f25ae75cc3bbacc9"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "PG",
+      "cik": 80424,
+      "record": "company-data-preparation/PG.md",
+      "record_sha256": "35b1c8fc246fc7dbb1a5c3b9012d260238b031c16e32799bedf15beb188c6f0b",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "states": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/PG.md",
+          "sha256": "35b1c8fc246fc7dbb1a5c3b9012d260238b031c16e32799bedf15beb188c6f0b"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "KO",
+      "cik": 21344,
+      "record": "company-data-preparation/KO.md",
+      "record_sha256": "c026d3420abdc9516d40f7ef754b962c25aa9734050f6c8a02c4dd325624a665",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 51,
+        "missing": 33,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/KO.md",
+          "sha256": "c026d3420abdc9516d40f7ef754b962c25aa9734050f6c8a02c4dd325624a665"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "PM",
+      "cik": 1413329,
+      "record": "company-data-preparation/PM.md",
+      "record_sha256": "7126fb96d302dabd702bee5fe5086e7be3027ab7111cf024be887776efca3c36",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 33,
+        "missing": 51,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/PM.md",
+          "sha256": "7126fb96d302dabd702bee5fe5086e7be3027ab7111cf024be887776efca3c36"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        },
+        {
+          "path": "docs/depreciation-amortization-component-derivation-matrix.json",
+          "sha256": "44dea59ab50d762b96080e974c5e188490d318b8f349e678f25ae75cc3bbacc9"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "HD",
+      "cik": 354950,
+      "record": "company-data-preparation/HD.md",
+      "record_sha256": "427cbe57b6d17039335df3a9b7c34b3a1f12344f9ecec46c2e465952e2d19656",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-01-30",
+        "2023-01-29",
+        "2024-01-28",
+        "2025-02-02",
+        "2026-02-01"
+      ],
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/HD.md",
+          "sha256": "427cbe57b6d17039335df3a9b7c34b3a1f12344f9ecec46c2e465952e2d19656"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "NFLX",
+      "cik": 1065280,
+      "record": "company-data-preparation/NFLX.md",
+      "record_sha256": "f62d8ddfb9877c1b3999845f7380fa39dadedf81be2230b2bcb6a544f3026b6d",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/NFLX.md",
+          "sha256": "f62d8ddfb9877c1b3999845f7380fa39dadedf81be2230b2bcb6a544f3026b6d"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "KLAC",
+      "cik": 319201,
+      "record": "company-data-preparation/KLAC.md",
+      "record_sha256": "f910c21a4aafaba7fc406485539b8e606930c4ef1e2c0b0dfcb8321ad76941b5",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "states": {
+        "resolved": 47,
+        "missing": 37,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/KLAC.md",
+          "sha256": "f910c21a4aafaba7fc406485539b8e606930c4ef1e2c0b0dfcb8321ad76941b5"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "TXN",
+      "cik": 97476,
+      "record": "company-data-preparation/TXN.md",
+      "record_sha256": "9a22226391648cd569a9d720c079816d6365155009b832f968ae5955f78c8dcb",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/TXN.md",
+          "sha256": "9a22226391648cd569a9d720c079816d6365155009b832f968ae5955f78c8dcb"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        },
+        {
+          "path": "docs/depreciation-amortization-component-derivation-matrix.json",
+          "sha256": "44dea59ab50d762b96080e974c5e188490d318b8f349e678f25ae75cc3bbacc9"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "GEV",
+      "cik": 1996810,
+      "record": "company-data-preparation/GEV.md",
+      "record_sha256": "a61d970f79b0fc18d8cb63d4f5ee383bf69d4e3b4cbf65de1ee458caaf8facac",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 2,
+      "annual_ends": [
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 12,
+        "missing": 21,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/GEV.md",
+          "sha256": "a61d970f79b0fc18d8cb63d4f5ee383bf69d4e3b4cbf65de1ee458caaf8facac"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        },
+        {
+          "path": "docs/depreciation-amortization-component-derivation-matrix.json",
+          "sha256": "44dea59ab50d762b96080e974c5e188490d318b8f349e678f25ae75cc3bbacc9"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "SNDK",
+      "cik": 2023554,
+      "record": "company-data-preparation/SNDK.md",
+      "record_sha256": "9f09fcb121528807487c9fe13e2472ae61732b0216a784798d60a4ba670094e2",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 2,
+      "annual_ends": [
+        "2025-06-27",
+        "2026-07-03"
+      ],
+      "states": {
+        "resolved": 20,
+        "missing": 13,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/SNDK.md",
+          "sha256": "9f09fcb121528807487c9fe13e2472ae61732b0216a784798d60a4ba670094e2"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "ORCL",
+      "cik": 1341439,
+      "record": "company-data-preparation/ORCL.md",
+      "record_sha256": "533b7879de3f2a7f7a6f86eaedadcd63772325c069b89e90513f644b9e00a254",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-05-31",
+        "2023-05-31",
+        "2024-05-31",
+        "2025-05-31",
+        "2026-05-31"
+      ],
+      "states": {
+        "resolved": 30,
+        "missing": 54,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/ORCL.md",
+          "sha256": "533b7879de3f2a7f7a6f86eaedadcd63772325c069b89e90513f644b9e00a254"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        },
+        {
+          "path": "docs/depreciation-amortization-component-derivation-matrix.json",
+          "sha256": "44dea59ab50d762b96080e974c5e188490d318b8f349e678f25ae75cc3bbacc9"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "LIN",
+      "cik": 1707925,
+      "record": "company-data-preparation/LIN.md",
+      "record_sha256": "b8e70ba17fd1ea157b273e4ac5e1863be018c739ecba626f6d08a6d4d6abb066",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 39,
+        "missing": 45,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/LIN.md",
+          "sha256": "b8e70ba17fd1ea157b273e4ac5e1863be018c739ecba626f6d08a6d4d6abb066"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "IBM",
+      "cik": 51143,
+      "record": "company-data-preparation/IBM.md",
+      "record_sha256": "8a1aa65e4ba4c11d5dd138ad98306d6e3bba8c961e0c73ad268a8d7b544a4549",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 45,
+        "missing": 39,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/IBM.md",
+          "sha256": "8a1aa65e4ba4c11d5dd138ad98306d6e3bba8c961e0c73ad268a8d7b544a4549"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "QCOM",
+      "cik": 804328,
+      "record": "company-data-preparation/QCOM.md",
+      "record_sha256": "0d5294e0b2b8053ace83d4a9da8ca5bd45877d7de6cea4d6e8d2c4078ae23a88",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-09-26",
+        "2022-09-25",
+        "2023-09-24",
+        "2024-09-29",
+        "2025-09-28"
+      ],
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/QCOM.md",
+          "sha256": "0d5294e0b2b8053ace83d4a9da8ca5bd45877d7de6cea4d6e8d2c4078ae23a88"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "VZ",
+      "cik": 732712,
+      "record": "company-data-preparation/VZ.md",
+      "record_sha256": "1c03894309e94a01bbaa8df48442933a161930bf84683bf0561e257ea5bc4a7f",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/VZ.md",
+          "sha256": "1c03894309e94a01bbaa8df48442933a161930bf84683bf0561e257ea5bc4a7f"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        },
+        {
+          "path": "docs/depreciation-amortization-inventory.json",
+          "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "PEP",
+      "cik": 77476,
+      "record": "company-data-preparation/PEP.md",
+      "record_sha256": "f9e935e0c19eb587ede2f7c5b9ae92c85d0b1084bb2ffd69f8e13648e9049d79",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "states": {
+        "resolved": 45,
+        "missing": 39,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/PEP.md",
+          "sha256": "f9e935e0c19eb587ede2f7c5b9ae92c85d0b1084bb2ffd69f8e13648e9049d79"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        },
+        {
+          "path": "docs/capex-inventory.json",
+          "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "ticker": "MCD",
+      "cik": 63908,
+      "record": "company-data-preparation/MCD.md",
+      "record_sha256": "838ae4a1fc483a3057735c4db9eb171b7c64295428573629f14656f6c3d5a135",
+      "evidence_accounted": "PASS",
+      "accounting_scope": "Available aggregate coverage, linked policies/research and explicitly recorded binding limitations only",
+      "financial_input_sufficiency": "NOT_ASSESSED",
+      "consumer_contract": null,
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "states": {
+        "resolved": 39,
+        "missing": 45,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "support_classification_unchanged": "GENERALIZATION_REQUIRED",
+      "aggregate_binding": "verified_retained_corpus_and_validation_counts",
+      "policy_binding": "documented_frozen_family_references_not_per_fact_policy_verification",
+      "exact_history_and_fact_binding": "INSUFFICIENT_FOR_WHOLE_HISTORY",
+      "limitations": [
+        "Compact corpus has counts, not selected accession/annual-start or exact fact occurrences.",
+        "Linked research is retained evidence, not a new independent fact-level verification.",
+        "Generic policy file existence is not proof of per-output policy application.",
+        "Five-year exceptions, revenue conflicts and original financial blockers remain."
+      ],
+      "independently_reviewed_packages": [],
+      "evidence_references": [
+        {
+          "path": "docs/universe/phase-1h5-issuer-validation.json",
+          "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+        },
+        {
+          "path": "docs/company-data-preparation/MCD.md",
+          "sha256": "838ae4a1fc483a3057735c4db9eb171b7c64295428573629f14656f6c3d5a135"
+        },
+        {
+          "path": "docs/phase-1h-generalization-exit-plan.md",
+          "sha256": "2731fae25f976bc7120f0b50acbabf203da456cb838d3ffbcc5c81dc7422b3ab"
+        },
+        {
+          "path": "docs/universe/sp500-top-50-failure-taxonomy.md",
+          "sha256": "e92180f25201e0388b26899f9df2f7bab0af9e06636b39c8d5c07290319528f6"
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

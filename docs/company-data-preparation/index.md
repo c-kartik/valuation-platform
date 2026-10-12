@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## Independent accounting and financial-sufficiency statuses
+
+User approval, 2026-10-12: [shared evidence-binding pass](../phase1-preparation-evidence-bindings.md)
+tracks evidence-accounted preparation separately from financial-input sufficiency.
+All 40 records PASS limited accounting (identity/coverage/references plus explained
+gaps); all 40 financial sufficiency statuses are NOT_ASSESSED without a named
+approved consumer contract. Exact whole-history fact provenance remains insufficient
+for all 40. Only four pilot reported packages receive independent exact evidence
+checks; they do not approve company histories. Five-year target and exceptions,
+conflicts, original blockers and support classifications persist.
+Run the offline validator for reproducible checks; missing/broken bindings fail,
+insufficient/unreviewed evidence stays explicit. Next is one retained selected-filing
+identity manifest, not more issuer financial research or a valuation path.
+
 ## Closed preparation pilots and next bounded pass
 
 The subsequent [40-issuer disposition](../phase1-issuer-preparation-disposition.md)

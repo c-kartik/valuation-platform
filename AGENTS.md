@@ -88,6 +88,16 @@ Repository documentation is the source of truth for project state and decisions.
 
 ### Standing company-preparation maintenance requirement
 
+Track two independent preparation statuses: **evidence-accounted preparation**
+(available evidence and gaps are traceable/explained within the stated binding
+scope) and **financial-input sufficiency** (inputs satisfy a named, approved
+consumer contract). Accounting PASS is not complete fact-level provenance,
+five-year completion, support certification or valuation readiness. Keep financial
+sufficiency NOT_ASSESSED/unknown when no such contract establishes it. Report
+aggregate corpus, exact fact provenance and independently reviewed bundles
+separately; pilot periods never approve whole histories. Preserve explicit
+missing/broken/insufficient bindings and short/empty-history exceptions.
+
 Any change to retrieval, filing/period selection, sorting/classification,
 normalization, derivation, or valuation-input preparation must update affected
 issuer records in `docs/company-data-preparation/` in the same milestone, and

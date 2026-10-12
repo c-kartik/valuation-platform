@@ -1,5 +1,20 @@
 # GOOGL — company data preparation
 
+## Evidence-accounting and financial-sufficiency statuses
+
+2026-10-12 shared [binding pass](../phase1-preparation-evidence-bindings.md):
+**evidence-accounted PASS**, limited to available frozen issuer/history/measure
+counts, linked policy/research records and explicitly documented gaps. This is
+not independently verified whole-history fact provenance. **Financial-input
+sufficiency NOT_ASSESSED**: no approved whole-issuer consumer contract establishes
+it. Exact whole-history accession/fact bindings remain insufficient.
+Existing pilot package periods only are independently verified through unchanged
+loaders/serialization; no extension to other frozen years or financial approval.
+Five-year target and 5 selected periods, original states/blockers and support
+classification are unchanged. [Result ledger](../phase1-preparation-evidence-bindings.json)
+and grouped backlog record bindings and reopening/stop criteria. No new issuer
+financial research, estimates, treatment transfer or policy change.
+
 ## Proposed FY2024 analyst-treatment decision
 
 **Subsequent user acceptance, 2026-10-12:** the

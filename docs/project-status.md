@@ -2,7 +2,28 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained-evidence disposition of all 40 preparation
+Latest completed milestone: **shared offline preparation evidence-binding pass**.
+User approves independent evidence-accounted and financial-input sufficiency
+statuses. [Results/backlog](phase1-preparation-evidence-bindings.md) and
+[ledger](phase1-preparation-evidence-bindings.json): 40 limited-accounting PASS,
+0 FAIL/0 unassessed; financial sufficiency 40 NOT_ASSESSED, 0 PASS/FAIL. Complete
+whole-history exact fact binding remains insufficient for all 40. Four registered
+pilot packages independently verify at their exact periods only.
+Minimal offline validator binds frozen universe/validation/original-corpus bytes,
+40 register/record mappings, history/measure counts, declared policy/evidence
+references and existing pilot receipts/round trips. Eleven focused tests pass.
+Counts-only corpus evidence is not per-fact provenance; broken/missing bindings
+fail and insufficient links are explained, never fabricated. All records and
+AGENTS/register guidance now distinguish both statuses. No financial policy,
+support, frozen-v1, bundle, scenario or sidecar changes; no SEC/full-suite/corpus.
+Single next Phase 1 milestone: **retained selected-filing identity manifest for
+189 selected periods and 11 target-history exceptions**, joining existing evidence
+only, marking missing/conflicting accession/annual bindings and stopping after
+one pass. No retrieval, pilot extension or financial certification. Phase 2 postponed.
+Coverage remains 680 register measure rows and baseline **1905/1483/11/27/42 =3468**;
+local references, compileall and diff check pass.
+
+Previously completed milestone: **retained-evidence disposition of all 40 preparation
 issuers**. [Assessment and completion decision](phase1-issuer-preparation-disposition.md)
 and [machine-checkable matrix](phase1-issuer-preparation-disposition.json) preserve
 all 17 measure states, review depth, evidence references, essential/deferred work
