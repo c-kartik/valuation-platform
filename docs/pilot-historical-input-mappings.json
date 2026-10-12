@@ -1,0 +1,867 @@
+{
+  "schema": "pilot-historical-input-mappings-v1",
+  "contract": "historical-input-preparation-v1",
+  "version": 1,
+  "period_count": 4,
+  "field_family_count": 14,
+  "scope": "Mappings/checks only; no adapter, assumptions, new registration or consumption approval. Source registry pointers retain exact values/QNames/locations; loaders reverify every occurrence against original bodies.",
+  "periods": [
+    {
+      "issuer": "MSFT",
+      "bundle_id": "msft-reported-cash-flow-fy2025",
+      "registry_path": "docs/company-data-preparation/msft-reported-cash-flow-bundles.json",
+      "registry_sha256": "c3c35e020066f0887d9d8fe493f975afe9e6f0ea4b1785d2f341691ebb49d993",
+      "registry_bundle_pointer": "/bundles/0",
+      "period": {"cik": 789019,"accession": "0000950170-25-100235","annual_start": "2024-07-01","annual_end": "2025-06-30","form": "10-K"},
+      "evidence_review": "docs/msft-alternative-historical-cash-flow-inputs.md",
+      "fields": {
+        "revenue": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No revenue input is bound by these reviewed reported-cash-flow packages; do not import counts-only corpus values."],
+          "null_reason": "No revenue input is bound by these reviewed reported-cash-flow packages; do not import counts-only corpus values.",
+          "bindings": [
+          ]
+        },
+        "ebit": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No EBIT input or complete operating-only expense bridge is bound by these packages."],
+          "null_reason": "No EBIT input or complete operating-only expense bridge is bound by these packages.",
+          "bindings": [
+          ]
+        },
+        "depreciation_amortization": {
+          "status": "limited_support",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Retained depreciation/noncash observations do not establish complete non-overlapping D&A primitive coverage and joint timing compatibility; no sum approved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "Depreciation","registry_pointer": "/bundles/0/inputs/14","origin": "reported","role": "depreciation_note_expense","population": "depreciation","unit": "USD","scale": 1,"sign": 1,"precision": "-8","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [1367]},
+            {"input_id": "FinanceLeaseRightOfUseAssetAmortization","registry_pointer": "/bundles/0/inputs/17","origin": "reported","role": "finance_lease_asset_amortization_expense","population": "finance_lease_amortization","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [1841]},
+            {"input_id": "DepreciationAmortizationAndOther","registry_pointer": "/bundles/0/inputs/26","origin": "reported","role": "mixed_da_and_other_cfo_addback","population": "mixed_da_other","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [684]}
+          ]
+        },
+        "cash_capex": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Narrow reported cash PP&E purchase only; complete reinvestment, acquisition/intangible allocation and noncash/accrual bridges are not established."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "PaymentsToAcquirePropertyPlantAndEquipment","registry_pointer": "/bundles/0/inputs/6","origin": "reported","role": "reported_cash_ppe_purchase","population": "cash_ppe","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [750]}
+          ]
+        },
+        "reported_cash_flow_working_capital_movements": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Mixed signed operating cash-flow reconciliation rows, including noncurrent/tax effects where disclosed; not book delta NWC or certified operating-only investment; acquisition/FX/reclassification allocations unresolved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "IncreaseDecreaseInAccountsReceivable","registry_pointer": "/bundles/0/inputs/28","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccountsReceivable","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [696]},
+            {"input_id": "IncreaseDecreaseInInventories","registry_pointer": "/bundles/0/inputs/29","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInInventories","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [699]},
+            {"input_id": "IncreaseDecreaseInOtherCurrentAssets","registry_pointer": "/bundles/0/inputs/30","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherCurrentAssets","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [702]},
+            {"input_id": "IncreaseDecreaseInOtherNoncurrentAssets","registry_pointer": "/bundles/0/inputs/31","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherNoncurrentAssets","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [705]},
+            {"input_id": "IncreaseDecreaseInAccountsPayable","registry_pointer": "/bundles/0/inputs/32","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccountsPayable","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [708]},
+            {"input_id": "IncreaseDecreaseInContractWithCustomerLiability","registry_pointer": "/bundles/0/inputs/33","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInContractWithCustomerLiability","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [711]},
+            {"input_id": "IncreaseDecreaseInAccruedIncomeTaxesPayable","registry_pointer": "/bundles/0/inputs/34","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccruedIncomeTaxesPayable","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [714]},
+            {"input_id": "IncreaseDecreaseInOtherCurrentLiabilities","registry_pointer": "/bundles/0/inputs/35","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherCurrentLiabilities","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [717]},
+            {"input_id": "IncreaseDecreaseInOtherNoncurrentLiabilities","registry_pointer": "/bundles/0/inputs/36","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherNoncurrentLiabilities","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [720]}
+          ]
+        },
+        "deferred_taxes": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["CFO adjustment and provision roles are not interchangeable; no operating tax allocation or economic removal approved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "DeferredIncomeTaxExpenseBenefit","registry_pointer": "/bundles/0/inputs/5","origin": "reported","role": "cfo_deferred_adjustment_with_provision_confirmation","population": "deferred_tax","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [693,1677]}
+          ]
+        },
+        "stock_based_compensation": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Preserve recognized expense and CFO add-back as separate non-additive representations; no economic duplicate charge, rounding adjustment or outstanding-award treatment."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "ShareBasedCompensation","registry_pointer": "/bundles/0/inputs/10","origin": "reported","role": "sbc_cfo_addback","population": "recognized_sbc","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [687]},
+            {"input_id": "AllocatedShareBasedCompensationExpense","registry_pointer": "/bundles/0/inputs/11","origin": "reported","role": "sbc_note_expense","population": "recognized_sbc","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [2093]}
+          ]
+        },
+        "unclassified_cfo_reconciliation_residual": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No residual equation or value approved: a residual-defined balance is not independent statement validation. Keep mixed disclosed rows as original observations, not a manufactured remainder."],
+          "null_reason": "No residual equation or value approved: a residual-defined balance is not independent statement validation. Keep mixed disclosed rows as original observations, not a manufactured remainder.",
+          "bindings": [
+          ]
+        },
+        "reported_cfo": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "consolidated_reported",
+          "completeness": "complete",
+          "aggregation": "none",
+          "unresolved_requirements": ["Complete reported consolidated subtotal only, not organic, adjusted, unlevered or consumer-ready cash flow."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "NetCashProvidedByUsedInOperatingActivities","registry_pointer": "/bundles/0/inputs/0","origin": "reported","role": "reported_consolidated_cfo","population": "cfo","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [723]}
+          ]
+        },
+        "reported_tax_context": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Cash paid net of refunds and accrued provision are distinct, not complete operating-tax context or an approved future rate."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "IncomeTaxesPaidNet","registry_pointer": "/bundles/0/inputs/3","origin": "reported","role": "cash_tax_paid_net","population": "cash_tax","unit": "USD","scale": 1,"sign": -1,"precision": "-8","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [1774]},
+            {"input_id": "IncomeTaxExpenseBenefit","registry_pointer": "/bundles/0/inputs/4","origin": "reported","role": "accrued_tax_provision","population": "tax_provision","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e","occurrence_ordinals": [569,1680]}
+          ]
+        },
+        "cash_investment_components": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No complete fiscal-year-end cash/investment component mapping is independently bound by these packages; annual cash-flow movements cannot supply balances."],
+          "null_reason": "No complete fiscal-year-end cash/investment component mapping is independently bound by these packages; annual cash-flow movements cannot supply balances.",
+          "bindings": [
+          ]
+        },
+        "debt_lease_components": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No fiscal-year-end debt/lease balance mapping; cash principal, interest and ROU additions are not closing debt. Preserve uncertain overlap and lease coverage."],
+          "null_reason": "No fiscal-year-end debt/lease balance mapping; cash principal, interest and ROU additions are not closing debt. Preserve uncertain overlap and lease coverage.",
+          "bindings": [
+          ]
+        },
+        "other_equity_bridge_claims_assets": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No reviewed FY-end claims/assets mapping; capital creditors or acquisition cash disclosures are not automatically equity-bridge inputs."],
+          "null_reason": "No reviewed FY-end claims/assets mapping; capital creditors or acquisition cash disclosures are not automatically equity-bridge inputs.",
+          "bindings": [
+          ]
+        },
+        "point_in_time_shares": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No separately dated point-in-time shares mapped; no inference from weighted-average shares, SBC or financing cash flows."],
+          "null_reason": "No separately dated point-in-time shares mapped; no inference from weighted-average shares, SBC or financing cash flows.",
+          "bindings": [
+          ]
+        }
+      },
+      "reported_cfo_check": {"kind": "independent_reported_statement_check","terms_pointer": "/bundles/0/cfo_terms","target_input_id": "NetCashProvidedByUsedInOperatingActivities","residual_operand": null},
+      "supplementary_input_ids": ["InterestPaid","InterestExpenseNonoperating","PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable","AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets","PaymentsForProceedsFromOtherInvestingActivities","EmployeeServiceShareBasedCompensationTaxBenefitFromCompensationExpense","PaymentsRelatedToTaxWithholdingForShareBasedCompensation","OperatingLeaseCost","OperatingLeasePayments","FinanceLeaseInterestExpense","FinanceLeaseCost","FinanceLeaseInterestPaymentOnLiability","FinanceLeasePrincipalPayments","RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability","RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability","EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsIncludingDisposalGroupAndDiscontinuedOperations","NetIncomeLoss","GainLossOnInvestmentsAndDerivativeInstruments"],
+      "source_unknowns_pointer": "/bundles/0/unknowns",
+      "limitations_pointer": "/bundles/0/limitations"
+    },
+    {
+      "issuer": "MSFT",
+      "bundle_id": "msft-reported-cash-flow-fy2026",
+      "registry_path": "docs/company-data-preparation/msft-reported-cash-flow-bundles.json",
+      "registry_sha256": "c3c35e020066f0887d9d8fe493f975afe9e6f0ea4b1785d2f341691ebb49d993",
+      "registry_bundle_pointer": "/bundles/1",
+      "period": {"cik": 789019,"accession": "0001193125-26-323660","annual_start": "2025-07-01","annual_end": "2026-06-30","form": "10-K"},
+      "evidence_review": "docs/msft-alternative-historical-cash-flow-inputs.md",
+      "fields": {
+        "revenue": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No revenue input is bound by these reviewed reported-cash-flow packages; do not import counts-only corpus values."],
+          "null_reason": "No revenue input is bound by these reviewed reported-cash-flow packages; do not import counts-only corpus values.",
+          "bindings": [
+          ]
+        },
+        "ebit": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No EBIT input or complete operating-only expense bridge is bound by these packages."],
+          "null_reason": "No EBIT input or complete operating-only expense bridge is bound by these packages.",
+          "bindings": [
+          ]
+        },
+        "depreciation_amortization": {
+          "status": "limited_support",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Retained depreciation/noncash observations do not establish complete non-overlapping D&A primitive coverage and joint timing compatibility; no sum approved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "Depreciation","registry_pointer": "/bundles/1/inputs/15","origin": "reported","role": "depreciation_note_expense","population": "depreciation","unit": "USD","scale": 1,"sign": 1,"precision": "-8","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [1381]},
+            {"input_id": "FinanceLeaseRightOfUseAssetAmortization","registry_pointer": "/bundles/1/inputs/18","origin": "reported","role": "finance_lease_asset_amortization_expense","population": "finance_lease_amortization","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [1878]},
+            {"input_id": "DepreciationAmortizationAndOther","registry_pointer": "/bundles/1/inputs/27","origin": "reported","role": "mixed_da_and_other_cfo_addback","population": "mixed_da_other","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [691]}
+          ]
+        },
+        "cash_capex": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Narrow reported cash PP&E purchase only; complete reinvestment, acquisition/intangible allocation and noncash/accrual bridges are not established."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "PaymentsToAcquirePropertyPlantAndEquipment","registry_pointer": "/bundles/1/inputs/7","origin": "reported","role": "reported_cash_ppe_purchase","population": "cash_ppe","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [757]}
+          ]
+        },
+        "reported_cash_flow_working_capital_movements": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Mixed signed operating cash-flow reconciliation rows, including noncurrent/tax effects where disclosed; not book delta NWC or certified operating-only investment; acquisition/FX/reclassification allocations unresolved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "IncreaseDecreaseInAccountsReceivable","registry_pointer": "/bundles/1/inputs/29","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccountsReceivable","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [703]},
+            {"input_id": "IncreaseDecreaseInInventories","registry_pointer": "/bundles/1/inputs/30","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInInventories","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [706]},
+            {"input_id": "IncreaseDecreaseInOtherCurrentAssets","registry_pointer": "/bundles/1/inputs/31","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherCurrentAssets","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [709]},
+            {"input_id": "IncreaseDecreaseInOtherNoncurrentAssets","registry_pointer": "/bundles/1/inputs/32","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherNoncurrentAssets","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [712]},
+            {"input_id": "IncreaseDecreaseInAccountsPayable","registry_pointer": "/bundles/1/inputs/33","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccountsPayable","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [715]},
+            {"input_id": "IncreaseDecreaseInContractWithCustomerLiability","registry_pointer": "/bundles/1/inputs/34","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInContractWithCustomerLiability","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [718]},
+            {"input_id": "IncreaseDecreaseInAccruedIncomeTaxesPayable","registry_pointer": "/bundles/1/inputs/35","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccruedIncomeTaxesPayable","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [721]},
+            {"input_id": "IncreaseDecreaseInOtherCurrentLiabilities","registry_pointer": "/bundles/1/inputs/36","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherCurrentLiabilities","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [724]},
+            {"input_id": "IncreaseDecreaseInOtherNoncurrentLiabilities","registry_pointer": "/bundles/1/inputs/37","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherNoncurrentLiabilities","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [727]}
+          ]
+        },
+        "deferred_taxes": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["CFO adjustment and provision roles are not interchangeable; no operating tax allocation or economic removal approved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "DeferredIncomeTaxExpenseBenefit","registry_pointer": "/bundles/1/inputs/5","origin": "reported","role": "deferred_tax_provision","population": "deferred_tax","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [1685]},
+            {"input_id": "DeferredIncomeTaxesAndTaxCredits","registry_pointer": "/bundles/1/inputs/6","origin": "reported","role": "cfo_deferred_tax_adjustment","population": "deferred_tax","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [700]}
+          ]
+        },
+        "stock_based_compensation": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Preserve recognized expense and CFO add-back as separate non-additive representations; no economic duplicate charge, rounding adjustment or outstanding-award treatment."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "ShareBasedCompensation","registry_pointer": "/bundles/1/inputs/11","origin": "reported","role": "sbc_cfo_addback","population": "recognized_sbc","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [694]},
+            {"input_id": "AllocatedShareBasedCompensationExpense","registry_pointer": "/bundles/1/inputs/12","origin": "reported","role": "sbc_note_expense","population": "recognized_sbc","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [2130]}
+          ]
+        },
+        "unclassified_cfo_reconciliation_residual": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No residual equation or value approved: a residual-defined balance is not independent statement validation. Keep mixed disclosed rows as original observations, not a manufactured remainder."],
+          "null_reason": "No residual equation or value approved: a residual-defined balance is not independent statement validation. Keep mixed disclosed rows as original observations, not a manufactured remainder.",
+          "bindings": [
+          ]
+        },
+        "reported_cfo": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "consolidated_reported",
+          "completeness": "complete",
+          "aggregation": "none",
+          "unresolved_requirements": ["Complete reported consolidated subtotal only, not organic, adjusted, unlevered or consumer-ready cash flow."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "NetCashProvidedByUsedInOperatingActivities","registry_pointer": "/bundles/1/inputs/0","origin": "reported","role": "reported_consolidated_cfo","population": "cfo","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [730]}
+          ]
+        },
+        "reported_tax_context": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Cash paid net of refunds and accrued provision are distinct, not complete operating-tax context or an approved future rate."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "IncomeTaxesPaidNet","registry_pointer": "/bundles/1/inputs/3","origin": "reported","role": "cash_tax_paid_net","population": "cash_tax","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [1808]},
+            {"input_id": "IncomeTaxExpenseBenefit","registry_pointer": "/bundles/1/inputs/4","origin": "reported","role": "accrued_tax_provision","population": "tax_provision","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e","occurrence_ordinals": [576,1688,1728]}
+          ]
+        },
+        "cash_investment_components": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No complete fiscal-year-end cash/investment component mapping is independently bound by these packages; annual cash-flow movements cannot supply balances."],
+          "null_reason": "No complete fiscal-year-end cash/investment component mapping is independently bound by these packages; annual cash-flow movements cannot supply balances.",
+          "bindings": [
+          ]
+        },
+        "debt_lease_components": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No fiscal-year-end debt/lease balance mapping; cash principal, interest and ROU additions are not closing debt. Preserve uncertain overlap and lease coverage."],
+          "null_reason": "No fiscal-year-end debt/lease balance mapping; cash principal, interest and ROU additions are not closing debt. Preserve uncertain overlap and lease coverage.",
+          "bindings": [
+          ]
+        },
+        "other_equity_bridge_claims_assets": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No reviewed FY-end claims/assets mapping; capital creditors or acquisition cash disclosures are not automatically equity-bridge inputs."],
+          "null_reason": "No reviewed FY-end claims/assets mapping; capital creditors or acquisition cash disclosures are not automatically equity-bridge inputs.",
+          "bindings": [
+          ]
+        },
+        "point_in_time_shares": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No separately dated point-in-time shares mapped; no inference from weighted-average shares, SBC or financing cash flows."],
+          "null_reason": "No separately dated point-in-time shares mapped; no inference from weighted-average shares, SBC or financing cash flows.",
+          "bindings": [
+          ]
+        }
+      },
+      "reported_cfo_check": {"kind": "independent_reported_statement_check","terms_pointer": "/bundles/1/cfo_terms","target_input_id": "NetCashProvidedByUsedInOperatingActivities","residual_operand": null},
+      "supplementary_input_ids": ["InterestPaid","InterestExpenseNonoperating","PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable","AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets","PaymentsForProceedsFromOtherInvestingActivities","EmployeeServiceShareBasedCompensationTaxBenefitFromCompensationExpense","PaymentsRelatedToTaxWithholdingForShareBasedCompensation","OperatingLeaseCost","OperatingLeasePayments","FinanceLeaseInterestExpense","FinanceLeaseCost","FinanceLeaseInterestPaymentOnLiability","FinanceLeasePrincipalPayments","RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability","RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability","EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsIncludingDisposalGroupAndDiscontinuedOperations","NetIncomeLoss","GainLossOnInvestmentsAndDerivativeInstruments"],
+      "source_unknowns_pointer": "/bundles/1/unknowns",
+      "limitations_pointer": "/bundles/1/limitations"
+    },
+    {
+      "issuer": "AAPL",
+      "bundle_id": "aapl-reported-cash-flow-fy2025",
+      "registry_path": "docs/company-data-preparation/aapl-reported-cash-flow-bundle.json",
+      "registry_sha256": "d185b995c566d6bfb3b165627283b5ab52edc8ead1e62332d3d9458d0667b747",
+      "registry_bundle_pointer": "/bundles/0",
+      "period": {"cik": 320193,"accession": "0000320193-25-000079","annual_start": "2024-09-29","annual_end": "2025-09-27","form": "10-K"},
+      "evidence_review": "docs/aapl-alternative-historical-cash-flow-inputs.md",
+      "fields": {
+        "revenue": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No revenue input is bound by these reviewed reported-cash-flow packages; do not import counts-only corpus values."],
+          "null_reason": "No revenue input is bound by these reviewed reported-cash-flow packages; do not import counts-only corpus values.",
+          "bindings": [
+          ]
+        },
+        "ebit": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No EBIT input or complete operating-only expense bridge is bound by these packages."],
+          "null_reason": "No EBIT input or complete operating-only expense bridge is bound by these packages.",
+          "bindings": [
+          ]
+        },
+        "depreciation_amortization": {
+          "status": "limited_support",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Retained depreciation/noncash observations do not establish complete non-overlapping D&A primitive coverage and joint timing compatibility; no sum approved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "DepreciationDepletionAndAmortization","registry_pointer": "/bundles/0/inputs/1","origin": "reported","role": "combined_da_cfo_addback","population": "da_addback","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [487]}
+          ]
+        },
+        "cash_capex": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Narrow reported cash PP&E purchase only; complete reinvestment, acquisition/intangible allocation and noncash/accrual bridges are not established."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "PaymentsToAcquirePropertyPlantAndEquipment","registry_pointer": "/bundles/0/inputs/11","origin": "reported","role": "reported_cash_ppe_purchase","population": "cash_ppe","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [526]}
+          ]
+        },
+        "reported_cash_flow_working_capital_movements": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Mixed signed operating cash-flow reconciliation rows, including noncurrent/tax effects where disclosed; not book delta NWC or certified operating-only investment; acquisition/FX/reclassification allocations unresolved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "IncreaseDecreaseInAccountsReceivable","registry_pointer": "/bundles/0/inputs/4","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccountsReceivable","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [496]},
+            {"input_id": "IncreaseDecreaseInOtherReceivables","registry_pointer": "/bundles/0/inputs/5","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherReceivables","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [499]},
+            {"input_id": "IncreaseDecreaseInInventories","registry_pointer": "/bundles/0/inputs/6","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInInventories","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [502]},
+            {"input_id": "IncreaseDecreaseInOtherOperatingAssets","registry_pointer": "/bundles/0/inputs/7","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherOperatingAssets","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [505]},
+            {"input_id": "IncreaseDecreaseInAccountsPayable","registry_pointer": "/bundles/0/inputs/8","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccountsPayable","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [508]},
+            {"input_id": "IncreaseDecreaseInOtherOperatingLiabilities","registry_pointer": "/bundles/0/inputs/9","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherOperatingLiabilities","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [511]}
+          ]
+        },
+        "deferred_taxes": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No independently bound deferred-tax adjustment/provision input in this reviewed package; OtherNoncashIncomeExpense is mixed and cannot be allocated from a residual."],
+          "null_reason": "No independently bound deferred-tax adjustment/provision input in this reviewed package; OtherNoncashIncomeExpense is mixed and cannot be allocated from a residual.",
+          "bindings": [
+          ]
+        },
+        "stock_based_compensation": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Preserve recognized expense and CFO add-back as separate non-additive representations; no economic duplicate charge, rounding adjustment or outstanding-award treatment."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "ShareBasedCompensation","registry_pointer": "/bundles/0/inputs/2","origin": "reported","role": "sbc_cfo_addback","population": "recognized_sbc","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [490]},
+            {"input_id": "AllocatedShareBasedCompensationExpense","registry_pointer": "/bundles/0/inputs/15","origin": "reported","role": "sbc_note_expense","population": "recognized_sbc","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [1185]}
+          ]
+        },
+        "unclassified_cfo_reconciliation_residual": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No residual equation or value approved: a residual-defined balance is not independent statement validation. Keep mixed disclosed rows as original observations, not a manufactured remainder."],
+          "null_reason": "No residual equation or value approved: a residual-defined balance is not independent statement validation. Keep mixed disclosed rows as original observations, not a manufactured remainder.",
+          "bindings": [
+          ]
+        },
+        "reported_cfo": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "consolidated_reported",
+          "completeness": "complete",
+          "aggregation": "none",
+          "unresolved_requirements": ["Complete reported consolidated subtotal only, not organic, adjusted, unlevered or consumer-ready cash flow."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "NetCashProvidedByUsedInOperatingActivities","registry_pointer": "/bundles/0/inputs/10","origin": "reported","role": "reported_consolidated_cfo","population": "cfo","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [514]}
+          ]
+        },
+        "reported_tax_context": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Cash paid net of refunds and accrued provision are distinct, not complete operating-tax context or an approved future rate."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "IncomeTaxesPaidNet","registry_pointer": "/bundles/0/inputs/13","origin": "reported","role": "cash_tax_paid_net","population": "cash_tax","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [565]},
+            {"input_id": "IncomeTaxExpenseBenefit","registry_pointer": "/bundles/0/inputs/14","origin": "reported","role": "accrued_tax_provision","population": "tax_provision","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [318,920,948]}
+          ]
+        },
+        "cash_investment_components": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No complete fiscal-year-end cash/investment component mapping is independently bound by these packages; annual cash-flow movements cannot supply balances."],
+          "null_reason": "No complete fiscal-year-end cash/investment component mapping is independently bound by these packages; annual cash-flow movements cannot supply balances.",
+          "bindings": [
+          ]
+        },
+        "debt_lease_components": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No fiscal-year-end debt/lease balance mapping; cash principal, interest and ROU additions are not closing debt. Preserve uncertain overlap and lease coverage."],
+          "null_reason": "No fiscal-year-end debt/lease balance mapping; cash principal, interest and ROU additions are not closing debt. Preserve uncertain overlap and lease coverage.",
+          "bindings": [
+          ]
+        },
+        "other_equity_bridge_claims_assets": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No reviewed FY-end claims/assets mapping; capital creditors or acquisition cash disclosures are not automatically equity-bridge inputs."],
+          "null_reason": "No reviewed FY-end claims/assets mapping; capital creditors or acquisition cash disclosures are not automatically equity-bridge inputs.",
+          "bindings": [
+          ]
+        },
+        "point_in_time_shares": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No separately dated point-in-time shares mapped; no inference from weighted-average shares, SBC or financing cash flows."],
+          "null_reason": "No separately dated point-in-time shares mapped; no inference from weighted-average shares, SBC or financing cash flows.",
+          "bindings": [
+          ]
+        }
+      },
+      "reported_cfo_check": {"kind": "independent_reported_statement_check","terms_pointer": "/bundles/0/cfo_terms","target_input_id": "NetCashProvidedByUsedInOperatingActivities","residual_operand": null},
+      "supplementary_input_ids": ["NetIncomeLoss","OtherNoncashIncomeExpense","PaymentsForProceedsFromOtherInvestingActivities","OperatingLeasePayments","OperatingLeaseCost","VariableLeaseCost","RightofUseAssetsObtainedinExchangeforOperatingandFinanceLeaseLiabilities","PaymentsRelatedToTaxWithholdingForShareBasedCompensation"],
+      "source_unknowns_pointer": "/bundles/0/unknowns",
+      "limitations_pointer": "/bundles/0/limitations"
+    },
+    {
+      "issuer": "GOOGL",
+      "bundle_id": "googl-reported-cash-flow-fy2024",
+      "registry_path": "docs/company-data-preparation/googl-reported-cash-flow-bundle.json",
+      "registry_sha256": "97ca73213b6bb46dfdaec67f930d3abd0cfbd6d1a17e50047998c0b2764f509f",
+      "registry_bundle_pointer": "/bundles/0",
+      "period": {"cik": 1652044,"accession": "0001652044-25-000014","annual_start": "2024-01-01","annual_end": "2024-12-31","form": "10-K"},
+      "evidence_review": "docs/googl-alternative-historical-cash-flow-inputs.md",
+      "fields": {
+        "revenue": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No revenue input is bound by these reviewed reported-cash-flow packages; do not import counts-only corpus values."],
+          "null_reason": "No revenue input is bound by these reviewed reported-cash-flow packages; do not import counts-only corpus values.",
+          "bindings": [
+          ]
+        },
+        "ebit": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No EBIT input or complete operating-only expense bridge is bound by these packages."],
+          "null_reason": "No EBIT input or complete operating-only expense bridge is bound by these packages.",
+          "bindings": [
+          ]
+        },
+        "depreciation_amortization": {
+          "status": "limited_support",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Retained depreciation/noncash observations do not establish complete non-overlapping D&A primitive coverage and joint timing compatibility; no sum approved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "Depreciation","registry_pointer": "/bundles/0/inputs/1","origin": "reported","role": "depreciation_cfo_addback","population": "depreciation","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [695]},
+            {"input_id": "FinanceLeaseRightOfUseAssetAmortization","registry_pointer": "/bundles/0/inputs/27","origin": "reported","role": "finance_lease_asset_amortization_expense","population": "finance_lease_amortization","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [1286]}
+          ]
+        },
+        "cash_capex": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Narrow reported cash PP&E purchase only; complete reinvestment, acquisition/intangible allocation and noncash/accrual bridges are not established."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "PaymentsToAcquirePropertyPlantAndEquipment","registry_pointer": "/bundles/0/inputs/14","origin": "reported","role": "reported_cash_ppe_purchase","population": "cash_ppe","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [734]}
+          ]
+        },
+        "reported_cash_flow_working_capital_movements": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Mixed signed operating cash-flow reconciliation rows, including noncurrent/tax effects where disclosed; not book delta NWC or certified operating-only investment; acquisition/FX/reclassification allocations unresolved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "IncreaseDecreaseInAccountsReceivable","registry_pointer": "/bundles/0/inputs/6","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccountsReceivable","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [710]},
+            {"input_id": "IncreaseDecreaseInIncomeTaxes","registry_pointer": "/bundles/0/inputs/7","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInIncomeTaxes","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [713]},
+            {"input_id": "IncreaseDecreaseInOtherOperatingAssets","registry_pointer": "/bundles/0/inputs/8","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInOtherOperatingAssets","unit": "USD","scale": 1,"sign": -1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [716]},
+            {"input_id": "IncreaseDecreaseInAccountsPayable","registry_pointer": "/bundles/0/inputs/9","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccountsPayable","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [719]},
+            {"input_id": "IncreaseDecreaseInAccruedLiabilities","registry_pointer": "/bundles/0/inputs/10","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccruedLiabilities","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [722]},
+            {"input_id": "IncreaseDecreaseInAccruedRevenueShare","registry_pointer": "/bundles/0/inputs/11","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInAccruedRevenueShare","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [725]},
+            {"input_id": "IncreaseDecreaseInContractWithCustomerLiability","registry_pointer": "/bundles/0/inputs/12","origin": "reported","role": "reported_cash_flow_movement","population": "IncreaseDecreaseInContractWithCustomerLiability","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [728]}
+          ]
+        },
+        "deferred_taxes": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["CFO adjustment and provision roles are not interchangeable; no operating tax allocation or economic removal approved."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "DeferredIncomeTaxesAndTaxCredits","registry_pointer": "/bundles/0/inputs/3","origin": "reported","role": "cfo_deferred_tax_adjustment","population": "deferred_tax","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [701]},
+            {"input_id": "DeferredIncomeTaxExpenseBenefit","registry_pointer": "/bundles/0/inputs/20","origin": "reported","role": "deferred_tax_provision","population": "deferred_tax","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [1878]}
+          ]
+        },
+        "stock_based_compensation": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Preserve recognized expense and CFO add-back as separate non-additive representations; no economic duplicate charge, rounding adjustment or outstanding-award treatment."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "ShareBasedCompensation","registry_pointer": "/bundles/0/inputs/2","origin": "reported","role": "sbc_cfo_addback","population": "recognized_sbc","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [698]},
+            {"input_id": "AllocatedShareBasedCompensationExpense","registry_pointer": "/bundles/0/inputs/18","origin": "reported","role": "sbc_note_expense","population": "recognized_sbc","unit": "USD","scale": 1,"sign": 1,"precision": "-8","context_id": "c-1","occurrence_ordinals": [1821]}
+          ]
+        },
+        "unclassified_cfo_reconciliation_residual": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No residual equation or value approved: a residual-defined balance is not independent statement validation. Keep mixed disclosed rows as original observations, not a manufactured remainder."],
+          "null_reason": "No residual equation or value approved: a residual-defined balance is not independent statement validation. Keep mixed disclosed rows as original observations, not a manufactured remainder.",
+          "bindings": [
+          ]
+        },
+        "reported_cfo": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "consolidated_reported",
+          "completeness": "complete",
+          "aggregation": "none",
+          "unresolved_requirements": ["Complete reported consolidated subtotal only, not organic, adjusted, unlevered or consumer-ready cash flow."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "NetCashProvidedByUsedInOperatingActivities","registry_pointer": "/bundles/0/inputs/13","origin": "reported","role": "reported_consolidated_cfo","population": "cfo","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [731]}
+          ]
+        },
+        "reported_tax_context": {
+          "status": "mapped",
+          "origin": "reported",
+          "quality": "limited",
+          "review": "reviewed",
+          "scope": "restricted",
+          "completeness": "partial",
+          "aggregation": "none",
+          "unresolved_requirements": ["Cash paid net of refunds and accrued provision are distinct, not complete operating-tax context or an approved future rate."],
+          "null_reason": null,
+          "bindings": [
+            {"input_id": "IncomeTaxesPaidNet","registry_pointer": "/bundles/0/inputs/17","origin": "reported","role": "cash_tax_paid_net","population": "cash_tax","unit": "USD","scale": 1,"sign": -1,"precision": "-8","context_id": "c-1","occurrence_ordinals": [1954]},
+            {"input_id": "IncomeTaxExpenseBenefit","registry_pointer": "/bundles/0/inputs/19","origin": "reported","role": "accrued_tax_provision","population": "tax_provision","unit": "USD","scale": 1,"sign": 1,"precision": "-6","context_id": "c-1","occurrence_ordinals": [568,1881]}
+          ]
+        },
+        "cash_investment_components": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No complete fiscal-year-end cash/investment component mapping is independently bound by these packages; annual cash-flow movements cannot supply balances."],
+          "null_reason": "No complete fiscal-year-end cash/investment component mapping is independently bound by these packages; annual cash-flow movements cannot supply balances.",
+          "bindings": [
+          ]
+        },
+        "debt_lease_components": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No fiscal-year-end debt/lease balance mapping; cash principal, interest and ROU additions are not closing debt. Preserve uncertain overlap and lease coverage."],
+          "null_reason": "No fiscal-year-end debt/lease balance mapping; cash principal, interest and ROU additions are not closing debt. Preserve uncertain overlap and lease coverage.",
+          "bindings": [
+          ]
+        },
+        "other_equity_bridge_claims_assets": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No reviewed FY-end claims/assets mapping; capital creditors or acquisition cash disclosures are not automatically equity-bridge inputs."],
+          "null_reason": "No reviewed FY-end claims/assets mapping; capital creditors or acquisition cash disclosures are not automatically equity-bridge inputs.",
+          "bindings": [
+          ]
+        },
+        "point_in_time_shares": {
+          "status": "unavailable",
+          "origin": "unavailable",
+          "quality": "unassessed",
+          "review": "reviewed",
+          "scope": "unknown",
+          "completeness": "unknown",
+          "aggregation": "none",
+          "unresolved_requirements": ["No separately dated point-in-time shares mapped; no inference from weighted-average shares, SBC or financing cash flows."],
+          "null_reason": "No separately dated point-in-time shares mapped; no inference from weighted-average shares, SBC or financing cash flows.",
+          "bindings": [
+          ]
+        }
+      },
+      "reported_cfo_check": {"kind": "independent_reported_statement_check","terms_pointer": "/bundles/0/cfo_terms","target_input_id": "NetCashProvidedByUsedInOperatingActivities","residual_operand": null},
+      "supplementary_input_ids": ["NetIncomeLoss","DebtAndEquitySecuritiesGainLoss","OtherNoncashIncomeExpense","AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets","PaymentsForProceedsFromOtherInvestingActivities","InterestExpenseNonoperating","InterestCostsCapitalized","OperatingLeasePayments","FinanceLeaseInterestPaymentOnLiability","FinanceLeasePrincipalPayments","OperatingLeaseCost","FinanceLeaseInterestExpense","VariableLeaseCost","RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability","RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability","RepaymentsOfDebtAndCapitalLeaseObligations","NetProceedsPaymentsRelatedToStockBasedAwardActivities"],
+      "source_unknowns_pointer": "/bundles/0/unknowns",
+      "limitations_pointer": "/bundles/0/limitations"
+    }
+  ]
+}

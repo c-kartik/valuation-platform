@@ -1,5 +1,31 @@
 # MSFT — company data preparation
 
+## Executable retained-input mappings — FY2025/FY2026 only
+
+[Mapping summary](../pilot-historical-input-mappings.md) /
+[exact matrix](../pilot-historical-input-mappings.json), keyed by existing
+`msft-reported-cash-flow-fy2025` and `msft-reported-cash-flow-fy2026`.
+Conflict: source-verified cash-flow packages are not complete WP0 historical
+inputs. Chosen treatment is six restricted mapped families, one D&A support
+family and seven unavailable families per year; no adapter or financial resolution.
+Pinned registry pointers bind exact periods, receipts, all occurrences, roles,
+signs and precision. Existing 14-term CFO checks pass independently with no
+balancing residual. 19/20 mapped inputs retain 21/22 occurrences; 18/18 remaining
+inputs stay supplementary, including capital creditors, leases and acquisition
+cash, not inferred bridge balances.
+
+D&A-and-other, depreciation and finance-lease amortization are not summed;
+complete coverage/non-overlap/timing remain unproved. Deferred-tax confirmations
+in 2025 count once; 2026 note provision is not the CFO adjustment. SBC expense
+and add-back share a population but remain non-additive. CF movements are not
+book ΔNWC. Revenue/EBIT, residual and bridge/share mappings remain unavailable
+within these packages, not claims of issuer nondisclosure. No change to prior
+lease acceptance, NWC blockers, selected history, fiscal recast limits, schema,
+policies or original bundle bytes. Financial sufficiency remains NOT_ASSESSED.
+Focused source/treatment/preservation tests, offline validator, compileall and
+links/diff checks pass. No SEC/full-suite/corpus. Next, only if authorized: isolated
+adapter for these tested mappings, with unavailable slots and support limits intact.
+
 ## Consolidated blocker disposition — proposed reported-input path
 
 2026-10-12: [bounded review](../phase1-blocker-disposition-review.md) and

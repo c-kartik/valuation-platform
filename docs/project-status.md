@@ -2,7 +2,28 @@
 
 ## Current Milestone
 
-Latest completed milestone: **WP0 — revised Phase 1 historical-input contract
+Latest completed milestone: **four-pilot executable retained-evidence field
+mappings and treatment checks**, no adapter. [Summary](pilot-historical-input-mappings.md)
+and [matrix](pilot-historical-input-mappings.json) cover all 56 WP0 field-family
+slots: 23 restricted mapped / four D&A support-only / 29 unavailable bindings.
+MSFT FY2025/FY2026 and Alphabet FY2024 each 6/1/7; AAPL FY2025 5/1/8.
+69 bound source inputs retain 76 confirming occurrences; 61 supplementary inputs
+remain visible. Original pinned loaders verify exact source receipts/facts and
+periods, not counts-only corpus evidence. All four independent reported CFO
+checks pass; no residual equation/value or unsupported component sum approved.
+SBC expense/add-back, deferred provision/reconciliation and cash/expense roles
+stay separate. Bridge/share and revenue/EBIT gaps remain specific package limitations.
+
+Three issuer records/index updated with decisions and limits. Frozen schema 5,
+policies/outputs, original bundles/scenarios/sidecars and 1905/1483/11/27/42 baseline
+unchanged; no blockers removed, treatment transfer or period extension. New
+focused tests and existing model/preservation checks (**43 passed**), compileall, local links
+and diff pass; no SEC, full-suite or corpus run. Phase 2 remains prohibited.
+**Stop after mappings.** Next bounded implementation, only if authorized:
+isolated explicit adapter for the four tested reported mappings, with unavailable
+requirements/support-only observations preserved, no sums, assumptions or residuals.
+
+Previously completed milestone: **WP0 — revised Phase 1 historical-input contract
 and isolated immutable model foundation**. [Contract](dcf-input-contract.md) /
 [decision](wp0-historical-input-decision.md). User-approved analyst-reviewable
 preparation extends, rather than retroactively alters, qualified facts/gaps closure.

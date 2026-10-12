@@ -160,3 +160,9 @@ from annual cash-flow facts. Stop with explicit unresolved requirements rather
 than launch new research or assume economic treatments. No new period approval.
 Subsequent field-treatment changes must update affected issuer records in the same
 milestone, preserving original decisions and explaining rationale/evidence/tests.
+
+The subsequent authorized [four-pilot mapping milestone](pilot-historical-input-mappings.md)
+now completes that bounded step with [exact references](pilot-historical-input-mappings.json)
+and executable treatment checks, not adapters or additional period registrations.
+Its next isolated adapter scope must keep support-only D&A, unavailable families
+and all role/precision/coverage limitations explicit; no residual is approved.

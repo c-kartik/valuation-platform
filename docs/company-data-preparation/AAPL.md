@@ -1,5 +1,31 @@
 # AAPL — company data preparation
 
+## Executable retained-input mappings — FY2025 only
+
+[Mapping summary](../pilot-historical-input-mappings.md) /
+[exact matrix](../pilot-historical-input-mappings.json), existing bundle
+`aapl-reported-cash-flow-fy2025`, accession `0000320193-25-000079`,
+2024-09-29–2025-09-27. Conflict: the reviewed CFO package is not complete WP0
+income/bridge/share coverage. Chosen treatment: five restricted mapped families,
+one D&A support family, eight unavailable families, with explicit null reasons.
+Thirteen source inputs retain fifteen occurrences; eight remain supplementary.
+Pinned registry/body references and existing 10-term independent CFO statement
+check confirm exact role/sign/precision and every occurrence; no balancing residual.
+
+No deferred-tax input is bound by this package; mixed OtherNoncash cannot be
+allocated from a residual. Combined D&A remains a cash-flow observation with
+unproved joint timing, not a second add-back or invalidation of frozen historical
+values. SBC expense/add-back are separate non-additive roles. Net cash taxes and
+cash PP&E are separately scoped, not operating tax/complete reinvestment.
+CF rows preserve mixed current/noncurrent scope; employee/distribution/AP/NWC
+blockers persist. Revenue/EBIT, residual and bridge/share gaps are package-binding
+limitations, not global nondisclosure. Rounded fixed lease cash remains supplementary
+and restricted; no transfer of MSFT treatments. Prior acceptances, cash-interest/
+investment unknowns, frozen outputs and bytes are preserved; no comparatives added.
+Focused mapping/preservation checks, compileall, links and diff pass. Financial
+sufficiency NOT_ASSESSED. Next, only if authorized: isolated adapter of tested
+reported mappings, with all unresolved slots/limitations retained, no new assumptions.
+
 ## Consolidated blocker disposition — proposed reported-input path
 
 2026-10-12: [bounded review](../phase1-blocker-disposition-review.md) and

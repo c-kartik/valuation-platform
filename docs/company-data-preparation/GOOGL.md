@@ -1,5 +1,32 @@
 # GOOGL — company data preparation
 
+## Executable retained-input mappings — FY2024 only
+
+[Mapping summary](../pilot-historical-input-mappings.md) /
+[exact matrix](../pilot-historical-input-mappings.json), existing bundle
+`googl-reported-cash-flow-fy2024`, accession `0001652044-25-000014`,
+2024-01-01–2024-12-31. Conflict: reviewed reported cash inputs do not establish
+complete WP0 income/bridge/share coverage. Chosen treatment: six restricted
+mapped families, one D&A support family, seven unavailable families. Seventeen
+source inputs retain eighteen occurrences; seventeen remain supplementary.
+Registry pointers and existing loaders verify original bodies and explicit
+refreshed receipt; original missing time/status remains unchanged history.
+The independent 13-term reported CFO check passes without a balancing residual.
+
+Rounded 22,800m note SBC expense (−8) and 22,785m CFO add-back (−6) keep different
+roles, same recognized-cost population and no sum/rounding adjustment. Deferred
+CFO −5,257m is distinct from note provision −5,256m. Depreciation does not establish
+complete D&A or timing; its original frozen blocker remains. CF movements do not
+reconstruct inventory/supplier-AP book ΔNWC. Revenue/EBIT, residual, bridge/share
+gaps are unavailable package bindings, not claims of filing-wide absence.
+Lease classes, debt-repayment cash and acquisitions/intangibles stay supplementary,
+not debt balances or complete investment; finance principal stays embedded in
+reported repayments, not additional. All prior acceptances, unknown borrowing
+interest, NWC/timing limits, frozen outputs and bundles/sidecars are preserved.
+Focused mappings, provenance/precision/preservation tests, compileall, links/diff
+pass; financial sufficiency NOT_ASSESSED. Next, only if authorized: isolated
+tested reported mappings adapter, with no assumptions, comparatives or new approval.
+
 ## Consolidated blocker disposition — proposed reported-input path
 
 2026-10-12: [bounded review](../phase1-blocker-disposition-review.md) and

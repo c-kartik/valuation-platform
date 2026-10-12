@@ -1,5 +1,23 @@
 # Company data preparation register
 
+## Four-pilot executable retained-evidence mappings
+
+[Summary](../pilot-historical-input-mappings.md) /
+[matrix](../pilot-historical-input-mappings.json) and offline validator complete
+the WP0 next mapping milestone, not an adapter or expanded financial review.
+All 56 family slots are accounted: 23 mapped, four D&A support-only, 29 unavailable
+package bindings. Only four existing periods; 69 mapped inputs and 61 supplementary
+inputs account for existing packages. Exact pinned evidence, precision/roles,
+unresolved requirements and prior acceptances remain. CFO checks use independently
+reported targets/terms, never residual-defined validation. No field-component sums.
+
+AAPL/MSFT/GOOGL records now explain these mapping limits/tests; all other records,
+40-issuer scope, 189 identities/11 history exceptions and classifications remain
+unchanged. Financial sufficiency remains unknown/not assessed, not granted by
+mapping counts. Smallest next authorized step: isolated adapter of tested reported
+mappings only, leaving unavailable primitive/bridge/share slots and D&A support
+explicit. No assumptions, new period approvals, resolver or Phase 2. Stop here.
+
 ## WP0 analyst-reviewable historical-input contract
 
 The user-approved extension beyond facts/gaps is documented in the
