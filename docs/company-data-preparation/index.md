@@ -1,5 +1,17 @@
 # Company data preparation register
 
+## Retained filing identities
+
+[Identity manifest](../phase1-selected-filing-identity-manifest.md) reconciles all
+40 issuers: 189 selected rows (162 verified retained, 26 missing, 1 incomplete,
+0 conflicting) and 11 five-year target exceptions. Each issuer record links its
+counts and candidates. Identity verification is not complete fact provenance or
+financial sufficiency; aggregate/evidence-accounted statuses and pilot boundaries
+remain distinct. Prior binding-report record hashes describe its prior revision;
+new record links do not retroactively rewrite that historical artifact.
+Next is one retained-source availability audit of the 27 unresolved bindings,
+not another financial research cycle or automatic history reconstruction.
+
 ## Independent accounting and financial-sufficiency statuses
 
 User approval, 2026-10-12: [shared evidence-binding pass](../phase1-preparation-evidence-bindings.md)

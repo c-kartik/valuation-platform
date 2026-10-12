@@ -2,7 +2,24 @@
 
 ## Current Milestone
 
-Latest completed milestone: **shared offline preparation evidence-binding pass**.
+Latest completed milestone: **retained selected-filing identity manifest**.
+[Results](phase1-selected-filing-identity-manifest.md) and
+[JSON manifest](phase1-selected-filing-identity-manifest.json) reconcile 40 issuers,
+189 selected periods and 11 history exceptions: 162 verified retained identities,
+26 missing, 1 incomplete (AVGO 2021 annual evidence unresolved), 0 conflicts.
+Exact identity is not complete measure-level provenance or financial sufficiency.
+Retained reviewed inventories/tables and NWC instance-byte/DEI checks supply
+identities; digest types/receipt gaps remain explicit, no inferred dates/forms.
+All affected records updated; five-year target, short/empty histories, support
+classes, financial blockers and frozen-v1 unchanged. Phase 2 postponed.
+Nine focused manifest tests and eleven existing binding tests, reproducibility,
+unique mappings/counts, links, compileall and diff check pass. No SEC/full-suite/
+corpus. Baseline remains **1905/1483/11/27/42 = 3468**.
+Single next Phase 1 milestone: **one retained-source availability audit for
+27 unresolved identity bindings**, stopping at a source/missing-evidence ledger;
+no retrieval, new research, annual-policy change or guessing.
+
+Previously completed milestone: **shared offline preparation evidence-binding pass**.
 User approves independent evidence-accounted and financial-input sufficiency
 statuses. [Results/backlog](phase1-preparation-evidence-bindings.md) and
 [ledger](phase1-preparation-evidence-bindings.json): 40 limited-accounting PASS,

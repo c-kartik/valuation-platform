@@ -1,5 +1,16 @@
 # LIN — company data preparation
 
+## Retained selected-filing identity manifest
+
+2026-10-12 [identity pass](../phase1-selected-filing-identity-manifest.md): 5 selected
+periods; 5 verified retained identities, 0 missing, 0 incomplete,
+0 conflicting. 0 unfilled five-period target slots remain history
+exceptions, not inferred fiscal years. [Exact manifest](../phase1-selected-filing-identity-manifest.json)
+retains candidates/source locators/digests and explicit rejected claims. Identity
+verification does not establish complete measure-level fact provenance or financial
+sufficiency. Original history, revenue conflicts, financial blockers, classifications
+and pilot limits remain unchanged; no SEC requests or issuer financial research.
+
 ## Evidence-accounting and financial-sufficiency statuses
 
 2026-10-12 shared [binding pass](../phase1-preparation-evidence-bindings.md):
