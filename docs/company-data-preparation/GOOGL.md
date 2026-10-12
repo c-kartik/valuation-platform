@@ -2,6 +2,21 @@
 
 ## Proposed FY2024 analyst-treatment decision
 
+**Subsequent user acceptance, 2026-10-12:** the
+[FY2024 checklist](../googl-treatment-acceptance-checklist.md) supersedes the
+pending statuses below, preserving their rationale/history. Accepted CFO and
+separate narrow PP&E do not establish organic cash or complete reinvestment.
+Rounded 22,800m expense is a labeled SBC cost proxy once; 22,785m add-back
+remains separate, with no rounding adjustment/duplicate charge. Cash taxes have
+no approved future operating basis/rate. Three restricted lease classes remain
+separate, not a modeling convention; finance principal is already in debt
+repayments. Borrowing interest and investment allocations stay unknown.
+Only qualified FY2024 historical-input preparation is closed; D&A/NWC/timing
+blocks, all facts/unknowns/artifacts and classifications are unchanged.
+[Consolidated gap assessment](../phase1-preparation-pilot-gap-assessment.md)
+records validation and one finite next milestone: retained-evidence disposition
+of all 40 issuer records, not more Alphabet research or economic implementation.
+
 2026-10-12: [bounded decision memo](../googl-analyst-treatment-decision.md)
 records recommendations **pending user review**, not imported MSFT/AAPL approvals.
 Original conflicts: reported CFO is not organic/unlevered cash; rounded note SBC

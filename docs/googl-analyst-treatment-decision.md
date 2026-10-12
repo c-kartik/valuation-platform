@@ -1,7 +1,12 @@
 # Alphabet FY2024 analyst-input treatment decision memo
 
 2026-10-12; starting HEAD `b4bf92963864fe5b0818f721857ecf020c9b91a8`.
-**All recommendations are proposed pending user review.** MSFT/AAPL decisions
+Original recommendations below were proposed pending review. **Subsequent user
+acceptance, 2026-10-12:** the [acceptance checklist](googl-treatment-acceptance-checklist.md)
+records the stated CFO/PP&E, rounded SBC proxy once, reported taxes and restricted
+lease dataset choices. Only qualified FY2024 preparation is closed; no economic
+calculation, tax basis/rate, completeness or modeling convention is approved.
+Original rationale remains below as decision history. MSFT/AAPL decisions
 are architecture/methodology references, not Alphabet approvals. Strictly Phase 1:
 no numerical economic treatment, total, forecast or valuation consumption.
 
@@ -96,9 +101,10 @@ complete reinvestment, supported-company upgrade or valuation readiness. It does
 not require inventing unavailable allocations or selecting a future tax rate.
 Unavailable disclosure is a durable boundary, not an indefinite annotation cycle.
 
-Single next bounded Phase 1 milestone: user review followed by **one FY2024
-treatment-acceptance/input checklist**, recording choices/limitations and qualified
-closure only if accepted. No further research or implementation starts here.
+The subsequent checklist is complete and the pilot is closed only within its
+qualified preparation scope. The [three-pilot assessment](phase1-preparation-pilot-gap-assessment.md)
+supersedes that next step with one retained-evidence 40-issuer disposition matrix.
+No further research or implementation starts here.
 Phase 2 remains postponed.
 
 Validation: registry hash/exact identity and points/roles/precision checked against

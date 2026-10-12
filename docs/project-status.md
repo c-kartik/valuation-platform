@@ -2,7 +2,24 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Alphabet FY2024 analyst-treatment decision memo**.
+Latest completed milestone: **Alphabet acceptance and three-pilot consolidation**.
+[Alphabet checklist](googl-treatment-acceptance-checklist.md) records explicit
+user approval and closes qualified FY2024 preparation only. Rounded SBC expense
+22,800m proxy once remains distinct from 22,785m add-back; restricted leases are
+not a modeling convention. No interest proxy/allocation/tax rate or blocker removal.
+[Gap assessment](phase1-preparation-pilot-gap-assessment.md) reconciles MSFT
+FY2025–2026, AAPL FY2025 and Alphabet FY2024: 3 pilots / 4 exact reported-input
+periods. Preparation packaging/acceptance improves; original frozen blockers,
+coverage counts, classifications and timing gates do not change. Phase 2 postponed.
+Single next Phase 1 milestone: **retained-evidence disposition matrix for all
+40 GENERALIZATION_REQUIRED issuers**, with 3 qualified pilot closures and 37
+without equivalent closure, explicit review depth/17-measure links, named scope,
+essential-versus-deferred needs and stop criteria. No fresh issuer research.
+Exact identities/registry hashes, counts, acceptance consistency, relevant links
+and diff check validated. No SEC requests, tests or corpus rerun; baseline
+**1905/1483/11/27/42 = 3468** preserved, not remeasured.
+
+Previously completed milestone: **Alphabet FY2024 analyst-treatment decision memo**.
 [Proposed recommendations](googl-analyst-treatment-decision.md) independently
 recommend consolidated reported CFO, separate narrow PP&E, rounded recognized
 SBC expense as a labeled cost proxy once, reported taxes without an operating

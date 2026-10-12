@@ -1,5 +1,14 @@
 # AAPL — company data preparation
 
+## Consolidated pilot disposition
+
+2026-10-12: [three-pilot gap assessment](../phase1-preparation-pilot-gap-assessment.md)
+preserves the [accepted FY2025 contract](../aapl-treatment-acceptance-checklist.md).
+Qualified one-period preparation remains closed; cash interest, investment
+allocations, original NWC scope and future timing remain unresolved. Original
+sources, rationale and all artifacts below are unchanged. No fresh review or
+consumer approval; next is a finite retained-evidence 40-issuer disposition matrix.
+
 CIK `320193`; securities AAPL; **GENERALIZATION_REQUIRED**.
 
 ## Sources, history and retrieval

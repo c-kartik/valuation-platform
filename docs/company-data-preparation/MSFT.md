@@ -1,5 +1,14 @@
 # MSFT — company data preparation
 
+## Consolidated pilot disposition
+
+2026-10-12: [three-pilot gap assessment](../phase1-preparation-pilot-gap-assessment.md)
+preserves the [accepted two-period contract](../msft-treatment-acceptance-checklist.md).
+Qualified FY2025–2026 preparation remains closed, not complete NWC/interest/
+reinvestment or consumer readiness. Existing conflicts, source evidence,
+decisions and artifacts below remain authoritative. No fresh MSFT review or
+blocker removal; next is a finite retained-evidence 40-issuer disposition matrix.
+
 CIK `789019`; securities MSFT; **GENERALIZATION_REQUIRED**.
 
 ## Sources, history and retrieval

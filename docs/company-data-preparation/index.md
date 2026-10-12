@@ -1,5 +1,18 @@
 # Company data preparation register
 
+## Closed preparation pilots and next bounded pass
+
+[Consolidated assessment](../phase1-preparation-pilot-gap-assessment.md) records
+three qualified closures: MSFT FY2025–2026, AAPL FY2025 and Alphabet FY2024
+(four reported-input periods). [Alphabet acceptance](../googl-treatment-acceptance-checklist.md)
+joins the existing issuer-specific checklists; no treatments transfer by analogy.
+Preparation improves evidence/input packaging, not original financial coverage
+or support classification. Of 40 records, 3 have this pilot closure and 37 do
+not; this does not imply fresh review or financial incapacity for those 37.
+The next milestone is a documentation-only retained-evidence disposition matrix
+of all 40 with explicit review depth, gaps, scope and bounded stop conditions.
+No new issuer research, annotation framework or automatic approval is authorized.
+
 Preparation records for all **40 GENERALIZATION_REQUIRED issuers** in the frozen
 [validation matrix](../universe/phase-1h5-issuer-validation.json). Alphabet has one
 record for GOOG/GOOGL. The other ten issuers remain in that authoritative matrix,
