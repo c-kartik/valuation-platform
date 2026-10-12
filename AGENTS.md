@@ -44,6 +44,13 @@ separate from adjusted cash-flow calculations and valuation readiness.
 
 ## Engineering Principles
 
+WP0 extends Phase 1 toward analyst-reviewable historical inputs under
+`docs/dcf-input-contract.md`, separately from the completed facts/gaps closure.
+It does not authorize Phase 2 or modify frozen-v1. Subsequent field-treatment or
+mapping changes must maintain affected issuer records in the same milestone;
+shared model-only work with no issuer value changes updates register guidance,
+not all forty records. Required missing values stay unresolved despite acceptance.
+
 - Prioritize correctness, modularity, explainability, and testability.
 - Build incrementally; do not implement the entire application at once.
 - Keep SEC retrieval, XBRL normalization, derived financial calculations, and valuation calculations separate.

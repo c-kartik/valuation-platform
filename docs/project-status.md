@@ -2,7 +2,32 @@
 
 ## Current Milestone
 
-Latest completed milestone: **consolidated Phase 1 blocker-disposition review**.
+Latest completed milestone: **WP0 — revised Phase 1 historical-input contract
+and isolated immutable model foundation**. [Contract](dcf-input-contract.md) /
+[decision](wp0-historical-input-decision.md). User-approved analyst-reviewable
+preparation extends, rather than retroactively alters, qualified facts/gaps closure.
+Annual income/cash fields, fiscal-year-end bridge components and separately dated
+point shares retain independent origin/quality/scope/completeness/review, source
+identity, precision, alternatives and unresolved requirements. Models/closed
+serialization are structural, not fact/equation/scope certification; no issuer
+values or new approvals. Five annual periods, three-period readiness and proposed
+90% recent/80% older coverage remain targets, not claims. Material shortfalls
+require explicit user acceptance; required nulls remain unresolved.
+
+Frozen schema 5, policies/registries/outputs and all pilot bundles/sidecars remain
+unchanged. Baseline 1905/1483/11/27/42; 43 executions/seven skips, classes 2/40/8;
+40 records/189 identities/11 exceptions/four reviewed periods preserved. GE and
+seven other specialized issuers are excluded from new generic bundles without
+changing existing outputs. Focused model/preservation tests, compileall, relevant
+local links and diff checks pass; **27 focused tests** (24 new model + three
+existing pilot-preservation checks); no SEC request, full suite or corpus rerun.
+Phase 2 remains prohibited. **Stop after WP0.** Next bounded authorized task would
+be one four-pilot-period retained field-treatment/mapping design with explicit
+missing requirements, scope/equation tests and bridge/share evidence limits.
+Subsequent field-treatment changes must update affected issuer records; none
+changed here, so only shared register guidance is updated.
+
+Previously completed milestone: **consolidated Phase 1 blocker-disposition review**.
 [Review/proposed delivery contract](phase1-blocker-disposition-review.md) and
 [JSON matrix](phase1-blocker-disposition-review.json) account for 40 issuers,
 189 selected identities, 11 history exceptions and all 354 unresolved metric/

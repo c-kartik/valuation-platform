@@ -15,7 +15,28 @@ schema 5 or active v1 policies. The [company preparation register](company-data-
 covers all forty generalization-required issuers without fresh financial review.
 No joint timing-readiness model or valuation calculator is implemented.
 
-### Isolated reported cash-flow input boundary
+### WP0 historical-input preparation foundation
+
+The additive [contract](dcf-input-contract.md) and
+[decision](wp0-historical-input-decision.md) implement immutable metadata-only
+`analyst/historical_inputs.py`: inputs, exact retained source references, manual
+identities, limited formula descriptors, annual/history bundles and separate
+`historical-input-preparation-v1` serialization. Reuse immutable Period/Artifact/
+Receipt without shared edits. Origin is independent of quality/scope/completeness/
+review; missing requirements survive acceptance. All fourteen field families
+appear, with explicit nulls rather than default numbers. Eight specialized CIKs
+are excluded. Short histories remain exceptions, not synthesized annuals.
+
+Validators check structural bindings, body digests, raw representation/sign/scale,
+required fields, formula operand graphs and declared scope/non-overlap boundaries;
+they do not parse new source facts, execute expressions or certify economic scope.
+Coverage counts are not confidence, readiness or sufficiency. No actual issuer
+values, registrations, resolver, store, source retrieval or valuation consumer is
+added; frozen schema 5 and existing pilot byte contracts remain unchanged.
+Future field-treatment changes require affected issuer-record updates. WP0 stops
+before a bounded four-pilot-period mapping design, not new financial research.
+
+### Existing reported-input implementation
 
 `analyst/cash_flow_inputs.py` provides immutable reported-input, occurrence,
 retrieval-receipt, unknown-input and bundle models, reusing existing immutable

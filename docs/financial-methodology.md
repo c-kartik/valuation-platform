@@ -2,6 +2,19 @@
 
 ## Current Phase 1 preparation boundary
 
+WP0 now adds the [analyst-reviewable historical-input contract](dcf-input-contract.md)
+and [decision record](wp0-historical-input-decision.md), without changing existing
+primitives. Annual income/cash inputs, fiscal-year-end bridge components and
+separately dated point shares carry independent origin/quality/scope/completeness/
+review. Five years and three-period readiness remain targets; proposed 90%/80%
+coverage targets are not claims. Required missing values cannot be resolved by
+acknowledgment. CF movements are not book ΔNWC; CFO residuals are unclassified
+reconciliation remainders, never approved FCFF adjustments. Partial component
+sums remain partial; operating-expense and non-overlap scope require evidence.
+No economic calculation, default tax/dilution input, implicit policy expansion
+or consumer certification is introduced. Timing gates and Phase 2 postponement
+remain. Structural model producibility does not establish financial sufficiency.
+
 Historical-normalization v1 is frozen with qualified scope; Phase 2 is still
 postponed. The [MSFT alternative reported cash-flow review](msft-alternative-historical-cash-flow-inputs.md)
 approves only preparation of separately scoped reported historical inputs.

@@ -1,5 +1,29 @@
 # Company data preparation register
 
+## WP0 analyst-reviewable historical-input contract
+
+The user-approved extension beyond facts/gaps is documented in the
+[historical-input contract](../dcf-input-contract.md) and
+[decision record](../wp0-historical-input-decision.md). Isolated immutable models
+and serialization now represent all required annual/bridge/share fields, origins,
+scope/quality/completeness/review, alternatives and unresolved requirements.
+They add no issuer values, reviewed bundles or financial sufficiency approval.
+All forty records, 189 identities, eleven history exceptions and four reviewed
+pilot periods retain their previous scope; no record is rewritten as a fresh review.
+
+Standing requirement: later field-treatment/mapping changes must update affected
+issuer records with original conflict, exact evidence, considered/chosen treatment,
+rationale, periods/policies, validation and limitations in the same milestone.
+Preserve superseded decisions and distinguish facts/derivations/proxies/overrides/
+unavailable data; origins are not confidence scores. Shared models alone require
+guidance updates, not forty issuer edits. Missing required values remain unresolved
+even if acknowledged; bundle production does not establish financial sufficiency.
+
+Next bounded step is a four-pilot-period retained field-treatment/mapping design,
+including annual versus bridge/share gaps and explicit evidence/equation tests.
+No automatic treatment transfer, new period approval or Phase 2 work. The prior
+restricted delivery-index proposal below is historical and superseded by WP0.
+
 ## Consolidated reported-path blocker review — proposed contract
 
 2026-10-12: [bounded review](../phase1-blocker-disposition-review.md) and
