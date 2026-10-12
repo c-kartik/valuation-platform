@@ -1,5 +1,33 @@
 # MSFT — company data preparation
 
+## Year-end cash/investment components — FY2025/FY2026
+
+Original conflict: one unavailable bridge-family slot obscured retained balance-
+sheet/note observations, but filling it must not manufacture unrestricted cash
+or a complete liquid portfolio. [Exact evidence and locators](../pilot-cash-investment-evidence.json)
+and [review/validation](../pilot-cash-investment-evidence.md) now bind the unchanged
+selected filings/annual periods to 2025-06-30 and 2026-06-30 instant observations.
+FY2025 cash/current investments **30,242m/64,323m USD**; FY2026 **20,935m/55,908m**.
+Long-term investments **15,405m/36,348m** retain mixed scope, not a marketable-only
+primitive. Rounded measurement-alternative equity **2,900m/12,400m** and equity-
+method **6,000m/12,000m** retain decimals −8 and possible parent overlap. Reported
+cash/current parents **94,565m/76,843m** and combined cash/restricted closing
+captions **30,242m/20,935m** are separate overlapping observations, never sums.
+
+Chosen resolution: seven reported observations and four explicit null cash
+requirements per period in mapping/preparation bundle version 3. No unrestricted/
+operating cash allocation, standalone restricted balance, marketable-only long-
+term partition or complete aggregate is supplied. Cash/current direct policy
+semantics are reused; strategic/mixed observations are book evidence only, not
+new frozen policies or valuation treatment. Independent retained statement/note
+checks preserve every occurrence, scale/precision and original-body receipts.
+Focused context/unit/conflict/overlap/serialization/preservation validation is
+reported in the linked results. All non-cash mappings, Revenue/EBIT, original
+bundles/sidecars, prior treatment decisions, NWC/D&A/timing blockers and frozen
+outputs remain unchanged. Financial sufficiency NOT_ASSESSED. Prior sections
+remain history. Next bounded field step: exact year-end debt/lease components,
+no totals, netting or valuation use.
+
 ## Direct Revenue/EBIT integration — FY2025/FY2026
 
 Conflict: the previous cash-flow-package mappings had no bound Revenue or EBIT

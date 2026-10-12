@@ -1,5 +1,10 @@
 # Four-pilot retained-evidence field mappings
 
+**Current version 3:** [year-end cash/investment components](pilot-cash-investment-evidence.md)
+are integrated with the adapter. Cash family completeness stays partial; every
+overlap, gate/conflict and missing restriction/allocation remains explicit. All
+other field bindings remain as version 2. Earlier results below remain historical.
+
 2026-10-12; starting HEAD `98b3af9fe16a2fc74c7d0d233678f91193533c9a`.
 Original milestone: mappings and executable checks only. The subsequent
 [direct-income delivery](pilot-direct-income-evidence.md) now advances this matrix
@@ -31,11 +36,11 @@ scope; none certifies timing or consumer sufficiency.
 | Unclassified CFO reconciliation residual | U | U | U | U |
 | CFO | M | M | M | M |
 | Reported tax context | M | M | M | M |
-| Cash/investment components | U | U | U | U |
+| Cash/investment components | M (partial) | M (partial) | M (partial) | M (partial) |
 | Debt/lease components | U | U | U | U |
 | Other equity-bridge claims/assets | U | U | U | U |
 | Separately dated point-in-time shares | U | U | U | U |
-| **M / L / U** | **8 / 1 / 5** | **8 / 1 / 5** | **7 / 1 / 6** | **8 / 1 / 5** |
+| **M / L / U** | **9 / 1 / 4** | **9 / 1 / 4** | **8 / 1 / 5** | **9 / 1 / 4** |
 
 Exact selected identities: MSFT CIK 789019, FY2025 accession
 `0000950170-25-100235`, 2024-07-01–2025-06-30; FY2026

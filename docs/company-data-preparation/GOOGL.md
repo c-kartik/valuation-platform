@@ -1,5 +1,36 @@
 # GOOGL — company data preparation
 
+## Year-end cash/investment components — FY2024 only
+
+Original conflict: the preparation bridge-family slot lacked bindings despite
+retained statement/note balances. [Exact evidence matrix](../pilot-cash-investment-evidence.json)
+and [scope/validation rationale](../pilot-cash-investment-evidence.md) now bind
+2024-12-31 cash **23,466m USD**, current marketable **72,191m**, long-term locked-up
+marketable equity **266m**, non-marketable parent **37,982m**, reported cash/current
+parent **95,657m**, rounded equity-method **2,000m**, and combined cash/restricted
+caption **23,466m**. Marketable/non-marketable, parent/child and restricted scopes
+are separate. Note 3 locates the 266m in other non-current assets under long-term
+lock-up restrictions; it is not unrestricted liquidity or a new generic policy.
+
+Two eligible measurement-alternative observations **35,500m (−8)** / **35,531m
+(−6)** remain beneath a null/conflicting component with both precision/source
+representations. Possible rounding does not prove exact equality or authorize
+an adjustment/selection. The **83,250m** issuer-extension combined note caption
+is separately gated support under another null; it is not interchangeable with
+the 95,657m parent. No aggregate, residual partition or cash-value equivalence.
+
+Chosen packaging: seven reported observations, two unresolved support/conflict
+slots and four null requirements in mapping/preparation bundle version 3.
+Unrestricted/operating allocation, standalone restricted cash, complete non-
+marketable partition and complete aggregate remain missing. Exact year-end
+contexts, all occurrences, primary tags, decimals and scope excerpts survive
+serialization. Explicit refreshed receipt and original metadata gap are preserved.
+Focused statement/date/unit/conflict/scope/overlap/serialization/preservation
+checks are recorded in results. All non-cash mappings, D&A/NWC/timing blockers,
+prior FY2024 pilot restrictions and frozen outputs remain unchanged. No Phase 2
+approval; financial sufficiency NOT_ASSESSED. Prior sections remain history.
+Next bounded field step: same-period year-end debt/lease components, no totals.
+
 ## Direct Revenue/EBIT integration — FY2024 only
 
 Original conflict was absent income-field bindings in the reviewed cash-flow

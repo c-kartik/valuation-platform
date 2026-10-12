@@ -2,7 +2,26 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained direct Revenue/EBIT mapping and adapter integration**.
+Latest completed milestone: **retained year-end cash/investment component integration**.
+[Evidence/results](pilot-cash-investment-evidence.md) /
+[reviewed matrix](pilot-cash-investment-evidence.json). Same four pilot periods:
+25 available reported observations, three gated/conflicting component slots with
+four support alternatives, and 16 explicit additional null requirements. Forty
+fact occurrences retained. Every cash/investment family stays partial; no
+aggregate, unrestricted-cash or financial-sufficiency certification. Mixed MSFT
+long-term, AAPL marketable, Alphabet lock-up/non-marketable scopes are distinct.
+Alphabet's 35,500m/35,531m representations remain unresolved; AAPL/Alphabet
+combined extensions remain support-only, not concept-policy approvals.
+Mapping and preparation annual/history versions advance to 3; schemas, original
+native bundles/sidecars, all non-cash mappings and frozen outputs remain unchanged.
+89 focused tests, four mapping/CFO checks, compileall, 408 local links and diff
+checks passed; results are recorded in the linked results document. No SEC,
+full suite or corpus run. Phase 2 remains prohibited. **Stop after this milestone.**
+Next smallest field step, only if authorized: retained year-end debt/lease
+component mappings for these same periods, preserving overlap and unknowns,
+without net debt, adjustments or valuation use.
+
+Previously completed milestone: **retained direct Revenue/EBIT mapping and adapter integration**.
 [Evidence, exact selections and limitations](pilot-direct-income-evidence.md) /
 [statement matrix](pilot-direct-income-evidence.json). All eight reported totals
 are available for the same four exact periods, using existing direct concepts,

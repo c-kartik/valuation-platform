@@ -1,5 +1,21 @@
 # Company data preparation register
 
+## Retained year-end cash/investment components — four pilot periods
+
+[Selections, scope and remaining requirements](../pilot-cash-investment-evidence.md)
+and [exact statement/note matrix](../pilot-cash-investment-evidence.json) add 25
+reported component observations under mapping/adapter version 3. Three gates/
+conflicts retain four support alternatives; 16 additional requirements remain
+null. No complete cash aggregate or unrestricted/excess-cash decision. Parent
+captions, mixed/strategic portfolios, marketable assets and restricted amounts
+are distinct and never summed. All non-cash mappings, original native packages,
+pilot acceptances and frozen outputs/classifications remain unchanged.
+Only MSFT FY2025/FY2026, AAPL FY2025, Alphabet FY2024 are reviewed here; no whole-
+history/universe sufficiency. Affected records explain original binding gaps,
+evidence, chosen packaging, exclusions and tests. Next bounded field milestone,
+only if authorized: same-period year-end debt/lease component mappings with
+overlap/nulls preserved, no net debt or valuation calculations.
+
 ## Retained direct Revenue/EBIT delivery — four pilot periods
 
 [Reviewed selections/results](../pilot-direct-income-evidence.md) and

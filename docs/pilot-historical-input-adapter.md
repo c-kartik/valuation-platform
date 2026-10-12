@@ -1,5 +1,13 @@
 # Isolated four-pilot historical-input adapter
 
+**Current additive delivery:** [cash/investment evidence/results](pilot-cash-investment-evidence.md)
+advance mapping and annual/history versions to 3, without changing schemas or
+native bundles. Individual reported component observations, parent overlaps,
+gated extension support, precision conflicts and explicit null requirements
+survive serialization. All non-cash field dispositions are unchanged; no complete
+aggregate, economic calculation or readiness. Earlier delivery sections below
+remain historical records. Current scalar/null counts are 93/40.
+
 **Subsequent additive delivery:** [direct Revenue/EBIT](pilot-direct-income-evidence.md)
 now uses mapping version 2 and annual/history bundle version 2, with unchanged
 model/serializer schemas. All eight reported totals are available; no other

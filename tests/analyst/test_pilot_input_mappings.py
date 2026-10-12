@@ -30,7 +30,7 @@ class PilotMappingTests(unittest.TestCase):
         self.assertEqual(sum(r['field_families'] for r in report.values()), 56)
         for key, r in report.items():
             self.assertEqual((r['mapped'], r['limited_support'], r['unavailable']),
-                             (7, 1, 6) if key.startswith('aapl') else (8, 1, 5))
+                             (8, 1, 5) if key.startswith('aapl') else (9, 1, 4))
         self.assertEqual(sum(r['mapped_source_inputs'] for r in report.values()), 69)
 
     def test_exact_period_registry_and_input_pointer(self):
@@ -47,6 +47,9 @@ class PilotMappingTests(unittest.TestCase):
         for row in self.doc['periods']:
             for f in row['fields'].values():
                 for bind in f['bindings']:
+                    if 'retained_cash' in bind:
+                        self.assertTrue(bind['retained_cash']['candidates'])
+                        continue
                     if 'retained_direct' in bind:
                         self.assertTrue(bind['retained_direct']['candidates'])
                         continue
@@ -135,7 +138,7 @@ class PilotMappingTests(unittest.TestCase):
 
     def test_null_requirements_cannot_be_acknowledged_away(self):
         for field in ('unclassified_cfo_reconciliation_residual',
-                      'cash_investment_components', 'debt_lease_components', 'other_equity_bridge_claims_assets',
+                      'debt_lease_components', 'other_equity_bridge_claims_assets',
                       'point_in_time_shares'):
             self.reject(lambda d, f=field: d['periods'][0]['fields'][f].__setitem__('null_reason', None))
             self.reject(lambda d, f=field: d['periods'][0]['fields'][f].__setitem__('unresolved_requirements', []))

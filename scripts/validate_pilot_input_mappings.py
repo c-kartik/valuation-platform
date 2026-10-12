@@ -19,6 +19,7 @@ from valuation_platform.analyst import cash_flow_inputs as msft
 from valuation_platform.analyst import aapl_cash_flow_inputs as aapl
 from valuation_platform.analyst import googl_cash_flow_inputs as googl
 from valuation_platform.analyst import pilot_direct_income as direct
+from valuation_platform.analyst import pilot_cash_investments as cash
 
 MAPPING = ROOT / "docs/pilot-historical-input-mappings.json"
 REGISTRIES = {
@@ -96,7 +97,7 @@ def validate(document=None, bundles=None):
     require(set(doc) == {"schema", "contract", "version", "period_count", "field_family_count", "scope", "periods"},
             "Exact mapping document shape required")
     require(doc["schema"] == "pilot-historical-input-mappings-v1" and doc["contract"] == h.SCHEMA
-            and type(doc["version"]) is int and doc["version"] == 2, "Mapping identity/version mismatch")
+            and type(doc["version"]) is int and doc["version"] == 3, "Mapping identity/version mismatch")
     require(doc["period_count"] == 4 and doc["field_family_count"] == len(h.Field)
             and len(doc["periods"]) == 4, "Four periods / fourteen families required")
     expected_ids = {"msft-reported-cash-flow-fy2025", "msft-reported-cash-flow-fy2026",
@@ -130,6 +131,7 @@ def validate(document=None, bundles=None):
         mapped_ids = []
         statuses = Counter()
         direct_occurrences = 0
+        cash_components = None
         for name, field in row["fields"].items():
             require(set(field) == {"status", "origin", "quality", "review", "scope", "completeness", "aggregation",
                     "bindings", "unresolved_requirements", "null_reason"}, "Exact field mapping shape required")
@@ -137,6 +139,12 @@ def validate(document=None, bundles=None):
             require(field["review"] == "reviewed" and field["unresolved_requirements"]
                     and all(type(s) is str and s.strip() for s in field["unresolved_requirements"]),
                     "Reviewed mapping with explicit unresolved requirements required")
+            if name == h.Field.CASH_INVESTMENTS.value:
+                cash_inspection = cash.inspect(b)
+                require(field == cash.mapping_entry(b, cash_inspection), "Exact cash component/scope/overlap/unknown bindings required")
+                cash_components = cash_inspection[1]
+                statuses["mapped"] += 1
+                continue
             if h.Field(name) in direct.POLICIES:
                 require((field["status"], field["origin"], field["quality"], field["scope"], field["completeness"], field["null_reason"]) ==
                         ("mapped", "reported", "supported", "consolidated_reported", "complete", None),
@@ -202,6 +210,9 @@ def validate(document=None, bundles=None):
                               "supplementary_inputs": len(row["supplementary_input_ids"]),
                               "confirming_occurrences": sum(len(b.input(k).occurrences) for k in mapped_ids),
                               "direct_source_inputs": 2, "direct_confirming_occurrences": direct_occurrences,
+                              "cash_available_components": sum(c.selected is not None for c in cash_components),
+                              "cash_unresolved_components": sum(c.selected is None for c in cash_components),
+                              "cash_occurrences": sum(len(i.occurrences) for c in cash_components for i in c.candidates),
                               "independent_reported_cfo_check": "PASS"}
     return report
 

@@ -54,6 +54,10 @@ class PilotAdapterTests(unittest.TestCase):
                 for field in h.Field:
                     entry = row['fields'][field.value]
                     values = tuple(v for v in annual.inputs if v.field is field)
+                    if field is h.Field.CASH_INVESTMENTS:
+                        self.assertTrue(all(v.as_of == annual.period.annual_end for v in values))
+                        self.assertTrue(all(v.completeness is not h.Completeness.COMPLETE for v in values))
+                        continue  # exact multi-component checks live in focused cash tests
                     observations = values[0].alternatives if entry['status'] == 'limited_support' else values
                     if not entry['bindings']:
                         self.assertEqual(len(values), 1)
@@ -93,10 +97,11 @@ class PilotAdapterTests(unittest.TestCase):
             for annual in history.annuals:
                 row = self.row(annual)
                 nulls = [v for v in annual.inputs if v.value is None]
-                self.assertEqual(len(nulls), 7 if row['issuer'] == 'AAPL' else 6)
+                self.assertEqual(len(nulls), 9 if row['issuer'] == 'MSFT' else 11)
                 for v in nulls:
                     self.assertTrue(v.null_reason)
-                    self.assertEqual(v.unresolved_requirements, tuple(row['fields'][v.field.value]['unresolved_requirements']))
+                    if v.field is not h.Field.CASH_INVESTMENTS:
+                        self.assertEqual(v.unresolved_requirements, tuple(row['fields'][v.field.value]['unresolved_requirements']))
                     self.assertIn(v.field, annual.unresolved_required_fields)
                 shares = next(v for v in annual.inputs if v.field is h.Field.SHARES)
                 self.assertIsNone(shares.as_of)
@@ -112,6 +117,10 @@ class PilotAdapterTests(unittest.TestCase):
                 observed = [v for v in annual.inputs if v.value is not None]
                 observed += list(next(v for v in annual.inputs if v.field is h.Field.DA).alternatives)
                 for value in observed:
+                    if value.field is h.Field.CASH_INVESTMENTS:
+                        self.assertTrue(value.sources)
+                        self.assertEqual(value.as_of, annual.period.annual_end)
+                        continue
                     original_id = value.input_id.split(':', 1)[1]
                     if value.field in p.direct.POLICIES:
                         reviewed = p.direct.reviewed(source, value.field)

@@ -17,6 +17,16 @@ No joint timing-readiness model or valuation calculator is implemented.
 
 ### WP0 historical-input preparation foundation
 
+The [retained cash/investment component layer](pilot-cash-investment-evidence.md)
+adds only four reviewed exact-instant inventories under mapping/preparation bundle
+version 3. Existing native context/unit/annual-DEI validators and original receipt
+proofs are reused; model/serializer schemas are unchanged. Separate immutable
+observations retain all candidates, raw precision, scope-note/inline evidence and
+parent/subcomponent overlap flags. Gated extensions and differing representations
+remain null with evidence alternatives; missing partitions/restrictions/aggregate
+are separate null requirements. No sum, policy expansion or financial-sufficiency
+decision. All non-cash mappings, frozen outputs and original native proofs remain.
+
 The subsequent [four-pilot direct-income layer](pilot-direct-income-evidence.md)
 reuses filing-XBRL structural helpers and native annual-DEI checks against the
 retained, verified original bodies. It never constructs synthetic filing or

@@ -19,11 +19,12 @@ from valuation_platform.analyst import aapl_cash_flow_inputs as aapl
 from valuation_platform.analyst import googl_cash_flow_inputs as googl
 from valuation_platform.analyst.nwc import Artifact
 from valuation_platform.analyst import pilot_direct_income as direct
+from valuation_platform.analyst import pilot_cash_investments as cash
 
 
 ROOT = Path(__file__).resolve().parents[3]
 MAPPING_PATH = ROOT / "docs/pilot-historical-input-mappings.json"
-MAPPING_SHA256 = "364bd0d2de9972e0119946b8ac83c465b6adbad07efcfeefa7fe54d406a0143c"
+MAPPING_SHA256 = "9ec38a0e22a235cc82aa76d1eaca8d64f328247881b46a09a650a73bd4a3d9ff"
 SCHEMA = "pilot-historical-input-adapter-v1"
 _SOURCES = {
     "msft-reported-cash-flow-fy2025": ("MSFT", msft, msft.load_msft_bundle),
@@ -167,6 +168,9 @@ def _annual(row, source):
     inputs = []
     for field in h.Field:
         entry = row["fields"][field.value]
+        if field is h.Field.CASH_INVESTMENTS:
+            inputs.extend(cash.values(dict(row, mapping_sha256=MAPPING_SHA256), source, entry))
+            continue
         if field in direct.POLICIES:
             inspection = direct.reviewed(source, field)
             if inspection.selected is not None and entry["bindings"] != [direct.binding(source, field, inspection)]:
@@ -186,7 +190,7 @@ def _annual(row, source):
         f"evidence_review:{row['evidence_review']}; source_unknowns:{row['registry_path']}#{row['source_unknowns_pointer']}",
         "supplementary_input_ids:" + json.dumps(row["supplementary_input_ids"], separators=(",", ":")),
         "Support alternatives retain source observations only; required D&A remains null. No completeness or readiness approval.")
-    return h.AnnualBundle(f"pilot-preparation:{source.bundle_id}", 2, source.period,
+    return h.AnnualBundle(f"pilot-preparation:{source.bundle_id}", 3, source.period,
                           tuple(inputs), source.limitations + unknowns + provenance)
 
 
@@ -203,7 +207,7 @@ def _history(issuer, sources):
     if set(sources) != {r["bundle_id"] for r in rows}:
         raise h.InputError("Exact pilot history scope required; no comparative or extra periods")
     annuals = tuple(_annual(row, sources[row["bundle_id"]]) for row in rows)
-    return h.HistoryBundle(f"pilot-preparation:{issuer}", 2, annuals[0].period.cik, annuals,
+    return h.HistoryBundle(f"pilot-preparation:{issuer}", 3, annuals[0].period.cik, annuals,
         (f"Restricted independently reviewed package scope: {len(annuals)} of five target annual periods. "
          "This is not a claim of short issuer history or approval of other selected periods.",))
 

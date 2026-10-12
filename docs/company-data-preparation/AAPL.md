@@ -1,5 +1,29 @@
 # AAPL — company data preparation
 
+## Year-end cash/investment components — FY2025 only
+
+Original conflict: reviewed cash-flow packaging left cash/investments unbound,
+not absent from the filing. [Exact evidence/instant locators](../pilot-cash-investment-evidence.json)
+and [decisions/tests](../pilot-cash-investment-evidence.md) support FY2025 closing
+cash **35,934m USD**, current marketable **18,763m**, non-current marketable
+**77,723m**, and combined cash/restricted closing caption **35,934m**. Main
+captions retain raw USD scale 1, displayed scale 6 and decimals −6. The note's
+issuer-extension combined caption **132,420m** is retained only as a support
+alternative beneath a null gate, overlapping cash/current/non-current captions,
+not a newly approved primitive or extra asset. No aggregate is calculated.
+
+Chosen packaging: four reported components, one gated support slot and four null
+requirements at exact 2025-09-27 in mapping/preparation bundle version 3. Unknown
+unrestricted/operating allocation, standalone restricted cash, unbound strategic
+components and complete aggregate remain explicit; no absence-to-zero inference.
+Every confirming occurrence, statement/note tag, precision and original receipt
+is retained. Focused independent value/date/unit/scope/overlap/serialization and
+preservation checks are recorded in the results. All non-cash mappings, prior
+FY2025 acceptance limits, original bundle/scenario, NWC/timing blockers and frozen
+outputs remain unchanged; comparatives are not new periods. Financial sufficiency
+NOT_ASSESSED. Prior decisions below remain history. Next bounded field step:
+same-period year-end debt/lease components, no totals or valuation approval.
+
 ## Direct Revenue/EBIT integration — FY2025 only
 
 Original conflict was absent income-field bindings in the reviewed cash-flow
