@@ -27,8 +27,8 @@ class SelectedFilingManifestTests(unittest.TestCase):
         self.assertEqual(len({(r['cik'], r['selected_annual_end']) for r in rows}), 189)
         self.assertEqual(self.result['issuer_count'], 40)
         self.assertEqual(len(self.result['history_exceptions']), 11)
-        self.assertEqual(self.result['status_counts'], {'VERIFIED_RETAINED_IDENTITY': 162,
-                                                      'INCOMPLETE_BINDING': 1, 'MISSING_BINDING': 26})
+        self.assertEqual(self.result['status_counts'], {'VERIFIED_RETAINED_IDENTITY': 163,
+                                                      'MISSING_BINDING': 26})
 
     def test_history_deficits_do_not_invent_periods(self):
         exceptions = self.result['history_exceptions']
@@ -69,10 +69,21 @@ class SelectedFilingManifestTests(unittest.TestCase):
         self.assertIsNone(old[0]['retrieved_at_utc']); self.assertIsNone(old[0]['http_status'])
         self.assertEqual(r['measure_fact_provenance'], 'NOT_ESTABLISHED')
 
-    def test_unresolved_annual_evidence_not_promoted(self):
+    def test_reviewed_dei_identity_does_not_change_production_resolver(self):
         r = next(x for x in self.result['rows'] if x['ticker'] == 'AVGO' and x['selected_annual_end'] == '2021-10-31')
-        self.assertEqual(r['status'], 'INCOMPLETE_BINDING')
-        self.assertIsNone(r['identity'])
+        self.assertEqual(r['status'], 'VERIFIED_RETAINED_IDENTITY')
+        import json
+        row = json.loads((ROOT / 'docs/depreciation-amortization-inventory.json').read_bytes())['rows'][5]
+        self.assertEqual(row['annual_resolver_status'], 'annual_period_not_found')
+        self.assertTrue(manifest.reviewed_avgo_annual_identity(row))
+        for field, value in [('filing', {**row['filing'], 'form': '10-K/A'}),
+                             ('annual_dei_evidence', row['annual_dei_evidence'][:-1]),
+                             ('annual_context_ids', ['missing'])]:
+            bad = copy.deepcopy(row); bad[field] = value
+            self.assertFalse(manifest.reviewed_avgo_annual_identity(bad))
+        bad = copy.deepcopy(row)
+        bad['contexts'][row['annual_context_ids'][0]]['dimensions'] = ['segment']
+        self.assertFalse(manifest.reviewed_avgo_annual_identity(bad))
 
     def test_no_financial_sufficiency_or_policy_changes(self):
         self.assertEqual(self.result['financial_input_sufficiency'], 'NOT_ASSESSED')

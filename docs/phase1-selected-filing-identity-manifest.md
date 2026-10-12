@@ -10,6 +10,12 @@ JSON (formatting may differ from the compact retained rows).
 
 ## Results and verification depth
 
+Superseding retained-source [availability audit](phase1-selected-filing-availability.md)
+repairs AVGO's identity from the already reviewed four DEI facts/entity/context,
+without changing its production resolver. Current JSON is 163 verified / 26 missing /
+0 incomplete / 0 conflicting; the original pass counts below are retained history.
+All other identities and eleven history exceptions are unchanged.
+
 | Selected-period identity status | Count | Meaning |
 | --- | ---: | --- |
 | VERIFIED_RETAINED_IDENTITY | 162 | One consistent exact accession/form/annual identity supported by retained reviewed filing/DEI evidence |
@@ -74,7 +80,7 @@ All affected issuer records link their count/limits. The prior binding ledger is
 an immutable historical pass: its record hashes describe the preceding revision,
 not these updated records. Live validation checks current records independently.
 
-**Next bounded Phase 1 milestone: one retained-source availability audit for the
+**Original next milestone (now completed): one retained-source availability audit for the
 27 unresolved identity bindings**, locating existing authoritative selection/
 metadata and AVGO annual-resolution diagnostics only. Stop at a source-location/
 missing-evidence ledger; no SEC retrieval, issuer research, guessing, policy

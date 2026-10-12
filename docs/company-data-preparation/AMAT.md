@@ -1,5 +1,19 @@
 # AMAT — company data preparation
 
+## Retained-source availability disposition
+
+[27-entry audit](../phase1-selected-filing-availability.md) and
+[exact ledger](../phase1-selected-filing-availability.json), 2026-10-12:
+2 selected identities remain missing: exact accession/form/annual start
+are not supplied by retained sources. Aggregate/history references exist and are
+not broken; no complete selected identity artifact located. No absent-disclosure
+claim, inferred metadata or transferred comparative identity.
+All original financial blockers, support/history states and facts remain unchanged.
+Identity verification is not measure-level provenance or financial sufficiency.
+Retained-source search is exhausted; stop here. Reopen only on contradictory
+identity proof (repaired entry) or newly supplied/authorized exact selected-filing
+metadata/DEI evidence (missing entries). No financial estimates or policy changes.
+
 ## Retained selected-filing identity manifest
 
 2026-10-12 [identity pass](../phase1-selected-filing-identity-manifest.md): 5 selected

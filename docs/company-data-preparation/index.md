@@ -3,14 +3,17 @@
 ## Retained filing identities
 
 [Identity manifest](../phase1-selected-filing-identity-manifest.md) reconciles all
-40 issuers: 189 selected rows (162 verified retained, 26 missing, 1 incomplete,
+40 issuers: 189 selected rows (163 verified retained, 26 missing, 0 incomplete,
 0 conflicting) and 11 five-year target exceptions. Each issuer record links its
 counts and candidates. Identity verification is not complete fact provenance or
 financial sufficiency; aggregate/evidence-accounted statuses and pilot boundaries
 remain distinct. Prior binding-report record hashes describe its prior revision;
 new record links do not retroactively rewrite that historical artifact.
-Next is one retained-source availability audit of the 27 unresolved bindings,
-not another financial research cycle or automatic history reconstruction.
+[Availability audit](../phase1-selected-filing-availability.md) closes the 27-row
+pass: AVGO's reviewed DEI/context proves identity despite the preserved production
+resolver limitation; 26 retained identity artifacts remain unavailable, no broken
+references or conflicts. Stop searching. Next is explicit disposition of these
+26 source exceptions, not another research cycle or automatic reconstruction.
 
 ## Independent accounting and financial-sufficiency statuses
 

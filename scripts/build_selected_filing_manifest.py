@@ -20,6 +20,32 @@ REGISTRIES = ('docs/company-data-preparation/msft-reported-cash-flow-bundles.jso
               'docs/company-data-preparation/googl-reported-cash-flow-bundle.json')
 
 
+def reviewed_avgo_annual_identity(row):
+    """Retained research proof only; no production annual-resolver change."""
+    if (row.get('cik'), row.get('filing', {}).get('accession_number'),
+            row.get('annual_start'), row.get('annual_end')) != (
+            1730168, '0001730168-21-000153', '2020-11-02', '2021-10-31'):
+        return False
+    filing = row['filing']
+    if filing.get('form') != '10-K' or filing.get('report_date') != row['annual_end']:
+        return False
+    required = {'DocumentType': '10-K', 'DocumentFiscalPeriodFocus': 'FY',
+                'DocumentFiscalYearFocus': '2021', 'DocumentPeriodEndDate': row['annual_end']}
+    for cid in row.get('annual_context_ids', []):
+        c = row.get('contexts', {}).get(cid, {})
+        if (c.get('entity_identifier_scheme') != 'http://www.sec.gov/CIK'
+                or c.get('entity_identifier') != '0001730168' or c.get('dimensions') != []
+                or c.get('start') != row['annual_start'] or c.get('end') != row['annual_end']):
+            continue
+        facts = [f for f in row.get('annual_dei_evidence', []) if f.get('concept') in required]
+        if len(facts) == 4 and all(
+                f.get('namespace') == 'http://xbrl.sec.gov/dei/2020-01-31'
+                and f.get('context_id') == cid and f.get('raw_value') == required[f['concept']]
+                for f in facts) and {f['concept'] for f in facts} == set(required):
+            return True
+    return False
+
+
 def candidate(source, index, cik, accession, form, start, end, verified, artifacts=()):
     return {'source': source, 'locator': index, 'cik': cik, 'accession': accession,
             'form': form, 'annual_start': start, 'annual_end': end,
@@ -78,6 +104,8 @@ def collect(root, ticker_ciks):
                             and int(c['entity_identifier']) == row['cik']]
                 sufficient = bool(matching) and any(e['concept'] == 'DocumentFiscalPeriodFocus'
                                                    and e['raw_value'] == 'FY' for e in row['annual_dei_evidence'])
+            if source == 'docs/depreciation-amortization-inventory.json' and reviewed_avgo_annual_identity(row):
+                sufficient = True
             artifacts = []
             if source.endswith('analyst-operating-nwc-inventory.json'):
                 entries = [a for a in retained if a['source_url'] == row['instance_url']]

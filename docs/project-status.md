@@ -2,7 +2,22 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained selected-filing identity manifest**.
+Latest completed milestone: **retained identity-source availability audit**.
+[Audit and closure](phase1-selected-filing-availability.md) and
+[27-entry ledger](phase1-selected-filing-availability.json): one AVGO identity
+repaired using previously reviewed legacy-namespace DEI/context evidence;
+26 missing bindings remain unavailable in retained sources, 0 broken references,
+0 conflicting identities. Manifest now 163 verified / 26 missing / 0 incomplete /
+0 conflicting, 40 issuers / 189 periods / 11 history exceptions unchanged.
+No raw-body/receipt inference, production resolver change or fact-provenance
+certification. Financial sufficiency remains NOT_ASSESSED; frozen-v1 and pilots
+unchanged. Focused tests, reproducibility, source hashes/counts, links, compileall
+and diff check pass; no SEC/full-suite/corpus. Phase 2 remains postponed.
+Next closure task: disposition the 26 unavailable-source exceptions explicitly,
+either retain identity limitations or separately authorize one fixed-scope metadata
+acquisition. Retained-source search is exhausted; no new issuer research cycle.
+
+Previously completed milestone: **retained selected-filing identity manifest**.
 [Results](phase1-selected-filing-identity-manifest.md) and
 [JSON manifest](phase1-selected-filing-identity-manifest.json) reconcile 40 issuers,
 189 selected periods and 11 history exceptions: 162 verified retained identities,

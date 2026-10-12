@@ -1,5 +1,20 @@
 # AVGO — company data preparation
 
+## Retained-source availability disposition
+
+[27-entry audit](../phase1-selected-filing-availability.md) and
+[exact ledger](../phase1-selected-filing-availability.json), 2026-10-12:
+One identity repaired: 2021-10-31, accession 0001730168-21-000153. Retained
+D&A row/5 proves exact CIK/form/duration and four same-context DEI facts under
+the reviewed legacy namespace. Original resolver remains annual_period_not_found;
+no production or raw-response re-verification. Prior incomplete conclusion below
+is superseded only for filing identity.
+All original financial blockers, support/history states and facts remain unchanged.
+Identity verification is not measure-level provenance or financial sufficiency.
+Retained-source search is exhausted; stop here. Reopen only on contradictory
+identity proof (repaired entry) or newly supplied/authorized exact selected-filing
+metadata/DEI evidence (missing entries). No financial estimates or policy changes.
+
 ## Retained selected-filing identity manifest
 
 2026-10-12 [identity pass](../phase1-selected-filing-identity-manifest.md): 5 selected
