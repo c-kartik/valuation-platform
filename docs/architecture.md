@@ -17,6 +17,19 @@ No joint timing-readiness model or valuation calculator is implemented.
 
 ### WP0 historical-input preparation foundation
 
+The subsequent [four-pilot direct-income layer](pilot-direct-income-evidence.md)
+reuses filing-XBRL structural helpers and native annual-DEI checks against the
+retained, verified original bodies. It never constructs synthetic filing or
+retrieval metadata. Eight Revenue/OperatingIncomeLoss observations are matched
+to exact reviewed inline face-statement locators using unchanged direct policies.
+Every eligible candidate/occurrence survives; conflicting eligible values remain
+unresolved, not discarded by precedence. No generic resolver/policy is changed.
+The existing isolated adapter advances its preparation annual/history versions
+to 2 and mapping to version 2, without changing model/serializer schemas or native
+bundle identities/byte proofs. Original proofs contain all needed source bodies;
+direct references/alternatives and the primary locator survive separate metadata
+serialization. All non-income dispositions remain unchanged. No valuation use.
+
 The additive [contract](dcf-input-contract.md) and
 [decision](wp0-historical-input-decision.md) implement immutable metadata-only
 `analyst/historical_inputs.py`: inputs, exact retained source references, manual

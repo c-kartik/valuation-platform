@@ -1,5 +1,21 @@
 # Company data preparation register
 
+## Retained direct Revenue/EBIT delivery — four pilot periods
+
+[Reviewed selections/results](../pilot-direct-income-evidence.md) and
+[exact statement evidence](../pilot-direct-income-evidence.json) now populate eight
+reported totals through mapping/adapter version 2. All 25 confirming direct
+occurrences and primary-statement locators survive serialization. Original absence
+was a reviewed-package binding gap, not a finding of absent filing disclosure.
+Existing approved direct semantics only; no new fallback or derivation. All
+non-income mappings, original bundles/sidecars, frozen outputs and blockers remain.
+MSFT/AAPL/Alphabet records explain exact selections and limits. Completeness is
+only reported-total scope, not whole-issuer or timing/consumer sufficiency.
+Preparation scope remains four periods, not forty prepared financial histories.
+Next smallest milestone, only if authorized: retained fiscal-year-end cash/
+investment component mapping for the same four periods; no totals or implied
+bridge completeness, and explicit missing evidence after bounded inspection.
+
 ## Isolated four-period preparation adapter delivered
 
 [Delivery](../pilot-historical-input-adapter.md) now implements the unchanged

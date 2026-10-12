@@ -1,5 +1,13 @@
 # Isolated four-pilot historical-input adapter
 
+**Subsequent additive delivery:** [direct Revenue/EBIT](pilot-direct-income-evidence.md)
+now uses mapping version 2 and annual/history bundle version 2, with unchanged
+model/serializer schemas. All eight reported totals are available; no other
+field disposition or original source package changes. The version-1 adapter
+results below remain the earlier delivery record, not current income availability.
+Current scalar/null counts are 68/25, with nine D&A support observations; current
+family dispositions are 8/1/5, 8/1/5, 7/1/6, 8/1/5. No readiness or new treatment.
+
 2026-10-13; starting HEAD `31aa2ff615467146d4f1463450b0d3accd07d848`.
 Phase 1 only. [Implementation](../src/valuation_platform/analyst/pilot_historical_inputs.py)
 consumes the unchanged [committed mappings](pilot-historical-input-mappings.md)

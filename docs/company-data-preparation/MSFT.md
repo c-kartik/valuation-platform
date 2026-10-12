@@ -1,5 +1,33 @@
 # MSFT — company data preparation
 
+## Direct Revenue/EBIT integration — FY2025/FY2026
+
+Conflict: the previous cash-flow-package mappings had no bound Revenue or EBIT
+observations, not evidence that the income statements lacked them. One bounded
+retained-instance/primary-statement inspection now proves the direct totals:
+FY2025 Revenue **281,724m USD**, operating income **128,528m USD**;
+FY2026 **331,839m / 155,237m USD**. [Exact selected accessions, annual dates,
+namespaces, contexts, units, receipts and statement IDs](../pilot-direct-income-evidence.json)
+and [selection/validation rationale](../pilot-direct-income-evidence.md) bind them.
+Four Revenue and two operating-income nondimensional occurrences per year agree
+with “Total revenue” / “Operating income” on the consolidated income statements.
+Existing approved direct concepts only; no expense subtraction, segment sum,
+alternate issuer concept or numerical-residual proof. USD raw dollars, scale 1,
+positive sign, decimals −6; inline display scale 6. All occurrences retained.
+
+Chosen resolution: reported consolidated totals in mapping version 2 and isolated
+adapter annual/history version 2. All other dispositions remain unchanged;
+8/1/5 families, 18/19 reported observations and six null required slots per year.
+New focused statement/context/unit/precision/conflict and serialization tests,
+original-artifact preservation and links/diff validate this treatment; final
+results are recorded in the linked evidence/results document. No SEC/corpus run.
+Earlier packaging decisions below are retained as version-1 history.
+Original source packages, $19.8bn movement evidence, NWC blockers, support-only D&A,
+lease/tax/investment/timing limitations and accepted pilot scope are unchanged.
+These two annual totals do not certify financial sufficiency or other years.
+Next bounded field step: same-period retained year-end cash/investment components,
+with no totals or unsupported bridge assumptions.
+
 ## Isolated preparation adapter — two reviewed periods only
 
 [Delivered adapter](../pilot-historical-input-adapter.md) now packages the unchanged

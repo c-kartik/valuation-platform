@@ -1,5 +1,30 @@
 # GOOGL — company data preparation
 
+## Direct Revenue/EBIT integration — FY2024 only
+
+Original conflict was absent income-field bindings in the reviewed cash-flow
+package, not a finding of missing statement disclosure. One bounded inspection
+of the retained FY2024 filing supports **350,018m USD revenues** and **112,390m USD
+operating income**. [Exact accession/annual dates, namespaces, contexts, unit IDs,
+receipts and inline IDs](../pilot-direct-income-evidence.json) and
+[selection/results](../pilot-direct-income-evidence.md) retain exact provenance.
+Five Revenue and two EBIT eligible nondimensional occurrences agree with the
+consolidated income statement. Only existing approved direct concepts; no issuer
+extension, segment sum or operating expense bridge. Raw USD scale 1, positive
+sign, decimals −6 and inline display scale 6 remain distinct representations.
+
+Chosen resolution: mapping/isolated preparation bundle version 2, 8/1/5 families,
+17 reported observations and six null required slots. Every occurrence and
+primary locator survives serialization; the explicit refreshed instance receipt
+and original metadata gap remain distinct. Prior decisions below are preserved;
+original bundles/scenarios, 22,800m rounded SBC expense versus 22,785m CFO add-back,
+all non-income mappings, D&A/NWC blockers and lease/tax/investment/timing limits
+remain unchanged. Focused statement/context/unit/conflict/precision/serialization
+and preservation checks plus compileall/links/diff are recorded in the results.
+No SEC/corpus run, treatment transfer, new period or financial sufficiency claim.
+Next bounded field step: retained FY2024 year-end cash/investment components,
+with no totals or inferred completeness.
+
 ## Isolated preparation adapter — FY2024 only
 
 [Delivered adapter](../pilot-historical-input-adapter.md) produces one restricted

@@ -2,7 +2,28 @@
 
 ## Current Milestone
 
-Latest completed milestone: **isolated four-pilot historical-input adapter**.
+Latest completed milestone: **retained direct Revenue/EBIT mapping and adapter integration**.
+[Evidence, exact selections and limitations](pilot-direct-income-evidence.md) /
+[statement matrix](pilot-direct-income-evidence.json). All eight reported totals
+are available for the same four exact periods, using existing direct concepts,
+25 confirming occurrences and separately verified retained face-statement tags.
+No competing differing eligible values; conflicts would remain unresolved with
+all candidates retained. No new fallback, derivation, receipt or period approval.
+Mapping version 2 and isolated preparation annual/history bundle version 2 keep
+original native bundles/sidecars and all non-income mappings unchanged.
+Family counts MSFT 2025/2026 8/1/5 each, AAPL 7/1/6, Alphabet 8/1/5; 68 top-level
+reported observations / 25 null required slots / nine D&A support observations.
+Reported total completeness is not economic/timing/consumer readiness. Original
+D&A/NWC/bridge/share/tax/lease limitations persist; financial sufficiency unknown.
+Frozen schema 5, policies/outputs and 1905/1483/11/27/42 baseline remain unchanged.
+75 focused tests, four mapping/CFO checks, compileall, 394 local links and diff
+pass; results are recorded in the evidence/results document. No SEC requests,
+full suite or corpus rerun. Phase 2 prohibited. **Stop after this milestone.**
+Next smallest authorized step would be retained fiscal-year-end cash/investment
+component mappings for these same periods, with restrictions/unknowns explicit,
+no totals or inference from cash-flow disclosures.
+
+Previously completed milestone: **isolated four-pilot historical-input adapter**.
 [Delivery/limitations](pilot-historical-input-adapter.md). Existing immutable
 AnnualBundle/HistoryBundle models now package only MSFT FY2025/FY2026, AAPL FY2025,
 Alphabet FY2024 from unchanged pinned mappings and source-verifying bundles.

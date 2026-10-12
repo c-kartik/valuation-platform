@@ -1,5 +1,28 @@
 # AAPL — company data preparation
 
+## Direct Revenue/EBIT integration — FY2025 only
+
+Original conflict was absent income-field bindings in the reviewed cash-flow
+package, not absent filing disclosure. The retained exact FY2025 instance and
+consolidated income statement support **416,161m USD total net sales** and
+**133,050m USD operating income**. [Exact accession/annual dates, namespaces,
+contexts, units, receipts and inline IDs](../pilot-direct-income-evidence.json)
+and [review/rationale/tests](../pilot-direct-income-evidence.md) provide provenance.
+Revenue has four confirming occurrences; EBIT two. Segment/dimensioned facts and
+comparatives remain excluded without being discarded from original bodies.
+Approved direct Revenue/OperatingIncomeLoss semantics only; no component bridge.
+Raw USD scale 1, positive sign, decimals −6 versus face display scale 6.
+
+Chosen resolution: mapping/isolated preparation bundle version 2, 7/1/6 families,
+14 reported observations and seven null required slots. Every occurrence plus
+the exact primary-statement locator survives serialization. Non-income mappings,
+original bundle, partial scenario, NWC blockers and rounded lease/tax/interest/
+investment/timing limits remain unchanged; prior decisions below are preserved.
+Focused independent statement/adversarial/serialization/preservation checks,
+compileall and links/diff are recorded in the linked results. No SEC/corpus run,
+new period, complete D&A or financial sufficiency approval. Next bounded field
+step is retained FY2025 year-end cash/investment component mapping, no totals.
+
 ## Isolated preparation adapter — FY2025 only
 
 [Delivered adapter](../pilot-historical-input-adapter.md) packages the existing

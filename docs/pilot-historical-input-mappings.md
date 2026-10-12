@@ -1,7 +1,10 @@
 # Four-pilot retained-evidence field mappings
 
 2026-10-12; starting HEAD `98b3af9fe16a2fc74c7d0d233678f91193533c9a`.
-**Mappings and executable checks only. No adapter or new financial approval.**
+Original milestone: mappings and executable checks only. The subsequent
+[direct-income delivery](pilot-direct-income-evidence.md) now advances this matrix
+to version 2 with Revenue/EBIT bindings and adapter integration. All other field
+dispositions/source-package bindings remain unchanged; no new financial treatment.
 [Machine-checkable matrix](pilot-historical-input-mappings.json) accounts for
 four existing periods × fourteen [WP0 field families](dcf-input-contract.md).
 Mapping statuses are not frozen metric availability states or confidence scores.
@@ -12,13 +15,14 @@ No unavailable row asserts that a disclosure is absent from the entire filing.
 M = mapped reported inputs for restricted preparation; L = related observations
 only, insufficient for complete primitive/timing coverage; U = no adequate
 binding/equation in these reviewed packages. M does not mean complete financial
-coverage: every family retains unresolved requirements. CFO alone is complete
-within the explicitly **reported consolidated subtotal** scope.
+coverage: every family retains unresolved requirements. CFO, Revenue and EBIT
+are complete only within their explicitly **reported consolidated subtotal/total**
+scope; none certifies timing or consumer sufficiency.
 
 | Contract field | MSFT 2025 | MSFT 2026 | AAPL 2025 | Alphabet 2024 |
 | --- | --- | --- | --- | --- |
-| Revenue | U | U | U | U |
-| EBIT | U | U | U | U |
+| Revenue | M | M | M | M |
+| EBIT | M | M | M | M |
 | D&A | L | L | L | L |
 | Cash Capex | M | M | M | M |
 | Reported CF working-capital movements | M | M | M | M |
@@ -31,7 +35,7 @@ within the explicitly **reported consolidated subtotal** scope.
 | Debt/lease components | U | U | U | U |
 | Other equity-bridge claims/assets | U | U | U | U |
 | Separately dated point-in-time shares | U | U | U | U |
-| **M / L / U** | **6 / 1 / 7** | **6 / 1 / 7** | **5 / 1 / 8** | **6 / 1 / 7** |
+| **M / L / U** | **8 / 1 / 5** | **8 / 1 / 5** | **7 / 1 / 6** | **8 / 1 / 5** |
 
 Exact selected identities: MSFT CIK 789019, FY2025 accession
 `0000950170-25-100235`, 2024-07-01–2025-06-30; FY2026
@@ -41,6 +45,15 @@ Exact selected identities: MSFT CIK 789019, FY2025 accession
 comparative columns are not additional approvals or substituted source periods.
 
 ## Exact evidence references and reproducible depth
+
+Version 2 adds eight `retained_direct` bindings to the
+[reviewed face-statement matrix](pilot-direct-income-evidence.json), not new
+inputs in the immutable cash-flow registries. They retain every eligible direct
+candidate/occurrence and both instance and primary-statement receipts. Existing
+69 cash-flow-package bindings/76 occurrences remain; eight bindings/25 confirming
+direct occurrences are additional. The results below describing original mapping
+validation remain a historical record; current selections/counts and validation
+are in the [direct-income results](pilot-direct-income-evidence.md).
 
 Matrix `registry_path` / SHA-256 / `registry_bundle_pointer` pin the existing
 [MSFT registry](company-data-preparation/msft-reported-cash-flow-bundles.json),

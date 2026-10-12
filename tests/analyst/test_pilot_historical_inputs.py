@@ -93,7 +93,7 @@ class PilotAdapterTests(unittest.TestCase):
             for annual in history.annuals:
                 row = self.row(annual)
                 nulls = [v for v in annual.inputs if v.value is None]
-                self.assertEqual(len(nulls), 9 if row['issuer'] == 'AAPL' else 8)
+                self.assertEqual(len(nulls), 7 if row['issuer'] == 'AAPL' else 6)
                 for v in nulls:
                     self.assertTrue(v.null_reason)
                     self.assertEqual(v.unresolved_requirements, tuple(row['fields'][v.field.value]['unresolved_requirements']))
@@ -113,7 +113,11 @@ class PilotAdapterTests(unittest.TestCase):
                 observed += list(next(v for v in annual.inputs if v.field is h.Field.DA).alternatives)
                 for value in observed:
                     original_id = value.input_id.split(':', 1)[1]
-                    item = source.input(original_id)
+                    if value.field in p.direct.POLICIES:
+                        reviewed = p.direct.reviewed(source, value.field)
+                        item = reviewed.candidates[reviewed.selected]
+                    else:
+                        item = source.input(original_id)
                     self.assertEqual(value.value, item.displayed_value_usd)
                     self.assertEqual(value.scope, item.location_and_scope)
                     refs = [s for s in value.sources if s.occurrence_ordinal is not None]

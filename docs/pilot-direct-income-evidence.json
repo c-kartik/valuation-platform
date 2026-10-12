@@ -1,0 +1,247 @@
+{
+  "schema": "four-pilot-direct-income-evidence-v1",
+  "version": 1,
+  "scope": "Eight reviewed direct observations only; not a generic registry or new period approval",
+  "entries": [
+    {
+      "bundle_id": "msft-reported-cash-flow-fy2025",
+      "field": "revenue",
+      "period": {
+        "cik": 789019,
+        "accession": "0000950170-25-100235",
+        "annual_start": "2024-07-01",
+        "annual_end": "2025-06-30",
+        "form": "10-K"
+      },
+      "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+      "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630_htm.xml",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "statement_id": "F_54f7ed46-65f2-456a-a77a-3c4b7593c6fb",
+      "statement_caption": "Total revenue",
+      "statement_scope": "Consolidated face income statement, exact annual total; not segment or adjusted income",
+      "statement_attributes": {
+        "name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "contextref": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+        "unitref": "U_USD",
+        "scale": "6",
+        "decimals": "-6",
+        "format": "ixt:num-dot-decimal"
+      },
+      "displayed_value": "281,724",
+      "receipt_source": "Original immutable reported-input bundle artifacts; Alphabet instance explicitly refreshed, original metadata gap preserved",
+      "approved_semantics": "REVENUE_POLICY"
+    },
+    {
+      "bundle_id": "msft-reported-cash-flow-fy2025",
+      "field": "ebit",
+      "period": {
+        "cik": 789019,
+        "accession": "0000950170-25-100235",
+        "annual_start": "2024-07-01",
+        "annual_end": "2025-06-30",
+        "form": "10-K"
+      },
+      "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+      "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630_htm.xml",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "statement_id": "F_73173a29-1d08-4327-aaa1-9436332a6097",
+      "statement_caption": "Operating income",
+      "statement_scope": "Consolidated face income statement, exact annual total; not segment or adjusted income",
+      "statement_attributes": {
+        "name": "us-gaap:OperatingIncomeLoss",
+        "contextref": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+        "unitref": "U_USD",
+        "scale": "6",
+        "decimals": "-6",
+        "format": "ixt:num-dot-decimal"
+      },
+      "displayed_value": "128,528",
+      "receipt_source": "Original immutable reported-input bundle artifacts; Alphabet instance explicitly refreshed, original metadata gap preserved",
+      "approved_semantics": "OPERATING_INCOME_POLICY"
+    },
+    {
+      "bundle_id": "msft-reported-cash-flow-fy2026",
+      "field": "revenue",
+      "period": {
+        "cik": 789019,
+        "accession": "0001193125-26-323660",
+        "annual_start": "2025-07-01",
+        "annual_end": "2026-06-30",
+        "form": "10-K"
+      },
+      "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+      "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630_htm.xml",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "statement_id": "F_a62216e4-4826-4209-89af-643bc5c2df10",
+      "statement_caption": "Total revenue",
+      "statement_scope": "Consolidated face income statement, exact annual total; not segment or adjusted income",
+      "statement_attributes": {
+        "name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "contextref": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+        "unitref": "U_USD",
+        "scale": "6",
+        "decimals": "-6",
+        "format": "ixt:num-dot-decimal"
+      },
+      "displayed_value": "331,839",
+      "receipt_source": "Original immutable reported-input bundle artifacts; Alphabet instance explicitly refreshed, original metadata gap preserved",
+      "approved_semantics": "REVENUE_POLICY"
+    },
+    {
+      "bundle_id": "msft-reported-cash-flow-fy2026",
+      "field": "ebit",
+      "period": {
+        "cik": 789019,
+        "accession": "0001193125-26-323660",
+        "annual_start": "2025-07-01",
+        "annual_end": "2026-06-30",
+        "form": "10-K"
+      },
+      "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+      "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630_htm.xml",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "statement_id": "F_606d36b1-9131-48c7-bcf9-e3c31061fd5c",
+      "statement_caption": "Operating income",
+      "statement_scope": "Consolidated face income statement, exact annual total; not segment or adjusted income",
+      "statement_attributes": {
+        "name": "us-gaap:OperatingIncomeLoss",
+        "contextref": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+        "unitref": "U_USD",
+        "scale": "6",
+        "decimals": "-6",
+        "format": "ixt:num-dot-decimal"
+      },
+      "displayed_value": "155,237",
+      "receipt_source": "Original immutable reported-input bundle artifacts; Alphabet instance explicitly refreshed, original metadata gap preserved",
+      "approved_semantics": "OPERATING_INCOME_POLICY"
+    },
+    {
+      "bundle_id": "aapl-reported-cash-flow-fy2025",
+      "field": "revenue",
+      "period": {
+        "cik": 320193,
+        "accession": "0000320193-25-000079",
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27",
+        "form": "10-K"
+      },
+      "instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+      "primary_sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "statement_id": "f-78",
+      "statement_caption": "Total net sales",
+      "statement_scope": "Consolidated face income statement, exact annual total; not segment or adjusted income",
+      "statement_attributes": {
+        "name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "contextref": "c-1",
+        "unitref": "usd",
+        "scale": "6",
+        "decimals": "-6",
+        "format": "ixt:num-dot-decimal"
+      },
+      "displayed_value": "416,161",
+      "receipt_source": "Original immutable reported-input bundle artifacts; Alphabet instance explicitly refreshed, original metadata gap preserved",
+      "approved_semantics": "REVENUE_POLICY"
+    },
+    {
+      "bundle_id": "aapl-reported-cash-flow-fy2025",
+      "field": "ebit",
+      "period": {
+        "cik": 320193,
+        "accession": "0000320193-25-000079",
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27",
+        "form": "10-K"
+      },
+      "instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+      "primary_sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "statement_id": "f-102",
+      "statement_caption": "Operating income",
+      "statement_scope": "Consolidated face income statement, exact annual total; not segment or adjusted income",
+      "statement_attributes": {
+        "name": "us-gaap:OperatingIncomeLoss",
+        "contextref": "c-1",
+        "unitref": "usd",
+        "scale": "6",
+        "decimals": "-6",
+        "format": "ixt:num-dot-decimal"
+      },
+      "displayed_value": "133,050",
+      "receipt_source": "Original immutable reported-input bundle artifacts; Alphabet instance explicitly refreshed, original metadata gap preserved",
+      "approved_semantics": "OPERATING_INCOME_POLICY"
+    },
+    {
+      "bundle_id": "googl-reported-cash-flow-fy2024",
+      "field": "revenue",
+      "period": {
+        "cik": 1652044,
+        "accession": "0001652044-25-000014",
+        "annual_start": "2024-01-01",
+        "annual_end": "2024-12-31",
+        "form": "10-K"
+      },
+      "instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3",
+      "primary_sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231_htm.xml",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "statement_id": "f-157",
+      "statement_caption": "Revenues",
+      "statement_scope": "Consolidated face income statement, exact annual total; not segment or adjusted income",
+      "statement_attributes": {
+        "name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "contextref": "c-1",
+        "unitref": "usd",
+        "scale": "6",
+        "decimals": "-6",
+        "format": "ixt:num-dot-decimal"
+      },
+      "displayed_value": "350,018",
+      "receipt_source": "Original immutable reported-input bundle artifacts; Alphabet instance explicitly refreshed, original metadata gap preserved",
+      "approved_semantics": "REVENUE_POLICY"
+    },
+    {
+      "bundle_id": "googl-reported-cash-flow-fy2024",
+      "field": "ebit",
+      "period": {
+        "cik": 1652044,
+        "accession": "0001652044-25-000014",
+        "annual_start": "2024-01-01",
+        "annual_end": "2024-12-31",
+        "form": "10-K"
+      },
+      "instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3",
+      "primary_sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231_htm.xml",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "statement_id": "f-175",
+      "statement_caption": "Operating income",
+      "statement_scope": "Consolidated face income statement, exact annual total; not segment or adjusted income",
+      "statement_attributes": {
+        "name": "us-gaap:OperatingIncomeLoss",
+        "contextref": "c-1",
+        "unitref": "usd",
+        "scale": "6",
+        "decimals": "-6",
+        "format": "ixt:num-dot-decimal"
+      },
+      "displayed_value": "112,390",
+      "receipt_source": "Original immutable reported-input bundle artifacts; Alphabet instance explicitly refreshed, original metadata gap preserved",
+      "approved_semantics": "OPERATING_INCOME_POLICY"
+    }
+  ]
+}

@@ -18,6 +18,7 @@ from valuation_platform.analyst import historical_inputs as h
 from valuation_platform.analyst import cash_flow_inputs as msft
 from valuation_platform.analyst import aapl_cash_flow_inputs as aapl
 from valuation_platform.analyst import googl_cash_flow_inputs as googl
+from valuation_platform.analyst import pilot_direct_income as direct
 
 MAPPING = ROOT / "docs/pilot-historical-input-mappings.json"
 REGISTRIES = {
@@ -95,7 +96,7 @@ def validate(document=None, bundles=None):
     require(set(doc) == {"schema", "contract", "version", "period_count", "field_family_count", "scope", "periods"},
             "Exact mapping document shape required")
     require(doc["schema"] == "pilot-historical-input-mappings-v1" and doc["contract"] == h.SCHEMA
-            and type(doc["version"]) is int and doc["version"] == 1, "Mapping identity/version mismatch")
+            and type(doc["version"]) is int and doc["version"] == 2, "Mapping identity/version mismatch")
     require(doc["period_count"] == 4 and doc["field_family_count"] == len(h.Field)
             and len(doc["periods"]) == 4, "Four periods / fourteen families required")
     expected_ids = {"msft-reported-cash-flow-fy2025", "msft-reported-cash-flow-fy2026",
@@ -128,6 +129,7 @@ def validate(document=None, bundles=None):
         require(set(row["fields"]) == {f.value for f in h.Field}, "Every contract family required")
         mapped_ids = []
         statuses = Counter()
+        direct_occurrences = 0
         for name, field in row["fields"].items():
             require(set(field) == {"status", "origin", "quality", "review", "scope", "completeness", "aggregation",
                     "bindings", "unresolved_requirements", "null_reason"}, "Exact field mapping shape required")
@@ -135,6 +137,15 @@ def validate(document=None, bundles=None):
             require(field["review"] == "reviewed" and field["unresolved_requirements"]
                     and all(type(s) is str and s.strip() for s in field["unresolved_requirements"]),
                     "Reviewed mapping with explicit unresolved requirements required")
+            if h.Field(name) in direct.POLICIES:
+                require((field["status"], field["origin"], field["quality"], field["scope"], field["completeness"], field["null_reason"]) ==
+                        ("mapped", "reported", "supported", "consolidated_reported", "complete", None),
+                        "Direct reported statement scope only; no readiness approval")
+                require(field["bindings"] == [direct.binding(b, h.Field(name))],
+                        "Every direct candidate/occurrence and independent statement locator required")
+                direct_occurrences += sum(len(i.occurrences) for i in direct.reviewed(b, h.Field(name)).candidates)
+                statuses["mapped"] += 1
+                continue
             expected = {i.input_id for i in b.inputs if role_for(row["issuer"], b, i.input_id) is not None
                         and role_for(row["issuer"], b, i.input_id)[0].value == name}
             bindings = field["bindings"]
@@ -190,6 +201,7 @@ def validate(document=None, bundles=None):
         report[b.bundle_id] = {**dict(statuses), "field_families": len(h.Field), "mapped_source_inputs": len(mapped_ids),
                               "supplementary_inputs": len(row["supplementary_input_ids"]),
                               "confirming_occurrences": sum(len(b.input(k).occurrences) for k in mapped_ids),
+                              "direct_source_inputs": 2, "direct_confirming_occurrences": direct_occurrences,
                               "independent_reported_cfo_check": "PASS"}
     return report
 

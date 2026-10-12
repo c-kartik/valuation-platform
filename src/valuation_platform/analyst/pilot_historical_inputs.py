@@ -5,7 +5,7 @@ support observations, not candidate complete primitives. Original proofs are
 serialized once using their existing closed bundle serializers.
 """
 
-from dataclasses import fields, is_dataclass
+from dataclasses import fields, is_dataclass, replace
 from datetime import date
 from decimal import Decimal
 from enum import Enum
@@ -18,11 +18,12 @@ from valuation_platform.analyst import cash_flow_inputs as msft
 from valuation_platform.analyst import aapl_cash_flow_inputs as aapl
 from valuation_platform.analyst import googl_cash_flow_inputs as googl
 from valuation_platform.analyst.nwc import Artifact
+from valuation_platform.analyst import pilot_direct_income as direct
 
 
 ROOT = Path(__file__).resolve().parents[3]
 MAPPING_PATH = ROOT / "docs/pilot-historical-input-mappings.json"
-MAPPING_SHA256 = "d4afc39f1700c6189a43bc72d0be31058d167dbf010c493bcfc25cca433eac33"
+MAPPING_SHA256 = "364bd0d2de9972e0119946b8ac83c465b6adbad07efcfeefa7fe54d406a0143c"
 SCHEMA = "pilot-historical-input-adapter-v1"
 _SOURCES = {
     "msft-reported-cash-flow-fy2025": ("MSFT", msft, msft.load_msft_bundle),
@@ -45,7 +46,7 @@ def _rows(issuer):
     return tuple(r for r in _mapping()["periods"] if r["issuer"] == issuer)
 
 
-def _reference(row, item, receipt, occurrence=None):
+def _reference(row, item, receipt, occurrence=None, direct_review=None):
     locator = {
         "registry": row["registry_path"], "registry_sha256": row["registry_sha256"],
         "mapping_sha256": MAPPING_SHA256, "source_input_id": item.input_id,
@@ -54,6 +55,11 @@ def _reference(row, item, receipt, occurrence=None):
         "nil": None if occurrence is None else occurrence.nil,
         "source_reference_kind": "primary_statement" if occurrence is None else "extracted_instance_occurrence",
     }
+    if direct_review is not None:
+        locator["retained_direct_evidence"] = direct_review.statement
+        locator["direct_evidence_sha256"] = direct.EVIDENCE_SHA256
+        locator["source_reference_kind"] = ("reviewed_inline_face_statement" if occurrence is None
+                                            else "retained_direct_instance_occurrence")
     first = item.occurrences[0] if occurrence is None else occurrence
     identity = "primary-statement" if occurrence is None else f"ordinal-{occurrence.ordinal}"
     return h.SourceReference(
@@ -104,6 +110,39 @@ def _observation(row, field, entry, binding, source):
         coverage_keys=(binding["population"],))
 
 
+def _direct_value(row, field, entry, source, inspection):
+    """Retain competing/equivalent candidates, never compute or discard conflict."""
+    instance = next(r for r in source.artifacts if r.artifact.url.endswith("_htm.xml"))
+    primary = next(r for r in source.artifacts if r.artifact.url.endswith(".htm"))
+    observations = []
+    for i, item in enumerate(inspection.candidates):
+        refs = tuple(_reference(row, item, instance, o, inspection) for o in item.occurrences)
+        if i == inspection.selected:
+            refs += (_reference(row, item, primary, direct_review=inspection),)
+        observations.append(h.InputValue(
+            input_id=f"{field.value}:{item.input_id}:ordinal-{item.occurrences[0].ordinal}",
+            field=field, period=source.period, as_of=None, value=item.value_usd, unit="USD", scale=1, sign=1,
+            precision=item.occurrences[0].decimals, role="reported_revenue" if field is h.Field.REVENUE else "reported_operating_income",
+            origin=h.Origin.REPORTED, quality=h.Quality.SUPPORTED, scope=item.location_and_scope,
+            scope_status=h.Scope.CONSOLIDATED_REPORTED, completeness=h.Completeness.COMPLETE,
+            review=h.Review.REVIEWED, sources=refs, manual=None, formula=None, alternatives=(),
+            selection_rationale="Approved direct concept; every exact annual eligible occurrence retained; "
+                "independent reviewed inline face-statement representation required; no precedence override.",
+            flags=("mapping_status:mapped", "reported_input_kind:accrued_income", f"population:{field.value}",
+                   "direct_reported_statement_total_only", "no_aggregation_or_valuation_authorization"),
+            unresolved_requirements=tuple(entry["unresolved_requirements"]), null_reason=None,
+            coverage_keys=(field.value,)))
+    if inspection.selected is None:
+        unresolved = dict(entry, quality="conflicting" if inspection.candidates else "unassessed",
+                          completeness="unknown", scope="unknown", status="unavailable",
+                          null_reason=inspection.reason,
+                          unresolved_requirements=[inspection.reason, *entry["unresolved_requirements"]])
+        result = _unavailable(row, field, unresolved, tuple(observations))
+        return replace(result, selection_rationale="No direct value selected; every eligible competing candidate retained.")
+    chosen = observations[inspection.selected]
+    return replace(chosen, alternatives=tuple(v for i, v in enumerate(observations) if i != inspection.selected))
+
+
 def _unavailable(row, field, entry, support=()):
     bridge = field in (h.Field.CASH_INVESTMENTS, h.Field.DEBT_LEASES, h.Field.OTHER_BRIDGE)
     reason = entry["null_reason"] or entry["unresolved_requirements"][0]
@@ -128,6 +167,12 @@ def _annual(row, source):
     inputs = []
     for field in h.Field:
         entry = row["fields"][field.value]
+        if field in direct.POLICIES:
+            inspection = direct.reviewed(source, field)
+            if inspection.selected is not None and entry["bindings"] != [direct.binding(source, field, inspection)]:
+                raise h.InputError("Exact direct-income candidate/statement mapping required")
+            inputs.append(_direct_value(row, field, entry, source, inspection))
+            continue
         observations = tuple(_observation(row, field, entry, binding, source) for binding in entry["bindings"])
         if entry["status"] == "mapped":
             inputs.extend(observations)
@@ -141,7 +186,7 @@ def _annual(row, source):
         f"evidence_review:{row['evidence_review']}; source_unknowns:{row['registry_path']}#{row['source_unknowns_pointer']}",
         "supplementary_input_ids:" + json.dumps(row["supplementary_input_ids"], separators=(",", ":")),
         "Support alternatives retain source observations only; required D&A remains null. No completeness or readiness approval.")
-    return h.AnnualBundle(f"pilot-preparation:{source.bundle_id}", 1, source.period,
+    return h.AnnualBundle(f"pilot-preparation:{source.bundle_id}", 2, source.period,
                           tuple(inputs), source.limitations + unknowns + provenance)
 
 
@@ -158,7 +203,7 @@ def _history(issuer, sources):
     if set(sources) != {r["bundle_id"] for r in rows}:
         raise h.InputError("Exact pilot history scope required; no comparative or extra periods")
     annuals = tuple(_annual(row, sources[row["bundle_id"]]) for row in rows)
-    return h.HistoryBundle(f"pilot-preparation:{issuer}", 1, annuals[0].period.cik, annuals,
+    return h.HistoryBundle(f"pilot-preparation:{issuer}", 2, annuals[0].period.cik, annuals,
         (f"Restricted independently reviewed package scope: {len(annuals)} of five target annual periods. "
          "This is not a claim of short issuer history or approval of other selected periods.",))
 
