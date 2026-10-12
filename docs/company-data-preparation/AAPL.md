@@ -1,5 +1,26 @@
 # AAPL — company data preparation
 
+## Isolated preparation adapter — FY2025 only
+
+[Delivered adapter](../pilot-historical-input-adapter.md) packages the existing
+FY2025 mapping in AnnualBundle/HistoryBundle without new periods or treatment.
+Conflict: an observed D&A add-back is not a selected complete primitive. It now
+remains an explicitly non-substitutable, partial source alternative under a null
+required D&A slot. Original 5/1/8 disposition: twelve top-level reported inputs,
+nine null required slots and one D&A support observation. Deferred tax, revenue/
+EBIT, residual and bridge/share requirements remain unresolved; no zero inferred.
+Expense and CFO SBC roles, cash taxes/PP&E and rounded fixed lease scope retain
+their original distinctions and evidence, not extra economic charges.
+
+Serialization verifies original native proofs and exact reconstructed typed
+metadata; original bundle/scenario bytes, unknown interest/investment disclosures,
+prior acceptances and NWC/timing blockers persist. A single registered preparation
+period is not complete selected history or ΔNWC. Focused binding/precision/null/
+support/preservation and deterministic round-trip checks, compileall, links/diff
+pass; no SEC/full-suite/corpus. Financial sufficiency NOT_ASSESSED. Next bounded
+design if authorized: direct Revenue/EBIT retained-source mappings in this exact
+FY2025 filing, not comparative registration or silent treatment expansion.
+
 ## Executable retained-input mappings — FY2025 only
 
 [Mapping summary](../pilot-historical-input-mappings.md) /

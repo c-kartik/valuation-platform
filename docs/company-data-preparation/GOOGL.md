@@ -1,5 +1,27 @@
 # GOOGL — company data preparation
 
+## Isolated preparation adapter — FY2024 only
+
+[Delivered adapter](../pilot-historical-input-adapter.md) produces one restricted
+AnnualBundle/HistoryBundle from the unchanged FY2024 mapping. Conflict: incomplete
+depreciation/amortization evidence cannot fill a complete D&A primitive. Required
+D&A stays null; two reported partial support alternatives retain distinct roles,
+precision/evidence and explicit non-substitutability. Original 6/1/7 disposition:
+fifteen top-level reported observations and eight null required slots. Rounded
+22,800m SBC expense and 22,785m add-back remain separate, not a rounding adjustment
+or duplicate charge. Deferred provision/reconciliation and signed CF movements
+do not resolve NWC/timing or operate as economic adjustments.
+
+Separate adapter serialization retains existing native source proofs, including
+the original metadata gap and separately refreshed receipt, and verifies every
+typed metadata field on reconstruction. Lease/principal/investment inputs stay
+supplementary, not bridge stocks. Prior acceptance, unknown borrowing interest,
+original D&A/NWC blockers, frozen outputs and source bundle bytes are unchanged.
+Focused source/rounding/support/null/preservation/round-trip tests, compileall,
+links/diff pass; no SEC/full-suite/corpus. Financial sufficiency NOT_ASSESSED.
+Next bounded design if authorized: direct Revenue/EBIT mappings from this exact
+retained filing, with no comparative approval or automatic whole-history expansion.
+
 ## Executable retained-input mappings — FY2024 only
 
 [Mapping summary](../pilot-historical-input-mappings.md) /

@@ -1,5 +1,22 @@
 # Company data preparation register
 
+## Isolated four-period preparation adapter delivered
+
+[Delivery](../pilot-historical-input-adapter.md) now implements the unchanged
+[four-pilot mappings](../pilot-historical-input-mappings.json) as existing immutable
+AnnualBundle/HistoryBundle objects and separate exact proof-bound serialization.
+Only MSFT FY2025/FY2026, AAPL FY2025 and Alphabet FY2024; no other period approval.
+Required D&A remains null with non-substitutable source observations retained in
+alternatives. Other null requirements, scope/roles/precision and old blockers
+stay explicit. No totals, assumptions, overrides or readiness calculation.
+
+Three records document the package output and tests. All other issuer records,
+frozen outputs/policies/mappings, prior acceptances and original bundles/sidecars
+are unchanged. Short adapter scopes are not short issuer histories or lowered
+five-year targets; financial sufficiency NOT_ASSESSED. Next bounded authorized
+design: direct Revenue/EBIT retained mappings in the same four filings, not new
+research/periods/issuers or a generic cascade. Stop after this adapter milestone.
+
 ## Four-pilot executable retained-evidence mappings
 
 [Summary](../pilot-historical-input-mappings.md) /

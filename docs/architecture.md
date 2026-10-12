@@ -36,7 +36,24 @@ added; frozen schema 5 and existing pilot byte contracts remain unchanged.
 Future field-treatment changes require affected issuer-record updates. WP0 stops
 before a bounded four-pilot-period mapping design, not new financial research.
 
-### Existing reported-input implementation
+### Isolated four-pilot historical-input adapter
+
+`analyst/pilot_historical_inputs.py` now builds unchanged WP0 AnnualBundle/
+HistoryBundle objects from only the [four committed pilot mappings](pilot-historical-input-mappings.md).
+[Delivered behavior](pilot-historical-input-adapter.md): strict mapping-byte pin,
+original source-verifying loaders, individual signed observations, explicit nulls
+and non-substitutable D&A support alternatives under an unresolved required slot.
+No new normalizer/policy, aggregate, assumption, registration or readiness method.
+
+Separate `pilot-historical-input-adapter-v1` serialization stores typed metadata
+and original native reported-bundle proofs once per period; native serializers
+remain unchanged. Deserialization verifies those proofs and exact reconstructed
+metadata/types. Receipt body references avoid duplicating large original instance
+bytes per occurrence, without changing digest representation or WP0 serialization.
+Original unknowns, supplementary references and Alphabet's original/refresh
+history remain explicit. No valuation integration or frozen-v1 mutation.
+
+### Original reported-input implementation
 
 `analyst/cash_flow_inputs.py` provides immutable reported-input, occurrence,
 retrieval-receipt, unknown-input and bundle models, reusing existing immutable

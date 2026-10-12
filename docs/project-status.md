@@ -2,7 +2,29 @@
 
 ## Current Milestone
 
-Latest completed milestone: **four-pilot executable retained-evidence field
+Latest completed milestone: **isolated four-pilot historical-input adapter**.
+[Delivery/limitations](pilot-historical-input-adapter.md). Existing immutable
+AnnualBundle/HistoryBundle models now package only MSFT FY2025/FY2026, AAPL FY2025,
+Alphabet FY2024 from unchanged pinned mappings and source-verifying bundles.
+Mapped/support-only/unavailable families retain 6/1/7, 6/1/7, 5/1/8, 6/1/7.
+60 top-level reported observations and 33 null required slots; nine separately
+labeled support-only D&A observations preserve evidence under four null D&A slots.
+No complete primitive, sum, residual, estimate, readiness or valuation approval.
+Roles/signs/scale/rounding and every unresolved requirement remain; Alphabet SBC
+expense/add-back and original/refresh receipt history are distinct.
+
+Separate adapter serialization carries original native source proofs once per
+period plus exact typed metadata, reverified on round trip. Core schemas/models,
+original policies/outputs/mappings/bundles/scenarios/sidecars remain unchanged.
+Baseline 1905/1483/11/27/42 retained; no corpus/full-suite or SEC requests. Three
+issuer records/index and architecture explain delivery and limitations. Focused
+tests (**58 passed**), deterministic serialization/preservation, compileall, links and diff pass.
+Phase 2 remains prohibited; financial sufficiency NOT_ASSESSED. **Stop here.**
+Next bounded step toward generic coverage, if authorized: retained-source direct
+Revenue/EBIT mapping design for the same four exact periods, no new issuers,
+component bridges, retrieval or cascades; unavailable/conflicts remain explicit.
+
+Previously completed milestone: **four-pilot executable retained-evidence field
 mappings and treatment checks**, no adapter. [Summary](pilot-historical-input-mappings.md)
 and [matrix](pilot-historical-input-mappings.json) cover all 56 WP0 field-family
 slots: 23 restricted mapped / four D&A support-only / 29 unavailable bindings.

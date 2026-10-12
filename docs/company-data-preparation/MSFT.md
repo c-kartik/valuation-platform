@@ -1,5 +1,28 @@
 # MSFT — company data preparation
 
+## Isolated preparation adapter — two reviewed periods only
+
+[Delivered adapter](../pilot-historical-input-adapter.md) now packages the unchanged
+FY2025/FY2026 mappings as AnnualBundle objects and one restricted HistoryBundle.
+Conflict resolved at packaging only: support evidence must not masquerade as a
+complete D&A primitive. Chosen representation is a null required D&A slot with
+three separately flagged, non-substitutable reported observations per year in
+alternatives; no arithmetic or economic equivalence. Original 6/1/7 family
+disposition survives, with 16/17 top-level reported observations and eight null
+required slots per year. Expense/reconciliation, deferred-tax roles, signed cash
+PP&E and working-capital rows retain exact source evidence and restrictions.
+
+Native receipt/body proofs and exact typed adapter metadata round-trip separately;
+original unknowns and limitations remain. Capital creditors, lease/investment
+disclosures are supplementary references, not completed bridge values. Original
+SBC/lease acceptances, $19.8bn partial-NWC movement evidence, recast limitations,
+NWC blockers and timing gates persist. Five-year target is not met by two packages;
+no claim the selected issuer history is short. No new source/policy registration.
+Focused source/precision/null/support/serialization/preservation checks pass;
+compileall and links/diff pass, no SEC/full-suite/corpus. Financial sufficiency
+NOT_ASSESSED. Next bounded design, only if authorized: retained direct Revenue/
+EBIT mappings for these same two filings, with unresolved source/scope kept explicit.
+
 ## Executable retained-input mappings — FY2025/FY2026 only
 
 [Mapping summary](../pilot-historical-input-mappings.md) /
