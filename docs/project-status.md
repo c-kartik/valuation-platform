@@ -2,7 +2,28 @@
 
 ## Current Milestone
 
-Latest completed milestone: **Alphabet acceptance and three-pilot consolidation**.
+Latest completed milestone: **retained-evidence disposition of all 40 preparation
+issuers**. [Assessment and completion decision](phase1-issuer-preparation-disposition.md)
+and [machine-checkable matrix](phase1-issuer-preparation-disposition.json) preserve
+all 17 measure states, review depth, evidence references, essential/deferred work
+and explicit stop/reopening criteria. Groups: 3 closed pilots, 3 history boundaries,
+3 revenue-conflict issuers, 31 other frozen-gap issuers without reviewed input
+packages. These are preparation groups, not support reclassifications.
+History target remains five years: 37 five-period / 2 two-period / 1 empty histories
+give 189 periods among the 40; only four reported-input periods across three
+issuers have pilot acceptance. No original blocker is cleared by CFO packaging.
+Single next Phase 1 milestone: **explicit preparation acceptance-contract decision**:
+complete required inputs versus five-year evidence-accounted facts/gaps, required
+input families and short-history exception handling. Recommended latter requires
+user acceptance, not silent lowering of coverage; neither is valuation readiness.
+After that choice, propose one reusable retained-evidence binding ledger and
+finite grouped exceptions backlog, not 40 research cycles. Phase 2 postponed.
+Validated 40 identities/680 record measures, frozen history/state counts, pilot
+identities and evidence/local links; diff check passed. No issuer financial
+conclusion/source/policy/artifact changes, SEC requests, tests or corpus rerun.
+Frozen baseline remains **1905/1483/11/27/42 = 3468**.
+
+Previously completed milestone: **Alphabet acceptance and three-pilot consolidation**.
 [Alphabet checklist](googl-treatment-acceptance-checklist.md) records explicit
 user approval and closes qualified FY2024 preparation only. Rounded SBC expense
 22,800m proxy once remains distinct from 22,785m add-back; restricted leases are

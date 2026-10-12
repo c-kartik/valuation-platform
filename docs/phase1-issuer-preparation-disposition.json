@@ -1,0 +1,3720 @@
+{
+  "version": "phase1-retained-evidence-disposition-v1",
+  "starting_head": "9d19c9f7a3c78afdcea8b63a50ca3c1002248946",
+  "validation_reference": "universe/phase-1h5-issuer-validation.json",
+  "validation_sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089",
+  "legend_reference": "phase1-issuer-preparation-disposition.md",
+  "five_year_target_preserved": true,
+  "completion_contract": "User choice pending; not complete-input or valuation certification",
+  "group_counts": {
+    "FROZEN_GAPS_NO_INPUT_PACKAGE": 31,
+    "PILOT_LIMITED_CLOSED": 3,
+    "HISTORY_BOUNDARY": 3,
+    "REVENUE_CONFLICT": 3
+  },
+  "history_counts": {
+    "5": 37,
+    "0": 1,
+    "2": 2
+  },
+  "selected_periods": 189,
+  "reported_input_periods": 4,
+  "rows": [
+    {
+      "ticker": "NVDA",
+      "cik": 1045810,
+      "securities": [
+        "NVDA"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/NVDA.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-01-30",
+        "2023-01-29",
+        "2024-01-28",
+        "2025-01-26",
+        "2026-01-25"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "capex",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "COMPONENT_SCOPE_UNPROVED": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/NVDA.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "cik": 320193,
+      "securities": [
+        "AAPL"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "PILOT_LIMITED_CLOSED",
+      "record": "company-data-preparation/AAPL.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-09-25",
+        "2022-09-24",
+        "2023-09-30",
+        "2024-09-28",
+        "2025-09-27"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 70,
+        "missing": 5,
+        "ambiguous": 0,
+        "methodology_blocked": 9,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:methodology_blocked": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:resolved": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:resolved": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:methodology_blocked": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:resolved": 5
+      },
+      "review_depth": "Exact input/partial-NWC review at registered periods only; other period inputs unreviewed",
+      "input_packages": [
+        {
+          "id": "aapl-reported-cash-flow-fy2025",
+          "period": {
+            "cik": 320193,
+            "accession": "0000320193-25-000079",
+            "annual_start": "2024-09-29",
+            "annual_end": "2025-09-27"
+          },
+          "registry": "company-data-preparation/aapl-reported-cash-flow-bundle.json"
+        }
+      ],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "methodology_blocked",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "methodology_blocked",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Accepted exact-period reported inspection/serialization/CFO reconciliation; other years frozen facts/gaps only",
+      "essential_work_code": "E1",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S1",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/AAPL.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "cik": 789019,
+      "securities": [
+        "MSFT"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "PILOT_LIMITED_CLOSED",
+      "record": "company-data-preparation/MSFT.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 62,
+        "missing": 13,
+        "ambiguous": 0,
+        "methodology_blocked": 9,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:methodology_blocked": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 3,
+        "commercial_paper:resolved": 2,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:methodology_blocked": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:resolved": 5
+      },
+      "review_depth": "Exact input/partial-NWC review at registered periods only; other period inputs unreviewed",
+      "input_packages": [
+        {
+          "id": "msft-reported-cash-flow-fy2025",
+          "period": {
+            "cik": 789019,
+            "accession": "0000950170-25-100235",
+            "annual_start": "2024-07-01",
+            "annual_end": "2025-06-30"
+          },
+          "registry": "company-data-preparation/msft-reported-cash-flow-bundles.json"
+        },
+        {
+          "id": "msft-reported-cash-flow-fy2026",
+          "period": {
+            "cik": 789019,
+            "accession": "0001193125-26-323660",
+            "annual_start": "2025-07-01",
+            "annual_end": "2026-06-30"
+          },
+          "registry": "company-data-preparation/msft-reported-cash-flow-bundles.json"
+        }
+      ],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "methodology_blocked",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "methodology_blocked",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Accepted exact-period reported inspection/serialization/CFO reconciliation; other years frozen facts/gaps only",
+      "essential_work_code": "E1",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S1",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/MSFT.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "securities": [
+        "AMZN"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/AMZN.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 45,
+        "missing": 39,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "pretax_income",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "reported_effective_tax_rate",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "EXACT_PERIOD_SCOPE_EQUIVALENT": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/AMZN.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "cik": 1652044,
+      "securities": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "PILOT_LIMITED_CLOSED",
+      "record": "company-data-preparation/GOOGL.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 60,
+        "missing": 15,
+        "ambiguous": 0,
+        "methodology_blocked": 9,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:methodology_blocked": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:resolved": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:methodology_blocked": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:resolved": 5
+      },
+      "review_depth": "Exact input/partial-NWC review at registered periods only; other period inputs unreviewed",
+      "input_packages": [
+        {
+          "id": "googl-reported-cash-flow-fy2024",
+          "period": {
+            "cik": 1652044,
+            "accession": "0001652044-25-000014",
+            "annual_start": "2024-01-01",
+            "annual_end": "2024-12-31"
+          },
+          "registry": "company-data-preparation/googl-reported-cash-flow-bundle.json"
+        }
+      ],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "methodology_blocked",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "methodology_blocked",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "METHODOLOGY_BLOCKER": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Accepted exact-period reported inspection/serialization/CFO reconciliation; other years frozen facts/gaps only",
+      "essential_work_code": "E1",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S1",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/GOOGL.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "cik": 1730168,
+      "securities": [
+        "AVGO"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/AVGO.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-10-31",
+        "2022-10-30",
+        "2023-10-29",
+        "2024-11-03",
+        "2025-11-02"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 4,
+        "long_term_debt_noncurrent:resolved": 1,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "DERIVATION": 5
+          }
+        },
+        {
+          "reference": "depreciation-amortization-component-derivation-matrix.json",
+          "retained_routes": {
+            "METHODOLOGY_BLOCKED": 4,
+            "FURTHER_RESEARCH_REQUIRED": 1
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/AVGO.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "cik": 723125,
+      "securities": [
+        "MU"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/MU.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-09-01",
+        "2023-08-31",
+        "2024-08-29",
+        "2025-08-28",
+        "2026-09-03"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 35,
+        "missing": 49,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "pretax_income",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "reported_effective_tax_rate",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/MU.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "cik": 1318605,
+      "securities": [
+        "TSLA"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/TSLA.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "METHODOLOGY_BLOCKER": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/TSLA.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "cik": 2488,
+      "securities": [
+        "AMD"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/AMD.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 47,
+        "missing": 37,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 3,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "ISSUER_EXTENSION": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/AMD.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "cik": 59478,
+      "securities": [
+        "LLY"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/LLY.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "EXACT_PERIOD_SCOPE_EQUIVALENT": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/LLY.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "cik": 2115436,
+      "securities": [
+        "XOM"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "HISTORY_BOUNDARY",
+      "record": "company-data-preparation/XOM.md",
+      "history_target": 5,
+      "selected_periods": 0,
+      "annual_ends": [],
+      "history_assessment": "empty",
+      "states": {
+        "resolved": 0,
+        "missing": 0,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 0
+      },
+      "all_measure_states": {},
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "selected_history",
+          "state": "empty",
+          "periods": 0,
+          "kind": "retrieval_identity_methodology"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E2",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S2",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/XOM.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "JNJ",
+      "cik": 200406,
+      "securities": [
+        "JNJ"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/JNJ.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-01-02",
+        "2023-01-01",
+        "2023-12-31",
+        "2024-12-29",
+        "2025-12-28"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 55,
+        "missing": 29,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/JNJ.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "V",
+      "cik": 1403161,
+      "securities": [
+        "V"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/V.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-09-30",
+        "2022-09-30",
+        "2023-09-30",
+        "2024-09-30",
+        "2025-09-30"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:missing": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "diluted_weighted_average_shares",
+          "state": "missing",
+          "periods": 5,
+          "kind": "retrieval_normalization_cause_unreviewed"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "SCOPE_RESEARCH_REQUIRED": 5
+          }
+        },
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "CONCEPT_POLICY": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/V.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "cik": 50863,
+      "securities": [
+        "INTC"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/INTC.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:missing": 4,
+        "cash_and_cash_equivalents:resolved": 1,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "cash_and_cash_equivalents",
+          "state": "missing",
+          "periods": 4,
+          "kind": "retrieval_normalization_cause_unreviewed"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "DERIVATION": 5
+          }
+        },
+        {
+          "reference": "depreciation-amortization-component-derivation-matrix.json",
+          "retained_routes": {
+            "FURTHER_RESEARCH_REQUIRED": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/INTC.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "WMT",
+      "cik": 104169,
+      "securities": [
+        "WMT"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "REVENUE_CONFLICT",
+      "record": "company-data-preparation/WMT.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-01-31",
+        "2023-01-31",
+        "2024-01-31",
+        "2025-01-31",
+        "2026-01-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 45,
+        "missing": 34,
+        "ambiguous": 5,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:ambiguous": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "revenue",
+          "state": "ambiguous",
+          "periods": 5,
+          "kind": "economic_scope_conflict"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "METHODOLOGY_BLOCKER": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E3",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S3",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/WMT.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "ABBV",
+      "cik": 1551152,
+      "securities": [
+        "ABBV"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/ABBV.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "DERIVATION": 5
+          }
+        },
+        {
+          "reference": "depreciation-amortization-component-derivation-matrix.json",
+          "retained_routes": {
+            "METHODOLOGY_BLOCKED": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/ABBV.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "MA",
+      "cik": 1141391,
+      "securities": [
+        "MA"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "REVENUE_CONFLICT",
+      "record": "company-data-preparation/MA.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 49,
+        "missing": 34,
+        "ambiguous": 1,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:ambiguous": 1,
+        "revenue:resolved": 4,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "revenue",
+          "state": "ambiguous",
+          "periods": 1,
+          "kind": "economic_scope_conflict"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "CONCEPT_POLICY": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E3",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S3",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/MA.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "cik": 858877,
+      "securities": [
+        "CSCO"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/CSCO.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-07-30",
+        "2023-07-29",
+        "2024-07-27",
+        "2025-07-26",
+        "2026-07-25"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 55,
+        "missing": 29,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/CSCO.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "LRCX",
+      "cik": 707549,
+      "securities": [
+        "LRCX"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/LRCX.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-06-26",
+        "2023-06-25",
+        "2024-06-30",
+        "2025-06-29",
+        "2026-06-28"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 43,
+        "missing": 41,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 1,
+        "current_portion_of_long_term_debt:resolved": 4,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 1,
+        "long_term_debt_noncurrent:resolved": 4,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "capex",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "COMPONENT_SCOPE_UNPROVED": 5
+          }
+        },
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "CONCEPT_POLICY": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/LRCX.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "cik": 1321655,
+      "securities": [
+        "PLTR"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/PLTR.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 4,
+        "long_term_debt_noncurrent:resolved": 1,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/PLTR.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "cik": 6951,
+      "securities": [
+        "AMAT"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/AMAT.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-10-31",
+        "2022-10-30",
+        "2023-10-29",
+        "2024-10-27",
+        "2025-10-26"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 49,
+        "missing": 35,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 3,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:missing": 3,
+        "depreciation_and_amortization:resolved": 2,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 3,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "CONCEPT_POLICY": 3
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/AMAT.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "securities": [
+        "CVX"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "REVENUE_CONFLICT",
+      "record": "company-data-preparation/CVX.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 37,
+        "missing": 42,
+        "ambiguous": 5,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:missing": 3,
+        "cash_and_cash_equivalents:resolved": 2,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:missing": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:ambiguous": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "cash_and_cash_equivalents",
+          "state": "missing",
+          "periods": 3,
+          "kind": "retrieval_normalization_cause_unreviewed"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_income",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "revenue",
+          "state": "ambiguous",
+          "periods": 5,
+          "kind": "economic_scope_conflict"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "SCOPE_RESEARCH_REQUIRED": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E3",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S3",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/CVX.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "CAT",
+      "cik": 18230,
+      "securities": [
+        "CAT"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/CAT.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "pretax_income",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "reported_effective_tax_rate",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/CAT.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "MRK",
+      "cik": 310158,
+      "securities": [
+        "MRK"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/MRK.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 48,
+        "missing": 36,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:missing": 2,
+        "capex:resolved": 3,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "capex",
+          "state": "missing",
+          "periods": 2,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "SCOPE_RESEARCH_REQUIRED": 2
+          }
+        },
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "DERIVATION": 5
+          }
+        },
+        {
+          "reference": "depreciation-amortization-component-derivation-matrix.json",
+          "retained_routes": {
+            "FURTHER_RESEARCH_REQUIRED": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/MRK.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "PG",
+      "cik": 80424,
+      "securities": [
+        "PG"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/PG.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 46,
+        "missing": 38,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:missing": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 2,
+        "pretax_income:resolved": 3,
+        "reported_effective_tax_rate:missing": 2,
+        "reported_effective_tax_rate:resolved": 3,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "cash_and_cash_equivalents",
+          "state": "missing",
+          "periods": 5,
+          "kind": "retrieval_normalization_cause_unreviewed"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "pretax_income",
+          "state": "missing",
+          "periods": 2,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "reported_effective_tax_rate",
+          "state": "missing",
+          "periods": 2,
+          "kind": "scope_evidence_gap"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/PG.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "KO",
+      "cik": 21344,
+      "securities": [
+        "KO"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/KO.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 51,
+        "missing": 33,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 2,
+        "current_portion_of_long_term_debt:resolved": 3,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 2,
+        "long_term_debt_noncurrent:resolved": 3,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/KO.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "PM",
+      "cik": 1413329,
+      "securities": [
+        "PM"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/PM.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 33,
+        "missing": 51,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 2,
+        "depreciation_and_amortization:resolved": 3,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 2,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "pretax_income",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "reported_effective_tax_rate",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "CONCEPT_POLICY": 1,
+            "DERIVATION": 1
+          }
+        },
+        {
+          "reference": "depreciation-amortization-component-derivation-matrix.json",
+          "retained_routes": {
+            "METHODOLOGY_BLOCKED": 1
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/PM.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "HD",
+      "cik": 354950,
+      "securities": [
+        "HD"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/HD.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-01-30",
+        "2023-01-29",
+        "2024-01-28",
+        "2025-02-02",
+        "2026-02-01"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "capex",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "SCOPE_RESEARCH_REQUIRED": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/HD.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "cik": 1065280,
+      "securities": [
+        "NFLX"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/NFLX.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/NFLX.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "KLAC",
+      "cik": 319201,
+      "securities": [
+        "KLAC"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/KLAC.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 47,
+        "missing": 37,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 3,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/KLAC.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "TXN",
+      "cik": 97476,
+      "securities": [
+        "TXN"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/TXN.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "DERIVATION": 5
+          }
+        },
+        {
+          "reference": "depreciation-amortization-component-derivation-matrix.json",
+          "retained_routes": {
+            "FURTHER_RESEARCH_REQUIRED": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/TXN.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "GEV",
+      "cik": 1996810,
+      "securities": [
+        "GEV"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "HISTORY_BOUNDARY",
+      "record": "company-data-preparation/GEV.md",
+      "history_target": 5,
+      "selected_periods": 2,
+      "annual_ends": [
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "short",
+      "states": {
+        "resolved": 12,
+        "missing": 21,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:missing": 2,
+        "cash_and_cash_equivalents:missing": 2,
+        "change_in_operating_nwc:missing": 1,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 2,
+        "current_portion_of_long_term_debt:missing": 2,
+        "depreciation_and_amortization:missing": 2,
+        "diluted_weighted_average_shares:resolved": 2,
+        "income_tax_expense:resolved": 2,
+        "long_term_debt_noncurrent:missing": 2,
+        "long_term_marketable_securities:missing": 2,
+        "operating_income:resolved": 2,
+        "operating_nwc:missing": 2,
+        "pretax_income:resolved": 2,
+        "reported_effective_tax_rate:resolved": 2,
+        "revenue:resolved": 2,
+        "short_term_borrowings:missing": 2,
+        "short_term_investments:missing": 2
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "capex",
+          "state": "missing",
+          "periods": 2,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "cash_and_cash_equivalents",
+          "state": "missing",
+          "periods": 2,
+          "kind": "retrieval_normalization_cause_unreviewed"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 1,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 2,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 2,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "COMPONENT_SCOPE_UNPROVED": 2
+          }
+        },
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "DERIVATION": 2
+          }
+        },
+        {
+          "reference": "depreciation-amortization-component-derivation-matrix.json",
+          "retained_routes": {
+            "METHODOLOGY_BLOCKED": 2
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E2",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S2",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/GEV.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "SNDK",
+      "cik": 2023554,
+      "securities": [
+        "SNDK"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "HISTORY_BOUNDARY",
+      "record": "company-data-preparation/SNDK.md",
+      "history_target": 5,
+      "selected_periods": 2,
+      "annual_ends": [
+        "2025-06-27",
+        "2026-07-03"
+      ],
+      "history_assessment": "short",
+      "states": {
+        "resolved": 20,
+        "missing": 13,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 2,
+        "cash_and_cash_equivalents:resolved": 2,
+        "change_in_operating_nwc:missing": 1,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 2,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:missing": 2,
+        "diluted_weighted_average_shares:resolved": 2,
+        "income_tax_expense:resolved": 2,
+        "long_term_debt_noncurrent:resolved": 2,
+        "long_term_marketable_securities:missing": 2,
+        "operating_income:resolved": 2,
+        "operating_nwc:missing": 2,
+        "pretax_income:resolved": 2,
+        "reported_effective_tax_rate:resolved": 2,
+        "revenue:resolved": 2,
+        "short_term_borrowings:missing": 2,
+        "short_term_investments:missing": 2
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 1,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 2,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 2,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "CONCEPT_POLICY": 2
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E2",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S2",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/SNDK.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "cik": 1341439,
+      "securities": [
+        "ORCL"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/ORCL.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2022-05-31",
+        "2023-05-31",
+        "2024-05-31",
+        "2025-05-31",
+        "2026-05-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 30,
+        "missing": 54,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "pretax_income",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "reported_effective_tax_rate",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "DERIVATION": 5
+          }
+        },
+        {
+          "reference": "depreciation-amortization-component-derivation-matrix.json",
+          "retained_routes": {
+            "FURTHER_RESEARCH_REQUIRED": 3,
+            "METHODOLOGY_BLOCKED": 2
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/ORCL.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "LIN",
+      "cik": 1707925,
+      "securities": [
+        "LIN"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/LIN.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 39,
+        "missing": 45,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 1,
+        "current_portion_of_long_term_debt:resolved": 4,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "pretax_income",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "reported_effective_tax_rate",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "CONCEPT_POLICY": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/LIN.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "IBM",
+      "cik": 51143,
+      "securities": [
+        "IBM"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/IBM.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 45,
+        "missing": 39,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "METHODOLOGY_BLOCKER": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/IBM.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "cik": 804328,
+      "securities": [
+        "QCOM"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/QCOM.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-09-26",
+        "2022-09-25",
+        "2023-09-24",
+        "2024-09-29",
+        "2025-09-28"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 50,
+        "missing": 34,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "capex",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "SCOPE_RESEARCH_REQUIRED": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/QCOM.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "VZ",
+      "cik": 732712,
+      "securities": [
+        "VZ"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/VZ.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 40,
+        "missing": 44,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:resolved": 5,
+        "depreciation_and_amortization:missing": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:missing": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "capex",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "depreciation_and_amortization",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "COMPONENT_SCOPE_UNPROVED": 5
+          }
+        },
+        {
+          "reference": "depreciation-amortization-inventory.json",
+          "retained_routes": {
+            "CONCEPT_POLICY": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/VZ.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "PEP",
+      "cik": 77476,
+      "securities": [
+        "PEP"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/PEP.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 45,
+        "missing": 39,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:missing": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 5,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:resolved": 5,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:resolved": 5,
+        "reported_effective_tax_rate:resolved": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "capex",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        }
+      ],
+      "retained_research": [
+        {
+          "reference": "capex-inventory.json",
+          "retained_routes": {
+            "SCOPE_RESEARCH_REQUIRED": 5
+          }
+        }
+      ],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/PEP.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    },
+    {
+      "ticker": "MCD",
+      "cik": 63908,
+      "securities": [
+        "MCD"
+      ],
+      "classification": "GENERALIZATION_REQUIRED",
+      "group": "FROZEN_GAPS_NO_INPUT_PACKAGE",
+      "record": "company-data-preparation/MCD.md",
+      "history_target": 5,
+      "selected_periods": 5,
+      "annual_ends": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "history_assessment": "five_selected_annual_periods_not_common_perimeter_certification",
+      "states": {
+        "resolved": 39,
+        "missing": 45,
+        "ambiguous": 0,
+        "methodology_blocked": 0,
+        "not_comparable": 1
+      },
+      "all_measure_states": {
+        "capex:resolved": 5,
+        "cash_and_cash_equivalents:resolved": 5,
+        "change_in_operating_nwc:missing": 4,
+        "change_in_operating_nwc:not_comparable": 1,
+        "commercial_paper:missing": 5,
+        "current_portion_of_long_term_debt:missing": 3,
+        "current_portion_of_long_term_debt:resolved": 2,
+        "depreciation_and_amortization:resolved": 5,
+        "diluted_weighted_average_shares:missing": 3,
+        "diluted_weighted_average_shares:resolved": 2,
+        "income_tax_expense:resolved": 5,
+        "long_term_debt_noncurrent:resolved": 5,
+        "long_term_marketable_securities:missing": 5,
+        "operating_income:resolved": 5,
+        "operating_nwc:missing": 5,
+        "pretax_income:missing": 5,
+        "reported_effective_tax_rate:missing": 5,
+        "revenue:resolved": 5,
+        "short_term_borrowings:missing": 5,
+        "short_term_investments:missing": 5
+      },
+      "review_depth": "Frozen validation plus measure-specific research where linked; no independently reviewed alternative package",
+      "input_packages": [],
+      "core_gaps": [
+        {
+          "measure": "change_in_operating_nwc",
+          "state": "missing",
+          "periods": 4,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "diluted_weighted_average_shares",
+          "state": "missing",
+          "periods": 3,
+          "kind": "retrieval_normalization_cause_unreviewed"
+        },
+        {
+          "measure": "operating_nwc",
+          "state": "missing",
+          "periods": 5,
+          "kind": "methodological_classification"
+        },
+        {
+          "measure": "pretax_income",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        },
+        {
+          "measure": "reported_effective_tax_rate",
+          "state": "missing",
+          "periods": 5,
+          "kind": "scope_evidence_gap"
+        }
+      ],
+      "retained_research": [],
+      "gap_cause_limit": "Missing is not proven unavailable disclosure or zero. Noncore debt/investment gaps in all_measure_states need source review; no fresh cause inferred.",
+      "permitted_scope": "Frozen-output inspection with evidence references and typed gaps only",
+      "essential_work_code": "E4",
+      "deferred_work_code": "D1",
+      "stop_reopen_code": "S4",
+      "future_assumptions": "Tax/lease/organic scope reserved; no new estimate. Accepted pilot proxies do not transfer.",
+      "provenance_limit": "Compact validated corpus lacks individual occurrence digests; linked artifacts/policies required. Unknown timing compatibility, no point-in-time share certification.",
+      "references": [
+        "universe/phase-1h5-issuer-validation.json",
+        "company-data-preparation/MCD.md",
+        "phase-1h-generalization-exit-plan.md",
+        "universe/sp500-top-50-failure-taxonomy.md"
+      ]
+    }
+  ]
+}

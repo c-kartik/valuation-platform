@@ -2,6 +2,16 @@
 
 ## Closed preparation pilots and next bounded pass
 
+The subsequent [40-issuer disposition](../phase1-issuer-preparation-disposition.md)
+and [JSON matrix](../phase1-issuer-preparation-disposition.json) complete the
+retained-evidence assessment below. Mapping/17-measure records stay unchanged;
+3 pilots, 3 short/empty history boundaries, 3 revenue-conflict issuers and 31
+other frozen-gap issuers sum to 40. Five years remains the target, not certified
+by pipeline completion or CFO presence. No fresh company financial review or
+transfer of analyst treatments. Next is one explicit preparation-contract
+decision on complete inputs versus evidence-accounted facts/gaps and history
+exceptions, before any shared retained-evidence binding implementation.
+
 [Consolidated assessment](../phase1-preparation-pilot-gap-assessment.md) records
 three qualified closures: MSFT FY2025–2026, AAPL FY2025 and Alphabet FY2024
 (four reported-input periods). [Alphabet acceptance](../googl-treatment-acceptance-checklist.md)
