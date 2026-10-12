@@ -1,5 +1,22 @@
 # SNDK — company data preparation
 
+## Qualified evidence-accounted preparation closure
+
+2026-10-12 [closure checklist](../phase1-preparation-closure-checklist.md):
+**PASS for the approved facts/gaps delivery; no essential preparation defect.**
+2 verified selected identities, all 17 measure rows and existing typed gaps
+are traceable. 0 reviewed reported-input period packages remain registered for
+this issuer; no implicit extension to other periods or transfer of treatments.
+All 3 target-history slots are accepted accounting limitations with
+null dates/accessions, not completed history; retain the five-year target.
+Whole-history fact/policy provenance is not established; financial sufficiency
+remains NOT_ASSESSED. Original financial blockers, support classification and
+frozen values are unchanged. Prior decisions/next-task wording below are retained
+history, not a new essential research queue. Stop preparation for this defined
+scope; reopen only for an identified integrity defect, newly supplied specific
+evidence or a separately authorized input requirement. No consumer approval or
+Phase 2 authority follows.
+
 ## Retained selected-filing identity manifest
 
 2026-10-12 [identity pass](../phase1-selected-filing-identity-manifest.md): 2 selected

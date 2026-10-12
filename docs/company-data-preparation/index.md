@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## Qualified evidence-accounted preparation closure
+
+[Closure checklist](../phase1-preparation-closure-checklist.md), 2026-10-12:
+all 40 records close for the user-approved **evidence-accounted facts/gaps**
+delivery, not complete financial inputs. 189 verified identities; 11 accepted
+target-history limitations (XOM five, GEV/SNDK three each). No five-year completion
+or support reclassification. All 17 measures remain tracked in every record.
+Four pilot periods retain their narrower independent package acceptance only;
+other periods/detail remain explicitly unreviewed where not evidenced.
+Whole-history fact/policy joins are unestablished, financial sufficiency remains
+NOT_ASSESSED, and future consumer/timing gates are separate. No essential repair
+remains for this standard; no new research chain or Phase 2 start is authorized.
+Earlier next-step/pending-choice statements below are chronological history,
+superseded by this closure and linked checklist, not outstanding prerequisites.
+
 ## Retained filing identities
 
 [Identity manifest](../phase1-selected-filing-identity-manifest.md) reconciles all

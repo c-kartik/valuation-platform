@@ -1,5 +1,12 @@
 # Phase 1 retained-evidence issuer preparation disposition
 
+Subsequent user approval chose evidence-accounted facts/gaps rather than complete
+financial sufficiency. The [closure checklist](phase1-preparation-closure-checklist.md)
+now dispositions history and provenance limits under that standard. This document
+and JSON `completion_contract` pending-choice wording are historical snapshots
+of this assessment, not current unresolved authority or valuation prerequisites.
+Current closure does not rewrite the original matrix, counts or financial blockers.
+
 2026-10-12; starting HEAD `9d19c9f7a3c78afdcea8b63a50ca3c1002248946`.
 This is a retained-evidence assessment, not fresh issuer financial review.
 The [machine-checkable matrix](phase1-issuer-preparation-disposition.json) contains

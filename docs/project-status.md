@@ -2,7 +2,24 @@
 
 ## Current Milestone
 
-Latest completed milestone: **authorized fixed 26-entry SEC identity acquisition**.
+Latest completed milestone: **qualified Phase 1 evidence-accounted preparation closure**.
+[Closure checklist](phase1-preparation-closure-checklist.md) applies the user's
+approved facts/gaps standard: 40 evidence-accounted records, 189 verified selected
+identities and all 11 target-history exceptions explicitly accepted as limitations
+(XOM five, GEV/SNDK three each), not five-year completeness. No essential remaining
+defect or new repair/research task. All 680 measure rows/3213 cohort states reconcile;
+four pilot reported-input periods remain the only independently reviewed packages.
+Whole-history fact/policy joins and unreverified receipt detail stay explicit,
+not certified. Financial sufficiency remains 40 NOT_ASSESSED; future consumer and
+timing gates are separate from preparation closure, not a Phase 1 exit requirement.
+Frozen classifications, financial blockers, source outputs and 1905/1483/11/27/42
+baseline unchanged. Existing focused checks/identity replay/digests/links/diff pass;
+no SEC requests, source changes, full suite or corpus. Phase 2 remains postponed.
+**No essential Phase 1 preparation work remains under the approved standard.**
+Stop; retain deferred coverage and evidence limits. Subsequent consumer-specific
+work requires separate authorization, not an automatically started milestone.
+
+Previously completed milestone: **authorized fixed 26-entry SEC identity acquisition**.
 [Results/closure](phase1-selected-filing-sec-acquisition.md): 26/26 verified from
 60 successful serial SEC requests; new original-body receipts, exact selection
 replay at frozen cutoff and annual DEI/context checks. Current manifest now

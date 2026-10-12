@@ -29,8 +29,11 @@ issuer-specific policy only when filing evidence and accounting rationale
 support it, and never force a result to improve coverage statistics.
 
 Phase 1H.6 has frozen historical normalization v1 with qualified coverage.
-Current work remains a Phase 1 blocker-resolution extension: historical data
-preparation, evidence review and explicitly isolated analyst input contracts.
+The Phase 1 blocker-resolution extension has qualified evidence-accounted
+preparation closure; see `docs/phase1-preparation-closure-checklist.md`.
+This is not complete financial-input sufficiency, whole-history fact provenance
+or five-year completeness. Financial blockers/history exceptions remain explicit;
+no further research chain is required by this preparation standard.
 Freeze completion is necessary but is not authority to start Phase 2.
 Phase 2 remains postponed: do not implement FCFF, forecasting, DCF, WACC,
 terminal value, sensitivities, equity/per-share valuation, valuation UI or

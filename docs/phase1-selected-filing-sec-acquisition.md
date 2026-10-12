@@ -1,5 +1,11 @@
 # Phase 1 fixed selected-filing SEC identity acquisition
 
+Subsequent [preparation closure](phase1-preparation-closure-checklist.md) accepts
+the explicit fact-provenance/history limits under the user-approved accounting
+standard. The final-prerequisite/next-decision wording below is acquisition-stage
+history: no valuation consumer contract or whole-history fact join is required
+to close that preparation scope. Future sufficiency remains a separate gate.
+
 Starting HEAD `149fe9a1f64105a49cfc537b57b695ff11313630`.
 Explicit user authorization covers only the 26 missing identities in the prior
 [availability ledger](phase1-selected-filing-availability.json). Configuration

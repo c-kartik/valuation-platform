@@ -1,5 +1,13 @@
 # Phase 1 shared preparation evidence-binding pass
 
+Current [qualified closure](phase1-preparation-closure-checklist.md) supersedes
+the historical next-step statements below: all 189 identities are now verified,
+eleven history slots are accepted explicit limitations, and no essential defect
+remains under the approved evidence-accounted facts/gaps delivery. Whole-history
+fact/policy provenance remains unestablished; financial sufficiency is a separate
+future gate, not required to close preparation. Prior ledger hashes describe
+their original revision; run the current validator for current record integrity.
+
 2026-10-12; starting HEAD `3bdcc1f39208ec51457d9939a888e853264baba6`.
 User approves two independent statuses, not complete financial coverage.
 The offline [validator](../scripts/validate_preparation_bindings.py) binds the
