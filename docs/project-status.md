@@ -2,7 +2,25 @@
 
 ## Current Milestone
 
-Latest completed milestone: **qualified Phase 1 evidence-accounted preparation closure**.
+Latest completed milestone: **consolidated Phase 1 blocker-disposition review**.
+[Review/proposed delivery contract](phase1-blocker-disposition-review.md) and
+[JSON matrix](phase1-blocker-disposition-review.json) account for 40 issuers,
+189 selected identities, 11 history exceptions and all 354 unresolved metric/
+state groups (1391 missing / 11 ambiguous / 27 blocked / 39 not-comparable cohort
+states). Retained alternative packaging remains four exact pilot periods only;
+37 other issuers have no reviewed reported package. Cash reconciliation movements
+are not reconstructed book ΔNWC or certified cash operating investment. Complete
+NWC is not a prerequisite to reproduce evidenced reported CFO; original blockers,
+Alphabet D&A, tax/lease/investment/organic/timing limits persist. No financial
+policy or whole-issuer sufficiency approval. No repairable integrity defect found;
+qualified facts/gaps closure remains valid. Baseline 1905/1483/11/27/42 unchanged.
+Workbook reference inspected read-only, not adopted. Matrix/source/period/link/
+baseline/diff checks pass; no SEC requests, tests or corpus. **Stop for user review**
+of the restricted delivery contract. If accepted, one bounded four-period retained-
+input delivery index/check is proposed using unchanged bundle machinery. Further
+history packaging requires a named finite scope; no new research chain or Phase 2.
+
+Previously completed milestone: **qualified Phase 1 evidence-accounted preparation closure**.
 [Closure checklist](phase1-preparation-closure-checklist.md) applies the user's
 approved facts/gaps standard: 40 evidence-accounted records, 189 verified selected
 identities and all 11 target-history exceptions explicitly accepted as limitations
@@ -1567,7 +1585,19 @@ AMD's five extension periods remain outside this pass. Safe new coverage is zero
 
 ## Next Step
 
-Current next step: **review and publish explicit MSFT FY2025–2026 partial
+Current next step: **user review of the consolidated restricted reported-input
+delivery contract and finite backlog** in
+[the blocker review](phase1-blocker-disposition-review.md). Do not implement until
+reviewed. Recommended bounded follow-up, if accepted: four-period retained-input
+delivery index/check for existing AAPL/MSFT/Alphabet packages, with signed
+movement references and explicit unknowns, no new schema/framework or financial
+calculation. Qualified facts/gaps closure stands; five-year target/history
+exceptions, original metric blockers and future sufficiency gates persist.
+Phase 2 remains postponed; do not automatically extend the four pilot periods.
+
+Historical next-step wording below is superseded by later completed milestones,
+qualified closure and the current review, not authority for new work.
+Previously proposed next step: **review and publish explicit MSFT FY2025–2026 partial
 scenario input bundles**, using the [implemented isolated evaluator](analyst-operating-nwc-design.md#implemented-isolated-foundation).
 Classify omissions and retain provenance; no default/earlier-period estimates,
 cash ΔNWC approval or forecast consumption. Phase 2 remains postponed; this

@@ -1,5 +1,25 @@
 # Company data preparation register
 
+## Consolidated reported-path blocker review — proposed contract
+
+2026-10-12: [bounded review](../phase1-blocker-disposition-review.md) and
+[machine-checkable matrix](../phase1-blocker-disposition-review.json) disposition
+all 40 issuers / 189 selected identities / 354 unresolved metric-state groups.
+The approved direction allows reported facts plus explicit analyst assumptions;
+complete book-NWC reconstruction is not required for independently evidenced
+reported CFO preparation. Signed cash-flow reconciliation rows are not book
+ΔNWC, automatic operating-only cash investment or new financial approvals.
+Only MSFT FY2025–2026, AAPL FY2025 and Alphabet FY2024 have independently
+reviewed packages. Other periods remain unassessed; all 11 history exceptions,
+revenue conflicts, original blockers and frozen support classes are preserved.
+
+No essential integrity defect was found under the qualified facts/gaps closure.
+The minimal restricted reported-input delivery contract and finite backlog are
+**proposed pending user review**. Next, if accepted: one four-period retained-
+input delivery index/check using existing machinery, not new schemas, research,
+period extensions or economic calculations. Five-year target remains; Phase 2
+is postponed. Unknown financial sufficiency stays NOT_ASSESSED. Stop for review.
+
 ## Qualified evidence-accounted preparation closure
 
 [Closure checklist](../phase1-preparation-closure-checklist.md), 2026-10-12:

@@ -1,5 +1,25 @@
 # GOOGL — company data preparation
 
+## Consolidated blocker disposition — proposed reported-input path
+
+2026-10-12: [bounded review](../phase1-blocker-disposition-review.md) and
+[matrix](../phase1-blocker-disposition-review.json), row keyed by CIK 1652044.
+6 unresolved metric/state groups retain the original counts,
+reasons, affected-period attribution, evidence depth and bounded stop rules.
+1 independently reviewed reported-input period(s), only the registered exact identities; no whole-history extension.
+FY2024 reported CFO avoids inventory/supplier-AP reconstruction for its subtotal only. Missing D&A, borrowing interest, investment allocations, rounded SBC roles and restricted embedded lease principal remain unchanged.
+
+Chosen disposition is **preserve original metrics and assess alternative inputs
+separately**, not resolve financial blockers. Signed reported CFO movements are
+not book ΔNWC or approved cash investment; source signs, acquisitions/noncash/FX,
+tax/lease scope and comparability must accompany any future package. Qualified
+facts/gaps closure remains; financial sufficiency NOT_ASSESSED. The minimal
+delivery contract/backlog is proposed pending user review, not new approval.
+No new integrity defect, fact, estimate, policy or period registration. Stop;
+reopen only a named data requirement with exact supporting evidence/authority.
+Validation joins existing issuer/history/measure and source references; no SEC
+request, tests or corpus rerun. Earlier decisions below remain preserved.
+
 ## Qualified evidence-accounted preparation closure
 
 2026-10-12 [closure checklist](../phase1-preparation-closure-checklist.md):
