@@ -1,0 +1,1999 @@
+{
+  "schema": "four-pilot-debt-lease-evidence-v1",
+  "version": 1,
+  "scope": "Retained reported component mappings only; not an issuer approval registry, debt aggregate or treatment convention.",
+  "periods": [
+    {
+      "bundle_id": "msft-reported-cash-flow-fy2025",
+      "period": {
+        "cik": 789019,
+        "accession": "0000950170-25-100235",
+        "annual_start": "2024-07-01",
+        "annual_end": "2025-06-30",
+        "form": "10-K"
+      },
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630_htm.xml",
+      "instance_sha256": "b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "primary_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "components": [
+        {
+          "component_id": "commercial_paper",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "CommercialPaper",
+          "role": "reported_short_term_commercial_paper",
+          "scope": "Commercial paper borrowing, not investment holdings",
+          "dimensions": [],
+          "overlap_with": [],
+          "statements": [
+            {
+              "id": "F_239742ab-6c3c-4947-9389-464eae8a5963",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:CommercialPaper",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "0"
+            }
+          ]
+        },
+        {
+          "component_id": "current_debt",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebtCurrent",
+          "role": "reported_current_debt_carrying",
+          "scope": "Current portion of term/long-term debt carrying balance",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "F_a9cad1a4-f70b-4127-ba2f-a323b723d10e",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:LongTermDebtCurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "2,999"
+            },
+            {
+              "id": "F_bac15dda-6637-4f55-b730-4cebf94e9b2c",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:LongTermDebtCurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "2,999"
+            }
+          ]
+        },
+        {
+          "component_id": "noncurrent_debt",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebtNoncurrent",
+          "role": "reported_noncurrent_debt_carrying",
+          "scope": "Noncurrent term/long-term debt carrying balance",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "F_ad76542e-1719-46cb-b817-8f10ff6aaea2",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:LongTermDebtNoncurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "40,152"
+            },
+            {
+              "id": "F_00313075-3328-450f-9814-ec515ef8d847",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:LongTermDebtNoncurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "40,152"
+            }
+          ]
+        },
+        {
+          "component_id": "term_debt_parent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebt",
+          "role": "reported_term_debt_parent",
+          "scope": "Total debt carrying balance before current/noncurrent split; not total debt including leases",
+          "dimensions": [],
+          "overlap_with": [
+            "current_debt",
+            "noncurrent_debt",
+            "debt_principal"
+          ],
+          "statements": [
+            {
+              "id": "F_cde2e832-2a1d-42d0-ab51-7c797a0ac33e",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:LongTermDebt",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "43,151"
+            }
+          ]
+        },
+        {
+          "component_id": "debt_principal",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "DebtInstrumentCarryingAmount",
+          "role": "reported_debt_face_principal",
+          "scope": "Note caption explicitly reports total face value / term debt principal despite taxonomy local name",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent",
+            "principal_due_next_year"
+          ],
+          "statements": [
+            {
+              "id": "F_482d51d8-df32-4254-b26c-ff63ddba334c",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:DebtInstrumentCarryingAmount",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "49,206"
+            },
+            {
+              "id": "F_e5c1e020-b899-4ff5-b047-3c21ee38aaf7",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:DebtInstrumentCarryingAmount",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "49,206"
+            }
+          ]
+        },
+        {
+          "component_id": "debt_fair_value",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebtFairValue",
+          "role": "reported_debt_fair_value",
+          "scope": "Estimated fair value of outstanding notes including current portion, not carrying amount",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "F_eb15be08-6be4-4eef-8482-4988dfe02ec7",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:LongTermDebtFairValue",
+                "unitref": "U_USD",
+                "scale": "9",
+                "decimals": "-8",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "40.4"
+            }
+          ]
+        },
+        {
+          "component_id": "principal_due_next_year",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "role": "reported_principal_maturity",
+          "scope": "Future contractual next-year principal payments, not current carrying debt",
+          "dimensions": [],
+          "overlap_with": [
+            "debt_principal"
+          ],
+          "statements": [
+            {
+              "id": "F_b8d9bdfb-debf-4f72-beb2-f4a95cbebfe6",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "3,000"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_total",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "OperatingLeaseLiability",
+          "role": "reported_discounted_operating_lease_liability",
+          "scope": "Discounted recognized operating lease liability, not payments or ROU asset",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_current",
+            "operating_lease_noncurrent",
+            "operating_lease_undiscounted"
+          ],
+          "statements": [
+            {
+              "id": "F_f969abb2-79a2-46a3-bf9d-a40eda00a7af",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:OperatingLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "22,861"
+            },
+            {
+              "id": "F_8800de0e-3f78-4d2f-af6d-7ca53aa05f97",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:OperatingLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "22,861"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_current",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "OperatingLeaseLiability",
+          "role": "reported_current_operating_lease_liability",
+          "scope": "Current discounted operating lease liability",
+          "dimensions": [
+            "{http://fasb.org/us-gaap/2024}BalanceSheetLocationAxis={http://fasb.org/us-gaap/2024}OtherCurrentLiabilitiesMember"
+          ],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_56f96fa0-1a4e-45fa-8300-d71d02f8bb8b",
+              "attributes": {
+                "contextref": "C_07ec1b14-6d72-4459-8a88-54321021fc79",
+                "name": "us-gaap:OperatingLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "5,424"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_noncurrent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "OperatingLeaseLiabilityNoncurrent",
+          "role": "reported_noncurrent_operating_lease_liability",
+          "scope": "Noncurrent discounted operating lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_efd90e0a-5462-4190-a298-5a835d126f89",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:OperatingLeaseLiabilityNoncurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "17,437"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_total",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "FinanceLeaseLiability",
+          "role": "reported_discounted_finance_lease_liability",
+          "scope": "Discounted recognized finance lease liability, not principal cash paid",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_current",
+            "finance_lease_noncurrent",
+            "finance_lease_undiscounted"
+          ],
+          "statements": [
+            {
+              "id": "F_8666233c-e24f-46ee-9ef7-b6b51729baf9",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "46,172"
+            },
+            {
+              "id": "F_f2f2b397-2402-40c9-b421-6827d03d936f",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "46,172"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_current",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "FinanceLeaseLiability",
+          "role": "reported_current_finance_lease_liability",
+          "scope": "Current discounted finance lease liability",
+          "dimensions": [
+            "{http://fasb.org/us-gaap/2024}BalanceSheetLocationAxis={http://fasb.org/us-gaap/2024}OtherCurrentLiabilitiesMember"
+          ],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_85bbe41d-6893-403a-89c1-8e2daec552fa",
+              "attributes": {
+                "contextref": "C_07ec1b14-6d72-4459-8a88-54321021fc79",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "3,172"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_noncurrent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "FinanceLeaseLiability",
+          "role": "reported_noncurrent_finance_lease_liability",
+          "scope": "Noncurrent discounted finance lease liability",
+          "dimensions": [
+            "{http://fasb.org/us-gaap/2024}BalanceSheetLocationAxis={http://fasb.org/us-gaap/2024}OtherNoncurrentLiabilitiesMember"
+          ],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_8be84686-0e1e-4147-bd63-3f9b52041667",
+              "attributes": {
+                "contextref": "C_304682f2-abac-4238-97bf-3da433eeee12",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "43,000"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_undiscounted",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LesseeOperatingLeaseLiabilityPaymentsDue",
+          "role": "reported_undiscounted_operating_lease_payments",
+          "scope": "Future undiscounted payments for recognized operating leases; not discounted liability or historical cash payments",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_0ca6b92e-5798-4aea-9cd9-0a5de86951cc",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDue",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "25,481"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_undiscounted",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "FinanceLeaseLiabilityPaymentsDue",
+          "role": "reported_undiscounted_finance_lease_payments",
+          "scope": "Future undiscounted payments for recognized finance leases; not discounted liability or historical cash payments",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_8663e399-4637-457a-b8ab-8f54e4747bb8",
+              "attributes": {
+                "contextref": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "name": "us-gaap:FinanceLeaseLiabilityPaymentsDue",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "60,506"
+            }
+          ]
+        }
+      ],
+      "scope_notes": [
+        {
+          "locator": "NOTE 10 \u2014 DEBT",
+          "text": "NOTE 10 \u2014 DEBT Short-term Debt As of June 30, 2025, we had no commercial paper issued or outstanding. As of June 30, 2024, we had $ 6.7 billion of commercial paper issued and outstanding, with a weighted average interest rate of 5.4 % and maturities ranging from 28 days to 152 days. The estimated fair value of this commercial paper approximates its carrying value. Long-term Debt The components of long-term debt were as follows: (In millions, issuance by calendar year) Maturities (calendar year) Stated Interest Rate Effective Interest Rate June 30, 2025 June 30, 2024 2009 issuance of $ 3.8 billion 2039 5.20 % 5.24 % $ 520 $ 520 2010 issuance of $ 4.8 billion 2040 4.50 % 4.57 % 486 486 2011 issuance of $ 2.3 billion 2041 5.30 % 5.36 % 718 718 2012 issuance of $ 2.3 billion 2042 3.50 % 3.57 % 454 454 2013 issuance of $ 5.2 billion 2043 3.75 % \u2013 4.88 % 3.83 % \u2013 4.92 % 314 314 2013 issuance of \u20ac 4.1 billion 2028 \u2013 2033 2.63 % \u2013 3.13 % 2.69 % \u2013 3.22 % 2,700 2,465 2015 issuance of $ 23.8 billion 2025 \u2013 2055 3.13 % \u2013 4.75 % 3.18 % \u2013 4.78 % 7,555 9,805 2016 issuance of $ 19.8 billion 2026 \u2013 2056 2.40 % \u2013 3.95 % 2.46 % \u2013 4.03 % 7,930 7,930 2017 issuance of $ 17.1 billion 2026 \u2013 2057 3.30 % \u2013 4.50 % 3.38 % \u2013 5.49 % 6,833 6,833 2020 issuance of $ 10.1 billion 2030 \u2013 2060 1.35 % \u2013 2.68 % 2.53 % \u2013 5.43 % 10,111 10,111 2021 issuance of $ 8.2 billion 2052 \u2013 2062 2.92 % \u2013 3.04 % 2.92 % \u2013 3.04 % 8,185 8,185 2023 issuance of $ 0.1 billion 2026 \u2013 2050 1.35 % \u2013 4.50 % 5.16 % \u2013 5.49 % 56 56 2024 issuance of $ 3.3 billion 2026 \u2013 2050 1.35 % \u2013 4.50 % 5.16 % \u2013 5.49 % 3,344 3,344 Total face value 49,206 51,221 Unamortized discount and issuance costs ( 1,155 ) ( 1,227 ) Hedge fair value adjustments (a) ( 36 ) ( 81 ) Premium on debt exchange ( 4,864 ) ( 4,976 ) Total debt 43,151 44,937 Current portion of long-term debt ( 2,999 ) ( 2,249 ) Long-term debt $ 40,152 $ 42,688 (a) Refer to Note 5 \u2013 Derivatives for further information on the interest rate swaps related to fixed-rate debt. As of June 30, 2025 and 2024, the estimated fair value of long-term debt, including the current portion, was $ 40.4 billion and $ 42.3 billion, respectively. The estimated fair values are based on Level 2 inputs. Debt in the table above is comprised of senior unsecured obligations and ranks equally with our other outstanding obligations. Interest is paid semi-annually, except for the Euro-denominated debt, which is paid annually. Cash paid for interest on our debt for fiscal years 2025, 2024, and 2023 was $ 1.6 billion, $ 1.7 billion, and $ 1.7 billion, respectively. The following table outlines maturities of our long-term debt, including the current portion, as of June 30, 2025: (In millions) Year Ending June 30, 2026 $ 3,000 2027 9,250 2028 0 2029 2,054 2030 0 Thereafter 34,902 Total $ 49,206 73 PART II Item 8 NOTE 11 \u2014 INCOME TAXES Provision for Income Taxes The components of the provision for income taxes were as follows: (In millions) Year Ended June 30, 2025 2024 2023 Current Taxes U.S. federal $ 14,086 $ 12,165 $ 14,009 U.S. state and local 3,342 2,366 2,322 Foreign 11,423 9,858 6,678 Current taxes $ 28,851 $ 24,389 $ 23,009 Deferred Taxes U.S. federal $ ( 6,250 ) $ ( 4,791 ) $ ( 6,146"
+        },
+        {
+          "locator": "Supplemental balance sheet information related to leases",
+          "text": "Supplemental balance sheet information related to leases was as follows: (In millions, except lease term and discount rate) June 30, 2025 2024 Operating Leases Operating lease right-of-use assets $ 24,823 $ 18,961 Other current liabilities $ 5,424 $ 3,580 Operating lease liabilities 17,437 15,497 Total operating lease liabilities $ 22,861 $ 19,077 Finance Leases Property and equipment, at cost $ 53,876 $ 32,248 Accumulated depreciation ( 9,861 ) ( 6,386 ) Property and equipment, net $ 44,015 $ 25,862 Other current liabilities $ 3,172 $ 2,349 Other long-term liabilities 43,000 24,796 Total finance lease liabilities $ 46,172 $ 27,145 Weighted Average Remaining Lease Term Operating leases 6 years 7 years Finance leases 13 years 12 years Weighted Average Discount Rate Operating leases 3.5 % 3.3 % Finance leases 4.2 % 3.9 % The following table outlines maturities of our lease liabilities as of June 30, 2025: (In millions) Year Ending June 30, Operating Leases Finance Leases 2026 $ 6,111 $ 5,008 2027 5,237 5,157 2028 3,495 5,187 2029 2,419 4,521 2030 2,017 4,382 Thereafter 6,202 36,251 Total lease payments 25,481 60,506 Less imputed interest ( 2,620 ) ( 14,334 ) Total $ 22,861 $ 46,172 As of June 30, 2025, we had additional leases, primarily for datacenters, that had not yet commenced of $ 92.7 billion. These leases will commence between fiscal year 2026 and fiscal year 2031 with lease terms of 1 year to 20 years. NOTE 14 \u2014 CONTINGENCIES Irish Data Protection Commission Matter In 2018, the Irish Data Protection Commission (\u201cIDPC\u201d) began investigating a complaint against LinkedIn as to whether LinkedIn\u2019s targeted advertising practices violated the recently implemented European Union General Data Protection Regulation (\u201cGDPR\u201d). Microsoft cooperated throughout the period of inqu"
+        }
+      ],
+      "unknowns": [
+        {
+          "component_id": "other_short_term_borrowing",
+          "reason": "No independently bound complete short-term borrowing population beyond disclosed commercial paper/current debt; no absence-to-zero inference."
+        },
+        {
+          "component_id": "complete_debt_lease_aggregate",
+          "reason": "No complete non-overlapping total debt/lease perimeter approved; carrying, principal, fair value and payment schedules cannot be added."
+        },
+        {
+          "component_id": "unrecognized_lease_commitments",
+          "reason": "Not-yet-commenced commitments and undisclosed coverage are not recognized discounted lease liabilities; no complete debt treatment approved."
+        }
+      ]
+    },
+    {
+      "bundle_id": "msft-reported-cash-flow-fy2026",
+      "period": {
+        "cik": 789019,
+        "accession": "0001193125-26-323660",
+        "annual_start": "2025-07-01",
+        "annual_end": "2026-06-30",
+        "form": "10-K"
+      },
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630_htm.xml",
+      "instance_sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "primary_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "components": [
+        {
+          "component_id": "commercial_paper",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "CommercialPaper",
+          "role": "reported_short_term_commercial_paper",
+          "scope": "Commercial paper borrowing, not investment holdings",
+          "dimensions": [],
+          "overlap_with": [],
+          "statements": []
+        },
+        {
+          "component_id": "current_debt",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebtCurrent",
+          "role": "reported_current_debt_carrying",
+          "scope": "Current portion of term/long-term debt carrying balance",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "F_ccc74744-8190-47f9-83d8-efcf043ad42d",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:LongTermDebtCurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "9,227"
+            },
+            {
+              "id": "F_6bdd3d02-00bf-4355-94dd-0fb1d0c0bb55",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:LongTermDebtCurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "9,227"
+            }
+          ]
+        },
+        {
+          "component_id": "noncurrent_debt",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebtNoncurrent",
+          "role": "reported_noncurrent_debt_carrying",
+          "scope": "Noncurrent term/long-term debt carrying balance",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "F_4bbc906c-68c8-4696-97ed-f11be329b64e",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:LongTermDebtNoncurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "31,067"
+            },
+            {
+              "id": "F_1d0baaa4-4424-484d-be99-dabe52c4be3b",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:LongTermDebtNoncurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "31,067"
+            }
+          ]
+        },
+        {
+          "component_id": "term_debt_parent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebt",
+          "role": "reported_term_debt_parent",
+          "scope": "Total debt carrying balance before current/noncurrent split; not total debt including leases",
+          "dimensions": [],
+          "overlap_with": [
+            "current_debt",
+            "noncurrent_debt",
+            "debt_principal"
+          ],
+          "statements": [
+            {
+              "id": "F_142716c6-e27e-45ac-8dc0-56b57aaa728a",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:LongTermDebt",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "40,294"
+            }
+          ]
+        },
+        {
+          "component_id": "debt_principal",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "DebtInstrumentCarryingAmount",
+          "role": "reported_debt_face_principal",
+          "scope": "Note caption explicitly reports total face value / term debt principal despite taxonomy local name",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent",
+            "principal_due_next_year"
+          ],
+          "statements": [
+            {
+              "id": "F_5594a130-428d-4a60-b33f-2b72ef921c5b",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:DebtInstrumentCarryingAmount",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "46,136"
+            },
+            {
+              "id": "F_aede321d-9704-424f-8e30-3106ac3f3b07",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:DebtInstrumentCarryingAmount",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "46,136"
+            }
+          ]
+        },
+        {
+          "component_id": "debt_fair_value",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebtFairValue",
+          "role": "reported_debt_fair_value",
+          "scope": "Estimated fair value of outstanding notes including current portion, not carrying amount",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "F_3a2efc76-179f-4f16-b82a-eb75a838327d",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:LongTermDebtFairValue",
+                "unitref": "U_USD",
+                "scale": "9",
+                "decimals": "-8",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "36.5"
+            }
+          ]
+        },
+        {
+          "component_id": "principal_due_next_year",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "role": "reported_principal_maturity",
+          "scope": "Future contractual next-year principal payments, not current carrying debt",
+          "dimensions": [],
+          "overlap_with": [
+            "debt_principal"
+          ],
+          "statements": [
+            {
+              "id": "F_96a1227a-2fdd-4947-81c2-9d2f88189996",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "9,250"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_total",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "OperatingLeaseLiability",
+          "role": "reported_discounted_operating_lease_liability",
+          "scope": "Discounted recognized operating lease liability, not payments or ROU asset",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_current",
+            "operating_lease_noncurrent",
+            "operating_lease_undiscounted"
+          ],
+          "statements": [
+            {
+              "id": "F_036b49a8-e91c-4e16-9ec9-29aaae103b35",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:OperatingLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "21,925"
+            },
+            {
+              "id": "F_025037bd-31c2-4d47-9e8d-92aee5af11a9",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:OperatingLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "21,925"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_current",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "OperatingLeaseLiability",
+          "role": "reported_current_operating_lease_liability",
+          "scope": "Current discounted operating lease liability",
+          "dimensions": [
+            "{http://fasb.org/us-gaap/2025}BalanceSheetLocationAxis={http://fasb.org/us-gaap/2025}OtherCurrentLiabilitiesMember"
+          ],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_0ad7224b-2847-44e8-9751-77e226efea6d",
+              "attributes": {
+                "contextref": "C_679d84a2-718e-485c-b446-83587991aa0e",
+                "name": "us-gaap:OperatingLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "5,393"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_noncurrent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "OperatingLeaseLiabilityNoncurrent",
+          "role": "reported_noncurrent_operating_lease_liability",
+          "scope": "Noncurrent discounted operating lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_36851ed9-64dd-4a76-8873-0e0e1580d071",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:OperatingLeaseLiabilityNoncurrent",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "16,532"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_total",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "FinanceLeaseLiability",
+          "role": "reported_discounted_finance_lease_liability",
+          "scope": "Discounted recognized finance lease liability, not principal cash paid",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_current",
+            "finance_lease_noncurrent",
+            "finance_lease_undiscounted"
+          ],
+          "statements": [
+            {
+              "id": "F_2e6e6970-8107-497c-960b-f9e603d7360b",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "66,594"
+            },
+            {
+              "id": "F_c910459c-9594-4c39-a5c9-d3d39841b935",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "66,594"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_current",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "FinanceLeaseLiability",
+          "role": "reported_current_finance_lease_liability",
+          "scope": "Current discounted finance lease liability",
+          "dimensions": [
+            "{http://fasb.org/us-gaap/2025}BalanceSheetLocationAxis={http://fasb.org/us-gaap/2025}OtherCurrentLiabilitiesMember"
+          ],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_8e5a87e3-8033-40df-b55d-4dce3d4c3d8b",
+              "attributes": {
+                "contextref": "C_679d84a2-718e-485c-b446-83587991aa0e",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "4,290"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_noncurrent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "FinanceLeaseLiability",
+          "role": "reported_noncurrent_finance_lease_liability",
+          "scope": "Noncurrent discounted finance lease liability",
+          "dimensions": [
+            "{http://fasb.org/us-gaap/2025}BalanceSheetLocationAxis={http://fasb.org/us-gaap/2025}OtherNoncurrentLiabilitiesMember"
+          ],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_7edba213-0ab5-4d0d-a722-15042af14e1a",
+              "attributes": {
+                "contextref": "C_ef26aaff-8fc4-4511-b672-42098fa07215",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "62,304"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_undiscounted",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LesseeOperatingLeaseLiabilityPaymentsDue",
+          "role": "reported_undiscounted_operating_lease_payments",
+          "scope": "Future undiscounted payments for recognized operating leases; not discounted liability or historical cash payments",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_93055e8f-2e9a-45c2-af46-de0baabaad4f",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDue",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "24,706"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_undiscounted",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "FinanceLeaseLiabilityPaymentsDue",
+          "role": "reported_undiscounted_finance_lease_payments",
+          "scope": "Future undiscounted payments for recognized finance leases; not discounted liability or historical cash payments",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "F_8a0510d1-6eec-4b30-be56-14c792690f95",
+              "attributes": {
+                "contextref": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "name": "us-gaap:FinanceLeaseLiabilityPaymentsDue",
+                "unitref": "U_USD",
+                "scale": "6",
+                "decimals": "-6",
+                "format": "ixt:num-dot-decimal"
+              },
+              "displayed_value": "89,686"
+            }
+          ]
+        }
+      ],
+      "scope_notes": [
+        {
+          "locator": "NOTE 10 \u2014 DEBT",
+          "text": "NOTE 10 \u2014 DEBT The components of long-term debt were as follows: (In millions, issuance by calendar year) Maturities (calendar year) Stated Interest Rate Effective Interest Rate June 30, 2026 June 30, 2025 2009 issuance of $ 3.8 billion 2039 5.20 % 5.24 % $ 520 $ 520 2010 issuance of $ 4.8 billion 2040 4.50 % 4.57 % 486 486 2011 issuance of $ 2.3 billion 2041 5.30 % 5.36 % 718 718 2012 issuance of $ 2.3 billion 2042 3.50 % 3.57 % 454 454 2013 issuance of $ 5.2 billion 2043 3.75 % \u2013 4.88 % 3.83 % \u2013 4.92 % 314 314 2013 issuance of \u20ac 4.1 billion 2028 \u2013 2033 2.63 % \u2013 3.13 % 2.69 % \u2013 3.22 % 2,630 2,700 2015 issuance of $ 23.8 billion 2035 \u2013 2055 3.50 % \u2013 4.75 % 3.60 % \u2013 4.78 % 4,555 7,555 2016 issuance of $ 19.8 billion 2026 \u2013 2056 2.40 % \u2013 3.95 % 2.46 % \u2013 4.03 % 7,930 7,930 2017 issuance of $ 17.1 billion 2026 \u2013 2057 3.30 % \u2013 4.50 % 3.38 % \u2013 5.49 % 6,833 6,833 2020 issuance of $ 10.1 billion 2030 \u2013 2060 1.35 % \u2013 2.68 % 2.53 % \u2013 5.43 % 10,111 10,111 2021 issuance of $ 8.2 billion 2052 \u2013 2062 2.92 % \u2013 3.04 % 2.92 % \u2013 3.04 % 8,185 8,185 2023 issuance of $ 0.1 billion 2026 \u2013 2050 1.35 % \u2013 4.50 % 5.16 % \u2013 5.49 % 56 56 2024 issuance of $ 3.3 billion 2026 \u2013 2050 1.35 % \u2013 4.50 % 5.16 % \u2013 5.49 % 3,344 3,344 Total face value 46,136 49,206 Unamortized discount and issuance costs ( 1,081 ) ( 1,155 ) Hedge fair value adjustments (a) ( 11 ) ( 36 ) Premium on debt exchange ( 4,750 ) ( 4,864 ) Total debt 40,294 43,151 Current portion of long-term debt ( 9,227 ) ( 2,999 ) Long-term debt $ 31,067 $ 40,152 (a) Refer to Note 5 \u2013 Derivatives for further information on the interest rate swaps related to fixed-rate debt. As of June 30, 2026 and 2025, the estimated fair value of long-term debt, including the current portion, was $ 36.5 billion and $ 40.4 billion, respectively. The estimated fair values are based on Level 2 inputs. Debt in the table above is comprised of senior unsecured obligations and ranks equally with our other outstanding obligations. Interest is paid semi-annually, except for the Euro-denominated debt, which is paid annually. Cash paid for interest on our debt for fiscal years 2026, 2025, and 2024 was $ 1.5 billion, $ 1.6 billion, and $ 1.7 billion, respectively. 72 PART II Item 8 The following table outlines maturities of our long-term debt, including the current portion, as of June 30, 2026: (In millions) Year Ending June 30, 2027 $ 9,250 2028 0 2029 2,001 2030 0 2031 500 Thereafter 34,385 Total $ 46,136 NOTE 11 \u2014 INCOME TAXES Provision for Income Taxes The components of the provision for income taxes were as follows: (In millions) Year Ended June 30, 2026 2025 2024 Current Taxes U.S. federal $ 2,461 $ 14,086 $ 12,165 U.S. state and local 2,713 3,342 2,366 Foreign 12,587 11,423 9,858 Current taxes $ 17,761 $ 28,851 $ 24,389 Deferred Taxes U.S. federal $ 12,780 $ ( 6,250 ) $ ( 4,791 ) U.S. state and local 1,113 ( 1,087 ) ( 379 ) Foreign 531 281 432 Deferred taxes $ 14,424 $ ( 7,056 ) $ ( 4,738 ) Provision for income taxes $ 32,185 $ 21,795 $ 19,651 U.S. and foreign components of income before income taxes were as follows: (In millions) Year Ended June 30, 2026 2025 2024 U.S. $ 103,591 $ 69,212 $ 62,886 Foreign 62,343 54,415 44,901 Income before in"
+        },
+        {
+          "locator": "Supplemental balance sheet information related to leases",
+          "text": "Supplemental balance sheet information related to leases was as follows: (In millions, except lease term and discount rate) June 30, 2026 2025 Operating Leases Operating lease right-of-use assets $ 24,177 $ 24,823 Other current liabilities $ 5,393 $ 5,424 Operating lease liabilities 16,532 17,437 Total operating lease liabilities $ 21,925 $ 22,861 Finance Leases Property and equipment, at cost $ 82,712 $ 53,876 Accumulated depreciation ( 15,431 ) ( 9,861 ) Property and equipment, net $ 67,281 $ 44,015 Other current liabilities $ 4,290 $ 3,172 Other long-term liabilities 62,304 43,000 Total finance lease liabilities $ 66,594 $ 46,172 Weighted Average Remaining Lease Term Operating leases 6 years 6 years Finance leases 13 years 13 years Weighted Average Discount Rate Operating leases 3.7 % 3.5 % Finance leases 4.5 % 4.2 % The following table outlines maturities of our lease liabilities as of June 30, 2026: (In millions) Year Ending June 30, Operating Leases Finance Leases 2027 $ 6,082 $ 7,121 2028 4,334 7,294 2029 3,146 6,668 2030 2,612 6,570 2031 2,316 6,543 Thereafter 6,216 55,490 Total lease payments 24,706 89,686 Less imputed interest ( 2,781 ) ( 23,092 ) Total $ 21,925 $ 66,594 As of June 30, 2026, we had additional leases, primarily for datacenters, that had not yet commenced of $ 329.1 billion, with some arrangements subject to certain contractual conditions being met. These leases will commence between fiscal year 2027 and fiscal year 2033 with lease terms of 1 year to 20 years. 78 PART II Item 8 NOTE 14 \u2014 CONTINGENCIES Irish Data Protection Commission Matter In 2018, the Irish Data Protection Commission (\u201cIDPC\u201d) began investigating a complaint against LinkedIn as to whether LinkedIn\u2019s targeted advertising practices violated the recently implemented European Union"
+        }
+      ],
+      "unknowns": [
+        {
+          "component_id": "other_short_term_borrowing",
+          "reason": "No independently bound complete short-term borrowing population beyond disclosed commercial paper/current debt; no absence-to-zero inference."
+        },
+        {
+          "component_id": "complete_debt_lease_aggregate",
+          "reason": "No complete non-overlapping total debt/lease perimeter approved; carrying, principal, fair value and payment schedules cannot be added."
+        },
+        {
+          "component_id": "unrecognized_lease_commitments",
+          "reason": "Not-yet-commenced commitments and undisclosed coverage are not recognized discounted lease liabilities; no complete debt treatment approved."
+        }
+      ]
+    },
+    {
+      "bundle_id": "aapl-reported-cash-flow-fy2025",
+      "period": {
+        "cik": 320193,
+        "accession": "0000320193-25-000079",
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27",
+        "form": "10-K"
+      },
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+      "instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "primary_sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "components": [
+        {
+          "component_id": "commercial_paper",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "CommercialPaper",
+          "role": "reported_short_term_commercial_paper",
+          "scope": "Commercial paper borrowing, not investment holdings",
+          "dimensions": [],
+          "overlap_with": [],
+          "statements": [
+            {
+              "id": "f-189",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:CommercialPaper",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "7,979"
+            }
+          ]
+        },
+        {
+          "component_id": "current_debt",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebtCurrent",
+          "role": "reported_current_debt_carrying",
+          "scope": "Current portion of term/long-term debt carrying balance",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "f-191",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebtCurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "12,350"
+            },
+            {
+              "id": "f-942",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebtCurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "12,350"
+            }
+          ]
+        },
+        {
+          "component_id": "noncurrent_debt",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebtNoncurrent",
+          "role": "reported_noncurrent_debt_carrying",
+          "scope": "Noncurrent term/long-term debt carrying balance",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "f-195",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebtNoncurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "78,328"
+            },
+            {
+              "id": "f-944",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebtNoncurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "78,328"
+            }
+          ]
+        },
+        {
+          "component_id": "term_debt_parent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebt",
+          "role": "reported_term_debt_parent",
+          "scope": "Total debt carrying balance before current/noncurrent split; not total debt including leases",
+          "dimensions": [],
+          "overlap_with": [
+            "current_debt",
+            "noncurrent_debt",
+            "debt_principal"
+          ],
+          "statements": [
+            {
+              "id": "f-940",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebt",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "90,678"
+            }
+          ]
+        },
+        {
+          "component_id": "debt_principal",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "DebtInstrumentCarryingAmount",
+          "role": "reported_debt_face_principal",
+          "scope": "Note caption explicitly reports total face value / term debt principal despite taxonomy local name",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent",
+            "principal_due_next_year"
+          ],
+          "statements": [
+            {
+              "id": "f-934",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:DebtInstrumentCarryingAmount",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "91,281"
+            },
+            {
+              "id": "f-953",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:DebtInstrumentCarryingAmount",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "91,281"
+            }
+          ]
+        },
+        {
+          "component_id": "debt_fair_value",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebtFairValue",
+          "role": "reported_debt_fair_value",
+          "scope": "Estimated fair value of outstanding notes including current portion, not carrying amount",
+          "dimensions": [
+            "{http://fasb.org/us-gaap/2025}FairValueByFairValueHierarchyLevelAxis={http://fasb.org/us-gaap/2025}FairValueInputsLevel2Member"
+          ],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "f-954",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-74",
+                "decimals": "-8",
+                "name": "us-gaap:LongTermDebtFairValue",
+                "scale": "9"
+              },
+              "displayed_value": "80.4"
+            }
+          ]
+        },
+        {
+          "component_id": "principal_due_next_year",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "role": "reported_principal_maturity",
+          "scope": "Future contractual next-year principal payments, not current carrying debt",
+          "dimensions": [],
+          "overlap_with": [
+            "debt_principal"
+          ],
+          "statements": [
+            {
+              "id": "f-947",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "12,393"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_total",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "OperatingLeaseLiability",
+          "role": "reported_discounted_operating_lease_liability",
+          "scope": "Discounted recognized operating lease liability, not payments or ROU asset",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_current",
+            "operating_lease_noncurrent",
+            "operating_lease_undiscounted"
+          ],
+          "statements": [
+            {
+              "id": "f-883",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:OperatingLeaseLiability",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "12,490"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_current",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "OperatingLeaseLiabilityCurrent",
+          "role": "reported_current_operating_lease_liability",
+          "scope": "Current discounted operating lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-841",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:OperatingLeaseLiabilityCurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "1,579"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_noncurrent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "OperatingLeaseLiabilityNoncurrent",
+          "role": "reported_noncurrent_operating_lease_liability",
+          "scope": "Noncurrent discounted operating lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-845",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:OperatingLeaseLiabilityNoncurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "10,911"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_total",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "FinanceLeaseLiability",
+          "role": "reported_discounted_finance_lease_liability",
+          "scope": "Discounted recognized finance lease liability, not principal cash paid",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_current",
+            "finance_lease_noncurrent",
+            "finance_lease_undiscounted"
+          ],
+          "statements": [
+            {
+              "id": "f-884",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "1,230"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_current",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "FinanceLeaseLiabilityCurrent",
+          "role": "reported_current_finance_lease_liability",
+          "scope": "Current discounted finance lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-849",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:FinanceLeaseLiabilityCurrent",
+                "scale": "6"
+              },
+              "displayed_value": "538"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_noncurrent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "FinanceLeaseLiabilityNoncurrent",
+          "role": "reported_noncurrent_finance_lease_liability",
+          "scope": "Noncurrent discounted finance lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-853",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:FinanceLeaseLiabilityNoncurrent",
+                "scale": "6"
+              },
+              "displayed_value": "692"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_undiscounted",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "LesseeOperatingLeaseLiabilityPaymentsDue",
+          "role": "reported_undiscounted_operating_lease_payments",
+          "scope": "Future undiscounted payments for recognized operating leases; not discounted liability or historical cash payments",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-877",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDue",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "14,725"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_undiscounted",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "concept": "FinanceLeaseLiabilityPaymentsDue",
+          "role": "reported_undiscounted_finance_lease_payments",
+          "scope": "Future undiscounted payments for recognized finance leases; not discounted liability or historical cash payments",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-878",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "us-gaap:FinanceLeaseLiabilityPaymentsDue",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "1,579"
+            }
+          ]
+        },
+        {
+          "component_id": "lease_parent",
+          "taxonomy": "aapl",
+          "namespace": "http://www.apple.com/20250927",
+          "concept": "OperatingandFinanceLeaseLiability",
+          "role": "reported_discounted_lease_parent",
+          "scope": "Issuer-extension reported total lease liabilities; component observation only, no generic approval",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total",
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-855",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "aapl:OperatingandFinanceLeaseLiability",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "13,720"
+            },
+            {
+              "id": "f-885",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-20",
+                "decimals": "-6",
+                "name": "aapl:OperatingandFinanceLeaseLiability",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "13,720"
+            }
+          ]
+        }
+      ],
+      "scope_notes": [
+        {
+          "locator": "Term Debt The Company",
+          "text": "Term Debt The Company has outstanding Notes, which are senior unsecured obligations with interest payable in arrears. The following table provides a summary of the Company\u2019s term debt as of September 27, 2025 and September 28, 2024: Maturities (calendar year) 2025 2024 Amount (in millions) Effective Interest Rate Amount (in millions) Effective Interest Rate 2013 \u2013 2023 debt issuances: Fixed-rate 0.000 % \u2013 4.850 % notes 2025 \u2013 2062 $ 86,781 0.03 % \u2013 5.75 % $ 97,341 0.03 % \u2013 6.65 % 2025 debt issuance: Fixed-rate 4.000 % \u2013 4.750 % notes 2028 \u2013 2035 4,500 4.07 % \u2013 4.83 % \u2014 Total term debt principal 91,281 97,341 Unamortized premium/(discount) and issuance costs, net ( 309 ) ( 321 ) Hedge accounting fair value adjustments ( 294 ) ( 358 ) Total term debt 90,678 96,662 Less: Current portion of term debt ( 12,350 ) ( 10,912 ) Total non-current portion of term debt $ 78,328 $ 85,750 To manage interest rate risk on certain of its U.S. dollar\u2013denominated fixed-rate notes, the Company uses interest rate swaps to effectively convert the fixed interest rates to floating interest rates on a portion of these notes. Additionally, to manage foreign exchange rate risk on certain of its foreign currency\u2013denominated notes, the Company uses cross-currency swaps to effectively convert these notes to U.S. dollar\u2013denominated notes. The effective interest rates for the Notes include the interest on the Notes, amortization of the discount or premium and, if applicable, adjustments related to hedging. The future principal payments for the Company\u2019s Notes as of September 27, 2025, are as follows (in millions): 2026 $ 12,393 2027 10,078 2028 9,300 2029 5,235 2030 4,972 Thereafter 49,303 Total term debt principal $ 91,281 As of September 27, 2025 and September 28, 2024, the fair value of the Company\u2019s Notes, based on Level 2 inputs, was $ 80.4 billion and $ 88.4 billion, respectively. Note 10 \u2013 Shareholders\u2019 Equity Share Repurchase Program During 2025, the Company repurchased 402 million shares of its common stock for $ 89.3 billion. The Company\u2019s share repurchase programs do not obligate the Company to acquire a minimum amount of shares. Under the programs, shares may be repurchased in privately negotiated or open market transactions, including under plans complying with Rule 10b5-1 under the Exchange Act. Apple Inc. | 2025 Form 10-K | 44 Shares of Common Stock The following table shows the changes in shares of common stock for 2025, 2024 and 2023 (in thousands): 2025 2024 2023 Common stock outstanding, beginning balances 15,116,786 15,550,061 15,943,425 Common stock repurchased ( 401,672 ) ( 499,372 ) ( 471,419 ) Common stock issued, net of shares withheld for employee taxes 58,146 66,097 78,055 Common stock outstanding, ending balances 14,773,260 15,116,786 15,550,061 Note 11 \u2013 Share-Based Compensation 2022 Employee Stock Plan The Apple Inc. 2022 Employee Stock Plan (\u201c2022 Plan\u201d) is a shareholder-approved plan that provides for broad-based equity grants to employees, including executive officers, and permits the granting of RSUs, stock grants, performance-based awards, stock options and stock appreciation rights. RSUs granted under the 2022 Plan generally vest over four"
+        },
+        {
+          "locator": "Lease liability maturities as of",
+          "text": "Lease liability maturities as of September 27, 2025, are as follows (in millions): Operating Leases Finance Leases Total 2026 $ 1,967 $ 563 $ 2,530 2027 1,988 73 2,061 2028 1,848 51 1,899 2029 1,585 48 1,633 2030 1,381 43 1,424 Thereafter 5,956 801 6,757 Total undiscounted liabilities 14,725 1,579 16,304 Less: Imputed interest ( 2,235 ) ( 349 ) ( 2,584 ) Total lease liabilities $ 12,490 $ 1,230 $ 13,720 The weighted-average remaining lease term related to the Company\u2019s lease liabilities as of September 27, 2025 and September 28, 2024 was 9.8 years and 10.3 years, respectively. The discount rate related to the Company\u2019s lease liabilities as of September 27, 2025 and September 28, 2024 was 3.4 % and 3.1 %, respectively. The discount rates related to the Company\u2019s lease liabilities are generally based on estimates of the Company\u2019s incremental borrowing rate, as the discount rates implicit in the Company\u2019s leases cannot be readily determined. As of September 27, 2025, the Company had $ 523 million of fixed payment obligations under additional leases, primarily for corporate facilities and retail space, that had not yet commenced. These leases are expected to commence between 2026 and 2027, with lease terms ranging from 1 year to 21 years. Note 9 \u2013 Debt Commercial Paper The Company issues unsecured short-term promissory notes pursuant to a commercial paper program. The Company uses net proceeds from the commercial paper program for general corporate purposes, including dividends and share repurchases. As of September 27, 2025 and September 28, 2024, the Company had $ 8.0 billion and $ 10.0 billion of commercial paper outstanding, respectively, with maturities generally less than nine months . The weighted-average interest rate of the Company\u2019s commercial paper was 4.19 % and"
+        }
+      ],
+      "unknowns": [
+        {
+          "component_id": "other_short_term_borrowing",
+          "reason": "No independently bound complete short-term borrowing population beyond disclosed commercial paper/current debt; no absence-to-zero inference."
+        },
+        {
+          "component_id": "complete_debt_lease_aggregate",
+          "reason": "No complete non-overlapping total debt/lease perimeter approved; carrying, principal, fair value and payment schedules cannot be added."
+        },
+        {
+          "component_id": "unrecognized_lease_commitments",
+          "reason": "Not-yet-commenced commitments and undisclosed coverage are not recognized discounted lease liabilities; no complete debt treatment approved."
+        }
+      ]
+    },
+    {
+      "bundle_id": "googl-reported-cash-flow-fy2024",
+      "period": {
+        "cik": 1652044,
+        "accession": "0001652044-25-000014",
+        "annual_start": "2024-01-01",
+        "annual_end": "2024-12-31",
+        "form": "10-K"
+      },
+      "instance_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231_htm.xml",
+      "instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3",
+      "primary_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+      "primary_sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+      "digest_type": "sha256_sec_response_body_bytes",
+      "components": [
+        {
+          "component_id": "commercial_paper",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "CommercialPaper",
+          "role": "reported_short_term_commercial_paper",
+          "scope": "Commercial paper borrowing, not investment holdings",
+          "dimensions": [],
+          "overlap_with": [],
+          "statements": [
+            {
+              "id": "f-1027",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "INF",
+                "name": "us-gaap:CommercialPaper",
+                "scale": "9"
+              },
+              "displayed_value": "2.3"
+            }
+          ]
+        },
+        {
+          "component_id": "current_debt",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebtCurrent",
+          "role": "reported_current_debt_carrying",
+          "scope": "Current portion of term/long-term debt carrying balance",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "f-1049",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebtCurrent",
+                "scale": "6"
+              },
+              "displayed_value": "999"
+            }
+          ]
+        },
+        {
+          "component_id": "noncurrent_debt",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebtNoncurrent",
+          "role": "reported_noncurrent_debt_carrying",
+          "scope": "Noncurrent term/long-term debt carrying balance",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "f-1051",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebtNoncurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "10,883"
+            }
+          ]
+        },
+        {
+          "component_id": "term_debt_parent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebtAndCapitalLeaseObligations",
+          "role": "reported_term_debt_parent",
+          "scope": "Balance-sheet long-term debt caption; Note 6 links to noncurrent notes. Do not infer finance-lease inclusion from taxonomy name",
+          "dimensions": [],
+          "overlap_with": [
+            "noncurrent_debt"
+          ],
+          "statements": [
+            {
+              "id": "f-98",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "10,883"
+            }
+          ]
+        },
+        {
+          "component_id": "debt_principal",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebt",
+          "role": "reported_debt_face_principal",
+          "scope": "Note 6 total face value of long-term debt, not carrying amount",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent",
+            "principal_due_next_year"
+          ],
+          "statements": [
+            {
+              "id": "f-1045",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebt",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "12,000"
+            },
+            {
+              "id": "f-1061",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebt",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "12,000"
+            }
+          ]
+        },
+        {
+          "component_id": "debt_fair_value",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebtFairValue",
+          "role": "reported_debt_fair_value",
+          "scope": "Estimated fair value of outstanding notes including current portion, not carrying amount",
+          "dimensions": [],
+          "overlap_with": [
+            "term_debt_parent"
+          ],
+          "statements": [
+            {
+              "id": "f-1053",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-8",
+                "name": "us-gaap:LongTermDebtFairValue",
+                "format": "ixt:num-dot-decimal",
+                "scale": "9"
+              },
+              "displayed_value": "9.0"
+            }
+          ]
+        },
+        {
+          "component_id": "principal_due_next_year",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "role": "reported_principal_maturity",
+          "scope": "Future contractual next-year principal payments, not current carrying debt",
+          "dimensions": [],
+          "overlap_with": [
+            "debt_principal"
+          ],
+          "statements": [
+            {
+              "id": "f-1055",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "1,000"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_total",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "OperatingLeaseLiability",
+          "role": "reported_discounted_operating_lease_liability",
+          "scope": "Discounted recognized operating lease liability, not payments or ROU asset",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_current",
+            "operating_lease_noncurrent",
+            "operating_lease_undiscounted"
+          ],
+          "statements": [
+            {
+              "id": "f-951",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:OperatingLeaseLiability",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "14,578"
+            },
+            {
+              "id": "f-1004",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:OperatingLeaseLiability",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "14,578"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_current",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "OperatingLeaseLiabilityCurrent",
+          "role": "reported_current_operating_lease_liability",
+          "scope": "Current discounted operating lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-945",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:OperatingLeaseLiabilityCurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "2,887"
+            },
+            {
+              "id": "f-1095",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:OperatingLeaseLiabilityCurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "2,887"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_noncurrent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "OperatingLeaseLiabilityNoncurrent",
+          "role": "reported_noncurrent_operating_lease_liability",
+          "scope": "Noncurrent discounted operating lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-102",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:OperatingLeaseLiabilityNoncurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "11,691"
+            },
+            {
+              "id": "f-949",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:OperatingLeaseLiabilityNoncurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "11,691"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_total",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "FinanceLeaseLiability",
+          "role": "reported_discounted_finance_lease_liability",
+          "scope": "Discounted recognized finance lease liability, not principal cash paid",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_current",
+            "finance_lease_noncurrent",
+            "finance_lease_undiscounted"
+          ],
+          "statements": [
+            {
+              "id": "f-969",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "1,677"
+            },
+            {
+              "id": "f-1005",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:FinanceLeaseLiability",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "1,677"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_current",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "FinanceLeaseLiabilityCurrent",
+          "role": "reported_current_finance_lease_liability",
+          "scope": "Current discounted finance lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-963",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:FinanceLeaseLiabilityCurrent",
+                "scale": "6"
+              },
+              "displayed_value": "235"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_noncurrent",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "FinanceLeaseLiabilityNoncurrent",
+          "role": "reported_noncurrent_finance_lease_liability",
+          "scope": "Noncurrent discounted finance lease liability",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-967",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:FinanceLeaseLiabilityNoncurrent",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "1,442"
+            }
+          ]
+        },
+        {
+          "component_id": "operating_lease_undiscounted",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "LesseeOperatingLeaseLiabilityPaymentsDue",
+          "role": "reported_undiscounted_operating_lease_payments",
+          "scope": "Future undiscounted payments for recognized operating leases; not discounted liability or historical cash payments",
+          "dimensions": [],
+          "overlap_with": [
+            "operating_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-1000",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:LesseeOperatingLeaseLiabilityPaymentsDue",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "17,038"
+            }
+          ]
+        },
+        {
+          "component_id": "finance_lease_undiscounted",
+          "taxonomy": "us-gaap",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "concept": "FinanceLeaseLiabilityPaymentsDue",
+          "role": "reported_undiscounted_finance_lease_payments",
+          "scope": "Future undiscounted payments for recognized finance leases; not discounted liability or historical cash payments",
+          "dimensions": [],
+          "overlap_with": [
+            "finance_lease_total"
+          ],
+          "statements": [
+            {
+              "id": "f-1001",
+              "attributes": {
+                "unitref": "usd",
+                "contextref": "c-9",
+                "decimals": "-6",
+                "name": "us-gaap:FinanceLeaseLiabilityPaymentsDue",
+                "format": "ixt:num-dot-decimal",
+                "scale": "6"
+              },
+              "displayed_value": "1,888"
+            }
+          ]
+        }
+      ],
+      "scope_notes": [
+        {
+          "locator": "Note 6. Debt",
+          "text": "Note 6. Debt Short-Term Debt We have a debt financing program of up to $ 10.0 billion through the issuance of commercial paper. Net proceeds from this program are used for general corporate purposes. We had no c ommercial paper outstanding as of December 31, 2023 and $ 2.3 billion of commercial paper outstanding with a weighted-average effective interest rate of 4.4 % as of December 31, 2024 .The estimated fair value of the commercial paper approximated its carrying value as of December 31, 2024 Our short-term debt balance also includes the current portion of certain long-term debt. Long-Term Debt Total outstanding long-term debt is summarized below (in millions, except percentages): Effective Interest Rate As of December 31, Maturity Coupon Rate 2023 2024 Debt 2014 Notes issuance 2024 3.38 % 3.38 % $ 1,000 $ 0 2016 Notes issuance 2026 2.00 % 2.23 % 2,000 2,000 2020 Notes issuance 2025 - 2060 0.45 % - 2.25 % 0.57 % - 2.33 % 10,000 10,000 Total face value of long-term debt 13,000 12,000 Unamortized discount and debt issuance costs ( 130 ) ( 118 ) Less: Current portion of long-term notes (1) ( 1,000 ) ( 999 ) Total long-term debt $ 11,870 $ 10,883 74. Table of Contents Alphabet Inc. (1) Total current portion of long-term debt is included within accrued expenses and other current liabilities. See Note 7 for further details. The notes in the table above are fixed-rate senior unsecured obligations and rank equally with each other. We may redeem the notes at any time in whole or in part at specified redemption prices. The effective interest rates are based on proceeds received with interest payable semi-annually. The total estimated fair value of the outstanding notes was approximately $ 10.3 billion and $ 9.0 billion as of December 31, 2023 and December 31, 2024, respectively. The fair value was determined based on observable market prices of identical instruments in less active markets and is categorized accordingly as Level 2 in the fair value hierarchy. As of December 31, 2024, the future principal payments for long-term debt were as follows (in millions): 2025 $ 1,000 2026 2,000 2027 1,000 2028 0 2029 0 Thereafter 8,000 Total $ 12,000 Credit Facility As of December 31, 2024, we had $ 10.0 billion of revolving credit facilities, of which $ 4.0 billion expires in April 2025 and $ 6.0 billion expires in April 2028. The interest rates for all credit facilities are determined based on a formula using certain market rates, as well as our progress toward the achievement of certain sustainability goa ls. No amounts were outstanding under the credit facilities as of December 31, 2023 and 2024. Note 7. Supplemental Financial Statement Information Accounts Receivable The allowance for credit losses on accounts receivable was $ 771 million and $ 879 million as of December 31, 2023 and 2024, respectively. Property and Equipment, Net Property and equipment, net, consisted of the following (in millions): As of December 31, 2023 2024 Technical infrastructure $ 112,504 $ 139,596 Office space 40,435 43,714 Corporate and other assets 13,728 16,519 Property and equipment, in service 166,667 199,829 Less: accumulated depreciation ( 67,458 ) ( 79,390 ) Add: assets "
+        },
+        {
+          "locator": "Future lease payments as of",
+          "text": "Future lease payments as of December 31, 2024 were as follows (in millions): Operating Leases Finance Leases 2025 $ 3,162 $ 257 2026 2,824 208 2027 2,311 208 2028 1,838 197 2029 1,448 166 Thereafter 5,455 852 Total future lease payments 17,038 1,888 Less imputed interest ( 2,460 ) ( 211 ) Total lease liability balance $ 14,578 $ 1,677 As of December 31, 2024 , we have entered into leases that have not yet commenced with short-term and long-term future lease payments of $ 773 million and $ 6.5 billion, respectively, that are not yet recorded on our Consolidated Balance Sheets. These leases will commence between 2025 and 2028 with non-cancelable lease terms between one and 25 years. Note 5. Variable Interest Entities Consolidated VIEs 73. Table of Contents Alphabet Inc. We consolidate VIEs in which we hold a variable interest and are the primary beneficiary. The results of operations and financial position of these VIEs are included in our consolidated financial statements. For certain consolidated VIEs, their assets are not available to us, and their creditors do not have recourse to us. As of December 31, 2023 and 2024, assets that can only be used to settle obligations of these VIEs were $ 4.9 billion and $ 8.7 billion, respectively and are primarily included in cash and cash equivalents on our Consolidated Balance Sheets. As of December 31, 2023 and 2024, liabilities for which creditors only have recourse to the VIEs were $ 2.5 billion and $ 2.3 billion, respectively. We may continue to fund ongoing operations of certain VIEs that are included within Other Bets. Waymo, a fully autonomous driving technology company and a consolidated VIE, received $ 5.6 billion in funding during the year ended December 31, 2024, the majority of which was funded by Alphabet. Investments"
+        }
+      ],
+      "unknowns": [
+        {
+          "component_id": "other_short_term_borrowing",
+          "reason": "No independently bound complete short-term borrowing population beyond disclosed commercial paper/current debt; no absence-to-zero inference."
+        },
+        {
+          "component_id": "complete_debt_lease_aggregate",
+          "reason": "No complete non-overlapping total debt/lease perimeter approved; carrying, principal, fair value and payment schedules cannot be added."
+        },
+        {
+          "component_id": "unrecognized_lease_commitments",
+          "reason": "Not-yet-commenced commitments and undisclosed coverage are not recognized discounted lease liabilities; no complete debt treatment approved."
+        }
+      ]
+    }
+  ]
+}

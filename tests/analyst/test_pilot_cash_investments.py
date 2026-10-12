@@ -212,7 +212,7 @@ class CashInvestmentTests(unittest.TestCase):
             for key in before:
                 if key != 'fields': self.assertEqual(before[key],after[key])
             for field in before['fields']:
-                if field != h.Field.CASH_INVESTMENTS.value: self.assertEqual(before['fields'][field],after['fields'][field])
+                if field not in (h.Field.CASH_INVESTMENTS.value, h.Field.DEBT_LEASES.value): self.assertEqual(before['fields'][field],after['fields'][field])
         for source in self.sources.values():
             for receipt in source.artifacts:
                 self.assertEqual(hashlib.sha256(receipt.artifact.body).hexdigest(),receipt.artifact.sha256)

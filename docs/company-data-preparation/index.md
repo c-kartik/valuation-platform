@@ -1,5 +1,23 @@
 # Company data preparation register
 
+## Retained year-end debt/lease delivery — four pilot periods
+
+[Exact evidence, basis/overlap decisions and tests](../pilot-debt-lease-evidence.md)
+and [machine-checkable locators](../pilot-debt-lease-evidence.json) add 60 reported
+component observations/80 occurrences, one null MSFT FY2026 commercial-paper
+slot and 12 additional null requirements. Mapping/isolated annual/history
+versions 4 preserve all other fields, original packages, frozen policies/outputs
+and financial blockers. Carrying, principal, fair value, discounted liabilities
+and undiscounted future/historical payments remain distinct. No complete debt
+aggregate or lease convention. Only MSFT FY2025/FY2026, AAPL FY2025, Alphabet
+FY2024 are packaged; no whole-history/issuer readiness or new registry approvals.
+The three detailed records explain source conflict, rejected substitutions,
+chosen separate packaging, exact evidence, validation and remaining limits.
+Next bounded shared prerequisite: reusable retained-instance direct-component
+inspection preserving these four mappings, with no extra registrations or
+financial treatment. Standing record maintenance and both preparation statuses
+remain required; financial sufficiency NOT_ASSESSED.
+
 ## Retained year-end cash/investment components — four pilot periods
 
 [Selections, scope and remaining requirements](../pilot-cash-investment-evidence.md)

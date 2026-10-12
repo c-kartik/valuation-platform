@@ -1,5 +1,38 @@
 # GOOGL — company data preparation
 
+## Retained year-end debt/lease components — FY2024 only
+
+Original conflict: debt-family mapping lacked closing evidence despite retained
+notes; labels could incorrectly combine notes and finance leases. [Exact receipts,
+contexts and statement/note locators](../pilot-debt-lease-evidence.json) and
+[scope/test results](../pilot-debt-lease-evidence.md) bind only accession
+`0001652044-25-000014`, 2024-12-31, preserving the explicit refreshed receipt
+and original metadata gap. USD millions: commercial paper **2,300** (issuer
+decimals INF), current/noncurrent notes **999/10,883**, face principal **12,000**,
+rounded fair value **9,000**, next-year maturity principal **1,000**.
+`LongTermDebtAndCapitalLeaseObligations` **10,883** is the balance-sheet
+noncurrent notes caption tied to Note 6, duplicating noncurrent notes; its name
+does not approve lease inclusion. Historical 2021–2023 debt derivations are not
+extended to this accession. No principal-minus-residual or component equation.
+
+Operating discounted total/current/noncurrent **14,578/2,887/11,691**, finance
+**1,677/235/1,442**, and undiscounted operating/finance future payments
+**17,038/1,888** retain separate roles and overlap. Note 4 places finance
+liabilities in other current/long-term liabilities, not implicitly the notes
+caption. Historical lease cash payments remain in their original package.
+Considered and rejected: naming-based scope, summed parents/components,
+fair-value/principal substitution and automatic lease/debt treatment.
+
+Fifteen available slots/20 fact occurrences are packaged in mapping/annual/
+history version 4, with three null requirements: other short-term borrowing
+coverage, complete non-overlapping debt/lease perimeter and unrecognized lease
+commitments. Reported facts only; no analyst estimate or financial convention.
+Independent values/conflicts/precision/serialization and preservation checks
+are recorded in the linked results. Other fields, D&A/NWC/timing/borrowing-
+interest unknowns, original bundle/scenario and frozen-v1 remain unchanged.
+Next bounded work is shared retained-component inspection, not new Alphabet
+research. GOOG/GOOGL still represent this one issuer, not additional histories.
+
 ## Year-end cash/investment components — FY2024 only
 
 Original conflict: the preparation bridge-family slot lacked bindings despite

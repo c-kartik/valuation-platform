@@ -1,6 +1,12 @@
 # Four-pilot retained-evidence field mappings
 
-**Current version 3:** [year-end cash/investment components](pilot-cash-investment-evidence.md)
+**Current version 4:** [year-end debt/lease components](pilot-debt-lease-evidence.md)
+add exact carrying/principal/fair-value/payment-schedule observations, reviewed
+location dimensions, parent overlaps and explicit null requirements. This family
+remains partial; all non-debt bindings from version 3 are unchanged. No totals,
+policy expansion or debt convention. Version 3 below is the earlier delivery.
+
+**Version 3:** [year-end cash/investment components](pilot-cash-investment-evidence.md)
 are integrated with the adapter. Cash family completeness stays partial; every
 overlap, gate/conflict and missing restriction/allocation remains explicit. All
 other field bindings remain as version 2. Earlier results below remain historical.
@@ -37,10 +43,10 @@ scope; none certifies timing or consumer sufficiency.
 | CFO | M | M | M | M |
 | Reported tax context | M | M | M | M |
 | Cash/investment components | M (partial) | M (partial) | M (partial) | M (partial) |
-| Debt/lease components | U | U | U | U |
+| Debt/lease components | M (partial) | M (partial) | M (partial) | M (partial) |
 | Other equity-bridge claims/assets | U | U | U | U |
 | Separately dated point-in-time shares | U | U | U | U |
-| **M / L / U** | **9 / 1 / 4** | **9 / 1 / 4** | **8 / 1 / 5** | **9 / 1 / 4** |
+| **M / L / U** | **10 / 1 / 3** | **10 / 1 / 3** | **9 / 1 / 4** | **10 / 1 / 3** |
 
 Exact selected identities: MSFT CIK 789019, FY2025 accession
 `0000950170-25-100235`, 2024-07-01–2025-06-30; FY2026

@@ -269,7 +269,7 @@ class DirectIncomeTests(unittest.TestCase):
                 if key != 'fields':
                     self.assertEqual(old[key], new[key])
             for field in old['fields']:
-                if field not in ('revenue', 'ebit', 'cash_investment_components'):
+                if field not in ('revenue', 'ebit', 'cash_investment_components', 'debt_lease_components'):
                     self.assertEqual(old['fields'][field], new['fields'][field])
         for source in self.sources.values():
             for receipt in source.artifacts:

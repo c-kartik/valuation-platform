@@ -30,7 +30,7 @@ class PilotMappingTests(unittest.TestCase):
         self.assertEqual(sum(r['field_families'] for r in report.values()), 56)
         for key, r in report.items():
             self.assertEqual((r['mapped'], r['limited_support'], r['unavailable']),
-                             (8, 1, 5) if key.startswith('aapl') else (9, 1, 4))
+                             (9, 1, 4) if key.startswith('aapl') else (10, 1, 3))
         self.assertEqual(sum(r['mapped_source_inputs'] for r in report.values()), 69)
 
     def test_exact_period_registry_and_input_pointer(self):
@@ -47,6 +47,9 @@ class PilotMappingTests(unittest.TestCase):
         for row in self.doc['periods']:
             for f in row['fields'].values():
                 for bind in f['bindings']:
+                    if 'retained_debt' in bind:
+                        self.assertIn('candidates', bind['retained_debt'])
+                        continue
                     if 'retained_cash' in bind:
                         self.assertTrue(bind['retained_cash']['candidates'])
                         continue
@@ -138,7 +141,7 @@ class PilotMappingTests(unittest.TestCase):
 
     def test_null_requirements_cannot_be_acknowledged_away(self):
         for field in ('unclassified_cfo_reconciliation_residual',
-                      'debt_lease_components', 'other_equity_bridge_claims_assets',
+                      'other_equity_bridge_claims_assets',
                       'point_in_time_shares'):
             self.reject(lambda d, f=field: d['periods'][0]['fields'][f].__setitem__('null_reason', None))
             self.reject(lambda d, f=field: d['periods'][0]['fields'][f].__setitem__('unresolved_requirements', []))
@@ -154,7 +157,8 @@ class PilotMappingTests(unittest.TestCase):
         for row in self.doc['periods']:
             self.assertIn('OperatingLeasePayments', row['supplementary_input_ids'])
             self.assertIn('PaymentsForProceedsFromOtherInvestingActivities', row['supplementary_input_ids'])
-            self.assertEqual(row['fields']['debt_lease_components']['bindings'], [])
+            self.assertTrue(row['fields']['debt_lease_components']['bindings'])
+            self.assertEqual(row['fields']['debt_lease_components']['aggregation'], 'none')
 
     def test_reproducible_report_and_original_bundle_flags(self):
         self.assertEqual(mapping.validate(self.doc, self.bundles), mapping.validate(self.doc, self.bundles))

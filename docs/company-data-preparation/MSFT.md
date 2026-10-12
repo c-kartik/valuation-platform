@@ -1,5 +1,38 @@
 # MSFT — company data preparation
 
+## Retained year-end debt/lease components — FY2025/FY2026
+
+Original conflict: the preparation family was unavailable despite retained debt
+and lease notes; historical lease cash/principal payments cannot stand in for
+closing liabilities. [Exact sources, dimensions and original-body digests](../pilot-debt-lease-evidence.json)
+and [scope decisions/validation](../pilot-debt-lease-evidence.md) bind only the
+frozen 2025-06-30 / 2026-06-30 instants in the existing selected accessions.
+Reported USD millions: current debt **2,999/9,227**, noncurrent **40,152/31,067**,
+adjusted term-debt parent **43,151/40,294**, face principal **49,206/46,136**,
+rounded fair value **40,400/36,500**. Do not equate their bases or add parents.
+Commercial paper FY2025 is explicitly **zero**, with both −6/−9 representations;
+FY2026 is **null**, not inferred zero from the prior period or absent tag.
+
+Operating discounted total/current/noncurrent are **22,861/5,424/17,437** and
+**21,925/5,393/16,532**; finance are **46,172/3,172/43,000** and
+**66,594/4,290/62,304**. Note 13 location dimensions retain exact current/other
+noncurrent liability populations. Undiscounted future payments are separately
+**25,481/60,506** and **24,706/89,686** operating/finance, not closing liability
+or historical cash totals. Considered but rejected: summing parent/components,
+using maturity principal as current carrying debt, treating cash payments as
+liabilities, or extending a generic debt convention. All figures are reported
+facts, not estimates, derivations or economic adjustments.
+
+Mapping/annual/history version 4 packages 15/14 available components, 21/19
+fact occurrences and three additional null requirements per year: other short-
+term borrowing coverage, complete non-overlapping debt/lease perimeter and
+unrecognized commitments. Independent statement-value, dimension, conflict,
+precision and serialization tests are recorded in the linked results. Original
+facts/bundles/sidecars, restricted cash-service acceptance, NWC blockers and
+timing limitations persist. No complete debt/financial-input sufficiency.
+Next bounded shared work is reusable retained-component inspection, not further
+MSFT research or financial treatment. Earlier decisions below remain intact.
+
 ## Year-end cash/investment components — FY2025/FY2026
 
 Original conflict: one unavailable bridge-family slot obscured retained balance-

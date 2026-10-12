@@ -2,7 +2,27 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained year-end cash/investment component integration**.
+Latest completed milestone: **retained year-end debt/lease component integration**.
+[Evidence/results](pilot-debt-lease-evidence.md) /
+[reviewed mapping evidence](pilot-debt-lease-evidence.json). Same four periods;
+60 available components, one missing MSFT FY2026 commercial-paper component,
+12 further null scope requirements and 80 fact occurrences. Carrying amounts,
+principal, fair values, discounted operating/finance liabilities and undiscounted
+future payments are separate; parents/dimensional locations/possible overlap
+remain explicit. No sums, debt completeness, lease toggle or financing convention.
+Mapping and isolated annual/history versions 4 preserve schemas, native bundles,
+sidecars, policies/outputs and all non-debt field dispositions. Financial
+sufficiency NOT_ASSESSED; NWC/D&A/timing blockers unchanged. Current top-level
+reported/null counts 153/49, family counts 10/1/3, 10/1/3, 9/1/4, 10/1/3.
+101 focused tests, four mapping/CFO checks, compileall, 426 local links and
+diff/digest checks passed; results are recorded in the results document.
+No SEC/full suite/corpus.
+Phase 2 remains prohibited. **Stop after this milestone.**
+Next bounded step, only if authorized: reusable retained-instance direct-component
+inspection interface reproducing all four existing pilot mappings and meanings
+without new issuer/period registrations, financial treatment or policy changes.
+
+Previously completed milestone: **retained year-end cash/investment component integration**.
 [Evidence/results](pilot-cash-investment-evidence.md) /
 [reviewed matrix](pilot-cash-investment-evidence.json). Same four pilot periods:
 25 available reported observations, three gated/conflicting component slots with

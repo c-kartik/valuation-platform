@@ -1,5 +1,35 @@
 # AAPL — company data preparation
 
+## Retained year-end debt/lease components — FY2025 only
+
+Original conflict: cash-flow input packaging did not bind closing debt; absence
+of mapping was not absence of obligations. [Exact evidence/instant/dimensions](../pilot-debt-lease-evidence.json)
+and [selection rationale/tests](../pilot-debt-lease-evidence.md) use only accession
+`0000320193-25-000079`, 2025-09-27. USD millions: commercial paper **7,979**,
+current/noncurrent term debt **12,350/78,328**, adjusted parent **90,678**,
+face principal **91,281**, rounded fair value **80,400**. The fair-value note's
+Level 2 dimension is retained; it is not a carrying balance. Next-year principal
+**12,393** is a maturity obligation, not current carrying debt.
+
+Operating discounted total/current/noncurrent **12,490/1,579/10,911** and finance
+**1,230/538/692** retain dedicated tags. The reported extension parent **13,720**
+overlaps both classes and is only a book observation, not generic extension
+approval. Undiscounted operating/finance payments **14,725/1,579** stay separate
+from liabilities and the existing rounded historical lease cash input.
+All values are reported facts, not estimates; no sum/lease debt convention.
+Considered and rejected: replacing carrying balances with principal/fair value,
+adding parents/components, or using cash payments/noncash ROU additions as debt.
+
+Sixteen available component slots/20 fact occurrences are packaged under
+mapping/annual/history version 4, with three further null requirements for
+other short-term borrowing, a complete non-overlapping perimeter and
+unrecognized lease commitments. Availability is not total-debt completeness.
+Validation/provenance/serialization results are linked above; non-debt fields,
+original FY2025 bundle/scenario, NWC/cash-interest/timing limitations and
+frozen-v1 remain unchanged. No comparative registration or new treatment.
+Next bounded work is the shared retained-component interface, not more issuer
+research. Earlier acceptance decisions below remain restricted to their scope.
+
 ## Year-end cash/investment components — FY2025 only
 
 Original conflict: reviewed cash-flow packaging left cash/investments unbound,

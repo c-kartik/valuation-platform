@@ -1,5 +1,16 @@
 # Architecture
 
+The [retained pilot debt/lease component delivery](pilot-debt-lease-evidence.md)
+uses existing filing-XBRL context/unit/fact parsing, annual-DEI checks, original
+receipts and immutable historical-input models. The isolated mapping inspector
+accepts only exact reviewed balance-sheet location/fair-value dimensions, retains
+all confirming/competing occurrences and preserves carrying/principal/fair-value,
+discounted liabilities versus undiscounted future/historical payment distinctions.
+Mapping/annual/history versions advance to 4; native schemas/registries and
+frozen-v1 remain unchanged. This is not an issuer approval registry or debt
+aggregation convention. Separate serialization revalidates all bindings and
+null requirements; no new retrieval, total, financing adjustment or valuation use.
+
 ## Overview
 
 Phase 1H.6 completes the [qualified historical-normalization-v1 freeze](historical-normalization-v1-freeze.md):

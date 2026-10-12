@@ -1,6 +1,14 @@
 # Isolated four-pilot historical-input adapter
 
-**Current additive delivery:** [cash/investment evidence/results](pilot-cash-investment-evidence.md)
+**Current additive delivery:** [debt/lease evidence/results](pilot-debt-lease-evidence.md)
+advances mapping and annual/history versions to 4, without schema or native
+package changes. Exact year-end carrying/principal/fair-value and lease
+liability/payment-schedule observations, location dimensions, overlaps,
+confirmations/alternatives and null requirements survive serialization.
+All non-debt dispositions are unchanged; no total debt completeness or treatment
+convention. Current scalar/null counts are 153/49. Earlier sections are history.
+
+**Version 3 delivery:** [cash/investment evidence/results](pilot-cash-investment-evidence.md)
 advance mapping and annual/history versions to 3, without changing schemas or
 native bundles. Individual reported component observations, parent overlaps,
 gated extension support, precision conflicts and explicit null requirements
