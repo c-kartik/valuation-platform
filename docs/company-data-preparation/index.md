@@ -3,7 +3,7 @@
 ## Retained filing identities
 
 [Identity manifest](../phase1-selected-filing-identity-manifest.md) reconciles all
-40 issuers: 189 selected rows (163 verified retained, 26 missing, 0 incomplete,
+40 issuers: 189 selected rows (189 verified, 0 missing, 0 incomplete,
 0 conflicting) and 11 five-year target exceptions. Each issuer record links its
 counts and candidates. Identity verification is not complete fact provenance or
 financial sufficiency; aggregate/evidence-accounted statuses and pilot boundaries
@@ -14,6 +14,11 @@ pass: AVGO's reviewed DEI/context proves identity despite the preserved producti
 resolver limitation; 26 retained identity artifacts remain unavailable, no broken
 references or conflicts. Stop searching. Next is explicit disposition of these
 26 source exceptions, not another research cycle or automatic reconstruction.
+The subsequently authorized [fixed SEC pass](../phase1-selected-filing-sec-acquisition.md)
+now verifies all 26 using new typed original-body receipts and exact frozen-selector/
+annual-DEI replay. Prior conclusions remain historical. Identity acquisition is
+closed, not complete measure provenance/sufficiency. Eleven history exceptions,
+all financial blockers and unapproved consumer readiness remain explicit.
 
 ## Independent accounting and financial-sufficiency statuses
 

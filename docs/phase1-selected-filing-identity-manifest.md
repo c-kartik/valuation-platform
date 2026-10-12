@@ -10,6 +10,12 @@ JSON (formatting may differ from the compact retained rows).
 
 ## Results and verification depth
 
+The authorized [fixed SEC acquisition](phase1-selected-filing-sec-acquisition.md)
+now verifies all 26 formerly missing entries: current JSON has 189 verified and
+zero missing/incomplete/conflicting. New receipts are explicitly new evidence,
+not recovered original metadata. Prior 163 identity records and eleven history
+exceptions remain unchanged; measure provenance/sufficiency remain unestablished.
+
 Superseding retained-source [availability audit](phase1-selected-filing-availability.md)
 repairs AVGO's identity from the already reviewed four DEI facts/entity/context,
 without changing its production resolver. Current JSON is 163 verified / 26 missing /
@@ -53,7 +59,7 @@ No annual-start/calendar-year, succession or absent-period inference.
 all 189 rows retain `measure_fact_provenance=NOT_ESTABLISHED` under this contract.
 Financial sufficiency is NOT_ASSESSED; support/policy/financial states unchanged.
 
-## Remaining evidence and history boundaries
+## Original evidence gaps and preserved history boundaries
 
 Missing: CSCO/PLTR/KO/NFLX five each; PG three (2024–2026 ends), AMAT two
 (2021–2022 ends), MU one (2026 end). Exact known annual ends are in JSON; these

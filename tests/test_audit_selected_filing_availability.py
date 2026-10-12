@@ -22,8 +22,8 @@ class AvailabilityTests(unittest.TestCase):
         rows = self.result['rows']
         self.assertEqual(len(rows), 27)
         self.assertEqual(len({(r['cik'], r['annual_end']) for r in rows}), 27)
-        self.assertEqual(self.result['disposition_counts'], {'REPAIRED': 1, 'RETAINED_IDENTITY_ARTIFACT_UNAVAILABLE': 26})
-        self.assertEqual(self.result['manifest_status_counts'], {'VERIFIED_RETAINED_IDENTITY': 163, 'MISSING_BINDING': 26})
+        self.assertEqual(self.result['disposition_counts'], {'REPAIRED': 1, 'VERIFIED_NEW_SEC_EVIDENCE': 26})
+        self.assertEqual(self.result['manifest_status_counts'], {'VERIFIED_RETAINED_IDENTITY': 189})
         self.assertEqual(self.result['history_exception_count'], 11)
         self.assertEqual(self.result['selected_period_count'], 189)
 
@@ -38,7 +38,7 @@ class AvailabilityTests(unittest.TestCase):
             self.assertTrue(r['bounded_action']); self.assertTrue(r['stopping_condition'])
             self.assertEqual(r['measure_fact_provenance'], 'NOT_ESTABLISHED')
             self.assertEqual(r['financial_input_sufficiency'], 'NOT_ASSESSED')
-            if r['disposition'] != 'REPAIRED':
+            if r['disposition'] == 'RETAINED_IDENTITY_ARTIFACT_UNAVAILABLE':
                 self.assertIsNone(r['verified_identity'])
                 self.assertEqual(r['missing_identity_fields'], ['accession', 'form', 'annual_start'])
 

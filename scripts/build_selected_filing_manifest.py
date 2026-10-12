@@ -163,6 +163,22 @@ def collect(root, ticker_ciks):
                                            'retrieved_at_utc', 'http_status')} for a in bundle['artifacts']]
             claims.append(candidate(source, 'bundles/' + str(i), period['cik'], period['accession'],
                                     '10-K', period['annual_start'], period['annual_end'], True, artifacts))
+    receipt_source = 'docs/evidence/selected-filing-identity-acquisition.json'
+    if local(root, receipt_source).is_file():
+        from acquire_selected_filing_identities import verify
+        body = local(root, receipt_source).read_bytes()
+        hashes[receipt_source] = digest(body)
+        payload = json.loads(body)
+        approved = verify(payload)  # Offline bytes, selector, directory and annual-DEI replay.
+        for i, r in enumerate(payload['rows']):
+            if r not in approved:
+                continue
+            identity = r['identity']
+            artifacts = [{k: a[k] for k in ('source_url', 'sha256', 'representation', 'digest_type',
+                                           'retrieved_at_utc', 'http_status')}
+                         for a in payload['artifacts'] if a['source_url'] in r['request_urls']]
+            claims.append(candidate(receipt_source, 'rows/' + str(i), r['cik'], identity['accession'],
+                                    identity['form'], identity['annual_start'], identity['annual_end'], True, artifacts))
     return claims, hashes
 
 

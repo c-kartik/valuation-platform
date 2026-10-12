@@ -10,6 +10,13 @@ No external URLs or historical `/tmp` artifacts were retrieved.
 
 ## Decisions
 
+Subsequent explicit authorization permitted one [fixed SEC acquisition](phase1-selected-filing-sec-acquisition.md).
+The reproducible ledger now adds 26 VERIFIED_NEW_SEC_EVIDENCE dispositions and
+new receipt references, preserving the original retained search and its absence
+conclusions. All 26 are verified; no identity exception remains. AVGO's retained
+repair is unchanged. The table below records the original availability decision,
+not a claim that newly acquired artifacts were present during that search.
+
 | Scope | Result | Bounded action / stopping condition |
 | --- | --- | --- |
 | AVGO 2021-10-31 | One identity repaired from retained evidence | Close identity only. Reopen on contradictory selected-identity evidence, not financial value disagreement. |

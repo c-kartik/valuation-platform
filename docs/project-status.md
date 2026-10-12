@@ -2,7 +2,22 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained identity-source availability audit**.
+Latest completed milestone: **authorized fixed 26-entry SEC identity acquisition**.
+[Results/closure](phase1-selected-filing-sec-acquisition.md): 26/26 verified from
+60 successful serial SEC requests; new original-body receipts, exact selection
+replay at frozen cutoff and annual DEI/context checks. Current manifest now
+189 verified / 0 missing/incomplete/conflicting across 40 issuers; prior 163
+identity records and 11 history exceptions unchanged. New receipts are not
+recovered original metadata. Exception ledger records 26 VERIFIED_NEW_SEC_EVIDENCE
+plus AVGO's retained-evidence repair; financial facts/policies/blockers unchanged.
+Focused tests, offline replay/reproducibility, digests/counts, links, compileall
+and diff pass; no full suite/corpus. External configuration sourced per acquisition
+command without exposing or copying it. Fixed pass is closed; no more SEC requests.
+Next decision: one bounded measure-level fact/policy-binding acceptance scope.
+History exceptions and consumer-specific sufficiency remain separate prerequisites;
+financial sufficiency NOT_ASSESSED, baseline 1905/1483/11/27/42 unchanged, Phase 2 postponed.
+
+Previously completed milestone: **retained identity-source availability audit**.
 [Audit and closure](phase1-selected-filing-availability.md) and
 [27-entry ledger](phase1-selected-filing-availability.json): one AVGO identity
 repaired using previously reviewed legacy-namespace DEI/context evidence;

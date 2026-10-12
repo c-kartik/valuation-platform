@@ -80,7 +80,17 @@ def audit():
                                  for c in catalog if c['path'] == p),
                              'meaning': 'Search hit only; not implicit annual identity proof'})
         repaired = current['status'] == 'VERIFIED_RETAINED_IDENTITY'
-        if repaired:
+        newly_verified = repaired and any(c['source'] == 'docs/evidence/selected-filing-identity-acquisition.json'
+                                         for c in current['candidates'])
+        if newly_verified:
+            refs.append('docs/evidence/selected-filing-identity-acquisition.json')
+            bindings = availability(ROOT, refs)
+            reason = ('Historical retained-source absence preserved; newly authorized official SEC receipts '
+                      'reproduce frozen selected ends/accession under unchanged selector and cutoff, '
+                      'then exact nondimensional annual DEI/entity evidence verifies identity.')
+            action = 'Closed new-evidence identity repair; no measure provenance or financial approval'
+            stop = 'Stop fixed acquisition pass; reopen only on contradictory exact identity evidence'
+        elif repaired:
             reason = ('Retained D&A row/5 has four same-context DEI facts, exact SEC CIK, '
                       'nondimensional annual duration and filing metadata; reviewed research explains '
                       'legacy DEI namespace. Production resolver status remains unchanged.')
@@ -95,7 +105,7 @@ def audit():
                     'or separately authorized retrieval proves CIK/accession/form/annual dates')
         rows.append({'ticker': old['ticker'], 'cik': cik, 'annual_end': end,
                      'prior_status': old['status'], 'current_status': current['status'],
-                     'disposition': 'REPAIRED' if repaired else 'RETAINED_IDENTITY_ARTIFACT_UNAVAILABLE',
+                     'disposition': 'VERIFIED_NEW_SEC_EVIDENCE' if newly_verified else 'REPAIRED' if repaired else 'RETAINED_IDENTITY_ARTIFACT_UNAVAILABLE',
                      'reference_bindings': bindings, 'retained_search_hits': hits,
                      'existing_candidates': old['candidates'], 'verified_identity': current['identity'],
                      'missing_identity_fields': [] if repaired else ['accession', 'form', 'annual_start'],

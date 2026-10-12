@@ -27,8 +27,7 @@ class SelectedFilingManifestTests(unittest.TestCase):
         self.assertEqual(len({(r['cik'], r['selected_annual_end']) for r in rows}), 189)
         self.assertEqual(self.result['issuer_count'], 40)
         self.assertEqual(len(self.result['history_exceptions']), 11)
-        self.assertEqual(self.result['status_counts'], {'VERIFIED_RETAINED_IDENTITY': 163,
-                                                      'MISSING_BINDING': 26})
+        self.assertEqual(self.result['status_counts'], {'VERIFIED_RETAINED_IDENTITY': 189})
 
     def test_history_deficits_do_not_invent_periods(self):
         exceptions = self.result['history_exceptions']

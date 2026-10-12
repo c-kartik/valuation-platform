@@ -1,5 +1,19 @@
 # PLTR — company data preparation
 
+## Authorized SEC filing-identity closure
+
+[Fixed acquisition](../phase1-selected-filing-sec-acquisition.md) verifies 5 prior
+missing identities using new SEC submissions/directory/instance receipts and the
+unchanged selector at the frozen cutoff. Exact accession/form/annual dates and
+DEI/context occurrences are in the [manifest](../phase1-selected-filing-identity-manifest.json)
+and [new receipts](../evidence/selected-filing-identity-acquisition.json). Original
+retained-source absence below is preserved history, now superseded by explicitly
+new evidence, not recovered metadata. No selected period or financial output
+was replaced; original measure blockers/support/history limits remain unchanged.
+Verified filing identity is not complete fact/policy provenance or financial
+sufficiency (NOT_ASSESSED). Stop identity acquisition; reopen only on contradictory
+exact evidence. No new financial research, estimates or consumer approval.
+
 ## Retained-source availability disposition
 
 [27-entry audit](../phase1-selected-filing-availability.md) and
