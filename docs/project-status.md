@@ -2,7 +2,33 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained D&A preparation overlays**.
+Latest completed milestone: **retained year-end cash/investment and debt/lease
+component inspection**. [Results](retained-bridge-component-results.md) /
+[199-period ledger](retained-bridge-component-ledger.json), 42 non-specialized
+issuers. Both families have observations in 199 periods, not complete balances:
+cash 188 observation-only / eleven conflicting; debt 168 observation-only /
+31 conflicting; no no-eligible or evidence-gap periods. 855 cash and 2,056 debt
+concept populations retain exact year-end source/context/unit/precision and
+confirmations/alternatives. Explicit family-perimeter requirements remain null;
+dimensioned/extensions and measurement/scope limits are diagnostics, not approval.
+Separate immutable overlays/serialization replay actual retained bodies; all
+original parent/pilot values and bytes, prior D&A and other prepared fields,
+frozen policies/registries/schema/corpus and eleven history deficits remain.
+Financial sufficiency NOT_ASSESSED; no aggregates, economic treatment, SEC
+requests or full-suite/corpus rerun. Focused validation results follow below.
+**46 unique focused tests pass**: nine new cohort/overlay tests, eleven shared
+inspection regressions, fourteen pilot cash and twelve pilot debt tests. The
+ledger replay's tuple/list report-shape mismatch was corrected and rerun; two
+pre-v2 preparation-model source pins were updated to the approved starting
+baseline (LLY anti-downgrade guard), leaving old payload hashes and all other
+artifact pins unchanged. All three affected tests pass on rerun. Compileall,
+2,182 affected local links, exact 40-plus-two mappings, 199 identities, eleven
+history exceptions, baseline preservation and diff checks pass.
+Next bounded field step, only when authorized: retained year-end other
+equity-bridge claims/assets inspection with explicit scope/unknowns, no bridge
+calculation or issuer research loop. Stop after this batch.
+
+Previously completed milestone: **retained D&A preparation overlays**.
 [Results](retained-d-and-a-results.md) / [199-period ledger](retained-d-and-a-ledger.json).
 42 issuers: **105 direct / five existing MSFT derivations / five Visa v1 curated /
 84 unapproved scope-completeness / zero conflicts or evidence gaps**. 115 approved

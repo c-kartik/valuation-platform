@@ -1,5 +1,28 @@
 # IBM — company data preparation
 
+## Retained year-end component inspection
+
+[Shared results](../retained-bridge-component-results.md) / [exact ledger](../retained-bridge-component-ledger.json):
+5 exact frozen annual-end instants. Cash/investments: 5 periods
+with observations, 0 conflicting; 18 concept populations. Debt/leases:
+5 periods with observations, 0 conflicting; 65 populations.
+Original requirement: aggregate corpus balances do not establish exact fact
+binding, complete cash/debt perimeter or non-overlap. Shared retained selectors
+now bind source receipts/digests, CIK/accession/end instant, contexts, USD/raw
+sign/scale/precision and confirming/competing occurrences. Chosen resolution:
+separate partial inspection overlays, not a financial aggregate or new policy.
+Taxonomy populations, restricted/strategic investments, debt measurement bases
+and lease liability/payment distinctions remain explicit. Scope interpretations
+are unreviewed outside existing pilot evidence; possible parent overlap is not
+permission to sum. Conflicts and complete-perimeter requirements remain null.
+Exact affected accessions/concepts/alternatives and diagnostics are in the ledger.
+No receipts/bodies missing in this pass. Original pilot values/serialization and
+all prior prepared/frozen fields are unchanged. Validation covers actual XML
+facts, exact identity/instant/unit/precision, replay, conflicts and preservation.
+No analyst estimates/manual/external inputs supplied. No SEC requests, totals
+or valuation approval. Original history/financial blockers and NOT_ASSESSED
+sufficiency persist; missing bounded concepts are not zero or evidence of absence.
+
 ## Retained D&A overlays — original history unchanged
 
 [Results](../retained-d-and-a-results.md) /

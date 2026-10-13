@@ -190,7 +190,12 @@ class DebtLeaseTests(unittest.TestCase):
             'docs/company-data-preparation/msft-reported-cash-flow-bundles.json','docs/company-data-preparation/aapl-reported-cash-flow-bundle.json',
             'docs/company-data-preparation/googl-reported-cash-flow-bundle.json','docs/pilot-cash-investment-evidence.json']
         for path in protected:
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show','2b949f8bed817d2a72e06fdee3aa4e5687362f1c:'+path],cwd=ROOT))
+            # The subsequently approved LLY preparation-v2 milestone added only
+            # the anti-downgrade guard to the separate preparation model. Pin
+            # that reviewed source, not its pre-v2 bytes; all other pins stay.
+            pin=('1220bd2ee2edaa3867de7eb7ba8066f5554a3b96' if path=='src/valuation_platform/analyst/historical_inputs.py'
+                 else '2b949f8bed817d2a72e06fdee3aa4e5687362f1c')
+            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',pin+':'+path],cwd=ROOT))
         for source in self.sources.values():
             self.assertFalse(source.valuation_consumption_approved)
             for receipt in source.artifacts:self.assertEqual(hashlib.sha256(receipt.artifact.body).hexdigest(),receipt.artifact.sha256)

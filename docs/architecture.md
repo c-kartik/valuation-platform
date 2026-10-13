@@ -1,5 +1,25 @@
 # Architecture
 
+## Separate retained instant-component overlays
+
+`analyst/retained_bridge_components.py` supplies one closed shared standard
+concept/role mapping for year-end cash/investment and debt/lease inspection over
+the 199 selected periods. It uses the existing retained-component parser,
+identity, context, exact-USD and precision validators; no issuer resolver or
+approval registry. Element populations do not establish issuer scope, liquidity,
+measurement-basis equivalence, completeness or non-overlap. Competing amounts
+remain null components with alternatives; missing evidence is distinct from no
+eligible mapped concept. Dimensioned/extension populations stay diagnostic-only.
+
+Immutable `AnnualComponents` overlays retain both families, original receipts,
+all occurrences and explicit complete-perimeter null requirements. Separate
+`retained-bridge-component-inspection-v1` serialization reuses exact-byte body
+transport and independently replays extraction on deserialization. Parent/pilot
+histories, their precision/alternatives/dimension-specific scope, D&A overlays,
+LLY preparation v2 and frozen schema 5 remain unchanged. No automatic merge,
+component total, lease treatment or valuation readiness. See
+[results and limitations](retained-bridge-component-results.md).
+
 ## Retained D&A overlays
 
 `analyst/retained_d_and_a.py` reuses the shared original-body/context/annual

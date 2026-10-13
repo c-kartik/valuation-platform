@@ -1,5 +1,12 @@
 # XOM — company data preparation
 
+## Retained year-end component inspection
+
+[Shared results](../retained-bridge-component-results.md) / [exact ledger](../retained-bridge-component-ledger.json):
+XOM retains empty selected history and five target deficits. No filing was
+inspected, no observations or zero/placeholder years created. Empty history
+remains a preparation limitation; this pass supplies no financial coverage.
+
 ## Retained D&A overlays — original history unchanged
 
 No selected history exists: no D&A filing was inspected and no value/observation

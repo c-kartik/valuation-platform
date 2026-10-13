@@ -1,5 +1,24 @@
 # Company data preparation register
 
+## Retained instant-component inspection
+
+[Results](../retained-bridge-component-results.md) /
+[199-period ledger](../retained-bridge-component-ledger.json): all selected annual
+ends for 42 non-specialized issuers; forty register records plus META/COST seeds.
+Cash/investments: 199 observation periods, eleven conflicts, 855 concept
+populations. Debt/leases: 199 observation periods, 31 conflicts, 2,056 populations.
+Zero missing-body/receipt exceptions, not zero absent financial components.
+Bounded standard mappings distinguish restricted/strategic/current/long-term
+investments, principal/carrying/fair-value/schedules and lease liabilities versus
+cash payments. Separate overlays never replace reviewed pilot interpretations,
+values, alternatives or serialized output. Complete-perimeter requirements remain
+null; possible overlap, unreviewed issuer scope and missing components explicit.
+No aggregates, new policy approvals or consumer sufficiency. Prior financial and
+history blockers, frozen support classes and NOT_ASSESSED sufficiency persist.
+Standing issuer maintenance applies to subsequent selection/treatment changes.
+Next authorized field step may inspect other year-end bridge claims/assets;
+it must not calculate a valuation bridge or reopen a broad research sequence.
+
 ## Separate retained D&A preparation overlays
 
 [Results](../retained-d-and-a-results.md) / [ledger](../retained-d-and-a-ledger.json):
