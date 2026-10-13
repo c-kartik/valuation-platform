@@ -106,6 +106,18 @@ CF-movement/book-change substitution or cash/debt aggregation engine is provided
 
 ## Packaging, serialization and coverage reporting
 
+The isolated [assembly/review layer](prepared-assembly-results.md) now packages
+existing parents and overlays in separate immutable review histories. It copies
+values/provenance without promoting support or partial components to totals.
+Original parents/pilots remain attached unchanged; source-ledger seals, typed
+refresh audits, formulas/operands and invalid-evidence diagnostics survive separate
+serialization. Field coverage distinguishes policy-prepared values from support
+and component observations. Review priority is configured field importance, not
+confidence. Stable targets and click-through payloads confer no acceptance or
+blocker-removal authority. No residual, aggregation or financial sufficiency is
+calculated. Persistent overrides require a subsequent explicitly authorized
+contract with provenance, revision checks and preserved originals.
+
 The subsequently authorized [LLY preparation refresh contract](lly-capex-preparation-refresh.md)
 adds a separate `historical-input-preparation-v2` typed wrapper for five exact
 Capex entries. It retains original financial approval/fingerprints and unavailable

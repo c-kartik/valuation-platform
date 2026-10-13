@@ -1,5 +1,22 @@
 # Company data preparation register
 
+## Isolated assembled histories and read-only review
+
+[Results](../prepared-assembly-results.md) /
+[quality/review summary](../prepared-assembly-summary.json): 42 histories, 199
+selected annuals and 2,786 field-family slots; forty register issuers plus
+META/COST seeds. XOM remains empty; GEV/SNDK short histories retain eleven
+target-year deficits. Existing values, support/operands, components, alternatives
+and null requirements are separately classified, not promoted to complete totals.
+Policy-prepared period counts: Revenue 188, EBIT 194, CFO 195, Capex 165, D&A 115.
+The 17,605-card queue exposes exact retained sources/alternatives, conflicts,
+invalid evidence, scope and overlap with stable targets and configured field
+importance, not confidence. No acceptance or blocker removal; financial
+sufficiency remains NOT_ASSESSED. Original parents/pilot bytes, policies and frozen
+outputs persist separately. Subsequent override/selection changes must update
+affected records with author/time/rationale, exact revision and alternatives;
+current assembly contains no override store or valuation consumption authority.
+
 ## Other claims/assets and point-in-time shares
 
 [Results](../retained-claims-shares-results.md) /

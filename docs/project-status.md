@@ -2,7 +2,32 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained other-bridge claims/assets and dated
+Latest completed milestone: **isolated historical-input assembly and review**.
+[Results](prepared-assembly-results.md) / [quality summary](prepared-assembly-summary.json).
+42 histories / 199 annuals / 2,786 field-family slots; all fourteen contract
+families accounted for. XOM empty, GEV/SNDK short; eleven target-year deficits
+persist. Policy-prepared value periods: Revenue 188, EBIT 194, CFO 195, Capex 165,
+D&A 115; support-only/component counts and alternatives remain separately visible.
+17,605 deterministic review cards: missing requirements, 119 conflicts, eight
+invalid-evidence locations, overlap and partial-scope warnings; codes overlap.
+Priority is field importance, not confidence. No acceptance, blocker removal,
+total, residual or financial sufficiency calculation. Derived formulas/operands,
+typed LLY refresh history, dated/class shares and original parent/pilot bytes
+survive separate closed assembly serialization. Existing financial policies,
+frozen outputs and support classes remain unchanged; sufficiency NOT_ASSESSED.
+No SEC request, new extraction/research or full-suite/corpus rerun. Focused
+validation results are recorded in the results document.
+**43 unique focused tests pass**: eight assembly, 24 immutable input models and
+eleven shared regressions. A pilot-versus-candidate ledger-shape mismatch in
+round-trip validation was fixed and rerun successfully, without changing values,
+conflicts or evidence rules. Compileall, 2,367 affected local links, exact
+40-plus-two mappings, period/field/review reconciliation and diff checks pass.
+Next bounded milestone, only when authorized: revision-bound persistent analyst
+overrides with author/actual UTC time/rationale, permitted Phase 1 targets,
+retained alternatives and stale/conflicting-input rejection. No forecasts,
+economic adjustments, automatic approvals or valuation calculations. Stop.
+
+Previously completed milestone: **retained other-bridge claims/assets and dated
 shares inspection**. [Results](retained-claims-shares-results.md) /
 [ledger](retained-claims-shares-ledger.json) accounts for 398 field slots over
 199 selected periods / 42 non-specialized issuers. Bridge: observations in 199,

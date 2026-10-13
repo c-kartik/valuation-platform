@@ -1,5 +1,24 @@
 # Architecture
 
+## Isolated prepared-history assembly and review
+
+`analyst/prepared_assembly.py` copies existing retained field adapters/overlays
+into new `AnnualBundle`/`HistoryBundle` containers with explicit binding categories.
+`PreparedHistory` attaches original parents (including typed LLY refresh audits),
+D&A/instant/claim-share overlays, diagnostic references and retained-ledger seals.
+It is not a financial resolver, extraction expansion or consumer calculator.
+Separate `assembled-historical-input-review-v1` serialization uses existing
+exact-byte body transport and closed structural/ledger/overlay replay validation.
+Original pilot serializers, frozen schema 5, policies and outputs remain unchanged.
+
+Read-only deterministic review cards provide stable field/component target IDs,
+source/alternative locators, invalid evidence and overlap warnings. Priority is
+explicit field importance, not confidence or financial sufficiency. Quality
+summaries separate period-level value availability from component/support/operand
+counts and missing history. No automatic acceptance, totals, residual or override
+store. See [results and boundaries](prepared-assembly-results.md); future
+persistent overrides must bind exact revisions and retain author/time/rationale
+and displaced alternatives without changing reported evidence.
 ## Retained claim/asset and point-in-time share observations
 
 `analyst/retained_claims_shares.py` extends component inspection with a closed

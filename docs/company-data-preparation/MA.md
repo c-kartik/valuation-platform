@@ -1,5 +1,28 @@
 # MA — company data preparation
 
+## Isolated assembled historical inputs and review queue
+
+[Assembly/review results](../prepared-assembly-results.md) / [quality summary](../prepared-assembly-summary.json).
+5 exact selected annuals, all 14 contract families represented. Policy-prepared
+value periods: Revenue 4, EBIT 5, CFO 5, Capex 5, D&A 0.
+Read-only review queue: 328 cards; per-field origins, support/component/operand
+counts, null requirements and conflict coverage are in the exact JSON summary.
+Original conflict: disconnected packages/ledgers are not a complete reviewed
+financial history. Resolution is separate immutable assembled containers with
+original parents and overlay evidence attached, not new financial acceptance.
+Existing derived/refreshed provenance, scope/precision, dates/classes and
+alternatives survive. Invalid evidence, same-source reuse and parent/component
+overlap remain explicit review warnings; no totals or residual are computed.
+Original pilot interpretations/bytes and frozen financial policies/outputs remain
+unchanged. Field availability is not complete scope or financial sufficiency.
+Exact retained ledger seals, source locators and alternative payloads provide
+click-through evidence. Prior history/NWC/timing/financial blockers persist.
+No analyst estimates, overrides, manual inputs, external data or acceptance
+are introduced; financial sufficiency remains NOT_ASSESSED. Focused validation
+covers assembly, replay, review target/order, serialization and preservation.
+Next authorized milestone is revision-bound persistent overrides with explicit
+author/time/rationale and displaced alternatives, not financial calculations.
+
 ## Other-bridge and dated-share retained inspection
 
 [Results](../retained-claims-shares-results.md) / [exact ledger](../retained-claims-shares-ledger.json).

@@ -1,5 +1,12 @@
 # XOM — company data preparation
 
+## Isolated assembled historical inputs and review queue
+
+[Assembly/review results](../prepared-assembly-results.md) / [quality summary](../prepared-assembly-summary.json).
+XOM has an explicit empty assembled history and five missing target years.
+No annual placeholder, financial value or share class was invented. Its history
+exception remains a review requirement, not financial-input sufficiency.
+
 ## Other-bridge and dated-share retained inspection
 
 [Results](../retained-claims-shares-results.md) / [exact ledger](../retained-claims-shares-ledger.json).
