@@ -2,7 +2,25 @@
 
 ## Current Milestone
 
-Latest completed milestone: **bounded LLY retained-report refresh review**.
+Latest completed milestone: **isolated LLY preparation refresh integration**.
+[Contract/results](lly-capex-preparation-refresh.md) /
+[199-period ledger](refreshed-capex-ledger.json). Five reviewed entries accepted,
+zero blocked through explicitly identified preparation refresh v1, not the legacy
+digest verifier. Typed preparation-v2 audits retain original approval/entry,
+unavailable historical bodies/fingerprints, unproved byte equivalence and exact
+review/refresh receipt identities. V1 bytes/version support remain; no migration,
+replacement hashes, new financial scope or legacy proof claim. Current coverage:
+**145 direct / fifteen legacy curated / five curated refresh / 34 unapproved =
+199; 165 populated**. All prior 160 values, other fields/pilots, frozen schema 5,
+registries/policies/corpus and history exceptions preserved. Unknown incentive/
+noncash/interest allocations and consumer timing/sufficiency remain explicit.
+58 unique focused tests, compileall, 363 affected links, ledger/serialization
+replay and diff checks pass. Zero SEC requests; no full-suite/corpus rerun.
+Stop after integration; Phase 2
+remains prohibited. Deferred retained D&A preparation under existing approvals
+is a separate bounded field milestone, not automatic financial readiness.
+
+Previously completed milestone: **bounded LLY retained-report refresh review**.
 [Disposition](lly-capex-refresh-review-results.md) /
 [immutable additive review record](evidence/lly-capex-refresh-review-v1.json).
 Fifteen refreshed reports independently support the five existing LLY amounts

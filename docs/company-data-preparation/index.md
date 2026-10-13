@@ -1,5 +1,21 @@
 # Company data preparation register
 
+## Additive LLY preparation refresh
+
+[Contract/results](../lly-capex-preparation-refresh.md) /
+[current ledger](../refreshed-capex-ledger.json): five exact LLY entries accepted
+through independent-review refresh provenance, with original fingerprints/statuses
+and unproved byte equivalence preserved. Legacy v1 attestations still reject the
+new report digests. Preparation-v2 typed audits retain actual refreshed receipts;
+old v1 bytes/pilots remain supported unchanged. Current 199-period Capex: 145
+direct, fifteen legacy curated, five refresh, 34 unapproved scope; 165 populated.
+Prior 160 results, all other fields, forty-plus-two mappings, history deficits,
+frozen classifications/policies/outputs and NOT_ASSESSED sufficiency remain.
+Subsequent field/evidence treatment must update affected records; this exact review
+does not generalize software/lease/incentive scope or register future filings.
+Zero SEC requests; stop after integration. Prior sections retain the history of
+the review/provenance blocker rather than rewriting it as a successful old hash check.
+
 ## LLY report refresh disposition
 
 [Review](../lly-capex-refresh-review-results.md) /

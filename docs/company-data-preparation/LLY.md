@@ -1,5 +1,31 @@
 # LLY — company data preparation
 
+## Explicit preparation-layer refresh integration
+
+[Additive contract/results](../lly-capex-preparation-refresh.md) /
+[current 199-period ledger](../refreshed-capex-ledger.json). User-authorized schema
+treatment now integrates all five independently reviewed 2021–2025 Capex periods.
+Original conflict and the prior review remain unchanged historical records:
+fifteen report bodies cannot verify the old fingerprints; no historical byte or
+renderer equivalence is established. New typed audits bind each unchanged v1
+financial entry to the exact three reviewed fresh reports, their original-body
+receipts and review requirements. Seven unchanged non-report artifacts and the
+original instance/annual/operand precision remain mandatory. No legacy hash
+replacement, attestation injection, new financial approval, equation or fallback.
+
+Chosen resolution: explicit preparation refresh path, reported origin and negative
+cash outflow; values 1,309.8 / 1,854.3 / 3,447.6 / 5,057.8 / 7,841 USD millions
+retain signs, original precision, all confirming occurrences and raw alternatives.
+Five accepted / zero blocked here; original legacy report attestations remain
+unsatisfied. V2 serialization retains both evidence generations and unknowns;
+existing v1/pilot serialization and all other LLY fields remain exact. No acquired
+IPR&D, broader lease/software, noncash, proceeds/incentive or interest adjustment.
+Missing allocations, the 2023 IPR&D comparative reclassification and all original
+NWC/timing/financial-sufficiency limitations persist. No complete reinvestment
+claim. Focused exact-match, tampering/conflict, serialization/replay and frozen/
+prior-value preservation tests validate this integration; no SEC/corpus requests.
+Stop after the five-entry integration; no issuer support reclassification.
+
 ## Authorized retained-report refresh review
 
 [Findings and stop condition](../lly-capex-refresh-review-results.md) /

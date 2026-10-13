@@ -106,6 +106,16 @@ CF-movement/book-change substitution or cash/debt aggregation engine is provided
 
 ## Packaging, serialization and coverage reporting
 
+The subsequently authorized [LLY preparation refresh contract](lly-capex-preparation-refresh.md)
+adds a separate `historical-input-preparation-v2` typed wrapper for five exact
+Capex entries. It retains original financial approval/fingerprints and unavailable
+original status alongside independently reviewed refreshed receipts/digests.
+Original byte equivalence remains unproved; no legacy attestation is synthesized.
+V2 uses an exact-byte payload-local body table and independent replay. The
+existing v1 models/serialization remain supported with byte-identical output;
+reserved refresh markers/roles/IDs require v2 and cannot be downgraded silently.
+No frozen schema 5, policy, registry, original proof requirement or pilot migration.
+
 Immutable `InputValue` → `AnnualBundle` → `HistoryBundle`. All fourteen field
 families must appear per annual, as individually identified components or explicit
 unavailable entries; component counts are not additional years. Bundle identity

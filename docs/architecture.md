@@ -1,5 +1,26 @@
 # Architecture
 
+## Isolated preparation refresh provenance
+
+`analyst/refreshed_capex.py` provides immutable exact-artifact/entry refresh audits
+and a typed preparation-v2 history wrapper. The original five LLY financial
+approvals remain descriptors from unchanged policy v1; original report hashes
+are never passed off as verified or replaced in the legacy attestation. The
+completed independent review is digest-pinned, replayed by the shared
+`analyst/lly_capex_refresh_review.py`, and bound to fifteen actual refreshed
+receipts. The legacy review CLI preserves its old result; operational acceptance
+is explicitly a different preparation path. Actual original instance inspection,
+approved amounts/precision, scope, direct precedence and conflict gates are
+preserved. Typed audits retain both generations and unknown byte equivalence.
+
+Preparation v2 transports exact bodies once in a payload-local digest table,
+retaining every receipt/source/occurrence identity, with closed deterministic
+decoding and independent value replay. Existing preparation v1 serialization
+remains byte-compatible, but rejects refresh markers without typed audits. No
+schema-5, legacy registry/proof, financial policy, persistence or valuation change.
+[Design/results](lly-capex-preparation-refresh.md) distinguish 165 populated
+preparation periods from unchanged frozen corpus coverage and consumer readiness.
+
 ## Additive fixed Capex evidence repair
 
 `analyst/capex_evidence_repair.py` pins the original 85 requirements and fifteen

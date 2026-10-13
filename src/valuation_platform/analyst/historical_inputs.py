@@ -444,6 +444,7 @@ def _decode(v):
 def serialize(bundle: HistoryBundle) -> str:
     if type(bundle) is not HistoryBundle:
         raise InputError("Isolated history bundle required")
+    _no_refresh_downgrade(bundle)
     return json.dumps({"schema": SCHEMA, "bundle": _encode(bundle)}, sort_keys=True, separators=(",", ":"))
 
 
@@ -462,6 +463,19 @@ def deserialize(payload: str) -> HistoryBundle:
         result = _decode(envelope["bundle"])
         if type(result) is not HistoryBundle:
             raise InputError("History bundle required")
+        _no_refresh_downgrade(result)
         return result
     except (ValueError, TypeError, KeyError) as exc:
         raise InputError("Invalid preparation serialization") from exc
+
+
+def _no_refresh_downgrade(bundle):
+    """V1 has no typed replacement-evidence audit; do not silently drop it."""
+    def visit(value):
+        if (any(flag.startswith('preparation_capex_refresh:') for flag in value.flags)
+                or value.input_id.startswith('refreshed-capex:')
+                or value.role=='approved_reported_cash_capex_outflow_refreshed_evidence'):
+            raise InputError('Refreshed evidence requires preparation v2 typed provenance')
+        for alternative in value.alternatives:visit(alternative)
+    for annual in bundle.annuals:
+        for value in annual.inputs:visit(value)
