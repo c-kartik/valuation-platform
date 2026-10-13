@@ -1,5 +1,9 @@
 # Retained cash-Capex preparation — existing approvals only
 
+Historical result of the initial retained-only pass. The subsequent fixed
+[artifact repair](capex-binding-repair-results.md) adds ten resolutions in a
+[separate ledger](repaired-capex-ledger.json); this original ledger stays unchanged.
+
 Phase 1 only. [199-period ledger](retained-capex-ledger.json); offline replay:
 `PYTHONPATH=src .venv/bin/python scripts/inspect_retained_capex.py`.
 Builds on unchanged [tax/SBC histories](retained-tax-sbc-results.md) under the

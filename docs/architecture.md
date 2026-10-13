@@ -1,5 +1,19 @@
 # Architecture
 
+## Additive fixed Capex evidence repair
+
+`analyst/capex_evidence_repair.py` pins the original 85 requirements and fifteen
+entries, searches declared retained bodies and verifies exact raw representations,
+receipt/source identities and immutable registered fingerprints. The bounded
+acquisition script retains original responses and actual refresh metadata;
+byte mismatches cannot enter the accepted artifact store. Separate offline replay
+adds verified artifacts to the existing resolver's store and changes only target
+Capex inputs. Original preparation ledgers, registries, financial policies, other
+fields and pilot serialization remain unchanged. Independent deserialization
+replays unchanged policy gates rather than trusting a stored result or text
+equivalence. [Results](capex-binding-repair-results.md) retain successful bindings
+and explicit mismatches; no general cache, persistence or valuation layer added.
+
 ## Retained approved cash-Capex preparation layer
 
 `analyst/retained_capex.py` reuses retained tax/SBC histories, exact shared

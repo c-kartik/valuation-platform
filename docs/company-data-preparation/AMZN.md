@@ -1,5 +1,26 @@
 # AMZN — company data preparation
 
+## Fixed original-artifact binding repair
+
+[Repair results](../capex-binding-repair-results.md) /
+[exact receipts and exceptions](../evidence/capex-binding-repair.json) /
+[current policy/source ledger](../repaired-capex-ledger.json).
+Original conflict: an existing financial approval lacked byte-verifiable required
+artifacts; absence did not revoke approval or establish financial equivalence.
+Bounded retained search found no reusable original bodies for the fixed scope.
+All thirty required raw fingerprints match new SEC response bodies. Five exact
+v1 entries now replay; five curated / zero evidence gaps. No software scope is
+generalized.
+New bodies retain exact URL, actual UTC/status, raw-response digest and prior
+fingerprint history; these are refresh receipts, not recovered original metadata.
+Unchanged exact-entry, annual/operand/scope and occurrence validators govern
+acceptance. No new financial judgment, estimate, equation or fallback. Prior
+sections preserve the initial pass and other decisions. Focused byte-binding,
+representation/mismatch, policy/sign, replay/serialization and preservation
+tests validate this repair; frozen values, all other prepared fields and support
+classifications stay unchanged. Complete reinvestment/timing and financial
+sufficiency remain NOT_ASSESSED. Stop after the fixed repair.
+
 ## Retained cash-Capex policy replay
 
 [Results](../retained-capex-results.md) / [exact policy/source ledger](../retained-capex-ledger.json):

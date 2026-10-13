@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## Fixed Capex artifact binding repair
+
+[Results](../capex-binding-repair-results.md) / [receipts](../evidence/capex-binding-repair.json)
+/ [current ledger](../repaired-capex-ledger.json): 85 registered requirements,
+zero local bodies reused, 85 requests, seventy exact matches and fifteen LLY
+byte mismatches. AMZN/CVX gain five curated resolutions each; five LLY entries
+remain blocked. Current 199-period coverage: 145 direct / fifteen curated /
+five evidence gaps / 34 unapproved scope. Original 150 populated bindings, other
+fields/pilots/frozen policies and outputs are preserved. New receipt metadata is
+a refresh, never manufactured original metadata. Prior sections record the older
+pass; they are not superseded financial denials. Forty records plus two seeds,
+eleven target deficits and NOT_ASSESSED sufficiency remain. Stop here: LLY requires
+an explicit fifteen-report fingerprint disposition, not automatic hash replacement.
+
 ## Retained approved cash-Capex preparation
 
 [Results](../retained-capex-results.md) / [ledger](../retained-capex-ledger.json):

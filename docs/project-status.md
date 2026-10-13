@@ -2,7 +2,25 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained approved cash-Capex preparation**.
+Latest completed milestone: **fixed Capex original-artifact binding repair**.
+[Results](capex-binding-repair-results.md) / [receipts](evidence/capex-binding-repair.json)
+/ [current ledger](repaired-capex-ledger.json). Exactly 85 requirements / fifteen
+AMZN/LLY/CVX approvals reconciled; zero verified local bodies reused. 85 SEC
+requests, all HTTP 200, no retries/transport failures: seventy raw fingerprints
+match; fifteen LLY report fingerprints differ and remain blocked. New receipts
+are refreshes, not recovered metadata; no registry hashes or semantics changed.
+Current preparation: **145 direct / fifteen curated / five LLY evidence gaps /
+34 unapproved scope / zero conflicts = 199 periods**. Ten resolutions added;
+all prior 150 populated bindings, 34 scope cases, other fields, pilot annuals,
+frozen outputs/classifications and eleven history deficits preserved. Full
+policy/occurrence/precision/audit provenance survives separate serialization.
+Financial sufficiency remains NOT_ASSESSED; Phase 2 prohibited. Stop after this
+pass. Remaining bounded closure prerequisite is explicit disposition of fifteen
+LLY historical report fingerprints, not further unapproved acquisition or scope
+research. 61 focused tests, compileall, 436 affected local links, source-digest/
+count reconciliation and diff checks pass. No full-suite/corpus rerun.
+
+Previously completed milestone: **retained approved cash-Capex preparation**.
 [Results](retained-capex-results.md) / [199-period ledger](retained-capex-ledger.json).
 42 non-specialized issuers: **145 direct / five Visa v3 curated / zero conflicts /
 15 approved-entry evidence gaps / 34 unapproved-scope periods**. 85 original
