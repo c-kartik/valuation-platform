@@ -12,7 +12,9 @@ import json
 from pathlib import Path
 
 from . import historical_inputs as h
-from .cash_flow_inputs import _instance, _occurrences, InputKind, ReportedInput
+from .cash_flow_inputs import Occurrence, InputKind, ReportedInput
+from . import retained_components as retained
+from ..sec.filing_xbrl import FilingXBRLDataError
 from ..normalization.balance_sheet import CASH_AND_CASH_EQUIVALENTS_POLICY, SHORT_TERM_INVESTMENTS_POLICY
 
 EVIDENCE_PATH = Path(__file__).resolve().parents[3] / "docs/pilot-cash-investment-evidence.json"
@@ -73,7 +75,13 @@ def inspect(source, review=None):
             or review["instance_url"] != instance.artifact.url or review["primary_url"] != primary.artifact.url
             or review["digest_type"] != "sha256_sec_response_body_bytes"):
         raise h.InputError("Exact original-body receipt binding required")
-    root, contexts, units, namespaces = _instance(source.artifacts, period)
+    try:
+        evidence = retained.prepare(period, source.artifacts, (
+            retained.ArtifactBinding(review["instance_url"], review["instance_sha256"], "instance"),
+            retained.ArtifactBinding(review["primary_url"], review["primary_sha256"], "support")))
+    except FilingXBRLDataError as exc:
+        raise h.InputError("Invalid instant context/unit/nil/numeric evidence") from exc
+    namespaces = evidence.namespaces
     primary_tags = _Tags(); primary_tags.feed(primary.artifact.body.decode("utf-8"))
     text = " ".join(" ".join(primary_tags.parts).split())
     if any(note["text"] not in text for note in review["scope_notes"]):
@@ -87,15 +95,11 @@ def inspect(source, review=None):
         if policy is not None and not any(c.concept.taxonomy == spec["taxonomy"] and c.concept.name == spec["concept"]
                 and (c.applicable_ciks is None or period.cik in c.applicable_ciks) for c in policy.candidates):
             raise h.InputError("Existing approved direct cash/current investment semantics required")
-        try:
-            occurrences = _occurrences(root, contexts, units, namespaces, spec["namespace"], spec["concept"], period, True)
-        except (KeyError, ValueError) as exc:
-            raise h.InputError("Invalid instant context/unit/nil/numeric evidence") from exc
-        groups = {}
-        for occurrence in occurrences:
-            groups.setdefault((Decimal(occurrence.raw_value), occurrence.decimals), []).append(occurrence)
-        candidates = tuple(ReportedInput(spec["concept"], InputKind.BOOK_BALANCE, key[0], 1,
-                            spec["scope"], tuple(items)) for key, items in groups.items())
+        inspected = retained.inspect(evidence, retained.SelectionSpec(spec["component_id"],
+            (retained.Selector(spec["namespace"], spec["concept"], ()),), "instant", "USD",
+            spec["role"], spec["scope"], tuple(u["reason"] for u in review["unknowns"])))
+        candidates = tuple(ReportedInput(spec["concept"], InputKind.BOOK_BALANCE, c.value, 1,
+            spec["scope"], tuple(Occurrence(**o.__dict__) for o in c.occurrences)) for c in inspected.candidates)
         for statement in spec["statements"]:
             if statement["id"] not in primary_tags.tags:
                 raise h.InputError("Exact reviewed statement/note tag missing")

@@ -1,5 +1,16 @@
 # MSFT — company data preparation
 
+## Shared inspection mechanism — no financial coverage change
+
+The [retained-component API](../retained-component-inspection.md) now supplies
+structural Revenue/EBIT, cash and debt candidates for the same two reviewed
+periods. Original conflict/scope interpretations, exact source passages and
+financial selection stay in the unchanged mapping data and pilot inspectors.
+This replaces duplicated parsing, not MSFT policy decisions. All values,
+confirmations/alternatives, nulls, versions and serialized bytes are preserved;
+tests pin the original two-period history hash. NWC, timing, interest/lease
+coverage and other limitations below remain. No new review/approval or estimate.
+
 ## Retained year-end debt/lease components — FY2025/FY2026
 
 Original conflict: the preparation family was unavailable despite retained debt

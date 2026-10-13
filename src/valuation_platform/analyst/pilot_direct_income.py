@@ -13,8 +13,8 @@ import json
 from pathlib import Path
 
 from . import historical_inputs as h
-from .cash_flow_inputs import _instance, Occurrence, ReportedInput, InputKind
-from ..sec import filing_xbrl as x
+from .cash_flow_inputs import Occurrence, ReportedInput, InputKind
+from . import retained_components as retained
 from ..normalization.concepts import REVENUE_POLICY, OPERATING_INCOME_POLICY
 
 EVIDENCE_PATH = Path(__file__).resolve().parents[3] / "docs/pilot-direct-income-evidence.json"
@@ -79,36 +79,18 @@ matching existing reported bundles (not filtered-parser fact indexes).
             instance.artifact.url != review["instance_url"] or primary.artifact.url != review["primary_url"] or
             review["digest_type"] != "sha256_sec_response_body_bytes"):
         raise h.InputError("Exact original response-body digests required")
-    root, _, _, namespaces = _instance(source.artifacts, period)
-    parsed_contexts = x._parse_contexts(root, namespaces)
-    contexts = {c.context_id: c for c in parsed_contexts}
-    units = {u.unit_id: u for u in x._parse_units(root, namespaces)}
-    facts = x._parse_facts(root, contexts, units, period.accession, instance.artifact.url)
-    elements = tuple(e for e in root if e.get("contextRef") is not None)
-    ordinals = {id(e): i for i, e in enumerate(root)}
-    groups = {}
-    for fact, element in zip(facts, elements):
-        if not any(key.taxonomy == "us-gaap" and key.name == fact.concept for key in POLICIES[field].candidates):
-            continue
-        if fact.namespace != namespaces.get("us-gaap") or not fact.namespace.startswith("http://fasb.org/us-gaap/"):
-            continue
-        c = contexts[fact.context_id]
-        if (c.entity_identifier_scheme != "http://www.sec.gov/CIK" or
-                int(c.entity_identifier) != period.cik or c.start != period.annual_start or
-                c.end != period.annual_end or c.dimensions):
-            continue
-        if (fact.is_nil or fact.numeric_value is None or fact.unit is None or
-                fact.unit.denominator_measures or fact.unit.numerator_measures !=
-                (x.FilingXBRLQName("http://www.xbrl.org/2003/iso4217", "USD"),)):
-            raise h.InputError("Eligible direct fact must be non-nil exact USD numeric evidence")
-        o = Occurrence(fact.namespace, fact.concept, c.context_id, period.cik, c.start, c.end,
-                       fact.unit_ref, fact.raw_value, fact.decimals, ordinals[id(element)])
-        # Different precision/concept representations remain separate candidates,
-        # each preserving its originals; only exact numeric agreement can confirm.
-        key = (fact.namespace, fact.concept, fact.numeric_value, fact.decimals)
-        groups.setdefault(key, []).append(o)
-    candidates = tuple(ReportedInput(key[1], InputKind.ACCRUED_INCOME, key[2], 1,
-        review["statement_scope"], tuple(occurrences)) for key, occurrences in groups.items())
+    evidence = retained.prepare(period, source.artifacts, (
+        retained.ArtifactBinding(review["instance_url"], review["instance_sha256"], "instance"),
+        retained.ArtifactBinding(review["primary_url"], review["primary_sha256"], "support")))
+    namespace = evidence.namespaces.get("us-gaap", "")
+    candidates = ()
+    if namespace.startswith("http://fasb.org/us-gaap/"):
+        specification = retained.SelectionSpec(field.value, tuple(retained.Selector(namespace, key.name, ())
+            for key in POLICIES[field].candidates if key.taxonomy == "us-gaap"), "annual", "USD",
+            "reported_revenue" if field is h.Field.REVENUE else "reported_operating_income", review["statement_scope"], ())
+        inspected = retained.inspect(evidence, specification)
+        candidates = tuple(ReportedInput(c.concept, InputKind.ACCRUED_INCOME, c.value, 1,
+            review["statement_scope"], tuple(Occurrence(**o.__dict__) for o in c.occurrences)) for c in inspected.candidates)
     parser = _Inline(review["statement_id"])
     parser.feed(primary.artifact.body.decode("utf-8"))
     if len(parser.matches) != 1:

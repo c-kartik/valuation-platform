@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## Shared retained-component inspection — mechanism only
+
+[Reusable API and preservation](../retained-component-inspection.md) now handles
+structural candidate inspection for the existing four pilot periods. Shared
+receipt/CIK/accession/annual-or-instant/context/unit/precision checks retain every
+confirmation/competing value and original evidence reference. Existing mapping
+data and inspector callers retain financial roles, scope interpretation, gates
+and selection. No new field coverage, periods, issuer approvals or readiness.
+The three records note mechanism changes only; all values, nulls, alternatives,
+serialized bytes, policies, blockers and preparation classifications persist.
+Next finite application is an offline direct Revenue/EBIT candidate ledger for
+NVDA's five frozen selections, with absent bodies/scope issues as exceptions,
+not a new research cycle or financial approval. Standing record maintenance and
+financial-sufficiency NOT_ASSESSED remain unchanged.
 ## Retained year-end debt/lease delivery — four pilot periods
 
 [Exact evidence, basis/overlap decisions and tests](../pilot-debt-lease-evidence.md)

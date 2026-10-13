@@ -1,5 +1,15 @@
 # Architecture
 
+The [reusable retained-component inspection API](retained-component-inspection.md)
+separates structural receipt/identity/context/unit/precision inspection from
+caller-owned financial policy, statement review and adapter selection. Exact
+explicit selectors return candidates, ordered confirmations, competing values,
+original evidence references and unresolved requirements, never acceptance or
+completeness. Existing Revenue/EBIT, cash and debt pilot inspectors route through
+it while retaining their issuer-specific interpretations in unchanged mapping
+data. Mapping/bundle versions, schemas and serialized pilot bytes remain unchanged.
+No new issuer approvals, retrieval, generic formulas or valuation consumers.
+
 The [retained pilot debt/lease component delivery](pilot-debt-lease-evidence.md)
 uses existing filing-XBRL context/unit/fact parsing, annual-DEI checks, original
 receipts and immutable historical-input models. The isolated mapping inspector

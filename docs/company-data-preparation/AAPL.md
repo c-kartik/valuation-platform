@@ -1,5 +1,16 @@
 # AAPL — company data preparation
 
+## Shared inspection mechanism — no financial coverage change
+
+[Shared retained-component inspection](../retained-component-inspection.md)
+now supplies structural candidates for FY2025 Revenue/EBIT, cash and debt from
+the same original receipts and exact annual/year-end contexts. Issuer-specific
+scope, gates and selection remain in unchanged evidence/mapping data and the
+pilot callers; no interpretation is generalized from a concept name. Exact
+history serialization hash, all values/nulls/alternatives and versions are
+preserved by tests. Cash-interest, lease completeness, NWC/timing and other
+limitations below persist. No comparative approval, new estimate or coverage.
+
 ## Retained year-end debt/lease components — FY2025 only
 
 Original conflict: cash-flow input packaging did not bind closing debt; absence

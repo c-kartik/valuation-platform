@@ -1,5 +1,17 @@
 # GOOGL — company data preparation
 
+## Shared inspection mechanism — no financial coverage change
+
+[Shared retained-component inspection](../retained-component-inspection.md)
+now handles structural candidates for the same FY2024 Revenue/EBIT, cash and
+debt mappings. Original metadata gap and separately refreshed receipt remain
+distinct. Scope interpretations, precision conflict, gates and conservative
+selection remain in unchanged mapping/evidence data and pilot callers. Exact
+history bytes, versions, all values/alternatives/nulls and original artifacts
+are pinned by tests. D&A/NWC/timing/interest and other limitations remain;
+GOOG/GOOGL are still one issuer. This is mechanism reuse, not new financial
+coverage or approval and not an estimate.
+
 ## Retained year-end debt/lease components — FY2024 only
 
 Original conflict: debt-family mapping lacked closing evidence despite retained

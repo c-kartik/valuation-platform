@@ -10,23 +10,17 @@ from decimal import Decimal
 import hashlib
 import json
 from pathlib import Path
-import re
 
 from . import historical_inputs as h
-from .cash_flow_inputs import _instance
+from . import retained_components as retained
 from .pilot_cash_investments import _Tags
-from ..sec import filing_xbrl as x
 from ..normalization.balance_sheet import CURRENT_PORTION_OF_LONG_TERM_DEBT_POLICY, LONG_TERM_DEBT_NONCURRENT_POLICY
 
 EVIDENCE_PATH = Path(__file__).resolve().parents[3] / 'docs/pilot-debt-lease-evidence.json'
 EVIDENCE_SHA256 = 'aac330aeccc9c132fcaa3e30054edacb25419cb2a12f2647567111d062945aec'
 
 
-def dimensions(context):
-    return tuple(f'{{{d.dimension.namespace}}}{d.dimension.local_name}=' +
-        (f'{{{d.explicit_member.namespace}}}{d.explicit_member.local_name}' if d.explicit_member else d.typed_member_xml)
-        for d in context.dimensions)
-
+dimensions = retained.dimensions
 
 @dataclass(frozen=True)
 class Candidate:
@@ -65,11 +59,10 @@ def inspect(source, review=None):
             review[k + '_sha256'] != r.artifact.sha256 or review[k + '_url'] != r.artifact.url
             for k, r in (('instance', instance), ('primary', primary)))):
         raise h.InputError('Exact original-body receipt binding required')
-    root, _, _, ns = _instance(source.artifacts, period)
-    contexts = {c.context_id: c for c in x._parse_contexts(root, ns)}
-    units = {u.unit_id: u for u in x._parse_units(root, ns)}
-    facts = x._parse_facts(root, contexts, units, period.accession, instance.artifact.url)
-    ordinals = [i for i, e in enumerate(root) if e.get('contextRef') is not None]
+    evidence = retained.prepare(period, source.artifacts, (
+        retained.ArtifactBinding(review['instance_url'], review['instance_sha256'], 'instance'),
+        retained.ArtifactBinding(review['primary_url'], review['primary_sha256'], 'support')))
+    ns = evidence.namespaces
     tags = _Tags(); tags.feed(primary.artifact.body.decode('utf-8'))
     text = ' '.join(' '.join(tags.parts).split())
     if any(note['text'] not in text for note in review['scope_notes']):
@@ -82,23 +75,11 @@ def inspect(source, review=None):
                   'noncurrent_debt': LONG_TERM_DEBT_NONCURRENT_POLICY}.get(spec['component_id'])
         if policy and not any(c.concept.taxonomy == spec['taxonomy'] and c.concept.name == spec['concept'] for c in policy.candidates):
             raise h.InputError('Existing direct current/noncurrent debt semantics required')
-        groups = {}
-        for fact, ordinal in zip(facts, ordinals):
-            if (fact.namespace, fact.concept) != (spec['namespace'], spec['concept']): continue
-            context = contexts[fact.context_id]
-            if (context.entity_identifier_scheme != 'http://www.sec.gov/CIK' or int(context.entity_identifier) != period.cik
-                    or context.start is not None or context.end != period.annual_end
-                    or dimensions(context) != tuple(spec['dimensions'])): continue
-            if (fact.is_nil or fact.numeric_value is None or fact.unit is None or fact.unit.denominator_measures
-                    or fact.unit.numerator_measures != (x.FilingXBRLQName('http://www.xbrl.org/2003/iso4217', 'USD'),)
-                    or not re.fullmatch(r'INF|-?\d+', fact.decimals or '')):
-                raise h.InputError('Eligible component requires non-nil exact USD numeric/precision evidence')
-            occurrence = dict(namespace=fact.namespace, concept=fact.concept, context_id=fact.context_id,
-                entity_cik=period.cik, start=None, end=str(fact.end), unit_id=fact.unit_ref,
-                raw_value=fact.raw_value, decimals=fact.decimals, ordinal=ordinal,
-                normalized_unit='USD', dimensions=list(dimensions(context)), nil=False)
-            groups.setdefault((fact.numeric_value, fact.decimals), []).append(occurrence)
-        candidates = tuple(Candidate(v, precision, tuple(items)) for (v, precision), items in groups.items())
+        inspected = retained.inspect(evidence, retained.SelectionSpec(spec['component_id'],
+            (retained.Selector(spec['namespace'], spec['concept'], tuple(spec['dimensions'])),), 'instant', 'USD',
+            spec['role'], spec['scope'], tuple(u['reason'] for u in review['unknowns'])))
+        candidates = tuple(Candidate(c.value, c.precision, tuple(o.__dict__ | dict(start=None,
+            end=str(o.end), dimensions=list(o.dimensions)) for o in c.occurrences)) for c in inspected.candidates)
         matched = True
         for statement in spec['statements']:
             actual = tags.tags.get(statement['id'])

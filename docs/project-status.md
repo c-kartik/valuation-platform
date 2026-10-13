@@ -2,7 +2,26 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained year-end debt/lease component integration**.
+Latest completed milestone: **reusable retained-component inspection interface**.
+[API contract, routing and byte-preservation results](retained-component-inspection.md).
+Shared exact-period retained receipt/context/unit/precision inspection now serves
+all four pilot Revenue/EBIT, cash/investment and debt/lease regressions. Financial
+policy/statement interpretation and selection stay outside the shared API in
+unchanged mapping data and pilot inspectors. Candidates, all confirmations and
+conflicts, source references, supplied roles/scopes and unresolved requirements
+remain explicit. No accepted/completed status, zero inference or aggregation.
+Mapping/annual/history versions 4, serialized outputs, frozen-v1, original
+artifacts, classifications and financial blockers remain unchanged. No SEC,
+new fields/periods/issuer approvals, full-suite/corpus or Phase 2 work.
+112 focused tests (11 new / 101 regression), four mapping/CFO checks, exact
+pre-refactor serialized history hashes/round trips, compileall, 405 relevant
+local links and diff checks pass. All pilot occurrences and dispositions persist.
+Next concrete bounded application, only if authorized: retained direct Revenue/
+EBIT candidate and exception ledger for NVDA's five frozen selections using
+existing selectors and bodies; no new approval or retrieval/research loop.
+**Stop after this interface milestone.**
+
+Previously completed milestone: **retained year-end debt/lease component integration**.
 [Evidence/results](pilot-debt-lease-evidence.md) /
 [reviewed mapping evidence](pilot-debt-lease-evidence.json). Same four periods;
 60 available components, one missing MSFT FY2026 commercial-paper component,
