@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## NVDA direct-field application beyond pilots
+
+[Five-period results](../nvda-retained-income-results.md) /
+[candidate and exception ledger](../nvda-retained-income-ledger.json) add ten
+verified direct Revenue/EBIT slots using retained original instances/receipts
+and existing approved policies. Twenty-eight occurrences and one equal Revenue
+alternative remain traceable. Missing retained income-statement reports are an
+explicit limitation; twelve other families per annual are unassessed nulls,
+not searched or approved. No implicit whole-history readiness, new financial
+treatments or support change. The four pilots and frozen-v1 remain unchanged.
+NVDA's record now describes actual limited coverage, source depth, selection
+rationale and remaining gaps. Shared direct inspection/packaging is ready for
+a separately bounded multi-issuer retained-only batch with explicit exceptions;
+no issuer research loop or further work starts here.
 ## Shared retained-component inspection — mechanism only
 
 [Reusable API and preservation](../retained-component-inspection.md) now handles

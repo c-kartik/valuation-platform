@@ -2,7 +2,25 @@
 
 ## Current Milestone
 
-Latest completed milestone: **reusable retained-component inspection interface**.
+Latest completed milestone: **NVDA five-period retained Revenue/EBIT preparation**.
+[Results and limitations](nvda-retained-income-results.md) /
+[reproducible ten-slot ledger](nvda-retained-income-ledger.json).
+Five exact frozen periods: ten populated direct slots, 28 occurrences, one equal
+approved Revenue alternative retained. All five original instance bodies and
+receipt metadata verify; absent R3 income-statement/primary bodies remain an
+explicit independent-review limitation. Existing approved semantics only;
+no issuer-specific policy, fallback or financial treatment. Five isolated
+annual bundles keep twelve other families per annual unassessed/unavailable.
+No support reclassification, original blocker removal, pilot/frozen output
+changes, SEC/full suite/corpus or Phase 2 work. Financial sufficiency NOT_ASSESSED.
+93 focused tests (10 NVDA / 83 regression), exact retained ledger replay,
+deterministic serialization, unchanged pilot hashes, compileall, 278 relevant
+local links and diff checks pass.
+Shared approach is ready for a fixed retained-only multi-issuer Revenue/EBIT
+batch with candidate/exception ledgers and no research chain; do not start it.
+**Stop after NVDA.**
+
+Previously completed milestone: **reusable retained-component inspection interface**.
 [API contract, routing and byte-preservation results](retained-component-inspection.md).
 Shared exact-period retained receipt/context/unit/precision inspection now serves
 all four pilot Revenue/EBIT, cash/investment and debt/lease regressions. Financial

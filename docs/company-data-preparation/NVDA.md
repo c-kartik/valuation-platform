@@ -1,5 +1,33 @@
 # NVDA — company data preparation
 
+## Five-period retained direct Revenue/EBIT application
+
+Original conflict: existing pipeline coverage and verified filing identities
+were not independently bound preparation inputs. [Exact ten-slot ledger](../nvda-retained-income-ledger.json)
+and [sources, rationale and validation](../nvda-retained-income-results.md) now
+apply the shared inspector to the five frozen 2022–2026 selections only.
+USD millions Revenue **26,914 / 26,974 / 60,922 / 130,497 / 215,938**;
+reported operating income **10,041 / 4,224 / 32,972 / 81,453 / 130,387**.
+Ten populated direct slots retain 28 occurrences; FY2022's two approved Revenue
+concepts agree, with existing policy-order choice logged and the alternative
+retained. No new concept semantics or issuer-specific approval registry.
+
+Original body/typed digest/actual receipt metadata, exact annual entity/context,
+unit, signs and precision are verified, rather than importing counts-only corpus
+values. R3.htm consolidated income statements/primary filings are not retained:
+this is limited approved-direct instance preparation, not fresh face-statement
+review or complete financial scope. Other twelve families per annual remain
+explicit unassessed/unavailable; none was searched or approved here. Five annual
+bundles serialize with original evidence and null requirements under unchanged
+models. Tests and retained replay are linked above. No estimates, derivations,
+NWC/D&A/Capex/timing blocker removal or support reclassification.
+
+The prior “no reviewed reported-input packages” statements below are historical
+for the earlier cash-flow/facts-gaps preparation pass. This additive delivery
+provides five **Revenue/EBIT-only** packages, not a CFO path or whole-history
+financial sufficiency. Financial sufficiency remains NOT_ASSESSED. Remaining
+financial coverage is deferred; this bounded pass stops without new SEC research.
+
 ## Consolidated blocker disposition — proposed reported-input path
 
 2026-10-12: [bounded review](../phase1-blocker-disposition-review.md) and

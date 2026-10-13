@@ -1,0 +1,1130 @@
+{
+  "schema": "retained-direct-income-candidate-ledger-v1",
+  "issuer": "NVDA",
+  "selected_period_count": 5,
+  "field_period_count": 10,
+  "identity_manifest_sha256": "bed57b00ed024de7e631a4cbe5f9c6ea638e5d6fef2b56264a8ac908115e7ba0",
+  "retained_bodies_sha256": "64ea48f91b7f4b5f545e638422f58d53c15e07a456ecb71b69b506beee08c591",
+  "limitations": [
+    "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+    "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+    "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+    "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+  ],
+  "rows": [
+    {
+      "identity": {
+        "cik": 1045810,
+        "accession": "0001045810-22-000036",
+        "form": "10-K",
+        "annual_start": "2021-02-01",
+        "annual_end": "2022-01-30"
+      },
+      "identity_reference": "docs/phase1-selected-filing-identity-manifest.json#/rows/0",
+      "source_reference": "docs/evidence/nvda-capex-response-bodies.json",
+      "retained_instance": {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130_htm.xml",
+        "accession": "0001045810-22-000036",
+        "location": "nvda-20220130_htm.xml",
+        "purpose": "Exact selected-instance annual, entity, unit and component-fact verification; prior extract was not exhaustive for intangible additions.",
+        "representation": "sec_response_body_bytes",
+        "digest_type": "sha256_sec_response_body_bytes",
+        "sha256": "230732b2e913338efa18b1975869cb8899a688bbb3c08e3a0b38946c9108fad3",
+        "byte_length": 2261972,
+        "http_status": 200,
+        "retrieved_at_utc": "2026-10-11T11:10:22.779742+00:00",
+        "retrieval_mode": "targeted_selected_filing_gap_retrieval",
+        "retained_original_path": null,
+        "prior_reported_digest": "230732b2e913338efa18b1975869cb8899a688bbb3c08e3a0b38946c9108fad3",
+        "prior_original_body_available": false,
+        "prior_digest_agrees": true,
+        "storage_encoding": "gzip_base64",
+        "prior_digest_type": "claimed_sha256_sec_response_body_bytes",
+        "prior_original_status": "unverifiable_original_body_unavailable",
+        "prior_comparison_status": "same_reported_digest_independently_verified_current_body",
+        "review_note": "Original old body unavailable. New body independently reviewed; old hash is not replaced or relabeled. Cause of any byte difference is unproved."
+      },
+      "fields": [
+        {
+          "field": "revenue",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 1,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_revenue",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "concept": "Revenues",
+              "value_usd": "26914000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                  "concept": "Revenues",
+                  "context_id": "i2c5e111a942340e08ad1e8d2e3b0fb71_D20210201-20220130",
+                  "entity_cik": 1045810,
+                  "start": "2021-02-01",
+                  "end": "2022-01-30",
+                  "unit_id": "usd",
+                  "raw_value": "26914000000",
+                  "decimals": "-6",
+                  "ordinal": 341,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-22-000036:revenue:ordinal-341",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130_htm.xml",
+                  "sha256": "230732b2e913338efa18b1975869cb8899a688bbb3c08e3a0b38946c9108fad3",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            },
+            {
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "value_usd": "26914000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                  "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "context_id": "i2c5e111a942340e08ad1e8d2e3b0fb71_D20210201-20220130",
+                  "entity_cik": 1045810,
+                  "start": "2021-02-01",
+                  "end": "2022-01-30",
+                  "unit_id": "usd",
+                  "raw_value": "26914000000",
+                  "decimals": "-6",
+                  "ordinal": 1485,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                  "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "context_id": "i2c5e111a942340e08ad1e8d2e3b0fb71_D20210201-20220130",
+                  "entity_cik": 1045810,
+                  "start": "2021-02-01",
+                  "end": "2022-01-30",
+                  "unit_id": "usd",
+                  "raw_value": "26914000000",
+                  "decimals": "-6",
+                  "ordinal": 1534,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                  "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "context_id": "i2c5e111a942340e08ad1e8d2e3b0fb71_D20210201-20220130",
+                  "entity_cik": 1045810,
+                  "start": "2021-02-01",
+                  "end": "2022-01-30",
+                  "unit_id": "usd",
+                  "raw_value": "26914000000",
+                  "decimals": "-6",
+                  "ordinal": 1556,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-22-000036:revenue:ordinal-1485",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130_htm.xml",
+                  "sha256": "230732b2e913338efa18b1975869cb8899a688bbb3c08e3a0b38946c9108fad3",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-22-000036:revenue:ordinal-1534",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130_htm.xml",
+                  "sha256": "230732b2e913338efa18b1975869cb8899a688bbb3c08e3a0b38946c9108fad3",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-22-000036:revenue:ordinal-1556",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130_htm.xml",
+                  "sha256": "230732b2e913338efa18b1975869cb8899a688bbb3c08e3a0b38946c9108fad3",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        },
+        {
+          "field": "ebit",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 0,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_operating_income",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "concept": "OperatingIncomeLoss",
+              "value_usd": "10041000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                  "concept": "OperatingIncomeLoss",
+                  "context_id": "i2c5e111a942340e08ad1e8d2e3b0fb71_D20210201-20220130",
+                  "entity_cik": 1045810,
+                  "start": "2021-02-01",
+                  "end": "2022-01-30",
+                  "unit_id": "usd",
+                  "raw_value": "10041000000",
+                  "decimals": "-6",
+                  "ordinal": 359,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                  "concept": "OperatingIncomeLoss",
+                  "context_id": "i2c5e111a942340e08ad1e8d2e3b0fb71_D20210201-20220130",
+                  "entity_cik": 1045810,
+                  "start": "2021-02-01",
+                  "end": "2022-01-30",
+                  "unit_id": "usd",
+                  "raw_value": "10041000000",
+                  "decimals": "-6",
+                  "ordinal": 1489,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-22-000036:ebit:ordinal-359",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130_htm.xml",
+                  "sha256": "230732b2e913338efa18b1975869cb8899a688bbb3c08e3a0b38946c9108fad3",
+                  "locator": "{\"field_id\": \"ebit\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_operating_income\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-22-000036:ebit:ordinal-1489",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130_htm.xml",
+                  "sha256": "230732b2e913338efa18b1975869cb8899a688bbb3c08e3a0b38946c9108fad3",
+                  "locator": "{\"field_id\": \"ebit\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_operating_income\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        }
+      ],
+      "other_field_families": "UNASSESSED_UNAVAILABLE_NOT_SEARCHED"
+    },
+    {
+      "identity": {
+        "cik": 1045810,
+        "accession": "0001045810-23-000017",
+        "form": "10-K",
+        "annual_start": "2022-01-31",
+        "annual_end": "2023-01-29"
+      },
+      "identity_reference": "docs/phase1-selected-filing-identity-manifest.json#/rows/1",
+      "source_reference": "docs/evidence/nvda-capex-response-bodies.json",
+      "retained_instance": {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129_htm.xml",
+        "accession": "0001045810-23-000017",
+        "location": "nvda-20230129_htm.xml",
+        "purpose": "Exact selected-instance annual, entity, unit and component-fact verification; prior extract was not exhaustive for intangible additions.",
+        "representation": "sec_response_body_bytes",
+        "digest_type": "sha256_sec_response_body_bytes",
+        "sha256": "6951254b74c59d8b0263604c83b0b494bc43a2565acffcc3645eede1df776644",
+        "byte_length": 2395989,
+        "http_status": 200,
+        "retrieved_at_utc": "2026-10-11T11:10:25.633712+00:00",
+        "retrieval_mode": "targeted_selected_filing_gap_retrieval",
+        "retained_original_path": null,
+        "prior_reported_digest": "6951254b74c59d8b0263604c83b0b494bc43a2565acffcc3645eede1df776644",
+        "prior_original_body_available": false,
+        "prior_digest_agrees": true,
+        "storage_encoding": "gzip_base64",
+        "prior_digest_type": "claimed_sha256_sec_response_body_bytes",
+        "prior_original_status": "unverifiable_original_body_unavailable",
+        "prior_comparison_status": "same_reported_digest_independently_verified_current_body",
+        "review_note": "Original old body unavailable. New body independently reviewed; old hash is not replaced or relabeled. Cause of any byte difference is unproved."
+      },
+      "fields": [
+        {
+          "field": "revenue",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 0,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_revenue",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2022",
+              "concept": "Revenues",
+              "value_usd": "26974000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2022",
+                  "concept": "Revenues",
+                  "context_id": "i793edb174e3c4f8499d46ce84a602d1b_D20220131-20230129",
+                  "entity_cik": 1045810,
+                  "start": "2022-01-31",
+                  "end": "2023-01-29",
+                  "unit_id": "usd",
+                  "raw_value": "26974000000",
+                  "decimals": "-6",
+                  "ordinal": 347,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2022",
+                  "concept": "Revenues",
+                  "context_id": "i793edb174e3c4f8499d46ce84a602d1b_D20220131-20230129",
+                  "entity_cik": 1045810,
+                  "start": "2022-01-31",
+                  "end": "2023-01-29",
+                  "unit_id": "usd",
+                  "raw_value": "26974000000",
+                  "decimals": "-6",
+                  "ordinal": 1566,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2022",
+                  "concept": "Revenues",
+                  "context_id": "i793edb174e3c4f8499d46ce84a602d1b_D20220131-20230129",
+                  "entity_cik": 1045810,
+                  "start": "2022-01-31",
+                  "end": "2023-01-29",
+                  "unit_id": "usd",
+                  "raw_value": "26974000000",
+                  "decimals": "-6",
+                  "ordinal": 1624,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2022",
+                  "concept": "Revenues",
+                  "context_id": "i793edb174e3c4f8499d46ce84a602d1b_D20220131-20230129",
+                  "entity_cik": 1045810,
+                  "start": "2022-01-31",
+                  "end": "2023-01-29",
+                  "unit_id": "usd",
+                  "raw_value": "26974000000",
+                  "decimals": "-6",
+                  "ordinal": 1647,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-23-000017:revenue:ordinal-347",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129_htm.xml",
+                  "sha256": "6951254b74c59d8b0263604c83b0b494bc43a2565acffcc3645eede1df776644",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-23-000017:revenue:ordinal-1566",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129_htm.xml",
+                  "sha256": "6951254b74c59d8b0263604c83b0b494bc43a2565acffcc3645eede1df776644",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-23-000017:revenue:ordinal-1624",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129_htm.xml",
+                  "sha256": "6951254b74c59d8b0263604c83b0b494bc43a2565acffcc3645eede1df776644",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-23-000017:revenue:ordinal-1647",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129_htm.xml",
+                  "sha256": "6951254b74c59d8b0263604c83b0b494bc43a2565acffcc3645eede1df776644",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        },
+        {
+          "field": "ebit",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 0,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_operating_income",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2022",
+              "concept": "OperatingIncomeLoss",
+              "value_usd": "4224000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2022",
+                  "concept": "OperatingIncomeLoss",
+                  "context_id": "i793edb174e3c4f8499d46ce84a602d1b_D20220131-20230129",
+                  "entity_cik": 1045810,
+                  "start": "2022-01-31",
+                  "end": "2023-01-29",
+                  "unit_id": "usd",
+                  "raw_value": "4224000000",
+                  "decimals": "-6",
+                  "ordinal": 368,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2022",
+                  "concept": "OperatingIncomeLoss",
+                  "context_id": "i793edb174e3c4f8499d46ce84a602d1b_D20220131-20230129",
+                  "entity_cik": 1045810,
+                  "start": "2022-01-31",
+                  "end": "2023-01-29",
+                  "unit_id": "usd",
+                  "raw_value": "4224000000",
+                  "decimals": "-6",
+                  "ordinal": 1570,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-23-000017:ebit:ordinal-368",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129_htm.xml",
+                  "sha256": "6951254b74c59d8b0263604c83b0b494bc43a2565acffcc3645eede1df776644",
+                  "locator": "{\"field_id\": \"ebit\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_operating_income\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-23-000017:ebit:ordinal-1570",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129_htm.xml",
+                  "sha256": "6951254b74c59d8b0263604c83b0b494bc43a2565acffcc3645eede1df776644",
+                  "locator": "{\"field_id\": \"ebit\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_operating_income\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        }
+      ],
+      "other_field_families": "UNASSESSED_UNAVAILABLE_NOT_SEARCHED"
+    },
+    {
+      "identity": {
+        "cik": 1045810,
+        "accession": "0001045810-24-000029",
+        "form": "10-K",
+        "annual_start": "2023-01-30",
+        "annual_end": "2024-01-28"
+      },
+      "identity_reference": "docs/phase1-selected-filing-identity-manifest.json#/rows/2",
+      "source_reference": "docs/evidence/nvda-capex-response-bodies.json",
+      "retained_instance": {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128_htm.xml",
+        "accession": "0001045810-24-000029",
+        "location": "nvda-20240128_htm.xml",
+        "purpose": "Exact selected-instance annual, entity, unit and component-fact verification; prior extract was not exhaustive for intangible additions.",
+        "representation": "sec_response_body_bytes",
+        "digest_type": "sha256_sec_response_body_bytes",
+        "sha256": "b9e74251f28f0537967d98ff71b835f0893ee08337ef9481ba6fe9cde2a5bb9d",
+        "byte_length": 1831322,
+        "http_status": 200,
+        "retrieved_at_utc": "2026-10-11T11:10:28.646157+00:00",
+        "retrieval_mode": "targeted_selected_filing_gap_retrieval",
+        "retained_original_path": null,
+        "prior_reported_digest": "b9e74251f28f0537967d98ff71b835f0893ee08337ef9481ba6fe9cde2a5bb9d",
+        "prior_original_body_available": false,
+        "prior_digest_agrees": true,
+        "storage_encoding": "gzip_base64",
+        "prior_digest_type": "claimed_sha256_sec_response_body_bytes",
+        "prior_original_status": "unverifiable_original_body_unavailable",
+        "prior_comparison_status": "same_reported_digest_independently_verified_current_body",
+        "review_note": "Original old body unavailable. New body independently reviewed; old hash is not replaced or relabeled. Cause of any byte difference is unproved."
+      },
+      "fields": [
+        {
+          "field": "revenue",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 0,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_revenue",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "concept": "Revenues",
+              "value_usd": "60922000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2023",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2023-01-30",
+                  "end": "2024-01-28",
+                  "unit_id": "usd",
+                  "raw_value": "60922000000",
+                  "decimals": "-6",
+                  "ordinal": 345,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2023",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2023-01-30",
+                  "end": "2024-01-28",
+                  "unit_id": "usd",
+                  "raw_value": "60922000000",
+                  "decimals": "-6",
+                  "ordinal": 1542,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2023",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2023-01-30",
+                  "end": "2024-01-28",
+                  "unit_id": "usd",
+                  "raw_value": "60922000000",
+                  "decimals": "-6",
+                  "ordinal": 1600,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2023",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2023-01-30",
+                  "end": "2024-01-28",
+                  "unit_id": "usd",
+                  "raw_value": "60922000000",
+                  "decimals": "-6",
+                  "ordinal": 1623,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-24-000029:revenue:ordinal-345",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128_htm.xml",
+                  "sha256": "b9e74251f28f0537967d98ff71b835f0893ee08337ef9481ba6fe9cde2a5bb9d",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-24-000029:revenue:ordinal-1542",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128_htm.xml",
+                  "sha256": "b9e74251f28f0537967d98ff71b835f0893ee08337ef9481ba6fe9cde2a5bb9d",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-24-000029:revenue:ordinal-1600",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128_htm.xml",
+                  "sha256": "b9e74251f28f0537967d98ff71b835f0893ee08337ef9481ba6fe9cde2a5bb9d",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-24-000029:revenue:ordinal-1623",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128_htm.xml",
+                  "sha256": "b9e74251f28f0537967d98ff71b835f0893ee08337ef9481ba6fe9cde2a5bb9d",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        },
+        {
+          "field": "ebit",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 0,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_operating_income",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "concept": "OperatingIncomeLoss",
+              "value_usd": "32972000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2023",
+                  "concept": "OperatingIncomeLoss",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2023-01-30",
+                  "end": "2024-01-28",
+                  "unit_id": "usd",
+                  "raw_value": "32972000000",
+                  "decimals": "-6",
+                  "ordinal": 366,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2023",
+                  "concept": "OperatingIncomeLoss",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2023-01-30",
+                  "end": "2024-01-28",
+                  "unit_id": "usd",
+                  "raw_value": "32972000000",
+                  "decimals": "-6",
+                  "ordinal": 1546,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-24-000029:ebit:ordinal-366",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128_htm.xml",
+                  "sha256": "b9e74251f28f0537967d98ff71b835f0893ee08337ef9481ba6fe9cde2a5bb9d",
+                  "locator": "{\"field_id\": \"ebit\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_operating_income\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-24-000029:ebit:ordinal-1546",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128_htm.xml",
+                  "sha256": "b9e74251f28f0537967d98ff71b835f0893ee08337ef9481ba6fe9cde2a5bb9d",
+                  "locator": "{\"field_id\": \"ebit\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_operating_income\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        }
+      ],
+      "other_field_families": "UNASSESSED_UNAVAILABLE_NOT_SEARCHED"
+    },
+    {
+      "identity": {
+        "cik": 1045810,
+        "accession": "0001045810-25-000023",
+        "form": "10-K",
+        "annual_start": "2024-01-29",
+        "annual_end": "2025-01-26"
+      },
+      "identity_reference": "docs/phase1-selected-filing-identity-manifest.json#/rows/3",
+      "source_reference": "docs/evidence/nvda-capex-response-bodies.json",
+      "retained_instance": {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126_htm.xml",
+        "accession": "0001045810-25-000023",
+        "location": "nvda-20250126_htm.xml",
+        "purpose": "Exact selected-instance annual, entity, unit and component-fact verification; prior extract was not exhaustive for intangible additions.",
+        "representation": "sec_response_body_bytes",
+        "digest_type": "sha256_sec_response_body_bytes",
+        "sha256": "c85f41184ee3b0a78c56564bf77804988757d6e002c16be558d01b53a0ad2845",
+        "byte_length": 1863403,
+        "http_status": 200,
+        "retrieved_at_utc": "2026-10-11T11:10:31.877498+00:00",
+        "retrieval_mode": "targeted_selected_filing_gap_retrieval",
+        "retained_original_path": null,
+        "prior_reported_digest": "c85f41184ee3b0a78c56564bf77804988757d6e002c16be558d01b53a0ad2845",
+        "prior_original_body_available": false,
+        "prior_digest_agrees": true,
+        "storage_encoding": "gzip_base64",
+        "prior_digest_type": "claimed_sha256_sec_response_body_bytes",
+        "prior_original_status": "unverifiable_original_body_unavailable",
+        "prior_comparison_status": "same_reported_digest_independently_verified_current_body",
+        "review_note": "Original old body unavailable. New body independently reviewed; old hash is not replaced or relabeled. Cause of any byte difference is unproved."
+      },
+      "fields": [
+        {
+          "field": "revenue",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 0,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_revenue",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "concept": "Revenues",
+              "value_usd": "130497000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2024",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2024-01-29",
+                  "end": "2025-01-26",
+                  "unit_id": "usd",
+                  "raw_value": "130497000000",
+                  "decimals": "-6",
+                  "ordinal": 380,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2024",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2024-01-29",
+                  "end": "2025-01-26",
+                  "unit_id": "usd",
+                  "raw_value": "130497000000",
+                  "decimals": "-6",
+                  "ordinal": 1530,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2024",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2024-01-29",
+                  "end": "2025-01-26",
+                  "unit_id": "usd",
+                  "raw_value": "130497000000",
+                  "decimals": "-6",
+                  "ordinal": 1597,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2024",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2024-01-29",
+                  "end": "2025-01-26",
+                  "unit_id": "usd",
+                  "raw_value": "130497000000",
+                  "decimals": "-6",
+                  "ordinal": 1631,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-25-000023:revenue:ordinal-380",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126_htm.xml",
+                  "sha256": "c85f41184ee3b0a78c56564bf77804988757d6e002c16be558d01b53a0ad2845",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-25-000023:revenue:ordinal-1530",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126_htm.xml",
+                  "sha256": "c85f41184ee3b0a78c56564bf77804988757d6e002c16be558d01b53a0ad2845",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-25-000023:revenue:ordinal-1597",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126_htm.xml",
+                  "sha256": "c85f41184ee3b0a78c56564bf77804988757d6e002c16be558d01b53a0ad2845",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-25-000023:revenue:ordinal-1631",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126_htm.xml",
+                  "sha256": "c85f41184ee3b0a78c56564bf77804988757d6e002c16be558d01b53a0ad2845",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        },
+        {
+          "field": "ebit",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 0,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_operating_income",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "concept": "OperatingIncomeLoss",
+              "value_usd": "81453000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2024",
+                  "concept": "OperatingIncomeLoss",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2024-01-29",
+                  "end": "2025-01-26",
+                  "unit_id": "usd",
+                  "raw_value": "81453000000",
+                  "decimals": "-6",
+                  "ordinal": 401,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2024",
+                  "concept": "OperatingIncomeLoss",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2024-01-29",
+                  "end": "2025-01-26",
+                  "unit_id": "usd",
+                  "raw_value": "81453000000",
+                  "decimals": "-6",
+                  "ordinal": 1536,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-25-000023:ebit:ordinal-401",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126_htm.xml",
+                  "sha256": "c85f41184ee3b0a78c56564bf77804988757d6e002c16be558d01b53a0ad2845",
+                  "locator": "{\"field_id\": \"ebit\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_operating_income\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-25-000023:ebit:ordinal-1536",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126_htm.xml",
+                  "sha256": "c85f41184ee3b0a78c56564bf77804988757d6e002c16be558d01b53a0ad2845",
+                  "locator": "{\"field_id\": \"ebit\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_operating_income\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        }
+      ],
+      "other_field_families": "UNASSESSED_UNAVAILABLE_NOT_SEARCHED"
+    },
+    {
+      "identity": {
+        "cik": 1045810,
+        "accession": "0001045810-26-000021",
+        "form": "10-K",
+        "annual_start": "2025-01-27",
+        "annual_end": "2026-01-25"
+      },
+      "identity_reference": "docs/phase1-selected-filing-identity-manifest.json#/rows/4",
+      "source_reference": "docs/evidence/nvda-capex-response-bodies.json",
+      "retained_instance": {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125_htm.xml",
+        "accession": "0001045810-26-000021",
+        "location": "nvda-20260125_htm.xml",
+        "purpose": "Exact selected-instance annual, entity, unit and component-fact verification; prior extract was not exhaustive for intangible additions.",
+        "representation": "sec_response_body_bytes",
+        "digest_type": "sha256_sec_response_body_bytes",
+        "sha256": "af8398105d629d98defacca572c8e85fe0d8a5f551266b01df2d8be4fa03558f",
+        "byte_length": 1685733,
+        "http_status": 200,
+        "retrieved_at_utc": "2026-10-11T11:10:34.777271+00:00",
+        "retrieval_mode": "targeted_selected_filing_gap_retrieval",
+        "retained_original_path": null,
+        "prior_reported_digest": "af8398105d629d98defacca572c8e85fe0d8a5f551266b01df2d8be4fa03558f",
+        "prior_original_body_available": false,
+        "prior_digest_agrees": true,
+        "storage_encoding": "gzip_base64",
+        "prior_digest_type": "claimed_sha256_sec_response_body_bytes",
+        "prior_original_status": "unverifiable_original_body_unavailable",
+        "prior_comparison_status": "same_reported_digest_independently_verified_current_body",
+        "review_note": "Original old body unavailable. New body independently reviewed; old hash is not replaced or relabeled. Cause of any byte difference is unproved."
+      },
+      "fields": [
+        {
+          "field": "revenue",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 0,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_revenue",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "concept": "Revenues",
+              "value_usd": "215938000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2025",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2025-01-27",
+                  "end": "2026-01-25",
+                  "unit_id": "usd",
+                  "raw_value": "215938000000",
+                  "decimals": "-6",
+                  "ordinal": 364,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2025",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2025-01-27",
+                  "end": "2026-01-25",
+                  "unit_id": "usd",
+                  "raw_value": "215938000000",
+                  "decimals": "-6",
+                  "ordinal": 1477,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                },
+                {
+                  "namespace": "http://fasb.org/us-gaap/2025",
+                  "concept": "Revenues",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2025-01-27",
+                  "end": "2026-01-25",
+                  "unit_id": "usd",
+                  "raw_value": "215938000000",
+                  "decimals": "-6",
+                  "ordinal": 1511,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-26-000021:revenue:ordinal-364",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125_htm.xml",
+                  "sha256": "af8398105d629d98defacca572c8e85fe0d8a5f551266b01df2d8be4fa03558f",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-26-000021:revenue:ordinal-1477",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125_htm.xml",
+                  "sha256": "af8398105d629d98defacca572c8e85fe0d8a5f551266b01df2d8be4fa03558f",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                },
+                {
+                  "source_id": "0001045810-26-000021:revenue:ordinal-1511",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125_htm.xml",
+                  "sha256": "af8398105d629d98defacca572c8e85fe0d8a5f551266b01df2d8be4fa03558f",
+                  "locator": "{\"field_id\": \"revenue\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_revenue\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        },
+        {
+          "field": "ebit",
+          "status": "POPULATED_REPORTED_DIRECT",
+          "selected": 0,
+          "selection_rationale": "Existing approved direct concept policy order selects one representation after exact numeric agreement; all other candidates remain alternatives. Numeric equality does not prove a new concept equivalent.",
+          "unit": "USD",
+          "scale": 1,
+          "sign": 1,
+          "role": "reported_operating_income",
+          "candidates": [
+            {
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "concept": "OperatingIncomeLoss",
+              "value_usd": "130387000000",
+              "precision": "-6",
+              "occurrences": [
+                {
+                  "namespace": "http://fasb.org/us-gaap/2025",
+                  "concept": "OperatingIncomeLoss",
+                  "context_id": "c-1",
+                  "entity_cik": 1045810,
+                  "start": "2025-01-27",
+                  "end": "2026-01-25",
+                  "unit_id": "usd",
+                  "raw_value": "130387000000",
+                  "decimals": "-6",
+                  "ordinal": 382,
+                  "normalized_unit": "USD",
+                  "dimensions": [],
+                  "nil": false
+                }
+              ],
+              "evidence_references": [
+                {
+                  "source_id": "0001045810-26-000021:ebit:ordinal-382",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125_htm.xml",
+                  "sha256": "af8398105d629d98defacca572c8e85fe0d8a5f551266b01df2d8be4fa03558f",
+                  "locator": "{\"field_id\": \"ebit\", \"inspection_only\": true, \"nil\": false, \"scale\": 1, \"sign\": 1, \"supplied_role\": \"reported_operating_income\", \"supplied_scope\": \"Approved direct US-GAAP nondimensional annual observation; no independent retained face-statement re-review.\", \"unit_id\": \"usd\"}",
+                  "representation": "sec_response_body_bytes",
+                  "digest_type": "sha256_sec_response_body_bytes"
+                }
+              ]
+            }
+          ],
+          "unresolved_requirements": [
+            "Only approved direct Revenue/EBIT observations inspected; twelve other contract families unassessed.",
+            "Consolidated income statement R3.htm and original primary 10-K are not retained in this evidence set; no independent face-statement re-review.",
+            "Evidence includes explicitly refreshed bodies from prior research; old unverifiable fingerprints are not recovered original receipts.",
+            "No complete financial-input sufficiency, organic/perimeter comparability, timing or valuation-consumption approval."
+          ]
+        }
+      ],
+      "other_field_families": "UNASSESSED_UNAVAILABLE_NOT_SEARCHED"
+    }
+  ]
+}

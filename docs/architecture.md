@@ -1,5 +1,14 @@
 # Architecture
 
+The [NVDA retained direct-income application](nvda-retained-income-results.md)
+uses the shared inspector plus a small caller-side Revenue/EBIT adapter for
+existing approved direct policies. It produces existing immutable annual/history
+models with all other families explicitly unassessed nulls. The fixed candidate/
+exception ledger is replayed from frozen selected identities and original retained
+receipts, not a new issuer-specific policy registry. Model serialization remains
+separate; existing pilot outputs and frozen-v1 are unchanged. Missing report bodies
+limit review/completeness and never trigger retrieval or financial-scope expansion.
+
 The [reusable retained-component inspection API](retained-component-inspection.md)
 separates structural receipt/identity/context/unit/precision inspection from
 caller-owned financial policy, statement review and adapter selection. Exact
