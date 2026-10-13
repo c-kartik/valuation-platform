@@ -1,5 +1,17 @@
 # Retained-only direct Revenue/EBIT universe sweep
 
+## Authorized fixed acquisition supersession
+
+The initial retained-only assessment below is preserved as history.
+[Fixed acquisition/results](income-sweep-acquisition-results.md) supersede its
+source availability: all 119 exact-accession exceptions verified with 148
+requests (119 instances, 29 indexes), zero failures/retries. Twenty excluded
+META/COST identity slots remain. Current ledger: **337 populated / 11 conflicting /
+30 no eligible direct concept / 20 insufficient identity = 398**. All 140 prior
+populated bindings unchanged; exact-accession artifact backlog zero. The 23
+retained original bodies match byte-for-byte; refreshes do not repair their old
+metadata. No changed financial semantics, derivations, support or readiness.
+
 Phase 1 only. [Reproducible ledger](retained-income-sweep-ledger.json),
 [pinned retained catalog](retained-income-sweep-sources.json),
 [input contract](dcf-input-contract.md) and

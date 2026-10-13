@@ -10,22 +10,40 @@ from . import pilot_historical_inputs as pilot
 
 CLASSIFICATIONS='docs/universe/phase-1h5-issuer-validation.json'
 CATALOG='docs/retained-income-sweep-sources.json'
+REFRESH='docs/evidence/income-sweep-backlog-acquisition.json'
 LIMITATIONS=batch.LIMITATIONS
 
 
 def sources():
     config=json.loads((shared.ROOT/CATALOG).read_text())
     refs=[]
+    refreshed={}
+    if REFRESH in config:
+        payload=shared.pinned(REFRESH,config[REFRESH])
+        for row in payload['rows']:
+            if row['status']=='VERIFIED':
+                refreshed[row['instance_url']]=row
     for path,digest in config.items():
         doc=shared.pinned(path,digest)
         artifacts=doc if isinstance(doc,list) else doc.get('artifacts',[])
         for i,a in enumerate(artifacts):
             if a.get('source_url','').endswith('_htm.xml'):
+                if path==REFRESH:
+                    row=refreshed.get(a['source_url'])
+                    if row is None:continue  # Retained failed responses are not accepted facts.
+                    a=dict(a,authorized_refresh_identity=row['identity'],
+                        authorized_prior_artifact=row['verification']['prior_history']['required_artifact'])
+                elif a['source_url'] in refreshed:
+                    continue  # Explicit authorized refresh, not economic concept precedence.
                 refs.append((path,i,a))
     return config,refs
 
 
 def expected_reference(row,refs):
+    fresh=[a for _,_,a in refs if a.get('authorized_refresh_identity')==row['identity']]
+    if len(fresh)>1:raise h.InputError('Multiple authorized refresh bindings')
+    if fresh:
+        a=fresh[0];return dict(url=a['source_url'],sha256=a['sha256'])
     try:return batch.instance_reference(row)
     except h.InputError:
         # No filename inferred. A retained exact-directory instance may provide

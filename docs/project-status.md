@@ -2,7 +2,27 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained-only direct Revenue/EBIT universe sweep**.
+Latest completed milestone: **fixed 119-accession sweep evidence acquisition**.
+[Actual acquisition/replay](income-sweep-acquisition-results.md) and separately
+[retained refresh receipts](evidence/income-sweep-backlog-acquisition.json):
+96 missing-body and 23 incomplete-receipt targets matched the frozen manifest;
+all 119 verified through existing exact annual/filing checks. 148 HTTP-200
+requests (119 instances, 29 indexes), zero failures/retries. All 23 retained
+original bodies identical; 96 prior bodies unavailable, with 67 matching claimed
+fingerprints and 29 absent fingerprints. Original metadata gaps remain preserved.
+Current sweep: **337 populated / 11 conflicting / 30 direct-concept absent /
+20 insufficient identity = 398**, 42 non-specialized issuers/199 periods.
+All 140 prior populated bindings unchanged; exact-accession artifact backlog zero.
+META/COST ten identity gaps excluded; eleven target history deficits unchanged.
+Existing derived EBIT remains separate. No policies, frozen outputs, support
+classes, original pilot serialization or twelve other family dispositions change.
+Focused receipt/replay/sweep/preservation checks only, no full suite/corpus.
+34 focused tests, both offline replays, 1,051 local links, rate/digest/count
+checks, compileall and diff checks pass.
+Financial sufficiency NOT_ASSESSED; Phase 2 prohibited.
+**Stop after acquisition and sweep; no follow-on research or implementation.**
+
+Previously completed milestone: **retained-only direct Revenue/EBIT universe sweep**.
 [Coverage, exceptions and preservation](retained-income-sweep-results.md) /
 [offline ledger](retained-income-sweep-ledger.json). All 42 non-specialized
 issuers (eight excluded, including GE): 199 selected periods / 398 slots.

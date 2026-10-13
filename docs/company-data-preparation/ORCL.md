@@ -1,5 +1,25 @@
 # ORCL — company data preparation
 
+## Fixed exact-instance acquisition and direct replay
+
+[Verified acquisition/results](../income-sweep-acquisition-results.md) /
+[exact source/candidate ledger](../retained-income-sweep-ledger.json): 5 frozen
+accession-period evidence exceptions repaired by explicit new SEC receipts,
+not recovered original metadata. Prior bodies/fingerprints and receipt gaps
+remain linked and unchanged. Current 10 Revenue/EBIT slots:
+10 populated, 0 conflicting eligible values,
+0 without eligible direct concepts. Zero body/receipt
+exceptions remain. Only existing approved direct semantics applied; exact
+annual contexts, occurrences, precision, alternatives and scope limitations
+remain traceable. No silent revenue precedence, derived-EBIT substitution,
+new financial approval or transfer of pilot treatments. Original 140 populated
+bindings across the sweep are preserved. Other twelve families in new packages
+remain unassessed/null; original financial blockers, history exceptions and
+frozen policies/values/support class unchanged. Financial sufficiency NOT_ASSESSED.
+Focused exact-receipt/body/identity, offline replay, original occurrence,
+conflict/absence and serialization/preservation validation only. Stop after this
+fixed acquisition; unresolved financial scope is not a new research queue.
+
 ## Retained-only direct Revenue/EBIT sweep
 
 [Universe ledger/results](../retained-income-sweep-results.md): 5 frozen

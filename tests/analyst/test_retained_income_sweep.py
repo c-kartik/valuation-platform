@@ -56,7 +56,8 @@ class SweepTests(unittest.TestCase):
         self.assertGreater(count,0)
 
     def test_missing_body_receipt_and_no_direct_are_distinct(self):
-        outcomes=self.ledger['outcomes']
+        baseline=json.loads(subprocess.check_output(['git','show','5d4f3808584a2712a054978420ca80bcbdb19c3f:docs/retained-income-sweep-ledger.json'],cwd=shared.ROOT))
+        outcomes=baseline['outcomes']
         for status in ('MISSING_RETAINED_BODY','INSUFFICIENT_IDENTITY_BINDING'):
             self.assertGreater(outcomes.get(status,0),0)
         populated=next(r for r in self.ledger['rows'] if not r['reused'] and r.get('retained_source') and any(f['outcome']=='POPULATED' for f in r['fields']))

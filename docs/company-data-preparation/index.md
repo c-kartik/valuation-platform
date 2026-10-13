@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## Fixed sweep evidence acquisition — current coverage
+
+[Actual results](../income-sweep-acquisition-results.md): all 119 exact-accession
+body/receipt exceptions verified through 148 requests, zero failures/retries.
+Twenty-six affected records retain original conflict history and now point to
+new refresh receipts. Twenty-three retained bodies identical; original metadata
+gaps not recovered. All 140 prior populated bindings unchanged. Current sweep:
+337 direct populated, 11 conflicts, 30 direct-concept absences and 20 excluded
+META/COST identity slots across 398 slots; artifact backlog zero. Existing
+derived EBIT remains separate. Eleven history deficits and other families'
+unassessed scope, frozen blockers/classes and financial sufficiency NOT_ASSESSED
+remain. No automatic issuer approval, future period extension, semantic research
+or valuation permission. Stop after this fixed acquisition/replay.
+
 ## Retained direct Revenue/EBIT sweep
 
 [Universe results](../retained-income-sweep-results.md) and
