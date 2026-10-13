@@ -2,7 +2,29 @@
 
 ## Current Milestone
 
-Latest completed milestone: **isolated historical-input assembly and review**.
+Latest milestone: **revision-bound persistent analyst overrides and grouped review**.
+[Control contract](analyst-override-review-controls.md) /
+[exact summary](grouped-preparation-review-summary.json). Separate opt-in local
+audit and analyst-origin overlay preserve original values/evidence/alternatives,
+history and unresolved requirements. Runtime UTC identity, explicit assumptions,
+relevant-content revisions, stale blocking and explicit revalidation are enforced;
+acknowledgment supplies no value. No real overrides or analyst decisions registered.
+All 17,605 original diagnostic cards remain in 9,886 cause groups: 8,308 actionable /
+1,578 informational, with source-detail click-through and explicit next actions.
+Grouping does not accept/discard issues or reduce financial requirements.
+All 42 preparation mechanisms are documented without new issuer values/support
+claims. Frozen/pilot/ledger outputs remain unchanged; sufficiency NOT_ASSESSED.
+No SEC requests, financial calculations, full-suite or corpus rerun.
+**58 unique focused tests pass**: fourteen synthetic override, nine assembly/
+grouping, 24 model and eleven shared regression tests. Original pilot/frozen/
+ledger preservation, compileall, 2,459 affected local links, forty-plus-two
+mappings, diagnostic membership/count reconciliation and diff checks pass.
+Next bounded validation milestone: end-to-end local review delivery checks against
+199 annual field denominators using representative synthetic decisions, restart/
+stale recovery and current grouped diagnostics. No new extraction/research or
+automatic financial acceptance. Stop pending authorization.
+
+Previously completed milestone: **isolated historical-input assembly and review**.
 [Results](prepared-assembly-results.md) / [quality summary](prepared-assembly-summary.json).
 42 histories / 199 annuals / 2,786 field-family slots; all fourteen contract
 families accounted for. XOM empty, GEV/SNDK short; eleven target-year deficits

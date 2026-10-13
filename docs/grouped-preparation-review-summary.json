@@ -1,0 +1,541 @@
+{
+  "issuers": 42,
+  "per_issuer": {
+    "AAPL": {
+      "actionable": 200,
+      "causes": {
+        "CONFLICT": 1,
+        "MISSING_REQUIRED_VALUE": 38,
+        "OVERLAP_WARNING": 31,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 100,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 268,
+      "groups": 240,
+      "informational": 40
+    },
+    "ABBV": {
+      "actionable": 215,
+      "causes": {
+        "CONFLICT": 5,
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 30,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 507,
+      "groups": 255,
+      "informational": 40
+    },
+    "AMAT": {
+      "actionable": 200,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 43,
+        "OVERLAP_WARNING": 22,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 359,
+      "groups": 240,
+      "informational": 40
+    },
+    "AMD": {
+      "actionable": 202,
+      "causes": {
+        "CONFLICT": 2,
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 30,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 100,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 256,
+      "groups": 242,
+      "informational": 40
+    },
+    "AMZN": {
+      "actionable": 210,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 288,
+      "groups": 250,
+      "informational": 40
+    },
+    "AVGO": {
+      "actionable": 204,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 24,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 372,
+      "groups": 244,
+      "informational": 40
+    },
+    "CAT": {
+      "actionable": 220,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 110,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 969,
+      "groups": 260,
+      "informational": 40
+    },
+    "COST": {
+      "actionable": 199,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 24,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 102,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 209,
+      "groups": 236,
+      "informational": 37
+    },
+    "CSCO": {
+      "actionable": 190,
+      "causes": {
+        "CONFLICT": 5,
+        "MISSING_REQUIRED_VALUE": 35,
+        "OVERLAP_WARNING": 20,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 100,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 274,
+      "groups": 230,
+      "informational": 40
+    },
+    "CVX": {
+      "actionable": 225,
+      "causes": {
+        "CONFLICT": 5,
+        "MISSING_REQUIRED_VALUE": 50,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 1172,
+      "groups": 265,
+      "informational": 40
+    },
+    "GEV": {
+      "actionable": 86,
+      "causes": {
+        "HISTORY_EXCEPTION": 1,
+        "MISSING_REQUIRED_VALUE": 22,
+        "OVERLAP_WARNING": 8,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 42,
+        "UNRESOLVED_REQUIREMENTS": 28
+      },
+      "diagnostics": 217,
+      "groups": 101,
+      "informational": 15
+    },
+    "GOOGL": {
+      "actionable": 199,
+      "causes": {
+        "CONFLICT": 5,
+        "MISSING_REQUIRED_VALUE": 38,
+        "OVERLAP_WARNING": 31,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 96,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 329,
+      "groups": 240,
+      "informational": 41
+    },
+    "HD": {
+      "actionable": 206,
+      "causes": {
+        "CONFLICT": 1,
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 25,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 247,
+      "groups": 246,
+      "informational": 40
+    },
+    "IBM": {
+      "actionable": 206,
+      "causes": {
+        "CONFLICT": 1,
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 30,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 100,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 949,
+      "groups": 246,
+      "informational": 40
+    },
+    "INTC": {
+      "actionable": 211,
+      "causes": {
+        "CONFLICT": 10,
+        "MISSING_REQUIRED_VALUE": 48,
+        "OVERLAP_WARNING": 15,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 103,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 349,
+      "groups": 246,
+      "informational": 35
+    },
+    "JNJ": {
+      "actionable": 205,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 100,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 536,
+      "groups": 245,
+      "informational": 40
+    },
+    "KLAC": {
+      "actionable": 195,
+      "causes": {
+        "CONFLICT": 5,
+        "MISSING_REQUIRED_VALUE": 35,
+        "OVERLAP_WARNING": 30,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 95,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 278,
+      "groups": 235,
+      "informational": 40
+    },
+    "KO": {
+      "actionable": 210,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 912,
+      "groups": 250,
+      "informational": 40
+    },
+    "LIN": {
+      "actionable": 217,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 49,
+        "OVERLAP_WARNING": 30,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 108,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 706,
+      "groups": 257,
+      "informational": 40
+    },
+    "LLY": {
+      "actionable": 205,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 100,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 765,
+      "groups": 245,
+      "informational": 40
+    },
+    "LRCX": {
+      "actionable": 215,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 50,
+        "OVERLAP_WARNING": 30,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 263,
+      "groups": 255,
+      "informational": 40
+    },
+    "MA": {
+      "actionable": 212,
+      "causes": {
+        "CONFLICT": 1,
+        "MISSING_REQUIRED_VALUE": 46,
+        "OVERLAP_WARNING": 30,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 328,
+      "groups": 252,
+      "informational": 40
+    },
+    "MCD": {
+      "actionable": 215,
+      "causes": {
+        "CONFLICT": 6,
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 34,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 228,
+      "groups": 255,
+      "informational": 40
+    },
+    "META": {
+      "actionable": 211,
+      "causes": {
+        "CONFLICT": 5,
+        "MISSING_REQUIRED_VALUE": 38,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 103,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 280,
+      "groups": 251,
+      "informational": 40
+    },
+    "MRK": {
+      "actionable": 222,
+      "causes": {
+        "INVALID_EVIDENCE": 2,
+        "MISSING_REQUIRED_VALUE": 50,
+        "OVERLAP_WARNING": 40,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 100,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 1237,
+      "groups": 262,
+      "informational": 40
+    },
+    "MSFT": {
+      "actionable": 184,
+      "causes": {
+        "CONFLICT": 1,
+        "MISSING_REQUIRED_VALUE": 34,
+        "OVERLAP_WARNING": 26,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 95,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 427,
+      "groups": 226,
+      "informational": 42
+    },
+    "MU": {
+      "actionable": 200,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 25,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 249,
+      "groups": 240,
+      "informational": 40
+    },
+    "NFLX": {
+      "actionable": 219,
+      "causes": {
+        "CONFLICT": 9,
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 208,
+      "groups": 259,
+      "informational": 40
+    },
+    "NVDA": {
+      "actionable": 218,
+      "causes": {
+        "CONFLICT": 3,
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 261,
+      "groups": 258,
+      "informational": 40
+    },
+    "ORCL": {
+      "actionable": 213,
+      "causes": {
+        "CONFLICT": 5,
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 28,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 242,
+      "groups": 253,
+      "informational": 40
+    },
+    "PEP": {
+      "actionable": 195,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 25,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 100,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 488,
+      "groups": 235,
+      "informational": 40
+    },
+    "PG": {
+      "actionable": 202,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 27,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 344,
+      "groups": 242,
+      "informational": 40
+    },
+    "PLTR": {
+      "actionable": 204,
+      "causes": {
+        "CONFLICT": 4,
+        "MISSING_REQUIRED_VALUE": 40,
+        "OVERLAP_WARNING": 25,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 216,
+      "groups": 244,
+      "informational": 40
+    },
+    "PM": {
+      "actionable": 215,
+      "causes": {
+        "INVALID_EVIDENCE": 5,
+        "MISSING_REQUIRED_VALUE": 47,
+        "OVERLAP_WARNING": 23,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 445,
+      "groups": 250,
+      "informational": 35
+    },
+    "QCOM": {
+      "actionable": 215,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 272,
+      "groups": 255,
+      "informational": 40
+    },
+    "SNDK": {
+      "actionable": 80,
+      "causes": {
+        "HISTORY_EXCEPTION": 1,
+        "MISSING_REQUIRED_VALUE": 18,
+        "OVERLAP_WARNING": 8,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 42,
+        "UNRESOLVED_REQUIREMENTS": 28
+      },
+      "diagnostics": 89,
+      "groups": 97,
+      "informational": 17
+    },
+    "TSLA": {
+      "actionable": 204,
+      "causes": {
+        "CONFLICT": 4,
+        "INVALID_EVIDENCE": 1,
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 19,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 261,
+      "groups": 244,
+      "informational": 40
+    },
+    "TXN": {
+      "actionable": 205,
+      "causes": {
+        "CONFLICT": 5,
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 20,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 509,
+      "groups": 245,
+      "informational": 40
+    },
+    "V": {
+      "actionable": 204,
+      "causes": {
+        "MISSING_REQUIRED_VALUE": 37,
+        "OVERLAP_WARNING": 35,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 102,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 387,
+      "groups": 244,
+      "informational": 40
+    },
+    "VZ": {
+      "actionable": 220,
+      "causes": {
+        "CONFLICT": 5,
+        "MISSING_REQUIRED_VALUE": 55,
+        "OVERLAP_WARNING": 20,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 655,
+      "groups": 255,
+      "informational": 35
+    },
+    "WMT": {
+      "actionable": 250,
+      "causes": {
+        "CONFLICT": 25,
+        "MISSING_REQUIRED_VALUE": 55,
+        "OVERLAP_WARNING": 30,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 110,
+        "UNRESOLVED_REQUIREMENTS": 70
+      },
+      "diagnostics": 253,
+      "groups": 290,
+      "informational": 40
+    },
+    "XOM": {
+      "actionable": 0,
+      "causes": {
+        "HISTORY_EXCEPTION": 1
+      },
+      "diagnostics": 1,
+      "groups": 1,
+      "informational": 1
+    }
+  },
+  "schema": "grouped-preparation-review-v1",
+  "selected_periods": 199,
+  "totals": {
+    "actionable": 8308,
+    "diagnostics": 17605,
+    "groups": 9886,
+    "informational": 1578
+  }
+}

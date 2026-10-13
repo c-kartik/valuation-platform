@@ -1,5 +1,23 @@
 # CSCO — company data preparation
 
+## Revision-bound decisions and grouped review
+
+[Control contract](../analyst-override-review-controls.md) /
+[exact grouped summary](../grouped-preparation-review-summary.json).
+Preparation mechanism now exposes 274 unchanged original diagnostic cards
+in 230 cause groups: 190 actionable / 40 informational.
+Source values, evidence, alternatives, original blockers and prior decisions remain
+unchanged. Groups retain every card/cause and exact source payload; no issue is
+accepted or discarded. Local opt-in analyst decisions require an exact relevant-
+content revision, author/actual UTC time/rationale, explicit compatible scope and
+assumption labeling. Stale decisions cannot apply; missing acknowledgment supplies
+no number. Separate overlays retain original completeness/requirements; they do
+not establish financial sufficiency or replace accepted pilot/frozen bytes.
+No real override or numerical assumption is registered. Focused validation covers
+group replay/preservation and synthetic audit workflows. This supersedes prior
+assembly-only next-step guidance, not its financial evidence or limitations.
+
+
 ## Isolated assembled historical inputs and review queue
 
 [Assembly/review results](../prepared-assembly-results.md) / [quality summary](../prepared-assembly-summary.json).

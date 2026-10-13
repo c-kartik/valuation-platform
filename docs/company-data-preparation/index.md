@@ -1,5 +1,26 @@
 # Company data preparation register
 
+## Revision-bound local review controls
+
+[Contract](../analyst-override-review-controls.md) /
+[reproducible grouped counts](../grouped-preparation-review-summary.json).
+All 42 assembled histories (forty register issuers plus META/COST seeds) now
+use shared cause grouping: 17,605 original diagnostic cards retained in 9,886
+groups, 8,308 actionable / 1,578 informational. Causes overlap; expansion retains
+every card/source/alternative. Counts do not indicate acceptance or fewer financial
+requirements. History exceptions and valued observation-only scope are explicitly
+informational; conflicts, invalid evidence, missing/completeness requirements and
+overlap remain actionable. Field importance is configured, not confidence.
+
+Optional local audit/overlay supports explicit analyst proposal, acceptance,
+revalidation, revocation and number-free acknowledgment, bound to exact source
+revisions. No real issuer decision/assumption is stored. Original values,
+limitations, pilot bytes and frozen output remain unchanged; sufficiency remains
+NOT_ASSESSED. Subsequent actual field/selection/override decisions must update
+affected records with exact evidence, displaced alternatives, author/time/rationale,
+revision, assumption classification, validation and remaining limitations in the
+same milestone. No automatic partial-to-complete promotion or blocker removal.
+
 ## Isolated assembled histories and read-only review
 
 [Results](../prepared-assembly-results.md) /

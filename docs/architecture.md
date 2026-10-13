@@ -1,5 +1,23 @@
 # Architecture
 
+## Local revision-bound analyst overlay
+
+`analyst/analyst_overrides.py` adds explicit proposal/accept/revalidate/revoke and
+number-free acknowledgment events in a caller-selected local directory. Exclusive
+immutable event files, chained hashes, writer lock and atomic head support restart
+and integrity checks. Relevant-content source revisions include field populations,
+evidence/scope/precision/diagnostics, not retrieval timestamps alone. Stale events
+are retained but cannot apply. Separate analyst-origin patches retain original
+values/evidence/alternatives and unresolved completeness; dependent derivations
+are flagged, not recalculated. Closed overlay serialization replays current
+source/audit bindings without changing old serializers or frozen schema 5.
+[Contract and trust boundary](analyst-override-review-controls.md).
+
+Actionable cause groups retain every original assembly card/detail. Informational
+support-scope observations/history exceptions are distinct from missing values,
+conflicts, invalid evidence, overlap and completeness requirements. No automated
+acceptance, source rewrite, economic treatment or valuation consumption.
+
 ## Isolated prepared-history assembly and review
 
 `analyst/prepared_assembly.py` copies existing retained field adapters/overlays

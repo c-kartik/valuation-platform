@@ -112,5 +112,25 @@ class PreparedAssemblyTests(unittest.TestCase):
         paths+=list(a.LEDGERS)+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
         for path in paths:self.assertEqual((a.ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=a.ROOT),path)
 
+    def test_grouped_queue_full_diagnostic_preservation_and_summary(self):
+        from valuation_platform.analyst import analyst_overrides as o
+        per={}
+        for name,prepared in self.histories.items():
+            cards=a.review_queue(prepared);groups=o.grouped_queue(prepared)
+            self.assertEqual({(c['target_id'],code) for c in cards for code in c['codes']},
+                {(c['target_id'],g['cause']) for g in groups for c in g['details']})
+            self.assertEqual(len({g['group_id'] for g in groups}),len(groups))
+            for g in groups:
+                if g['cause'] in ('CONFLICT','INVALID_EVIDENCE','OVERLAP_WARNING','MISSING_REQUIRED_VALUE','UNRESOLVED_REQUIREMENTS'):
+                    self.assertTrue(g['actionable'])
+            per[name]=o.queue_summary(prepared)
+        report=dict(schema='grouped-preparation-review-v1',issuers=len(per),
+            selected_periods=self.report['selected_periods'],per_issuer=per,
+            totals={k:sum(v[k] for v in per.values()) for k in ('diagnostics','groups','actionable','informational')})
+        self.assertEqual(report['totals']['diagnostics'],17605)
+        # Generated test output is outside the repository; no analyst decisions persisted.
+        from pathlib import Path
+        Path('/tmp/grouped-preparation-review-summary.json').write_text(a.canonical(report)+'\n')
+
 
 if __name__=='__main__':unittest.main()

@@ -106,6 +106,17 @@ CF-movement/book-change substitution or cash/debt aggregation engine is provided
 
 ## Packaging, serialization and coverage reporting
 
+The authorized [revision-bound override/review controls](analyst-override-review-controls.md)
+now provide a separate local immutable audit and analyst-origin overlay. Explicit
+proposals require author/actual UTC time/rationale, normalized value/unit/sign,
+precision, exact scope and numerical-assumption labeling where applicable.
+Acceptance binds exact relevant-content revisions; stale decisions require new
+explicit revalidation. Acknowledgment supplies no number. Original evidence,
+alternatives, completeness and unresolved requirements persist; no partial-to-total
+promotion or automatic blocker removal. Grouping retains every original diagnostic.
+This additive contract supersedes the earlier assembly-only next-step statement;
+no prior serializer, policy or financial value is migrated.
+
 The isolated [assembly/review layer](prepared-assembly-results.md) now packages
 existing parents and overlays in separate immutable review histories. It copies
 values/provenance without promoting support or partial components to totals.
