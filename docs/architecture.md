@@ -1,5 +1,21 @@
 # Architecture
 
+## Additive approved-income preparation integration
+
+`analyst/approved_income_integration.py` wraps, not modifies, the retained direct
+sweep. It executes the existing exact-accession Operating Income resolver only
+for no-direct EBIT slots with retained filing metadata and receipted operands.
+Direct values/conflicts are never replaced. Existing immutable input models
+retain signed support-only components, formula identity and canonical full policy
+provenance in an explicitly labeled flag; original and policy-local occurrence
+ordinals remain distinct. `validate_serialized_history` additionally replays the
+active resolver and compares proof, operands and formula after generic structural
+deserialization. No schema/policy migration or generic formula engine is introduced.
+Missing metadata blocks integration rather than acquiring fabricated dates.
+Prior seed resolver records remain identity candidates, not new fact provenance.
+See [verified scope/limitations](approved-income-integration-results.md). Frozen-v1
+and original pilot/direct serialization remain separate and unchanged.
+
 The [fixed retained-income batch](retained-income-batch-results.md) reuses the
 shared inspection/direct-input path for eight issuers, selecting exact identities
 from the frozen manifest and joining only explicit retained-source URLs/digests.

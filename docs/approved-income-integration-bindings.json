@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "sources": {
+    "docs/capex-inventory.json": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6",
+    "docs/depreciation-amortization-inventory.json": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8",
+    "docs/annual-period-evidence.md": "7dff7928026536679b71422b9c8a1fd032f59ba66e99c73d129548d44d23526b",
+    "src/valuation_platform/normalization/operating_income_derivation.py": "572438171eb754fa679d2dbb1830738114d2a7cbf361236f46662fa1b9f79016"
+  },
+  "filings": [
+    {
+      "filing": {
+        "accession_number": "0000059478-22-000068",
+        "form": "10-K",
+        "filing_date": "2022-02-23",
+        "report_date": "2021-12-31",
+        "primary_document": "lly-20211231.htm"
+      },
+      "reference": "docs/capex-inventory.json#/rows/10/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0000059478-23-000082",
+        "form": "10-K",
+        "filing_date": "2023-02-22",
+        "report_date": "2022-12-31",
+        "primary_document": "lly-20221231.htm"
+      },
+      "reference": "docs/capex-inventory.json#/rows/11/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0000059478-24-000065",
+        "form": "10-K",
+        "filing_date": "2024-02-21",
+        "report_date": "2023-12-31",
+        "primary_document": "lly-20231231.htm"
+      },
+      "reference": "docs/capex-inventory.json#/rows/12/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0000059478-25-000067",
+        "form": "10-K",
+        "filing_date": "2025-02-19",
+        "report_date": "2024-12-31",
+        "primary_document": "lly-20241231.htm"
+      },
+      "reference": "docs/capex-inventory.json#/rows/13/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0000059478-26-000013",
+        "form": "10-K",
+        "filing_date": "2026-02-12",
+        "report_date": "2025-12-31",
+        "primary_document": "lly-20251231.htm"
+      },
+      "reference": "docs/capex-inventory.json#/rows/14/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0000310158-22-000003",
+        "form": "10-K",
+        "filing_date": "2022-02-25",
+        "report_date": "2021-12-31",
+        "primary_document": "mrk-20211231.htm"
+      },
+      "reference": "docs/capex-inventory.json#/rows/30/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0001628280-23-005061",
+        "form": "10-K",
+        "filing_date": "2023-02-24",
+        "report_date": "2022-12-31",
+        "primary_document": "mrk-20221231.htm"
+      },
+      "reference": "docs/capex-inventory.json#/rows/31/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0001628280-24-006850",
+        "form": "10-K",
+        "filing_date": "2024-02-26",
+        "report_date": "2023-12-31",
+        "primary_document": "mrk-20231231.htm"
+      },
+      "reference": "docs/depreciation-amortization-inventory.json#/rows/55/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0001628280-25-007732",
+        "form": "10-K",
+        "filing_date": "2025-02-25",
+        "report_date": "2024-12-31",
+        "primary_document": "mrk-20241231.htm"
+      },
+      "reference": "docs/depreciation-amortization-inventory.json#/rows/56/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0000310158-26-000063",
+        "form": "10-K",
+        "filing_date": "2026-02-24",
+        "report_date": "2025-12-31",
+        "primary_document": "mrk-20251231.htm"
+      },
+      "reference": "docs/depreciation-amortization-inventory.json#/rows/57/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0001558370-22-001584",
+        "form": "10-K",
+        "filing_date": "2022-02-22",
+        "report_date": "2021-12-31",
+        "primary_document": "ibm-20211231x10k.htm"
+      },
+      "reference": "docs/depreciation-amortization-inventory.json#/rows/84/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0001558370-23-002376",
+        "form": "10-K",
+        "filing_date": "2023-02-28",
+        "report_date": "2022-12-31",
+        "primary_document": "ibm-20221231x10k.htm"
+      },
+      "reference": "docs/depreciation-amortization-inventory.json#/rows/85/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0000051143-24-000012",
+        "form": "10-K",
+        "filing_date": "2024-02-26",
+        "report_date": "2023-12-31",
+        "primary_document": "ibm-20231231.htm"
+      },
+      "reference": "docs/depreciation-amortization-inventory.json#/rows/86/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0000051143-25-000015",
+        "form": "10-K",
+        "filing_date": "2025-02-25",
+        "report_date": "2024-12-31",
+        "primary_document": "ibm-20241231.htm"
+      },
+      "reference": "docs/depreciation-amortization-inventory.json#/rows/87/filing"
+    },
+    {
+      "filing": {
+        "accession_number": "0000051143-26-000010",
+        "form": "10-K",
+        "filing_date": "2026-02-24",
+        "report_date": "2025-12-31",
+        "primary_document": "ibm-20251231.htm"
+      },
+      "reference": "docs/depreciation-amortization-inventory.json#/rows/88/filing"
+    }
+  ],
+  "seed_identities": [
+    {
+      "issuer": "COST",
+      "identity": {
+        "cik": 909832,
+        "accession": "0000909832-22-000021",
+        "form": "10-K",
+        "annual_start": "2021-08-30",
+        "annual_end": "2022-08-28"
+      },
+      "reference": "docs/annual-period-evidence.md:121",
+      "depth": "Reviewed annual-DEI diagnostic record; original instance/receipt not retained"
+    },
+    {
+      "issuer": "COST",
+      "identity": {
+        "cik": 909832,
+        "accession": "0000909832-23-000042",
+        "form": "10-K",
+        "annual_start": "2022-08-29",
+        "annual_end": "2023-09-03"
+      },
+      "reference": "docs/annual-period-evidence.md:122",
+      "depth": "Reviewed annual-DEI diagnostic record; original instance/receipt not retained"
+    },
+    {
+      "issuer": "COST",
+      "identity": {
+        "cik": 909832,
+        "accession": "0000909832-24-000049",
+        "form": "10-K",
+        "annual_start": "2023-09-04",
+        "annual_end": "2024-09-01"
+      },
+      "reference": "docs/annual-period-evidence.md:123",
+      "depth": "Reviewed annual-DEI diagnostic record; original instance/receipt not retained"
+    },
+    {
+      "issuer": "COST",
+      "identity": {
+        "cik": 909832,
+        "accession": "0000909832-25-000101",
+        "form": "10-K",
+        "annual_start": "2024-09-02",
+        "annual_end": "2025-08-31"
+      },
+      "reference": "docs/annual-period-evidence.md:124",
+      "depth": "Reviewed annual-DEI diagnostic record; original instance/receipt not retained"
+    },
+    {
+      "issuer": "META",
+      "identity": {
+        "cik": 1326801,
+        "accession": "0001326801-22-000018",
+        "form": "10-K",
+        "annual_start": "2021-01-01",
+        "annual_end": "2021-12-31"
+      },
+      "reference": "docs/annual-period-evidence.md:127",
+      "depth": "Reviewed annual-DEI diagnostic record; original instance/receipt not retained"
+    },
+    {
+      "issuer": "META",
+      "identity": {
+        "cik": 1326801,
+        "accession": "0001326801-23-000013",
+        "form": "10-K",
+        "annual_start": "2022-01-01",
+        "annual_end": "2022-12-31"
+      },
+      "reference": "docs/annual-period-evidence.md:128",
+      "depth": "Reviewed annual-DEI diagnostic record; original instance/receipt not retained"
+    },
+    {
+      "issuer": "META",
+      "identity": {
+        "cik": 1326801,
+        "accession": "0001326801-24-000012",
+        "form": "10-K",
+        "annual_start": "2023-01-01",
+        "annual_end": "2023-12-31"
+      },
+      "reference": "docs/annual-period-evidence.md:129",
+      "depth": "Reviewed annual-DEI diagnostic record; original instance/receipt not retained"
+    },
+    {
+      "issuer": "META",
+      "identity": {
+        "cik": 1326801,
+        "accession": "0001326801-25-000017",
+        "form": "10-K",
+        "annual_start": "2024-01-01",
+        "annual_end": "2024-12-31"
+      },
+      "reference": "docs/annual-period-evidence.md:130",
+      "depth": "Reviewed annual-DEI diagnostic record; original instance/receipt not retained"
+    },
+    {
+      "issuer": "META",
+      "identity": {
+        "cik": 1326801,
+        "accession": "0001628280-26-003942",
+        "form": "10-K",
+        "annual_start": "2025-01-01",
+        "annual_end": "2025-12-31"
+      },
+      "reference": "docs/annual-period-evidence.md:131",
+      "depth": "Reviewed annual-DEI diagnostic record; original instance/receipt not retained"
+    }
+  ]
+}

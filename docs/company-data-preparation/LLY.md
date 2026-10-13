@@ -1,5 +1,25 @@
 # LLY — company data preparation
 
+## Existing approved EBIT integration — bounded retained evidence
+
+[Additive ledger/results](../approved-income-integration-results.md):
+Five derived EBIT primitives added using existing approved exact-accession
+policy and verified retained operands; no direct binding overwritten.
+The original conflict is absence of an eligible reported Operating Income total.
+Only `operating_income_component_derivation` version `1` is considered; exact
+accession/form/report date and annual DEI context bind the existing policy.
+Raw receipted operands, original occurrences/precision, reviewed alternates,
+equation and Pretax/gross-profit validation gates are retained where executed.
+Signed supporting contributions are not independent EBIT observations or a
+new financial treatment. Sources and remaining requirements are linked in the
+[bindings](../approved-income-integration-bindings.json) and
+[period ledger](../approved-income-integration-ledger.json). Original frozen
+values/policies, prior preparation decisions, other families, support class and
+history remain unchanged. Financial sufficiency and timing readiness NOT_ASSESSED.
+Focused replay/arithmetic/precision/provenance, serialization and preservation
+checks support only this scope. Stop without further research, SEC requests,
+new equations, assumed zeros or automatic blocker removal.
+
 ## Fixed exact-instance acquisition and direct replay
 
 [Verified acquisition/results](../income-sweep-acquisition-results.md) /

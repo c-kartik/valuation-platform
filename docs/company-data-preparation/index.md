@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## Existing-evidence approved income integration
+
+[Additive results](../approved-income-integration-results.md) /
+[398-slot ledger](../approved-income-integration-ledger.json): original 337 direct
+bindings and eleven conflicts remain unchanged. Fifteen LLY/MRK/IBM EBIT inputs
+are separately derived under the existing immutable policy, with raw operands,
+precision and validation provenance. JNJ/KLAC ten remain missing required filing
+metadata; CVX five have no approved equation. No blocker or support class is cleared.
+The register remains forty GENERALIZATION_REQUIRED issuers. Supplemental
+[META](supported-seeds/META.md) and [COST](supported-seeds/COST.md) notes describe
+nine prior reviewed annual-identity candidates, eighteen original-body/receipt
+gaps and COST FY2026's remaining unknown accession/start. They are not new members
+or independent seed-input approvals. Other families and future consumer timing/
+sufficiency remain unassessed. Stop without acquisitions or new financial rules.
+
 ## Fixed sweep evidence acquisition — current coverage
 
 [Actual results](../income-sweep-acquisition-results.md): all 119 exact-accession

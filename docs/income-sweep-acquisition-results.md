@@ -1,5 +1,10 @@
 # Fixed 119-accession acquisition and unchanged direct replay
 
+Subsequent [existing-evidence integration](approved-income-integration-results.md)
+adds fifteen separately derived EBIT inputs and documents nine prior seed identity
+candidates. This acquisition/direct ledger and its 337 direct/eleven conflicting
+bindings remain unchanged; acquisition receipts and frozen outputs are preserved.
+
 Phase 1 only. Baseline `5d4f3808584a2712a054978420ca80bcbdb19c3f`:
 119 deduplicated exact-accession exceptions, 96 missing instance bodies and
 23 incomplete receipts, verified against the unchanged

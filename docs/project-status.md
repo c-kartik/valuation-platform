@@ -2,7 +2,28 @@
 
 ## Current Milestone
 
-Latest completed milestone: **fixed 119-accession sweep evidence acquisition**.
+Latest completed milestone: **existing-evidence income/approved EBIT integration**.
+[Results and remaining requirements](approved-income-integration-results.md) /
+[additive 398-slot ledger](approved-income-integration-ledger.json). 337 direct
+bindings and eleven conflicts unchanged; fifteen approved derived EBIT inputs
+(LLY/MRK/IBM five each) replay actual operands and immutable policy/version,
+equations, precision alternates and entry-specific bridge gates. JNJ/KLAC ten
+approved periods lack actual filing-date/submission-bound metadata needed by
+existing provenance serialization; no date fabricated or model weakened. CVX
+five remain unregistered. Retained annual-diagnostic records supply nine META/
+COST identity candidates, not fresh frozen-selection/body verification: eighteen
+slots lack original instance/receipt, COST FY2026's two lack accession/start.
+337 direct + 15 derived + 11 conflicts + 15 no-direct/unintegrated + 18 body gaps
++ 2 identity gaps = 398 across 199 periods. Frozen 189-period cohort manifest,
+eleven history deficits, schema 5, policies/registries, pilot outputs and production
+unchanged. Supported-seed notes are supplemental, not new forty-register members.
+Financial sufficiency/timing unassessed; Phase 2 prohibited. Focused validation
+only, no SEC, full-suite or corpus execution. **Stop after this integration.**
+41 focused tests (eight integration / twenty-two active-policy / eleven shared),
+final binding/serialization rerun, offline replay, compileall, 478 local links
+and diff checks pass. No essential metadata or seed fact evidence was invented.
+
+Previously completed milestone: **fixed 119-accession sweep evidence acquisition**.
 [Actual acquisition/replay](income-sweep-acquisition-results.md) and separately
 [retained refresh receipts](evidence/income-sweep-backlog-acquisition.json):
 96 missing-body and 23 incomplete-receipt targets matched the frozen manifest;
