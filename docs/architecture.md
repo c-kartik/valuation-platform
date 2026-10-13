@@ -1,5 +1,22 @@
 # Architecture
 
+## Retained tax / SBC role inspection layer
+
+`analyst/retained_tax_sbc.py` builds on unchanged movement/CFO histories and the
+shared original-body/annual/entity/unit/precision inspector. Immutable explicit
+concept/role mappings distinguish reconciliation eligibility from provision,
+expense and mixed support. There is no substring resolver, issuer registry,
+formula execution or economic acceptance. Partial immutable input histories
+replace only the two target families; original four pilot annuals remain verbatim.
+Conflicts within a role retain nulls/alternatives; differing expense versus
+reconciliation values remain separate, not additive. Closed serialization is
+paired with independent occurrence/role/sign replay. The closed diagnostic list
+separates cash, balances, tax movements, awards and withholding populations;
+comparative evidence remains in original bodies. [Results](retained-tax-sbc-results.md)
+report period outcomes separately from row counts and preserve all completeness,
+statement-scope and timing limitations. Frozen/pilot/CFO/income/movement outputs
+and financial policies are unchanged; no valuation consumption is authorized.
+
 ## Retained working-capital reconciliation observation layer
 
 `analyst/retained_working_capital.py` reuses CFO packages and the shared retained

@@ -1,5 +1,27 @@
 # NFLX — company data preparation
 
+## Retained deferred-tax / SBC reconciliation preparation
+
+[Results/role contract](../retained-tax-sbc-results.md) /
+[exact observations/exceptions](../retained-tax-sbc-ledger.json):
+5 frozen selected periods; populated/conflicting/unavailable CFO-role
+outcomes: deferred tax **0/0/5**; SBC **5/0/0**.
+Original conflict: provision, balance, cash-tax and operating tax movements do
+not independently establish a deferred CFO adjustment; recognized SBC expense,
+awards and withholding cash are not interchangeable with reconciliation rows.
+Shared exact annual/entity/USD/precision/receipt inspection now packages explicit
+standard roles only. Tax-and-credit captions retain broader scope; provision and
+note expense remain support-only, and mixed other-noncash rows are not allocated.
+Signs and original precision/occurrences remain traceable; no inferred zero,
+rounding adjustment, residual, sum or economic duplicate charge. Missing or
+conflicting required roles stay unresolved. Statement/continuing/acquisition/FX/
+timing scope is not independently re-reviewed by this pass. Prior decisions,
+four pilot annuals, every income/CFO/movement input, frozen policies/blockers,
+history exceptions and support classification remain unchanged. Validation is
+focused source/sign/role, serialization/replay and preservation only; financial
+sufficiency NOT_ASSESSED. No SEC requests, fresh issuer research or automatic
+financial treatment. Stop after this bounded inspection.
+
 ## Retained cash-flow movement inspection
 
 [Results](../retained-working-capital-results.md) /

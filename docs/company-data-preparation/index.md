@@ -1,5 +1,21 @@
 # Company data preparation register
 
+## Retained tax / SBC reconciliation observations
+
+[Results](../retained-tax-sbc-results.md) / [ledger](../retained-tax-sbc-ledger.json):
+199 periods / 42 non-specialized issuers. Deferred-tax CFO-role outcomes
+39 populated / zero conflicting / 160 unavailable; SBC 164 / five / 30.
+Counts are separate period outcomes, not completeness. Provision/expense,
+combined credits and mixed noncash support retain distinct roles; tax balances,
+cash/working-capital taxes, awards and withholding are not substitutes.
+All five INTC SBC periods retain exact-versus-rounded alternatives unresolved;
+original pilot annuals and Alphabet's differing SBC precision stay unchanged.
+Forty-register mappings plus two seed notes, eleven history deficits, all prior
+income/CFO/movement data and frozen blockers/classifications remain. Financial
+sufficiency NOT_ASSESSED. Stop after this retained pass; next authorized field
+step may integrate cash Capex under unchanged existing policies, not new scope
+approval or D&A timing certification.
+
 ## Reusable retained movement preparation
 
 [Results](../retained-working-capital-results.md) / [ledger](../retained-working-capital-ledger.json):

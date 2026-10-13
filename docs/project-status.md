@@ -2,7 +2,26 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained cash-flow working-capital movement inspection**.
+Latest completed milestone: **retained deferred-tax and SBC reconciliation observations**.
+[Results](retained-tax-sbc-results.md) / [199-period ledger](retained-tax-sbc-ledger.json).
+42 non-specialized issuers; deferred-tax CFO role **39 populated / zero conflicting
+/ 160 unavailable**; SBC **164 / five / 30**. Deferred provision and note-expense
+support do not fill reconciliation gaps. Broader tax/credit captions and mixed
+noncash support stay unallocated; no pure-component completeness claim.
+Five INTC exact/rounded SBC populations remain unresolved; original four pilot
+annuals, Alphabet's distinct SBC precision, all income/CFO/movement results,
+eleven history deficits and frozen-v1 remain unchanged. No SEC requests,
+issuer research, economic treatment, full suite/corpus or Phase 2. **Stop here.**
+Next authorized bounded step: retained cash Capex under existing direct/curated
+policies, with no new scope fallback; D&A/timing limitations remain separate.
+46 unique focused tests pass: nine new role/sign/replay/preservation tests
+(final rerun) and 37 shared/pilot mapping/Alphabet bundle regressions. All 199
+receipt bindings, two independent 199-slot outcome totals, forty-plus-two record
+mapping, eleven history exceptions, compileall, 1,892 affected links and diff
+checks pass. No mapped evidence errors; no full suite/corpus or SEC requests.
+
+
+Previously completed milestone: **retained cash-flow working-capital movement inspection**.
 [Results](retained-working-capital-results.md) / [199-period ledger](retained-working-capital-ledger.json).
 42 issuers / 199 periods have mapped observations; five KO reported totals,
 all 199 partial/unknown complete-family coverage, zero without eligible rows.
