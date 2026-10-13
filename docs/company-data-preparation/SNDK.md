@@ -1,5 +1,26 @@
 # SNDK — company data preparation
 
+## Retained cash-Capex policy replay
+
+[Results](../retained-capex-results.md) / [exact policy/source ledger](../retained-capex-ledger.json):
+2 selected periods; 2 direct / 0 curated,
+0 conflicting / 0 evidence gaps /
+0 unapproved-scope periods.
+Original requirement: approved cash PP&E purchase evidence is not interchangeable
+with combined software/intangible captions, acquisitions, noncash additions,
+capital creditors, financing/lease principal or proceeds. Shared exact retained
+annual/CIK/USD/precision inspection and unchanged direct/curated resolvers now
+bind actual operands and confirming occurrences. Approved magnitudes are signed
+negative cash outflows; raw source values remain. Broader candidates stay raw
+support-only, not a fallback, sum or blanket software approval. Missing artifacts
+for registered approvals are explicitly separate from financial-scope denials;
+no synthetic attestations, metadata or zero. Policy/version/scope/audit evidence
+and alternatives survive separate serialization/replay. Prior treatments,
+pilot annuals, all other fields, frozen policies/outputs and financial blockers
+remain unchanged. Focused value/sign, actual-source, conflict/scope, serialization
+and preservation checks only; no fresh issuer research or SEC requests. Complete
+reinvestment, timing and financial sufficiency NOT_ASSESSED. Stop after Capex.
+
 ## Retained deferred-tax / SBC reconciliation preparation
 
 [Results/role contract](../retained-tax-sbc-results.md) /

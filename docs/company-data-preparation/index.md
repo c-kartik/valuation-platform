@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## Retained approved cash-Capex preparation
+
+[Results](../retained-capex-results.md) / [ledger](../retained-capex-ledger.json):
+199 periods / 42 issuers; 145 direct, five Visa v3 curated, zero conflicts,
+fifteen approved-entry evidence gaps and 34 unapproved-scope periods. Eighty-five
+registered original-artifact requirements for AMZN/LLY/CVX remain separate from
+financial denials; v1/v2 identity/approval unchanged. No new scope, fallback,
+formula, software blanket rule or synthetic provenance. Accepted payments are
+negative outflows; raw representations/alternatives and noncash/creditor/
+lease/acquisition/proceeds distinctions remain. Original four pilot annuals and
+all other fields/frozen data remain exact. Forty register records plus two seeds,
+eleven target deficits and NOT_ASSESSED financial sufficiency persist. Stop after
+this pass; next authorized bounded work is the fixed registered-artifact repair,
+not more issuer financial research or valuation use.
+
 ## Retained tax / SBC reconciliation observations
 
 [Results](../retained-tax-sbc-results.md) / [ledger](../retained-tax-sbc-ledger.json):

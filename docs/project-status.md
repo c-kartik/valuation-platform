@@ -2,7 +2,27 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained deferred-tax and SBC reconciliation observations**.
+Latest completed milestone: **retained approved cash-Capex preparation**.
+[Results](retained-capex-results.md) / [199-period ledger](retained-capex-ledger.json).
+42 non-specialized issuers: **145 direct / five Visa v3 curated / zero conflicts /
+15 approved-entry evidence gaps / 34 unapproved-scope periods**. 85 original
+artifact requirements (AMZN 30, LLY 40, CVX 15) prevent v1/v2 replay; no synthetic
+attestation or financial denial. Visa verifies unchanged v3 raw evidence/scope.
+Only accepted payment magnitudes are negative cash outflows. Broader combined
+captions, raw support and noncash/creditor/lease/acquisition/proceeds populations
+remain separate, not substituted or summed. Original pilot annuals, all prior
+fields, frozen schema/policies/corpus, classifications and eleven history deficits
+remain unchanged. No SEC requests, new financial research or full suite/corpus.
+**Stop after Capex.** Next authorized bounded step: fixed raw-artifact repair for
+fifteen registered approvals under existing digest/validation gates; no new scope.
+D&A/timing integration remains separate, with no consumer sufficiency approval.
+66 unique focused tests pass (eight new preparation/representation checks and
+58 v1/v2/v3/shared regressions). Exact replay, actual-source/sign/precision,
+serialization, prior-field/pilot/frozen preservation, counts, compileall,
+1,976 affected links and diff checks pass. No full suite/corpus or SEC requests.
+
+
+Previously completed milestone: **retained deferred-tax and SBC reconciliation observations**.
 [Results](retained-tax-sbc-results.md) / [199-period ledger](retained-tax-sbc-ledger.json).
 42 non-specialized issuers; deferred-tax CFO role **39 populated / zero conflicting
 / 160 unavailable**; SBC **164 / five / 30**. Deferred provision and note-expense

@@ -1,5 +1,23 @@
 # Architecture
 
+## Retained approved cash-Capex preparation layer
+
+`analyst/retained_capex.py` reuses retained tax/SBC histories, exact shared
+inspection and existing Capex resolvers/catalog. Direct selector projection is
+explicitly internal: it carries exact integer signatures, emits no fictional
+Company Facts provenance and preserves every filing occurrence/precision. Curated
+replay uses actual registered raw bytes, annual-DEI resolution, published v1/v2/v3
+matching and unchanged verification/provenance validators. Missing registered
+artifacts are evidence defects, not policy rejection; no synthetic attestation.
+Immutable input models serialize original source bodies and full policy/scope
+flags, reviewed evidence and raw-artifact pointers; independent replay checks
+closed deserialization. Annual support alternatives retain raw signs and roles;
+instant diagnostics are not disguised as annual Capex. Only nonpilot Capex
+changes; other fields and original pilot annuals are preserved.
+[Results](retained-capex-results.md) distinguish direct/curated coverage, financial
+scope, evidence defects and complete reinvestment/readiness. No schema, financial
+policy, formula, persistence, acquisition or valuation layer change.
+
 ## Retained tax / SBC role inspection layer
 
 `analyst/retained_tax_sbc.py` builds on unchanged movement/CFO histories and the
