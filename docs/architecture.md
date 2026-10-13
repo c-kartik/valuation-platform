@@ -1,5 +1,14 @@
 # Architecture
 
+The [fixed retained-income batch](retained-income-batch-results.md) reuses the
+shared inspection/direct-input path for eight issuers, selecting exact identities
+from the frozen manifest and joining only explicit retained-source URLs/digests.
+One common loader handles existing string/chunked gzip-base64 storage conventions
+without changing original decoded-byte digests or metadata. Candidate/exception
+ledgers distinguish missing bodies from disclosure absence; unchanged immutable
+models package direct observations and unassessed nulls. No separate issuer
+rules, approval registry, fallback, economic adjustment or valuation use.
+
 The [NVDA retained direct-income application](nvda-retained-income-results.md)
 uses the shared inspector plus a small caller-side Revenue/EBIT adapter for
 existing approved direct policies. It produces existing immutable annual/history

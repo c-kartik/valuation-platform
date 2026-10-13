@@ -1,5 +1,16 @@
 # Company data preparation register
 
+## Fixed eight-issuer retained Revenue/EBIT batch
+
+[Results](../retained-income-batch-results.md) / [exact slot ledger](../retained-income-batch-ledger.json):
+AMZN, AVGO, CSCO, KO, HD, NFLX, PLTR and AMAT reconcile 40 frozen periods/80
+slots: 54 populated, zero conflicting, 26 unavailable due to missing full
+retained instances—not proven missing financial disclosure. One shared path,
+no issuer-specific policies. Each annual retains twelve unassessed null families;
+the eight records explain actual coverage and source depth. Original pilot/NVDA
+bytes, financial policies, classifications and blockers persist. Complete
+instance/receipt availability is the principal constraint on further fixed
+batches; no new retrieval or follow-on research starts here.
 ## NVDA direct-field application beyond pilots
 
 [Five-period results](../nvda-retained-income-results.md) /

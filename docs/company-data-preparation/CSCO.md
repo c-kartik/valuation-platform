@@ -1,5 +1,23 @@
 # CSCO — company data preparation
 
+## Fixed retained Revenue/EBIT batch — actual field coverage
+
+Original conflict: identity/pipeline coverage did not by itself establish retained
+fact-level preparation. [Exact ledger](../retained-income-batch-ledger.json) and
+[shared selection rationale/tests](../retained-income-batch-results.md) now account
+for 5 frozen periods / 10 slots: **10 populated, 0 conflicting,
+0 unavailable**. All five selected instances have verified original bodies and actual receipts in retained official identity-acquisition evidence.
+Existing approved direct semantics only; no fallback, derivation or issuer policy.
+No independent face-statement re-review or complete financial scope is claimed.
+All twelve other contract families per annual remain unassessed/null, not searched.
+Historical-input bundles serialize all original bindings, precision/signs and
+explicit gaps; full or partial field availability is not financial sufficiency.
+Prior whole-issuer preparation/support classifications, financial blockers and
+frozen outputs remain unchanged. Earlier “no packages” statements are retained
+history, not a denial of this additive Revenue/EBIT-only packaging. No analyst
+assumptions were introduced. Missing bodies are not missing issuer disclosures.
+The bounded catalog is exhausted; stop without SEC requests or follow-on research.
+
 ## Consolidated blocker disposition — proposed reported-input path
 
 2026-10-12: [bounded review](../phase1-blocker-disposition-review.md) and

@@ -37,7 +37,7 @@ def period(identity):
     return h.Period(identity['cik'],identity['accession'],date.fromisoformat(identity['annual_start']),date.fromisoformat(identity['annual_end']),identity['form'])
 
 
-def inspect_period(row, artifacts):
+def inspect_period(row, artifacts, limitations=LIMITATIONS):
     p=period(row['identity']);expected=row['candidates'][0]['artifacts'][0]
     refs=[a for a in artifacts if a['source_url']==expected['url']]
     receipts=();issues=[];metadata=None
@@ -51,11 +51,15 @@ def inspect_period(row, artifacts):
             issues.append('Retained instance body unavailable; metadata is not fact provenance.')
         else:
             if a.get('storage_encoding')!='gzip_base64':raise h.InputError('Retained encoding differs')
-            receipts=(_receipt(a,gzip.decompress(base64.b64decode(a['response_body_gzip_base64'],validate=True))),)
+            encoded=a['response_body_gzip_base64']
+            if isinstance(encoded,list):
+                if not all(isinstance(chunk,str) for chunk in encoded):raise h.InputError('Invalid retained storage chunks')
+                encoded=''.join(encoded)  # Existing acquisition storage convention; hash still verifies original decoded bytes.
+            receipts=(_receipt(a,gzip.decompress(base64.b64decode(encoded,validate=True))),)
     else:issues.append('Selected retained instance artifact unavailable.')
     evidence=r.prepare(p,receipts,(r.ArtifactBinding(expected['url'],expected['sha256'],'instance'),))
     if issues:evidence=replace(evidence,unresolved_requirements=evidence.unresolved_requirements+tuple(issues))
-    results={f:income.inspect(evidence,f,LIMITATIONS) for f in income.POLICIES}
+    results={f:income.inspect(evidence,f,limitations) for f in income.POLICIES}
     return evidence,results,metadata
 
 

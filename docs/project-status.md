@@ -2,7 +2,23 @@
 
 ## Current Milestone
 
-Latest completed milestone: **NVDA five-period retained Revenue/EBIT preparation**.
+Latest completed milestone: **fixed eight-issuer retained Revenue/EBIT batch**.
+[Results and evidence gaps](retained-income-batch-results.md) /
+[reproducible ledger](retained-income-batch-ledger.json). AMZN, AVGO, CSCO, KO,
+HD, NFLX, PLTR and AMAT: 40 frozen selected periods / 80 slots = 54 populated,
+zero conflicting, 26 unavailable due to missing full retained bodies/receipts.
+126 occurrences retained; negatives and precision preserved. One shared path
+and existing direct policies only. Forty annuals retain twelve other unassessed
+null families each; no whole-issuer readiness or support change. Pilot/NVDA
+serialization, frozen-v1 policies/outputs and financial blockers persist.
+No SEC/full suite/corpus or Phase 2 work. Main expansion constraint is complete
+selected-instance/receipt availability, not further issuer-specific rules.
+53 focused tests (8 batch / 45 regression), exact replay, independent original
+fact checks, all eight history round trips and pilot/NVDA byte preservation,
+compileall, 514 affected local links and diff/digest checks pass.
+**Stop after this fixed batch; no acquisition or research chain.**
+
+Previously completed milestone: **NVDA five-period retained Revenue/EBIT preparation**.
 [Results and limitations](nvda-retained-income-results.md) /
 [reproducible ten-slot ledger](nvda-retained-income-ledger.json).
 Five exact frozen periods: ten populated direct slots, 28 occurrences, one equal
