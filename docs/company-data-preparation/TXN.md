@@ -1,5 +1,28 @@
 # TXN — company data preparation
 
+## Retained D&A overlays — original history unchanged
+
+[Results](../retained-d-and-a-results.md) /
+[exact source/policy ledger](../retained-d-and-a-ledger.json):
+5 frozen selected periods; 0 direct / 0 existing approved-derived /
+0 curated / 5 scope-completeness unresolved /
+0 conflicting / 0 evidence gaps. Support-only availability:
+5 periods, 8 raw populations; no completeness or extra CFO charge.
+Original conflict: cash-flow add-backs, note expenses and separate components do
+not automatically satisfy the operating D&A primitive. Exact selected annual
+instance/context/USD/precision inspection now replays only existing direct,
+MSFT or Visa policies as applicable; no new fallback, sum, refresh or scope rule.
+Source occurrences and policy/equation/scope provenance survive separate overlays
+and independent replay. Mixed impairment/accretion/lease and extension populations
+remain support-only; absent amortization is not zero. No statement-placement,
+expense-timing or consumer-compatibility certification from numerical agreement.
+All original parent values, pilot support distinctions/bytes, Capex v2, financial
+blockers, history exceptions and frozen policies/outputs remain unchanged.
+Focused source, policy, scope/conflict, serialization/replay and preservation
+checks only; no SEC requests or corpus rerun. Financial sufficiency remains
+NOT_ASSESSED. Stop after this pass; prior research/decisions are not reopened.
+
+
 ## Retained cash-Capex policy replay
 
 [Results](../retained-capex-results.md) / [exact policy/source ledger](../retained-capex-ledger.json):

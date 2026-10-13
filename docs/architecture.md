@@ -1,5 +1,21 @@
 # Architecture
 
+## Retained D&A overlays
+
+`analyst/retained_d_and_a.py` reuses the shared original-body/context/annual
+inspector, existing direct numeric selector, MSFT arithmetic policy and Visa
+curated verifier/resolver. Internal numeric projections never emit fabricated
+Company Facts evidence; actual filing sources, occurrences and precision are
+retained. Source/policy verification precedes values; no frozen result imports.
+Immutable `AnnualDAndA` overlays keep required values, raw observations and
+approved MSFT operands separately. Parent histories/pilot bytes and the exact LLY
+Capex-v2 audits remain untouched. The bounded support mapping is observation-only,
+with extensions and mixed impairment/accretion/lease/noncash scopes unapproved.
+Closed separate serialization reuses exact-byte transport and independently
+replays the source/policy; no schema-5 or financial-policy migration, new
+refresh, formula engine, evidence store or valuation layer. [Results](retained-d-and-a-results.md)
+distinguish approved coverage from partial support and deferred timing/scope.
+
 ## Isolated preparation refresh provenance
 
 `analyst/refreshed_capex.py` provides immutable exact-artifact/entry refresh audits

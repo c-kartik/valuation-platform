@@ -2,7 +2,25 @@
 
 ## Current Milestone
 
-Latest completed milestone: **isolated LLY preparation refresh integration**.
+Latest completed milestone: **retained D&A preparation overlays**.
+[Results](retained-d-and-a-results.md) / [199-period ledger](retained-d-and-a-ledger.json).
+42 issuers: **105 direct / five existing MSFT derivations / five Visa v1 curated /
+84 unapproved scope-completeness / zero conflicts or evidence gaps**. 115 approved
+required values are separate from support-only availability in 199 periods
+(1,320 populations; no completeness claim). All 45 Visa original artifact
+requirements match retained bytes; deduplicated evidence backlog zero. No new
+scope, fallback, equation, registry, refresh, lease adjustment or economic charge.
+Exact annual overlays preserve all original parent histories and four pilot
+support-only distinctions/bytes, including LLY Capex v2. Prior fields and frozen
+policies/registries/schema/corpus remain unchanged; eleven history deficits
+persist. 61 unique focused tests, compileall, 2,093 affected links, forty-plus-two
+mapping/count reconciliation and diff checks pass. Zero SEC requests; no
+full-suite/corpus rerun. Stop after this pass.
+Next bounded step, only when authorized: retained year-end cash/investment
+components for the same cohort, without sums or completeness inference. Do not
+reopen exhausted D&A research or automatically approve consumer timing/readiness.
+
+Previously completed milestone: **isolated LLY preparation refresh integration**.
 [Contract/results](lly-capex-preparation-refresh.md) /
 [199-period ledger](refreshed-capex-ledger.json). Five reviewed entries accepted,
 zero blocked through explicitly identified preparation refresh v1, not the legacy

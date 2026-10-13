@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## Separate retained D&A preparation overlays
+
+[Results](../retained-d-and-a-results.md) / [ledger](../retained-d-and-a-ledger.json):
+199 selected periods / 42 issuers, 105 direct, five approved MSFT derivations,
+five Visa v1 curated and 84 unresolved financial scope/completeness periods.
+199 periods with raw support observations (1,320 populations), not complete
+D&A or extra CFO charges. All 45 Visa artifact requirements replay retained
+original bytes; evidence backlog zero. New exact-period overlays do not replace
+parent histories or accepted pilot support-only distinctions/serialization;
+LLY Capex v2, all prior fields, forty-plus-two mappings and frozen outputs remain.
+Original timing, history, financial blockers and NOT_ASSESSED sufficiency persist.
+No automatic refresh, generic component sum or issuer treatment transfer. Stop
+after this pass; next authorized bounded field step may inspect year-end cash/
+investments, not restart exhausted D&A research or perform valuation calculations.
+
 ## Additive LLY preparation refresh
 
 [Contract/results](../lly-capex-preparation-refresh.md) /
