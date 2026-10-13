@@ -2,7 +2,34 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained year-end cash/investment and debt/lease
+Latest completed milestone: **retained other-bridge claims/assets and dated
+shares inspection**. [Results](retained-claims-shares-results.md) /
+[ledger](retained-claims-shares-ledger.json) accounts for 398 field slots over
+199 selected periods / 42 non-specialized issuers. Bridge: observations in 199,
+143 observation-only / 48 conflicting / eight invalid-evidence outcomes, 8,404
+populations; 49 periods contain a conflicting component including invalid TSLA
+2021. Nil/invalid preferred or pension populations remain explicit, not zero;
+no retained body/receipt is missing. Shares: 199 observation periods, 241 distinct
+date/class populations, zero numeric conflicts; 25 dimensioned periods and 188
+non-year-end dates. No date coercion, class sum, weighted-average substitution,
+netting, duplicate investment addition or complete financial coverage claim.
+The additive shared dated-instant/share-unit path preserves old USD inspection
+and prior ledger output. Separate overlays/serialization preserve parent/pilot
+bytes, all prior fields, frozen policies/registries/schema/corpus and eleven
+history exceptions. Family completeness and financial sufficiency remain unknown.
+Validation results are recorded in the results document; no SEC requests,
+full-suite/corpus rerun or new issuer research. Phase 2 remains prohibited.
+**20 focused tests pass** (eight new, eleven shared, one full parent/pilot/frozen
+preservation check), with old USD ledger and pilot payload hashes unchanged.
+Only the mutable shared inspector is excluded from its old source-byte freeze;
+financial policies/models/schemas/evidence remain pinned. Compileall, 2,276
+affected links, exact mappings/identities, 398 slots and diff checks pass.
+Next bounded milestone, only when authorized: opt-in bundle assembly and review
+controls, with source-selection logs, overlap warnings and explicit unresolved
+requirements. No formulas, estimates, automatic approvals or research queue.
+Stop after this inspection batch.
+
+Previously completed milestone: **retained year-end cash/investment and debt/lease
 component inspection**. [Results](retained-bridge-component-results.md) /
 [199-period ledger](retained-bridge-component-ledger.json), 42 non-specialized
 issuers. Both families have observations in 199 periods, not complete balances:

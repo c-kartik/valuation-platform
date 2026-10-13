@@ -1,5 +1,29 @@
 # AMD — company data preparation
 
+## Other-bridge and dated-share retained inspection
+
+[Results](../retained-claims-shares-results.md) / [exact ledger](../retained-claims-shares-ledger.json).
+5 frozen annual selections. Other-bridge: 5 periods with observations,
+2 with conflicts, 0 invalid/missing-evidence outcomes; 34 populations.
+Shares: 5 observation periods, 0 conflicting; 5 dated/class populations.
+Original conflict: counts/balances do not establish a complete equity bridge or
+point-in-time issuer share denominator. Chosen treatment is separate immutable
+inspection overlays, bound to exact retained bodies/receipts, CIK/accession,
+contexts, units, raw signs/scale/precision and all confirming/competing facts.
+Preferred/NCI carrying or redemption bases, pension gross/fair/net populations
+and pure NOL versus broader DTAs remain distinct. Investment populations may
+overlap earlier cash/investment observations; no netting or additional asset.
+DEI shares retain actual dates and dimensioned classes, never FY-end coercion,
+weighted-average substitution, class sum/equivalence or dilution estimate.
+Exact affected dates/classes/accessions and invalid/nil facts are in the ledger.
+Absence is not zero; complete-perimeter and share-total requirements remain
+unresolved. Scope is unreviewed, not financial approval. No estimates/manual
+or external inputs supplied. XML/replay/serialization and preservation checks
+validate observations, not sufficiency. Original pilots, prior field results,
+history/financial blockers, policies and frozen outputs remain unchanged.
+No SEC requests or research chain. Financial sufficiency remains NOT_ASSESSED.
+Next authorized work is shared bundle assembly/review controls, not new research.
+
 ## Retained year-end component inspection
 
 [Shared results](../retained-bridge-component-results.md) / [exact ledger](../retained-bridge-component-ledger.json):

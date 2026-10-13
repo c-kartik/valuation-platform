@@ -1,5 +1,23 @@
 # Company data preparation register
 
+## Other claims/assets and point-in-time shares
+
+[Results](../retained-claims-shares-results.md) /
+[ledger](../retained-claims-shares-ledger.json): 398 target field slots across
+199 selected periods / 42 non-specialized issuers. Forty register records plus
+META/COST seeds; no change to XOM/short histories or support classifications.
+Both families have observations in all selected periods, not complete inputs.
+Bridge outcomes: 143 observation-only, 48 conflicting, eight invalid evidence;
+shares: 199 observation periods with 241 distinct date/class populations and
+zero conflicts. Twenty-five periods have dimensioned classes, 188 non-year-end
+dates. Pension/preferred/NCI/DTA bases and investment overlap remain explicit;
+nil/absent observations are not zero. Separate overlays preserve original
+pilots and prior fields. Financial sufficiency remains NOT_ASSESSED and missing
+complete-perimeter/share-total requirements remain unresolved. Standing issuer
+maintenance applies when future assembly selects or reviews these populations.
+Next authorized step is shared opt-in bundle assembly/review controls with a
+finite exception list, not financial calculation or additional issuer research.
+
 ## Retained instant-component inspection
 
 [Results](../retained-bridge-component-results.md) /

@@ -1,5 +1,11 @@
 # XOM — company data preparation
 
+## Other-bridge and dated-share retained inspection
+
+[Results](../retained-claims-shares-results.md) / [exact ledger](../retained-claims-shares-ledger.json).
+XOM remains empty with five target-history deficits. No selected period, claim
+or share observation was invented. This pass supplies no financial coverage.
+
 ## Retained year-end component inspection
 
 [Shared results](../retained-bridge-component-results.md) / [exact ledger](../retained-bridge-component-ledger.json):

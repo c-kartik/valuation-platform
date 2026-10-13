@@ -100,11 +100,31 @@ class Evidence:
 
 @dataclass(frozen=True)
 class Inspection:
-    specification: SelectionSpec
+    specification: 'SelectionSpec | InstantObservationSpec'
     candidates: tuple[Candidate, ...]
     evidence_receipts: tuple[Receipt, ...]
     competing_values: tuple[Decimal, ...]  # unequal observed values, not a financial decision
     unresolved_requirements: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class InstantObservationSpec:
+    """Explicit observed instant and unit, without year-end/class equivalence."""
+    field_id: str
+    selectors: tuple[Selector, ...]
+    as_of: date
+    unit: str
+    role: str
+    scope: str
+    unresolved_requirements: tuple[str, ...]
+
+    def __post_init__(self):
+        for v in (self.field_id,self.role,self.scope): h._text(v)
+        if (type(self.as_of) is not date or self.unit not in ('USD','shares') or
+                type(self.selectors) is not tuple or not self.selectors or
+                any(type(s) is not Selector for s in self.selectors) or len(set(self.selectors))!=len(self.selectors)):
+            raise h.InputError('Explicit observation date/unit and unique selectors required')
+        h._strings(self.unresolved_requirements)
 
 
 def dimensions(context):
@@ -158,20 +178,33 @@ No concept-name classifications, zero inference, completeness or sum permission.
 """
     if type(evidence) is not Evidence or type(specification) is not SelectionSpec:
         raise h.InputError('Prepared retained evidence and explicit selection specification required')
+    start=evidence.period.annual_start if specification.period_kind=='annual' else None
+    return _inspect_at(evidence,specification,start,evidence.period.annual_end)
+
+
+def inspect_instant(evidence,specification):
+    """Observe the supplied actual date/class; never choose a cover date or sum."""
+    if type(evidence) is not Evidence or type(specification) is not InstantObservationSpec:
+        raise h.InputError('Prepared evidence and explicit instant observation specification required')
+    return _inspect_at(evidence,specification,None,specification.as_of)
+
+
+def _inspect_at(evidence,specification,start,end):
     p = evidence.period; groups = {}
     selectors = {(s.namespace, s.concept, frozenset(s.dimensions)) for s in specification.selectors}
-    start = p.annual_start if specification.period_kind == 'annual' else None
+    measure=(x.FilingXBRLQName('http://www.xbrl.org/2003/instance','shares') if specification.unit=='shares' else
+             x.FilingXBRLQName('http://www.xbrl.org/2003/iso4217','USD'))
     for fact, ordinal in evidence.facts:
         c = evidence.contexts[fact.context_id]
         ds = dimensions(c)
-        if ((fact.namespace, fact.concept, frozenset(ds)) not in selectors or c.start != start or c.end != p.annual_end
+        if ((fact.namespace, fact.concept, frozenset(ds)) not in selectors or c.start != start or c.end != end
                 or c.entity_identifier_scheme != 'http://www.sec.gov/CIK' or int(c.entity_identifier) != p.cik): continue
         if (fact.is_nil or fact.numeric_value is None or fact.unit is None or fact.unit.denominator_measures
-                or fact.unit.numerator_measures != (x.FilingXBRLQName('http://www.xbrl.org/2003/iso4217', specification.unit),)
+                or fact.unit.numerator_measures != (measure,)
                 or not re.fullmatch(r'INF|-?\d+', fact.decimals or '')):
-            raise h.InputError('Eligible fact requires non-nil exact USD numeric/precision evidence')
+            raise h.InputError('Eligible fact requires non-nil exact '+specification.unit+' numeric/precision evidence')
         o = Occurrence(fact.namespace, fact.concept, c.context_id, p.cik, c.start, c.end, fact.unit_ref,
-            fact.raw_value, fact.decimals, ordinal, dimensions=ds)
+            fact.raw_value, fact.decimals, ordinal, normalized_unit=specification.unit, dimensions=ds)
         key = (fact.namespace, fact.concept, fact.numeric_value, fact.decimals, tuple(sorted(ds)))
         groups.setdefault(key, []).append(o)
     candidates = []
@@ -180,7 +213,7 @@ No concept-name classifications, zero inference, completeness or sum permission.
             evidence.instance, json.dumps(dict(field_id=specification.field_id, supplied_role=specification.role,
                 supplied_scope=specification.scope, unit_id=o.unit_id, nil=o.nil,
                 inspection_only=True, scale=1, sign=1), sort_keys=True), namespace, concept, o.context_id,
-            o.ordinal, o.start, o.end, 'USD', o.raw_value, o.decimals, o.dimensions) for o in occurrences)
+            o.ordinal, o.start, o.end, specification.unit, o.raw_value, o.decimals, o.dimensions) for o in occurrences)
         candidates.append(Candidate(namespace, concept, value, precision, tuple(occurrences), refs))
     values = tuple(dict.fromkeys(c.value for c in candidates))
     requirements = evidence.unresolved_requirements + specification.unresolved_requirements

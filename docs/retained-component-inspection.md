@@ -10,6 +10,14 @@ field or period is registered. No SEC request or financial calculation.
 
 ## Public inspection contract
 
+The additive `InstantObservationSpec` / `inspect_instant` path accepts an
+explicit observed date, exact selector dimensions and either exact USD or
+`xbrli:shares`. It uses the same grouping, parser, precision and source-reference
+validation as existing inspection. Original `SelectionSpec` calls still require
+annual/year-end USD and retain their old outputs. Actual share dates are not
+forced to year end; classes and dates are separate populations, not summable or
+automatically issuer-wide. See [retained claims/shares results](retained-claims-shares-results.md).
+
 `prepare(period, receipts, bindings)` accepts the existing exact non-amended
 annual `Period`, original immutable `Receipt` objects and explicit
 `ArtifactBinding(url, sha256, role, digest_type)` specifications. One binding

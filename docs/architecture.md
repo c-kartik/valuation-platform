@@ -1,5 +1,25 @@
 # Architecture
 
+## Retained claim/asset and point-in-time share observations
+
+`analyst/retained_claims_shares.py` extends component inspection with a closed
+other-bridge population mapping and exact `dei:EntityCommonStockSharesOutstanding`
+observations. The shared inspector's additive `InstantObservationSpec` accepts
+an explicit actual instant and shares/USD unit; its old USD calls and payloads
+remain unchanged. Pension net status versus gross/fair/recognized amounts,
+preferred/NCI bases and NOL versus broader deferred-tax captions stay separate.
+Existing investment populations carry cross-family overlap markers, not a new
+independent asset. All share dates/classes/dimensions remain separate; no FY-end
+coercion, weighted-average substitution, class sum or dilution estimate.
+
+Immutable `AnnualClaimsShares` overlays have separate closed
+`retained-claims-shares-inspection-v1` serialization, original-body transport and
+independent fact/date/dimension replay. They leave parent histories, all previous
+overlays, four accepted pilots, financial policies and frozen schema 5 intact.
+Family completeness remains unknown with null review requirements. No equity
+bridge calculation, netting, valuation adjustment or financial-input readiness.
+See [coverage and limitations](retained-claims-shares-results.md).
+
 ## Separate retained instant-component overlays
 
 `analyst/retained_bridge_components.py` supplies one closed shared standard
