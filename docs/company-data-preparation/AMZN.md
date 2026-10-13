@@ -1,5 +1,27 @@
 # AMZN — company data preparation
 
+## Retained cash-flow movement inspection
+
+[Results](../retained-working-capital-results.md) /
+[exact observations/exceptions](../retained-working-capital-ledger.json):
+5 frozen selected periods; 5 with mapped observations,
+0 with separately retained reported totals;
+23 mapped populations, 0 conflicting population(s).
+Original requirement: trace signed reported reconciliation rows separately from
+book ΔNWC and CFO, without assuming a complete operating-current perimeter.
+Explicit standard concepts/signs use shared annual/entity/USD/precision and
+original receipt/occurrence replay; combined/current/noncurrent/tax populations,
+confirmations and potential overlaps remain separate, never summed. Extensions
+and uncertain net roles remain unsupported diagnostics, not inferred values.
+Statement-specific continuing/consolidated scope and acquisition/FX exclusions
+remain unknown unless already reviewed in unchanged pilot sources. New coverage
+is partial/unknown; absent mapped rows are not zero or missing-disclosure proof.
+Prior pilot annuals, all CFO/income bindings and active sixteen income reviews,
+frozen blockers/classification and history exceptions stay unchanged. Financial
+sufficiency NOT_ASSESSED. Focused sign/raw-source, scope/conflict, serialization
+and preservation checks validate packaging only. No SEC requests or fresh issuer
+financial review; stop after this bounded pass.
+
 ## Retained reported CFO preparation
 
 [CFO results](../retained-cfo-results.md) /

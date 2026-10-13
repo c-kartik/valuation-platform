@@ -1,5 +1,21 @@
 # Architecture
 
+## Retained working-capital reconciliation observation layer
+
+`analyst/retained_working_capital.py` reuses CFO packages and the shared retained
+inspection API with immutable explicit concept/sign/population rules. It is not
+an issuer registry, formula engine or financial acceptance resolver. Each
+population retains raw values, exact receipt/source occurrences and precision;
+conflicts within a population remain null with alternatives. Different rows,
+parent totals and possible children stay separate; coverage remains partial and
+statement scope/acquisition effects unresolved. Unmapped change-tag discovery
+cannot populate values. Original pilot annuals are reused verbatim; only the
+unassessed movement family changes in new partial histories. Closed structural
+serialization is complemented by independent occurrence/sign replay.
+[Results/contract limits](retained-working-capital-results.md) distinguish period
+coverage from row counts, unsupported diagnostics and complete-family gaps.
+No frozen schema/policy/corpus, CFO/income, readiness or valuation change.
+
 ## Reusable retained reported CFO subtotal preparation
 
 `analyst/retained_cfo_preparation.py` reuses existing exact retained receipts,

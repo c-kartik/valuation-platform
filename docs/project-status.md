@@ -2,7 +2,27 @@
 
 ## Current Milestone
 
-Latest completed milestone: **retained-only reported CFO extraction**.
+Latest completed milestone: **retained cash-flow working-capital movement inspection**.
+[Results](retained-working-capital-results.md) / [199-period ledger](retained-working-capital-ledger.json).
+42 issuers / 199 periods have mapped observations; five KO reported totals,
+all 199 partial/unknown complete-family coverage, zero without eligible rows.
+983 observed populations / one conflicting NFLX FY2021 contract-liability
+population; 421 discovery-only unsupported/dimensioned occurrences. Explicit
+standard account-movement signs, exact retained annual/CIK/USD/precision proof
+and all confirming occurrences survive separate serialization. No sum,
+completeness, book ΔNWC, additional CFO or valuation approval. Original four
+pilot annuals, all CFO/income outputs, sixteen unresolved income reviews and
+frozen baseline stay unchanged. Eleven history deficits remain. No SEC requests,
+full suite/corpus or issuer research. **Stop after this pass.** Next bounded step,
+only when authorized: deferred-tax CFO reconciliation observations, separate from
+provision/cash-tax and working-capital tax roles.
+43 unique focused tests pass: eight new movement tests (final rerun) plus 35
+existing shared/CFO/pilot mapping regressions. Ledger/source/sign/serialization
+replay, frozen/pilot/non-movement preservation, compileall, 1,798 affected local
+links, register/count reconciliation and diff checks pass.
+
+Previously completed milestone: **retained-only reported CFO extraction**.
+
 [Coverage/limitations](retained-cfo-results.md) / [199-slot ledger](retained-cfo-ledger.json).
 42 non-specialized issuers / 199 frozen periods: **195 populated / zero conflicting
 / four unavailable CFO slots**. Four original pilot CFO inputs/annuals reused

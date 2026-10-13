@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## Reusable retained movement preparation
+
+[Results](../retained-working-capital-results.md) / [ledger](../retained-working-capital-ledger.json):
+199 periods / 42 non-specialized issuers; 199 with observations, five KO reported
+totals, all 199 partial/unknown complete-family coverage, zero without eligible
+mapped observations. 983 observed populations, one NFLX FY2021 conflicting
+contract-liability population, 421 unsupported/dimensioned discovery occurrences.
+Counts are not completeness or sufficiency. Four original pilot annuals remain
+verbatim; parent/children, tax/noncurrent rows and scope/acquisition uncertainties
+remain separate. The register stays forty issuers plus two supplemental seeds.
+XOM empty and GEV/SNDK short histories remain explicit. Every affected record
+links its actual scope, evidence and limits; CFO/income/frozen outputs unchanged.
+No SEC requests or financial acceptance expansion. Next authorized bounded field
+step may inspect deferred-tax reconciliation roles, not compute an aggregate.
+
 ## Reusable retained reported CFO preparation
 
 [CFO results](../retained-cfo-results.md) / [period/source ledger](../retained-cfo-ledger.json):
