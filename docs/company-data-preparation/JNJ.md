@@ -1,5 +1,23 @@
 # JNJ — company data preparation
 
+## Official metadata repair and approved EBIT replay
+
+[Fixed repair/results](../income-binding-repair-results.md) and
+[additive ledger](../repaired-income-ledger.json) close five missing legal filing
+date/submission-bound primary-document requirements with new official receipts.
+Prior missing metadata remains history, not recovered original retrieval metadata.
+Existing verified instance bodies are reused, without refresh. Frozen-cutoff
+selection reproduces the original five accessions/ends; annual DEI and unchanged
+operating-income policy version 1 verify operands, signed equation, alternates,
+absence and entry-specific validation/precision gates. Five derived EBIT inputs
+are added, never reported-direct. Official array locators/digests, monetary
+occurrences and complete policy proof survive serialization. No new equation,
+assumption, inferred zero or automatic blocker removal. Direct inputs/conflicts,
+frozen outputs/policies/schema/support remain unchanged. Other families, financial
+sufficiency and timing remain unassessed. Focused source/selection/annual/policy,
+arithmetic, serialization and preservation checks support only this fixed repair.
+Stop without further research; prior decisions below remain visible.
+
 ## Existing approved EBIT integration — bounded retained evidence
 
 [Additive ledger/results](../approved-income-integration-results.md):

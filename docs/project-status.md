@@ -2,7 +2,28 @@
 
 ## Current Milestone
 
-Latest completed milestone: **existing-evidence income/approved EBIT integration**.
+Latest completed milestone: **fixed official income binding repair/replay**.
+[Results](income-binding-repair-results.md) / [additive ledger](repaired-income-ledger.json).
+Twenty targets verify: ten JNJ/KLAC exact filing metadata bindings and ten seed
+annual identities/instances (nine documented candidates plus COST FY2026).
+25 successful requests: five submissions records, ten indexes, ten instances;
+no retries/failures, no JNJ/KLAC body acquisition. Unchanged selection at frozen
+cutoff reproduces all four five-year histories. COST FY2026 is accession
+0000909832-26-000093, filed 2026-10-07, annual 2025-09-01–2026-08-30; not a new
+period or calendar inference. Current 398 slots: **357 direct / 25 derived /
+11 conflicts / five unregistered CVX EBIT**. All prior 337 direct/fifteen derived
+bindings and eleven conflicts preserved; official metadata/annual-source gaps
+in this fixed scope close. Monetary and metadata provenance remain separately
+bound through serialization. Forty-cohort manifest, eleven history deficits,
+frozen schema/policies/registries/corpus and original pilot outputs unchanged.
+Other families and financial sufficiency/timing remain unassessed. No SEC
+research beyond this fixed pass, full-suite/corpus or Phase 2 work.
+**Stop after repair/replay.**
+48 focused tests (seven repair / eight prior integration / twenty-two active-policy
+/ eleven shared) pass, as do both offline replays, compileall, 357 local links,
+rate/digest/count and diff checks. No full-suite or corpus rerun.
+
+Previously completed milestone: **existing-evidence income/approved EBIT integration**.
 [Results and remaining requirements](approved-income-integration-results.md) /
 [additive 398-slot ledger](approved-income-integration-ledger.json). 337 direct
 bindings and eleven conflicts unchanged; fifteen approved derived EBIT inputs

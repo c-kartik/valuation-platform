@@ -1,5 +1,21 @@
 # META — supplemental supported-seed preparation note
 
+## Official seed binding repair — supersedes gaps below
+
+[Fixed repair/results](../../income-binding-repair-results.md) /
+[ledger](../../repaired-income-ledger.json) independently bind all five original
+selected accessions and annual DEI contexts under the unchanged frozen-cutoff
+selector. New submissions/index/instance receipts retain original bytes, URL,
+actual UTC/status and typed digest; missing old receipts are not recovered.
+Shared direct policies populate ten Revenue/EBIT slots with exact occurrence,
+sign/unit/precision, confirmations and alternatives. Five annual packages keep
+twelve other unassessed/null families. Official metadata array locators survive
+serialization alongside actual monetary receipts. No new periods or treatments.
+Frozen SUPPORTED classification/outputs remain unchanged; financial sufficiency
+and timing readiness NOT_ASSESSED. Focused official selection/annual/source/value,
+serialization and prior-result preservation checks validate only this scope.
+Stop after repair; prior gap history below remains visible.
+
 Not a new member of the forty GENERALIZATION_REQUIRED register; frozen SUPPORTED
 classification is unchanged. [Existing-evidence integration](../../approved-income-integration-results.md)
 and [exact ledger](../../approved-income-integration-ledger.json) recover five

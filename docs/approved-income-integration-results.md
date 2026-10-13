@@ -1,5 +1,12 @@
 # Existing-evidence Revenue/EBIT and approved derivation integration
 
+Subsequent [fixed official binding repair](income-binding-repair-results.md)
+verifies all ten missing JNJ/KLAC filing metadata bindings and all ten seed
+identities/instances, including the bounded COST FY2026 check. The original
+15-derived/337-direct ledger below remains preserved. Current additive coverage:
+357 direct / 25 derived / 11 conflicts / five unregistered CVX EBIT = 398.
+No original binding, policy, registry, history or frozen output is overwritten.
+
 Phase 1 only; no SEC requests, new equation, registry, financial treatment or
 support change. [Bindings](approved-income-integration-bindings.json) and
 [full 398-slot ledger](approved-income-integration-ledger.json) are reproducible

@@ -20,9 +20,10 @@ from ..sec.fact_selection import FilingFactObservations
 
 DATA='docs/approved-income-integration-bindings.json'
 PROOF_FLAG='approved_operating_income_provenance:'
+METADATA_FLAG='official_selected_filing_metadata:'
 
 
-def bindings():
+def bindings(include_repairs=False):
     data=json.loads((shared.ROOT/DATA).read_text())
     for path,digest in data['sources'].items():
         if hashlib.sha256((shared.ROOT/path).read_bytes()).hexdigest()!=digest:raise h.InputError('Retained integration source changed: '+path)
@@ -35,15 +36,21 @@ def bindings():
         identity=item['identity']
         expected=f"| {item['issuer']} | {identity['annual_end']} | `{identity['accession']}` | {identity['annual_start']} | {identity['annual_end']} |"
         if text!=expected:raise h.InputError('Seed identity claim differs from reviewed resolver row')
+    if include_repairs:
+        config=json.loads((shared.ROOT/'docs/income-binding-repair-config.json').read_text())
+        path='docs/evidence/income-binding-repair.json';payload=shared.pinned(path,config['receipt_sha256'])
+        for i,row in enumerate(payload['rows']):
+            if row['status']=='VERIFIED' and row['issuer'] in ('JNJ','KLAC'):
+                data['filings'].append(dict(filing=row['filing'],reference=path+'#/rows/'+str(i)+'/filing'))
     return data
 
 
-def execute(evidence,metadata):
+def execute(evidence,metadata,include_repairs=False):
     """Replay actual body, annual resolver and immutable operating-income policy."""
     p=evidence.period
     if metadata['accession_number']!=p.accession or metadata['form']!=p.form or metadata['report_date']!=str(p.annual_end):
         raise h.InputError('Retained filing metadata/target mismatch')
-    if not any(m['filing']==metadata for m in bindings()['filings']):raise h.InputError('Filing metadata lacks an exact retained source binding')
+    if not any(m['filing']==metadata for m in bindings(include_repairs)['filings']):raise h.InputError('Filing metadata lacks an exact retained source binding')
     filing=SECFiling(p.accession,p.form,date.fromisoformat(metadata['filing_date']),p.annual_end,metadata['primary_document'])
     receipt=evidence.instance
     if receipt is None:raise h.InputError('Verified retained instance required')
@@ -59,7 +66,7 @@ def execute(evidence,metadata):
     return result
 
 
-def package(annual,evidence,result):
+def package(annual,evidence,result,metadata_binding=None):
     """Signed registered components + full existing policy proof, separately derived."""
     proof=result.derivation_provenance;p=annual.period
     entry=policy.operating_income_derivation_entry_for(p.cik,p.accession,p.annual_end,p.annual_start,p.annual_end)
@@ -105,6 +112,8 @@ def package(annual,evidence,result):
         'Existing immutable exact-accession resolver verified operands, arithmetic and entry-specific bridge gates.',
         ('existing_derivation_only','no_financial_sufficiency_or_timing_approval',PROOF_FLAG+json.dumps(serialized,sort_keys=True,separators=(',',':'))),
         ('Future consumer-specific timing and financial sufficiency remain unassessed.',),None,('approved_ebit_primitive',))
+    if metadata_binding is not None:
+        derived=replace(derived,flags=derived.flags+(METADATA_FLAG+json.dumps(metadata_binding,sort_keys=True,separators=(',',':')),))
     return replace(annual,inputs=tuple(v for v in annual.inputs if v.field is not h.Field.EBIT)+(derived,*inputs)),serialized
 
 
@@ -162,9 +171,9 @@ def build():
     return ledger,histories
 
 
-def validate_serialized_history(payload):
+def validate_serialized_history(payload,include_repairs=False):
     """Generic models round-trip proof; this gate re-executes approved policy."""
-    history=h.deserialize(payload);data=bindings()
+    history=h.deserialize(payload);data=bindings(include_repairs)
     for annual in history.annuals:
         derived=[v for v in annual.inputs if v.origin is h.Origin.DERIVED]
         for value in derived:
@@ -173,14 +182,18 @@ def validate_serialized_history(payload):
             metadata=next(m['filing'] for m in data['filings'] if m['filing']['accession_number']==annual.period.accession)
             receipt=value.sources[0].receipt
             evidence=inspection.prepare(annual.period,(receipt,),(inspection.ArtifactBinding(receipt.artifact.url,receipt.artifact.sha256,'instance'),))
-            result=execute(evidence,metadata)
+            result=execute(evidence,metadata,include_repairs)
             if not isinstance(result,DerivedHistoricalValue) or value.value!=result.value or json.loads(flags[0])!=_serialize_operating_income_derivation(result.derivation_provenance):
                 raise h.InputError('Serialized approved policy value/proof differs')
             original=replace(annual,inputs=tuple(v for v in annual.inputs if v.field is not h.Field.EBIT)+
                 (income.unavailable(annual.period,h.Field.EBIT,'Replay placeholder, never an approved value.',h.Review.UNREVIEWED),))
             # Repack exact inputs and compare formula, support operands and root
             # occurrence bindings, not just the supplied numerical result.
-            expected,_=package(original,evidence,result)
+            binding=None
+            if include_repairs and annual.period.cik in (200406,319201):
+                from .repaired_income_preparation import metadata_binding
+                binding=metadata_binding(annual.period.accession)
+            expected,_=package(original,evidence,result,metadata_binding=binding)
             if tuple(v for v in expected.inputs if v.field is h.Field.EBIT)!=tuple(v for v in annual.inputs if v.field is h.Field.EBIT):
                 raise h.InputError('Serialized operands/formula/source bindings differ')
     return history

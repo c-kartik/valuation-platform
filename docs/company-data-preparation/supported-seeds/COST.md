@@ -1,5 +1,21 @@
 # COST — supplemental supported-seed preparation note
 
+## Official seed binding repair — supersedes gaps below
+
+[Fixed repair/results](../../income-binding-repair-results.md) /
+[ledger](../../repaired-income-ledger.json) independently bind all five frozen
+periods. Four candidate accessions agree; the bounded FY2026 check establishes
+`0000909832-26-000093`, 10-K filed 2026-10-07, primary `cost-20260830.htm`, annual
+2025-09-01–2026-08-30 via official submission selection and annual DEI, not calendar
+inference. This is the original frozen end, not a new period. Actual byte/UTC/
+status/digest receipts do not recover old missing receipt history. Ten Revenue/
+EBIT slots resolve through shared direct semantics, retaining occurrences,
+alternatives and precision. Five packages keep twelve other families unassessed/
+null. Official array locators and monetary receipts survive serialization.
+No treatment transfer, new rule, support change or sufficiency/timing certification.
+Focused selection/annual/metadata/source/value, serialization and preservation
+checks support this fixed scope only. Stop; prior gaps below remain history.
+
 Not a new member of the forty GENERALIZATION_REQUIRED register; frozen SUPPORTED
 classification is unchanged. [Existing-evidence integration](../../approved-income-integration-results.md)
 and [exact ledger](../../approved-income-integration-ledger.json) recover four

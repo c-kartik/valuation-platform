@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## Fixed official binding repair — current income coverage
+
+[Repair/results](../income-binding-repair-results.md) independently verify ten
+seed annual identities/instances and ten JNJ/KLAC filing metadata bindings under
+the existing frozen-cutoff selector. 25 requests, zero failures/retries; no new
+years or financial rules. Current additive coverage: 357 direct / 25 derived /
+11 conflicts / five CVX unregistered EBIT across 398 slots. Prior 337 direct and
+fifteen derived bindings, all conflicts, history deficits and classifications
+stay unchanged. The forty-company register remains forty; META/COST supplemental
+notes now cover their verified five-period income packages without certifying
+other fields or financial sufficiency. Official source-array locators, receipt
+digests and precision/operands/proof survive serialization. Stop without further
+acquisition, policy expansion, original blocker removal or valuation work.
+
 ## Existing-evidence approved income integration
 
 [Additive results](../approved-income-integration-results.md) /

@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "receipt_sha256": "c1e39fc5d7de48fa6a0560802fb6482ae4961b2e6749a2b970c11600054e4c7a",
+  "baseline_revision": "eb99ab310fe6d3860d4cd3036e8a922189350d38",
+  "scope": "Ten approved metadata identities; nine seed candidates; one COST frozen-end check"
+}

@@ -1,5 +1,16 @@
 # Architecture
 
+## Fixed official binding repair adapter
+
+`analyst/repaired_income_preparation.py` adds only the authorized official
+submission bindings and ten seed instances to the preceding direct/approved
+integration. `approved_income_integration` retains unchanged default behavior;
+repaired metadata is explicit opt-in. Exact official array locators and actual
+receipt identities are preserved in existing provenance flags, alongside original
+monetary occurrence sources. Existing annual selection, DEI parser and approved
+operating-income resolver perform the validation; no schema, registry, formula
+engine or financial treatment is added. See [scope/results](income-binding-repair-results.md).
+
 ## Additive approved-income preparation integration
 
 `analyst/approved_income_integration.py` wraps, not modifies, the retained direct
