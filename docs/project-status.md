@@ -2,7 +2,23 @@
 
 ## Current Milestone
 
-Latest completed milestone: **fixed eight-issuer retained Revenue/EBIT batch**.
+Latest completed milestone: **fixed 13-instance SEC acquisition and Revenue/EBIT replay**.
+[Verified acquisition/results](retained-income-acquisition-results.md) /
+[new original-body receipts](evidence/retained-income-instance-acquisition.json).
+Exact reconciliation: AMZN five, AVGO five, AMAT three missing instances / 26
+slots. 13 successful direct requests, no indexes/retries; all identities/dates
+and original-byte digests verify. New receipts preserve old unverified history.
+Unchanged direct rules move the original batch from 54/0/26 to **80 populated /
+zero conflicting / zero unavailable** across the same 40 periods/80 slots.
+197 occurrences; original 54 populated bindings unchanged. Twelve other families
+per annual remain unassessed/null. Pilot/NVDA outputs, frozen policies/schema 5,
+production counts, support classifications and financial blockers persist.
+56 focused tests, final offline 13/13 receipt replay, all-80-slot batch replay,
+original 54/pilot/NVDA preservation, compileall, 328 affected local links and
+diff/digest checks pass. No full suite/corpus or Phase 2 work.
+**Stop after this fixed acquisition/replay.**
+
+Previously completed milestone: **fixed eight-issuer retained Revenue/EBIT batch**.
 [Results and evidence gaps](retained-income-batch-results.md) /
 [reproducible ledger](retained-income-batch-ledger.json). AMZN, AVGO, CSCO, KO,
 HD, NFLX, PLTR and AMAT: 40 frozen selected periods / 80 slots = 54 populated,

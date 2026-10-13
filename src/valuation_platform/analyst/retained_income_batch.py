@@ -8,6 +8,7 @@ from . import nvda_income_inputs as shared
 
 ISSUERS=('AMZN','AVGO','CSCO','KO','HD','NFLX','PLTR','AMAT')
 SOURCES={
+    'docs/evidence/retained-income-instance-acquisition.json':'ddf6dc2b14ab74b0103235c6df291756e1dd9efeccc761792c0ec67ebfd5e4ee',
     'docs/evidence/hd-capex-response-bodies.json':'06e9158e4b8001345eb18da7e787da56739bd0a59f0f512470c1260e9b6bd96f',
     'docs/evidence/selected-filing-identity-acquisition.json':'d1501453dac98f540064d1f689c4c37186f8e8a8b1d525e3344faeb5bbef49e7',
     'tests/fixtures/capex_amzn_response_bodies.json':'7cd3c480d9afb1fca1f858d40a40389d7e7dab921518b191a9fb8c4f29db1650'}

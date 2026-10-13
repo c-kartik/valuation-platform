@@ -1,5 +1,20 @@
 # AMAT — company data preparation
 
+## Fixed-instance acquisition completes direct-field retained coverage
+
+[New receipts/identity verification and replay](../retained-income-acquisition-results.md)
+bind only 2023-10-29, 2024-10-27 and 2025-10-26 selected instances. Three
+requests, no indexes/retries/statement research; prior fingerprints and original
+receipt unavailability remain explicit history. Six newly populated slots join
+the original four unchanged slots: **10 Revenue/EBIT populated / zero conflict /
+zero unavailable** in the [current ledger](../retained-income-batch-ledger.json).
+Original fiscal identities, direct rules, signs/precision and source provenance
+remain; acquisition is not a new financial-scope approval. All twelve other
+families per annual stay unassessed/null. Tests check current body/DEI bindings,
+original four values and serialization. Support class, financial blockers and
+timing limits remain unchanged. Earlier missing-body decisions are preserved
+and superseded only within this fixed three-entry pass. Stop here.
+
 ## Fixed retained Revenue/EBIT batch — actual field coverage
 
 Original conflict: identity/pipeline coverage did not by itself establish retained

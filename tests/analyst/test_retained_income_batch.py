@@ -27,8 +27,7 @@ class RetainedIncomeBatchTests(unittest.TestCase):
         self.assertEqual(len(selections),40);self.assertEqual(self.ledger['field_period_slots'],80)
         self.assertEqual(self.ledger,json.loads((ROOT/'docs/retained-income-batch-ledger.json').read_text()))
         self.assertEqual(self.ledger,b.build()[0])
-        expected={'AMZN':(0,0,10),'AVGO':(0,0,10),'CSCO':(10,0,0),'KO':(10,0,0),'HD':(10,0,0),
-            'NFLX':(10,0,0),'PLTR':(10,0,0),'AMAT':(4,0,6)}
+        expected={name:(10,0,0) for name in b.ISSUERS}
         for name,c in self.ledger['summary'].items():
             self.assertEqual((c['populated'],c['conflicting'],c['unavailable']),expected[name])
             self.assertEqual(c['selected_periods'],5)
@@ -67,7 +66,7 @@ class RetainedIncomeBatchTests(unittest.TestCase):
                             self.assertEqual(ref.receipt.retrieval_mode,original['retrieval_mode'])
                             self.assertEqual(hashlib.sha256(body).hexdigest(),original['sha256'])
                             total+=1
-        self.assertEqual(total,126)
+        self.assertEqual(total,197)
 
     def test_negative_income_and_precision_not_converted_to_millions(self):
         pltr=self.histories['PLTR']
@@ -78,7 +77,8 @@ class RetainedIncomeBatchTests(unittest.TestCase):
                 self.assertTrue(all(v.precision=='-3' for v in annual.inputs if v.value is not None))
 
     def test_missing_retained_evidence_is_not_missing_disclosure(self):
-        missing=[row for row in self.ledger['rows'] if row['retained_source'] is None]
+        baseline=json.loads(subprocess.check_output(['git','show','3bf319eda79b9c5e3e855f134ebb82d496cb004a:docs/retained-income-batch-ledger.json'],cwd=ROOT))
+        missing=[row for row in baseline['rows'] if row['retained_source'] is None]
         self.assertEqual(len(missing),13)
         self.assertEqual({row['issuer'] for row in missing},{'AMZN','AVGO','AMAT'})
         for row in missing:
@@ -124,7 +124,8 @@ class RetainedIncomeBatchTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(payload.encode()).hexdigest(),'ea438857acb1485479b65390cdfdd45bc47eb313e522797e75ec31de6c6d0f52')
 
     def test_frozen_sources_policies_mappings_preserved(self):
-        for path in (n.MANIFEST,n.BODIES,*b.SOURCES,'docs/nvda-retained-income-ledger.json',
+        originals=tuple(path for path in b.SOURCES if path!='docs/evidence/retained-income-instance-acquisition.json')
+        for path in (n.MANIFEST,n.BODIES,*originals,'docs/nvda-retained-income-ledger.json',
             'src/valuation_platform/analyst/retained_income_preparation.py','src/valuation_platform/analyst/retained_components.py',
             'src/valuation_platform/analyst/historical_inputs.py','src/valuation_platform/analyst/pilot_historical_inputs.py',
             'src/valuation_platform/normalization/concepts.py','docs/pilot-historical-input-mappings.json'):

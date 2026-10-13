@@ -1,5 +1,12 @@
 # Retained Revenue/EBIT batch — eight issuers
 
+**Current additive acquisition result:** [fixed 13-instance pass](retained-income-acquisition-results.md)
+now yields 80 populated / zero conflicting / zero unavailable slots, with 197
+occurrences. Original 54 bindings remain unchanged. Twelve other families per
+annual remain unassessed/null; no financial-sufficiency or support change.
+The table/results below preserve the original retained-only pass at its starting
+revision, not current instance availability.
+
 Phase 1 only; starting HEAD `3289ba191e17bc6b78e3b061f3530557bd4b5ad6`.
 [Reproducible ledger](retained-income-batch-ledger.json) /
 [offline replay](../scripts/inspect_retained_income_batch.py) /

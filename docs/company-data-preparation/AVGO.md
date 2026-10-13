@@ -1,5 +1,19 @@
 # AVGO — company data preparation
 
+## Fixed-instance acquisition closes the direct-field retention gap
+
+[New receipts/identity verification and replay](../retained-income-acquisition-results.md)
+bind the five exact selected 2021–2025 annual instances, preserving the reviewed
+non-calendar/53-week dates. Five requests, no indexes/retries/statement research;
+new receipts are not recovered original metadata and old fingerprints persist.
+Unchanged direct semantics now populate **10 Revenue/EBIT slots**, no conflicts
+or unavailable slots, in the [current ledger](../retained-income-batch-ledger.json).
+No extension, derivation, scope change or issuer-specific approval. All twelve
+other families per annual remain unassessed/null; financial blockers, support
+classification and timing limits persist. Tests replay exact body/DEI/context/
+unit/precision/provenance and serialization. Earlier retention gaps below are
+superseded only for these acquisitions; no further research starts here.
+
 ## Fixed retained Revenue/EBIT batch — actual field coverage
 
 Original conflict: identity/pipeline coverage did not by itself establish retained

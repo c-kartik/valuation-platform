@@ -1,5 +1,17 @@
 # Company data preparation register
 
+## Fixed 13-instance acquisition — current direct batch coverage
+
+[Acquisition and unchanged-rule results](../retained-income-acquisition-results.md)
+close the 26 Revenue/EBIT retained-instance gaps (AMZN five, AVGO five, AMAT
+three) with 13 exact SEC instance requests and separately retained new receipts.
+The original 40-period/80-slot batch now has 80 populated, zero conflicting and
+zero unavailable direct slots; all 54 previous bindings remain unchanged.
+Actual metadata/digests/refresh history and 197 occurrences remain traceable.
+Other twelve families per annual stay unassessed/null, financial sufficiency
+NOT_ASSESSED, support classes/blockers unchanged. Three records explain this
+bounded supersession; no additional acquisition or research is authorized here.
+
 ## Fixed eight-issuer retained Revenue/EBIT batch
 
 [Results](../retained-income-batch-results.md) / [exact slot ledger](../retained-income-batch-ledger.json):

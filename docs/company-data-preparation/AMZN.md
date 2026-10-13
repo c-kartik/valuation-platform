@@ -1,5 +1,19 @@
 # AMZN — company data preparation
 
+## Fixed-instance acquisition closes the direct-field retention gap
+
+[New receipts/identity verification and replay](../retained-income-acquisition-results.md)
+bind all five exact 2021–2025 December 31 instances after the prior retained-only
+pass lacked full bodies. Five requests, no indexes/retries/statement research;
+old claimed fingerprints and unavailable original receipts are preserved.
+Unchanged direct rules now populate **10 Revenue/EBIT slots**, no conflicts or
+unavailable slots, in the [current ledger](../retained-income-batch-ledger.json).
+All twelve other families per annual remain unassessed/null. No new financial
+treatment, complete scope, timing/readiness, support change or blocker removal.
+Source/occurrence/precision/sign and actual receipt provenance survive testing
+and serialization. The older “missing full instances” disposition below is
+superseded only for these acquired bindings, not erased. Stop after this pass.
+
 ## Fixed retained Revenue/EBIT batch — actual field coverage
 
 Original conflict: identity/pipeline coverage did not by itself establish retained
