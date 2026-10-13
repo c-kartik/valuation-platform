@@ -1,5 +1,22 @@
 # QCOM — company data preparation
 
+## Retained-only direct Revenue/EBIT sweep
+
+[Universe ledger/results](../retained-income-sweep-results.md): 5 frozen
+selected periods / 10 slots: 10 populated,
+0 missing retained-body and 0 incomplete-receipt slots.
+Exact source/context/occurrence/precision bindings and exceptions remain in the
+ledger. Existing packaged bindings are reused unchanged; any new values use
+only approved direct semantics and verified original instance receipts, without
+independent face-statement re-review. Other families in new partial packages
+remain unassessed/null. Absent bodies are not missing disclosures; incomplete
+retrieval metadata is not repaired by file dates or present availability.
+Existing derived EBIT, financial blockers, history exceptions and support class
+are not changed. Financial sufficiency NOT_ASSESSED. Shared focused offline
+replay, original occurrence/digest, exception and serialization/preservation
+checks validate this bounded mechanism, not complete financial coverage.
+Stop at the fixed backlog; no SEC acquisition or new research is authorized.
+
 ## Consolidated blocker disposition — proposed reported-input path
 
 2026-10-12: [bounded review](../phase1-blocker-disposition-review.md) and

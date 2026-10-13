@@ -2,7 +2,29 @@
 
 ## Current Milestone
 
-Latest completed milestone: **fixed 13-instance SEC acquisition and Revenue/EBIT replay**.
+Latest completed milestone: **retained-only direct Revenue/EBIT universe sweep**.
+[Coverage, exceptions and preservation](retained-income-sweep-results.md) /
+[offline ledger](retained-income-sweep-ledger.json). All 42 non-specialized
+issuers (eight excluded, including GE): 199 selected periods / 398 slots.
+140 populated (98 preserved + 42 newly supported), 192 missing-body, 46
+incomplete-receipt, 20 insufficient-identity slots. META/COST's ten selected
+years lack exact filing/start bindings in the inspected retained records; no
+accessions inferred. Deduplicated backlog: 119 exact-accession artifact entries
+(96 bodies, 23 receipts), plus ten separate selection-identity gaps; unknown
+instance filenames/digests remain null. Eleven target history deficits remain
+XOM five / GEV three / SNDK three. Existing derived EBIT policy references are
+retained, not integrated as direct values. No new direct concepts or treatments.
+New partial packages keep other families unassessed/null; original pilot,
+NVDA/batch packages, schema 5, policies, classifications and production remain
+unchanged. Financial sufficiency NOT_ASSESSED. Focused offline scope/occurrence,
+exception, conflict, digest, serialization and preservation validation only;
+27 focused tests pass (eight sweep / nineteen shared and batch regressions),
+with final offline replay, compileall, affected links and diff checks. No SEC
+requests, full-suite/corpus rerun or Phase 2 work.
+**Stop after the sweep; no evidence acquisition.** Any next fixed backlog
+disposition/acquisition plan requires separate authorization.
+
+Previously completed milestone: **fixed 13-instance SEC acquisition and Revenue/EBIT replay**.
 [Verified acquisition/results](retained-income-acquisition-results.md) /
 [new original-body receipts](evidence/retained-income-instance-acquisition.json).
 Exact reconciliation: AMZN five, AVGO five, AMAT three missing instances / 26

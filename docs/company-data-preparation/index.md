@@ -1,5 +1,23 @@
 # Company data preparation register
 
+## Retained direct Revenue/EBIT sweep
+
+[Universe results](../retained-income-sweep-results.md) and
+[replay ledger](../retained-income-sweep-ledger.json) account for all 42
+non-specialized issuers / 199 selected periods / 398 slots. This register remains
+the forty GENERALIZATION_REQUIRED issuers; META/COST's selected-end-only identity
+exceptions are tracked separately in the ledger, not silently added to the
+register or treated as verified input packages. 140 slots populated, 192 lack
+bodies, 46 lack complete receipts, 20 lack exact identity. All eight specialized
+issuers, including GE, excluded; original classes unchanged. History exceptions
+remain explicit. Only 42 slots are newly populated; 98 earlier bindings/packages
+are preserved. Filing identity and source availability are not financial
+sufficiency or independent statement review. Derived EBIT is not direct evidence;
+other families in new packages remain unassessed/null. No exhausted issuer
+research reopened. The 119-entry artifact backlog plus ten identity exceptions
+is a fixed stopping point, not acquisition authority. Affected records retain
+older decisions and source-specific limitations.
+
 ## Fixed 13-instance acquisition — current direct batch coverage
 
 [Acquisition and unchanged-rule results](../retained-income-acquisition-results.md)
