@@ -2,7 +2,24 @@
 
 ## Current Milestone
 
-Latest completed milestone: **fixed Capex original-artifact binding repair**.
+Latest completed milestone: **bounded LLY retained-report refresh review**.
+[Disposition](lly-capex-refresh-review-results.md) /
+[immutable additive review record](evidence/lly-capex-refresh-review-v1.json).
+Fifteen refreshed reports independently support the five existing LLY amounts
+and financial scope; no financial contradiction found. One retained-source check
+finds no historical bodies, so historical byte equivalence/renderer-only changes
+are not established. **Zero entries activated; five remain operationally blocked**:
+immutable v1 attestation/output provenance cannot carry different report digests
+without a separately designed provenance/schema treatment. The explicit stop
+condition applies; no policy, schema, hash, input or fallback changed. Zero SEC
+requests. Existing preparation stays **160 populated / five evidence gaps /
+34 unapproved scope = 199**, with all prior fields/pilots/frozen outputs exact.
+29 unique focused tests, compileall, 310 affected links, identity/digest/coverage
+replay and diff checks pass; no full-suite/corpus rerun. Next prerequisite is
+explicit additive evidence-generation/provenance design, not repeat acquisition
+or financial research. Phase 2 remains prohibited.
+
+Previously completed milestone: **fixed Capex original-artifact binding repair**.
 [Results](capex-binding-repair-results.md) / [receipts](evidence/capex-binding-repair.json)
 / [current ledger](repaired-capex-ledger.json). Exactly 85 requirements / fifteen
 AMZN/LLY/CVX approvals reconciled; zero verified local bodies reused. 85 SEC

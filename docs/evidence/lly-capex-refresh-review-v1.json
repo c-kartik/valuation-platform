@@ -1,0 +1,2079 @@
+{
+  "activated_entries": 0,
+  "baseline_revision": "6e9634c3b3c5c11228c3e1e3c207a848367e66d8",
+  "content_supported_entries": 5,
+  "coverage": {
+    "CURATED": 15,
+    "DIRECT": 145,
+    "EVIDENCE_GAP": 5,
+    "UNAPPROVED_SCOPE": 34
+  },
+  "entries": [
+    {
+      "blocker": "V1 verification and output provenance require the immutable original artifact_digests, reviewed_evidence and reviewed_entry_json exactly. A different digest needs a separately designed provenance/schema treatment; no operational refresh or attestation substitution here.",
+      "checks": {
+        "contradicted": [],
+        "operationally_unsatisfied": [
+          "IMMUTABLE_V1_REPORT_DIGEST_ATTESTATION"
+        ],
+        "supported": [
+          "CURRENT_CASH_AMOUNT",
+          "AUTHORITATIVE_ANNUAL_PERIOD",
+          "EXACT_OPERAND_OCCURRENCES",
+          "CONSOLIDATED_INVESTING_SCOPE",
+          "PPE_PHYSICAL_ASSET_SCOPE",
+          "ACQUISITION_IPRD_SEPARATION",
+          "NO_NONCASH_LEASE_PROCEEDS_INCENTIVE_OR_INTEREST_ADJUSTMENT"
+        ],
+        "unverified": [
+          "HISTORICAL_REPORT_BYTE_EQUIVALENCE",
+          "COMPLETE_INCENTIVE_OR_NONCASH_ALLOCATIONS",
+          "COMPLETE_CAPITALIZED_INTEREST_AMOUNT"
+        ]
+      },
+      "content_review": "SUPPORTED_EXISTING_FINANCIAL_SCOPE",
+      "financial_policy": {
+        "entry_sha256": "4d44c1095d0695389dcc7de340ad42b40a9fed295a5e0fbf87eb6d86f5567119",
+        "policy_id": "capex_scope_equivalence",
+        "version": "1"
+      },
+      "identity": {
+        "accession": "0000059478-22-000068",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 59478,
+        "filed": "2022-02-23",
+        "form": "10-K",
+        "primary_document": "lly-20211231.htm"
+      },
+      "observations": {
+        "acquisition_row": [
+          {
+            "links": [
+              "top.Show.showAR( this, 'defref_us-gaap_PaymentsToAcquireBusinessesNetOfCashAcquired', window );"
+            ],
+            "text": "Cash paid for acquisitions, net of cash acquired (Note 3)"
+          },
+          {
+            "links": [],
+            "text": "(747.4)"
+          },
+          {
+            "links": [],
+            "text": "(849.3)"
+          },
+          {
+            "links": [],
+            "text": "(6,917.7)"
+          }
+        ],
+        "approved_magnitude_usd": "1309800000.0",
+        "broader_long_lived_passage": "Long-lived assets consist of property and equipment, net, operating lease assets, and certain other noncurrent assets.",
+        "capitalized_interest_passage": "Capitalized interest costs were not material for the years ended December 31, 2021, 2020, and 2019.",
+        "cash_caption": "Purchases of property and equipment",
+        "consolidation_passage": "The accompanying consolidated financial statements include Eli Lilly and Company and all subsidiaries",
+        "cost_passage": "Property and equipment is stated on the basis of cost.",
+        "current_column": "Dec. 31, 2021",
+        "display_decimals": 1,
+        "display_unit": "USD millions",
+        "displayed_outflow": "(1,309.8)",
+        "elimination_passage": "All intercompany balances and transactions have been eliminated.",
+        "header": "Consolidated Statements of Cash Flows - USD ($) $ in Millions",
+        "iprd_passage": "Acquired IPR&D expense includes the initial costs",
+        "iprd_row": [
+          {
+            "links": [
+              "top.Show.showAR( this, 'defref_lly_PurchasedInProcessResearchAndDevelopment', window );"
+            ],
+            "text": "Purchases of in-process research and development"
+          },
+          {
+            "links": [],
+            "text": "(563.4)"
+          },
+          {
+            "links": [],
+            "text": "(641.2)"
+          },
+          {
+            "links": [],
+            "text": "(319.6)"
+          }
+        ],
+        "nonalternative_passage": "that do not have an alternative future use",
+        "operand_occurrences": [
+          {
+            "context_id": "i22de8effd1e0473ea9e6b2ebf9fa4dfd_D20210101-20211231",
+            "decimals": "-5",
+            "dimensions": [],
+            "numeric_value": "1309800000",
+            "ordinal": 400,
+            "raw_value": "1309800000",
+            "unit_ref": "usd"
+          }
+        ],
+        "physical_components": [
+          "Land",
+          "Buildings",
+          "Equipment",
+          "Construction in progress"
+        ]
+      },
+      "operational_acceptance": "BLOCKED_SCHEMA_TREATMENT_REQUIRED",
+      "reports": [
+        {
+          "artifact_type": "Statements",
+          "byte_length": 101676,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "46166f9276e88787caff4dba9990b4ee55cf5a991418d206fc917b68abe02fab",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/35",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "ffe92303835cb1987318949b01dbf19016a979c2073e7bb22fabf334e82e4d42",
+          "report": {
+            "HtmlFileName": "R9.htm",
+            "LongName": "1007009 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:01.140069+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R9.htm",
+          "supports": [
+            "CURRENT_CASH_AMOUNT",
+            "CONSOLIDATED_INVESTING_SCOPE",
+            "ACQUISITION_IPRD_SEPARATION",
+            "REPORTED_NOT_RESIDUAL"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 14075,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "62176db279ad528349efcfdada05bd76ba6cf447e8df72a2a2180261bdac1c60",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/36",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "6fd25cca31a3b7afee12c4b679d08ae5b7377f0a5d8f9a9aef3a905a7e0385b5",
+          "report": {
+            "HtmlFileName": "R11.htm",
+            "LongName": "2101101 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standard",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandard",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standard"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:01.615998+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R11.htm",
+          "supports": [
+            "CONSOLIDATED_SCOPE",
+            "ACQUIRED_IPRD_SEPARATION"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 30280,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "86fce7762b2b5bfbdd037e1c75546f5c2912e164e751f1db6e5018bf5ab5bed2",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/37",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "dd060bab7771062fdee7db07c565f2a310e2f01dc46eed19280370c8b8d5bc04",
+          "report": {
+            "HtmlFileName": "R19.htm",
+            "LongName": "2144109 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:02.068115+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R19.htm",
+          "supports": [
+            "PPE_PHYSICAL_ASSET_SCOPE",
+            "BROADER_LEASE_SOFTWARE_NOT_SUBSTITUTED",
+            "NO_INTEREST_ADJUSTMENT"
+          ]
+        }
+      ],
+      "unchanged_requirements": [
+        {
+          "sha256": "0149695203760e7d01fc89e2eee08e18e66af90f39ee8eeccdf990ed938212da",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "f0d3355e8653e8b3b1720978b74a8087b902509f99d4a68adc5c06611b510e69",
+            "http_status": null,
+            "locator": "/0",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "tests/fixtures/capex_index_responses.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": null,
+            "sha256": "0149695203760e7d01fc89e2eee08e18e66af90f39ee8eeccdf990ed938212da",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/index.json"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/index.json"
+        },
+        {
+          "sha256": "7123097dbc6f8ca8f5cc3930034cf5be307a6cce25fd90cb4017ca876f585bc3",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "e21d6b322a72879f441ff49056aea22e47bd26ad1c05f5bb0c8c8bde2b83b9e6",
+            "http_status": 200,
+            "locator": "/artifacts/22",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "docs/evidence/income-sweep-backlog-acquisition.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T08:42:03.471529+00:00",
+            "sha256": "7123097dbc6f8ca8f5cc3930034cf5be307a6cce25fd90cb4017ca876f585bc3",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_htm.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_htm.xml"
+        },
+        {
+          "sha256": "4ec003f449bb19005e0f88dd92180c2b3963ac5d27c5da2cd77679fb060a2820",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/30",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:42:58.414275+00:00",
+            "sha256": "4ec003f449bb19005e0f88dd92180c2b3963ac5d27c5da2cd77679fb060a2820",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231.xsd"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231.xsd"
+        },
+        {
+          "sha256": "a1460ba7d60f4770cfbaafc0d604436269ce0c857d28c982dac0aff3b3dc2adb",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/31",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:42:58.858918+00:00",
+            "sha256": "a1460ba7d60f4770cfbaafc0d604436269ce0c857d28c982dac0aff3b3dc2adb",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_pre.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_pre.xml"
+        },
+        {
+          "sha256": "831d6933828459f61400c61ab7fa0234e3744dbd616ddd88177e606612ed73b2",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/32",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:42:59.186520+00:00",
+            "sha256": "831d6933828459f61400c61ab7fa0234e3744dbd616ddd88177e606612ed73b2",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_cal.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_cal.xml"
+        },
+        {
+          "sha256": "9121b199458cd8383254686bbf55afe03d8ad837f8f17aec6dc0416d7d3f9f73",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/33",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:42:59.713085+00:00",
+            "sha256": "9121b199458cd8383254686bbf55afe03d8ad837f8f17aec6dc0416d7d3f9f73",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_lab.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/lly-20211231_lab.xml"
+        },
+        {
+          "sha256": "e2f969f7ff8002e3975200f7f713bc5c521b8a37b7095268df3c9404c34579a4",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/34",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:00.496230+00:00",
+            "sha256": "e2f969f7ff8002e3975200f7f713bc5c521b8a37b7095268df3c9404c34579a4",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/FilingSummary.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/FilingSummary.xml"
+        }
+      ]
+    },
+    {
+      "blocker": "V1 verification and output provenance require the immutable original artifact_digests, reviewed_evidence and reviewed_entry_json exactly. A different digest needs a separately designed provenance/schema treatment; no operational refresh or attestation substitution here.",
+      "checks": {
+        "contradicted": [],
+        "operationally_unsatisfied": [
+          "IMMUTABLE_V1_REPORT_DIGEST_ATTESTATION"
+        ],
+        "supported": [
+          "CURRENT_CASH_AMOUNT",
+          "AUTHORITATIVE_ANNUAL_PERIOD",
+          "EXACT_OPERAND_OCCURRENCES",
+          "CONSOLIDATED_INVESTING_SCOPE",
+          "PPE_PHYSICAL_ASSET_SCOPE",
+          "ACQUISITION_IPRD_SEPARATION",
+          "NO_NONCASH_LEASE_PROCEEDS_INCENTIVE_OR_INTEREST_ADJUSTMENT"
+        ],
+        "unverified": [
+          "HISTORICAL_REPORT_BYTE_EQUIVALENCE",
+          "COMPLETE_INCENTIVE_OR_NONCASH_ALLOCATIONS",
+          "COMPLETE_CAPITALIZED_INTEREST_AMOUNT"
+        ]
+      },
+      "content_review": "SUPPORTED_EXISTING_FINANCIAL_SCOPE",
+      "financial_policy": {
+        "entry_sha256": "b50fbb2e6576dcf7e21505f1f412a22c9dbacbf93ba494ceaf26d715aa92f347",
+        "policy_id": "capex_scope_equivalence",
+        "version": "1"
+      },
+      "identity": {
+        "accession": "0000059478-23-000082",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 59478,
+        "filed": "2023-02-22",
+        "form": "10-K",
+        "primary_document": "lly-20221231.htm"
+      },
+      "observations": {
+        "acquisition_row": [
+          {
+            "links": [
+              "Show.showAR( this, 'defref_us-gaap_PaymentsToAcquireBusinessesNetOfCashAcquired', window );"
+            ],
+            "text": "Cash paid for acquisitions, net of cash acquired (Note 3)"
+          },
+          {
+            "links": [],
+            "text": "(327.2)"
+          },
+          {
+            "links": [],
+            "text": "(747.4)"
+          },
+          {
+            "links": [],
+            "text": "(849.3)"
+          }
+        ],
+        "approved_magnitude_usd": "1854300000.0",
+        "broader_long_lived_passage": "Long-lived assets consist of property and equipment, net, operating lease assets, and certain other noncurrent assets.",
+        "capitalized_interest_passage": "Capitalized interest costs were not material for the years ended December 31, 2022, 2021, and 2020.",
+        "cash_caption": "Purchases of property and equipment",
+        "consolidation_passage": "The accompanying consolidated financial statements include Eli Lilly and Company and all subsidiaries",
+        "cost_passage": "Property and equipment is stated on the basis of cost.",
+        "current_column": "Dec. 31, 2022",
+        "display_decimals": 1,
+        "display_unit": "USD millions",
+        "displayed_outflow": "(1,854.3)",
+        "elimination_passage": "All intercompany balances and transactions have been eliminated.",
+        "header": "Consolidated Statements of Cash Flows - USD ($) $ in Millions",
+        "iprd_passage": "Acquired IPR&D and development milestones include the initial costs",
+        "iprd_row": [
+          {
+            "links": [
+              "Show.showAR( this, 'defref_lly_PurchasedInProcessResearchAndDevelopment', window );"
+            ],
+            "text": "Purchases of in-process research and development"
+          },
+          {
+            "links": [],
+            "text": "(629.7)"
+          },
+          {
+            "links": [],
+            "text": "(563.4)"
+          },
+          {
+            "links": [],
+            "text": "(641.2)"
+          }
+        ],
+        "nonalternative_passage": "that do not have an alternative future use",
+        "operand_occurrences": [
+          {
+            "context_id": "i095cf5e171c244d4957ecbd3f0e77a2d_D20220101-20221231",
+            "decimals": "-5",
+            "dimensions": [],
+            "numeric_value": "1854300000",
+            "ordinal": 364,
+            "raw_value": "1854300000",
+            "unit_ref": "usd"
+          }
+        ],
+        "physical_components": [
+          "Land",
+          "Buildings",
+          "Equipment",
+          "Construction in progress"
+        ]
+      },
+      "operational_acceptance": "BLOCKED_SCHEMA_TREATMENT_REQUIRED",
+      "reports": [
+        {
+          "artifact_type": "Statements",
+          "byte_length": 91791,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "ed4b82885492644faf9bcd039d77371578d33abee0e58d6caabbece1a7d5f96e",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/43",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "d54184d339e605c581259dd9d41d258245e8337874626548f307cc60dea7f4f5",
+          "report": {
+            "HtmlFileName": "R9.htm",
+            "LongName": "0000009 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:04.869507+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R9.htm",
+          "supports": [
+            "CURRENT_CASH_AMOUNT",
+            "CONSOLIDATED_INVESTING_SCOPE",
+            "ACQUISITION_IPRD_SEPARATION",
+            "REPORTED_NOT_RESIDUAL"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 13907,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "79348a959ba3b3a5e57b4778d55b7e76768750b40bb063bd80ef4cfa90c91137",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/44",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "be61a73145b923b0848a620ad0256569b808b10adb6befbd51d3be3ae644bd7d",
+          "report": {
+            "HtmlFileName": "R10.htm",
+            "LongName": "0000010 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandards",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:05.443945+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R10.htm",
+          "supports": [
+            "CONSOLIDATED_SCOPE",
+            "ACQUIRED_IPRD_SEPARATION"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 30180,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "1427a88223cb6e043ceb650c5b8b80acf20b88ed000a11b0e3da98902d56bfb8",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/45",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "cb122a2f9709e41da6415cabcd5ac28d13f331e68502625bb1a89c7194621959",
+          "report": {
+            "HtmlFileName": "R18.htm",
+            "LongName": "0000018 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:05.801272+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R18.htm",
+          "supports": [
+            "PPE_PHYSICAL_ASSET_SCOPE",
+            "BROADER_LEASE_SOFTWARE_NOT_SUBSTITUTED",
+            "NO_INTEREST_ADJUSTMENT"
+          ]
+        }
+      ],
+      "unchanged_requirements": [
+        {
+          "sha256": "a9e4f89284614558e1be5c40f173c863f6ff494792067151b15175a335c59d29",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "f0d3355e8653e8b3b1720978b74a8087b902509f99d4a68adc5c06611b510e69",
+            "http_status": null,
+            "locator": "/1",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "tests/fixtures/capex_index_responses.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": null,
+            "sha256": "a9e4f89284614558e1be5c40f173c863f6ff494792067151b15175a335c59d29",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/index.json"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/index.json"
+        },
+        {
+          "sha256": "0eb5adf13c2df229a1a15e42e8b03de7c349b95f36f337e5e0fdd9c7b6f7fb9e",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "e21d6b322a72879f441ff49056aea22e47bd26ad1c05f5bb0c8c8bde2b83b9e6",
+            "http_status": 200,
+            "locator": "/artifacts/23",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "docs/evidence/income-sweep-backlog-acquisition.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T08:42:03.970069+00:00",
+            "sha256": "0eb5adf13c2df229a1a15e42e8b03de7c349b95f36f337e5e0fdd9c7b6f7fb9e",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_htm.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_htm.xml"
+        },
+        {
+          "sha256": "d0eb1dce06b659ba0cffa53a49fa1dc01d989f44167de03edc438397209cfd40",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/38",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:02.238159+00:00",
+            "sha256": "d0eb1dce06b659ba0cffa53a49fa1dc01d989f44167de03edc438397209cfd40",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231.xsd"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231.xsd"
+        },
+        {
+          "sha256": "9da5cef7d79e31ae5457d89a3a4c2f2c7b1c9c56153f39b06f0ca59276c8d5a4",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/39",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:02.895020+00:00",
+            "sha256": "9da5cef7d79e31ae5457d89a3a4c2f2c7b1c9c56153f39b06f0ca59276c8d5a4",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_pre.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_pre.xml"
+        },
+        {
+          "sha256": "c00394bf109fc21b0ebfe8f2bb57309e871a5254301a1b06d9559016c62c9eba",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/40",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:03.242767+00:00",
+            "sha256": "c00394bf109fc21b0ebfe8f2bb57309e871a5254301a1b06d9559016c62c9eba",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_cal.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_cal.xml"
+        },
+        {
+          "sha256": "aad8813c020f8c918baf4ef92e140c0a975bbc3470e1dff0718685776ce93adc",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/41",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:03.749221+00:00",
+            "sha256": "aad8813c020f8c918baf4ef92e140c0a975bbc3470e1dff0718685776ce93adc",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_lab.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231_lab.xml"
+        },
+        {
+          "sha256": "cc0b71f32fa38270bd8658f6c079e4b5d618e413d834fe49aba5fbf8e361c68e",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/42",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:04.405873+00:00",
+            "sha256": "cc0b71f32fa38270bd8658f6c079e4b5d618e413d834fe49aba5fbf8e361c68e",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/FilingSummary.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/FilingSummary.xml"
+        }
+      ]
+    },
+    {
+      "blocker": "V1 verification and output provenance require the immutable original artifact_digests, reviewed_evidence and reviewed_entry_json exactly. A different digest needs a separately designed provenance/schema treatment; no operational refresh or attestation substitution here.",
+      "checks": {
+        "contradicted": [],
+        "operationally_unsatisfied": [
+          "IMMUTABLE_V1_REPORT_DIGEST_ATTESTATION"
+        ],
+        "supported": [
+          "CURRENT_CASH_AMOUNT",
+          "AUTHORITATIVE_ANNUAL_PERIOD",
+          "EXACT_OPERAND_OCCURRENCES",
+          "CONSOLIDATED_INVESTING_SCOPE",
+          "PPE_PHYSICAL_ASSET_SCOPE",
+          "ACQUISITION_IPRD_SEPARATION",
+          "NO_NONCASH_LEASE_PROCEEDS_INCENTIVE_OR_INTEREST_ADJUSTMENT"
+        ],
+        "unverified": [
+          "HISTORICAL_REPORT_BYTE_EQUIVALENCE",
+          "COMPLETE_INCENTIVE_OR_NONCASH_ALLOCATIONS",
+          "COMPLETE_CAPITALIZED_INTEREST_AMOUNT"
+        ]
+      },
+      "content_review": "SUPPORTED_EXISTING_FINANCIAL_SCOPE",
+      "financial_policy": {
+        "entry_sha256": "b6eaf736edbedb05bf89fbf3bcfa8dae4b9544af7b93550201949670d48dc66e",
+        "policy_id": "capex_scope_equivalence",
+        "version": "1"
+      },
+      "identity": {
+        "accession": "0000059478-24-000065",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 59478,
+        "filed": "2024-02-21",
+        "form": "10-K",
+        "primary_document": "lly-20231231.htm"
+      },
+      "observations": {
+        "acquisition_row": [
+          {
+            "links": [
+              "Show.showAR( this, 'defref_us-gaap_OtherPaymentsToAcquireBusinesses', window );"
+            ],
+            "text": "Cash paid for acquisitions, net of cash acquired (Note 3)"
+          },
+          {
+            "links": [],
+            "text": "(1,044.3)"
+          },
+          {
+            "links": [],
+            "text": "(327.2)"
+          },
+          {
+            "links": [],
+            "text": "(747.4)"
+          }
+        ],
+        "approved_magnitude_usd": "3447600000.0",
+        "broader_long_lived_passage": "Long-lived assets consist of property and equipment, net, operating lease assets, and unamortized computer software costs.",
+        "capitalized_interest_passage": "Capitalized interest costs were not material for the years ended December 31, 2023, 2022, and 2021.",
+        "cash_caption": "Purchases of property and equipment",
+        "consolidation_passage": "The accompanying consolidated financial statements include Eli Lilly and Company and all subsidiaries",
+        "cost_passage": "Property and equipment is stated on the basis of cost.",
+        "current_column": "Dec. 31, 2023",
+        "display_decimals": 1,
+        "display_unit": "USD millions",
+        "displayed_outflow": "(3,447.6)",
+        "elimination_passage": "All intercompany balances and transactions have been eliminated.",
+        "header": "Consolidated Statements of Cash Flows - USD ($) $ in Millions",
+        "iprd_passage": "Acquired IPR&D includes the initial costs",
+        "iprd_row": [
+          {
+            "links": [
+              "Show.showAR( this, 'defref_us-gaap_PaymentsToAcquireInProcessResearchAndDevelopment', window );"
+            ],
+            "text": "Purchases of in-process research and development"
+          },
+          {
+            "links": [],
+            "text": "(3,944.5)"
+          },
+          {
+            "links": [],
+            "text": "(1,131.0)"
+          },
+          {
+            "links": [],
+            "text": "(668.6)"
+          }
+        ],
+        "nonalternative_passage": "that do not have an alternative future use",
+        "operand_occurrences": [
+          {
+            "context_id": "c-1",
+            "decimals": "-5",
+            "dimensions": [],
+            "numeric_value": "3447600000",
+            "ordinal": 365,
+            "raw_value": "3447600000",
+            "unit_ref": "usd"
+          }
+        ],
+        "physical_components": [
+          "Land",
+          "Buildings",
+          "Equipment",
+          "Construction in progress"
+        ]
+      },
+      "operational_acceptance": "BLOCKED_SCHEMA_TREATMENT_REQUIRED",
+      "reports": [
+        {
+          "artifact_type": "Statements",
+          "byte_length": 94473,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "d13f889aee418a6a9b87491bb0678ecfe1bdf97ffa9d774442f8e6a6e6bc5117",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/51",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "a38c24312d4ef5b1b60ff703870bc8f5c14a90ab881185a9f2251ecdc0d6b1f6",
+          "report": {
+            "HtmlFileName": "R9.htm",
+            "LongName": "0000009 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:08.795475+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R9.htm",
+          "supports": [
+            "CURRENT_CASH_AMOUNT",
+            "CONSOLIDATED_INVESTING_SCOPE",
+            "ACQUISITION_IPRD_SEPARATION",
+            "REPORTED_NOT_RESIDUAL"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 15669,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "c15305215e40b9ed024bdbe41b9f3456a021bc28b939ebc84f0aadd58f74e39b",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/52",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "73a626869f3765c13ff35756a16dcb7528bb83c2570d93781c830c94e4096f5f",
+          "report": {
+            "HtmlFileName": "R10.htm",
+            "LongName": "0000010 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandards",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:09.270588+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R10.htm",
+          "supports": [
+            "CONSOLIDATED_SCOPE",
+            "ACQUIRED_IPRD_SEPARATION"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 30206,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "0587a1820c70e726292dd91ade4dd5f921755535afa3d037ea785c69c4fbef7a",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/53",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "0ced6dd4f1fc47b8d293e0f4bcecc415d6a07595c0567a5f26ec12c278a9c3a2",
+          "report": {
+            "HtmlFileName": "R18.htm",
+            "LongName": "0000018 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:09.858790+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R18.htm",
+          "supports": [
+            "PPE_PHYSICAL_ASSET_SCOPE",
+            "BROADER_LEASE_SOFTWARE_NOT_SUBSTITUTED",
+            "NO_INTEREST_ADJUSTMENT"
+          ]
+        }
+      ],
+      "unchanged_requirements": [
+        {
+          "sha256": "786a0bca7cba5e97c617a2c36fb47647e9588c13e4dbdc7167071417b04ff75f",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "f0d3355e8653e8b3b1720978b74a8087b902509f99d4a68adc5c06611b510e69",
+            "http_status": null,
+            "locator": "/2",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "tests/fixtures/capex_index_responses.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": null,
+            "sha256": "786a0bca7cba5e97c617a2c36fb47647e9588c13e4dbdc7167071417b04ff75f",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/index.json"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/index.json"
+        },
+        {
+          "sha256": "f4759574a8abfc4aae9f4eee3994d1cd3bb141456e7515bdf6a0175cc964d7da",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "e21d6b322a72879f441ff49056aea22e47bd26ad1c05f5bb0c8c8bde2b83b9e6",
+            "http_status": 200,
+            "locator": "/artifacts/24",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "docs/evidence/income-sweep-backlog-acquisition.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T08:42:04.539911+00:00",
+            "sha256": "f4759574a8abfc4aae9f4eee3994d1cd3bb141456e7515bdf6a0175cc964d7da",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_htm.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_htm.xml"
+        },
+        {
+          "sha256": "2b0e0b68438f4ba85e8f4ab275a0533b07eb7143224ba3b5cba258f87be98422",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/46",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:06.539116+00:00",
+            "sha256": "2b0e0b68438f4ba85e8f4ab275a0533b07eb7143224ba3b5cba258f87be98422",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231.xsd"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231.xsd"
+        },
+        {
+          "sha256": "4e54d8979943e0111bddb18b5c0a989b2b8cd8f00b4151770c058208dca6fd23",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/47",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:06.795034+00:00",
+            "sha256": "4e54d8979943e0111bddb18b5c0a989b2b8cd8f00b4151770c058208dca6fd23",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_pre.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_pre.xml"
+        },
+        {
+          "sha256": "4eee27ae94cca7fcc4f03dc2fee05a6df5690b55f4952106170cb280754a3590",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/48",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:07.289340+00:00",
+            "sha256": "4eee27ae94cca7fcc4f03dc2fee05a6df5690b55f4952106170cb280754a3590",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_cal.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_cal.xml"
+        },
+        {
+          "sha256": "4861b4b1415c167160939ea74bdf927a04683c9a53d3c46d0698a506fb251ed3",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/49",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:07.820470+00:00",
+            "sha256": "4861b4b1415c167160939ea74bdf927a04683c9a53d3c46d0698a506fb251ed3",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_lab.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/lly-20231231_lab.xml"
+        },
+        {
+          "sha256": "b124729c902a32c2a40132929d45738e1ac790630a298a6f15751544f4550883",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/50",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:08.381085+00:00",
+            "sha256": "b124729c902a32c2a40132929d45738e1ac790630a298a6f15751544f4550883",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/FilingSummary.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/FilingSummary.xml"
+        }
+      ]
+    },
+    {
+      "blocker": "V1 verification and output provenance require the immutable original artifact_digests, reviewed_evidence and reviewed_entry_json exactly. A different digest needs a separately designed provenance/schema treatment; no operational refresh or attestation substitution here.",
+      "checks": {
+        "contradicted": [],
+        "operationally_unsatisfied": [
+          "IMMUTABLE_V1_REPORT_DIGEST_ATTESTATION"
+        ],
+        "supported": [
+          "CURRENT_CASH_AMOUNT",
+          "AUTHORITATIVE_ANNUAL_PERIOD",
+          "EXACT_OPERAND_OCCURRENCES",
+          "CONSOLIDATED_INVESTING_SCOPE",
+          "PPE_PHYSICAL_ASSET_SCOPE",
+          "ACQUISITION_IPRD_SEPARATION",
+          "NO_NONCASH_LEASE_PROCEEDS_INCENTIVE_OR_INTEREST_ADJUSTMENT"
+        ],
+        "unverified": [
+          "HISTORICAL_REPORT_BYTE_EQUIVALENCE",
+          "COMPLETE_INCENTIVE_OR_NONCASH_ALLOCATIONS",
+          "COMPLETE_CAPITALIZED_INTEREST_AMOUNT"
+        ]
+      },
+      "content_review": "SUPPORTED_EXISTING_FINANCIAL_SCOPE",
+      "financial_policy": {
+        "entry_sha256": "69377da3a7b1f2687abca5e365602c32496a50fc79ed710b8c348893a930834c",
+        "policy_id": "capex_scope_equivalence",
+        "version": "1"
+      },
+      "identity": {
+        "accession": "0000059478-25-000067",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 59478,
+        "filed": "2025-02-19",
+        "form": "10-K",
+        "primary_document": "lly-20241231.htm"
+      },
+      "observations": {
+        "acquisition_row": [
+          {
+            "links": [
+              "Show.showAR( this, 'defref_us-gaap_OtherPaymentsToAcquireBusinesses', window );"
+            ],
+            "text": "Cash paid for acquisitions, net of cash acquired"
+          },
+          {
+            "links": [],
+            "text": "(947.7)"
+          },
+          {
+            "links": [],
+            "text": "(1,044.3)"
+          },
+          {
+            "links": [],
+            "text": "(327.2)"
+          }
+        ],
+        "approved_magnitude_usd": "5057800000.0",
+        "broader_long_lived_passage": "Long-lived assets consist of property and equipment, net, operating lease assets, and unamortized computer software costs.",
+        "capitalized_interest_passage": "Capitalized interest costs were not material for the years ended December 31, 2024, 2023, and 2022.",
+        "cash_caption": "Purchases of property and equipment",
+        "consolidation_passage": "The accompanying consolidated financial statements include Eli Lilly and Company and all subsidiaries",
+        "cost_passage": "Property and equipment is stated on the basis of cost.",
+        "current_column": "Dec. 31, 2024",
+        "display_decimals": 1,
+        "display_unit": "USD millions",
+        "displayed_outflow": "(5,057.8)",
+        "elimination_passage": "All intercompany balances and transactions have been eliminated.",
+        "header": "Consolidated Statements of Cash Flows - USD ($) $ in Millions",
+        "iprd_passage": "Acquired IPR&D includes the initial costs",
+        "iprd_row": [
+          {
+            "links": [
+              "Show.showAR( this, 'defref_us-gaap_PaymentsToAcquireInProcessResearchAndDevelopment', window );"
+            ],
+            "text": "Purchases of in-process research and development"
+          },
+          {
+            "links": [],
+            "text": "(3,345.8)"
+          },
+          {
+            "links": [],
+            "text": "(3,944.5)"
+          },
+          {
+            "links": [],
+            "text": "(1,131.0)"
+          }
+        ],
+        "nonalternative_passage": "that do not have an alternative future use",
+        "operand_occurrences": [
+          {
+            "context_id": "c-1",
+            "decimals": "-5",
+            "dimensions": [],
+            "numeric_value": "5057800000",
+            "ordinal": 384,
+            "raw_value": "5057800000",
+            "unit_ref": "usd"
+          }
+        ],
+        "physical_components": [
+          "Land",
+          "Buildings",
+          "Equipment",
+          "Construction in progress"
+        ]
+      },
+      "operational_acceptance": "BLOCKED_SCHEMA_TREATMENT_REQUIRED",
+      "reports": [
+        {
+          "artifact_type": "Statements",
+          "byte_length": 93078,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "4afd98c74da2833ce4dc48d7e17e6ac632c045d3d6f0c3d31668556b9e2dd818",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/59",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "e06855f5c377cbe1bbad1a90b9585026fcaef70b8353f89fb2700823e10971df",
+          "report": {
+            "HtmlFileName": "R9.htm",
+            "LongName": "9952157 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:13.098822+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R9.htm",
+          "supports": [
+            "CURRENT_CASH_AMOUNT",
+            "CONSOLIDATED_INVESTING_SCOPE",
+            "ACQUISITION_IPRD_SEPARATION",
+            "REPORTED_NOT_RESIDUAL"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 15523,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "114c962ac5cb43384bd383d012fdac2dd7afd12126d9e5cd3d019ee6358b2432",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/60",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "0f61a9f93126e5b476279a77f4112fa12816b2979fa5d6bfe1bbd4dd23f3b747",
+          "report": {
+            "HtmlFileName": "R10.htm",
+            "LongName": "9952158 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandards",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:13.481682+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R10.htm",
+          "supports": [
+            "CONSOLIDATED_SCOPE",
+            "ACQUIRED_IPRD_SEPARATION"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 30195,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "019adb55d4431116eea05d71ac9acc96bc27172b59fb864aa7501f18d8798e68",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/61",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "acf5e2f381dd2ad49b83cd47e390cb1890ab8dd55549c5c7d5832dbb152f5fe2",
+          "report": {
+            "HtmlFileName": "R18.htm",
+            "LongName": "9952166 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:13.966693+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R18.htm",
+          "supports": [
+            "PPE_PHYSICAL_ASSET_SCOPE",
+            "BROADER_LEASE_SOFTWARE_NOT_SUBSTITUTED",
+            "NO_INTEREST_ADJUSTMENT"
+          ]
+        }
+      ],
+      "unchanged_requirements": [
+        {
+          "sha256": "1f183c0d52cd33ffb654b860c62f67e622f221f784b9e90a9c911140729ac1bf",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "f0d3355e8653e8b3b1720978b74a8087b902509f99d4a68adc5c06611b510e69",
+            "http_status": null,
+            "locator": "/3",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "tests/fixtures/capex_index_responses.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": null,
+            "sha256": "1f183c0d52cd33ffb654b860c62f67e622f221f784b9e90a9c911140729ac1bf",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/index.json"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/index.json"
+        },
+        {
+          "sha256": "dfb1c3f422dd840f7bf5dc3874de8315ed8c3d9e2460e60d5ba9010b8578fb8b",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "e21d6b322a72879f441ff49056aea22e47bd26ad1c05f5bb0c8c8bde2b83b9e6",
+            "http_status": 200,
+            "locator": "/artifacts/25",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "docs/evidence/income-sweep-backlog-acquisition.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T08:42:05.023251+00:00",
+            "sha256": "dfb1c3f422dd840f7bf5dc3874de8315ed8c3d9e2460e60d5ba9010b8578fb8b",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_htm.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_htm.xml"
+        },
+        {
+          "sha256": "c45366e25c62ce8d2febdcc93699236dd45e0bd0e996254a76c771cb3b376008",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/54",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:10.596719+00:00",
+            "sha256": "c45366e25c62ce8d2febdcc93699236dd45e0bd0e996254a76c771cb3b376008",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231.xsd"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231.xsd"
+        },
+        {
+          "sha256": "98b970fda95ebb60fde0f74c67814dbc174a6a631fa7b3595341762b84ee7694",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/55",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:10.956635+00:00",
+            "sha256": "98b970fda95ebb60fde0f74c67814dbc174a6a631fa7b3595341762b84ee7694",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_pre.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_pre.xml"
+        },
+        {
+          "sha256": "8edf48300e2eb8d069e4500477920b6efd0fd0a3a0c96616253725b04cd3d99f",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/56",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:11.331718+00:00",
+            "sha256": "8edf48300e2eb8d069e4500477920b6efd0fd0a3a0c96616253725b04cd3d99f",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_cal.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_cal.xml"
+        },
+        {
+          "sha256": "11572ec09778357315f2feeef6541e0bb4427518f79f07058674b211f74c2d14",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/57",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:11.934529+00:00",
+            "sha256": "11572ec09778357315f2feeef6541e0bb4427518f79f07058674b211f74c2d14",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_lab.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231_lab.xml"
+        },
+        {
+          "sha256": "cb1eefd3af67a55452c61f1ea7317c19f1610c175298c418dbc0551793186284",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/58",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:12.456166+00:00",
+            "sha256": "cb1eefd3af67a55452c61f1ea7317c19f1610c175298c418dbc0551793186284",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/FilingSummary.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/FilingSummary.xml"
+        }
+      ]
+    },
+    {
+      "blocker": "V1 verification and output provenance require the immutable original artifact_digests, reviewed_evidence and reviewed_entry_json exactly. A different digest needs a separately designed provenance/schema treatment; no operational refresh or attestation substitution here.",
+      "checks": {
+        "contradicted": [],
+        "operationally_unsatisfied": [
+          "IMMUTABLE_V1_REPORT_DIGEST_ATTESTATION"
+        ],
+        "supported": [
+          "CURRENT_CASH_AMOUNT",
+          "AUTHORITATIVE_ANNUAL_PERIOD",
+          "EXACT_OPERAND_OCCURRENCES",
+          "CONSOLIDATED_INVESTING_SCOPE",
+          "PPE_PHYSICAL_ASSET_SCOPE",
+          "ACQUISITION_IPRD_SEPARATION",
+          "NO_NONCASH_LEASE_PROCEEDS_INCENTIVE_OR_INTEREST_ADJUSTMENT"
+        ],
+        "unverified": [
+          "HISTORICAL_REPORT_BYTE_EQUIVALENCE",
+          "COMPLETE_INCENTIVE_OR_NONCASH_ALLOCATIONS",
+          "COMPLETE_CAPITALIZED_INTEREST_AMOUNT"
+        ]
+      },
+      "content_review": "SUPPORTED_EXISTING_FINANCIAL_SCOPE",
+      "financial_policy": {
+        "entry_sha256": "6a14b96dfe33c5612b0bf6403d3ef9534a08c17880ce73413f807c035bbd9f54",
+        "policy_id": "capex_scope_equivalence",
+        "version": "1"
+      },
+      "identity": {
+        "accession": "0000059478-26-000013",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 59478,
+        "filed": "2026-02-12",
+        "form": "10-K",
+        "primary_document": "lly-20251231.htm"
+      },
+      "observations": {
+        "acquisition_row": [
+          {
+            "links": [
+              "Show.showAR( this, 'defref_us-gaap_OtherPaymentsToAcquireBusinesses', window );"
+            ],
+            "text": "Cash paid for acquisitions, net of cash acquired"
+          },
+          {
+            "links": [],
+            "text": "(661)"
+          },
+          {
+            "links": [],
+            "text": "(948)"
+          },
+          {
+            "links": [],
+            "text": "(1,044)"
+          }
+        ],
+        "approved_magnitude_usd": "7841000000",
+        "broader_long_lived_passage": "Long-lived assets consist of property and equipment, net, operating lease assets, and unamortized computer software costs.",
+        "capitalized_interest_passage": null,
+        "cash_caption": "Purchases of property and equipment",
+        "consolidation_passage": "The accompanying consolidated financial statements include Eli Lilly and Company and all subsidiaries",
+        "cost_passage": "Property and equipment is stated on the basis of cost.",
+        "current_column": "Dec. 31, 2025",
+        "display_decimals": 0,
+        "display_unit": "USD millions",
+        "displayed_outflow": "(7,841)",
+        "elimination_passage": "All intercompany balances and transactions have been eliminated.",
+        "header": "Consolidated Statements of Cash Flows - USD ($) $ in Millions",
+        "iprd_passage": "Acquired IPR&D includes the initial costs",
+        "iprd_row": [
+          {
+            "links": [
+              "Show.showAR( this, 'defref_us-gaap_PaymentsToAcquireInProcessResearchAndDevelopment', window );"
+            ],
+            "text": "Purchases of in-process research and development"
+          },
+          {
+            "links": [],
+            "text": "(3,008)"
+          },
+          {
+            "links": [],
+            "text": "(3,346)"
+          },
+          {
+            "links": [],
+            "text": "(3,944)"
+          }
+        ],
+        "nonalternative_passage": "that do not have an alternative future use",
+        "operand_occurrences": [
+          {
+            "context_id": "c-1",
+            "decimals": "-6",
+            "dimensions": [],
+            "numeric_value": "7841000000",
+            "ordinal": 314,
+            "raw_value": "7841000000",
+            "unit_ref": "usd"
+          }
+        ],
+        "physical_components": [
+          "Land",
+          "Buildings",
+          "Equipment",
+          "Construction in progress"
+        ]
+      },
+      "operational_acceptance": "BLOCKED_SCHEMA_TREATMENT_REQUIRED",
+      "reports": [
+        {
+          "artifact_type": "Statements",
+          "byte_length": 89913,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "9fba79e4e98d3b1065f33589e7ab6e3e4641eaed0f4e232ddb8dc9fb965f35de",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/67",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "174395945ff0a7d691e1bfde0edb02227d5c7bf739cb78657c79d14e16306c91",
+          "report": {
+            "HtmlFileName": "R9.htm",
+            "LongName": "9952157 - Statement - Consolidated Statements of Cash Flows",
+            "MenuCategory": "Statements",
+            "Role": "http://www.lilly.com/role/ConsolidatedStatementsofCashFlows",
+            "ShortName": "Consolidated Statements of Cash Flows"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:17.035906+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R9.htm",
+          "supports": [
+            "CURRENT_CASH_AMOUNT",
+            "CONSOLIDATED_INVESTING_SCOPE",
+            "ACQUISITION_IPRD_SEPARATION",
+            "REPORTED_NOT_RESIDUAL"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 14732,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "b5d9f50fb524ccea6546478967944318cb533d9591410199d44790c24358bc9e",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/68",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "935f3fbd368d3778b3f435f2b651e986e8be4284259ec000a9661b0f8f1c8c5b",
+          "report": {
+            "HtmlFileName": "R10.htm",
+            "LongName": "9952158 - Disclosure - Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/SummaryofSignificantAccountingPoliciesandImplementationofNewFinancialAccountingStandards",
+            "ShortName": "Summary of Significant Accounting Policies and Implementation of New Financial Accounting Standards"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:17.461231+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R10.htm",
+          "supports": [
+            "CONSOLIDATED_SCOPE",
+            "ACQUIRED_IPRD_SEPARATION"
+          ]
+        },
+        {
+          "artifact_type": "Notes",
+          "byte_length": 29880,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "historical_digest_type": "sha256_sec_response_body_bytes",
+          "historical_sha256": "b50b99ffffd98db532a4d908aaf29313aa187c256cf0433cf0a076fbe3e041f1",
+          "historical_status": "ORIGINAL_BODY_UNAVAILABLE_BYTE_EQUIVALENCE_UNESTABLISHED",
+          "http_status": 200,
+          "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+          "receipt_locator": "/artifacts/69",
+          "receipt_path": "docs/evidence/capex-binding-repair.json",
+          "refresh_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+          "refreshed_sha256": "616e9b4ac639f42b5519116c1ba83c2ca43117d3fcd5badee2bfe1078d4f65fa",
+          "report": {
+            "HtmlFileName": "R18.htm",
+            "LongName": "9952166 - Disclosure - Property and Equipment",
+            "MenuCategory": "Notes",
+            "Role": "http://www.lilly.com/role/PropertyandEquipment",
+            "ShortName": "Property and Equipment"
+          },
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T13:43:17.916342+00:00",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R18.htm",
+          "supports": [
+            "PPE_PHYSICAL_ASSET_SCOPE",
+            "BROADER_LEASE_SOFTWARE_NOT_SUBSTITUTED",
+            "NO_INTEREST_ADJUSTMENT"
+          ]
+        }
+      ],
+      "unchanged_requirements": [
+        {
+          "sha256": "d0e2ec46b324e0f0a0c53f2a05424eda95e0c250290c2a842603ac19aff8fcbc",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "f0d3355e8653e8b3b1720978b74a8087b902509f99d4a68adc5c06611b510e69",
+            "http_status": null,
+            "locator": "/4",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "tests/fixtures/capex_index_responses.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": null,
+            "sha256": "d0e2ec46b324e0f0a0c53f2a05424eda95e0c250290c2a842603ac19aff8fcbc",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/index.json"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/index.json"
+        },
+        {
+          "sha256": "8294c5cfb8f2e61b64f23121fc8c79439a20e1084b026cf23c94143dbe834078",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "e21d6b322a72879f441ff49056aea22e47bd26ad1c05f5bb0c8c8bde2b83b9e6",
+            "http_status": 200,
+            "locator": "/artifacts/26",
+            "metadata_limit": "Actual retained metadata only; missing original fields not recovered.",
+            "path": "docs/evidence/income-sweep-backlog-acquisition.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T08:42:05.468931+00:00",
+            "sha256": "8294c5cfb8f2e61b64f23121fc8c79439a20e1084b026cf23c94143dbe834078",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_htm.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_htm.xml"
+        },
+        {
+          "sha256": "def0cd59173cc889b23323e3dc84ad0868df4b5b98f5f1aad73f96e8439aa7b4",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/62",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:14.416633+00:00",
+            "sha256": "def0cd59173cc889b23323e3dc84ad0868df4b5b98f5f1aad73f96e8439aa7b4",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.xsd"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.xsd"
+        },
+        {
+          "sha256": "9f428d3a2463415f4cfa2ca4a314e63e28f827ab5c20bb85abd9fd9e1ae235b5",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/63",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:14.865066+00:00",
+            "sha256": "9f428d3a2463415f4cfa2ca4a314e63e28f827ab5c20bb85abd9fd9e1ae235b5",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_pre.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_pre.xml"
+        },
+        {
+          "sha256": "4860214a395aa356d1bdd396341b722a999f7bd3c28b4c549bdbc0fd09e7a9c8",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/64",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:15.642452+00:00",
+            "sha256": "4860214a395aa356d1bdd396341b722a999f7bd3c28b4c549bdbc0fd09e7a9c8",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_cal.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_cal.xml"
+        },
+        {
+          "sha256": "a359f78b5c45d326d95d3892805f14cd61269daf2c623a879680eba1a04af7ba",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/65",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:15.936879+00:00",
+            "sha256": "a359f78b5c45d326d95d3892805f14cd61269daf2c623a879680eba1a04af7ba",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_lab.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231_lab.xml"
+        },
+        {
+          "sha256": "705157d8e32d846baf13d774d571f142a71ae706a9005949dbcf57e792e8f225",
+          "source": {
+            "digest_type": "sha256_sec_response_body_bytes",
+            "document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+            "evidence_history": "New receipt, not recovered original metadata; immutable prior fingerprint retained.",
+            "http_status": 200,
+            "locator": "/artifacts/66",
+            "path": "docs/evidence/capex-binding-repair.json",
+            "representation": "sec_response_body_bytes",
+            "retrieved_at_utc": "2026-10-13T13:43:16.534151+00:00",
+            "sha256": "705157d8e32d846baf13d774d571f142a71ae706a9005949dbcf57e792e8f225",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/FilingSummary.xml"
+          },
+          "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/FilingSummary.xml"
+        }
+      ]
+    }
+  ],
+  "historical_byte_equivalence": "UNESTABLISHED_ORIGINAL_BODIES_UNAVAILABLE",
+  "historical_search": {
+    "explicit_retained_paths_checked": [],
+    "issues": [
+      {
+        "locator": "/rows/35/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R9.htm"
+      },
+      {
+        "locator": "/rows/36/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R11.htm"
+      },
+      {
+        "locator": "/rows/37/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R19.htm"
+      },
+      {
+        "locator": "/rows/43/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R9.htm"
+      },
+      {
+        "locator": "/rows/44/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R10.htm"
+      },
+      {
+        "locator": "/rows/45/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R18.htm"
+      },
+      {
+        "locator": "/rows/51/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R9.htm"
+      },
+      {
+        "locator": "/rows/52/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R10.htm"
+      },
+      {
+        "locator": "/rows/53/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R18.htm"
+      },
+      {
+        "locator": "/rows/59/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R9.htm"
+      },
+      {
+        "locator": "/rows/60/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R10.htm"
+      },
+      {
+        "locator": "/rows/61/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R18.htm"
+      },
+      {
+        "locator": "/rows/67/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R9.htm"
+      },
+      {
+        "locator": "/rows/68/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R10.htm"
+      },
+      {
+        "locator": "/rows/69/target",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R18.htm"
+      },
+      {
+        "locator": "/targets/35",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R9.htm"
+      },
+      {
+        "locator": "/targets/36",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R11.htm"
+      },
+      {
+        "locator": "/targets/37",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947822000068/R19.htm"
+      },
+      {
+        "locator": "/targets/43",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R9.htm"
+      },
+      {
+        "locator": "/targets/44",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R10.htm"
+      },
+      {
+        "locator": "/targets/45",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/R18.htm"
+      },
+      {
+        "locator": "/targets/51",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R9.htm"
+      },
+      {
+        "locator": "/targets/52",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R10.htm"
+      },
+      {
+        "locator": "/targets/53",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947824000065/R18.htm"
+      },
+      {
+        "locator": "/targets/59",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R9.htm"
+      },
+      {
+        "locator": "/targets/60",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R10.htm"
+      },
+      {
+        "locator": "/targets/61",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/R18.htm"
+      },
+      {
+        "locator": "/targets/67",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R9.htm"
+      },
+      {
+        "locator": "/targets/68",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R10.htm"
+      },
+      {
+        "locator": "/targets/69",
+        "path": "docs/evidence/capex-binding-repair.json",
+        "reason": "Declared matching raw fingerprint but original body/path unavailable.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R18.htm"
+      }
+    ],
+    "matches": {},
+    "searched_json_files": 73
+  },
+  "historical_search_sources": [
+    {
+      "path": "docs/analyst-operating-nwc-inventory.json",
+      "sha256": "ef68344fe6d523cb55f5478eb03045fa984f067e07b2b37e6687011cd5a4d1b6"
+    },
+    {
+      "path": "docs/approved-income-integration-bindings.json",
+      "sha256": "ab6037acfa9ef3c0ea5b5875e2227441e6a0ee9ac4c8a24be4d6c26993291724"
+    },
+    {
+      "path": "docs/approved-income-integration-ledger.json",
+      "sha256": "269cb5cd6157017027e3205e4755a696162bdff78783b3795debbf22ebb2b9d1"
+    },
+    {
+      "path": "docs/capex-cvx-perimeter-inventory.json",
+      "sha256": "a2883f10403a685ba93b36151a8be2d100e41c43b49ed14ad4eecc83ef88f372"
+    },
+    {
+      "path": "docs/capex-cvx-scope-evidence-matrix.json",
+      "sha256": "7fbf28fe564eb65a2b171a1e32ab0f40ff77c36b91ddc1c6a85446cd7f7d40d5"
+    },
+    {
+      "path": "docs/capex-ge-scope-inventory.json",
+      "sha256": "9beedeca41930f0370fbc70bba43349cb8428f0a6c25c6986409e4a2155aef50"
+    },
+    {
+      "path": "docs/capex-gev-scope-inventory.json",
+      "sha256": "42d91374cf71f5d5a3195c854a5619e36dc1c1275535c36850ae253e7bcf2cca"
+    },
+    {
+      "path": "docs/capex-hd-scope-inventory.json",
+      "sha256": "2aa44e68279e92d030b8b90cf9607e8f31b45b1cb0958f6e143f651bee567330"
+    },
+    {
+      "path": "docs/capex-inventory.json",
+      "sha256": "625ee07206b47373991cb24869885fb7823b4fc6678064ee3daea3ff97135eb6"
+    },
+    {
+      "path": "docs/capex-lrcx-component-inventory.json",
+      "sha256": "8fff6bd5b7a3ff34f37740bfa7c41b1d243b352544ed29927414cdf09460766b"
+    },
+    {
+      "path": "docs/capex-mrk-scope-inventory.json",
+      "sha256": "8dea2f59d0669b5ebc9b903d665e84c3e4882863d6828978a407ca7c9a618b63"
+    },
+    {
+      "path": "docs/capex-nvda-combined-inventory.json",
+      "sha256": "1c3a1bc978d255f197813b7cfe545f90f39c64a22715e5f3d062cbe49764ef5d"
+    },
+    {
+      "path": "docs/capex-pep-scope-inventory.json",
+      "sha256": "d2878122f7926db619d09857d29611acb8b7e882e9842402c0f510b5ce3e7c24"
+    },
+    {
+      "path": "docs/capex-qcom-scope-inventory.json",
+      "sha256": "854269d6f515189783aa8633997822e4a769e65ce8e7c8454da091ad5bd373a5"
+    },
+    {
+      "path": "docs/capex-scope-evidence-matrix.json",
+      "sha256": "0df4b74b235a349d4c25cdc01b26c2009e2c2fc22c9a8babfded69d68d52118a"
+    },
+    {
+      "path": "docs/capex-visa-scope-evidence-matrix.json",
+      "sha256": "1e5b5088942408e33d41b65d9108b333b163a6b41901abc20586f7f99ca94035"
+    },
+    {
+      "path": "docs/capex-visa-technology-inventory.json",
+      "sha256": "413eb52a20b87e7aa4343677a73e6e5fed0d13b2aeebbc024b6d3e7049f72316"
+    },
+    {
+      "path": "docs/capex-vz-scope-inventory.json",
+      "sha256": "c01775375a61d80b18e9752cf6213407277d58c796b470e153d0eb3be11de8bf"
+    },
+    {
+      "path": "docs/company-data-preparation/aapl-analyst-nwc-bundle.json",
+      "sha256": "85226f5213247abfc7aedf0ec11f0d99ff69c7f1a9746e4db7dd764e0d7f45c2"
+    },
+    {
+      "path": "docs/company-data-preparation/aapl-reported-cash-flow-bundle.json",
+      "sha256": "d185b995c566d6bfb3b165627283b5ab52edc8ead1e62332d3d9458d0667b747"
+    },
+    {
+      "path": "docs/company-data-preparation/googl-analyst-nwc-bundle.json",
+      "sha256": "a8a45520d79bdedbdeeae398c1ea16cbe3639e43fed4300998b109176e4aafdb"
+    },
+    {
+      "path": "docs/company-data-preparation/googl-reported-cash-flow-bundle.json",
+      "sha256": "97ca73213b6bb46dfdaec67f930d3abd0cfbd6d1a17e50047998c0b2764f509f"
+    },
+    {
+      "path": "docs/company-data-preparation/msft-analyst-nwc-bundles.json",
+      "sha256": "4242d8bd0ca6a5b1dac2d08f60b0cfb18bdc6466862d1c4185e7046922c906c1"
+    },
+    {
+      "path": "docs/company-data-preparation/msft-cash-interest-annotations.json",
+      "sha256": "5d01dfc0880fa38f7d421f7ee75fb7ed57e6b346f9984e2ec979d0a124d719bc"
+    },
+    {
+      "path": "docs/company-data-preparation/msft-reported-cash-flow-bundles.json",
+      "sha256": "c3c35e020066f0887d9d8fe493f975afe9e6f0ea4b1785d2f341691ebb49d993"
+    },
+    {
+      "path": "docs/depreciation-amortization-component-derivation-matrix.json",
+      "sha256": "44dea59ab50d762b96080e974c5e188490d318b8f349e678f25ae75cc3bbacc9"
+    },
+    {
+      "path": "docs/depreciation-amortization-inventory.json",
+      "sha256": "ad63ce09cdc3b1efeb04a3cde56f9afb4107e96789fc56b63b539835b34ad2a8"
+    },
+    {
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "sha256": "8b7dd48e6408fb84af1493acfba3136d4a7671fc8bb1147c339015da80990542"
+    },
+    {
+      "path": "docs/evidence/capex-binding-repair.json",
+      "sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580"
+    },
+    {
+      "path": "docs/evidence/cvx-capex-perimeter-response-bodies.json",
+      "sha256": "432a69e88ee82ba1f57060c2ce85968393d4774625d8e3659bcf55050a5fc271"
+    },
+    {
+      "path": "docs/evidence/ge-capex-response-bodies.json",
+      "sha256": "4d5cd985128ba50390500a69788b50e4c96e39c0dbaa7d4c5285b96c7b95f67e"
+    },
+    {
+      "path": "docs/evidence/gev-capex-response-bodies.json",
+      "sha256": "93289d6c3b514eb3d8dbd06e7c7f4fecad4742d3007e04bab31a5ec2538991de"
+    },
+    {
+      "path": "docs/evidence/googl-fy2024-instance-provenance-refresh.json",
+      "sha256": "1047e612f28d9da2e2974f687c61b858524b7ad168ebc0d8cc4c1118903e368b"
+    },
+    {
+      "path": "docs/evidence/hd-capex-response-bodies.json",
+      "sha256": "06e9158e4b8001345eb18da7e787da56739bd0a59f0f512470c1260e9b6bd96f"
+    },
+    {
+      "path": "docs/evidence/income-binding-repair.json",
+      "sha256": "c1e39fc5d7de48fa6a0560802fb6482ae4961b2e6749a2b970c11600054e4c7a"
+    },
+    {
+      "path": "docs/evidence/income-sweep-backlog-acquisition.json",
+      "sha256": "e21d6b322a72879f441ff49056aea22e47bd26ad1c05f5bb0c8c8bde2b83b9e6"
+    },
+    {
+      "path": "docs/evidence/lrcx-capex-response-bodies.json",
+      "sha256": "17b6b1524eeb365b8de42049ac59405ce9d8213fae9c4b5b5cb5f78f9de096bd"
+    },
+    {
+      "path": "docs/evidence/mrk-capex-response-bodies.json",
+      "sha256": "f9b2d0af262d0be1ddf97c3b6611aa8a8354020d7ea7e853fdf597575aa5c754"
+    },
+    {
+      "path": "docs/evidence/nvda-capex-response-bodies.json",
+      "sha256": "64ea48f91b7f4b5f545e638422f58d53c15e07a456ecb71b69b506beee08c591"
+    },
+    {
+      "path": "docs/evidence/pep-capex-response-bodies.json",
+      "sha256": "0a8ba0717d76259d98d64418800c75e3bfd58b759f4b32bfc323f13a0fd24a61"
+    },
+    {
+      "path": "docs/evidence/qcom-capex-response-bodies.json",
+      "sha256": "6932150578603cab184a877c6eb912957279c5eefae7afc0f242e8eaa21786f4"
+    },
+    {
+      "path": "docs/evidence/retained-income-instance-acquisition.json",
+      "sha256": "ddf6dc2b14ab74b0103235c6df291756e1dd9efeccc761792c0ec67ebfd5e4ee"
+    },
+    {
+      "path": "docs/evidence/selected-filing-identity-acquisition.json",
+      "sha256": "d1501453dac98f540064d1f689c4c37186f8e8a8b1d525e3344faeb5bbef49e7"
+    },
+    {
+      "path": "docs/evidence/visa-capex-response-bodies.json",
+      "sha256": "a5caf3cd81797f8ea61e38e8ab5a2bd3a53bf37c2e3db04cfb6bf7b294b2471c"
+    },
+    {
+      "path": "docs/evidence/vz-capex-response-bodies.json",
+      "sha256": "f61dcc8fe19dc97a8a63762ccd0db4c3cf54126657dd62a5d1a889ebd8710a2f"
+    },
+    {
+      "path": "docs/income-binding-repair-config.json",
+      "sha256": "d1b289a14c162e27a1d8b1ecdc9e3b0696734fb9a05195b0073e4221417570df"
+    },
+    {
+      "path": "docs/nvda-retained-income-ledger.json",
+      "sha256": "ab6a13277429497e3bc059e79c6726afc5b573f5fcd027efc1d9e018ec95f07a"
+    },
+    {
+      "path": "docs/phase1-blocker-disposition-review.json",
+      "sha256": "10e5073dcec79e1102c7e93f354357dfafab4dcb65844d9789acb79147180ffe"
+    },
+    {
+      "path": "docs/phase1-issuer-preparation-disposition.json",
+      "sha256": "a7ed84b4b41595dcf0386c2cc99ce0d67e8d045721b8050c291e566d96d3e6d4"
+    },
+    {
+      "path": "docs/phase1-preparation-evidence-bindings.json",
+      "sha256": "b0b6966a2fc3b8ec068f31fd98bbebb0478564c856700678c7118da722c30f5a"
+    },
+    {
+      "path": "docs/phase1-selected-filing-availability.json",
+      "sha256": "3544de8b7b3d5af4a970a9e11a92995491d265e924097195e7084470459561f7"
+    },
+    {
+      "path": "docs/phase1-selected-filing-identity-manifest.json",
+      "sha256": "bed57b00ed024de7e631a4cbe5f9c6ea638e5d6fef2b56264a8ac908115e7ba0"
+    },
+    {
+      "path": "docs/pilot-cash-investment-evidence.json",
+      "sha256": "b9c1da7534ed8fb02530d6d2b8f8bbce22cbc0bede6079ca1b34b3fce3b7996d"
+    },
+    {
+      "path": "docs/pilot-debt-lease-evidence.json",
+      "sha256": "aac330aeccc9c132fcaa3e30054edacb25419cb2a12f2647567111d062945aec"
+    },
+    {
+      "path": "docs/pilot-direct-income-evidence.json",
+      "sha256": "efd4618955e56e17bd3a9b0b44374b501236151adcdefc04a4e661834844b274"
+    },
+    {
+      "path": "docs/pilot-historical-input-mappings.json",
+      "sha256": "ff226429dd0ef9d9f2d11607827cb5993dd54efc2507fd093a584db359b3e53d"
+    },
+    {
+      "path": "docs/repaired-capex-ledger.json",
+      "sha256": "5cbdec3fbaf5f277ce91b749e031a3ad357dd601c01550d0b51d3eb485cf7288"
+    },
+    {
+      "path": "docs/repaired-income-ledger.json",
+      "sha256": "3dca01d1a29eeb702fcec394e1f9db5f31590928c7fa0ebec45abc851080c2d3"
+    },
+    {
+      "path": "docs/retained-capex-ledger.json",
+      "sha256": "1e97ce02977225c6a30692aa7a09680b4f718c39cfea69ae2f72562c69fa69f5"
+    },
+    {
+      "path": "docs/retained-cfo-ledger.json",
+      "sha256": "db4ef5b70d5808dcc3bb15516cf10bd7e5a8b5ce736035c3e840b05c56b83661"
+    },
+    {
+      "path": "docs/retained-income-batch-ledger.json",
+      "sha256": "b43d030c46086e422a0414a2e221c52f1aa616679d2088444627c9668c8ef47c"
+    },
+    {
+      "path": "docs/retained-income-sweep-ledger.json",
+      "sha256": "8ededa5fd7050076290f50a1da3805f7f5ebd8f1f2951c15a6b904e0e0dd0dfa"
+    },
+    {
+      "path": "docs/retained-income-sweep-sources.json",
+      "sha256": "65ee3933b695c77452df3775b80b99de882a33de69c0bed48ab2bea66480145d"
+    },
+    {
+      "path": "docs/retained-tax-sbc-ledger.json",
+      "sha256": "ee6a7bb7241b3b46a979d1d9fc402376b02726e4fdd1218129af3e74b180aeac"
+    },
+    {
+      "path": "docs/retained-working-capital-ledger.json",
+      "sha256": "ffae70c8162ef5d691644885881795bdc9b3876e445f0a1082e697aedf19692c"
+    },
+    {
+      "path": "docs/universe/phase-1h5-issuer-validation.json",
+      "sha256": "1d7b538fa757eef51ef1fcc9edeb42a9fef3cebdd8882a9caf7abd822b6ab089"
+    },
+    {
+      "path": "src/valuation_platform/normalization/capex_scope_registry.json",
+      "sha256": "34684ae93ed81bfb454ad43cf9ff3510c8dbc9714a09b11a27e547a36bdd5606"
+    },
+    {
+      "path": "src/valuation_platform/normalization/capex_scope_v2_registry.json",
+      "sha256": "f10baae15ed90097b1c06cd08e2f211c49c4cc87425f2b29cfbd3728bf88dc2d"
+    },
+    {
+      "path": "src/valuation_platform/normalization/capex_scope_v3_registry.json",
+      "sha256": "2bcabd2aa9f27db21b15d881bbe045ac634f1aab9cf277ed6b64070ecdc7d029"
+    },
+    {
+      "path": "src/valuation_platform/normalization/d_and_a_scope_registry.json",
+      "sha256": "d35c126744dbb079b59fadf87ddea73946e878619b87cb37b4ba580b7876e0cd"
+    },
+    {
+      "path": "tests/fixtures/capex_amzn_response_bodies.json",
+      "sha256": "7cd3c480d9afb1fca1f858d40a40389d7e7dab921518b191a9fb8c4f29db1650"
+    },
+    {
+      "path": "tests/fixtures/capex_index_responses.json",
+      "sha256": "f0d3355e8653e8b3b1720978b74a8087b902509f99d4a68adc5c06611b510e69"
+    },
+    {
+      "path": "tests/research/fixtures/MetaLinks.json",
+      "sha256": "f9370be10e0ece54df369a13fed3cf2dbc0469442973941b5bcfe878618dc05f"
+    }
+  ],
+  "receipt_document_sha256": "61b33786b9d42deaf16da8a7b6d2e4a18554c264c94ee61452eabfb05b4a0580",
+  "registry_sha256": "34684ae93ed81bfb454ad43cf9ff3510c8dbc9714a09b11a27e547a36bdd5606",
+  "renderer_only_change": "NOT_ESTABLISHED",
+  "requests": 0,
+  "review_authorization": "User-authorized independent refresh review; stop entries requiring different financial-policy/schema treatment.",
+  "review_scope": "Only fifteen already-retrieved LLY reports; existing financial approvals unchanged.",
+  "stopping_condition": "No operational integration: immutable v1 cannot serialize accepted refreshed digests; explicit provenance-contract design is needed, not more financial research.",
+  "unchanged_coverage_ledger_sha256": "5cbdec3fbaf5f277ce91b749e031a3ad357dd601c01550d0b51d3eb485cf7288",
+  "version": "lly-capex-report-refresh-review-v1"
+}

@@ -1,5 +1,34 @@
 # LLY — company data preparation
 
+## Authorized retained-report refresh review
+
+[Findings and stop condition](../lly-capex-refresh-review-results.md) /
+[exact old/new artifact and requirement matrix](../evidence/lly-capex-refresh-review-v1.json).
+Original conflict: fifteen current report bodies do not match immutable v1
+fingerprints. The bounded retained-source check found no original bodies;
+historical byte equivalence and renderer-only changes cannot be established.
+Fresh reports were independently reviewed, not accepted from equal values:
+current annual cash/PP&E caption and sign, consolidated accounting policy,
+physical PP&E note, acquisition/IPR&D separation, broader lease/software exclusions
+and no interest/incentive/noncash/proceeds adjustments support all five original
+financial decisions. Original instance/operand/date/context/USD/precision checks
+and seven other artifact requirements per entry also hold. Incentive/noncash
+allocations and complete capitalized-interest amounts remain unverified; 2025
+interest silence is not zero. 2023 IPR&D comparative reclassification is not a
+PP&E adjustment or later comparative substitution.
+
+Resolution: immutable additive review v1 retains all fifteen old/new pairs and
+actual receipt metadata. Five content reviews supported, no financial contradiction;
+**zero operational acceptances**. Existing verifier, resolver and output audit
+require historical digest/evidence identities exactly. Changing that provenance/
+schema treatment exceeds the explicit stop condition; no synthetic attestation,
+registry replacement, fallback or new policy was implemented. Five Capex gaps
+remain; all other inputs, partial bundles, frozen outputs and prior decisions are
+preserved. Review/provenance replay and conservative-rejection tests validate
+this disposition, not complete reinvestment/timing or financial sufficiency.
+Stop here: a separately authorized additive evidence-generation contract is the
+remaining implementation prerequisite, not more financial research or requests.
+
 ## Fixed original-artifact binding repair
 
 [Repair results](../capex-binding-repair-results.md) /

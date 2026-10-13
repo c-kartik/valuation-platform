@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## LLY report refresh disposition
+
+[Review](../lly-capex-refresh-review-results.md) /
+[versioned exact-artifact record](../evidence/lly-capex-refresh-review-v1.json):
+fifteen existing refreshed reports support five original financial-scope decisions;
+historical bodies remain unavailable, byte/renderer equivalence unestablished.
+No entries activated: v1 cannot truthfully carry replacement digests without a
+different provenance/schema treatment, so the explicit stop condition preserves
+five LLY gaps. Existing 160 populated / five gaps / 34 scope cases across 199
+periods remain unchanged, as do forty-plus-two mappings, history exceptions,
+classifications and NOT_ASSESSED sufficiency. Zero SEC requests. No issuer approval
+transfer or new financial scope; evidence review is separate from operational
+acceptance. Prior repair sections remain historical decisions.
+
 ## Fixed Capex artifact binding repair
 
 [Results](../capex-binding-repair-results.md) / [receipts](../evidence/capex-binding-repair.json)
