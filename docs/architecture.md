@@ -1,5 +1,18 @@
 # Architecture
 
+## Reusable retained reported CFO subtotal preparation
+
+`analyst/retained_cfo_preparation.py` reuses existing exact retained receipts,
+shared inspection and immutable annual/history models for the standard annual
+CFO root. Scope variants and dimensioned/comparative populations remain separate;
+no summation or CFO reconciliation is performed. Four pilot annuals are reused
+verbatim. Other annuals replace only their null CFO field, preserving all income
+inputs; excluded/empty histories remain explicit. The CFO serialization gate
+replays actual facts/scope/precision or exact reviewed pilot CFO. No schema,
+financial policy, issuer registry, network or valuation capability is introduced.
+See [scope and results](retained-cfo-results.md); all sixteen income exceptions
+remain unresolved review requirements independently of reported CFO availability.
+
 ## Fixed official binding repair adapter
 
 `analyst/repaired_income_preparation.py` adds only the authorized official

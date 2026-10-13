@@ -2,7 +2,25 @@
 
 ## Current Milestone
 
-Latest completed milestone: **fixed official income binding repair/replay**.
+Latest completed milestone: **retained-only reported CFO extraction**.
+[Coverage/limitations](retained-cfo-results.md) / [199-slot ledger](retained-cfo-ledger.json).
+42 non-specialized issuers / 199 frozen periods: **195 populated / zero conflicting
+/ four unavailable CFO slots**. Four original pilot CFO inputs/annuals reused
+verbatim; 191 new reported subtotals use the shared exact annual/CIK/USD/precision
+inspection. MRK 2021–2023 and LIN 2021 have only narrower continuing-operation
+scope, not eligible consolidated roots; no substitution or sum. Artifact backlog
+zero; no SEC requests. XOM empty, GEV/SNDK short histories and eleven target
+deficits stay explicit. All income 357 direct / 25 derived / eleven conflicts /
+five CVX EBIT gaps unchanged; sixteen unresolved income slots remain active review
+requirements, not abandoned/accepted. CFO is not FCFF/organic cash/book ΔNWC;
+no complete reconciliation or consumer sufficiency/timing claim. Frozen schemas,
+policies, corpus and original pilot serialization unchanged. Focused checks only,
+no full suite/corpus. **Stop after CFO.** Next bounded step is reported cash-flow
+working-capital movement rows, not aggregate or book ΔNWC, only when authorized.
+19 focused tests (eight CFO / eleven shared/pilot), final offline replay,
+compileall, 1,708 affected local links and diff/count/preservation checks pass.
+
+Previously completed milestone: **fixed official income binding repair/replay**.
 [Results](income-binding-repair-results.md) / [additive ledger](repaired-income-ledger.json).
 Twenty targets verify: ten JNJ/KLAC exact filing metadata bindings and ten seed
 annual identities/instances (nine documented candidates plus COST FY2026).

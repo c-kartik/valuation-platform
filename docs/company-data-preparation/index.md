@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## Reusable retained reported CFO preparation
+
+[CFO results](../retained-cfo-results.md) / [period/source ledger](../retained-cfo-ledger.json):
+all 42 non-specialized issuers / 199 periods account for 195 populated, zero
+conflicting and four unavailable consolidated CFO subtotals. MRK 2021–2023 and
+LIN 2021 narrower continuing-operation facts remain non-substitutable. Original
+four pilot CFO values/outputs are unchanged. Shared standard-concept/entity/
+annual-context inspection introduces no issuer registries, adjustments or full
+reconciliation claim. No acquisition backlog or SEC requests. Forty-cohort mapping,
+two supplemental seed records, short/empty histories and financial sufficiency
+NOT_ASSESSED remain. Every affected record links actual scope/results; all sixteen
+income gaps remain explicit unresolved review requirements. CFO alone clears none.
+Stop before any cash-flow movement or other field step without authorization.
+
 ## Fixed official binding repair — current income coverage
 
 [Repair/results](../income-binding-repair-results.md) independently verify ten

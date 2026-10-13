@@ -1,5 +1,27 @@
 # V — company data preparation
 
+## Retained reported CFO preparation
+
+[CFO results](../retained-cfo-results.md) /
+[exact period/source ledger](../retained-cfo-ledger.json): 5 frozen periods;
+5 populated, 0 conflicting, 0 unavailable CFO slots.
+The original requirement is a consolidated reported cash subtotal, not an
+adjusted cash-flow input or reconstructed book change in working capital.
+Shared exact standard-concept, accession, annual/context/entity/USD/precision
+inspection preserves occurrences, scope alternatives and excluded populations.
+Continuing/discontinued or dimensioned/component amounts are not summed or
+substituted; missing roots are explicit, never zero. Prior reviewed pilot CFO
+values/annuals are reused verbatim where applicable. New input assessment remains
+partial/limited, with no new full reconciliation, organic/FCFF, tax/lease scope,
+comparability or future-consumer approval. Source bindings and limitations stay
+in the ledger; all previous income values, derived proof and conflicts are
+unchanged. Sixteen income exceptions remain unresolved review requirements, not
+abandoned or silently accepted; CFO availability clears none. Frozen policy,
+output/support classification, short/empty history and financial blockers remain.
+No SEC requests or inferred periods; financial sufficiency NOT_ASSESSED. Focused
+source/value/scope, replay, serialization and preservation checks only.
+Stop after CFO; other field work requires its own bounded authorization.
+
 ## Fixed exact-instance acquisition and direct replay
 
 [Verified acquisition/results](../income-sweep-acquisition-results.md) /
