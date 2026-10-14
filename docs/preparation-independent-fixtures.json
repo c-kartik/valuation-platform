@@ -1,0 +1,3281 @@
+{
+  "fixtures": [
+    {
+      "accession": "0000320193-25-000079",
+      "annual_end": "2025-09-27",
+      "annual_start": "2024-09-29",
+      "as_of": null,
+      "cells": [
+        "Total net sales",
+        "416,161",
+        "",
+        "",
+        "391,035",
+        "",
+        "",
+        "383,285",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "September 27,2025",
+          "",
+          "September 28,2024",
+          "",
+          "September 30,2023"
+        ],
+        "row": 137
+      },
+      "concepts": [
+        "RevenueFromContractWithCustomerExcludingAssessedTax"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "416161000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "416161000000",
+      "field": "revenue",
+      "fixture_id": "AAPL:revenue:141",
+      "locator": "/artifacts/9",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Total net sales"
+      ],
+      "roles": [
+        "reported_revenue"
+      ],
+      "row": 141,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "ticker": "AAPL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000320193-25-000079",
+      "annual_end": "2025-09-27",
+      "annual_start": "2024-09-29",
+      "as_of": null,
+      "cells": [
+        "Operating income",
+        "133,050",
+        "",
+        "",
+        "123,216",
+        "",
+        "",
+        "114,301",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "September 27,2025",
+          "",
+          "September 28,2024",
+          "",
+          "September 30,2023"
+        ],
+        "row": 137
+      },
+      "concepts": [
+        "OperatingIncomeLoss"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "133050000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "133050000000",
+      "field": "ebit",
+      "fixture_id": "AAPL:ebit:154",
+      "locator": "/artifacts/9",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Operating income"
+      ],
+      "roles": [
+        "reported_operating_income"
+      ],
+      "row": 154,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "ticker": "AAPL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000320193-25-000079",
+      "annual_end": "2025-09-27",
+      "annual_start": "2024-09-29",
+      "as_of": null,
+      "cells": [
+        "Depreciation and amortization",
+        "11,698",
+        "",
+        "",
+        "11,445",
+        "",
+        "",
+        "11,519",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "September 27,2025",
+          "",
+          "September 28,2024",
+          "",
+          "September 30,2023"
+        ],
+        "row": 258
+      },
+      "concepts": [
+        "DepreciationDepletionAndAmortization"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "11698000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "11698000000",
+      "field": "depreciation_amortization",
+      "fixture_id": "AAPL:depreciation_amortization:264",
+      "locator": "/artifacts/9",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Depreciation and amortization"
+      ],
+      "roles": [
+        "approved_historical_policy_d_and_a",
+        "approved_direct_concept_observation_placement_not_reverified",
+        "combined_d_and_a_support_unapproved_except_exact_curated_entry",
+        "depreciation_component_expense_support",
+        "finite_lived_amortization_component_expense_support",
+        "mixed_d_and_a_accretion_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_cfo_d_and_a_other_support",
+        "mixed_cfo_d_and_a_other_support",
+        "finance_lease_amortization_separate_support",
+        "mixed_finance_lease_amortization_interest_support",
+        "operating_lease_amortization_separate_support",
+        "operating_lease_amortization_separate_support",
+        "amortization_adjustment_scope_unapproved",
+        "deferred_cost_amortization_scope_unapproved",
+        "financing_cost_amortization_not_operating_d_and_a",
+        "financing_cost_discount_amortization_not_operating_d_and_a",
+        "debt_discount_amortization_not_operating_d_and_a",
+        "contract_cost_amortization_scope_unapproved",
+        "acquired_intangible_amortization_component_support",
+        "restricted_nonacquired_d_and_a_support",
+        "other_d_and_a_scope_unapproved",
+        "cfo_reconciliation_addback"
+      ],
+      "row": 264,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "ticker": "AAPL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000320193-25-000079",
+      "annual_end": "2025-09-27",
+      "annual_start": "2024-09-29",
+      "as_of": null,
+      "cells": [
+        "Accounts receivable, net",
+        "(6,682)",
+        "",
+        "",
+        "(3,788)",
+        "",
+        "",
+        "(1,688)",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "September 27,2025",
+          "",
+          "September 28,2024",
+          "",
+          "September 30,2023"
+        ],
+        "row": 258
+      },
+      "concepts": [
+        "IncreaseDecreaseInAccountsReceivable"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-6682000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-6682000000",
+      "field": "reported_cash_flow_working_capital_movements",
+      "fixture_id": "AAPL:reported_cash_flow_working_capital_movements:268",
+      "locator": "/artifacts/9",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Accounts receivable, net"
+      ],
+      "roles": [
+        "reported_cash_flow_movement"
+      ],
+      "row": 268,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "ticker": "AAPL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000320193-25-000079",
+      "annual_end": "2025-09-27",
+      "annual_start": "2024-09-29",
+      "as_of": null,
+      "cells": [
+        "Payments for acquisition of property, plant and equipment",
+        "(12,715)",
+        "",
+        "",
+        "(9,447)",
+        "",
+        "",
+        "(10,959)",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "September 27,2025",
+          "",
+          "September 28,2024",
+          "",
+          "September 30,2023"
+        ],
+        "row": 258
+      },
+      "concepts": [
+        "PaymentsToAcquirePropertyPlantAndEquipment"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-12715000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-12715000000",
+      "field": "cash_capex",
+      "fixture_id": "AAPL:cash_capex:280",
+      "locator": "/artifacts/9",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Payments for acquisition of property, plant and equipment"
+      ],
+      "roles": [
+        "approved_reported_cash_capex_outflow",
+        "approved_reported_cash_capex_outflow_refreshed_evidence",
+        "cash_ppe_cash_payment",
+        "cash_ppe_purchase",
+        "reported_cash_ppe_purchase"
+      ],
+      "row": 280,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "ticker": "AAPL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000320193-25-000079",
+      "annual_end": "2025-09-27",
+      "annual_start": "2024-09-29",
+      "as_of": "2025-09-27",
+      "cells": [
+        "Cash and cash equivalents",
+        "$",
+        "35,934",
+        "",
+        "",
+        "$",
+        "29,943",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "September 27,2025",
+          "",
+          "September 28,2024"
+        ],
+        "row": 187
+      },
+      "concepts": [
+        "CashAndCashEquivalentsAtCarryingValue"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "35934000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "35934000000",
+      "field": "cash_investment_components",
+      "fixture_id": "AAPL:cash_investment_components:190",
+      "locator": "/artifacts/9",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Cash and cash equivalents"
+      ],
+      "roles": [
+        "cash_equivalents_carrying",
+        "cash_only",
+        "current_investments_scope_unreviewed",
+        "current_marketable_securities",
+        "noncurrent_marketable_securities",
+        "long_term_investments_mixed",
+        "other_long_term_investments",
+        "cash_current_investment_parent",
+        "cash_marketable_parent",
+        "cash_restricted_parent",
+        "restricted_cash_current",
+        "restricted_cash_noncurrent",
+        "restricted_cash_parent",
+        "equity_method_investments",
+        "measurement_alternative_equity",
+        "fair_value_equity_investments",
+        "available_for_sale_debt",
+        "held_to_maturity_investments"
+      ],
+      "row": 190,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "ticker": "AAPL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "value_cells": [
+        2
+      ]
+    },
+    {
+      "accession": "0000320193-25-000079",
+      "annual_end": "2025-09-27",
+      "annual_start": "2024-09-29",
+      "as_of": "2025-09-27",
+      "cells": [
+        "Term debt",
+        "12,350",
+        "",
+        "",
+        "10,912",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "September 27,2025",
+          "",
+          "September 28,2024"
+        ],
+        "row": 187
+      },
+      "concepts": [
+        "LongTermDebtCurrent"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "12350000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "12350000000",
+      "field": "debt_lease_components",
+      "fixture_id": "AAPL:debt_lease_components:211",
+      "locator": "/artifacts/9",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Term debt"
+      ],
+      "roles": [
+        "commercial_paper_borrowing",
+        "short_term_borrowing",
+        "current_short_term_borrowing",
+        "current_short_term_debt",
+        "current_long_term_debt",
+        "noncurrent_long_term_debt",
+        "long_term_debt_parent_basis_unreviewed",
+        "current_debt_parent",
+        "debt_legacy_lease_parent",
+        "long_term_debt_legacy_lease_parent",
+        "current_debt_legacy_lease_parent",
+        "noncurrent_debt_legacy_lease_parent",
+        "instrument_carrying_candidate",
+        "instrument_face_principal",
+        "debt_fair_value",
+        "next_year_principal_schedule",
+        "discounted_operating_lease_parent",
+        "discounted_operating_lease_current",
+        "discounted_operating_lease_noncurrent",
+        "discounted_finance_lease_parent",
+        "discounted_finance_lease_current",
+        "discounted_finance_lease_noncurrent",
+        "undiscounted_operating_lease_schedule",
+        "undiscounted_finance_lease_schedule"
+      ],
+      "row": 211,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "ticker": "AAPL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "as_of": null,
+      "cells": [
+        "Total revenue",
+        "",
+        "",
+        "331,839",
+        "",
+        "",
+        "",
+        "281,724",
+        "",
+        "",
+        "",
+        "245,122",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Year Ended June 30,",
+          "",
+          "2026",
+          "",
+          "",
+          "2025",
+          "",
+          "",
+          "2024",
+          ""
+        ],
+        "row": 335
+      },
+      "concepts": [
+        "RevenueFromContractWithCustomerExcludingAssessedTax"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "331839000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "331839000000",
+      "field": "revenue",
+      "fixture_id": "MSFT:revenue:342",
+      "locator": "/artifacts/20",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Total revenue"
+      ],
+      "roles": [
+        "reported_revenue"
+      ],
+      "row": 342,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "ticker": "MSFT",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "value_cells": [
+        3
+      ]
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "as_of": null,
+      "cells": [
+        "Operating income",
+        "",
+        "",
+        "155,237",
+        "",
+        "",
+        "",
+        "128,528",
+        "",
+        "",
+        "",
+        "109,433",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Year Ended June 30,",
+          "",
+          "2026",
+          "",
+          "",
+          "2025",
+          "",
+          "",
+          "2024",
+          ""
+        ],
+        "row": 335
+      },
+      "concepts": [
+        "OperatingIncomeLoss"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "155237000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "155237000000",
+      "field": "ebit",
+      "fixture_id": "MSFT:ebit:359",
+      "locator": "/artifacts/20",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Operating income"
+      ],
+      "roles": [
+        "reported_operating_income"
+      ],
+      "row": 359,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "ticker": "MSFT",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "value_cells": [
+        3
+      ]
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "as_of": null,
+      "cells": [
+        "Accounts receivable",
+        "",
+        "",
+        "(12,737",
+        ")",
+        "",
+        "",
+        "(10,581",
+        ")",
+        "",
+        "",
+        "(7,191",
+        ")"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Year Ended June 30,",
+          "",
+          "2026",
+          "",
+          "",
+          "2025",
+          "",
+          "",
+          "2024",
+          ""
+        ],
+        "row": 466
+      },
+      "concepts": [
+        "IncreaseDecreaseInAccountsReceivable"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-12737000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-12737000000",
+      "field": "reported_cash_flow_working_capital_movements",
+      "fixture_id": "MSFT:reported_cash_flow_working_capital_movements:476",
+      "locator": "/artifacts/20",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Accounts receivable"
+      ],
+      "roles": [
+        "reported_cash_flow_movement"
+      ],
+      "row": 476,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "ticker": "MSFT",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "value_cells": [
+        3,
+        4
+      ]
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "as_of": null,
+      "cells": [
+        "Additions to property and equipment",
+        "",
+        "",
+        "(115,948",
+        ")",
+        "",
+        "",
+        "(64,551",
+        ")",
+        "",
+        "",
+        "(44,477",
+        ")"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Year Ended June 30,",
+          "",
+          "2026",
+          "",
+          "",
+          "2025",
+          "",
+          "",
+          "2024",
+          ""
+        ],
+        "row": 466
+      },
+      "concepts": [
+        "PaymentsToAcquirePropertyPlantAndEquipment"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-115948000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-115948000000",
+      "field": "cash_capex",
+      "fixture_id": "MSFT:cash_capex:504",
+      "locator": "/artifacts/20",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Additions to property and equipment"
+      ],
+      "roles": [
+        "approved_reported_cash_capex_outflow",
+        "approved_reported_cash_capex_outflow_refreshed_evidence",
+        "cash_ppe_cash_payment",
+        "cash_ppe_purchase",
+        "reported_cash_ppe_purchase"
+      ],
+      "row": 504,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "ticker": "MSFT",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "value_cells": [
+        3,
+        4
+      ]
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "as_of": "2026-06-30",
+      "cells": [
+        "Cash and cash equivalents",
+        "",
+        "$",
+        "20,935",
+        "",
+        "",
+        "$",
+        "30,242",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "June 30,",
+          "",
+          "2026",
+          "",
+          "",
+          "2025",
+          ""
+        ],
+        "row": 402
+      },
+      "concepts": [
+        "CashAndCashEquivalentsAtCarryingValue"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "20935000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "20935000000",
+      "field": "cash_investment_components",
+      "fixture_id": "MSFT:cash_investment_components:406",
+      "locator": "/artifacts/20",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Cash and cash equivalents"
+      ],
+      "roles": [
+        "cash_equivalents_carrying",
+        "cash_only",
+        "current_investments_scope_unreviewed",
+        "current_marketable_securities",
+        "noncurrent_marketable_securities",
+        "long_term_investments_mixed",
+        "other_long_term_investments",
+        "cash_current_investment_parent",
+        "cash_marketable_parent",
+        "cash_restricted_parent",
+        "restricted_cash_current",
+        "restricted_cash_noncurrent",
+        "restricted_cash_parent",
+        "equity_method_investments",
+        "measurement_alternative_equity",
+        "fair_value_equity_investments",
+        "available_for_sale_debt",
+        "held_to_maturity_investments"
+      ],
+      "row": 406,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "ticker": "MSFT",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "value_cells": [
+        3
+      ]
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "as_of": "2026-06-30",
+      "cells": [
+        "Long-term debt",
+        "",
+        "",
+        "31,067",
+        "",
+        "",
+        "",
+        "40,152",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "June 30,",
+          "",
+          "2026",
+          "",
+          "",
+          "2025",
+          ""
+        ],
+        "row": 402
+      },
+      "concepts": [
+        "LongTermDebtNoncurrent"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "31067000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "31067000000",
+      "field": "debt_lease_components",
+      "fixture_id": "MSFT:debt_lease_components:439",
+      "locator": "/artifacts/20",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Long-term debt"
+      ],
+      "roles": [
+        "commercial_paper_borrowing",
+        "short_term_borrowing",
+        "current_short_term_borrowing",
+        "current_short_term_debt",
+        "current_long_term_debt",
+        "noncurrent_long_term_debt",
+        "long_term_debt_parent_basis_unreviewed",
+        "current_debt_parent",
+        "debt_legacy_lease_parent",
+        "long_term_debt_legacy_lease_parent",
+        "current_debt_legacy_lease_parent",
+        "noncurrent_debt_legacy_lease_parent",
+        "instrument_carrying_candidate",
+        "instrument_face_principal",
+        "debt_fair_value",
+        "next_year_principal_schedule",
+        "discounted_operating_lease_parent",
+        "discounted_operating_lease_current",
+        "discounted_operating_lease_noncurrent",
+        "discounted_finance_lease_parent",
+        "discounted_finance_lease_current",
+        "discounted_finance_lease_noncurrent",
+        "undiscounted_operating_lease_schedule",
+        "undiscounted_finance_lease_schedule"
+      ],
+      "row": 439,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "ticker": "MSFT",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "value_cells": [
+        3
+      ]
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Revenues",
+        "$",
+        "307,394",
+        "",
+        "",
+        "$",
+        "350,018",
+        "",
+        "",
+        "$",
+        "402,836",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "2023",
+          "",
+          "2024",
+          "",
+          "2025"
+        ],
+        "row": 363
+      },
+      "concepts": [
+        "Revenues"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "402836000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "402836000000",
+      "field": "revenue",
+      "fixture_id": "GOOGL:revenue:364",
+      "locator": "/artifacts/32",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Revenues"
+      ],
+      "roles": [
+        "reported_revenue"
+      ],
+      "row": 364,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "ticker": "GOOGL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "value_cells": [
+        10
+      ]
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Income from operations",
+        "84,293",
+        "",
+        "",
+        "112,390",
+        "",
+        "",
+        "129,039",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "2023",
+          "",
+          "2024",
+          "",
+          "2025"
+        ],
+        "row": 363
+      },
+      "concepts": [
+        "OperatingIncomeLoss"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "129039000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "129039000000",
+      "field": "ebit",
+      "fixture_id": "GOOGL:ebit:371",
+      "locator": "/artifacts/32",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Income from operations"
+      ],
+      "roles": [
+        "reported_operating_income"
+      ],
+      "row": 371,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "ticker": "GOOGL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "value_cells": [
+        7
+      ]
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Depreciation of property and equipment",
+        "11,946",
+        "",
+        "",
+        "15,311",
+        "",
+        "",
+        "21,136",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "2023",
+          "",
+          "2024",
+          "",
+          "2025"
+        ],
+        "row": 453
+      },
+      "concepts": [
+        "Depreciation"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "21136000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "21136000000",
+      "field": "depreciation_amortization",
+      "fixture_id": "GOOGL:depreciation_amortization:457",
+      "locator": "/artifacts/32",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Depreciation of property and equipment"
+      ],
+      "roles": [
+        "approved_historical_policy_d_and_a",
+        "approved_direct_concept_observation_placement_not_reverified",
+        "combined_d_and_a_support_unapproved_except_exact_curated_entry",
+        "depreciation_component_expense_support",
+        "finite_lived_amortization_component_expense_support",
+        "mixed_d_and_a_accretion_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_cfo_d_and_a_other_support",
+        "mixed_cfo_d_and_a_other_support",
+        "finance_lease_amortization_separate_support",
+        "mixed_finance_lease_amortization_interest_support",
+        "operating_lease_amortization_separate_support",
+        "operating_lease_amortization_separate_support",
+        "amortization_adjustment_scope_unapproved",
+        "deferred_cost_amortization_scope_unapproved",
+        "financing_cost_amortization_not_operating_d_and_a",
+        "financing_cost_discount_amortization_not_operating_d_and_a",
+        "debt_discount_amortization_not_operating_d_and_a",
+        "contract_cost_amortization_scope_unapproved",
+        "acquired_intangible_amortization_component_support",
+        "restricted_nonacquired_d_and_a_support",
+        "other_d_and_a_scope_unapproved",
+        "cfo_reconciliation_addback"
+      ],
+      "row": 457,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "ticker": "GOOGL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "value_cells": [
+        7
+      ]
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Accounts receivable, net",
+        "(7,833)",
+        "",
+        "",
+        "(5,891)",
+        "",
+        "",
+        "(8,779)",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "2023",
+          "",
+          "2024",
+          "",
+          "2025"
+        ],
+        "row": 453
+      },
+      "concepts": [
+        "IncreaseDecreaseInAccountsReceivable"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-8779000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-8779000000",
+      "field": "reported_cash_flow_working_capital_movements",
+      "fixture_id": "GOOGL:reported_cash_flow_working_capital_movements:463",
+      "locator": "/artifacts/32",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Accounts receivable, net"
+      ],
+      "roles": [
+        "reported_cash_flow_movement"
+      ],
+      "row": 463,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "ticker": "GOOGL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "value_cells": [
+        7
+      ]
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Purchases of property and equipment",
+        "(32,251)",
+        "",
+        "",
+        "(52,535)",
+        "",
+        "",
+        "(91,447)",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "2023",
+          "",
+          "2024",
+          "",
+          "2025"
+        ],
+        "row": 453
+      },
+      "concepts": [
+        "PaymentsToAcquirePropertyPlantAndEquipment"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-91447000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-91447000000",
+      "field": "cash_capex",
+      "fixture_id": "GOOGL:cash_capex:472",
+      "locator": "/artifacts/32",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Purchases of property and equipment"
+      ],
+      "roles": [
+        "approved_reported_cash_capex_outflow",
+        "approved_reported_cash_capex_outflow_refreshed_evidence",
+        "cash_ppe_cash_payment",
+        "cash_ppe_purchase",
+        "reported_cash_ppe_purchase"
+      ],
+      "row": 472,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "ticker": "GOOGL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "value_cells": [
+        7
+      ]
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": "2025-12-31",
+      "cells": [
+        "Cash and cash equivalents",
+        "$",
+        "23,466",
+        "",
+        "",
+        "$",
+        "30,708",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "2024",
+          "",
+          "2025"
+        ],
+        "row": 321
+      },
+      "concepts": [
+        "CashAndCashEquivalentsAtCarryingValue"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "30708000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "30708000000",
+      "field": "cash_investment_components",
+      "fixture_id": "GOOGL:cash_investment_components:324",
+      "locator": "/artifacts/32",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Cash and cash equivalents"
+      ],
+      "roles": [
+        "cash_equivalents_carrying",
+        "cash_only",
+        "current_investments_scope_unreviewed",
+        "current_marketable_securities",
+        "noncurrent_marketable_securities",
+        "long_term_investments_mixed",
+        "other_long_term_investments",
+        "cash_current_investment_parent",
+        "cash_marketable_parent",
+        "cash_restricted_parent",
+        "restricted_cash_current",
+        "restricted_cash_noncurrent",
+        "restricted_cash_parent",
+        "equity_method_investments",
+        "measurement_alternative_equity",
+        "fair_value_equity_investments",
+        "available_for_sale_debt",
+        "held_to_maturity_investments"
+      ],
+      "row": 324,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "ticker": "GOOGL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "value_cells": [
+        6
+      ]
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": "2025-12-31",
+      "cells": [
+        "Long-term debt",
+        "10,883",
+        "",
+        "",
+        "46,547",
+        ""
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "",
+          "2024",
+          "",
+          "2025"
+        ],
+        "row": 321
+      },
+      "concepts": [
+        "LongTermDebtNoncurrent"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "46547000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "46547000000",
+      "field": "debt_lease_components",
+      "fixture_id": "GOOGL:debt_lease_components:346",
+      "locator": "/artifacts/32",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "Long-term debt"
+      ],
+      "roles": [
+        "commercial_paper_borrowing",
+        "short_term_borrowing",
+        "current_short_term_borrowing",
+        "current_short_term_debt",
+        "current_long_term_debt",
+        "noncurrent_long_term_debt",
+        "long_term_debt_parent_basis_unreviewed",
+        "current_debt_parent",
+        "debt_legacy_lease_parent",
+        "long_term_debt_legacy_lease_parent",
+        "current_debt_legacy_lease_parent",
+        "noncurrent_debt_legacy_lease_parent",
+        "instrument_carrying_candidate",
+        "instrument_face_principal",
+        "debt_fair_value",
+        "next_year_principal_schedule",
+        "discounted_operating_lease_parent",
+        "discounted_operating_lease_current",
+        "discounted_operating_lease_noncurrent",
+        "discounted_finance_lease_parent",
+        "discounted_finance_lease_current",
+        "discounted_finance_lease_noncurrent",
+        "undiscounted_operating_lease_schedule",
+        "undiscounted_finance_lease_schedule"
+      ],
+      "row": 346,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "ticker": "GOOGL",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "value_cells": [
+        4
+      ]
+    },
+    {
+      "accession": "0001628280-26-019436",
+      "annual_end": "2026-02-01",
+      "annual_start": "2025-02-03",
+      "as_of": null,
+      "cells": [
+        "Net sales",
+        "$",
+        "164,683",
+        "",
+        "",
+        "$",
+        "159,514",
+        "",
+        "",
+        "$",
+        "152,669",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2026-02-01",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "RevenueFromContractWithCustomerExcludingAssessedTax"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "164683000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "164683000000",
+      "field": "revenue",
+      "fixture_id": "HD:revenue:356",
+      "locator": "/artifacts/57",
+      "match": "support_or_value",
+      "path": "docs/evidence/hd-capex-response-bodies.json",
+      "required_text": [
+        "Net sales"
+      ],
+      "roles": [
+        "reported_revenue"
+      ],
+      "row": 356,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "0bd4b991d55e03cfd109401cf8b9a55faebec02c1b33ededf6d4edef0168a808",
+      "ticker": "HD",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm",
+      "value_cells": [
+        2
+      ]
+    },
+    {
+      "accession": "0001628280-26-019436",
+      "annual_end": "2026-02-01",
+      "annual_start": "2025-02-03",
+      "as_of": null,
+      "cells": [
+        "Operating income",
+        "20,890",
+        "",
+        "",
+        "21,526",
+        "",
+        "",
+        "21,689",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2026-02-01",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "OperatingIncomeLoss"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "20890000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "20890000000",
+      "field": "ebit",
+      "fixture_id": "HD:ebit:364",
+      "locator": "/artifacts/57",
+      "match": "support_or_value",
+      "path": "docs/evidence/hd-capex-response-bodies.json",
+      "required_text": [
+        "Operating income"
+      ],
+      "roles": [
+        "reported_operating_income"
+      ],
+      "row": 364,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "0bd4b991d55e03cfd109401cf8b9a55faebec02c1b33ededf6d4edef0168a808",
+      "ticker": "HD",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001628280-26-019436",
+      "annual_end": "2026-02-01",
+      "annual_start": "2025-02-03",
+      "as_of": null,
+      "cells": [
+        "Depreciation and amortization, excluding amortization of intangible assets",
+        "3,514",
+        "",
+        "",
+        "3,336",
+        "",
+        "",
+        "3,061",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2026-02-01",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "DepreciationDepletionAndAmortization"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "3514000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "exclude_from_primitive": true,
+      "expected_value": "3514000000",
+      "field": "depreciation_amortization",
+      "fixture_id": "HD:depreciation_amortization:435",
+      "locator": "/artifacts/57",
+      "match": "support_or_value",
+      "path": "docs/evidence/hd-capex-response-bodies.json",
+      "required_text": [
+        "Depreciation and amortization, excluding amortization of intangible assets"
+      ],
+      "roles": [
+        "approved_historical_policy_d_and_a",
+        "approved_direct_concept_observation_placement_not_reverified",
+        "combined_d_and_a_support_unapproved_except_exact_curated_entry",
+        "depreciation_component_expense_support",
+        "finite_lived_amortization_component_expense_support",
+        "mixed_d_and_a_accretion_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_cfo_d_and_a_other_support",
+        "mixed_cfo_d_and_a_other_support",
+        "finance_lease_amortization_separate_support",
+        "mixed_finance_lease_amortization_interest_support",
+        "operating_lease_amortization_separate_support",
+        "operating_lease_amortization_separate_support",
+        "amortization_adjustment_scope_unapproved",
+        "deferred_cost_amortization_scope_unapproved",
+        "financing_cost_amortization_not_operating_d_and_a",
+        "financing_cost_discount_amortization_not_operating_d_and_a",
+        "debt_discount_amortization_not_operating_d_and_a",
+        "contract_cost_amortization_scope_unapproved",
+        "acquired_intangible_amortization_component_support",
+        "restricted_nonacquired_d_and_a_support",
+        "other_d_and_a_scope_unapproved",
+        "cfo_reconciliation_addback"
+      ],
+      "row": 435,
+      "scale": 1000000,
+      "scope_issue_type": "CONTRADICTED",
+      "scope_note": "Caption excludes intangible amortization; next row separately reports it. No replacement sum approved.",
+      "sha256": "0bd4b991d55e03cfd109401cf8b9a55faebec02c1b33ededf6d4edef0168a808",
+      "ticker": "HD",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001628280-26-019436",
+      "annual_end": "2026-02-01",
+      "annual_start": "2025-02-03",
+      "as_of": null,
+      "cells": [
+        "Changes in receivables, net",
+        "107",
+        "",
+        "",
+        "174",
+        "",
+        "",
+        "134",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2026-02-01",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "IncreaseDecreaseInReceivables"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "107000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "107000000",
+      "field": "reported_cash_flow_working_capital_movements",
+      "fixture_id": "HD:reported_cash_flow_working_capital_movements:439",
+      "locator": "/artifacts/57",
+      "match": "support_or_value",
+      "path": "docs/evidence/hd-capex-response-bodies.json",
+      "required_text": [
+        "Changes in receivables, net"
+      ],
+      "roles": [
+        "reported_cash_flow_movement"
+      ],
+      "row": 439,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "0bd4b991d55e03cfd109401cf8b9a55faebec02c1b33ededf6d4edef0168a808",
+      "ticker": "HD",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001628280-26-019436",
+      "annual_end": "2026-02-01",
+      "annual_start": "2025-02-03",
+      "as_of": null,
+      "cells": [
+        "Capital expenditures",
+        "(3,679)",
+        "",
+        "",
+        "(3,485)",
+        "",
+        "",
+        "(3,226)",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2026-02-01",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "PaymentsToAcquireProductiveAssets"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-3679000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-3679000000",
+      "field": "cash_capex",
+      "fixture_id": "HD:cash_capex:450",
+      "locator": "/artifacts/57",
+      "match": "required_null",
+      "path": "docs/evidence/hd-capex-response-bodies.json",
+      "required_text": [
+        "Capital expenditures"
+      ],
+      "roles": [
+        "approved_reported_cash_capex_outflow",
+        "approved_reported_cash_capex_outflow_refreshed_evidence",
+        "cash_ppe_cash_payment",
+        "cash_ppe_purchase",
+        "reported_cash_ppe_purchase"
+      ],
+      "row": 450,
+      "scale": 1000000,
+      "scope_note": "Broader purchase perimeter remains unapproved; no new fallback or equation.",
+      "sha256": "0bd4b991d55e03cfd109401cf8b9a55faebec02c1b33ededf6d4edef0168a808",
+      "ticker": "HD",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001628280-26-019436",
+      "annual_end": "2026-02-01",
+      "annual_start": "2025-02-03",
+      "as_of": "2026-02-01",
+      "cells": [
+        "Cash and cash equivalents",
+        "$",
+        "1,389",
+        "",
+        "",
+        "$",
+        "1,659",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2026-02-01",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "CashAndCashEquivalentsAtCarryingValue"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "1389000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "1389000000",
+      "field": "cash_investment_components",
+      "fixture_id": "HD:cash_investment_components:314",
+      "locator": "/artifacts/57",
+      "match": "support_or_value",
+      "path": "docs/evidence/hd-capex-response-bodies.json",
+      "required_text": [
+        "Cash and cash equivalents"
+      ],
+      "roles": [
+        "cash_equivalents_carrying",
+        "cash_only",
+        "current_investments_scope_unreviewed",
+        "current_marketable_securities",
+        "noncurrent_marketable_securities",
+        "long_term_investments_mixed",
+        "other_long_term_investments",
+        "cash_current_investment_parent",
+        "cash_marketable_parent",
+        "cash_restricted_parent",
+        "restricted_cash_current",
+        "restricted_cash_noncurrent",
+        "restricted_cash_parent",
+        "equity_method_investments",
+        "measurement_alternative_equity",
+        "fair_value_equity_investments",
+        "available_for_sale_debt",
+        "held_to_maturity_investments"
+      ],
+      "row": 314,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "0bd4b991d55e03cfd109401cf8b9a55faebec02c1b33ededf6d4edef0168a808",
+      "ticker": "HD",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm",
+      "value_cells": [
+        2
+      ]
+    },
+    {
+      "accession": "0001628280-26-019436",
+      "annual_end": "2026-02-01",
+      "annual_start": "2025-02-03",
+      "as_of": "2026-02-01",
+      "cells": [
+        "Long-term debt, excluding current installments",
+        "46,341",
+        "",
+        "",
+        "48,485",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2026-02-01",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "LongTermDebtAndCapitalLeaseObligations"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "46341000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "46341000000",
+      "field": "debt_lease_components",
+      "fixture_id": "HD:debt_lease_components:338",
+      "locator": "/artifacts/57",
+      "match": "support_or_value",
+      "path": "docs/evidence/hd-capex-response-bodies.json",
+      "required_text": [
+        "Long-term debt, excluding current installments"
+      ],
+      "roles": [
+        "commercial_paper_borrowing",
+        "short_term_borrowing",
+        "current_short_term_borrowing",
+        "current_short_term_debt",
+        "current_long_term_debt",
+        "noncurrent_long_term_debt",
+        "long_term_debt_parent_basis_unreviewed",
+        "current_debt_parent",
+        "debt_legacy_lease_parent",
+        "long_term_debt_legacy_lease_parent",
+        "current_debt_legacy_lease_parent",
+        "noncurrent_debt_legacy_lease_parent",
+        "instrument_carrying_candidate",
+        "instrument_face_principal",
+        "debt_fair_value",
+        "next_year_principal_schedule",
+        "discounted_operating_lease_parent",
+        "discounted_operating_lease_current",
+        "discounted_operating_lease_noncurrent",
+        "discounted_finance_lease_parent",
+        "discounted_finance_lease_current",
+        "discounted_finance_lease_noncurrent",
+        "undiscounted_operating_lease_schedule",
+        "undiscounted_finance_lease_schedule"
+      ],
+      "row": 338,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "0bd4b991d55e03cfd109401cf8b9a55faebec02c1b33ededf6d4edef0168a808",
+      "ticker": "HD",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000732712-26-000007",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Total Operating Revenues",
+        "138,191",
+        "",
+        "",
+        "134,788",
+        "",
+        "",
+        "133,974",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2025-12-31",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "Revenues"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "138191000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "138191000000",
+      "field": "revenue",
+      "fixture_id": "VZ:revenue:548",
+      "locator": "/artifacts/59",
+      "match": "support_or_value",
+      "path": "docs/evidence/vz-capex-response-bodies.json",
+      "required_text": [
+        "Total Operating Revenues"
+      ],
+      "roles": [
+        "reported_revenue"
+      ],
+      "row": 548,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7015f43b7d3d3ea6abcfb9cca0102d85ef31f12d3fd5fa4eade0f34a85ff1811",
+      "ticker": "VZ",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000732712-26-000007",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Operating Income",
+        "29,259",
+        "",
+        "",
+        "28,686",
+        "",
+        "",
+        "22,877",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2025-12-31",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "OperatingIncomeLoss"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "29259000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "29259000000",
+      "field": "ebit",
+      "fixture_id": "VZ:ebit:558",
+      "locator": "/artifacts/59",
+      "match": "support_or_value",
+      "path": "docs/evidence/vz-capex-response-bodies.json",
+      "required_text": [
+        "Operating Income"
+      ],
+      "roles": [
+        "reported_operating_income"
+      ],
+      "row": 558,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7015f43b7d3d3ea6abcfb9cca0102d85ef31f12d3fd5fa4eade0f34a85ff1811",
+      "ticker": "VZ",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000732712-26-000007",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": "2025-12-31",
+      "cells": [
+        "Cash and cash equivalents",
+        "$",
+        "19,048",
+        "",
+        "",
+        "$",
+        "4,194",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2025-12-31",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "CashAndCashEquivalentsAtCarryingValue"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "19048000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "19048000000",
+      "field": "cash_investment_components",
+      "fixture_id": "VZ:cash_investment_components:605",
+      "locator": "/artifacts/59",
+      "match": "support_or_value",
+      "path": "docs/evidence/vz-capex-response-bodies.json",
+      "required_text": [
+        "Cash and cash equivalents"
+      ],
+      "roles": [
+        "cash_equivalents_carrying",
+        "cash_only",
+        "current_investments_scope_unreviewed",
+        "current_marketable_securities",
+        "noncurrent_marketable_securities",
+        "long_term_investments_mixed",
+        "other_long_term_investments",
+        "cash_current_investment_parent",
+        "cash_marketable_parent",
+        "cash_restricted_parent",
+        "restricted_cash_current",
+        "restricted_cash_noncurrent",
+        "restricted_cash_parent",
+        "equity_method_investments",
+        "measurement_alternative_equity",
+        "fair_value_equity_investments",
+        "available_for_sale_debt",
+        "held_to_maturity_investments"
+      ],
+      "row": 605,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7015f43b7d3d3ea6abcfb9cca0102d85ef31f12d3fd5fa4eade0f34a85ff1811",
+      "ticker": "VZ",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
+      "value_cells": [
+        2
+      ]
+    },
+    {
+      "accession": "0000732712-26-000007",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": "2025-12-31",
+      "cells": [
+        "Long-term debt",
+        "139,532",
+        "",
+        "",
+        "121,381",
+        ""
+      ],
+      "column_period_evidence": {
+        "annual_end": "2025-12-31",
+        "basis": "Primary statement fiscal-year/date captions read in retained exact-accession body"
+      },
+      "concepts": [
+        "LongTermDebtAndCapitalLeaseObligations"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "139532000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "139532000000",
+      "field": "debt_lease_components",
+      "fixture_id": "VZ:debt_lease_components:635",
+      "locator": "/artifacts/59",
+      "match": "support_or_value",
+      "path": "docs/evidence/vz-capex-response-bodies.json",
+      "required_text": [
+        "Long-term debt"
+      ],
+      "roles": [
+        "commercial_paper_borrowing",
+        "short_term_borrowing",
+        "current_short_term_borrowing",
+        "current_short_term_debt",
+        "current_long_term_debt",
+        "noncurrent_long_term_debt",
+        "long_term_debt_parent_basis_unreviewed",
+        "current_debt_parent",
+        "debt_legacy_lease_parent",
+        "long_term_debt_legacy_lease_parent",
+        "current_debt_legacy_lease_parent",
+        "noncurrent_debt_legacy_lease_parent",
+        "instrument_carrying_candidate",
+        "instrument_face_principal",
+        "debt_fair_value",
+        "next_year_principal_schedule",
+        "discounted_operating_lease_parent",
+        "discounted_operating_lease_current",
+        "discounted_operating_lease_noncurrent",
+        "discounted_finance_lease_parent",
+        "discounted_finance_lease_current",
+        "discounted_finance_lease_noncurrent",
+        "undiscounted_operating_lease_schedule",
+        "undiscounted_finance_lease_schedule"
+      ],
+      "row": 635,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "7015f43b7d3d3ea6abcfb9cca0102d85ef31f12d3fd5fa4eade0f34a85ff1811",
+      "ticker": "VZ",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000059478-26-000013",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Depreciation and amortization",
+        "1,997",
+        "1,767",
+        "1,527"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "DepreciationDepletionAndAmortization"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "1997000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "1997000000",
+      "field": "depreciation_amortization",
+      "fixture_id": "LLY:depreciation_amortization:5",
+      "locator": "/artifacts/67",
+      "match": "support_or_value",
+      "path": "docs/evidence/capex-binding-repair.json",
+      "required_text": [
+        "Depreciation and amortization"
+      ],
+      "roles": [
+        "approved_historical_policy_d_and_a",
+        "approved_direct_concept_observation_placement_not_reverified",
+        "combined_d_and_a_support_unapproved_except_exact_curated_entry",
+        "depreciation_component_expense_support",
+        "finite_lived_amortization_component_expense_support",
+        "mixed_d_and_a_accretion_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_cfo_d_and_a_other_support",
+        "mixed_cfo_d_and_a_other_support",
+        "finance_lease_amortization_separate_support",
+        "mixed_finance_lease_amortization_interest_support",
+        "operating_lease_amortization_separate_support",
+        "operating_lease_amortization_separate_support",
+        "amortization_adjustment_scope_unapproved",
+        "deferred_cost_amortization_scope_unapproved",
+        "financing_cost_amortization_not_operating_d_and_a",
+        "financing_cost_discount_amortization_not_operating_d_and_a",
+        "debt_discount_amortization_not_operating_d_and_a",
+        "contract_cost_amortization_scope_unapproved",
+        "acquired_intangible_amortization_component_support",
+        "restricted_nonacquired_d_and_a_support",
+        "other_d_and_a_scope_unapproved",
+        "cfo_reconciliation_addback"
+      ],
+      "row": 5,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "174395945ff0a7d691e1bfde0edb02227d5c7bf739cb78657c79d14e16306c91",
+      "ticker": "LLY",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R9.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000059478-26-000013",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Receivables\u2014(increase) decrease",
+        "(7,000)",
+        "(2,155)",
+        "(2,451)"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "IncreaseDecreaseInAccountsAndOtherReceivables"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-7000000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-7000000000",
+      "field": "reported_cash_flow_working_capital_movements",
+      "fixture_id": "LLY:reported_cash_flow_working_capital_movements:12",
+      "locator": "/artifacts/67",
+      "match": "support_or_value",
+      "path": "docs/evidence/capex-binding-repair.json",
+      "required_text": [
+        "Receivables\u2014(increase) decrease"
+      ],
+      "roles": [
+        "reported_cash_flow_movement"
+      ],
+      "row": 12,
+      "scale": 1000000,
+      "scope_note": "Receivables cash-flow contribution; statement group is net of acquisitions and divestitures; not book delta NWC or complete movements.",
+      "sha256": "174395945ff0a7d691e1bfde0edb02227d5c7bf739cb78657c79d14e16306c91",
+      "ticker": "LLY",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R9.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000059478-26-000013",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Purchases of property and equipment",
+        "(7,841)",
+        "(5,058)",
+        "(3,448)"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "PaymentsToAcquireOtherPropertyPlantAndEquipment"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-7841000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-7841000000",
+      "field": "cash_capex",
+      "fixture_id": "LLY:cash_capex:18",
+      "locator": "/artifacts/67",
+      "match": "support_or_value",
+      "path": "docs/evidence/capex-binding-repair.json",
+      "required_text": [
+        "Purchases of property and equipment"
+      ],
+      "roles": [
+        "approved_reported_cash_capex_outflow",
+        "approved_reported_cash_capex_outflow_refreshed_evidence",
+        "cash_ppe_cash_payment",
+        "cash_ppe_purchase",
+        "reported_cash_ppe_purchase"
+      ],
+      "row": 18,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "174395945ff0a7d691e1bfde0edb02227d5c7bf739cb78657c79d14e16306c91",
+      "ticker": "LLY",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/R9.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000093410-26-000078",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Depreciation, depletion and amortization",
+        "20,132",
+        "17,282",
+        "17,326"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "DepreciationDepletionAndAmortization"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "20132000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "20132000000",
+      "field": "depreciation_amortization",
+      "fixture_id": "CVX:depreciation_amortization:5",
+      "locator": "/artifacts/29",
+      "match": "support_or_value",
+      "path": "docs/evidence/cvx-capex-perimeter-response-bodies.json",
+      "required_text": [
+        "Depreciation, depletion and amortization"
+      ],
+      "roles": [
+        "approved_historical_policy_d_and_a",
+        "approved_direct_concept_observation_placement_not_reverified",
+        "combined_d_and_a_support_unapproved_except_exact_curated_entry",
+        "depreciation_component_expense_support",
+        "finite_lived_amortization_component_expense_support",
+        "mixed_d_and_a_accretion_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_cfo_d_and_a_other_support",
+        "mixed_cfo_d_and_a_other_support",
+        "finance_lease_amortization_separate_support",
+        "mixed_finance_lease_amortization_interest_support",
+        "operating_lease_amortization_separate_support",
+        "operating_lease_amortization_separate_support",
+        "amortization_adjustment_scope_unapproved",
+        "deferred_cost_amortization_scope_unapproved",
+        "financing_cost_amortization_not_operating_d_and_a",
+        "financing_cost_discount_amortization_not_operating_d_and_a",
+        "debt_discount_amortization_not_operating_d_and_a",
+        "contract_cost_amortization_scope_unapproved",
+        "acquired_intangible_amortization_component_support",
+        "restricted_nonacquired_d_and_a_support",
+        "other_d_and_a_scope_unapproved",
+        "cfo_reconciliation_addback"
+      ],
+      "row": 5,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "45785f79d4672144264d55dbf3a046f9138b7753d2c171af1706b00147ec8e96",
+      "ticker": "CVX",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R7.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000093410-26-000078",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [],
+      "column_period_evidence": {
+        "description": "Supplemental cash-flow note table: Year ended December 31, 2025/2024/2023; first column 16,830; other capital-expenditure components distinct."
+      },
+      "concepts": [
+        "PaymentsToAcquireOilAndGasPropertyAndEquipment"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "16830000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-16830000000",
+      "field": "cash_capex",
+      "fixture_id": "CVX:cash_capex:20",
+      "locator": "/artifacts/31",
+      "match": "support_or_value",
+      "path": "docs/evidence/cvx-capex-perimeter-response-bodies.json",
+      "required_text": [
+        "Additions to properties, plant and equipment",
+        "16,830",
+        "Excludes non-cash movements",
+        "1,235"
+      ],
+      "roles": [
+        "approved_reported_cash_capex_outflow",
+        "approved_reported_cash_capex_outflow_refreshed_evidence",
+        "cash_ppe_cash_payment",
+        "cash_ppe_purchase",
+        "reported_cash_ppe_purchase"
+      ],
+      "row": null,
+      "scale": 1000000,
+      "scope_note": "Note identifies cash additions to PP&E separately from broader capital expenditures; excludes noncash movements. Existing exact reviewed approval only; no residual calculation.",
+      "sha256": "244fc7a0e6751eaa4bd6913763192b2dec010d69cc2249240ab0dabe1107201c",
+      "ticker": "CVX",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R12.htm",
+      "value_cells": []
+    },
+    {
+      "accession": "0000093410-26-000078",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": "2025-12-31",
+      "cells": [
+        "Cash, Cash Equivalents and Restricted Cash at December 31",
+        "$ 7,285",
+        "$ 8,262",
+        "$ 9,275"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "7285000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "7285000000",
+      "field": "cash_investment_components",
+      "fixture_id": "CVX:cash_investment_components:37",
+      "locator": "/artifacts/29",
+      "match": "support_or_value",
+      "path": "docs/evidence/cvx-capex-perimeter-response-bodies.json",
+      "required_text": [
+        "Cash, Cash Equivalents and Restricted Cash at December 31"
+      ],
+      "roles": [
+        "cash_equivalents_carrying",
+        "cash_only",
+        "current_investments_scope_unreviewed",
+        "current_marketable_securities",
+        "noncurrent_marketable_securities",
+        "long_term_investments_mixed",
+        "other_long_term_investments",
+        "cash_current_investment_parent",
+        "cash_marketable_parent",
+        "cash_restricted_parent",
+        "restricted_cash_current",
+        "restricted_cash_noncurrent",
+        "restricted_cash_parent",
+        "equity_method_investments",
+        "measurement_alternative_equity",
+        "fair_value_equity_investments",
+        "available_for_sale_debt",
+        "held_to_maturity_investments"
+      ],
+      "row": 37,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "45785f79d4672144264d55dbf3a046f9138b7753d2c171af1706b00147ec8e96",
+      "ticker": "CVX",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/R7.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001045810-26-000021",
+      "annual_end": "2026-01-25",
+      "annual_start": "2025-01-27",
+      "as_of": "2026-01-25",
+      "cells": [
+        "Cash and cash equivalents",
+        "$ 10,605",
+        "$ 8,589"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Current assets:",
+          "",
+          ""
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "CashAndCashEquivalentsAtCarryingValue"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "10605000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "10605000000",
+      "field": "cash_investment_components",
+      "fixture_id": "NVDA:cash_investment_components:2",
+      "locator": "/artifacts/38",
+      "match": "support_or_value",
+      "path": "docs/evidence/nvda-capex-response-bodies.json",
+      "required_text": [
+        "Cash and cash equivalents"
+      ],
+      "roles": [
+        "cash_equivalents_carrying",
+        "cash_only",
+        "current_investments_scope_unreviewed",
+        "current_marketable_securities",
+        "noncurrent_marketable_securities",
+        "long_term_investments_mixed",
+        "other_long_term_investments",
+        "cash_current_investment_parent",
+        "cash_marketable_parent",
+        "cash_restricted_parent",
+        "restricted_cash_current",
+        "restricted_cash_noncurrent",
+        "restricted_cash_parent",
+        "equity_method_investments",
+        "measurement_alternative_equity",
+        "fair_value_equity_investments",
+        "available_for_sale_debt",
+        "held_to_maturity_investments"
+      ],
+      "row": 2,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "3d15991cd9f9e75c7ad44f2fd47fb2a323027eb9357db3ea7da17867b55011b6",
+      "ticker": "NVDA",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R5.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001045810-26-000021",
+      "annual_end": "2026-01-25",
+      "annual_start": "2025-01-27",
+      "as_of": "2026-01-25",
+      "cells": [
+        "Long-term debt",
+        "7,469",
+        "8,463"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Current assets:",
+          "",
+          ""
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "LongTermDebtNoncurrent"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "7469000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "7469000000",
+      "field": "debt_lease_components",
+      "fixture_id": "NVDA:debt_lease_components:21",
+      "locator": "/artifacts/38",
+      "match": "support_or_value",
+      "path": "docs/evidence/nvda-capex-response-bodies.json",
+      "required_text": [
+        "Long-term debt"
+      ],
+      "roles": [
+        "commercial_paper_borrowing",
+        "short_term_borrowing",
+        "current_short_term_borrowing",
+        "current_short_term_debt",
+        "current_long_term_debt",
+        "noncurrent_long_term_debt",
+        "long_term_debt_parent_basis_unreviewed",
+        "current_debt_parent",
+        "debt_legacy_lease_parent",
+        "long_term_debt_legacy_lease_parent",
+        "current_debt_legacy_lease_parent",
+        "noncurrent_debt_legacy_lease_parent",
+        "instrument_carrying_candidate",
+        "instrument_face_principal",
+        "debt_fair_value",
+        "next_year_principal_schedule",
+        "discounted_operating_lease_parent",
+        "discounted_operating_lease_current",
+        "discounted_operating_lease_noncurrent",
+        "discounted_finance_lease_parent",
+        "discounted_finance_lease_current",
+        "discounted_finance_lease_noncurrent",
+        "undiscounted_operating_lease_schedule",
+        "undiscounted_finance_lease_schedule"
+      ],
+      "row": 21,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "3d15991cd9f9e75c7ad44f2fd47fb2a323027eb9357db3ea7da17867b55011b6",
+      "ticker": "NVDA",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R5.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001018724-26-000004",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+        "65,756",
+        "52,795",
+        "48,663"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "DepreciationDepletionAndAmortization"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "65756000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "exclude_from_primitive": true,
+      "expected_value": "65756000000",
+      "field": "depreciation_amortization",
+      "fixture_id": "AMZN:depreciation_amortization:7",
+      "locator": "/artifacts/12",
+      "match": "support_or_value",
+      "path": "tests/fixtures/capex_amzn_response_bodies.json",
+      "required_text": [
+        "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other"
+      ],
+      "roles": [
+        "approved_historical_policy_d_and_a",
+        "approved_direct_concept_observation_placement_not_reverified",
+        "combined_d_and_a_support_unapproved_except_exact_curated_entry",
+        "depreciation_component_expense_support",
+        "finite_lived_amortization_component_expense_support",
+        "mixed_d_and_a_accretion_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_cfo_d_and_a_other_support",
+        "mixed_cfo_d_and_a_other_support",
+        "finance_lease_amortization_separate_support",
+        "mixed_finance_lease_amortization_interest_support",
+        "operating_lease_amortization_separate_support",
+        "operating_lease_amortization_separate_support",
+        "amortization_adjustment_scope_unapproved",
+        "deferred_cost_amortization_scope_unapproved",
+        "financing_cost_amortization_not_operating_d_and_a",
+        "financing_cost_discount_amortization_not_operating_d_and_a",
+        "debt_discount_amortization_not_operating_d_and_a",
+        "contract_cost_amortization_scope_unapproved",
+        "acquired_intangible_amortization_component_support",
+        "restricted_nonacquired_d_and_a_support",
+        "other_d_and_a_scope_unapproved",
+        "cfo_reconciliation_addback"
+      ],
+      "row": 7,
+      "scale": 1000000,
+      "scope_issue_type": "NOT_ESTABLISHED",
+      "scope_note": "Combined CFO caption includes content costs, operating-lease assets and other; expense/scope equivalence is unproved, not demonstrated economic incompatibility.",
+      "sha256": "98afcca778787e6f8e2c088cf7c951549be730eb4081e2e1fcaed75490697133",
+      "ticker": "AMZN",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/R3.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001018724-26-000004",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Inventories",
+        "(3,002)",
+        "(1,884)",
+        "1,449"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "IncreaseDecreaseInInventories"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-3002000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-3002000000",
+      "field": "reported_cash_flow_working_capital_movements",
+      "fixture_id": "AMZN:reported_cash_flow_working_capital_movements:12",
+      "locator": "/artifacts/12",
+      "match": "support_or_value",
+      "path": "tests/fixtures/capex_amzn_response_bodies.json",
+      "required_text": [
+        "Inventories"
+      ],
+      "roles": [
+        "reported_cash_flow_movement"
+      ],
+      "row": 12,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "98afcca778787e6f8e2c088cf7c951549be730eb4081e2e1fcaed75490697133",
+      "ticker": "AMZN",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/R3.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001018724-26-000004",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Purchases of property and equipment",
+        "(131,819)",
+        "(82,999)",
+        "(52,729)"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "PaymentsToAcquireProductiveAssets"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-131819000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-131819000000",
+      "field": "cash_capex",
+      "fixture_id": "AMZN:cash_capex:20",
+      "locator": "/artifacts/12",
+      "match": "support_or_value",
+      "path": "tests/fixtures/capex_amzn_response_bodies.json",
+      "required_text": [
+        "Purchases of property and equipment"
+      ],
+      "roles": [
+        "approved_reported_cash_capex_outflow",
+        "approved_reported_cash_capex_outflow_refreshed_evidence",
+        "cash_ppe_cash_payment",
+        "cash_ppe_purchase",
+        "reported_cash_ppe_purchase"
+      ],
+      "row": 20,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "98afcca778787e6f8e2c088cf7c951549be730eb4081e2e1fcaed75490697133",
+      "ticker": "AMZN",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/R3.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001018724-26-000004",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": "2025-12-31",
+      "cells": [
+        "CASH, CASH EQUIVALENTS, AND RESTRICTED CASH, END OF PERIOD",
+        "$ 90,106",
+        "$ 82,312",
+        "$ 73,890"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "90106000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "90106000000",
+      "field": "cash_investment_components",
+      "fixture_id": "AMZN:cash_investment_components:36",
+      "locator": "/artifacts/12",
+      "match": "support_or_value",
+      "path": "tests/fixtures/capex_amzn_response_bodies.json",
+      "required_text": [
+        "CASH, CASH EQUIVALENTS, AND RESTRICTED CASH, END OF PERIOD"
+      ],
+      "roles": [
+        "cash_equivalents_carrying",
+        "cash_only",
+        "current_investments_scope_unreviewed",
+        "current_marketable_securities",
+        "noncurrent_marketable_securities",
+        "long_term_investments_mixed",
+        "other_long_term_investments",
+        "cash_current_investment_parent",
+        "cash_marketable_parent",
+        "cash_restricted_parent",
+        "restricted_cash_current",
+        "restricted_cash_noncurrent",
+        "restricted_cash_parent",
+        "equity_method_investments",
+        "measurement_alternative_equity",
+        "fair_value_equity_investments",
+        "available_for_sale_debt",
+        "held_to_maturity_investments"
+      ],
+      "row": 36,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "98afcca778787e6f8e2c088cf7c951549be730eb4081e2e1fcaed75490697133",
+      "ticker": "AMZN",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/R3.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000732712-26-000007",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Depreciation and amortization expense",
+        "18,349",
+        "17,892",
+        "17,624"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "DepreciationAndAmortization"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "18349000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "18349000000",
+      "field": "depreciation_amortization",
+      "fixture_id": "VZ:depreciation_amortization:5",
+      "locator": "/artifacts/49",
+      "match": "support_or_value",
+      "path": "docs/evidence/vz-capex-response-bodies.json",
+      "required_text": [
+        "Depreciation and amortization expense"
+      ],
+      "roles": [
+        "approved_historical_policy_d_and_a",
+        "approved_direct_concept_observation_placement_not_reverified",
+        "combined_d_and_a_support_unapproved_except_exact_curated_entry",
+        "depreciation_component_expense_support",
+        "finite_lived_amortization_component_expense_support",
+        "mixed_d_and_a_accretion_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_cfo_d_and_a_other_support",
+        "mixed_cfo_d_and_a_other_support",
+        "finance_lease_amortization_separate_support",
+        "mixed_finance_lease_amortization_interest_support",
+        "operating_lease_amortization_separate_support",
+        "operating_lease_amortization_separate_support",
+        "amortization_adjustment_scope_unapproved",
+        "deferred_cost_amortization_scope_unapproved",
+        "financing_cost_amortization_not_operating_d_and_a",
+        "financing_cost_discount_amortization_not_operating_d_and_a",
+        "debt_discount_amortization_not_operating_d_and_a",
+        "contract_cost_amortization_scope_unapproved",
+        "acquired_intangible_amortization_component_support",
+        "restricted_nonacquired_d_and_a_support",
+        "other_d_and_a_scope_unapproved",
+        "cfo_reconciliation_addback"
+      ],
+      "row": 5,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "c376da06345e4c8be6583cb126318e794c42421447418cfe6b14692d09a967cf",
+      "ticker": "VZ",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/R8.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000732712-26-000007",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Accounts receivable",
+        "(2,513)",
+        "(2,565)",
+        "(2,198)"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "IncreaseDecreaseInAccountsReceivable"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-2513000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-2513000000",
+      "field": "reported_cash_flow_working_capital_movements",
+      "fixture_id": "VZ:reported_cash_flow_working_capital_movements:12",
+      "locator": "/artifacts/49",
+      "match": "support_or_value",
+      "path": "docs/evidence/vz-capex-response-bodies.json",
+      "required_text": [
+        "Accounts receivable"
+      ],
+      "roles": [
+        "reported_cash_flow_movement"
+      ],
+      "row": 12,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "c376da06345e4c8be6583cb126318e794c42421447418cfe6b14692d09a967cf",
+      "ticker": "VZ",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/R8.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000732712-26-000007",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": null,
+      "cells": [
+        "Capital expenditures (including capitalized software)",
+        "(17,011)",
+        "(17,090)",
+        "(18,767)"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Dec. 31, 2025",
+          "Dec. 31, 2024",
+          "Dec. 31, 2023"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "PaymentsToAcquireOtherProductiveAssets"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-17011000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-17011000000",
+      "field": "cash_capex",
+      "fixture_id": "VZ:cash_capex:19",
+      "locator": "/artifacts/49",
+      "match": "required_null",
+      "path": "docs/evidence/vz-capex-response-bodies.json",
+      "required_text": [
+        "Capital expenditures (including capitalized software)"
+      ],
+      "roles": [
+        "approved_reported_cash_capex_outflow",
+        "approved_reported_cash_capex_outflow_refreshed_evidence",
+        "cash_ppe_cash_payment",
+        "cash_ppe_purchase",
+        "reported_cash_ppe_purchase"
+      ],
+      "row": 19,
+      "scale": 1000000,
+      "scope_note": "Broader purchase perimeter remains unapproved; no new fallback or equation.",
+      "sha256": "c376da06345e4c8be6583cb126318e794c42421447418cfe6b14692d09a967cf",
+      "ticker": "VZ",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/R8.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001045810-26-000021",
+      "annual_end": "2026-01-25",
+      "annual_start": "2025-01-27",
+      "as_of": null,
+      "cells": [
+        "Depreciation and amortization",
+        "2,843",
+        "1,864",
+        "1,508"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Jan. 25, 2026",
+          "Jan. 26, 2025",
+          "Jan. 28, 2024"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "DepreciationDepletionAndAmortization"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "2843000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "2843000000",
+      "field": "depreciation_amortization",
+      "fixture_id": "NVDA:depreciation_amortization:6",
+      "locator": "/artifacts/40",
+      "match": "support_or_value",
+      "path": "docs/evidence/nvda-capex-response-bodies.json",
+      "required_text": [
+        "Depreciation and amortization"
+      ],
+      "roles": [
+        "approved_historical_policy_d_and_a",
+        "approved_direct_concept_observation_placement_not_reverified",
+        "combined_d_and_a_support_unapproved_except_exact_curated_entry",
+        "depreciation_component_expense_support",
+        "finite_lived_amortization_component_expense_support",
+        "mixed_d_and_a_accretion_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_d_and_a_impairment_support",
+        "mixed_cfo_d_and_a_other_support",
+        "mixed_cfo_d_and_a_other_support",
+        "finance_lease_amortization_separate_support",
+        "mixed_finance_lease_amortization_interest_support",
+        "operating_lease_amortization_separate_support",
+        "operating_lease_amortization_separate_support",
+        "amortization_adjustment_scope_unapproved",
+        "deferred_cost_amortization_scope_unapproved",
+        "financing_cost_amortization_not_operating_d_and_a",
+        "financing_cost_discount_amortization_not_operating_d_and_a",
+        "debt_discount_amortization_not_operating_d_and_a",
+        "contract_cost_amortization_scope_unapproved",
+        "acquired_intangible_amortization_component_support",
+        "restricted_nonacquired_d_and_a_support",
+        "other_d_and_a_scope_unapproved",
+        "cfo_reconciliation_addback"
+      ],
+      "row": 6,
+      "scale": 1000000,
+      "scope_note": "Reported sample only; no complete-field, non-overlap, timing or valuation certification.",
+      "sha256": "32e9019bba9810c4d00a9babb4d0645a30bf52d3bc0094fd81d1164d4d8294a0",
+      "ticker": "NVDA",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R9.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001045810-26-000021",
+      "annual_end": "2026-01-25",
+      "annual_start": "2025-01-27",
+      "as_of": null,
+      "cells": [
+        "Accounts receivable",
+        "(15,399)",
+        "(13,063)",
+        "(6,172)"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Jan. 25, 2026",
+          "Jan. 26, 2025",
+          "Jan. 28, 2024"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "IncreaseDecreaseInAccountsReceivable"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-15399000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-15399000000",
+      "field": "reported_cash_flow_working_capital_movements",
+      "fixture_id": "NVDA:reported_cash_flow_working_capital_movements:11",
+      "locator": "/artifacts/40",
+      "match": "support_or_value",
+      "path": "docs/evidence/nvda-capex-response-bodies.json",
+      "required_text": [
+        "Accounts receivable"
+      ],
+      "roles": [
+        "reported_cash_flow_movement"
+      ],
+      "row": 11,
+      "scale": 1000000,
+      "scope_note": "Receivables cash-flow contribution; statement group is net of acquisitions; not book delta NWC or complete movements.",
+      "sha256": "32e9019bba9810c4d00a9babb4d0645a30bf52d3bc0094fd81d1164d4d8294a0",
+      "ticker": "NVDA",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R9.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0001045810-26-000021",
+      "annual_end": "2026-01-25",
+      "annual_start": "2025-01-27",
+      "as_of": null,
+      "cells": [
+        "Purchases related to property and equipment and intangible assets",
+        "(6,042)",
+        "(3,236)",
+        "(1,069)"
+      ],
+      "column_period_evidence": {
+        "cells": [
+          "Jan. 25, 2026",
+          "Jan. 26, 2025",
+          "Jan. 28, 2024"
+        ],
+        "row": 1
+      },
+      "concepts": [
+        "PaymentsToAcquireProductiveAssets"
+      ],
+      "dimensions": [],
+      "display_precision": "USD millions; no independent XBRL-decimals attestation",
+      "displayed_value": "-6042000000",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "-6042000000",
+      "field": "cash_capex",
+      "fixture_id": "NVDA:cash_capex:25",
+      "locator": "/artifacts/40",
+      "match": "required_null",
+      "path": "docs/evidence/nvda-capex-response-bodies.json",
+      "required_text": [
+        "Purchases related to property and equipment and intangible assets"
+      ],
+      "roles": [
+        "approved_reported_cash_capex_outflow",
+        "approved_reported_cash_capex_outflow_refreshed_evidence",
+        "cash_ppe_cash_payment",
+        "cash_ppe_purchase",
+        "reported_cash_ppe_purchase"
+      ],
+      "row": 25,
+      "scale": 1000000,
+      "scope_note": "Broader purchase perimeter remains unapproved; no new fallback or equation.",
+      "sha256": "32e9019bba9810c4d00a9babb4d0645a30bf52d3bc0094fd81d1164d4d8294a0",
+      "ticker": "NVDA",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R9.htm",
+      "value_cells": [
+        1
+      ]
+    },
+    {
+      "accession": "0000320193-25-000079",
+      "annual_end": "2025-09-27",
+      "annual_start": "2024-09-29",
+      "as_of": "2025-10-17",
+      "cells": null,
+      "concepts": [
+        "EntityCommonStockSharesOutstanding"
+      ],
+      "dimensions": [],
+      "display_precision": "Literal cover count; GOOGL rounded millions; no class sum",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "14776353000",
+      "field": "point_in_time_shares",
+      "fixture_id": "AAPL:dated_cover_shares",
+      "locator": "/artifacts/9",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "14,776,353,000 shares of common stock were issued and outstanding as of October 17, 2025.",
+        "2025"
+      ],
+      "roles": [
+        "reported_point_in_time_common_shares"
+      ],
+      "row": null,
+      "scope_note": "Disclosed dated common-share population, not diluted/weighted-average shares or class-equivalent issuer total.",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "ticker": "AAPL",
+      "unit": "shares",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "as_of": "2026-07-23",
+      "cells": null,
+      "concepts": [
+        "EntityCommonStockSharesOutstanding"
+      ],
+      "dimensions": [],
+      "display_precision": "Literal cover count; GOOGL rounded millions; no class sum",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "7425545491",
+      "field": "point_in_time_shares",
+      "fixture_id": "MSFT:dated_cover_shares",
+      "locator": "/artifacts/20",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "As of July 23, 2026, there were 7,425,545,491 shares of common stock outstanding.",
+        "2026"
+      ],
+      "roles": [
+        "reported_point_in_time_common_shares"
+      ],
+      "row": null,
+      "scope_note": "Disclosed dated common-share population, not diluted/weighted-average shares or class-equivalent issuer total.",
+      "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "ticker": "MSFT",
+      "unit": "shares",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": "2026-01-28",
+      "cells": null,
+      "class_member": "CapitalClassCMember",
+      "concepts": [
+        "EntityCommonStockSharesOutstanding"
+      ],
+      "dimensions": null,
+      "display_precision": "Literal cover count; GOOGL rounded millions; no class sum",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "5438000000",
+      "field": "point_in_time_shares",
+      "fixture_id": "GOOGL:dated_cover_shares",
+      "locator": "/artifacts/32",
+      "match": "support_or_value",
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "5,438 million shares of the Alphabet\u2019s Class C stock outstanding.",
+        "2026"
+      ],
+      "roles": [
+        "reported_point_in_time_common_shares"
+      ],
+      "row": null,
+      "scope_note": "Disclosed dated common-share population, not diluted/weighted-average shares or class-equivalent issuer total.",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "ticker": "GOOGL",
+      "unit": "shares",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+    },
+    {
+      "accession": "0001628280-26-019436",
+      "annual_end": "2026-02-01",
+      "annual_start": "2025-02-03",
+      "as_of": "2026-03-04",
+      "cells": null,
+      "concepts": [
+        "EntityCommonStockSharesOutstanding"
+      ],
+      "dimensions": [],
+      "display_precision": "Literal cover count; GOOGL rounded millions; no class sum",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "996011466",
+      "field": "point_in_time_shares",
+      "fixture_id": "HD:dated_cover_shares",
+      "locator": "/artifacts/57",
+      "match": "support_or_value",
+      "path": "docs/evidence/hd-capex-response-bodies.json",
+      "required_text": [
+        "common stock as of March 4, 2026 was 996,011,466 shares.",
+        "2026"
+      ],
+      "roles": [
+        "reported_point_in_time_common_shares"
+      ],
+      "row": null,
+      "scope_note": "Disclosed dated common-share population, not diluted/weighted-average shares or class-equivalent issuer total.",
+      "sha256": "0bd4b991d55e03cfd109401cf8b9a55faebec02c1b33ededf6d4edef0168a808",
+      "ticker": "HD",
+      "unit": "shares",
+      "url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm"
+    },
+    {
+      "accession": "0000732712-26-000007",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "as_of": "2026-01-30",
+      "cells": null,
+      "concepts": [
+        "EntityCommonStockSharesOutstanding"
+      ],
+      "dimensions": [],
+      "display_precision": "Literal cover count; GOOGL rounded millions; no class sum",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "4217684168",
+      "field": "point_in_time_shares",
+      "fixture_id": "VZ:dated_cover_shares",
+      "locator": "/artifacts/59",
+      "match": "support_or_value",
+      "path": "docs/evidence/vz-capex-response-bodies.json",
+      "required_text": [
+        "At January 30, 2026, 4,217,684,168 shares of the registrant\u2019s common stock were outstanding",
+        "2026"
+      ],
+      "roles": [
+        "reported_point_in_time_common_shares"
+      ],
+      "row": null,
+      "scope_note": "Disclosed dated common-share population, not diluted/weighted-average shares or class-equivalent issuer total.",
+      "sha256": "7015f43b7d3d3ea6abcfb9cca0102d85ef31f12d3fd5fa4eade0f34a85ff1811",
+      "ticker": "VZ",
+      "unit": "shares",
+      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm"
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "as_of": null,
+      "cells": null,
+      "concepts": [
+        "Depreciation",
+        "AmortizationOfIntangibleAssets"
+      ],
+      "dimensions": [],
+      "display_precision": "Rounded 0.1bn note operands; existing proof gates retained",
+      "evidence_kind": "rendered_statement_or_note",
+      "expected_value": "39000000000",
+      "field": "depreciation_amortization",
+      "fixture_id": "MSFT:existing_da_note_operand_pair",
+      "locator": "/artifacts/20",
+      "match": "support_or_value",
+      "operand_values": [
+        "34300000000",
+        "4700000000"
+      ],
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "required_text": [
+        "During fiscal years 2026, 2025, and 2024, depreciation expense was $ 34.3 billion, $ 22.0 billion, and $ 15.2 billion, respectively.",
+        "Intangible assets amortization expense was $ 4.7 billion, $ 6.0 billion, and $ 4.8 billion for fiscal years 2026, 2025, and 2024, respectively."
+      ],
+      "roles": [
+        "existing_approved_msft_d_and_a_derivation"
+      ],
+      "row": null,
+      "scope_note": "Existing approved equation only; no timing or FCFF certification.",
+      "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+      "ticker": "MSFT",
+      "unit": "USD",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+    }
+  ],
+  "review_basis": "Literal retained cells/cover/notes independently inspected before current assembly; not output-seeded expectations",
+  "schema": "retained-independent-statement-fixtures-v1"
+}

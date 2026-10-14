@@ -2,6 +2,44 @@
 
 ## Current Milestone
 
+Completed **independent retained-evidence spot checks and explicit coverage
+reporting**, not closure/readiness. [Definitions and source citations](preparation-coverage-validation.md),
+[coverage ledger](preparation-coverage-results.json),
+[independent results/backlog](preparation-independent-results.json).
+42 histories / 199 selected periods versus 210 target slots; forty-issuer cohort
+189/200. Recent 121/126, older 78/84; all fourteen fields accounted for. Missing
+five-year slots remain XOM five, GEV three, SNDK three, with no invented dates.
+
+120 latest field slots across fifteen issuers: **53 CHECKED / 2 FAILED /
+65 NOT_VERIFIED**. CHECKED is a documented observation or expected-null sample,
+not complete field confirmation. HD's D&A caption excludes intangible amortization;
+AMZN's combined caption includes content/lease/other scope whose equivalence is
+unproved. No replacement equation or value is approved. Ten exact independent
+primary-document targets remain in the deduplicated backlog; no requests made.
+
+Coverage separates policy values, declared complete totals, support, conflicts,
+missing requirements and manual origins. No component family becomes a usable
+complete field. All fields fall below 90%/80% declared-complete targets; no
+shortfall is accepted for the user. Existing 2,786 inventory locations remain:
+1931 substantive review locations versus 855 policy-value locations pending
+independent confirmation only. No queue diagnostics are discarded.
+
+Validation: **27 focused tests pass** (nine assembly, seven new reporting/independent
+checks, eleven shared inspection). Initial fixture role labels omitted existing
+pilot cash-PP&E roles; Chevron's face total was incorrectly used for its narrower
+approved component. Literal retained supplemental-note evidence corrected that
+fixture, not source values or policies. Compileall, affected local/source links,
+denominator reconciliation, deterministic reporting and diff checks pass.
+Pilot bytes, original ledgers, policies, registries, schema 5 and corpus artifacts
+are unchanged. No SEC requests, full-suite/corpus rerun or real overrides.
+
+**Stop for review:** user disposition of the two D&A scope failures, explicit
+coverage definition/shortfalls and independent-evidence backlog. No automatic
+acceptance, additional acquisition/research or Phase 2 work; no phase is closed.
+
+
+## Previous milestone
+
 Latest milestone: **bounded end-to-end preparation/review validation and primary
 field-family presentation**. [Workflow](preparation-review-workflow.md) /
 [exact counts](preparation-workflow-summary.json). Full-history queue: 2,786

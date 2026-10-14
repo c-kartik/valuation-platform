@@ -1,5 +1,27 @@
 # Company data preparation register
 
+## Independent spot checks and explicit denominator reporting
+
+[Definitions/shortfalls](../preparation-coverage-validation.md) /
+[coverage](../preparation-coverage-results.json) /
+[independent results and artifact backlog](../preparation-independent-results.json).
+42 non-specialized histories: 199 selected / 210 target periods; forty-company
+cohort: 189/200. Recent selected/target 121/126; older 78/84. Eleven missing target
+history slots remain explicit. No component observation counts as a complete field.
+
+Latest checks for fifteen issuers: 53 CHECKED observation/expected-null samples,
+two FAILED D&A scope checks (HD/AMZN), 65 NOT_VERIFIED slots; ten exact independent
+primary-body backlog targets. The fifteen records (including META/COST seed notes)
+link exact evidence and limitations. No whole-issuer or whole-history approval.
+
+All-field inventory: 2,786 locations, of which 1931 have substantive
+missing/conflicting/invalid/scope review requirements and 855 existing policy-value
+locations are pending independent confirmation only under this report's definition.
+Original queue cards/diagnostics remain intact. All fields fall below the proposed
+90%/80% declared-complete targets; shortfalls are NOT accepted. No real overrides,
+support reclassification, closure or financial sufficiency certification.
+
+
 ## Primary field-family review and local workflow
 
 [Workflow](../preparation-review-workflow.md) /

@@ -1,5 +1,31 @@
 # VZ — company data preparation
 
+## Independent retained spot check and explicit coverage
+
+Latest frozen selection: `0000732712-26-000007`, 2025-01-01 through
+2025-12-31. [Exact checks/fixture references](../preparation-independent-results.json)
+and [literal source fixtures](../preparation-independent-fixtures.json):
+8 CHECKED / 0 FAILED / 0 NOT_VERIFIED.
+revenue CHECKED; ebit CHECKED; depreciation_amortization CHECKED; cash_capex CHECKED; reported_cash_flow_working_capital_movements CHECKED; cash_investment_components CHECKED; debt_lease_components CHECKED; point_in_time_shares CHECKED.
+
+CHECKED is a sample observation/equation or expected unresolved outcome, not
+complete field approval. NOT_VERIFIED means retained independent statement/cover/
+note evidence is absent or insufficient, not that the financial disclosure is
+absent. The exact artifact backlog has source URLs, body references and stopping
+conditions; no acquisition or new financial treatment is authorized. XBRL-only
+replay remains distinct from independent statement confirmation.
+
+No independently established scope failure in the checked sample; unverified fields remain unproved.
+
+[Coverage definitions and limitations](../preparation-coverage-validation.md)
+preserve selected versus five-period-target denominators and separate policy
+values from declared complete totals, support/components, conflicts and nulls.
+Components do not form approved cash/debt/share/working-capital totals. No original
+value, policy, financial blocker, history exception or support classification is
+changed; prior pilot scope stays limited. No manual override is applied, no phase
+is closed, and financial sufficiency remains NOT_ASSESSED.
+
+
 ## Primary field-family review presentation
 
 [Workflow](../preparation-review-workflow.md) / [exact counts](../preparation-workflow-summary.json).

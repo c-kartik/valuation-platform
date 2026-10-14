@@ -1,5 +1,17 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Explicit coverage measurement (no acceptance)
+
+[Retained coverage validation](preparation-coverage-validation.md) fixes selected
+and five-period-target denominators per field, with newest-three-selected ordinal
+and older-position bands. Valued observations, existing policy values and declared
+complete totals are different metrics; component availability is not complete
+cash/debt/share/working-capital coverage. The proposed 90%/80% targets are not
+lowered or accepted automatically. Missing target history remains in the target
+denominator; manual overrides are separate. Failed independent scope checks do
+not silently mutate policies or establish a replacement value. Current shortfalls
+require user review; no closure or financial sufficiency follows these reports.
+
 Contract/schema `historical-input-preparation-v1`, version 1; 2026-10-12.
 The name describes eventual input purpose, **not a DCF consumer or calculator**.
 User-approved direction now extends beyond evidence-accounted facts/gaps to

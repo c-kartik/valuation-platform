@@ -1,5 +1,18 @@
 # Architecture
 
+## Retained coverage and independent validation reporting
+
+`analyst/preparation_validation.py` is a read-only layer over existing assembly.
+It reports selected/target ordinal denominators and declared completeness without
+changing values, queue diagnostics or acceptance. Literal retained HTML fixtures
+are independently established expectations; instance replay is a distinct evidence
+depth. Original-body digests, visible cells/passages, share dates/classes and scope
+findings survive in separate reports. Missing bodies and failed scope checks are
+explicit and cannot be accepted automatically. The local validation entry point
+replays committed reports; no acquisition, resolver, override, persistence or
+financial sufficiency logic is added.
+[Definitions, evidence and stopping point](preparation-coverage-validation.md).
+
 ## Primary field-family preparation review
 
 `analyst/preparation_review.py` is an additive presentation layer over unchanged
