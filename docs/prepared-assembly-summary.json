@@ -28,10 +28,10 @@
       "periods_with_values": 199,
       "policy_prepared_value_periods": 0,
       "selected_periods": 199,
-      "support_observations": 2085,
+      "support_observations": 2090,
       "unresolved_entries": 243,
       "unresolved_periods": 199,
-      "valued_inputs": 2085
+      "valued_inputs": 2090
     },
     "deferred_taxes": {
       "derivation_operands": 0,
@@ -7964,22 +7964,22 @@
           },
           "debt_lease_components": {
             "completeness": {
-              "partial": 49,
+              "partial": 54,
               "unknown": 5
             },
             "derivation_operands": 0,
             "origins": {
-              "reported": 49,
+              "reported": 54,
               "unavailable": 5
             },
             "periods_with_conflicts": 0,
             "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
-            "support_observations": 49,
+            "support_observations": 54,
             "unresolved_entries": 5,
             "unresolved_periods": 5,
-            "valued_inputs": 49
+            "valued_inputs": 54
           },
           "deferred_taxes": {
             "completeness": {
@@ -8185,11 +8185,11 @@
       "review_codes": {
         "CONFLICT": 5,
         "MISSING_REQUIRED_VALUE": 50,
-        "OVERLAP_WARNING": 97,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 237,
-        "UNRESOLVED_REQUIREMENTS": 237
+        "OVERLAP_WARNING": 102,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 242,
+        "UNRESOLVED_REQUIREMENTS": 242
       },
-      "review_count": 242
+      "review_count": 247
     },
     "PEP": {
       "quality": {
@@ -11352,18 +11352,18 @@
     "HISTORY_EXCEPTION": 3,
     "INVALID_EVIDENCE": 8,
     "MISSING_REQUIRED_VALUE": 1867,
-    "OVERLAP_WARNING": 11787,
-    "PARTIAL_OR_UNREVIEWED_SCOPE": 17278,
-    "UNRESOLVED_REQUIREMENTS": 17315
+    "OVERLAP_WARNING": 11792,
+    "PARTIAL_OR_UNREVIEWED_SCOPE": 17283,
+    "UNRESOLVED_REQUIREMENTS": 17320
   },
-  "review_count": 17612,
+  "review_count": 17617,
   "schema": "assembled-historical-input-review-v1",
   "selected_periods": 199,
   "source_ledgers": {
     "docs/approved-income-integration-bindings.json": "ab6037acfa9ef3c0ea5b5875e2227441e6a0ee9ac4c8a24be4d6c26993291724",
     "docs/refreshed-capex-ledger.json": "d24fcfa928bb823677121ba3a34c6b5dcc9da23a6fe44bcde9b4602c37f72709",
     "docs/repaired-income-ledger.json": "3dca01d1a29eeb702fcec394e1f9db5f31590928c7fa0ebec45abc851080c2d3",
-    "docs/retained-bridge-component-ledger.json": "9dc608597b92299b5f3f5f6e2d78d82e12e9f260032414275d3f3654b0c4081a",
+    "docs/retained-bridge-component-ledger.json": "84b733d43b3f2c94d10a372a55e54ae845b2eef8753b3b04c9e48cc21224d7ed",
     "docs/retained-cfo-ledger.json": "db4ef5b70d5808dcc3bb15516cf10bd7e5a8b5ce736035c3e840b05c56b83661",
     "docs/retained-claims-shares-ledger.json": "c9e04f5547df6ace6b2a4ab5795185cc17cb93c0434fcfc9297d463cc82dfbd1",
     "docs/retained-d-and-a-ledger.json": "d69e002a8c6a27953ddc3f546e6f50b49df18803300c6f831e0a4eee327f04e0",

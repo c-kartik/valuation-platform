@@ -376,7 +376,7 @@
         "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
         "UNRESOLVED_REQUIREMENTS": 70
       },
-      "diagnostics": 242,
+      "diagnostics": 247,
       "groups": 253,
       "informational": 40
     },
@@ -534,7 +534,7 @@
   "selected_periods": 199,
   "totals": {
     "actionable": 8315,
-    "diagnostics": 17612,
+    "diagnostics": 17617,
     "groups": 9893,
     "informational": 1578
   }

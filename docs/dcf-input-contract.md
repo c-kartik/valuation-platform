@@ -1,5 +1,15 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Separate reported accounting tax-context delivery
+
+[Retained tax replay](retained-reported-tax-context-results.md) provides USD
+provision/Pretax observations and separately serialized pure-unit reported ETR,
+with existing policy identity, operands, precision and exact sources. The original
+USD-only InputValue and pilot payloads are unchanged. The ratio is not an operating
+or future forecast rate; the separate overlay is not yet in the persistent review
+container and cannot count as a complete tax-consumer field. Missing/conflicting
+operands remain required gaps, without inferred zeros or financial approval.
+
 ## Demonstrated scope defects in isolated preparation
 
 [Negative D&A repair](preparation-independent-repair-results.md) preserves seven

@@ -1,5 +1,24 @@
 # Retained preparation coverage and independent spot checks
 
+## Current borrowing/tax replay
+
+[Bounded results](retained-reported-tax-context-results.md): 119 CHECKED / zero
+FAILED / one NOT_VERIFIED across the same 120 latest-period checks. ORCL's literal
+noncurrent borrowing sample is bound; CVX EBIT remains unverified. This is not total
+debt approval. Seven D&A scope downgrades and all former financial conflicts remain.
+
+Coverage now includes a separate reported-tax overlay: provision 186 populated /
+13 conflicting; Pretax 159 populated / 40 unavailable; ETR 151 populated /
+13 incompatible / 35 unavailable. This stream uses the same 199 selected / 210
+target denominator, with eleven missing-history slots. It is not merged into the
+original assembled tax inventory (four pilot observations) or counted as an
+approved complete consumer field. Units, monetary operands, pure-unit arithmetic
+and original curated policy references remain separate and source-bound.
+No change to 90% recent / 80% older completeness definitions or acceptance of their
+shortfalls. Financial sufficiency NOT_ASSESSED; Phase 1 not closed.
+
+Prior milestone sections below are preserved historical decisions.
+
 ## Current repair disposition
 
 The explicitly authorized [bounded repair](preparation-independent-repair-results.md)

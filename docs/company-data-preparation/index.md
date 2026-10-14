@@ -1,5 +1,24 @@
 # Company data preparation register
 
+## Retained borrowing and separate reported tax context
+
+[Results](../retained-reported-tax-context-results.md) /
+[exact ledger](../retained-reported-tax-context-ledger.json): provision 186 populated /
+13 conflicting; Pretax 159 populated / 40 unavailable; pure-unit ETR 151 populated /
+13 incompatible / 35 unavailable. All 42 non-specialized issuer records (40 cohort,
+two seeds) explain actual outcomes, limitations and exact source references. Empty/
+short history stays explicit. Policy replay is not independent whole-history review,
+complete operating-tax input or financial sufficiency. Original pilot/assembled tax
+observations and serialized bytes stay unchanged; the separate stream is not yet
+integrated into the persistent review container.
+
+Reusable noncurrent `LongTermNotesAndLoans` carrying inspection adds five ORCL
+observations with overlap/lease-scope limits. ORCL's independent borrowing sample
+is confirmed; all 120 checks: 119 CHECKED / zero FAILED / one NOT_VERIFIED. Prior
+conflicts, seven D&A negative reviews, financial blockers and history exceptions
+remain. No 90%/80% shortfall acceptance or Phase 1 closure. Earlier sections below
+preserve superseded results/decisions rather than silently erasing their history.
+
 ## Independent backlog repair and explicit negative D&A evidence
 
 [Current bounded results](../preparation-independent-repair-results.md): exactly ten

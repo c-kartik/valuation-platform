@@ -109,7 +109,7 @@ class PreparedAssemblyTests(unittest.TestCase):
             actual=hashlib.sha256(pilot.serialize(pilot.load_history(name)).encode()).hexdigest()
             self.assertEqual(actual,digest)
         paths=subprocess.check_output(['git','ls-tree','-r','--name-only',HEAD,'src/valuation_platform/normalization','docs/evidence','docs/universe'],cwd=a.ROOT).decode().splitlines()
-        paths+=[p for p in a.LEDGERS if p!=a.da.LEDGER]+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
+        paths+=[p for p in a.LEDGERS if p not in (a.da.LEDGER,a.bridge.LEDGER)]+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
         for path in paths:self.assertEqual((a.ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=a.ROOT),path)
 
     def test_grouped_queue_full_diagnostic_preservation_and_summary(self):
@@ -127,7 +127,7 @@ class PreparedAssemblyTests(unittest.TestCase):
         report=dict(schema='grouped-preparation-review-v1',issuers=len(per),
             selected_periods=self.report['selected_periods'],per_issuer=per,
             totals={k:sum(v[k] for v in per.values()) for k in ('diagnostics','groups','actionable','informational')})
-        self.assertEqual(report['totals']['diagnostics'],17612)
+        self.assertEqual(report['totals']['diagnostics'],17617)
         # Generated test output is outside the repository; no analyst decisions persisted.
         from pathlib import Path
         Path('/tmp/grouped-preparation-review-summary.json').write_text(a.canonical(report)+'\n')

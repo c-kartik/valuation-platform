@@ -1,5 +1,17 @@
 # Architecture
 
+## Separate reported-tax preparation
+
+`analyst/retained_reported_tax.py` replays unchanged provision/Pretax/ETR policies
+against exact retained annual facts. Immutable USD operands and separate pure-unit
+ETR retain occurrences, precision, policy/version and curated review references.
+Closed serialization replays evidence, without changing USD-only InputValue or
+frozen schema 5. Existing pilot/assembled tax observations stay unchanged; this
+stream is not yet a persistent review/override overlay. Coverage reports component
+outcomes separately, never complete operating-tax readiness. The shared instant
+map adds evidenced noncurrent `LongTermNotesAndLoans` carrying observations, not
+a debt aggregate or lease convention. [Results](retained-reported-tax-context-results.md).
+
 ## Preparation-only negative scope validation
 
 [Bounded repair](preparation-independent-repair-results.md) adds seven immutable

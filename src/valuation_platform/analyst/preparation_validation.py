@@ -130,6 +130,19 @@ def coverage(histories,spot=None):
         target_periods=5*len(histories),selected_field_inventory=len(per),target_field_inventory=5*len(histories)*len(h.Field),
         substantive_review_required=sum(r['substantive_review_required'] for r in per),
         confirmation_pending_only=sum(r['independent_confirmation_pending'] for r in per),manual_overrides=sum(r['manual_override'] for r in per))
+    # Separate tax overlay: pure-unit ETR cannot be inserted into the unchanged
+    # USD-only assembled value contract. Do not count it as complete-field or
+    # duplicate the four accepted pilot observations in the inventory above.
+    tax_path=a.ROOT/'docs/retained-reported-tax-context-ledger.json'
+    if tax_path.is_file() and len(histories)==42:
+        tax=json.loads(tax_path.read_text())
+        selected={y.period.accession for p in histories.values() for y in p.bundle.annuals}
+        if {r['identity']['accession'] for r in tax['rows']}!=selected or tax['selected_periods']!=199:
+            raise h.InputError('Separate tax coverage identity mismatch')
+        report['separate_reported_tax_context']=dict(source=str(tax_path.relative_to(a.ROOT)),
+            sha256=hashlib.sha256(tax_path.read_bytes()).hexdigest(),selected_denominator=199,target_denominator=210,
+            missing_target_history_slots=11,components=tax['summary'],approved_complete_consumer_fields=0,
+            counted_in_assembled_inventory=False,financial_sufficiency='NOT_ASSESSED')
     return report
 
 

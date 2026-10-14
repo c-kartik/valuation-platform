@@ -89,12 +89,13 @@ class PreparationValidationTests(unittest.TestCase):
         source=reported();manual=h.ManualIdentity('synthetic','2026-10-14T00:00:00+00:00','test only')
         override=replace(source,input_id='synthetic-override',origin=h.Origin.OVERRIDE,manual=manual,alternatives=(source,))
         report=v.coverage({'SYNTHETIC':fixture(override)})
+        self.assertNotIn('separate_reported_tax_context',report)
         self.assertEqual(report['totals']['manual_overrides'],1)
         self.assertEqual(report['fields']['revenue']['recent']['counts']['approved_complete_total'],0)
 
     def test_original_artifacts_and_policies_preserved(self):
         import subprocess
-        paths=[p for p in a.LEDGERS if p!=a.da.LEDGER]+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
+        paths=[p for p in a.LEDGERS if p not in (a.da.LEDGER,a.bridge.LEDGER)]+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
         paths+=subprocess.check_output(['git','ls-tree','-r','--name-only','0e7970593399fc2289dccacb4e284fd04677868b','docs/evidence','docs/universe','src/valuation_platform/normalization'],cwd=a.ROOT).decode().splitlines()
         for path in paths:
             self.assertTrue((a.ROOT/path).read_bytes()==subprocess.check_output(['git','show','0e7970593399fc2289dccacb4e284fd04677868b:'+path],cwd=a.ROOT),path)

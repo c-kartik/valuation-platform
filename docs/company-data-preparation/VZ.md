@@ -1,5 +1,13 @@
 # VZ — company data preparation
 
+## Retained reported tax context — separate preparation overlay
+
+5 exact selected periods: provision {'POPULATED': 5}; Pretax {'POPULATED': 5}; 5 derived reported ETR observations.
+[Policy replay, conflicts and precise evidence gaps](../retained-reported-tax-context-results.md) /
+[Exact period/source/occurrence ledger](../retained-reported-tax-context-ledger.json).
+
+Original conflict: tax context was limited to four independently reviewed pilot periods; available corpus counts were not source-bound preparation. Chosen treatment replays unchanged provision/Pretax policies and accounting ETR rules against original retained annual facts. No statutory placeholder, operating-tax rate, cash-tax substitution, fallback or financial approval. Reported provision, cash taxes and CFO deferred-tax movements remain distinct. Monetary operands and pure-unit ETR are separately serialized; existing pilots and assembled tax observations are not rewritten. Source-bound replay is not a new independent statement/whole-history review. Missing/conflicting operands remain unresolved. Financial sufficiency NOT_ASSESSED; prior NWC, timing, history and support classifications persist.
+
 ## Bounded independent repair — current disposition
 
 Latest selection `0000732712-26-000007`, 2025-01-01 through 2025-12-31.

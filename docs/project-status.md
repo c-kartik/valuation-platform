@@ -2,6 +2,37 @@
 
 ## Current Milestone
 
+Completed bounded **ORCL borrowing mapping and separate reported-tax preparation**.
+[Results/limits](retained-reported-tax-context-results.md) /
+[199-period source ledger](retained-reported-tax-context-ledger.json).
+Shared noncurrent notes/loans carrying mapping adds five ORCL observations; no
+debt total or lease inclusion inferred. Independent checks: 119 CHECKED / zero
+FAILED / one NOT_VERIFIED (CVX EBIT).
+
+Tax provision 186 populated / 13 conflicting; Pretax 159 populated / 40 unavailable
+(154 direct + five existing CVX curated replays); ETR 151 populated / 13 incompatible /
+35 missing operands. Three registered MA periods remain evidence-blocked by filing
+metadata, not financially rejected. No conflicting population selected away, clamp,
+rate assumption or new policy. Pure-unit ETR has separate serialization with USD
+operands/provenance; accepted pilot and assembled tax observations stay unchanged.
+The overlay is not yet in the persistent review container and is not a complete
+operating-tax consumer input. Coverage reports its components separately.
+
+42 histories / 199 selected / eleven history deficits; previous scalar values,
+seven D&A negative reviews, income conflicts/CVX gaps and frozen schema 5/results
+unchanged. All 42 records describe actual component outcomes, not whole-history
+statement review or support reclassification. Unaccepted 90%/80% shortfalls remain.
+Focused replay/preservation/independent checks, compileall, links and diff checks;
+**85 distinct focused tests pass** (51 integration/curated regressions, nine bridge,
+25 existing tax-policy tests); 2,768 affected local links and 42 record checks pass.
+no SEC requests, full suite or corpus run. Stop after commit; Phase 1 not closed.
+
+Next bounded step: explicit additive tax-overlay review-container integration,
+preserving pure-versus-USD units and revision-bound source identities. No metadata
+acquisition, operating-tax allocation or broad research queue authorized.
+
+### Prior milestone — preserved decisions
+
 Completed **fixed independent-document acquisition and preparation-only D&A scope
 repair**. [Detailed source/decisions](preparation-independent-repair-results.md),
 [receipts](evidence/independent-validation-document-acquisition.json),

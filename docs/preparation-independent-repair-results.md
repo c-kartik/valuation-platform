@@ -1,5 +1,14 @@
 # Bounded independent evidence acquisition and D&A scope repair
 
+## Subsequent bounded borrowing binding
+
+[Current results](retained-reported-tax-context-results.md) adds the reusable
+noncurrent `LongTermNotesAndLoans` role and binds the previously unbound ORCL
+122,342m statement observation. Same 120-check scope now 119 CHECKED / zero FAILED /
+one NOT_VERIFIED (CVX EBIT). No further SEC request or financial treatment; all
+seven negative D&A reviews and original frozen/preparation discrepancies persist.
+The results below preserve the prior milestone's evidence and dispositions.
+
 Baseline `c96fadacaee4e01c35d3e1c3334933565eca20da`; Phase 1 only. No closure,
 consumer sufficiency, new financial equation/approval or valuation authority.
 

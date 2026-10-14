@@ -81,4 +81,4 @@ class IndependentScopeRepairTests(unittest.TestCase):
         for row in new['rows']:
             if row['identity']['accession'] not in changed:self.assertEqual(row,prior[row['identity']['accession']])
         for path in a.LEDGERS:
-            if path!=d.LEDGER:self.assertEqual((a.ROOT/path).read_bytes(),subprocess.check_output(['git','show',BASELINE+':'+path],cwd=a.ROOT))
+            if path not in (d.LEDGER,a.bridge.LEDGER):self.assertEqual((a.ROOT/path).read_bytes(),subprocess.check_output(['git','show',BASELINE+':'+path],cwd=a.ROOT))

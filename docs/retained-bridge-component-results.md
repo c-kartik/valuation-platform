@@ -1,5 +1,15 @@
 # Retained year-end cash/investment and debt/lease inspection
 
+## Additive noncurrent borrowing mapping
+
+[Latest bounded results](retained-reported-tax-context-results.md) adds the shared
+`LongTermNotesAndLoans` noncurrent carrying population. Five exact ORCL periods
+add observations, no other issuer additions; component populations now 2,061.
+Existing 199 observed / 31 conflicting periods, other component values, alternatives
+and parent overlaps are unchanged. No lease inclusion or total debt inference.
+Latest ORCL independent statement sample (122,342m at 2026-05-31) is confirmed.
+The original results below are retained as the pre-addition baseline.
+
 Phase 1 only; baseline `1220bd2ee2edaa3867de7eb7ba8066f5554a3b96`.
 [Reproducible 199-period ledger](retained-bridge-component-ledger.json) covers
 42 non-specialized issuers. Offline replay:
