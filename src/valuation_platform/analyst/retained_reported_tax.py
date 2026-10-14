@@ -41,6 +41,26 @@ def inspect(e, concept):
 def filing_metadata(e):
     """Only existing reviewed metadata; never manufacture a filed date."""
     p=e.period
+    # Repair a demonstrated missed join, not a new metadata inference. The
+    # identity manifest seals the original research inventory and exact row.
+    if p.cik==1141391 and any(x.accession_number==p.accession for x in curated.PRETAX_SCOPE_EQUIVALENCE_POLICY.entries):
+        from . import nvda_income_inputs as shared
+        manifest=shared.pinned(shared.MANIFEST,shared.MANIFEST_SHA256)
+        matches=[v for v in manifest['rows'] if v['identity'] and v['identity']['accession']==p.accession]
+        if len(matches)!=1 or matches[0]['status']!='VERIFIED_RETAINED_IDENTITY':raise h.InputError('Exact MA manifest identity unavailable')
+        path='docs/depreciation-amortization-inventory.json'
+        inventory=shared.pinned(path,manifest['source_repository_file_sha256'][path])
+        candidates=[c for c in matches[0]['candidates'] if c['source']==path]
+        if len(candidates)!=1:raise h.InputError('Unique retained MA metadata join required')
+        locator=candidates[0]['locator'];row=inventory['rows'][int(locator.split('/')[-1])];m=row['filing']
+        if ((row['cik'],m['accession_number'],m['form'],m['report_date'],row['annual_start'],row['annual_end'])!=
+                (p.cik,p.accession,p.form,str(p.annual_end),str(p.annual_start),str(p.annual_end))
+                or row['source_url']!=e.instance.artifact.url or row['instance_sha256']!=e.instance.artifact.sha256):
+            raise h.InputError('Retained MA metadata/body binding mismatch')
+        return SECFiling(p.accession,p.form,date.fromisoformat(m['filing_date']),p.annual_end,m['primary_document']),dict(
+            source=path,locator=locator+'/filing',source_sha256=manifest['source_repository_file_sha256'][path],
+            manifest=shared.MANIFEST,filing=m,instance_sha256=row['instance_sha256'],
+            evidence_depth='Existing reviewed selected-filing metadata, sealed by verified identity manifest; no new receipt or recovered metadata.')
     found=[m['filing'] for m in metadata.bindings(True)['filings'] if m['filing']['accession_number']==p.accession]
     if found:
         m=found[0]
@@ -189,6 +209,23 @@ def validate(v):
     e=r.prepare(v.period,(v.receipt,),(r.ArtifactBinding(v.receipt.artifact.url,v.receipt.artifact.sha256,'instance'),))
     if v!=package(e)[0]:raise h.InputError('Tax context differs from exact policy/evidence replay')
     return v
+
+
+def inputs(v):
+    """Materialize existing policy result; do not execute a new ratio."""
+    ratio=json.loads(v.etr_json);operands=(v.provision,v.pretax)
+    sources=tuple({s.source_id:s for o in operands for s in o.sources}.values())
+    number=None if ratio['value'] is None else Decimal(ratio['value'])
+    formula=None if number is None else h.Formula(ratio['policy_id'],1,h.FormulaKind.REPORTED_ETR,
+        'income_tax_expense / pretax_income',tuple(o.input_id for o in operands),False,False,True,tuple(s.source_id for s in sources))
+    etr=h.InputValue('reported-tax:required:reported_effective_tax_rate',h.Field.TAX,v.period,None,number,'pure',1,1,
+        ratio['precision'],'reported_effective_tax_rate',h.Origin.UNAVAILABLE if number is None else h.Origin.DERIVED,
+        h.Quality.CONFLICTING if ratio['reason']=='incompatible_derivation_operands' else h.Quality.LIMITED,
+        'Reported accounting ETR, not cash tax or a forecast/operating-tax rate.',h.Scope.RESTRICTED,h.Completeness.PARTIAL,
+        h.Review.REVIEWED,sources,None,formula,(),'Original existing-policy result retained; never recomputed under analyst overlays.',
+        ('reported_tax_policy_result:'+v.etr_json,'tax_context_proof:'+v.proof_json,'not_forecast_rate'),LIMITS,
+        ratio['reason'] if number is None else None,('reported_effective_tax_rate',))
+    return (*operands,etr)
 
 
 def serialize(v):

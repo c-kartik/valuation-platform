@@ -112,14 +112,14 @@
     },
     "reported_tax_context": {
       "derivation_operands": 0,
-      "periods_with_conflicts": 0,
-      "periods_with_values": 4,
+      "periods_with_conflicts": 13,
+      "periods_with_values": 194,
       "policy_prepared_value_periods": 0,
       "selected_periods": 199,
-      "support_observations": 8,
-      "unresolved_entries": 195,
+      "support_observations": 4,
+      "unresolved_entries": 95,
       "unresolved_periods": 199,
-      "valued_inputs": 8
+      "valued_inputs": 506
     },
     "revenue": {
       "derivation_operands": 0,
@@ -354,22 +354,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "partial": 2,
-              "unknown": 4
+              "partial": 16
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "reported": 2,
-              "unavailable": 4
+              "derived": 5,
+              "reported": 11
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 1,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
-            "support_observations": 2,
-            "unresolved_entries": 4,
+            "support_observations": 1,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 2
+            "valued_inputs": 16
           },
           "revenue": {
             "completeness": {
@@ -429,12 +451,12 @@
       },
       "review_codes": {
         "CONFLICT": 1,
-        "MISSING_REQUIRED_VALUE": 49,
+        "MISSING_REQUIRED_VALUE": 45,
         "OVERLAP_WARNING": 142,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 265,
-        "UNRESOLVED_REQUIREMENTS": 268
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 275,
+        "UNRESOLVED_REQUIREMENTS": 278
       },
-      "review_count": 268
+      "review_count": 278
     },
     "ABBV": {
       "quality": {
@@ -625,20 +647,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -697,12 +743,12 @@
       },
       "review_codes": {
         "CONFLICT": 5,
-        "MISSING_REQUIRED_VALUE": 50,
+        "MISSING_REQUIRED_VALUE": 45,
         "OVERLAP_WARNING": 372,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 502,
-        "UNRESOLVED_REQUIREMENTS": 502
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 512,
+        "UNRESOLVED_REQUIREMENTS": 512
       },
-      "review_count": 507
+      "review_count": 517
     },
     "AMAT": {
       "quality": {
@@ -893,20 +939,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -964,12 +1034,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 43,
+        "MISSING_REQUIRED_VALUE": 38,
         "OVERLAP_WARNING": 178,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 354,
-        "UNRESOLVED_REQUIREMENTS": 354
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 364,
+        "UNRESOLVED_REQUIREMENTS": 364
       },
-      "review_count": 359
+      "review_count": 369
     },
     "AMD": {
       "quality": {
@@ -1158,20 +1228,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -1230,12 +1324,12 @@
       },
       "review_codes": {
         "CONFLICT": 2,
-        "MISSING_REQUIRED_VALUE": 42,
+        "MISSING_REQUIRED_VALUE": 37,
         "OVERLAP_WARNING": 104,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 251,
-        "UNRESOLVED_REQUIREMENTS": 251
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 261,
+        "UNRESOLVED_REQUIREMENTS": 261
       },
-      "review_count": 256
+      "review_count": 266
     },
     "AMZN": {
       "quality": {
@@ -1426,18 +1520,42 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 5,
+              "unknown": 10
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 5,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 5,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "unavailable": 15
             },
-            "periods_with_conflicts": 0,
+            "periods_with_conflicts": 5,
             "periods_with_values": 0,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 15,
             "unresolved_periods": 5,
             "valued_inputs": 0
           },
@@ -1497,12 +1615,13 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 45,
+        "CONFLICT": 10,
+        "MISSING_REQUIRED_VALUE": 55,
         "OVERLAP_WARNING": 132,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 288,
-        "UNRESOLVED_REQUIREMENTS": 288
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 298,
+        "UNRESOLVED_REQUIREMENTS": 298
       },
-      "review_count": 293
+      "review_count": 303
     },
     "AVGO": {
       "quality": {
@@ -1693,20 +1812,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -1764,12 +1907,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 45,
+        "MISSING_REQUIRED_VALUE": 40,
         "OVERLAP_WARNING": 247,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 372,
-        "UNRESOLVED_REQUIREMENTS": 372
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 382,
+        "UNRESOLVED_REQUIREMENTS": 382
       },
-      "review_count": 372
+      "review_count": 382
     },
     "CAT": {
       "quality": {
@@ -1958,20 +2101,45 @@
           },
           "reported_tax_context": {
             "completeness": {
+              "partial": 10,
               "unknown": 5
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "reported": 5,
+              "unavailable": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 10,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 5
           },
           "revenue": {
             "completeness": {
@@ -2031,12 +2199,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 45,
-        "OVERLAP_WARNING": 801,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 964,
-        "UNRESOLVED_REQUIREMENTS": 964
+        "MISSING_REQUIRED_VALUE": 50,
+        "OVERLAP_WARNING": 811,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 974,
+        "UNRESOLVED_REQUIREMENTS": 974
       },
-      "review_count": 969
+      "review_count": 979
     },
     "COST": {
       "quality": {
@@ -2225,20 +2393,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -2296,12 +2488,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 40,
+        "MISSING_REQUIRED_VALUE": 35,
         "OVERLAP_WARNING": 94,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 209,
-        "UNRESOLVED_REQUIREMENTS": 209
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 219,
+        "UNRESOLVED_REQUIREMENTS": 219
       },
-      "review_count": 209
+      "review_count": 219
     },
     "CSCO": {
       "quality": {
@@ -2488,20 +2680,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -2560,12 +2776,12 @@
       },
       "review_codes": {
         "CONFLICT": 5,
-        "MISSING_REQUIRED_VALUE": 40,
+        "MISSING_REQUIRED_VALUE": 35,
         "OVERLAP_WARNING": 114,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 274,
-        "UNRESOLVED_REQUIREMENTS": 274
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 284,
+        "UNRESOLVED_REQUIREMENTS": 284
       },
-      "review_count": 274
+      "review_count": 284
     },
     "CVX": {
       "quality": {
@@ -2752,20 +2968,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -2826,12 +3066,12 @@
       },
       "review_codes": {
         "CONFLICT": 5,
-        "MISSING_REQUIRED_VALUE": 50,
+        "MISSING_REQUIRED_VALUE": 45,
         "OVERLAP_WARNING": 1016,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 1167,
-        "UNRESOLVED_REQUIREMENTS": 1167
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 1177,
+        "UNRESOLVED_REQUIREMENTS": 1177
       },
-      "review_count": 1172
+      "review_count": 1182
     },
     "GEV": {
       "quality": {
@@ -3020,20 +3260,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 2
+              "partial": 6
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 2,
+                "selected_periods": 2,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 2,
+                "selected_periods": 2,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 2,
+                "selected_periods": 2,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 2
+              "derived": 2,
+              "reported": 4
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 2,
             "policy_prepared_value_periods": 0,
             "selected_periods": 2,
             "support_observations": 0,
-            "unresolved_entries": 2,
+            "unresolved_entries": 0,
             "unresolved_periods": 2,
-            "valued_inputs": 0
+            "valued_inputs": 6
           },
           "revenue": {
             "completeness": {
@@ -3096,12 +3360,12 @@
       },
       "review_codes": {
         "HISTORY_EXCEPTION": 1,
-        "MISSING_REQUIRED_VALUE": 22,
+        "MISSING_REQUIRED_VALUE": 20,
         "OVERLAP_WARNING": 160,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 214,
-        "UNRESOLVED_REQUIREMENTS": 214
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 218,
+        "UNRESOLVED_REQUIREMENTS": 218
       },
-      "review_count": 217
+      "review_count": 221
     },
     "GOOGL": {
       "quality": {
@@ -3292,22 +3556,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "partial": 2,
-              "unknown": 4
+              "partial": 16
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "reported": 2,
-              "unavailable": 4
+              "derived": 5,
+              "reported": 11
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 1,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
-            "support_observations": 2,
-            "unresolved_entries": 4,
+            "support_observations": 1,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 2
+            "valued_inputs": 16
           },
           "revenue": {
             "completeness": {
@@ -3367,12 +3653,12 @@
       },
       "review_codes": {
         "CONFLICT": 6,
-        "MISSING_REQUIRED_VALUE": 54,
+        "MISSING_REQUIRED_VALUE": 50,
         "OVERLAP_WARNING": 177,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 321,
-        "UNRESOLVED_REQUIREMENTS": 324
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 331,
+        "UNRESOLVED_REQUIREMENTS": 334
       },
-      "review_count": 329
+      "review_count": 339
     },
     "HD": {
       "quality": {
@@ -3563,20 +3849,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -3635,12 +3945,12 @@
       },
       "review_codes": {
         "CONFLICT": 1,
-        "MISSING_REQUIRED_VALUE": 48,
+        "MISSING_REQUIRED_VALUE": 43,
         "OVERLAP_WARNING": 118,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 244,
-        "UNRESOLVED_REQUIREMENTS": 244
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 254,
+        "UNRESOLVED_REQUIREMENTS": 254
       },
-      "review_count": 249
+      "review_count": 259
     },
     "IBM": {
       "quality": {
@@ -3832,20 +4142,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -3904,12 +4238,12 @@
       },
       "review_codes": {
         "CONFLICT": 1,
-        "MISSING_REQUIRED_VALUE": 46,
-        "OVERLAP_WARNING": 810,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 919,
-        "UNRESOLVED_REQUIREMENTS": 924
+        "MISSING_REQUIRED_VALUE": 41,
+        "OVERLAP_WARNING": 820,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 929,
+        "UNRESOLVED_REQUIREMENTS": 934
       },
-      "review_count": 949
+      "review_count": 959
     },
     "INTC": {
       "quality": {
@@ -4100,20 +4434,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -4172,12 +4530,12 @@
       },
       "review_codes": {
         "CONFLICT": 10,
-        "MISSING_REQUIRED_VALUE": 53,
+        "MISSING_REQUIRED_VALUE": 48,
         "OVERLAP_WARNING": 212,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 349,
-        "UNRESOLVED_REQUIREMENTS": 349
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 359,
+        "UNRESOLVED_REQUIREMENTS": 359
       },
-      "review_count": 349
+      "review_count": 359
     },
     "JNJ": {
       "quality": {
@@ -4367,20 +4725,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -4438,12 +4820,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 40,
-        "OVERLAP_WARNING": 401,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 501,
-        "UNRESOLVED_REQUIREMENTS": 506
+        "MISSING_REQUIRED_VALUE": 35,
+        "OVERLAP_WARNING": 411,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 511,
+        "UNRESOLVED_REQUIREMENTS": 516
       },
-      "review_count": 536
+      "review_count": 546
     },
     "KLAC": {
       "quality": {
@@ -4631,20 +5013,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -4703,12 +5109,12 @@
       },
       "review_codes": {
         "CONFLICT": 5,
-        "MISSING_REQUIRED_VALUE": 40,
-        "OVERLAP_WARNING": 144,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 249,
-        "UNRESOLVED_REQUIREMENTS": 254
+        "MISSING_REQUIRED_VALUE": 35,
+        "OVERLAP_WARNING": 154,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 259,
+        "UNRESOLVED_REQUIREMENTS": 264
       },
-      "review_count": 278
+      "review_count": 288
     },
     "KO": {
       "quality": {
@@ -4897,20 +5303,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -4968,12 +5398,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 40,
+        "MISSING_REQUIRED_VALUE": 35,
         "OVERLAP_WARNING": 740,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 907,
-        "UNRESOLVED_REQUIREMENTS": 907
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 917,
+        "UNRESOLVED_REQUIREMENTS": 917
       },
-      "review_count": 912
+      "review_count": 922
     },
     "LIN": {
       "quality": {
@@ -5166,20 +5596,45 @@
           },
           "reported_tax_context": {
             "completeness": {
+              "partial": 10,
               "unknown": 5
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "reported": 5,
+              "unavailable": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 10,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 5
           },
           "revenue": {
             "completeness": {
@@ -5239,12 +5694,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 49,
-        "OVERLAP_WARNING": 521,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 701,
-        "UNRESOLVED_REQUIREMENTS": 701
+        "MISSING_REQUIRED_VALUE": 54,
+        "OVERLAP_WARNING": 531,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 711,
+        "UNRESOLVED_REQUIREMENTS": 711
       },
-      "review_count": 706
+      "review_count": 716
     },
     "LLY": {
       "quality": {
@@ -5434,20 +5889,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -5505,12 +5984,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 40,
-        "OVERLAP_WARNING": 652,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 725,
-        "UNRESOLVED_REQUIREMENTS": 730
+        "MISSING_REQUIRED_VALUE": 35,
+        "OVERLAP_WARNING": 662,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 735,
+        "UNRESOLVED_REQUIREMENTS": 740
       },
-      "review_count": 765
+      "review_count": 775
     },
     "LRCX": {
       "quality": {
@@ -5701,20 +6180,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -5772,12 +6275,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 50,
+        "MISSING_REQUIRED_VALUE": 45,
         "OVERLAP_WARNING": 117,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 258,
-        "UNRESOLVED_REQUIREMENTS": 258
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 268,
+        "UNRESOLVED_REQUIREMENTS": 268
       },
-      "review_count": 263
+      "review_count": 273
     },
     "MA": {
       "quality": {
@@ -5968,20 +6471,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -6042,12 +6569,12 @@
       },
       "review_codes": {
         "CONFLICT": 1,
-        "MISSING_REQUIRED_VALUE": 46,
+        "MISSING_REQUIRED_VALUE": 41,
         "OVERLAP_WARNING": 186,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 323,
-        "UNRESOLVED_REQUIREMENTS": 323
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 333,
+        "UNRESOLVED_REQUIREMENTS": 333
       },
-      "review_count": 328
+      "review_count": 338
     },
     "MCD": {
       "quality": {
@@ -6236,20 +6763,45 @@
           },
           "reported_tax_context": {
             "completeness": {
+              "partial": 10,
               "unknown": 5
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "reported": 5,
+              "unavailable": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 10,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 5
           },
           "revenue": {
             "completeness": {
@@ -6308,12 +6860,12 @@
       },
       "review_codes": {
         "CONFLICT": 6,
-        "MISSING_REQUIRED_VALUE": 46,
-        "OVERLAP_WARNING": 95,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 223,
-        "UNRESOLVED_REQUIREMENTS": 223
+        "MISSING_REQUIRED_VALUE": 51,
+        "OVERLAP_WARNING": 105,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 233,
+        "UNRESOLVED_REQUIREMENTS": 233
       },
-      "review_count": 228
+      "review_count": 238
     },
     "META": {
       "quality": {
@@ -6502,20 +7054,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -6574,12 +7150,12 @@
       },
       "review_codes": {
         "CONFLICT": 5,
-        "MISSING_REQUIRED_VALUE": 43,
+        "MISSING_REQUIRED_VALUE": 38,
         "OVERLAP_WARNING": 131,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 275,
-        "UNRESOLVED_REQUIREMENTS": 275
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 285,
+        "UNRESOLVED_REQUIREMENTS": 285
       },
-      "review_count": 280
+      "review_count": 290
     },
     "MRK": {
       "quality": {
@@ -6775,20 +7351,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -6847,12 +7447,12 @@
       },
       "review_codes": {
         "INVALID_EVIDENCE": 2,
-        "MISSING_REQUIRED_VALUE": 50,
-        "OVERLAP_WARNING": 1076,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 1200,
-        "UNRESOLVED_REQUIREMENTS": 1205
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 1086,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 1210,
+        "UNRESOLVED_REQUIREMENTS": 1215
       },
-      "review_count": 1237
+      "review_count": 1247
     },
     "MSFT": {
       "quality": {
@@ -7044,22 +7644,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "partial": 4,
-              "unknown": 3
+              "partial": 17
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "reported": 4,
-              "unavailable": 3
+              "derived": 5,
+              "reported": 12
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 2,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
-            "support_observations": 4,
-            "unresolved_entries": 3,
+            "support_observations": 2,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 4
+            "valued_inputs": 17
           },
           "revenue": {
             "completeness": {
@@ -7119,12 +7741,12 @@
       },
       "review_codes": {
         "CONFLICT": 1,
-        "MISSING_REQUIRED_VALUE": 54,
+        "MISSING_REQUIRED_VALUE": 51,
         "OVERLAP_WARNING": 273,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 421,
-        "UNRESOLVED_REQUIREMENTS": 427
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 431,
+        "UNRESOLVED_REQUIREMENTS": 437
       },
-      "review_count": 427
+      "review_count": 437
     },
     "MU": {
       "quality": {
@@ -7313,20 +7935,45 @@
           },
           "reported_tax_context": {
             "completeness": {
+              "partial": 10,
               "unknown": 5
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "reported": 5,
+              "unavailable": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 10,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 5
           },
           "revenue": {
             "completeness": {
@@ -7384,12 +8031,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 40,
-        "OVERLAP_WARNING": 102,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 244,
-        "UNRESOLVED_REQUIREMENTS": 244
+        "MISSING_REQUIRED_VALUE": 45,
+        "OVERLAP_WARNING": 112,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 254,
+        "UNRESOLVED_REQUIREMENTS": 254
       },
-      "review_count": 249
+      "review_count": 259
     },
     "NFLX": {
       "quality": {
@@ -7578,20 +8225,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -7650,12 +8321,12 @@
       },
       "review_codes": {
         "CONFLICT": 9,
-        "MISSING_REQUIRED_VALUE": 49,
+        "MISSING_REQUIRED_VALUE": 44,
         "OVERLAP_WARNING": 91,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 203,
-        "UNRESOLVED_REQUIREMENTS": 203
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 213,
+        "UNRESOLVED_REQUIREMENTS": 213
       },
-      "review_count": 208
+      "review_count": 218
     },
     "NVDA": {
       "quality": {
@@ -7844,20 +8515,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -7916,12 +8611,12 @@
       },
       "review_codes": {
         "CONFLICT": 3,
-        "MISSING_REQUIRED_VALUE": 48,
+        "MISSING_REQUIRED_VALUE": 43,
         "OVERLAP_WARNING": 129,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 256,
-        "UNRESOLVED_REQUIREMENTS": 256
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 266,
+        "UNRESOLVED_REQUIREMENTS": 266
       },
-      "review_count": 261
+      "review_count": 271
     },
     "ORCL": {
       "quality": {
@@ -8112,20 +8807,45 @@
           },
           "reported_tax_context": {
             "completeness": {
+              "partial": 10,
               "unknown": 5
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "reported": 5,
+              "unavailable": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 10,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 5
           },
           "revenue": {
             "completeness": {
@@ -8184,12 +8904,12 @@
       },
       "review_codes": {
         "CONFLICT": 5,
-        "MISSING_REQUIRED_VALUE": 50,
-        "OVERLAP_WARNING": 102,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 242,
-        "UNRESOLVED_REQUIREMENTS": 242
+        "MISSING_REQUIRED_VALUE": 55,
+        "OVERLAP_WARNING": 112,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 252,
+        "UNRESOLVED_REQUIREMENTS": 252
       },
-      "review_count": 247
+      "review_count": 257
     },
     "PEP": {
       "quality": {
@@ -8376,20 +9096,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -8447,12 +9191,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 40,
+        "MISSING_REQUIRED_VALUE": 35,
         "OVERLAP_WARNING": 278,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 483,
-        "UNRESOLVED_REQUIREMENTS": 483
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 493,
+        "UNRESOLVED_REQUIREMENTS": 493
       },
-      "review_count": 488
+      "review_count": 498
     },
     "PG": {
       "quality": {
@@ -8641,20 +9385,46 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 13,
+              "unknown": 2
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 3,
+                "selected_periods": 5,
+                "unavailable": 2,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 3,
+                "selected_periods": 5,
+                "unavailable": 2,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 3,
+              "reported": 8,
+              "unavailable": 4
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 4,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 11
           },
           "revenue": {
             "completeness": {
@@ -8712,12 +9482,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 40,
-        "OVERLAP_WARNING": 206,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 341,
-        "UNRESOLVED_REQUIREMENTS": 341
+        "MISSING_REQUIRED_VALUE": 39,
+        "OVERLAP_WARNING": 210,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 351,
+        "UNRESOLVED_REQUIREMENTS": 351
       },
-      "review_count": 344
+      "review_count": 354
     },
     "PLTR": {
       "quality": {
@@ -8906,20 +9676,46 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 11,
+              "unknown": 4
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 4,
+                "populated": 1,
+                "selected_periods": 5,
+                "unavailable": 4,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 4,
+                "populated": 1,
+                "selected_periods": 5,
+                "unavailable": 4,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 1,
+              "reported": 6,
+              "unavailable": 8
             },
-            "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_conflicts": 4,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 8,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 7
           },
           "revenue": {
             "completeness": {
@@ -8977,13 +9773,13 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "CONFLICT": 4,
-        "MISSING_REQUIRED_VALUE": 44,
-        "OVERLAP_WARNING": 73,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 211,
-        "UNRESOLVED_REQUIREMENTS": 211
+        "CONFLICT": 12,
+        "MISSING_REQUIRED_VALUE": 47,
+        "OVERLAP_WARNING": 81,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 221,
+        "UNRESOLVED_REQUIREMENTS": 221
       },
-      "review_count": 216
+      "review_count": 226
     },
     "PM": {
       "quality": {
@@ -9174,20 +9970,45 @@
           },
           "reported_tax_context": {
             "completeness": {
+              "partial": 10,
               "unknown": 5
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 5,
+                "unavailable": 5,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "reported": 5,
+              "unavailable": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 10,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 5
           },
           "revenue": {
             "completeness": {
@@ -9246,12 +10067,12 @@
       },
       "review_codes": {
         "INVALID_EVIDENCE": 5,
-        "MISSING_REQUIRED_VALUE": 47,
-        "OVERLAP_WARNING": 285,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 435,
-        "UNRESOLVED_REQUIREMENTS": 435
+        "MISSING_REQUIRED_VALUE": 52,
+        "OVERLAP_WARNING": 295,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 445,
+        "UNRESOLVED_REQUIREMENTS": 445
       },
-      "review_count": 445
+      "review_count": 455
     },
     "QCOM": {
       "quality": {
@@ -9440,20 +10261,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -9511,12 +10356,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 45,
+        "MISSING_REQUIRED_VALUE": 40,
         "OVERLAP_WARNING": 142,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 267,
-        "UNRESOLVED_REQUIREMENTS": 267
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 277,
+        "UNRESOLVED_REQUIREMENTS": 277
       },
-      "review_count": 272
+      "review_count": 282
     },
     "SNDK": {
       "quality": {
@@ -9707,20 +10552,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 2
+              "partial": 6
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 2,
+                "selected_periods": 2,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 2,
+                "selected_periods": 2,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 2,
+                "selected_periods": 2,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 2
+              "derived": 2,
+              "reported": 4
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 2,
             "policy_prepared_value_periods": 0,
             "selected_periods": 2,
             "support_observations": 0,
-            "unresolved_entries": 2,
+            "unresolved_entries": 0,
             "unresolved_periods": 2,
-            "valued_inputs": 0
+            "valued_inputs": 6
           },
           "revenue": {
             "completeness": {
@@ -9781,12 +10650,12 @@
       },
       "review_codes": {
         "HISTORY_EXCEPTION": 1,
-        "MISSING_REQUIRED_VALUE": 18,
+        "MISSING_REQUIRED_VALUE": 16,
         "OVERLAP_WARNING": 32,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 86,
-        "UNRESOLVED_REQUIREMENTS": 86
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 90,
+        "UNRESOLVED_REQUIREMENTS": 90
       },
-      "review_count": 89
+      "review_count": 93
     },
     "TSLA": {
       "quality": {
@@ -9977,20 +10846,46 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 11,
+              "unknown": 4
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 4,
+                "populated": 1,
+                "selected_periods": 5,
+                "unavailable": 4,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 4,
+                "populated": 1,
+                "selected_periods": 5,
+                "unavailable": 4,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 1,
+              "reported": 6,
+              "unavailable": 8
             },
-            "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_conflicts": 4,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 8,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 7
           },
           "revenue": {
             "completeness": {
@@ -10048,14 +10943,14 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "CONFLICT": 4,
+        "CONFLICT": 12,
         "INVALID_EVIDENCE": 1,
-        "MISSING_REQUIRED_VALUE": 49,
-        "OVERLAP_WARNING": 105,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 255,
-        "UNRESOLVED_REQUIREMENTS": 255
+        "MISSING_REQUIRED_VALUE": 52,
+        "OVERLAP_WARNING": 113,
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 265,
+        "UNRESOLVED_REQUIREMENTS": 265
       },
-      "review_count": 261
+      "review_count": 271
     },
     "TXN": {
       "quality": {
@@ -10246,20 +11141,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -10318,12 +11237,12 @@
       },
       "review_codes": {
         "CONFLICT": 5,
-        "MISSING_REQUIRED_VALUE": 50,
+        "MISSING_REQUIRED_VALUE": 45,
         "OVERLAP_WARNING": 376,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 504,
-        "UNRESOLVED_REQUIREMENTS": 504
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 514,
+        "UNRESOLVED_REQUIREMENTS": 514
       },
-      "review_count": 509
+      "review_count": 519
     },
     "V": {
       "quality": {
@@ -10512,20 +11431,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -10583,12 +11526,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 37,
+        "MISSING_REQUIRED_VALUE": 32,
         "OVERLAP_WARNING": 265,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 382,
-        "UNRESOLVED_REQUIREMENTS": 382
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 392,
+        "UNRESOLVED_REQUIREMENTS": 392
       },
-      "review_count": 387
+      "review_count": 397
     },
     "VZ": {
       "quality": {
@@ -10779,20 +11722,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -10851,12 +11818,12 @@
       },
       "review_codes": {
         "CONFLICT": 10,
-        "MISSING_REQUIRED_VALUE": 65,
+        "MISSING_REQUIRED_VALUE": 60,
         "OVERLAP_WARNING": 490,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 650,
-        "UNRESOLVED_REQUIREMENTS": 650
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 660,
+        "UNRESOLVED_REQUIREMENTS": 660
       },
-      "review_count": 655
+      "review_count": 665
     },
     "WMT": {
       "quality": {
@@ -11047,20 +12014,44 @@
           },
           "reported_tax_context": {
             "completeness": {
-              "unknown": 5
+              "partial": 15
+            },
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 5,
+                "selected_periods": 5,
+                "unavailable": 0,
+                "unit": "USD"
+              }
             },
             "derivation_operands": 0,
             "origins": {
-              "unavailable": 5
+              "derived": 5,
+              "reported": 10
             },
             "periods_with_conflicts": 0,
-            "periods_with_values": 0,
+            "periods_with_values": 5,
             "policy_prepared_value_periods": 0,
             "selected_periods": 5,
             "support_observations": 0,
-            "unresolved_entries": 5,
+            "unresolved_entries": 0,
             "unresolved_periods": 5,
-            "valued_inputs": 0
+            "valued_inputs": 15
           },
           "revenue": {
             "completeness": {
@@ -11121,12 +12112,12 @@
       },
       "review_codes": {
         "CONFLICT": 25,
-        "MISSING_REQUIRED_VALUE": 75,
+        "MISSING_REQUIRED_VALUE": 70,
         "OVERLAP_WARNING": 103,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 248,
-        "UNRESOLVED_REQUIREMENTS": 248
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 258,
+        "UNRESOLVED_REQUIREMENTS": 258
       },
-      "review_count": 253
+      "review_count": 263
     },
     "XOM": {
       "quality": {
@@ -11263,6 +12254,29 @@
           },
           "reported_tax_context": {
             "completeness": {},
+            "components": {
+              "reported_continuing_pretax_income": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 0,
+                "unavailable": 0,
+                "unit": "USD"
+              },
+              "reported_effective_tax_rate": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 0,
+                "unavailable": 0,
+                "unit": "pure"
+              },
+              "reported_income_tax_expense_benefit": {
+                "conflicting": 0,
+                "populated": 0,
+                "selected_periods": 0,
+                "unavailable": 0,
+                "unit": "USD"
+              }
+            },
             "derivation_operands": 0,
             "origins": {},
             "periods_with_conflicts": 0,
@@ -11348,16 +12362,16 @@
     "unclassified_cfo_reconciliation_residual": 10
   },
   "review_codes": {
-    "CONFLICT": 119,
+    "CONFLICT": 145,
     "HISTORY_EXCEPTION": 3,
     "INVALID_EVIDENCE": 8,
-    "MISSING_REQUIRED_VALUE": 1867,
-    "OVERLAP_WARNING": 11792,
-    "PARTIAL_OR_UNREVIEWED_SCOPE": 17283,
-    "UNRESOLVED_REQUIREMENTS": 17320
+    "MISSING_REQUIRED_VALUE": 1767,
+    "OVERLAP_WARNING": 11922,
+    "PARTIAL_OR_UNREVIEWED_SCOPE": 17681,
+    "UNRESOLVED_REQUIREMENTS": 17718
   },
-  "review_count": 17617,
-  "schema": "assembled-historical-input-review-v1",
+  "review_count": 18015,
+  "schema": "assembled-historical-input-review-v2",
   "selected_periods": 199,
   "source_ledgers": {
     "docs/approved-income-integration-bindings.json": "ab6037acfa9ef3c0ea5b5875e2227441e6a0ee9ac4c8a24be4d6c26993291724",
@@ -11367,6 +12381,7 @@
     "docs/retained-cfo-ledger.json": "db4ef5b70d5808dcc3bb15516cf10bd7e5a8b5ce736035c3e840b05c56b83661",
     "docs/retained-claims-shares-ledger.json": "c9e04f5547df6ace6b2a4ab5795185cc17cb93c0434fcfc9297d463cc82dfbd1",
     "docs/retained-d-and-a-ledger.json": "d69e002a8c6a27953ddc3f546e6f50b49df18803300c6f831e0a4eee327f04e0",
+    "docs/retained-reported-tax-context-ledger.json": "9fc567179e4c9007d4d4911330cc47d385428bbc9229004f914e8b2716b21081",
     "docs/retained-tax-sbc-ledger.json": "ee6a7bb7241b3b46a979d1d9fc402376b02726e4fdd1218129af3e74b180aeac",
     "docs/retained-working-capital-ledger.json": "ffae70c8162ef5d691644885881795bdc9b3876e445f0a1082e697aedf19692c"
   }

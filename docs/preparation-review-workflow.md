@@ -1,5 +1,22 @@
 # Bounded Phase 1 preparation/review workflow
 
+## Integrated tax components and invalidation
+
+[Current tax integration](integrated-reported-tax-preparation.md) provides stable
+provision/Pretax/ETR component targets inside each tax-family primary. Exact sources,
+alternatives, units and policy proofs remain reachable. Original pilot cash taxes
+remain distinct; replaced provision duplicates/placeholders stay in attached source
+history rather than inflating active warnings. Ratio/operand evidence reuse is an
+explicit dependency, not independent overlapping amounts.
+
+With an accepted monetary operand overlay, original ETR remains visible but its
+same-period effective value is null (`DEPENDENT_ETR_INVALIDATED`), without an
+effective formula. No adjusted rate is computed or certified. Direct ETR numerical
+overrides are rejected. Missing acknowledgments and stale patches supply no value;
+revalidation restores only a monetary patch. Other periods remain unaffected.
+Current reproducible counts are in [the summary](preparation-workflow-summary.json);
+the older counts below record prior milestones, not automatic financial closure.
+
 The [input contract](dcf-input-contract.md), [source assembly](prepared-assembly-results.md)
 and [local analyst audit](analyst-override-review-controls.md) remain unchanged.
 This milestone validates preparation mechanics, not financial sufficiency or

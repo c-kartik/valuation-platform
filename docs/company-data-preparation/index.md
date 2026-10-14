@@ -1,5 +1,22 @@
 # Company data preparation register
 
+## Integrated reported-tax preparation — current delivery
+
+[Contract/results](../integrated-reported-tax-preparation.md): all 199 annuals now
+have distinct USD provision/Pretax and pure-unit reported ETR components inside
+assembly, quality and grouped review. Provision 186 populated / 13 conflicting;
+Pretax 162 / 37 unavailable; ETR 154 / 13 conflicting / 32 unavailable. Three MA
+approved entries replay after a retained, manifest-sealed metadata join repair,
+not new evidence or financial approval. All 42 records describe actual outcomes.
+
+Stable targets use existing immutable local audits. Monetary patches invalidate
+only the same-period effective source ratio; its original remains visible and no
+adjusted ratio or rate override is created. Conflicts, partial scope, unassessed
+cash taxes, history deficits and financial blockers stay explicit. Original
+pilots/frozen/non-tax outputs are preserved. Component counts are not complete
+operating-tax coverage or whole-history review. No phase closure or target-shortfall
+acceptance. Earlier sections below preserve prior delivery limits/decisions.
+
 ## Retained borrowing and separate reported tax context
 
 [Results](../retained-reported-tax-context-results.md) /

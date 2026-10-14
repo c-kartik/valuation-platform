@@ -2,6 +2,41 @@
 
 ## Current Milestone
 
+Completed bounded **reported-tax assembly/review/override integration**.
+[Current contract and finite decisions](integrated-reported-tax-preparation.md).
+199 annuals / 42 histories retain distinct provision, Pretax and pure-unit reported
+ETR components, exact source/policy proof, alternatives and null requirements.
+Coverage: provision 186 populated / 13 conflicting; Pretax 162 populated / 37
+unavailable; ETR 154 populated / 13 conflicting / 32 unavailable. Three MA metadata
+gaps repaired by joining the manifest-sealed retained D&A inventory to the exact
+instances; original approvals/annual checks replay, no SEC requests or new policy.
+
+Assembly v2 / pure-containing generic preparation v3 preserve legacy support and
+original pilot bytes; frozen schema 5, registries/results, non-tax values and seven
+D&A negative reviews unchanged. Monetary analyst patches are revision-bound and
+persist through restart; same-period dependent ETR is suppressed in the effective
+view while original source history remains. No adjusted ratio or direct rate
+override is allowed. Intentional operand-source reuse does not inflate overlap
+warnings. Reported cash taxes and deferred-tax CFO adjustments remain distinct.
+
+Quality remains partial, financial sufficiency NOT_ASSESSED; no forecast rate,
+economic adjustment, Phase 1 closure or automatic blocker removal. Proposed
+90%/80% shortfalls are not accepted. Stop after focused validation and local commit.
+Remaining finite decisions: accept/reject delivery coverage limitations, disposition
+existing tax conflicts/missing scopes, and define independent closure-validation
+acceptance. Any adjusted/operating-tax treatment requires a separate future contract;
+no new research queue or Phase 2 start is authorized.
+
+Verified 76 distinct focused tests pass, including original-ratio export tampering,
+transport-versus-relevant-proof revisions, synthetic persistence/revalidation and
+same-period invalidation. Compileall, affected links and diff checks pass. Queue
+2,786 primaries / 8,247 nested actionable / 18,012 annual diagnostics plus three
+history cards; eight invalid-evidence locations preserved. Independent 120-check
+results remain 119 CHECKED / zero FAILED / one NOT_VERIFIED (CVX EBIT). No full suite
+or corpus rerun. Stop after this local milestone; no automatic phase closure.
+
+### Prior borrowing/separate-tax milestone — preserved decisions
+
 Completed bounded **ORCL borrowing mapping and separate reported-tax preparation**.
 [Results/limits](retained-reported-tax-context-results.md) /
 [199-period source ledger](retained-reported-tax-context-ledger.json).

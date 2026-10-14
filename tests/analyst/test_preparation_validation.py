@@ -95,7 +95,7 @@ class PreparationValidationTests(unittest.TestCase):
 
     def test_original_artifacts_and_policies_preserved(self):
         import subprocess
-        paths=[p for p in a.LEDGERS if p not in (a.da.LEDGER,a.bridge.LEDGER)]+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
+        paths=[p for p in a.LEDGERS if p not in (a.da.LEDGER,a.bridge.LEDGER,a.tax.LEDGER)]+['docs/pilot-historical-input-mappings.json']
         paths+=subprocess.check_output(['git','ls-tree','-r','--name-only','0e7970593399fc2289dccacb4e284fd04677868b','docs/evidence','docs/universe','src/valuation_platform/normalization'],cwd=a.ROOT).decode().splitlines()
         for path in paths:
             self.assertTrue((a.ROOT/path).read_bytes()==subprocess.check_output(['git','show','0e7970593399fc2289dccacb4e284fd04677868b:'+path],cwd=a.ROOT),path)

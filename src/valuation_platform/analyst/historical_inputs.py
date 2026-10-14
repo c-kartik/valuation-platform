@@ -79,6 +79,7 @@ class FormulaKind(str, Enum):
     COMPONENT_TOTAL = "component_total"
     OPERATING_EXPENSE_BRIDGE = "revenue_minus_operating_expenses"
     CFO_REMAINDER = "cfo_reconciliation_remainder"
+    REPORTED_ETR = "existing_reported_effective_tax_rate"
 
 
 def _text(v: object) -> None:
@@ -227,8 +228,12 @@ class InputValue:
                        (self.scope_status, Scope)):
             if type(v) is not cls:
                 raise InputError("Explicit typed identity/status required")
-        if self.unit != ("shares" if self.field is Field.SHARES else "USD"):
+        ratio = self.field is Field.TAX and self.role == 'reported_effective_tax_rate'
+        if self.unit != ('pure' if ratio else "shares" if self.field is Field.SHARES else "USD"):
             raise InputError("Field/unit mismatch")
+        if ratio and self.origin not in (Origin.DERIVED, Origin.UNAVAILABLE):
+            raise InputError('Reported ETR is policy-derived or unavailable, never a direct rate or override')
+        if ratio and (self.scale,self.sign)!=(1,1):raise InputError('Reported ETR is an unscaled signed policy ratio')
         if type(self.scale) is not int or self.scale < 1 or type(self.sign) is not int or self.sign not in (-1, 1):
             raise InputError("Explicit positive scale and sign multiplier required")
         bridge = self.field in (Field.CASH_INVESTMENTS, Field.DEBT_LEASES, Field.OTHER_BRIDGE, Field.SHARES)
@@ -246,7 +251,7 @@ class InputValue:
         if len({s.source_id for s in self.sources}) != len(self.sources):
             raise InputError("Duplicate source identity")
         for s in self.sources:
-            if s.period != self.period or s.unit != self.unit or (bridge and (s.start is not None or s.end != self.as_of)) or (not bridge and s.start is None):
+            if s.period != self.period or s.unit != ('USD' if ratio else self.unit) or (bridge and (s.start is not None or s.end != self.as_of)) or (not bridge and s.start is None):
                 raise InputError("Source/target period, date or unit mismatch")
         if self.value is None:
             if self.origin is not Origin.UNAVAILABLE or self.null_reason is None or not self.unresolved_requirements:
@@ -282,6 +287,12 @@ class InputValue:
                 raise InputError("CFO remainder is not an approved operating adjustment")
             if self.formula.kind is FormulaKind.OPERATING_EXPENSE_BRIDGE and self.field is not Field.EBIT:
                 raise InputError("Operating expense bridge belongs only to EBIT")
+            if self.formula.kind is FormulaKind.REPORTED_ETR and (not ratio or
+                    self.formula.formula_id!='annual_reported_effective_tax_rate_v1' or self.formula.version!=1
+                    or self.formula.expression!='income_tax_expense / pretax_income' or len(self.formula.operands)!=2):
+                raise InputError('Only the existing reported ETR policy descriptor is allowed')
+        if ratio and self.value is not None and (self.formula is None or self.formula.kind is not FormulaKind.REPORTED_ETR):
+            raise InputError('Reported ETR requires its exact accounting-policy descriptor')
         if self.origin is Origin.OVERRIDE and not self.alternatives:
             raise InputError("Override must preserve displaced alternatives")
         for a in self.alternatives:
@@ -323,6 +334,11 @@ class AnnualBundle:
                 raise InputError("Formula scope references must bind retained evidence")
             if any(o.value is None for o in operands):
                 raise InputError("Missing operands cannot yield a derived value")
+            if v.formula.kind is FormulaKind.REPORTED_ETR:
+                if (tuple(o.role for o in operands)!=('reported_income_tax_expense_benefit','reported_continuing_pretax_income')
+                        or any(o.field is not Field.TAX or o.unit!='USD' or o.origin is not Origin.REPORTED for o in operands)
+                        or operands[1].value==0):
+                    raise InputError('Reported ETR binds original reported USD provision/Pretax operands only')
             if v.formula.kind is FormulaKind.OPERATING_EXPENSE_BRIDGE:
                 if (len(operands) < 2 or operands[0].field is not Field.REVENUE or
                         any(o.scope_status is not Scope.OPERATING_ONLY or o.role != "operating_expense"
@@ -445,7 +461,8 @@ def serialize(bundle: HistoryBundle) -> str:
     if type(bundle) is not HistoryBundle:
         raise InputError("Isolated history bundle required")
     _no_refresh_downgrade(bundle)
-    return json.dumps({"schema": SCHEMA, "bundle": _encode(bundle)}, sort_keys=True, separators=(",", ":"))
+    schema='historical-input-preparation-v3' if any(v.unit=='pure' for a in bundle.annuals for v in a.inputs) else SCHEMA
+    return json.dumps({"schema": schema, "bundle": _encode(bundle)}, sort_keys=True, separators=(",", ":"))
 
 
 def deserialize(payload: str) -> HistoryBundle:
@@ -458,12 +475,14 @@ def deserialize(payload: str) -> HistoryBundle:
                 result[k] = v
             return result
         envelope = json.loads(payload, object_pairs_hook=unique)
-        if type(envelope) is not dict or set(envelope) != {"schema", "bundle"} or envelope["schema"] != SCHEMA:
+        if type(envelope) is not dict or set(envelope) != {"schema", "bundle"} or envelope["schema"] not in (SCHEMA,'historical-input-preparation-v3'):
             raise InputError("Separate versioned preparation schema required")
         result = _decode(envelope["bundle"])
         if type(result) is not HistoryBundle:
             raise InputError("History bundle required")
         _no_refresh_downgrade(result)
+        pure=any(v.unit=='pure' for a in result.annuals for v in a.inputs)
+        if pure!=(envelope['schema']=='historical-input-preparation-v3'):raise InputError('No silent ratio schema downgrade')
         return result
     except (ValueError, TypeError, KeyError) as exc:
         raise InputError("Invalid preparation serialization") from exc

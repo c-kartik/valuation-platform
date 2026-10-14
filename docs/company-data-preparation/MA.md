@@ -1,5 +1,15 @@
 # MA — company data preparation
 
+## Integrated reported-tax review — current preparation mechanism
+
+5 selected annuals: provision {'POPULATED': 5}; Pretax {'POPULATED': 5}; 5 existing-policy ETR values. No annual created for empty/short history.
+[Integration, exact metadata repair and validation](../integrated-reported-tax-preparation.md) /
+[Source and policy ledger](../retained-reported-tax-context-ledger.json).
+
+Original conflict: the separate pure-unit ETR stream was outside bundle/review/override controls. Chosen resolution uses three distinct active components, preserving raw facts, exact sources, alternatives, original accounting-policy proof and partial scope. Prior tax placeholders/provision duplicates stay in attached original history; pilot cash taxes stay separate and unchanged. Stable component targets permit explicit monetary decisions, not rate overrides. A same-period provision/Pretax patch invalidates the effective ETR display; the original source ratio remains visible and no adjusted ratio is calculated. Changed source/evidence revisions require explicit revalidation. Cash taxes not already packaged remain unassessed, not zero. Existing NWC, timing, support, history and financial blockers persist; financial sufficiency NOT_ASSESSED. Tests cover ledger agreement, round trips, synthetic audit restart/staleness/dependencies and frozen/pilot/non-tax preservation. Earlier sections retain prior decisions and their superseded delivery boundary.
+
+Three former metadata gaps were a missed join: manifest-sealed D&A inventory rows 40–42 provide exact filing dates/primary documents, matching all three retained instance URLs/digests. Unchanged approved Pretax policies and annual DEI replay now succeed for 2021–2023, adding three Pretax/ETR values. No new receipt, approval, source value or financial fallback; exact join proof is retained in the ledger.
+
 ## Retained reported tax context — separate preparation overlay
 
 5 exact selected periods: provision {'POPULATED': 5}; Pretax {'UNAVAILABLE': 3, 'POPULATED': 2}; 2 derived reported ETR observations.

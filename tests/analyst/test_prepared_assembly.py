@@ -29,12 +29,12 @@ class PreparedAssemblyTests(unittest.TestCase):
 
     def test_exact_parent_overlay_and_operand_agreement(self):
         for prepared in self.histories.values():
-            expected,binding=a.combine(prepared.original,prepared.d_and_a,prepared.instant,prepared.claims_shares)
+            expected,binding=a.combine(prepared.original,prepared.d_and_a,prepared.instant,prepared.claims_shares,prepared.tax_context)
             self.assertEqual((expected,binding),(prepared.bundle,prepared.bindings_json))
             for original,assembled in zip(a.unwrap(prepared.original).annuals,prepared.bundle.annuals):
                 retained={v.input_id:v for v in assembled.inputs}
                 for v in original.inputs:
-                    if v.field not in (h.Field.DA,h.Field.CASH_INVESTMENTS,h.Field.DEBT_LEASES,h.Field.OTHER_BRIDGE,h.Field.SHARES):
+                    if v.field not in (h.Field.DA,h.Field.CASH_INVESTMENTS,h.Field.DEBT_LEASES,h.Field.OTHER_BRIDGE,h.Field.SHARES,h.Field.TAX):
                         self.assertEqual(retained[v.input_id],v)
                 for v in assembled.inputs:
                     if v.formula:self.assertTrue(all(o in retained for o in v.formula.operands))
@@ -97,7 +97,7 @@ class PreparedAssemblyTests(unittest.TestCase):
         self.assertEqual(q[h.Field.DA.value]['policy_prepared_value_periods'],108)
         self.assertEqual(q[h.Field.CASH_INVESTMENTS.value]['policy_prepared_value_periods'],0)
         self.assertGreater(q[h.Field.CASH_INVESTMENTS.value]['support_observations'],199)
-        self.assertEqual(q[h.Field.TAX.value]['periods_with_values'],4)
+        self.assertEqual(q[h.Field.TAX.value]['periods_with_values'],194)
         self.assertEqual(q[h.Field.CFO_RESIDUAL.value]['periods_with_values'],0)
         self.assertEqual(self.report['financial_sufficiency'],'NOT_ASSESSED')
 
@@ -109,7 +109,7 @@ class PreparedAssemblyTests(unittest.TestCase):
             actual=hashlib.sha256(pilot.serialize(pilot.load_history(name)).encode()).hexdigest()
             self.assertEqual(actual,digest)
         paths=subprocess.check_output(['git','ls-tree','-r','--name-only',HEAD,'src/valuation_platform/normalization','docs/evidence','docs/universe'],cwd=a.ROOT).decode().splitlines()
-        paths+=[p for p in a.LEDGERS if p not in (a.da.LEDGER,a.bridge.LEDGER)]+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
+        paths+=[p for p in a.LEDGERS if p not in (a.da.LEDGER,a.bridge.LEDGER,a.tax.LEDGER)]+['docs/pilot-historical-input-mappings.json']
         for path in paths:self.assertEqual((a.ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=a.ROOT),path)
 
     def test_grouped_queue_full_diagnostic_preservation_and_summary(self):
@@ -127,7 +127,7 @@ class PreparedAssemblyTests(unittest.TestCase):
         report=dict(schema='grouped-preparation-review-v1',issuers=len(per),
             selected_periods=self.report['selected_periods'],per_issuer=per,
             totals={k:sum(v[k] for v in per.values()) for k in ('diagnostics','groups','actionable','informational')})
-        self.assertEqual(report['totals']['diagnostics'],17617)
+        self.assertEqual(report['totals']['diagnostics'],self.report['review_count'])
         # Generated test output is outside the repository; no analyst decisions persisted.
         from pathlib import Path
         Path('/tmp/grouped-preparation-review-summary.json').write_text(a.canonical(report)+'\n')

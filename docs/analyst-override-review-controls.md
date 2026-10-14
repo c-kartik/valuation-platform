@@ -1,5 +1,17 @@
 # Revision-bound analyst decisions and grouped review
 
+## Reported-tax dependency control
+
+[Tax integration](integrated-reported-tax-preparation.md) uses the same immutable
+audit persistence for USD provision/Pretax component decisions. The original
+pure-unit reported ETR is not numerically writable. An applied operand patch marks
+`accession#ratio-input-ID` dependent, avoiding cross-period invalidation of repeated
+IDs. Original history stays unchanged; effective presentation suppresses the old
+ratio and its formula, rather than implying consistency or calculating an adjusted
+ratio. Stale rejection/revalidation and null acknowledgment do not certify a rate.
+Tax revisions retain both operands and relevant proof/evidence, excluding transport
+timestamps inside known tax-proof JSON flags. No default or real assumption added.
+
 Phase 1 only. The [historical-input contract](dcf-input-contract.md) and
 [assembled sources](prepared-assembly-results.md) remain authoritative.
 `analyst/analyst_overrides.py` adds opt-in local persistence and a separate

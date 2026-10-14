@@ -1,5 +1,21 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Additive reported-tax integration
+
+[Current integrated contract](integrated-reported-tax-preparation.md) supersedes
+the separate-delivery limitation below. Provision/Pretax remain reported USD
+components; reported ETR is a separately identified pure-unit existing-policy
+derivation, never a suggested rate. Only its exact descriptor/operand roles are
+allowed. New pure-containing generic histories use preparation v3, new assemblies
+v2; legacy/pilot/frozen bytes retain their versions. Cash taxes/deferred-tax CFO
+adjustments stay distinct. Scope/completeness gaps are not automatically cleared.
+
+Existing analyst audits accept explicit monetary patches, not ratio overrides.
+Operand changes invalidate same-period effective ETR; original source history is
+retained. An adjusted ratio would require a separate derivation, not created here.
+Component source revisions include both operands/evidence; stale choices require
+explicit revalidation. No financial sufficiency or Phase 1 closure is implied.
+
 ## Separate reported accounting tax-context delivery
 
 [Retained tax replay](retained-reported-tax-context-results.md) provides USD

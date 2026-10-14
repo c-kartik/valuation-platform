@@ -93,12 +93,19 @@ def inspection_payload(prepared, view='full', store=None):
         values = []
         for source in annual.inputs:
             patch = patches.get((annual.period.accession,source.input_id))
+            invalid_ratio=overlay is not None and annual.period.accession+'#'+source.input_id in overlay.dependent_review
+            effective=a.click(source if patch is None else patch)
+            if invalid_ratio:
+                effective={**effective,'value':None,'null_reason':'Original reported ETR is inconsistent with an overridden operand; no adjusted ratio calculated.',
+                    'origin':'unavailable','quality':'limited','formula':None,
+                    'requirements':effective['requirements']+['Dependent reported ETR is invalidated; adjusted ratio requires a separate derivation contract.'],
+                    'flags':effective['flags']+['dependent_etr_invalidated']}
             values.append(dict(input_id=source.input_id,field=source.field.value,
                 target_id=a.target(source.period,source.field.value,{
                     'channel':bindings[(annual.period.accession,source.input_id)]['channel'],'input_id':source.input_id}),
                 binding=bindings[(annual.period.accession,source.input_id)],
-                original=a.click(source),effective=a.click(source if patch is None else patch),
-                effective_basis='SOURCE_UNCHANGED' if patch is None else 'SEPARATE_ANALYST_OVERLAY',
+                original=a.click(source),effective=effective,
+                effective_basis='DEPENDENT_ETR_INVALIDATED' if invalid_ratio else 'SOURCE_UNCHANGED' if patch is None else 'SEPARATE_ANALYST_OVERLAY',
                 scope_status=source.scope_status.value,coverage_keys=list(source.coverage_keys)))
         annuals.append(dict(bundle_id=annual.bundle_id,period=h._encode(annual.period),
             inputs=values,limitations=list(annual.limitations)))

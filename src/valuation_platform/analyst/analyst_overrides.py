@@ -46,6 +46,14 @@ def relevant(content):
         return {k: relevant(v) for k, v in content.items() if k not in
                 {'retrieved_at_utc', 'http_status', 'retrieval_mode', 'ledger_sha256'}}
     if isinstance(content, (list, tuple)): return [relevant(v) for v in content]
+    if isinstance(content,str) and any(content.startswith(prefix) for prefix in
+            ('existing_policy_proof:','reported_tax_policy_result:','tax_context_proof:')):
+        prefix,payload=content.split(':',1)
+        def tax_content(value):
+            if isinstance(value,dict):return {k:tax_content(v) for k,v in value.items() if k not in ('retrieved_at','retrieved_at_utc','http_status','retrieval_mode')}
+            if isinstance(value,list):return [tax_content(v) for v in value]
+            return value
+        return prefix+':'+a.canonical(tax_content(_json(payload)))
     return content
 
 
@@ -97,6 +105,8 @@ def _validate_payload(target, payload):
     try: value = Decimal(payload['value'])
     except Exception as exc: raise h.InputError('Finite decimal string required') from exc
     source = target.source
+    if source.role=='reported_effective_tax_rate':
+        raise h.InputError('Source reported ETR cannot be overridden; an adjusted ratio requires a separate derivation contract')
     if type(payload['value']) is not str or not value.is_finite():
         raise h.InputError('Finite decimal string required')
     if payload['unit'] != source.unit or type(payload['sign']) is not int or payload['sign'] != source.sign:
@@ -257,8 +267,10 @@ def overlay(prepared, store):
             flags=tuple(dict.fromkeys((*source.flags,'separate_analyst_overlay',event['payload']['kind']))))
         # Completeness, limitations and original unresolved requirements are intentionally unchanged.
         values.append(patch); applied.append(event['sha256'])
-        dependencies.extend(v.input_id for annual in prepared.bundle.annuals for v in annual.inputs
-                            if v.formula and source.input_id in v.formula.operands)
+        dependencies.extend((annual.period.accession+'#'+v.input_id if v.formula.kind is h.FormulaKind.REPORTED_ETR else v.input_id)
+                            for annual in prepared.bundle.annuals for v in annual.inputs
+                            if v.formula and source.input_id in v.formula.operands and
+                            (v.formula.kind is not h.FormulaKind.REPORTED_ETR or annual.period==source.period))
     return Overlay(tuple(values), tuple(applied), tuple(stale), tuple(acknowledgments),
                    tuple(sorted(set(dependencies))), a.canonical(events))
 

@@ -124,8 +124,8 @@ class ReportedTaxPreparationTests(unittest.TestCase):
 
     def test_previous_pilot_frozen_and_other_ledger_bytes_preserved(self):
         paths=list(shared.a.LEDGERS)
-        paths=[p for p in paths if p!=b.LEDGER]
-        paths+=['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
+        paths=[p for p in paths if p not in (b.LEDGER,t.LEDGER)]
+        paths+=['docs/pilot-historical-input-mappings.json']
         paths += subprocess.check_output(['git','ls-files','src/valuation_platform/normalization','tests/fixtures'],cwd=shared.a.ROOT,text=True).splitlines()
         for path in paths:self.assertEqual((shared.a.ROOT/path).read_bytes(),subprocess.check_output(['git','show',BASE+':'+path],cwd=shared.a.ROOT),path)
         old=json.loads(subprocess.check_output(['git','show',BASE+':'+b.LEDGER],cwd=shared.a.ROOT))

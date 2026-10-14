@@ -1,5 +1,24 @@
 # Architecture
 
+## Integrated reported-tax review
+
+[Bounded integration](integrated-reported-tax-preparation.md) adds provision,
+Pretax and existing-policy pure-unit ETR to assembly v2. Model support is restricted
+to this reported accounting ratio; generic histories with it use preparation v3,
+while original v1/pilot bytes and refreshed Capex v2 stay unchanged. Legacy assembly
+v1 remains readable at its source revision. Original tax overlays/proof replay on
+decode; no new financial equation, registry or frozen schema change.
+
+Stable component targets/revisions feed existing grouped review and local audits.
+Exact same-period operand overrides invalidate the effective ETR display, preserving
+the original ratio as source history. No recomputation or ratio override is allowed.
+Intentional ratio-source reuse is not an overlap warning; genuine overlaps remain.
+MA's three metadata joins use the manifest-sealed retained inventory, not new SEC
+receipts. Quality/coverage reports distinguish the three components from complete
+operating-tax sufficiency and leave financial approval NOT_ASSESSED.
+
+Earlier separate-delivery description below records the prior boundary.
+
 ## Separate reported-tax preparation
 
 `analyst/retained_reported_tax.py` replays unchanged provision/Pretax/ETR policies

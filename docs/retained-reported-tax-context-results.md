@@ -1,5 +1,15 @@
 # Retained borrowing and reported-tax preparation
 
+## Subsequent integrated delivery and MA join repair
+
+[Current integration](integrated-reported-tax-preparation.md) supersedes the
+separate-delivery boundary and three MA gaps recorded below. Exact authoritative
+filing metadata already existed in manifest-sealed D&A inventory rows 40–42;
+instances/digests/annuals match and original approvals replay. Current Pretax 162,
+ETR 154; source values and frozen approvals are unchanged. Tax components now enter
+assembly/review/audits with original-ratio preservation and same-period effective
+invalidation under monetary patches. Earlier text is the preserved prior result.
+
 Bounded Phase 1 retained-evidence replay; no phase closure, coverage-shortfall
 acceptance, frozen policy/schema change or valuation authorization.
 

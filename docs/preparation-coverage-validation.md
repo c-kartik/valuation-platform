@@ -1,5 +1,19 @@
 # Retained preparation coverage and independent spot checks
 
+## Integrated reported-tax coverage
+
+[Current integration](integrated-reported-tax-preparation.md) now accounts for the
+three components in the assembled tax family. Provision 186 / 13 conflicting;
+Pretax 162 / 37 unavailable; ETR 154 / 13 conflicting / 32 unavailable, each over
+199 selected annuals (210 target, eleven history gaps). All 199 tax families have
+scope/consumer limitations; component counts/194 valued periods are not complete
+operating-tax readiness. Original pilot cash-tax observations stay distinct.
+No change to recent/older denominator definitions, 90%/80% targets or acceptance.
+The reported-tax source ledger remains separately referenced for reproducibility,
+but is now marked as counted in assembled inventory rather than an extra coverage
+denominator. Independent checks remain 119 CHECKED / zero FAILED / one NOT_VERIFIED.
+Earlier separate-delivery sections preserve the prior milestone's boundary.
+
 ## Current borrowing/tax replay
 
 [Bounded results](retained-reported-tax-context-results.md): 119 CHECKED / zero

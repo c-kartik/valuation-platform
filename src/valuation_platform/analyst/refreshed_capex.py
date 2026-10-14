@@ -247,7 +247,7 @@ def deserialize(payload):
             return d
         doc=json.loads(payload,object_pairs_hook=unique)
         if type(doc) is not dict:raise h.InputError('Closed preparation envelope required')
-        if doc.get('schema')==h.SCHEMA:return h.deserialize(payload)
+        if doc.get('schema') in (h.SCHEMA,'historical-input-preparation-v3'):return h.deserialize(payload)
         if set(doc)!={'schema','history','original_bodies'} or doc['schema']!=SCHEMA:raise h.InputError('Unsupported refresh serialization version')
         if type(doc['original_bodies']) is not dict:raise h.InputError('Closed original-body table required')
         bodies={};used=set()

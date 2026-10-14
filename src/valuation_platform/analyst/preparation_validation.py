@@ -142,7 +142,7 @@ def coverage(histories,spot=None):
         report['separate_reported_tax_context']=dict(source=str(tax_path.relative_to(a.ROOT)),
             sha256=hashlib.sha256(tax_path.read_bytes()).hexdigest(),selected_denominator=199,target_denominator=210,
             missing_target_history_slots=11,components=tax['summary'],approved_complete_consumer_fields=0,
-            counted_in_assembled_inventory=False,financial_sufficiency='NOT_ASSESSED')
+            counted_in_assembled_inventory=all(p.bundle.version==2 for p in histories.values()),financial_sufficiency='NOT_ASSESSED')
     return report
 
 

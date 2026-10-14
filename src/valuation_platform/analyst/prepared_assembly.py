@@ -8,13 +8,15 @@ from decimal import Decimal
 from . import historical_inputs as h,refreshed_capex as parent,retained_d_and_a as da
 from . import retained_bridge_components as bridge,retained_claims_shares as claims
 from . import retained_cfo_preparation as cfo
+from . import retained_reported_tax as tax
 
 ROOT=parent.capex.shared.ROOT
-SCHEMA='assembled-historical-input-review-v1'
+LEGACY_SCHEMA='assembled-historical-input-review-v1'
+SCHEMA='assembled-historical-input-review-v2'
 REPORT='docs/prepared-assembly-summary.json'
 LEDGERS=('docs/repaired-income-ledger.json','docs/approved-income-integration-bindings.json',
     'docs/retained-cfo-ledger.json','docs/retained-working-capital-ledger.json','docs/retained-tax-sbc-ledger.json',
-    'docs/refreshed-capex-ledger.json',da.LEDGER,bridge.LEDGER,claims.LEDGER)
+    'docs/refreshed-capex-ledger.json',da.LEDGER,bridge.LEDGER,claims.LEDGER,tax.LEDGER)
 PRIMARY=frozenset((h.Field.REVENUE,h.Field.EBIT,h.Field.DA,h.Field.CAPEX,h.Field.CFO))
 # Configured review order, not confidence or materiality scores. No acceptance
 # threshold is implied by position. Overrides of this ordering must be explicit.
@@ -36,13 +38,14 @@ def aliases_for(cik):
         return tuple(sorted({v['project_ticker'] for v in csv.DictReader(source) if int(v['sec_cik'])==cik}))
 
 
-def seals():return tuple((path,sha256((ROOT/path).read_bytes()).hexdigest()) for path in LEDGERS)
+def seals(integrated=True):return tuple((path,sha256((ROOT/path).read_bytes()).hexdigest()) for path in LEDGERS if integrated or path!=tax.LEDGER)
 
 
-def diagnostics(original):
+def diagnostics(original,integrated=True):
     """Retain existing errors/status/overlap locations, not new fact extraction."""
     accessions={a.period.accession for a in unwrap(original).annuals};out=[]
     for path in LEDGERS:
+        if not integrated and path==tax.LEDGER:continue
         doc=json.loads((ROOT/path).read_text())
         for i,row in enumerate(doc.get('rows',[])):
             acc=row.get('identity',{}).get('accession')
@@ -61,10 +64,10 @@ def diagnostics(original):
     return canonical(out)
 
 
-def combine(original,ds,bs,cs):
+def combine(original,ds,bs,cs,ts=None):
     """Copy exact existing InputValues; only container identities are new."""
     history=unwrap(original);mapping=[];annuals=[]
-    for a,d,b,c in zip(history.annuals,ds,bs,cs):
+    for index,(a,d,b,c) in enumerate(zip(history.annuals,ds,bs,cs)):
         if not a.period==d.period==b.period==c.period:raise h.InputError('Exact period-aligned overlays required')
         selected={};bindings={}
         operands={o for v in a.inputs if v.formula for o in v.formula.operands}
@@ -75,6 +78,8 @@ def combine(original,ds,bs,cs):
             selected[v.input_id]=v;bindings[v.input_id]=dict(accession=a.period.accession,input_id=v.input_id,
                 field=v.field.value,category=category,channel=channel)
         for v in a.inputs:
+            if ts is not None and v.field is h.Field.TAX and (v.value is None or v.role=='accrued_tax_provision'):
+                continue  # Superseded tax placeholders/provision stay in attached original history.
             if v.field in (h.Field.DA,h.Field.CASH_INVESTMENTS,h.Field.DEBT_LEASES,h.Field.OTHER_BRIDGE,h.Field.SHARES):
                 if v.value is not None:add(v,'support_observation','original_parent')
                 elif v.review is not h.Review.UNREVIEWED and v.field is not h.Field.DA:
@@ -88,12 +93,17 @@ def combine(original,ds,bs,cs):
         for v in d.operands:add(v,'derivation_operand','d_and_a')
         for channel,values in (('instant_components',(*b.cash_investments,*b.debt_leases)),('claims_shares',(*c.other_bridge,*c.shares))):
             for v in values:add(v,'component_observation' if v.value is not None else 'unresolved_requirement',channel)
+        if ts is not None:
+            if ts[index].period!=a.period:raise h.InputError('Exact tax overlay period required')
+            for v in tax.inputs(ts[index]):
+                add(v,'tax_context_value' if v.value is not None else 'unresolved_requirement','reported_tax')
         vv=tuple(sorted(selected.values(),key=lambda v:(list(h.Field).index(v.field),v.input_id)))
-        annuals.append(h.AnnualBundle('assembled-inputs:'+a.period.accession,1,a.period,vv,
+        annuals.append(h.AnnualBundle('assembled-inputs:'+a.period.accession,2 if ts is not None else 1,a.period,vv,
             tuple(dict.fromkeys((*a.limitations,*LIMITS)))))
         mapping.extend(bindings[v.input_id] for v in vv)
     if not len(history.annuals)==len(ds)==len(bs)==len(cs):raise h.InputError('Every selected annual requires all overlays')
-    return h.HistoryBundle('assembled-inputs:'+str(history.cik),1,history.cik,tuple(annuals),history.history_exceptions),canonical(mapping)
+    if ts is not None and len(ts)!=len(history.annuals):raise h.InputError('Every selected annual requires tax overlay')
+    return h.HistoryBundle('assembled-inputs:'+str(history.cik),2 if ts is not None else 1,history.cik,tuple(annuals),history.history_exceptions),canonical(mapping)
 
 
 @dataclass(frozen=True)
@@ -108,16 +118,20 @@ class PreparedHistory:
     bindings_json:str
     diagnostics_json:str
     ledger_seals:tuple[tuple[str,str],...]
+    tax_context:tuple[tax.AnnualTaxContext,...]=()
 
     def __post_init__(self):
         h._text(self.ticker);h._strings(self.aliases)
-        if self.ticker not in self.aliases or self.aliases!=aliases_for(unwrap(self.original).cik) or self.ledger_seals!=seals():raise h.InputError('Exact ticker/retained ledger revision required')
+        integrated=self.bundle.version==2
+        if self.ticker not in self.aliases or self.aliases!=aliases_for(unwrap(self.original).cik) or self.ledger_seals!=seals(integrated):raise h.InputError('Exact ticker/retained ledger revision required')
         if type(self.original) not in (h.HistoryBundle,parent.RefreshedHistory):raise h.InputError('Original typed parent required')
         for vv,cls in ((self.d_and_a,da.AnnualDAndA),(self.instant,bridge.AnnualComponents),(self.claims_shares,claims.AnnualClaimsShares)):
             h._typed(vv,cls)
-        expected,mapping=combine(self.original,self.d_and_a,self.instant,self.claims_shares)
+        h._typed(self.tax_context,tax.AnnualTaxContext)
+        if not integrated and self.tax_context:raise h.InputError('No tax overlay in legacy assembly')
+        expected,mapping=combine(self.original,self.d_and_a,self.instant,self.claims_shares,self.tax_context if integrated else None)
         if (self.bundle,self.bindings_json)!=(expected,mapping):raise h.InputError('Assembled values/bindings differ from original materialized inputs')
-        if self.diagnostics_json!=diagnostics(self.original):raise h.InputError('Invalid evidence/diagnostic ledger binding differs')
+        if self.diagnostics_json!=diagnostics(self.original,integrated):raise h.InputError('Invalid evidence/diagnostic ledger binding differs')
 
 
 def source_payload(s):
@@ -200,7 +214,10 @@ def review_queue(prepared,priority=PRIORITY):
             if v.completeness is not h.Completeness.COMPLETE or v.scope_status in (h.Scope.UNKNOWN,h.Scope.RESTRICTED,h.Scope.MIXED):
                 codes.append('PARTIAL_OR_UNREVIEWED_SCOPE');reasons.append(v.scope)
             overlap=[f for f in v.flags if 'overlap' in f and not f.endswith(':')]
-            shared=sorted({other for s in v.sources for other in known[(s.receipt.artifact.sha256,s.occurrence_ordinal,s.context_id,s.namespace,s.concept)] if other!=v.input_id})
+            intentional={x.input_id for x in annual.inputs if x.formula and x.formula.kind is h.FormulaKind.REPORTED_ETR
+                and (x.input_id==v.input_id or v.input_id in x.formula.operands)}
+            if v.formula and v.formula.kind is h.FormulaKind.REPORTED_ETR:intentional.update(v.formula.operands)
+            shared=sorted({other for s in v.sources for other in known[(s.receipt.artifact.sha256,s.occurrence_ordinal,s.context_id,s.namespace,s.concept)] if other!=v.input_id and other not in intentional})
             if overlap or shared:codes.append('OVERLAP_WARNING');reasons.append('Known same-source reuse or possible parent/component overlap; not independent amounts.')
             if v.unresolved_requirements:codes.append('UNRESOLVED_REQUIREMENTS');reasons.extend(v.unresolved_requirements)
             if codes:item(v.field,dict(channel=binding['channel'],input_id=v.input_id),reasons,codes,
@@ -249,6 +266,13 @@ def quality(prepared):
             valued_inputs=sum(v.value is not None for a,v,b in vv),support_observations=sum(v.value is not None and b['category'] in ('support_observation','component_observation') for a,v,b in vv),
             derivation_operands=sum(b['category']=='derivation_operand' for a,v,b in vv),unresolved_entries=sum(v.value is None for a,v,b in vv),
             origins=dict(Counter(v.origin.value for a,v,b in vv)),completeness=dict(Counter(v.completeness.value for a,v,b in vv)))
+        if f is h.Field.TAX:
+            summary[f.value]['components']={role:dict(selected_periods=len(prepared.bundle.annuals),
+                populated=sum(v.value is not None for a,v,b in vv if v.role==role),
+                conflicting=sum(v.quality is h.Quality.CONFLICTING for a,v,b in vv if v.role==role),
+                unavailable=sum(v.value is None for a,v,b in vv if v.role==role),
+                unit='pure' if role=='reported_effective_tax_rate' else 'USD') for role in
+                ('reported_income_tax_expense_benefit','reported_continuing_pretax_income','reported_effective_tax_rate')}
     return dict(fields=summary,history_exceptions=list(prepared.bundle.history_exceptions),financial_sufficiency='NOT_ASSESSED')
 
 
@@ -257,12 +281,12 @@ def build():
     with (ROOT/'docs/universe/sp500-top-50-2026-10-02.csv').open() as source:
         security=list(csv.DictReader(source))
     for ticker,original in parents.items():
-        ds=[];bs=[];cs=claim_overlays[ticker]
+        ds=[];bs=[];ts=[];cs=claim_overlays[ticker]
         for a in unwrap(original).annuals:
-            e=cfo.prepare(a);d,_=da.package(e,store);b,_=bridge.overlay(e);ds.append(d);bs.append(b)
-        bundle,bindings=combine(original,tuple(ds),tuple(bs),cs)
+            e=cfo.prepare(a);d,_=da.package(e,store);b,_=bridge.overlay(e);t,_=tax.package(e);ds.append(d);bs.append(b);ts.append(t)
+        bundle,bindings=combine(original,tuple(ds),tuple(bs),cs,tuple(ts))
         aliases=tuple(sorted({v['project_ticker'] for v in security if int(v['sec_cik'])==bundle.cik}))
-        out[ticker]=PreparedHistory(ticker,aliases,original,tuple(ds),tuple(bs),cs,bundle,bindings,diagnostics(original),seals())
+        out[ticker]=PreparedHistory(ticker,aliases,original,tuple(ds),tuple(bs),cs,bundle,bindings,diagnostics(original),seals(),tuple(ts))
     per={name:dict(quality=quality(v),review_count=len(review_queue(v)),review_codes=dict(Counter(code for q in review_queue(v) for code in q['codes']))) for name,v in out.items()}
     aggregate={f.value:{key:sum(per[n]['quality']['fields'][f.value][key] for n in out)
         for key in ('selected_periods','periods_with_values','policy_prepared_value_periods','periods_with_conflicts','unresolved_periods','valued_inputs','support_observations','derivation_operands','unresolved_entries')} for f in h.Field}
@@ -278,12 +302,14 @@ def build():
 def serialize(value):
     if type(value) is not PreparedHistory:raise h.InputError('Typed prepared history required')
     value.__post_init__();bodies={}
+    for entry in value.tax_context:tax.validate(entry)
     def overlay(v):return dict(fields={f.name:parent._encode(getattr(v,f.name),bodies) for f in fields(v)})
     entry=dict(ticker=value.ticker,aliases=list(value.aliases),original=parent._encode(value.original,bodies),
         d_and_a=[overlay(v) for v in value.d_and_a],instant=[overlay(v) for v in value.instant],claims_shares=[overlay(v) for v in value.claims_shares],
         bundle=parent._encode(value.bundle,bodies),bindings_json=value.bindings_json,diagnostics_json=value.diagnostics_json,
         ledger_seals=[list(s) for s in value.ledger_seals])
-    return canonical(dict(schema=SCHEMA,entry=entry,original_bodies=bodies))
+    if value.bundle.version==2:entry['tax_context']=[overlay(v) for v in value.tax_context]
+    return canonical(dict(schema=SCHEMA if value.bundle.version==2 else LEGACY_SCHEMA,entry=entry,original_bodies=bodies))
 
 
 def deserialize(payload):
@@ -295,9 +321,11 @@ def deserialize(payload):
         return d
     try:
         doc=json.loads(payload,object_pairs_hook=unique)
-        if set(doc)!={'schema','entry','original_bodies'} or doc['schema']!=SCHEMA:raise h.InputError('Closed assembly envelope required')
+        if set(doc)!={'schema','entry','original_bodies'} or doc['schema'] not in (SCHEMA,LEGACY_SCHEMA):raise h.InputError('Closed assembly envelope required')
         e=doc['entry']
-        if set(e)!={f.name for f in fields(PreparedHistory)}:raise h.InputError('Closed prepared history fields required')
+        integrated=doc['schema']==SCHEMA
+        required={f.name for f in fields(PreparedHistory)}-({'tax_context'} if not integrated else set())
+        if set(e)!=required:raise h.InputError('Closed prepared history fields required')
         bodies={};used=set()
         for key,v in doc['original_bodies'].items():
             raw=h._decode(v)
@@ -311,11 +339,14 @@ def deserialize(payload):
             return tuple(result)
         value=PreparedHistory(e['ticker'],tuple(e['aliases']),parent._decode(e['original'],bodies,used),
             overlays(e['d_and_a'],da.AnnualDAndA),overlays(e['instant'],bridge.AnnualComponents),overlays(e['claims_shares'],claims.AnnualClaimsShares),
-            parent._decode(e['bundle'],bodies,used),e['bindings_json'],e['diagnostics_json'],tuple(tuple(s) for s in e['ledger_seals']))
+            parent._decode(e['bundle'],bodies,used),e['bindings_json'],e['diagnostics_json'],tuple(tuple(s) for s in e['ledger_seals']),
+            overlays(e['tax_context'],tax.AnnualTaxContext) if integrated else ())
+        if (value.bundle.version==2)!=integrated:raise h.InputError('No silent tax assembly schema downgrade')
         if used!=set(bodies):raise h.InputError('Unused body references')
         for v in value.d_and_a:da.validate_overlay(v)
         for v in value.instant:bridge.validate_overlay(v)
         for v in value.claims_shares:claims.validate_overlay(v)
+        for v in value.tax_context:tax.validate(v)
         validate_parent(value.original)
         return value
     except (ValueError,KeyError,TypeError) as exc:raise h.InputError('Invalid assembled preparation payload') from exc
