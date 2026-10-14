@@ -1,5 +1,16 @@
 # QCOM — company data preparation
 
+## Bounded existing-rule caption inspection
+
+[Same-rule ledger](../d-and-a-independent-rule-inspection.json) and
+[repair rationale](../preparation-independent-repair-results.md) inspect retained
+rendered D&A captions for the existing direct-rule population. No same demonstrated
+HD/AMZN caption defect is established here; this is not fresh complete-expense,
+timing or consumer certification. No new requests, values, equations, approvals
+or policy changes for this issuer. Prior gaps/classification persist; sufficiency
+remains NOT_ASSESSED. Retained-source scope is exhausted for this bounded check.
+
+
 ## Primary field-family review presentation
 
 [Workflow](../preparation-review-workflow.md) / [exact counts](../preparation-workflow-summary.json).

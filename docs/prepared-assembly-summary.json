@@ -48,10 +48,10 @@
       "derivation_operands": 10,
       "periods_with_conflicts": 0,
       "periods_with_values": 199,
-      "policy_prepared_value_periods": 115,
+      "policy_prepared_value_periods": 108,
       "selected_periods": 199,
-      "support_observations": 1320,
-      "unresolved_entries": 84,
+      "support_observations": 1327,
+      "unresolved_entries": 91,
       "unresolved_periods": 199,
       "valued_inputs": 1445
     },
@@ -1316,18 +1316,20 @@
           },
           "depreciation_amortization": {
             "completeness": {
-              "partial": 53
+              "partial": 53,
+              "unknown": 5
             },
             "derivation_operands": 0,
             "origins": {
-              "reported": 53
+              "reported": 53,
+              "unavailable": 5
             },
             "periods_with_conflicts": 0,
             "periods_with_values": 5,
-            "policy_prepared_value_periods": 5,
+            "policy_prepared_value_periods": 0,
             "selected_periods": 5,
-            "support_observations": 48,
-            "unresolved_entries": 0,
+            "support_observations": 53,
+            "unresolved_entries": 5,
             "unresolved_periods": 5,
             "valued_inputs": 53
           },
@@ -1495,12 +1497,12 @@
         "history_exceptions": []
       },
       "review_codes": {
-        "MISSING_REQUIRED_VALUE": 40,
+        "MISSING_REQUIRED_VALUE": 45,
         "OVERLAP_WARNING": 132,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 283,
-        "UNRESOLVED_REQUIREMENTS": 283
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 288,
+        "UNRESOLVED_REQUIREMENTS": 288
       },
-      "review_count": 288
+      "review_count": 293
     },
     "AVGO": {
       "quality": {
@@ -3451,18 +3453,20 @@
           },
           "depreciation_amortization": {
             "completeness": {
-              "partial": 28
+              "partial": 28,
+              "unknown": 2
             },
             "derivation_operands": 0,
             "origins": {
-              "reported": 28
+              "reported": 28,
+              "unavailable": 2
             },
             "periods_with_conflicts": 0,
             "periods_with_values": 5,
-            "policy_prepared_value_periods": 5,
+            "policy_prepared_value_periods": 3,
             "selected_periods": 5,
-            "support_observations": 23,
-            "unresolved_entries": 0,
+            "support_observations": 25,
+            "unresolved_entries": 2,
             "unresolved_periods": 5,
             "valued_inputs": 28
           },
@@ -3631,12 +3635,12 @@
       },
       "review_codes": {
         "CONFLICT": 1,
-        "MISSING_REQUIRED_VALUE": 46,
+        "MISSING_REQUIRED_VALUE": 48,
         "OVERLAP_WARNING": 118,
-        "PARTIAL_OR_UNREVIEWED_SCOPE": 242,
-        "UNRESOLVED_REQUIREMENTS": 242
+        "PARTIAL_OR_UNREVIEWED_SCOPE": 244,
+        "UNRESOLVED_REQUIREMENTS": 244
       },
-      "review_count": 247
+      "review_count": 249
     },
     "IBM": {
       "quality": {
@@ -11347,12 +11351,12 @@
     "CONFLICT": 119,
     "HISTORY_EXCEPTION": 3,
     "INVALID_EVIDENCE": 8,
-    "MISSING_REQUIRED_VALUE": 1860,
+    "MISSING_REQUIRED_VALUE": 1867,
     "OVERLAP_WARNING": 11787,
-    "PARTIAL_OR_UNREVIEWED_SCOPE": 17271,
-    "UNRESOLVED_REQUIREMENTS": 17308
+    "PARTIAL_OR_UNREVIEWED_SCOPE": 17278,
+    "UNRESOLVED_REQUIREMENTS": 17315
   },
-  "review_count": 17605,
+  "review_count": 17612,
   "schema": "assembled-historical-input-review-v1",
   "selected_periods": 199,
   "source_ledgers": {
@@ -11362,7 +11366,7 @@
     "docs/retained-bridge-component-ledger.json": "9dc608597b92299b5f3f5f6e2d78d82e12e9f260032414275d3f3654b0c4081a",
     "docs/retained-cfo-ledger.json": "db4ef5b70d5808dcc3bb15516cf10bd7e5a8b5ce736035c3e840b05c56b83661",
     "docs/retained-claims-shares-ledger.json": "c9e04f5547df6ace6b2a4ab5795185cc17cb93c0434fcfc9297d463cc82dfbd1",
-    "docs/retained-d-and-a-ledger.json": "6d2acb36e82d50284e6ad6d8a8d9c171d7454918e08f1594b5abf475e3c4f0ab",
+    "docs/retained-d-and-a-ledger.json": "d69e002a8c6a27953ddc3f546e6f50b49df18803300c6f831e0a4eee327f04e0",
     "docs/retained-tax-sbc-ledger.json": "ee6a7bb7241b3b46a979d1d9fc402376b02726e4fdd1218129af3e74b180aeac",
     "docs/retained-working-capital-ledger.json": "ffae70c8162ef5d691644885881795bdc9b3876e445f0a1082e697aedf19692c"
   }

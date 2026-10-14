@@ -1,5 +1,28 @@
 # Company data preparation register
 
+## Independent backlog repair and explicit negative D&A evidence
+
+[Current bounded results](../preparation-independent-repair-results.md): exactly ten
+primary documents acquired, ten receipts/DEI annual identities verified; all 120
+spot slots rerun (118 CHECKED / zero FAILED / two NOT_VERIFIED). Checks are samples
+and expected unresolved outcomes, not complete fields or financial sufficiency.
+CVX EBIT and ORCL's unbound borrowing population remain explicit; no new acquisition
+queue is implied. WMT cash/Revenue and CVX Revenue conflicts are not selected away.
+
+Seven D&A required values downgraded in preparation only (AMZN five, HD latest two).
+Original reported values/occurrences/proofs stay support-only; frozen rules/results
+unchanged. D&A 108 policy values / 91 unresolved, support in 199 periods. Other
+fields unchanged. [105-rule scan](../d-and-a-independent-rule-inspection.json) is
+bounded retained evidence, not whole-history fresh scope review. Seventeen records
+link the actual acquisition/check/scope changes without transferring pilot policies.
+
+Same denominators/90% recent/80% older definitions and unaccepted shortfalls remain.
+2,786 primary inventory items / 8,315 nested actionable causes / 17,609 annual
+diagnostics; history exceptions remain separate. No issue is closed by regrouping.
+Do not infer zero, complete component totals, readiness or financial sufficiency.
+Stop for review; no phase closure or Phase 2 authority.
+
+
 ## Independent spot checks and explicit denominator reporting
 
 [Definitions/shortfalls](../preparation-coverage-validation.md) /

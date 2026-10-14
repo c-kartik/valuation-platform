@@ -145,7 +145,8 @@
   "outcomes": {
     "CURATED": 5,
     "DERIVED_APPROVED": 5,
-    "DIRECT": 105,
+    "DIRECT": 98,
+    "SCOPE_DOWNGRADED": 7,
     "UNAPPROVED_SCOPE_COMPLETENESS": 84
   },
   "rows": [
@@ -1650,19 +1651,41 @@
       "pilot_original_unmodified": false,
       "policy": {
         "concept": "DepreciationDepletionAndAmortization",
+        "frozen_discrepancy": "Unchanged frozen/direct policy still resolves; isolated preparation required value is unresolved.",
         "numeric_projection": "Exact integer signatures only; no Company Facts receipt or evidence emitted.",
         "policy_id": "D_AND_A_POLICY",
+        "preparation_scope_disposition": {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "artifact_index": 0,
+          "caption": "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+          "cik": 1018724,
+          "concept": "DepreciationDepletionAndAmortization",
+          "form": "10-K",
+          "path": "tests/fixtures/capex_amzn_response_bodies.json",
+          "reason": "Combined CFO caption includes content, operating-lease assets and other; required operating-PP&E/finite-lived-intangible scope is unproved. No allocation or alternative equation authorized.",
+          "record_id": "negative-da-scope-v1:0001018724-22-000005",
+          "required_text": [
+            "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other"
+          ],
+          "scope_result": "REQUIRED_D_AND_A_NOT_ESTABLISHED",
+          "sha256": "7a7073d3654b4bdb47c76276abdd261778fbba9af244b431f50cee514d3f3baa",
+          "ticker": "AMZN",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872422000005/R3.htm",
+          "value_usd": "34296000000"
+        },
         "resolver": "normalization.historical._resolve_metric",
         "source_kind": "filing_xbrl",
         "timing_readiness": "NOT_ASSESSED",
         "version": null,
         "version_status": "existing_unversioned_direct_policy"
       },
-      "status": "DIRECT",
+      "status": "SCOPE_DOWNGRADED",
       "support_available": true,
       "support_complete": false,
-      "support_observations": 9,
-      "value_usd": "34296000000"
+      "support_observations": 10,
+      "value_usd": null
     },
     {
       "approved_entry_evidence_gaps": [],
@@ -1858,19 +1881,41 @@
       "pilot_original_unmodified": false,
       "policy": {
         "concept": "DepreciationDepletionAndAmortization",
+        "frozen_discrepancy": "Unchanged frozen/direct policy still resolves; isolated preparation required value is unresolved.",
         "numeric_projection": "Exact integer signatures only; no Company Facts receipt or evidence emitted.",
         "policy_id": "D_AND_A_POLICY",
+        "preparation_scope_disposition": {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "artifact_index": 3,
+          "caption": "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+          "cik": 1018724,
+          "concept": "DepreciationDepletionAndAmortization",
+          "form": "10-K",
+          "path": "tests/fixtures/capex_amzn_response_bodies.json",
+          "reason": "Combined CFO caption includes content, operating-lease assets and other; required operating-PP&E/finite-lived-intangible scope is unproved. No allocation or alternative equation authorized.",
+          "record_id": "negative-da-scope-v1:0001018724-23-000004",
+          "required_text": [
+            "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other"
+          ],
+          "scope_result": "REQUIRED_D_AND_A_NOT_ESTABLISHED",
+          "sha256": "a0915e28a88a0adf42e276b6736082062c7cca3410636f5894c359c24549def8",
+          "ticker": "AMZN",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/R3.htm",
+          "value_usd": "41921000000"
+        },
         "resolver": "normalization.historical._resolve_metric",
         "source_kind": "filing_xbrl",
         "timing_readiness": "NOT_ASSESSED",
         "version": null,
         "version_status": "existing_unversioned_direct_policy"
       },
-      "status": "DIRECT",
+      "status": "SCOPE_DOWNGRADED",
       "support_available": true,
       "support_complete": false,
-      "support_observations": 10,
-      "value_usd": "41921000000"
+      "support_observations": 11,
+      "value_usd": null
     },
     {
       "approved_entry_evidence_gaps": [],
@@ -2047,19 +2092,41 @@
       "pilot_original_unmodified": false,
       "policy": {
         "concept": "DepreciationDepletionAndAmortization",
+        "frozen_discrepancy": "Unchanged frozen/direct policy still resolves; isolated preparation required value is unresolved.",
         "numeric_projection": "Exact integer signatures only; no Company Facts receipt or evidence emitted.",
         "policy_id": "D_AND_A_POLICY",
+        "preparation_scope_disposition": {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "artifact_index": 6,
+          "caption": "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+          "cik": 1018724,
+          "concept": "DepreciationDepletionAndAmortization",
+          "form": "10-K",
+          "path": "tests/fixtures/capex_amzn_response_bodies.json",
+          "reason": "Combined CFO caption includes content, operating-lease assets and other; required operating-PP&E/finite-lived-intangible scope is unproved. No allocation or alternative equation authorized.",
+          "record_id": "negative-da-scope-v1:0001018724-24-000008",
+          "required_text": [
+            "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other"
+          ],
+          "scope_result": "REQUIRED_D_AND_A_NOT_ESTABLISHED",
+          "sha256": "3c5e5e66c5220c46c6e8d7b8f676cf441dde63e461c0b8e6712a0f050eaee22c",
+          "ticker": "AMZN",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/R3.htm",
+          "value_usd": "48663000000"
+        },
         "resolver": "normalization.historical._resolve_metric",
         "source_kind": "filing_xbrl",
         "timing_readiness": "NOT_ASSESSED",
         "version": null,
         "version_status": "existing_unversioned_direct_policy"
       },
-      "status": "DIRECT",
+      "status": "SCOPE_DOWNGRADED",
       "support_available": true,
       "support_complete": false,
-      "support_observations": 9,
-      "value_usd": "48663000000"
+      "support_observations": 10,
+      "value_usd": null
     },
     {
       "approved_entry_evidence_gaps": [],
@@ -2275,19 +2342,41 @@
       "pilot_original_unmodified": false,
       "policy": {
         "concept": "DepreciationDepletionAndAmortization",
+        "frozen_discrepancy": "Unchanged frozen/direct policy still resolves; isolated preparation required value is unresolved.",
         "numeric_projection": "Exact integer signatures only; no Company Facts receipt or evidence emitted.",
         "policy_id": "D_AND_A_POLICY",
+        "preparation_scope_disposition": {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "artifact_index": 9,
+          "caption": "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+          "cik": 1018724,
+          "concept": "DepreciationDepletionAndAmortization",
+          "form": "10-K",
+          "path": "tests/fixtures/capex_amzn_response_bodies.json",
+          "reason": "Combined CFO caption includes content, operating-lease assets and other; required operating-PP&E/finite-lived-intangible scope is unproved. No allocation or alternative equation authorized.",
+          "record_id": "negative-da-scope-v1:0001018724-25-000004",
+          "required_text": [
+            "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other"
+          ],
+          "scope_result": "REQUIRED_D_AND_A_NOT_ESTABLISHED",
+          "sha256": "dc6b84ba2847bc846c14bb6cb7c239a1f444288a2716344c70afbb0531e7ac04",
+          "ticker": "AMZN",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/R3.htm",
+          "value_usd": "52795000000"
+        },
         "resolver": "normalization.historical._resolve_metric",
         "source_kind": "filing_xbrl",
         "timing_readiness": "NOT_ASSESSED",
         "version": null,
         "version_status": "existing_unversioned_direct_policy"
       },
-      "status": "DIRECT",
+      "status": "SCOPE_DOWNGRADED",
       "support_available": true,
       "support_complete": false,
-      "support_observations": 10,
-      "value_usd": "52795000000"
+      "support_observations": 11,
+      "value_usd": null
     },
     {
       "approved_entry_evidence_gaps": [],
@@ -2483,19 +2572,41 @@
       "pilot_original_unmodified": false,
       "policy": {
         "concept": "DepreciationDepletionAndAmortization",
+        "frozen_discrepancy": "Unchanged frozen/direct policy still resolves; isolated preparation required value is unresolved.",
         "numeric_projection": "Exact integer signatures only; no Company Facts receipt or evidence emitted.",
         "policy_id": "D_AND_A_POLICY",
+        "preparation_scope_disposition": {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "artifact_index": 12,
+          "caption": "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other",
+          "cik": 1018724,
+          "concept": "DepreciationDepletionAndAmortization",
+          "form": "10-K",
+          "path": "tests/fixtures/capex_amzn_response_bodies.json",
+          "reason": "Combined CFO caption includes content, operating-lease assets and other; required operating-PP&E/finite-lived-intangible scope is unproved. No allocation or alternative equation authorized.",
+          "record_id": "negative-da-scope-v1:0001018724-26-000004",
+          "required_text": [
+            "Depreciation and amortization of property and equipment and capitalized content costs, operating lease assets, and other"
+          ],
+          "scope_result": "REQUIRED_D_AND_A_NOT_ESTABLISHED",
+          "sha256": "98afcca778787e6f8e2c088cf7c951549be730eb4081e2e1fcaed75490697133",
+          "ticker": "AMZN",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/R3.htm",
+          "value_usd": "65756000000"
+        },
         "resolver": "normalization.historical._resolve_metric",
         "source_kind": "filing_xbrl",
         "timing_readiness": "NOT_ASSESSED",
         "version": null,
         "version_status": "existing_unversioned_direct_policy"
       },
-      "status": "DIRECT",
+      "status": "SCOPE_DOWNGRADED",
       "support_available": true,
       "support_complete": false,
-      "support_observations": 10,
-      "value_usd": "65756000000"
+      "support_observations": 11,
+      "value_usd": null
     },
     {
       "approved_entry_evidence_gaps": [],
@@ -42014,19 +42125,41 @@
       "pilot_original_unmodified": false,
       "policy": {
         "concept": "DepreciationDepletionAndAmortization",
+        "frozen_discrepancy": "Unchanged frozen/direct policy still resolves; isolated preparation required value is unresolved.",
         "numeric_projection": "Exact integer signatures only; no Company Facts receipt or evidence emitted.",
         "policy_id": "D_AND_A_POLICY",
+        "preparation_scope_disposition": {
+          "accession": "0000354950-25-000085",
+          "annual_end": "2025-02-02",
+          "annual_start": "2024-01-29",
+          "artifact_index": 35,
+          "caption": "Depreciation and amortization, excluding amortization of intangible assets",
+          "cik": 354950,
+          "concept": "DepreciationDepletionAndAmortization",
+          "form": "10-K",
+          "path": "docs/evidence/hd-capex-response-bodies.json",
+          "reason": "Reported CFO caption excludes intangible amortization; complete required D&A is unresolved. No component sum authorized.",
+          "record_id": "negative-da-scope-v1:0000354950-25-000085",
+          "required_text": [
+            "Depreciation and amortization, excluding amortization of intangible assets"
+          ],
+          "scope_result": "REQUIRED_D_AND_A_NOT_ESTABLISHED",
+          "sha256": "69da474a23e55a456d1df13fb3dce546160e7b6ba347ed1cf5531718b6e95e47",
+          "ticker": "HD",
+          "url": "https://www.sec.gov/Archives/edgar/data/354950/000035495025000085/R8.htm",
+          "value_usd": "3336000000"
+        },
         "resolver": "normalization.historical._resolve_metric",
         "source_kind": "filing_xbrl",
         "timing_readiness": "NOT_ASSESSED",
         "version": null,
         "version_status": "existing_unversioned_direct_policy"
       },
-      "status": "DIRECT",
+      "status": "SCOPE_DOWNGRADED",
       "support_available": true,
       "support_complete": false,
-      "support_observations": 7,
-      "value_usd": "3336000000"
+      "support_observations": 8,
+      "value_usd": null
     },
     {
       "approved_entry_evidence_gaps": [],
@@ -42186,19 +42319,41 @@
       "pilot_original_unmodified": false,
       "policy": {
         "concept": "DepreciationDepletionAndAmortization",
+        "frozen_discrepancy": "Unchanged frozen/direct policy still resolves; isolated preparation required value is unresolved.",
         "numeric_projection": "Exact integer signatures only; no Company Facts receipt or evidence emitted.",
         "policy_id": "D_AND_A_POLICY",
+        "preparation_scope_disposition": {
+          "accession": "0001628280-26-019436",
+          "annual_end": "2026-02-01",
+          "annual_start": "2025-02-03",
+          "artifact_index": 46,
+          "caption": "Depreciation and amortization, excluding amortization of intangible assets",
+          "cik": 354950,
+          "concept": "DepreciationDepletionAndAmortization",
+          "form": "10-K",
+          "path": "docs/evidence/hd-capex-response-bodies.json",
+          "reason": "Reported CFO caption excludes intangible amortization; complete required D&A is unresolved. No component sum authorized.",
+          "record_id": "negative-da-scope-v1:0001628280-26-019436",
+          "required_text": [
+            "Depreciation and amortization, excluding amortization of intangible assets"
+          ],
+          "scope_result": "REQUIRED_D_AND_A_NOT_ESTABLISHED",
+          "sha256": "cdadcb935b72c9cc395297a587824bcf7f4b5420ab0a009ef030dc2b661b4dd1",
+          "ticker": "HD",
+          "url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/R8.htm",
+          "value_usd": "3514000000"
+        },
         "resolver": "normalization.historical._resolve_metric",
         "source_kind": "filing_xbrl",
         "timing_readiness": "NOT_ASSESSED",
         "version": null,
         "version_status": "existing_unversioned_direct_policy"
       },
-      "status": "DIRECT",
+      "status": "SCOPE_DOWNGRADED",
       "support_available": true,
       "support_complete": false,
-      "support_observations": 7,
-      "value_usd": "3514000000"
+      "support_observations": 8,
+      "value_usd": null
     },
     {
       "approved_entry_evidence_gaps": [],
@@ -52443,7 +52598,7 @@
     },
     "AMZN": {
       "outcomes": {
-        "DIRECT": 5
+        "SCOPE_DOWNGRADED": 5
       },
       "periods": 5,
       "support_periods": 5
@@ -52499,7 +52654,8 @@
     },
     "HD": {
       "outcomes": {
-        "DIRECT": 5
+        "DIRECT": 3,
+        "SCOPE_DOWNGRADED": 2
       },
       "periods": 5,
       "support_periods": 5
@@ -52707,6 +52863,6 @@
       "support_periods": 0
     }
   },
-  "support_observations": 1320,
+  "support_observations": 1327,
   "support_periods": 199
 }

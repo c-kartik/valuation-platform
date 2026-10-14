@@ -53,15 +53,15 @@
       "informational": 40
     },
     "AMZN": {
-      "actionable": 210,
+      "actionable": 215,
       "causes": {
-        "MISSING_REQUIRED_VALUE": 40,
+        "MISSING_REQUIRED_VALUE": 45,
         "OVERLAP_WARNING": 35,
         "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
         "UNRESOLVED_REQUIREMENTS": 70
       },
-      "diagnostics": 288,
-      "groups": 250,
+      "diagnostics": 293,
+      "groups": 255,
       "informational": 40
     },
     "AVGO": {
@@ -153,16 +153,16 @@
       "informational": 41
     },
     "HD": {
-      "actionable": 206,
+      "actionable": 208,
       "causes": {
         "CONFLICT": 1,
-        "MISSING_REQUIRED_VALUE": 45,
+        "MISSING_REQUIRED_VALUE": 47,
         "OVERLAP_WARNING": 25,
         "PARTIAL_OR_UNREVIEWED_SCOPE": 105,
         "UNRESOLVED_REQUIREMENTS": 70
       },
-      "diagnostics": 247,
-      "groups": 246,
+      "diagnostics": 249,
+      "groups": 248,
       "informational": 40
     },
     "IBM": {
@@ -533,9 +533,9 @@
   "schema": "grouped-preparation-review-v1",
   "selected_periods": 199,
   "totals": {
-    "actionable": 8308,
-    "diagnostics": 17605,
-    "groups": 9886,
+    "actionable": 8315,
+    "diagnostics": 17612,
+    "groups": 9893,
     "informational": 1578
   }
 }

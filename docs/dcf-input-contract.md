@@ -1,5 +1,18 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Demonstrated scope defects in isolated preparation
+
+[Negative D&A repair](preparation-independent-repair-results.md) preserves seven
+legacy/frozen reported values but disqualifies their required-input use in this
+preparation layer. Support-only evidence and exact original policy/occurrences
+remain visible beside a null required value and specific reason. No replacement
+sum or scope assumption. Sealed exact negative reviews fail closed on identity,
+amount, review or body mismatch; they are not new financial approvals. Independent
+CHECKED samples include confirmed unresolved alternatives/negative dispositions,
+not complete primitive/family certification. Coverage definitions/targets are
+unchanged and financial sufficiency remains NOT_ASSESSED.
+
+
 ## Explicit coverage measurement (no acceptance)
 
 [Retained coverage validation](preparation-coverage-validation.md) fixes selected

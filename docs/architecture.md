@@ -1,5 +1,19 @@
 # Architecture
 
+## Preparation-only negative scope validation
+
+[Bounded repair](preparation-independent-repair-results.md) adds seven immutable
+negative D&A dispositions, not financial approvals. The preparation package
+validates exact identity/amount and sealed reviewed statement bodies before
+retaining the legacy-resolved amount as disqualified support and required D&A as
+null. Original proof/precision/occurrences and negative-review metadata serialize
+separately; unchanged legacy resolution/frozen output is explicitly distinguished.
+No replacement hash, generic bypass, component sum or financial schema migration.
+Independent fixtures also inspect existing conflicting alternatives without
+selecting them. Unbound statement observations remain NOT_VERIFIED and retain
+their exact source/binding limitation; component availability is not completeness.
+
+
 ## Retained coverage and independent validation reporting
 
 `analyst/preparation_validation.py` is a read-only layer over existing assembly.

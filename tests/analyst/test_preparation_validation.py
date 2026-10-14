@@ -32,8 +32,7 @@ class PreparationValidationTests(unittest.TestCase):
             p=self.histories[row['ticker']].bundle.annuals[-1].period
             self.assertEqual((row['accession'],row['annual_start'],row['annual_end']),(p.accession,str(p.annual_start),str(p.annual_end)))
             self.assertFalse(row['independent_complete_field'])
-        for name in ('META','COST','WMT','MA','ORCL','AVGO'):
-            self.assertTrue(all(r['status']=='NOT_VERIFIED' for r in rows if r['ticker']==name))
+        self.assertTrue(all(r['available_artifacts'] for r in rows))
         self.assertTrue(any(r['source_conflicting'] for r in rows if r['ticker']=='WMT'))
 
     def test_independent_cells_not_output_seeded_and_scope_failures_visible(self):
@@ -41,8 +40,8 @@ class PreparationValidationTests(unittest.TestCase):
         unexpected=[r for r in self.spot['rows'] if r['status']=='FAILED' and
                     any(not e.startswith('APPROVED_PRIMITIVE_SCOPE_') for e in r['failures'])]
         self.assertFalse(unexpected,[(r['ticker'],r['field'],r['failures']) for r in unexpected])
-        self.assertEqual(expected['HD',h.Field.DA.value]['status'],'FAILED')
-        self.assertEqual(expected['AMZN',h.Field.DA.value]['status'],'FAILED')
+        self.assertEqual(expected['HD',h.Field.DA.value]['status'],'CHECKED')
+        self.assertEqual(expected['AMZN',h.Field.DA.value]['status'],'CHECKED')
         for row in self.spot['rows']:
             if row['status']=='CHECKED':self.assertTrue(row['fixture_ids'])
         self.assertTrue(all(f['evidence_kind']=='rendered_statement_or_note' for f in self.fixtures))
@@ -95,7 +94,7 @@ class PreparationValidationTests(unittest.TestCase):
 
     def test_original_artifacts_and_policies_preserved(self):
         import subprocess
-        paths=list(a.LEDGERS)+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
+        paths=[p for p in a.LEDGERS if p!=a.da.LEDGER]+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
         paths+=subprocess.check_output(['git','ls-tree','-r','--name-only','0e7970593399fc2289dccacb4e284fd04677868b','docs/evidence','docs/universe','src/valuation_platform/normalization'],cwd=a.ROOT).decode().splitlines()
         for path in paths:
             self.assertTrue((a.ROOT/path).read_bytes()==subprocess.check_output(['git','show','0e7970593399fc2289dccacb4e284fd04677868b:'+path],cwd=a.ROOT),path)

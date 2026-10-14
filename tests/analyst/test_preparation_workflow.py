@@ -46,8 +46,8 @@ class PreparationWorkflowTests(unittest.TestCase):
             else:self.assertFalse(latest['primary_items'])
         summary=r.summary(self.histories)
         Path('/tmp/preparation-workflow-summary.json').write_text(a.canonical(summary)+'\n')
-        self.assertEqual(summary['totals']['full']['original_diagnostics']+summary['totals']['full']['history_exceptions'],17605)
-        self.assertEqual(summary['totals']['full']['nested_actionable_causes'],8308)
+        self.assertEqual(summary['totals']['full']['original_diagnostics']+summary['totals']['full']['history_exceptions'],17612)
+        self.assertEqual(summary['totals']['full']['nested_actionable_causes'],8315)
 
     def test_four_retained_end_to_end_cases(self):
         cases=(('META',h.Field.REVENUE,h.Origin.REPORTED),('MSFT',h.Field.DA,h.Origin.DERIVED),

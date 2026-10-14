@@ -2,6 +2,53 @@
 
 ## Current Milestone
 
+Completed **fixed independent-document acquisition and preparation-only D&A scope
+repair**. [Detailed source/decisions](preparation-independent-repair-results.md),
+[receipts](evidence/independent-validation-document-acquisition.json),
+[exact 120 outcomes](preparation-independent-results.json).
+Ten exact requests / ten HTTP 200 / zero failures or retries; no other filings,
+indexes or notes requested. Original bytes, UTC receipts and typed digests retained;
+exact primary DEI CIK, 10-K and annual dates independently replay. Configuration
+remains external and undisclosed; prior evidence/fingerprints are unchanged.
+
+118 CHECKED / zero current FAILED / two NOT_VERIFIED. Checks include support-only
+and expected unresolved populations, not complete-field approval. CVX EBIT is
+still unregistered/perimeter-unresolved; ORCL's 122,342m noncurrent borrowing note
+concept is outside the current component map. WMT cash is confirmed as an existing
+competing alternative, not selected; original income conflicts remain.
+
+105 former direct D&A occurrences accounted for: seven exact negative scope
+dispositions, 35 retained captions without the same demonstrated defect, 63 without
+independent rendered captions. Only AMZN's five and HD's latest two are downgraded.
+No replacement equation, scope allocation, zero or financial approval. Seven
+original values/occurrences/precision/proofs remain support-only with missing
+required D&A and exact reasons. Frozen generic/curated policies, schema 5 and
+normalization values remain unchanged; their discrepancy is explicit.
+
+Preparation D&A 108 = 98 direct + five MSFT derived + five Visa curated; 91
+unresolved, support in 199 periods (1,327 observations, not totals). Revenue 188,
+EBIT 194, CFO 195, cash Capex 165 and all other prepared fields/pilot bytes unchanged.
+42 histories/199 selected versus 210 target, forty-issuer cohort 189/200 and eleven
+history deficits preserved. Coverage definitions unchanged; no 90%/80% shortfall
+accepted. Queue 2,786 primary / 8,315 actionable / 17,609 annual diagnostics;
+three history cards separate. 1,936 substantive locations / 850 confirmation-only
+locations under the documented reporting definition. No sufficiency certification.
+
+Focused acquisition, validation, D&A, preservation, assembly and review workflow
+tests; compileall, identities/digests/counts, affected links and diff checks.
+**33 distinct focused tests pass** (nine assembly, seven validation, four repair,
+eight D&A, five workflow); updated 18-test assembly/repair/workflow run passes.
+No full-suite/corpus rerun, assumptions, economic calculations or Phase 2 code.
+Initial diagnostic-count assertion (17,605) was updated for the seven newly explicit
+missing requirements (17,612 including history cards); no diagnostic was hidden.
+
+**Stop for user review.** The fixed evidence acquisition is complete, not Phase 1.
+Required D&A/completeness and the two unverified field populations remain unresolved.
+No further research/acquisition or financial mapping expansion is authorized here.
+
+
+## Previous milestone
+
 Completed **independent retained-evidence spot checks and explicit coverage
 reporting**, not closure/readiness. [Definitions and source citations](preparation-coverage-validation.md),
 [coverage ledger](preparation-coverage-results.json),

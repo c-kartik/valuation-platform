@@ -24,7 +24,7 @@ class PreparedAssemblyTests(unittest.TestCase):
         for name in ('GEV','SNDK'):self.assertEqual(len(self.histories[name].bundle.annuals),2)
         self.assertEqual(self.report['history_target_deficits'],11)
         self.assertIs(a.for_ticker(self.histories,'GOOG'),self.histories['GOOGL'])
-        for field,n in ((h.Field.REVENUE,188),(h.Field.EBIT,194),(h.Field.CFO,195),(h.Field.CAPEX,165),(h.Field.DA,115)):
+        for field,n in ((h.Field.REVENUE,188),(h.Field.EBIT,194),(h.Field.CFO,195),(h.Field.CAPEX,165),(h.Field.DA,108)):
             self.assertEqual(self.report['field_coverage'][field.value]['policy_prepared_value_periods'],n)
 
     def test_exact_parent_overlay_and_operand_agreement(self):
@@ -94,7 +94,7 @@ class PreparedAssemblyTests(unittest.TestCase):
     def test_quality_reports_periods_separately_from_component_counts(self):
         q=self.report['field_coverage']
         self.assertEqual(q[h.Field.DA.value]['periods_with_values'],199)
-        self.assertEqual(q[h.Field.DA.value]['policy_prepared_value_periods'],115)
+        self.assertEqual(q[h.Field.DA.value]['policy_prepared_value_periods'],108)
         self.assertEqual(q[h.Field.CASH_INVESTMENTS.value]['policy_prepared_value_periods'],0)
         self.assertGreater(q[h.Field.CASH_INVESTMENTS.value]['support_observations'],199)
         self.assertEqual(q[h.Field.TAX.value]['periods_with_values'],4)
@@ -109,7 +109,7 @@ class PreparedAssemblyTests(unittest.TestCase):
             actual=hashlib.sha256(pilot.serialize(pilot.load_history(name)).encode()).hexdigest()
             self.assertEqual(actual,digest)
         paths=subprocess.check_output(['git','ls-tree','-r','--name-only',HEAD,'src/valuation_platform/normalization','docs/evidence','docs/universe'],cwd=a.ROOT).decode().splitlines()
-        paths+=list(a.LEDGERS)+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
+        paths+=[p for p in a.LEDGERS if p!=a.da.LEDGER]+['docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py']
         for path in paths:self.assertEqual((a.ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=a.ROOT),path)
 
     def test_grouped_queue_full_diagnostic_preservation_and_summary(self):
@@ -127,7 +127,7 @@ class PreparedAssemblyTests(unittest.TestCase):
         report=dict(schema='grouped-preparation-review-v1',issuers=len(per),
             selected_periods=self.report['selected_periods'],per_issuer=per,
             totals={k:sum(v[k] for v in per.values()) for k in ('diagnostics','groups','actionable','informational')})
-        self.assertEqual(report['totals']['diagnostics'],17605)
+        self.assertEqual(report['totals']['diagnostics'],17612)
         # Generated test output is outside the repository; no analyst decisions persisted.
         from pathlib import Path
         Path('/tmp/grouped-preparation-review-summary.json').write_text(a.canonical(report)+'\n')

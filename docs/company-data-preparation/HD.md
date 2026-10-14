@@ -1,5 +1,26 @@
 # HD — company data preparation
 
+## Bounded independent repair — current disposition
+
+Latest selection `0001628280-26-019436`, 2025-02-03 through 2026-02-01.
+[Results and precise limitations](../preparation-independent-repair-results.md) /
+[source fixtures](../preparation-independent-fixtures.json) /
+[120-slot ledger](../preparation-independent-results.json).
+Existing retained primary evidence reused; no additional request for this issuer.
+revenue CHECKED; ebit CHECKED; depreciation_amortization CHECKED; cash_capex CHECKED; reported_cash_flow_working_capital_movements CHECKED; cash_investment_components CHECKED; debt_lease_components CHECKED; point_in_time_shares CHECKED.
+
+Latest two selected D&A values now support-only: 3,336m/3,514m explicitly exclude intangible amortization (separate rows 425m/607m). No replacement sum. Earliest three selected current captions are unchanged; later comparatives do not replace them.
+
+CHECKED is an independently established observation or expected unresolved outcome,
+not a complete field/history or consumer approval. Cover dates/classes/rounding
+remain explicit; component observations are never summed. Original conflicts,
+NWC/timing/financial blockers, frozen outputs and pilot bytes persist. The new
+preparation negative dispositions do not alter legacy policy results; exact
+evidence, amount, original proof and disqualification rationale remain traceable.
+No assumptions, zero inference, support reclassification, coverage-shortfall
+acceptance or Phase 1 closure. Financial sufficiency remains NOT_ASSESSED.
+
+
 ## Independent retained spot check and explicit coverage
 
 Latest frozen selection: `0001628280-26-019436`, 2025-02-03 through

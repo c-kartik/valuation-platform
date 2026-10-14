@@ -8,6 +8,7 @@ import json
 from . import historical_inputs as h, retained_components as inspect
 from . import retained_capex as capex, refreshed_capex as parent
 from . import retained_cfo_preparation as cfo, retained_income_preparation as missing
+from . import da_scope_dispositions as scope_review
 from ..normalization.concepts import D_AND_A_POLICY,FinancialMetric
 from ..normalization.historical import _resolve_metric
 from ..normalization.derived import applicable_derivation_policy,ANNUAL_DERIVATION_POLICIES,derive_annual_metric
@@ -240,6 +241,20 @@ def package(e,store):
     except (ValueError,KeyError) as exc:
         status='EVIDENCE_GAP';value=missing.unavailable(e.period,h.Field.DA,'D&A source/policy replay failed: '+str(exc),h.Review.REVIEWED)
         errors.append(str(exc))
+    if status=='DIRECT':
+        review=scope_review.disposition(e.period,DIRECT,str(value.value))
+        if review:
+            rejected=replace(value,input_id='retained-da:disqualified:'+e.period.accession,
+                role='support_only_scope_disqualified_previous_policy_value',quality=h.Quality.LIMITED,
+                scope=review['reason'],scope_status=h.Scope.RESTRICTED,completeness=h.Completeness.PARTIAL,
+                flags=value.flags+('support_only','no_sum','scope_disqualified'),
+                unresolved_requirements=(review['reason'],),
+                selection_rationale='Original policy replay retained only as support; independently reviewed caption does not establish complete required D&A.')
+            support=support+(rejected,);status='SCOPE_DOWNGRADED'
+            value=replace(missing.unavailable(e.period,h.Field.DA,review['reason'],h.Review.REVIEWED),
+                input_id='retained-da:required:'+e.period.accession)
+            proof=dict(proof,preparation_scope_disposition=review,
+                frozen_discrepancy='Unchanged frozen/direct policy still resolves; isolated preparation required value is unresolved.')
     overlay=AnnualDAndA(e.period,value,support,operands,e.instance,parent.canonical(proof),parent.canonical(diagnostics))
     return overlay,dict(status=status,value_usd=None if value.value is None else str(value.value),policy=proof,
         support_observations=len(support),support_available=bool(support),support_complete=False,

@@ -22,8 +22,8 @@ class RetainedDAndATests(unittest.TestCase):
 
     def test_199_approved_and_support_counts_independent(self):
         self.assertEqual(self.ledger,json.loads((d.capex.shared.ROOT/d.LEDGER).read_text()))
-        self.assertEqual(self.ledger['outcomes'],dict(DIRECT=105,DERIVED_APPROVED=5,CURATED=5,UNAPPROVED_SCOPE_COMPLETENESS=84))
-        self.assertEqual((self.ledger['selected_periods'],self.ledger['issuer_count'],self.ledger['support_periods'],self.ledger['support_observations']),(199,42,199,1320))
+        self.assertEqual(self.ledger['outcomes'],dict(DIRECT=98,DERIVED_APPROVED=5,CURATED=5,UNAPPROVED_SCOPE_COMPLETENESS=84,SCOPE_DOWNGRADED=7))
+        self.assertEqual((self.ledger['selected_periods'],self.ledger['issuer_count'],self.ledger['support_periods'],self.ledger['support_observations']),(199,42,199,1327))
         self.assertEqual(len(self.ledger['history_exceptions']),11);self.assertFalse(self.overlays['XOM'])
         self.assertEqual(len(self.overlays['GEV']),2);self.assertEqual(len(self.overlays['SNDK']),2)
         self.assertEqual(self.ledger['evidence_backlog'],[])

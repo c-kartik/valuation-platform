@@ -1,5 +1,20 @@
 # Retained preparation coverage and independent spot checks
 
+## Current repair disposition
+
+The explicitly authorized [bounded repair](preparation-independent-repair-results.md)
+acquired the ten committed primaries. Current results: **118 CHECKED / zero FAILED /
+two NOT_VERIFIED** (CVX EBIT, ORCL borrowing binding); no new financial approval.
+AMZN five / HD latest two required D&A values are now unresolved, with original
+reported amounts/proof retained support-only. Current prepared D&A 108; support
+in 199 periods. Other policy values, denominator/completeness definitions and
+unaccepted 90%/80% targets are unchanged. 1,936 substantive review locations /
+850 confirmation-only; primary/annual diagnostics updated without dropping issues.
+Frozen outputs/pilots persist. Stop for review; no closure/readiness claim.
+
+## Prior c96fada validation (preserved, superseded by repair above)
+
+
 This is validation/reporting, not preparation closure, financial sufficiency or
 Phase 2 authority. Prepared inputs, original diagnostics, financial policies and
 frozen schema 5 are unchanged. No SEC requests or new accounting research.

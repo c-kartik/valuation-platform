@@ -171,6 +171,13 @@ def spot_checks(histories,fixtures,artifacts):
                     failures.append('Fixture annual identity differs');continue
                 if any(phrase not in artifact['text'] for phrase in fixture['required_text']):
                     failures.append('Reviewed date/unit/scope/class passage missing');continue
+                header=fixture.get('column_period_evidence',{})
+                if 'row' in header and [c['text'] for c in artifact['rows'][header['row']]]!=header['cells']:
+                    failures.append('Independent fiscal-column header changed');continue
+                equation=fixture.get('independent_equation')
+                if equation and (sum(equation['operands_millions'])*1000000!=Decimal(fixture['expected_value']) or
+                    equation['pretax_bridge_millions'][0]+equation['pretax_bridge_millions'][1]!=equation['pretax_bridge_millions'][2]):
+                    failures.append('Independent approved-equation arithmetic differs');continue
                 if fixture['row'] is not None:
                     row=artifact['rows'][fixture['row']]
                     cells=[c['text'] for c in row]
@@ -180,6 +187,11 @@ def spot_checks(histories,fixtures,artifacts):
                     if displayed!=Decimal(fixture['displayed_value']):failures.append('Independent display/sign/scale fixture inconsistent');continue
                 expected=Decimal(fixture['expected_value'])
                 candidates=values if fixture['match']=='support_or_value' else [v for v in values if v.value is None]
+                if fixture['match']=='conflicting_alternative':
+                    def descendants(value):
+                        return [value]+[entry for alternative in value.alternatives for entry in descendants(alternative)]
+                    candidates=[entry for value in values if value.quality is h.Quality.CONFLICTING
+                                for entry in descendants(value)]
                 if fixture['match']=='required_null':
                     bindings={(b['accession'],b['input_id']):b for b in json.loads(prepared.bindings_json)}
                     match=any(v.unresolved_requirements for v in candidates) and not any(v.value is not None and
@@ -192,6 +204,13 @@ def spot_checks(histories,fixtures,artifacts):
                              any(d.rsplit('}',1)[-1]==fixture['class_member'] for d in s.dimensions)) for s in v.sources) for v in candidates)
                 if not match:failures.append('Value/date/class/unit/role/source scope differs from reviewed fixture')
                 else:established.append(fixture['fixture_id'])
+                if fixture.get('expected_conflict') and not any(v.quality is h.Quality.CONFLICTING for v in values):
+                    failures.append('Expected unresolved conflicting candidates not retained')
+                if fixture.get('required_value_unresolved'):
+                    bindings={(b['accession'],b['input_id']):b for b in json.loads(prepared.bindings_json)}
+                    if not any(v.value is None and v.unresolved_requirements for v in values) or any(v.value is not None and
+                        bindings[(acc,v.input_id)]['category']=='prepared_value' for v in values):
+                        failures.append('Scope-disqualified D&A incorrectly populates required value')
                 if fixture.get('exclude_from_primitive'):
                     bindings={(b['accession'],b['input_id']):b for b in json.loads(prepared.bindings_json)}
                     if any(v.value is not None and bindings[(acc,v.input_id)]['category']=='prepared_value'
@@ -200,10 +219,14 @@ def spot_checks(histories,fixtures,artifacts):
             status='FAILED' if failures else 'CHECKED' if checks else 'NOT_VERIFIED'
             reason=None if checks else ('No retained exact-accession statement/cover/note body.' if not available else
                 'Retained bodies do not independently establish this exact field/population; no expected value forced.')
+            unbound=json.loads((a.ROOT/FIXTURES).read_text()).get('unbound_observations',[])
+            unresolved=[f for f in unbound if (f['ticker'],f['accession'],f['field'])==(ticker,acc,field.value)]
+            if not checks and available and unresolved:reason=unresolved[0]['binding_limitation']
             results.append(dict(ticker=ticker,accession=acc,annual_start=str(annual.period.annual_start),annual_end=str(annual.period.annual_end),
                 field=field.value,status=status,fixture_ids=established,failures=failures,reason=reason,
                 source_value_available=any(v.value is not None for v in values),source_conflicting=any(v.quality is h.Quality.CONFLICTING for v in values),
-                independent_complete_field=False,available_artifacts=[dict(url=x['url'],sha256=x['sha256'],path=x['path'],locator=x['locator']) for x in available]))
+                independent_complete_field=False,unbound_statement_observations=unresolved,
+                available_artifacts=[dict(url=x['url'],sha256=x['sha256'],path=x['path'],locator=x['locator']) for x in available]))
             if not checks:
                 base='https://www.sec.gov/Archives/edgar/data/'+str(annual.period.cik)+'/'+acc.replace('-','')+'/'
                 refs=primary.get(acc,[]);names=sorted({r['filename'] for r in refs})
