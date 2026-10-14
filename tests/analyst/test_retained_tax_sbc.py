@@ -5,6 +5,7 @@ import hashlib
 import json
 import subprocess
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 import xml.etree.ElementTree as ET
 from valuation_platform.analyst import retained_tax_sbc as t, retained_working_capital as w
 from valuation_platform.analyst import retained_cfo_preparation as cfo, retained_components as r
@@ -145,4 +146,4 @@ class TaxSBCTests(unittest.TestCase):
                 self.assertEqual(tuple(v for v in a.inputs if v.field not in t.FIELDS),tuple(v for v in new.inputs if v.field not in t.FIELDS))
         for path in ('docs/retained-working-capital-ledger.json','docs/retained-cfo-ledger.json','docs/repaired-income-ledger.json',
             'docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py'):
-            self.assertEqual((shared.ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=shared.ROOT))
+            assert_preserved(self, shared.ROOT, path, HEAD)

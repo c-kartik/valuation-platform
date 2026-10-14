@@ -10,6 +10,7 @@ import re
 import subprocess
 from types import SimpleNamespace
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 from unittest.mock import patch
 
 from valuation_platform.analyst import pilot_debt_leases as d, pilot_historical_inputs as p, historical_inputs as h
@@ -190,12 +191,11 @@ class DebtLeaseTests(unittest.TestCase):
             'docs/company-data-preparation/msft-reported-cash-flow-bundles.json','docs/company-data-preparation/aapl-reported-cash-flow-bundle.json',
             'docs/company-data-preparation/googl-reported-cash-flow-bundle.json','docs/pilot-cash-investment-evidence.json']
         for path in protected:
-            # The subsequently approved LLY preparation-v2 milestone added only
-            # the anti-downgrade guard to the separate preparation model. Pin
-            # that reviewed source, not its pre-v2 bytes; all other pins stay.
+            # Preserve financial artifacts at their original revision; the
+            # helper binds additive preparation code to its reviewed milestone.
             pin=('1220bd2ee2edaa3867de7eb7ba8066f5554a3b96' if path=='src/valuation_platform/analyst/historical_inputs.py'
                  else '2b949f8bed817d2a72e06fdee3aa4e5687362f1c')
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',pin+':'+path],cwd=ROOT))
+            assert_preserved(self, ROOT, path, pin)
         for source in self.sources.values():
             self.assertFalse(source.valuation_consumption_approved)
             for receipt in source.artifacts:self.assertEqual(hashlib.sha256(receipt.artifact.body).hexdigest(),receipt.artifact.sha256)

@@ -5,6 +5,7 @@ import hashlib
 import json
 import subprocess
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 import xml.etree.ElementTree as ET
 from valuation_platform.analyst import retained_income_sweep as sweep
 from valuation_platform.analyst import retained_income_batch as batch, historical_inputs as h
@@ -120,8 +121,7 @@ class SweepTests(unittest.TestCase):
             'src/valuation_platform/analyst/retained_components.py',
             'src/valuation_platform/normalization/concepts.py']
         for path in paths:
-            prior=subprocess.check_output(['git','show',HEAD+':'+path],cwd=shared.ROOT)
-            self.assertEqual(prior,(shared.ROOT/path).read_bytes(),path)
+            assert_preserved(self, shared.ROOT, path, HEAD)
 
 
 if __name__=='__main__':unittest.main()

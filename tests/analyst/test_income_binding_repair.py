@@ -9,6 +9,7 @@ from pathlib import Path
 import subprocess
 import sys
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -109,7 +110,7 @@ class IncomeBindingRepairTests(unittest.TestCase):
         for path in ('docs/evidence/income-sweep-backlog-acquisition.json','docs/approved-income-integration-bindings.json',
             'docs/phase1-selected-filing-identity-manifest.json','src/valuation_platform/normalization/operating_income_derivation.py',
             'src/valuation_platform/analyst/historical_inputs.py','docs/approved-income-integration-ledger.json'):
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',BASELINE+':'+path],cwd=ROOT))
+            assert_preserved(self, ROOT, path, BASELINE)
 
 
 if __name__=='__main__':unittest.main()

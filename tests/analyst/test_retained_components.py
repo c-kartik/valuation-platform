@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import subprocess
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 
 from valuation_platform.analyst import retained_components as r, historical_inputs as h
 from valuation_platform.analyst import pilot_historical_inputs as p, pilot_cash_investments as cash
@@ -191,10 +192,10 @@ class RetainedComponentTests(unittest.TestCase):
             'src/valuation_platform/normalization/balance_sheet.py','src/valuation_platform/sec/filing_xbrl.py',
             'docs/company-data-preparation/msft-reported-cash-flow-bundles.json',
             'docs/company-data-preparation/aapl-reported-cash-flow-bundle.json','docs/company-data-preparation/googl-reported-cash-flow-bundle.json'):
-            # LLY preparation v2 subsequently added the approved anti-downgrade
-            # guard; old payload hashes above and every other artifact pin stay.
+            # Later reviewed preparation versions are source-pinned by the
+            # helper; original payload hashes and financial artifact pins stay.
             pin='1220bd2ee2edaa3867de7eb7ba8066f5554a3b96' if path=='src/valuation_platform/analyst/historical_inputs.py' else HEAD
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',pin+':'+path],cwd=ROOT))
+            assert_preserved(self, ROOT, path, pin)
 
 
 if __name__=='__main__':unittest.main()

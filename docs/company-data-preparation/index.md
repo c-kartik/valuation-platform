@@ -1,5 +1,23 @@
 # Company data preparation register
 
+## Final integrated validation — pending user acceptance
+
+[Delivery report and finite checklist](../phase1-delivery-acceptance-report.md)
+separate technical validation from independent samples and financial coverage.
+42 histories / 199 annuals / fourteen field families retain the forty-company
+cohort plus META/COST, eleven history deficits and all frozen support/blocker
+classifications. No issuer values or treatments change in this validation pass;
+there is no new independent review of forty histories. Original four pilot
+periods retain their limited acceptance and exact bytes.
+
+Reported scalar availability, partial component observations, alternatives and
+required nulls remain distinct. Complete aggregate/share and CFO-reconciliation
+contracts have not been delivered; coverage shortfalls and future consumer/timing
+gates are not automatically waived. All financial sufficiency remains NOT_ASSESSED.
+No real override or analyst acceptance is registered. Stop for user review; neither
+test success nor queue grouping closes Phase 1. Earlier milestones below preserve
+their historical results, not current financial completeness claims.
+
 ## Integrated reported-tax preparation — current delivery
 
 [Contract/results](../integrated-reported-tax-preparation.md): all 199 annuals now

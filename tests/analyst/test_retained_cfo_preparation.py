@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import subprocess
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 import xml.etree.ElementTree as ET
 from valuation_platform.analyst import retained_cfo_preparation as cfo, historical_inputs as h
 from valuation_platform.analyst import pilot_historical_inputs as pilot, nvda_income_inputs as shared
@@ -110,7 +111,7 @@ class RetainedCFOTests(unittest.TestCase):
                 new=next(v for v in self.histories[name].annuals if v.period==a.period);self.assertEqual(new,a)
         for path in ('docs/repaired-income-ledger.json','docs/pilot-historical-input-mappings.json','src/valuation_platform/analyst/historical_inputs.py',
             'src/valuation_platform/normalization/operating_income_derivation.py'):
-            self.assertEqual((shared.ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=shared.ROOT))
+            assert_preserved(self, shared.ROOT, path, HEAD)
 
     def test_serialization_replay_and_actual_fact_tampering_rejected(self):
         history=self.histories['QCOM'];one=replace(history,annuals=(history.annuals[-1],),history_exceptions=('Single-period test, not additional registration.',))

@@ -1,5 +1,24 @@
 # Retained preparation coverage and independent spot checks
 
+## Final integrated delivery review
+
+[Current acceptance report](phase1-delivery-acceptance-report.md) supersedes the
+earlier tables below for current counts. Retained offline replay reproduces the
+committed assembly, coverage and 120 sample outcomes: 119 CHECKED / zero FAILED /
+one NOT_VERIFIED. Exact recent/older denominators and complete-field targets are
+unchanged; D&A now has 64/44 policy values, tax context 118/76 valued periods.
+These are not complete-family counts. No coverage limitation is accepted, no phase
+is closed and no consumer sufficiency/timing certification is made. Earlier
+sections retain prior milestone decisions; see the report for current technical
+validation, integrity depth, undelivered obligations and finite user-review gates.
+
+The single complete suite ran 1,068 tests: 1,057 passed, eleven stale preparation
+preservation pins failed, zero errors. Test-only pin repairs plus fourteen focused
+checks pass without changes to financial values/scope, ledgers or frozen artifacts.
+The original full run is not relabeled green; a post-repair full rerun is explicitly
+NOT_ASSESSED under the once-only scope. Technical repair and exact retained replay
+do not accept material complete-field shortfalls or certify whole histories.
+
 ## Integrated reported-tax coverage
 
 [Current integration](integrated-reported-tax-preparation.md) now accounts for the

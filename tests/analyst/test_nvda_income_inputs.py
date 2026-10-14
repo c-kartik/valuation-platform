@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import subprocess
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 import xml.etree.ElementTree as ET
 
 from valuation_platform.analyst import historical_inputs as h, retained_components as r
@@ -149,7 +150,7 @@ class NvdaIncomeTests(unittest.TestCase):
             'src/valuation_platform/normalization/concepts.py','docs/pilot-historical-input-mappings.json',
             'docs/company-data-preparation/msft-reported-cash-flow-bundles.json','docs/company-data-preparation/aapl-reported-cash-flow-bundle.json',
             'docs/company-data-preparation/googl-reported-cash-flow-bundle.json'):
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=ROOT))
+            assert_preserved(self, ROOT, path, HEAD)
 
 
 if __name__=='__main__':unittest.main()

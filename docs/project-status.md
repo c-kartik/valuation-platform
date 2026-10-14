@@ -2,6 +2,34 @@
 
 ## Current Milestone
 
+Final integrated technical-validation and user delivery review, Phase 1 only.
+[Acceptance report](phase1-delivery-acceptance-report.md) separates technical
+replay, the independent 120-slot sample and financial coverage. No Phase 1 closure,
+financial-shortfall acceptance or Phase 2 authority is recorded. The complete
+suite is run once; only demonstrated test/implementation repairs receive focused
+reruns. No SEC requests or live corpus execution.
+
+Retained assembly/coverage/sample replay agrees with committed reports: 42
+histories, 199 annuals, fourteen families/2,786 selected slots versus 210 annuals/
+2,940 target slots. Eleven history deficits remain. Recent selected/target 121/126,
+older 78/84; all complete-field 90%/80% comparisons remain short, not accepted.
+119 CHECKED / zero FAILED / one NOT_VERIFIED is sample depth, not complete-field
+approval. The finite closure checklist retains aggregate/share and CFO-reconciliation
+obligations separately from future consumer-specific sufficiency/timing gates.
+Stop for user review after this validation milestone.
+
+Single full suite: 1,068 tests / 1,057 passed / eleven obsolete preservation-pin
+failures / zero errors. Test-only repairs bind mutable preparation code/ledgers
+to explicitly reviewed milestones while preserving strict frozen/financial pins.
+Fourteen distinct focused checks pass (nine affected methods plus five new
+compatibility/transition/assertion-loop checks). No financial expectations, runtime
+source, policies or ledgers changed. The initial suite remains FAILED; a second
+full run after repair is NOT_ASSESSED/not executed under the once-only scope.
+No known implementation defect remains. Compileall, retained receipt/identity
+checks, forty-register accounting, affected local links and diff checks pass.
+
+### Prior reported-tax integration — preserved results
+
 Completed bounded **reported-tax assembly/review/override integration**.
 [Current contract and finite decisions](integrated-reported-tax-preparation.md).
 199 annuals / 42 histories retain distinct provision, Pretax and pure-unit reported

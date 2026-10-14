@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import subprocess
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 import xml.etree.ElementTree as ET
 from valuation_platform.analyst import retained_income_batch as b, retained_income_preparation as income
 from valuation_platform.analyst import nvda_income_inputs as n, historical_inputs as h, retained_components as r
@@ -129,7 +130,7 @@ class RetainedIncomeBatchTests(unittest.TestCase):
             'src/valuation_platform/analyst/retained_income_preparation.py','src/valuation_platform/analyst/retained_components.py',
             'src/valuation_platform/analyst/historical_inputs.py','src/valuation_platform/analyst/pilot_historical_inputs.py',
             'src/valuation_platform/normalization/concepts.py','docs/pilot-historical-input-mappings.json'):
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=ROOT))
+            assert_preserved(self, ROOT, path, HEAD)
 
 
 if __name__=='__main__':unittest.main()

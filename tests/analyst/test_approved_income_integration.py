@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import subprocess
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 from unittest.mock import patch
 from valuation_platform.analyst import approved_income_integration as integration
 from valuation_platform.analyst import retained_income_sweep as sweep, historical_inputs as h
@@ -120,7 +121,7 @@ class ApprovedIncomeIntegrationTests(unittest.TestCase):
             'src/valuation_platform/analyst/historical_inputs.py','docs/phase1-selected-filing-identity-manifest.json',
             'docs/retained-income-sweep-ledger.json','docs/evidence/income-sweep-backlog-acquisition.json']
         for path in paths:
-            self.assertEqual((shared.ROOT/path).read_bytes(),subprocess.check_output(['git','show',BASELINE+':'+path],cwd=shared.ROOT))
+            assert_preserved(self, shared.ROOT, path, BASELINE)
 
 
 if __name__=='__main__':unittest.main()

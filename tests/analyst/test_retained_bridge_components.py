@@ -5,6 +5,7 @@ import hashlib
 import json
 import subprocess
 import unittest
+from tests.analyst.preparation_preservation import assert_preserved
 import xml.etree.ElementTree as ET
 from valuation_platform.analyst import retained_bridge_components as b
 from valuation_platform.analyst import historical_inputs as h, retained_components as r
@@ -162,7 +163,7 @@ class RetainedBridgeTests(unittest.TestCase):
         paths += ['docs/retained-d-and-a-ledger.json','docs/pilot-historical-input-mappings.json','docs/refreshed-capex-ledger.json',
                   'docs/retained-tax-sbc-ledger.json','docs/retained-working-capital-ledger.json']
         for path in paths:
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=ROOT),path)
+            assert_preserved(self, ROOT, path, HEAD)
         for entries in self.overlays.values():
             for a in entries:
                 for v in (*a.cash_investments,*a.debt_leases):

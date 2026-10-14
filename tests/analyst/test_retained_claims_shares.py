@@ -3,6 +3,7 @@ from dataclasses import replace
 from datetime import timedelta
 from decimal import Decimal
 import hashlib,json,subprocess,unittest
+from tests.analyst.preparation_preservation import assert_preserved
 import xml.etree.ElementTree as ET
 from valuation_platform.analyst import retained_claims_shares as c,retained_components as r,historical_inputs as h
 from valuation_platform.analyst import pilot_historical_inputs as p
@@ -141,7 +142,7 @@ class ClaimsSharesTests(unittest.TestCase):
         protected=subprocess.check_output(['git','ls-tree','-r','--name-only',HEAD,'src/valuation_platform/normalization','docs/evidence','docs/universe'],cwd=ROOT).decode().splitlines()
         protected+=['docs/retained-bridge-component-ledger.json','docs/retained-d-and-a-ledger.json','docs/pilot-historical-input-mappings.json',
                     'docs/retained-cfo-ledger.json','docs/retained-working-capital-ledger.json','docs/retained-tax-sbc-ledger.json','docs/refreshed-capex-ledger.json']
-        for path in protected:self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',HEAD+':'+path],cwd=ROOT),path)
+        for path in protected:assert_preserved(self, ROOT, path, HEAD)
         old=c.bridge.overlay(self.e)[0]
         self.assertEqual(c.bridge.deserialize(c.bridge.serialize(old)),old)
         for name in ('AAPL','MSFT','GOOGL'):
