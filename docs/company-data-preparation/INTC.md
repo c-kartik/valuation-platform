@@ -1,5 +1,17 @@
 # INTC — company data preparation
 
+## Primary field-family review presentation
+
+[Workflow](../preparation-review-workflow.md) / [exact counts](../preparation-workflow-summary.json).
+Full history: 70 primary items / 211 nested actionable causes /
+349 original annual diagnostics; latest selected period: 14 primary items.
+History exceptions stay separate. All old component override IDs, source/alternative
+payloads, invalid evidence, scope/overlap warnings and prior decisions remain intact.
+The presentation change supplies no new fact, assumption, acceptance or financial
+coverage. Original/effective comparisons are separate and never clear missing
+requirements. No real overrides registered; financial sufficiency remains NOT_ASSESSED.
+
+
 ## Revision-bound decisions and grouped review
 
 [Control contract](../analyst-override-review-controls.md) /

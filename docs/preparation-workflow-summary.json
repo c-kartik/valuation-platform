@@ -1,0 +1,867 @@
+{
+  "issuers": 42,
+  "per_issuer": {
+    "AAPL": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 200,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 268,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 35,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 76,
+        "primary_items": 14
+      }
+    },
+    "ABBV": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 215,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 507,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 43,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 100,
+        "primary_items": 14
+      }
+    },
+    "AMAT": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 200,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 359,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 40,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 47,
+        "primary_items": 14
+      }
+    },
+    "AMD": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 202,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 256,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 50,
+        "primary_items": 14
+      }
+    },
+    "AMZN": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 210,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 288,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 42,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 61,
+        "primary_items": 14
+      }
+    },
+    "AVGO": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 204,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 372,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 70,
+        "primary_items": 14
+      }
+    },
+    "CAT": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 220,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 969,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 44,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 195,
+        "primary_items": 14
+      }
+    },
+    "COST": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 199,
+        "nested_informational_causes": 37,
+        "original_diagnostics": 209,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 45,
+        "primary_items": 14
+      }
+    },
+    "CSCO": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 190,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 274,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 38,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 56,
+        "primary_items": 14
+      }
+    },
+    "CVX": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 225,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 1172,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 45,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 233,
+        "primary_items": 14
+      }
+    },
+    "GEV": {
+      "full": {
+        "history_exceptions": 1,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 86,
+        "nested_informational_causes": 14,
+        "original_diagnostics": 216,
+        "primary_items": 28
+      },
+      "latest": {
+        "history_exceptions": 1,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 43,
+        "nested_informational_causes": 7,
+        "original_diagnostics": 108,
+        "primary_items": 14
+      }
+    },
+    "GOOGL": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 199,
+        "nested_informational_causes": 41,
+        "original_diagnostics": 329,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 58,
+        "primary_items": 14
+      }
+    },
+    "HD": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 206,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 247,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 52,
+        "primary_items": 14
+      }
+    },
+    "IBM": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 206,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 949,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 218,
+        "primary_items": 14
+      }
+    },
+    "INTC": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 211,
+        "nested_informational_causes": 35,
+        "original_diagnostics": 349,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 7,
+        "original_diagnostics": 74,
+        "primary_items": 14
+      }
+    },
+    "JNJ": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 205,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 536,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 109,
+        "primary_items": 14
+      }
+    },
+    "KLAC": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 195,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 278,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 39,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 46,
+        "primary_items": 14
+      }
+    },
+    "KO": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 210,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 912,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 42,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 154,
+        "primary_items": 14
+      }
+    },
+    "LIN": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 217,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 706,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 44,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 142,
+        "primary_items": 14
+      }
+    },
+    "LLY": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 205,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 765,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 129,
+        "primary_items": 14
+      }
+    },
+    "LRCX": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 215,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 263,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 43,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 48,
+        "primary_items": 14
+      }
+    },
+    "MA": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 212,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 328,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 42,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 52,
+        "primary_items": 14
+      }
+    },
+    "MCD": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 215,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 228,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 43,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 49,
+        "primary_items": 14
+      }
+    },
+    "META": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 211,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 280,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 61,
+        "primary_items": 14
+      }
+    },
+    "MRK": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 2,
+        "nested_actionable_causes": 222,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 1237,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 43,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 239,
+        "primary_items": 14
+      }
+    },
+    "MSFT": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 184,
+        "nested_informational_causes": 42,
+        "original_diagnostics": 427,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 33,
+        "nested_informational_causes": 9,
+        "original_diagnostics": 105,
+        "primary_items": 14
+      }
+    },
+    "MU": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 200,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 249,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 40,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 45,
+        "primary_items": 14
+      }
+    },
+    "NFLX": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 219,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 208,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 43,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 42,
+        "primary_items": 14
+      }
+    },
+    "NVDA": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 218,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 261,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 44,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 49,
+        "primary_items": 14
+      }
+    },
+    "ORCL": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 213,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 242,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 49,
+        "primary_items": 14
+      }
+    },
+    "PEP": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 195,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 488,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 39,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 89,
+        "primary_items": 14
+      }
+    },
+    "PG": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 202,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 344,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 70,
+        "primary_items": 14
+      }
+    },
+    "PLTR": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 204,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 216,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 40,
+        "primary_items": 14
+      }
+    },
+    "PM": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 5,
+        "nested_actionable_causes": 215,
+        "nested_informational_causes": 35,
+        "original_diagnostics": 445,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 1,
+        "nested_actionable_causes": 43,
+        "nested_informational_causes": 7,
+        "original_diagnostics": 87,
+        "primary_items": 14
+      }
+    },
+    "QCOM": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 215,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 272,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 43,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 53,
+        "primary_items": 14
+      }
+    },
+    "SNDK": {
+      "full": {
+        "history_exceptions": 1,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 80,
+        "nested_informational_causes": 16,
+        "original_diagnostics": 88,
+        "primary_items": 28
+      },
+      "latest": {
+        "history_exceptions": 1,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 40,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 43,
+        "primary_items": 14
+      }
+    },
+    "TSLA": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 1,
+        "nested_actionable_causes": 204,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 261,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 40,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 50,
+        "primary_items": 14
+      }
+    },
+    "TXN": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 205,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 509,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 41,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 96,
+        "primary_items": 14
+      }
+    },
+    "V": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 204,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 387,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 42,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 54,
+        "primary_items": 14
+      }
+    },
+    "VZ": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 220,
+        "nested_informational_causes": 35,
+        "original_diagnostics": 655,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 44,
+        "nested_informational_causes": 7,
+        "original_diagnostics": 133,
+        "primary_items": 14
+      }
+    },
+    "WMT": {
+      "full": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 250,
+        "nested_informational_causes": 40,
+        "original_diagnostics": 253,
+        "primary_items": 70
+      },
+      "latest": {
+        "history_exceptions": 0,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 50,
+        "nested_informational_causes": 8,
+        "original_diagnostics": 50,
+        "primary_items": 14
+      }
+    },
+    "XOM": {
+      "full": {
+        "history_exceptions": 1,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 0,
+        "nested_informational_causes": 0,
+        "original_diagnostics": 0,
+        "primary_items": 0
+      },
+      "latest": {
+        "history_exceptions": 1,
+        "informational_fields": 0,
+        "invalid_evidence_diagnostics": 0,
+        "nested_actionable_causes": 0,
+        "nested_informational_causes": 0,
+        "original_diagnostics": 0,
+        "primary_items": 0
+      }
+    }
+  },
+  "schema": "preparation-field-review-v1",
+  "selected_periods": 199,
+  "totals": {
+    "full": {
+      "history_exceptions": 3,
+      "informational_fields": 0,
+      "invalid_evidence_diagnostics": 8,
+      "nested_actionable_causes": 8308,
+      "nested_informational_causes": 1575,
+      "original_diagnostics": 17602,
+      "primary_items": 2786
+    },
+    "latest": {
+      "history_exceptions": 3,
+      "informational_fields": 0,
+      "invalid_evidence_diagnostics": 1,
+      "nested_actionable_causes": 1701,
+      "nested_informational_causes": 325,
+      "original_diagnostics": 3527,
+      "primary_items": 574
+    }
+  }
+}

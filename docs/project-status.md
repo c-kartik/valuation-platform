@@ -2,7 +2,33 @@
 
 ## Current Milestone
 
-Latest milestone: **revision-bound persistent analyst overrides and grouped review**.
+Latest milestone: **bounded end-to-end preparation/review validation and primary
+field-family presentation**. [Workflow](preparation-review-workflow.md) /
+[exact counts](preparation-workflow-summary.json). Full-history queue: 2,786
+primary items, 8,308 nested actionable causes, 1,575 informational causes and
+17,602 original annual diagnostics; three history-exception cards stay separate.
+All eight invalid-evidence locations and stable component IDs remain reachable.
+Latest views: 574 primary items / 1,701 actionable causes / 3,527 diagnostics,
+with explicit full-history/outside-view counts. One item per annual/field does
+not mean one financial gap or complete inputs. All forty records plus META/COST
+seed notes document the shared presentation change, not new financial coverage.
+Read-only local ticker inspection now exposes source/effective bundle values,
+full-history quality and full/latest queues. Separate temporary synthetic
+META/MSFT/WMT/Alphabet workflows exercise persistence/restart, stale rejection,
+explicit revalidation and overlay round trips. No real analyst decisions,
+financial treatments, source edits, extraction expansion or support changes.
+Frozen/pilot/ledger outputs persist; sufficiency remains NOT_ASSESSED.
+**28 focused tests pass**: nine assembly, fourteen override and five new
+end-to-end/presentation tests. The initial test-only lookup omitted period from
+reused input IDs; exact period-plus-ID binding was corrected and the complete
+focused run passed. Production target matching/financial selection was unchanged.
+Compileall, affected links, forty-plus-two mappings, counts/reproducibility and
+diff checks pass. No SEC requests or full-suite/corpus rerun.
+Next independent gate: bounded retained-source/financial-input spot checks and
+explicit coverage denominators/material-shortfall disposition before any qualified
+analyst-reviewable acceptance. Do not reopen research or start Phase 2. Stop.
+
+Previously completed milestone: **revision-bound persistent analyst overrides and grouped review**.
 [Control contract](analyst-override-review-controls.md) /
 [exact summary](grouped-preparation-review-summary.json). Separate opt-in local
 audit and analyst-origin overlay preserve original values/evidence/alternatives,

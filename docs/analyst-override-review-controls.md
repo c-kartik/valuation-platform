@@ -84,6 +84,11 @@ adjustment, financial sufficiency approval or valuation calculation.
 
 ## Grouped queue
 
+The subsequent [primary field-family workflow](preparation-review-workflow.md)
+now nests these unchanged cause groups under one annual/field primary item.
+Stable component IDs, original details and revision/audit semantics are unchanged;
+full/latest filters and separate history exceptions are presentation only.
+
 `grouped_queue()` groups by issuer/accession/field/actionable cause and review
 class. Stable group IDs do not depend on count, priority or value. Every original
 card is retained in expandable `details`, including source/alternative/refresh

@@ -1,5 +1,26 @@
 # Company data preparation register
 
+## Primary field-family review and local workflow
+
+[Workflow](../preparation-review-workflow.md) /
+[exact full/latest counts](../preparation-workflow-summary.json): one primary
+review item per selected annual/field family, with stable component targets,
+distinct causes and verbatim original diagnostics nested underneath. Full history:
+2,786 primary items / 8,308 actionable causes / 17,602 annual diagnostics; three
+history exceptions remain separate. Latest: 574 primary items / 1,701 actionable
+causes / 3,527 diagnostics, with explicit older-period counts. Informational
+observations do not prove complete inputs. Invalid evidence, conflicts, overlap
+and completeness requirements are retained, never accepted by regrouping.
+
+The local assembly script provides read-only ticker bundle/quality/queue inspection
+and optional existing-audit comparisons. META/MSFT/WMT/Alphabet are mechanical
+end-to-end test cases using temporary synthetic decisions only. All 42 records
+retain prior facts, evidence, limitations, classifications and original decisions;
+no real override is registered. Actual decisions still require same-milestone
+issuer maintenance. Financial sufficiency remains NOT_ASSESSED. Independent
+financial-input validation and explicit coverage/shortfall review are separate
+closure gates; no new research chain or Phase 2 authority follows these tests.
+
 ## Revision-bound local review controls
 
 [Contract](../analyst-override-review-controls.md) /

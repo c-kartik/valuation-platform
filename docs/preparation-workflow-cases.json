@@ -1,0 +1,46 @@
+[
+  {
+    "accession": "0001628280-26-003942",
+    "annual_end": "2025-12-31",
+    "as_of": null,
+    "field": "revenue",
+    "source_origin": "reported",
+    "source_value": "200966000000",
+    "target_id": "review:1326801:0001628280-26-003942:revenue:a7c926c46f69c869336565d5",
+    "ticker": "META",
+    "workflow": "PASS_SYNTHETIC_ONLY"
+  },
+  {
+    "accession": "0001193125-26-323660",
+    "annual_end": "2026-06-30",
+    "as_of": null,
+    "field": "depreciation_amortization",
+    "source_origin": "derived",
+    "source_value": "39000000000",
+    "target_id": "review:789019:0001193125-26-323660:depreciation_amortization:ae04f3a0b3067bab069756c7",
+    "ticker": "MSFT",
+    "workflow": "PASS_SYNTHETIC_ONLY"
+  },
+  {
+    "accession": "0000104169-26-000055",
+    "annual_end": "2026-01-31",
+    "as_of": null,
+    "field": "revenue",
+    "source_origin": "unavailable",
+    "source_value": null,
+    "target_id": "review:104169:0000104169-26-000055:revenue:11b35cf694d139cd1671453c",
+    "ticker": "WMT",
+    "workflow": "PASS_SYNTHETIC_ONLY"
+  },
+  {
+    "accession": "0001652044-26-000018",
+    "annual_end": "2025-12-31",
+    "as_of": "2026-01-28",
+    "field": "point_in_time_shares",
+    "source_origin": "reported",
+    "source_value": "5438000000",
+    "target_id": "review:1652044:0001652044-26-000018:point_in_time_shares:e4a3e4226d4b73bbeaf996df",
+    "ticker": "GOOGL",
+    "workflow": "PASS_SYNTHETIC_ONLY"
+  }
+]

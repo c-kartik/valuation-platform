@@ -1,5 +1,18 @@
 # Architecture
 
+## Primary field-family preparation review
+
+`analyst/preparation_review.py` is an additive presentation layer over unchanged
+assembly cards and local override controls. One primary annual/field item nests
+stable component IDs, cause memberships and verbatim original diagnostics;
+informational fields/history exceptions remain separate. Explicit full/latest
+views retain full-history/outside-view counts and configured field ordering.
+Read-only original/effective displays keep analyst patches distinct from facts
+and preserve source quality/missing requirements. The existing local assembly
+script exposes bundle/quality/queue inspection, optionally reading a validated
+existing payload/audit store. No new financial resolver, database, UI or server.
+[Workflow and validation boundary](preparation-review-workflow.md).
+
 ## Local revision-bound analyst overlay
 
 `analyst/analyst_overrides.py` adds explicit proposal/accept/revalidate/revoke and
