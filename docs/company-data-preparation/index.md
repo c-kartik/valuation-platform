@@ -1,6 +1,30 @@
 # Company data preparation register
 
-## Final integrated validation — pending user acceptance
+## Separate reported-population delivery — current mechanism
+
+[Contract/evidence/review](../reported-population-delivery.md) /
+[source ledger](../reported-population-delivery-ledger.json) /
+[coverage](../reported-population-delivery-summary.json). All forty cohort records
+and two supported-seed records link exact row locators and actual outcomes. 42
+histories / 199 annuals / eleven deficits remain; no issuer or history approval
+is inferred from a new shared mechanism. Original four pilot periods stay unchanged.
+
+Current-liquidity selections 46; unclassed common-share selections 86 at actual
+dates. Partial reported borrowing captions 23, finance-lease totals 81, operating-lease totals
+169 stay separate; no complete combined-debt sum. CFO checks: 122 supported, 59
+partial, 18 not assessed, zero failed. Prior conflicts/negative D&A/NWC/timing and
+history limitations persist. Source aliases/operands are revision-bound; synthetic
+overrides invalidate related effective populations, never recalculate or accept
+them. Raw facts, support, alternatives, old null requirements and diagnostics are
+not discarded. Financial sufficiency NOT_ASSESSED; 90%/80% shortfalls unaccepted.
+Final technical results and finite user gates belong in the
+[acceptance report](../phase1-delivery-acceptance-report.md), not automatic closure.
+Final technical validation: 1,101 tests passed in 6298.428 seconds; all 180 Python
+files match the pre-run seal. Final focused runs passed 19 and nine tests, with
+compileall, integrity/count, local-link and diff checks passing. Financial limits
+remain pending explicit user review; recovery did not repeat tests or SEC requests.
+
+## Prior integrated validation — preserved history, pending user acceptance
 
 [Delivery report and finite checklist](../phase1-delivery-acceptance-report.md)
 separate technical validation from independent samples and financial coverage.

@@ -1,5 +1,120 @@
 # Phase 1 integrated delivery — user acceptance report
 
+## Current separately versioned population delivery
+
+Implementation baseline: `2468e77574e24b4a980767ae315121b6a148bc46`.
+[Contract](reported-population-delivery.md), [exact source/exception ledger](reported-population-delivery-ledger.json)
+and [coverage](reported-population-delivery-summary.json) supersede undelivered
+population/reconciliation obligations below, not the preserved financial gaps.
+Original assembly, policies, pilots and frozen results remain separate/unchanged.
+Final complete-suite validation on the final implementation **passed: 1,101 tests
+in 6298.428 seconds**. The earlier failed suite remains a separate historical run.
+No real override, shortfall acceptance,
+Phase 1 closure or Phase 2 authority is recorded.
+
+### Completed technical verification and interrupted-run recovery
+
+The completed `/tmp/reported-population-full-suite.log` ends in `OK`. Recovery
+verified the exact path set and SHA-256 of all **180 Python files** under `src`,
+`scripts` and `tests` against the pre-run seal: no executable changes occurred.
+Seal SHA-256: `e37ac167f3cdaa1eae8d5d036ee6561e35e1b08c267fa42f4bd70c42e3041ba9`;
+completed log SHA-256: `ab14c15c46737ed4e98113df88616ea4e1b43aa9abd32ab0359aa9f6af7b21a9`.
+These identify local validation records, not permanent repository evidence bodies.
+The suite was not restarted. Final focused runs also passed: 19 source/acquisition
+tests in 25.300 seconds and nine delivery/replay tests in 731.676 seconds.
+They cover exact ledger replay, source/operand binding, serialization, synthetic
+override persistence/dependencies and original assembly/pilot/frozen preservation.
+Compileall, source/body-digest/count checks, affected local links and diff checks
+pass. No SEC requests or duplicate tests were made during recovery.
+
+Whole-universe independent accounting-scope certification, integrated FCFF/timing
+compatibility, consumer financial sufficiency and live source availability remain
+**NOT_ASSESSED**. Construction-dependent arithmetic is not independent financial
+verification. No demonstrated technical failure remains; conservative unsupported
+source populations and missing coverage contracts are not proven numerical errors.
+
+### Technical, independent and financial results are different
+
+42 histories / 199 annuals / fourteen families / 2,786 selected field slots versus
+210 annuals / 2,940 targets remain. Eleven deficits: XOM five, GEV/SNDK three each.
+Forty cohort records plus two seed records account for every selected identity.
+New and original source/operand proofs, nulls, conflicts and diagnostics survive
+separate round trips; source aliases and same-period transitive override dependencies
+invalidate effective selections, never recompute them. All overrides are synthetic
+temporary tests, not analyst decisions. Source and formula arithmetic checks do
+not certify financial sufficiency.
+
+Independent original sample replay remains **119 CHECKED / zero FAILED / one
+NOT_VERIFIED** (CVX EBIT) across 120 checks. It includes correctly unresolved and
+negative D&A outcomes, not 119 complete inputs. Seven negative D&A dispositions
+remain. The new CFO display pass is a distinct 199-period check: **122 SUPPORTED /
+59 PARTIAL / zero FAILED / 18 NOT_ASSESSED**. Four initial Linde false failures
+were a newly demonstrated enumeration defect (income bridge plus its parent);
+an explicit parent guard retains them partial instead of altering amounts/tolerance.
+Three further zero/equal-value movement parent/child cases fail closed: equality
+does not establish non-overlap. No residual certifies either check by construction.
+
+139 exact primary requests / 139 HTTP 200 bodies / 139 independently verified annual
+identities, with actual UTC receipts and typed original-body digests. Seven initial
+parser outcomes remain preserved, separately revalidated offline. Including 47
+reused bodies, 186 primaries are available. Thirteen exact primary metadata/body
+gaps (CAT five, MCD five, PM three) and five IBM independent financial-report
+bindings remain NOT_ASSESSED. IBM's selected primaries contain no CFO facts;
+this is not proof of absent financial disclosure. Other partial checks identify
+unbound rows, scope/hierarchy conflicts and uncertain parent/component coverage.
+No further source search or new financial approval is implied.
+
+### Exact coverage and unchanged targets
+
+Recent: 121 selected / 126 target; older: 78 / 84, for **each** field. Recent/older
+are newest-three and remaining-two selected ordinals, not assured consecutive
+years. Proposed 90%/80% targets remain unchanged and unaccepted.
+
+| Field/population | Available reported/policy scalar | Declared usable scoped total R/O | Remaining boundary |
+| --- | ---: | ---: | --- |
+| Revenue | 188 | 4/0 | Eleven conflicts; scope/whole-history metadata not numerically certified by availability. |
+| EBIT | 194 | 19/10 | Five CVX scope gaps; 25 policy-derived values remain distinct. |
+| Required D&A | 108 | 0/0 | 91 unresolved; support in 199, seven explicit negative reviews. No new component sum. |
+| Cash Capex | 165 | 0/0 | 34 unapproved scopes; immutable direct/curated/refresh proof preserved. |
+| Reported CFO | 195 | 75/49 | 122 newly reconciled consolidated displays plus two prior metadata-qualified pilot subtotals; 124 is not 124 new independent checks. Four required values remain unavailable. |
+| Current reported liquidity | 46 narrow selections | 29/17 | 153 selections unestablished; long-term/strategic/restricted holdings stay separate; not unrestricted/excess cash. |
+| Borrowing/leases | 23 partial borrowing captions; 81 finance and 169 operating lease totals | 0/0 combined debt | Borrowing basis/short-term/lease inclusion unproved. No parent+child or borrowing+lease sum. |
+| Issuer common shares | 86 narrow unclassed cover selections | 53/33 | 113 selections unestablished; actual dates preserved, no class equivalence/sum or dilution estimate. |
+
+All other complete families remain zero: movements, deferred-tax reconciliation,
+SBC, reported-tax consumer context, other claims/assets and unclassified remainder.
+Their partial/support observations remain available (respectively 199, 193, 184,
+194, 199 and 122 periods); they are not complete financial inputs. Provision/
+Pretax/ETR remain separately 186/162/154, not a complete operating-tax basis.
+Residuals are partial unclassified source remainders, not approved adjustments.
+
+The machine summary separately records valued observations, partial support,
+conflicts and nulls; categories overlap. Old nulls are retained alongside new
+narrow selections, not silently cleared or counted as a second missing company.
+Component counts never substitute for period-level complete-field coverage.
+Every declared-complete recent/older comparison still misses 90%/80%, on both
+selected and target denominators. Scalar availability meets some weaker comparisons
+but cannot silently replace the complete-field definition. Missing completeness
+metadata is not demonstrated numerical error.
+
+### Finite acceptance/closure checklist — not accepted
+
+| Decision or requirement | Required disposition |
+| --- | --- |
+| Coverage/history limitations | Explicitly accept or reject the above shortfalls and eleven history deficits for qualified analyst-reviewable preparation. No silent target reduction, five-year claim or whole-issuer pilot approval. |
+| Narrow reported populations | Confirm the stated cash/current-marketable and unclassed actual-date share perimeter, separate recognized lease populations, and partial borrowing observations. They are not net debt, excess cash, complete borrowing scope or a modeling convention. |
+| CFO limitations | Accept/reject 59 partial and 18 unassessed source checks as explicit limitations. If rejected, finite repair scope is the thirteen exact primary metadata/body gaps, five IBM statement bindings, and ledger-identified hierarchy/row/scope requirements—no new issuer research queue. |
+| Existing financial gaps | Eleven Revenue conflicts, five CVX EBIT gaps, 91 D&A/34 Capex scopes, tax conflicts/denominators and class/population ambiguity remain review requirements, not discarded values or inferred zeros. Accept limited preparation or specify a bounded evidence/analyst disposition. |
+| Future financial consumption | Consumer-specific sufficiency/timing, economic lease/SBC/interest/tax treatment, dilution, assumptions and all valuation calculations remain a separate gate; not needed to manufacture preparation closure and not approved here. |
+
+Qualified Phase 1 preparation can close only after final technical validation and
+explicit acceptance of material delivery limitations. If limitations are rejected,
+the exact finite ledger repairs remain; no complete-input or valuation readiness
+is currently supported. Source identity, accounting/source scope uncertainty and
+future analyst policy choices are distinct—not one open-ended research mandate.
+
+## Prior integrated validation findings — preserved history
+
 Validation baseline: `61086107005f78592ed0dca05291d095b4ccff89`.
 This is a delivery review, **not Phase 1 closure**, financial-shortfall acceptance
 or authority to start Phase 2. No real analyst override is registered.

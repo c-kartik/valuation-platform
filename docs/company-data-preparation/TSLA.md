@@ -1,5 +1,11 @@
 # TSLA — company data preparation
 
+## Separate reported-population delivery — current mechanism
+
+5 selected annuals: current-liquidity selections 1; actual-date unclassed issuer shares 3; partial reported borrowing captions 0; recognized finance/operating lease totals 5/5. No complete combined-debt, excess-cash or diluted-share claim. Independent displayed CFO checks: {'PARTIAL': 2, 'SUPPORTED': 3}.
+
+[Exact source/period/alternatives and exceptions](../reported-population-delivery-ledger.json), locators /rows/40, /rows/41, /rows/42, /rows/43, /rows/44. [Shared contract and validation](../reported-population-delivery.md) / [final acceptance report](../phase1-delivery-acceptance-report.md). Original component-only conflict is addressed by separate source-bound selection/partition and display checks, not a policy fallback or inferred zero. Carrying/short-term/lease inclusion, class coverage and incomplete hierarchies remain explicit. Original inputs, pilot bytes and all financial/history/timing blockers stay unchanged. Synthetic override tests invalidate exact source aliases/dependents, not recalculate them. Financial sufficiency NOT_ASSESSED; no whole-history pilot acceptance or Phase 2 use.
+
 ## Integrated reported-tax review — current preparation mechanism
 
 5 selected annuals: provision {'POPULATED': 1, 'CONFLICTING': 4}; Pretax {'POPULATED': 5}; 1 existing-policy ETR values. No annual created for empty/short history.

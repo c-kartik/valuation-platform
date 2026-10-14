@@ -2,6 +2,35 @@
 
 ## Current Milestone
 
+Separate reported-population delivery and independent CFO reconciliation,
+with completed final full-suite validation on the final implementation. Phase 1 only.
+[Implemented contract/results](reported-population-delivery.md) /
+[199-period ledger](reported-population-delivery-ledger.json) /
+[coverage](reported-population-delivery-summary.json). No Phase 1 closure,
+financial-shortfall acceptance or Phase 2 authority.
+
+42 histories / 199 annuals / fourteen families / eleven target-history deficits
+remain. Narrow current-liquidity selections: 46; actual-date unclassed issuer
+shares: 86. Separate partial reported borrowing captions: 23; recognized finance leases: 81;
+operating leases: 169. No complete borrowing-plus-finance-lease total is inferred.
+Independent CFO checks: 122 SUPPORTED / 59 PARTIAL / zero FAILED / 18 NOT_ASSESSED.
+Residuals remain partial/unclassified, not validation by construction or FCFF.
+
+139 exact selected primaries acquired with actual raw-body receipts; all 139
+annual DEI identities verified on offline replay. Original parser outcomes/history
+are retained. Thirteen primary filename/body gaps (CAT five, MCD five, PM three)
+and five IBM independent financial-statement bindings remain explicit. No further
+SEC requests or new research chain. All frozen/pilot/original preparation outputs
+are separate and preserved. Final suite: **1,101 tests passed in 6298.428 seconds**;
+all 180 Python file digests match the pre-run source seal. Final focused runs:
+19 source/acquisition tests and nine delivery/replay tests passed. Compileall,
+local links, integrity/count checks and diff checks pass. Recovery made no SEC
+requests or duplicate test runs. See the [acceptance report](phase1-delivery-acceptance-report.md)
+for exact validation binding and finite outstanding user decisions. Stop for review;
+do not accept 90%/80% shortfalls or close Phase 1 automatically.
+
+## Prior integrated technical-validation milestone
+
 Final integrated technical-validation and user delivery review, Phase 1 only.
 [Acceptance report](phase1-delivery-acceptance-report.md) separates technical
 replay, the independent 120-slot sample and financial coverage. No Phase 1 closure,

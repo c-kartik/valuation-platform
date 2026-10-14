@@ -1,5 +1,18 @@
 # Architecture
 
+## Separate reported-population delivery
+
+[Current contract/implementation](reported-population-delivery.md) reuses shared
+filing inspection, immutable historical models, original assembly/review and
+local audits. `statement_delivery` binds retained primary receipts to exact
+metadata/DEI; `usable_bridge` performs bounded reported-population selection;
+`cfo_statement_reconciliation` independently enumerates displayed rows and checks
+non-overlap/precision. `preparation_delivery` is an additive, separately serialized
+wrapper, not a replacement for assembly v2 or frozen schema 5. Decoder replays
+source proofs; formula arithmetic and same-period transitive invalidation are
+explicit. No generic economic treatment, new issuer registry, retrieval cache,
+valuation consumer or database is introduced. Original APIs/bytes stay unchanged.
+
 ## Integrated reported-tax review
 
 [Bounded integration](integrated-reported-tax-preparation.md) adds provision,

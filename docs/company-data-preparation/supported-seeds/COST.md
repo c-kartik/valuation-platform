@@ -1,5 +1,11 @@
 # COST — supplemental supported-seed preparation note
 
+## Separate reported-population delivery — current mechanism
+
+5 selected annuals: current-liquidity selections 0; actual-date unclassed issuer shares 4; partial reported borrowing captions 0; recognized finance/operating lease totals 2/5. No complete combined-debt, excess-cash or diluted-share claim. Independent displayed CFO checks: {'SUPPORTED': 5}.
+
+[Exact source/period/alternatives and exceptions](../../reported-population-delivery-ledger.json), locators /rows/110, /rows/111, /rows/112, /rows/113, /rows/114. [Shared contract and validation](../../reported-population-delivery.md) / [final acceptance report](../../phase1-delivery-acceptance-report.md). Original component-only conflict is addressed by separate source-bound selection/partition and display checks, not a policy fallback or inferred zero. Carrying/short-term/lease inclusion, class coverage and incomplete hierarchies remain explicit. Original inputs, pilot bytes and all financial/history/timing blockers stay unchanged. Synthetic override tests invalidate exact source aliases/dependents, not recalculate them. Financial sufficiency NOT_ASSESSED; no whole-history pilot acceptance or Phase 2 use.
+
 ## Integrated reported-tax review — current preparation mechanism
 
 5 selected annuals: provision {'POPULATED': 5}; Pretax {'POPULATED': 5}; 5 existing-policy ETR values. No annual created for empty/short history.

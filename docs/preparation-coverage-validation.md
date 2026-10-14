@@ -1,6 +1,22 @@
 # Retained preparation coverage and independent spot checks
 
-## Final integrated delivery review
+## Separate reported-population validation
+
+[Current acceptance report](phase1-delivery-acceptance-report.md) and
+[separate scoped coverage](reported-population-delivery-summary.json) distinguish
+new reported-population selections from preserved baseline policy availability,
+partial components, conflicts and nulls. Complete source-population counts are not
+financial sufficiency or whole-history independent verification. Original coverage
+and 120 fixtures remain byte-for-byte unchanged; replay is 119 CHECKED / zero
+FAILED / one NOT_VERIFIED. New CFO checks independently enumerate 199 statements:
+122 supported / 59 partial / 18 not assessed / zero failed. No residual is proof.
+Targets/denominators are unchanged; shortfalls remain unaccepted. Final full-suite
+result is **1,101 passing tests in 6298.428 seconds**, bound to all 180 unchanged
+Python files by the pre-run seal. Final focused runs passed 19 and nine tests;
+compileall, integrity/count, local-link and diff checks pass. Exact seal/log hashes
+are in the acceptance report. Earlier results below remain historical findings.
+
+## Prior integrated delivery review — preserved history
 
 [Current acceptance report](phase1-delivery-acceptance-report.md) supersedes the
 earlier tables below for current counts. Retained offline replay reproduces the

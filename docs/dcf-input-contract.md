@@ -1,5 +1,22 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Separately versioned reported populations and CFO checks
+
+[Implemented population contract](reported-population-delivery.md) adds narrow
+reported current-liquidity selections, separate borrowing/recognized lease
+populations, evidenced unclassed issuer shares at actual dates, and independent
+displayed CFO checks. Parent/child overlap, incomplete partitions, class coverage
+and unavailable evidence fail closed. Scope-qualified population availability is
+not complete financial sufficiency; long-term/restricted/strategic and original
+null requirements remain separate. No borrowing-plus-lease total is inferred.
+
+New delivery serialization v1 retains unchanged assembly v2/pilot/frozen bytes.
+Exact formula operands and independent primary evidence survive round trips;
+same-period transitive override dependencies are invalidated, not recomputed.
+Unclassified CFO remainder is partial and cannot certify reconciliation, become
+book delta NWC or authorize an FCFF adjustment. No user shortfall acceptance or
+Phase 2 authority follows source verification, arithmetic or successful tests.
+
 ## Additive reported-tax integration
 
 [Current integrated contract](integrated-reported-tax-preparation.md) supersedes

@@ -1,5 +1,17 @@
 # Bounded Phase 1 preparation/review workflow
 
+## Separate reported-population view
+
+[Delivery contract](reported-population-delivery.md) and
+`scripts/inspect_preparation_delivery.py` expose the additive wrapper while the
+original CLI/assembly remain unchanged. Original targets/diagnostics remain
+reachable. Exact source aliases and same-period transitive formula dependencies
+invalidate related effective selections/remainders after a synthetic override;
+source totals remain visible and are not recomputed. Expense versus add-back
+roles are not fused from numerical agreement. The same immutable audit storage,
+explicit acceptance/revalidation and transport-insensitive revisions are reused.
+No real assumption/override or financial-shortfall acceptance is registered.
+
 ## Integrated tax components and invalidation
 
 [Current tax integration](integrated-reported-tax-preparation.md) provides stable
