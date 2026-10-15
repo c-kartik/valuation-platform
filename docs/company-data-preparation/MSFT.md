@@ -1,5 +1,41 @@
 # MSFT — company data preparation
 
+## Company-specific draft analyst package — FY2025–FY2026
+
+[Reviewable schedules and consolidated approval sheet](MSFT-analyst-input-package.md)
+and [exact machine-readable inputs](msft-analyst-input-package.json) add a separate
+draft under explicit user authorization; no original artifact or runtime policy is
+changed. Original conflict: component inventories alone did not select defensible
+historical populations or explain their arithmetic to an analyst. Retained exact
+primaries/instances now support revenue 281724m/331839m, EBIT 128528m/155237m,
+rounded expense D&A 28000m/39000m, current liquidity 94565m/76843m, carrying
+term-debt 43151m/40294m, separately recognized lease totals and dated shares/awards.
+Explicit PP&E-in-AP exclusions produce narrow partial NWC −28245m/−21353m and
+adjacent **book** movement +6892m, not cash delta NWC. Both complete displayed
+CFO bridges reproduce 136162m/182935m; mixed add-backs, expense observations,
+cash investment, tax roles and overlapping balance populations remain separate.
+
+Chosen source-supported selections are made in this draft now, not left missing
+because no generic aggregate policy exists. FY2025 CP is affirmatively zero;
+FY2026 CP and all-borrowing completeness remain unknown. Actual selected filing
+headings correct older prose citations: taxes Note 11, SBC/awards Note 17; exact
+facts, receipts and original registry bytes are untouched. June 30 common shares
+7434m/7427m are distinct from exact July cover counts; restricted-stock awards
+82m/78m are not incremental dilution. Other claims/pure NOL allocation remain
+unresolved rather than zero. Four original bodies suffice; no SEC requests.
+
+Existing accepted SBC proxy, CFO/cash-PP&E/tax and restricted lease dataset remain
+accepted only in their original scope. Six new material decision rows consolidate
+NWC perimeter, lease method, investment/timing, tax basis, balance scope and
+shares/awards. No new numerical estimate, override, comprehensive lease convention,
+operating-tax rate or economic calculation is accepted. Original five-period
+history, NWC blockers, timing gate, pilots/sidecars and frozen-v1 remain unchanged.
+Financial sufficiency NOT_ASSESSED. Focused source/arithmetic/replay/preservation
+validation passes: 12 package tests plus 54 existing bundle/sidecar/NWC tests,
+exact offline replay, four retained receipts, fourteen arithmetic/parent checks,
+compileall, 425 affected links and diff checks. All original JSONs/runtime source
+are byte-preserved. Stop for consolidated user review.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

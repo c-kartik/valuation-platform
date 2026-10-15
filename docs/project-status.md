@@ -1,5 +1,34 @@
 # Project Status
 
+## Current milestone — MSFT two-period analyst input package
+
+[Selected schedules and one approval sheet](company-data-preparation/MSFT-analyst-input-package.md)
+with [reproducible data](company-data-preparation/msft-analyst-input-package.json)
+deliver a separate company-specific **draft**, not runtime integration or financial
+sufficiency. Exact reviewed FY2025/FY2026 bodies support source selections and
+historical component arithmetic now: expense D&A 28000m/39000m, partial NWC
+−28245m/−21353m and adjacent book movement +6892m, current liquidity
+94565m/76843m, term-debt carrying totals 43151m/40294m, recognized leases,
+June 30 and separately dated cover shares, and restricted-stock awards 82m/78m.
+Both complete displayed CFO bridges reproduce 136162m/182935m. Tax/SBC roles,
+noncash investment, parent/subset overlaps and exact rounded precision remain.
+
+FY2025 commercial paper is expressly zero; FY2026 absent CP is not zero.
+Mixed NWC/capital creditors, acquisition/FX/timing, complete interest/lease/debt,
+other claims and operating-tax requirements stay explicit. Six proposed judgments
+await consolidated review; no new numerical assumption or acceptance is created.
+Previously accepted MSFT choices are preserved, including restricted lease data
+**not** being a comprehensive modeling convention. No future tax rate approved.
+All original JSONs/runtime source, pilot bytes, five-period history, blockers,
+schemas, policies and frozen outputs remain unchanged. No SEC requests or full
+suite/corpus rerun. Bounded validation passes: **12 package tests in 7.345s** and
+**54 existing cash-flow/sidecar/NWC tests in 31.336s**, exact offline replay,
+four receipt/pointer bindings, fourteen source arithmetic/parent checks, original
+JSON/runtime byte preservation, compileall, 425 affected links and diff checks;
+the 1117-test suite below is the preceding runtime milestone, not a claim that
+this new report helper was in that run. Phase 1 remains open; financial sufficiency
+NOT_ASSESSED. Stop for user review; no automatic next task or Phase 2 authority.
+
 ## Current bounded statement-repair milestone
 
 [Results and stopping conditions](statement-binding-repair-results.md) /

@@ -1,5 +1,21 @@
 # Company data preparation register
 
+## Separate MSFT analyst draft — two periods only
+
+[MSFT FY2025–FY2026 input package](MSFT-analyst-input-package.md) /
+[machine data](msft-analyst-input-package.json) select source-supported historical
+populations and component calculations in an explicitly authorized separate draft.
+This does not alter generic component-only outputs, approve whole-issuer readiness
+or transfer treatments to another issuer. Original MSFT accepted choices persist;
+six new material judgments are consolidated pending review. Complete NWC, all-in
+interest/debt, joint timing and financial sufficiency remain unproved. No new
+SEC requests, period registrations, policy/schema changes or Phase 2 calculations.
+The shared register mapping/status contract is unchanged; only MSFT's record is
+extended. Stop after the package and user review, not a new research chain.
+Validation: 12 package and 54 existing MSFT bundle/sidecar/NWC tests pass; exact
+offline replay, original-artifact preservation, compileall, affected links and
+diff checks pass. No full-suite/corpus rerun or SEC request.
+
 ## Current bounded statement-binding and shared repair
 
 [Exact v2 results](../statement-binding-repair-results.md) /

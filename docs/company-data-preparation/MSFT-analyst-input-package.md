@@ -1,0 +1,270 @@
+# MSFT — draft analyst historical-input package, FY2025–FY2026
+
+**For consolidated review, not valuation consumption.** Separate company-specific
+draft under the user's explicit authorization; no runtime integration, frozen
+policy change, forecast, economic cash adjustment or valuation is delivered.
+Financial-input sufficiency remains **NOT_ASSESSED**. Original reported bundles,
+partial NWC scenarios, sidecars, population ledgers and accepted treatments persist.
+
+Open first: the selected schedules and single approval sheet below. The
+[machine-readable package](msft-analyst-input-package.json) supplies every raw
+fact, confirming occurrence, context, date, namespace, inline ID, unit, precision,
+sign, operand, formula/version, scope, limitation and receipt reference.
+Reproduce with `PYTHONPATH=src .venv/bin/python scripts/prepare_msft_analyst_package.py --check`.
+It makes no requests and does not run a universe rebuild.
+
+## Evidence and status key
+
+| Source IDs | Exact selected identity | Retained original bodies |
+| --- | --- | --- |
+| FY2025-primary / FY2025-instance | CIK 789019; `0000950170-25-100235`, 10-K, **2024-07-01–2025-06-30** | [Primary](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm), [instance](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630_htm.xml); original-body manifest `/artifacts/18` and `/artifacts/19`. |
+| FY2026-primary / FY2026-instance | CIK 789019; `0001193125-26-323660`, 10-K, **2025-07-01–2026-06-30** | [Primary](https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm), [instance](https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630_htm.xml); `/artifacts/20` and `/artifacts/21`. |
+
+The [original-body manifest](../evidence/analyst-operating-nwc-response-bodies.json)
+retains all four actual UTC/HTTP-200 receipts and `sha256_sec_response_body_bytes`.
+Primary hashes: `9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e` /
+`cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f`.
+Instance hashes: `b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792` /
+`56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886`.
+No refresh or new SEC request was necessary. Filing identity alone is not fact
+verification: selected numeric instances are also checked against their exact
+primary inline IDs, display transformation, context, currency, scale and precision.
+
+- **A — existing accepted treatment:** [MSFT acceptance checklist](../msft-treatment-acceptance-checklist.md); retained without expansion.
+- **S — source-supported selection/calculation:** selected in this separate draft now, not left null for lack of a generic policy. Complete only for its expressly named population.
+- **P — proposed judgment:** one approval sheet below; none automatically accepted.
+- **U — unresolved:** no number supplied. An acknowledgment cannot fill it.
+
+All monetary tables use **USD millions**, positive balance/expense magnitudes,
+negative cash uses unless labelled otherwise. Source XBRL is USD at scale 1.
+`decimals=-6` normally; **R** means rounded `-8` (reported to 100m).
+All closing balances are June 30 of the stated FY; annual expense/cash rows use
+the full selected duration. Formula precision never improves source precision.
+JSON `facts/<key>` and `inputs/<input_id>` are the exact audit lookup keys used
+below; `occurrences` preserve every qualifying confirmation, not extra operands.
+
+## 1. Income, investment and tax selections
+
+| Field: reported → selection/calculation | FY2025 selected | FY2026 selected | Status, scope and exact evidence keys |
+| --- | ---: | ---: | --- |
+| Revenue → select face total | 281,724 | 331,839 | S; consolidated income statement; `revenue`, confirming segment facts retained. |
+| Operating income → EBIT | 128,528 | 155,237 | S; face operating-only subtotal, `ebit`; not pretax plus a residual. |
+| Depreciation + intangible amortization → expense D&A | 22,000R + 6,000R = **28,000** | 34,300R + 4,700R = **39,000** | S; Notes 6/9; `Depreciation`, `AmortizationOfIntangibleAssets` → `expense_da`; existing `msft_annual_d_and_a_v1`. Lease amortization is not added again; joint timing remains unproved. |
+| Cash PP&E payment magnitude → cash outflow | 64,551 → **−64,551** | 115,948 → **−115,948** | A; `PaymentsToAcquirePropertyPlantAndEquipment`; narrow cash additions, not complete reinvestment. |
+| Acquisition/intangible/other payment → separate cash outflow | 5,978 → **−5,978** | 1,743 → **−1,743** | S; `AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets`; keep combined investing scope, no allocation. |
+| Other investing, net → separate reported cash contribution | **+2,317** | **−19,861** | S; `PaymentsForProceedsFromOtherInvestingActivities`, raw multipliers −1; broad/net scope unallocated, not a second cash-PP&E input. |
+| Closing PP&E still in AP → capital creditor stock | 6,900R | 26,700R | S; Note 6 `PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable`; not another cash payment. |
+| Recognized SBC expense → accepted cost proxy once | **11,974** | **12,405** | A; Note **17** `AllocatedShareBasedCompensationExpense` → `sbc_cost_proxy`; EBIT already contains the expense. CFO add-back below is a linked role, not a second economic cost. |
+| Income-tax provision → reported expense | 21,795 | 32,185 | S; income statement and Note **11**, `IncomeTaxExpenseBenefit`. |
+| Continuing pretax income → reported denominator | 123,627 | 165,934 | S; `pretax`; positive eligible existing-policy denominator. |
+| Provision / Pretax → historical accounting ETR | **17.6296440098%** | **19.3962659853%** | S; `reported_etr`, existing `annual_reported_effective_tax_rate_v1`; JSON retains 34-significant-digit ratio. Display rounded here only. **No future operating-tax rate approved.** |
+| Net cash income taxes → cash outflow | 28,700R → **−28,700R** | 21,188 → **−21,188** | A; Note 11 `IncomeTaxesPaidNet`; not an operating-tax allocation. |
+| Deferred tax provision → note observation | −7,056 | 14,424 | S; Note 11 `DeferredIncomeTaxExpenseBenefit`; FY2026 CFO adjustment is separately 14,189 below. |
+
+This resolves source selection/arithmetic, not the integration of D&A expense,
+lease treatment, cash investment and inventory timing into an EBIT-based model.
+The mixed CFO D&A row is **34,153 / 38,534**, not either selected expense sum.
+Finance-lease ROU amortization **3,408 / 5,403** stays separate: it is not an
+independent third D&A operand without non-overlap evidence.
+
+Reported income checks, not economic adjustments: EBIT plus disclosed other
+income/expense **−4,901 / +10,697** gives Pretax **123,627 / 165,934**; less
+provision gives reported net income **101,832 / 133,749**. All three stages bind
+independent face-statement facts. Financing withholding cash **5,400R / 5,600R**
+and recognized SBC tax benefits **2,027 / 2,089** remain separate observations,
+not another compensation charge or an inferred cash-tax refund.
+
+## 2. Current operating-capital schedule — selected, explicitly partial
+
+| Closing reported component → treatment | FY2025 | FY2026 | Evidence / rationale |
+| --- | ---: | ---: | --- |
+| Customer AR → include | 69,905 | 80,876 | Balance-sheet `ar`; net current customer receivables. |
+| Inventory → include | 938 | 1,397 | `inventory`; reported stock, not purchases or cash movement. |
+| Accounts payable → remove explicit capital creditors | 27,724 − 6,900R = **20,824** | 42,416 − 26,700R = **15,716** | `ap`, Note 6 PP&E-in-AP → `adjusted_ap`; the note explicitly says **remaining in accounts payable**, establishing the subset exclusion. |
+| Current unearned revenue → subtract | 64,555 | 72,965 | `current_contract`; separately presented current liability. |
+| Accrued compensation → subtract | 13,709 | 14,945 | `compensation`; a disclosed caption, not an inferred employee allocation. |
+| **AR + inventory − adjusted AP − current unearned revenue − compensation** | **−28,245** | **−21,353** | S, `partial_nwc`; disjoint face captions and one documented AP exclusion. Complete for this enumerated narrow sum, **not complete Operating NWC**. |
+| Same subtotal with whole AP — diagnostic only | −35,145 | −48,053 | `whole_ap_comparator`; not the selected operating-AP treatment. |
+
+Adjacent **book** movement is **−21,353 − (−28,245) = +6,892m**. Whole-AP
+diagnostic movement is **−12,908m**; their **+19,800m** difference equals the
+rounded capital-creditor change **26,700 − 6,900**. This is a classification
+effect on two balance snapshots, not a cash correction or complete cash ΔNWC.
+No FY2025 annual movement is fabricated from a third unregistered package.
+
+Explicit omissions/uncertainty, not zeros:
+
+- Mixed other current assets **25,723 / 48,594**, `other_current_assets`; mixed other current liabilities **25,020 / 26,738**, `other_current_liabilities`. These gross captions are not bounds on the unknown operating allocation.
+- Note 1 separately identifies server-component facilitation receivables **8,200R / 27,800R**, `component_receivables`, within other current assets. Classifying them as operating would add those balance points to this narrow asset perimeter, before any matching-obligation review. Their **19,600m** growth is exposure, not an approved cash movement or a justified interval for complete NWC. Recommend keeping them separate pending classification, not assuming non-operating or zero.
+- Customer financing includes current/noncurrent exposure without a complete current split; contract-cost materiality prose supplies no numeric zero. No residual allocation is used.
+- Current income-tax balances **7,211 / 2,534**, noncurrent income-tax balances **25,986 / 28,647**, and noncurrent unearned revenue **2,710 / 2,747** remain distinct facts, outside this narrow current perimeter. Lease balances stay separate. Material omitted operating/noncurrent accruals may remain.
+- Acquisition/disposal, FX, noncash and reclassification effects are not exhaustively bridged. No supported numerical uncertainty range for full NWC or cash ΔNWC exists.
+
+The existing [partial scenarios](msft-analyst-nwc-bundles.json) and original
+frozen NWC blockers are unchanged. Only this separate draft records the supported
+selection and arithmetic; no automatic blocker removal or cash substitution.
+
+## 3. Reported CFO cross-check — not the model starting adjustment
+
+Every row below is an independently retained annual cash-flow reconciliation
+observation, with its exact source concept in JSON and raw-to-display multiplier.
+Asset-increase concepts use −1; liability movements use +1. No movement is a
+reconstructed book change, and no row is added again to reported CFO.
+
+| Statement contribution (USD m) | FY2025 | FY2026 |
+| --- | ---: | ---: |
+| Net income | 101,832 | 133,749 |
+| D&A **and other** | 34,153 | 38,534 |
+| SBC add-back | 11,974 | 12,405 |
+| Investment/derivative gain-loss adjustment | +609 | −11,047 |
+| Deferred-tax reconciliation | −7,056 | +14,189 |
+| Receivables | −10,581 | −12,737 |
+| Inventories | +309 | −461 |
+| Other current assets | −3,044 | −2,627 |
+| Other noncurrent assets | −2,950 | −3,964 |
+| AP | +569 | +5,268 |
+| Contract liabilities | +5,438 | +9,361 |
+| Accrued income taxes | −38 | −1,875 |
+| Other current liabilities | +5,922 | +6,847 |
+| Other noncurrent liabilities | −975 | −4,707 |
+| **Sum of the fourteen displayed contributions = reported CFO** | **136,162** | **182,935** |
+
+Both checks reproduce the independently reported subtotal exactly at source
+precision. This is not residual-defined proof. Existing algebraic/unclassified
+remainder observations are not selected as economic inputs. FY2026's deferred
+reconciliation concept includes **tax credits**; its 14,189 is not replaced with
+the note's 14,424, nor is their difference allocated.
+
+Comparability: FY2026 presents selected FY2025's D&A-and-other **34,153** as
+**29,433** in its comparative, offset by gain/loss **+609 → +5,329**. Changes
+−4,720/+4,720 cancel; the reported CFO is unchanged. The two comparative XML
+occurrences and primary IDs are retained in JSON `comparative_support`; they do
+not overwrite FY2025 or become new registered periods/trend-compatible adjustments.
+The [cash-flow evidence review](../msft-alternative-historical-cash-flow-inputs.md)
+explains the Note 1 presentation recast and component-level limitations.
+
+For an eventual **EBIT-based operating model**, cash-flow movements can cross-check
+cash realization without requiring every current book balance to be reconstructed.
+That does not prove an operating-only capital cash total: tax rows, noncurrent
+rows, acquisitions/FX and parent coverage must be classified consistently.
+Do not subtract this partial book movement from CFO, add D&A/SBC again, or label
+the displayed CFO organic/unlevered. No such calculation is performed here.
+
+## 4. Fiscal-end liquidity, borrowings, leases and other claims/assets
+
+| Reported → selected population | FY2025 | FY2026 | Source-supported boundary |
+| --- | ---: | ---: | --- |
+| Cash + current investments → reported current-liquidity parent | 30,242 + 64,323 = **94,565** | 20,935 + 55,908 = **76,843** | S; balance sheet/Note 4, `cash`, `current_investments`, independently reported `current_liquidity_parent`. Columns are disjoint; **not unrestricted/excess cash**. |
+| Equity and other long-term investments → mixed parent retained separately | **15,405** | **36,348** | S; `long_investments`; Note 4 includes debt, equity and derivative populations. No automatic addition to liquidity or valuation adjustment. |
+| Equity-method / nonmarketable equity observations | 6,000R / 2,900R | 12,000R / 12,400R | `equity_method`, `nonmarketable`; overlapping investment subsets, **not additional assets** on top of the parent. |
+| Current + noncurrent term debt → carrying total | 2,999 + 40,152 = **43,151** | 9,227 + 31,067 = **40,294** | S; Note 10, `current_debt`, `noncurrent_debt`, independently reported `term_debt_parent`; explicit current-portion subtraction proves the partition. |
+| Commercial paper → disclosed borrowing perimeter | **0 explicitly reported**, so disclosed CP + term debt = **43,151** | **U**, not zero; selected term debt remains **40,294** | FY2025 face zero and Note 10 “no commercial paper issued or outstanding” corroborate the zero. FY2026 has neither a borrowing CP fact nor an affirmative no-outstanding statement; **all-borrowing completeness remains unknown**. |
+| Debt face/principal / estimated fair value → alternatives only | 49,206 / 40,400R | 46,136 / 36,500R | `debt_face`, `debt_fair`; Note 10 captions govern even though the face fact uses `DebtInstrumentCarryingAmount`. Do not substitute these for the table's net carrying total. |
+| Operating lease current + noncurrent → recognized total | 5,424 + 17,437 = **22,861** | 5,393 + 16,532 = **21,925** | S; Note 13 balance-sheet-location dimensions retained, parent independently confirms; not undiscounted maturities. |
+| Finance lease current + noncurrent → recognized total | 3,172 + 43,000 = **46,172** | 4,290 + 62,304 = **66,594** | S; Note 13 explicit current/noncurrent partition; separate from Note 10 term debt and lease cash. **No combined economic debt selected.** |
+| Loss-and-credit carryforward DTA → combined observation only | **2,114** | **2,124** | S; Note 11 `loss_credit_dta`; no pure NOL allocation or separate equity addition. |
+| Closing tax-position accrued interest → separately scoped observation | 8,200R | 9,400R | Note 11 `tax_interest_accrued`, net of tax benefits; not borrowing interest cash or a second debt adjustment. |
+
+Parent and component rows remain linked, never summed together. Strategic assets,
+restricted/excess cash status, preferred equity, noncontrolling claims and pension
+funding applicability/completeness are not exhaustively established. No affirmative
+zero is supplied. Note 13 not-yet-commenced lease commitments are not recognized
+liabilities or historical cash investment. Broader claims remain U, not implicitly
+immaterial or excluded by economic judgment.
+
+### Restricted payments and noncash lease observations
+
+| Reported payment class → cash-flow location | FY2025 | FY2026 | Status / limitation |
+| --- | ---: | ---: | --- |
+| `OperatingLeasePayments` → operating outflow | −4,931 | −6,443 | A restricted dataset; already in CFO. |
+| `FinanceLeaseInterestPaymentOnLiability` → operating outflow | −1,372 | −2,547 | A restricted dataset; already in CFO. |
+| `FinanceLeasePrincipalPayments` → financing outflow | −2,283 | −3,101 | A restricted dataset; outside CFO; no reclassification here. |
+| `InterestPaid` → debt-scoped cash payment | −1,600R | −1,500R | S source fact; unknown overlap/capitalization/gross-net basis; **not an all-interest total**. |
+| Noncash finance / operating ROU additions | 20,511 / 7,826 | 24,608 / 4,555 | S separate noncash additions, not cash Capex or principal payments. |
+
+The three accepted lease classes cover only payments included in measurement of
+lease liabilities. Variable/short-term/nonlease coverage and borrowing-interest
+overlap remain unknown. Accepted restricted **data** is not a comprehensive lease
+**modeling convention**. Recognized expense, cash service, leased-asset investment,
+principal and debt treatment must eventually align as one method; this package
+does not adjust any of them or authorize a sum. Operating cost, finance interest
+expense and ROU amortization remain distinct reported observations in JSON.
+
+## 5. Dated common shares and disclosed awards
+
+| Reported observation → draft selection | FY2025 | FY2026 | Scope |
+| --- | ---: | ---: | --- |
+| June 30 common shares → fiscal-end historical snapshot | **7,434m shares** | **7,427m shares** | S; balance sheet/Note 15, `year_end_common`, decimals −6; no false exact-share precision. |
+| Cover common shares → separate dated observation | **7,433,166,379**, 2025-07-24 | **7,425,545,491**, 2026-07-23 | S; `cover_common`, decimals 0; not coerced to June 30 or used to replace the fiscal-end snapshot. |
+| Nonvested restricted-stock awards → separate award population | **82m shares** | **78m shares** | S; Note 17 `nonvested_awards`, decimals −6, exact `AwardTypeAxis=RestrictedStockMember` retained; not incremental diluted shares. |
+| Unrecognized future compensation → separate disclosure | **21,600R** | **24,800R** | S; `unrecognized_award_cost`; not current SBC expense or award market value. |
+
+No automatic sum of common shares and awards, option-zero inference, dilution
+estimate, grant-value substitute or per-share calculation. The accepted SBC
+expense proxy and outstanding claims are separate populations; future handling
+must avoid charging the same compensation cost twice.
+
+## 6. One consolidated approval sheet — new material judgments only
+
+Source-supported selections above are made now. Existing accepted SBC/CFO/cash
+PP&E/tax/restricted-lease preparation choices are **not** submitted for reapproval.
+The six decisions below remain P; none supplies a new numerical assumption.
+
+| Decision | Recommended treatment / relevant alternative | What remains unknown; blocking boundary |
+| --- | --- | --- |
+| **NWC-PERIMETER** | Retain the −28,245/−21,353 narrow levels and +6,892 book movement as partial diagnostics alongside source cash movements. Alternative: require a complete operating level and leave it null. Whole-AP diagnostic changes the movement by +19,800; no cash implication. | Mixed/current/noncurrent classifications and acquisition/FX/reclass bridge. Does not block this draft; blocks complete NWC/cash-capital claims. No supportable full-NWC interval. |
+| **LEASE-METHOD** | Preserve restricted data and prior cash-service direction **in principle**. Before later consumption, specify the whole lease method; consistent financing treatment is an alternative, not silently substituted. | Complete coverage, overlap, capitalization and expense/investment/debt consistency. Blocks adjusted lease/interest use, not reported packaging. No lease or interest total proposed. |
+| **INVESTMENT-TIMING** | Use narrow reported cash PP&E, separately retain creditors, acquisitions/intangibles and noncash additions. Alternative complete accrual/organic schedule requires real allocation evidence. | Complete reinvestment and joint EBIT/D&A/lease/book timing; no cash-plus-creditor bridge assumed. Does not block the evidenced cash input. |
+| **TAX-BASIS** | Retain historical provision/Pretax/ETR/cash/deferred roles; approve **no** future operating basis/rate now. Alternative later policy must identify justified scope and acceptance. | Operating-only tax and uncertain-interest effects. Historical ratios are available; future tax treatment remains a later decision, not an invented default. |
+| **BALANCE-SCOPE** | Use reported current liquidity and term-debt carrying totals only; keep long-term/strategic assets and leases separate. Broader excess-cash/economic-debt treatment is an alternative requiring evidence/decisions. | FY2026 CP, restricted/excess availability and complete other claims. Does not block named totals; blocks a complete economic equity bridge. |
+| **SHARES-AWARDS** | Use rounded June 30 common shares for the historical fiscal-end snapshot, while preserving exact later cover observations and restricted awards separately. A later denominator/award method must state its dates/classes and cost treatment. | Complete option/award economic claim and incremental dilution. Historical observations are available; no fully diluted denominator or valuation claim. |
+
+Any eventual new numerical estimate must identify author, actual decision time,
+evidence or justified assumption, affected period/scope, uncertainty and explicit
+acceptance. This package supplies **no unsupported proxy, default estimate or
+inferred zero**. An unavailable disclosure is not cured by approving a convention.
+No open-ended research queue follows this sheet.
+
+## 7. Validation, preservation and stopping point
+
+This package has 77 exact source fact populations and 62 distinct selected/support
+input entries per year. Repeated roles share operand identities: SBC expense and
+add-back, borrowing parent/children and alternative dates do not imply additional
+economic amounts. Fourteen effective unresolved requirements remain per year;
+original bundle unknowns are retained separately as history. Subsequent accepted
+SBC classification is explicit, not a silent edit to that older bundle's unknown.
+
+The reporting helper independently checks primary inline versus instance values,
+CIK/accession/annual dates, instant/class contexts, units, signs/scales, decimals,
+receipt integrity, confirming occurrences and source-supported arithmetic. It
+reproduces current liquidity, term-debt and both lease partitions against
+independently reported parents, and both complete fourteen-term CFO displays.
+The numeric parent ties complement the actual statement/note scope review;
+matching amounts alone are not scope evidence. ETR retains its positive denominator
+and existing policy. Exact metadata/occurrences/rounding survive JSON replay.
+
+**Citation correction:** the two selected primaries place income taxes in
+**Note 11**, unearned revenue in **Note 12**, and SBC/awards in **Note 17**.
+Some prior evidence-review prose labelled taxes Note 12 and compensation Note 14.
+The new package corrects those headings and binds exact inline IDs; old artifacts,
+receipts, facts and decisions remain byte-identical. This is a citation correction,
+not new financial evidence or an altered amount.
+
+Validation passed: **12 package tests (7.345s)** and **54 existing MSFT cash-flow,
+interest-sidecar and NWC preservation tests (31.336s)**. Exact package replay,
+four original receipt/pointer bindings, fourteen source arithmetic/parent checks,
+JSON round trips, class/date/sign/precision rejection, and byte preservation of
+all original JSON artifacts/runtime source pass. Compileall, **425 affected local
+links** and `git diff --check` pass. No full suite, corpus replay or SEC requests
+were run for this isolated report; the prior 1,117-test result is not relabelled
+as coverage of this new helper.
+Original artifacts, schemas, policies, five-period history, support classification,
+NWC blockers and prior pilot bytes remain unchanged. The public-equity normalization
+skill informed the source-to-selection schedules, role separation and visible QA
+limitations; it does not confer model-consumption approval.
+
+**Stop for consolidated user review.** This completes the two-period draft
+historical-input preparation package, not complete financial sufficiency or Phase 1
+closure. The [timing gate](../financial-timing-readiness-design.md), absent complete
+operating allocations and future economic choices remain. No next implementation
+or research milestone begins automatically.
