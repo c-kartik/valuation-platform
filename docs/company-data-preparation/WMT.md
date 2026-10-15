@@ -1,6 +1,17 @@
 # WMT — company data preparation
 
-## Separate reported-population delivery — current mechanism
+## Bounded v2 statement-binding/shared repair
+
+[Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).
+5 unchanged selected annuals; CFO outcomes {'SUPPORTED': 5}. Narrow liquidity
+selections 0, separately dated unclassed share selections 5, partial borrowing
+observations in 5 periods (not complete debt). Existing values and stable targets
+remain; competing populations and class/overlap/scope requirements are not discarded.
+Only shared retained-evidence parsing/binding changed; no new financial treatment,
+whole-issuer approval, pilot migration or blocker removal. Final technical validation
+is recorded centrally; financial sufficiency remains NOT_ASSESSED. Prior decisions follow.
+
+## Prior v1 reported-population delivery — preserved history
 
 5 selected annuals: current-liquidity selections 0; actual-date unclassed issuer shares 0; partial reported borrowing captions 5; recognized finance/operating lease totals 5/5. No complete combined-debt, excess-cash or diluted-share claim. Independent displayed CFO checks: {'PARTIAL': 5}.
 

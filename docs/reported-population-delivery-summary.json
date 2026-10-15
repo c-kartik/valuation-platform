@@ -1,8 +1,8 @@
 {
   "cfo_checks": {
-    "NOT_ASSESSED": 18,
-    "PARTIAL": 59,
-    "SUPPORTED": 122
+    "FAILED": 1,
+    "PARTIAL": 24,
+    "SUPPORTED": 174
   },
   "fields": {
     "cash_capex": {
@@ -158,19 +158,19 @@
           "selected_denominator": 78,
           "target": "80%",
           "target_denominator": 84,
-          "usable": 33
+          "usable": 61
         },
         "recent": {
           "selected_denominator": 121,
           "target": "90%",
           "target_denominator": 126,
-          "usable": 53
+          "usable": 101
         }
       },
       "conflicting": 0,
       "null": 199,
       "partial": 199,
-      "usable": 86,
+      "usable": 162,
       "valued": 199
     },
     "reported_cash_flow_working_capital_movements": {
@@ -200,19 +200,19 @@
           "selected_denominator": 78,
           "target": "80%",
           "target_denominator": 84,
-          "usable": 49
+          "usable": 69
         },
         "recent": {
           "selected_denominator": 121,
           "target": "90%",
           "target_denominator": 126,
-          "usable": 75
+          "usable": 105
         }
       },
       "conflicting": 0,
       "null": 4,
       "partial": 191,
-      "usable": 124,
+      "usable": 174,
       "valued": 195
     },
     "reported_tax_context": {
@@ -295,9 +295,9 @@
       },
       "conflicting": 0,
       "null": 199,
-      "partial": 122,
+      "partial": 174,
       "usable": 0,
-      "valued": 122
+      "valued": 174
     }
   },
   "financial_sufficiency": "NOT_ASSESSED",
@@ -12696,15 +12696,15 @@
     "cash_equivalents_reported": 46,
     "current_liquid_investments_reviewed": 2,
     "current_marketable_reported": 44,
-    "issuer_common_shares": 86,
-    "reported_borrowing_total": 23,
+    "issuer_common_shares": 162,
+    "reported_borrowing_total": 43,
     "reported_current_liquidity": 46,
-    "reported_finance_lease_liability": 81,
-    "reported_operating_lease_liability": 168,
-    "reported_operating_lease_liability:current": 1,
-    "reported_operating_lease_liability:noncurrent": 1
+    "reported_finance_lease_liability": 92,
+    "reported_operating_lease_liability": 184,
+    "reported_operating_lease_liability:current": 2,
+    "reported_operating_lease_liability:noncurrent": 2
   },
-  "schema": "reported-population-delivery-v1",
+  "schema": "reported-population-delivery-v2",
   "selected_annuals": 199,
   "target_annuals": 210
 }

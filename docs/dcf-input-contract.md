@@ -1,5 +1,20 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Additive v2 statement-binding contract
+
+[Bounded repair](statement-binding-repair-results.md) retains exact incorporated
+annual-report bindings and separately serialized primary/index identity receipts.
+Metadata does not masquerade as a monetary fact. Independently displayed CFO rows
+may select their exact instance amount/precision while preserving other financial
+populations; they do not establish D&A expense, economic SBC or book delta NWC.
+An explicit adjustment subtotal must reconcile its complete displayed children
+before any parent is used; children remain support, never another additive charge.
+Current/noncurrent scope separation requires explicit source captions. Ambiguous
+scope/hierarchy and MCD's failed precision check remain unresolved, without tolerance
+changes or residual-defined validation. New delivery v2 and retained v1 stay separate
+from frozen schema 5, original policy approvals and accepted pilots. No economic
+convention, shortfall acceptance or financial sufficiency is implied.
+
 ## Separately versioned reported populations and CFO checks
 
 [Implemented population contract](reported-population-delivery.md) adds narrow

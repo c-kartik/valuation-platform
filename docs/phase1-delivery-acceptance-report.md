@@ -1,6 +1,83 @@
 # Phase 1 integrated delivery — user acceptance report
 
-## Current separately versioned population delivery
+## Current bounded v2 repair — technically validated, pending user review
+
+[Exact repair/results](statement-binding-repair-results.md) and
+[machine-checkable cause disposition](statement-repair-disposition.json) cover all
+18 binding targets and all 59 prior partial cases. Source collection:
+[eighteen bindings and 36 actual responses](evidence/preparation-statement-binding-repair.json).
+All bindings are established; no additional requests are authorized by this pass.
+CFO: **174 SUPPORTED / 24 PARTIAL / one FAILED / zero NOT_ASSESSED**.
+The independent original sample remains a separate 119 CHECKED / zero FAILED /
+one NOT_VERIFIED; replay/sample checks do not certify whole-history scope.
+MCD FY2024's displayed sum is 9,446m against CFO 9,447m: −1m exceeds the
+unchanged 0.6m bound. Its reported fact and failed check both remain visible.
+
+| Narrow population | Period selections / 199 | Remaining limitation |
+| --- | ---: | --- |
+| Current reported cash/current liquid investment population | 46 | 153 not established; not excess/unrestricted cash or all investment assets. |
+| Actual-date unclassed common shares | 162 | 37 not established; classed/ambiguous populations remain separate; no dilution. |
+| Partial reported borrowing captions | 33 periods / 43 observations | Carrying/principal/inclusion unproved; competing captions retained, no combined debt. |
+| Recognized finance lease liability | 92 | Separate from borrowing and cash payments, not full debt coverage. |
+| Recognized operating lease liability | 186 | Includes two complete displayed current/noncurrent partitions; not lease cash service. |
+
+Each family retains recent 121 selected / 126 target and older 78 / 84.
+Qualified reported CFO: recent **105/121 selected, 105/126 target**, older
+**69/78 selected, 69/84 target**. Only the CFO older comparison now exceeds the
+80% target; recent still misses 90%. Shares: recent **101/121, 101/126**;
+older **61/78, 61/84**, both below targets. Liquidity: **29/121, 29/126** and
+**17/78, 17/84**. Complete combined debt remains zero. Targets are neither lowered
+nor automatically accepted. All other field availability/completeness limitations
+persist; current machine summary is authoritative. Missing completeness metadata
+is not demonstrated numerical error.
+
+The final current-tree suite passed **1,117 tests in 7116.733 seconds**. Focused
+gates passed 44 tests: 13 source repair (19.051s), 12 exact delivery/replay/legacy
+serialization/override/queue (1046.624s), 16 legacy source (3.967s) and three
+acquisition-preservation tests (19.984s). No executable or evidence changes occurred
+during the full run: exact path sets and SHA-256 hashes match the pre-run seal for
+all **182 Python files and 87 JSON artifacts**. Durable local records:
+
+- `/tmp/statement-repair-full-suite.log`, SHA-256
+  `5f00f5030836de0bef5830a3d634234c29600222c7697c61a1150b115599eebc`.
+- `/tmp/statement-repair-tested-source-digests.json`, SHA-256
+  `57a880895b32b98c372302ecfd9305a5d026ae15844d18e6a5bca339ae89bfa3`.
+
+These are local technical-validation identifiers, not substitute filing provenance.
+Exact ledger/summary replay, incorporated-report round trips and required receipt
+rejection, all 2,487 prior population values/IDs, original fixtures and pilot/frozen
+preservation pass. Compileall, receipt/digest/count checks, affected local links and
+`git diff --check` pass. Recovery made no SEC requests or duplicate acquisitions.
+The earlier bounded replay diagnostic exposed omitted TSLA competing borrowing
+observations in an intermediate generated ledger; retained-source replay restored
+those partial observations without changing financial acceptance. Large failure
+pretty-printing was replaced with bounded diagnostics, retaining exact equality.
+Interrupted/failed intermediate runs are not claimed as current passing validation.
+
+The old passing suite/seal below covers v1 only. Technical replay, independent
+sample verification and financial sufficiency
+are separate; valuation/timing compatibility and whole-universe accounting-scope
+certification remain NOT_ASSESSED. No real overrides or user acceptance recorded.
+
+### Smallest explicit user-decision checklist
+
+1. Accept or reject qualified preparation with the unchanged five-year target,
+   eleven deficits, 90%/80% shortfalls and original financial gaps; acknowledgment
+   does not supply missing values or approve financial sufficiency.
+2. Accept or reject the narrow liquidity/share and separate lease/partial borrowing
+   boundaries, 24 partial CFO cases and MCD's failed source check. If rejected,
+   identify a finite exact population/precision repair scope; no broad research chain.
+3. Keep economic lease/SBC/interest/tax treatment, dilution, future assumptions and
+   consumer-specific sufficiency/timing deferred. This pass authorizes no Phase 2.
+
+The 18-document binding obligation is delivered. No demonstrated implementation
+bug remains pending after the generic parsing/preservation repairs and completed
+technical validation. Broader borrowing/class/liquidity populations and unresolved
+hierarchies are not silently certified or converted to zeros. Phase 1 is not closed.
+
+### Prior v1 delivery and validation — preserved history
+
+## Prior v1 population delivery — preserved history
 
 Implementation baseline: `2468e77574e24b4a980767ae315121b6a148bc46`.
 [Contract](reported-population-delivery.md), [exact source/exception ledger](reported-population-delivery-ledger.json)

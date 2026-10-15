@@ -1,5 +1,23 @@
 # Architecture
 
+## Additive statement delivery v2
+
+[Bounded statement repair](statement-binding-repair-results.md) reuses exact
+metadata/receipt, annual-context and shared inline inspection infrastructure.
+`reported-population-delivery-v2` adds `AnnualDelivery.binding_receipts` for
+incorporated annual reports. Metadata index/primary receipts establish identity
+and context declarations, not financial amounts. Monetary sources remain actual
+statement/instance occurrences. Legacy v1 decoding/reserialization stays supported;
+version/proof mismatches and hidden binding receipts fail closed, with no migration
+of original preparation/pilot or schema-5 payloads.
+Explicit split punctuation, nested standard income confirmations, exact displayed
+row matching and headed adjustment-parent checks do not approve new financial
+primitive semantics. Only expressly current/noncurrent asset captions qualify the
+bounded overlap exception. Broader populations remain unknown. Original borrowing
+partial target IDs survive new competing observations; relevant source/population
+proof revisions make prior overrides stale, not automatically accepted.
+No database/UI, economic calculation, broad extraction or valuation consumption.
+
 ## Separate reported-population delivery
 
 [Current contract/implementation](reported-population-delivery.md) reuses shared

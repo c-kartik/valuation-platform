@@ -1,5 +1,19 @@
 # Separate reported-population delivery — Phase 1
 
+## Current additive v2 repair
+
+[Bounded repair/evidence and final validation](statement-binding-repair-results.md)
+supersede v1 availability counts below, not its financial boundaries or history.
+Current envelope `reported-population-delivery-v2` separately binds incorporated
+report/primary/index metadata receipts without fabricating monetary occurrences.
+The v1 serializer/replay remains supported; prior bytes and decisions persist.
+Current source checks: 174 supported, 24 partial, one failed, zero unassessed.
+All 2,487 prior prepared population values and stable IDs are retained; five TXN
+partial targets remain beside newly bound competing captions, never an approved total.
+No frozen policy/schema/registry, pilot migration or financial sufficiency approval.
+
+### Original v1 contract and validation
+
 Contract/serialization: `reported-population-delivery-v1`. This is separate from
 assembly v2, preparation v3 and frozen normalization schema 5. Original assembly,
 pilot bytes, policies, registry entries and financial blockers are unchanged.

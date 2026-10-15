@@ -1,0 +1,3306 @@
+{
+  "baseline_revision": "60837808489c5a4bfe2526c489e6decb76572d11",
+  "binding_targets": [
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000018230-22-000050",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 18230,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823022000050/cat-20211231.htm",
+      "ticker": "CAT"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000018230-23-000011",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 18230,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823023000011/cat-20221231.htm",
+      "ticker": "CAT"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000018230-24-000009",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 18230,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823024000009/cat-20231231.htm",
+      "ticker": "CAT"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000018230-25-000008",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 18230,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823025000008/cat-20241231.htm",
+      "ticker": "CAT"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000018230-26-000008",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 18230,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm",
+      "ticker": "CAT"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0001413329-24-000013",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1413329,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/1413329/000141332924000013/pm-20231231.htm",
+      "ticker": "PM"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0001413329-25-000013",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1413329,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/1413329/000141332925000013/pm-20241231.htm",
+      "ticker": "PM"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0001628280-26-005939",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1413329,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/pm-20251231.htm",
+      "ticker": "PM"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0001558370-22-001584",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 51143,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/51143/000155837022001584/ibm-20211231xex13.htm",
+      "ticker": "IBM"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0001558370-23-002376",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 51143,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/51143/000155837023002376/ibm-20221231xex13.htm",
+      "ticker": "IBM"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000051143-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 51143,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/51143/000005114324000012/ibm-20231231_d2.htm",
+      "ticker": "IBM"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000051143-25-000015",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 51143,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/51143/000005114325000015/ibm-20241231_d2.htm",
+      "ticker": "IBM"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000051143-26-000010",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 51143,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/ibm-20251231_d2.htm",
+      "ticker": "IBM"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000063908-22-000011",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 63908,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390822000011/mcd-20211231.htm",
+      "ticker": "MCD"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000063908-23-000012",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 63908,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390823000012/mcd-20221231.htm",
+      "ticker": "MCD"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000063908-24-000072",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 63908,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390824000072/mcd-20231231.htm",
+      "ticker": "MCD"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000063908-25-000012",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 63908,
+        "form": "10-K"
+      },
+      "reconciliation_status": "FAILED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390825000012/mcd-20241231.htm",
+      "ticker": "MCD"
+    },
+    {
+      "binding_status": "DOCUMENT_BOUND",
+      "identity": {
+        "accession": "0000063908-26-000035",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 63908,
+        "form": "10-K"
+      },
+      "reconciliation_status": "SUPPORTED",
+      "statement_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+      "ticker": "MCD"
+    }
+  ],
+  "cause_counts_overlap": true,
+  "cause_period_counts": {
+    "DIFFERENT_FINANCIAL_POPULATIONS": 30,
+    "INSUFFICIENT_STARTING_SCOPE_BINDING": 4,
+    "PARENT_SUBTOTAL_HIERARCHY": 25,
+    "REPAIRABLE_PARSING_BINDING": 14,
+    "UNSUPPORTED_DIMENSIONAL_SCOPE": 4
+  },
+  "original_ledger_sha256": "ae2d141408760d62142692c0247b12cfb9620eac08c3555b5ff506607066e6b4",
+  "preserved_prior_population_input_count": 2487,
+  "prior_partial_count": 59,
+  "prior_partial_final_counts": {
+    "PARTIAL": 24,
+    "SUPPORTED": 35
+  },
+  "rows": [
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(409",
+          "inline_text": "409",
+          "name": "msft:GainLossOnInvestmentsAndDerivativeInstruments",
+          "reason": "Unbound displayed numeric cell",
+          "row": 10,
+          "table": 152
+        },
+        {
+          "cell": 3,
+          "display": "(5,702",
+          "inline_text": "5,702",
+          "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "reason": "Unbound displayed numeric cell",
+          "row": 11,
+          "table": 152
+        },
+        {
+          "cell": 3,
+          "display": "(6,834",
+          "inline_text": "6,834",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 13,
+          "table": 152
+        },
+        {
+          "cell": 3,
+          "display": "(1,123",
+          "inline_text": "1,123",
+          "name": "us-gaap:IncreaseDecreaseInInventories",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 152
+        },
+        {
+          "cell": 3,
+          "display": "(709",
+          "inline_text": "709",
+          "name": "us-gaap:IncreaseDecreaseInOtherCurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 15,
+          "table": 152
+        },
+        {
+          "cell": 3,
+          "display": "(2,805",
+          "inline_text": "2,805",
+          "name": "us-gaap:IncreaseDecreaseInOtherNoncurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 16,
+          "table": 152
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001564590-22-026876",
+          "annual_end": {
+            "date": "2022-06-30"
+          },
+          "annual_start": {
+            "date": "2021-07-01"
+          },
+          "cik": 789019,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 10",
+        "Multiple/unbound current monetary populations at row 11",
+        "Multiple/unbound current monetary populations at row 13",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 15",
+        "Multiple/unbound current monetary populations at row 16"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MSFT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(6,059",
+          "inline_text": "6,059",
+          "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "reason": "Unbound displayed numeric cell",
+          "row": 12,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(4,087",
+          "inline_text": "4,087",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(1,991",
+          "inline_text": "1,991",
+          "name": "us-gaap:IncreaseDecreaseInOtherCurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 16,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(2,833",
+          "inline_text": "2,833",
+          "name": "us-gaap:IncreaseDecreaseInOtherNoncurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 17,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(2,721",
+          "inline_text": "2,721",
+          "name": "us-gaap:IncreaseDecreaseInAccountsPayable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 18,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(358",
+          "inline_text": "358",
+          "name": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 20,
+          "table": 27
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000950170-23-035122",
+          "annual_end": {
+            "date": "2023-06-30"
+          },
+          "annual_start": {
+            "date": "2022-07-01"
+          },
+          "cik": 789019,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 12",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 16",
+        "Multiple/unbound current monetary populations at row 17",
+        "Multiple/unbound current monetary populations at row 18",
+        "Multiple/unbound current monetary populations at row 20"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MSFT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(4,738",
+          "inline_text": "4,738",
+          "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "reason": "Unbound displayed numeric cell",
+          "row": 12,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(7,191",
+          "inline_text": "7,191",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(1,648",
+          "inline_text": "1,648",
+          "name": "us-gaap:IncreaseDecreaseInOtherCurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 16,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(6,817",
+          "inline_text": "6,817",
+          "name": "us-gaap:IncreaseDecreaseInOtherNoncurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 17,
+          "table": 27
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000950170-24-087843",
+          "annual_end": {
+            "date": "2024-06-30"
+          },
+          "annual_start": {
+            "date": "2023-07-01"
+          },
+          "cik": 789019,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 12",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 16",
+        "Multiple/unbound current monetary populations at row 17"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MSFT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(7,056",
+          "inline_text": "7,056",
+          "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "reason": "Unbound displayed numeric cell",
+          "row": 12,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(10,581",
+          "inline_text": "10,581",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(3,044",
+          "inline_text": "3,044",
+          "name": "us-gaap:IncreaseDecreaseInOtherCurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 16,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(2,950",
+          "inline_text": "2,950",
+          "name": "us-gaap:IncreaseDecreaseInOtherNoncurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 17,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(38",
+          "inline_text": "38",
+          "name": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 20,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(975",
+          "inline_text": "975",
+          "name": "us-gaap:IncreaseDecreaseInOtherNoncurrentLiabilities",
+          "reason": "Unbound displayed numeric cell",
+          "row": 22,
+          "table": 26
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000950170-25-100235",
+          "annual_end": {
+            "date": "2025-06-30"
+          },
+          "annual_start": {
+            "date": "2024-07-01"
+          },
+          "cik": 789019,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 12",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 16",
+        "Multiple/unbound current monetary populations at row 17",
+        "Multiple/unbound current monetary populations at row 20",
+        "Multiple/unbound current monetary populations at row 22"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MSFT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(11,047",
+          "inline_text": "11,047",
+          "name": "msft:GainLossOnInvestmentsAndDerivativeInstruments",
+          "reason": "Unbound displayed numeric cell",
+          "row": 11,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(12,737",
+          "inline_text": "12,737",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(461",
+          "inline_text": "461",
+          "name": "us-gaap:IncreaseDecreaseInInventories",
+          "reason": "Unbound displayed numeric cell",
+          "row": 15,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(2,627",
+          "inline_text": "2,627",
+          "name": "us-gaap:IncreaseDecreaseInOtherCurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 16,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(3,964",
+          "inline_text": "3,964",
+          "name": "us-gaap:IncreaseDecreaseInOtherNoncurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 17,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(1,875",
+          "inline_text": "1,875",
+          "name": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 20,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(4,707",
+          "inline_text": "4,707",
+          "name": "us-gaap:IncreaseDecreaseInOtherNoncurrentLiabilities",
+          "reason": "Unbound displayed numeric cell",
+          "row": 22,
+          "table": 27
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001193125-26-323660",
+          "annual_end": {
+            "date": "2026-06-30"
+          },
+          "annual_start": {
+            "date": "2025-07-01"
+          },
+          "cik": 789019,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 11",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 15",
+        "Multiple/unbound current monetary populations at row 16",
+        "Multiple/unbound current monetary populations at row 17",
+        "Multiple/unbound current monetary populations at row 20",
+        "Multiple/unbound current monetary populations at row 22"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MSFT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "5,895",
+          "inline_text": "",
+          "name": "us-gaap:ProfitLoss",
+          "reason": "Unbound displayed numeric cell",
+          "row": 6,
+          "table": 26
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001730168-24-000139",
+          "annual_end": {
+            "date": "2024-11-03"
+          },
+          "annual_start": {
+            "date": "2023-10-30"
+          },
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "AVGO"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "2,218",
+          "inline_text": "2,218",
+          "name": "us-gaap:RestructuringCharges",
+          "reason": "Exact nondimensional entity context required",
+          "row": 9,
+          "table": 36
+        },
+        {
+          "cell": 1,
+          "display": "1,341",
+          "inline_text": "1,341",
+          "name": "us-gaap:RestructuringCharges",
+          "reason": "Exact nondimensional entity context required",
+          "row": 10,
+          "table": 36
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001326801-23-000013",
+          "annual_end": {
+            "date": "2022-12-31"
+          },
+          "annual_start": {
+            "date": "2022-01-01"
+          },
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "UNSUPPORTED_DIMENSIONAL_SCOPE"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 9",
+        "Multiple/unbound current monetary populations at row 10"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Multiple/unbound current monetary populations at row 9",
+            "Multiple/unbound current monetary populations at row 10"
+          ],
+          "table": 36
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "META"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "(224)",
+          "inline_text": "224",
+          "name": "us-gaap:RestructuringCharges",
+          "reason": "Exact nondimensional entity context required",
+          "row": 10,
+          "table": 30
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001326801-24-000012",
+          "annual_end": {
+            "date": "2023-12-31"
+          },
+          "annual_start": {
+            "date": "2023-01-01"
+          },
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "UNSUPPORTED_DIMENSIONAL_SCOPE"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 10"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Multiple/unbound current monetary populations at row 10"
+          ],
+          "table": 30
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "META"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "\u2014",
+          "inline_text": "\u2014",
+          "name": "us-gaap:RestructuringCharges",
+          "reason": "Exact nondimensional entity context required",
+          "row": 10,
+          "table": 28
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001326801-25-000017",
+          "annual_end": {
+            "date": "2024-12-31"
+          },
+          "annual_start": {
+            "date": "2024-01-01"
+          },
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "UNSUPPORTED_DIMENSIONAL_SCOPE"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 10"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Multiple/unbound current monetary populations at row 10"
+          ],
+          "table": 28
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "META"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "1,831",
+          "inline_text": "1,831",
+          "name": "us-gaap:InventoryWriteDown",
+          "reason": "Conflicting same-population facts",
+          "row": 7,
+          "table": 22
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000723125-23-000054",
+          "annual_end": {
+            "date": "2023-08-31"
+          },
+          "annual_start": {
+            "date": "2022-09-02"
+          },
+          "cik": 723125,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 7"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MU"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(55",
+          "inline_text": "55",
+          "name": "us-gaap:ForeignCurrencyTransactionGainLossUnrealized",
+          "reason": "Unbound displayed numeric cell",
+          "row": 9,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(27",
+          "inline_text": "27",
+          "name": "tsla:GainOnDigitalAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 11,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(130",
+          "inline_text": "130",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(1,709",
+          "inline_text": "1,709",
+          "name": "us-gaap:IncreaseDecreaseInInventories",
+          "reason": "Unbound displayed numeric cell",
+          "row": 15,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(2,114",
+          "inline_text": "2,114",
+          "name": "tsla:IncreaseDecreaseInOperatingLeaseVehicles",
+          "reason": "Unbound displayed numeric cell",
+          "row": 16,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(271",
+          "inline_text": "271",
+          "name": "us-gaap:IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 17,
+          "table": 26
+        },
+        {
+          "cell": 3,
+          "display": "(1,291",
+          "inline_text": "1,291",
+          "name": "us-gaap:IncreaseDecreaseInOtherNoncurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 18,
+          "table": 26
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000950170-22-000796",
+          "annual_end": {
+            "date": "2021-12-31"
+          },
+          "annual_start": {
+            "date": "2021-01-01"
+          },
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 9",
+        "Multiple/unbound current monetary populations at row 11",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 15",
+        "Multiple/unbound current monetary populations at row 16",
+        "Multiple/unbound current monetary populations at row 17",
+        "Multiple/unbound current monetary populations at row 18"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "TSLA"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(1,124",
+          "inline_text": "1,124",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 13,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(6,465",
+          "inline_text": "6,465",
+          "name": "us-gaap:IncreaseDecreaseInInventories",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(1,570",
+          "inline_text": "1,570",
+          "name": "tsla:IncreaseDecreaseInOperatingLeaseVehicles",
+          "reason": "Unbound displayed numeric cell",
+          "row": 15,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(1,417",
+          "inline_text": "1,417",
+          "name": "us-gaap:IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 16,
+          "table": 27
+        },
+        {
+          "cell": 3,
+          "display": "(2,551",
+          "inline_text": "2,551",
+          "name": "us-gaap:IncreaseDecreaseInOtherNoncurrentAssets",
+          "reason": "Unbound displayed numeric cell",
+          "row": 17,
+          "table": 27
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000950170-23-001409",
+          "annual_end": {
+            "date": "2022-12-31"
+          },
+          "annual_start": {
+            "date": "2022-01-01"
+          },
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 13",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 15",
+        "Multiple/unbound current monetary populations at row 16",
+        "Multiple/unbound current monetary populations at row 17"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "TSLA"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "189",
+          "inline_text": "189",
+          "name": "us-gaap:OtherDepreciationAndAmortization",
+          "reason": "Exact nondimensional entity context required",
+          "row": 11,
+          "table": 16
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0000002488-23-000047",
+          "annual_end": {
+            "date": "2022-12-31"
+          },
+          "annual_start": {
+            "date": "2021-12-26"
+          },
+          "cik": 2488,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "UNSUPPORTED_DIMENSIONAL_SCOPE"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 11"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Multiple/unbound current monetary populations at row 11"
+          ],
+          "table": 16
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "AMD"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0000002488-26-000018",
+          "annual_end": {
+            "date": "2025-12-27"
+          },
+          "annual_start": {
+            "date": "2024-12-29"
+          },
+          "cik": 2488,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Multiple/parent CFO populations; hierarchy unresolved"
+      ],
+      "original_requirements": [],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Multiple/parent CFO populations; hierarchy unresolved",
+          "requirements": [],
+          "table": 14
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "AMD"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "3,799.8",
+          "inline_text": "3,799.8",
+          "name": "us-gaap:ResearchAndDevelopmentAssetAcquiredOtherThanThroughBusinessCombinationWrittenOff",
+          "reason": "Conflicting same-population facts",
+          "row": 13,
+          "table": 27
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000059478-24-000065",
+          "annual_end": {
+            "date": "2023-12-31"
+          },
+          "annual_start": {
+            "date": "2023-01-01"
+          },
+          "cik": 59478,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 13"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "LLY"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "3,280.4",
+          "inline_text": "3,280.4",
+          "name": "us-gaap:ResearchAndDevelopmentAssetAcquiredOtherThanThroughBusinessCombinationWrittenOff",
+          "reason": "Conflicting same-population facts",
+          "row": 13,
+          "table": 28
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000059478-25-000067",
+          "annual_end": {
+            "date": "2024-12-31"
+          },
+          "annual_start": {
+            "date": "2024-01-01"
+          },
+          "cik": 59478,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 13"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "LLY"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "2,910",
+          "inline_text": "2,910",
+          "name": "us-gaap:ResearchAndDevelopmentAssetAcquiredOtherThanThroughBusinessCombinationWrittenOff",
+          "reason": "Conflicting same-population facts",
+          "row": 13,
+          "table": 27
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000059478-26-000013",
+          "annual_end": {
+            "date": "2025-12-31"
+          },
+          "annual_start": {
+            "date": "2025-01-01"
+          },
+          "cik": 59478,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 13"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "LLY"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "2,036",
+          "inline_text": "2,036",
+          "name": "us-gaap:ShareBasedCompensation",
+          "reason": "Conflicting same-population facts",
+          "row": 7,
+          "table": 193
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000050863-22-000007",
+          "annual_end": {
+            "date": "2021-12-25"
+          },
+          "annual_start": {
+            "date": "2020-12-27"
+          },
+          "cik": 50863,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 7",
+        "Possible intermediate parent subtotal at row 23"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "INTC"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "3,128",
+          "inline_text": "3,128",
+          "name": "us-gaap:ShareBasedCompensation",
+          "reason": "Conflicting same-population facts",
+          "row": 7,
+          "table": 174
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000050863-23-000006",
+          "annual_end": {
+            "date": "2022-12-31"
+          },
+          "annual_start": {
+            "date": "2021-12-26"
+          },
+          "cik": 50863,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 7",
+        "Possible intermediate parent subtotal at row 23"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "INTC"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "3,229",
+          "inline_text": "3,229",
+          "name": "us-gaap:ShareBasedCompensation",
+          "reason": "Conflicting same-population facts",
+          "row": 7,
+          "table": 164
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000050863-24-000010",
+          "annual_end": {
+            "date": "2023-12-30"
+          },
+          "annual_start": {
+            "date": "2023-01-01"
+          },
+          "cik": 50863,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 7",
+        "Possible intermediate parent subtotal at row 23"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "INTC"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "3,410",
+          "inline_text": "3,410",
+          "name": "us-gaap:ShareBasedCompensation",
+          "reason": "Conflicting same-population facts",
+          "row": 7,
+          "table": 131
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000050863-25-000009",
+          "annual_end": {
+            "date": "2024-12-28"
+          },
+          "annual_start": {
+            "date": "2023-12-31"
+          },
+          "cik": 50863,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 7",
+        "Possible intermediate parent subtotal at row 24"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "INTC"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "2,434",
+          "inline_text": "2,434",
+          "name": "us-gaap:ShareBasedCompensation",
+          "reason": "Conflicting same-population facts",
+          "row": 7,
+          "table": 140
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000050863-26-000011",
+          "annual_end": {
+            "date": "2025-12-27"
+          },
+          "annual_start": {
+            "date": "2024-12-29"
+          },
+          "cik": 50863,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 7",
+        "Possible intermediate parent subtotal at row 25"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "INTC"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "10,658",
+          "inline_text": "10,658",
+          "name": "us-gaap:DepreciationAmortizationAndAccretionNet",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 53
+        },
+        {
+          "cell": 2,
+          "display": "2,410",
+          "inline_text": "2,410",
+          "name": "us-gaap:GainsLossesOnExtinguishmentOfDebt",
+          "reason": "Conflicting same-population facts",
+          "row": 11,
+          "table": 53
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000104169-22-000012",
+          "annual_end": {
+            "date": "2022-01-31"
+          },
+          "annual_start": {
+            "date": "2021-02-01"
+          },
+          "cik": 104169,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6",
+        "Multiple/unbound current monetary populations at row 11"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "WMT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "10,945",
+          "inline_text": "10,945",
+          "name": "us-gaap:DepreciationAmortizationAndAccretionNet",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 53
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000104169-23-000020",
+          "annual_end": {
+            "date": "2023-01-31"
+          },
+          "annual_start": {
+            "date": "2022-02-01"
+          },
+          "cik": 104169,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "WMT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "11,853",
+          "inline_text": "11,853",
+          "name": "us-gaap:DepreciationAmortizationAndAccretionNet",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 53
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000104169-24-000056",
+          "annual_end": {
+            "date": "2024-01-31"
+          },
+          "annual_start": {
+            "date": "2023-02-01"
+          },
+          "cik": 104169,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "WMT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "12,973",
+          "inline_text": "12,973",
+          "name": "us-gaap:DepreciationAmortizationAndAccretionNet",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 53
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000104169-25-000021",
+          "annual_end": {
+            "date": "2025-01-31"
+          },
+          "annual_start": {
+            "date": "2024-02-01"
+          },
+          "cik": 104169,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "WMT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "14,203",
+          "inline_text": "14,203",
+          "name": "us-gaap:DepreciationAmortizationAndAccretionNet",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 50
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000104169-26-000055",
+          "annual_end": {
+            "date": "2026-01-31"
+          },
+          "annual_start": {
+            "date": "2025-02-01"
+          },
+          "cik": 104169,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "WMT"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "7,718",
+          "inline_text": "7,718",
+          "name": "us-gaap:AmortizationOfIntangibleAssets",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 94
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001551152-22-000007",
+          "annual_end": {
+            "date": "2021-12-31"
+          },
+          "annual_start": {
+            "date": "2021-01-01"
+          },
+          "cik": 1551152,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ABBV"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "7,689",
+          "inline_text": "7,689",
+          "name": "us-gaap:AmortizationOfIntangibleAssets",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 98
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001551152-23-000011",
+          "annual_end": {
+            "date": "2022-12-31"
+          },
+          "annual_start": {
+            "date": "2022-01-01"
+          },
+          "cik": 1551152,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ABBV"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "7,946",
+          "inline_text": "7,946",
+          "name": "us-gaap:AmortizationOfIntangibleAssets",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 101
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001551152-24-000011",
+          "annual_end": {
+            "date": "2023-12-31"
+          },
+          "annual_start": {
+            "date": "2023-01-01"
+          },
+          "cik": 1551152,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ABBV"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "7,622",
+          "inline_text": "7,622",
+          "name": "us-gaap:AmortizationOfIntangibleAssets",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 101
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001551152-25-000020",
+          "annual_end": {
+            "date": "2024-12-31"
+          },
+          "annual_start": {
+            "date": "2024-01-01"
+          },
+          "cik": 1551152,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ABBV"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "7,377",
+          "inline_text": "7,377",
+          "name": "us-gaap:AmortizationOfIntangibleAssets",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 102
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001551152-26-000008",
+          "annual_end": {
+            "date": "2025-12-31"
+          },
+          "annual_start": {
+            "date": "2025-01-01"
+          },
+          "cik": 1551152,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ABBV"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001193125-22-050913",
+          "annual_end": {
+            "date": "2021-12-31"
+          },
+          "annual_start": {
+            "date": "2021-01-01"
+          },
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "INSUFFICIENT_STARTING_SCOPE_BINDING",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Unique reported starting subtotal unavailable"
+      ],
+      "original_requirements": [],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets', 'IncreaseDecreaseInOtherNoncurrentAssets')]"
+          ],
+          "table": 292
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "PLTR"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001321655-23-000011",
+          "annual_end": {
+            "date": "2022-12-31"
+          },
+          "annual_start": {
+            "date": "2022-01-01"
+          },
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets', 'IncreaseDecreaseInOtherNoncurrentAssets')]"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets', 'IncreaseDecreaseInOtherNoncurrentAssets')]"
+          ],
+          "table": 32
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "PLTR"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001321655-24-000022",
+          "annual_end": {
+            "date": "2023-12-31"
+          },
+          "annual_start": {
+            "date": "2023-01-01"
+          },
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets', 'IncreaseDecreaseInOtherNoncurrentAssets')]"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets', 'IncreaseDecreaseInOtherNoncurrentAssets')]"
+          ],
+          "table": 31
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "PLTR"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001321655-25-000022",
+          "annual_end": {
+            "date": "2024-12-31"
+          },
+          "annual_start": {
+            "date": "2024-01-01"
+          },
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets', 'IncreaseDecreaseInOtherNoncurrentAssets')]"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets', 'IncreaseDecreaseInOtherNoncurrentAssets')]"
+          ],
+          "table": 29
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "PLTR"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0000310158-22-000003",
+          "annual_end": {
+            "date": "2021-12-31"
+          },
+          "annual_start": {
+            "date": "2021-01-01"
+          },
+          "cik": 310158,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "INSUFFICIENT_STARTING_SCOPE_BINDING",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Unique reported starting subtotal unavailable"
+      ],
+      "original_requirements": [],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Unique reported starting subtotal unavailable",
+          "requirements": [],
+          "table": 45
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MRK"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001628280-23-005061",
+          "annual_end": {
+            "date": "2022-12-31"
+          },
+          "annual_start": {
+            "date": "2022-01-01"
+          },
+          "cik": 310158,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "INSUFFICIENT_STARTING_SCOPE_BINDING",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Unique reported starting subtotal unavailable"
+      ],
+      "original_requirements": [],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Unique reported starting subtotal unavailable",
+          "requirements": [],
+          "table": 43
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MRK"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001628280-24-006850",
+          "annual_end": {
+            "date": "2023-12-31"
+          },
+          "annual_start": {
+            "date": "2023-01-01"
+          },
+          "cik": 310158,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "INSUFFICIENT_STARTING_SCOPE_BINDING",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Unique reported starting subtotal unavailable"
+      ],
+      "original_requirements": [],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Unique reported starting subtotal unavailable",
+          "requirements": [],
+          "table": 46
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MRK"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "2,104",
+          "inline_text": "2,104",
+          "name": "us-gaap:Depreciation",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 45
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001628280-25-007732",
+          "annual_end": {
+            "date": "2024-12-31"
+          },
+          "annual_start": {
+            "date": "2024-01-01"
+          },
+          "cik": 310158,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6",
+        "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInAccruedLiabilities', 'IncreaseDecreaseInAccruedIncomeTaxesPayable')]"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInAccruedLiabilities', 'IncreaseDecreaseInAccruedIncomeTaxesPayable')]"
+          ],
+          "table": 45
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MRK"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "3,045",
+          "inline_text": "3,045",
+          "name": "us-gaap:Depreciation",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 48
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0000310158-26-000063",
+          "annual_end": {
+            "date": "2025-12-31"
+          },
+          "annual_start": {
+            "date": "2025-01-01"
+          },
+          "cik": 310158,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6",
+        "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInAccruedLiabilities', 'IncreaseDecreaseInAccruedIncomeTaxesPayable')]"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInAccruedLiabilities', 'IncreaseDecreaseInAccruedIncomeTaxesPayable')]"
+          ],
+          "table": 48
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "MRK"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "91,350",
+          "inline_text": "91,350",
+          "name": "us-gaap:IncreaseDecreaseInContractWithCustomerLiability",
+          "reason": "Conflicting same-population facts",
+          "row": 18,
+          "table": 29
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001065280-22-000036",
+          "annual_end": {
+            "date": "2021-12-31"
+          },
+          "annual_start": {
+            "date": "2021-01-01"
+          },
+          "cik": 1065280,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 18"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "NFLX"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "1,830",
+          "inline_text": "1,830",
+          "name": "us-gaap:GoodwillImpairmentLoss",
+          "reason": "Conflicting same-population facts",
+          "row": 8,
+          "table": 25
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0002023554-25-000034",
+          "annual_end": {
+            "date": "2025-06-27"
+          },
+          "annual_start": {
+            "date": "2024-06-29"
+          },
+          "cik": 2023554,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 8"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "SNDK"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 1,
+          "display": "\u2014",
+          "inline_text": "\u2014",
+          "name": "us-gaap:GoodwillImpairmentLoss",
+          "reason": "Conflicting occurrence precision",
+          "row": 8,
+          "table": 25
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001628280-26-057406",
+          "annual_end": {
+            "date": "2026-07-03"
+          },
+          "annual_start": {
+            "date": "2025-06-28"
+          },
+          "cik": 2023554,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "PARENT_SUBTOTAL_HIERARCHY",
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 8",
+        "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInAccruedLiabilities', 'IncreaseDecreaseInAccruedIncomeTaxesPayable')]"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Reported movement parent/children coexist; no demonstrated non-overlap: [('IncreaseDecreaseInAccruedLiabilities', 'IncreaseDecreaseInAccruedIncomeTaxesPayable')]"
+          ],
+          "table": 25
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "SNDK"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(1,146",
+          "inline_text": "1,146",
+          "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "reason": "Unbound displayed numeric cell",
+          "row": 7,
+          "table": 217
+        },
+        {
+          "cell": 3,
+          "display": "(874",
+          "inline_text": "874",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 11,
+          "table": 217
+        },
+        {
+          "cell": 3,
+          "display": "(733",
+          "inline_text": "733",
+          "name": "us-gaap:IncreaseDecreaseInAccountsPayableAndOtherOperatingLiabilities",
+          "reason": "Unbound displayed numeric cell",
+          "row": 13,
+          "table": 217
+        },
+        {
+          "cell": 3,
+          "display": "(398",
+          "inline_text": "398",
+          "name": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 217
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001564590-22-023675",
+          "annual_end": {
+            "date": "2022-05-31"
+          },
+          "annual_start": {
+            "date": "2021-06-01"
+          },
+          "cik": 1341439,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 7",
+        "Multiple/unbound current monetary populations at row 11",
+        "Multiple/unbound current monetary populations at row 13",
+        "Multiple/unbound current monetary populations at row 14"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ORCL"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(2,167",
+          "inline_text": "2,167",
+          "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "reason": "Unbound displayed numeric cell",
+          "row": 8,
+          "table": 36
+        },
+        {
+          "cell": 3,
+          "display": "(151",
+          "inline_text": "151",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 12,
+          "table": 36
+        },
+        {
+          "cell": 3,
+          "display": "(281",
+          "inline_text": "281",
+          "name": "us-gaap:IncreaseDecreaseInAccountsPayableAndOtherOperatingLiabilities",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 36
+        },
+        {
+          "cell": 3,
+          "display": "(153",
+          "inline_text": "153",
+          "name": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 15,
+          "table": 36
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000950170-23-028914",
+          "annual_end": {
+            "date": "2023-05-31"
+          },
+          "annual_start": {
+            "date": "2022-06-01"
+          },
+          "cik": 1341439,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 8",
+        "Multiple/unbound current monetary populations at row 12",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 15"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ORCL"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(2,139",
+          "inline_text": "2,139",
+          "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "reason": "Unbound displayed numeric cell",
+          "row": 8,
+          "table": 38
+        },
+        {
+          "cell": 3,
+          "display": "(965",
+          "inline_text": "965",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 12,
+          "table": 38
+        },
+        {
+          "cell": 3,
+          "display": "(594",
+          "inline_text": "594",
+          "name": "us-gaap:IncreaseDecreaseInAccountsPayableAndOtherOperatingLiabilities",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 38
+        },
+        {
+          "cell": 3,
+          "display": "(127",
+          "inline_text": "127",
+          "name": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 15,
+          "table": 38
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000950170-24-075605",
+          "annual_end": {
+            "date": "2024-05-31"
+          },
+          "annual_start": {
+            "date": "2023-06-01"
+          },
+          "cik": 1341439,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 8",
+        "Multiple/unbound current monetary populations at row 12",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 15"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ORCL"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "(1,637",
+          "inline_text": "1,637",
+          "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "reason": "Unbound displayed numeric cell",
+          "row": 8,
+          "table": 38
+        },
+        {
+          "cell": 3,
+          "display": "(653",
+          "inline_text": "653",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 12,
+          "table": 38
+        },
+        {
+          "cell": 3,
+          "display": "(608",
+          "inline_text": "608",
+          "name": "us-gaap:IncreaseDecreaseInAccountsPayableAndOtherOperatingLiabilities",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 38
+        },
+        {
+          "cell": 3,
+          "display": "(659",
+          "inline_text": "659",
+          "name": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 15,
+          "table": 38
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000950170-25-087926",
+          "annual_end": {
+            "date": "2025-05-31"
+          },
+          "annual_start": {
+            "date": "2024-06-01"
+          },
+          "cik": 1341439,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 8",
+        "Multiple/unbound current monetary populations at row 12",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 15"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ORCL"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 3,
+          "display": "7,623",
+          "inline_text": "7,623",
+          "name": "us-gaap:Depreciation",
+          "reason": "Conflicting same-population facts",
+          "row": 6,
+          "table": 36
+        },
+        {
+          "cell": 3,
+          "display": "(917",
+          "inline_text": "917",
+          "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "reason": "Unbound displayed numeric cell",
+          "row": 8,
+          "table": 36
+        },
+        {
+          "cell": 3,
+          "display": "(2,433",
+          "inline_text": "2,433",
+          "name": "orcl:GainsFromInvestmentsAndOtherNet",
+          "reason": "Unbound displayed numeric cell",
+          "row": 10,
+          "table": 36
+        },
+        {
+          "cell": 3,
+          "display": "(2,190",
+          "inline_text": "2,190",
+          "name": "us-gaap:IncreaseDecreaseInAccountsReceivable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 12,
+          "table": 36
+        },
+        {
+          "cell": 3,
+          "display": "(240",
+          "inline_text": "240",
+          "name": "us-gaap:IncreaseDecreaseInAccountsPayableAndOtherOperatingLiabilities",
+          "reason": "Unbound displayed numeric cell",
+          "row": 14,
+          "table": 36
+        },
+        {
+          "cell": 3,
+          "display": "(256",
+          "inline_text": "256",
+          "name": "us-gaap:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+          "reason": "Unbound displayed numeric cell",
+          "row": 15,
+          "table": 36
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0001193125-26-277521",
+          "annual_end": {
+            "date": "2026-05-31"
+          },
+          "annual_start": {
+            "date": "2025-06-01"
+          },
+          "cik": 1341439,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "REPAIRABLE_PARSING_BINDING"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 6",
+        "Multiple/unbound current monetary populations at row 8",
+        "Multiple/unbound current monetary populations at row 10",
+        "Multiple/unbound current monetary populations at row 12",
+        "Multiple/unbound current monetary populations at row 14",
+        "Multiple/unbound current monetary populations at row 15"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "ORCL"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001628280-22-004180",
+          "annual_end": {
+            "date": "2021-12-31"
+          },
+          "annual_start": {
+            "date": "2021-01-01"
+          },
+          "cik": 1707925,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Starting/CFO scope requires separate evidence",
+        "Possible intermediate parent subtotal at row 7"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Starting/CFO scope requires separate evidence",
+            "Possible intermediate parent subtotal at row 7"
+          ],
+          "table": 37
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "LIN"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001628280-23-005434",
+          "annual_end": {
+            "date": "2022-12-31"
+          },
+          "annual_start": {
+            "date": "2022-01-01"
+          },
+          "cik": 1707925,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Possible intermediate parent subtotal at row 7"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Possible intermediate parent subtotal at row 7"
+          ],
+          "table": 37
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "LIN"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001628280-24-007424",
+          "annual_end": {
+            "date": "2023-12-31"
+          },
+          "annual_start": {
+            "date": "2023-01-01"
+          },
+          "cik": 1707925,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Possible intermediate parent subtotal at row 7"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Possible intermediate parent subtotal at row 7"
+          ],
+          "table": 37
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "LIN"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001628280-25-007990",
+          "annual_end": {
+            "date": "2024-12-31"
+          },
+          "annual_start": {
+            "date": "2024-01-01"
+          },
+          "cik": 1707925,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Possible intermediate parent subtotal at row 7"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Possible intermediate parent subtotal at row 7"
+          ],
+          "table": 36
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "LIN"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0001628280-26-011430",
+          "annual_end": {
+            "date": "2025-12-31"
+          },
+          "annual_start": {
+            "date": "2025-01-01"
+          },
+          "cik": 1707925,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Possible intermediate parent subtotal at row 7"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Possible intermediate parent subtotal at row 7"
+          ],
+          "table": 36
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "LIN"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0000804328-22-000021",
+          "annual_end": {
+            "date": "2022-09-25"
+          },
+          "annual_start": {
+            "date": "2021-09-27"
+          },
+          "cik": 804328,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Starting/CFO scope requires separate evidence",
+        "Possible intermediate parent subtotal at row 22"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Starting/CFO scope requires separate evidence",
+            "Possible intermediate parent subtotal at row 22"
+          ],
+          "table": 34
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "QCOM"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0000804328-23-000055",
+          "annual_end": {
+            "date": "2023-09-24"
+          },
+          "annual_start": {
+            "date": "2022-09-26"
+          },
+          "cik": 804328,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Starting/CFO scope requires separate evidence",
+        "Possible intermediate parent subtotal at row 23"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Starting/CFO scope requires separate evidence",
+            "Possible intermediate parent subtotal at row 23"
+          ],
+          "table": 34
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "QCOM"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0000804328-24-000075",
+          "annual_end": {
+            "date": "2024-09-29"
+          },
+          "annual_start": {
+            "date": "2023-09-25"
+          },
+          "cik": 804328,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Starting/CFO scope requires separate evidence",
+        "Possible intermediate parent subtotal at row 23"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Starting/CFO scope requires separate evidence",
+            "Possible intermediate parent subtotal at row 23"
+          ],
+          "table": 34
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "QCOM"
+    },
+    {
+      "binding_errors": [],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "PARTIAL",
+      "identity": {
+        "fields": {
+          "accession": "0000804328-25-000085",
+          "annual_end": {
+            "date": "2025-09-28"
+          },
+          "annual_start": {
+            "date": "2024-09-30"
+          },
+          "cik": 804328,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS",
+        "PARENT_SUBTOTAL_HIERARCHY"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Starting/CFO scope requires separate evidence",
+        "Possible intermediate parent subtotal at row 23"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [
+        {
+          "reason": "Complete non-overlapping displayed operand population not established",
+          "requirements": [
+            "Starting/CFO scope requires separate evidence",
+            "Possible intermediate parent subtotal at row 23"
+          ],
+          "table": 33
+        }
+      ],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "QCOM"
+    },
+    {
+      "binding_errors": [
+        {
+          "cell": 2,
+          "display": "5,841",
+          "inline_text": "5,841",
+          "name": "us-gaap:GoodwillImpairmentLoss",
+          "reason": "Conflicting same-population facts",
+          "row": 13,
+          "table": 84
+        }
+      ],
+      "bounded_action": "Shared v2 source/layout checks applied once; no issuer numeric patch or new approval",
+      "final_status": "SUPPORTED",
+      "identity": {
+        "fields": {
+          "accession": "0000732712-24-000010",
+          "annual_end": {
+            "date": "2023-12-31"
+          },
+          "annual_start": {
+            "date": "2023-01-01"
+          },
+          "cik": 732712,
+          "form": "10-K"
+        },
+        "type": "Period"
+      },
+      "initial_causes": [
+        "DIFFERENT_FINANCIAL_POPULATIONS"
+      ],
+      "original_reasons": [
+        "Complete non-overlapping displayed operand population not established"
+      ],
+      "original_requirements": [
+        "Multiple/unbound current monetary populations at row 13"
+      ],
+      "original_status": "PARTIAL",
+      "remaining": [],
+      "stopping_condition": "No further acquisition/research in this pass; reopen only with exact evidence of the required population, hierarchy or scope.",
+      "ticker": "VZ"
+    }
+  ],
+  "schema": "bounded-statement-repair-disposition-v1"
+}

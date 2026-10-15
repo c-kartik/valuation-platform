@@ -4,6 +4,9 @@ from decimal import Decimal
 import hashlib
 import json
 import tempfile
+import subprocess
+import types
+import sys
 import unittest
 
 from valuation_platform.analyst import historical_inputs as h, prepared_assembly as a
@@ -57,8 +60,39 @@ class PreparationDeliveryTests(unittest.TestCase):
                 self.assertNotIn('unclassified_remainder',{v['concept'] for v in p['rows']})
 
     def test_exact_deterministic_ledger_replay(self):
-        self.assertEqual(self.ledger,json.loads((a.ROOT/d.LEDGER).read_text()))
-        self.assertEqual(self.summary,json.loads((a.ROOT/d.SUMMARY).read_text()))
+        # Exact whole-object equality, with bounded diagnostics instead of
+        # quadratic pretty-diffs of a 30MB ledger on a provenance mismatch.
+        def differences(left,right,path=''):
+            if type(left)!=type(right):return [(path,type(left).__name__,type(right).__name__)]
+            if isinstance(left,dict):
+                if left.keys()!=right.keys():return [(path+' keys',sorted(left),sorted(right))]
+                found=[]
+                for k in left:
+                    if left[k]!=right[k]:found+=differences(left[k],right[k],path+'/'+str(k))
+                    if len(found)>=5:return found[:5]
+                return found
+            if isinstance(left,list):
+                if len(left)!=len(right):return [(path+' length',len(left),len(right))]
+                found=[]
+                for i,(x,y) in enumerate(zip(left,right)):
+                    if x!=y:found+=differences(x,y,path+'/'+str(i))
+                    if len(found)>=5:return found[:5]
+                return found
+            return [(path,left,right)]
+        for actual,path in ((self.ledger,d.LEDGER),(self.summary,d.SUMMARY)):
+            expected=json.loads((a.ROOT/path).read_text())
+            self.assertTrue(actual==expected,str(differences(actual,expected)))
+
+    def test_prior_population_values_and_stable_ids_are_not_dropped(self):
+        old=json.loads(subprocess.check_output(['git','show','60837808489c5a4bfe2526c489e6decb76572d11:'+d.LEDGER],cwd=a.ROOT))
+        current={r['identity']['fields']['accession']:r for r in self.ledger['rows']}
+        for row in old['rows']:
+            selected=current[row['identity']['fields']['accession']]
+            by_id={v['input_id']:v for v in selected['inputs']}
+            for v in row['inputs']:
+                self.assertIn(v['input_id'],by_id)
+                for key in ('value','unit','sign','precision','origin','role','as_of','field'):
+                    self.assertEqual(v.get(key),by_id[v['input_id']].get(key))
 
     def test_serialization_round_trip_original_and_new_proofs(self):
         p=self.histories['AAPL'];original=a.serialize(p.parent)
@@ -67,6 +101,32 @@ class PreparationDeliveryTests(unittest.TestCase):
         self.assertEqual(a.serialize(decoded.parent),original)
         document=json.loads(text);document['schema']='unapproved'
         with self.assertRaises(h.InputError):d.deserialize(json.dumps(document))
+        document=json.loads(text);key=next(iter(document['original_bodies']))
+        document['original_bodies'][key]=h._encode(b'tampered')
+        with self.assertRaises(h.InputError):d.deserialize(json.dumps(document))
+
+    def test_legacy_delivery_serializer_and_empty_history_remain_supported(self):
+        from valuation_platform.analyst import statement_delivery as documents
+        raw=subprocess.check_output(['git','show','60837808489c5a4bfe2526c489e6decb76572d11:src/valuation_platform/analyst/preparation_delivery.py'],cwd=a.ROOT)
+        name='valuation_platform.analyst._prior_delivery_preservation'
+        module=types.ModuleType(name);module.__package__='valuation_platform.analyst';sys.modules[name]=module
+        try:
+            exec(compile(raw,'prior-delivery','exec'),module.__dict__)
+            scope,catalog,_=documents.scope()
+            records={r['identity']['accession']:next(x for x in catalog if x['url']==r['url']) for r in scope if r['status']=='RETAINED'}
+            for ticker in ('AAPL','XOM'):
+                parent=self.histories[ticker].parent
+                prior=module.deliver(parent,records);old=module.serialize(prior)
+                decoded=d.deserialize(old)
+                self.assertEqual(d.serialize(decoded),old)
+                self.assertEqual(decoded.serialization_schema,d.LEGACY_SCHEMA)
+        finally:sys.modules.pop(name,None)
+
+    def test_incorporated_statement_serialization_requires_binding_receipts(self):
+        p=self.histories['IBM'];text=d.serialize(p)
+        self.assertEqual(d.serialize(d.deserialize(text)),text)
+        doc=json.loads(text);doc['annuals'][0]['binding_receipts']=h._encode(())
+        with self.assertRaises(h.InputError):d.deserialize(json.dumps(doc))
         document=json.loads(text);key=next(iter(document['original_bodies']))
         document['original_bodies'][key]=h._encode(b'tampered')
         with self.assertRaises(h.InputError):d.deserialize(json.dumps(document))

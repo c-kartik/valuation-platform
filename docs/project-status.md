@@ -1,6 +1,31 @@
 # Project Status
 
-## Current Milestone
+## Current bounded statement-repair milestone
+
+[Results and stopping conditions](statement-binding-repair-results.md) /
+[59-case disposition](statement-repair-disposition.json) /
+[v2 delivery ledger](reported-population-delivery-ledger.json).
+18/18 exact statement bindings established: 36 unique SEC requests, all HTTP 200;
+five IBM primaries reused, annual reports explicitly incorporated/indexed.
+42 histories / 199 annuals / eleven deficits remain. CFO: **174 supported / 24
+partial / one failed / zero not assessed**. Thirty-five of the prior 59 partial
+cases now reconcile; 24 retain exact scope/hierarchy requirements. MCD FY2024
+has a −1m difference outside the unchanged 0.6m precision bound, retained FAILED.
+Current reported liquidity 46; dated unclassed common-share selections 162;
+43 partial borrowing observations across 33 periods; recognized finance leases
+92 and operating leases 186. No complete combined-debt field or dilution estimate.
+All 2,487 prior population inputs preserve values and stable IDs; original parent,
+pilot and frozen outputs remain unchanged. Current validation: **1,117 full-suite
+tests passed in 7116.733s**, plus 44 focused tests. Exact ledger replay, legacy/v2
+serialization, receipt rejection, override/queue and preservation checks pass;
+all 182 Python files and 87 JSON artifacts match the pre-run seal. Compileall,
+receipt/count/digest checks, local links and diff checks pass. No recovery requests
+or duplicate acquisitions. Prior 1,101-test success covers v1 only. Phase 1 stays open;
+financial sufficiency NOT_ASSESSED and material shortfalls remain unaccepted.
+
+### Prior reported-population v1 milestone
+
+## Prior v1 Milestone
 
 Separate reported-population delivery and independent CFO reconciliation,
 with completed final full-suite validation on the final implementation. Phase 1 only.

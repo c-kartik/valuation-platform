@@ -17,6 +17,7 @@ from .cash_flow_inputs import Receipt
 
 ROOT = validation.a.ROOT
 ACQUISITION = 'docs/evidence/preparation-statement-acquisition.json'
+BINDING_REPAIR = 'docs/evidence/preparation-statement-binding-repair.json'
 
 
 def canonical(v): return json.dumps(v, sort_keys=True, separators=(',', ':'))
@@ -71,7 +72,72 @@ def primary_metadata(catalog):
                 refs.setdefault(acc, []).append(dict(filename=name, path=record['path'],
                     locator=record['locator']+'/response/filings/row/'+str(index),
                     metadata_body_sha256=record['sha256'], authority='OFFICIAL_SUBMISSION_RESPONSE',cik=cik))
+    for record in catalog:
+        match=re.fullmatch(r'https://www.sec.gov/Archives/edgar/data/(\d+)/(\d+)/([\d-]+)-index.html',record['url'])
+        if not match:continue
+        for entry in index_documents(record['body'],int(match[1]),match[3]):
+            if entry['type']=='10-K' and entry['url'].endswith(('.htm','.html')):
+                refs.setdefault(match[3],[]).append(dict(filename=entry['url'].split('/')[-1],path=record['path'],
+                    locator=record['locator']+'/index/row/'+str(entry['row']),metadata_body_sha256=record['sha256'],
+                    authority='OFFICIAL_ACCESSION_INDEX',cik=int(match[1])))
     return refs
+
+
+def index_documents(body,cik,accession):
+    """Exact official document-type rows, not filename heuristics."""
+    class Index(HTMLParser):
+        def __init__(self):super().__init__();self.rows=[];self.row=None;self.cell=None
+        def handle_starttag(self,tag,attrs):
+            if tag=='tr':self.row=[]
+            if tag in ('td','th'):self.cell=dict(text=[],links=[])
+            if tag=='a' and self.cell is not None:self.cell['links'].append(dict(attrs).get('href',''))
+        def handle_data(self,data):
+            if self.cell is not None:self.cell['text'].append(data)
+        def handle_endtag(self,tag):
+            if tag in ('td','th') and self.cell is not None:
+                self.cell['text']=' '.join(''.join(self.cell['text']).split())
+                if self.row is not None:self.row.append(self.cell)
+                self.cell=None
+            if tag=='tr' and self.row is not None:self.rows.append(self.row);self.row=None
+    parser=Index();parser.feed(body.decode());parser.close();out=[]
+    base='https://www.sec.gov/Archives/edgar/data/'+str(cik)+'/'+accession.replace('-','')+'/'
+    for n,row in enumerate(parser.rows):
+        if len(row)<4 or row[3]['text'] not in ('10-K','EX-13','EX-13.1'):continue
+        for href in row[2]['links']:
+            if href.startswith('/ix?doc='):href=href[len('/ix?doc='):]
+            url='https://www.sec.gov'+href if href.startswith('/') else base+href
+            if url.startswith(base) and '/' not in url[len(base):] and '?' not in url and '#' not in url:
+                out.append(dict(type=row[3]['text'],url=url,description=row[1]['text'],row=n))
+    return out
+
+
+def repaired_records(scope,catalog):
+    """Independent acquisition bindings; no financial acceptance registry."""
+    result={r['identity']['accession']:next(x for x in catalog if x['url']==r['url']) for r in scope if r['status']=='RETAINED'}
+    path=ROOT/BINDING_REPAIR
+    if not path.exists():return result
+    payload=json.loads(path.read_bytes())
+    targets={r['identity']['accession']:r['identity'] for r in scope}
+    for row in payload['rows']:
+        if row['status']!='DOCUMENT_BOUND':continue
+        identity=row['identity'];acc=identity['accession']
+        if identity!=targets.get(acc):raise h.InputError('Statement repair selected identity differs')
+        bound={}
+        for role in ('index','primary','document'):
+            ref=row[role];matches=[r for r in catalog if r['url']==ref['url'] and r['sha256']==ref['sha256']]
+            if not matches:raise h.InputError('Required repaired statement body/receipt unavailable')
+            if len({r['sha256'] for r in catalog if r['url']==ref['url']})!=1:raise h.InputError('Conflicting repaired statement bodies')
+            bound[role]=matches[0]
+        index=index_documents(bound['index']['body'],identity['cik'],acc)
+        if not any(x['type']=='10-K' and x['url']==bound['primary']['url'] for x in index):raise h.InputError('Primary not bound to authoritative index')
+        verify_primary(bound['primary'],identity)
+        if row['document_type']!='10-K':
+            if not any(x['type']==row['document_type'] and x['url']==bound['document']['url'] for x in index):raise h.InputError('Statement not bound to indexed annual report')
+            text=re.sub('<[^>]+>',' ',bound['primary']['body'].decode())
+            if not re.search(r'annual report.{0,250}incorporat|incorporat.{0,250}annual report',text,re.I|re.S):raise h.InputError('Explicit primary incorporation reference unavailable')
+        record=dict(bound['document'],document_type=row['document_type'],filing_primary=bound['primary'],index_record=bound['index'],selected_identity=identity)
+        result[acc]=record
+    return result
 
 
 def scope(root=ROOT):
@@ -105,6 +171,16 @@ def receipt(record, period):
 
 def verify_primary(record, identity):
     """Independent primary DEI annual context; no calendar-date reconstruction."""
+    if record.get('document_type') in ('EX-13','EX-13.1'):
+        if any(record.get('selected_identity',{}).get(k)!=v for k,v in identity.items()):raise h.InputError('Incorporated statement identity differs')
+        if hashlib.sha256(record['body']).hexdigest()!=record['sha256']:raise h.InputError('Incorporated statement body differs')
+        for key in ('filing_primary','index_record'):
+            metadata=record.get(key)
+            if metadata is None or hashlib.sha256(metadata['body']).hexdigest()!=metadata.get('sha256') or metadata.get('http_status')!=200 or not metadata.get('retrieved_at_utc'):
+                raise h.InputError('Incorporated identity metadata body/receipt invalid')
+        entries=index_documents(record['index_record']['body'],identity['cik'],identity['accession'])
+        if not any(x['url']==record['url'] and x['type']==record['document_type'] for x in entries):raise h.InputError('Incorporated document index binding differs')
+        return verify_primary(record['filing_primary'],identity)
     text = record['body'].decode('utf-8')
     if record.get('url') and not re.fullmatch(r'https://www\.sec\.gov/Archives/edgar/data/'+str(identity['cik'])+'/'+re.escape(identity['accession'].replace('-',''))+r'/[^/?#]+',record['url']):
         raise h.InputError('Primary URL exact accession/CIK differs')
@@ -185,8 +261,36 @@ class Tables(HTMLParser):
             if self.depth==0:self.tables.append(self.table);self.table=None
 
 
-def parse(record):
-    parser=Tables();parser.feed(record['body'].decode('utf-8'));parser.close();return parser.tables
+class BoundTables(Tables):
+    """Inline nesting and explicit split-cell punctuation, without column guesses."""
+    def __init__(self):super().__init__();self.fact_stack=[]
+    def handle_starttag(self,tag,attrs):
+        super().handle_starttag(tag,attrs)
+        if tag=='ix:nonfraction' and self.depth==1 and self.cell is not None:
+            if self.fact_stack:self.fact['nested_parent']=self.fact_stack[-1]['attrs'].get('name')
+            self.fact_stack.append(self.fact)
+    def handle_data(self,data):
+        if self.cell is not None:
+            self.cell['text'].append(data)
+            for fact in self.fact_stack:fact['text'].append(data)
+    def handle_endtag(self,tag):
+        if tag=='ix:nonfraction' and self.fact_stack:
+            self.fact_stack.pop();self.fact=self.fact_stack[-1] if self.fact_stack else None
+            return
+        super().handle_endtag(tag)
+
+
+def parse(record,improved=False):
+    parser=BoundTables() if improved else Tables();parser.feed(record['body'].decode('utf-8'));parser.close()
+    if improved:
+        for table in parser.tables:
+            for row in table:
+                for index,cell in enumerate(row[:-1]):
+                    # Only an explicit adjacent closing parenthesis is joined.
+                    # No missing punctuation or inferred cash sign is supplied.
+                    if cell['facts'] and cell['text'].strip().startswith('(') and not cell['text'].strip().endswith(')') and row[index+1]['text'].strip()==')' and not row[index+1]['facts']:
+                        cell['split_sign_cells']=[index,index+1];cell['text']+=')'
+    return parser.tables
 
 
 def primary_bindings(record):
@@ -195,6 +299,10 @@ def primary_bindings(record):
     namespaces=dict(re.findall(r'xmlns:([^\s=]+)=["\']([^"\']+)',text))
     contexts={m[0]:m[1] for m in re.findall(r'<xbrli:context\b[^>]*\bid=["\']([^"\']+)["\']([^>]*>.*?</xbrli:context>)',text,re.I|re.S)}
     units={m[0]:m[1] for m in re.findall(r'<xbrli:unit\b[^>]*\bid=["\']([^"\']+)["\']([^>]*>.*?</xbrli:unit>)',text,re.I|re.S)}
+    if not contexts and record.get('document_type') in ('EX-13','EX-13.1'):
+        own_ns,contexts,units=primary_bindings(record['filing_primary'])
+        if any(own_ns.get(k)!=v for k,v in namespaces.items() if k in own_ns):raise h.InputError('Inline document-set namespaces conflict')
+        namespaces={**own_ns,**namespaces}
     return namespaces,contexts,units
 
 

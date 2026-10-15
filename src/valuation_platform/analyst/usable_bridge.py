@@ -14,6 +14,7 @@ from . import historical_inputs as h, statement_delivery as docs
 from . import cfo_statement_reconciliation as statement, retained_components as inspection
 
 VERSION='reported-bridge-population-v1'
+IMPROVED_VERSION='reported-bridge-population-v2'
 FAMILIES=(h.Field.CASH_INVESTMENTS,h.Field.DEBT_LEASES,h.Field.SHARES)
 POPULATIONS=frozenset(('CashAndCashEquivalentsAtCarryingValue','MarketableSecuritiesCurrent',
     'CashCashEquivalentsAndMarketableSecurities','ShortTermInvestments','LongTermDebt','DebtInstrumentCarryingAmount',
@@ -21,15 +22,15 @@ POPULATIONS=frozenset(('CashAndCashEquivalentsAtCarryingValue','MarketableSecuri
     'OperatingLeaseLiability','OperatingLeaseLiabilityCurrent','OperatingLeaseLiabilityNoncurrent'))
 
 
-def monetary_rows(e,record):
+def monetary_rows(e,record,improved=False):
     bindings=docs.primary_bindings(record);tables=[];errors=[]
-    for ti,table in enumerate(docs.parse(record)):
+    for ti,table in enumerate(docs.parse(record,improved=improved)):
         rows=[]
         for ri,row in enumerate(table):
             caption=' '.join(c['text'] for c in row if not c['facts']).strip()
             for cell in row:
                 for item in cell['facts']:
-                    try:v=statement.bind_inline(e,record,ti,ri,cell,item,'instant',bindings)
+                    try:v=statement.bind_inline(e,record,ti,ri,cell,item,'instant',bindings,reviewed_display=improved)
                     except (h.InputError,ValueError) as exc:
                         context=e.contexts.get(item['attrs'].get('contextref'))
                         if context is None or (context.start is None and context.end==e.period.annual_end and not inspection.dimensions(context)):
@@ -99,11 +100,13 @@ def total(operands,field,role,scope):
         selection_rationale='Complete expressly defined partition, same date/unit, independent displayed evidence; no parent plus child sum.')
 
 
-def inspect(e,record):
+def inspect(e,record,version=VERSION):
+    if version not in (VERSION,IMPROVED_VERSION):raise h.InputError('Unknown bridge inspection version')
+    improved=version==IMPROVED_VERSION
     inputs=[];requirements=[];proofs=[]
-    if record is None:return (),dict(version=VERSION,status='UNRESOLVED',requirements=['Exact independent primary body/receipt unavailable'],populations=[])
+    if record is None:return (),dict(version=version,status='UNRESOLVED',requirements=['Exact independent primary body/receipt unavailable'],populations=[])
     docs.verify_primary(record,dict(cik=e.period.cik,accession=e.period.accession,annual_start=str(e.period.annual_start),annual_end=str(e.period.annual_end)))
-    tables,errors=monetary_rows(e,record);allrows=[r for t in tables for r in t]
+    tables,errors=monetary_rows(e,record,improved);allrows=[r for t in tables for r in t]
     reviewed=reviewed_current_scope(e,record)
     invalid={v['name'].split(':')[-1] for v in errors if v['name']}
     # An invalid competing nondimensional population cannot be dropped to make
@@ -151,6 +154,24 @@ def inspect(e,record):
             completeness=h.Completeness.PARTIAL,
             flags=v.flags+('borrowing_finance_lease_overlap_unknown','borrowing_basis_and_full_population_unproved'),
             unresolved_requirements=('Reported caption/tag alone does not establish carrying basis or complete borrowing scope; do not add finance leases.',)))
+    elif improved and borrowing:
+        # Newly bound competing captions cannot erase a previously supported
+        # partial observation or change its stable analyst target identity.
+        # Reuse v1 inspection solely for that physical-source identity join.
+        prior,_=inspect(e,record,VERSION)
+        prior=[v for v in prior if v.role=='reported_borrowing_total']
+        keys=lambda v:{(s.receipt.artifact.sha256,s.namespace,s.concept,s.context_id,s.occurrence_ordinal) for s in v.sources if s.occurrence_ordinal is not None}
+        groups={}
+        for row in borrowing:groups.setdefault((row['value'],row['concept'],row['precision']),[]).append(row)
+        for group in groups.values():
+            v=unique(group,group[0]['concept'],FAMILIES[1],'reported_borrowing_total',
+                'Competing independently displayed borrowing caption; carrying/principal basis and complete inclusion are unresolved.')
+            matches=[old for old in prior if keys(old)&keys(v)]
+            if len(matches)==1:v=replace(v,input_id=matches[0].input_id)
+            inputs.append(replace(v,quality=h.Quality.LIMITED,scope_status=h.Scope.UNKNOWN,completeness=h.Completeness.PARTIAL,
+                flags=v.flags+('borrowing_finance_lease_overlap_unknown','borrowing_basis_and_full_population_unproved','competing_borrowing_populations'),
+                unresolved_requirements=('Competing reported borrowing captions retained separately; no selection, carrying-basis equivalence, aggregation or lease addition approved.',)))
+        requirements.append('Competing borrowing captions retained, including prior physical-source targets; basis/inclusion unresolved, no total selected.')
     else:requirements.append('Complete reported borrowing total not established; long-term/current components are retained without assuming absent borrowing is zero.')
     for prefix,label in (('Finance','finance'),('Operating','operating')):
         role='reported_'+label+'_lease_liability'
@@ -169,13 +190,14 @@ def inspect(e,record):
                 inputs.extend((a,b,total((a,b),FAMILIES[1],role,
                     'Current/noncurrent recognized '+label+' lease partition in the same disclosure; no addition to debt.')))
             else:requirements.append('Recognized '+label+' lease total/unique complete partition unestablished; absence is not zero.')
-    shares,share_proof=inspect_shares(e,record)
+    share_record=record['filing_primary'] if improved and record.get('document_type') in ('EX-13','EX-13.1') else record
+    shares,share_proof=inspect_shares(e,share_record,improved=improved)
     inputs.extend(shares);proofs.append(share_proof)
     requirements.extend(share_proof['requirements'])
     # Invalid primary bindings remain visible. They cannot establish a population
     # and must be dispositioned alongside retained alternatives in the parent.
     if errors:requirements.append('Invalid independent primary bindings retained in proof; not accepted as component values.')
-    return tuple(inputs),dict(version=VERSION,status='PARTIAL' if requirements else 'REPORTED_POPULATIONS',
+    return tuple(inputs),dict(version=version,status='PARTIAL' if requirements else 'REPORTED_POPULATIONS',
         requirements=requirements,populations=proofs,invalid_bindings=errors,source=dict(url=record['url'],sha256=record['sha256'],path=record['path'],locator=record['locator']),
         candidates=[r for t in tables for r in t if r['concept'] in POPULATIONS],
         limitations=['Reported population selection is not financial sufficiency or an economic lease convention.',
@@ -183,7 +205,7 @@ def inspect(e,record):
                     'Issuer share completeness requires separate cover/date/class evidence.'])
 
 
-def inspect_shares(e,record):
+def inspect_shares(e,record,improved=False):
     """Accept only an independently labelled nondimensional cover-page total.
 
     Class observations stay in the original ledger; this interface never infers
@@ -194,7 +216,7 @@ def inspect_shares(e,record):
         def handle_starttag(self,tag,attrs):
             attrs=dict(attrs)
             if tag=='ix:nonfraction' and attrs.get('name')=='dei:EntityCommonStockSharesOutstanding':
-                self.active=dict(attrs=attrs,text=[],before=' '.join(self.parts)[-300:])
+                self.active=dict(attrs=attrs,text=[],before=' '.join(self.parts)[-300:],part_index=len(self.parts))
         def handle_data(self,text):
             self.parts.append(text)
             if self.active is not None:self.active['text'].append(text)
@@ -214,7 +236,11 @@ def inspect_shares(e,record):
             if ctx is None or ctx.start is not None or inspection.dimensions(ctx):continue
             if int(ctx.entity_identifier)!=e.period.cik or ctx.entity_identifier_scheme!='http://www.sec.gov/CIK':continue
             caption=item['before'].lower()
-            if not re.search(r'(?:shares of (?:the registrant.s )?common stock|common stock[^.]{0,160}(?:outstanding|as of))',caption) or re.search(r'\bclass [abc]\b',caption):
+            after=' '.join(parser.parts[item['part_index']:])[:240] if improved else ''
+            if improved:caption+=' '+after.lower()
+            pattern=r'(?:shares of (?:the registrant.s )?common stock|common stock[^.]{0,160}(?:outstanding|as of))'
+            if improved:pattern=r'(?:shares of (?:the registrant.s )?common stock|common stock.{0,160}(?:outstanding|as of)|shares outstanding of the registrant.s common stock)'
+            if not re.search(pattern,caption) or re.search(r'\bclass [abc]\b',caption):
                 reasons.append('Cover caption does not establish unclassed issuer common shares.');continue
             matches=[(f,i) for f,i in facts if f.context_id==attrs.get('contextref')]
             if not matches or len({(f.numeric_value,f.decimals) for f,_ in matches})!=1:reasons.append('Share values/precision conflicting.');continue
@@ -229,8 +255,10 @@ def inspect_shares(e,record):
                 statement.uncertainty(f.decimals)
                 sources=tuple(h.SourceReference('share-instance:'+str(i),e.period,e.instance,
                     docs.canonical(dict(unit_id=g.unit_ref)),g.namespace,g.concept,g.context_id,i,None,ctx.end,'shares',str(g.numeric_value),g.decimals,()) for g,i in matches)
+                location=dict(name=attrs['name'],context=attrs['contextref'],caption=item['before'],display=item['text'])
+                if improved:location['following_caption']=after
                 sources+=(h.SourceReference('share-primary:'+ctx.context_id if hasattr(ctx,'context_id') else 'share-primary:'+attrs['contextref'],
-                    e.period,docs.receipt(record,e.period),docs.canonical(dict(name=attrs['name'],context=attrs['contextref'],caption=item['before'],display=item['text'])),
+                    e.period,docs.receipt(record,e.period),docs.canonical(location),
                     '','','',None,None,ctx.end,'shares',str(f.numeric_value),f.decimals,()),)
                 values.append(h.InputValue('usable-bridge:issuer-common-shares:'+str(matches[0][1]),h.Field.SHARES,e.period,ctx.end,
                     f.numeric_value,'shares',1,1,f.decimals,'issuer_common_shares',h.Origin.REPORTED,h.Quality.SUPPORTED,
@@ -241,6 +269,11 @@ def inspect_shares(e,record):
             except (h.InputError,ValueError) as exc:reasons.append(str(exc))
     # Multiple independently displayed occurrences are not silently selected even
     # when their numbers match; retain source candidates for explicit review.
+    if improved and len(values)>1 and not reasons:
+        identities={(v.as_of,v.value,v.precision,tuple((s.namespace,s.concept,s.context_id,s.unit) for s in v.sources if s.occurrence_ordinal is not None)) for v in values}
+        if len(identities)==1:
+            refs={s.source_id:s for v in values for s in v.sources}
+            values=[replace(values[0],sources=tuple(refs.values()),selection_rationale='Confirming occurrences of the same explicitly unclassed date/context/unit population; no class summation.')]
     accepted=tuple(values) if len(values)==1 and not reasons else ()
     if not accepted and not reasons:reasons.append('Exact unclassed issuer-share cover population unavailable; absence is not zero.')
     if len(values)>1:reasons.append('Multiple cover populations require reviewed date/class coverage; no precedence.')

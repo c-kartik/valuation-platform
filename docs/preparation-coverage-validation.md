@@ -1,6 +1,26 @@
 # Retained preparation coverage and independent spot checks
 
-## Separate reported-population validation
+## Current bounded statement-repair coverage
+
+[Current repair/acceptance](statement-binding-repair-results.md) /
+[explicit user gates](phase1-delivery-acceptance-report.md). Exact denominators
+remain 199 selected / 210 target annuals, recent 121/126 and older 78/84 per family.
+CFO source checks 174/24/1/0 (supported/partial/failed/not assessed); the literal
+MCD difference remains failed, not a test defect to conceal. Independent sample
+replay remains separate at 119 CHECKED / zero FAILED / one NOT_VERIFIED.
+Liquidity 46; unclassed actual-date shares 162; partial borrowing 43 observations
+in 33 periods; finance lease totals 92, operating lease totals 186. No combined
+complete debt or economic share estimate. CFO older coverage meets 80% on both
+selected and target bases; recent CFO and all share/liquidity bands remain short.
+No target/shortfall acceptance or financial sufficiency follows technical tests.
+Final v2 technical validation passes: 1,117 full-suite tests in 7116.733s and
+44 focused tests, with exact ledger replay, legacy/v2 serialization, receipt
+rejection and original-artifact preservation. All 182 Python files and 87 JSON
+artifacts match the pre-run seal. Compileall, receipt/count/digest checks, local
+links and diff checks pass. Seal/log identifiers are in the acceptance report;
+earlier results below are historical, not validation of changed executable files.
+
+## Prior v1 reported-population validation
 
 [Current acceptance report](phase1-delivery-acceptance-report.md) and
 [separate scoped coverage](reported-population-delivery-summary.json) distinguish

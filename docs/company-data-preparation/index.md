@@ -1,6 +1,25 @@
 # Company data preparation register
 
-## Separate reported-population delivery — current mechanism
+## Current bounded statement-binding and shared repair
+
+[Exact v2 results](../statement-binding-repair-results.md) /
+[59-case disposition](../statement-repair-disposition.json) /
+[coverage](../reported-population-delivery-summary.json). 18/18 source bindings;
+CFO 174 supported, 24 partial, one failed, zero unassessed. Liquidity 46; actual-date
+unclassed shares 162; 43 partial borrowing observations across 33 periods; finance
+leases 92, operating leases 186. These are reported populations, not complete debt,
+unrestricted cash, diluted shares or financial sufficiency. All 2,487 prior
+population values/stable targets and original pilot/frozen parents are preserved.
+Every affected record links actual outcomes; no new whole-history financial review
+or support reclassification. Eleven history deficits and original blockers persist.
+Technical validation passes: 1,117 full-suite tests (7116.733s), 44 focused tests,
+exact ledger replay, legacy/v2 serialization, override/queue and preservation checks.
+The sealed 182 Python files/87 JSON artifacts are unchanged; compileall, receipts,
+counts, local links and diff checks pass. The prior v1 suite is historical only.
+Stop for explicit user decisions; Phase 1 remains open, financial sufficiency
+NOT_ASSESSED and no missing financial input is supplied by acknowledgment.
+
+## Prior v1 reported-population delivery mechanism
 
 [Contract/evidence/review](../reported-population-delivery.md) /
 [source ledger](../reported-population-delivery-ledger.json) /

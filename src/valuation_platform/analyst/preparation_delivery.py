@@ -13,7 +13,8 @@ from . import historical_inputs as h, prepared_assembly as a, statement_delivery
 from . import usable_bridge as bridge, cfo_statement_reconciliation as cfo
 from . import analyst_overrides as overrides, preparation_review as review
 
-SCHEMA='reported-population-delivery-v1'
+LEGACY_SCHEMA='reported-population-delivery-v1'
+SCHEMA='reported-population-delivery-v2'
 LEDGER='docs/reported-population-delivery-ledger.json'
 SUMMARY='docs/reported-population-delivery-summary.json'
 QUALIFIED=frozenset(('reported_current_liquidity','issuer_common_shares','independently_reconciled_reported_cfo'))
@@ -66,7 +67,9 @@ def reconciliation_inputs(result,period):
         flags=('unclassified_reconciliation_remainder','not_independent_validation','not_fcff_adjustment'),
         unresolved_requirements=('Remainder is unclassified, not a complete working-capital or approved economic adjustment.',),
         coverage_keys=('unclassified_remainder',))
-    return (*inputs,remainder)
+    children=tuple(replace(row_input(r,period),flags=('support_only_displayed_reconciliation','hierarchy_child_not_summed_with_parent','not_fcff_adjustment'))
+        for r in (population.get('hierarchy_proof') or {}).get('children',()))
+    return (*inputs,*children,remainder)
 
 
 @dataclass(frozen=True)
@@ -76,9 +79,12 @@ class AnnualDelivery:
     inputs:tuple[h.InputValue,...]
     bridge_json:str
     reconciliation_json:str
+    binding_receipts:tuple[h.Receipt,...]=()
 
     def __post_init__(self):
         h._typed(self.inputs,h.InputValue)
+        h._typed(self.binding_receipts,h.Receipt)
+        if any(r.artifact.accession!=self.period.accession for r in self.binding_receipts):raise h.InputError('Cross-accession statement binding receipt')
         if any(v.period!=self.period for v in self.inputs):raise h.InputError('Cross-period delivery')
         for text in (self.bridge_json,self.reconciliation_json):
             if a.canonical(json.loads(text))!=text:raise h.InputError('Canonical exact population proof required')
@@ -93,16 +99,17 @@ class AnnualDelivery:
                 if v.value!=expected:raise h.InputError('Exact formula arithmetic differs')
 
 
-def inspect(annual,record):
+def inspect(annual,record,legacy=False):
     e=a.cfo.prepare(annual)
     if record is None:
-        bp=dict(version=bridge.VERSION,status='UNRESOLVED',requirements=['Exact primary metadata/body/receipt unavailable; no inferred filename.'],populations=[])
-        cr=dict(version=cfo.VERSION,status='NOT_ASSESSED',reason=bp['requirements'][0],populations=[])
+        bp=dict(version=bridge.VERSION if legacy else bridge.IMPROVED_VERSION,status='UNRESOLVED',requirements=['Exact primary metadata/body/receipt unavailable; no inferred filename.'],populations=[])
+        cr=dict(version=cfo.VERSION if legacy else cfo.IMPROVED_VERSION,status='NOT_ASSESSED',reason=bp['requirements'][0],populations=[])
         return AnnualDelivery(annual.period,None,(),a.canonical(bp),a.canonical(cr))
-    values,bp=bridge.inspect(e,record)
-    cr=cfo.inspect_statement(e,record)
+    values,bp=bridge.inspect(e,record,bridge.VERSION if legacy else bridge.IMPROVED_VERSION)
+    cr=cfo.inspect_statement(e,record,cfo.VERSION if legacy else cfo.IMPROVED_VERSION)
+    receipts=tuple(docs.receipt(record[k],annual.period) for k in ('filing_primary','index_record')) if record.get('document_type') in ('EX-13','EX-13.1') else ()
     return AnnualDelivery(annual.period,docs.receipt(record,annual.period),
-        (*values,*reconciliation_inputs(cr,annual.period)),a.canonical(plain(bp)),a.canonical(plain(cr)))
+        (*values,*reconciliation_inputs(cr,annual.period)),a.canonical(plain(bp)),a.canonical(plain(cr)),receipts)
 
 
 def combine(parent,annuals):
@@ -114,7 +121,7 @@ def combine(parent,annuals):
         for v in extra.inputs:
             relevant_proof=proof['cfo'] if v.field in (h.Field.CFO,h.Field.CFO_RESIDUAL) else field_proof(proof['bridge'],v.field)
             bindings.append(dict(accession=v.period.accession,input_id=v.input_id,field=v.field.value,
-                channel=SCHEMA,category='derivation_operand' if v.input_id in operands else
+                channel=LEGACY_SCHEMA if json.loads(extra.reconciliation_json)['version']==cfo.VERSION else SCHEMA,category='derivation_operand' if v.input_id in operands else
                 'prepared_value' if v.role in QUALIFIED else 'support_observation',
                 population_proof=relevant_proof,usable_population=v.role not in ('displayed_adjustment','displayed_movement','starting_subtotal','displayed_cfo_subtotal','unclassified_cfo_reconciliation_remainder'),
                 field_complete=v.role in QUALIFIED))
@@ -141,9 +148,14 @@ class DeliveryHistory:
     annuals:tuple[AnnualDelivery,...]
     bundle:h.HistoryBundle
     bindings_json:str
+    serialization_schema:str=SCHEMA
 
     def __post_init__(self):
         h._typed(self.annuals,AnnualDelivery)
+        if self.serialization_schema not in (SCHEMA,LEGACY_SCHEMA):raise h.InputError('Unknown delivery history schema')
+        expected=(cfo.VERSION,bridge.VERSION) if self.serialization_schema==LEGACY_SCHEMA else (cfo.IMPROVED_VERSION,bridge.IMPROVED_VERSION)
+        if any((json.loads(v.reconciliation_json)['version'],json.loads(v.bridge_json)['version'])!=expected for v in self.annuals):raise h.InputError('Inspection/schema version mismatch; no implicit migration')
+        if self.serialization_schema==LEGACY_SCHEMA and any(v.binding_receipts for v in self.annuals):raise h.InputError('Legacy envelope cannot hide added binding receipts')
         if (self.bundle,self.bindings_json)!=combine(self.parent,self.annuals):raise h.InputError('Delivery differs from exact source assembly')
 
     @property
@@ -232,41 +244,55 @@ def deserialize_overlay(payload,prepared,store):
 
 def serialize(value):
     bodies={}
-    def annual(v):return dict(period=a.parent._encode(v.period,bodies),primary=a.parent._encode(v.primary,bodies),
-        inputs=a.parent._encode(v.inputs,bodies),bridge_json=v.bridge_json,reconciliation_json=v.reconciliation_json)
+    def annual(v):
+        out=dict(period=a.parent._encode(v.period,bodies),primary=a.parent._encode(v.primary,bodies),
+            inputs=a.parent._encode(v.inputs,bodies),bridge_json=v.bridge_json,reconciliation_json=v.reconciliation_json)
+        if value.serialization_schema==SCHEMA:out['binding_receipts']=a.parent._encode(v.binding_receipts,bodies)
+        return out
     extras=[annual(v) for v in value.annuals]
-    return a.canonical(dict(schema=SCHEMA,parent=a.serialize(value.parent),annuals=extras,original_bodies=bodies))
+    return a.canonical(dict(schema=value.serialization_schema,parent=a.serialize(value.parent),annuals=extras,original_bodies=bodies))
 
 
 def deserialize(payload):
     doc=overrides._json(payload)
-    if set(doc)!= {'schema','parent','annuals','original_bodies'} or doc['schema']!=SCHEMA:raise h.InputError('Closed delivery envelope required')
+    if set(doc)!= {'schema','parent','annuals','original_bodies'} or doc['schema'] not in (SCHEMA,LEGACY_SCHEMA):raise h.InputError('Closed delivery envelope required')
     parent=a.deserialize(doc['parent']);bodies={};used=set()
     for key,encoded in doc['original_bodies'].items():
         raw=h._decode(encoded)
         if type(raw) is not bytes or a.sha256(raw).hexdigest()!=key:raise h.InputError('Changed delivery body')
         bodies[key]=raw
-    annuals=[]
+    annuals=[];repaired=None
     for entry,original in zip(doc['annuals'],parent.bundle.annuals):
-        if set(entry)!= {'period','primary','inputs','bridge_json','reconciliation_json'}:raise h.InputError('Closed annual delivery required')
+        keys={'period','primary','inputs','bridge_json','reconciliation_json'}
+        if doc['schema']==SCHEMA:keys.add('binding_receipts')
+        if set(entry)!=keys:raise h.InputError('Closed annual delivery required')
         extra=AnnualDelivery(a.parent._decode(entry['period'],bodies,used),a.parent._decode(entry['primary'],bodies,used),
-            a.parent._decode(entry['inputs'],bodies,used),entry['bridge_json'],entry['reconciliation_json'])
+            a.parent._decode(entry['inputs'],bodies,used),entry['bridge_json'],entry['reconciliation_json'],
+            a.parent._decode(entry['binding_receipts'],bodies,used) if doc['schema']==SCHEMA else ())
         record=None if extra.primary is None else dict(json.loads(extra.bridge_json)['source'],body=extra.primary.artifact.body,
             retrieved_at_utc=extra.primary.retrieved_at_utc,http_status=extra.primary.http_status,
             retrieval_mode=extra.primary.retrieval_mode)
         # Recompute exact scope/selection from retained evidence, not trust a
         # serialized completeness assertion or changed derived expected number.
-        if inspect(original,record)!=extra:raise h.InputError('Delivery proof/source replay differs')
+        if record is not None and doc['schema']==SCHEMA and extra.binding_receipts:
+            if repaired is None:
+                scope,catalog,_=docs.scope();repaired=docs.repaired_records(scope,catalog)
+            bound=repaired.get(extra.period.accession)
+            if bound is not None and bound.get('document_type') in ('EX-13','EX-13.1'):
+                if (bound['url'],bound['sha256'])!=(record['url'],record['sha256']):raise h.InputError('Incorporated document serialization identity differs')
+                for role in ('filing_primary','index_record'):
+                    if bound[role]['sha256'] not in bodies:raise h.InputError('Required incorporated-document binding body missing')
+                record={**bound,**record}
+        if inspect(original,record,legacy=doc['schema']==LEGACY_SCHEMA)!=extra:raise h.InputError('Delivery proof/source replay differs')
         annuals.append(extra)
     if used!=set(bodies) or len(annuals)!=len(parent.bundle.annuals) or len(doc['annuals'])!=len(annuals):raise h.InputError('Exact body/annual accounting differs')
     bundle,bindings=combine(parent,tuple(annuals))
-    return DeliveryHistory(parent,tuple(annuals),bundle,bindings)
+    return DeliveryHistory(parent,tuple(annuals),bundle,bindings,doc['schema'])
 
 
 def build():
     prior,parents=a.build();scope,catalog,errors=docs.scope()
-    records={r['identity']['accession']:next(x for x in catalog if x['url']==r['url'])
-        for r in scope if r['status']=='RETAINED'}
+    records=docs.repaired_records(scope,catalog)
     histories={t:deliver(p,records) for t,p in parents.items()}
     rows=[]
     for t,p in histories.items():
