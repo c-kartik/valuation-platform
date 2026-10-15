@@ -1,4 +1,1958 @@
 {
+  "accepted_view": {
+    "approval_audit": {
+      "action": "ACCEPT_SCOPED_SELECTIONS",
+      "author": "User, explicit MSFT FY2025\u2013FY2026 treatment-set instruction",
+      "authority": "Current user instruction: Implement the user-approved treatment set below in the separate MSFT analyst-input view for FY2025\u20132026.",
+      "decisions": {
+        "borrowings": "Select named term-debt-plus-finance-lease subtotal only. Reject zero additional FY2026 short borrowing; source remains null/unknown, no complete-debt certification.",
+        "cash": "Select current financial balances less identified restrictions; unknown restrictions and operating reserves remain unknown, not unrestricted or excess cash.",
+        "investment": "Keep cash PP&E, capital creditors, noncash finance additions and combined acquisition/intangible spending separate; no complete reinvestment subtotal.",
+        "leases_da": "Operating leases service costs; finance leases asset financing. Preserve rounded D&A and the explicitly unproved finance-amortization-inclusion assumption; no additional ROU add-back.",
+        "operating_capital": "Select named-only partial operating capital; residual-caption estimate remains non-default. Neither is complete current NWC or cash delta NWC.",
+        "taxes_shares": "Accept named historical schedules with original dates, precision and scope; no future tax rate, award valuation or forecast dilution approval."
+      },
+      "financial_sufficiency": "NOT_ASSESSED",
+      "phase1_closed": false,
+      "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rationale": "Record the user-approved six-part treatment set; not financial sufficiency or Phase 2 authorization.",
+      "recorded_at_utc": "2026-10-15T16:56:09.400781+00:00",
+      "schema": "msft-treatment-acceptance-audit-v1",
+      "sequence": 1,
+      "sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+      "source_commit": "ce919800126d7a4ff35ffbe7e23e5b080db1c2b9",
+      "source_revision": "e40bcf3fc66be802a93dbf27b50c882b230b6e8b132cff3c3576e615b58ad328",
+      "valuation_consumption_approved": false,
+      "version": 1
+    },
+    "complete_operating_capital": false,
+    "decision_statuses": {
+      "borrowings": "accepted_for_stated_historical_preparation_scope",
+      "cash": "accepted_for_stated_historical_preparation_scope",
+      "investment": "accepted_for_stated_historical_preparation_scope",
+      "leases_da": "accepted_for_stated_historical_preparation_scope",
+      "operating_capital": "accepted_for_stated_historical_preparation_scope",
+      "taxes_shares": "accepted_for_stated_historical_preparation_scope"
+    },
+    "financial_sufficiency": "NOT_ASSESSED",
+    "investment_columns_review": "accepted_for_stated_historical_preparation_scope",
+    "movement_is_cash_delta_nwc": false,
+    "periods": [
+      {
+        "additional_deferred_tax_cfo": [],
+        "additional_short_borrowing": {
+          "null_reason": null,
+          "origin": "reported",
+          "value_usd": "0"
+        },
+        "award_valuation_approved": false,
+        "borrowings": {
+          "approval_sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+          "complete_debt": false,
+          "label": "Named term-debt-plus-finance-lease subtotal only",
+          "review": "accepted_for_stated_historical_preparation_scope",
+          "selected": {
+            "accepted": true,
+            "assumption": "Proposed GAAP-aligned historical classification: finance leases financing; operating leases service, outside this financing subtotal.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Named term-debt carrying plus recognized finance-lease financing subtotal; not an all-debt completeness assertion",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "term_debt_parent"
+              },
+              {
+                "coefficient": 1,
+                "operand": "finance_liability"
+              }
+            ],
+            "value_millions": "89323",
+            "value_usd": "89323000000"
+          },
+          "source_reference": "/decision_resolution/periods/0/schedules/term_and_finance_leases",
+          "source_status": "proposed_pending_user_approval"
+        },
+        "cash": {
+          "approval_sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+          "label": "Current financial balances less identified restrictions",
+          "operating_reserve": null,
+          "review": "accepted_for_stated_historical_preparation_scope",
+          "selected": {
+            "accepted": true,
+            "coefficients": [
+              1,
+              1
+            ],
+            "completeness": "complete_for_named_population",
+            "display_unit": "USD millions",
+            "display_value": "94565",
+            "evidence_label": "derived_calculation",
+            "formula": "LINEAR_COMPONENTS",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "current_liquidity",
+            "label": "Cash plus reported short-term investments",
+            "limitations": [
+              "Not unrestricted/excess cash; long-term/strategic/derivative populations excluded, not zero."
+            ],
+            "operands": [
+              "cash",
+              "current_investments"
+            ],
+            "origin": "derived",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6",
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Same current-assets panel; Note 4 separately allocates columns without overlap; reported parent independently confirms the sum.",
+            "role": "reported_observation",
+            "scope": "Reported current cash/investment parent only",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": null,
+                "as_of": "2025-06-30",
+                "operand": "cash"
+              },
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": null,
+                "as_of": "2025-06-30",
+                "operand": "current_investments"
+              }
+            ],
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "unit": "USD",
+            "value": "94565000000"
+          },
+          "source_reference": "/periods/0/inputs/45",
+          "source_status": "source_supported_selection_or_calculation",
+          "unknown_restrictions": null,
+          "unrestricted_or_excess_cash": false
+        },
+        "complete_reinvestment": false,
+        "estimated_nondefault_alternative": {
+          "adjacent_book_movement_usd": "20055000000",
+          "default": false,
+          "estimated": true,
+          "label": "Residual-caption partial operating-capital estimate (includes noncurrent balances)",
+          "schedule": {
+            "accepted": false,
+            "assumption": "Classify the explicitly displayed residual asset/accrual captions and AP after the identified PP&E exclusion as operating. This is a whole-caption analyst proxy, not proof of operating allocation or complete NWC; undisclosed components may be material. An unidentified matching facilitation obligation could require a further AP exclusion; it is not assigned zero.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Recommended expanded historical operating-capital proxy, including current/noncurrent ordinary operating balances; BOOK basis only",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "partial_nwc"
+              },
+              {
+                "coefficient": 1,
+                "operand": "residual_assets"
+              },
+              {
+                "coefficient": -1,
+                "operand": "residual_current_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "residual_long_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "noncurrent_contract"
+              }
+            ],
+            "value_millions": "-23427",
+            "value_usd": "-23427000000"
+          }
+        },
+        "expense_da": {
+          "additional_rou_addback": false,
+          "approval_sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+          "assumption": "Finance amortization already included; accepted assumption, NOT source-confirmed overlap.",
+          "label": "Original rounded expense D&A",
+          "review": "accepted_for_stated_historical_preparation_scope",
+          "selected": {
+            "accepted": true,
+            "coefficients": [
+              1,
+              1
+            ],
+            "completeness": "complete_for_named_population",
+            "display_unit": "USD millions",
+            "display_value": "28000",
+            "evidence_label": "derived_calculation",
+            "formula": "LINEAR_COMPONENTS",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "expense_da",
+            "label": "Rounded depreciation plus intangible amortization",
+            "limitations": [
+              "Rounded components; lease/EBIT/inventory timing compatibility remains unproved."
+            ],
+            "operands": [
+              "Depreciation",
+              "AmortizationOfIntangibleAssets"
+            ],
+            "origin": "derived",
+            "policy": "msft_annual_d_and_a_v1",
+            "precision": {
+              "operand_decimals": [
+                "-8",
+                "-8"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Notes 6 and 9 disjoint PP&E depreciation and finite-lived intangible amortization; finance-lease amortization is not added again.",
+            "role": "reported_observation",
+            "scope": "Existing MSFT expense-component policy; no joint timing certification",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "Depreciation"
+              },
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "AmortizationOfIntangibleAssets"
+              }
+            ],
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "unit": "USD",
+            "value": "28000000000"
+          },
+          "source_confirmed_overlap": false,
+          "source_reference": "/periods/0/inputs/41",
+          "source_status": "source_supported_selection_or_calculation"
+        },
+        "fiscal_year": 2025,
+        "forecast_dilution_approved": false,
+        "future_tax_rate_approved": false,
+        "identity": {
+          "accession": "0000950170-25-100235",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 789019,
+          "form": "10-K"
+        },
+        "investment_columns": [
+          {
+            "coefficients": [
+              -1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "-64551",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:PaymentsToAcquirePropertyPlantAndEquipment",
+            "label": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "PaymentsToAcquirePropertyPlantAndEquipment"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "cash_payment",
+            "scope": "Cash-flow additions to PP&E: investing outflow (display negative). Reported cash purchases, not accrual additions or total investment including leases/acquisitions. Existing direct Capex result unchanged.",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "PaymentsToAcquirePropertyPlantAndEquipment"
+              }
+            ],
+            "status": "existing_accepted_treatment",
+            "unit": "USD",
+            "value": "-64551000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "6900",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+            "label": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-8"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "book_balance",
+            "scope": "Note 6 PP&E: closing capital creditors, not annual cash outflow. Their 19800 movement explains the existing partial-NWC adjustment effect, not a complete accrual-to-cash bridge.",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": null,
+                "as_of": "2025-06-30",
+                "operand": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "6900000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "20511",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+            "label": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "noncash_addition",
+            "scope": "Note 13 noncash lease asset additions; not cash Capex or principal paid.",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "20511000000"
+          },
+          {
+            "coefficients": [
+              -1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "-5978",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+            "label": "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "cash_payment",
+            "scope": "Investing outflow magnitude; combined acquisition/intangible/other perimeter, **not separable acquisition cash**. Keep separate from cash PP&E; no residual allocation.",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "-5978000000"
+          }
+        ],
+        "lease_classification": {
+          "complete_lease_coverage": false,
+          "finance": "asset_financing",
+          "operating": "service_cost",
+          "review": "accepted_for_stated_historical_preparation_scope"
+        },
+        "operating_capital": {
+          "approval_sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+          "cash_delta_nwc_certified": false,
+          "complete_current_nwc": false,
+          "label": "Named-only partial operating capital (includes noncurrent balances)",
+          "review": "accepted_for_stated_historical_preparation_scope",
+          "selected": {
+            "accepted": true,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Disclosed operating balance expansion; still a named-only partial perimeter",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "partial_nwc"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_ar"
+              },
+              {
+                "coefficient": -1,
+                "operand": "noncurrent_contract"
+              }
+            ],
+            "value_millions": "-25755",
+            "value_usd": "-25755000000"
+          },
+          "source_reference": "/decision_resolution/periods/0/schedules/named_expansion",
+          "source_status": "source_supported_selection_or_calculation"
+        },
+        "original_current_only_partial_nwc": {
+          "coefficients": [
+            1,
+            1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "completeness": "partial",
+          "display_unit": "USD millions",
+          "display_value": "-28245",
+          "evidence_label": "derived_calculation",
+          "formula": "LINEAR_COMPONENTS",
+          "formula_version": "msft-draft-historical-v1",
+          "input_id": "partial_nwc",
+          "label": "Selected narrow current operating-capital subtotal",
+          "limitations": [
+            "Not complete Operating NWC or cash movement; acquisition/FX/reclassification and joint timing unbridged."
+          ],
+          "operands": [
+            "ar",
+            "inventory",
+            "ap",
+            "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+            "current_contract",
+            "compensation"
+          ],
+          "origin": "derived",
+          "policy": null,
+          "precision": {
+            "operand_decimals": [
+              "-6",
+              "-6",
+              "-6",
+              "-8",
+              "-6",
+              "-6"
+            ],
+            "treatment": "Reported rounded points; calculation does not improve source precision."
+          },
+          "rationale": "Face-statement captions are disjoint; AP subcomponent removed once. Explicit mixed-caption/noncurrent/tax/lease omissions remain.",
+          "role": "reported_observation",
+          "scope": "AR + inventory - (AP - PP&E-in-AP) - current contract liabilities - accrued compensation",
+          "source_dates": [
+            {
+              "annual_end": "2025-06-30",
+              "annual_start": null,
+              "as_of": "2025-06-30",
+              "operand": "ar"
+            },
+            {
+              "annual_end": "2025-06-30",
+              "annual_start": null,
+              "as_of": "2025-06-30",
+              "operand": "inventory"
+            },
+            {
+              "annual_end": "2025-06-30",
+              "annual_start": null,
+              "as_of": "2025-06-30",
+              "operand": "ap"
+            },
+            {
+              "annual_end": "2025-06-30",
+              "annual_start": null,
+              "as_of": "2025-06-30",
+              "operand": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable"
+            },
+            {
+              "annual_end": "2025-06-30",
+              "annual_start": null,
+              "as_of": "2025-06-30",
+              "operand": "current_contract"
+            },
+            {
+              "annual_end": "2025-06-30",
+              "annual_start": null,
+              "as_of": "2025-06-30",
+              "operand": "compensation"
+            }
+          ],
+          "status": "source_supported_selection_or_calculation",
+          "unit": "USD",
+          "value": "-28245000000"
+        },
+        "pretax_fact": {
+          "as_of": null,
+          "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "display_unit": "USD millions",
+          "display_value": "123627",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2025-instance",
+          "location": "Income statements and Note 11 Income Taxes",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 2,
+          "occurrences": [
+            {
+              "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+              "dimensions": [],
+              "end": "2025-06-30",
+              "ordinal": 566,
+              "precision": "-6",
+              "primary_display": "123,627",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_715e7121-ce93-4b88-ad0e-dcd5c3fc8385",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "123627000000",
+              "start": "2024-07-01",
+              "unit_id": "U_USD",
+              "xml_id": "F_715e7121-ce93-4b88-ad0e-dcd5c3fc8385"
+            },
+            {
+              "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+              "dimensions": [],
+              "end": "2025-06-30",
+              "ordinal": 1690,
+              "precision": "-6",
+              "primary_display": "123,627",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_0517d996-9a42-4bfb-9ea0-2c9cab345a36",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "123627000000",
+              "start": "2024-07-01",
+              "unit_id": "U_USD",
+              "xml_id": "F_0517d996-9a42-4bfb-9ea0-2c9cab345a36"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2025-primary",
+          "unit": "USD",
+          "value": "123627000000"
+        },
+        "shares_awards": [
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "shares",
+            "display_value": "7434000000",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "year_end_common",
+            "label": "Balance sheets and Note 15: fiscal-year-end common shares, rounded",
+            "limitations": [
+              "No complete equity bridge, debt convention, excess-cash classification or dilution approval."
+            ],
+            "operands": [
+              "year_end_common"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retained note/statement population selected as labelled, with no cross-basis substitution or economic netting.",
+            "role": "reported_observation",
+            "scope": "Balance sheets and Note 15: fiscal-year-end common shares, rounded",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": null,
+                "as_of": "2025-06-30",
+                "operand": "year_end_common"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "shares",
+            "value": "7434000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "complete_for_named_population",
+            "display_unit": "shares",
+            "display_value": "7433166379",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "cover_common",
+            "label": "Separately dated cover common shares",
+            "limitations": [
+              "Not weighted-average or diluted shares; no award count added."
+            ],
+            "operands": [
+              "cover_common"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "0"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain actual July date; use rounded June 30 observation for an annual-end snapshot, not this later count.",
+            "role": "reported_observation",
+            "scope": "Issuer common shares at the cover observation date",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": null,
+                "as_of": "2025-07-24",
+                "operand": "cover_common"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "shares",
+            "value": "7433166379"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "shares",
+            "display_value": "82000000",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "nonvested_awards",
+            "label": "Note 17: nonvested restricted stock award balance at annual end",
+            "limitations": [
+              "Not incremental dilution or a fair-value equity claim; outstanding option count not established."
+            ],
+            "operands": [
+              "nonvested_awards"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain explicit award-class/date population separately from common shares and current SBC expense.",
+            "role": "reported_observation",
+            "scope": "Note 17: nonvested restricted stock award balance at annual end",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": null,
+                "as_of": "2025-06-30",
+                "operand": "nonvested_awards"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "shares",
+            "value": "82000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "21600",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "unrecognized_award_cost",
+            "label": "Note 17: future unrecognized compensation, not current expense or award market value",
+            "limitations": [
+              "Not incremental dilution or a fair-value equity claim; outstanding option count not established."
+            ],
+            "operands": [
+              "unrecognized_award_cost"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-8"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain explicit award-class/date population separately from common shares and current SBC expense.",
+            "role": "reported_observation",
+            "scope": "Note 17: future unrecognized compensation, not current expense or award market value",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": null,
+                "as_of": "2025-06-30",
+                "operand": "unrecognized_award_cost"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "21600000000"
+          }
+        ],
+        "taxes": [
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "21795",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:IncomeTaxExpenseBenefit",
+            "label": "IncomeTaxExpenseBenefit",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "IncomeTaxExpenseBenefit"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "accrued_expense",
+            "scope": "Income statement / Note 11: duplicate confirming tax provision, count once; never infer cash tax from provision.",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "IncomeTaxExpenseBenefit"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "21795000000"
+          },
+          {
+            "coefficients": [
+              -1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "-28700",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:IncomeTaxesPaidNet",
+            "label": "IncomeTaxesPaidNet",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "IncomeTaxesPaidNet"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-8"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "cash_payment",
+            "scope": "Note 11 Income taxes: cash paid net of refunds, all disclosed jurisdictions; not tax expense, operating-only tax or marginal tax rate. FY2026 jurisdiction sum 6246 + 2917 + 6495 + 5530 = 21188.",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "IncomeTaxesPaidNet"
+              }
+            ],
+            "status": "existing_accepted_treatment",
+            "unit": "USD",
+            "value": "-28700000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "-7056",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:DeferredIncomeTaxExpenseBenefit",
+            "label": "DeferredIncomeTaxExpenseBenefit",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "DeferredIncomeTaxExpenseBenefit"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "reported_reconciliation_item",
+            "scope": "FY2025 cash-flow/Note 11 confirm the same value; FY2026 **note provision** differs from cash-flow adjustment below. Distinct semantic roles, not conflicting duplicates.",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "DeferredIncomeTaxExpenseBenefit"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "-7056000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "-38",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+            "label": "IncreaseDecreaseInAccruedIncomeTaxesPayable",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "IncreaseDecreaseInAccruedIncomeTaxesPayable"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "reported_reconciliation_item",
+            "scope": "Consolidated cash-flow reconciliation: IncreaseDecreaseInAccruedIncomeTaxesPayable. Reported item only, not reconstructed Operating NWC or a new adjustment.",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "IncreaseDecreaseInAccruedIncomeTaxesPayable"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "-38000000"
+          },
+          {
+            "coefficients": [
+              1,
+              1
+            ],
+            "completeness": "complete_for_named_population",
+            "display_unit": "pure",
+            "display_value": "0.1762964400980368366133611589701279",
+            "evidence_label": "derived_calculation",
+            "formula": "DIVIDE",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported_etr",
+            "label": "Historical reported accounting ETR",
+            "limitations": [
+              "No future operating-tax basis or rate approved."
+            ],
+            "operands": [
+              "IncomeTaxExpenseBenefit",
+              "pretax"
+            ],
+            "origin": "derived",
+            "policy": "annual_reported_effective_tax_rate_v1",
+            "precision": {
+              "operand_decimals": [
+                "-6",
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Existing annual_reported_effective_tax_rate_v1: positive denominator, no clamp or forecast interpretation.",
+            "role": "reported_observation",
+            "scope": "Consolidated reported provision / eligible positive continuing pretax income",
+            "source_dates": [
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "IncomeTaxExpenseBenefit"
+              },
+              {
+                "annual_end": "2025-06-30",
+                "annual_start": "2024-07-01",
+                "as_of": null,
+                "operand": "pretax"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "pure",
+            "value": "0.1762964400980368366133611589701279"
+          }
+        ],
+        "unknowns": [
+          "Complete residual operating/nonoperating allocations; matching facilitation obligations; cash acquisition/FX/noncash/reclassification bridge.",
+          "Income-recognized versus capitalized finance ROU amortization and exact inclusion in Note 6 depreciation; complete accrual investment/organic allocation.",
+          "All-interest overlap, capitalized expense/cash and gross/net basis; complete variable/short-term/nonlease cash.",
+          "FY2025 restrictions, FY2026 restricted-long asset-class allocation, operating cash reserve; pure NOL DTA and exhaustive preferred/NCI/pension quantities.",
+          "No extra short-debt source defect: CP zero affirmatively reported."
+        ]
+      },
+      {
+        "additional_deferred_tax_cfo": [
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "14189",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:DeferredIncomeTaxesAndTaxCredits",
+            "label": "DeferredIncomeTaxesAndTaxCredits",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "DeferredIncomeTaxesAndTaxCredits"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "reported_reconciliation_item",
+            "scope": "FY2026 cash-flow adjustment includes credits; do not replace with 14424 or infer an operating cash allocation from the 235 difference.",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "DeferredIncomeTaxesAndTaxCredits"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "14189000000"
+          }
+        ],
+        "additional_short_borrowing": {
+          "null_reason": "Ending additional short borrowing unavailable; zero proposal rejected.",
+          "origin": "unavailable",
+          "value_usd": null
+        },
+        "award_valuation_approved": false,
+        "borrowings": {
+          "approval_sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+          "complete_debt": false,
+          "label": "Named term-debt-plus-finance-lease subtotal only",
+          "review": "accepted_for_stated_historical_preparation_scope",
+          "selected": {
+            "accepted": true,
+            "assumption": "Proposed GAAP-aligned historical classification: finance leases financing; operating leases service, outside this financing subtotal.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Named term-debt carrying plus recognized finance-lease financing subtotal; not an all-debt completeness assertion",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "term_debt_parent"
+              },
+              {
+                "coefficient": 1,
+                "operand": "finance_liability"
+              }
+            ],
+            "value_millions": "106888",
+            "value_usd": "106888000000"
+          },
+          "source_reference": "/decision_resolution/periods/1/schedules/term_and_finance_leases",
+          "source_status": "proposed_pending_user_approval"
+        },
+        "cash": {
+          "approval_sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+          "label": "Current financial balances less identified restrictions",
+          "operating_reserve": null,
+          "review": "accepted_for_stated_historical_preparation_scope",
+          "selected": {
+            "accepted": true,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Current financial pool excluding specifically disclosed supplier restriction; not proven excess cash",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "cash"
+              },
+              {
+                "coefficient": 1,
+                "operand": "current_investments"
+              },
+              {
+                "coefficient": -1,
+                "operand": "restricted_current"
+              }
+            ],
+            "value_millions": "73043",
+            "value_usd": "73043000000"
+          },
+          "source_reference": "/decision_resolution/periods/1/schedules/known_restriction_current_pool",
+          "source_status": "source_supported_selection_or_calculation",
+          "unknown_restrictions": null,
+          "unrestricted_or_excess_cash": false
+        },
+        "complete_reinvestment": false,
+        "estimated_nondefault_alternative": {
+          "adjacent_book_movement_usd": "20055000000",
+          "default": false,
+          "estimated": true,
+          "label": "Residual-caption partial operating-capital estimate (includes noncurrent balances)",
+          "schedule": {
+            "accepted": false,
+            "assumption": "Classify the explicitly displayed residual asset/accrual captions and AP after the identified PP&E exclusion as operating. This is a whole-caption analyst proxy, not proof of operating allocation or complete NWC; undisclosed components may be material. An unidentified matching facilitation obligation could require a further AP exclusion; it is not assigned zero.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Recommended expanded historical operating-capital proxy, including current/noncurrent ordinary operating balances; BOOK basis only",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "partial_nwc"
+              },
+              {
+                "coefficient": 1,
+                "operand": "residual_assets"
+              },
+              {
+                "coefficient": -1,
+                "operand": "residual_current_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "residual_long_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "noncurrent_contract"
+              }
+            ],
+            "value_millions": "-3372",
+            "value_usd": "-3372000000"
+          }
+        },
+        "expense_da": {
+          "additional_rou_addback": false,
+          "approval_sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+          "assumption": "Finance amortization already included; accepted assumption, NOT source-confirmed overlap.",
+          "label": "Original rounded expense D&A",
+          "review": "accepted_for_stated_historical_preparation_scope",
+          "selected": {
+            "accepted": true,
+            "coefficients": [
+              1,
+              1
+            ],
+            "completeness": "complete_for_named_population",
+            "display_unit": "USD millions",
+            "display_value": "39000",
+            "evidence_label": "derived_calculation",
+            "formula": "LINEAR_COMPONENTS",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "expense_da",
+            "label": "Rounded depreciation plus intangible amortization",
+            "limitations": [
+              "Rounded components; lease/EBIT/inventory timing compatibility remains unproved."
+            ],
+            "operands": [
+              "Depreciation",
+              "AmortizationOfIntangibleAssets"
+            ],
+            "origin": "derived",
+            "policy": "msft_annual_d_and_a_v1",
+            "precision": {
+              "operand_decimals": [
+                "-8",
+                "-8"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Notes 6 and 9 disjoint PP&E depreciation and finite-lived intangible amortization; finance-lease amortization is not added again.",
+            "role": "reported_observation",
+            "scope": "Existing MSFT expense-component policy; no joint timing certification",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "Depreciation"
+              },
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "AmortizationOfIntangibleAssets"
+              }
+            ],
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "unit": "USD",
+            "value": "39000000000"
+          },
+          "source_confirmed_overlap": false,
+          "source_reference": "/periods/1/inputs/42",
+          "source_status": "source_supported_selection_or_calculation"
+        },
+        "fiscal_year": 2026,
+        "forecast_dilution_approved": false,
+        "future_tax_rate_approved": false,
+        "identity": {
+          "accession": "0001193125-26-323660",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 789019,
+          "form": "10-K"
+        },
+        "investment_columns": [
+          {
+            "coefficients": [
+              -1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "-115948",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:PaymentsToAcquirePropertyPlantAndEquipment",
+            "label": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "PaymentsToAcquirePropertyPlantAndEquipment"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "cash_payment",
+            "scope": "Cash-flow additions to PP&E: investing outflow (display negative). Reported cash purchases, not accrual additions or total investment including leases/acquisitions. Existing direct Capex result unchanged.",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "PaymentsToAcquirePropertyPlantAndEquipment"
+              }
+            ],
+            "status": "existing_accepted_treatment",
+            "unit": "USD",
+            "value": "-115948000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "26700",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+            "label": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-8"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "book_balance",
+            "scope": "Note 6 PP&E: closing capital creditors, not annual cash outflow. Their 19800 movement explains the existing partial-NWC adjustment effect, not a complete accrual-to-cash bridge.",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": null,
+                "as_of": "2026-06-30",
+                "operand": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "26700000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "24608",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+            "label": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "noncash_addition",
+            "scope": "Note 13 noncash lease asset additions; not cash Capex or principal paid.",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "24608000000"
+          },
+          {
+            "coefficients": [
+              -1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "-1743",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+            "label": "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "cash_payment",
+            "scope": "Investing outflow magnitude; combined acquisition/intangible/other perimeter, **not separable acquisition cash**. Keep separate from cash PP&E; no residual allocation.",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "-1743000000"
+          }
+        ],
+        "lease_classification": {
+          "complete_lease_coverage": false,
+          "finance": "asset_financing",
+          "operating": "service_cost",
+          "review": "accepted_for_stated_historical_preparation_scope"
+        },
+        "operating_capital": {
+          "approval_sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+          "cash_delta_nwc_certified": false,
+          "complete_current_nwc": false,
+          "label": "Named-only partial operating capital (includes noncurrent balances)",
+          "review": "accepted_for_stated_historical_preparation_scope",
+          "selected": {
+            "accepted": true,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Disclosed operating balance expansion; still a named-only partial perimeter",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "partial_nwc"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_ar"
+              },
+              {
+                "coefficient": -1,
+                "operand": "noncurrent_contract"
+              }
+            ],
+            "value_millions": "-18600",
+            "value_usd": "-18600000000"
+          },
+          "source_reference": "/decision_resolution/periods/1/schedules/named_expansion",
+          "source_status": "source_supported_selection_or_calculation"
+        },
+        "original_current_only_partial_nwc": {
+          "coefficients": [
+            1,
+            1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "completeness": "partial",
+          "display_unit": "USD millions",
+          "display_value": "-21353",
+          "evidence_label": "derived_calculation",
+          "formula": "LINEAR_COMPONENTS",
+          "formula_version": "msft-draft-historical-v1",
+          "input_id": "partial_nwc",
+          "label": "Selected narrow current operating-capital subtotal",
+          "limitations": [
+            "Not complete Operating NWC or cash movement; acquisition/FX/reclassification and joint timing unbridged."
+          ],
+          "operands": [
+            "ar",
+            "inventory",
+            "ap",
+            "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable",
+            "current_contract",
+            "compensation"
+          ],
+          "origin": "derived",
+          "policy": null,
+          "precision": {
+            "operand_decimals": [
+              "-6",
+              "-6",
+              "-6",
+              "-8",
+              "-6",
+              "-6"
+            ],
+            "treatment": "Reported rounded points; calculation does not improve source precision."
+          },
+          "rationale": "Face-statement captions are disjoint; AP subcomponent removed once. Explicit mixed-caption/noncurrent/tax/lease omissions remain.",
+          "role": "reported_observation",
+          "scope": "AR + inventory - (AP - PP&E-in-AP) - current contract liabilities - accrued compensation",
+          "source_dates": [
+            {
+              "annual_end": "2026-06-30",
+              "annual_start": null,
+              "as_of": "2026-06-30",
+              "operand": "ar"
+            },
+            {
+              "annual_end": "2026-06-30",
+              "annual_start": null,
+              "as_of": "2026-06-30",
+              "operand": "inventory"
+            },
+            {
+              "annual_end": "2026-06-30",
+              "annual_start": null,
+              "as_of": "2026-06-30",
+              "operand": "ap"
+            },
+            {
+              "annual_end": "2026-06-30",
+              "annual_start": null,
+              "as_of": "2026-06-30",
+              "operand": "PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable"
+            },
+            {
+              "annual_end": "2026-06-30",
+              "annual_start": null,
+              "as_of": "2026-06-30",
+              "operand": "current_contract"
+            },
+            {
+              "annual_end": "2026-06-30",
+              "annual_start": null,
+              "as_of": "2026-06-30",
+              "operand": "compensation"
+            }
+          ],
+          "status": "source_supported_selection_or_calculation",
+          "unit": "USD",
+          "value": "-21353000000"
+        },
+        "pretax_fact": {
+          "as_of": null,
+          "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "display_unit": "USD millions",
+          "display_value": "165934",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "Income statements and Note 11 Income Taxes",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 2,
+          "occurrences": [
+            {
+              "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 573,
+              "precision": "-6",
+              "primary_display": "165,934",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_e408b80f-4cfc-4412-bd75-423e2ebd09d7",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "165934000000",
+              "start": "2025-07-01",
+              "unit_id": "U_USD",
+              "xml_id": "F_e408b80f-4cfc-4412-bd75-423e2ebd09d7"
+            },
+            {
+              "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 1698,
+              "precision": "-6",
+              "primary_display": "165,934",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_a26fffce-f78c-4f47-8dfe-4c156f799f83",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "165934000000",
+              "start": "2025-07-01",
+              "unit_id": "U_USD",
+              "xml_id": "F_a26fffce-f78c-4f47-8dfe-4c156f799f83"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "165934000000"
+        },
+        "shares_awards": [
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "shares",
+            "display_value": "7427000000",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "year_end_common",
+            "label": "Balance sheets and Note 15: fiscal-year-end common shares, rounded",
+            "limitations": [
+              "No complete equity bridge, debt convention, excess-cash classification or dilution approval."
+            ],
+            "operands": [
+              "year_end_common"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retained note/statement population selected as labelled, with no cross-basis substitution or economic netting.",
+            "role": "reported_observation",
+            "scope": "Balance sheets and Note 15: fiscal-year-end common shares, rounded",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": null,
+                "as_of": "2026-06-30",
+                "operand": "year_end_common"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "shares",
+            "value": "7427000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "complete_for_named_population",
+            "display_unit": "shares",
+            "display_value": "7425545491",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "cover_common",
+            "label": "Separately dated cover common shares",
+            "limitations": [
+              "Not weighted-average or diluted shares; no award count added."
+            ],
+            "operands": [
+              "cover_common"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "0"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain actual July date; use rounded June 30 observation for an annual-end snapshot, not this later count.",
+            "role": "reported_observation",
+            "scope": "Issuer common shares at the cover observation date",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": null,
+                "as_of": "2026-07-23",
+                "operand": "cover_common"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "shares",
+            "value": "7425545491"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "shares",
+            "display_value": "78000000",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "nonvested_awards",
+            "label": "Note 17: nonvested restricted stock award balance at annual end",
+            "limitations": [
+              "Not incremental dilution or a fair-value equity claim; outstanding option count not established."
+            ],
+            "operands": [
+              "nonvested_awards"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain explicit award-class/date population separately from common shares and current SBC expense.",
+            "role": "reported_observation",
+            "scope": "Note 17: nonvested restricted stock award balance at annual end",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": null,
+                "as_of": "2026-06-30",
+                "operand": "nonvested_awards"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "shares",
+            "value": "78000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "24800",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "unrecognized_award_cost",
+            "label": "Note 17: future unrecognized compensation, not current expense or award market value",
+            "limitations": [
+              "Not incremental dilution or a fair-value equity claim; outstanding option count not established."
+            ],
+            "operands": [
+              "unrecognized_award_cost"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-8"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain explicit award-class/date population separately from common shares and current SBC expense.",
+            "role": "reported_observation",
+            "scope": "Note 17: future unrecognized compensation, not current expense or award market value",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": null,
+                "as_of": "2026-06-30",
+                "operand": "unrecognized_award_cost"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "24800000000"
+          }
+        ],
+        "taxes": [
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "32185",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:IncomeTaxExpenseBenefit",
+            "label": "IncomeTaxExpenseBenefit",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "IncomeTaxExpenseBenefit"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "accrued_expense",
+            "scope": "Income statement / Note 11: duplicate confirming tax provision, count once; never infer cash tax from provision.",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "IncomeTaxExpenseBenefit"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "32185000000"
+          },
+          {
+            "coefficients": [
+              -1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "-21188",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:IncomeTaxesPaidNet",
+            "label": "IncomeTaxesPaidNet",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "IncomeTaxesPaidNet"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "cash_payment",
+            "scope": "Note 11 Income taxes: cash paid net of refunds, all disclosed jurisdictions; not tax expense, operating-only tax or marginal tax rate. FY2026 jurisdiction sum 6246 + 2917 + 6495 + 5530 = 21188.",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "IncomeTaxesPaidNet"
+              }
+            ],
+            "status": "existing_accepted_treatment",
+            "unit": "USD",
+            "value": "-21188000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "14424",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:DeferredIncomeTaxExpenseBenefit",
+            "label": "DeferredIncomeTaxExpenseBenefit",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "DeferredIncomeTaxExpenseBenefit"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "accrued_expense",
+            "scope": "FY2025 cash-flow/Note 11 confirm the same value; FY2026 **note provision** differs from cash-flow adjustment below. Distinct semantic roles, not conflicting duplicates.",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "DeferredIncomeTaxExpenseBenefit"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "14424000000"
+          },
+          {
+            "coefficients": [
+              1
+            ],
+            "completeness": "reported_population_only",
+            "display_unit": "USD millions",
+            "display_value": "-1875",
+            "evidence_label": "fact_source_reported",
+            "formula": "SELECT",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported:IncreaseDecreaseInAccruedIncomeTaxesPayable",
+            "label": "IncreaseDecreaseInAccruedIncomeTaxesPayable",
+            "limitations": [
+              "Original MSFT accepted-input and interest-sidecar limitations remain."
+            ],
+            "operands": [
+              "IncreaseDecreaseInAccruedIncomeTaxesPayable"
+            ],
+            "origin": "reported",
+            "policy": null,
+            "precision": {
+              "operand_decimals": [
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Retain exact independently reviewed input and its distinct role; no economic adjustment.",
+            "role": "reported_reconciliation_item",
+            "scope": "Consolidated cash-flow reconciliation: IncreaseDecreaseInAccruedIncomeTaxesPayable. Reported item only, not reconstructed Operating NWC or a new adjustment.",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "IncreaseDecreaseInAccruedIncomeTaxesPayable"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "USD",
+            "value": "-1875000000"
+          },
+          {
+            "coefficients": [
+              1,
+              1
+            ],
+            "completeness": "complete_for_named_population",
+            "display_unit": "pure",
+            "display_value": "0.1939626598527125242566321549531742",
+            "evidence_label": "derived_calculation",
+            "formula": "DIVIDE",
+            "formula_version": "msft-draft-historical-v1",
+            "input_id": "reported_etr",
+            "label": "Historical reported accounting ETR",
+            "limitations": [
+              "No future operating-tax basis or rate approved."
+            ],
+            "operands": [
+              "IncomeTaxExpenseBenefit",
+              "pretax"
+            ],
+            "origin": "derived",
+            "policy": "annual_reported_effective_tax_rate_v1",
+            "precision": {
+              "operand_decimals": [
+                "-6",
+                "-6"
+              ],
+              "treatment": "Reported rounded points; calculation does not improve source precision."
+            },
+            "rationale": "Existing annual_reported_effective_tax_rate_v1: positive denominator, no clamp or forecast interpretation.",
+            "role": "reported_observation",
+            "scope": "Consolidated reported provision / eligible positive continuing pretax income",
+            "source_dates": [
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "IncomeTaxExpenseBenefit"
+              },
+              {
+                "annual_end": "2026-06-30",
+                "annual_start": "2025-07-01",
+                "as_of": null,
+                "operand": "pretax"
+              }
+            ],
+            "status": "source_supported_selection_or_calculation",
+            "unit": "pure",
+            "value": "0.1939626598527125242566321549531742"
+          }
+        ],
+        "unknowns": [
+          "Complete residual operating/nonoperating allocations; matching facilitation obligations; cash acquisition/FX/noncash/reclassification bridge.",
+          "Income-recognized versus capitalized finance ROU amortization and exact inclusion in Note 6 depreciation; complete accrual investment/organic allocation.",
+          "All-interest overlap, capitalized expense/cash and gross/net basis; complete variable/short-term/nonlease cash.",
+          "FY2025 restrictions, FY2026 restricted-long asset-class allocation, operating cash reserve; pure NOL DTA and exhaustive preferred/NCI/pension quantities.",
+          "FY2026 ending short-debt source amount (analyst zero proposal is not a reported zero)."
+        ]
+      }
+    ],
+    "phase1_closed": false,
+    "prior_proposals_retained": true,
+    "schema": "msft-accepted-historical-view-v1",
+    "selected_adjacent_book_movement_usd": "7155000000",
+    "short_debt_zero_proposal_status": "REJECTED_NOT_SELECTED",
+    "stopping_condition": "Stop after MSFT integration. No automatic issuer work or research.",
+    "tax_share_schedules_review": "accepted_for_stated_historical_preparation_scope",
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
   "adjacent_book_movement": {
     "capital_creditor_exclusion_effect_usd": "19800000000",
     "completeness": "partial",

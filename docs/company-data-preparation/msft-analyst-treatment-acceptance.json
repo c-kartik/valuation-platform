@@ -1,0 +1,25 @@
+{
+  "action": "ACCEPT_SCOPED_SELECTIONS",
+  "author": "User, explicit MSFT FY2025\u2013FY2026 treatment-set instruction",
+  "authority": "Current user instruction: Implement the user-approved treatment set below in the separate MSFT analyst-input view for FY2025\u20132026.",
+  "decisions": {
+    "borrowings": "Select named term-debt-plus-finance-lease subtotal only. Reject zero additional FY2026 short borrowing; source remains null/unknown, no complete-debt certification.",
+    "cash": "Select current financial balances less identified restrictions; unknown restrictions and operating reserves remain unknown, not unrestricted or excess cash.",
+    "investment": "Keep cash PP&E, capital creditors, noncash finance additions and combined acquisition/intangible spending separate; no complete reinvestment subtotal.",
+    "leases_da": "Operating leases service costs; finance leases asset financing. Preserve rounded D&A and the explicitly unproved finance-amortization-inclusion assumption; no additional ROU add-back.",
+    "operating_capital": "Select named-only partial operating capital; residual-caption estimate remains non-default. Neither is complete current NWC or cash delta NWC.",
+    "taxes_shares": "Accept named historical schedules with original dates, precision and scope; no future tax rate, award valuation or forecast dilution approval."
+  },
+  "financial_sufficiency": "NOT_ASSESSED",
+  "phase1_closed": false,
+  "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+  "rationale": "Record the user-approved six-part treatment set; not financial sufficiency or Phase 2 authorization.",
+  "recorded_at_utc": "2026-10-15T16:56:09.400781+00:00",
+  "schema": "msft-treatment-acceptance-audit-v1",
+  "sequence": 1,
+  "sha256": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+  "source_commit": "ce919800126d7a4ff35ffbe7e23e5b080db1c2b9",
+  "source_revision": "e40bcf3fc66be802a93dbf27b50c882b230b6e8b132cff3c3576e615b58ad328",
+  "valuation_consumption_approved": false,
+  "version": 1
+}

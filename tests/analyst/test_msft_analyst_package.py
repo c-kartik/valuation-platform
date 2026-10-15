@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 import unittest
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -21,7 +22,7 @@ class MSFTAnalystPackageTests(unittest.TestCase):
         cls.result=package.resolve_decisions(cls.filings,package.finish(cls.filings))
 
     def test_exact_package_replay_and_registered_identity(self):
-        self.assertEqual(self.result,json.loads((ROOT/package.OUTPUT).read_text()))
+        self.assertTrue(package.accepted_view(self.result)==json.loads((ROOT/package.OUTPUT).read_text()),'Exact accepted package replay differs')
         self.assertEqual([p['identity']['accession'] for p in self.result['periods']],
             ['0000950170-25-100235','0001193125-26-323660'])
         self.assertEqual([p['identity']['annual_start'] for p in self.result['periods']],['2024-07-01','2025-07-01'])
@@ -249,6 +250,87 @@ class MSFTAnalystPackageTests(unittest.TestCase):
     def test_deterministic_json_round_trip(self):
         text=json.dumps(self.result,sort_keys=True,indent=2)+'\n'
         self.assertEqual(json.dumps(json.loads(text),sort_keys=True,indent=2)+'\n',text)
+
+    def test_accepted_defaults_nondefault_estimate_and_original_proposals(self):
+        result=package.accepted_view(self.result);view=result.pop('accepted_view')
+        self.assertEqual(result,self.result)
+        prior=json.loads(subprocess.check_output(['git','show',package.ACCEPTANCE_BASIS+':'+package.OUTPUT],cwd=ROOT))
+        self.assertTrue(result==prior,'Complete prior proposal/source payload changed')
+        self.assertEqual(view['selected_adjacent_book_movement_usd'],'7155000000')
+        self.assertFalse(view['movement_is_cash_delta_nwc'])
+        for row,capital,cash,debt in zip(view['periods'],(-25755,-18600),(94565,73043),(89323,106888)):
+            for key,value in [('operating_capital',capital),('cash',cash),('borrowings',debt)]:
+                self.assertEqual(Decimal(row[key]['selected'].get('value_usd',row[key]['selected'].get('value')))/1000000,value)
+                self.assertEqual(row[key]['selected']['status'],package.APPROVED_SCOPE)
+                cursor=self.result
+                for part in row[key]['source_reference'].strip('/').split('/'):
+                    cursor=cursor[int(part)] if isinstance(cursor,list) else cursor[part]
+                restored=copy.deepcopy(row[key]['selected']);restored['status']=row[key]['source_status']
+                if 'accepted' in cursor:restored['accepted']=cursor['accepted']
+                else:restored.pop('accepted')
+                self.assertEqual(restored,cursor)
+            self.assertIn('operating capital',row['operating_capital']['label'])
+            self.assertFalse(row['estimated_nondefault_alternative']['default'])
+            self.assertTrue(row['estimated_nondefault_alternative']['estimated'])
+            self.assertFalse(row['operating_capital']['complete_current_nwc'])
+            self.assertFalse(row['borrowings']['complete_debt'])
+            self.assertFalse(row['cash']['unrestricted_or_excess_cash'])
+            self.assertIsNone(row['cash']['unknown_restrictions'])
+        self.assertIsNone(view['periods'][1]['additional_short_borrowing']['value_usd'])
+        self.assertEqual(view['short_debt_zero_proposal_status'],'REJECTED_NOT_SELECTED')
+        view['periods'][0]['taxes'][0]['value']='synthetic mutation'
+        self.assertTrue(self.result==prior,'View must not alias or mutate original source/proposal data')
+
+    def test_accepted_precision_dates_assumption_and_separate_investments(self):
+        for row,original in zip(package.accepted_view(self.result)['accepted_view']['periods'],self.result['periods']):
+            entries={e['input_id']:e for e in original['inputs']}
+            self.assertEqual(row['expense_da']['selected']['precision'],entries['expense_da']['precision'])
+            self.assertFalse(row['expense_da']['source_confirmed_overlap'])
+            self.assertFalse(row['expense_da']['additional_rou_addback'])
+            self.assertEqual(row['lease_classification']['finance'],'asset_financing')
+            self.assertEqual(row['lease_classification']['operating'],'service_cost')
+            self.assertEqual(len(row['investment_columns']),4)
+            self.assertFalse(row['complete_reinvestment'])
+            self.assertEqual(row['shares_awards'],[entries[k] for k in ('year_end_common','cover_common','nonvested_awards','unrecognized_award_cost')])
+            self.assertEqual(row['pretax_fact'],original['facts']['pretax'])
+            self.assertFalse(row['future_tax_rate_approved'])
+            if row['fiscal_year']==2026:
+                self.assertEqual(row['additional_deferred_tax_cfo'],[entries['reported:DeferredIncomeTaxesAndTaxCredits']])
+
+    def test_persisted_audit_restart_roundtrip_and_stale_evidence_rejection(self):
+        path=ROOT/package.ACCEPTANCE_PATH;body=path.read_text()
+        audit=json.loads(body)
+        self.assertEqual(audit['source_commit'],package.ACCEPTANCE_BASIS)
+        self.assertEqual(audit['source_revision'],package.digest(package.relevant(self.result)))
+        with tempfile.TemporaryDirectory() as folder:
+            saved=Path(folder)/'acceptance.json';saved.write_text(body)
+            self.assertEqual(package.accepted_view(self.result,saved),package.accepted_view(self.result,path))
+            self.assertEqual(json.loads(json.dumps(package.accepted_view(self.result,saved))),package.accepted_view(self.result,saved))
+            for location,key in [('facts','ar'),('facts','commercial_paper')]:
+                changed=copy.deepcopy(self.result)
+                changed['periods'][0][location][key]['value']='123'
+                with self.assertRaisesRegex(ValueError,'Stale MSFT acceptance'):package.accepted_view(changed,saved)
+            for mutation in ('precision','scope','evidence','alternative'):
+                changed=copy.deepcopy(self.result)
+                changed['decision_resolution']['periods'][0][mutation]='changed'
+                with self.assertRaisesRegex(ValueError,'Stale MSFT acceptance'):package.accepted_view(changed,saved)
+            audit['decisions']['borrowings']='Select zero'
+            saved.write_text(json.dumps(audit))
+            with self.assertRaisesRegex(ValueError,'Changed or malformed'):package.accepted_view(self.result,saved)
+            audit['sha256']=package.digest({k:v for k,v in audit.items() if k!='sha256'})
+            saved.write_text(json.dumps(audit))
+            with self.assertRaisesRegex(ValueError,'Unregistered'):package.accepted_view(self.result,saved)
+        self.assertEqual(path.read_text(),body)
+
+    def test_missing_audit_cannot_automatically_accept_or_fill_unknown(self):
+        with tempfile.TemporaryDirectory() as folder:
+            with self.assertRaises(FileNotFoundError):package.accepted_view(self.result,Path(folder)/'missing.json')
+        result=package.accepted_view(self.result)
+        self.assertFalse(result['accepted_view']['valuation_consumption_approved'])
+        self.assertFalse(result['accepted_view']['phase1_closed'])
+        self.assertEqual(result['accepted_view']['financial_sufficiency'],'NOT_ASSESSED')
+        self.assertEqual(result['accepted_view']['decision_statuses'],{k:package.APPROVED_SCOPE for k in package.USER_DECISIONS})
+        self.assertIsNone(result['accepted_view']['periods'][1]['additional_short_borrowing']['value_usd'])
 
 
 if __name__=='__main__':unittest.main()

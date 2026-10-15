@@ -1,5 +1,36 @@
 # MSFT FY2025–2026 historical-input acceptance checklist
 
+## Subsequent scope-specific approval — separate analyst view
+
+The user's six-part MSFT instruction is now implemented in the
+[existing package's accepted view](company-data-preparation/MSFT-analyst-input-package.md)
+with an [immutable revision-bound audit](company-data-preparation/msft-analyst-treatment-acceptance.json).
+Actual recording UTC: **2026-10-15T16:56:09.400781+00:00**; source revision is the
+two-period proposal at `ce919800126d7a4ff35ffbe7e23e5b080db1c2b9`.
+
+Named-only partial **operating capital**, including noncurrent balances, is
+selected at −25,755 / −18,600 USDm, book movement +7,155. The residual estimate
+is non-default; original current-only NWC and all source facts remain unchanged.
+Operating leases as service costs / finance leases as asset financing is now
+accepted for historical classification, superseding the former in-principle
+cash-service direction, not changing the restricted cash dataset. D&A stays
+28,000 / 39,000 with finance-amortization inclusion explicitly an assumption,
+not verified overlap. No extra ROU add-back or complete coverage assertion.
+
+Cash selection is **current financial balances less identified restrictions**
+94,565 / 73,043, not unrestricted/excess cash. Investment columns remain separate.
+Named term+finance subtotal 89,323 / 106,888 is not total debt; FY2026 additional
+short borrowing stays null and its zero proposal is rejected but preserved.
+Named tax/share schedules retain dates, precision and scope. No future rate,
+award valuation, dilution, FCFF or valuation-consumption approval follows.
+Financial sufficiency is NOT_ASSESSED; original blockers/timing gates remain.
+
+The earlier acceptance record below is preserved as history; its restrictions
+continue except for the explicitly superseded historical lease-classification
+direction. This does not close Phase 1 or initiate another company.
+
+## Original reported-input acceptance history
+
 2026-10-12; documentation revision 1. Acceptance authority: the user's explicit
 milestone instructions, not an inferred policy approval. This records analyst
 choices alongside unchanged SEC-reported inputs; it is not a schema, sidecar,

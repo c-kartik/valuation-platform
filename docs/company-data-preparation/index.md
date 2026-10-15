@@ -1,6 +1,22 @@
 # Company data preparation register
 
-## Separate MSFT analyst draft — two periods only
+## MSFT scope-specific accepted analyst view
+
+The [existing MSFT package](MSFT-analyst-input-package.md) and
+[JSON](msft-analyst-input-package.json) add a revision-bound accepted selection
+view with [user-authority audit](msft-analyst-treatment-acceptance.json).
+Named-only partial operating capital is selected, broader estimate non-default;
+leases/D&A classification, separate investments, identified-restriction cash
+balances, named debt+finance subtotal and named tax/share histories follow the
+explicit user choices. FY2026 short-debt zero is rejected: source remains null.
+No complete NWC/debt/reinvestment, excess cash or financial sufficiency claim.
+Original proposals/facts/pilots/frozen outputs and both preparation statuses
+remain; no automatic extension to other periods/issuers. Validation: 21 focused
+package/integration and 54 preservation tests, exact replay, stale audit checks,
+compileall, 445 affected local links and diff checks pass. Stop after this MSFT
+integration, not another company or Phase 2.
+
+## Prior separate MSFT analyst draft — two periods only
 
 Revision 2 of the same package now resolves the six former deferrals into concrete
 proposed NWC, lease/investment, financial-asset/debt/claims and tax/share treatments.

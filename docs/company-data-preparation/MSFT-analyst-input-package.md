@@ -1,6 +1,52 @@
-# MSFT — draft analyst historical-input package, FY2025–FY2026
+# MSFT — analyst historical-input package, FY2025–FY2026
 
-## Revision 2 — concrete analyst recommendations, not acceptance
+## Accepted separate view — scope-specific user decision
+
+The user's explicit six-part instruction is recorded in the immutable
+[acceptance audit](msft-analyst-treatment-acceptance.json), recorded at
+**2026-10-15T16:56:09.400781+00:00** (recording time, not an invented source or
+earlier approval timestamp). It binds the exact revision at
+`ce919800126d7a4ff35ffbe7e23e5b080db1c2b9`. JSON `accepted_view` version 1
+is the effective separate MSFT selection overlay; all original sections,
+calculations, proposals and prior approval sheets below remain history.
+
+| Accepted default, USD millions FY2025 / FY2026 | Treatment and remaining limit |
+| --- | --- |
+| **Named-only partial operating capital −25,755 / −18,600; adjacent book movement +7,155** | Includes noncurrent balances: not complete current NWC, complete operating capital or cash ΔNWC. Original current-only partial NWC −28,245 / −21,353 remains separately retained, movement +6,892. Residual-caption estimate −23,427 / −3,372, movement +20,055, is explicitly estimated and **non-default**. |
+| **Operating leases service; finance leases asset financing; D&A 28,000 / 39,000** | Finance amortization already being included is an **accepted assumption**, not source-confirmed expense overlap. Rounded precision remains; no extra ROU add-back or complete lease/investment coverage. This supersedes the earlier in-principle cash-service direction only for these historical classifications. |
+| **Separate investment columns** | Cash PP&E 64,551 / 115,948; capital creditors 6,900 / 26,700; noncash finance additions 20,511 / 24,608; combined acquisition/intangible purchases 5,978 / 1,743. No reinvestment subtotal or adjustment equation. Source cash outflow signs remain unchanged. |
+| **Current financial balances less identified restrictions: 94,565 / 73,043** | FY2026 subtracts known current restriction 3,800. Unknown further restrictions and operating reserves remain unknown; neither unrestricted nor excess cash. The earlier availability assumption is not selected or approved as completeness. |
+| **Named term-debt-plus-finance-lease subtotal: 89,323 / 106,888** | Not complete debt. FY2026 additional short borrowing remains **null/unknown**. The zero proposal is **rejected, not selected**, but retained verbatim as history. |
+| **Named historical taxes and shares** | Existing source dates, precision, scope, provision/cash/deferred distinctions and separate common/award populations remain. No future tax basis/rate, award valuation or forecast dilution approval. |
+
+Implementation reuses the existing review/override `relevant` revision filter,
+canonical digest, strict JSON reader and UTC `ManualIdentity` validation. This
+minimal company-specific **selection overlay** does not use a numeric override
+to mislabel book operating capital as the generic cash-flow-movement field.
+The persisted audit binds the entire underlying financial/evidence revision;
+changed facts, alternatives, precision, scope or evidence fail closed as stale.
+There is no automatic revalidation, acceptance or overwrite command. Normal
+replay only reads the audit; the explicit one-time recording command refuses
+an existing receipt. Git retains prior decisions. Digest integrity is not an
+adversarial signature or a substitute for user authority.
+
+Selected payloads carry exact JSON pointers back to unchanged source/proposal
+objects, approval hash and original status; source facts/derived origin remain
+distinct from analyst review acceptance. View serialization is separate/additive;
+the revision-2 proposal payload and all original pilot/frozen bytes are preserved.
+No generic runtime/policy/schema change, issuer expansion, SEC request or Phase 2
+calculation. Financial sufficiency remains **NOT_ASSESSED**; no Phase 1 closure.
+
+Validation: **21 package/integration tests (7.791s)** and **54 existing preservation
+tests** pass (cash-flow22, sidecar24, NWC8). Exact replay, audit persistence/restart,
+stale/altered audit rejection, independent selected-value/source ties, dates/
+precision, non-default alternatives, retained nulls and complete prior-proposal
+equality pass. Original JSON/runtime byte preservation, compileall, **445 affected
+local links** and `git diff --check` pass. No full-suite/corpus rerun.
+Stop after MSFT;
+no approval is transferred to another period, company or consumer.
+
+## Prior revision 2 — proposal history (effective choices superseded above)
 
 This bounded revision replaces the former six deferral rows with the concrete
 recommendations in section 6. **All new classifications and estimates remain

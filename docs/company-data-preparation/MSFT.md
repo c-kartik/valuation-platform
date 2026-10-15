@@ -1,5 +1,41 @@
 # MSFT — company data preparation
 
+## User-approved separate analyst view — FY2025–FY2026 only
+
+The [same package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
+now implement the explicit user decision, bound by the
+[persisted acceptance audit](msft-analyst-treatment-acceptance.json) to the
+preceding proposal/source revision. Original conflict: revision 2 recommended
+a broader estimate and left six choices pending. The user instead selected
+named-only partial **operating capital** −25,755 / −18,600 USDm, book movement
++7,155; includes noncurrent balances, not complete current NWC or cash ΔNWC.
+The broader −23,427 / −3,372 estimate (+20,055 movement) stays non-default.
+Original current-only partial NWC and all cash-flow movements remain separate.
+
+Accepted historical classification: operating leases service costs, finance
+leases asset financing; rounded D&A 28,000 / 39,000 with finance-amortization
+inclusion explicitly an accepted **assumption**, not source-confirmed overlap.
+No extra ROU add-back. Cash PP&E, creditors, noncash finance assets and combined
+acquisition/intangible cash remain separate; no reinvestment total.
+Current financial balances less identified restrictions are 94,565 / 73,043;
+FY2026 known restriction deduction 3,800, unknown restrictions/reserves persist.
+Named term+finance liability subtotal 89,323 / 106,888 is not complete debt.
+FY2026 short borrowing stays **unknown/null**; zero proposal rejected and retained.
+Tax/share historical schedules accepted with original dates/precision/scope;
+future rates, award valuation and dilution unapproved and not historical defects.
+
+UTC approval recording and user authority live in the immutable audit. Shared
+review revision/digest/manual-identity utilities underpin a minimal report-only
+selection overlay; changed financial/source/proposal content rejects stale
+acceptance. Earlier proposals, facts, calculations, original acceptance records,
+pilot/sidecar bytes, policies and frozen outputs remain; no generic runtime
+integration. Financial sufficiency NOT_ASSESSED, NWC/timing blockers unchanged.
+Validation: 21 focused integration/package tests and 54 original cash-flow/
+sidecar/NWC preservation tests pass; exact source/proposal replay, audit restart,
+stale/malformed rejection, null/alternative/precision/source checks, original
+bytes, compileall, 445 affected links and diff checks pass. Stop after MSFT,
+no phase closure or full-suite/corpus rerun.
+
 ## Concrete decision-resolution revision — FY2025–FY2026
 
 The [existing analyst package](MSFT-analyst-input-package.md) and

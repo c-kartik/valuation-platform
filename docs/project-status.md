@@ -1,6 +1,36 @@
 # Project Status
 
-## Current milestone — concrete MSFT analyst decisions, revision 2
+## Current milestone — approved MSFT historical selections
+
+The [existing package](company-data-preparation/MSFT-analyst-input-package.md)
+and JSON add a separate accepted view, with immutable user-authority audit and
+relevant source/proposal revision. Named-only partial operating capital
+−25,755 / −18,600 USDm and book movement +7,155 selected; broader estimate
+−23,427 / −3,372 (+20,055) remains non-default. Both include noncurrent balances,
+not complete current NWC or cash ΔNWC; original current-only partial NWC remains.
+
+Operating-service/finance-financing historical classification accepted; D&A
+28,000 / 39,000 retains explicitly unproved finance-amortization inclusion as
+an accepted assumption. Investment columns separate. Current financial balances
+less identified restrictions 94,565 / 73,043 selected, not unrestricted/excess
+cash. Named term+finance subtotal 89,323 / 106,888 is not complete debt; FY2026
+extra short borrowing null, zero proposal rejected but retained. Named historical
+tax/share schedules accepted without future rates/award valuation/dilution.
+
+The report-only overlay reuses existing revision/digest/strict-JSON/manual UTC
+utilities; no generic numeric override mislabels book operating capital. Missing
+audit or changed facts/scope/precision/alternatives/evidence fails closed; explicit
+future revalidation required. Original proposal/source sections and all earlier
+facts, accepted inputs, pilots/sidecars, frozen policies/output bytes preserved.
+No SEC requests, full-suite/corpus rerun or Phase 2 work. Financial sufficiency
+NOT_ASSESSED, original blockers retained, no Phase 1 closure. Stop after MSFT.
+Validation: **21 package/integration tests (7.791s)**; **54 existing preservation
+tests** (22 cash-flow in 5.930s, 24 interest annotations in 18.084s, eight NWC in
+7.205s) pass. Exact package replay, approval persistence/restart, stale-content
+rejection, source/proposal equality to the preceding commit, original JSON/runtime
+byte checks, compileall, **445 changed-document local links** and diff checks pass.
+
+## Prior milestone — concrete MSFT analyst decisions, revision 2
 
 The [same two-period package](company-data-preparation/MSFT-analyst-input-package.md)
 and [JSON](company-data-preparation/msft-analyst-input-package.json) replace six

@@ -1,10 +1,10 @@
-"""Two reviewed MSFT annuals: draft historical schedules, not a runtime adapter.
+"""Two reviewed MSFT annuals: separate historical selections, not a runtime adapter.
 
-No retrieval, financial approval, forecast or valuation calculation. Original
+Scoped user acceptance only; no sufficiency approval, retrieval or valuation. Original
 registries/outputs are read-only. Exact source occurrences and statement tags
 are checked before any point enters this separate company-specific package.
 """
-from datetime import date
+from datetime import date, datetime, timezone
 from decimal import Decimal, localcontext
 from html.parser import HTMLParser
 import hashlib
@@ -16,6 +16,9 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 from valuation_platform.analyst import cash_flow_inputs as cash
+from valuation_platform.analyst.analyst_overrides import relevant, _json
+from valuation_platform.analyst.prepared_assembly import digest
+from valuation_platform.analyst.historical_inputs import ManualIdentity
 
 OUTPUT = 'docs/company-data-preparation/msft-analyst-input-package.json'
 BASELINE = 'daeb3b007a664cfe9fe31fe426d1f5ae40be503a'
@@ -23,6 +26,17 @@ ACCEPTED = 'existing_accepted_treatment'
 SUPPORTED = 'source_supported_selection_or_calculation'
 PROPOSED = 'proposed_pending_user_approval'
 UNRESOLVED = 'unresolved_requirement'
+ACCEPTANCE_PATH = 'docs/company-data-preparation/msft-analyst-treatment-acceptance.json'
+ACCEPTANCE_BASIS = 'ce919800126d7a4ff35ffbe7e23e5b080db1c2b9'
+APPROVED_SCOPE = 'accepted_for_stated_historical_preparation_scope'
+USER_DECISIONS = {
+    'operating_capital': 'Select named-only partial operating capital; residual-caption estimate remains non-default. Neither is complete current NWC or cash delta NWC.',
+    'leases_da': 'Operating leases service costs; finance leases asset financing. Preserve rounded D&A and the explicitly unproved finance-amortization-inclusion assumption; no additional ROU add-back.',
+    'investment': 'Keep cash PP&E, capital creditors, noncash finance additions and combined acquisition/intangible spending separate; no complete reinvestment subtotal.',
+    'cash': 'Select current financial balances less identified restrictions; unknown restrictions and operating reserves remain unknown, not unrestricted or excess cash.',
+    'borrowings': 'Select named term-debt-plus-finance-lease subtotal only. Reject zero additional FY2026 short borrowing; source remains null/unknown, no complete-debt certification.',
+    'taxes_shares': 'Accept named historical schedules with original dates, precision and scope; no future tax rate, award valuation or forecast dilution approval.',
+}
 
 
 class InlineFacts(HTMLParser):
@@ -155,7 +169,109 @@ class Filing:
 def build():
     filings = [Filing(y) for y in (2025,2026)]
     for f in filings: populate(f)
-    return resolve_decisions(filings, finish(filings))
+    return accepted_view(resolve_decisions(filings, finish(filings)))
+
+
+def approval_record(proposal):
+    """Explicit one-time user-approved recording command, never normal replay.
+
+    Reuse audit canonicalization/relevant-content revision and manual identity.
+    This is a selection overlay, not a numeric override of generic CF movements.
+    """
+    record = dict(schema='msft-treatment-acceptance-audit-v1', version=1,
+        sequence=1, previous='0'*64, action='ACCEPT_SCOPED_SELECTIONS',
+        author='User, explicit MSFT FY2025–FY2026 treatment-set instruction',
+        recorded_at_utc=datetime.now(timezone.utc).isoformat(),
+        rationale='Record the user-approved six-part treatment set; not financial sufficiency or Phase 2 authorization.',
+        authority='Current user instruction: Implement the user-approved treatment set below in the separate MSFT analyst-input view for FY2025–2026.',
+        source_commit=ACCEPTANCE_BASIS, source_revision=digest(relevant(proposal)),
+        decisions=USER_DECISIONS.copy(), financial_sufficiency='NOT_ASSESSED',
+        phase1_closed=False, valuation_consumption_approved=False)
+    record['sha256'] = digest(record)
+    return record
+
+
+def accepted_view(proposal, audit_path=None):
+    """Fail closed on a changed proposal/evidence revision or audit receipt.
+
+    Original facts, proposed calculations/assumptions and old approval sheets
+    are never rewritten. Persisted acceptance only selects a separate view.
+    """
+    path = Path(audit_path) if audit_path is not None else ROOT/ACCEPTANCE_PATH
+    record = _json(path.read_text())
+    expected = {'schema','version','sequence','previous','action','author','recorded_at_utc',
+        'rationale','authority','source_commit','source_revision','decisions',
+        'financial_sufficiency','phase1_closed','valuation_consumption_approved','sha256'}
+    if set(record) != expected or record.get('sha256') != digest({k:v for k,v in record.items() if k != 'sha256'}):
+        raise ValueError('Changed or malformed MSFT acceptance audit')
+    ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale'])
+    if (record['schema']!='msft-treatment-acceptance-audit-v1' or type(record['version']) is not int or record['version']!=1
+            or type(record['sequence']) is not int or record['sequence']!=1 or record['previous']!='0'*64 or record['action']!='ACCEPT_SCOPED_SELECTIONS'
+            or record['source_commit']!=ACCEPTANCE_BASIS or record['decisions']!=USER_DECISIONS
+            or record['financial_sufficiency']!='NOT_ASSESSED' or record['phase1_closed'] is not False
+            or record['valuation_consumption_approved'] is not False):
+        raise ValueError('Unregistered MSFT acceptance scope')
+    if record['source_revision'] != digest(relevant(proposal)):
+        raise ValueError('Stale MSFT acceptance: source, evidence or proposal changed; explicit revalidation required')
+    result=json.loads(json.dumps(proposal)); rows=[]
+    for index,(original,resolution) in enumerate(zip(proposal['periods'],proposal['decision_resolution']['periods'])):
+        entries={e['input_id']:e for e in original['inputs']}; schedules=resolution['schedules']
+        def select(item,ref,label,**limitations):
+            parts=ref.split('/')
+            if parts[0]=='periods':
+                parts=['periods',str(index),'inputs',str(next(i for i,e in enumerate(original['inputs']) if e['input_id']==parts[-1]))]
+            else:parts=['decision_resolution','periods',str(index),'schedules',parts[-1]]
+            selected=json.loads(json.dumps(item))
+            selected.update(status=APPROVED_SCOPE,accepted=True)
+            return dict(selected=selected,source_reference='/'+'/'.join(parts),source_status=item['status'],label=label,
+                review=APPROVED_SCOPE,approval_sha256=record['sha256'],**limitations)
+        row=dict(fiscal_year=original['fiscal_year'],identity=original['identity'],
+            operating_capital=select(schedules['named_expansion'],'decision_resolution/periods/schedules/named_expansion',
+                'Named-only partial operating capital (includes noncurrent balances)',
+                complete_current_nwc=False,cash_delta_nwc_certified=False),
+            original_current_only_partial_nwc=entries['partial_nwc'],
+            estimated_nondefault_alternative=dict(default=False,estimated=True,
+                label='Residual-caption partial operating-capital estimate (includes noncurrent balances)',
+                schedule=schedules['proposed_operating_capital'],
+                adjacent_book_movement_usd=proposal['decision_resolution']['adjacent_book_movements_usd']['proposed_operating_capital']),
+            lease_classification=dict(operating='service_cost',finance='asset_financing',review=APPROVED_SCOPE,
+                complete_lease_coverage=False),
+            expense_da=select(entries['expense_da'],'periods/inputs/expense_da','Original rounded expense D&A',
+                assumption='Finance amortization already included; accepted assumption, NOT source-confirmed overlap.',
+                source_confirmed_overlap=False,additional_rou_addback=False),
+            investment_columns=[entries[key] for key in (
+                'reported:PaymentsToAcquirePropertyPlantAndEquipment',
+                'reported:PurchasesOfPropertyAndEquipmentRemainingInAccountsPayable',
+                'reported:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability',
+                'reported:AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets')],
+            complete_reinvestment=False,
+            cash=select(schedules['known_restriction_current_pool'] if original['fiscal_year']==2026 else entries['current_liquidity'],
+                'decision_resolution/periods/schedules/known_restriction_current_pool' if original['fiscal_year']==2026 else 'periods/inputs/current_liquidity',
+                'Current financial balances less identified restrictions',
+                unknown_restrictions=None,operating_reserve=None,unrestricted_or_excess_cash=False),
+            borrowings=select(schedules['term_and_finance_leases'],'decision_resolution/periods/schedules/term_and_finance_leases',
+                'Named term-debt-plus-finance-lease subtotal only',complete_debt=False),
+            additional_short_borrowing=dict(value_usd=None if original['fiscal_year']==2026 else '0',
+                origin='unavailable' if original['fiscal_year']==2026 else 'reported',
+                null_reason='Ending additional short borrowing unavailable; zero proposal rejected.' if original['fiscal_year']==2026 else None),
+            taxes=[entries[k] for k in ('reported:IncomeTaxExpenseBenefit','reported:IncomeTaxesPaidNet',
+                'reported:DeferredIncomeTaxExpenseBenefit','reported:IncreaseDecreaseInAccruedIncomeTaxesPayable','reported_etr')],
+            additional_deferred_tax_cfo=[entries[k] for k in ('reported:DeferredIncomeTaxesAndTaxCredits',) if k in entries],
+            pretax_fact=original['facts']['pretax'],
+            shares_awards=[entries[k] for k in ('year_end_common','cover_common','nonvested_awards','unrecognized_award_cost')],
+            unknowns=resolution['unavailable_amounts'],
+            future_tax_rate_approved=False,award_valuation_approved=False,forecast_dilution_approved=False)
+        rows.append(row)
+    result['accepted_view']=json.loads(json.dumps(dict(schema='msft-accepted-historical-view-v1',version=1,
+        approval_audit=record,periods=rows,financial_sufficiency='NOT_ASSESSED',
+        selected_adjacent_book_movement_usd=proposal['decision_resolution']['adjacent_book_movements_usd']['named_expansion'],
+        movement_is_cash_delta_nwc=False,complete_operating_capital=False,
+        prior_proposals_retained=True,short_debt_zero_proposal_status='REJECTED_NOT_SELECTED',
+        decision_statuses={key:APPROVED_SCOPE for key in USER_DECISIONS},
+        investment_columns_review=APPROVED_SCOPE,tax_share_schedules_review=APPROVED_SCOPE,
+        phase1_closed=False,valuation_consumption_approved=False,
+        stopping_condition='Stop after MSFT integration. No automatic issuer work or research.')))
+    return result
 
 
 def populate(f):
@@ -626,6 +742,12 @@ def concrete_approval_sheet():
 
 
 if __name__ == '__main__':
+    if '--record-approved-treatment-set' in sys.argv:
+        if (ROOT/ACCEPTANCE_PATH).exists():raise SystemExit('Immutable acceptance record already exists')
+        filings=[Filing(y) for y in (2025,2026)]
+        for f in filings:populate(f)
+        print(json.dumps(approval_record(resolve_decisions(filings,finish(filings))),sort_keys=True,indent=2))
+        raise SystemExit(0)
     result=build()
     text=json.dumps(result,sort_keys=True,indent=2)+'\n'
     if '--check' in sys.argv:
