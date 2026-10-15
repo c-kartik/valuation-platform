@@ -1,9 +1,10 @@
-"""One retained Alphabet FY2024 decision package, never financial acceptance.
+"""One retained Alphabet FY2024 package and scoped user-approved selection view.
 
 Reuse exact inspection and primary/instance validation, not peer assumptions.
 Original partial/manual-note input and refreshed receipt history stay intact.
 """
-from datetime import date
+from datetime import date, datetime, timezone
+from pathlib import Path
 from decimal import Decimal
 import hashlib
 import json
@@ -11,11 +12,20 @@ import re
 import sys
 
 from prepare_msft_analyst_package import Filing, InlineFacts, ROOT, ACCEPTED, SUPPORTED, PROPOSED, inline_amount
+from prepare_msft_analyst_package import APPROVED_SCOPE, relevant, digest, _json, ManualIdentity
 from valuation_platform.analyst import googl_cash_flow_inputs as googl, cash_flow_inputs as cash
 from valuation_platform.analyst import retained_components as inspect
 
 OUTPUT='docs/company-data-preparation/googl-analyst-input-package.json'
 BASELINE='44eab95cfbf38fa597927abb8ce7eb8f051d4a1e'
+ACCEPTANCE_BASIS='3422da1a9a369055b0b7cdc6197610112b9fd47f'
+ACCEPTANCE_PATH='docs/company-data-preparation/googl-analyst-treatment-acceptance.json'
+USER_DECISIONS={
+    'OPERATING-CAPITAL':'Select rounded partial current operating capital13342 USDm including reviewed manual-note3200; whole AP/fines alternatives non-default; inventory/supplier/other allocations unknown; no opening or delta/completeness.',
+    'LEASE-FINANCING':'Operating service / finance asset financing; named term+CP+finance15859 USDm only, all-lease30437 non-default; principal405 already within repayments12701; no complete debt, lease cash or borrowing interest.',
+    'DA-INVESTMENT':'CFO depreciation15311 and finance amortization413 separate; complete expense D&A null; cash PP&E52535, combined2931, Other2667, creditors and noncash additions separate with source signs; no sum or inclusion assumption.',
+    'FINANCIAL-CLAIMS':'Select current financial95657, not unrestricted/excess; restricted266 and strategic/precision alternatives separate; NCI4200 includes redeemable1100, never5300; claims/commitments separate, no net debt or exhaustive coverage.',
+    'HISTORICAL-SCHEDULES':'Revenue350018, EBIT112390, CFO125299; accepted rounded SBC expense22800 once versus add-back22785; historical tax roles and dated classes/source aggregate/EPS/awards separate; no future rate, interest proxy, rounding plug or dilution.'}
 NWC_PATH='docs/company-data-preparation/googl-analyst-nwc-bundle.json'
 NWC_SHA='a8a45520d79bdedbdeeae398c1ea16cbe3639e43fed4300998b109176e4aafdb'
 
@@ -58,7 +68,7 @@ def variants(f,evidence,key,concept):
         treatment='Retain every representation; precision difference is not an adjustment or automatic selection.')
 
 
-def build():
+def build_proposal():
     f=AlphabetFiling();doc=googl._registry()
     nwc_body=(ROOT/NWC_PATH).read_bytes()
     if hashlib.sha256(nwc_body).hexdigest()!=NWC_SHA:raise ValueError('Original rounded-note scenario changed')
@@ -265,7 +275,96 @@ APPROVAL_SHEET=[dict(decision_id=k,status=PROPOSED,recommendation=r,numeric_effe
 )]
 
 
+def approval_record(proposal):
+    """Explicit user recording; replay never creates or renews acceptance."""
+    record=dict(schema='googl-treatment-acceptance-audit-v1',version=1,sequence=1,previous='0'*64,
+        action='ACCEPT_SCOPED_SELECTIONS',author='User, explicit Alphabet FY2024 approved-selection instruction',
+        recorded_at_utc=datetime.now(timezone.utc).isoformat(),
+        rationale='Record only the approved Alphabet historical selections; preserve unavailable amounts, prior proposals and original blockers.',
+        authority='Current user instruction: Implement the user-approved Alphabet FY2024 selections.',
+        source_commit=ACCEPTANCE_BASIS,source_revision=digest(relevant(proposal)),decisions=USER_DECISIONS.copy(),
+        financial_sufficiency='NOT_ASSESSED',phase1_closed=False,valuation_consumption_approved=False)
+    record['sha256']=digest(record)
+    return record
+
+
+def accepted_view(proposal,audit_path=None):
+    """Report-only selection overlay, not runtime policy or CF-movement override."""
+    path=Path(audit_path) if audit_path is not None else ROOT/ACCEPTANCE_PATH
+    record=_json(path.read_text())
+    expected={'schema','version','sequence','previous','action','author','recorded_at_utc','rationale','authority',
+        'source_commit','source_revision','decisions','financial_sufficiency','phase1_closed','valuation_consumption_approved','sha256'}
+    if type(record) is not dict or set(record)!=expected or record['sha256']!=digest({k:v for k,v in record.items() if k!='sha256'}):
+        raise ValueError('Changed or malformed Alphabet acceptance audit')
+    ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale'])
+    if (record['schema']!='googl-treatment-acceptance-audit-v1' or type(record['version']) is not int or record['version']!=1
+        or type(record['sequence']) is not int or record['sequence']!=1 or record['previous']!='0'*64
+        or record['action']!='ACCEPT_SCOPED_SELECTIONS' or record['source_commit']!=ACCEPTANCE_BASIS
+        or record['decisions']!=USER_DECISIONS or record['financial_sufficiency']!='NOT_ASSESSED'
+        or record['phase1_closed'] is not False or record['valuation_consumption_approved'] is not False):
+        raise ValueError('Unregistered Alphabet acceptance scope')
+    if record['source_revision']!=digest(relevant(proposal)):
+        raise ValueError('Stale Alphabet acceptance: source, candidates, scope or evidence changed; explicit revalidation required')
+    entries={e['input_id']:e for e in proposal['inputs']}
+    def select(key,label):
+        original=entries[key];selected=json.loads(json.dumps(original))
+        selected.update(status=APPROVED_SCOPE,accepted=True)
+        return dict(selected=selected,label=label,source_status=original['status'],
+            source_reference='/inputs/'+str(next(i for i,e in enumerate(proposal['inputs']) if e['input_id']==key)),
+            approval_sha256=record['sha256'],review=APPROVED_SCOPE)
+    def fact(key):
+        return dict(source_reference='/facts/'+key,observation=proposal['facts'][key])
+    unknown={u['input_id']:u for u in proposal['unresolved_requirements']}
+    view=dict(schema='googl-accepted-historical-view-v1',version=1,approval_audit=record,identity=proposal['identity'],
+        operating_capital=select('proposed_rounded_partial','Partial current operating capital; inherited rounded precision'),
+        manual_note_input=proposal['manual_note_input'],complete_operating_capital=False,opening_balance=None,
+        book_delta_nwc=None,cash_delta_nwc=None,
+        nondefault_history=[dict(default=False,observation=entries[k],source_reference='/inputs/'+str(next(i for i,e in enumerate(proposal['inputs']) if e['input_id']==k)))
+            for k in ('whole_ap_partial','alternative_operating_fines','alternative_all_leases')],
+        lease_classification=dict(operating='service_cost',finance='asset_financing',review=APPROVED_SCOPE,
+            complete_lease_coverage=False,finance_amortization_inclusion_assumption=None),
+        borrowings=select('proposed_financing','Named term-debt + CP + finance-lease liability subtotal'),complete_debt=False,
+        finance_principal_already_in_debt_repayments=True,
+        lease_cash_and_debt_repayments=[entries['reported:'+k] for k in ('OperatingLeasePayments',
+            'FinanceLeaseInterestPaymentOnLiability','FinanceLeasePrincipalPayments','RepaymentsOfDebtAndCapitalLeaseObligations')],
+        current_financial_balances=select('current_financial','Current financial balances; not unrestricted/excess cash'),
+        separate_investments=[fact(k) for k in ('long_marketable','nonmarketable_parent','equity_method','listed_equity','restricted_combined')],
+        precision_candidates=proposal['precision_candidates'],unrestricted_or_excess_cash=False,unknown_restrictions=None,operating_reserve=None,
+        da_observations=[entries['reported:'+k] for k in ('Depreciation','FinanceLeaseRightOfUseAssetAmortization')],
+        complete_expense_basis_da=unknown['expense_da'],additional_rou_addback=False,
+        investment_columns=[entries['reported:'+k] for k in ('PaymentsToAcquirePropertyPlantAndEquipment',
+            'AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets','PaymentsForProceedsFromOtherInvestingActivities',
+            'RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability','RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability')],
+        capital_creditor_observations=[fact('accrued_ppe'),fact('ap_note_source')],complete_reinvestment=False,
+        separate_claims=[fact(k) for k in ('nci_vie','redeemable_nci','ec_fines','tax_current','tax_long','nol_dta','vie_funding','preferred_value')],
+        nci_includes_redeemable=True,exhaustive_claims=False,overlap_relationships=proposal['overlap_relationships'],
+        historical_income=[select('reported:NetCashProvidedByUsedInOperatingActivities','Consolidated reported CFO'),
+            dict(**fact('revenue'),review=APPROVED_SCOPE),dict(**fact('ebit'),review=APPROVED_SCOPE)],
+        sbc_expense_proxy=select('reported:AllocatedShareBasedCompensationExpense','Rounded recognized SBC expense proxy counted once'),
+        sbc_cfo_addback=entries['reported:ShareBasedCompensation'],
+        historical_taxes=[entries[k] for k in ('reported:IncomeTaxExpenseBenefit','reported:IncomeTaxesPaidNet','reported_etr',
+            'reported:DeferredIncomeTaxExpenseBenefit','reported:DeferredIncomeTaxesAndTaxCredits')],
+        separate_shares_and_awards=[fact(k) for k in ('year_end_a','year_end_b','year_end_c','cover_a','cover_b','cover_c',
+            'reported_common_total','weighted_basic','weighted_diluted','rsu','future_sbc')],
+        unresolved_requirements=proposal['unresolved_requirements'],original_bundle_unknowns=proposal['original_bundle_unknowns'],
+        evidence_history=proposal['evidence_history'],prior_proposals_retained=True,
+        decision_statuses={key:APPROVED_SCOPE for key in USER_DECISIONS},financial_sufficiency='NOT_ASSESSED',
+        valuation_consumption_approved=False,phase1_closed=False,future_tax_assumption_approved=False,
+        award_valuation_approved=False,dilution_estimate_approved=False,
+        stopping_condition='Stop after Alphabet integration and consolidated pilot assessment; no automatic issuer work or closure.')
+    result=json.loads(json.dumps(proposal));result['accepted_view']=json.loads(json.dumps(view))
+    return result
+
+
+def build():
+    return accepted_view(build_proposal())
+
+
 if __name__=='__main__':
+    if '--record-approved-treatment-set' in sys.argv:
+        if (ROOT/ACCEPTANCE_PATH).exists():raise SystemExit('Immutable Alphabet acceptance record already exists')
+        print(json.dumps(approval_record(build_proposal()),sort_keys=True,indent=2))
+        raise SystemExit(0)
     text=json.dumps(build(),sort_keys=True,indent=2)+'\n'
     if '--check' in sys.argv:
         if (ROOT/OUTPUT).read_text()!=text:raise SystemExit('Alphabet package replay differs')

@@ -1,5 +1,35 @@
 # GOOGL — company data preparation
 
+## Approved FY2024 analyst selections — separate, revision-bound view
+
+The [package](GOOGL-analyst-input-package.md) / [JSON](googl-analyst-input-package.json)
+now retain the user's exact five scoped approvals in a separate `accepted_view`;
+[audit](googl-analyst-treatment-acceptance.json) binds the original proposal/evidence
+revision, author, actual UTC recording time and rationale. Original conflict was
+proposal-only treatment status; report-only integration reuses existing audit and
+stale-source controls, not runtime policies or peer financial assumptions.
+
+Selected rounded partial current capital13,342m includes manual closing-note
+3,200R correction, not a new instant fact; wholeAP10,142/fines7,020 non-default.
+Inventory, supplier AP and allocations remain unknown. Operating service/finance
+asset-financing classification selects named term+CP+finance15,859m only;
+all-lease30,437 non-default. Principal405 already inside repayments12,701.
+Current financial95,657 not unrestricted/excess; restricted266/strategic and
+precision alternatives separate. NCI4,200R includes redeemable1,100R, no5,300.
+CFO depreciation15,311/finance amortization413 remain separate, required expense
+D&A null, no inclusion assumption. Investment/source signs, creditors/noncash,
+SBC22,800R once versus add-back22,785, taxes/classes/dates/awards all preserved.
+
+Chosen rationale: select only reviewed named populations and explicit analyst
+classification; do not turn arithmetic into completeness. All nine required nulls,
+twelve bundle unknowns, receipt refresh/original metadata gap, original NWC/D&A
+blockers and timing gates remain. Validation covers exact selections, inherited
+rounding, alternatives, overlap, serialization, persisted audit and stale rejection;
+prior proposal/peer view/pilot/frozen bytes and all three package replays checked.
+Financial sufficiency NOT_ASSESSED; no Phase 1 closure or automatic next issuer.
+
+The following proposal section is retained as prior decision history.
+
 ## Consolidated FY2024 analyst decision package — proposed only
 
 [One review package](GOOGL-analyst-input-package.md) /

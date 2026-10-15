@@ -1,5 +1,21 @@
 # Alphabet FY2024 historical-input acceptance checklist
 
+## Subsequent scoped selection acceptance
+
+The user's explicit approval is now recorded in the separate
+[analyst view/package](company-data-preparation/GOOGL-analyst-input-package.md) and
+[revision-bound immutable audit](company-data-preparation/googl-analyst-treatment-acceptance.json).
+Rounded partial current operating capital13,342m, named term/CP/finance15,859m
+and current financial95,657m are selected only for FY2024 historical preparation.
+Operating leases are service costs and finance leases asset financing for that
+classification. Whole-AP/fines/all-lease alternatives remain non-default.
+Required missing values remain unresolved. No complete expense D&A, debt,
+cash availability, reinvestment, ΔNWC or financial-sufficiency approval follows.
+Original restricted payment acceptance and receipt-gap history below remain
+unchanged; principal405m is already within repayments12,701m.
+
+## Original reported-input acceptance — preserved history
+
 2026-10-12; documentation revision 1. Authority: explicit user acceptance in
 this milestone. CIK 1652044 (GOOG/GOOGL), selected non-amended 10-K
 `0001652044-25-000014`, **2024-01-01–2024-12-31** only.

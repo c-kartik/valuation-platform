@@ -1,6 +1,45 @@
 # Alphabet FY2024 — consolidated analyst-input decision package
 
-**One review package; new judgments are proposed, not accepted or integrated.**
+## Current user-approved separate analyst view
+
+[Immutable approval audit](googl-analyst-treatment-acceptance.json) records the
+explicit user instruction, actual UTC recording time, rationale, exact proposal
+revision and five scoped decisions. The machine companion's `accepted_view`
+reuses existing strict audit/revision/serialization controls. Missing, malformed,
+changed-scope or stale evidence/proposals fail closed; replay cannot renew approval.
+The original proposal payload and approval sheet below remain unchanged history,
+not the current default. Acceptance is not financial-sufficiency certification.
+
+| Active selection / treatment | USDm unless otherwise stated | Retained limitation / non-default history |
+| --- | ---: | --- |
+| Partial current operating capital | 13,342, inherited rounded precision | Includes reviewed manual-note 3,200; not an exact instant XBRL correction. Whole AP 10,142 and fines inclusion 7,020 non-default. Inventory, supplier scope and other allocations unknown; no opening, book/cash ΔNWC or completeness. |
+| Operating service / finance asset financing | Named term + CP + finance liability 15,859 | All-lease 30,437 non-default; no complete debt or lease cash. Finance principal 405 already included in repayments 12,701, never another deduction. |
+| Current financial balances | 95,657 | Not unrestricted/excess cash. Restricted long marketable 266, strategic holdings and precision alternatives stay separate. |
+| D&A observations | CFO depreciation 15,311; finance amortization 413 | Complete expense D&A remains null. No sum, residual amortization or finance-inclusion assumption. |
+| Investment columns | Cash PP&E −52,535; combined purchases −2,931; Other −2,667 | Original signs retained; creditors/noncash additions separate. No complete reinvestment or acquisition allocation. |
+| Other claims | NCI 4,200R **includes** redeemable 1,100R | Not 5,300; regulatory/tax claims and commitments separate, not valuation deductions or exhaustive claims. |
+| Income / SBC / taxes / shares | Revenue 350,018; EBIT 112,390; CFO 125,299; SBC expense 22,800R once | Add-back 22,785 separate, no rounding plug. Historical tax roles unchanged. Dated classes, independently reported aggregate, EPS denominators and awards separate; no aggregation/dilution. |
+
+All nine required nulls, twelve original bundle unknowns, overlaps, source signs,
+precision alternatives, original missing retrieval metadata and explicit refreshed
+receipt history remain attached. No future tax rate, borrowing-interest proxy,
+valuation use, frozen blocker removal or Phase 1 closure. See the
+[consolidated four-period assessment](../phase1-preparation-pilot-gap-assessment.md).
+
+Validation: **18 focused integration tests + 57 relevant preservation tests**
+pass. All three exact package replays, source/operand arithmetic, inherited
+rounding, nulls/non-defaults, overlap safeguards, JSON round trips, persisted
+audit restart and stale/tampered/missing audit rejection pass. The entire original
+proposal payload and MSFT/AAPL accepted views, original registries/bundles,
+source/evidence JSON and runtime bytes remain unchanged. Compileall,473 affected
+local links and diff checks pass. No SEC requests or full-suite/corpus rerun.
+Normal replay reads the immutable audit; it never creates acceptance. Digest
+integrity is not a cryptographic signature of user identity. The recorded UTC
+is the actual recording time, not a fabricated source/earlier approval timestamp.
+
+## Original consolidated proposal — preserved history
+
+**The following review wording describes the pre-acceptance proposal.**
 [Machine companion](googl-analyst-input-package.json) records exact source facts,
 all confirmations, alternatives, formula operands, signs, units, precision and
 unknowns. GOOG/GOOGL are one issuer. Existing [accepted treatments](../googl-treatment-acceptance-checklist.md)

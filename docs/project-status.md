@@ -1,6 +1,39 @@
 # Project Status
 
-## Current milestone — Alphabet FY2024 consolidated analyst review draft
+## Current milestone — approved Alphabet FY2024 historical selections
+
+[Package](company-data-preparation/GOOGL-analyst-input-package.md) /
+[JSON](company-data-preparation/googl-analyst-input-package.json) add an isolated
+accepted view and [immutable user audit](company-data-preparation/googl-analyst-treatment-acceptance.json).
+Exact five scoped decisions bind the prior proposal/source revision and actual
+UTC recording time; replay cannot create or renew acceptance. Original proposal
+sheet remains prior history. Changed evidence/scope/candidates fail closed.
+
+Select rounded partial current capital13,342m, named term/CP/finance15,859m and
+current financial95,657m only. WholeAP/fines/all-lease alternatives non-default.
+Operating service/finance asset financing classification accepted, no D&A overlap
+assumption. Required expense D&A null; CFO15311/finance amortization413 distinct.
+Principal405 already inside repayments12701; NCI4200R includes redeemable1100R.
+Investment cash/noncash/creditors, tax/SBC roles, precision alternatives and dated
+share classes/source aggregate/awards stay separate. Unknowns never cleared.
+
+[Consolidated pilot assessment](phase1-preparation-pilot-gap-assessment.md) now
+distinguishes four exact accepted periods from whole histories, original blockers,
+assumption-dependent treatments and remaining delivery-contract/user decisions.
+Frozen/pilot artifacts, original receipt gaps and accepted AAPL/MSFT bytes remain.
+No SEC requests, full-suite/corpus rerun, Phase 2 authority or Phase 1 closure.
+
+Validation: **18 Alphabet integration tests (5.866s)** plus **57 preservation
+tests** (reported-input10 in3.289s, partial-NWC9 in6.210s, accepted AAPL17
+in5.487s, accepted MSFT21 in7.600s) pass. All three exact package replays,
+prior-proposal equality and original runtime/JSON/pilot/frozen/peer bytes,
+audit restart/staleness/tamper/missing rejection, rounding/null/overlap checks,
+compileall, **473 affected local links** and `git diff --check` pass.
+Two initial older-module invocations lacked `PYTHONPATH=src` and failed import
+before running tests; corrected invocations above passed without source changes.
+These are bounded current checks, not a claim of a new full-suite run.
+
+## Prior milestone — Alphabet FY2024 consolidated analyst review draft
 
 [Package](company-data-preparation/GOOGL-analyst-input-package.md) /
 [JSON](company-data-preparation/googl-analyst-input-package.json) reuse retained

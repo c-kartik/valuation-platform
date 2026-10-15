@@ -1,5 +1,22 @@
 # Company data preparation register
 
+## Alphabet FY2024 scoped selections integrated
+
+[Accepted view/package](GOOGL-analyst-input-package.md) and
+[audit](googl-analyst-treatment-acceptance.json) now bind the user's approval to
+the exact original proposal/evidence revision. Partial capital13,342R, named
+financing15,859 and current financial95,657m selected; wholeAP/fines/all-lease
+alternatives non-default. Source facts, rounding, original unknowns, overlaps,
+receipt history and D&A/NWC/timing blockers remain unchanged. No financial
+sufficiency or whole-history approval. MSFT/AAPL accepted bytes preserved.
+The [consolidated assessment](../phase1-preparation-pilot-gap-assessment.md)
+covers only MSFT FY2025–2026, AAPL FY2025 and Alphabet FY2024; it distinguishes
+approved classifications from assumptions and remaining contract obligations.
+No new issuer review, SEC request or phase closure is authorized.
+Validation:18 focused +57 preservation tests, all three exact package replays,
+original proposal/peer/pilot/frozen preservation, compileall,473 affected local
+links and diff checks pass. Financial sufficiency remains NOT_ASSESSED.
+
 ## Alphabet FY2024 consolidated review draft
 
 [Alphabet package](GOOGL-analyst-input-package.md) /

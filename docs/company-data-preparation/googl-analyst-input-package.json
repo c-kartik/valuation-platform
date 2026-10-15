@@ -1,4 +1,2967 @@
 {
+  "accepted_view": {
+    "additional_rou_addback": false,
+    "approval_audit": {
+      "action": "ACCEPT_SCOPED_SELECTIONS",
+      "author": "User, explicit Alphabet FY2024 approved-selection instruction",
+      "authority": "Current user instruction: Implement the user-approved Alphabet FY2024 selections.",
+      "decisions": {
+        "DA-INVESTMENT": "CFO depreciation15311 and finance amortization413 separate; complete expense D&A null; cash PP&E52535, combined2931, Other2667, creditors and noncash additions separate with source signs; no sum or inclusion assumption.",
+        "FINANCIAL-CLAIMS": "Select current financial95657, not unrestricted/excess; restricted266 and strategic/precision alternatives separate; NCI4200 includes redeemable1100, never5300; claims/commitments separate, no net debt or exhaustive coverage.",
+        "HISTORICAL-SCHEDULES": "Revenue350018, EBIT112390, CFO125299; accepted rounded SBC expense22800 once versus add-back22785; historical tax roles and dated classes/source aggregate/EPS/awards separate; no future rate, interest proxy, rounding plug or dilution.",
+        "LEASE-FINANCING": "Operating service / finance asset financing; named term+CP+finance15859 USDm only, all-lease30437 non-default; principal405 already within repayments12701; no complete debt, lease cash or borrowing interest.",
+        "OPERATING-CAPITAL": "Select rounded partial current operating capital13342 USDm including reviewed manual-note3200; whole AP/fines alternatives non-default; inventory/supplier/other allocations unknown; no opening or delta/completeness."
+      },
+      "financial_sufficiency": "NOT_ASSESSED",
+      "phase1_closed": false,
+      "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rationale": "Record only the approved Alphabet historical selections; preserve unavailable amounts, prior proposals and original blockers.",
+      "recorded_at_utc": "2026-10-15T21:14:24.133192+00:00",
+      "schema": "googl-treatment-acceptance-audit-v1",
+      "sequence": 1,
+      "sha256": "de1a2a13771c251f77c8ccd2354d935023c048e0af64a2cacadfa9b438f4923c",
+      "source_commit": "3422da1a9a369055b0b7cdc6197610112b9fd47f",
+      "source_revision": "367e519c8a3cdf0f0e05acb19d9addc14eb37c1e7da70445be74a2af41d0021e",
+      "valuation_consumption_approved": false,
+      "version": 1
+    },
+    "award_valuation_approved": false,
+    "book_delta_nwc": null,
+    "borrowings": {
+      "approval_sha256": "de1a2a13771c251f77c8ccd2354d935023c048e0af64a2cacadfa9b438f4923c",
+      "label": "Named term-debt + CP + finance-lease liability subtotal",
+      "review": "accepted_for_stated_historical_preparation_scope",
+      "selected": {
+        "accepted": true,
+        "coefficients": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "completeness": "complete_for_named_population",
+        "display_unit": "USD millions",
+        "display_value": "15859",
+        "evidence_label": "derived_calculation",
+        "formula": "LINEAR_COMPONENTS",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "proposed_financing",
+        "label": "Proposed term+CP+finance-lease financing subtotal only",
+        "limitations": [],
+        "operands": [
+          "term_current",
+          "term_long",
+          "cp",
+          "finance_total"
+        ],
+        "origin": "derived",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6",
+            "-6",
+            "INF",
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Proposed term+CP+finance-lease financing subtotal only",
+        "role": "reported_observation",
+        "scope": "Proposed term+CP+finance-lease financing subtotal only",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "term_current"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "term_long"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "cp"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "finance_total"
+          }
+        ],
+        "status": "accepted_for_stated_historical_preparation_scope",
+        "unit": "USD",
+        "value": "15859000000"
+      },
+      "source_reference": "/inputs/41",
+      "source_status": "proposed_pending_user_approval"
+    },
+    "capital_creditor_observations": [
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "AccruedPurchasesOfPropertyAndEquipmentCurrent",
+          "display_unit": "USD millions",
+          "display_value": "7104",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note7 separate accrued PP&E, not additional PP&E in AP",
+          "namespace": "http://www.google.com/20241231",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1446,
+              "precision": "-6",
+              "primary_display": "7,104",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1089",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "7104000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-1089"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "7104000000"
+        },
+        "source_reference": "/facts/accrued_ppe"
+      },
+      {
+        "observation": {
+          "as_of": null,
+          "concept": "CapitalExpendituresIncurredButNotYetPaid",
+          "display_unit": "USD millions",
+          "display_value": "3200",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note7 duration-tagged source for reviewed rounded manual closing interpretation",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1459,
+              "precision": "-8",
+              "primary_display": "3.2",
+              "primary_format": null,
+              "primary_locator": "inline#f-1104",
+              "primary_scale": 9,
+              "primary_sign": "+",
+              "raw_value": "3200000000",
+              "start": "2024-01-01",
+              "unit_id": "usd",
+              "xml_id": "f-1104"
+            }
+          ],
+          "precision": "-8",
+          "precision_variants": [
+            "-8"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "3200000000"
+        },
+        "source_reference": "/facts/ap_note_source"
+      }
+    ],
+    "cash_delta_nwc": null,
+    "complete_debt": false,
+    "complete_expense_basis_da": {
+      "input_id": "expense_da",
+      "reason": "Complete income-recognized D&A/finite-lived amortization and lease/inventory overlap unavailable. CFO depreciation15311 and finance ROU amortization413 do not prove completeness/non-overlap.",
+      "status": "unresolved_requirement",
+      "value": null
+    },
+    "complete_operating_capital": false,
+    "complete_reinvestment": false,
+    "current_financial_balances": {
+      "approval_sha256": "de1a2a13771c251f77c8ccd2354d935023c048e0af64a2cacadfa9b438f4923c",
+      "label": "Current financial balances; not unrestricted/excess cash",
+      "review": "accepted_for_stated_historical_preparation_scope",
+      "selected": {
+        "accepted": true,
+        "coefficients": [
+          1,
+          1
+        ],
+        "completeness": "complete_for_named_population",
+        "display_unit": "USD millions",
+        "display_value": "95657",
+        "evidence_label": "derived_calculation",
+        "formula": "LINEAR_COMPONENTS",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "current_financial",
+        "label": "Named current cash/marketable captions; not unrestricted/excess cash",
+        "limitations": [],
+        "operands": [
+          "cash",
+          "current_marketable"
+        ],
+        "origin": "derived",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6",
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Named current cash/marketable captions; not unrestricted/excess cash",
+        "role": "reported_observation",
+        "scope": "Named current cash/marketable captions; not unrestricted/excess cash",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "cash"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "current_marketable"
+          }
+        ],
+        "status": "accepted_for_stated_historical_preparation_scope",
+        "unit": "USD",
+        "value": "95657000000"
+      },
+      "source_reference": "/inputs/37",
+      "source_status": "source_supported_selection_or_calculation"
+    },
+    "da_observations": [
+      {
+        "coefficients": [
+          1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "15311",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:Depreciation",
+        "label": "Depreciation",
+        "limitations": [],
+        "operands": [
+          "Depreciation"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "reported_reconciliation_item",
+        "scope": "CFO PP&E depreciation add-back only; not complete D&A primitive or timing certification.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "Depreciation"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "15311000000"
+      },
+      {
+        "coefficients": [
+          1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "413",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:FinanceLeaseRightOfUseAssetAmortization",
+        "label": "FinanceLeaseRightOfUseAssetAmortization",
+        "limitations": [],
+        "operands": [
+          "FinanceLeaseRightOfUseAssetAmortization"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "noncash_expense",
+        "scope": "Note 4 finance ROU amortization, noncash, not complete D&A.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "FinanceLeaseRightOfUseAssetAmortization"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "413000000"
+      }
+    ],
+    "decision_statuses": {
+      "DA-INVESTMENT": "accepted_for_stated_historical_preparation_scope",
+      "FINANCIAL-CLAIMS": "accepted_for_stated_historical_preparation_scope",
+      "HISTORICAL-SCHEDULES": "accepted_for_stated_historical_preparation_scope",
+      "LEASE-FINANCING": "accepted_for_stated_historical_preparation_scope",
+      "OPERATING-CAPITAL": "accepted_for_stated_historical_preparation_scope"
+    },
+    "dilution_estimate_approved": false,
+    "evidence_history": {
+      "body_comparison": "byte_identical",
+      "original_body_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "original_instance": {
+        "accession": "0001652044-25-000014",
+        "byte_length": 2703015,
+        "digest_type": "sha256_sec_response_body_bytes",
+        "http_status": null,
+        "representation": "sec_response_body_bytes",
+        "retrieval_mode": "reused_retained_original_body",
+        "retrieved_at_utc": null,
+        "sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231_htm.xml"
+      },
+      "original_metadata_status": "original_retrieval_metadata_unrecoverable_from_inspected_records",
+      "receipt_selection": "explicit_authorized_refresh_not_recovered_original_metadata",
+      "refresh_body_reference": "docs/evidence/googl-fy2024-instance-provenance-refresh.json"
+    },
+    "exhaustive_claims": false,
+    "finance_principal_already_in_debt_repayments": true,
+    "financial_sufficiency": "NOT_ASSESSED",
+    "future_tax_assumption_approved": false,
+    "historical_income": [
+      {
+        "approval_sha256": "de1a2a13771c251f77c8ccd2354d935023c048e0af64a2cacadfa9b438f4923c",
+        "label": "Consolidated reported CFO",
+        "review": "accepted_for_stated_historical_preparation_scope",
+        "selected": {
+          "accepted": true,
+          "coefficients": [
+            1
+          ],
+          "completeness": "reported_population_only",
+          "display_unit": "USD millions",
+          "display_value": "125299",
+          "evidence_label": "fact_source_reported",
+          "formula": "SELECT",
+          "formula_version": "googl-draft-historical-v1",
+          "input_id": "reported:NetCashProvidedByUsedInOperatingActivities",
+          "label": "NetCashProvidedByUsedInOperatingActivities",
+          "limitations": [],
+          "operands": [
+            "NetCashProvidedByUsedInOperatingActivities"
+          ],
+          "origin": "reported",
+          "policy": null,
+          "precision": {
+            "operand_decimals": [
+              "-6"
+            ],
+            "treatment": "Reported rounded points; calculation does not improve source precision."
+          },
+          "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+          "role": "cash_subtotal",
+          "scope": "Consolidated reported CFO only, not organic/unlevered/adjusted operating-only cash.",
+          "source_dates": [
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": "2024-01-01",
+              "as_of": null,
+              "operand": "NetCashProvidedByUsedInOperatingActivities"
+            }
+          ],
+          "status": "accepted_for_stated_historical_preparation_scope",
+          "unit": "USD",
+          "value": "125299000000"
+        },
+        "source_reference": "/inputs/13",
+        "source_status": "existing_accepted_treatment"
+      },
+      {
+        "observation": {
+          "as_of": null,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "display_unit": "USD millions",
+          "display_value": "350018",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Income statement / Notes 2 and 15",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 5,
+          "occurrences": [
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 541,
+              "precision": "-6",
+              "primary_display": "350,018",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-157",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "350018000000",
+              "start": "2024-01-01",
+              "unit_id": "usd",
+              "xml_id": "f-157"
+            },
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 856,
+              "precision": "-6",
+              "primary_display": "350,018",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-474",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "350018000000",
+              "start": "2024-01-01",
+              "unit_id": "usd",
+              "xml_id": "f-474"
+            },
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 892,
+              "precision": "-6",
+              "primary_display": "350,018",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-510",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "350018000000",
+              "start": "2024-01-01",
+              "unit_id": "usd",
+              "xml_id": "f-510"
+            },
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1196,
+              "precision": "-6",
+              "primary_display": "350,018",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-823",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "350018000000",
+              "start": "2024-01-01",
+              "unit_id": "usd",
+              "xml_id": "f-823"
+            },
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 2000,
+              "precision": "-6",
+              "primary_display": "350,018",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1645",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "350018000000",
+              "start": "2024-01-01",
+              "unit_id": "usd",
+              "xml_id": "f-1645"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "350018000000"
+        },
+        "review": "accepted_for_stated_historical_preparation_scope",
+        "source_reference": "/facts/revenue"
+      },
+      {
+        "observation": {
+          "as_of": null,
+          "concept": "OperatingIncomeLoss",
+          "display_unit": "USD millions",
+          "display_value": "112390",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Income statement / Note 15",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 2,
+          "occurrences": [
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 559,
+              "precision": "-6",
+              "primary_display": "112,390",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-175",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "112390000000",
+              "start": "2024-01-01",
+              "unit_id": "usd",
+              "xml_id": "f-175"
+            },
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 2015,
+              "precision": "-6",
+              "primary_display": "112,390",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1660",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "112390000000",
+              "start": "2024-01-01",
+              "unit_id": "usd",
+              "xml_id": "f-1660"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "112390000000"
+        },
+        "review": "accepted_for_stated_historical_preparation_scope",
+        "source_reference": "/facts/ebit"
+      }
+    ],
+    "historical_taxes": [
+      {
+        "coefficients": [
+          1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "19697",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:IncomeTaxExpenseBenefit",
+        "label": "IncomeTaxExpenseBenefit",
+        "limitations": [],
+        "operands": [
+          "IncomeTaxExpenseBenefit"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "accrued_expense",
+        "scope": "Accrued income-tax provision, distinct from cash and CFO deferred reconciliation.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "IncomeTaxExpenseBenefit"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "19697000000"
+      },
+      {
+        "coefficients": [
+          -1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-27400",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:IncomeTaxesPaidNet",
+        "label": "IncomeTaxesPaidNet",
+        "limitations": [],
+        "operands": [
+          "IncomeTaxesPaidNet"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-8"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "cash_payment",
+        "scope": "Note 14 rounded cash taxes net of refunds, not operating-only tax or approved rate.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "IncomeTaxesPaidNet"
+          }
+        ],
+        "status": "existing_accepted_treatment",
+        "unit": "USD",
+        "value": "-27400000000"
+      },
+      {
+        "coefficients": [
+          1,
+          1
+        ],
+        "completeness": "complete_for_named_population",
+        "display_unit": "pure",
+        "display_value": "0.1643951091265701289487960605934148",
+        "evidence_label": "derived_calculation",
+        "formula": "DIVIDE",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported_etr",
+        "label": "Historical accounting provision / positive reported pretax; no future rate",
+        "limitations": [],
+        "operands": [
+          "IncomeTaxExpenseBenefit",
+          "pretax"
+        ],
+        "origin": "derived",
+        "policy": "annual_reported_effective_tax_rate_v1",
+        "precision": {
+          "operand_decimals": [
+            "-6",
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Historical accounting provision / positive reported pretax; no future rate",
+        "role": "reported_observation",
+        "scope": "Historical accounting provision / positive reported pretax; no future rate",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "IncomeTaxExpenseBenefit"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "pretax"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "pure",
+        "value": "0.1643951091265701289487960605934148"
+      },
+      {
+        "coefficients": [
+          1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-5256",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:DeferredIncomeTaxExpenseBenefit",
+        "label": "DeferredIncomeTaxExpenseBenefit",
+        "limitations": [],
+        "operands": [
+          "DeferredIncomeTaxExpenseBenefit"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "accrued_expense",
+        "scope": "Note 14 deferred tax provision -5256m, not CFO -5257m; no adjustment.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "DeferredIncomeTaxExpenseBenefit"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "-5256000000"
+      },
+      {
+        "coefficients": [
+          1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-5257",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:DeferredIncomeTaxesAndTaxCredits",
+        "label": "DeferredIncomeTaxesAndTaxCredits",
+        "limitations": [],
+        "operands": [
+          "DeferredIncomeTaxesAndTaxCredits"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "reported_reconciliation_item",
+        "scope": "CFO deferred-tax adjustment; distinct from Note 14 deferred provision.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "DeferredIncomeTaxesAndTaxCredits"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "-5257000000"
+      }
+    ],
+    "identity": {
+      "accession": "0001652044-25-000014",
+      "annual_end": "2024-12-31",
+      "annual_start": "2024-01-01",
+      "cik": 1652044,
+      "form": "10-K"
+    },
+    "investment_columns": [
+      {
+        "coefficients": [
+          -1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-52535",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:PaymentsToAcquirePropertyPlantAndEquipment",
+        "label": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "limitations": [],
+        "operands": [
+          "PaymentsToAcquirePropertyPlantAndEquipment"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "cash_payment",
+        "scope": "Investing PP&E cash purchases, not complete reinvestment.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "PaymentsToAcquirePropertyPlantAndEquipment"
+          }
+        ],
+        "status": "existing_accepted_treatment",
+        "unit": "USD",
+        "value": "-52535000000"
+      },
+      {
+        "coefficients": [
+          -1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-2931",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+        "label": "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+        "limitations": [],
+        "operands": [
+          "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "cash_payment",
+        "scope": "Combined acquisitions net of cash and intangible purchases; no complete allocation or Character residual.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "-2931000000"
+      },
+      {
+        "coefficients": [
+          -1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-2667",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:PaymentsForProceedsFromOtherInvestingActivities",
+        "label": "PaymentsForProceedsFromOtherInvestingActivities",
+        "limitations": [],
+        "operands": [
+          "PaymentsForProceedsFromOtherInvestingActivities"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "cash_payment",
+        "scope": "Net investing Other, not complete gross reinvestment.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "PaymentsForProceedsFromOtherInvestingActivities"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "-2667000000"
+      },
+      {
+        "coefficients": [
+          1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "2510",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+        "label": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+        "limitations": [],
+        "operands": [
+          "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "noncash_addition",
+        "scope": "Noncash operating ROU additions, not cash PP&E.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "2510000000"
+      },
+      {
+        "coefficients": [
+          1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "313",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+        "label": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+        "limitations": [],
+        "operands": [
+          "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "noncash_addition",
+        "scope": "Noncash finance ROU additions, not principal cash or PP&E purchases.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "313000000"
+      }
+    ],
+    "lease_cash_and_debt_repayments": [
+      {
+        "coefficients": [
+          -1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-3425",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:OperatingLeasePayments",
+        "label": "OperatingLeasePayments",
+        "limitations": [],
+        "operands": [
+          "OperatingLeasePayments"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "cash_payment",
+        "scope": "Note 4 operating lease liability-measurement cash; already operating CFO; nonlease/variable coverage unproved.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "OperatingLeasePayments"
+          }
+        ],
+        "status": "existing_accepted_treatment",
+        "unit": "USD",
+        "value": "-3425000000"
+      },
+      {
+        "coefficients": [
+          -1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-31",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:FinanceLeaseInterestPaymentOnLiability",
+        "label": "FinanceLeaseInterestPaymentOnLiability",
+        "limitations": [],
+        "operands": [
+          "FinanceLeaseInterestPaymentOnLiability"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "cash_payment",
+        "scope": "Note 4 finance-lease interest cash, already operating CFO; borrowing cash overlap unknown.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "FinanceLeaseInterestPaymentOnLiability"
+          }
+        ],
+        "status": "existing_accepted_treatment",
+        "unit": "USD",
+        "value": "-31000000"
+      },
+      {
+        "coefficients": [
+          -1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-405",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:FinanceLeasePrincipalPayments",
+        "label": "FinanceLeasePrincipalPayments",
+        "limitations": [],
+        "operands": [
+          "FinanceLeasePrincipalPayments"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "cash_payment",
+        "scope": "Note 4 finance-lease principal cash, financing; included in face debt repayments, not additional to them.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "FinanceLeasePrincipalPayments"
+          }
+        ],
+        "status": "existing_accepted_treatment",
+        "unit": "USD",
+        "value": "-405000000"
+      },
+      {
+        "coefficients": [
+          -1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "-12701",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:RepaymentsOfDebtAndCapitalLeaseObligations",
+        "label": "RepaymentsOfDebtAndCapitalLeaseObligations",
+        "limitations": [],
+        "operands": [
+          "RepaymentsOfDebtAndCapitalLeaseObligations"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "cash_payment",
+        "scope": "Face financing repayments of debt include finance principal; do not sum them.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "RepaymentsOfDebtAndCapitalLeaseObligations"
+          }
+        ],
+        "status": "source_supported_selection_or_calculation",
+        "unit": "USD",
+        "value": "-12701000000"
+      }
+    ],
+    "lease_classification": {
+      "complete_lease_coverage": false,
+      "finance": "asset_financing",
+      "finance_amortization_inclusion_assumption": null,
+      "operating": "service_cost",
+      "review": "accepted_for_stated_historical_preparation_scope"
+    },
+    "manual_note_input": {
+      "assumptions": [
+        "Explicit reviewed note-to-closing interpretation at disclosed rounded precision, not an estimated allocation or generic stock inference.",
+        "Use the disclosed 3.2bn rounded point only; no invented unrounded value, numerical uncertainty interval, zero inventory or residual supplier allocation."
+      ],
+      "closing_basis": "2024-12-31",
+      "coefficient": 1,
+      "component_id": "reviewed_ppe_in_ap_note",
+      "displayed_unit": "USD billion",
+      "displayed_value": "3.2",
+      "evidence_kind": "manual_input",
+      "inline_scale": "9",
+      "precision": "rounded",
+      "rationale": "Explicitly transcribed rounded additional PP&E purchases included in AP as of closing. The source XBRL context is annual-duration; closing scope is established by the note, not a fabricated instant fact.",
+      "scope_assertion": "Additional property and equipment purchases of $ 2.8 billion and $ 3.2 billion as of December 31, 2023 and 2024, respectively, were included in accounts payable.",
+      "scope_keys": [
+        "reviewed_ppe_in_ap_note"
+      ],
+      "source_occurrence": {
+        "concept": "CapitalExpendituresIncurredButNotYetPaid",
+        "context": {
+          "dimensions": [],
+          "end": "2024-12-31",
+          "entity": "0001652044",
+          "start": "2024-01-01"
+        },
+        "context_id": "c-1",
+        "decimals": "-8",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "nil": "false",
+        "occurrence_ordinal": 1459,
+        "raw_value": "3200000000",
+        "source_fact_id": "f-1104",
+        "unit": [
+          "iso4217:USD"
+        ],
+        "unit_id": "usd"
+      },
+      "value_usd": "3200000000"
+    },
+    "nci_includes_redeemable": true,
+    "nondefault_history": [
+      {
+        "default": false,
+        "observation": {
+          "coefficients": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "completeness": "partial",
+          "display_unit": "USD millions",
+          "display_value": "10142",
+          "evidence_label": "derived_calculation",
+          "formula": "LINEAR_COMPONENTS",
+          "formula_version": "googl-draft-historical-v1",
+          "input_id": "whole_ap_partial",
+          "label": "Whole-AP partial current book comparator excluding inventory/other assets",
+          "limitations": [],
+          "operands": [
+            "ar",
+            "ap",
+            "current_deferred",
+            "compensation",
+            "revenue_share",
+            "customer_liability"
+          ],
+          "origin": "derived",
+          "policy": null,
+          "precision": {
+            "operand_decimals": [
+              "-6",
+              "-6",
+              "-6",
+              "-6",
+              "-6",
+              "-6"
+            ],
+            "treatment": "Reported rounded points; calculation does not improve source precision."
+          },
+          "rationale": "Whole-AP partial current book comparator excluding inventory/other assets",
+          "role": "reported_observation",
+          "scope": "Whole-AP partial current book comparator excluding inventory/other assets",
+          "source_dates": [
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "ar"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "ap"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "current_deferred"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "compensation"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "revenue_share"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "customer_liability"
+            }
+          ],
+          "status": "source_supported_selection_or_calculation",
+          "unit": "USD",
+          "value": "10142000000"
+        },
+        "source_reference": "/inputs/34"
+      },
+      {
+        "default": false,
+        "observation": {
+          "coefficients": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "completeness": "partial",
+          "display_unit": "USD millions",
+          "display_value": "7020",
+          "evidence_label": "derived_calculation",
+          "formula": "LINEAR_COMPONENTS",
+          "formula_version": "googl-draft-historical-v1",
+          "input_id": "alternative_operating_fines",
+          "label": "Alternative classify EC fines as ordinary operating accrual, still rounded partial capital",
+          "limitations": [],
+          "manual_note_reference": "/manual_note_input",
+          "manual_operand_ids": [
+            "reviewed_ppe_in_ap_note"
+          ],
+          "operands": [
+            "ar",
+            "ap",
+            "current_deferred",
+            "compensation",
+            "revenue_share",
+            "customer_liability",
+            "ap_note_source",
+            "ec_fines"
+          ],
+          "origin": "derived",
+          "policy": null,
+          "precision": {
+            "operand_decimals": [
+              "-6",
+              "-6",
+              "-6",
+              "-6",
+              "-6",
+              "-6",
+              "-8",
+              "-6"
+            ],
+            "treatment": "Reported rounded points; calculation does not improve source precision."
+          },
+          "rationale": "Alternative classify EC fines as ordinary operating accrual, still rounded partial capital",
+          "role": "partial_book_alternative_with_reviewed_manual_note",
+          "scope": "Alternative classify EC fines as ordinary operating accrual, still rounded partial capital",
+          "source_dates": [
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "ar"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "ap"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "current_deferred"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "compensation"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "revenue_share"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "customer_liability"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": "2024-01-01",
+              "as_of": null,
+              "operand": "ap_note_source"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "ec_fines"
+            }
+          ],
+          "status": "proposed_pending_user_approval",
+          "unit": "USD",
+          "value": "7020000000"
+        },
+        "source_reference": "/inputs/36"
+      },
+      {
+        "default": false,
+        "observation": {
+          "coefficients": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "completeness": "complete_for_named_population",
+          "display_unit": "USD millions",
+          "display_value": "30437",
+          "evidence_label": "derived_calculation",
+          "formula": "LINEAR_COMPONENTS",
+          "formula_version": "googl-draft-historical-v1",
+          "input_id": "alternative_all_leases",
+          "label": "Alternative all-lease obligation perimeter, not complete debt",
+          "limitations": [],
+          "operands": [
+            "term_current",
+            "term_long",
+            "cp",
+            "finance_total",
+            "op_total"
+          ],
+          "origin": "derived",
+          "policy": null,
+          "precision": {
+            "operand_decimals": [
+              "-6",
+              "-6",
+              "INF",
+              "-6",
+              "-6"
+            ],
+            "treatment": "Reported rounded points; calculation does not improve source precision."
+          },
+          "rationale": "Alternative all-lease obligation perimeter, not complete debt",
+          "role": "reported_observation",
+          "scope": "Alternative all-lease obligation perimeter, not complete debt",
+          "source_dates": [
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "term_current"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "term_long"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "cp"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "finance_total"
+            },
+            {
+              "annual_end": "2024-12-31",
+              "annual_start": null,
+              "as_of": "2024-12-31",
+              "operand": "op_total"
+            }
+          ],
+          "status": "proposed_pending_user_approval",
+          "unit": "USD",
+          "value": "30437000000"
+        },
+        "source_reference": "/inputs/42"
+      }
+    ],
+    "opening_balance": null,
+    "operating_capital": {
+      "approval_sha256": "de1a2a13771c251f77c8ccd2354d935023c048e0af64a2cacadfa9b438f4923c",
+      "label": "Partial current operating capital; inherited rounded precision",
+      "review": "accepted_for_stated_historical_preparation_scope",
+      "selected": {
+        "accepted": true,
+        "coefficients": [
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "completeness": "partial",
+        "display_unit": "USD millions",
+        "display_value": "13342",
+        "evidence_label": "derived_calculation",
+        "formula": "LINEAR_COMPONENTS",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "proposed_rounded_partial",
+        "label": "Recommended partial current operating-capital schedule with reviewed rounded manual closing-note adjustment",
+        "limitations": [],
+        "manual_note_reference": "/manual_note_input",
+        "manual_operand_ids": [
+          "reviewed_ppe_in_ap_note"
+        ],
+        "operands": [
+          "ar",
+          "ap",
+          "current_deferred",
+          "compensation",
+          "revenue_share",
+          "customer_liability",
+          "ap_note_source"
+        ],
+        "origin": "derived",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-6",
+            "-6",
+            "-6",
+            "-6",
+            "-6",
+            "-6",
+            "-8"
+          ],
+          "treatment": "Manual closing interpretation of duration-tagged rounded note; arithmetic does not create an instant XBRL fact or improve precision."
+        },
+        "rationale": "Recommended partial current operating-capital schedule with reviewed rounded manual closing-note adjustment",
+        "role": "partial_book_schedule_with_reviewed_manual_note",
+        "scope": "Recommended partial current operating-capital schedule with reviewed rounded manual closing-note adjustment",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "ar"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "ap"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "current_deferred"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "compensation"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "revenue_share"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": null,
+            "as_of": "2024-12-31",
+            "operand": "customer_liability"
+          },
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "ap_note_source"
+          }
+        ],
+        "status": "accepted_for_stated_historical_preparation_scope",
+        "unit": "USD",
+        "value": "13342000000"
+      },
+      "source_reference": "/inputs/35",
+      "source_status": "proposed_pending_user_approval"
+    },
+    "operating_reserve": null,
+    "original_bundle_unknowns": [
+      {
+        "input_id": "borrowing_cash_interest",
+        "reason": "No eligible separately disclosed annual borrowing cash interest; no expense/rate proxy."
+      },
+      {
+        "input_id": "complete_lease_cash_coverage",
+        "reason": "Liability-measurement payments exclude unproved variable/nonlease coverage; no certified total."
+      },
+      {
+        "input_id": "borrowing_lease_cash_overlap",
+        "reason": "Borrowing interest cash not established; no mutual-exclusion or combined total approval."
+      },
+      {
+        "input_id": "cash_interest_capitalization_basis",
+        "reason": "Capitalized expense is known but annual paid/capitalized cash and gross/net basis not established."
+      },
+      {
+        "input_id": "acquisition_only_cash_purchases",
+        "reason": "Combined line and rounded Character note do not provide a complete non-overlapping cash bridge."
+      },
+      {
+        "input_id": "intangible_only_cash_purchases",
+        "reason": "Combined cash line unallocated; no residual or zero intangible cash."
+      },
+      {
+        "input_id": "complete_reinvestment",
+        "reason": "PP&E cash, combined purchases and net Other do not establish complete gross reinvestment."
+      },
+      {
+        "input_id": "operating_only_cash_tax",
+        "reason": "Rounded corporate cash taxes and provision do not supply recurring operating-tax allocation or approved rate."
+      },
+      {
+        "input_id": "complete_depreciation_and_amortization",
+        "reason": "PP&E depreciation reconciliation does not resolve frozen missing D&A primitive."
+      },
+      {
+        "input_id": "complete_operating_nwc",
+        "reason": "Inventory and supplier-AP scope remain blocked; rounded partial scenario unchanged."
+      },
+      {
+        "input_id": "acquisition_fx_reclassification_cash_bridge",
+        "reason": "Operating balance changes exclude acquisitions but reported CFO includes acquired operations; no complete organic/comparability bridge."
+      },
+      {
+        "input_id": "joint_timing_compatibility",
+        "reason": "Integrated EBIT/D&A/NWC/tax/lease timing remains unproved."
+      }
+    ],
+    "overlap_relationships": [
+      {
+        "children": [
+          "customer_liability",
+          "op_current",
+          "finance_current",
+          "term_current",
+          "cp",
+          "accrued_ppe",
+          "ec_fines",
+          "tax_current"
+        ],
+        "coverage": "partial; never add parent and children",
+        "parent": "accrued_current_parent"
+      },
+      {
+        "amount_usd": "405000000",
+        "child": "FinanceLeasePrincipalPayments",
+        "handling": "Already included in12701; never add405 again.",
+        "parent": "debt_repayments"
+      },
+      {
+        "child": "redeemable_nci",
+        "handling": "Note5 explicitly says of which;1100R included in4200R, no sum.",
+        "parent": "nci_vie"
+      },
+      {
+        "children": [
+          "equity_method",
+          "precision_candidates/nonmarketable_equity"
+        ],
+        "coverage": "overlapping/incomplete; no sum",
+        "parent": "nonmarketable_parent"
+      }
+    ],
+    "phase1_closed": false,
+    "precision_candidates": {
+      "nonmarketable_equity": {
+        "candidates": [
+          {
+            "concept": "EquitySecuritiesWithoutReadilyDeterminableFairValueAmount",
+            "instance_source": "FY2024-instance",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrences": [
+              {
+                "context_id": "c-9",
+                "dimensions": [],
+                "end": "2024-12-31",
+                "ordinal": 1019,
+                "precision": "-8",
+                "primary_display": "35.5",
+                "primary_locator": "inline#f-640",
+                "primary_scale": 9,
+                "primary_sign": "+",
+                "raw_value": "35500000000",
+                "start": null,
+                "unit_id": "usd",
+                "xml_id": "f-640"
+              }
+            ],
+            "precision": "-8",
+            "primary_source": "FY2024-primary",
+            "unit": "USD",
+            "value": "35500000000"
+          },
+          {
+            "concept": "EquitySecuritiesWithoutReadilyDeterminableFairValueAmount",
+            "instance_source": "FY2024-instance",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrences": [
+              {
+                "context_id": "c-9",
+                "dimensions": [],
+                "end": "2024-12-31",
+                "ordinal": 1109,
+                "precision": "-6",
+                "primary_display": "35,531",
+                "primary_locator": "inline#f-730",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "35531000000",
+                "start": null,
+                "unit_id": "usd",
+                "xml_id": "f-730"
+              }
+            ],
+            "precision": "-6",
+            "primary_source": "FY2024-primary",
+            "unit": "USD",
+            "value": "35531000000"
+          }
+        ],
+        "competing_values": [
+          "35500000000",
+          "35531000000"
+        ],
+        "selected_value": null,
+        "treatment": "Retain every representation; precision difference is not an adjustment or automatic selection.",
+        "unresolved_requirements": [
+          "Competing unequal observed values for nonmarketable_equity; selection remains outside inspection."
+        ]
+      },
+      "uncertain_tax": {
+        "candidates": [
+          {
+            "concept": "UnrecognizedTaxBenefits",
+            "instance_source": "FY2024-instance",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrences": [
+              {
+                "context_id": "c-9",
+                "dimensions": [],
+                "end": "2024-12-31",
+                "ordinal": 1973,
+                "precision": "-6",
+                "primary_display": "12,619",
+                "primary_locator": "inline#f-1618",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "12619000000",
+                "start": null,
+                "unit_id": "usd",
+                "xml_id": "f-1618"
+              }
+            ],
+            "precision": "-6",
+            "primary_source": "FY2024-primary",
+            "unit": "USD",
+            "value": "12619000000"
+          },
+          {
+            "concept": "UnrecognizedTaxBenefits",
+            "instance_source": "FY2024-instance",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrences": [
+              {
+                "context_id": "c-9",
+                "dimensions": [],
+                "end": "2024-12-31",
+                "ordinal": 1976,
+                "precision": "-8",
+                "primary_display": "12.6",
+                "primary_locator": "inline#f-1621",
+                "primary_scale": 9,
+                "primary_sign": "+",
+                "raw_value": "12600000000",
+                "start": null,
+                "unit_id": "usd",
+                "xml_id": "f-1621"
+              }
+            ],
+            "precision": "-8",
+            "primary_source": "FY2024-primary",
+            "unit": "USD",
+            "value": "12600000000"
+          }
+        ],
+        "competing_values": [
+          "12619000000",
+          "12600000000"
+        ],
+        "selected_value": null,
+        "treatment": "Retain every representation; precision difference is not an adjustment or automatic selection.",
+        "unresolved_requirements": [
+          "Competing unequal observed values for uncertain_tax; selection remains outside inspection."
+        ]
+      }
+    },
+    "prior_proposals_retained": true,
+    "sbc_cfo_addback": {
+      "coefficients": [
+        1
+      ],
+      "completeness": "reported_population_only",
+      "display_unit": "USD millions",
+      "display_value": "22785",
+      "evidence_label": "fact_source_reported",
+      "formula": "SELECT",
+      "formula_version": "googl-draft-historical-v1",
+      "input_id": "reported:ShareBasedCompensation",
+      "label": "ShareBasedCompensation",
+      "limitations": [],
+      "operands": [
+        "ShareBasedCompensation"
+      ],
+      "origin": "reported",
+      "policy": null,
+      "precision": {
+        "operand_decimals": [
+          "-6"
+        ],
+        "treatment": "Reported rounded points; calculation does not improve source precision."
+      },
+      "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+      "role": "reported_reconciliation_item",
+      "scope": "CFO SBC add-back at decimals -6; not the rounded note expense or a second economic cost.",
+      "source_dates": [
+        {
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "as_of": null,
+          "operand": "ShareBasedCompensation"
+        }
+      ],
+      "status": "source_supported_selection_or_calculation",
+      "unit": "USD",
+      "value": "22785000000"
+    },
+    "sbc_expense_proxy": {
+      "approval_sha256": "de1a2a13771c251f77c8ccd2354d935023c048e0af64a2cacadfa9b438f4923c",
+      "label": "Rounded recognized SBC expense proxy counted once",
+      "review": "accepted_for_stated_historical_preparation_scope",
+      "selected": {
+        "accepted": true,
+        "coefficients": [
+          1
+        ],
+        "completeness": "reported_population_only",
+        "display_unit": "USD millions",
+        "display_value": "22800",
+        "evidence_label": "fact_source_reported",
+        "formula": "SELECT",
+        "formula_version": "googl-draft-historical-v1",
+        "input_id": "reported:AllocatedShareBasedCompensationExpense",
+        "label": "AllocatedShareBasedCompensationExpense",
+        "limitations": [],
+        "operands": [
+          "AllocatedShareBasedCompensationExpense"
+        ],
+        "origin": "reported",
+        "policy": null,
+        "precision": {
+          "operand_decimals": [
+            "-8"
+          ],
+          "treatment": "Reported rounded points; calculation does not improve source precision."
+        },
+        "rationale": "Retain Alphabet original role/precision; existing acceptance is scope-specific, no adjustment.",
+        "role": "noncash_expense",
+        "scope": "Note 13 rounded SBC expense at decimals -8; distinct point from CFO add-back, no difference adjustment or accepted cost proxy.",
+        "source_dates": [
+          {
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "as_of": null,
+            "operand": "AllocatedShareBasedCompensationExpense"
+          }
+        ],
+        "status": "accepted_for_stated_historical_preparation_scope",
+        "unit": "USD",
+        "value": "22800000000"
+      },
+      "source_reference": "/inputs/18",
+      "source_status": "existing_accepted_treatment"
+    },
+    "schema": "googl-accepted-historical-view-v1",
+    "separate_claims": [
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "NoncontrollingInterestInVariableInterestEntity",
+          "display_unit": "USD millions",
+          "display_value": "4200",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note5 rounded total NCI in consolidated subsidiaries, includes redeemable portion",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1376,
+              "precision": "-8",
+              "primary_display": "4.2",
+              "primary_format": null,
+              "primary_locator": "inline#f-1019",
+              "primary_scale": 9,
+              "primary_sign": "+",
+              "raw_value": "4200000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-1019"
+            }
+          ],
+          "precision": "-8",
+          "precision_variants": [
+            "-8"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "4200000000"
+        },
+        "source_reference": "/facts/nci_vie"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "RedeemableNoncontrollingInterestInVariableInterestEntity",
+          "display_unit": "USD millions",
+          "display_value": "1100",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note5 redeemable NCI SUBSET of total NCI; do not add again",
+          "namespace": "http://www.google.com/20241231",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1378,
+              "precision": "-8",
+              "primary_display": "1.1",
+              "primary_format": null,
+              "primary_locator": "inline#f-1021",
+              "primary_scale": 9,
+              "primary_sign": "+",
+              "raw_value": "1100000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-1021"
+            }
+          ],
+          "precision": "-8",
+          "precision_variants": [
+            "-8"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "1100000000"
+        },
+        "source_reference": "/facts/redeemable_nci"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "LossContingencyAccrualCarryingValueCurrent",
+          "display_unit": "USD millions",
+          "display_value": "6322",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note7 EC fines including FX/interest within accrued current parent",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1444,
+              "precision": "-6",
+              "primary_display": "6,322",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1087",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "6322000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-1087"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "6322000000"
+        },
+        "source_reference": "/facts/ec_fines"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "AccruedIncomeTaxesCurrent",
+          "display_unit": "USD millions",
+          "display_value": "2905",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note7 current tax within accrued current parent",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1452,
+              "precision": "-6",
+              "primary_display": "2,905",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1097",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "2905000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-1097"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "2905000000"
+        },
+        "source_reference": "/facts/tax_current"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "AccruedIncomeTaxesNoncurrent",
+          "display_unit": "USD millions",
+          "display_value": "8782",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Noncurrent taxes outside narrow capital schedule",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 484,
+              "precision": "-6",
+              "primary_display": "8,782",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-100",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "8782000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-100"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "8782000000"
+        },
+        "source_reference": "/facts/tax_long"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "DeferredTaxAssetsOperatingLossCarryforwards",
+          "display_unit": "USD millions",
+          "display_value": "3472",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note14 gross loss DTA, before valuation allowance; not equity value",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1921,
+              "precision": "-6",
+              "primary_display": "3,472",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1566",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "3472000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-1566"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "3472000000"
+        },
+        "source_reference": "/facts/nol_dta"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "UnconsolidatedVariableInterestEntityFutureFundingCommitments",
+          "display_unit": "USD millions",
+          "display_value": "1500",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note5 future funding commitment, not funded debt",
+          "namespace": "http://www.google.com/20241231",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1380,
+              "precision": "-8",
+              "primary_display": "1.5",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1023",
+              "primary_scale": 9,
+              "primary_sign": "+",
+              "raw_value": "1500000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-1023"
+            }
+          ],
+          "precision": "-8",
+          "precision_variants": [
+            "-8"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "1500000000"
+        },
+        "source_reference": "/facts/vie_funding"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "ConvertiblePreferredStockNonredeemableOrRedeemableIssuerOptionValue",
+          "display_unit": "USD millions",
+          "display_value": "0",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Balance sheet explicitly reported preferred stock value zero",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 502,
+              "precision": "-6",
+              "primary_display": "0",
+              "primary_format": null,
+              "primary_locator": "inline#f-118",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "0",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-118"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "0"
+        },
+        "source_reference": "/facts/preferred_value"
+      }
+    ],
+    "separate_investments": [
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "MarketableSecuritiesNoncurrent",
+          "display_unit": "USD millions",
+          "display_value": "266",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note3 long-term lock-up-restricted marketable equity within other noncurrent assets, not current cash",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1018,
+              "precision": "-6",
+              "primary_display": "266",
+              "primary_format": null,
+              "primary_locator": "inline#f-639",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "266000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-639"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "266000000"
+        },
+        "source_reference": "/facts/long_marketable"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "OtherLongTermInvestments",
+          "display_unit": "USD millions",
+          "display_value": "37982",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Balance sheet non-marketable securities, not unrestricted cash",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 456,
+              "precision": "-6",
+              "primary_display": "37,982",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-72",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "37982000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-72"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "37982000000"
+        },
+        "source_reference": "/facts/nonmarketable_parent"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "EquityMethodInvestments",
+          "display_unit": "USD millions",
+          "display_value": "2000.0",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note3 rounded equity-method population; overlap with nonmarketable parent",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1142,
+              "precision": "-8",
+              "primary_display": "2.0",
+              "primary_format": null,
+              "primary_locator": "inline#f-763",
+              "primary_scale": 9,
+              "primary_sign": "+",
+              "raw_value": "2000000000.0",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-763"
+            }
+          ],
+          "precision": "-8",
+          "precision_variants": [
+            "-8"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "2000000000.0"
+        },
+        "source_reference": "/facts/equity_method"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "EquitySecuritiesFvNi",
+          "display_unit": "USD millions",
+          "display_value": "5079",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note3 fair-value equity population; overlap with financial captions unbridged",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1108,
+              "precision": "-6",
+              "primary_display": "5,079",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-729",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "5079000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-729"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "5079000000"
+        },
+        "source_reference": "/facts/listed_equity"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "display_unit": "USD millions",
+          "display_value": "23466",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Cash-flow closing combined cash/restricted caption, not standalone restricted cash",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 788,
+              "precision": "-6",
+              "primary_display": "23,466",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-404",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "23466000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-404"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "23466000000"
+        },
+        "source_reference": "/facts/restricted_combined"
+      }
+    ],
+    "separate_shares_and_awards": [
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "CommonStockSharesOutstanding",
+          "display_unit": "shares",
+          "display_value": "5835000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Balance sheet distinct year-end class A",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-11",
+              "dimensions": [
+                [
+                  "us-gaap:StatementClassOfStockAxis",
+                  "us-gaap:CommonClassAMember"
+                ]
+              ],
+              "end": "2024-12-31",
+              "ordinal": 523,
+              "precision": "-3",
+              "primary_display": "5,835",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-139",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "5835000000",
+              "start": null,
+              "unit_id": "shares",
+              "xml_id": "f-139"
+            }
+          ],
+          "precision": "-3",
+          "precision_variants": [
+            "-3"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "5835000000"
+        },
+        "source_reference": "/facts/year_end_a"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "CommonStockSharesOutstanding",
+          "display_unit": "shares",
+          "display_value": "861000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Balance sheet distinct year-end class B",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-13",
+              "dimensions": [
+                [
+                  "us-gaap:StatementClassOfStockAxis",
+                  "us-gaap:CommonClassBMember"
+                ]
+              ],
+              "end": "2024-12-31",
+              "ordinal": 526,
+              "precision": "-3",
+              "primary_display": "861",
+              "primary_format": null,
+              "primary_locator": "inline#f-142",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "861000000",
+              "start": null,
+              "unit_id": "shares",
+              "xml_id": "f-142"
+            }
+          ],
+          "precision": "-3",
+          "precision_variants": [
+            "-3"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "861000000"
+        },
+        "source_reference": "/facts/year_end_b"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "CommonStockSharesOutstanding",
+          "display_unit": "shares",
+          "display_value": "5515000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Balance sheet distinct year-end class C",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-14",
+              "dimensions": [
+                [
+                  "us-gaap:StatementClassOfStockAxis",
+                  "goog:CapitalClassCMember"
+                ]
+              ],
+              "end": "2024-12-31",
+              "ordinal": 527,
+              "precision": "-3",
+              "primary_display": "5,515",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-143",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "5515000000",
+              "start": null,
+              "unit_id": "shares",
+              "xml_id": "f-143"
+            }
+          ],
+          "precision": "-3",
+          "precision_variants": [
+            "-3"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "5515000000"
+        },
+        "source_reference": "/facts/year_end_c"
+      },
+      {
+        "observation": {
+          "as_of": "2025-01-28",
+          "concept": "EntityCommonStockSharesOutstanding",
+          "display_unit": "shares",
+          "display_value": "5833000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Cover distinct class A, actual 2025-01-28 date",
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-5",
+              "dimensions": [
+                [
+                  "us-gaap:StatementClassOfStockAxis",
+                  "us-gaap:CommonClassAMember"
+                ]
+              ],
+              "end": "2025-01-28",
+              "ordinal": 421,
+              "precision": "INF",
+              "primary_display": "5,833",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-33",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "5833000000",
+              "start": null,
+              "unit_id": "shares",
+              "xml_id": "f-33"
+            }
+          ],
+          "precision": "INF",
+          "precision_variants": [
+            "INF"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "5833000000"
+        },
+        "source_reference": "/facts/cover_a"
+      },
+      {
+        "observation": {
+          "as_of": "2025-01-28",
+          "concept": "EntityCommonStockSharesOutstanding",
+          "display_unit": "shares",
+          "display_value": "860000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Cover distinct class B, actual 2025-01-28 date",
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-6",
+              "dimensions": [
+                [
+                  "us-gaap:StatementClassOfStockAxis",
+                  "us-gaap:CommonClassBMember"
+                ]
+              ],
+              "end": "2025-01-28",
+              "ordinal": 422,
+              "precision": "INF",
+              "primary_display": "860",
+              "primary_format": null,
+              "primary_locator": "inline#f-34",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "860000000",
+              "start": null,
+              "unit_id": "shares",
+              "xml_id": "f-34"
+            }
+          ],
+          "precision": "INF",
+          "precision_variants": [
+            "INF"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "860000000"
+        },
+        "source_reference": "/facts/cover_b"
+      },
+      {
+        "observation": {
+          "as_of": "2025-01-28",
+          "concept": "EntityCommonStockSharesOutstanding",
+          "display_unit": "shares",
+          "display_value": "5497000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Cover distinct class C, actual 2025-01-28 date",
+          "namespace": "http://xbrl.sec.gov/dei/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-7",
+              "dimensions": [
+                [
+                  "us-gaap:StatementClassOfStockAxis",
+                  "goog:CapitalClassCMember"
+                ]
+              ],
+              "end": "2025-01-28",
+              "ordinal": 423,
+              "precision": "INF",
+              "primary_display": "5,497",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-35",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "5497000000",
+              "start": null,
+              "unit_id": "shares",
+              "xml_id": "f-35"
+            }
+          ],
+          "precision": "INF",
+          "precision_variants": [
+            "INF"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "5497000000"
+        },
+        "source_reference": "/facts/cover_c"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "CommonStockSharesOutstanding",
+          "display_unit": "shares",
+          "display_value": "12211000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Reported aggregate year-end common observation, not a computed class sum",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-9",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 522,
+              "precision": "-3",
+              "primary_display": "12,211",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-138",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "12211000000",
+              "start": null,
+              "unit_id": "shares",
+              "xml_id": "f-138"
+            }
+          ],
+          "precision": "-3",
+          "precision_variants": [
+            "-3"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "12211000000"
+        },
+        "source_reference": "/facts/reported_common_total"
+      },
+      {
+        "observation": {
+          "as_of": null,
+          "concept": "WeightedAverageNumberOfSharesOutstandingBasic",
+          "display_unit": "shares",
+          "display_value": "12319000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note12 annual weighted-average EPS count, not closing shares",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 2,
+          "occurrences": [
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1778,
+              "precision": "-6",
+              "primary_display": "12,319",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1423",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "12319000000",
+              "start": "2024-01-01",
+              "unit_id": "shares",
+              "xml_id": "f-1423"
+            },
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1800,
+              "precision": "-6",
+              "primary_display": "12,319",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1445",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "12319000000",
+              "start": "2024-01-01",
+              "unit_id": "shares",
+              "xml_id": "f-1445"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "12319000000"
+        },
+        "source_reference": "/facts/weighted_basic"
+      },
+      {
+        "observation": {
+          "as_of": null,
+          "concept": "WeightedAverageNumberOfDilutedSharesOutstanding",
+          "display_unit": "shares",
+          "display_value": "12447000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note12 annual diluted EPS denominator, not point-in-time or forecast dilution",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-1",
+              "dimensions": [],
+              "end": "2024-12-31",
+              "ordinal": 1811,
+              "precision": "-6",
+              "primary_display": "12,447",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#f-1456",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "12447000000",
+              "start": "2024-01-01",
+              "unit_id": "shares",
+              "xml_id": "f-1456"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "12447000000"
+        },
+        "source_reference": "/facts/weighted_diluted"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber",
+          "display_unit": "shares",
+          "display_value": "299000000",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note13 Alphabet unvested RSU population; future issuance Class C per note, actual dimensions retained",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-307",
+              "dimensions": [
+                [
+                  "us-gaap:AwardTypeAxis",
+                  "us-gaap:RestrictedStockUnitsRSUMember"
+                ]
+              ],
+              "end": "2024-12-31",
+              "ordinal": 1840,
+              "precision": "INF",
+              "primary_display": "299",
+              "primary_format": null,
+              "primary_locator": "inline#f-1485",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "299000000",
+              "start": null,
+              "unit_id": "shares",
+              "xml_id": "f-1485"
+            }
+          ],
+          "precision": "INF",
+          "precision_variants": [
+            "INF"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "shares",
+          "value": "299000000"
+        },
+        "source_reference": "/facts/rsu"
+      },
+      {
+        "observation": {
+          "as_of": "2024-12-31",
+          "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+          "display_unit": "USD millions",
+          "display_value": "34800",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2024-instance",
+          "location": "Note13 Alphabet unvested RSU population; future issuance Class C per note, actual dimensions retained",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-307",
+              "dimensions": [
+                [
+                  "us-gaap:AwardTypeAxis",
+                  "us-gaap:RestrictedStockUnitsRSUMember"
+                ]
+              ],
+              "end": "2024-12-31",
+              "ordinal": 1847,
+              "precision": "-8",
+              "primary_display": "34.8",
+              "primary_format": null,
+              "primary_locator": "inline#f-1492",
+              "primary_scale": 9,
+              "primary_sign": "+",
+              "raw_value": "34800000000",
+              "start": null,
+              "unit_id": "usd",
+              "xml_id": "f-1492"
+            }
+          ],
+          "precision": "-8",
+          "precision_variants": [
+            "-8"
+          ],
+          "primary_source": "FY2024-primary",
+          "unit": "USD",
+          "value": "34800000000"
+        },
+        "source_reference": "/facts/future_sbc"
+      }
+    ],
+    "stopping_condition": "Stop after Alphabet integration and consolidated pilot assessment; no automatic issuer work or closure.",
+    "unknown_restrictions": null,
+    "unresolved_requirements": [
+      {
+        "input_id": "expense_da",
+        "reason": "Complete income-recognized D&A/finite-lived amortization and lease/inventory overlap unavailable. CFO depreciation15311 and finance ROU amortization413 do not prove completeness/non-overlap.",
+        "status": "unresolved_requirement",
+        "value": null
+      },
+      {
+        "input_id": "inventory",
+        "reason": "No separately evidenced complete inventory amount in this retained perimeter. Device inventory costs exist; absence is not zero.",
+        "status": "unresolved_requirement",
+        "value": null
+      },
+      {
+        "input_id": "supplier_ap",
+        "reason": "Rounded manual correction3200 does not prove remaining supplier AP operating-only; no residual allocation.",
+        "status": "unresolved_requirement",
+        "value": null
+      },
+      {
+        "input_id": "other_operating_capital",
+        "reason": "Other current/noncurrent operating allocations and acquisition/FX/noncash/reclass cash bridge unavailable. One level, no delta NWC.",
+        "status": "unresolved_requirement",
+        "value": null
+      },
+      {
+        "input_id": "cash_interest",
+        "reason": "Borrowing interest cash unavailable; expense268 and capitalized expense194 do not provide a cash bridge or lease-overlap proof.",
+        "status": "unresolved_requirement",
+        "value": null
+      },
+      {
+        "input_id": "complete_lease_cash",
+        "reason": "Restricted cash classes accepted; complete variable/nonlease cash and expense conversion unproved. Principal405 already within debt repayments.",
+        "status": "unresolved_requirement",
+        "value": null
+      },
+      {
+        "input_id": "investment_allocations",
+        "reason": "Combined acquisition/intangible cash2931 and Other2667 unallocated; no complete accrual/organic bridge from cash and capital creditors.",
+        "status": "unresolved_requirement",
+        "value": null
+      },
+      {
+        "input_id": "cash_availability",
+        "reason": "Restricted/operating-reserve allocations unproved. Combined cash/restricted caption equality does not establish standalone restricted cash0.",
+        "status": "unresolved_requirement",
+        "value": null
+      },
+      {
+        "input_id": "claims",
+        "reason": "NCI4200R includes redeemable1100R; other claims, valuation and exhaustive claim coverage unproved. No automatic all-claims total or valuation.",
+        "status": "unresolved_requirement",
+        "value": null
+      }
+    ],
+    "unrestricted_or_excess_cash": false,
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
   "adjacent_book_movement": null,
   "approval_sheet": [
     {

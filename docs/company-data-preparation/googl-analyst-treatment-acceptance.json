@@ -1,0 +1,24 @@
+{
+  "action": "ACCEPT_SCOPED_SELECTIONS",
+  "author": "User, explicit Alphabet FY2024 approved-selection instruction",
+  "authority": "Current user instruction: Implement the user-approved Alphabet FY2024 selections.",
+  "decisions": {
+    "DA-INVESTMENT": "CFO depreciation15311 and finance amortization413 separate; complete expense D&A null; cash PP&E52535, combined2931, Other2667, creditors and noncash additions separate with source signs; no sum or inclusion assumption.",
+    "FINANCIAL-CLAIMS": "Select current financial95657, not unrestricted/excess; restricted266 and strategic/precision alternatives separate; NCI4200 includes redeemable1100, never5300; claims/commitments separate, no net debt or exhaustive coverage.",
+    "HISTORICAL-SCHEDULES": "Revenue350018, EBIT112390, CFO125299; accepted rounded SBC expense22800 once versus add-back22785; historical tax roles and dated classes/source aggregate/EPS/awards separate; no future rate, interest proxy, rounding plug or dilution.",
+    "LEASE-FINANCING": "Operating service / finance asset financing; named term+CP+finance15859 USDm only, all-lease30437 non-default; principal405 already within repayments12701; no complete debt, lease cash or borrowing interest.",
+    "OPERATING-CAPITAL": "Select rounded partial current operating capital13342 USDm including reviewed manual-note3200; whole AP/fines alternatives non-default; inventory/supplier/other allocations unknown; no opening or delta/completeness."
+  },
+  "financial_sufficiency": "NOT_ASSESSED",
+  "phase1_closed": false,
+  "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+  "rationale": "Record only the approved Alphabet historical selections; preserve unavailable amounts, prior proposals and original blockers.",
+  "recorded_at_utc": "2026-10-15T21:14:24.133192+00:00",
+  "schema": "googl-treatment-acceptance-audit-v1",
+  "sequence": 1,
+  "sha256": "de1a2a13771c251f77c8ccd2354d935023c048e0af64a2cacadfa9b438f4923c",
+  "source_commit": "3422da1a9a369055b0b7cdc6197610112b9fd47f",
+  "source_revision": "367e519c8a3cdf0f0e05acb19d9addc14eb37c1e7da70445be74a2af41d0021e",
+  "valuation_consumption_approved": false,
+  "version": 1
+}

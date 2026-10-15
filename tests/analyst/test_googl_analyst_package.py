@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 import unittest
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -18,7 +19,7 @@ class AlphabetPackageTests(unittest.TestCase):
     def setUpClass(cls):
         cls.result=p.build();cls.filing=p.AlphabetFiling()
 
-    def test_exact_replay_selected_identity_and_proposal_only(self):
+    def test_exact_replay_selected_identity_and_prior_proposals(self):
         self.assertTrue(self.result==json.loads((ROOT/p.OUTPUT).read_text()),'Alphabet exact replay differs')
         self.assertEqual(self.result['identity'],dict(cik=1652044,accession='0001652044-25-000014',form='10-K',annual_start='2024-01-01',annual_end='2024-12-31'))
         self.assertEqual(len(self.result['approval_sheet']),6)
@@ -176,6 +177,95 @@ class AlphabetPackageTests(unittest.TestCase):
             'instance' if r is f.instance else 'support') for r in f.bundle.artifacts))
         with self.assertRaisesRegex(ValueError,'precision alternative mismatch'):
             p.variants(f,evidence,'nonmarketable_equity','EquitySecuritiesWithoutReadilyDeterminableFairValueAmount')
+
+
+    def test_accepted_selections_precision_and_nondefault_history(self):
+        v=self.result['accepted_view']
+        for key,amount in [('operating_capital','13342000000'),('borrowings','15859000000'),
+                           ('current_financial_balances','95657000000'),('sbc_expense_proxy','22800000000')]:
+            selected=v[key]
+            self.assertEqual(selected['selected']['value'],amount)
+            self.assertEqual(selected['review'],p.APPROVED_SCOPE)
+            self.assertTrue(selected['selected']['accepted'])
+            self.assertEqual(selected['approval_sha256'],v['approval_audit']['sha256'])
+        self.assertIn('-8',v['operating_capital']['selected']['precision']['operand_decimals'])
+        self.assertEqual(v['manual_note_input'],self.result['manual_note_input'])
+        self.assertEqual([x['observation']['value'] for x in v['nondefault_history']],
+                         ['10142000000','7020000000','30437000000'])
+        self.assertTrue(all(x['default'] is False for x in v['nondefault_history']))
+        self.assertEqual(v['lease_classification']['operating'],'service_cost')
+        self.assertEqual(v['lease_classification']['finance'],'asset_financing')
+        self.assertIsNone(v['lease_classification']['finance_amortization_inclusion_assumption'])
+
+    def test_accepted_nulls_roles_overlap_and_history_survive_round_trip(self):
+        v=json.loads(json.dumps(self.result))['accepted_view']
+        self.assertEqual(v['unresolved_requirements'],self.result['unresolved_requirements'])
+        self.assertTrue(all(x['value'] is None for x in v['unresolved_requirements']))
+        self.assertIsNone(v['complete_expense_basis_da']['value'])
+        self.assertEqual([x['value'] for x in v['da_observations']],['15311000000','413000000'])
+        self.assertEqual(v['sbc_cfo_addback']['value'],'22785000000')
+        self.assertEqual([x['value'] for x in v['investment_columns'][:3]],
+                         ['-52535000000','-2931000000','-2667000000'])
+        self.assertTrue(v['finance_principal_already_in_debt_repayments'])
+        self.assertEqual(v['lease_cash_and_debt_repayments'][2]['value'],'-405000000')
+        self.assertEqual(v['lease_cash_and_debt_repayments'][3]['value'],'-12701000000')
+        self.assertTrue(v['nci_includes_redeemable'])
+        self.assertEqual([x['observation']['value'] for x in v['separate_claims'][:2]],['4200000000','1100000000'])
+        self.assertEqual(v['overlap_relationships'],self.result['overlap_relationships'])
+        self.assertEqual(v['evidence_history'],self.result['evidence_history'])
+        self.assertEqual(v['precision_candidates'],self.result['precision_candidates'])
+        self.assertEqual(len(v['separate_shares_and_awards']),11)
+        for key in ('book_delta_nwc','cash_delta_nwc','opening_balance','unknown_restrictions','operating_reserve'):
+            self.assertIsNone(v[key])
+        for key in ('complete_operating_capital','complete_debt','complete_reinvestment','unrestricted_or_excess_cash',
+                    'phase1_closed','valuation_consumption_approved','future_tax_assumption_approved',
+                    'award_valuation_approved','dilution_estimate_approved'):
+            self.assertIs(v[key],False)
+
+    def test_original_proposal_and_peer_views_unchanged(self):
+        original=json.loads(subprocess.check_output(['git','show',p.ACCEPTANCE_BASIS+':'+p.OUTPUT],cwd=ROOT))
+        proposal={k:v for k,v in self.result.items() if k!='accepted_view'}
+        self.assertTrue(proposal==original,'Original Alphabet proposal changed')
+        for path in ('scripts/prepare_aapl_analyst_package.py','scripts/prepare_msft_analyst_package.py',
+            'docs/company-data-preparation/aapl-analyst-input-package.json',
+            'docs/company-data-preparation/msft-analyst-input-package.json',
+            'docs/company-data-preparation/aapl-analyst-treatment-acceptance.json',
+            'docs/company-data-preparation/msft-analyst-treatment-acceptance.json'):
+            expected=subprocess.check_output(['git','show',p.ACCEPTANCE_BASIS+':'+path],cwd=ROOT)
+            self.assertTrue((ROOT/path).read_bytes()==expected,path)
+
+    def test_audit_persistence_staleness_and_tamper_rejection(self):
+        proposal={k:v for k,v in self.result.items() if k!='accepted_view'}
+        audit=json.loads((ROOT/p.ACCEPTANCE_PATH).read_text())
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'audit.json';path.write_text(json.dumps(audit))
+            self.assertTrue(p.accepted_view(proposal,path)==self.result,'Persisted replay differs')
+            for key in ('facts','inputs','manual_note_input','sources','precision_candidates','unresolved_requirements'):
+                changed=copy.deepcopy(proposal)
+                changed[key]=dict(changed=changed[key])
+                with self.assertRaisesRegex(ValueError,'Stale Alphabet acceptance'):
+                    p.accepted_view(changed,path)
+            bad=copy.deepcopy(audit);bad['decisions']['DA-INVESTMENT']='approve complete D&A'
+            path.write_text(json.dumps(bad))
+            with self.assertRaisesRegex(ValueError,'malformed Alphabet'):
+                p.accepted_view(proposal,path)
+            bad['sha256']=p.digest({k:v for k,v in bad.items() if k!='sha256'})
+            path.write_text(json.dumps(bad))
+            with self.assertRaisesRegex(ValueError,'Unregistered Alphabet'):
+                p.accepted_view(proposal,path)
+            path.unlink()
+            with self.assertRaises(FileNotFoundError):p.accepted_view(proposal,path)
+
+    def test_no_replay_auto_approval_or_aliasing(self):
+        run=subprocess.run([sys.executable,str(ROOT/'scripts/prepare_googl_analyst_package.py'),
+                            '--record-approved-treatment-set'],capture_output=True,text=True,cwd=ROOT)
+        self.assertNotEqual(run.returncode,0)
+        self.assertIn('already exists',run.stderr)
+        proposal={k:copy.deepcopy(v) for k,v in self.result.items() if k!='accepted_view'}
+        out=p.accepted_view(proposal)
+        out['accepted_view']['unresolved_requirements'].clear()
+        self.assertEqual(len(proposal['unresolved_requirements']),9)
+        self.assertEqual(len(out['unresolved_requirements']),9)
 
 
 if __name__=='__main__':unittest.main()
