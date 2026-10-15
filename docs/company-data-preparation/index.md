@@ -1,6 +1,21 @@
 # Company data preparation register
 
-## AAPL FY2025 consolidated review draft
+## AAPL FY2025 accepted separate selections
+
+[AAPL package](AAPL-analyst-input-package.md) / [JSON](aapl-analyst-input-package.json)
+add a separate version1 accepted view with [user-authority audit](aapl-analyst-treatment-acceptance.json).
+Partial current operating capital−9159m, named financing99887m, current financial
+balances54697m, separate LT77723m and fiscal-end common shares are selected.
+D&A expense completeness remains null; cash/noncash investment, SBC/tax roles,
+dated/classed/weighted-average shares and all unknowns stay distinct. Prior
+proposals/alternatives are non-default history; no complete NWC/debt, excess
+cash, financial sufficiency or MSFT assumption transfer. Source/pilot/frozen/MSFT
+bytes preserved; relevant-content changes reject stale approval. Validation:
+17 package/integration +44 preservation tests, both package replays, audit
+restart/staleness checks, compileall,445 local links and diff checks pass.
+Stop after AAPL, not Alphabet or Phase 1 closure.
+
+## Prior AAPL FY2025 consolidated review draft
 
 [One AAPL package](AAPL-analyst-input-package.md) /
 [source-bound machine companion](aapl-analyst-input-package.json) combine retained

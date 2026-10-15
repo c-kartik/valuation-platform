@@ -1,6 +1,40 @@
 # AAPL — company data preparation
 
-## Consolidated FY2025 analyst decision package — proposed, not accepted
+## User-approved separate FY2025 analyst view
+
+[Same package](AAPL-analyst-input-package.md) / [JSON](aapl-analyst-input-package.json)
+now include a separately versioned accepted selection view with
+[immutable user-authority audit](aapl-analyst-treatment-acceptance.json), not a
+runtime override or financial-policy expansion. Original conflict: six proposal
+rows awaited review. Explicit user choices select partial current operating
+capital−9159m (original−240 less distribution8919), vendor receivables included;
+original and alternatives non-default, employee/capital-creditor/mixed allocations
+unknown. No ΔNWC or completeness approval; original scenario unchanged.
+
+Operating leases service / finance asset financing accepted for historical
+classification; named CP+term carrying+finance subtotal99887m only, all-lease
+112377m non-default. No finance-amortization inclusion assumption, expense/cash
+split or complete debt. Current financial balances54697m and LT securities77723m
+separate, not unrestricted/excess cash; restrictions/reserves/claims unknown.
+CFO D&A11698m and rounded expense8000m remain distinct, complete expense D&A
+null. Separate cash PP&E−12715m, Other−1480m and noncash ROU+2800m rounded,
+no reinvestment sum/allocation. Accepted SBC12863m once, revenue416161m,
+EBIT133050m, CFO111482m, provision20719m and cash tax43369m roles retained.
+Fiscal-end common14773260000 at2025-09-27 selected, decimals−3; later cover,
+weighted-average EPS counts and RSUs151574000 separate. No future tax, award
+valuation or dilution approval.
+
+The original proposal payload and all accepted MSFT/pilot/frozen/source artifacts
+are unchanged. Existing review digest/relevant-revision/strict-JSON/manual UTC
+controls bind approval to exact financial/source content; missing/tampered/stale
+audit cannot apply and requires explicit revalidation. Original unknowns/blockers
+remain despite acceptance; financial sufficiency NOT_ASSESSED. Validation:
+17 package/integration +44 preservation tests pass, both exact package replays,
+source/proposal/JSON/runtime/MSFT preservation, persistent audit restart and stale/
+tampered rejection, compileall,445 local links and diff checks pass. No full-suite/
+corpus rerun or SEC requests. Stop after AAPL, no phase closure or automatic issuer work.
+
+## Prior consolidated FY2025 proposal record — preserved history
 
 [One review package](AAPL-analyst-input-package.md) and
 [machine companion](aapl-analyst-input-package.json) bind exact selected

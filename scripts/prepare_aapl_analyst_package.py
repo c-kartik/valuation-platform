@@ -1,19 +1,30 @@
-"""One retained AAPL review package; no runtime treatment or user acceptance.
+"""One retained AAPL package with separate scoped acceptance, not runtime use.
 
 Reuse the MSFT package's exact fact/inline checks, not its financial choices.
 Original registries, pilot serializations and MSFT selections are read-only.
 """
-from datetime import date
+from datetime import date, datetime, timezone
 from decimal import Decimal
 import json
+from pathlib import Path
 import re
 import sys
 
-from prepare_msft_analyst_package import Filing, InlineFacts, ROOT, ACCEPTED, SUPPORTED, PROPOSED, inline_amount
+from prepare_msft_analyst_package import (Filing, InlineFacts, ROOT, ACCEPTED, SUPPORTED, PROPOSED,
+    inline_amount, relevant, digest, _json, ManualIdentity, APPROVED_SCOPE)
 from valuation_platform.analyst import aapl_cash_flow_inputs as aapl, cash_flow_inputs as cash
 
 OUTPUT='docs/company-data-preparation/aapl-analyst-input-package.json'
 BASELINE='fc403d47ddd23daa387c3e3b872911853e97e8c8'
+ACCEPTANCE_BASIS='36ef3d2fa63e712d1735e75d23ebeadc0f33bdcc'
+ACCEPTANCE_PATH='docs/company-data-preparation/aapl-analyst-treatment-acceptance.json'
+USER_DECISIONS={
+    'operating_capital':'Select partial current operating capital -9159 USDm, including manufacturing vendor receivables and distribution accrual8919. Original -240 and alternatives non-default; employee, capital creditors and mixed captions unknown; no delta NWC.',
+    'leases_borrowings':'Operating leases service, finance leases asset financing; named CP+term carrying+finance liability99887 USDm only. All-lease112377 non-default. No complete debt, cash/expense split or D&A overlap assumption.',
+    'cash_investments':'Current financial balances54697 USDm selected; long-term marketable securities77723 separately. Not unrestricted/excess cash; restrictions, reserves and claims remain unknown.',
+    'da_investment':'Keep CFO D&A11698 and rounded depreciation expense8000 distinct; complete expense D&A null. Cash PP&E12715, investing Other1480 and rounded noncash ROU2800 separate with source signs; no amortization residual, reinvestment sum or acquisition allocation.',
+    'historical_schedules':'Retain revenue416161, EBIT133050, CFO111482, accepted SBC expense proxy12863 once, provision20719 and cash taxes43369 in distinct roles. Select fiscal-end common14773260000, original date/precision; cover, weighted averages and RSUs151574000 separate. No future rate, award valuation or dilution estimate.',
+}
 
 
 class AppleFiling(Filing):
@@ -33,7 +44,7 @@ class AppleFiling(Filing):
         self.entries[-1]['formula_version']='aapl-draft-historical-v1'
 
 
-def build():
+def build_proposal():
     f=AppleFiling()
     accepted={'NetCashProvidedByUsedInOperatingActivities','PaymentsToAcquirePropertyPlantAndEquipment',
         'IncomeTaxesPaidNet','AllocatedShareBasedCompensationExpense','OperatingLeasePayments'}
@@ -206,6 +217,94 @@ def build():
         stopping_condition='One consolidated user review. No automatic research, override, policy integration, Phase 1 closure or Phase 2.')
 
 
+def weighted_average_support():
+    """Already reviewed EPS populations; never closing shares or dilution estimates."""
+    f=AppleFiling()
+    for key,concept in [('weighted_basic','WeightedAverageNumberOfSharesOutstandingBasic'),
+                        ('weighted_diluted','WeightedAverageNumberOfDilutedSharesOutstanding')]:
+        f.fact(key,concept,'Income statement / Note 3 annual EPS duration population, not point-in-time shares',unit='shares')
+    return f.facts
+
+
+def approval_record(proposal,support):
+    """Explicit recording only; normal replay cannot create/renew an approval."""
+    record=dict(schema='aapl-treatment-acceptance-audit-v1',version=1,sequence=1,previous='0'*64,
+        action='ACCEPT_SCOPED_SELECTIONS',author='User, explicit AAPL FY2025 approved-selection instruction',
+        recorded_at_utc=datetime.now(timezone.utc).isoformat(),
+        rationale='Record the user-approved AAPL selections only; missing values, source limitations and original blockers remain.',
+        authority='Current user instruction: Implement the user-approved AAPL FY2025 selections in a separate analyst view.',
+        source_commit=ACCEPTANCE_BASIS,source_revision=digest(relevant(dict(proposal=proposal,weighted_average_observations=support))),
+        decisions=USER_DECISIONS.copy(),financial_sufficiency='NOT_ASSESSED',phase1_closed=False,valuation_consumption_approved=False)
+    record['sha256']=digest(record)
+    return record
+
+
+def accepted_view(proposal,support=None,audit_path=None):
+    """MSFT's audit/revision/selection pattern, with AAPL-only target meanings.
+
+    The generic numerical override contract has no book operating-capital field.
+    Keep this report selection overlay separate instead of misusing CF movements.
+    """
+    if support is None:support=weighted_average_support()
+    path=Path(audit_path) if audit_path is not None else ROOT/ACCEPTANCE_PATH
+    record=_json(path.read_text())
+    expected={'schema','version','sequence','previous','action','author','recorded_at_utc','rationale','authority',
+        'source_commit','source_revision','decisions','financial_sufficiency','phase1_closed','valuation_consumption_approved','sha256'}
+    if type(record) is not dict or set(record)!=expected or record['sha256']!=digest({k:v for k,v in record.items() if k!='sha256'}):
+        raise ValueError('Changed or malformed AAPL acceptance audit')
+    ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale'])
+    if (record['schema']!='aapl-treatment-acceptance-audit-v1' or type(record['version']) is not int or record['version']!=1
+        or type(record['sequence']) is not int or record['sequence']!=1 or record['previous']!='0'*64
+        or record['action']!='ACCEPT_SCOPED_SELECTIONS' or record['source_commit']!=ACCEPTANCE_BASIS
+        or record['decisions']!=USER_DECISIONS or record['financial_sufficiency']!='NOT_ASSESSED'
+        or record['phase1_closed'] is not False or record['valuation_consumption_approved'] is not False):
+        raise ValueError('Unregistered AAPL acceptance scope')
+    if record['source_revision']!=digest(relevant(dict(proposal=proposal,weighted_average_observations=support))):
+        raise ValueError('Stale AAPL acceptance: source, candidates, scope or evidence changed; explicit revalidation required')
+    entries={e['input_id']:e for e in proposal['inputs']}
+    def select(key,label):
+        original=entries[key];selected=json.loads(json.dumps(original))
+        selected.update(status=APPROVED_SCOPE,accepted=True)
+        return dict(selected=selected,label=label,source_status=original['status'],
+            source_reference='/inputs/'+str(next(i for i,e in enumerate(proposal['inputs']) if e['input_id']==key)),
+            approval_sha256=record['sha256'],review=APPROVED_SCOPE)
+    unknown={u['input_id']:u for u in proposal['unresolved_requirements']}
+    view=dict(schema='aapl-accepted-historical-view-v1',version=1,approval_audit=record,identity=proposal['identity'],
+        operating_capital=select('proposed_distribution_expanded','Partial current operating capital'),
+        complete_operating_capital=False,book_delta_nwc=None,cash_delta_nwc=None,
+        nondefault_history=[dict(default=False,source_reference='/inputs/'+str(next(i for i,e in enumerate(proposal['inputs']) if e['input_id']==key)),
+            observation=entries[key]) for key in ('original_partial','alternative_without_vendor','alternative_all_leases','all_financial','named_borrowing')],
+        lease_classification=dict(operating='service_cost',finance='asset_financing',review=APPROVED_SCOPE,
+            complete_lease_coverage=False,finance_amortization_inclusion_assumption=None),
+        borrowings=select('proposed_financing','Named CP + term-debt carrying + finance-lease liability subtotal'),complete_debt=False,
+        current_financial_balances=select('current_financial','Current financial balances'),
+        long_term_marketable_securities=dict(source_reference='/facts/long_securities',observation=proposal['facts']['long_securities'],review=APPROVED_SCOPE),
+        unrestricted_or_excess_cash=False,unknown_restrictions=None,operating_reserve=None,
+        da_observations=[entries['reported:DepreciationDepletionAndAmortization'],entries['depreciation_expense']],
+        complete_expense_basis_da=unknown['expense_basis_da'],additional_rou_addback=False,
+        investment_columns=[entries[k] for k in ('reported:PaymentsToAcquirePropertyPlantAndEquipment',
+            'reported:PaymentsForProceedsFromOtherInvestingActivities','reported:RightofUseAssetsObtainedinExchangeforOperatingandFinanceLeaseLiabilities')],
+        complete_reinvestment=False,
+        historical_income=[select(k,entries[k]['label']) for k in ('revenue','ebit','reported:NetCashProvidedByUsedInOperatingActivities')],
+        sbc_expense_proxy=select('reported:AllocatedShareBasedCompensationExpense','Recognized SBC expense proxy counted once'),
+        sbc_cfo_addback=entries['reported:ShareBasedCompensation'],
+        historical_taxes=[entries[k] for k in ('reported:IncomeTaxExpenseBenefit','reported:IncomeTaxesPaidNet','reported_etr','deferred_provision')],
+        fiscal_end_common=select('year_end_common','Fiscal-end common shares; original date and precision'),
+        separate_cover_awards=[entries[k] for k in ('cover_common','rsu','future_sbc')],
+        weighted_average_observations=support,
+        unresolved_requirements=proposal['unresolved_requirements'],original_bundle_unknowns=proposal['original_bundle_unknowns'],
+        prior_proposals_retained=True,decision_statuses={key:APPROVED_SCOPE for key in USER_DECISIONS},
+        financial_sufficiency='NOT_ASSESSED',valuation_consumption_approved=False,phase1_closed=False,
+        future_tax_assumption_approved=False,award_valuation_approved=False,dilution_estimate_approved=False,
+        stopping_condition='Stop after AAPL integration; no automatic Alphabet work or Phase 1 closure.')
+    result=json.loads(json.dumps(proposal));result['accepted_view']=json.loads(json.dumps(view))
+    return result
+
+
+def build():
+    return accepted_view(build_proposal())
+
+
 UNKNOWN=[
     dict(input_id=key,value=None,status='unresolved_requirement',reason=reason) for key,reason in (
     ('expense_basis_da','CFO D&A 11698 and PP&E depreciation expense 8000 rounded are different populations. Complete income-recognized amortization and inventory/finance-lease timing bridge unavailable; no residual-derived amortization.'),
@@ -251,6 +350,10 @@ APPROVAL_SHEET=[dict(decision_id=key,status=PROPOSED,recommendation=rec,numerica
 
 
 if __name__=='__main__':
+    if '--record-approved-treatment-set' in sys.argv:
+        if (ROOT/ACCEPTANCE_PATH).exists():raise SystemExit('Immutable AAPL acceptance record already exists')
+        print(json.dumps(approval_record(build_proposal(),weighted_average_support()),sort_keys=True,indent=2))
+        raise SystemExit(0)
     text=json.dumps(build(),sort_keys=True,indent=2)+'\n'
     if '--check' in sys.argv:
         if (ROOT/OUTPUT).read_text()!=text:raise SystemExit('AAPL package replay differs')

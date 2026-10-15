@@ -1,0 +1,24 @@
+{
+  "action": "ACCEPT_SCOPED_SELECTIONS",
+  "author": "User, explicit AAPL FY2025 approved-selection instruction",
+  "authority": "Current user instruction: Implement the user-approved AAPL FY2025 selections in a separate analyst view.",
+  "decisions": {
+    "cash_investments": "Current financial balances54697 USDm selected; long-term marketable securities77723 separately. Not unrestricted/excess cash; restrictions, reserves and claims remain unknown.",
+    "da_investment": "Keep CFO D&A11698 and rounded depreciation expense8000 distinct; complete expense D&A null. Cash PP&E12715, investing Other1480 and rounded noncash ROU2800 separate with source signs; no amortization residual, reinvestment sum or acquisition allocation.",
+    "historical_schedules": "Retain revenue416161, EBIT133050, CFO111482, accepted SBC expense proxy12863 once, provision20719 and cash taxes43369 in distinct roles. Select fiscal-end common14773260000, original date/precision; cover, weighted averages and RSUs151574000 separate. No future rate, award valuation or dilution estimate.",
+    "leases_borrowings": "Operating leases service, finance leases asset financing; named CP+term carrying+finance liability99887 USDm only. All-lease112377 non-default. No complete debt, cash/expense split or D&A overlap assumption.",
+    "operating_capital": "Select partial current operating capital -9159 USDm, including manufacturing vendor receivables and distribution accrual8919. Original -240 and alternatives non-default; employee, capital creditors and mixed captions unknown; no delta NWC."
+  },
+  "financial_sufficiency": "NOT_ASSESSED",
+  "phase1_closed": false,
+  "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+  "rationale": "Record the user-approved AAPL selections only; missing values, source limitations and original blockers remain.",
+  "recorded_at_utc": "2026-10-15T20:31:05.526779+00:00",
+  "schema": "aapl-treatment-acceptance-audit-v1",
+  "sequence": 1,
+  "sha256": "634d053b82a9cd1c440bab7e5e8c14037371ecadf55fa2784991f37776db44f3",
+  "source_commit": "36ef3d2fa63e712d1735e75d23ebeadc0f33bdcc",
+  "source_revision": "0433f982ab4f041012e28c6e6f302da9dea03d836b5af32dcf5c6bf57fe549c9",
+  "valuation_consumption_approved": false,
+  "version": 1
+}

@@ -1,5 +1,36 @@
 # AAPL FY2025 historical-input acceptance checklist
 
+## Subsequent explicit approval — separate analyst-input view
+
+The user's FY2025 five-part selection instruction is implemented in the
+[same AAPL package](company-data-preparation/AAPL-analyst-input-package.md),
+with a [revision-bound immutable audit](company-data-preparation/aapl-analyst-treatment-acceptance.json).
+Recording UTC **2026-10-15T20:31:05.526779+00:00** (2026-10-16 Dubai), source
+proposal `36ef3d2fa63e712d1735e75d23ebeadc0f33bdcc`; scope stays the one
+selected accession/annual period below, not whole-history or consumer readiness.
+
+Accepted: partial current operating capital−9,159 USDm including vendor
+receivables and identified distribution8,919; original−240 and alternatives
+non-default. Employee/capital-creditor/mixed allocations remain unknown, no ΔNWC.
+Operating leases service, finance leases asset financing; named financing99,887
+only, all-lease112,377 non-default, no complete debt or D&A-overlap assumption.
+Current financial balances54,697 and LT securities77,723 remain separate, not
+unrestricted/excess cash. CFO D&A11,698 versus rounded expense8,000 distinct;
+complete expense D&A null. Separate cash PP&E, Other and noncash ROU columns,
+no reinvestment total or acquisition allocation. Revenue/EBIT/CFO, SBC proxy
+once, provision/cash tax and named historical schedules retained. Fiscal-end
+common14,773,260,000 selected at original date/precision; cover, annual weighted
+averages and RSUs151,574,000 remain separate, no dilution or award valuation.
+
+This historical classification approval supplements the original accepted fixed
+lease cash dataset; it does not establish complete lease cash or future valuation
+consumption. Old proposal/history records and original unknowns stay intact.
+No future tax assumption, financial-sufficiency certification, original blocker
+removal, Phase 1 closure or automatic Alphabet work. The older record follows
+unchanged as history; its limited datasets gain no completeness certification.
+
+## Original restricted reported-input acceptance history
+
 2026-10-12; documentation revision 1. Authority: explicit user approval in this
 milestone. Scope is CIK `0000320193`, selected non-amended 10-K
 `0000320193-25-000079`, **2024-09-29–2025-09-27** only. This is not executable

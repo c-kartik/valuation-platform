@@ -1,6 +1,39 @@
 # Project Status
 
-## Current milestone — AAPL FY2025 consolidated analyst review draft
+## Current milestone — approved AAPL FY2025 historical selections
+
+[Existing package](company-data-preparation/AAPL-analyst-input-package.md) /
+[JSON](company-data-preparation/aapl-analyst-input-package.json) add a separately
+versioned analyst selection view, with persisted exact user-approval/source
+revision and UTC recording provenance. Partial current operating capital−9159m
+includes vendor receivables and distribution8919m; original−240 and alternatives
+remain non-default history. Employee/capital creditors/mixed allocations remain
+unknown, no ΔNWC/completeness approval.
+
+Operating-service/finance-asset-financing historical classification; named
+CP+term carrying+finance subtotal99887m only, all-lease112377m non-default.
+Current financial54697m and LT marketable77723m separate, not unrestricted/excess
+cash. CFO D&A11698m versus rounded expense8000m distinct; complete expense D&A
+null, no finance-amortization overlap assumption. Cash PP&E−12715m, Other−1480m
+and noncash ROU+2800m rounded separate, no reinvestment total/allocation.
+Income/CFO/SBC-proxy/tax roles retained; fiscal-end common14773260000 selected
+with original date/precision, cover/weighted averages/RSUs separate. No future
+tax, award valuation or dilution approval.
+
+Minimal report-only integration reuses MSFT audit/relevant-revision/strict-JSON/
+manual UTC utilities, not MSFT financial assumptions. Missing, tampered or stale
+financial/evidence content fails closed; explicit revalidation required. Original
+proposal payload, policies/outputs, source bodies, scenarios/bundles, pilot bytes
+and accepted MSFT view preserved. Financial sufficiency NOT_ASSESSED, original
+blockers remain; no SEC requests, full-suite/corpus rerun, Phase 2 work or Phase 1
+closure. Validation: **17 AAPL package/integration tests (5.509s)**, **15 original
+AAPL cash-flow tests (2.591s)**, **eight AAPL partial-NWC tests (2.138s)** and
+**21 accepted MSFT package tests (7.776s)** pass. Both exact package replays,
+original proposal/source/JSON/runtime preservation, persistent audit restart,
+stale/tampered/missing audit rejection, precision/null/non-default/source checks,
+compileall, **445 changed-document local links** and diff checks pass. Stop after AAPL.
+
+## Prior milestone — AAPL FY2025 consolidated analyst review draft
 
 [Package](company-data-preparation/AAPL-analyst-input-package.md) /
 [JSON](company-data-preparation/aapl-analyst-input-package.json) reuse verified

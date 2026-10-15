@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 import unittest
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -154,6 +155,101 @@ class ApplePackageTests(unittest.TestCase):
             if not (path.startswith('src/') or path.endswith('.json') or path=='scripts/prepare_msft_analyst_package.py'):continue
             prior=subprocess.check_output(['git','show',p.BASELINE+':'+path],cwd=ROOT)
             self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),hashlib.sha256(prior).hexdigest(),path)
+
+    def test_accepted_selections_exact_source_pointers_and_nondefaults(self):
+        view=self.result['accepted_view']
+        for key,amount in [('operating_capital',-9159),('borrowings',99887),('current_financial_balances',54697)]:
+            chosen=view[key];self.assertEqual(Decimal(chosen['selected']['value'])/1000000,amount)
+            self.assertEqual(chosen['review'],p.APPROVED_SCOPE)
+            original=self.result
+            for part in chosen['source_reference'].strip('/').split('/'):
+                original=original[int(part)] if isinstance(original,list) else original[part]
+            restored=copy.deepcopy(chosen['selected']);restored['status']=chosen['source_status'];restored.pop('accepted')
+            self.assertEqual(restored,original)
+        self.assertEqual(view['operating_capital']['label'],'Partial current operating capital')
+        self.assertEqual(view['operating_capital']['selected']['completeness'],'partial')
+        self.assertIn('vendor_ar',view['operating_capital']['selected']['operands'])
+        self.assertTrue(all(v['default'] is False for v in view['nondefault_history']))
+        self.assertEqual([v['observation']['value'] for v in view['nondefault_history'][:3]],
+            ['-240000000','-42339000000','112377000000'])
+        self.assertFalse(view['complete_debt']);self.assertFalse(view['complete_operating_capital'])
+        self.assertEqual(view['lease_classification']['operating'],'service_cost')
+        self.assertEqual(view['lease_classification']['finance'],'asset_financing')
+        self.assertIsNone(view['lease_classification']['finance_amortization_inclusion_assumption'])
+
+    def test_accepted_roles_nulls_precision_and_dates_do_not_become_complete(self):
+        view=self.result['accepted_view']
+        self.assertEqual(view['complete_expense_basis_da']['input_id'],'expense_basis_da')
+        self.assertIsNone(view['complete_expense_basis_da']['value'])
+        self.assertEqual([v['value'] for v in view['da_observations']],['11698000000','8000000000.0'])
+        self.assertEqual(view['da_observations'][1]['precision']['operand_decimals'],['-8'])
+        self.assertEqual([v['value'] for v in view['investment_columns']],['-12715000000','-1480000000','2800000000'])
+        self.assertFalse(view['complete_reinvestment']);self.assertFalse(view['additional_rou_addback'])
+        self.assertIsNone(view['book_delta_nwc']);self.assertIsNone(view['cash_delta_nwc'])
+        self.assertIsNone(view['unknown_restrictions']);self.assertIsNone(view['operating_reserve'])
+        self.assertEqual(view['long_term_marketable_securities']['observation']['value'],'77723000000')
+        self.assertFalse(view['unrestricted_or_excess_cash'])
+        self.assertEqual(view['fiscal_end_common']['selected']['value'],'14773260000')
+        self.assertEqual(view['fiscal_end_common']['selected']['precision']['operand_decimals'],['-3'])
+        self.assertEqual(view['fiscal_end_common']['selected']['source_dates'][0]['as_of'],'2025-09-27')
+        self.assertEqual(view['separate_cover_awards'][0]['source_dates'][0]['as_of'],'2025-10-17')
+        support=view['weighted_average_observations']
+        for key,value,ordinals in [('weighted_basic','14948500000',[330,616]),('weighted_diluted','15004697000',[333,622])]:
+            self.assertEqual(support[key]['value'],value)
+            self.assertEqual([o['ordinal'] for o in support[key]['occurrences']],ordinals)
+            self.assertTrue(all(o['start']=='2024-09-29' and o['end']=='2025-09-27' for o in support[key]['occurrences']))
+        self.assertNotEqual(view['sbc_expense_proxy']['selected']['role'],view['sbc_cfo_addback']['role'])
+        self.assertFalse(view['future_tax_assumption_approved']);self.assertFalse(view['dilution_estimate_approved'])
+        self.assertTrue(all(u['value'] is None for u in view['unresolved_requirements']))
+
+    def test_entire_original_proposal_and_approval_history_remain_unchanged(self):
+        original=json.loads(subprocess.check_output(['git','show',p.ACCEPTANCE_BASIS+':'+p.OUTPUT],cwd=ROOT))
+        result=copy.deepcopy(self.result);view=result.pop('accepted_view')
+        self.assertTrue(result==original,'Original facts, proposals, sources or unknowns changed')
+        self.assertTrue(p.build_proposal()==original,'Original report replay changed')
+        view['historical_taxes'][0]['value']='synthetic mutation'
+        self.assertTrue(result==original,'Accepted view must not alias original source data')
+        self.assertFalse(view['phase1_closed']);self.assertFalse(view['valuation_consumption_approved'])
+        self.assertEqual(view['financial_sufficiency'],'NOT_ASSESSED')
+
+    def test_persisted_approval_restart_stale_revision_and_tamper_rejection(self):
+        body=(ROOT/p.ACCEPTANCE_PATH).read_text();record=json.loads(body)
+        proposal=copy.deepcopy(self.result);proposal.pop('accepted_view')
+        support=self.result['accepted_view']['weighted_average_observations']
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'audit.json';path.write_text(body)
+            self.assertTrue(p.accepted_view(proposal,support,path)==self.result)
+            self.assertTrue(json.loads(json.dumps(p.accepted_view(proposal,support,path)))==self.result)
+            for item in ('value','scope','precision','candidates','source_digest','null'):
+                changed=copy.deepcopy(proposal)
+                if item=='source_digest':changed['sources'][0]['sha256']='0'*64
+                elif item=='null':changed['unresolved_requirements'][0]['value']='0'
+                else:changed['inputs'][0][item]='synthetic changed content'
+                with self.assertRaisesRegex(ValueError,'Stale AAPL acceptance'):p.accepted_view(changed,support,path)
+            changed=copy.deepcopy(support);changed['weighted_basic']['value']='1'
+            with self.assertRaisesRegex(ValueError,'Stale AAPL acceptance'):p.accepted_view(proposal,changed,path)
+            record['decisions']['da_investment']='Approve complete D&A'
+            path.write_text(json.dumps(record))
+            with self.assertRaisesRegex(ValueError,'Changed or malformed'):p.accepted_view(proposal,support,path)
+            record['sha256']=p.digest({k:v for k,v in record.items() if k!='sha256'})
+            path.write_text(json.dumps(record))
+            with self.assertRaisesRegex(ValueError,'Unregistered'):p.accepted_view(proposal,support,path)
+        self.assertEqual((ROOT/p.ACCEPTANCE_PATH).read_text(),body)
+
+    def test_missing_duplicate_or_existing_audit_cannot_auto_accept(self):
+        proposal=copy.deepcopy(self.result);proposal.pop('accepted_view')
+        support=self.result['accepted_view']['weighted_average_observations']
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'audit.json'
+            with self.assertRaises(FileNotFoundError):p.accepted_view(proposal,support,path)
+            path.write_text('{"schema":"one","schema":"two"}')
+            with self.assertRaises(ValueError):p.accepted_view(proposal,support,path)
+        before=(ROOT/p.ACCEPTANCE_PATH).read_bytes()
+        result=subprocess.run([sys.executable,str(ROOT/'scripts/prepare_aapl_analyst_package.py'),'--record-approved-treatment-set'],
+            cwd=ROOT,capture_output=True,text=True)
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn('Immutable AAPL acceptance record already exists',result.stderr)
+        self.assertEqual((ROOT/p.ACCEPTANCE_PATH).read_bytes(),before)
 
 
 if __name__=='__main__':unittest.main()

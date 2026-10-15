@@ -1,5 +1,56 @@
 # AAPL FY2025 — consolidated analyst-input decision package
 
+## Active separate analyst view — user-approved selections
+
+The explicit five-part user instruction is implemented in JSON `accepted_view`
+(`aapl-accepted-historical-view-v1`, version1). The immutable
+[approval audit](aapl-analyst-treatment-acceptance.json) records authority,
+rationale and actual recording UTC **2026-10-15T20:31:05.526779+00:00**
+(2026-10-16 00:31:05.526779 Dubai), not a source retrieval or invented earlier
+approval time. It binds the original proposal at
+`36ef3d2fa63e712d1735e75d23ebeadc0f33bdcc` plus the already-reviewed annual
+EPS weighted-average source observations now explicitly packaged separately.
+
+| Active selection, USDm unless shares | Accepted scope / remaining limitation |
+| --- | --- |
+| **Partial current operating capital −9,159** | Original−240 less distribution8,919; includes manufacturing vendor receivables. Original−240, vendor-exclusion−42,339 and other alternatives are non-default history. Employee accruals, capital creditors and mixed allocations stay unknown; **no ΔNWC or completeness approval**. |
+| **Operating leases service; finance leases asset financing. Named financing subtotal99,887** | CP+net term carrying+finance liability only; all-lease112,377 stays non-default. Not complete debt; cash/expense splits unavailable. **No finance-amortization inclusion assumption.** |
+| **Current financial balances54,697; LT marketable77,723 separately** | Not unrestricted/excess cash. Unknown restrictions, operating reserves and other claims remain unknown; broader132,420 total is non-default support. |
+| **CFO D&A11,698 and depreciation expense8,000R separate** | Complete expense-basis D&A stays explicitly **null/unresolved**. No subtraction to infer amortization, no extra ROU add-back. |
+| **Cash PP&E−12,715; investing Other−1,480; noncash ROU+2,800R separate** | Original raw values and display signs/precision retained. No reinvestment sum, capital-creditor estimate or acquisition allocation. |
+| **Revenue416,161; EBIT133,050; CFO111,482; SBC expense proxy12,863 once** | Original reported roles, sources and prior acceptance restrictions preserved; SBC add-back remains distinct, not another cost. |
+| **Provision20,719; net cash taxes43,369 and other named historical tax observations** | Provision/cash/deferred/ETR stay distinct, no future tax basis/rate or economic adjustment. |
+| **Fiscal-end common14,773,260,000, 2025-09-27, decimals−3** | Cover14,776,353,000 at2025-10-17, RSUs151,574,000 and annual weighted-average basic14,948,500,000/diluted15,004,697,000 remain separate. No class/award sum, dilution estimate or award valuation. |
+
+The audit reuses the accepted MSFT view's canonical digest, relevant-content
+revision filter, strict JSON and UTC manual-identity controls, **not its financial
+assumptions**. A minimal company-specific selection overlay avoids mislabeling
+book operating capital as generic cash-flow movements. Each active scalar retains
+its original source status and an exact JSON pointer to unchanged proposal input,
+plus the approval hash; origin/precision/completeness are not replaced by review
+acceptance. Original proposal JSON sections remain exactly unchanged.
+
+Normal replay reads the persisted audit only. Missing/malformed/conflicting audit,
+or changed values, scope, precision, alternatives, unknowns, evidence digests or
+weighted-average sources fails closed; **explicit revalidation is required**, not
+automatic approval. The one-time recording command refuses an existing receipt.
+Digest checks detect changes, not adversarially signed user identity. Serialization
+is additive and separately versioned within the existing report; no pilot migration.
+
+Original accepted inputs, registries/scenarios, source bytes, all frozen policies/
+outputs and the accepted MSFT view remain unchanged. Financial sufficiency remains
+**NOT_ASSESSED**; no original blocker removal, complete input certification,
+valuation approval, Phase 1 closure or automatic Alphabet work. Validation:
+**17 AAPL package/integration tests (5.509s)** and **44 preservation tests**
+(AAPL cash15 in2.591s, partial-NWC8 in2.138s, accepted MSFT21 in7.776s) pass.
+Tests cover active source/value ties, precision/roles/nulls/non-defaults,
+deterministic round trips, audit persistence/restart/staleness, duplicate/tampered
+or missing audit rejection and full prior-proposal equality. Original JSON/
+runtime/MSFT bytes, both package replays, compileall, **445 local links** and diff
+checks pass. No full-suite/corpus rerun or SEC requests. **Stop after AAPL integration.**
+
+## Original proposal record — preserved history, selections superseded above
+
 **One draft for consolidated user review; new judgments are PROPOSED, not
 accepted or integrated.** The [machine companion](aapl-analyst-input-package.json)
 contains every retained occurrence, context, raw value, sign/scale, precision,
