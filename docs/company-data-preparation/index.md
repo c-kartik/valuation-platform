@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## AAPL FY2025 consolidated review draft
+
+[One AAPL package](AAPL-analyst-input-package.md) /
+[source-bound machine companion](aapl-analyst-input-package.json) combine retained
+facts, existing approvals, calculations, proposed treatments and explicit unknowns.
+Proposed distribution-expanded partial capital−9159m versus original−240m;
+employee/capital-creditor allocations unknown. CFO versus expense D&A remains
+distinct, as do current financial balances54697m and proposed named financing
+99887m—not excess cash or complete debt. Six material choices await one review,
+without transferring MSFT assumptions or registering comparative periods.
+Original AAPL/MSFT/frozen/pilot artifacts and support/preparation statuses remain.
+Validation:12 new focused and44 preservation tests, exact AAPL/MSFT replay,
+compileall,429 affected links and diff checks pass. No SEC requests/full-suite/corpus rerun or
+Phase 1 closure. Stop after this package, not a sequence of treatment memos.
+
 ## MSFT scope-specific accepted analyst view
 
 The [existing MSFT package](MSFT-analyst-input-package.md) and

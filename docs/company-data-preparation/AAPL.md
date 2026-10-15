@@ -1,5 +1,51 @@
 # AAPL — company data preparation
 
+## Consolidated FY2025 analyst decision package — proposed, not accepted
+
+[One review package](AAPL-analyst-input-package.md) and
+[machine companion](aapl-analyst-input-package.json) bind exact selected
+`0000320193-25-000079`, 2024-09-29–2025-09-27, to retained original primary/
+instance bytes, receipts, all confirming occurrences, roles and precision.
+Original conflict: separate pilot packages and mixed-current omissions did not
+provide one concrete company-specific treatment sheet. Revenue416161m,
+EBIT133050m and accepted CFO111482m are retained. Proposed partial current
+operating capital includes known distribution8919m: original−240m becomes
+**−9159m**. Vendor33180m remains operating supply-chain based on AAPL Note4;
+excluding it yields−42339m, not MSFT's facilitation treatment. Employee accrual
+and investing-in-AP remain unknown; no number, zero or whole-caption allocation.
+Other current/noncurrent residuals and lease overlaps remain visible support.
+No approved opening schedule or book/cash ΔNWC.
+
+CFO D&A11698m and PP&E depreciation expense8000m rounded stay separate;
+complete expense-basis D&A/amortization and finance/inventory timing unproved.
+No inherited MSFT D&A assumption or alteration of legacy normalized D&A.
+Propose AAPL Note8 operating-service/finance-asset-financing locations without
+an unavailable expense/cash conversion. Cash PP&E12715m, investing Other1480m
+and combined noncash ROU2800m rounded remain separate; cash interest, full lease
+coverage, acquisition/intangible allocations and capital creditors unavailable.
+
+Named current financial balances54697m; all cash/marketable captions132420m,
+not unrestricted/excess cash. Net term90678m+CP7979m=98657m; proposed adding
+recognized finance1230m gives99887m, versus all-lease112377m. Principal/carrying/
+fair values are reconciled, not interchangeable; no complete debt claim.
+Tax provision20719m, cash43369m, ETR15.6100023356…% and deferred provision
+−1339m remain separate, no future rate or CFO tax allocation. Accepted SBC12863m
+expense proxy counts once, distinct add-back. Common shares14773260000 at
+September27 versus14776353000 at October17; RSUs151574000 separate, no
+summation/dilution estimate. Future compensation21800m rounded is not current cost.
+Tax contingencies and future commitments remain disclosures, not extra debt.
+
+All six new decisions remain proposed for one consolidated review. Existing
+accepted AAPL treatments, original scenario/registry, accepted MSFT view, source
+receipts, runtime/frozen policies, outputs and pilot bytes remain unchanged.
+Financial sufficiency NOT_ASSESSED; original NWC/timing/support blockers remain.
+Reporting helper reuses exact source validation, not MSFT financial choices.
+Validation: 12 package tests plus44 relevant AAPL/MSFT preservation tests pass;
+both package replays, twelve recorded arithmetic/parent/CFO checks, original
+JSON/runtime/MSFT bytes, compileall,429 local links and diff checks pass.
+No full-suite/corpus rerun or SEC requests. Stop here; no automatic
+research chain, issuer work, acceptance, Phase 1 closure or Phase 2 consumption.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

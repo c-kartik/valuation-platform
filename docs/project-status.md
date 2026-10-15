@@ -1,6 +1,41 @@
 # Project Status
 
-## Current milestone — approved MSFT historical selections
+## Current milestone — AAPL FY2025 consolidated analyst review draft
+
+[Package](company-data-preparation/AAPL-analyst-input-package.md) /
+[JSON](company-data-preparation/aapl-analyst-input-package.json) reuse verified
+selected primary/instance evidence and existing reporting helpers, not MSFT
+financial assumptions. Existing accepted CFO/cash-PP&E/SBC-proxy/cash-tax/
+restricted fixed-lease inputs remain accepted only within their original scope.
+Six new recommendations remain proposed for one consolidated user review.
+
+Proposed partial current operating capital−9159m includes distribution8919m,
+versus original−240m, with operating vendor receivables33180m. Employee and
+capital-creditor allocations unknown, no cash/book movement. CFO D&A11698m
+versus PP&E expense8000m rounded does not establish expense-basis D&A or an
+amortization residual. Proposed AAPL-specific operating-service/finance-financing
+classification does not assume finance amortization inclusion. Investment
+columns remain separate; cash-interest/lease/acquisition scope gaps explicit.
+
+Named financial current54697m/allreported132420m; carrying borrowing98657m,
+proposed with finance leases99887m versus all-lease112377m; neither unrestricted
+cash nor complete debt. Provision20719m, Pretax132729m and historical ETR,
+cash taxes43369m and deferred provision−1339m stay distinct. Fiscal-end common,
+later cover, RSUs and future expense retain dates/classes/rounding, no dilution.
+Commitments/tax contingencies are separately evidenced disclosures, not new debt.
+
+Original source bodies, AAPL scenarios/bundles, accepted MSFT view, all frozen
+policies/results and pilot serialization remain unchanged. Financial sufficiency
+NOT_ASSESSED and original blockers persist. No SEC requests, runtime/policy/
+schema changes, full-suite/corpus rerun, Phase 1 closure or Phase 2 calculation.
+Validation: **12 focused package tests (4.788s)**, **15 original AAPL cash-flow
+tests (2.563s)**, **eight AAPL partial-NWC tests (2.248s)** and **21 accepted MSFT
+package tests (7.947s)** pass. AAPL and MSFT exact offline package replay,
+original JSON/runtime/MSFT-helper byte preservation, twelve recorded arithmetic/
+parent/CFO checks, compileall, **429 affected local links** and diff checks pass.
+Stop for one consolidated review; no full-suite/corpus rerun.
+
+## Prior milestone — approved MSFT historical selections
 
 The [existing package](company-data-preparation/MSFT-analyst-input-package.md)
 and JSON add a separate accepted view, with immutable user-authority audit and
