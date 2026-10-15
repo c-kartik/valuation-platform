@@ -1,5 +1,47 @@
 # MSFT — company data preparation
 
+## Concrete decision-resolution revision — FY2025–FY2026
+
+The [existing analyst package](MSFT-analyst-input-package.md) and
+[same JSON](msft-analyst-input-package.json) now carry revision 2, not a parallel
+report or runtime overlay. Original conflict: the six approval rows mostly
+restated unknowns without choosing a company-specific treatment. The bounded
+retained review now proposes an explicitly estimated operating-capital proxy
+−23427m/−3372m, adjacent **book** movement +20055m, versus named-only expansion
+−25755m/−18600m, movement +7155m. Facilitation is excluded based on actual investing
+cash discussion; customer financing, tax, derivatives and leases are separated.
+The residual-caption operating classification is a **proposed assumption**, not
+proof of complete operating allocation; 12900m movement sensitivity is visible.
+
+Recommend GAAP-aligned operating-lease service / finance-lease financing, explicitly
+different from the former cash-service direction in principle; neither is accepted
+as a complete convention. Named term+finance liabilities 89323m/106888m and
+finance/nonfinance PP&E partitions now have source checks. Original rounded D&A
+28000m/39000m stays; the proposed finance-amortization-inclusion assumption and
+conditional alternative31408m/44403m are separate, never new approved values.
+Cash PP&E, creditors, noncash ROU additions and acquisition/intangible cash remain
+separate with no invented accrual or organic allocation.
+
+FY2026 supplier restriction11300m is explicitly split3800m current/7500m long;
+proposed current-financial availability73043m excludes the known current portion.
+FY2025 proposed94565m and remaining availability are assumption-dependent, not
+unrestricted/excess cash. Long investments have a disjoint source partition.
+Both face/carrying/fair debt bases are reconciled. FY2026 net short-debt cash0 and
+issuance0 support a **proposed extra-short-debt estimate0**, not a reported ending
+CP zero; source amount remains null with unbounded missing-exposure risk. Legal,
+tax and other claims are not double-added or inferred immaterial. No SEC requests.
+
+Historical reported taxes, dated common shares and disclosed restricted awards
+are finalized for their named scopes; no newly demonstrated source defect.
+Future operating rates, award valuation and forecast dilution are not historical
+completion prerequisites. Every original fact/input, accepted treatment, source
+receipt, pilot/sidecar, policy and frozen output remains unchanged; the former
+sheet survives as history. Financial sufficiency NOT_ASSESSED, no user acceptance,
+no original blocker removal, no runtime integration or Phase 1 closure. Stop for
+one consolidated review. Current validation: 17 package tests (7.355s), 54 existing
+cash-flow/sidecar/NWC tests (31.632s), exact replay, source/preservation checks,
+compileall, affected local links and diff checks pass; no full-suite/corpus rerun.
+
 ## Company-specific draft analyst package — FY2025–FY2026
 
 [Reviewable schedules and consolidated approval sheet](MSFT-analyst-input-package.md)

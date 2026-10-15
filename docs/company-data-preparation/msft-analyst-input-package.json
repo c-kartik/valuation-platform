@@ -16,52 +16,64 @@
   },
   "approval_sheet": [
     {
-      "alternative": "Require a complete operating-capital level: mixed/noncurrent allocations and cash bridge would remain unresolved; no numerical estimate recommended.",
-      "blocks": "Does not block this historical draft. Blocks complete NWC/cash-change claims and later EBIT-based consumption without an aligned movement contract.",
+      "accepted": false,
+      "alternative": "Named-only operating expansion avoids the residual classification assumption; facilitation-inclusion alternative is less consistent with the investing narrative.",
       "decision_id": "NWC-PERIMETER",
-      "numeric_comparison": "Whole-AP diagnostic movement -12,908m versus capital-creditor-excluded +6,892m: +19,800m difference, not cash.",
-      "recommendation": "Use the source-supported narrow NWC levels and +6,892m adjacent BOOK movement as a partial diagnostic only; retain cash-flow movements as the separate cash evidence.",
-      "status": "proposed_pending_user_approval"
+      "evidence": "Notes 1/5/11/12/13, balance sheets and FY2026 Item 7 investing discussion; decision_resolution source keys/primary IDs.",
+      "numeric_consequence": "Proxy -23,427m/-3,372m, book movement +20,055m; named-only -25,755m/-18,600m, +7,155m. Facilitation inclusion adds 8,200m/27,800m, changing movement by +19,600m.",
+      "recommendation": "Exclude capital-procurement facilitation, customer finance, tax, derivative and lease balances; include ordinary long-term contract AR and advances. Recommend the broader explicitly estimated residual-caption operating proxy for review.",
+      "status": "proposed_pending_user_approval",
+      "unavailable": "Residual operating allocations, exact matching facilitation obligation and cash acquisition/FX/noncash/reclass bridge."
     },
     {
-      "alternative": "Financing treatment is possible only as a consistently replacing method covering expense/amortization, principal, assets, debt and tax; not silently selected here.",
-      "blocks": "Missing comprehensive coverage and interest overlap do not block reported packaging; block any certified total or future unlevering/lease adjustment.",
+      "accepted": false,
+      "alternative": "All-lease cash-service is the prior direction in principle, but adopting it now would need a verified profit/loss amortization conversion; this recommendation explicitly changes that proposed direction, not the accepted restricted dataset.",
       "decision_id": "LEASE-METHOD",
-      "numeric_comparison": "Payment classes and recognized liabilities are separately populated; no combined service or interest total.",
-      "recommendation": "Preserve the accepted restricted three-payment dataset. Retain the prior cash-service direction in principle; require one precise whole-method lease treatment before future consumption.",
-      "status": "proposed_pending_user_approval"
+      "evidence": "Notes 1/6/9/13: finance assets expressly inside PP&E; liability location partitions, cost/cash and noncash additions.",
+      "numeric_consequence": "Term plus finance lease subtotal 89,323m/106,888m versus term-only 43,151m/40,294m. Restricted finance cash service 3,655m/5,648m; three-class restricted service 8,586m/12,091m, not comprehensive.",
+      "recommendation": "Recommend GAAP-aligned hybrid historical classification: operating leases service/operating cost; finance leases assets and financing. Keep reported EBIT and expense D&A unchanged; classify finance liability with term borrowing, not operating lease liability.",
+      "status": "proposed_pending_user_approval",
+      "unavailable": "Annual income-recognized/capitalized ROU expense allocation, complete service coverage and interest cash overlap. No guessed EBIT adjustment."
     },
     {
-      "alternative": "A complete accrual/organic reinvestment schedule needs independently supported allocations; do not use cash plus creditor movement as a complete bridge.",
-      "blocks": "Does not block narrow reported investment. Complete reinvestment and D&A/EBIT/book-capital timing compatibility remain unproved, not demonstrated incompatible.",
+      "accepted": false,
+      "alternative": "Broader cash-investment classification could include the whole combined purchases caption; adds 5,978m/1,743m but must not be labelled PP&E or organic reinvestment.",
       "decision_id": "INVESTMENT-TIMING",
-      "numeric_comparison": "Rounded capital creditors 6,900m/26,700m; combined cash purchases 5,978m/1,743m are visible but unallocated.",
-      "recommendation": "Select reported cash PP&E as narrow historical investment and keep capital creditors, noncash lease additions and combined acquisition/intangible purchases separate.",
-      "status": "proposed_pending_user_approval"
+      "evidence": "Notes 6/7/9/13 and investing cash-flow captions; original narrow cash-PP&E acceptance preserved.",
+      "numeric_consequence": "Cash PP&E 64,551m/115,948m; noncash finance additions 20,511m/24,608m; capital creditors 6,900m/26,700m. Nonfinance PP&E net stock 160,951m/245,795m; no stock-to-cash bridge.",
+      "recommendation": "Retain cash PP&E as the selected cash purchase series; keep capital creditors, noncash finance ROU additions and 100% of combined acquisition/intangible/other purchases as separate investment columns. No organic allocation.",
+      "status": "proposed_pending_user_approval",
+      "unavailable": "Complete accrual additions, cash/noncash acquisition and capitalized-interest allocations, FX/disposal/reclass bridge; no capital-creditor stock change assumed to equal expenditure."
     },
     {
-      "alternative": "A later operating-tax policy needs an explicit justified basis and analyst acceptance; reported ETR or cash tax is not automatically that basis.",
-      "blocks": "Not a historical data blocker; future operating-tax treatment remains a separate decision.",
+      "accepted": false,
+      "alternative": "Cash-tax series is a historical cash observation, not a replacement for provision/ETR. Future operating-tax rate is outside Phase 1 and not required to finish these schedules.",
       "decision_id": "TAX-BASIS",
-      "numeric_comparison": "Historical ETR points are calculated only from the stated provision/Pretax operands; no numerical future recommendation.",
-      "recommendation": "Keep reported provision, positive continuing Pretax, accounting ETR, deferred items and cash tax separate. Approve no operating/future tax rate now.",
-      "status": "proposed_pending_user_approval"
+      "evidence": "Income statements, Note 11 and cash-flow statement; original exact policy/occurrence proofs retained.",
+      "numeric_consequence": "Provision 21,795m/32,185m; Pretax 123,627m/165,934m; ETR 17.6296440098%/19.3962659853%; cash tax 28,700m/21,188m. FY2026 deferred CFO 14,189m versus note provision 14,424m remain separate.",
+      "recommendation": "Finalize the reported historical provision, Pretax, accounting ETR, cash taxes and distinct deferred roles. Exclude tax balances from operating-capital proxy; no separate NOL equity addition.",
+      "status": "proposed_pending_user_approval",
+      "unavailable": "Pure NOL DTA allocation and operating-only cash-tax allocation are unavailable but do not invalidate named historical reported points."
     },
     {
-      "alternative": "Excess-cash or all-borrowing/economic-debt totals require availability, valuation and scope decisions; FY2026 absent CP is not zero.",
-      "blocks": "Does not block named source populations. Broader balance-sheet/equity-bridge completeness remains unresolved.",
+      "accepted": false,
+      "alternative": "Current-only reported liquidity avoids availability assumptions. Broader pool including long debt securities adds 2,460m/9,108m before restrictions; do not add overlapping strategic/equity-method subsets.",
       "decision_id": "BALANCE-SCOPE",
-      "numeric_comparison": "Current liquidity 94,565m/76,843m; term debt 43,151m/40,294m; mixed long-term investments 15,405m/36,348m are not added or netted.",
-      "recommendation": "Use the evidenced current-liquidity and term-debt carrying populations for historical review; keep strategic/equity-method investments, leases and other claims separate.",
-      "status": "proposed_pending_user_approval"
+      "evidence": "Notes 1/4/5/10/11/14 and financing cash flows: current short net0 and long issuance0 do not prove ending CP0.",
+      "numeric_consequence": "Reported current 94,565m/76,843m; FY2026 known-restriction-excluded 73,043m. Long investment partition 15,405m/36,348m; FY2026 supplier restriction 11,300m=3,800m+7,500m. Face-to-carrying bridges explicitly reconciled.",
+      "recommendation": "Exclude identified supplier restrictions from the proposed available-current-financial pool; classify long-term debt/equity/derivative holdings separately as nonoperating investments. Use term carrying values. Propose explicit FY2026 unreported-short-debt zero estimate, never a source zero.",
+      "status": "proposed_pending_user_approval",
+      "unavailable": "FY2025 restriction amount, FY2026 restricted-long category, operating reserve, ending CP evidence and exhaustive other claims; no materiality or true unrestricted-cash claim."
     },
     {
-      "alternative": "A later dated share denominator or outstanding-award economic method must specify date/classes and prevent double counting the already accepted SBC cost proxy.",
-      "blocks": "Does not block dated historical observations; blocks diluted/fully adjusted share or equity-claim use.",
+      "accepted": false,
+      "alternative": "Later-dated cover snapshots remain a valid separately dated disclosure; they cannot silently replace the fiscal-end count.",
       "decision_id": "SHARES-AWARDS",
-      "numeric_comparison": "June30 common 7,434m/7,427m; nonvested awards 82m/78m are not incremental diluted shares. No dilution estimate.",
-      "recommendation": "Select the rounded June 30 common-share observation for the fiscal-end historical snapshot; keep exact later cover observations and nonvested awards separately.",
-      "status": "proposed_pending_user_approval"
+      "evidence": "Cover, balance sheets, Notes 15/17; source dates, exact class dimensions and rounding retained.",
+      "numeric_consequence": "Year-end common 7,434m/7,427m; dated covers 7,433,166,379/7,425,545,491; restricted awards 82m/78m, unrecognized cost21,600m/24,800m.",
+      "recommendation": "Finalize June 30 rounded common shares for historical fiscal-end snapshots, retain exact July cover shares and restricted awards separately. No common-plus-award sum or extra current SBC charge.",
+      "status": "proposed_pending_user_approval",
+      "unavailable": "No remaining source defect for these named historical observations. Complete option economic value and forecast dilution are Phase 2, not historical schedule completion requirements."
     }
   ],
   "baseline_revision": "daeb3b007a664cfe9fe31fe426d1f5ae40be503a",
@@ -99,6 +111,3534 @@
       "unit": "USD"
     }
   ],
+  "decision_resolution": {
+    "accepted": false,
+    "adjacent_book_movements_usd": {
+      "alternative_include_customer_finance": "19455000000",
+      "alternative_include_facilitation": "39655000000",
+      "named_expansion": "7155000000",
+      "proposed_operating_capital": "20055000000"
+    },
+    "named_only_vs_proxy_movement_difference_usd": "12900000000",
+    "periods": [
+      {
+        "additional_facts": {
+          "customer_finance": {
+            "as_of": "2025-06-30",
+            "concept": "FinanceReceivablesNet",
+            "display_unit": "USD millions",
+            "display_value": "4300",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 1: combined current/noncurrent customer-finance receivables",
+            "namespace": "http://www.microsoft.com/20250630",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 843,
+                "precision": "-8",
+                "primary_display": "4.3",
+                "primary_format": null,
+                "primary_locator": "inline#F_0a4cff7a-aa5d-4397-9c25-f036939df724",
+                "primary_scale": 9,
+                "primary_sign": "+",
+                "raw_value": "4300000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_0a4cff7a-aa5d-4397-9c25-f036939df724"
+              }
+            ],
+            "precision": "-8",
+            "precision_variants": [
+              "-8"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "4300000000"
+          },
+          "debt_discount_cost": {
+            "as_of": "2025-06-30",
+            "concept": "DebtInstrumentUnamortizedDiscountPremiumAndDebtIssuanceCostsNet",
+            "display_unit": "USD millions",
+            "display_value": "1155",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 10: subtract discount and issuance costs from face",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1629,
+                "precision": "-6",
+                "primary_display": "1,155",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_77f6b0f2-03b4-4d0f-ba00-3ce959042348",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "1155000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_77f6b0f2-03b4-4d0f-ba00-3ce959042348"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "1155000000"
+          },
+          "debt_exchange_premium": {
+            "as_of": "2025-06-30",
+            "concept": "PremiumOnDebtExchange1",
+            "display_unit": "USD millions",
+            "display_value": "4864",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 10: subtract debt-exchange premium",
+            "namespace": "http://www.microsoft.com/20250630",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1633,
+                "precision": "-6",
+                "primary_display": "4,864",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_fdde23fc-1ee4-429e-bcc5-4120e0f35ac7",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "4864000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_fdde23fc-1ee4-429e-bcc5-4120e0f35ac7"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "4864000000"
+          },
+          "debt_hedge_adjustment": {
+            "as_of": "2025-06-30",
+            "concept": "HedgeAccountingFairValueAdjustments",
+            "display_unit": "USD millions",
+            "display_value": "-36",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 10: signed hedge carrying adjustment",
+            "namespace": "http://www.microsoft.com/20250630",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1631,
+                "precision": "-6",
+                "primary_display": "36",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_a7ebff40-700e-4ace-b5cb-3bf4073afe0f",
+                "primary_scale": 6,
+                "primary_sign": "-",
+                "raw_value": "-36000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_a7ebff40-700e-4ace-b5cb-3bf4073afe0f"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "-36000000"
+          },
+          "derivative_current_asset": {
+            "as_of": "2025-06-30",
+            "concept": "DerivativeAssetsCurrent",
+            "display_unit": "USD millions",
+            "display_value": "201",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 5: net derivative carrying asset within OCA",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_a656d6a9-3969-4911-b33a-96bf084eb201",
+                "dimensions": [
+                  [
+                    "us-gaap:BalanceSheetLocationAxis",
+                    "us-gaap:OtherCurrentAssetsMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1292,
+                "precision": "-6",
+                "primary_display": "201",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_6ef8ca8f-3c88-4eb7-910a-14e7c157f38f",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "201000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_6ef8ca8f-3c88-4eb7-910a-14e7c157f38f"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "201000000"
+          },
+          "derivative_current_liability": {
+            "as_of": "2025-06-30",
+            "concept": "DerivativeLiabilitiesCurrent",
+            "display_unit": "USD millions",
+            "display_value": "1639",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 5: net carrying derivative liability located in other current liabilities",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1298,
+                "precision": "-6",
+                "primary_display": "1,639",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_717f7c89-3624-4f23-8210-c78d0d348ddb",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "1639000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_717f7c89-3624-4f23-8210-c78d0d348ddb"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "1639000000"
+          },
+          "derivative_long_asset": {
+            "as_of": "2025-06-30",
+            "concept": "DerivativeAssetsNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "17",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 5: net derivative carrying asset within other LT assets",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_94256e2b-6d80-4ef1-852e-63b0130cf17a",
+                "dimensions": [
+                  [
+                    "us-gaap:BalanceSheetLocationAxis",
+                    "us-gaap:OtherNoncurrentAssetsMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1296,
+                "precision": "-6",
+                "primary_display": "17",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_d05e7d49-fd8f-4562-aa3a-46ba14e3597d",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "17000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_d05e7d49-fd8f-4562-aa3a-46ba14e3597d"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "17000000"
+          },
+          "derivative_long_liability": {
+            "as_of": "2025-06-30",
+            "concept": "DerivativeLiabilitiesNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "37",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 5: net carrying derivative liability located in other long-term liabilities",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1300,
+                "precision": "-6",
+                "primary_display": "37",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_aebcb7c1-f399-4ef5-ad15-a7a0abef934e",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "37000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_aebcb7c1-f399-4ef5-ad15-a7a0abef934e"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "37000000"
+          },
+          "dta_in_other_assets": {
+            "as_of": "2025-06-30",
+            "concept": "DeferredIncomeTaxAssetsNet",
+            "display_unit": "USD millions",
+            "display_value": "29108",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 11 Reported As: DTA actually within other long-term assets, not gross DTA",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_94256e2b-6d80-4ef1-852e-63b0130cf17a",
+                "dimensions": [
+                  [
+                    "us-gaap:BalanceSheetLocationAxis",
+                    "us-gaap:OtherNoncurrentAssetsMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1761,
+                "precision": "-6",
+                "primary_display": "29,108",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_4604c75e-4d3a-4a5e-92c0-63797cb119c5",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "29108000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_4604c75e-4d3a-4a5e-92c0-63797cb119c5"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "29108000000"
+          },
+          "finance_ppe_accumulated": {
+            "as_of": "2025-06-30",
+            "concept": "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+            "display_unit": "USD millions",
+            "display_value": "9861",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 13: recognized finance-lease PP&E subset of Note 6 total",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_5074d789-8774-4db1-8d86-dde02154d9aa",
+                "dimensions": [
+                  [
+                    "us-gaap:LeaseContractualTermAxis",
+                    "msft:FinanceLeaseMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1877,
+                "precision": "-6",
+                "primary_display": "9,861",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_4571eb9c-ca66-4e45-a22c-63c6c1f5e615",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "9861000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_4571eb9c-ca66-4e45-a22c-63c6c1f5e615"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "9861000000"
+          },
+          "finance_ppe_gross": {
+            "as_of": "2025-06-30",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "display_unit": "USD millions",
+            "display_value": "53876",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 13: recognized finance-lease PP&E subset of Note 6 total",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_5074d789-8774-4db1-8d86-dde02154d9aa",
+                "dimensions": [
+                  [
+                    "us-gaap:LeaseContractualTermAxis",
+                    "msft:FinanceLeaseMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1875,
+                "precision": "-6",
+                "primary_display": "53,876",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_9f50a91e-1770-44b4-9838-f6735e9d6bf4",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "53876000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_9f50a91e-1770-44b4-9838-f6735e9d6bf4"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "53876000000"
+          },
+          "finance_ppe_net": {
+            "as_of": "2025-06-30",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "display_unit": "USD millions",
+            "display_value": "44015",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 13: recognized finance-lease PP&E subset of Note 6 total",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_5074d789-8774-4db1-8d86-dde02154d9aa",
+                "dimensions": [
+                  [
+                    "us-gaap:LeaseContractualTermAxis",
+                    "msft:FinanceLeaseMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1879,
+                "precision": "-6",
+                "primary_display": "44,015",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_eef9beca-3d59-4fa2-a025-c0d3bf2d3ee3",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "44015000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_eef9beca-3d59-4fa2-a025-c0d3bf2d3ee3"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "44015000000"
+          },
+          "legal_accrual": {
+            "as_of": "2025-06-30",
+            "concept": "LossContingencyAccrualAtCarryingValue",
+            "display_unit": "USD millions",
+            "display_value": "541",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 14: accrued legal liabilities, not an incremental debt claim",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1921,
+                "precision": "-6",
+                "primary_display": "541",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_b80117b0-5277-43d1-b578-d6b35ebd9c02",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "541000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_b80117b0-5277-43d1-b578-d6b35ebd9c02"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "541000000"
+          },
+          "legal_additional_exposure": {
+            "as_of": "2025-06-30",
+            "concept": "LossContingencyRangeOfPossibleLossPortionNotAccrued",
+            "display_unit": "USD millions",
+            "display_value": "600",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 14: reasonably possible additional losses, not an expected-value provision",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1922,
+                "precision": "-6",
+                "primary_display": "600",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_d4c54afa-2fc9-4b61-abb4-7c3dcd52c3f0",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "600000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_d4c54afa-2fc9-4b61-abb4-7c3dcd52c3f0"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "600000000"
+          },
+          "long_ar": {
+            "as_of": "2025-06-30",
+            "concept": "AccountsReceivableNetNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "5200",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 1: ordinary long-term contract receivables, not the customer financing program",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 839,
+                "precision": "-8",
+                "primary_display": "5.2",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_b69cc030-2543-4e75-a0b7-7ead625ba0d6",
+                "primary_scale": 9,
+                "primary_sign": "+",
+                "raw_value": "5200000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_b69cc030-2543-4e75-a0b7-7ead625ba0d6"
+              }
+            ],
+            "precision": "-8",
+            "precision_variants": [
+              "-8"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "5200000000"
+          },
+          "long_debt_cash_proceeds": {
+            "as_of": null,
+            "concept": "ProceedsFromDebtMaturingInMoreThanThreeMonths",
+            "display_unit": "USD millions",
+            "display_value": "0",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Consolidated financing cash-flow row; not an ending-debt balance or gross short-debt bridge",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 729,
+                "precision": "-6",
+                "primary_display": "0",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_ce97ee3c-f75f-4740-932d-a2146379d832",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "0",
+                "start": "2024-07-01",
+                "unit_id": "U_USD",
+                "xml_id": "F_ce97ee3c-f75f-4740-932d-a2146379d832"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "0"
+          },
+          "long_debt_cash_repayments": {
+            "as_of": null,
+            "concept": "RepaymentsOfDebtMaturingInMoreThanThreeMonths",
+            "display_unit": "USD millions",
+            "display_value": "3216",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Consolidated financing cash-flow row; not an ending-debt balance or gross short-debt bridge",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 732,
+                "precision": "-6",
+                "primary_display": "3,216",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_25ed7f76-2851-4b5e-950a-5c981252a681",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "3216000000",
+                "start": "2024-07-01",
+                "unit_id": "U_USD",
+                "xml_id": "F_25ed7f76-2851-4b5e-950a-5c981252a681"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "3216000000"
+          },
+          "long_debt_securities": {
+            "as_of": "2025-06-30",
+            "concept": "LongTermInvestments",
+            "display_unit": "USD millions",
+            "display_value": "2460",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 4: explicit disjoint long-term investment table row",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_71d42840-522a-48a0-8f57-51182aaae0cb",
+                "dimensions": [
+                  [
+                    "us-gaap:FairValueByAssetClassAxis",
+                    "us-gaap:DebtSecuritiesMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1018,
+                "precision": "-6",
+                "primary_display": "2,460",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_e3242555-7d9f-49c3-a8ad-acc2f9e7da2c",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "2460000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_e3242555-7d9f-49c3-a8ad-acc2f9e7da2c"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "2460000000"
+          },
+          "long_derivatives": {
+            "as_of": "2025-06-30",
+            "concept": "LongTermInvestments",
+            "display_unit": "USD millions",
+            "display_value": "272",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 4: explicit disjoint long-term investment table row",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_fa150ea9-270e-4a0b-950d-910644eb4c22",
+                "dimensions": [
+                  [
+                    "us-gaap:FinancialInstrumentAxis",
+                    "us-gaap:DerivativeMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1038,
+                "precision": "-6",
+                "primary_display": "272",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_eb069572-db66-47f9-ac97-0102d66e7590",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "272000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_eb069572-db66-47f9-ac97-0102d66e7590"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "272000000"
+          },
+          "long_listed_equities": {
+            "as_of": "2025-06-30",
+            "concept": "LongTermInvestments",
+            "display_unit": "USD millions",
+            "display_value": "3532",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 4: explicit disjoint long-term investment table row",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_66f3a380-d3c4-4be5-b28b-6821fa832abc",
+                "dimensions": [
+                  [
+                    "us-gaap:FairValueByFairValueHierarchyLevelAxis",
+                    "us-gaap:FairValueInputsLevel1Member"
+                  ],
+                  [
+                    "us-gaap:FinancialInstrumentAxis",
+                    "us-gaap:EquitySecuritiesMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1022,
+                "precision": "-6",
+                "primary_display": "3,532",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_d9607ff5-b488-4080-abe5-4e40ddb50138",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "3532000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_d9607ff5-b488-4080-abe5-4e40ddb50138"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "3532000000"
+          },
+          "long_other_equities": {
+            "as_of": "2025-06-30",
+            "concept": "LongTermInvestments",
+            "display_unit": "USD millions",
+            "display_value": "9141",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 4: explicit disjoint long-term investment table row",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_8dff39b4-21d9-43c3-ae61-7af1053ca628",
+                "dimensions": [
+                  [
+                    "us-gaap:FinancialInstrumentAxis",
+                    "us-gaap:EquitySecuritiesMember"
+                  ],
+                  [
+                    "us-gaap:MeasurementInputTypeAxis",
+                    "msft:OtherMeasurementMember"
+                  ]
+                ],
+                "end": "2025-06-30",
+                "ordinal": 1026,
+                "precision": "-6",
+                "primary_display": "9,141",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_7a34dc82-73f3-4ba7-93b4-bcad56aef706",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "9141000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_7a34dc82-73f3-4ba7-93b4-bcad56aef706"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "9141000000"
+          },
+          "other_long_assets": {
+            "as_of": "2025-06-30",
+            "concept": "OtherAssetsNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "40565",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Balance sheets: other long-term assets",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 633,
+                "precision": "-6",
+                "primary_display": "40,565",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_86f1d04d-6243-44f1-bee8-bdcd46058805",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "40565000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_86f1d04d-6243-44f1-bee8-bdcd46058805"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "40565000000"
+          },
+          "other_long_liabilities": {
+            "as_of": "2025-06-30",
+            "concept": "OtherLiabilitiesNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "45186",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Balance sheets: other long-term liabilities",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 663,
+                "precision": "-6",
+                "primary_display": "45,186",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_5ee11d22-dbcd-429d-a8b4-0837f1a2a6f3",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "45186000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_5ee11d22-dbcd-429d-a8b4-0837f1a2a6f3"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "45186000000"
+          },
+          "ppe_accumulated": {
+            "as_of": "2025-06-30",
+            "concept": "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+            "display_unit": "USD millions",
+            "display_value": "93653",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 6: total accumulated PP&E depreciation",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 2,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 621,
+                "precision": "-6",
+                "primary_display": "93,653",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_4ded842a-348c-4f98-a740-6d24442dcd2c",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "93653000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_4ded842a-348c-4f98-a740-6d24442dcd2c"
+              },
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1363,
+                "precision": "-6",
+                "primary_display": "93,653",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_dff92dff-7751-46d2-9380-4564c6a691ac",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "93653000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_dff92dff-7751-46d2-9380-4564c6a691ac"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "93653000000"
+          },
+          "ppe_gross": {
+            "as_of": "2025-06-30",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "display_unit": "USD millions",
+            "display_value": "298619",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 6: total recognized gross PP&E, includes finance leases per Note 1",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1361,
+                "precision": "-6",
+                "primary_display": "298,619",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_d7992538-aa5e-4a66-8ae7-208aaea945a0",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "298619000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_d7992538-aa5e-4a66-8ae7-208aaea945a0"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "298619000000"
+          },
+          "ppe_net": {
+            "as_of": "2025-06-30",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "display_unit": "USD millions",
+            "display_value": "204966",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Note 6: total recognized PP&E net",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 2,
+            "occurrences": [
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 623,
+                "precision": "-6",
+                "primary_display": "204,966",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_383106b5-e6c6-452a-9be9-83f9580afa3a",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "204966000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_383106b5-e6c6-452a-9be9-83f9580afa3a"
+              },
+              {
+                "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 1365,
+                "precision": "-6",
+                "primary_display": "204,966",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_ce8f67db-3754-4b49-80b7-cf93ae6cc9d0",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "204966000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_ce8f67db-3754-4b49-80b7-cf93ae6cc9d0"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "204966000000"
+          },
+          "short_debt_cash_net": {
+            "as_of": null,
+            "concept": "ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess",
+            "display_unit": "USD millions",
+            "display_value": "-5746",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2025-instance",
+            "location": "Consolidated financing cash-flow row; not an ending-debt balance or gross short-debt bridge",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+                "dimensions": [],
+                "end": "2025-06-30",
+                "ordinal": 726,
+                "precision": "-6",
+                "primary_display": "5,746",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_7b5d7ad5-3abd-4cdd-a251-25b815915270",
+                "primary_scale": 6,
+                "primary_sign": "-",
+                "raw_value": "-5746000000",
+                "start": "2024-07-01",
+                "unit_id": "U_USD",
+                "xml_id": "F_7b5d7ad5-3abd-4cdd-a251-25b815915270"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2025-primary",
+            "unit": "USD",
+            "value": "-5746000000"
+          }
+        },
+        "assumptions": [
+          {
+            "assumption_id": "RESIDUAL-OPERATING",
+            "author": "Repository MSFT analyst-treatment review; proposed, not user acceptance",
+            "numeric_effect_schedule": "proposed_operating_capital",
+            "rationale": "Classify the explicitly displayed residual asset/accrual captions and AP after the identified PP&E exclusion as operating. This is a whole-caption analyst proxy, not proof of operating allocation or complete NWC; undisclosed components may be material. An unidentified matching facilitation obligation could require a further AP exclusion; it is not assigned zero.",
+            "source_keys": [
+              "residual_assets",
+              "residual_current_liabilities",
+              "residual_long_liabilities"
+            ],
+            "status": "proposed_pending_user_approval",
+            "timestamp_utc": "2026-10-15T14:53:18+00:00",
+            "value": null
+          },
+          {
+            "alternative": "conditional_da_if_rou_excluded",
+            "assumption_id": "FINANCE-AMORT-IN-DEPRECIATION",
+            "author": "Repository MSFT analyst-treatment review; proposed, not user acceptance",
+            "numeric_effect_schedule": "expense_da",
+            "rationale": "Recommend treating Note 6 depreciation as finance-lease inclusive for the proposed unchanged D&A schedule because Note 1 expressly puts finance assets in PP&E. Exact annual expense inclusion/capitalized allocation is not certified; no separate ROU add-on.",
+            "status": "proposed_pending_user_approval",
+            "timestamp_utc": "2026-10-15T14:53:18+00:00",
+            "value": null
+          },
+          {
+            "assumption_id": "CURRENT-FINANCIAL-AVAILABILITY",
+            "author": "Repository MSFT analyst-treatment review; proposed, not user acceptance",
+            "numeric_effect_schedule": "proposed_available_current_pool",
+            "rationale": "Propose treating the current financial pool as available after specifically disclosed restrictions, with no operating-reserve estimate. Other restrictions are not proved absent and the result is not excess cash.",
+            "source_amount_for_additional_restrictions": null,
+            "status": "proposed_pending_user_approval",
+            "timestamp_utc": "2026-10-15T14:53:18+00:00"
+          }
+        ],
+        "fiscal_year": 2025,
+        "historical_tax_and_share_schedule": "FINALIZED_AS_REPORTED_FOR_NAMED_DISCLOSURES; no source defect found in existing provision/Pretax/ETR/cash-tax or dated-common/restricted-award points. Future rates, award valuation and forecast dilution are not historical completion prerequisites.",
+        "schedules": {
+          "alternative_include_customer_finance": {
+            "accepted": false,
+            "assumption": "Classify customer lending as operating rather than a separately financed asset.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Customer-finance inclusion sensitivity, not an approval",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "proposed_operating_capital"
+              },
+              {
+                "coefficient": 1,
+                "operand": "customer_finance"
+              }
+            ],
+            "value_millions": "-19127",
+            "value_usd": "-19127000000"
+          },
+          "alternative_include_facilitation": {
+            "accepted": false,
+            "assumption": "Contrary to primary recommendation: treat facilitation as operating and do not invent a matching liability.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Less-preferred classification alternative including capital-procurement facilitation as operating",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "proposed_operating_capital"
+              },
+              {
+                "coefficient": 1,
+                "operand": "component_receivables"
+              }
+            ],
+            "value_millions": "-15227",
+            "value_usd": "-15227000000"
+          },
+          "carrying_less_fair": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Historical difference to separately reported rounded fair value, not a valuation gain",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "term_debt_parent"
+              },
+              {
+                "coefficient": -1,
+                "operand": "debt_fair"
+              }
+            ],
+            "value_millions": "2751",
+            "value_usd": "2751000000"
+          },
+          "cash_and_all_reported_investments": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "All reported cash/investment captions; not a cash-like or strategic-value selection",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "cash"
+              },
+              {
+                "coefficient": 1,
+                "operand": "current_investments"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_investments"
+              }
+            ],
+            "value_millions": "109970",
+            "value_usd": "109970000000"
+          },
+          "conditional_da_if_rou_excluded": {
+            "accepted": false,
+            "assumption": "Conditional non-overlap/full-income-recognition scenario, neither condition proved. Do not populate an approved value from this sum.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Mechanical alternative ONLY IF separate full income recognition AND exclusion from Note 6 depreciation were established; not selected D&A",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "expense_da"
+              },
+              {
+                "coefficient": 1,
+                "operand": "FinanceLeaseRightOfUseAssetAmortization"
+              }
+            ],
+            "value_millions": "31408",
+            "value_usd": "31408000000"
+          },
+          "current_plus_long_debt_securities": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Broader financial-investment alternative BEFORE restrictions; not available cash",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "cash"
+              },
+              {
+                "coefficient": 1,
+                "operand": "current_investments"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_debt_securities"
+              }
+            ],
+            "value_millions": "97025",
+            "value_usd": "97025000000"
+          },
+          "expense_da": {
+            "accepted": false,
+            "meaning": "Original rounded expense-component policy value, unchanged",
+            "origin": "derived",
+            "status": "source_supported_selection_or_calculation",
+            "value_usd": "28000000000"
+          },
+          "face_to_carrying": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Note 10 face-to-carrying reconciliation",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "debt_face"
+              },
+              {
+                "coefficient": -1,
+                "operand": "debt_discount_cost"
+              },
+              {
+                "coefficient": 1,
+                "operand": "debt_hedge_adjustment"
+              },
+              {
+                "coefficient": -1,
+                "operand": "debt_exchange_premium"
+              }
+            ],
+            "value_millions": "43151",
+            "value_usd": "43151000000"
+          },
+          "finance_ppe_partition": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Note 13 recognized finance PP&E gross less accumulated depreciation",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "finance_ppe_gross"
+              },
+              {
+                "coefficient": -1,
+                "operand": "finance_ppe_accumulated"
+              }
+            ],
+            "value_millions": "44015",
+            "value_usd": "44015000000"
+          },
+          "long_investment_partition": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Note 4 disjoint debt/listed-equity/other-equity/derivative partition",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "long_debt_securities"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_listed_equities"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_other_equities"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_derivatives"
+              }
+            ],
+            "value_millions": "15405",
+            "value_usd": "15405000000"
+          },
+          "named_expansion": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Disclosed operating balance expansion; still a named-only partial perimeter",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "partial_nwc"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_ar"
+              },
+              {
+                "coefficient": -1,
+                "operand": "noncurrent_contract"
+              }
+            ],
+            "value_millions": "-25755",
+            "value_usd": "-25755000000"
+          },
+          "nonfinance_ppe_net": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Nonfinance PP&E net stock partition, not cash additions or owned-only D&A",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "ppe_net"
+              },
+              {
+                "coefficient": -1,
+                "operand": "finance_ppe_net"
+              }
+            ],
+            "value_millions": "160951",
+            "value_usd": "160951000000"
+          },
+          "partial_nwc": {
+            "accepted": false,
+            "meaning": "Original narrow partial core, unchanged",
+            "origin": "derived",
+            "status": "source_supported_selection_or_calculation",
+            "value_usd": "-28245000000"
+          },
+          "proposed_available_current_pool": {
+            "accepted": false,
+            "assumption": "Propose treating the current financial pool as available after specifically disclosed restrictions, with no operating-reserve estimate. Other restrictions are not proved absent and the result is not excess cash.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Proposed current financial-asset availability proxy, not an unrestricted/excess-cash fact",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "cash"
+              },
+              {
+                "coefficient": 1,
+                "operand": "current_investments"
+              }
+            ],
+            "value_millions": "94565",
+            "value_usd": "94565000000"
+          },
+          "proposed_operating_capital": {
+            "accepted": false,
+            "assumption": "Classify the explicitly displayed residual asset/accrual captions and AP after the identified PP&E exclusion as operating. This is a whole-caption analyst proxy, not proof of operating allocation or complete NWC; undisclosed components may be material. An unidentified matching facilitation obligation could require a further AP exclusion; it is not assigned zero.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Recommended expanded historical operating-capital proxy, including current/noncurrent ordinary operating balances; BOOK basis only",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "partial_nwc"
+              },
+              {
+                "coefficient": 1,
+                "operand": "residual_assets"
+              },
+              {
+                "coefficient": -1,
+                "operand": "residual_current_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "residual_long_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "noncurrent_contract"
+              }
+            ],
+            "value_millions": "-23427",
+            "value_usd": "-23427000000"
+          },
+          "residual_assets": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Observed mixed-asset remainder after explicit disjoint financing/tax/investing exclusions; not a disclosed pure operating caption",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "other_current_assets"
+              },
+              {
+                "coefficient": 1,
+                "operand": "other_long_assets"
+              },
+              {
+                "coefficient": -1,
+                "operand": "dta_in_other_assets"
+              },
+              {
+                "coefficient": -1,
+                "operand": "component_receivables"
+              },
+              {
+                "coefficient": -1,
+                "operand": "customer_finance"
+              },
+              {
+                "coefficient": -1,
+                "operand": "derivative_current_asset"
+              },
+              {
+                "coefficient": -1,
+                "operand": "derivative_long_asset"
+              }
+            ],
+            "value_millions": "24462",
+            "value_usd": "24462000000"
+          },
+          "residual_current_liabilities": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Other current liabilities excluding separately located recognized leases and derivatives",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "other_current_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "operating_current"
+              },
+              {
+                "coefficient": -1,
+                "operand": "finance_current"
+              },
+              {
+                "coefficient": -1,
+                "operand": "derivative_current_liability"
+              }
+            ],
+            "value_millions": "14785",
+            "value_usd": "14785000000"
+          },
+          "residual_long_liabilities": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Other LT liabilities excluding finance leases and derivatives; operating noncurrent lease already lies outside this parent",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "other_long_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "finance_noncurrent"
+              },
+              {
+                "coefficient": -1,
+                "operand": "derivative_long_liability"
+              }
+            ],
+            "value_millions": "2149",
+            "value_usd": "2149000000"
+          },
+          "restricted_all_lease_service": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Three disclosed liability-measurement payment classes only; borrowing-interest disclosure excluded, no all-interest claim",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "OperatingLeasePayments"
+              },
+              {
+                "coefficient": 1,
+                "operand": "restricted_finance_service"
+              }
+            ],
+            "value_millions": "8586",
+            "value_usd": "8586000000"
+          },
+          "restricted_finance_service": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Sum of disjoint disclosed finance lease cash classes only; incomplete all-service coverage, not a new expense input",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "FinanceLeaseInterestPaymentOnLiability"
+              },
+              {
+                "coefficient": 1,
+                "operand": "FinanceLeasePrincipalPayments"
+              }
+            ],
+            "value_millions": "3655",
+            "value_usd": "3655000000"
+          },
+          "term_and_finance_leases": {
+            "accepted": false,
+            "assumption": "Proposed GAAP-aligned historical classification: finance leases financing; operating leases service, outside this financing subtotal.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Named term-debt carrying plus recognized finance-lease financing subtotal; not an all-debt completeness assertion",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "term_debt_parent"
+              },
+              {
+                "coefficient": 1,
+                "operand": "finance_liability"
+              }
+            ],
+            "value_millions": "89323",
+            "value_usd": "89323000000"
+          }
+        },
+        "scope_passages": [
+          {
+            "exact_excerpt": "Finance leases are included in property and equipment, other current liabilities, and other long-term liabilities in our consolidated balance sheets. 60 PART II Item 8 ROU assets represent our right to use an underlying asset for the lease term and lease liabilities repres",
+            "offset": 254246,
+            "source": "FY2025-primary"
+          },
+          {
+            "exact_excerpt": "financing receivables, net were $ 4.3 billion and $ 4.5 billion, respectively, for short-term and long-term financing receivables, which are included in other current assets and other long-term assets in our consolidated balance sheets. 57 PART II Ite",
+            "offset": 241597,
+            "source": "FY2025-primary"
+          },
+          {
+            "exact_excerpt": "generally do not include a significant financing component. The primary purpose of our invoicing terms is to provide customers with simplified and predictable ways of purchasing our products and services, not to receive financing from our customers or to provide customers with ",
+            "offset": 240382,
+            "source": "FY2025-primary"
+          }
+        ],
+        "source_checks": [
+          {
+            "check": "face_to_carrying",
+            "independent_parent": "term_debt_parent",
+            "result": "PASS"
+          },
+          {
+            "check": "long_investment_partition",
+            "independent_parent": "long_investments",
+            "result": "PASS"
+          },
+          {
+            "check": "finance_ppe_partition",
+            "independent_parent": "finance_ppe_net",
+            "result": "PASS"
+          }
+        ],
+        "stopping_condition": "Stop after this retained pass and consolidated review. Reopen only on exact allocation/roll-forward disclosure or a separately accepted analyst assumption, never by automatic searching.",
+        "unavailable_amounts": [
+          "Complete residual operating/nonoperating allocations; matching facilitation obligations; cash acquisition/FX/noncash/reclassification bridge.",
+          "Income-recognized versus capitalized finance ROU amortization and exact inclusion in Note 6 depreciation; complete accrual investment/organic allocation.",
+          "All-interest overlap, capitalized expense/cash and gross/net basis; complete variable/short-term/nonlease cash.",
+          "FY2025 restrictions, FY2026 restricted-long asset-class allocation, operating cash reserve; pure NOL DTA and exhaustive preferred/NCI/pension quantities.",
+          "No extra short-debt source defect: CP zero affirmatively reported."
+        ]
+      },
+      {
+        "additional_facts": {
+          "customer_finance": {
+            "as_of": "2026-06-30",
+            "concept": "FinanceReceivablesNet",
+            "display_unit": "USD millions",
+            "display_value": "3700",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 1: combined current/noncurrent customer-finance receivables",
+            "namespace": "http://www.microsoft.com/20260630",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 853,
+                "precision": "-8",
+                "primary_display": "3.7",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_42e89b11-28c9-4484-9342-ca530dd6ac2f",
+                "primary_scale": 9,
+                "primary_sign": "+",
+                "raw_value": "3700000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_42e89b11-28c9-4484-9342-ca530dd6ac2f"
+              }
+            ],
+            "precision": "-8",
+            "precision_variants": [
+              "-8"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "3700000000"
+          },
+          "debt_discount_cost": {
+            "as_of": "2026-06-30",
+            "concept": "DebtInstrumentUnamortizedDiscountPremiumAndDebtIssuanceCostsNet",
+            "display_unit": "USD millions",
+            "display_value": "1081",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 10: subtract discount and issuance costs from face",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1637,
+                "precision": "-6",
+                "primary_display": "1,081",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_5b42b53c-6083-4ff3-bd3a-5d7cc309fa46",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "1081000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_5b42b53c-6083-4ff3-bd3a-5d7cc309fa46"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "1081000000"
+          },
+          "debt_exchange_premium": {
+            "as_of": "2026-06-30",
+            "concept": "PremiumOnDebtExchange1",
+            "display_unit": "USD millions",
+            "display_value": "4750",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 10: subtract debt-exchange premium",
+            "namespace": "http://www.microsoft.com/20260630",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1641,
+                "precision": "-6",
+                "primary_display": "4,750",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_484fbf5b-adea-4d30-9867-7745868cec40",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "4750000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_484fbf5b-adea-4d30-9867-7745868cec40"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "4750000000"
+          },
+          "debt_hedge_adjustment": {
+            "as_of": "2026-06-30",
+            "concept": "HedgeAccountingFairValueAdjustments",
+            "display_unit": "USD millions",
+            "display_value": "-11",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 10: signed hedge carrying adjustment",
+            "namespace": "http://www.microsoft.com/20260630",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1639,
+                "precision": "-6",
+                "primary_display": "11",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_01908a37-3670-461f-892f-ba96afc5272b",
+                "primary_scale": 6,
+                "primary_sign": "-",
+                "raw_value": "-11000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_01908a37-3670-461f-892f-ba96afc5272b"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "-11000000"
+          },
+          "derivative_current_asset": {
+            "as_of": "2026-06-30",
+            "concept": "DerivativeAssetsCurrent",
+            "display_unit": "USD millions",
+            "display_value": "681",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 5: net derivative carrying asset within OCA",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_da4f521d-5c63-4ac0-91a7-efc2505f81f9",
+                "dimensions": [
+                  [
+                    "us-gaap:BalanceSheetLocationAxis",
+                    "us-gaap:OtherCurrentAssetsMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1306,
+                "precision": "-6",
+                "primary_display": "681",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_7aa2e635-fb6f-465a-baf3-c68b97a5086a",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "681000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_7aa2e635-fb6f-465a-baf3-c68b97a5086a"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "681000000"
+          },
+          "derivative_current_liability": {
+            "as_of": "2026-06-30",
+            "concept": "DerivativeLiabilitiesCurrent",
+            "display_unit": "USD millions",
+            "display_value": "379",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 5: net carrying derivative liability located in other current liabilities",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1312,
+                "precision": "-6",
+                "primary_display": "379",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_a2f4d7c2-71b1-45a3-8956-92894dbe057f",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "379000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_a2f4d7c2-71b1-45a3-8956-92894dbe057f"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "379000000"
+          },
+          "derivative_long_asset": {
+            "as_of": "2026-06-30",
+            "concept": "DerivativeAssetsNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "3",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 5: net derivative carrying asset within other LT assets",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_4e3f7f7e-7f17-474c-b856-0ced917239ea",
+                "dimensions": [
+                  [
+                    "us-gaap:BalanceSheetLocationAxis",
+                    "us-gaap:OtherNoncurrentAssetsMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1310,
+                "precision": "-6",
+                "primary_display": "3",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_e4eaf3ab-1711-4b8a-a230-b2184b7e29fc",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "3000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_e4eaf3ab-1711-4b8a-a230-b2184b7e29fc"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "3000000"
+          },
+          "derivative_long_liability": {
+            "as_of": "2026-06-30",
+            "concept": "DerivativeLiabilitiesNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "116",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 5: net carrying derivative liability located in other long-term liabilities",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1314,
+                "precision": "-6",
+                "primary_display": "116",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_ae4add01-702c-451c-9bb5-dc8cde5488a3",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "116000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_ae4add01-702c-451c-9bb5-dc8cde5488a3"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "116000000"
+          },
+          "dta_in_other_assets": {
+            "as_of": "2026-06-30",
+            "concept": "DeferredIncomeTaxAssetsNet",
+            "display_unit": "USD millions",
+            "display_value": "15114",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 11 Reported As: DTA actually within other long-term assets, not gross DTA",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_4e3f7f7e-7f17-474c-b856-0ced917239ea",
+                "dimensions": [
+                  [
+                    "us-gaap:BalanceSheetLocationAxis",
+                    "us-gaap:OtherNoncurrentAssetsMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1790,
+                "precision": "-6",
+                "primary_display": "15,114",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_66ae3fb7-ef90-4d38-a052-b665dfa45061",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "15114000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_66ae3fb7-ef90-4d38-a052-b665dfa45061"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "15114000000"
+          },
+          "finance_ppe_accumulated": {
+            "as_of": "2026-06-30",
+            "concept": "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+            "display_unit": "USD millions",
+            "display_value": "15431",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 13: recognized finance-lease PP&E subset of Note 6 total",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_aa3aa932-6850-40ec-b80e-30264e66b967",
+                "dimensions": [
+                  [
+                    "us-gaap:LeaseContractualTermAxis",
+                    "msft:FinanceLeaseMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1914,
+                "precision": "-6",
+                "primary_display": "15,431",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_c8956394-d0dd-4577-a6ea-cd3b4423e9a4",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "15431000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_c8956394-d0dd-4577-a6ea-cd3b4423e9a4"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "15431000000"
+          },
+          "finance_ppe_gross": {
+            "as_of": "2026-06-30",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "display_unit": "USD millions",
+            "display_value": "82712",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 13: recognized finance-lease PP&E subset of Note 6 total",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_aa3aa932-6850-40ec-b80e-30264e66b967",
+                "dimensions": [
+                  [
+                    "us-gaap:LeaseContractualTermAxis",
+                    "msft:FinanceLeaseMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1912,
+                "precision": "-6",
+                "primary_display": "82,712",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_83b80a8e-4e93-4cb1-8c9a-0358125968a4",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "82712000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_83b80a8e-4e93-4cb1-8c9a-0358125968a4"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "82712000000"
+          },
+          "finance_ppe_net": {
+            "as_of": "2026-06-30",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "display_unit": "USD millions",
+            "display_value": "67281",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 13: recognized finance-lease PP&E subset of Note 6 total",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_aa3aa932-6850-40ec-b80e-30264e66b967",
+                "dimensions": [
+                  [
+                    "us-gaap:LeaseContractualTermAxis",
+                    "msft:FinanceLeaseMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1916,
+                "precision": "-6",
+                "primary_display": "67,281",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_c651dd3d-3237-40f3-83fd-514b22bbe5fb",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "67281000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_c651dd3d-3237-40f3-83fd-514b22bbe5fb"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "67281000000"
+          },
+          "legal_accrual": {
+            "as_of": "2026-06-30",
+            "concept": "LossContingencyAccrualAtCarryingValue",
+            "display_unit": "USD millions",
+            "display_value": "553",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 14: accrued legal liabilities, not an incremental debt claim",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1958,
+                "precision": "-6",
+                "primary_display": "553",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_6b8c4327-c1ea-420b-b427-e6d6957c6946",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "553000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_6b8c4327-c1ea-420b-b427-e6d6957c6946"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "553000000"
+          },
+          "legal_additional_exposure": {
+            "as_of": "2026-06-30",
+            "concept": "LossContingencyRangeOfPossibleLossPortionNotAccrued",
+            "display_unit": "USD millions",
+            "display_value": "400",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 14: reasonably possible additional losses, not an expected-value provision",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1959,
+                "precision": "-6",
+                "primary_display": "400",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_ac78ac11-706f-4879-9d6e-f94c582df6f1",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "400000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_ac78ac11-706f-4879-9d6e-f94c582df6f1"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "400000000"
+          },
+          "long_ar": {
+            "as_of": "2026-06-30",
+            "concept": "AccountsReceivableNetNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "5500",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 1: ordinary long-term contract receivables, not the customer financing program",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 846,
+                "precision": "-8",
+                "primary_display": "5.5",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_30adfaa6-63c6-491d-8b31-d71b3ec468c4",
+                "primary_scale": 9,
+                "primary_sign": "+",
+                "raw_value": "5500000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_30adfaa6-63c6-491d-8b31-d71b3ec468c4"
+              }
+            ],
+            "precision": "-8",
+            "precision_variants": [
+              "-8"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "5500000000"
+          },
+          "long_debt_cash_proceeds": {
+            "as_of": null,
+            "concept": "ProceedsFromDebtMaturingInMoreThanThreeMonths",
+            "display_unit": "USD millions",
+            "display_value": "0",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Consolidated financing cash-flow row; not an ending-debt balance or gross short-debt bridge",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 736,
+                "precision": "-6",
+                "primary_display": "0",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_662e061c-dd3c-4e53-b278-cb57b9b0c45c",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "0",
+                "start": "2025-07-01",
+                "unit_id": "U_USD",
+                "xml_id": "F_662e061c-dd3c-4e53-b278-cb57b9b0c45c"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "0"
+          },
+          "long_debt_cash_repayments": {
+            "as_of": null,
+            "concept": "RepaymentsOfDebtMaturingInMoreThanThreeMonths",
+            "display_unit": "USD millions",
+            "display_value": "3000",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Consolidated financing cash-flow row; not an ending-debt balance or gross short-debt bridge",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 739,
+                "precision": "-6",
+                "primary_display": "3,000",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_b88ff240-7b32-487e-9d08-bc573b95b463",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "3000000000",
+                "start": "2025-07-01",
+                "unit_id": "U_USD",
+                "xml_id": "F_b88ff240-7b32-487e-9d08-bc573b95b463"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "3000000000"
+          },
+          "long_debt_securities": {
+            "as_of": "2026-06-30",
+            "concept": "LongTermInvestments",
+            "display_unit": "USD millions",
+            "display_value": "9108",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 4: explicit disjoint long-term investment table row",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_cc101e72-74f3-415b-8abe-e8e55ce67222",
+                "dimensions": [
+                  [
+                    "us-gaap:FairValueByAssetClassAxis",
+                    "us-gaap:DebtSecuritiesMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1032,
+                "precision": "-6",
+                "primary_display": "9,108",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_597dfc04-8cee-41e2-9e57-70379106a364",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "9108000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_597dfc04-8cee-41e2-9e57-70379106a364"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "9108000000"
+          },
+          "long_derivatives": {
+            "as_of": "2026-06-30",
+            "concept": "LongTermInvestments",
+            "display_unit": "USD millions",
+            "display_value": "0",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 4: explicit disjoint long-term investment table row",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_adb4e64a-d681-4dd2-9c03-7aeb13036d65",
+                "dimensions": [
+                  [
+                    "us-gaap:FinancialInstrumentAxis",
+                    "us-gaap:DerivativeMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1052,
+                "precision": "-6",
+                "primary_display": "0",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_78f73909-0c1b-496d-bc83-a2d4181237c2",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "0",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_78f73909-0c1b-496d-bc83-a2d4181237c2"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "0"
+          },
+          "long_listed_equities": {
+            "as_of": "2026-06-30",
+            "concept": "LongTermInvestments",
+            "display_unit": "USD millions",
+            "display_value": "2673",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 4: explicit disjoint long-term investment table row",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_4adae3f9-a18a-476c-813f-8fb19d80b26a",
+                "dimensions": [
+                  [
+                    "us-gaap:FairValueByFairValueHierarchyLevelAxis",
+                    "us-gaap:FairValueInputsLevel1Member"
+                  ],
+                  [
+                    "us-gaap:FinancialInstrumentAxis",
+                    "us-gaap:EquitySecuritiesMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1036,
+                "precision": "-6",
+                "primary_display": "2,673",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_404db8f1-dc7b-4c43-b5f1-35b1b7282646",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "2673000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_404db8f1-dc7b-4c43-b5f1-35b1b7282646"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "2673000000"
+          },
+          "long_other_equities": {
+            "as_of": "2026-06-30",
+            "concept": "LongTermInvestments",
+            "display_unit": "USD millions",
+            "display_value": "24567",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 4: explicit disjoint long-term investment table row",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_e933b7e2-0196-4333-8ae6-bc57fa7e647d",
+                "dimensions": [
+                  [
+                    "us-gaap:FinancialInstrumentAxis",
+                    "us-gaap:EquitySecuritiesMember"
+                  ],
+                  [
+                    "us-gaap:MeasurementInputTypeAxis",
+                    "msft:OtherMeasurementMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 1040,
+                "precision": "-6",
+                "primary_display": "24,567",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_2de0eb10-04e8-4110-b01b-ef0ab35342be",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "24567000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_2de0eb10-04e8-4110-b01b-ef0ab35342be"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "24567000000"
+          },
+          "other_long_assets": {
+            "as_of": "2026-06-30",
+            "concept": "OtherAssetsNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "38805",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Balance sheets: other long-term assets",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 640,
+                "precision": "-6",
+                "primary_display": "38,805",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_cd2a839b-e580-40ca-9c1e-7682095706b0",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "38805000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_cd2a839b-e580-40ca-9c1e-7682095706b0"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "38805000000"
+          },
+          "other_long_liabilities": {
+            "as_of": "2026-06-30",
+            "concept": "OtherLiabilitiesNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "65117",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Balance sheets: other long-term liabilities",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 668,
+                "precision": "-6",
+                "primary_display": "65,117",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_c65edfa2-69cf-4863-a8d5-e4f28644b6d2",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "65117000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_c65edfa2-69cf-4863-a8d5-e4f28644b6d2"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "65117000000"
+          },
+          "ppe_accumulated": {
+            "as_of": "2026-06-30",
+            "concept": "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+            "display_unit": "USD millions",
+            "display_value": "118691",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 6: total accumulated PP&E depreciation",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 2,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 628,
+                "precision": "-6",
+                "primary_display": "118,691",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_d0cc5eab-e8c2-4dcb-953c-0fca4e010fab",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "118691000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_d0cc5eab-e8c2-4dcb-953c-0fca4e010fab"
+              },
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1377,
+                "precision": "-6",
+                "primary_display": "118,691",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_79c4b752-533a-4195-83d2-6903c7e298c0",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "118691000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_79c4b752-533a-4195-83d2-6903c7e298c0"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "118691000000"
+          },
+          "ppe_gross": {
+            "as_of": "2026-06-30",
+            "concept": "PropertyPlantAndEquipmentGross",
+            "display_unit": "USD millions",
+            "display_value": "431767",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 6: total recognized gross PP&E, includes finance leases per Note 1",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1375,
+                "precision": "-6",
+                "primary_display": "431,767",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_35499588-8f36-485d-bf6e-f1d441e9bb5e",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "431767000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_35499588-8f36-485d-bf6e-f1d441e9bb5e"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "431767000000"
+          },
+          "ppe_net": {
+            "as_of": "2026-06-30",
+            "concept": "PropertyPlantAndEquipmentNet",
+            "display_unit": "USD millions",
+            "display_value": "313076",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 6: total recognized PP&E net",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 2,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 630,
+                "precision": "-6",
+                "primary_display": "313,076",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_3ccd6f9b-5f13-4c50-8411-f38d57421c16",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "313076000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_3ccd6f9b-5f13-4c50-8411-f38d57421c16"
+              },
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 1379,
+                "precision": "-6",
+                "primary_display": "313,076",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_5c17f9ce-8e2d-4934-984a-3224266e0699",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "313076000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_5c17f9ce-8e2d-4934-984a-3224266e0699"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "313076000000"
+          },
+          "restricted_current": {
+            "as_of": "2026-06-30",
+            "concept": "RestrictedInvestmentsCurrent",
+            "display_unit": "USD millions",
+            "display_value": "3800",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 1: supplier restriction inside short-term investments",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_57ab5bda-1562-4e3f-badc-16e678b4ac96",
+                "dimensions": [
+                  [
+                    "us-gaap:BalanceSheetLocationAxis",
+                    "us-gaap:ShortTermInvestmentsMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 851,
+                "precision": "-8",
+                "primary_display": "3.8",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_6e9708ce-20cb-4bf9-a779-2187436cb2b7",
+                "primary_scale": 9,
+                "primary_sign": "+",
+                "raw_value": "3800000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_6e9708ce-20cb-4bf9-a779-2187436cb2b7"
+              }
+            ],
+            "precision": "-8",
+            "precision_variants": [
+              "-8"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "3800000000"
+          },
+          "restricted_long": {
+            "as_of": "2026-06-30",
+            "concept": "RestrictedInvestmentsNoncurrent",
+            "display_unit": "USD millions",
+            "display_value": "7500",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 1: supplier restriction inside equity and other investments",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_cb7b172a-147c-4efc-8510-00a745c231af",
+                "dimensions": [
+                  [
+                    "us-gaap:BalanceSheetLocationAxis",
+                    "msft:EquityAndOtherInvestmentsMember"
+                  ]
+                ],
+                "end": "2026-06-30",
+                "ordinal": 852,
+                "precision": "-8",
+                "primary_display": "7.5",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_2c934ef2-d1fd-41a1-b79c-7d182478cb99",
+                "primary_scale": 9,
+                "primary_sign": "+",
+                "raw_value": "7500000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_2c934ef2-d1fd-41a1-b79c-7d182478cb99"
+              }
+            ],
+            "precision": "-8",
+            "precision_variants": [
+              "-8"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "7500000000"
+          },
+          "restricted_total": {
+            "as_of": "2026-06-30",
+            "concept": "RestrictedInvestments",
+            "display_unit": "USD millions",
+            "display_value": "11300",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Note 1: supplier-agreement restricted investment total",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 850,
+                "precision": "-8",
+                "primary_display": "11.3",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_a2ccbcca-e9d3-4c67-8967-e78f5a15984b",
+                "primary_scale": 9,
+                "primary_sign": "+",
+                "raw_value": "11300000000",
+                "start": null,
+                "unit_id": "U_USD",
+                "xml_id": "F_a2ccbcca-e9d3-4c67-8967-e78f5a15984b"
+              }
+            ],
+            "precision": "-8",
+            "precision_variants": [
+              "-8"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "11300000000"
+          },
+          "short_debt_cash_net": {
+            "as_of": null,
+            "concept": "ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess",
+            "display_unit": "USD millions",
+            "display_value": "0",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "evidence_label": "fact_source_reported",
+            "instance_source": "FY2026-instance",
+            "location": "Consolidated financing cash-flow row; not an ending-debt balance or gross short-debt bridge",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+                "dimensions": [],
+                "end": "2026-06-30",
+                "ordinal": 733,
+                "precision": "-6",
+                "primary_display": "0",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#F_b052456e-e860-41de-bcae-a3a15701294e",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "0",
+                "start": "2025-07-01",
+                "unit_id": "U_USD",
+                "xml_id": "F_b052456e-e860-41de-bcae-a3a15701294e"
+              }
+            ],
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "primary_source": "FY2026-primary",
+            "unit": "USD",
+            "value": "0"
+          }
+        },
+        "assumptions": [
+          {
+            "assumption_id": "RESIDUAL-OPERATING",
+            "author": "Repository MSFT analyst-treatment review; proposed, not user acceptance",
+            "numeric_effect_schedule": "proposed_operating_capital",
+            "rationale": "Classify the explicitly displayed residual asset/accrual captions and AP after the identified PP&E exclusion as operating. This is a whole-caption analyst proxy, not proof of operating allocation or complete NWC; undisclosed components may be material. An unidentified matching facilitation obligation could require a further AP exclusion; it is not assigned zero.",
+            "source_keys": [
+              "residual_assets",
+              "residual_current_liabilities",
+              "residual_long_liabilities"
+            ],
+            "status": "proposed_pending_user_approval",
+            "timestamp_utc": "2026-10-15T14:53:18+00:00",
+            "value": null
+          },
+          {
+            "alternative": "conditional_da_if_rou_excluded",
+            "assumption_id": "FINANCE-AMORT-IN-DEPRECIATION",
+            "author": "Repository MSFT analyst-treatment review; proposed, not user acceptance",
+            "numeric_effect_schedule": "expense_da",
+            "rationale": "Recommend treating Note 6 depreciation as finance-lease inclusive for the proposed unchanged D&A schedule because Note 1 expressly puts finance assets in PP&E. Exact annual expense inclusion/capitalized allocation is not certified; no separate ROU add-on.",
+            "status": "proposed_pending_user_approval",
+            "timestamp_utc": "2026-10-15T14:53:18+00:00",
+            "value": null
+          },
+          {
+            "assumption_id": "CURRENT-FINANCIAL-AVAILABILITY",
+            "author": "Repository MSFT analyst-treatment review; proposed, not user acceptance",
+            "numeric_effect_schedule": "proposed_available_current_pool",
+            "rationale": "Propose treating the current financial pool as available after specifically disclosed restrictions, with no operating-reserve estimate. Other restrictions are not proved absent and the result is not excess cash.",
+            "source_amount_for_additional_restrictions": null,
+            "status": "proposed_pending_user_approval",
+            "timestamp_utc": "2026-10-15T14:53:18+00:00"
+          },
+          {
+            "assumption_id": "UNREPORTED-SHORT-DEBT",
+            "author": "Repository MSFT analyst-treatment review; proposed, not user acceptance",
+            "evidence_keys": [
+              "short_debt_cash_net",
+              "long_debt_cash_proceeds",
+              "long_debt_cash_repayments"
+            ],
+            "limitation": "No supported upper bound on missing short borrowing. Original source commercial-paper amount remains unavailable; explicit user approval required.",
+            "origin": "analyst_assumption",
+            "rationale": "Recommend no additional unreported short-borrowing amount in the draft estimate: prior explicit CP zero, current net short-debt cash zero, long-debt issuance zero, and only term debt disclosed. Net zero is not gross/ending zero; acquired/noncash/offsetting or embedded exposure is unbridged.",
+            "resulting_borrowing_perimeter_usd": "40294000000",
+            "source_value_usd": null,
+            "status": "proposed_pending_user_approval",
+            "timestamp_utc": "2026-10-15T14:53:18+00:00",
+            "value_usd": "0"
+          }
+        ],
+        "fiscal_year": 2026,
+        "historical_tax_and_share_schedule": "FINALIZED_AS_REPORTED_FOR_NAMED_DISCLOSURES; no source defect found in existing provision/Pretax/ETR/cash-tax or dated-common/restricted-award points. Future rates, award valuation and forecast dilution are not historical completion prerequisites.",
+        "schedules": {
+          "alternative_include_customer_finance": {
+            "accepted": false,
+            "assumption": "Classify customer lending as operating rather than a separately financed asset.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Customer-finance inclusion sensitivity, not an approval",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "proposed_operating_capital"
+              },
+              {
+                "coefficient": 1,
+                "operand": "customer_finance"
+              }
+            ],
+            "value_millions": "328",
+            "value_usd": "328000000"
+          },
+          "alternative_include_facilitation": {
+            "accepted": false,
+            "assumption": "Contrary to primary recommendation: treat facilitation as operating and do not invent a matching liability.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Less-preferred classification alternative including capital-procurement facilitation as operating",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "proposed_operating_capital"
+              },
+              {
+                "coefficient": 1,
+                "operand": "component_receivables"
+              }
+            ],
+            "value_millions": "24428",
+            "value_usd": "24428000000"
+          },
+          "carrying_less_fair": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Historical difference to separately reported rounded fair value, not a valuation gain",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "term_debt_parent"
+              },
+              {
+                "coefficient": -1,
+                "operand": "debt_fair"
+              }
+            ],
+            "value_millions": "3794",
+            "value_usd": "3794000000"
+          },
+          "cash_and_all_reported_investments": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "All reported cash/investment captions; not a cash-like or strategic-value selection",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "cash"
+              },
+              {
+                "coefficient": 1,
+                "operand": "current_investments"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_investments"
+              }
+            ],
+            "value_millions": "113191",
+            "value_usd": "113191000000"
+          },
+          "conditional_da_if_rou_excluded": {
+            "accepted": false,
+            "assumption": "Conditional non-overlap/full-income-recognition scenario, neither condition proved. Do not populate an approved value from this sum.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Mechanical alternative ONLY IF separate full income recognition AND exclusion from Note 6 depreciation were established; not selected D&A",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "expense_da"
+              },
+              {
+                "coefficient": 1,
+                "operand": "FinanceLeaseRightOfUseAssetAmortization"
+              }
+            ],
+            "value_millions": "44403",
+            "value_usd": "44403000000"
+          },
+          "current_plus_long_debt_securities": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Broader financial-investment alternative BEFORE restrictions; not available cash",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "cash"
+              },
+              {
+                "coefficient": 1,
+                "operand": "current_investments"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_debt_securities"
+              }
+            ],
+            "value_millions": "85951",
+            "value_usd": "85951000000"
+          },
+          "expense_da": {
+            "accepted": false,
+            "meaning": "Original rounded expense-component policy value, unchanged",
+            "origin": "derived",
+            "status": "source_supported_selection_or_calculation",
+            "value_usd": "39000000000"
+          },
+          "face_to_carrying": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Note 10 face-to-carrying reconciliation",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "debt_face"
+              },
+              {
+                "coefficient": -1,
+                "operand": "debt_discount_cost"
+              },
+              {
+                "coefficient": 1,
+                "operand": "debt_hedge_adjustment"
+              },
+              {
+                "coefficient": -1,
+                "operand": "debt_exchange_premium"
+              }
+            ],
+            "value_millions": "40294",
+            "value_usd": "40294000000"
+          },
+          "finance_ppe_partition": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Note 13 recognized finance PP&E gross less accumulated depreciation",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "finance_ppe_gross"
+              },
+              {
+                "coefficient": -1,
+                "operand": "finance_ppe_accumulated"
+              }
+            ],
+            "value_millions": "67281",
+            "value_usd": "67281000000"
+          },
+          "known_restriction_current_pool": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Current financial pool excluding specifically disclosed supplier restriction; not proven excess cash",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "cash"
+              },
+              {
+                "coefficient": 1,
+                "operand": "current_investments"
+              },
+              {
+                "coefficient": -1,
+                "operand": "restricted_current"
+              }
+            ],
+            "value_millions": "73043",
+            "value_usd": "73043000000"
+          },
+          "long_investment_partition": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Note 4 disjoint debt/listed-equity/other-equity/derivative partition",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "long_debt_securities"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_listed_equities"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_other_equities"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_derivatives"
+              }
+            ],
+            "value_millions": "36348",
+            "value_usd": "36348000000"
+          },
+          "named_expansion": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Disclosed operating balance expansion; still a named-only partial perimeter",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "partial_nwc"
+              },
+              {
+                "coefficient": 1,
+                "operand": "long_ar"
+              },
+              {
+                "coefficient": -1,
+                "operand": "noncurrent_contract"
+              }
+            ],
+            "value_millions": "-18600",
+            "value_usd": "-18600000000"
+          },
+          "nonfinance_ppe_net": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Nonfinance PP&E net stock partition, not cash additions or owned-only D&A",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "ppe_net"
+              },
+              {
+                "coefficient": -1,
+                "operand": "finance_ppe_net"
+              }
+            ],
+            "value_millions": "245795",
+            "value_usd": "245795000000"
+          },
+          "partial_nwc": {
+            "accepted": false,
+            "meaning": "Original narrow partial core, unchanged",
+            "origin": "derived",
+            "status": "source_supported_selection_or_calculation",
+            "value_usd": "-21353000000"
+          },
+          "proposed_available_current_pool": {
+            "accepted": false,
+            "assumption": "Propose treating the current financial pool as available after specifically disclosed restrictions, with no operating-reserve estimate. Other restrictions are not proved absent and the result is not excess cash.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Proposed current financial-asset availability proxy, not an unrestricted/excess-cash fact",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "known_restriction_current_pool"
+              }
+            ],
+            "value_millions": "73043",
+            "value_usd": "73043000000"
+          },
+          "proposed_operating_capital": {
+            "accepted": false,
+            "assumption": "Classify the explicitly displayed residual asset/accrual captions and AP after the identified PP&E exclusion as operating. This is a whole-caption analyst proxy, not proof of operating allocation or complete NWC; undisclosed components may be material. An unidentified matching facilitation obligation could require a further AP exclusion; it is not assigned zero.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Recommended expanded historical operating-capital proxy, including current/noncurrent ordinary operating balances; BOOK basis only",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "partial_nwc"
+              },
+              {
+                "coefficient": 1,
+                "operand": "residual_assets"
+              },
+              {
+                "coefficient": -1,
+                "operand": "residual_current_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "residual_long_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "noncurrent_contract"
+              }
+            ],
+            "value_millions": "-3372",
+            "value_usd": "-3372000000"
+          },
+          "residual_assets": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Observed mixed-asset remainder after explicit disjoint financing/tax/investing exclusions; not a disclosed pure operating caption",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "other_current_assets"
+              },
+              {
+                "coefficient": 1,
+                "operand": "other_long_assets"
+              },
+              {
+                "coefficient": -1,
+                "operand": "dta_in_other_assets"
+              },
+              {
+                "coefficient": -1,
+                "operand": "component_receivables"
+              },
+              {
+                "coefficient": -1,
+                "operand": "customer_finance"
+              },
+              {
+                "coefficient": -1,
+                "operand": "derivative_current_asset"
+              },
+              {
+                "coefficient": -1,
+                "operand": "derivative_long_asset"
+              }
+            ],
+            "value_millions": "40101",
+            "value_usd": "40101000000"
+          },
+          "residual_current_liabilities": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Other current liabilities excluding separately located recognized leases and derivatives",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "other_current_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "operating_current"
+              },
+              {
+                "coefficient": -1,
+                "operand": "finance_current"
+              },
+              {
+                "coefficient": -1,
+                "operand": "derivative_current_liability"
+              }
+            ],
+            "value_millions": "16676",
+            "value_usd": "16676000000"
+          },
+          "residual_long_liabilities": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Other LT liabilities excluding finance leases and derivatives; operating noncurrent lease already lies outside this parent",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "other_long_liabilities"
+              },
+              {
+                "coefficient": -1,
+                "operand": "finance_noncurrent"
+              },
+              {
+                "coefficient": -1,
+                "operand": "derivative_long_liability"
+              }
+            ],
+            "value_millions": "2697",
+            "value_usd": "2697000000"
+          },
+          "restricted_all_lease_service": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Three disclosed liability-measurement payment classes only; borrowing-interest disclosure excluded, no all-interest claim",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "OperatingLeasePayments"
+              },
+              {
+                "coefficient": 1,
+                "operand": "restricted_finance_service"
+              }
+            ],
+            "value_millions": "12091",
+            "value_usd": "12091000000"
+          },
+          "restricted_finance_service": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Sum of disjoint disclosed finance lease cash classes only; incomplete all-service coverage, not a new expense input",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "FinanceLeaseInterestPaymentOnLiability"
+              },
+              {
+                "coefficient": 1,
+                "operand": "FinanceLeasePrincipalPayments"
+              }
+            ],
+            "value_millions": "5648",
+            "value_usd": "5648000000"
+          },
+          "restricted_partition": {
+            "accepted": false,
+            "assumption": null,
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Supplier restriction partition, outside mixed-other-asset NWC parents",
+            "origin": "derived",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "source_supported_selection_or_calculation",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "restricted_current"
+              },
+              {
+                "coefficient": 1,
+                "operand": "restricted_long"
+              }
+            ],
+            "value_millions": "11300",
+            "value_usd": "11300000000"
+          },
+          "term_and_finance_leases": {
+            "accepted": false,
+            "assumption": "Proposed GAAP-aligned historical classification: finance leases financing; operating leases service, outside this financing subtotal.",
+            "formula_version": "msft-analyst-decision-resolution-v2",
+            "meaning": "Named term-debt carrying plus recognized finance-lease financing subtotal; not an all-debt completeness assertion",
+            "origin": "proxy",
+            "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+            "status": "proposed_pending_user_approval",
+            "terms": [
+              {
+                "coefficient": 1,
+                "operand": "term_debt_parent"
+              },
+              {
+                "coefficient": 1,
+                "operand": "finance_liability"
+              }
+            ],
+            "value_millions": "106888",
+            "value_usd": "106888000000"
+          }
+        },
+        "scope_passages": [
+          {
+            "exact_excerpt": "Finance leases are included in property and equipment, other current liabilities, and other long-term liabilities in our consolidated balance sheets. ROU assets represent our right to use an underlying asset for the lease term and lease liabilities represent our obligation",
+            "offset": 263269,
+            "source": "FY2026-primary"
+          },
+          {
+            "exact_excerpt": "financing receivables, net were $ 3.7 billion and $ 4.3 billion, respectively, for short-term and long-term financing receivables, which are included in other current assets and other long-term assets in our consolidated balance sheets. We record an a",
+            "offset": 248084,
+            "source": "FY2026-primary"
+          },
+          {
+            "exact_excerpt": "generally do not include a significant financing component. The primary purpose of our invoicing terms is to provide customers with simplified and predictable ways of purchasing our products and services, not to receive financing from our customers or to provide customers with ",
+            "offset": 246569,
+            "source": "FY2026-primary"
+          },
+          {
+            "exact_excerpt": "uded in other current assets in our consolidated balance sheets. Additionally, as of June 30, 2026, restricted investments pursuant to a supplier agreement were $ 11.3 billion, with $ 3.8 billion included in short-term investments and $ 7.5 billion included in equity and other investments in our consolid",
+            "offset": 247614,
+            "source": "FY2026-primary"
+          },
+          {
+            "exact_excerpt": "in additions to property and equipment and a $22.2 billion increase in cash used in other investing primarily to facilitate the purchase of components, offset in part by a $4.2 billion decrease in cash used in the acquisition of companies, net of cash acquired and divestitures, and purchases of inta",
+            "offset": 208321,
+            "source": "FY2026-primary"
+          }
+        ],
+        "source_checks": [
+          {
+            "check": "face_to_carrying",
+            "independent_parent": "term_debt_parent",
+            "result": "PASS"
+          },
+          {
+            "check": "long_investment_partition",
+            "independent_parent": "long_investments",
+            "result": "PASS"
+          },
+          {
+            "check": "finance_ppe_partition",
+            "independent_parent": "finance_ppe_net",
+            "result": "PASS"
+          },
+          {
+            "check": "restricted_partition",
+            "independent_parent": "restricted_total",
+            "result": "PASS"
+          }
+        ],
+        "stopping_condition": "Stop after this retained pass and consolidated review. Reopen only on exact allocation/roll-forward disclosure or a separately accepted analyst assumption, never by automatic searching.",
+        "unavailable_amounts": [
+          "Complete residual operating/nonoperating allocations; matching facilitation obligations; cash acquisition/FX/noncash/reclassification bridge.",
+          "Income-recognized versus capitalized finance ROU amortization and exact inclusion in Note 6 depreciation; complete accrual investment/organic allocation.",
+          "All-interest overlap, capitalized expense/cash and gross/net basis; complete variable/short-term/nonlease cash.",
+          "FY2025 restrictions, FY2026 restricted-long asset-class allocation, operating cash reserve; pure NOL DTA and exhaustive preferred/NCI/pension quantities.",
+          "FY2026 ending short-debt source amount (analyst zero proposal is not a reported zero)."
+        ]
+      }
+    ],
+    "revision": "2",
+    "runtime_integration": false,
+    "scope": "Historical analyst proposals only; book movements are not cash delta NWC; no FCFF or enterprise-equity calculation."
+  },
   "financial_sufficiency": "NOT_ASSESSED",
   "issuer": "MSFT",
   "new_sec_requests": 0,
@@ -12436,7 +15976,60 @@
   ],
   "phase": "1",
   "preserved_acceptance_reference": "docs/msft-treatment-acceptance-checklist.md",
-  "schema": "msft-draft-analyst-historical-package-v1",
+  "previous_approval_sheet": [
+    {
+      "alternative": "Require a complete operating-capital level: mixed/noncurrent allocations and cash bridge would remain unresolved; no numerical estimate recommended.",
+      "blocks": "Does not block this historical draft. Blocks complete NWC/cash-change claims and later EBIT-based consumption without an aligned movement contract.",
+      "decision_id": "NWC-PERIMETER",
+      "numeric_comparison": "Whole-AP diagnostic movement -12,908m versus capital-creditor-excluded +6,892m: +19,800m difference, not cash.",
+      "recommendation": "Use the source-supported narrow NWC levels and +6,892m adjacent BOOK movement as a partial diagnostic only; retain cash-flow movements as the separate cash evidence.",
+      "status": "proposed_pending_user_approval"
+    },
+    {
+      "alternative": "Financing treatment is possible only as a consistently replacing method covering expense/amortization, principal, assets, debt and tax; not silently selected here.",
+      "blocks": "Missing comprehensive coverage and interest overlap do not block reported packaging; block any certified total or future unlevering/lease adjustment.",
+      "decision_id": "LEASE-METHOD",
+      "numeric_comparison": "Payment classes and recognized liabilities are separately populated; no combined service or interest total.",
+      "recommendation": "Preserve the accepted restricted three-payment dataset. Retain the prior cash-service direction in principle; require one precise whole-method lease treatment before future consumption.",
+      "status": "proposed_pending_user_approval"
+    },
+    {
+      "alternative": "A complete accrual/organic reinvestment schedule needs independently supported allocations; do not use cash plus creditor movement as a complete bridge.",
+      "blocks": "Does not block narrow reported investment. Complete reinvestment and D&A/EBIT/book-capital timing compatibility remain unproved, not demonstrated incompatible.",
+      "decision_id": "INVESTMENT-TIMING",
+      "numeric_comparison": "Rounded capital creditors 6,900m/26,700m; combined cash purchases 5,978m/1,743m are visible but unallocated.",
+      "recommendation": "Select reported cash PP&E as narrow historical investment and keep capital creditors, noncash lease additions and combined acquisition/intangible purchases separate.",
+      "status": "proposed_pending_user_approval"
+    },
+    {
+      "alternative": "A later operating-tax policy needs an explicit justified basis and analyst acceptance; reported ETR or cash tax is not automatically that basis.",
+      "blocks": "Not a historical data blocker; future operating-tax treatment remains a separate decision.",
+      "decision_id": "TAX-BASIS",
+      "numeric_comparison": "Historical ETR points are calculated only from the stated provision/Pretax operands; no numerical future recommendation.",
+      "recommendation": "Keep reported provision, positive continuing Pretax, accounting ETR, deferred items and cash tax separate. Approve no operating/future tax rate now.",
+      "status": "proposed_pending_user_approval"
+    },
+    {
+      "alternative": "Excess-cash or all-borrowing/economic-debt totals require availability, valuation and scope decisions; FY2026 absent CP is not zero.",
+      "blocks": "Does not block named source populations. Broader balance-sheet/equity-bridge completeness remains unresolved.",
+      "decision_id": "BALANCE-SCOPE",
+      "numeric_comparison": "Current liquidity 94,565m/76,843m; term debt 43,151m/40,294m; mixed long-term investments 15,405m/36,348m are not added or netted.",
+      "recommendation": "Use the evidenced current-liquidity and term-debt carrying populations for historical review; keep strategic/equity-method investments, leases and other claims separate.",
+      "status": "proposed_pending_user_approval"
+    },
+    {
+      "alternative": "A later dated share denominator or outstanding-award economic method must specify date/classes and prevent double counting the already accepted SBC cost proxy.",
+      "blocks": "Does not block dated historical observations; blocks diluted/fully adjusted share or equity-claim use.",
+      "decision_id": "SHARES-AWARDS",
+      "numeric_comparison": "June30 common 7,434m/7,427m; nonvested awards 82m/78m are not incremental diluted shares. No dilution estimate.",
+      "recommendation": "Select the rounded June 30 common-share observation for the fiscal-end historical snapshot; keep exact later cover observations and nonvested awards separately.",
+      "status": "proposed_pending_user_approval"
+    }
+  ],
+  "proposal_author": "Repository MSFT analyst-treatment review; proposed, not user acceptance",
+  "proposed_at_utc": "2026-10-15T14:53:18+00:00",
+  "review_basis": "fb571f1e40bc8a62fc55f4788ebe34d7a376b1f7",
+  "schema": "msft-draft-analyst-historical-package-v2",
   "separately_identified_omitted_asset_growth": {
     "formula": "FY2026.component_receivables - FY2025.component_receivables",
     "limitation": "Gross server-facilitation receivable growth only; not accepted as operating, cash, a matching-liability allocation or a bound on full NWC.",
@@ -12499,5 +16092,5 @@
   ],
   "stopping_condition": "User review of one consolidated sheet; no automatic additional research, override, policy change or Phase 2 work.",
   "valuation_consumption_approved": false,
-  "version": "1"
+  "version": "2"
 }

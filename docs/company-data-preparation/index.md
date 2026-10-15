@@ -2,6 +2,13 @@
 
 ## Separate MSFT analyst draft — two periods only
 
+Revision 2 of the same package now resolves the six former deferrals into concrete
+proposed NWC, lease/investment, financial-asset/debt/claims and tax/share treatments.
+Source-supported totals and explicitly estimated classifications are separate;
+original facts/accepted outputs and prior decision history remain. Named historical
+tax/share schedules do not require Phase 2 rates or forecast dilution to finish.
+No acceptance or financial sufficiency is implied; stop for consolidated review.
+
 [MSFT FY2025–FY2026 input package](MSFT-analyst-input-package.md) /
 [machine data](msft-analyst-input-package.json) select source-supported historical
 populations and component calculations in an explicitly authorized separate draft.
@@ -9,10 +16,10 @@ This does not alter generic component-only outputs, approve whole-issuer readine
 or transfer treatments to another issuer. Original MSFT accepted choices persist;
 six new material judgments are consolidated pending review. Complete NWC, all-in
 interest/debt, joint timing and financial sufficiency remain unproved. No new
-SEC requests, period registrations, policy/schema changes or Phase 2 calculations.
+SEC requests, period registrations, runtime/frozen-policy/schema changes or Phase 2 calculations.
 The shared register mapping/status contract is unchanged; only MSFT's record is
 extended. Stop after the package and user review, not a new research chain.
-Validation: 12 package and 54 existing MSFT bundle/sidecar/NWC tests pass; exact
+Current validation: 17 package and 54 existing MSFT bundle/sidecar/NWC tests pass; exact
 offline replay, original-artifact preservation, compileall, affected links and
 diff checks pass. No full-suite/corpus rerun or SEC request.
 

@@ -1,6 +1,38 @@
 # Project Status
 
-## Current milestone — MSFT two-period analyst input package
+## Current milestone — concrete MSFT analyst decisions, revision 2
+
+The [same two-period package](company-data-preparation/MSFT-analyst-input-package.md)
+and [JSON](company-data-preparation/msft-analyst-input-package.json) replace six
+deferrals with concrete proposed treatments and source/assumption-separated
+schedules. Proposed operating-capital proxy −23427m/−3372m, **book** movement
++20055m; named-only alternative −25755m/−18600m, +7155m. Residual operating
+classification is explicitly estimated; no cash bridge or complete NWC claim.
+Facilitation exclusion is supported by investing narrative, with no invented
+matching liability. GAAP-aligned operating-service/finance-financing lease method
+is recommended, not accepted; named term+finance liabilities89323m/106888m,
+original EBIT/D&A unchanged, conditional D&A scope alternative separately gated.
+
+Known FY2026 supplier restriction11300m=3800m current+7500m long is separated;
+proposed available-current pool94565m/73043m carries explicit availability
+assumptions, not excess cash. FY2026 zero extra-short-borrowing is an explicit
+proposal supported by statement/flow context, **not a source zero or net-to-stock
+inference**; source CP still null. Debt basis reconciliations, investment partitions
+and known other-claim observations now have exact retained evidence. Tax/share
+histories are finalized as reported for named scope; future rates/award valuation/
+forecast dilution are not Phase 1 historical-preparation requirements.
+
+No user acceptance, runtime or frozen-policy/schema change, frozen/pilot mutation, full-suite
+or corpus rerun, SEC requests or Phase 1 closure. Original two-period facts/inputs,
+accepted treatments and source receipts are preserved; new facts/proposals occupy
+separate JSON sections with prior sheet history and actual UTC proposal metadata.
+Current validation: **17 package tests (7.355s)** and **54 existing cash-flow,
+sidecar and NWC preservation tests (31.632s)** pass, including exact original
+period/input preservation and all 57 newly bound source facts. Offline replay,
+compileall, affected links and diff checks pass. Stop for consolidated review;
+financial sufficiency remains NOT_ASSESSED and Phase 2 remains prohibited.
+
+## Prior revision — MSFT two-period analyst input package
 
 [Selected schedules and one approval sheet](company-data-preparation/MSFT-analyst-input-package.md)
 with [reproducible data](company-data-preparation/msft-analyst-input-package.json)

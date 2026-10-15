@@ -18,7 +18,7 @@ class MSFTAnalystPackageTests(unittest.TestCase):
     def setUpClass(cls):
         cls.filings=[package.Filing(y) for y in (2025,2026)]
         for f in cls.filings:package.populate(f)
-        cls.result=package.finish(cls.filings)
+        cls.result=package.resolve_decisions(cls.filings,package.finish(cls.filings))
 
     def test_exact_package_replay_and_registered_identity(self):
         self.assertEqual(self.result,json.loads((ROOT/package.OUTPUT).read_text()))
@@ -162,13 +162,81 @@ class MSFTAnalystPackageTests(unittest.TestCase):
         self.assertEqual(package.inline_amount({'format':'ixt-sec:numwordsen'},'no'),0)
         with self.assertRaises((ValueError,InvalidOperation)):package.inline_amount({'format':'ixt:num-dot-decimal'},'no')
 
-    def test_one_pending_sheet_and_no_new_numeric_assumptions(self):
+    def test_one_pending_sheet_and_no_accepted_new_numeric_assumptions(self):
         self.assertEqual(len(self.result['approval_sheet']),6)
         self.assertTrue(all(d['status']==package.PROPOSED for d in self.result['approval_sheet']))
         self.assertTrue(all(e['origin'] in ('reported','derived','proxy') for p in self.result['periods'] for e in p['inputs']))
         self.assertTrue(all('value' not in d for d in self.result['approval_sheet']))
         self.assertFalse(any(u['input_id']=='sbc_economic_treatment' for p in self.result['periods'] for u in p['unresolved_requirements']))
         self.assertTrue(all(any(u['input_id']=='sbc_economic_treatment' for u in p['original_bundle_unknowns']) for p in self.result['periods']))
+
+    def test_revision_preserves_every_original_fact_selection_and_accepted_output(self):
+        prior=json.loads(subprocess.check_output(['git','show',package.REVIEW_BASIS+':'+package.OUTPUT],cwd=ROOT))
+        self.assertEqual(self.result['periods'],prior['periods'])
+        self.assertEqual(self.result['sources'],prior['sources'])
+        self.assertEqual(self.result['adjacent_book_movement'],prior['adjacent_book_movement'])
+        self.assertEqual(self.result['previous_approval_sheet'],prior['approval_sheet'])
+        self.assertEqual(self.result['schema'],'msft-draft-analyst-historical-package-v2')
+
+    def test_concrete_operating_proxy_and_named_alternatives_have_literal_source_ties(self):
+        rows=self.result['decision_resolution']['periods']
+        for r,named,assets,current,long,proxy,fac,finance in zip(rows,(-25755,-18600),(24462,40101),
+                (14785,16676),(2149,2697),(-23427,-3372),(-15227,24428),(-19127,328)):
+            for key,v in [('named_expansion',named),('residual_assets',assets),('residual_current_liabilities',current),
+                    ('residual_long_liabilities',long),('proposed_operating_capital',proxy),
+                    ('alternative_include_facilitation',fac),('alternative_include_customer_finance',finance)]:
+                self.assertEqual(Decimal(r['schedules'][key]['value_usd'])/1000000,v)
+            self.assertEqual(r['schedules']['proposed_operating_capital']['origin'],'proxy')
+            self.assertEqual(r['schedules']['proposed_operating_capital']['status'],package.PROPOSED)
+            terms={v['operand'] for v in r['schedules']['residual_assets']['terms']}
+            self.assertFalse(terms & {'restricted_current','restricted_long','long_ar'})
+            self.assertEqual(r['additional_facts']['dta_in_other_assets']['location'].split(':')[0],'Note 11 Reported As')
+        moves=self.result['decision_resolution']['adjacent_book_movements_usd']
+        self.assertEqual({k:Decimal(v)/1000000 for k,v in moves.items()},dict(named_expansion=7155,
+            proposed_operating_capital=20055,alternative_include_facilitation=39655,alternative_include_customer_finance=19455))
+        self.assertEqual(Decimal(self.result['decision_resolution']['named_only_vs_proxy_movement_difference_usd'])/1000000,12900)
+
+    def test_debt_reconciliation_and_finance_assets_not_duplicate_cash_or_expense(self):
+        for r,carrying,funded,net,alternative in zip(self.result['decision_resolution']['periods'],
+                (43151,40294),(89323,106888),(160951,245795),(31408,44403)):
+            s=r['schedules']
+            for key,value in [('face_to_carrying',carrying),('term_and_finance_leases',funded),
+                    ('nonfinance_ppe_net',net),('conditional_da_if_rou_excluded',alternative)]:
+                self.assertEqual(Decimal(s[key]['value_usd'])/1000000,value)
+            self.assertEqual(s['term_and_finance_leases']['status'],package.PROPOSED)
+            self.assertEqual([t['operand'] for t in s['term_and_finance_leases']['terms']],['term_debt_parent','finance_liability'])
+            self.assertIn('not selected D&A',s['conditional_da_if_rou_excluded']['meaning'])
+            self.assertTrue(all(c['result']=='PASS' for c in r['source_checks']))
+
+    def test_restricted_cash_and_short_debt_estimates_never_become_reported_zeros(self):
+        first,second=self.result['decision_resolution']['periods']
+        self.assertNotIn('restricted_current',first['additional_facts'])
+        self.assertEqual(Decimal(second['additional_facts']['restricted_current']['value'])/1000000,3800)
+        self.assertEqual(Decimal(second['additional_facts']['restricted_long']['value'])/1000000,7500)
+        self.assertEqual(Decimal(second['schedules']['known_restriction_current_pool']['value_usd'])/1000000,73043)
+        estimate=next(a for a in second['assumptions'] if a['assumption_id']=='UNREPORTED-SHORT-DEBT')
+        self.assertEqual(estimate['value_usd'],'0')
+        self.assertIsNone(estimate['source_value_usd'])
+        self.assertEqual(estimate['status'],package.PROPOSED)
+        for r in (first,second):
+            self.assertTrue(all(a['author'] and a['timestamp_utc'] and a['status']==package.PROPOSED for a in r['assumptions']))
+            self.assertTrue(all(not s.get('accepted',False) for s in r['schedules'].values()))
+        self.assertNotIn('commercial_paper',self.result['periods'][1]['facts'])
+
+    def test_additional_sources_keep_exact_occurrences_and_scope_prose(self):
+        for r,f in zip(self.result['decision_resolution']['periods'],self.filings):
+            for item in r['additional_facts'].values():
+                self.assertEqual(item['evidence_depth'],'exact_primary_inline_and_instance_verified')
+                for o in item['occurrences']:
+                    n=f.root[o['ordinal']]
+                    self.assertEqual(n.attrib['id'],o['xml_id'])
+                    self.assertEqual(n.text,o['raw_value'])
+                    self.assertEqual(o['end'],str(f.period.annual_end))
+            for passage in r['scope_passages']:
+                self.assertIn(passage['exact_excerpt'],f.text)
+            self.assertIn('Future rates, award valuation and forecast dilution are not historical completion prerequisites',r['historical_tax_and_share_schedule'])
+        self.assertEqual(package.inline_amount({'scale':'9'},'4.3'),Decimal('4300000000'))
+        with self.assertRaises(ValueError):package.inline_amount({},'4,300')
 
     def test_original_json_artifacts_and_runtime_source_are_byte_preserved(self):
         # All pre-existing JSONs and runtime source, not only numeric samples.

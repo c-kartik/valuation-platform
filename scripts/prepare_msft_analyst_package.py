@@ -45,6 +45,9 @@ class InlineFacts(HTMLParser):
 
 
 def inline_amount(attrs, text):
+    if attrs.get('format') is None and re.fullmatch(r'[+-]?\d+(?:\.\d+)?',text.strip()):
+        value=Decimal(text.strip())
+        return (-value if attrs.get('sign')=='-' else value)*Decimal(10)**int(attrs.get('scale','0'))
     if attrs.get('format') not in ('ixt:num-dot-decimal','ixt:numdotdecimal','ixt-sec:numwordsen'):
         raise ValueError('Unsupported selected inline transformation')
     text = text.replace(',', '').replace('\xa0', '').strip()
@@ -79,7 +82,7 @@ class Filing:
                             if x.tag.endswith('}explicitMember'))
             if members != dimensions: continue
             # The existing identity validator deliberately excludes dimensions;
-            # the one explicitly classed award population is checked separately.
+            # explicitly reviewed class/location populations are checked separately.
             if dimensions:
                 xi = cash._XI
                 start = context.findtext(xi+'period/'+xi+'startDate')
@@ -152,7 +155,7 @@ class Filing:
 def build():
     filings = [Filing(y) for y in (2025,2026)]
     for f in filings: populate(f)
-    return finish(filings)
+    return resolve_decisions(filings, finish(filings))
 
 
 def populate(f):
@@ -411,6 +414,215 @@ def finish(filings):
             'Older review prose note numbers are retained as history; this draft cites actual headings and inline IDs. Amounts and original evidence are unchanged.'],
         preserved_acceptance_reference='docs/msft-treatment-acceptance-checklist.md',
         stopping_condition='User review of one consolidated sheet; no automatic additional research, override, policy change or Phase 2 work.')
+
+
+REVIEW_BASIS='fb571f1e40bc8a62fc55f4788ebe34d7a376b1f7'
+PROPOSAL_AUTHOR='Repository MSFT analyst-treatment review; proposed, not user acceptance'
+PROPOSAL_TIME='2026-10-15T14:53:18+00:00'
+
+
+def resolve_decisions(filings, original):
+    """One company-specific revision of this report, never a runtime overlay.
+
+    Original facts/inputs stay intact. New source observations and proposed
+    classification schedules occupy separate sections with explicit assumptions.
+    """
+    result=json.loads(json.dumps(original))
+    result.update(schema='msft-draft-analyst-historical-package-v2',version='2',review_basis=REVIEW_BASIS,
+        previous_approval_sheet=result['approval_sheet'],proposal_author=PROPOSAL_AUTHOR,
+        proposed_at_utc=PROPOSAL_TIME)
+    resolutions=[]
+    for f in filings:
+        original_keys=set(f.facts)
+        def read(key,concept,location,*,dimensions=(),annual=False,namespace='us-gaap'):
+            return f.fact(key,concept,location,instant=not annual,dimensions=dimensions,namespace=namespace)
+        for key,concept,where in (
+            ('long_ar','AccountsReceivableNetNoncurrent','Note 1: ordinary long-term contract receivables, not the customer financing program'),
+            ('customer_finance','FinanceReceivablesNet','Note 1: combined current/noncurrent customer-finance receivables'),
+            ('other_long_assets','OtherAssetsNoncurrent','Balance sheets: other long-term assets'),
+            ('other_long_liabilities','OtherLiabilitiesNoncurrent','Balance sheets: other long-term liabilities'),
+            ('derivative_current_liability','DerivativeLiabilitiesCurrent','Note 5: net carrying derivative liability located in other current liabilities'),
+            ('derivative_long_liability','DerivativeLiabilitiesNoncurrent','Note 5: net carrying derivative liability located in other long-term liabilities'),
+            ('debt_discount_cost','DebtInstrumentUnamortizedDiscountPremiumAndDebtIssuanceCostsNet','Note 10: subtract discount and issuance costs from face'),
+            ('debt_hedge_adjustment','HedgeAccountingFairValueAdjustments','Note 10: signed hedge carrying adjustment'),
+            ('ppe_gross','PropertyPlantAndEquipmentGross','Note 6: total recognized gross PP&E, includes finance leases per Note 1'),
+            ('ppe_accumulated','AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment','Note 6: total accumulated PP&E depreciation'),
+            ('ppe_net','PropertyPlantAndEquipmentNet','Note 6: total recognized PP&E net'),
+            ('legal_accrual','LossContingencyAccrualAtCarryingValue','Note 14: accrued legal liabilities, not an incremental debt claim'),
+            ('legal_additional_exposure','LossContingencyRangeOfPossibleLossPortionNotAccrued','Note 14: reasonably possible additional losses, not an expected-value provision'),
+        ):read(key,concept,where,namespace='msft' if key in ('customer_finance','debt_hedge_adjustment') else 'us-gaap')
+        read('debt_exchange_premium','PremiumOnDebtExchange1','Note 10: subtract debt-exchange premium',namespace='msft')
+        for key,concept,member,where in (
+            ('dta_in_other_assets','DeferredIncomeTaxAssetsNet','us-gaap:OtherNoncurrentAssetsMember','Note 11 Reported As: DTA actually within other long-term assets, not gross DTA'),
+            ('derivative_current_asset','DerivativeAssetsCurrent','us-gaap:OtherCurrentAssetsMember','Note 5: net derivative carrying asset within OCA'),
+            ('derivative_long_asset','DerivativeAssetsNoncurrent','us-gaap:OtherNoncurrentAssetsMember','Note 5: net derivative carrying asset within other LT assets'),
+        ):read(key,concept,where,dimensions=(('us-gaap:BalanceSheetLocationAxis',member),))
+        for key,concept in (('finance_ppe_gross','PropertyPlantAndEquipmentGross'),
+            ('finance_ppe_accumulated','AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment'),
+            ('finance_ppe_net','PropertyPlantAndEquipmentNet')):
+            read(key,concept,'Note 13: recognized finance-lease PP&E subset of Note 6 total',
+                dimensions=(('us-gaap:LeaseContractualTermAxis','msft:FinanceLeaseMember'),))
+        for key,concept in (('short_debt_cash_net','ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess'),
+            ('long_debt_cash_proceeds','ProceedsFromDebtMaturingInMoreThanThreeMonths'),
+            ('long_debt_cash_repayments','RepaymentsOfDebtMaturingInMoreThanThreeMonths')):
+            read(key,concept,'Consolidated financing cash-flow row; not an ending-debt balance or gross short-debt bridge',annual=True)
+        invest_dims={
+            'long_debt_securities':(('us-gaap:FairValueByAssetClassAxis','us-gaap:DebtSecuritiesMember'),),
+            'long_listed_equities':(('us-gaap:FairValueByFairValueHierarchyLevelAxis','us-gaap:FairValueInputsLevel1Member'),('us-gaap:FinancialInstrumentAxis','us-gaap:EquitySecuritiesMember')),
+            'long_other_equities':(('us-gaap:FinancialInstrumentAxis','us-gaap:EquitySecuritiesMember'),('us-gaap:MeasurementInputTypeAxis','msft:OtherMeasurementMember')),
+            'long_derivatives':(('us-gaap:FinancialInstrumentAxis','us-gaap:DerivativeMember'),),
+        }
+        for key,dims in invest_dims.items():read(key,'LongTermInvestments','Note 4: explicit disjoint long-term investment table row',dimensions=dims)
+        if f.year==2026:
+            read('restricted_total','RestrictedInvestments','Note 1: supplier-agreement restricted investment total')
+            read('restricted_current','RestrictedInvestmentsCurrent','Note 1: supplier restriction inside short-term investments',
+                dimensions=(('us-gaap:BalanceSheetLocationAxis','us-gaap:ShortTermInvestmentsMember'),))
+            read('restricted_long','RestrictedInvestmentsNoncurrent','Note 1: supplier restriction inside equity and other investments',
+                dimensions=(('us-gaap:BalanceSheetLocationAxis','msft:EquityAndOtherInvestmentsMember'),))
+        # All below are named historical components/diagnostics, not FCFF or
+        # an accepted economic adjustment. References name exact source operands.
+        schedules={}
+        def calc(key,terms,meaning,*,assumption=None):
+            if len({k for k,c in terms})!=len(terms):raise ValueError('Duplicate economic operand')
+            values={k:Decimal(f.facts[k]['value']) if k in f.facts else Decimal(schedules[k]['value_usd']) for k,c in terms}
+            value=sum((values[k]*c for k,c in terms),Decimal(0))
+            schedules[key]=dict(value_usd=str(value),value_millions=str(value/1000000),
+                formula_version='msft-analyst-decision-resolution-v2',terms=[dict(operand=k,coefficient=c) for k,c in terms],
+                meaning=meaning,status=PROPOSED if assumption else SUPPORTED,origin='proxy' if assumption else 'derived',
+                assumption=assumption,accepted=False,precision='Retains every reported operand precision; rounding is not reduced by arithmetic.')
+            return value
+        # The original partial core is already source-bound, not a new source fact.
+        old_entries={e['input_id']:e for e in f.entries}
+        schedules['partial_nwc']=dict(value_usd=old_entries['partial_nwc']['value'],meaning='Original narrow partial core, unchanged',status=SUPPORTED,origin='derived',accepted=False)
+        calc('named_expansion',[('partial_nwc',1),('long_ar',1),('noncurrent_contract',-1)],'Disclosed operating balance expansion; still a named-only partial perimeter')
+        calc('residual_assets',[('other_current_assets',1),('other_long_assets',1),('dta_in_other_assets',-1),('component_receivables',-1),
+            ('customer_finance',-1),('derivative_current_asset',-1),('derivative_long_asset',-1)],
+            'Observed mixed-asset remainder after explicit disjoint financing/tax/investing exclusions; not a disclosed pure operating caption')
+        calc('residual_current_liabilities',[('other_current_liabilities',1),('operating_current',-1),('finance_current',-1),('derivative_current_liability',-1)],
+            'Other current liabilities excluding separately located recognized leases and derivatives')
+        calc('residual_long_liabilities',[('other_long_liabilities',1),('finance_noncurrent',-1),('derivative_long_liability',-1)],
+            'Other LT liabilities excluding finance leases and derivatives; operating noncurrent lease already lies outside this parent')
+        proxy_assumption='Classify the explicitly displayed residual asset/accrual captions and AP after the identified PP&E exclusion as operating. This is a whole-caption analyst proxy, not proof of operating allocation or complete NWC; undisclosed components may be material. An unidentified matching facilitation obligation could require a further AP exclusion; it is not assigned zero.'
+        calc('proposed_operating_capital',[('partial_nwc',1),('residual_assets',1),('residual_current_liabilities',-1),('residual_long_liabilities',-1),('noncurrent_contract',-1)],
+            'Recommended expanded historical operating-capital proxy, including current/noncurrent ordinary operating balances; BOOK basis only',assumption=proxy_assumption)
+        calc('alternative_include_facilitation',[('proposed_operating_capital',1),('component_receivables',1)],
+            'Less-preferred classification alternative including capital-procurement facilitation as operating',assumption='Contrary to primary recommendation: treat facilitation as operating and do not invent a matching liability.')
+        calc('alternative_include_customer_finance',[('proposed_operating_capital',1),('customer_finance',1)],
+            'Customer-finance inclusion sensitivity, not an approval',assumption='Classify customer lending as operating rather than a separately financed asset.')
+        calc('face_to_carrying',[('debt_face',1),('debt_discount_cost',-1),('debt_hedge_adjustment',1),('debt_exchange_premium',-1)],'Note 10 face-to-carrying reconciliation')
+        calc('carrying_less_fair',[('term_debt_parent',1),('debt_fair',-1)],'Historical difference to separately reported rounded fair value, not a valuation gain')
+        calc('term_and_finance_leases',[('term_debt_parent',1),('finance_liability',1)],
+            'Named term-debt carrying plus recognized finance-lease financing subtotal; not an all-debt completeness assertion',
+            assumption='Proposed GAAP-aligned historical classification: finance leases financing; operating leases service, outside this financing subtotal.')
+        calc('long_investment_partition',[(k,1) for k in invest_dims],'Note 4 disjoint debt/listed-equity/other-equity/derivative partition')
+        calc('current_plus_long_debt_securities',[('cash',1),('current_investments',1),('long_debt_securities',1)],'Broader financial-investment alternative BEFORE restrictions; not available cash')
+        calc('cash_and_all_reported_investments',[('cash',1),('current_investments',1),('long_investments',1)],'All reported cash/investment captions; not a cash-like or strategic-value selection')
+        calc('nonfinance_ppe_net',[('ppe_net',1),('finance_ppe_net',-1)],'Nonfinance PP&E net stock partition, not cash additions or owned-only D&A')
+        calc('finance_ppe_partition',[('finance_ppe_gross',1),('finance_ppe_accumulated',-1)],'Note 13 recognized finance PP&E gross less accumulated depreciation')
+        calc('restricted_finance_service',[('FinanceLeaseInterestPaymentOnLiability',1),('FinanceLeasePrincipalPayments',1)],
+            'Sum of disjoint disclosed finance lease cash classes only; incomplete all-service coverage, not a new expense input')
+        calc('restricted_all_lease_service',[('OperatingLeasePayments',1),('restricted_finance_service',1)],
+            'Three disclosed liability-measurement payment classes only; borrowing-interest disclosure excluded, no all-interest claim')
+        schedules['expense_da']=dict(value_usd=old_entries['expense_da']['value'],meaning='Original rounded expense-component policy value, unchanged',status=SUPPORTED,origin='derived',accepted=False)
+        calc('conditional_da_if_rou_excluded',[('expense_da',1),('FinanceLeaseRightOfUseAssetAmortization',1)],
+            'Mechanical alternative ONLY IF separate full income recognition AND exclusion from Note 6 depreciation were established; not selected D&A',
+            assumption='Conditional non-overlap/full-income-recognition scenario, neither condition proved. Do not populate an approved value from this sum.')
+        if f.year==2026:
+            calc('known_restriction_current_pool',[('cash',1),('current_investments',1),('restricted_current',-1)],
+                'Current financial pool excluding specifically disclosed supplier restriction; not proven excess cash')
+            calc('restricted_partition',[('restricted_current',1),('restricted_long',1)],'Supplier restriction partition, outside mixed-other-asset NWC parents')
+        availability='Propose treating the current financial pool as available after specifically disclosed restrictions, with no operating-reserve estimate. Other restrictions are not proved absent and the result is not excess cash.'
+        calc('proposed_available_current_pool',
+            [('known_restriction_current_pool',1)] if f.year==2026 else [('cash',1),('current_investments',1)],
+            'Proposed current financial-asset availability proxy, not an unrestricted/excess-cash fact',assumption=availability)
+        checks=[]
+        for key,parent in (('face_to_carrying','term_debt_parent'),('long_investment_partition','long_investments'),
+                           ('finance_ppe_partition','finance_ppe_net')):
+            if Decimal(schedules[key]['value_usd'])!=Decimal(f.facts[parent]['value']):raise ValueError('Resolution parent mismatch: '+key)
+            checks.append(dict(check=key,independent_parent=parent,result='PASS'))
+        if f.year==2026:
+            if schedules['restricted_partition']['value_usd']!=f.facts['restricted_total']['value']:raise ValueError('Restricted partition mismatch')
+            checks.append(dict(check='restricted_partition',independent_parent='restricted_total',result='PASS'))
+        passages=[]
+        for marker in ('Finance leases are included in property and equipment','financing receivables, net were',
+                       'generally do not include a significant financing component'):
+            m=re.search(re.escape(marker),f.text,re.I)
+            if not m:raise ValueError('Required classification passage absent: '+marker)
+            passages.append(dict(source=f'FY{f.year}-primary',offset=m.start(),exact_excerpt=f.text[m.start():m.end()+220]))
+        if f.year==2026:
+            for marker in ('restricted investments pursuant to a supplier agreement','primarily to facilitate the purchase of components'):
+                m=re.search(re.escape(marker),f.text,re.I)
+                if not m:raise ValueError('Required FY2026 scope evidence absent: '+marker)
+                passages.append(dict(source='FY2026-primary',offset=m.start(),exact_excerpt=f.text[max(0,m.start()-100):m.end()+150]))
+        assumptions=[dict(assumption_id='RESIDUAL-OPERATING',status=PROPOSED,author=PROPOSAL_AUTHOR,timestamp_utc=PROPOSAL_TIME,
+            rationale=proxy_assumption,source_keys=['residual_assets','residual_current_liabilities','residual_long_liabilities'],
+            value=None,numeric_effect_schedule='proposed_operating_capital'),
+            dict(assumption_id='FINANCE-AMORT-IN-DEPRECIATION',status=PROPOSED,author=PROPOSAL_AUTHOR,timestamp_utc=PROPOSAL_TIME,
+                rationale='Recommend treating Note 6 depreciation as finance-lease inclusive for the proposed unchanged D&A schedule because Note 1 expressly puts finance assets in PP&E. Exact annual expense inclusion/capitalized allocation is not certified; no separate ROU add-on.',
+                value=None,numeric_effect_schedule='expense_da',alternative='conditional_da_if_rou_excluded'),
+            dict(assumption_id='CURRENT-FINANCIAL-AVAILABILITY',status=PROPOSED,author=PROPOSAL_AUTHOR,timestamp_utc=PROPOSAL_TIME,
+                rationale=availability,source_amount_for_additional_restrictions=None,
+                numeric_effect_schedule='proposed_available_current_pool')]
+        if f.year==2026:
+            assumptions.append(dict(assumption_id='UNREPORTED-SHORT-DEBT',status=PROPOSED,author=PROPOSAL_AUTHOR,timestamp_utc=PROPOSAL_TIME,
+                value_usd='0',origin='analyst_assumption',source_value_usd=None,
+                rationale='Recommend no additional unreported short-borrowing amount in the draft estimate: prior explicit CP zero, current net short-debt cash zero, long-debt issuance zero, and only term debt disclosed. Net zero is not gross/ending zero; acquired/noncash/offsetting or embedded exposure is unbridged.',
+                evidence_keys=['short_debt_cash_net','long_debt_cash_proceeds','long_debt_cash_repayments'],
+                resulting_borrowing_perimeter_usd=f.facts['term_debt_parent']['value'],
+                limitation='No supported upper bound on missing short borrowing. Original source commercial-paper amount remains unavailable; explicit user approval required.'))
+        resolutions.append(dict(fiscal_year=f.year,additional_facts={k:v for k,v in f.facts.items() if k not in original_keys},
+            schedules=schedules,source_checks=checks,scope_passages=passages,assumptions=assumptions,
+            historical_tax_and_share_schedule='FINALIZED_AS_REPORTED_FOR_NAMED_DISCLOSURES; no source defect found in existing provision/Pretax/ETR/cash-tax or dated-common/restricted-award points. Future rates, award valuation and forecast dilution are not historical completion prerequisites.',
+            unavailable_amounts=['Complete residual operating/nonoperating allocations; matching facilitation obligations; cash acquisition/FX/noncash/reclassification bridge.',
+                'Income-recognized versus capitalized finance ROU amortization and exact inclusion in Note 6 depreciation; complete accrual investment/organic allocation.',
+                'All-interest overlap, capitalized expense/cash and gross/net basis; complete variable/short-term/nonlease cash.',
+                'FY2025 restrictions, FY2026 restricted-long asset-class allocation, operating cash reserve; pure NOL DTA and exhaustive preferred/NCI/pension quantities.',
+                'FY2026 ending short-debt source amount (analyst zero proposal is not a reported zero).' if f.year==2026 else 'No extra short-debt source defect: CP zero affirmatively reported.'],
+            stopping_condition='Stop after this retained pass and consolidated review. Reopen only on exact allocation/roll-forward disclosure or a separately accepted analyst assumption, never by automatic searching.'))
+    def val(i,key):return Decimal(resolutions[i]['schedules'][key]['value_usd'])
+    movements={k:str(val(1,k)-val(0,k)) for k in ('named_expansion','proposed_operating_capital','alternative_include_facilitation','alternative_include_customer_finance')}
+    result['decision_resolution']=dict(revision='2',periods=resolutions,adjacent_book_movements_usd=movements,
+        named_only_vs_proxy_movement_difference_usd=str(Decimal(movements['proposed_operating_capital'])-Decimal(movements['named_expansion'])),
+        accepted=False,runtime_integration=False,scope='Historical analyst proposals only; book movements are not cash delta NWC; no FCFF or enterprise-equity calculation.')
+    result['approval_sheet']=concrete_approval_sheet()
+    return result
+
+
+def concrete_approval_sheet():
+    return [dict(decision_id=key,status=PROPOSED,recommendation=recommendation,alternative=alternative,
+        numeric_consequence=numeric,unavailable=unavailable,evidence=evidence,accepted=False)
+        for key,recommendation,alternative,numeric,unavailable,evidence in (
+        ('NWC-PERIMETER','Exclude capital-procurement facilitation, customer finance, tax, derivative and lease balances; include ordinary long-term contract AR and advances. Recommend the broader explicitly estimated residual-caption operating proxy for review.',
+         'Named-only operating expansion avoids the residual classification assumption; facilitation-inclusion alternative is less consistent with the investing narrative.',
+         'Proxy -23,427m/-3,372m, book movement +20,055m; named-only -25,755m/-18,600m, +7,155m. Facilitation inclusion adds 8,200m/27,800m, changing movement by +19,600m.',
+         'Residual operating allocations, exact matching facilitation obligation and cash acquisition/FX/noncash/reclass bridge.',
+         'Notes 1/5/11/12/13, balance sheets and FY2026 Item 7 investing discussion; decision_resolution source keys/primary IDs.'),
+        ('LEASE-METHOD','Recommend GAAP-aligned hybrid historical classification: operating leases service/operating cost; finance leases assets and financing. Keep reported EBIT and expense D&A unchanged; classify finance liability with term borrowing, not operating lease liability.',
+         'All-lease cash-service is the prior direction in principle, but adopting it now would need a verified profit/loss amortization conversion; this recommendation explicitly changes that proposed direction, not the accepted restricted dataset.',
+         'Term plus finance lease subtotal 89,323m/106,888m versus term-only 43,151m/40,294m. Restricted finance cash service 3,655m/5,648m; three-class restricted service 8,586m/12,091m, not comprehensive.',
+         'Annual income-recognized/capitalized ROU expense allocation, complete service coverage and interest cash overlap. No guessed EBIT adjustment.',
+         'Notes 1/6/9/13: finance assets expressly inside PP&E; liability location partitions, cost/cash and noncash additions.'),
+        ('INVESTMENT-TIMING','Retain cash PP&E as the selected cash purchase series; keep capital creditors, noncash finance ROU additions and 100% of combined acquisition/intangible/other purchases as separate investment columns. No organic allocation.',
+         'Broader cash-investment classification could include the whole combined purchases caption; adds 5,978m/1,743m but must not be labelled PP&E or organic reinvestment.',
+         'Cash PP&E 64,551m/115,948m; noncash finance additions 20,511m/24,608m; capital creditors 6,900m/26,700m. Nonfinance PP&E net stock 160,951m/245,795m; no stock-to-cash bridge.',
+         'Complete accrual additions, cash/noncash acquisition and capitalized-interest allocations, FX/disposal/reclass bridge; no capital-creditor stock change assumed to equal expenditure.',
+         'Notes 6/7/9/13 and investing cash-flow captions; original narrow cash-PP&E acceptance preserved.'),
+        ('TAX-BASIS','Finalize the reported historical provision, Pretax, accounting ETR, cash taxes and distinct deferred roles. Exclude tax balances from operating-capital proxy; no separate NOL equity addition.',
+         'Cash-tax series is a historical cash observation, not a replacement for provision/ETR. Future operating-tax rate is outside Phase 1 and not required to finish these schedules.',
+         'Provision 21,795m/32,185m; Pretax 123,627m/165,934m; ETR 17.6296440098%/19.3962659853%; cash tax 28,700m/21,188m. FY2026 deferred CFO 14,189m versus note provision 14,424m remain separate.',
+         'Pure NOL DTA allocation and operating-only cash-tax allocation are unavailable but do not invalidate named historical reported points.',
+         'Income statements, Note 11 and cash-flow statement; original exact policy/occurrence proofs retained.'),
+        ('BALANCE-SCOPE','Exclude identified supplier restrictions from the proposed available-current-financial pool; classify long-term debt/equity/derivative holdings separately as nonoperating investments. Use term carrying values. Propose explicit FY2026 unreported-short-debt zero estimate, never a source zero.',
+         'Current-only reported liquidity avoids availability assumptions. Broader pool including long debt securities adds 2,460m/9,108m before restrictions; do not add overlapping strategic/equity-method subsets.',
+         'Reported current 94,565m/76,843m; FY2026 known-restriction-excluded 73,043m. Long investment partition 15,405m/36,348m; FY2026 supplier restriction 11,300m=3,800m+7,500m. Face-to-carrying bridges explicitly reconciled.',
+         'FY2025 restriction amount, FY2026 restricted-long category, operating reserve, ending CP evidence and exhaustive other claims; no materiality or true unrestricted-cash claim.',
+         'Notes 1/4/5/10/11/14 and financing cash flows: current short net0 and long issuance0 do not prove ending CP0.'),
+        ('SHARES-AWARDS','Finalize June 30 rounded common shares for historical fiscal-end snapshots, retain exact July cover shares and restricted awards separately. No common-plus-award sum or extra current SBC charge.',
+         'Later-dated cover snapshots remain a valid separately dated disclosure; they cannot silently replace the fiscal-end count.',
+         'Year-end common 7,434m/7,427m; dated covers 7,433,166,379/7,425,545,491; restricted awards 82m/78m, unrecognized cost21,600m/24,800m.',
+         'No remaining source defect for these named historical observations. Complete option economic value and forecast dilution are Phase 2, not historical schedule completion requirements.',
+         'Cover, balance sheets, Notes 15/17; source dates, exact class dimensions and rounding retained.'),
+    )]
 
 
 if __name__ == '__main__':
