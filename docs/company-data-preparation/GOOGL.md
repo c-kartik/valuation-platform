@@ -1,5 +1,58 @@
 # GOOGL — company data preparation
 
+## Consolidated FY2024 analyst decision package — proposed only
+
+[One review package](GOOGL-analyst-input-package.md) /
+[machine companion](googl-analyst-input-package.json) bind CIK1652044 selected
+`0001652044-25-000014`, 2024-01-01–2024-12-31, to original primary and explicit
+refreshed instance receipt. Original instance timestamp/status remain null;
+byte equality does not recover old metadata. Original conflict: separate pilot
+inputs/typed gaps did not provide one concrete treatment/alternative sheet.
+Retained source receipts, confirmations, dates/classes, precision, scope and
+formula operands now accompany all proposed selections. No peer assumptions.
+
+Recommend the existing rounded partial current operating-capital perimeter
+**13342m**, not complete NWC: AR52340 minus whole AP7987 plus **manual note3200R**
+minus current deferred5036, compensation15069, revenue share9802 and customer4304.
+Manual note stays duration-tagged source plus reviewed closing interpretation,
+not an exact instant XBRL fact or new estimate. Whole-AP alternative10142m;
+ordinary-fines alternative7020R. Inventory, supplier scope, mixed other/current/
+noncurrent allocations and all book/cash movement bridges remain unknown. Separate
+accrued PP&E7104m is outside AP, never an extra correction. No opening/movement.
+
+CFO125299m is accepted consolidated reference; revenue350018m and EBIT112390m
+direct. CFO depreciation15311m and finance ROU amortization413m do not establish
+expense D&A/completeness/overlap. No sum, residual amortization or inherited MSFT
+inclusion assumption. Recommend Alphabet Note1/4 operating-service/finance-asset-
+financing classification, **pending**; finance principal405m already within12701m
+debt repayments. Cash PP&E−52535m, combined purchases−2931m, Other−2667m,
+noncash operating2510m/finance313m and creditor stocks remain separate.
+
+Named current financial95657m, not unrestricted/excess cash. Long marketable266m
+explicitly lock-up restricted, nonmarketable37982m and precision alternatives
+35500R/35531m separate, no silent selection/31m adjustment. Net term11882m plus
+CP2300m gives14182m; proposed finance-lease addition1677m gives15859m; all-lease
+alternative30437m. Not complete debt. NCI4200R **includes** redeemable1100R;
+EC fines6322m are a separate recorded regulatory claim; future VIE funding1500R
+not funded debt. No automatic claim/cash/equity aggregate or valuation.
+
+Accepted SBC22800R expense proxy once remains distinct from22785m CFO add-back;
+provision19697m/Pretax119815m yield historical ETR16.4395109127…%, not future
+rate. Cash tax27400R and provision/deferred roles separate; deferred provision
+−5256m versus CFO−5257m, no plug. Year-end classA5835m/B861m/C5515m and later
+cover observations remain separately dated/dimensioned, source issuer total only
+an observation; RSUs299m and future cost34800R separate. No class/award sum or
+dilution/award valuation. All six new choices proposed for one consolidated review.
+
+Original approvals, bundles/scenarios, source metadata gap/refresh history,
+accepted AAPL/MSFT views, runtime/frozen policies/results and pilot bytes remain
+unchanged. Financial sufficiency NOT_ASSESSED; original D&A/NWC/timing/support
+blockers remain. Validation:13 new focused and57 relevant preservation tests pass,
+all three package replays, twelve recorded arithmetic/source checks, original
+JSON/runtime/prior-helper bytes, compileall,444 local links and diff checks pass.
+No SEC requests, generic framework, automatic research/issuer sequence, financial
+acceptance, Phase 1 closure or Phase 2 calculation. Stop for consolidated review.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

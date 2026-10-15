@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## Alphabet FY2024 consolidated review draft
+
+[Alphabet package](GOOGL-analyst-input-package.md) /
+[machine companion](googl-analyst-input-package.json) present one proposed sheet,
+not new acceptance. Rounded manual AP3200m stays distinct from accrued PP&E7104m;
+recommended partial capital13342m versus wholeAP10142m, inventory/supplier gaps
+explicit. Current financial95657m, proposed named financing15859m versus all-lease
+30437m; no unrestricted cash or complete debt. Restricted/precision investment
+populations, NCI parent/subset, dated share classes and expense/CFO roles remain.
+Existing Alphabet approvals, original receipt gap/refreshed evidence, all pilot/
+frozen data and accepted MSFT/AAPL views preserved. Validation:13 focused+57
+preservation tests, all three package replays, original bytes, compileall,444
+affected local links and diff checks pass;
+stop for one consolidated review, not implementation or a new research queue.
+
 ## AAPL FY2025 accepted separate selections
 
 [AAPL package](AAPL-analyst-input-package.md) / [JSON](aapl-analyst-input-package.json)

@@ -1,6 +1,43 @@
 # Project Status
 
-## Current milestone — approved AAPL FY2025 historical selections
+## Current milestone — Alphabet FY2024 consolidated analyst review draft
+
+[Package](company-data-preparation/GOOGL-analyst-input-package.md) /
+[JSON](company-data-preparation/googl-analyst-input-package.json) reuse retained
+source/inspection machinery, not peer financial assumptions. Exact selected
+`0001652044-25-000014`, FY2024 only; explicit refreshed instance receipt and
+original null timestamp/status history remain distinct. Six new material
+recommendations proposed for one consolidated review; original approvals remain.
+
+Rounded manual AP3200m is still a duration source plus reviewed closing reading,
+not an exact instant. Proposed partial capital13342m versus wholeAP10142m;
+inventory/supplier and mixed allocations unknown; separate accrued PP&E7104m
+not added to correction. No book/cash movement or complete NWC. CFO125299m,
+Revenue350018m, EBIT112390m retained; CFO depreciation15311m versus finance
+ROU expense413m does not establish complete expense D&A/non-overlap.
+
+Propose Alphabet-specific operating-service/finance-financing; principal405m
+already within repayments12701m. Investment cash/combined purchases/noncash/
+creditors separate. Current financial95657m, locked long marketable266m and
+nonmarketable/precision35500R/35531 observations retained separately. Named
+term/CP14182m, proposed plusfinance15859m versus all-lease30437m, no complete
+debt/excess cash. NCI4200R includes redeemable1100R; other claims/commitments
+not automatically summed. Accepted SBC22800R proxy once, add-back22785m and
+tax/cash/deferred roles distinct. Shares retain class/date/source precision,
+awards separate, no dilution/aggregation.
+
+All prior JSON/runtime/source/pilot/frozen artifacts and accepted AAPL/MSFT
+views preserved. Financial sufficiency NOT_ASSESSED, original blockers remain.
+No SEC requests, new financial policy/registry, full-suite/corpus rerun,
+Phase 1 closure or Phase 2 calculations. Validation: **13 focused tests (5.319s)**;
+**57 preservation tests** (Alphabet reported10 in3.209s, partial-NWC9 in6.111s,
+accepted AAPL17 in5.403s, accepted MSFT21 in7.479s) pass. All three exact package
+replays, twelve recorded arithmetic/source checks, original JSON/runtime/prior
+helper byte preservation, manual precision/receipt/class/overlap/conflict/null
+checks, compileall, **444 affected local links** and diff checks pass.
+Stop for one consolidated user review, not implementation or a research chain.
+
+## Prior milestone — approved AAPL FY2025 historical selections
 
 [Existing package](company-data-preparation/AAPL-analyst-input-package.md) /
 [JSON](company-data-preparation/aapl-analyst-input-package.json) add a separately
