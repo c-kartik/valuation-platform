@@ -1,5 +1,30 @@
 # Company data preparation register
 
+## Current analyst-completeness work assessment — not certification
+
+[42-issuer assessment](../analyst-complete-historical-assessment.md) /
+[machine backlog](../analyst-complete-historical-assessment.json) join all40
+register records plus supported-seed META/COST (189+10=199 selected annuals),
+210 target slots/11 deficits and fourteen-field source/review ledgers. Actual
+partial-pilot approvals cover MSFT FY2025–2026, AAPL FY2025 and Alphabet FY2024
+only; no issuer is demonstrated analyst-complete. Frozen support classes remain.
+
+The stricter user target requires every required field supported/selected, a
+defensible approved estimate/classification, or an approved exclusion genuinely
+making it unnecessary. An acknowledged gap, partial observation or reported CFO
+does not suffice. Three partial pilots,9 standard-review candidates,27 complex
+selection cases and3 history boundaries are work-planning groups only. All issuer
+records/source facts/accepted views remain unchanged; no fresh financial review.
+
+The report deduplicates shared tasks, gives exact requirements/pointers and stop
+conditions, separates latest/full-history and engineering/review/external effort,
+and proposes MSFT FY2026 as one finite first completion attempt. No task is
+authorized here. Unavailable essential inputs without defensible alternatives
+remain incomplete; no automatic research queue, support change or phase closure.
+Assessment validation:five focused tests, exact replay/source pointers,
+42/199/210/11 reconciliation, task deduplication and source/accepted-view
+preservation pass; compileall,406 affected local links and diff checks pass.
+
 ## Alphabet FY2024 scoped selections integrated
 
 [Accepted view/package](GOOGL-analyst-input-package.md) and

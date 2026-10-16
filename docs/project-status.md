@@ -1,6 +1,48 @@
 # Project Status
 
-## Current milestone — approved Alphabet FY2024 historical selections
+## Current milestone — analyst-complete historical-input work assessment
+
+[Consolidated assessment](analyst-complete-historical-assessment.md) /
+[reproducible JSON](analyst-complete-historical-assessment.json) join current
+coverage, exact population/CFO proofs, issuer records, frozen mappings and scoped
+pilot approvals. **42 histories / 199 selected annuals / 210 target slots / 11
+deficits / 2,786 field-family slots** reconcile. Previous40-record189-period
+cohort plus META/COST ten periods explains the scope difference; no new selection.
+No issuer has demonstrated analyst completeness under the user's stricter target;
+this is not a support reclassification or a finding every value is wrong.
+
+Planning groups:3 approved-partial pilots,9 standard-review candidates,27 complex
+selection cases,3 history boundaries. Five-year target preserved; no deficit is
+invented as a period or automatically called a nonexistent business year. Exact
+field/null/conflict/support pointers, independent sample depth and scoped approved
+periods stay separate. Alphabet2024 approval does not extend to selected2025.
+Original NWC/D&A/financial/timing blockers and accepted views are unchanged.
+
+Eight shared tasks deduplicate controls, required-perimeter decisions, income,
+expense D&A, investment, CFO/roles/tax, financial populations/shares and history.
+First **proposed** finite completion attempt:MSFT FY2026 only; required short
+borrowing and other scope gaps need defensible evidence/alternatives, not zero
+or acknowledgment. Stop INCOMPLETE if an essential input remains unsupported.
+No backlog execution or research authority is implied. Future economics stay
+Phase2; neither financial shortfalls nor Phase1 closure are accepted here.
+
+Conditional workload, not completion promise:latest-selected financial review
+140/280/522 person-days, full available history414/855/1,547; separate shared and
+issuer integration effort is detailed in the report. At two reviewers/four
+focused days each weekly, latest review alone is17.5/35/65.25 team-weeks.
+External disclosures/user decisions and all42 completion date remain **not
+estimable**. These are task-based low-confidence planning budgets, not a forced
+6–12-week estimate or financial numerical assumptions. Individual records need
+no new financial conclusion:existing records are linked, not re-reviewed/rewritten.
+
+Validation:five focused assessment tests pass (2.303s), exact retained replay and
+source pointers,42 mappings/199 accessions/210 targets/11 deficits/2,786 field
+slots, deduplicated tasks and latest-target batch coverage, original source and
+accepted-view digests, compileall,406 affected local links and diff checks pass.
+No financial/runtime/policy/accepted-view changes, SEC requests, full-suite or
+corpus rerun. Stop after assessment for user review, not backlog execution.
+
+## Prior milestone — approved Alphabet FY2024 historical selections
 
 [Package](company-data-preparation/GOOGL-analyst-input-package.md) /
 [JSON](company-data-preparation/googl-analyst-input-package.json) add an isolated
