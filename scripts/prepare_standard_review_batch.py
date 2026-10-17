@@ -103,7 +103,7 @@ def observe(case):
         except (ValueError,KeyError) as exc:errors.append(dict(input_id=slot['field'],value=None,reason=str(exc)))
     # Explicit reviewed populations, not a substring-based financial resolver.
     extra={'COST':[(k,'us-gaap',co,None) for k,co in [('capital_lease_current','CapitalLeaseObligationsCurrent'),('capital_lease_long','CapitalLeaseObligationsNoncurrent')]],
-        'CAT':[], 'KO':[(k,'ko',co,None) for k,co in [('combined_acquisitions','AcquisitionsOfBusinessesEquityMethodInvestmentsAndNonmarketableSecurities'),('irs_estimate','RecordedEstimateOfTaxLiability'),('irs_possible','IncrementalTaxAndInterestLiability')]]}[case['ticker']]
+        'CAT':[], 'KO':[(k,'ko',co,None) for k,co in [('combined_acquisitions','AcquisitionsOfBusinessesEquityMethodInvestmentsAndNonmarketableSecurities'),('irs_estimate','RecordedEstimateOfTaxLiability'),('irs_possible','IncrementalTaxAndInterestLiability')]]}.get(case['ticker'],[])
     if case['ticker']=='KO':
         extra += [(k,'ko',co,None) for k,co in [('held_sale_cash','DisposalGroupIncludingDiscontinuedOperationsCashCashEquivalentsAndShortTermInvestments'),
             ('held_sale_short','DisposalGroupIncludingDiscontinuedOperationLoansAndNotesPayable'),('held_sale_current_debt','DisposalGroupIncludingDiscontinuedOperationCurrentMaturitiesOfLongTermDebt'),
@@ -311,18 +311,18 @@ def build():
     return packages,missing
 
 
-def load():
+def load(tickers=TICKERS):
     """Join only the fifteen existing selected proof bindings to actual receipts."""
     ledger=json.loads((ROOT/LEDGER).read_text());manifest=json.loads((ROOT/MANIFEST).read_text())
     income=json.loads((ROOT/'docs/repaired-income-ledger.json').read_text())
     selected=[]
     for i,r in enumerate(income['rows']):
-        if r['issuer'] not in TICKERS:continue
+        if r['issuer'] not in tickers:continue
         matches=[(j,m) for j,m in enumerate(manifest['rows']) if m['identity']['accession']==r['identity']['accession']]
-        if r['issuer']!='COST' and (len(matches)!=1 or matches[0][1]['identity']!=r['identity']):raise ValueError('Frozen manifest/income join differs')
+        if r['issuer'] not in ('COST','META') and (len(matches)!=1 or matches[0][1]['identity']!=r['identity']):raise ValueError('Frozen manifest/income join differs')
         selected.append((r['identity_reference'],dict(ticker=r['issuer'],identity=r['identity'])))
-    if len(selected)!=15 or any(sum(r['ticker']==t for i,r in selected)!=5 for t in TICKERS):raise ValueError('Fixed fifteen selected periods required')
-    proofs={r['identity']['fields']['accession']:(i,r) for i,r in enumerate(ledger['rows']) if r['ticker'] in TICKERS}
+    if len(selected)!=15 or any(sum(r['ticker']==t for i,r in selected)!=5 for t in tickers):raise ValueError('Fixed fifteen selected periods required')
+    proofs={r['identity']['fields']['accession']:(i,r) for i,r in enumerate(ledger['rows']) if r['ticker'] in tickers}
     needed={(s['url'],s['body_reference']) for i,r in proofs.values() for s in r['reconciliation']['populations'][0]['cfo']['sources']}
     catalog={key:[] for key in needed}
     for path in sorted((ROOT/'docs/evidence').glob('*.json')):

@@ -1,5 +1,31 @@
 # META — supplemental supported-seed preparation note
 
+## Current — FY2021–FY2025 company review, proposals inactive
+
+[Schedule/matrix](../META-analyst-input-package.md) /
+[source-bound JSON](../meta-analyst-input-package.json) and
+[ONE batch sheet](../../trillion-review-batch-results.md) cover70 families:
+25 source-supported observations/45 pending judgments. Seed SUPPORTED status
+did not establish analyst-checklist completeness. Limited CFO-D&A proxy, SBC
+once, gross current balances, named financing, unknown-claim omission and dated
+classes remain proposals; no transfer of peer approvals or source-zero inference.
+
+Original conflict: three shared CFO parser PARTIALs2022–24 bind multiple inline
+populations on distinct restructuring captions. These proofs remain unchanged.
+Separate caption/dimension-specific primary checks exactly sum50,475/71,113/
+91,328m CFO, zero difference/tolerance, without a balancing item or generic parser
+repair.2021/25 shared proofs supported.2024 note deferred tax−4,737 versus cash
+row−4,738 remains visible; no plug. Original2021 PP&E18,567 is not later18,690.
+
+Named2021 financing581 is finance-only, not reported zero term debt. Noncash/
+capital creditors/principal, known strategic holdings/claims/restrictions, Class
+A/B shares, separately reported common aggregate, covers/EPS/awards remain
+distinct. All ten selected bodies/receipts retained; no acquisition target or
+request. Sources, alternatives, uncertainty and validation in the package/batch.
+Unknown expense/borrowing/claim/reserve completeness persists. Frozen SUPPORTED
+class, seed/source history and completed peer views remain unchanged; no automatic
+acceptance, company completion, Phase1 closure or Phase2 authorization.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../../statement-binding-repair-results.md) / [cause disposition](../../statement-repair-disposition.json).

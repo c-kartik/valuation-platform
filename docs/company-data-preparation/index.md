@@ -1,5 +1,23 @@
 # Company data preparation register
 
+## Current — unfinished trillion-dollar company review batch
+
+[NVDA](NVDA-analyst-input-package.md), [AMZN](AMZN-analyst-input-package.md)
+and [META](META-analyst-input-package.md) have initial five-year packages under
+existing review conventions:15 exact annuals/210 families and ONE
+[25-decision sheet](../trillion-review-batch-results.md) /
+[machine companion](trillion-review-batch.json). All proposals inactive.
+NVDA's pure-PP&E split and AMZN's broad-D&A negative findings remain; alternative
+proxies are not financial-policy changes. META's three partial parser proofs
+remain beside separate source-bound displayed sums. All selected bodies/receipts
+retained; no acquisition list/request. COST/CAT/KO proposals unchanged/inactive.
+
+42 broad assessments;9 packages =3 completed scoped MSFT/AAPL/Alphabet +6 pending
+COST/CAT/KO/NVDA/AMZN/META;33 broad-only.40 register issuers plus2 supported
+seeds and frozen classes remain. No acceptance, company completion, phase closure
+or Phase2 authority. Stop for consolidated review; earlier counts are historical
+checkpoints, not instructions to execute another company automatically.
+
 ## Current — three-company review batch awaiting one consolidated decision
 
 [COST](COST-analyst-input-package.md), [CAT](CAT-analyst-input-package.md) and

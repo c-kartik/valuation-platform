@@ -1,0 +1,1424 @@
+{
+  "broad_assessment_only": 33,
+  "companies": {
+    "AMZN": {
+      "outcomes": {
+        "ESSENTIAL_EXCEPTION": 0,
+        "PROPOSED_PENDING_APPROVAL": 50,
+        "SOURCE_SUPPORTED": 20
+      },
+      "periods": 5,
+      "review_revision": "1131d7ef457ed8764723b38299bdfef8d08dbc61be60a5a29dd09a5caf8e3378"
+    },
+    "META": {
+      "outcomes": {
+        "ESSENTIAL_EXCEPTION": 0,
+        "PROPOSED_PENDING_APPROVAL": 45,
+        "SOURCE_SUPPORTED": 25
+      },
+      "periods": 5,
+      "review_revision": "d253b875b14907963169fd7734e01fdf2500de01d0d447cc4b7fb4fb9bbb24ec"
+    },
+    "NVDA": {
+      "outcomes": {
+        "ESSENTIAL_EXCEPTION": 0,
+        "PROPOSED_PENDING_APPROVAL": 50,
+        "SOURCE_SUPPORTED": 20
+      },
+      "periods": 5,
+      "review_revision": "59c248285a353fac85c07c2523fcd637e3c7307e34467d7d121f094ed98e5411"
+    }
+  },
+  "completed_company_packages": 3,
+  "decisions": [
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "NVDA-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001045810-22-000036",
+          "annual_end": "2022-01-30",
+          "annual_start": "2021-02-01",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-23-000017",
+          "annual_end": "2023-01-29",
+          "annual_start": "2022-01-31",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-24-000029",
+          "annual_end": "2024-01-28",
+          "annual_start": "2023-01-30",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-25-000023",
+          "annual_end": "2025-01-26",
+          "annual_start": "2024-01-29",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-26-000021",
+          "annual_end": "2026-01-25",
+          "annual_start": "2025-01-27",
+          "cik": 1045810,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "9108/5641/28090/64089/102718 USDm",
+      "recommendation": "Use displayed reported cash movements and independently checked consolidated CFO; no separate residual operation and no second movement deduction.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "NVDA",
+      "uncertainty_and_alternative": "Not operating-only/organic cash or book delta NWC. Preserve mixed/acquisition/FX/reclassification scopes; alternative require separately supported allocations, not balancing items. META original parser remains PARTIAL2022\u201324; independent caption/dimension-specific display check is separate, no altered legacy result."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "NVDA-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001045810-22-000036",
+          "annual_end": "2022-01-30",
+          "annual_start": "2021-02-01",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-23-000017",
+          "annual_end": "2023-01-29",
+          "annual_start": "2022-01-31",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-24-000029",
+          "annual_end": "2024-01-28",
+          "annual_start": "2023-01-30",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-25-000023",
+          "annual_end": "2025-01-26",
+          "annual_start": "2024-01-29",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-26-000021",
+          "annual_end": "2026-01-25",
+          "annual_start": "2025-01-27",
+          "cik": 1045810,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "2004/2710/3549/4737/6386 USDm",
+      "recommendation": "Use recognized expense as a labeled historical cost proxy once, preserving CFO add-back differences and awards separately.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "NVDA",
+      "uncertainty_and_alternative": "No double charge, rounded difference adjustment, exercise-cash substitution or forecast dilution. Alternative retain observations without cost-proxy selection."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "NVDA-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001045810-22-000036",
+          "annual_end": "2022-01-30",
+          "annual_start": "2021-02-01",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-23-000017",
+          "annual_end": "2023-01-29",
+          "annual_start": "2022-01-31",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-24-000029",
+          "annual_end": "2024-01-28",
+          "annual_start": "2023-01-30",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-25-000023",
+          "annual_end": "2025-01-26",
+          "annual_start": "2024-01-29",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-26-000021",
+          "annual_end": "2026-01-25",
+          "annual_start": "2025-01-27",
+          "cik": 1045810,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "21208/13296/25984/43210/62556 USDm",
+      "recommendation": "Select gross current financial captions only; retain restricted, strategic/nonmarketable and long-term holdings separately.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "NVDA",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash; unknown restrictions/reserves remain unbounded. Do not add restricted-cash parents to included cash. Alternative defer financial-balance selection until operating reserve policy is designed."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "NVDA-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001045810-22-000036",
+          "annual_end": "2022-01-30",
+          "annual_start": "2021-02-01",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-23-000017",
+          "annual_end": "2023-01-29",
+          "annual_start": "2022-01-31",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-24-000029",
+          "annual_end": "2024-01-28",
+          "annual_start": "2023-01-30",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-25-000023",
+          "annual_end": "2025-01-26",
+          "annual_start": "2024-01-29",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-26-000021",
+          "annual_end": "2026-01-25",
+          "annual_start": "2025-01-27",
+          "cik": 1045810,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Known source populations and nulls remain separate in facts, candidate and claims-ledger payloads; no invented amount.",
+      "recommendation": "Retain specifically recorded claims/strategic assets and retirement disclosures; propose no additional unidentified preferred/NCI/pension adjustment.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "NVDA",
+      "uncertainty_and_alternative": "Presentation-based analyst omission, not reported zero or immateriality. Potential omitted claims unbounded. Alternative leave that operation unresolved. Combined loss/credit DTA is not a pure-NOL economic asset."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "NVDA-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001045810-22-000036",
+          "annual_end": "2022-01-30",
+          "annual_start": "2021-02-01",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-23-000017",
+          "annual_end": "2023-01-29",
+          "annual_start": "2022-01-31",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-24-000029",
+          "annual_end": "2024-01-28",
+          "annual_start": "2023-01-30",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-25-000023",
+          "annual_end": "2025-01-26",
+          "annual_start": "2024-01-29",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-26-000021",
+          "annual_end": "2026-01-25",
+          "annual_start": "2025-01-27",
+          "cik": 1045810,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact dates/classes/precision in facts shares:* and claims-shares source records; no new dilution number.",
+      "recommendation": "Select actual dated fiscal-end common populations/classes separately; retain cover counts, EPS denominators and awards without automatic addition.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "NVDA",
+      "uncertainty_and_alternative": "NVDA original2022\u201324 counts precede2024 ten-for-one split;2022 already reflects2021 four-for-one. AMZN2021 predates2022 twenty-for-one; META A/B voting classes remain separate. Alternative a separately approved comparison restatement; none computed here."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "NVDA-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001045810-22-000036",
+          "annual_end": "2022-01-30",
+          "annual_start": "2021-02-01",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-23-000017",
+          "annual_end": "2023-01-29",
+          "annual_start": "2022-01-31",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-24-000029",
+          "annual_end": "2024-01-28",
+          "annual_start": "2023-01-30",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-25-000023",
+          "annual_end": "2025-01-26",
+          "annual_start": "2024-01-29",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-26-000021",
+          "annual_end": "2026-01-25",
+          "annual_start": "2025-01-27",
+          "cik": 1045810,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1174/1544/1508/1864/2843 USDm",
+      "recommendation": "Use reported CFO D&A as a limited historical proxy, preserving expense depreciation and finite-lived amortization separately.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "NVDA",
+      "uncertainty_and_alternative": "Depreciation note includes finance assets; no extra finance add-back.2023 component844+699=1543 versus CFO1544;2025 rounded1300+593=1893 versus1864;2026 rounded2400+488=2888 versus2843. Do not plug differences or certify expense completeness. Alternative retain component observations without an approved complete D&A operation."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "NVDA-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001045810-22-000036",
+          "annual_end": "2022-01-30",
+          "annual_start": "2021-02-01",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-23-000017",
+          "annual_end": "2023-01-29",
+          "annual_start": "2022-01-31",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-24-000029",
+          "annual_end": "2024-01-28",
+          "annual_start": "2023-01-30",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-25-000023",
+          "annual_end": "2025-01-26",
+          "annual_start": "2024-01-29",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-26-000021",
+          "annual_end": "2026-01-25",
+          "annual_start": "2025-01-27",
+          "cik": 1045810,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "976/1833/1069/3236/6042 USDm",
+      "recommendation": "Approve combined PP&E/intangible purchases as a specifically broader historical investment proxy, NOT pure PP&E cash.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "NVDA",
+      "uncertainty_and_alternative": "2022\u201323 issuer extensions need explicit separate approval as well as2024\u201326 standard captions. Prior NO-GO for pure PP&E remains. Missing split cannot be inferred from unpaid258/374/170/525/820, assets or acquisition cash263/49/83/1007/1535. FY2026 Groq13000 cash is separate; no sum or acquisition allocation. Alternative pure PP&E remains unresolved with no defensible split."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "NVDA-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/nvda-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001045810-22-000036",
+          "annual_end": "2022-01-30",
+          "annual_start": "2021-02-01",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-23-000017",
+          "annual_end": "2023-01-29",
+          "annual_start": "2022-01-31",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-24-000029",
+          "annual_end": "2024-01-28",
+          "annual_start": "2023-01-30",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-25-000023",
+          "annual_end": "2025-01-26",
+          "annual_start": "2024-01-29",
+          "cik": 1045810,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001045810-26-000021",
+          "annual_end": "2026-01-25",
+          "annual_start": "2025-01-27",
+          "cik": 1045810,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "10946/10953/9709/8463/8468 USDm",
+      "recommendation": "Retain named net term carrying as financing input, operating leases service; keep license/finance/other populations separate and propose no unidentified borrowing adjustment.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "NVDA",
+      "uncertainty_and_alternative": "Finance/license liability allocation and exhaustive borrowing not proved. CP source0 where explicitly tagged cannot establish broader zero. No addition of op lease885/1078/1347/1807/2944 or undiscounted/principal/fair-value alternatives. Alternative require full liability split; no complete-debt claim."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AMZN-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "46327/46752/84946/115877/139514 USDm",
+      "recommendation": "Use displayed reported cash movements and independently checked consolidated CFO; no separate residual operation and no second movement deduction.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMZN",
+      "uncertainty_and_alternative": "Not operating-only/organic cash or book delta NWC. Preserve mixed/acquisition/FX/reclassification scopes; alternative require separately supported allocations, not balancing items. META original parser remains PARTIAL2022\u201324; independent caption/dimension-specific display check is separate, no altered legacy result."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AMZN-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "12757/19621/24023/22011/19467 USDm",
+      "recommendation": "Use recognized expense as a labeled historical cost proxy once, preserving CFO add-back differences and awards separately.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMZN",
+      "uncertainty_and_alternative": "No double charge, rounded difference adjustment, exercise-cash substitution or forecast dilution. Alternative retain observations without cost-proxy selection."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AMZN-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "96049/70026/86780/101202/123029 USDm",
+      "recommendation": "Select gross current financial captions only; retain restricted, strategic/nonmarketable and long-term holdings separately.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMZN",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash; unknown restrictions/reserves remain unbounded. Do not add restricted-cash parents to included cash. Alternative defer financial-balance selection until operating reserve policy is designed."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AMZN-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Known source populations and nulls remain separate in facts, candidate and claims-ledger payloads; no invented amount.",
+      "recommendation": "Retain specifically recorded claims/strategic assets and retirement disclosures; propose no additional unidentified preferred/NCI/pension adjustment.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMZN",
+      "uncertainty_and_alternative": "Presentation-based analyst omission, not reported zero or immateriality. Potential omitted claims unbounded. Alternative leave that operation unresolved. Combined loss/credit DTA is not a pure-NOL economic asset."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AMZN-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact dates/classes/precision in facts shares:* and claims-shares source records; no new dilution number.",
+      "recommendation": "Select actual dated fiscal-end common populations/classes separately; retain cover counts, EPS denominators and awards without automatic addition.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMZN",
+      "uncertainty_and_alternative": "NVDA original2022\u201324 counts precede2024 ten-for-one split;2022 already reflects2021 four-for-one. AMZN2021 predates2022 twenty-for-one; META A/B voting classes remain separate. Alternative a separately approved comparison restatement; none computed here."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AMZN-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "23421/25528/30931/32905/42677 USDm",
+      "recommendation": "Select PP&E depreciation/amortization plus separately named finite-lived intangible expense as a LIMITED historical expense proxy.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMZN",
+      "uncertainty_and_alternative": "PP&E segment-note22909/24924/30225/32067/41860 already includes finance depreciation. Add named intangible512/604/706/838/817 once; no operating ROU/content/other inclusion claim or new frozen equation. Broad CFO34296/41921/48663/52795/65756 remains negatively reviewed/support-only. Alternative rounded PP&E note22900/24900/30200/32100/41900 has different precision; broad CFO is NOT acceptable pure D&A. Content cost/amortization remains in service/content operating perimeter, proposed exclusion from this limited investment proxy; not proved complete expense D&A."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AMZN-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "61053/63645/52729/82999/131819 USDm",
+      "recommendation": "Retain approved gross cash equipment purchases separately from proceeds/incentives, cash acquisition/other, finance-lease additions and facility financing.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMZN",
+      "uncertainty_and_alternative": "Gross, not company non-GAAP net purchases. Proceeds/incentives remain separate source observations, never guessed or netted. No add of financed equipment7061/675/642/854/2911 to cash; no complete reinvestment or content proxy. Alternative explicit later investment perimeter, not a residual."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AMZN-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "4791/-3217/7120/9265/19087 USDm; cash 3688/6035/11179/12308/8295 USDm",
+      "recommendation": "Select exact displayed provision/cash-tax populations and separately retain before-tax scope/issuer ETR; no generic denominator override.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMZN",
+      "uncertainty_and_alternative": "Preserve rounded competing candidates and original generic tax conflicts/nulls; source statement population, not precedence. Pretax38151/-5936/37557/68614/97311 is before-equity-method scope. FY2022 loss denominator does not permit existing positive-denominator ETR. No future rate/clamp; alternative keep all generic required values unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AMZN-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amzn-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001018724-22-000005",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-23-000004",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-24-000008",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-25-000004",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001018724-26-000004",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1018724,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "81109/100898/85935/75805/89295 USDm",
+      "recommendation": "Use current+noncurrent NET term carrying, finance lease parent, separately recognized facility financing and known short borrowing; exclude operating leases as service.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMZN",
+      "uncertainty_and_alternative": "Use2021 expanded81427 including318 facility explicitly quantified in the selected2022 comparative; keep that later source identity. Named2021 base81109 excludes318. CP725/6800 then explicit note-zero scope, plus facility1200/147/151/455 in2022\u201325 remain separate. Do not use gross term parent50553/70542/67182/58000/68836 on top of net components or add finance children again. Facility financing196+6200/266+6700/271+6600/312+7100/358+7800 has rounded long components; include separately, not maturity/interest totals. Unidentified borrowing omission remains proposed/unbounded. Alternative keep financing incomplete; no net-flow inference."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "META-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001326801-22-000018",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-23-000013",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-25-000017",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003942",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "57683/50475/71113/91328/115800 USDm",
+      "recommendation": "Use displayed reported cash movements and independently checked consolidated CFO; no separate residual operation and no second movement deduction.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "META",
+      "uncertainty_and_alternative": "Not operating-only/organic cash or book delta NWC. Preserve mixed/acquisition/FX/reclassification scopes; alternative require separately supported allocations, not balancing items. META original parser remains PARTIAL2022\u201324; independent caption/dimension-specific display check is separate, no altered legacy result."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "META-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001326801-22-000018",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-23-000013",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-25-000017",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003942",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "9164/11992/14027/16690/20427 USDm",
+      "recommendation": "Use recognized expense as a labeled historical cost proxy once, preserving CFO add-back differences and awards separately.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "META",
+      "uncertainty_and_alternative": "No double charge, rounded difference adjustment, exercise-cash substitution or forecast dilution. Alternative retain observations without cost-proxy selection."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "META-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001326801-22-000018",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-23-000013",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-25-000017",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003942",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "47998/40738/65403/77815/81592 USDm",
+      "recommendation": "Select gross current financial captions only; retain restricted, strategic/nonmarketable and long-term holdings separately.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "META",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash; unknown restrictions/reserves remain unbounded. Do not add restricted-cash parents to included cash. Alternative defer financial-balance selection until operating reserve policy is designed."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "META-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001326801-22-000018",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-23-000013",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-25-000017",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003942",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Known source populations and nulls remain separate in facts, candidate and claims-ledger payloads; no invented amount.",
+      "recommendation": "Retain specifically recorded claims/strategic assets and retirement disclosures; propose no additional unidentified preferred/NCI/pension adjustment.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "META",
+      "uncertainty_and_alternative": "Presentation-based analyst omission, not reported zero or immateriality. Potential omitted claims unbounded. Alternative leave that operation unresolved. Combined loss/credit DTA is not a pure-NOL economic asset."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "META-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001326801-22-000018",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-23-000013",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-25-000017",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003942",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact dates/classes/precision in facts shares:* and claims-shares source records; no new dilution number.",
+      "recommendation": "Select actual dated fiscal-end common populations/classes separately; retain cover counts, EPS denominators and awards without automatic addition.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "META",
+      "uncertainty_and_alternative": "NVDA original2022\u201324 counts precede2024 ten-for-one split;2022 already reflects2021 four-for-one. AMZN2021 predates2022 twenty-for-one; META A/B voting classes remain separate. Alternative a separately approved comparison restatement; none computed here."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "META-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001326801-22-000018",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-23-000013",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-25-000017",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003942",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "7967/8686/11178/15498/18616 USDm",
+      "recommendation": "Use CFO D&A as a limited historical proxy, without extra finance ROU amortization.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "META",
+      "uncertainty_and_alternative": "Finance assets in PP&E; note expense and CFO differences remain. Finance amortization344/380/349/387/549 is supporting, not incremental. Facilities/data-center impairments are separate mixed populations, not added to D&A. Useful-life changes affect comparisons. Alternative note components remain partial, no subtraction-based amortization."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "META-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001326801-22-000018",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-23-000013",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-25-000017",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003942",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "18567/31431/27266/37256/69691 USDm",
+      "recommendation": "Select gross cash PP&E separately from proceeds, noncash additions, capital creditors and acquisition/investment cash.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "META",
+      "uncertainty_and_alternative": "2021 original18567 is not later restated comparative18690. Capital creditors3404/3319/4105/7127/9331 are not cash. Finance principal677/850/1058/1969/2524 not added to cash purchase. Known strategic investments include2025 equity-method7448 and nonmarketable27524; no exhaustive allocation/net reinvestment. Alternative net cash only after explicit proceeds scope, not selected here."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "META-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/meta-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001326801-22-000018",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-23-000013",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001326801-25-000017",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003942",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "581/10610/19075/29535/59928 USDm",
+      "recommendation": "Select named net term carrying where reported plus finance lease parent; operating leases service; propose no additional unidentified borrowing adjustment.",
+      "recorded_at_utc": "2026-10-17T17:50:43+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "META",
+      "uncertainty_and_alternative": "2021 named581 is finance-only; no debt tag is NOT source zero.2022\u201325 net term9923/18385/28826/58744 differs from principal10000/18500/29000/59000 by77/115/174/256 issuance costs/discount. Do not add both. Other borrowing unbounded; no present complete-debt certification. Alternative leave incomplete financing operation open."
+    }
+  ],
+  "evidence_acquisition_requirements": [],
+  "family_slots": 210,
+  "new_assumptions_active": false,
+  "new_sec_requests": 0,
+  "phase1_closed": false,
+  "reviewed_pending_company_packages": 6,
+  "schema": "retained-trillion-review-batch-v1",
+  "selected_periods": 15,
+  "source_commit": "afd1a2598a790826be5dd1f4beebaf0ea412467a",
+  "tickers": [
+    "NVDA",
+    "AMZN",
+    "META"
+  ]
+}

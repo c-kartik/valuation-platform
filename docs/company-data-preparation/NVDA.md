@@ -1,5 +1,27 @@
 # NVDA — company data preparation
 
+## Current — FY2022–FY2026 company review awaiting consolidated decision
+
+[Schedule/matrix](NVDA-analyst-input-package.md) /
+[source-bound JSON](nvda-analyst-input-package.json) and
+[ONE batch sheet](../trillion-review-batch-results.md) cover70 families:
+20 source-supported observations/50 pending judgments. Original conflict:
+combined PP&E/intangible cash cannot establish pure PP&E. Proposed purchases
+976/1,833/1,069/3,236/6,042m are a broader inactive analyst operation, not a
+reversal of the [negative scope finding](../capex-nvda-combined-scope.md).
+Both extension years and all three standard-caption years remain separately
+gated. No book/unpaid/acquisition subtraction supplies the unknown cash split.
+
+Limited CFO-D&A proxy, gross current balances and named term financing retain
+rounded/component differences, restrictions, strategic investments, unquantified
+claims/financing coverage and FY2026 Groq13,000 separately. No complete expense
+D&A, unrestricted cash, complete debt or reinvestment claim. Original2021
+four-for-one and2024 ten-for-one share boundaries remain with actual dates.
+All ten exact selected primary/instance bodies and actual receipts retained;
+five independent CFO proofs, raw facts/alternatives, sources and precision are
+in JSON. No acquisition target/request or new acceptance. Validation in batch
+results; original classifications/outputs, policies and scope blockers persist.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

@@ -1,5 +1,22 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+## Current — NVDA/AMZN/META consolidated company reviews remain pending
+
+[ONE batch sheet](trillion-review-batch-results.md) /
+[exact machine decisions](company-data-preparation/trillion-review-batch.json):
+15 annuals/210 families,65 source-supported observation slots/145 pending
+financial-choice slots. All25 proposals inactive; no analyst-complete result.
+NVDA's combined-investment proxy does not supply its missing PP&E split;
+AMZN's narrow expense proxy does not reverse five negative broad-D&A reviews.
+META's separate display arithmetic preserves the three shared parser PARTIALs.
+All30 required source bodies/receipts retained; no exact acquisition requirement.
+
+42 broadly assessed;9 company packages =3 completed scoped MSFT/AAPL/Alphabet
++6 pending COST/CAT/KO/NVDA/AMZN/META;33 broad-only. History exceptions, frozen
+support classes and sufficiency limitations persist. Older baseline JSON remains
+a dated snapshot, not rewritten counts or approvals. Stop for consolidated user
+review, without accepting limitations, executing the backlog or closing Phase1.
+
 ## Current — COST/CAT/KO one retained-evidence review batch, all choices pending
 
 [ONE batch approval/exception table](standard-review-batch-results.md) and three

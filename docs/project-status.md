@@ -1,5 +1,34 @@
 # Project Status
 
+## Current — NVDA/AMZN/META consolidated review, proposals inactive
+
+[ONE decision/exception sheet](trillion-review-batch-results.md) and
+[machine batch](company-data-preparation/trillion-review-batch.json) cover15
+exact selected annuals/210 families: NVDA FY2022–26 20 source-supported/50
+pending; AMZN FY2021–25 20/50; META FY2021–25 25/45. These are review
+dispositions, not missing-fact counts or complete-field approvals. All25 new
+judgments remain inactive; COST/CAT/KO proposals remain unchanged/inactive.
+
+NVDA proposes combined cash PP&E/intangible purchases976/1,833/1,069/3,236/
+6,042m with separate extension gates; original pure-PP&E rejection remains.
+AMZN's five negative broad-D&A reviews persist; proposed narrow expense proxies
+23,421/25,528/30,931/32,905/42,677 are a distinct inactive analyst operation,
+not a frozen equation or source completeness finding. Named financing retains
+separate facility financing, CP/working borrowing and the2021-end318 comparative
+explicitly bound to its FY2022 source. META's three shared CFO parser PARTIALs
+remain beside separate exact primary-row/dimension arithmetic, not overwritten
+proofs or altered tolerances. All30 selected bodies and actual receipts retained;
+no acquisition target/request, accepted assumption or company-completion claim.
+
+42 broad assessments;9 company packages =3 completed scoped MSFT/AAPL/Alphabet
++6 reviewed/pending COST/CAT/KO/NVDA/AMZN/META;33 broad-only.40 generalization
+records plus2 supported seeds and all frozen support classes persist. Financial
+perimeters, unbounded omissions and class/split comparability need consolidated
+review, not automatic research. Validation is in the
+[batch results](trillion-review-batch-results.md#validation-and-preservation).
+No Phase1 closure/Phase2 authority. Older sections retain dated checkpoints;
+their candidate instructions/counts do not supersede this current state.
+
 ## Current — COST/CAT/KO one retained-evidence review batch, all choices pending
 
 [ONE batch approval/exception table](standard-review-batch-results.md) and three

@@ -1,5 +1,33 @@
 # AMZN — company data preparation
 
+## Current — FY2021–FY2025 company review awaiting consolidated decision
+
+[Schedule/matrix](AMZN-analyst-input-package.md) /
+[source-bound JSON](amzn-analyst-input-package.json) and
+[ONE batch sheet](../trillion-review-batch-results.md) cover70 families:
+20 source-supported observations/50 pending judgments. Original broad CFO-D&A
+scope conflict persists in all five negative reviews; required expense D&A
+remains null. New proposed limited PP&E+named-intangible proxies23,421/25,528/
+30,931/32,905/42,677 preserve explicit source tables and rounded alternatives.
+Finance depreciation is already within PP&E; content/operating ROU exclusions
+need approval. No source completeness, frozen equation or scope reversal.
+
+Gross cash equipment, proceeds/incentives, noncash additions, principal,
+acquisitions/nonmarketable/Other and capital creditors remain separate.
+Proposed financing81,427/100,898/85,935/75,805/89,295 includes named facility
+financing and CP/working facilities, not duplicate gross term parents.2021
+expanded81,427 includes318 working facilities explicitly disclosed for2021-end
+in the selected FY2022 comparative; actual later provenance is preserved.
+Rounded long facility precision and unknown additional borrowing remain; no
+complete-debt claim. Tax source-row selections preserve original rounded
+conflicts/denominator exclusions, not a future rate or loss assumption.
+
+All ten selected bodies/receipts retained; five displayed CFOs independently
+supported.2022/23 reclassifications, useful-life changes,2022 twenty-for-one split,
+acquisitions, scope and unknown claims/restrictions remain explicit. No acquisition
+target/request, inferred zero, active assumption or completion. Validation in
+batch results; frozen/prior negative findings and completed peer views persist.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).
