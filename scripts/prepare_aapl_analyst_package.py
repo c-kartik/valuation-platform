@@ -302,13 +302,14 @@ def accepted_view(proposal,support=None,audit_path=None):
 
 
 def build():
-    return review_company_history(accepted_view(build_proposal()))
+    return activate_company_history(review_company_history(accepted_view(build_proposal())))
 
 
 def review_company_history(package):
     """One retained-only company review; all new judgments remain inactive."""
-    parent={k:v for k,v in package.items() if k!='aapl_history_review'}
-    if accepted_view(build_proposal())!=parent:raise ValueError('Changed prior AAPL source/approval')
+    parent={k:v for k,v in package.items() if k not in ('aapl_history_review','aapl_history_approval','aapl_current_history')}
+    reviewed=accepted_view(build_proposal())
+    if reviewed!=parent:raise ValueError('Changed prior AAPL source/approval')
     manifest=_json((ROOT/'docs/phase1-selected-filing-identity-manifest.json').read_text())
     selected=[(i,r) for i,r in enumerate(manifest['rows']) if r['ticker']=='AAPL']
     if len(selected)!=5 or len({r['identity']['accession'] for i,r in selected})!=5:raise ValueError('Frozen AAPL selection differs')
@@ -323,7 +324,9 @@ def review_company_history(package):
         f.primary=primaries[0];f.instance=instances[0];f.root,f.contexts,f.units,f.namespaces=cash._instance(tuple(receipts),f.period)
         f.inline=InlineFacts();f.inline.feed(f.primary.artifact.body.decode());f.text=re.sub(r'\s+',' ',' '.join(f.inline.text));f.facts={};f.entries=[];exceptions=[]
         # Reuse the reviewed AAPL concept/population specifications, not FY2025 values.
-        for key,spec in parent['facts'].items():
+        # JSON key order is not a source revision. Retain the original reviewed
+        # specification order so restart reproduces the exact exception history.
+        for key,spec in reviewed['facts'].items():
             if key=='cover_common':continue
             try:f.fact(key,spec['concept'],'Selected FY'+str(year)+' primary reported population: '+key,instant=spec['as_of'] is not None,
                 namespace='aapl' if spec['namespace'].startswith('http://www.apple.com/') else 'us-gaap',unit=spec['unit'],
@@ -587,6 +590,67 @@ APPROVAL_SHEET=[dict(decision_id=key,status=PROPOSED,recommendation=rec,numerica
      'Cover count differs +3093000 shares at a later date, not dilution; annual weighted-average diluted15004697000 is a different population.',
      'No common+award total, award valuation, forecast dilution or extra SBC charge; source rounding remains.'),
 )]
+
+
+def history_approval_record(package):
+    if 'aapl_history_approval' in package:raise ValueError('Immutable AAPL history approval already exists')
+    review=package['aapl_history_review']
+    record=dict(schema='aapl-treatment-acceptance-audit-v1',version=1,sequence=2,
+        previous=package['accepted_view']['approval_audit']['sha256'],action='ACCEPT_FY2021_FY2025_A2_A10',
+        author='User, explicit approval of AAPL A2-A10 exactly as proposed across FY2021-FY2025',
+        recorded_at_utc=datetime.now(timezone.utc).isoformat(),
+        rationale='Accept labeled CFO-D&A proxies, named financing/no additional borrowing and claim/pension omissions with unbounded uncertainty, gross current financial balances with known restrictions; historical perimeter only.',
+        authority='Current user instruction Part1: explicitly approves A2-A10 exactly as proposed; preserve facts, unknowns, alternatives and earlier decisions.',
+        source_commit='d6e0ea51b19a4786a11d816d16c8678f8e7b99ba',source_revision=digest(relevant(package)),
+        review_revision=review['review_revision'],identities=[r['identity'] for r in review['periods']],
+        decisions={r['decision_id']:{k:v for k,v in r.items() if k not in ('decision_id','status','accepted','approval_required')} for r in review['consolidated_proposals'] if r['approval_required']},
+        financial_sufficiency='ONLY_APPROVED_HISTORICAL_PERIMETER',phase1_closed=False,valuation_consumption_approved=False)
+    record['sha256']=digest(record)
+    return record
+
+
+def activate_company_history(package):
+    parent={k:v for k,v in package.items() if k not in ('aapl_history_approval','aapl_current_history')}
+    if review_company_history(parent)!=parent:raise ValueError('Changed AAPL source/company review')
+    record=_json((ROOT/OUTPUT).read_text())['aapl_history_approval'];expected=history_approval_record(parent)
+    if type(record) is not dict or set(record)!=set(expected) or record['sha256']!=digest({k:v for k,v in record.items() if k!='sha256'}):raise ValueError('Malformed AAPL history approval')
+    ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale'])
+    for k in set(expected)-{'recorded_at_utc','sha256','source_revision','review_revision'}:
+        if type(record[k]) is not type(expected[k]) or record[k]!=expected[k]:raise ValueError('Unregistered AAPL history approval: '+k)
+    if any(record[k]!=expected[k] for k in ('source_revision','review_revision')):raise ValueError('Stale AAPL history approval; explicit revalidation required')
+    if set(record['decisions'])!={f'A{i}' for i in range(2,11)} or parent['aapl_history_review']['outcomes']['ESSENTIAL_EVIDENCE_EXCEPTION']:raise ValueError('Incomplete AAPL authorization/evidence')
+    periods=[]
+    for i,row in enumerate(parent['aapl_history_review']['periods']):
+        base=f'/aapl_history_review/periods/{i}';facts=row['facts'];calcs={c['input_id']:c for c in row['calculations']}
+        def fact(key,multiplier=1):
+            f=facts[key]
+            return dict(value=str(Decimal(f['value'])*multiplier),unit=f['unit'],precision=f['precision'],origin='reported',raw_value=f['value'],multiplier=multiplier,as_of=f['as_of'],source_reference=base+'/facts/'+key)
+        def calculation(key):
+            return dict(calcs[key],source_reference=base+'/calculations/'+str(next(j for j,c in enumerate(row['calculations']) if c['input_id']==key)),review=APPROVED_SCOPE)
+        checklist=[]
+        if len(row['family_checklist'])!=14 or len({r['field'] for r in row['family_checklist']})!=14 or not row['cfo_reconciliation']['supported']:raise ValueError('AAPL checklist/reconciliation incomplete')
+        for r in row['family_checklist']:
+            if r['status'] not in ('SOURCE_SUPPORTED','EXISTING_SCOPED_APPROVAL','PROPOSED_PENDING_APPROVAL') or any(k not in record['decisions'] for k in r['pending_decisions']):raise ValueError('Unresolved AAPL family')
+            checklist.append(dict(r,status='SATISFIED_BY_EXPLICIT_APPROVAL' if r['pending_decisions'] else 'SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE',approval_reference='/aapl_history_approval' if r['pending_decisions'] else r['existing_approval_reference']))
+        inputs=dict(revenue=fact('revenue'),ebit=fact('ebit'),depreciation_amortization=dict(row['proposed_da_proxy'],accepted=True,status=APPROVED_SCOPE,approval_reference='/aapl_history_approval'),
+            cash_capex=fact('PaymentsToAcquirePropertyPlantAndEquipment',-1),reported_cash_flow_working_capital_movements=dict(rows=row['movement_rows'],source_reference=base+'/cfo_reconciliation',additional_deduction_permitted=False),
+            deferred_taxes=dict(selected=fact('deferred_cfo') if 'deferred_cfo' in facts else None,mixed_other=fact('OtherNoncashIncomeExpense',-1),deferred_provision=calculation('deferred_provision'),separate_pure_cfo_operation='reported_row' if 'deferred_cfo' in facts else 'APPROVED_EXCLUSION_UNKNOWN_COMPONENT'),
+            stock_based_compensation=dict(selected=fact('AllocatedShareBasedCompensationExpense'),origin='proxy',count_once=True,addback=fact('ShareBasedCompensation')),
+            unclassified_cfo_reconciliation_residual=dict(value=None,disposition='APPROVED_NO_SEPARATE_OPERATION',not_reported_zero=True),reported_cfo=fact('NetCashProvidedByUsedInOperatingActivities'),
+            reported_tax_context=dict(provision=fact('IncomeTaxExpenseBenefit'),pretax=fact('pretax'),reported_etr=calculation('reported_etr'),cash_taxes=fact('IncomeTaxesPaidNet',-1),future_rate_approved=False),
+            cash_investment_components=dict(selected=calculation('current_financial'),long_term=fact('long_securities'),known_restrictions_reference=base+'/note_observations',known_restriction_scope_support=base+'/comparative_scope_support' if i==3 else None,alternative_reference=base+'/restricted_current_alternative' if i==3 else None,unknown_restrictions=None,operating_reserve=None,unrestricted_or_excess_cash=False),
+            debt_lease_components=dict(selected=calculation('named_financing'),additional_borrowing=None,no_additional_adjustment='Approved analyst assumption; omitted borrowing unbounded, not reported zero',complete_debt=False,operating_lease=fact('op_total'),all_lease_alternative=dict(calculation('all_lease_alternative'),default=False,selected=False),current_maturities_already_included=True),
+            other_equity_bridge_claims_assets=dict(preferred=None,nci=None,pension=None,pure_nol=None,no_additional_adjustments='Approved analyst omissions, potentially undisclosed amounts unbounded, no immateriality finding',tax_credit_dta=fact('tax_credit_dta'),source_reference=base+'/partition_checks'),
+            point_in_time_shares=dict(selected=fact('year_end_common'),cover=[fact(k) for k in facts if k.startswith('cover_common_')],awards=fact('rsu'),weighted_basic=fact('weighted_basic'),weighted_diluted=fact('weighted_diluted'),aggregation_or_dilution_approved=False))
+        periods.append(dict(identity=row['identity'],inputs=inputs,checklist=checklist,analyst_complete=True,remaining_essential_inputs=[],
+            supporting_unknowns=row['supporting_unknowns'],sources_reference=base+'/sources',supporting_investment_reference=base+'/facts',complete_expense_basis_da=None))
+    if len(periods)!=5:raise ValueError('Five selected AAPL annuals required')
+    result=json.loads(json.dumps(parent));result['aapl_history_approval']=record
+    result['aapl_current_history']=dict(version=1,authoritative_current_view=True,periods=periods,company_completed_for_approved_historical_perimeter=True,
+        family_slots=70,passed_family_slots=70,complete_expense_basis_da=None,complete_debt=False,complete_reinvestment=False,phase1_closed=False,valuation_consumption_approved=False,
+        approval_sha256=record['sha256'],historical_proposal_snapshot='/aapl_history_review',
+        company_counts=dict(broad_evidence_assessment=42,company_analyst_packages=3,completed_company_wide_packages=2,partial_company_packages=1,broad_assessment_only=39))
+    return result
 
 
 if __name__=='__main__':

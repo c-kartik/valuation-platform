@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## Current — AAPL company-history acceptance
+
+[AAPL current schedule](AAPL-analyst-input-package.md) and current JSON overlay
+record exact A2–A10 user approval in revision-bound sequence2. FY2021–25 each
+pass14/14 only under the approved historical perimeter. CFO-D&A is a labeled
+proxy; complete expense D&A remains unknown. Known restrictions are prominent
+beside selected gross balances; borrowing/claim/pension omissions retain unbounded
+uncertainty. Original values/nulls/audits, alternatives and frozen/pilot artifacts
+persist; MSFT's completed result and Alphabet's accepted FY2024 view are unchanged.
+
+Counts:42 broad evidence-assessed issuers;3 company packages =2 completed
+MSFT/AAPL +1 partial Alphabet;39 broad-only. No complete debt/reinvestment,
+support-class change, Phase1 closure or Phase2 readiness. Alphabet full-history
+review is separately authorized next, not an automatic transfer of assumptions.
+
 ## Current — AAPL five-year source review, nine new judgments pending
 
 [AAPL company package](AAPL-analyst-input-package.md) /

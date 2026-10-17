@@ -1,6 +1,85 @@
 # AAPL — consolidated frozen FY2021–FY2025 analyst-input package
 
-## Current company batch — one consolidated review, new judgments inactive
+## Authoritative current five-year schedule — approved historical perimeter
+
+User explicitly approves **A2–A10 exactly as proposed**. The additive JSON
+`/aapl_history_approval` and `/aapl_current_history` activate those judgments,
+preserving all source facts/nulls, FY2025 approvals and the entire prior review as
+history. **FY2021–FY2025 each pass14/14; AAPL is completed company-wide only for
+the approved historical-input perimeter.** Complete expense-basis D&A, complete
+debt/reinvestment, unrestricted/excess cash, financial/valuation sufficiency and
+Phase1/universe closure are **not** certified. MSFT's completed view is unchanged.
+
+Audit sequence2 at`2026-10-17T15:56:35.868488+00:00`, SHA256
+`f0a91b70b853ec380091a779b227d742c5d1d0aa0add21fdd09e91d39cf96f62`,
+links the unchanged FY2025 sequence1 and exact A2–A10 wording/identities. Source
+commit`d6e0ea51b19a4786a11d816d16c8678f8e7b99ba`, revision
+`61a87d70109b8de1e663b196c78b4a222d1348cd642a236b91d0e9bda0a643cd`.
+Receipt/body, candidates, precision, scope or review changes make approval stale;
+explicit revalidation is required. Earlier decisions/rejections are not rewritten.
+
+USD millions except shares; ordinary source points decimals−6, shares decimals−3.
+Proxy D&A inherits CFO decimals−6, **not** the rounded PP&E expense precision.
+Each current value retains exact source references to the selected annuals,
+contexts, occurrences, typed body digests/receipts and note evidence below.
+
+| Existing family / selected operation | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|---:|---:|
+|Revenue|365,817|394,328|383,285|391,035|416,161|
+|EBIT|108,949|119,437|114,301|123,216|133,050|
+|Approved CFO-D&A **proxy**, not expense D&A|11,284|11,104|11,519|11,445|11,698|
+|Cash PP&E|−11,085|−10,708|−10,959|−9,447|−12,715|
+|Reported movements, already in CFO|7 rows|7 rows|6 rows|6 rows|6 rows|
+|Pure deferred CFO / retained mixed Other|−4,774 /−147|895 /111|excluded, unknown /−2,227|excluded, unknown /−2,266|excluded, unknown /−89|
+|SBC expense proxy once, separate add-back|7,906|9,038|10,833|11,688|12,863|
+|Separate residual operation|excluded/null|excluded/null|excluded/null|excluded/null|excluded/null|
+|Independently reconciled CFO|104,038|122,151|110,543|118,254|111,482|
+|Tax provision / pretax|14,527 /109,207|19,300 /119,103|16,741 /113,736|29,749 /123,485|20,719 /132,729|
+|Gross current financial balances|62,639|48,304|61,555|65,171|54,697|
+|Named financing/no additional adjustment|125,567|121,010|112,112|107,525|99,887|
+|Preferred/NCI/pension; pure-NOL operation|approved omissions; source unknown|same|same|same|same|
+|Dated fiscal-end common shares|16,426,786,000|15,943,425,000|15,550,061,000|15,116,786,000|14,773,260,000|
+|Existing checklist|**14/14**|**14/14**|**14/14**|**14/14**|**14/14**|
+
+**Known restrictions are prominent, not silently omitted:** FY2021–23 total
+restricted marketable17,900/12,700/13,800R lacks a selected current/LT split.
+FY2024 includes cash2,600R and current securities13,200R escrow (the latter's
+location explicitly corroborated by the dated FY2025 comparative). Selected
+FY2024 remains **gross65,171**, not49,371R; that restricted-current alternative
+and all-lease alternatives remain non-default. Gross amounts are **not available
+or excess cash**. Other restrictions/operating reserves remain unknown, including
+FY2025; no presumed zero. LT securities remain separate, no cash aggregation.
+
+The CFO-D&A proxy does not resolve inventory/income/lease timing or amortization
+scope. Complete expense D&A stays null; no subtraction-derived amortization,
+finance-inclusion assumption or additional ROU add-back. Preferred/NCI/pension
+and additional borrowing amounts stay source-null; approved no-adjustment choices
+economically omit potentially undisclosed amounts of **unbounded size**, not
+immateriality findings. Pension evidence is weaker and its disclosed uncertainty
+is explicitly accepted. Current maturities already in term debt are not added
+again; no investment/reinvestment total, interest proxy or tax normalization.
+
+Reported movement rows and independently bound12/12/10/10/10-term CFO displays
+remain the path; supporting NWC is not a prerequisite or another deduction.
+FY2023's53 weeks, comparative regroupings, acquisitions/investing changes and
+FY2024 Ireland charge/FY2025 cash settlement remain accession-specific. Existing
+FY2025 partial operating capital−9,159 is unchanged; no cash/book ΔNWC approval.
+Dated cover/common, EPS denominators and awards stay separate; future tax rates,
+award valuation and forecast dilution remain Phase2 decisions.
+
+Company counts:42 broad evidence assessments;3 company packages = **2 completed
+(MSFT/AAPL)** + **1 partial (Alphabet)**;39 broad-only. No support-class change or
+phase closure. Validation:82 focused tests pass (54.446s), all-three package
+replays, compileall,579 local-path links and diff checks pass. Exact prior
+payload/audit and peer/pilot/frozen preservation, proxy/null/alternative precision,
+restart/stale/tamper checks pass; JSON key-order replay was corrected without
+altering the prior source/review. No full-suite/corpus or requests; details in
+project status.
+
+## Historical company review snapshot — new judgments were then inactive
+
+Pending labels below describe the preserved prior proposal, superseded only by
+the explicit current approval above. They do not override the current schedule.
 
 [Machine companion](aapl-analyst-input-package.json) `/aapl_history_review` adds
 one five-year review to the **unchanged** FY2025 source/proposal/accepted view.

@@ -115,7 +115,7 @@ class AppleHistoryBatchTests(unittest.TestCase):
         self.assertFalse(self.review['phase_closed']);self.assertFalse(self.review['valuation_consumption_approved'])
 
     def test_original_package_audits_peer_views_and_serialization_preserved(self):
-        self.assertTrue({k:v for k,v in self.result.items() if k!='aapl_history_review'}==self.prior,'Prior AAPL approval/facts changed')
+        self.assertTrue({k:v for k,v in self.result.items() if k not in ('aapl_history_review','aapl_history_approval','aapl_current_history')}==self.prior,'Prior AAPL approval/facts changed')
         self.assertTrue(json.loads((ROOT/p.OUTPUT).read_text())==self.result,'Replay differs')
         self.assertTrue(json.loads(json.dumps(self.result))==self.result,'Round trip differs')
         for path in ['docs/company-data-preparation/msft-analyst-input-package.json','docs/company-data-preparation/googl-analyst-input-package.json',p.ACCEPTANCE_PATH]:

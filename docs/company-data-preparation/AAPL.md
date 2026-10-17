@@ -1,5 +1,34 @@
 # AAPL — company data preparation
 
+## Current — approved five-year historical-input perimeter completed
+
+[Authoritative schedule](AAPL-analyst-input-package.md) /
+[current JSON](aapl-analyst-input-package.json) record exact user A2–A10 acceptance,
+sequence2 at2026-10-17T15:56:35.868488+00:00 linking the prior FY2025 audit and
+complete company-review source revision. All five selected FY2021–25 annuals pass
+the unchanged14-family checklist (70/70). Original source facts/nulls, prior
+approval/proposal history, MSFT completion, Alphabet view and frozen/pilot bytes
+are preserved. The earlier pending review remains a historical snapshot.
+
+Selected CFO-D&A11,284/11,104/11,519/11,445/11,698 are **approved proxies**, not
+verified expense D&A; expense D&A remains null. No ROU/finance-overlap assumption
+or amortization plug. Named financing125,567/121,010/112,112/107,525/99,887 has an
+approved no-additional-borrowing adjustment, with source additional borrowing
+unknown/unbounded. Preferred/NCI/pension omissions have the same explicit risk,
+not reported zeros or immateriality. Gross current financial62,639/48,304/61,555/
+65,171/54,697 retains known restrictions prominently: restricted marketable
+17,900/12,700/13,800R in earlier years, FY2024 cash2,600R +current securities13,200R.
+FY2024 alternative49,371R stays non-default; no unrestricted/excess cash claim.
+
+Active path uses reported movements and independently reconciled CFO; complete
+NWC/book delta not required, rows not deducted twice. Source acquisitions,
+53-week FY2023, tax/lease/timing and disclosure limits persist. Only the approved
+historical-input perimeter is completed, not complete debt/reinvestment or Phase2
+readiness. Counts:42 broad assessments,2 completed MSFT/AAPL,1 partial Alphabet,
+39 broad-only. Phase1 stays open. Current validation is in project status.
+
+## Historical review checkpoints below
+
 ## Current — frozen FY2021–FY2025 reviewed together, decisions pending
 
 [One company package](AAPL-analyst-input-package.md) and

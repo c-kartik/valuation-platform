@@ -1,4 +1,4596 @@
 {
+  "aapl_current_history": {
+    "approval_sha256": "f0a91b70b853ec380091a779b227d742c5d1d0aa0add21fdd09e91d39cf96f62",
+    "authoritative_current_view": true,
+    "company_completed_for_approved_historical_perimeter": true,
+    "company_counts": {
+      "broad_assessment_only": 39,
+      "broad_evidence_assessment": 42,
+      "company_analyst_packages": 3,
+      "completed_company_wide_packages": 2,
+      "partial_company_packages": 1
+    },
+    "complete_debt": false,
+    "complete_expense_basis_da": null,
+    "complete_reinvestment": false,
+    "family_slots": 70,
+    "historical_proposal_snapshot": "/aapl_history_review",
+    "passed_family_slots": 70,
+    "periods": [
+      {
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/revenue"
+            ],
+            "existing_approval_reference": null,
+            "field": "revenue",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/ebit"
+            ],
+            "existing_approval_reference": null,
+            "field": "ebit",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/DepreciationDepletionAndAmortization",
+              "/aapl_history_review/periods/0/facts/depreciation_expense"
+            ],
+            "existing_approval_reference": null,
+            "field": "depreciation_amortization",
+            "pending_decisions": [
+              "A2"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+              "/aapl_history_review/periods/0/facts/PaymentsForProceedsFromOtherInvestingActivities",
+              "/aapl_history_review/periods/0/facts/RightofUseAssetsObtainedinExchangeforOperatingandFinanceLeaseLiabilities"
+            ],
+            "existing_approval_reference": null,
+            "field": "cash_capex",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/IncreaseDecreaseInAccountsReceivable",
+              "/aapl_history_review/periods/0/facts/IncreaseDecreaseInInventories",
+              "/aapl_history_review/periods/0/facts/IncreaseDecreaseInOtherReceivables",
+              "/aapl_history_review/periods/0/facts/IncreaseDecreaseInOtherOperatingAssets",
+              "/aapl_history_review/periods/0/facts/IncreaseDecreaseInAccountsPayable",
+              "/aapl_history_review/periods/0/facts/deferred_revenue_movement",
+              "/aapl_history_review/periods/0/facts/IncreaseDecreaseInOtherOperatingLiabilities"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_cash_flow_working_capital_movements",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/deferred_cfo",
+              "/aapl_history_review/periods/0/facts/deferred_federal",
+              "/aapl_history_review/periods/0/facts/deferred_state",
+              "/aapl_history_review/periods/0/facts/deferred_foreign",
+              "/aapl_history_review/periods/0/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "deferred_taxes",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/AllocatedShareBasedCompensationExpense",
+              "/aapl_history_review/periods/0/facts/ShareBasedCompensation"
+            ],
+            "existing_approval_reference": null,
+            "field": "stock_based_compensation",
+            "pending_decisions": [
+              "A3"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "unclassified_cfo_reconciliation_residual",
+            "pending_decisions": [
+              "A9"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/NetCashProvidedByUsedInOperatingActivities"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_cfo",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/IncomeTaxExpenseBenefit",
+              "/aapl_history_review/periods/0/facts/pretax",
+              "/aapl_history_review/periods/0/facts/IncomeTaxesPaidNet"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_tax_context",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/cash",
+              "/aapl_history_review/periods/0/facts/current_securities",
+              "/aapl_history_review/periods/0/facts/long_securities",
+              "/aapl_history_review/periods/0/facts/financial_parent"
+            ],
+            "existing_approval_reference": null,
+            "field": "cash_investment_components",
+            "pending_decisions": [
+              "A5"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/cp",
+              "/aapl_history_review/periods/0/facts/current_debt",
+              "/aapl_history_review/periods/0/facts/long_debt",
+              "/aapl_history_review/periods/0/facts/finance_total",
+              "/aapl_history_review/periods/0/facts/op_total"
+            ],
+            "existing_approval_reference": null,
+            "field": "debt_lease_components",
+            "pending_decisions": [
+              "A4"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/equity",
+              "/aapl_history_review/periods/0/facts/common_capital",
+              "/aapl_history_review/periods/0/facts/retained",
+              "/aapl_history_review/periods/0/facts/oci",
+              "/aapl_history_review/periods/0/facts/tax_credit_dta"
+            ],
+            "existing_approval_reference": null,
+            "field": "other_equity_bridge_claims_assets",
+            "pending_decisions": [
+              "A6",
+              "A7",
+              "A8"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/0/facts/year_end_common",
+              "/aapl_history_review/periods/0/facts/rsu"
+            ],
+            "existing_approval_reference": null,
+            "field": "point_in_time_shares",
+            "pending_decisions": [
+              "A10"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          }
+        ],
+        "complete_expense_basis_da": null,
+        "identity": {
+          "accession": "0000320193-21-000105",
+          "annual_end": "2021-09-25",
+          "annual_start": "2020-09-27",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "as_of": null,
+            "multiplier": -1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "11085000000",
+            "source_reference": "/aapl_history_review/periods/0/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+            "unit": "USD",
+            "value": "-11085000000"
+          },
+          "cash_investment_components": {
+            "alternative_reference": null,
+            "known_restriction_scope_support": null,
+            "known_restrictions_reference": "/aapl_history_review/periods/0/note_observations",
+            "long_term": {
+              "as_of": "2021-09-25",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "127877000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/long_securities",
+              "unit": "USD",
+              "value": "127877000000"
+            },
+            "operating_reserve": null,
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "62639",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "current_financial",
+              "label": "current_financial",
+              "limitations": [],
+              "operands": [
+                "cash",
+                "current_securities"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "current_securities"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/0/calculations/0",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "62639000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "all_lease_alternative": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "default": false,
+              "display_unit": "USD millions",
+              "display_value": "136522",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "all_lease_alternative",
+              "label": "all_lease_alternative",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total",
+                "op_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "selected": false,
+              "source_dates": [
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "finance_total"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "op_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/0/calculations/4",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "136522000000"
+            },
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "no_additional_adjustment": "Approved analyst assumption; omitted borrowing unbounded, not reported zero",
+            "operating_lease": {
+              "as_of": "2021-09-25",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "10955000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/op_total",
+              "unit": "USD",
+              "value": "10955000000"
+            },
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "125567",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": null,
+                  "as_of": "2021-09-25",
+                  "operand": "finance_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/0/calculations/3",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "125567000000"
+            }
+          },
+          "deferred_taxes": {
+            "deferred_provision": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "-4774",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "deferred_provision",
+              "label": "deferred_provision",
+              "limitations": [],
+              "operands": [
+                "deferred_federal",
+                "deferred_state",
+                "deferred_foreign"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": "2020-09-27",
+                  "as_of": null,
+                  "operand": "deferred_federal"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": "2020-09-27",
+                  "as_of": null,
+                  "operand": "deferred_state"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": "2020-09-27",
+                  "as_of": null,
+                  "operand": "deferred_foreign"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/0/calculations/7",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "-4774000000"
+            },
+            "mixed_other": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "147000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/OtherNoncashIncomeExpense",
+              "unit": "USD",
+              "value": "-147000000"
+            },
+            "selected": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "-4774000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/deferred_cfo",
+              "unit": "USD",
+              "value": "-4774000000"
+            },
+            "separate_pure_cfo_operation": "reported_row"
+          },
+          "depreciation_amortization": {
+            "accepted": true,
+            "approval_reference": "/aapl_history_approval",
+            "author": "Analyst preparation review, pending user approval",
+            "expense_basis_da": null,
+            "finance_amortization_inclusion_assumption": null,
+            "inventory_lease_timing_bridge": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "rationale": "Use explicitly displayed depreciation/amortization cash-reconciliation amount as a historical noncash-cost proxy, NOT verified complete income-recognized D&A. No balancing subtraction or extra ROU add-back.",
+            "recorded_at_utc": "2026-10-17T15:33:27+00:00",
+            "source_reference": "/aapl_history_review/periods/0/facts/DepreciationDepletionAndAmortization",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "unit": "USD",
+            "value_usd": "11284000000"
+          },
+          "ebit": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "108949000000",
+            "source_reference": "/aapl_history_review/periods/0/facts/ebit",
+            "unit": "USD",
+            "value": "108949000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "nci": null,
+            "no_additional_adjustments": "Approved analyst omissions, potentially undisclosed amounts unbounded, no immateriality finding",
+            "pension": null,
+            "preferred": null,
+            "pure_nol": null,
+            "source_reference": "/aapl_history_review/periods/0/partition_checks",
+            "tax_credit_dta": {
+              "as_of": "2021-09-25",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "4262000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/tax_credit_dta",
+              "unit": "USD",
+              "value": "4262000000"
+            }
+          },
+          "point_in_time_shares": {
+            "aggregation_or_dilution_approved": false,
+            "awards": {
+              "as_of": "2021-09-25",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "240427000",
+              "source_reference": "/aapl_history_review/periods/0/facts/rsu",
+              "unit": "shares",
+              "value": "240427000"
+            },
+            "cover": [
+              {
+                "as_of": "2021-10-15",
+                "multiplier": 1,
+                "origin": "reported",
+                "precision": "-3",
+                "raw_value": "16406397000",
+                "source_reference": "/aapl_history_review/periods/0/facts/cover_common_2021-10-15",
+                "unit": "shares",
+                "value": "16406397000"
+              }
+            ],
+            "selected": {
+              "as_of": "2021-09-25",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "16426786000",
+              "source_reference": "/aapl_history_review/periods/0/facts/year_end_common",
+              "unit": "shares",
+              "value": "16426786000"
+            },
+            "weighted_basic": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "16701272000",
+              "source_reference": "/aapl_history_review/periods/0/facts/weighted_basic",
+              "unit": "shares",
+              "value": "16701272000"
+            },
+            "weighted_diluted": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "16864919000",
+              "source_reference": "/aapl_history_review/periods/0/facts/weighted_diluted",
+              "unit": "shares",
+              "value": "16864919000"
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "rows": [
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-10125000000",
+                "fact": "IncreaseDecreaseInAccountsReceivable",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-2642000000",
+                "fact": "IncreaseDecreaseInInventories",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-3903000000",
+                "fact": "IncreaseDecreaseInOtherReceivables",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-8042000000",
+                "fact": "IncreaseDecreaseInOtherOperatingAssets",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "12326000000",
+                "fact": "IncreaseDecreaseInAccountsPayable",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "1676000000",
+                "fact": "deferred_revenue_movement",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "5799000000",
+                "fact": "IncreaseDecreaseInOtherOperatingLiabilities",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              }
+            ],
+            "source_reference": "/aapl_history_review/periods/0/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "104038000000",
+            "source_reference": "/aapl_history_review/periods/0/facts/NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "value": "104038000000"
+          },
+          "reported_tax_context": {
+            "cash_taxes": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "25385000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/IncomeTaxesPaidNet",
+              "unit": "USD",
+              "value": "-25385000000"
+            },
+            "future_rate_approved": false,
+            "pretax": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "109207000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/pretax",
+              "unit": "USD",
+              "value": "109207000000"
+            },
+            "provision": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "14527000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/IncomeTaxExpenseBenefit",
+              "unit": "USD",
+              "value": "14527000000"
+            },
+            "reported_etr": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "pure",
+              "display_value": "0.1330226084408508612085305886985267",
+              "evidence_label": "derived_calculation",
+              "formula": "DIVIDE",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "reported_etr",
+              "label": "reported_etr",
+              "limitations": [],
+              "operands": [
+                "IncomeTaxExpenseBenefit",
+                "pretax"
+              ],
+              "origin": "derived",
+              "policy": "annual_reported_effective_tax_rate_v1",
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": "2020-09-27",
+                  "as_of": null,
+                  "operand": "IncomeTaxExpenseBenefit"
+                },
+                {
+                  "annual_end": "2021-09-25",
+                  "annual_start": "2020-09-27",
+                  "as_of": null,
+                  "operand": "pretax"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/0/calculations/6",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "pure",
+              "value": "0.1330226084408508612085305886985267"
+            }
+          },
+          "revenue": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "365817000000",
+            "source_reference": "/aapl_history_review/periods/0/facts/revenue",
+            "unit": "USD",
+            "value": "365817000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "7906000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/ShareBasedCompensation",
+              "unit": "USD",
+              "value": "7906000000"
+            },
+            "count_once": true,
+            "origin": "proxy",
+            "selected": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "7906000000",
+              "source_reference": "/aapl_history_review/periods/0/facts/AllocatedShareBasedCompensationExpense",
+              "unit": "USD",
+              "value": "7906000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "value": null
+          }
+        },
+        "remaining_essential_inputs": [],
+        "sources_reference": "/aapl_history_review/periods/0/sources",
+        "supporting_investment_reference": "/aapl_history_review/periods/0/facts",
+        "supporting_unknowns": {
+          "additional_borrowing": null,
+          "capital_creditors": null,
+          "complete_expense_basis_da": null,
+          "complete_lease_cash": null,
+          "employee_accrual": null,
+          "finance_lease_interest_cash": null,
+          "finance_lease_principal_cash": null,
+          "nci": null,
+          "operating_reserve": null,
+          "pension_funded_status": null,
+          "preferred": null,
+          "pure_nol_dta": null,
+          "unallocated_other_investing": null
+        }
+      },
+      {
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/revenue"
+            ],
+            "existing_approval_reference": null,
+            "field": "revenue",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/ebit"
+            ],
+            "existing_approval_reference": null,
+            "field": "ebit",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/DepreciationDepletionAndAmortization",
+              "/aapl_history_review/periods/1/facts/depreciation_expense"
+            ],
+            "existing_approval_reference": null,
+            "field": "depreciation_amortization",
+            "pending_decisions": [
+              "A2"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+              "/aapl_history_review/periods/1/facts/PaymentsForProceedsFromOtherInvestingActivities",
+              "/aapl_history_review/periods/1/facts/RightofUseAssetsObtainedinExchangeforOperatingandFinanceLeaseLiabilities"
+            ],
+            "existing_approval_reference": null,
+            "field": "cash_capex",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/IncreaseDecreaseInAccountsReceivable",
+              "/aapl_history_review/periods/1/facts/IncreaseDecreaseInInventories",
+              "/aapl_history_review/periods/1/facts/IncreaseDecreaseInOtherReceivables",
+              "/aapl_history_review/periods/1/facts/IncreaseDecreaseInOtherOperatingAssets",
+              "/aapl_history_review/periods/1/facts/IncreaseDecreaseInAccountsPayable",
+              "/aapl_history_review/periods/1/facts/deferred_revenue_movement",
+              "/aapl_history_review/periods/1/facts/IncreaseDecreaseInOtherOperatingLiabilities"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_cash_flow_working_capital_movements",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/deferred_cfo",
+              "/aapl_history_review/periods/1/facts/deferred_federal",
+              "/aapl_history_review/periods/1/facts/deferred_state",
+              "/aapl_history_review/periods/1/facts/deferred_foreign",
+              "/aapl_history_review/periods/1/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "deferred_taxes",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/AllocatedShareBasedCompensationExpense",
+              "/aapl_history_review/periods/1/facts/ShareBasedCompensation"
+            ],
+            "existing_approval_reference": null,
+            "field": "stock_based_compensation",
+            "pending_decisions": [
+              "A3"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "unclassified_cfo_reconciliation_residual",
+            "pending_decisions": [
+              "A9"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/NetCashProvidedByUsedInOperatingActivities"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_cfo",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/IncomeTaxExpenseBenefit",
+              "/aapl_history_review/periods/1/facts/pretax",
+              "/aapl_history_review/periods/1/facts/IncomeTaxesPaidNet"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_tax_context",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/cash",
+              "/aapl_history_review/periods/1/facts/current_securities",
+              "/aapl_history_review/periods/1/facts/long_securities",
+              "/aapl_history_review/periods/1/facts/financial_parent"
+            ],
+            "existing_approval_reference": null,
+            "field": "cash_investment_components",
+            "pending_decisions": [
+              "A5"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/cp",
+              "/aapl_history_review/periods/1/facts/current_debt",
+              "/aapl_history_review/periods/1/facts/long_debt",
+              "/aapl_history_review/periods/1/facts/finance_total",
+              "/aapl_history_review/periods/1/facts/op_total"
+            ],
+            "existing_approval_reference": null,
+            "field": "debt_lease_components",
+            "pending_decisions": [
+              "A4"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/equity",
+              "/aapl_history_review/periods/1/facts/common_capital",
+              "/aapl_history_review/periods/1/facts/retained",
+              "/aapl_history_review/periods/1/facts/oci",
+              "/aapl_history_review/periods/1/facts/tax_credit_dta"
+            ],
+            "existing_approval_reference": null,
+            "field": "other_equity_bridge_claims_assets",
+            "pending_decisions": [
+              "A6",
+              "A7",
+              "A8"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/1/facts/year_end_common",
+              "/aapl_history_review/periods/1/facts/rsu"
+            ],
+            "existing_approval_reference": null,
+            "field": "point_in_time_shares",
+            "pending_decisions": [
+              "A10"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          }
+        ],
+        "complete_expense_basis_da": null,
+        "identity": {
+          "accession": "0000320193-22-000108",
+          "annual_end": "2022-09-24",
+          "annual_start": "2021-09-26",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "as_of": null,
+            "multiplier": -1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "10708000000",
+            "source_reference": "/aapl_history_review/periods/1/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+            "unit": "USD",
+            "value": "-10708000000"
+          },
+          "cash_investment_components": {
+            "alternative_reference": null,
+            "known_restriction_scope_support": null,
+            "known_restrictions_reference": "/aapl_history_review/periods/1/note_observations",
+            "long_term": {
+              "as_of": "2022-09-24",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "120805000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/long_securities",
+              "unit": "USD",
+              "value": "120805000000"
+            },
+            "operating_reserve": null,
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "48304",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "current_financial",
+              "label": "current_financial",
+              "limitations": [],
+              "operands": [
+                "cash",
+                "current_securities"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "current_securities"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/1/calculations/0",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "48304000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "all_lease_alternative": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "default": false,
+              "display_unit": "USD millions",
+              "display_value": "132480",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "all_lease_alternative",
+              "label": "all_lease_alternative",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total",
+                "op_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "selected": false,
+              "source_dates": [
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "finance_total"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "op_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/1/calculations/4",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "132480000000"
+            },
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "no_additional_adjustment": "Approved analyst assumption; omitted borrowing unbounded, not reported zero",
+            "operating_lease": {
+              "as_of": "2022-09-24",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "11470000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/op_total",
+              "unit": "USD",
+              "value": "11470000000"
+            },
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "121010",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": null,
+                  "as_of": "2022-09-24",
+                  "operand": "finance_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/1/calculations/3",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "121010000000"
+            }
+          },
+          "deferred_taxes": {
+            "deferred_provision": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "895",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "deferred_provision",
+              "label": "deferred_provision",
+              "limitations": [],
+              "operands": [
+                "deferred_federal",
+                "deferred_state",
+                "deferred_foreign"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": "2021-09-26",
+                  "as_of": null,
+                  "operand": "deferred_federal"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": "2021-09-26",
+                  "as_of": null,
+                  "operand": "deferred_state"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": "2021-09-26",
+                  "as_of": null,
+                  "operand": "deferred_foreign"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/1/calculations/7",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "895000000"
+            },
+            "mixed_other": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "-111000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/OtherNoncashIncomeExpense",
+              "unit": "USD",
+              "value": "111000000"
+            },
+            "selected": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "895000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/deferred_cfo",
+              "unit": "USD",
+              "value": "895000000"
+            },
+            "separate_pure_cfo_operation": "reported_row"
+          },
+          "depreciation_amortization": {
+            "accepted": true,
+            "approval_reference": "/aapl_history_approval",
+            "author": "Analyst preparation review, pending user approval",
+            "expense_basis_da": null,
+            "finance_amortization_inclusion_assumption": null,
+            "inventory_lease_timing_bridge": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "rationale": "Use explicitly displayed depreciation/amortization cash-reconciliation amount as a historical noncash-cost proxy, NOT verified complete income-recognized D&A. No balancing subtraction or extra ROU add-back.",
+            "recorded_at_utc": "2026-10-17T15:33:27+00:00",
+            "source_reference": "/aapl_history_review/periods/1/facts/DepreciationDepletionAndAmortization",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "unit": "USD",
+            "value_usd": "11104000000"
+          },
+          "ebit": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "119437000000",
+            "source_reference": "/aapl_history_review/periods/1/facts/ebit",
+            "unit": "USD",
+            "value": "119437000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "nci": null,
+            "no_additional_adjustments": "Approved analyst omissions, potentially undisclosed amounts unbounded, no immateriality finding",
+            "pension": null,
+            "preferred": null,
+            "pure_nol": null,
+            "source_reference": "/aapl_history_review/periods/1/partition_checks",
+            "tax_credit_dta": {
+              "as_of": "2022-09-24",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "6962000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/tax_credit_dta",
+              "unit": "USD",
+              "value": "6962000000"
+            }
+          },
+          "point_in_time_shares": {
+            "aggregation_or_dilution_approved": false,
+            "awards": {
+              "as_of": "2022-09-24",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "201501000",
+              "source_reference": "/aapl_history_review/periods/1/facts/rsu",
+              "unit": "shares",
+              "value": "201501000"
+            },
+            "cover": [
+              {
+                "as_of": "2022-10-14",
+                "multiplier": 1,
+                "origin": "reported",
+                "precision": "-3",
+                "raw_value": "15908118000",
+                "source_reference": "/aapl_history_review/periods/1/facts/cover_common_2022-10-14",
+                "unit": "shares",
+                "value": "15908118000"
+              }
+            ],
+            "selected": {
+              "as_of": "2022-09-24",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "15943425000",
+              "source_reference": "/aapl_history_review/periods/1/facts/year_end_common",
+              "unit": "shares",
+              "value": "15943425000"
+            },
+            "weighted_basic": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "16215963000",
+              "source_reference": "/aapl_history_review/periods/1/facts/weighted_basic",
+              "unit": "shares",
+              "value": "16215963000"
+            },
+            "weighted_diluted": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "16325819000",
+              "source_reference": "/aapl_history_review/periods/1/facts/weighted_diluted",
+              "unit": "shares",
+              "value": "16325819000"
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "rows": [
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-1823000000",
+                "fact": "IncreaseDecreaseInAccountsReceivable",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "1484000000",
+                "fact": "IncreaseDecreaseInInventories",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-7520000000",
+                "fact": "IncreaseDecreaseInOtherReceivables",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-6499000000",
+                "fact": "IncreaseDecreaseInOtherOperatingAssets",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "9448000000",
+                "fact": "IncreaseDecreaseInAccountsPayable",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "478000000",
+                "fact": "deferred_revenue_movement",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "5632000000",
+                "fact": "IncreaseDecreaseInOtherOperatingLiabilities",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              }
+            ],
+            "source_reference": "/aapl_history_review/periods/1/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "122151000000",
+            "source_reference": "/aapl_history_review/periods/1/facts/NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "value": "122151000000"
+          },
+          "reported_tax_context": {
+            "cash_taxes": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "19573000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/IncomeTaxesPaidNet",
+              "unit": "USD",
+              "value": "-19573000000"
+            },
+            "future_rate_approved": false,
+            "pretax": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "119103000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/pretax",
+              "unit": "USD",
+              "value": "119103000000"
+            },
+            "provision": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "19300000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/IncomeTaxExpenseBenefit",
+              "unit": "USD",
+              "value": "19300000000"
+            },
+            "reported_etr": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "pure",
+              "display_value": "0.1620446168442440576643745329672636",
+              "evidence_label": "derived_calculation",
+              "formula": "DIVIDE",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "reported_etr",
+              "label": "reported_etr",
+              "limitations": [],
+              "operands": [
+                "IncomeTaxExpenseBenefit",
+                "pretax"
+              ],
+              "origin": "derived",
+              "policy": "annual_reported_effective_tax_rate_v1",
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": "2021-09-26",
+                  "as_of": null,
+                  "operand": "IncomeTaxExpenseBenefit"
+                },
+                {
+                  "annual_end": "2022-09-24",
+                  "annual_start": "2021-09-26",
+                  "as_of": null,
+                  "operand": "pretax"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/1/calculations/6",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "pure",
+              "value": "0.1620446168442440576643745329672636"
+            }
+          },
+          "revenue": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "394328000000",
+            "source_reference": "/aapl_history_review/periods/1/facts/revenue",
+            "unit": "USD",
+            "value": "394328000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "9038000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/ShareBasedCompensation",
+              "unit": "USD",
+              "value": "9038000000"
+            },
+            "count_once": true,
+            "origin": "proxy",
+            "selected": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "9038000000",
+              "source_reference": "/aapl_history_review/periods/1/facts/AllocatedShareBasedCompensationExpense",
+              "unit": "USD",
+              "value": "9038000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "value": null
+          }
+        },
+        "remaining_essential_inputs": [],
+        "sources_reference": "/aapl_history_review/periods/1/sources",
+        "supporting_investment_reference": "/aapl_history_review/periods/1/facts",
+        "supporting_unknowns": {
+          "additional_borrowing": null,
+          "capital_creditors": null,
+          "complete_expense_basis_da": null,
+          "complete_lease_cash": null,
+          "employee_accrual": null,
+          "finance_lease_interest_cash": null,
+          "finance_lease_principal_cash": null,
+          "nci": null,
+          "operating_reserve": null,
+          "pension_funded_status": null,
+          "preferred": null,
+          "pure_nol_dta": null,
+          "unallocated_other_investing": null
+        }
+      },
+      {
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/revenue"
+            ],
+            "existing_approval_reference": null,
+            "field": "revenue",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/ebit"
+            ],
+            "existing_approval_reference": null,
+            "field": "ebit",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/DepreciationDepletionAndAmortization",
+              "/aapl_history_review/periods/2/facts/depreciation_expense"
+            ],
+            "existing_approval_reference": null,
+            "field": "depreciation_amortization",
+            "pending_decisions": [
+              "A2"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+              "/aapl_history_review/periods/2/facts/PaymentsForProceedsFromOtherInvestingActivities",
+              "/aapl_history_review/periods/2/facts/RightofUseAssetsObtainedinExchangeforOperatingandFinanceLeaseLiabilities"
+            ],
+            "existing_approval_reference": null,
+            "field": "cash_capex",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/IncreaseDecreaseInAccountsReceivable",
+              "/aapl_history_review/periods/2/facts/IncreaseDecreaseInInventories",
+              "/aapl_history_review/periods/2/facts/IncreaseDecreaseInOtherReceivables",
+              "/aapl_history_review/periods/2/facts/IncreaseDecreaseInOtherOperatingAssets",
+              "/aapl_history_review/periods/2/facts/IncreaseDecreaseInAccountsPayable",
+              "/aapl_history_review/periods/2/facts/IncreaseDecreaseInOtherOperatingLiabilities"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_cash_flow_working_capital_movements",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/deferred_federal",
+              "/aapl_history_review/periods/2/facts/deferred_state",
+              "/aapl_history_review/periods/2/facts/deferred_foreign",
+              "/aapl_history_review/periods/2/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "deferred_taxes",
+            "pending_decisions": [
+              "A8"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/AllocatedShareBasedCompensationExpense",
+              "/aapl_history_review/periods/2/facts/ShareBasedCompensation"
+            ],
+            "existing_approval_reference": null,
+            "field": "stock_based_compensation",
+            "pending_decisions": [
+              "A3"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "unclassified_cfo_reconciliation_residual",
+            "pending_decisions": [
+              "A9"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/NetCashProvidedByUsedInOperatingActivities"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_cfo",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/IncomeTaxExpenseBenefit",
+              "/aapl_history_review/periods/2/facts/pretax",
+              "/aapl_history_review/periods/2/facts/IncomeTaxesPaidNet"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_tax_context",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/cash",
+              "/aapl_history_review/periods/2/facts/current_securities",
+              "/aapl_history_review/periods/2/facts/long_securities",
+              "/aapl_history_review/periods/2/facts/financial_parent"
+            ],
+            "existing_approval_reference": null,
+            "field": "cash_investment_components",
+            "pending_decisions": [
+              "A5"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/cp",
+              "/aapl_history_review/periods/2/facts/current_debt",
+              "/aapl_history_review/periods/2/facts/long_debt",
+              "/aapl_history_review/periods/2/facts/finance_total",
+              "/aapl_history_review/periods/2/facts/op_total"
+            ],
+            "existing_approval_reference": null,
+            "field": "debt_lease_components",
+            "pending_decisions": [
+              "A4"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/equity",
+              "/aapl_history_review/periods/2/facts/common_capital",
+              "/aapl_history_review/periods/2/facts/retained",
+              "/aapl_history_review/periods/2/facts/oci",
+              "/aapl_history_review/periods/2/facts/tax_credit_dta"
+            ],
+            "existing_approval_reference": null,
+            "field": "other_equity_bridge_claims_assets",
+            "pending_decisions": [
+              "A6",
+              "A7",
+              "A8"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/2/facts/year_end_common",
+              "/aapl_history_review/periods/2/facts/rsu"
+            ],
+            "existing_approval_reference": null,
+            "field": "point_in_time_shares",
+            "pending_decisions": [
+              "A10"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          }
+        ],
+        "complete_expense_basis_da": null,
+        "identity": {
+          "accession": "0000320193-23-000106",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-09-25",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "as_of": null,
+            "multiplier": -1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "10959000000",
+            "source_reference": "/aapl_history_review/periods/2/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+            "unit": "USD",
+            "value": "-10959000000"
+          },
+          "cash_investment_components": {
+            "alternative_reference": null,
+            "known_restriction_scope_support": null,
+            "known_restrictions_reference": "/aapl_history_review/periods/2/note_observations",
+            "long_term": {
+              "as_of": "2023-09-30",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "100544000000",
+              "source_reference": "/aapl_history_review/periods/2/facts/long_securities",
+              "unit": "USD",
+              "value": "100544000000"
+            },
+            "operating_reserve": null,
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "61555",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "current_financial",
+              "label": "current_financial",
+              "limitations": [],
+              "operands": [
+                "cash",
+                "current_securities"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "current_securities"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/2/calculations/0",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "61555000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "all_lease_alternative": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "default": false,
+              "display_unit": "USD millions",
+              "display_value": "123930",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "all_lease_alternative",
+              "label": "all_lease_alternative",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total",
+                "op_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "selected": false,
+              "source_dates": [
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "finance_total"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "op_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/2/calculations/4",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "123930000000"
+            },
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "no_additional_adjustment": "Approved analyst assumption; omitted borrowing unbounded, not reported zero",
+            "operating_lease": {
+              "as_of": "2023-09-30",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "11818000000",
+              "source_reference": "/aapl_history_review/periods/2/facts/op_total",
+              "unit": "USD",
+              "value": "11818000000"
+            },
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "112112",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": null,
+                  "as_of": "2023-09-30",
+                  "operand": "finance_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/2/calculations/3",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "112112000000"
+            }
+          },
+          "deferred_taxes": {
+            "deferred_provision": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "-3024",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "deferred_provision",
+              "label": "deferred_provision",
+              "limitations": [],
+              "operands": [
+                "deferred_federal",
+                "deferred_state",
+                "deferred_foreign"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": "2022-09-25",
+                  "as_of": null,
+                  "operand": "deferred_federal"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": "2022-09-25",
+                  "as_of": null,
+                  "operand": "deferred_state"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": "2022-09-25",
+                  "as_of": null,
+                  "operand": "deferred_foreign"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/2/calculations/7",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "-3024000000"
+            },
+            "mixed_other": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "2227000000",
+              "source_reference": "/aapl_history_review/periods/2/facts/OtherNoncashIncomeExpense",
+              "unit": "USD",
+              "value": "-2227000000"
+            },
+            "selected": null,
+            "separate_pure_cfo_operation": "APPROVED_EXCLUSION_UNKNOWN_COMPONENT"
+          },
+          "depreciation_amortization": {
+            "accepted": true,
+            "approval_reference": "/aapl_history_approval",
+            "author": "Analyst preparation review, pending user approval",
+            "expense_basis_da": null,
+            "finance_amortization_inclusion_assumption": null,
+            "inventory_lease_timing_bridge": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "rationale": "Use explicitly displayed depreciation/amortization cash-reconciliation amount as a historical noncash-cost proxy, NOT verified complete income-recognized D&A. No balancing subtraction or extra ROU add-back.",
+            "recorded_at_utc": "2026-10-17T15:33:27+00:00",
+            "source_reference": "/aapl_history_review/periods/2/facts/DepreciationDepletionAndAmortization",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "unit": "USD",
+            "value_usd": "11519000000"
+          },
+          "ebit": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "114301000000",
+            "source_reference": "/aapl_history_review/periods/2/facts/ebit",
+            "unit": "USD",
+            "value": "114301000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "nci": null,
+            "no_additional_adjustments": "Approved analyst omissions, potentially undisclosed amounts unbounded, no immateriality finding",
+            "pension": null,
+            "preferred": null,
+            "pure_nol": null,
+            "source_reference": "/aapl_history_review/periods/2/partition_checks",
+            "tax_credit_dta": {
+              "as_of": "2023-09-30",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "8302000000",
+              "source_reference": "/aapl_history_review/periods/2/facts/tax_credit_dta",
+              "unit": "USD",
+              "value": "8302000000"
+            }
+          },
+          "point_in_time_shares": {
+            "aggregation_or_dilution_approved": false,
+            "awards": {
+              "as_of": "2023-09-30",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "180247000",
+              "source_reference": "/aapl_history_review/periods/2/facts/rsu",
+              "unit": "shares",
+              "value": "180247000"
+            },
+            "cover": [
+              {
+                "as_of": "2023-10-20",
+                "multiplier": 1,
+                "origin": "reported",
+                "precision": "-3",
+                "raw_value": "15552752000",
+                "source_reference": "/aapl_history_review/periods/2/facts/cover_common_2023-10-20",
+                "unit": "shares",
+                "value": "15552752000"
+              }
+            ],
+            "selected": {
+              "as_of": "2023-09-30",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "15550061000",
+              "source_reference": "/aapl_history_review/periods/2/facts/year_end_common",
+              "unit": "shares",
+              "value": "15550061000"
+            },
+            "weighted_basic": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "15744231000",
+              "source_reference": "/aapl_history_review/periods/2/facts/weighted_basic",
+              "unit": "shares",
+              "value": "15744231000"
+            },
+            "weighted_diluted": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "15812547000",
+              "source_reference": "/aapl_history_review/periods/2/facts/weighted_diluted",
+              "unit": "shares",
+              "value": "15812547000"
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "rows": [
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-1688000000",
+                "fact": "IncreaseDecreaseInAccountsReceivable",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-1618000000",
+                "fact": "IncreaseDecreaseInInventories",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "1271000000",
+                "fact": "IncreaseDecreaseInOtherReceivables",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-5684000000",
+                "fact": "IncreaseDecreaseInOtherOperatingAssets",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-1889000000",
+                "fact": "IncreaseDecreaseInAccountsPayable",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "3031000000",
+                "fact": "IncreaseDecreaseInOtherOperatingLiabilities",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              }
+            ],
+            "source_reference": "/aapl_history_review/periods/2/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "110543000000",
+            "source_reference": "/aapl_history_review/periods/2/facts/NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "value": "110543000000"
+          },
+          "reported_tax_context": {
+            "cash_taxes": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "18679000000",
+              "source_reference": "/aapl_history_review/periods/2/facts/IncomeTaxesPaidNet",
+              "unit": "USD",
+              "value": "-18679000000"
+            },
+            "future_rate_approved": false,
+            "pretax": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "113736000000",
+              "source_reference": "/aapl_history_review/periods/2/facts/pretax",
+              "unit": "USD",
+              "value": "113736000000"
+            },
+            "provision": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "16741000000",
+              "source_reference": "/aapl_history_review/periods/2/facts/IncomeTaxExpenseBenefit",
+              "unit": "USD",
+              "value": "16741000000"
+            },
+            "reported_etr": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "pure",
+              "display_value": "0.1471917422803685728353379756629387",
+              "evidence_label": "derived_calculation",
+              "formula": "DIVIDE",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "reported_etr",
+              "label": "reported_etr",
+              "limitations": [],
+              "operands": [
+                "IncomeTaxExpenseBenefit",
+                "pretax"
+              ],
+              "origin": "derived",
+              "policy": "annual_reported_effective_tax_rate_v1",
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": "2022-09-25",
+                  "as_of": null,
+                  "operand": "IncomeTaxExpenseBenefit"
+                },
+                {
+                  "annual_end": "2023-09-30",
+                  "annual_start": "2022-09-25",
+                  "as_of": null,
+                  "operand": "pretax"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/2/calculations/6",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "pure",
+              "value": "0.1471917422803685728353379756629387"
+            }
+          },
+          "revenue": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "383285000000",
+            "source_reference": "/aapl_history_review/periods/2/facts/revenue",
+            "unit": "USD",
+            "value": "383285000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "10833000000",
+              "source_reference": "/aapl_history_review/periods/2/facts/ShareBasedCompensation",
+              "unit": "USD",
+              "value": "10833000000"
+            },
+            "count_once": true,
+            "origin": "proxy",
+            "selected": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "10833000000",
+              "source_reference": "/aapl_history_review/periods/2/facts/AllocatedShareBasedCompensationExpense",
+              "unit": "USD",
+              "value": "10833000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "value": null
+          }
+        },
+        "remaining_essential_inputs": [],
+        "sources_reference": "/aapl_history_review/periods/2/sources",
+        "supporting_investment_reference": "/aapl_history_review/periods/2/facts",
+        "supporting_unknowns": {
+          "additional_borrowing": null,
+          "capital_creditors": null,
+          "complete_expense_basis_da": null,
+          "complete_lease_cash": null,
+          "employee_accrual": null,
+          "finance_lease_interest_cash": null,
+          "finance_lease_principal_cash": null,
+          "nci": null,
+          "operating_reserve": null,
+          "pension_funded_status": null,
+          "preferred": null,
+          "pure_nol_dta": null,
+          "unallocated_other_investing": null
+        }
+      },
+      {
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/revenue"
+            ],
+            "existing_approval_reference": null,
+            "field": "revenue",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/ebit"
+            ],
+            "existing_approval_reference": null,
+            "field": "ebit",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/DepreciationDepletionAndAmortization",
+              "/aapl_history_review/periods/3/facts/depreciation_expense"
+            ],
+            "existing_approval_reference": null,
+            "field": "depreciation_amortization",
+            "pending_decisions": [
+              "A2"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+              "/aapl_history_review/periods/3/facts/PaymentsForProceedsFromOtherInvestingActivities",
+              "/aapl_history_review/periods/3/facts/RightofUseAssetsObtainedinExchangeforOperatingandFinanceLeaseLiabilities"
+            ],
+            "existing_approval_reference": null,
+            "field": "cash_capex",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/IncreaseDecreaseInAccountsReceivable",
+              "/aapl_history_review/periods/3/facts/IncreaseDecreaseInInventories",
+              "/aapl_history_review/periods/3/facts/IncreaseDecreaseInOtherReceivables",
+              "/aapl_history_review/periods/3/facts/IncreaseDecreaseInOtherOperatingAssets",
+              "/aapl_history_review/periods/3/facts/IncreaseDecreaseInAccountsPayable",
+              "/aapl_history_review/periods/3/facts/IncreaseDecreaseInOtherOperatingLiabilities"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_cash_flow_working_capital_movements",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/deferred_federal",
+              "/aapl_history_review/periods/3/facts/deferred_state",
+              "/aapl_history_review/periods/3/facts/deferred_foreign",
+              "/aapl_history_review/periods/3/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "deferred_taxes",
+            "pending_decisions": [
+              "A8"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/AllocatedShareBasedCompensationExpense",
+              "/aapl_history_review/periods/3/facts/ShareBasedCompensation"
+            ],
+            "existing_approval_reference": null,
+            "field": "stock_based_compensation",
+            "pending_decisions": [
+              "A3"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "unclassified_cfo_reconciliation_residual",
+            "pending_decisions": [
+              "A9"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/NetCashProvidedByUsedInOperatingActivities"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_cfo",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/IncomeTaxExpenseBenefit",
+              "/aapl_history_review/periods/3/facts/pretax",
+              "/aapl_history_review/periods/3/facts/IncomeTaxesPaidNet"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_tax_context",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/cash",
+              "/aapl_history_review/periods/3/facts/current_securities",
+              "/aapl_history_review/periods/3/facts/long_securities",
+              "/aapl_history_review/periods/3/facts/financial_parent"
+            ],
+            "existing_approval_reference": null,
+            "field": "cash_investment_components",
+            "pending_decisions": [
+              "A5"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/cp",
+              "/aapl_history_review/periods/3/facts/current_debt",
+              "/aapl_history_review/periods/3/facts/long_debt",
+              "/aapl_history_review/periods/3/facts/finance_total",
+              "/aapl_history_review/periods/3/facts/op_total"
+            ],
+            "existing_approval_reference": null,
+            "field": "debt_lease_components",
+            "pending_decisions": [
+              "A4"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/equity",
+              "/aapl_history_review/periods/3/facts/common_capital",
+              "/aapl_history_review/periods/3/facts/retained",
+              "/aapl_history_review/periods/3/facts/oci",
+              "/aapl_history_review/periods/3/facts/tax_credit_dta"
+            ],
+            "existing_approval_reference": null,
+            "field": "other_equity_bridge_claims_assets",
+            "pending_decisions": [
+              "A6",
+              "A7",
+              "A8"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/3/facts/year_end_common",
+              "/aapl_history_review/periods/3/facts/rsu"
+            ],
+            "existing_approval_reference": null,
+            "field": "point_in_time_shares",
+            "pending_decisions": [
+              "A10"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          }
+        ],
+        "complete_expense_basis_da": null,
+        "identity": {
+          "accession": "0000320193-24-000123",
+          "annual_end": "2024-09-28",
+          "annual_start": "2023-10-01",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "as_of": null,
+            "multiplier": -1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "9447000000",
+            "source_reference": "/aapl_history_review/periods/3/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+            "unit": "USD",
+            "value": "-9447000000"
+          },
+          "cash_investment_components": {
+            "alternative_reference": "/aapl_history_review/periods/3/restricted_current_alternative",
+            "known_restriction_scope_support": "/aapl_history_review/periods/3/comparative_scope_support",
+            "known_restrictions_reference": "/aapl_history_review/periods/3/note_observations",
+            "long_term": {
+              "as_of": "2024-09-28",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "91479000000",
+              "source_reference": "/aapl_history_review/periods/3/facts/long_securities",
+              "unit": "USD",
+              "value": "91479000000"
+            },
+            "operating_reserve": null,
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "65171",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "current_financial",
+              "label": "current_financial",
+              "limitations": [],
+              "operands": [
+                "cash",
+                "current_securities"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "current_securities"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/3/calculations/0",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "65171000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "all_lease_alternative": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "default": false,
+              "display_unit": "USD millions",
+              "display_value": "119059",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "all_lease_alternative",
+              "label": "all_lease_alternative",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total",
+                "op_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "selected": false,
+              "source_dates": [
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "finance_total"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "op_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/3/calculations/4",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "119059000000"
+            },
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "no_additional_adjustment": "Approved analyst assumption; omitted borrowing unbounded, not reported zero",
+            "operating_lease": {
+              "as_of": "2024-09-28",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "11534000000",
+              "source_reference": "/aapl_history_review/periods/3/facts/op_total",
+              "unit": "USD",
+              "value": "11534000000"
+            },
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "107525",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": null,
+                  "as_of": "2024-09-28",
+                  "operand": "finance_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/3/calculations/3",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "107525000000"
+            }
+          },
+          "deferred_taxes": {
+            "deferred_provision": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "-3031",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "deferred_provision",
+              "label": "deferred_provision",
+              "limitations": [],
+              "operands": [
+                "deferred_federal",
+                "deferred_state",
+                "deferred_foreign"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": "2023-10-01",
+                  "as_of": null,
+                  "operand": "deferred_federal"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": "2023-10-01",
+                  "as_of": null,
+                  "operand": "deferred_state"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": "2023-10-01",
+                  "as_of": null,
+                  "operand": "deferred_foreign"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/3/calculations/7",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "-3031000000"
+            },
+            "mixed_other": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "2266000000",
+              "source_reference": "/aapl_history_review/periods/3/facts/OtherNoncashIncomeExpense",
+              "unit": "USD",
+              "value": "-2266000000"
+            },
+            "selected": null,
+            "separate_pure_cfo_operation": "APPROVED_EXCLUSION_UNKNOWN_COMPONENT"
+          },
+          "depreciation_amortization": {
+            "accepted": true,
+            "approval_reference": "/aapl_history_approval",
+            "author": "Analyst preparation review, pending user approval",
+            "expense_basis_da": null,
+            "finance_amortization_inclusion_assumption": null,
+            "inventory_lease_timing_bridge": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "rationale": "Use explicitly displayed depreciation/amortization cash-reconciliation amount as a historical noncash-cost proxy, NOT verified complete income-recognized D&A. No balancing subtraction or extra ROU add-back.",
+            "recorded_at_utc": "2026-10-17T15:33:27+00:00",
+            "source_reference": "/aapl_history_review/periods/3/facts/DepreciationDepletionAndAmortization",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "unit": "USD",
+            "value_usd": "11445000000"
+          },
+          "ebit": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "123216000000",
+            "source_reference": "/aapl_history_review/periods/3/facts/ebit",
+            "unit": "USD",
+            "value": "123216000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "nci": null,
+            "no_additional_adjustments": "Approved analyst omissions, potentially undisclosed amounts unbounded, no immateriality finding",
+            "pension": null,
+            "preferred": null,
+            "pure_nol": null,
+            "source_reference": "/aapl_history_review/periods/3/partition_checks",
+            "tax_credit_dta": {
+              "as_of": "2024-09-28",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "8856000000",
+              "source_reference": "/aapl_history_review/periods/3/facts/tax_credit_dta",
+              "unit": "USD",
+              "value": "8856000000"
+            }
+          },
+          "point_in_time_shares": {
+            "aggregation_or_dilution_approved": false,
+            "awards": {
+              "as_of": "2024-09-28",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "163326000",
+              "source_reference": "/aapl_history_review/periods/3/facts/rsu",
+              "unit": "shares",
+              "value": "163326000"
+            },
+            "cover": [
+              {
+                "as_of": "2024-10-18",
+                "multiplier": 1,
+                "origin": "reported",
+                "precision": "-3",
+                "raw_value": "15115823000",
+                "source_reference": "/aapl_history_review/periods/3/facts/cover_common_2024-10-18",
+                "unit": "shares",
+                "value": "15115823000"
+              }
+            ],
+            "selected": {
+              "as_of": "2024-09-28",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "15116786000",
+              "source_reference": "/aapl_history_review/periods/3/facts/year_end_common",
+              "unit": "shares",
+              "value": "15116786000"
+            },
+            "weighted_basic": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "15343783000",
+              "source_reference": "/aapl_history_review/periods/3/facts/weighted_basic",
+              "unit": "shares",
+              "value": "15343783000"
+            },
+            "weighted_diluted": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "15408095000",
+              "source_reference": "/aapl_history_review/periods/3/facts/weighted_diluted",
+              "unit": "shares",
+              "value": "15408095000"
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "rows": [
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-3788000000",
+                "fact": "IncreaseDecreaseInAccountsReceivable",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-1046000000",
+                "fact": "IncreaseDecreaseInInventories",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-1356000000",
+                "fact": "IncreaseDecreaseInOtherReceivables",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-11731000000",
+                "fact": "IncreaseDecreaseInOtherOperatingAssets",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "6020000000",
+                "fact": "IncreaseDecreaseInAccountsPayable",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "15552000000",
+                "fact": "IncreaseDecreaseInOtherOperatingLiabilities",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              }
+            ],
+            "source_reference": "/aapl_history_review/periods/3/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "118254000000",
+            "source_reference": "/aapl_history_review/periods/3/facts/NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "value": "118254000000"
+          },
+          "reported_tax_context": {
+            "cash_taxes": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "26102000000",
+              "source_reference": "/aapl_history_review/periods/3/facts/IncomeTaxesPaidNet",
+              "unit": "USD",
+              "value": "-26102000000"
+            },
+            "future_rate_approved": false,
+            "pretax": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "123485000000",
+              "source_reference": "/aapl_history_review/periods/3/facts/pretax",
+              "unit": "USD",
+              "value": "123485000000"
+            },
+            "provision": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "29749000000",
+              "source_reference": "/aapl_history_review/periods/3/facts/IncomeTaxExpenseBenefit",
+              "unit": "USD",
+              "value": "29749000000"
+            },
+            "reported_etr": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "pure",
+              "display_value": "0.2409118516418998258897841843138843",
+              "evidence_label": "derived_calculation",
+              "formula": "DIVIDE",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "reported_etr",
+              "label": "reported_etr",
+              "limitations": [],
+              "operands": [
+                "IncomeTaxExpenseBenefit",
+                "pretax"
+              ],
+              "origin": "derived",
+              "policy": "annual_reported_effective_tax_rate_v1",
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": "2023-10-01",
+                  "as_of": null,
+                  "operand": "IncomeTaxExpenseBenefit"
+                },
+                {
+                  "annual_end": "2024-09-28",
+                  "annual_start": "2023-10-01",
+                  "as_of": null,
+                  "operand": "pretax"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/3/calculations/6",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "pure",
+              "value": "0.2409118516418998258897841843138843"
+            }
+          },
+          "revenue": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "391035000000",
+            "source_reference": "/aapl_history_review/periods/3/facts/revenue",
+            "unit": "USD",
+            "value": "391035000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "11688000000",
+              "source_reference": "/aapl_history_review/periods/3/facts/ShareBasedCompensation",
+              "unit": "USD",
+              "value": "11688000000"
+            },
+            "count_once": true,
+            "origin": "proxy",
+            "selected": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "11688000000",
+              "source_reference": "/aapl_history_review/periods/3/facts/AllocatedShareBasedCompensationExpense",
+              "unit": "USD",
+              "value": "11688000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "value": null
+          }
+        },
+        "remaining_essential_inputs": [],
+        "sources_reference": "/aapl_history_review/periods/3/sources",
+        "supporting_investment_reference": "/aapl_history_review/periods/3/facts",
+        "supporting_unknowns": {
+          "additional_borrowing": null,
+          "capital_creditors": null,
+          "complete_expense_basis_da": null,
+          "complete_lease_cash": null,
+          "employee_accrual": null,
+          "finance_lease_interest_cash": null,
+          "finance_lease_principal_cash": null,
+          "nci": null,
+          "operating_reserve": null,
+          "pension_funded_status": null,
+          "preferred": null,
+          "pure_nol_dta": null,
+          "unallocated_other_investing": null
+        }
+      },
+      {
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": "/accepted_view",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/revenue"
+            ],
+            "existing_approval_reference": "/accepted_view",
+            "field": "revenue",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/accepted_view",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/ebit"
+            ],
+            "existing_approval_reference": "/accepted_view",
+            "field": "ebit",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/DepreciationDepletionAndAmortization",
+              "/aapl_history_review/periods/4/facts/depreciation_expense"
+            ],
+            "existing_approval_reference": null,
+            "field": "depreciation_amortization",
+            "pending_decisions": [
+              "A2"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/accepted_view",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+              "/aapl_history_review/periods/4/facts/PaymentsForProceedsFromOtherInvestingActivities",
+              "/aapl_history_review/periods/4/facts/RightofUseAssetsObtainedinExchangeforOperatingandFinanceLeaseLiabilities"
+            ],
+            "existing_approval_reference": "/accepted_view",
+            "field": "cash_capex",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": null,
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/IncreaseDecreaseInAccountsReceivable",
+              "/aapl_history_review/periods/4/facts/IncreaseDecreaseInInventories",
+              "/aapl_history_review/periods/4/facts/IncreaseDecreaseInOtherReceivables",
+              "/aapl_history_review/periods/4/facts/IncreaseDecreaseInOtherOperatingAssets",
+              "/aapl_history_review/periods/4/facts/IncreaseDecreaseInAccountsPayable",
+              "/aapl_history_review/periods/4/facts/IncreaseDecreaseInOtherOperatingLiabilities"
+            ],
+            "existing_approval_reference": null,
+            "field": "reported_cash_flow_working_capital_movements",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/deferred_federal",
+              "/aapl_history_review/periods/4/facts/deferred_state",
+              "/aapl_history_review/periods/4/facts/deferred_foreign",
+              "/aapl_history_review/periods/4/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "deferred_taxes",
+            "pending_decisions": [
+              "A8"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/accepted_view",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/AllocatedShareBasedCompensationExpense",
+              "/aapl_history_review/periods/4/facts/ShareBasedCompensation"
+            ],
+            "existing_approval_reference": "/accepted_view",
+            "field": "stock_based_compensation",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/OtherNoncashIncomeExpense"
+            ],
+            "existing_approval_reference": null,
+            "field": "unclassified_cfo_reconciliation_residual",
+            "pending_decisions": [
+              "A9"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/accepted_view",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/NetCashProvidedByUsedInOperatingActivities"
+            ],
+            "existing_approval_reference": "/accepted_view",
+            "field": "reported_cfo",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/accepted_view",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/IncomeTaxExpenseBenefit",
+              "/aapl_history_review/periods/4/facts/pretax",
+              "/aapl_history_review/periods/4/facts/IncomeTaxesPaidNet"
+            ],
+            "existing_approval_reference": "/accepted_view",
+            "field": "reported_tax_context",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/accepted_view",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/cash",
+              "/aapl_history_review/periods/4/facts/current_securities",
+              "/aapl_history_review/periods/4/facts/long_securities",
+              "/aapl_history_review/periods/4/facts/financial_parent"
+            ],
+            "existing_approval_reference": "/accepted_view",
+            "field": "cash_investment_components",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/cp",
+              "/aapl_history_review/periods/4/facts/current_debt",
+              "/aapl_history_review/periods/4/facts/long_debt",
+              "/aapl_history_review/periods/4/facts/finance_total",
+              "/aapl_history_review/periods/4/facts/op_total"
+            ],
+            "existing_approval_reference": "/accepted_view",
+            "field": "debt_lease_components",
+            "pending_decisions": [
+              "A4"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/aapl_history_approval",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/equity",
+              "/aapl_history_review/periods/4/facts/common_capital",
+              "/aapl_history_review/periods/4/facts/retained",
+              "/aapl_history_review/periods/4/facts/oci",
+              "/aapl_history_review/periods/4/facts/tax_credit_dta"
+            ],
+            "existing_approval_reference": null,
+            "field": "other_equity_bridge_claims_assets",
+            "pending_decisions": [
+              "A6",
+              "A7",
+              "A8"
+            ],
+            "status": "SATISFIED_BY_EXPLICIT_APPROVAL"
+          },
+          {
+            "approval_reference": "/accepted_view",
+            "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+            "evidence_references": [
+              "/aapl_history_review/periods/4/facts/year_end_common",
+              "/aapl_history_review/periods/4/facts/rsu"
+            ],
+            "existing_approval_reference": "/accepted_view",
+            "field": "point_in_time_shares",
+            "pending_decisions": [],
+            "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+          }
+        ],
+        "complete_expense_basis_da": null,
+        "identity": {
+          "accession": "0000320193-25-000079",
+          "annual_end": "2025-09-27",
+          "annual_start": "2024-09-29",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "as_of": null,
+            "multiplier": -1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "12715000000",
+            "source_reference": "/aapl_history_review/periods/4/facts/PaymentsToAcquirePropertyPlantAndEquipment",
+            "unit": "USD",
+            "value": "-12715000000"
+          },
+          "cash_investment_components": {
+            "alternative_reference": null,
+            "known_restriction_scope_support": null,
+            "known_restrictions_reference": "/aapl_history_review/periods/4/note_observations",
+            "long_term": {
+              "as_of": "2025-09-27",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "77723000000",
+              "source_reference": "/aapl_history_review/periods/4/facts/long_securities",
+              "unit": "USD",
+              "value": "77723000000"
+            },
+            "operating_reserve": null,
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "54697",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "current_financial",
+              "label": "current_financial",
+              "limitations": [],
+              "operands": [
+                "cash",
+                "current_securities"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "current_securities"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/4/calculations/0",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "54697000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "all_lease_alternative": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "default": false,
+              "display_unit": "USD millions",
+              "display_value": "112377",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "all_lease_alternative",
+              "label": "all_lease_alternative",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total",
+                "op_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "selected": false,
+              "source_dates": [
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "finance_total"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "op_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/4/calculations/4",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "112377000000"
+            },
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "no_additional_adjustment": "Approved analyst assumption; omitted borrowing unbounded, not reported zero",
+            "operating_lease": {
+              "as_of": "2025-09-27",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "12490000000",
+              "source_reference": "/aapl_history_review/periods/4/facts/op_total",
+              "unit": "USD",
+              "value": "12490000000"
+            },
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "99887",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operands": [
+                "cp",
+                "current_debt",
+                "long_debt",
+                "finance_total"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "current_debt"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "long_debt"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": null,
+                  "as_of": "2025-09-27",
+                  "operand": "finance_total"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/4/calculations/3",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "99887000000"
+            }
+          },
+          "deferred_taxes": {
+            "deferred_provision": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "-1339",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "deferred_provision",
+              "label": "deferred_provision",
+              "limitations": [],
+              "operands": [
+                "deferred_federal",
+                "deferred_state",
+                "deferred_foreign"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": "2024-09-29",
+                  "as_of": null,
+                  "operand": "deferred_federal"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": "2024-09-29",
+                  "as_of": null,
+                  "operand": "deferred_state"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": "2024-09-29",
+                  "as_of": null,
+                  "operand": "deferred_foreign"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/4/calculations/8",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "USD",
+              "value": "-1339000000"
+            },
+            "mixed_other": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "89000000",
+              "source_reference": "/aapl_history_review/periods/4/facts/OtherNoncashIncomeExpense",
+              "unit": "USD",
+              "value": "-89000000"
+            },
+            "selected": null,
+            "separate_pure_cfo_operation": "APPROVED_EXCLUSION_UNKNOWN_COMPONENT"
+          },
+          "depreciation_amortization": {
+            "accepted": true,
+            "approval_reference": "/aapl_history_approval",
+            "author": "Analyst preparation review, pending user approval",
+            "expense_basis_da": null,
+            "finance_amortization_inclusion_assumption": null,
+            "inventory_lease_timing_bridge": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "rationale": "Use explicitly displayed depreciation/amortization cash-reconciliation amount as a historical noncash-cost proxy, NOT verified complete income-recognized D&A. No balancing subtraction or extra ROU add-back.",
+            "recorded_at_utc": "2026-10-17T15:33:27+00:00",
+            "source_reference": "/aapl_history_review/periods/4/facts/DepreciationDepletionAndAmortization",
+            "status": "accepted_for_stated_historical_preparation_scope",
+            "unit": "USD",
+            "value_usd": "11698000000"
+          },
+          "ebit": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "133050000000",
+            "source_reference": "/aapl_history_review/periods/4/facts/ebit",
+            "unit": "USD",
+            "value": "133050000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "nci": null,
+            "no_additional_adjustments": "Approved analyst omissions, potentially undisclosed amounts unbounded, no immateriality finding",
+            "pension": null,
+            "preferred": null,
+            "pure_nol": null,
+            "source_reference": "/aapl_history_review/periods/4/partition_checks",
+            "tax_credit_dta": {
+              "as_of": "2025-09-27",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "8643000000",
+              "source_reference": "/aapl_history_review/periods/4/facts/tax_credit_dta",
+              "unit": "USD",
+              "value": "8643000000"
+            }
+          },
+          "point_in_time_shares": {
+            "aggregation_or_dilution_approved": false,
+            "awards": {
+              "as_of": "2025-09-27",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "151574000",
+              "source_reference": "/aapl_history_review/periods/4/facts/rsu",
+              "unit": "shares",
+              "value": "151574000"
+            },
+            "cover": [
+              {
+                "as_of": "2025-10-17",
+                "multiplier": 1,
+                "origin": "reported",
+                "precision": "-3",
+                "raw_value": "14776353000",
+                "source_reference": "/aapl_history_review/periods/4/facts/cover_common_2025-10-17",
+                "unit": "shares",
+                "value": "14776353000"
+              }
+            ],
+            "selected": {
+              "as_of": "2025-09-27",
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "14773260000",
+              "source_reference": "/aapl_history_review/periods/4/facts/year_end_common",
+              "unit": "shares",
+              "value": "14773260000"
+            },
+            "weighted_basic": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "14948500000",
+              "source_reference": "/aapl_history_review/periods/4/facts/weighted_basic",
+              "unit": "shares",
+              "value": "14948500000"
+            },
+            "weighted_diluted": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-3",
+              "raw_value": "15004697000",
+              "source_reference": "/aapl_history_review/periods/4/facts/weighted_diluted",
+              "unit": "shares",
+              "value": "15004697000"
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "rows": [
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-6682000000",
+                "fact": "IncreaseDecreaseInAccountsReceivable",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "1400000000",
+                "fact": "IncreaseDecreaseInInventories",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-347000000",
+                "fact": "IncreaseDecreaseInOtherReceivables",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-9197000000",
+                "fact": "IncreaseDecreaseInOtherOperatingAssets",
+                "multiplier": -1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "902000000",
+                "fact": "IncreaseDecreaseInAccountsPayable",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              },
+              {
+                "already_in_reported_cfo": true,
+                "contribution_usd": "-11076000000",
+                "fact": "IncreaseDecreaseInOtherOperatingLiabilities",
+                "multiplier": 1,
+                "not_book_delta_nwc": true
+              }
+            ],
+            "source_reference": "/aapl_history_review/periods/4/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "111482000000",
+            "source_reference": "/aapl_history_review/periods/4/facts/NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "value": "111482000000"
+          },
+          "reported_tax_context": {
+            "cash_taxes": {
+              "as_of": null,
+              "multiplier": -1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "43369000000",
+              "source_reference": "/aapl_history_review/periods/4/facts/IncomeTaxesPaidNet",
+              "unit": "USD",
+              "value": "-43369000000"
+            },
+            "future_rate_approved": false,
+            "pretax": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "132729000000",
+              "source_reference": "/aapl_history_review/periods/4/facts/pretax",
+              "unit": "USD",
+              "value": "132729000000"
+            },
+            "provision": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "20719000000",
+              "source_reference": "/aapl_history_review/periods/4/facts/IncomeTaxExpenseBenefit",
+              "unit": "USD",
+              "value": "20719000000"
+            },
+            "reported_etr": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "pure",
+              "display_value": "0.1561000233558604374326635475291760",
+              "evidence_label": "derived_calculation",
+              "formula": "DIVIDE",
+              "formula_version": "aapl-draft-historical-v1",
+              "input_id": "reported_etr",
+              "label": "reported_etr",
+              "limitations": [],
+              "operands": [
+                "IncomeTaxExpenseBenefit",
+                "pretax"
+              ],
+              "origin": "derived",
+              "policy": "annual_reported_effective_tax_rate_v1",
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Source-bound arithmetic, not approval of financial use",
+              "review": "accepted_for_stated_historical_preparation_scope",
+              "role": "reported_observation",
+              "scope": "Named population only; original operand precision; no economic completeness",
+              "source_dates": [
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": "2024-09-29",
+                  "as_of": null,
+                  "operand": "IncomeTaxExpenseBenefit"
+                },
+                {
+                  "annual_end": "2025-09-27",
+                  "annual_start": "2024-09-29",
+                  "as_of": null,
+                  "operand": "pretax"
+                }
+              ],
+              "source_reference": "/aapl_history_review/periods/4/calculations/7",
+              "status": "source_supported_selection_or_calculation",
+              "unit": "pure",
+              "value": "0.1561000233558604374326635475291760"
+            }
+          },
+          "revenue": {
+            "as_of": null,
+            "multiplier": 1,
+            "origin": "reported",
+            "precision": "-6",
+            "raw_value": "416161000000",
+            "source_reference": "/aapl_history_review/periods/4/facts/revenue",
+            "unit": "USD",
+            "value": "416161000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "12863000000",
+              "source_reference": "/aapl_history_review/periods/4/facts/ShareBasedCompensation",
+              "unit": "USD",
+              "value": "12863000000"
+            },
+            "count_once": true,
+            "origin": "proxy",
+            "selected": {
+              "as_of": null,
+              "multiplier": 1,
+              "origin": "reported",
+              "precision": "-6",
+              "raw_value": "12863000000",
+              "source_reference": "/aapl_history_review/periods/4/facts/AllocatedShareBasedCompensationExpense",
+              "unit": "USD",
+              "value": "12863000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "value": null
+          }
+        },
+        "remaining_essential_inputs": [],
+        "sources_reference": "/aapl_history_review/periods/4/sources",
+        "supporting_investment_reference": "/aapl_history_review/periods/4/facts",
+        "supporting_unknowns": {
+          "additional_borrowing": null,
+          "capital_creditors": null,
+          "complete_expense_basis_da": null,
+          "complete_lease_cash": null,
+          "employee_accrual": null,
+          "finance_lease_interest_cash": null,
+          "finance_lease_principal_cash": null,
+          "nci": null,
+          "operating_reserve": null,
+          "pension_funded_status": null,
+          "preferred": null,
+          "pure_nol_dta": null,
+          "unallocated_other_investing": null
+        }
+      }
+    ],
+    "phase1_closed": false,
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
+  "aapl_history_approval": {
+    "action": "ACCEPT_FY2021_FY2025_A2_A10",
+    "author": "User, explicit approval of AAPL A2-A10 exactly as proposed across FY2021-FY2025",
+    "authority": "Current user instruction Part1: explicitly approves A2-A10 exactly as proposed; preserve facts, unknowns, alternatives and earlier decisions.",
+    "decisions": {
+      "A10": {
+        "evidence_reference": "/aapl_history_review/periods",
+        "numerical_consequence": "16426786000/15943425000/15550061000/15116786000 shares; FY2025 accepted14773260000. Awards240427000/201501000/180247000/163326000/151574000 separate, never added.",
+        "periods": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "recommendation": "Select fiscal-end common shares at each original date/precision; keep later cover observations, EPS denominators and award populations separate. FY2025 selection unchanged.",
+        "uncertainty_and_alternative": "Alternative later cover dates differ and annual diluted weighted averages are not closing shares. Unrecognized compensation in FY2021/22 includes RSUs AND options, later RSUs only. No award valuation/dilution estimate."
+      },
+      "A2": {
+        "evidence_reference": "/aapl_history_review/periods",
+        "numerical_consequence": "Proposed proxy11284/11104/11519/11445/11698 versus PP&E note9500/8700/8500/8200/8000R. Differences1784/2404/3019/3245/3698 are population differences, NOT amortization. No extra ROU add-back.",
+        "periods": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-25-000079",
+            "annual_end": "2025-09-27",
+            "annual_start": "2024-09-29",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "recommendation": "Select each explicitly labeled CFO D&A amount as a historical noncash-cost proxy; do not call it complete expense D&A, infer amortization or assume finance amortization is included.",
+        "uncertainty_and_alternative": "Alternative keep required D&A unresolved; PP&E-only note is not complete intangible D&A. CFO versus income/inventory/lease timing is unbridged and its effect unquantified. FY2021/22 note says PP&E depreciation AND amortization, unlike later depreciation-only prose."
+      },
+      "A3": {
+        "evidence_reference": "/aapl_history_review/periods",
+        "numerical_consequence": "7906/9038/10833/11688 USDm; FY2025 accepted12863. No duplicate expense or rounding adjustment.",
+        "periods": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "recommendation": "Extend recognized SBC expense as a labeled economic-cost proxy once to FY2021-FY2024; keep separate add-back and awards. FY2025 approval remains unchanged.",
+        "uncertainty_and_alternative": "Alternative economic replacement-cost/award-value basis unavailable; recognized expense is neither cash replacement cost nor outstanding-award value."
+      },
+      "A4": {
+        "evidence_reference": "/aapl_history_review/periods",
+        "numerical_consequence": "125567/121010/112112/107525/99887 USDm. All-lease alternatives136522/132480/123930/119059/112377. Current term maturities already included; principal/fair value and commitments are not additive.",
+        "periods": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-25-000079",
+            "annual_end": "2025-09-27",
+            "annual_start": "2024-09-29",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "recommendation": "Use operating leases as service/finance leases as financing; select each named CP + term carrying + finance liability, with no additional undisclosed-borrowing adjustment. FY2025 named subtotal/convention already accepted; broader no-extra-adjustment assumption is newly proposed.",
+        "uncertainty_and_alternative": "No extra adjustment economically omits unquantified possible borrowing; not source zero, complete debt or immateriality. Alternative retain named subtotal as partial only; all-lease alternative requires aligned economics. Finance cash/expense splits remain unavailable; no MSFT D&A-inclusion assumption."
+      },
+      "A5": {
+        "evidence_reference": "/aapl_history_review/periods",
+        "numerical_consequence": "62639/48304/61555/65171 USDm; LT127877/120805/100544/91479 separate. FY2021-23 restricted total marketable17900/12700/13800R not allocated to current/LT. FY2024 known2600R cash and13200R marketable escrow stay visible.",
+        "periods": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "recommendation": "Select named current financial balances, retaining LT/restricted/strategic observations separately; do not call any current balance unrestricted or excess. FY2025 accepted54697 unchanged.",
+        "uncertainty_and_alternative": "Alternative FY2024 current less15800R identified escrow is49371R, with current-securities location explicitly corroborated by FY2025 dated comparative note. It is non-default pending a choice, not a rounding adjustment. Unknown restrictions/reserves and strategic holdings remain unquantified; gross balances must not be used as available cash."
+      },
+      "A6": {
+        "evidence_reference": "/aapl_history_review/periods",
+        "numerical_consequence": "No extra claim adjustment, not a reported zero. Source common/APIC+retained+OCI equals reported equity in all five selected filings.",
+        "periods": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-25-000079",
+            "annual_end": "2025-09-27",
+            "annual_start": "2024-09-29",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "recommendation": "No additional preferred-equity or NCI adjustment selected, relying on each common-equity partition and wholly-owned consolidated presentation; preserve source nulls.",
+        "uncertainty_and_alternative": "Alternative quantify separate claims if evidenced; current evidence cannot bound omitted preferred/minority claims. Presentation supports an analyst choice, not an immateriality finding or exhaustive ownership proof."
+      },
+      "A7": {
+        "evidence_reference": "/aapl_history_review/periods",
+        "numerical_consequence": "No extra adjustment selected would omit a potentially unreported net claim/surplus of unbounded size; source remains null.",
+        "periods": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-25-000079",
+            "annual_end": "2025-09-27",
+            "annual_start": "2024-09-29",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "recommendation": "Propose no separate pension funded-status adjustment while retaining the recognized balance-sheet liabilities; disclose absent quantified funded status and do not invent retirement expense.",
+        "uncertainty_and_alternative": "Weaker evidence than common-equity choices: benefits/stock-plan notes do not establish pension population completeness. Alternative leave this essential claim decision blocked. User must explicitly accept this unbounded omission; no audit opinion/keyword absence establishes zero."
+      },
+      "A8": {
+        "evidence_reference": "/aapl_history_review/periods",
+        "numerical_consequence": "CFO deferred -4774/+895 then pure component unknown within Other-2227/-2266/-89; deferred provision -4774/+895/-3024/-3031/-1339 is a separate role, not a replacement. Cash taxes25385/19573/18679/26102/43369 outflows remain reported.",
+        "periods": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-25-000079",
+            "annual_end": "2025-09-27",
+            "annual_start": "2024-09-29",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "recommendation": "Retain reported provision/pretax/ETR and cash taxes; retain FY2021/22 explicit deferred-tax CFO rows. For FY2023-25 no separate pure-deferred CFO operation or pure-NOL economic-asset operation; retain mixed Other and reported tax-credit DTA without allocations.",
+        "uncertainty_and_alternative": "Alternative pure operating-tax/deferred bridge is unavailable and unnecessary only under approved consolidated-CFO path; future rate/valuation is separate. Tax-credit DTA4262/6962/8302/8856/8643 is not pure NOL or an approved valued asset. Ireland FY2024 charge/FY2025 settlement remains historical, not normalized."
+      },
+      "A9": {
+        "evidence_reference": "/aapl_history_review/periods",
+        "numerical_consequence": "Other contributions -147/+111/-2227/-2266/-89 USDm; full CFO displays tie independently, no plug or new adjustment.",
+        "periods": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-25-000079",
+            "annual_end": "2025-09-27",
+            "annual_start": "2024-09-29",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "recommendation": "No separately computed residual scalar for each fully bound displayed reconciliation; retain signed mixed Other rows, not a residual-defined zero.",
+        "uncertainty_and_alternative": "Alternative classify every mixed subcomponent cannot be supported from retained disclosures. Source equality does not certify operating-only cash or EBIT-based FCFF readiness."
+      }
+    },
+    "financial_sufficiency": "ONLY_APPROVED_HISTORICAL_PERIMETER",
+    "identities": [
+      {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      }
+    ],
+    "phase1_closed": false,
+    "previous": "634d053b82a9cd1c440bab7e5e8c14037371ecadf55fa2784991f37776db44f3",
+    "rationale": "Accept labeled CFO-D&A proxies, named financing/no additional borrowing and claim/pension omissions with unbounded uncertainty, gross current financial balances with known restrictions; historical perimeter only.",
+    "recorded_at_utc": "2026-10-17T15:56:35.868488+00:00",
+    "review_revision": "3c1b3b3510bc1760e914e306cc5be3733d27ae5b8feead0f398d59a127444319",
+    "schema": "aapl-treatment-acceptance-audit-v1",
+    "sequence": 2,
+    "sha256": "f0a91b70b853ec380091a779b227d742c5d1d0aa0add21fdd09e91d39cf96f62",
+    "source_commit": "d6e0ea51b19a4786a11d816d16c8678f8e7b99ba",
+    "source_revision": "61a87d70109b8de1e663b196c78b4a222d1348cd642a236b91d0e9bda0a643cd",
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
   "aapl_history_review": {
     "analyst_complete": false,
     "company_completed": false,

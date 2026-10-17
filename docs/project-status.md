@@ -1,5 +1,39 @@
 # Project Status
 
+## Current milestone — AAPL approved five-year historical-input completion
+
+[Authoritative schedule](company-data-preparation/AAPL-analyst-input-package.md)
+and current JSON overlay record explicit A2–A10 approval exactly as proposed,
+sequence2 at2026-10-17T15:56:35.868488+00:00, linked to previous FY2025 audit and
+exact company review revision. All five selected FY2021–25 periods pass14/14
+(70/70) within the approved historical-input perimeter. Prior sources/nulls,
+approvals/proposals, alternatives and MSFT completed result remain unchanged.
+
+CFO-D&A11,284/11,104/11,519/11,445/11,698 are approved proxies, **not verified
+expense D&A**, which stays unknown. Gross current financial balances retain known
+restrictions; FY2024 gross65,171 is selected,49,371R non-default. Named financing
+and no preferred/NCI/pension/additional-borrowing adjustments retain source nulls
+and explicitly accepted unbounded omission risk, not immateriality or complete
+debt. Reported movements explain independently reconciled CFO, not extra
+deductions; complete reconstructed NWC is not required. No reinvestment total,
+forecast, valuation or Phase1 closure. Counts:42 broad assessments,2 completed
+company packages (MSFT/AAPL),1 partial Alphabet,39 broad-only.
+
+Validation:82 focused tests pass in54.446s (6 new history-acceptance tests plus
+existing AAPL history/package/audit, MSFT completion, Alphabet package, AAPL cash
+and NWC preservation). All-three package replays, compileall,579 affected local
+path links and diff checks pass. Restart testing exposed JSON-map-order-dependent
+exception ordering; replay now uses the original reviewed specification order,
+preserving the exact prior review/financial data rather than weakening equality
+or changing approval hashes. Corrected restart/tamper/stale gates pass; prior
+package after stripping only two additive keys remains exact. No full-suite,
+corpus run or SEC request. Logs: `/tmp/aapl-history-approved-final-tests.log`,
+`/tmp/aapl-approved-final-replays.log`, `/tmp/aapl-approved-links.log`.
+Part2 Alphabet company review is separately authorized; no new Alphabet judgment
+has been approved.
+
+## Prior checkpoints
+
 ## Current milestone — AAPL one five-year retained-evidence company review
 
 [Existing package](company-data-preparation/AAPL-analyst-input-package.md) /

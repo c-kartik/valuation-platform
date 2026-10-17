@@ -1,5 +1,17 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+## Current completion checkpoint — MSFT and AAPL
+
+[AAPL current schedule](company-data-preparation/AAPL-analyst-input-package.md)
+records explicit A2–A10 acceptance and5×14/14 within its approved historical
+perimeter, alongside unchanged MSFT5×14/14. Counts are42 broad assessments,
+2 completed company-wide packages MSFT/AAPL,1 partial Alphabet and39 broad-only.
+Approved proxies/omissions are not source-proved expense scope or complete debt;
+source nulls, restrictions, alternatives and original blockers remain. The dated
+machine workload inventory below is preserved, not a new universe certification.
+Next separately authorized task is Alphabet's full-history review, with no
+automatic transfer of assumptions or activation of its proposed choices.
+
 ## Current AAPL B1 checkpoint — company review complete, approvals pending
 
 [AAPL company package](company-data-preparation/AAPL-analyst-input-package.md)

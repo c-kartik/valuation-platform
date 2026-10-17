@@ -1,5 +1,17 @@
 # Phase 1 preparation pilots — outcomes and bounded remaining work
 
+## Current — two scoped company-wide packages completed
+
+AAPL FY2021–25 now passes5×14/14 after explicit A2–A10 approval in the existing
+revision-bound overlay. MSFT's result remains exact. **42 broad assessments,
+2 completed company packages (MSFT/AAPL),1 partial Alphabet,39 broad-only**;
+not whole-universe readiness. Labeled CFO-D&A proxies, unbounded claim/borrowing
+omissions and gross financial balances with known restrictions are approved
+historical judgments, not complete source disclosure. Complete AAPL expense D&A
+remains unknown; original NWC/frozen/pilot outputs stay unchanged. No Phase1
+closure or Phase2 authority. Alphabet full-history review is authorized separately;
+its new judgments must remain pending for consolidated review.
+
 ## Current AAPL company-level batch — review depth is not accepted completeness
 
 [Updated AAPL package](company-data-preparation/AAPL-analyst-input-package.md)
