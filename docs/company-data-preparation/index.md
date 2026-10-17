@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## MSFT FY2025 — one consolidated review, approvals pending
+
+[Same package](MSFT-analyst-input-package.md) adds a retained-source FY2025
+14-family review:10 satisfied within old scope,4 pending seven explicit proposed
+decisions in one table. CP0 is reported **CP only**, not broader short borrowing.
+Original14-term CFO display ties136,162;13 refers to adjustments excluding net
+income, not inclusive terms. Existing rounded D&A and named balance/financing
+approvals remain; no FY2026 assumptions transferred. FY2025 is not analyst-complete;
+FY2026 scoped14/14 remains unchanged. Stop for consolidated approval, no new cycle.
+
+146 focused tests (79.219s), all-three package replays, exact prior-package/audit
+preservation, compileall,558 affected local links and diff checks pass. No SEC
+requests, full-suite/corpus rerun or financial approvals added.
+
 ## MSFT FY2026 scoped analyst-completeness PASS
 
 [Same package](MSFT-analyst-input-package.md) records explicit user-approved106,888m

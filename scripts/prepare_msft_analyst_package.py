@@ -169,7 +169,7 @@ class Filing:
 def build():
     filings = [Filing(y) for y in (2025,2026)]
     for f in filings: populate(f)
-    return apply_fy2026_financing(filings[1],apply_fy2026_claim_assumptions(filings[1],apply_fy2026_operations(filings[1],attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings)))))))
+    return attach_fy2025_review(filings[0],apply_fy2026_financing(filings[1],apply_fy2026_claim_assumptions(filings[1],apply_fy2026_operations(filings[1],attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings))))))))
 
 
 def approval_record(proposal):
@@ -978,7 +978,7 @@ def review_fy2026_populations(f):
 def apply_fy2026_operations(filing,package):
     if (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
         raise ValueError('Wrong FY2026 operation filing')
-    parent={k:v for k,v in package.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist')}
+    parent={k:v for k,v in package.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review')}
     if package['fy2026_completeness_attempt']['base_package_revision']!=digest(relevant(parent)):
         raise ValueError('Stale FY2026 parent package')
     if accepted_view({k:v for k,v in parent.items() if k!='accepted_view'})!=parent:
@@ -1041,7 +1041,7 @@ def apply_fy2026_claim_assumptions(filing,package):
     """No numerical override: requirements addressed by approved analyst judgments."""
     if (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
         raise ValueError('Wrong FY2026 claim filing')
-    parent={k:v for k,v in package.items() if k not in ('fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist')}
+    parent={k:v for k,v in package.items() if k not in ('fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review')}
     # Replay the already-approved operations and source review, not a stale saved view.
     if apply_fy2026_operations(filing,parent)!=parent:raise ValueError('Changed operation/source view')
     record=_json((ROOT/OUTPUT).read_text())['fy2026_claim_assumption_approval']
@@ -1103,7 +1103,7 @@ def fy2026_financing_record(package):
 
 
 def apply_fy2026_financing(filing,package):
-    parent={k:v for k,v in package.items() if k not in ('fy2026_financing_approval','fy2026_analyst_checklist')}
+    parent={k:v for k,v in package.items() if k not in ('fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review')}
     if apply_fy2026_claim_assumptions(filing,parent)!=parent:raise ValueError('Changed claim/source view')
     record=_json((ROOT/OUTPUT).read_text())['fy2026_financing_approval']
     expected=fy2026_financing_record(parent)
@@ -1149,6 +1149,107 @@ def apply_fy2026_financing(filing,package):
         financial_sufficiency='SATISFIED_ONLY_FOR_THIS_APPROVED_HISTORICAL_PERIMETER',
         complete_issuer_history=False,whole_universe_closed=False,phase_closed=False,valuation_consumption_approved=False,
         original_nulls_preserved=True,supporting_and_phase2_requirements_reference='/fy2026_completeness_attempt/original_requirement_dispositions')
+    return result
+
+
+def attach_fy2025_review(filing,package):
+    """One proposal-only FY2025 review; FY2026 authority is not transferred."""
+    base={k:v for k,v in package.items() if k!='fy2025_completeness_review'}
+    period=base['periods'][0];view=base['accepted_view']['periods'][0]
+    identity=dict(cik=789019,accession='0000950170-25-100235',form='10-K',annual_start='2024-07-01',annual_end='2025-06-30')
+    if period['identity']!=identity or (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,identity['accession'],identity['annual_start'],identity['annual_end']):raise ValueError('Wrong FY2025 review filing')
+    entries={e['input_id']:e for e in period['inputs']}
+    terms=period['cfo_reconciliation']['terms'];movements=[e for e in period['inputs'] if e['input_id'].startswith('reported:IncreaseDecrease')]
+    if len(terms)!=14 or len(movements)!=9 or sum((Decimal(entries[k]['value']) for k in terms),Decimal(0))!=Decimal(entries['reported:NetCashProvidedByUsedInOperatingActivities']['value']):raise ValueError('FY2025 displayed reconciliation changed')
+    observations={}
+    for key,concept,instant in [('current_liabilities','LiabilitiesCurrent',True),('liabilities','Liabilities',True),
+        ('equity','StockholdersEquity',True),('common_capital','CommonStocksIncludingAdditionalPaidInCapital',True),
+        ('retained','RetainedEarningsAccumulatedDeficit',True),('oci','AccumulatedOtherComprehensiveIncomeLossNetOfTax',True),
+        ('balance_total','LiabilitiesAndStockholdersEquity',True),('retirement_cost','DefinedContributionPlanCostRecognized',False)]:
+        filing.fact('fy2025_review_'+key,concept,'FY2025 consolidated presentation / Note17 annual retirement expense',instant=instant)
+        observations[key]=filing.facts['fy2025_review_'+key]
+    if sum((Decimal(observations[k]['value']) for k in ('common_capital','retained','oci')),Decimal(0))!=Decimal(observations['equity']['value']):raise ValueError('FY2025 equity partition differs')
+    if Decimal(observations['liabilities']['value'])+Decimal(observations['equity']['value'])!=Decimal(observations['balance_total']['value']):raise ValueError('FY2025 balance partition differs')
+    passages=[]
+    for start,end in [('CASH FLOWS','Refer to accompanying notes.'),('Principles of Consolidation','Recast of Certain Prior Period Information'),
+        ('NOTE 10 — DEBT','NOTE 11'),('NOTE 15 — STOCKHOLDERS','Share Repurchases'),('Savings Plans We have savings plans','NOTE 18')]:
+        a=filing.text.find(start);b=filing.text.find(end,a+len(start))
+        if a<0 or b<a:raise ValueError('Required FY2025 disclosure absent: '+start)
+        passages.append(dict(source='FY2025-primary',offset=a,exact_excerpt=filing.text[a:b],source_body_sha256=filing.primary.artifact.sha256))
+    def pointer(key):return '/periods/0/inputs/'+str(next(i for i,e in enumerate(period['inputs']) if e['input_id']==key))
+    definitions=[
+        ('revenue','SATISFIED_ACCEPTED',['revenue'],[]),('ebit','SATISFIED_ACCEPTED',['ebit'],[]),
+        ('depreciation_amortization','SATISFIED_APPROVED_ASSUMPTION',['expense_da'],[]),
+        ('cash_capex','SATISFIED_ACCEPTED_NARROW',['reported:PaymentsToAcquirePropertyPlantAndEquipment'],[]),
+        ('reported_cash_flow_working_capital_movements','PENDING_APPROVAL',[e['input_id'] for e in movements],['25-D1']),
+        ('deferred_taxes','SATISFIED_REPORTED',['reported:DeferredIncomeTaxExpenseBenefit'],[]),
+        ('stock_based_compensation','SATISFIED_ACCEPTED',['sbc_cost_proxy','reported:ShareBasedCompensation'],[]),
+        ('unclassified_cfo_reconciliation_residual','PENDING_APPROVAL',['reported:DepreciationAmortizationAndOther'],['25-D2']),
+        ('reported_cfo','SATISFIED_ACCEPTED',['reported:NetCashProvidedByUsedInOperatingActivities'],[]),
+        ('reported_tax_context','SATISFIED_ACCEPTED',['reported:IncomeTaxExpenseBenefit','reported_etr','reported:IncomeTaxesPaidNet'],[]),
+        ('cash_investment_components','SATISFIED_ACCEPTED_NAMED',['current_liquidity','long_investments'],[]),
+        ('debt_lease_components','PENDING_APPROVAL',['disclosed_borrowings','finance_liability'],['25-D7']),
+        ('other_equity_bridge_claims_assets','PENDING_APPROVAL',['loss_credit_dta'],['25-D3','25-D4','25-D5','25-D6']),
+        ('point_in_time_shares','SATISFIED_ACCEPTED_DATED',['year_end_common','cover_common','nonvested_awards'],[])]
+    checklist=[dict(field=field,status=status,evidence_references=[pointer(k) for k in keys],
+        existing_approval_reference='/accepted_view/periods/0',pending_decisions=decisions) for field,status,keys,decisions in definitions]
+    proposals=[dict(decision_id=k,status=PROPOSED,accepted=False,recommendation=treatment,numerical_consequence=effect,
+        evidence_references=refs,uncertainty=risk,alternative=alternative)
+        for k,treatment,effect,refs,risk,alternative in [
+        ('25-D1','Use nine reported CF movement rows and independently bound14-term CFO control; retain partial book capital as support, not cash delta NWC.',
+         'Retain reported CFO136162 and nine signed rows; partial operating capital-25755 stays partial, no new total.',
+         ['/periods/0/cfo_reconciliation','/accepted_view/periods/0/operating_capital'],
+         'Consolidated tax/noncurrent/acquisition/FX effects not removed; no EBIT/organic compatibility.',
+         'A complete reconstructed book-to-cash operating-capital bridge remains unavailable; do not substitute book movement.'),
+        ('25-D2','No separately computed residual for this independently bound display; preserve the mixed D&A-and-other row.',
+         'No residual value or zero; mixed34153 remains distinct from rounded expense D&A28000; no6153 adjustment.',
+         [pointer('reported:DepreciationAmortizationAndOther'),'/periods/0/cfo_reconciliation'],
+         'Mixed row is not pure D&A or an economic adjustment.', 'Keep residual requirement unresolved instead; do not manufacture a balancing item.'),
+        ('25-D3','Retain combined loss-and-credit DTA without a separate pure-NOL economic-asset operation.',
+         'Retain2114 combined DTA; pure-NOL allocation stays null, no benefit value or zero.',
+         ['/periods/0/facts/loss_credit_dta'], 'Credits/losses not separated; no pure-NOL value or economic benefit established.',
+         'Separate pure-NOL operation remains unsupported; combined2114 cannot serve as pure NOL.'),
+        ('25-D4','No additional preferred-equity adjustment, relying on reviewed FY2025 common-equity presentation.',
+         'No additional adjustment proposed; source preferred amount remains unavailable, not reported zero.',
+         ['/fy2025_completeness_review/observations/equity','/fy2025_completeness_review/passages/3'],
+         'Economically omits potentially undisclosed claim of unbounded amount; no immateriality finding.',
+         'Require exact outstanding preferred claim or approved estimate; no defensible numeric estimate is disclosed.'),
+        ('25-D5','No additional NCI adjustment, relying on reviewed FY2025 consolidated-equity presentation.',
+         'No additional adjustment proposed; NCI amount remains unavailable.',
+         ['/fy2025_completeness_review/observations/equity','/fy2025_completeness_review/passages/1'],
+         'Economically omits potentially undisclosed minority claim; amount unbounded, no ownership-by-ownership absence proof.',
+         'Keep essential claim operation unresolved pending quantified ownership/claim evidence, not an invented residual.'),
+        ('25-D6','Retain disclosed FY2025 retirement expense without separate pension adjustment, acknowledging incomplete international-plan coverage.',
+         'Retain1800 rounded expense; funded-status amount remains null; no extra charge/debt.',
+         ['/fy2025_completeness_review/observations/retirement_cost','/fy2025_completeness_review/passages/4'],
+         'Potential undisclosed funded obligation/surplus unbounded; contribution expense is not closing pension debt.',
+         'Require recognized funded-status/plan-assets bridge for a separate pension operation; no available estimate.'),
+        ('25-D7','Select named89323 term-debt-plus-finance-lease financing with no adjustment for additional borrowing beyond the expressly reported CP zero.',
+         'Retain43151 term+46172 finance=89323; CP0 source-confirmed only. Broader short borrowing remains unquantified.',
+         ['/accepted_view/periods/0/borrowings','/periods/0/facts/commercial_paper','/fy2025_completeness_review/passages/2'],
+         'No adjustment economically omits potentially undisclosed other short borrowing; no supported bound or complete-debt assertion. Current term2999 already included; CP investment assets excluded.',
+         'Require quantified broader short borrowing or an independently justified estimate; CP0 alone cannot establish that total.')]]
+    supporting={'complete_operating_nwc','accrual_ppe_additions_cash_bridge','all_in_cash_interest','acquisition_only_cash_purchases','discontinued_operations_cash_allocation','component_acquisition_fx_reclassification_effects'}
+    future={'operating_only_cash_tax','joint_timing_compatibility','outstanding_options_and_dilution','excess_unrestricted_cash','cfo_to_ebit_compatibility'}
+    expected_nulls=supporting|future|{'DeferredIncomeTaxesAndTaxCredits','pure_nol_dta','preferred_nci_pension'}
+    if {u['input_id'] for u in period['unresolved_requirements']}!=expected_nulls:raise ValueError('Unaccounted FY2025 original requirement')
+    dispositions=[dict(input_id=u['input_id'],original_reference='/periods/0/unresolved_requirements/'+str(i),original_null_preserved=True,
+        classification='SUPPORTING_UNDER_PROPOSED_D1' if u['input_id'] in supporting else 'PHASE2_OPERATION' if u['input_id'] in future else
+            'USE_REPORTED_FY2025_DEFERRED_TAX_ROLE_NOT_UNREPORTED_FY2026_CONCEPT' if u['input_id']=='DeferredIncomeTaxesAndTaxCredits' else 'PENDING_CONSOLIDATED_APPROVAL')
+        for i,u in enumerate(period['unresolved_requirements'])]
+    result=json.loads(json.dumps(base));result['fy2025_completeness_review']=dict(version=1,identity=identity,
+        basis_commit='2d62dbc38810bb54864ac207bc81fdf0b3b03795',parent_revision=digest(relevant(base)),
+        review_status='PENDING_CONSOLIDATED_USER_APPROVAL',financial_approvals_added=0,observations=observations,passages=passages,
+        checklist=checklist,satisfied_families=10,pending_families=4,decisions=proposals,original_requirement_dispositions=dispositions,
+        cfo_control=dict(terms_reference='/periods/0/cfo_reconciliation',term_count=14,adjustments_excluding_net_income=13,
+            amount_usd=str(sum((Decimal(entries[k]['value']) for k in terms),Decimal(0))),independently_bound=True,
+            correction='Earlier prose FY2025 has13 means adjustments, not terms including net income;14 displayed terms tie. Original numerical data unchanged.'),
+        cp_scope=dict(source_reference='/periods/0/facts/commercial_paper',reported_cp_usd='0',broader_short_borrowing_usd=None,
+            historical_label_limitation='Existing additional_short_borrowing reported0 field is supported ONLY as CP; do not read its historical broad label as an all-short-borrowing fact.'),
+        essential_requirements_pending=['reported_movement_perimeter','separate_residual_exclusion','pure_nol_operation','preferred_nci_pension_adjustments','broader_borrowing_treatment'],
+        no_defensible_numerical_estimate_for_missing_claims=True,analyst_complete=False,financial_sufficiency='PENDING_APPROVAL_FOR_PROPOSED_HISTORICAL_PERIMETER',
+        original_nulls_preserved=True,fy2026_authority_transferred=False,phase_closed=False,valuation_consumption_approved=False,
+        stopping_condition='Stop for all seven FY2025 decisions together; no automatic next memo, research or company. FY2026 approvals do not apply.')
     return result
 
 

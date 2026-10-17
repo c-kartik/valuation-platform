@@ -1,5 +1,40 @@
 # MSFT — company data preparation
 
+## Current FY2025 bounded review — pending consolidated approval
+
+[Same package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
+now add one proposal-only FY2025 review for `0000950170-25-100235`,
+2024-07-01–2025-06-30. Existing approvals apply only at their original scope:
+Revenue281,724, EBIT128,528, rounded expense D&A28,000 with accepted/unproved finance
+inclusion, CFO136,162, narrow cash PP&E−64,551, SBC11,974 once, historical tax,
+current94,565/LT15,405, named financing89,323, partial capital−25,755 and dated shares.
+
+14 families:10 satisfied within scope,4 pending; **no FY2025 completeness label**.
+ONE table contains seven new proposed choices: reported-movement path, no separate
+residual, combined DTA/no pure NOL, no extra preferred/NCI/pension adjustment, and
+named financing/no broader-borrowing adjustment. Amounts, evidence, risks and
+alternatives are consolidated there. None is active; FY2026 authority is not
+transferred. Missing claim/borrowing amounts remain unbounded, not immaterial.
+
+FY2025 source CP0 is explicit, but covers only CP, not all short borrowing. The
+old broad-label0 is preserved and expressly limited in the review. Current term
+2,999 is included once; CP investment assets excluded. Original CF statement has
+14 terms including net income (13 adjustments) summing136,162, not13 inclusive
+terms; source values/term list unchanged. Mixed34,153 versus expense28,000R stay
+distinct. Notes1/10/15/17 and exact equity partitions independently support the
+proposals; retirement1,800R is expense, not closing debt.
+
+Five essential operation choices remain across four families. All original14
+nulls are dispositioned without filling them; supporting/Phase2 limits remain.
+Stop for consolidated approval, no research queue or next company. FY2026 14/14,
+old audits and accepted AAPL/Alphabet/frozen/pilot artifacts remain unchanged.
+
+Validation:146 focused tests in79.219s, all-three exact package replays,
+compileall,558 local links and diff checks pass. Exact source/scopes/precision,
+CF arithmetic, proposal/null accounting and tamper/period rejection tested.
+Entire prior package/FY2026 PASS and audits equal after removing only the new
+FY2025 review key. No requests, full-suite/corpus rerun or new financial approval.
+
 ## Current FY2026 scoped analyst-completeness PASS
 
 [Same package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)

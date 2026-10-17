@@ -1,5 +1,109 @@
 # MSFT — analyst historical-input package, FY2025–FY2026
 
+## Current FY2025 review — one consolidated approval request, not completeness
+
+Exact CIK789019,10-K `0000950170-25-100235`, annual2024-07-01–2025-06-30;
+instant balances2025-06-30 unless explicitly dated otherwise. Existing fourteen
+families: **10 satisfied within existing scope,4 pending**, requiring the seven
+decisions below. **No new treatment is active and FY2025 is not analyst-complete.**
+The FY2026 14/14 PASS, all approvals/audits and every prior package key remain
+unchanged. FY2026 is methodological precedent, not FY2025 authorization.
+
+JSON `/fy2025_completeness_review` is a single additive, proposal-only review
+using existing package structures. Parent revision
+`6690e6ec47317a6a78e28979233473d60209c29334d1da8c00da477e0478b1fe`
+binds starting commit `2d62dbc38810bb54864ac207bc81fdf0b3b03795` and its unchanged
+accepted views. Existing FY2025 scope authority is original audit
+`b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2`,
+not any FY2026-only audit. No new audit consent or financial assumption is invented.
+
+### Exact-period evidence and fourteen-family checklist
+
+All money USDm; source decimals−6 unless R denotes rounded decimals−8. The
+existing `/periods/0/facts`, `/inputs`, `/decision_resolution/periods/0` and
+`/accepted_view/periods/0` retain QName/context, sign/multiplier, original
+receipt/body digest, occurrences and derivation/approval provenance. Additional
+display/retirement observations and exact excerpts reside in the new review.
+Retained official primary/instance: `/sources/0..1`, manifest artifacts18/19;
+primary SHA256 `9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e`,
+instance `b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792`.
+
+| Family | Supported/previously accepted input | Result / limitation |
+| --- | --- | --- |
+| Revenue |281,724 reported | Satisfied, exact consolidated source |
+| EBIT |128,528 reported | Satisfied; no CFO-to-EBIT transformation |
+| Expense D&A |28,000R = depreciation22,000R + amortization6,000R | Existing approved finance-amortization inclusion **assumption**, not proved overlap; no additional3,408 finance-ROU add-back |
+| Cash Capex |−64,551 cash PP&E | Existing narrow approval; capital creditors6,900R, noncash finance additions20,511 and combined purchases−5,978 remain separate |
+| CF working-capital movements | AR−10,581; inventory+309; OCA−3,044; ONCA−2,950; AP+569; contract liabilities+5,438; taxes−38; OCL+5,922; ONCL−975 | Sources verified, proposed historical-path choice25-D1; not cash ΔNWC |
+| Deferred taxes | CFO−7,056, provision−7,056 separately identified | Satisfied FY2025 reported role; broader FY2026 tax-and-credit concept absent, not zero/required substitute |
+| SBC | Expense proxy11,974 once; CFO add-back11,974 separate | Existing acceptance; no duplicate charge; awards separate |
+| Unclassified residual | No new scalar; mixed D&A-and-other34,153 remains source observation | Pending25-D2, not zero or pure D&A |
+| CFO |136,162 reported;14 independently bound terms including net income | Satisfied reported subtotal; pending25-D1 does not invalidate source fact |
+| Tax context | Provision21,795; Pretax123,627; ETR17.629644…%; cash taxes−28,700R | Existing historical schedules; no operating/future rate |
+| Cash/investment components | Current94,565, LT15,405 separately | Existing named balance approval, not unrestricted/excess; LT2,460 debt+3,532 listed+9,141 other+272 derivatives partition is not new investment valuation |
+| Debt/leases | CP0 expressly reported; term43,151 +finance46,172 = named89,323; operating22,861 separate | Named scope previously accepted; broader borrowing treatment requires25-D7 |
+| Other claims/assets | Combined loss/credit DTA2,114; legal accrual541 versus possible additional600 separate | Pending25-D3–D6; no1,141 claim, pure NOL or unknown-claim zeros |
+| Dated common/awards | June30 common7,434m rounded; July24 exact7,433,166,379; nonvested82m separately | Existing dated selections; no sum, award valuation or forecast dilution |
+
+**Independent source controls:** selected FY2025 primary CF statement displays
+14 terms including101,832 net income (13 adjustments), summing136,162. Earlier
+prose saying FY2025 has13 terms is corrected here:13 excludes net income. Existing
+term list/numbers and FY2026 PASS are unchanged. FY2025 original mixed34,153 and
+investment/derivative loss+609 differ from FY2026 comparative29,433/+5,329, but
+both pairs sum34,762. Preserve exact selected-accession presentations; no rounding
+plug, silent recast or economic adjustment is proposed.
+
+FY2025 consolidated equity343,479 = common capital109,095 +retained237,731
+−OCI3,347; liabilities275,524 +equity343,479 =619,003. Notes1/15 describe
+consolidation/common shares; Note17 reports1,800R retirement expense expensed as
+contributed. These support presentation-based proposals, **not absence/zero or
+materiality proof**. International plan coverage and undisclosed claims remain
+unquantified. The new observations preserve exact primary inline/instance ties.
+
+Note10 explicitly states no CP issued/outstanding at June30,2025, supported by
+two nondimensional `CommercialPaper` occurrences639/1504, precision−6/−9. This
+is **CP only**. The historical broad label `/accepted_view/periods/0/additional_short_borrowing`
+with reported0 remains unmodified but cannot be read as all-short-borrowing proof.
+Note10's43,151 term includes current2,999 already; Note4 CP securities are assets.
+Net ≤90-day financing−5,746 and >3-month proceeds0/repayments−3,216 are flows,
+not an all-category closing debt bridge. Original CP tenor28–152 days also rules
+out assuming the cash population and CP balance are identical.
+
+### ONE approval table — all new FY2025 judgments remain proposed
+
+| Decision | Recommendation and source basis | Numerical consequence | Uncertainty / alternative / approval |
+| --- | --- | --- | --- |
+|25-D1 | Accept nine **reported** movements plus independent14-term CFO control; original selected CF statement and accepted partial capital | Retain136,162 CFO and signed rows; named partial operating capital−25,755 remains partial, no new movement total | Mixed tax/noncurrent/acquisition/FX scope remains; alternative complete book-to-cash reconstruction is unavailable. **Approval required**, not transferred from FY2026. |
+|25-D2 | No separate residual for fully bound displayed reconciliation | Null, no zero; retain34,153 mixed row and28,000R expense D&A separately, no6,153 adjustment | No pure D&A/economic scope inferred. Alternative retain residual requirement unresolved; never balance it artificially. **Approval required.** |
+|25-D3 | Keep combined loss/credit DTA without separate pure-NOL economic-asset operation |2,114 remains combined; pure-NOL amount null, no benefit value | Unavailable loss/credit allocation; alternative pure-NOL operation cannot be quantified. **Approval required.** |
+|25-D4 | No additional preferred-equity adjustment based on FY2025 common-equity presentation/Note15 | No additional adjustment proposed, source amount unavailable | Economically omits potentially undisclosed claim, amount unbounded; no immateriality. Alternative quantified claim/defensible estimate unavailable. **Approval required.** |
+|25-D5 | No additional NCI adjustment based on consolidated-equity partition/Note1 | No additional adjustment proposed, source amount unavailable | Ownership-by-ownership completeness unproved; omitted claim unbounded. Alternative keep essential claim operation unresolved. **Approval required.** |
+|25-D6 | Retain retirement expense without separate pension adjustment, Note17 | Retain1,800R expense, funded-status amount null; no extra charge/debt | International-plan coverage incomplete; omitted obligation/surplus unbounded. Alternative separate funded-status bridge unavailable. **Approval required.** |
+|25-D7 | Select named89,323 financing with no adjustment for borrowing beyond the explicitly reported CP zero | Preserve43,151 term+46,172 finance, CP0 source fact; broader borrowing remains unquantified | No adjustment economically omits possible other borrowing, amount unbounded; not complete debt or immateriality. Alternative quantified broader balance/defensible estimate unavailable. **Approval required.** |
+
+Five essential operation choices remain across four pending families: movement
+perimeter, residual exclusion, pure-NOL operation, preferred/NCI/pension treatment,
+and broader borrowing treatment. No defensible numerical estimate exists for the
+missing claims; proposed no-adjustment assumptions are not active. Existing
+14 null requirements are mapped one-for-one in JSON: six would be supporting
+under proposed25-D1, five are Phase2 operations, one retains actual FY2025 deferred-
+tax role rather than an absent FY2026 concept, two require the proposed NOL/claims
+choices. All original nulls remain. No new unrelated requirement is invented.
+
+Stop for all seven decisions **together**. No sequential memo/annotation cycle,
+new issuer, automatic research or Phase2 work. No SEC requests. FY2026 scoped
+14/14 outcome and all original source/audit/pilot/frozen bytes are preserved.
+
+Validation: **146 focused tests pass in79.219s**, including six new FY2025 review
+tests plus all existing financing/claim/operation/attempt/package, original inputs,
+sidecars/NWC and assessment preservation. Exact-period primary/instance amounts,
+signs/precision, new note/display bindings,14-term arithmetic, seven pending choices,
+fourteen-family/null accounting, wrong-period/tampered-source rejection and JSON
+round trips pass. All three package replays, compileall,558 affected local links
+and diff checks pass. Removing only the new proposal-review key reproduces the
+entire prior package, including FY2026's14/14 and every audit. No SEC requests,
+full-suite or corpus rerun; no new approvals or automatic next work.
+
 ## Current FY2026 financing acceptance and scoped checklist PASS
 
 **Analyst-complete for the existing, explicitly approved FY2026 historical

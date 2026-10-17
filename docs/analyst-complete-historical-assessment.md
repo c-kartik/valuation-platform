@@ -1,5 +1,11 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+Current B1 checkpoint: [MSFT FY2025](company-data-preparation/MSFT-analyst-input-package.md)
+has one bounded independent review,10 satisfied families/four pending seven
+consolidated proposals. No new approval or complete period. FY2026's scoped14/14
+result is preserved; B1 stops for user review before any other issuer/work.
+The machine inventory/workload below remains its original dated assessment.
+
 Current exact-period update: [MSFT FY2026 package](company-data-preparation/MSFT-analyst-input-package.md)
 passes its existing approved historical checklist after explicit financing-risk
 acceptance, D1–D3 and claim assumptions. This does not approve complete debt or

@@ -5594,6 +5594,730 @@
     "scope": "Historical analyst proposals only; book movements are not cash delta NWC; no FCFF or enterprise-equity calculation."
   },
   "financial_sufficiency": "NOT_ASSESSED",
+  "fy2025_completeness_review": {
+    "analyst_complete": false,
+    "basis_commit": "2d62dbc38810bb54864ac207bc81fdf0b3b03795",
+    "cfo_control": {
+      "adjustments_excluding_net_income": 13,
+      "amount_usd": "136162000000",
+      "correction": "Earlier prose FY2025 has13 means adjustments, not terms including net income;14 displayed terms tie. Original numerical data unchanged.",
+      "independently_bound": true,
+      "term_count": 14,
+      "terms_reference": "/periods/0/cfo_reconciliation"
+    },
+    "checklist": [
+      {
+        "evidence_references": [
+          "/periods/0/inputs/37"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "revenue",
+        "pending_decisions": [],
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/38"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "ebit",
+        "pending_decisions": [],
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/41"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "depreciation_amortization",
+        "pending_decisions": [],
+        "status": "SATISFIED_APPROVED_ASSUMPTION"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/6"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "cash_capex",
+        "pending_decisions": [],
+        "status": "SATISFIED_ACCEPTED_NARROW"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/28",
+          "/periods/0/inputs/29",
+          "/periods/0/inputs/30",
+          "/periods/0/inputs/31",
+          "/periods/0/inputs/32",
+          "/periods/0/inputs/33",
+          "/periods/0/inputs/34",
+          "/periods/0/inputs/35",
+          "/periods/0/inputs/36"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "reported_cash_flow_working_capital_movements",
+        "pending_decisions": [
+          "25-D1"
+        ],
+        "status": "PENDING_APPROVAL"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/5"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "deferred_taxes",
+        "pending_decisions": [],
+        "status": "SATISFIED_REPORTED"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/40",
+          "/periods/0/inputs/10"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "stock_based_compensation",
+        "pending_decisions": [],
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/26"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "unclassified_cfo_reconciliation_residual",
+        "pending_decisions": [
+          "25-D2"
+        ],
+        "status": "PENDING_APPROVAL"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/0"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "reported_cfo",
+        "pending_decisions": [],
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/4",
+          "/periods/0/inputs/47",
+          "/periods/0/inputs/3"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "reported_tax_context",
+        "pending_decisions": [],
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/45",
+          "/periods/0/inputs/48"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "cash_investment_components",
+        "pending_decisions": [],
+        "status": "SATISFIED_ACCEPTED_NAMED"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/58",
+          "/periods/0/inputs/56"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "debt_lease_components",
+        "pending_decisions": [
+          "25-D7"
+        ],
+        "status": "PENDING_APPROVAL"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/53"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "other_equity_bridge_claims_assets",
+        "pending_decisions": [
+          "25-D3",
+          "25-D4",
+          "25-D5",
+          "25-D6"
+        ],
+        "status": "PENDING_APPROVAL"
+      },
+      {
+        "evidence_references": [
+          "/periods/0/inputs/54",
+          "/periods/0/inputs/59",
+          "/periods/0/inputs/60"
+        ],
+        "existing_approval_reference": "/accepted_view/periods/0",
+        "field": "point_in_time_shares",
+        "pending_decisions": [],
+        "status": "SATISFIED_ACCEPTED_DATED"
+      }
+    ],
+    "cp_scope": {
+      "broader_short_borrowing_usd": null,
+      "historical_label_limitation": "Existing additional_short_borrowing reported0 field is supported ONLY as CP; do not read its historical broad label as an all-short-borrowing fact.",
+      "reported_cp_usd": "0",
+      "source_reference": "/periods/0/facts/commercial_paper"
+    },
+    "decisions": [
+      {
+        "accepted": false,
+        "alternative": "A complete reconstructed book-to-cash operating-capital bridge remains unavailable; do not substitute book movement.",
+        "decision_id": "25-D1",
+        "evidence_references": [
+          "/periods/0/cfo_reconciliation",
+          "/accepted_view/periods/0/operating_capital"
+        ],
+        "numerical_consequence": "Retain reported CFO136162 and nine signed rows; partial operating capital-25755 stays partial, no new total.",
+        "recommendation": "Use nine reported CF movement rows and independently bound14-term CFO control; retain partial book capital as support, not cash delta NWC.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "Consolidated tax/noncurrent/acquisition/FX effects not removed; no EBIT/organic compatibility."
+      },
+      {
+        "accepted": false,
+        "alternative": "Keep residual requirement unresolved instead; do not manufacture a balancing item.",
+        "decision_id": "25-D2",
+        "evidence_references": [
+          "/periods/0/inputs/26",
+          "/periods/0/cfo_reconciliation"
+        ],
+        "numerical_consequence": "No residual value or zero; mixed34153 remains distinct from rounded expense D&A28000; no6153 adjustment.",
+        "recommendation": "No separately computed residual for this independently bound display; preserve the mixed D&A-and-other row.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "Mixed row is not pure D&A or an economic adjustment."
+      },
+      {
+        "accepted": false,
+        "alternative": "Separate pure-NOL operation remains unsupported; combined2114 cannot serve as pure NOL.",
+        "decision_id": "25-D3",
+        "evidence_references": [
+          "/periods/0/facts/loss_credit_dta"
+        ],
+        "numerical_consequence": "Retain2114 combined DTA; pure-NOL allocation stays null, no benefit value or zero.",
+        "recommendation": "Retain combined loss-and-credit DTA without a separate pure-NOL economic-asset operation.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "Credits/losses not separated; no pure-NOL value or economic benefit established."
+      },
+      {
+        "accepted": false,
+        "alternative": "Require exact outstanding preferred claim or approved estimate; no defensible numeric estimate is disclosed.",
+        "decision_id": "25-D4",
+        "evidence_references": [
+          "/fy2025_completeness_review/observations/equity",
+          "/fy2025_completeness_review/passages/3"
+        ],
+        "numerical_consequence": "No additional adjustment proposed; source preferred amount remains unavailable, not reported zero.",
+        "recommendation": "No additional preferred-equity adjustment, relying on reviewed FY2025 common-equity presentation.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "Economically omits potentially undisclosed claim of unbounded amount; no immateriality finding."
+      },
+      {
+        "accepted": false,
+        "alternative": "Keep essential claim operation unresolved pending quantified ownership/claim evidence, not an invented residual.",
+        "decision_id": "25-D5",
+        "evidence_references": [
+          "/fy2025_completeness_review/observations/equity",
+          "/fy2025_completeness_review/passages/1"
+        ],
+        "numerical_consequence": "No additional adjustment proposed; NCI amount remains unavailable.",
+        "recommendation": "No additional NCI adjustment, relying on reviewed FY2025 consolidated-equity presentation.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "Economically omits potentially undisclosed minority claim; amount unbounded, no ownership-by-ownership absence proof."
+      },
+      {
+        "accepted": false,
+        "alternative": "Require recognized funded-status/plan-assets bridge for a separate pension operation; no available estimate.",
+        "decision_id": "25-D6",
+        "evidence_references": [
+          "/fy2025_completeness_review/observations/retirement_cost",
+          "/fy2025_completeness_review/passages/4"
+        ],
+        "numerical_consequence": "Retain1800 rounded expense; funded-status amount remains null; no extra charge/debt.",
+        "recommendation": "Retain disclosed FY2025 retirement expense without separate pension adjustment, acknowledging incomplete international-plan coverage.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "Potential undisclosed funded obligation/surplus unbounded; contribution expense is not closing pension debt."
+      },
+      {
+        "accepted": false,
+        "alternative": "Require quantified broader short borrowing or an independently justified estimate; CP0 alone cannot establish that total.",
+        "decision_id": "25-D7",
+        "evidence_references": [
+          "/accepted_view/periods/0/borrowings",
+          "/periods/0/facts/commercial_paper",
+          "/fy2025_completeness_review/passages/2"
+        ],
+        "numerical_consequence": "Retain43151 term+46172 finance=89323; CP0 source-confirmed only. Broader short borrowing remains unquantified.",
+        "recommendation": "Select named89323 term-debt-plus-finance-lease financing with no adjustment for additional borrowing beyond the expressly reported CP zero.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "No adjustment economically omits potentially undisclosed other short borrowing; no supported bound or complete-debt assertion. Current term2999 already included; CP investment assets excluded."
+      }
+    ],
+    "essential_requirements_pending": [
+      "reported_movement_perimeter",
+      "separate_residual_exclusion",
+      "pure_nol_operation",
+      "preferred_nci_pension_adjustments",
+      "broader_borrowing_treatment"
+    ],
+    "financial_approvals_added": 0,
+    "financial_sufficiency": "PENDING_APPROVAL_FOR_PROPOSED_HISTORICAL_PERIMETER",
+    "fy2026_authority_transferred": false,
+    "identity": {
+      "accession": "0000950170-25-100235",
+      "annual_end": "2025-06-30",
+      "annual_start": "2024-07-01",
+      "cik": 789019,
+      "form": "10-K"
+    },
+    "no_defensible_numerical_estimate_for_missing_claims": true,
+    "observations": {
+      "balance_total": {
+        "as_of": "2025-06-30",
+        "concept": "LiabilitiesAndStockholdersEquity",
+        "display_unit": "USD millions",
+        "display_value": "619003",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "FY2025 consolidated presentation / Note17 annual retirement expense",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+            "dimensions": [],
+            "end": "2025-06-30",
+            "ordinal": 679,
+            "precision": "-6",
+            "primary_display": "619,003",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#F_0cdec355-74e2-4cf8-90e0-4ceffa8775b0",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "619003000000",
+            "start": null,
+            "unit_id": "U_USD",
+            "xml_id": "F_0cdec355-74e2-4cf8-90e0-4ceffa8775b0"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "619003000000"
+      },
+      "common_capital": {
+        "as_of": "2025-06-30",
+        "concept": "CommonStocksIncludingAdditionalPaidInCapital",
+        "display_unit": "USD millions",
+        "display_value": "109095",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "FY2025 consolidated presentation / Note17 annual retirement expense",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+            "dimensions": [],
+            "end": "2025-06-30",
+            "ordinal": 671,
+            "precision": "-6",
+            "primary_display": "109,095",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#F_3f0ade30-aa48-4227-b454-efcb5929a3d5",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "109095000000",
+            "start": null,
+            "unit_id": "U_USD",
+            "xml_id": "F_3f0ade30-aa48-4227-b454-efcb5929a3d5"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "109095000000"
+      },
+      "current_liabilities": {
+        "as_of": "2025-06-30",
+        "concept": "LiabilitiesCurrent",
+        "display_unit": "USD millions",
+        "display_value": "141218",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "FY2025 consolidated presentation / Note17 annual retirement expense",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+            "dimensions": [],
+            "end": "2025-06-30",
+            "ordinal": 651,
+            "precision": "-6",
+            "primary_display": "141,218",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#F_d396c4e3-d173-4a58-bf66-70bf5b1b78c8",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "141218000000",
+            "start": null,
+            "unit_id": "U_USD",
+            "xml_id": "F_d396c4e3-d173-4a58-bf66-70bf5b1b78c8"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "141218000000"
+      },
+      "equity": {
+        "as_of": "2025-06-30",
+        "concept": "StockholdersEquity",
+        "display_unit": "USD millions",
+        "display_value": "343479",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "FY2025 consolidated presentation / Note17 annual retirement expense",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 2,
+        "occurrences": [
+          {
+            "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+            "dimensions": [],
+            "end": "2025-06-30",
+            "ordinal": 677,
+            "precision": "-6",
+            "primary_display": "343,479",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#F_7ef83fda-b42b-4a9e-a602-aaefcad7bc9a",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "343479000000",
+            "start": null,
+            "unit_id": "U_USD",
+            "xml_id": "F_7ef83fda-b42b-4a9e-a602-aaefcad7bc9a"
+          },
+          {
+            "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+            "dimensions": [],
+            "end": "2025-06-30",
+            "ordinal": 825,
+            "precision": "-6",
+            "primary_display": "343,479",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#F_363e79b9-4a75-486d-a186-ee8c77015e1f",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "343479000000",
+            "start": null,
+            "unit_id": "U_USD",
+            "xml_id": "F_363e79b9-4a75-486d-a186-ee8c77015e1f"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "343479000000"
+      },
+      "liabilities": {
+        "as_of": "2025-06-30",
+        "concept": "Liabilities",
+        "display_unit": "USD millions",
+        "display_value": "275524",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "FY2025 consolidated presentation / Note17 annual retirement expense",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+            "dimensions": [],
+            "end": "2025-06-30",
+            "ordinal": 665,
+            "precision": "-6",
+            "primary_display": "275,524",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#F_3a169ddc-8a4c-4ee2-beb2-f7e5267c1fd6",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "275524000000",
+            "start": null,
+            "unit_id": "U_USD",
+            "xml_id": "F_3a169ddc-8a4c-4ee2-beb2-f7e5267c1fd6"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "275524000000"
+      },
+      "oci": {
+        "as_of": "2025-06-30",
+        "concept": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",
+        "display_unit": "USD millions",
+        "display_value": "-3347",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "FY2025 consolidated presentation / Note17 annual retirement expense",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+            "dimensions": [],
+            "end": "2025-06-30",
+            "ordinal": 675,
+            "precision": "-6",
+            "primary_display": "3,347",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#F_a26f7e14-0a96-4169-a69c-7a0070a9de92",
+            "primary_scale": 6,
+            "primary_sign": "-",
+            "raw_value": "-3347000000",
+            "start": null,
+            "unit_id": "U_USD",
+            "xml_id": "F_a26f7e14-0a96-4169-a69c-7a0070a9de92"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "-3347000000"
+      },
+      "retained": {
+        "as_of": "2025-06-30",
+        "concept": "RetainedEarningsAccumulatedDeficit",
+        "display_unit": "USD millions",
+        "display_value": "237731",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "FY2025 consolidated presentation / Note17 annual retirement expense",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "C_f6acec30-41ed-4918-bef7-c8a710bf3a7a",
+            "dimensions": [],
+            "end": "2025-06-30",
+            "ordinal": 673,
+            "precision": "-6",
+            "primary_display": "237,731",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#F_d3794cfa-665a-4b1b-9198-dd9d64b59b8d",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "237731000000",
+            "start": null,
+            "unit_id": "U_USD",
+            "xml_id": "F_d3794cfa-665a-4b1b-9198-dd9d64b59b8d"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "237731000000"
+      },
+      "retirement_cost": {
+        "as_of": null,
+        "concept": "DefinedContributionPlanCostRecognized",
+        "display_unit": "USD millions",
+        "display_value": "1800",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "FY2025 consolidated presentation / Note17 annual retirement expense",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "C_7102029d-8d6c-44c5-b166-04cf41443b1e",
+            "dimensions": [],
+            "end": "2025-06-30",
+            "ordinal": 2153,
+            "precision": "-8",
+            "primary_display": "1.8",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#F_f5e85075-7075-494f-ad84-1d4921effe61",
+            "primary_scale": 9,
+            "primary_sign": "+",
+            "raw_value": "1800000000",
+            "start": "2024-07-01",
+            "unit_id": "U_USD",
+            "xml_id": "F_f5e85075-7075-494f-ad84-1d4921effe61"
+          }
+        ],
+        "precision": "-8",
+        "precision_variants": [
+          "-8"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "1800000000"
+      }
+    },
+    "original_nulls_preserved": true,
+    "original_requirement_dispositions": [
+      {
+        "classification": "SUPPORTING_UNDER_PROPOSED_D1",
+        "input_id": "complete_operating_nwc",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/0"
+      },
+      {
+        "classification": "SUPPORTING_UNDER_PROPOSED_D1",
+        "input_id": "accrual_ppe_additions_cash_bridge",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/1"
+      },
+      {
+        "classification": "SUPPORTING_UNDER_PROPOSED_D1",
+        "input_id": "all_in_cash_interest",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/2"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "input_id": "operating_only_cash_tax",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/3"
+      },
+      {
+        "classification": "SUPPORTING_UNDER_PROPOSED_D1",
+        "input_id": "acquisition_only_cash_purchases",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/4"
+      },
+      {
+        "classification": "SUPPORTING_UNDER_PROPOSED_D1",
+        "input_id": "discontinued_operations_cash_allocation",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/5"
+      },
+      {
+        "classification": "SUPPORTING_UNDER_PROPOSED_D1",
+        "input_id": "component_acquisition_fx_reclassification_effects",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/6"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "input_id": "joint_timing_compatibility",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/7"
+      },
+      {
+        "classification": "USE_REPORTED_FY2025_DEFERRED_TAX_ROLE_NOT_UNREPORTED_FY2026_CONCEPT",
+        "input_id": "DeferredIncomeTaxesAndTaxCredits",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/8"
+      },
+      {
+        "classification": "PENDING_CONSOLIDATED_APPROVAL",
+        "input_id": "pure_nol_dta",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/9"
+      },
+      {
+        "classification": "PENDING_CONSOLIDATED_APPROVAL",
+        "input_id": "preferred_nci_pension",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/10"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "input_id": "outstanding_options_and_dilution",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/11"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "input_id": "excess_unrestricted_cash",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/12"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "input_id": "cfo_to_ebit_compatibility",
+        "original_null_preserved": true,
+        "original_reference": "/periods/0/unresolved_requirements/13"
+      }
+    ],
+    "parent_revision": "6690e6ec47317a6a78e28979233473d60209c29334d1da8c00da477e0478b1fe",
+    "passages": [
+      {
+        "exact_excerpt": "CASH FLOWS S TATEMENTS (In millions) Year Ended June 30, 2025 2024 2023 Operations Net income $ 101,832 $ 88,136 $ 72,361 Adjustments to reconcile net income to net cash from operations: Depreciation, amortization, and other 34,153 22,287 13,861 Stock-based compensation expense 11,974 10,734 9,611 Net recognized losses on investments and derivatives 609 305 196 Deferred income taxes ( 7,056 ) ( 4,738 ) ( 6,059 ) Changes in operating assets and liabilities: Accounts receivable ( 10,581 ) ( 7,191 ) ( 4,087 ) Inventories 309 1,284 1,242 Other current assets ( 3,044 ) ( 1,648 ) ( 1,991 ) Other long-term assets ( 2,950 ) ( 6,817 ) ( 2,833 ) Accounts payable 569 3,545 ( 2,721 ) Unearned revenue 5,438 5,348 5,535 Income taxes ( 38 ) 1,687 ( 358 ) Other current liabilities 5,922 4,867 2,272 Other long-term liabilities ( 975 ) 749 553 Net cash from operations 136,162 118,548 87,582 Financing Proceeds from issuance (repayments) of debt, maturities of 90 days or less, net ( 5,746 ) 5,250 0 Proceeds from issuance of debt 0 24,395 0 Repayments of debt ( 3,216 ) ( 29,070 ) ( 2,750 ) Common stock issued 2,056 2,002 1,866 Common stock repurchased ( 18,420 ) ( 17,254 ) ( 22,245 ) Common stock cash dividends paid ( 24,082 ) ( 21,771 ) ( 19,800 ) Other, net ( 2,291 ) ( 1,309 ) ( 1,006 ) Net cash used in financing ( 51,699 ) ( 37,757 ) ( 43,935 ) Investing Additions to property and equipment ( 64,551 ) ( 44,477 ) ( 28,107 ) Acquisition of companies, net of cash acquired and divestitures, and purchases of intangible and other assets ( 5,978 ) ( 69,132 ) ( 1,670 ) Purchases of investments ( 29,775 ) ( 17,732 ) ( 37,651 ) Maturities of investments 16,079 24,775 33,510 Sales of investments 9,309 10,894 14,354 Other, net 2,317 ( 1,298 ) ( 3,116 ) Net cash used in investing ( 72,599 ) ( 96,970 ) ( 22,680 ) Effect of foreign exchange rates on cash and cash equivalents 63 ( 210 ) ( 194 ) Net change in cash and cash equivalents 11,927 ( 16,389 ) 20,773 Cash and cash equivalents, beginning of period 18,315 34,704 13,931 Cash and cash equivalents, end of period $ 30,242 $ 18,315 $ 34,704 ",
+        "offset": 225675,
+        "source": "FY2025-primary",
+        "source_body_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e"
+      },
+      {
+        "exact_excerpt": "Principles of Consolidation The consolidated financial statements include the accounts of Microsoft Corporation and its subsidiaries. Intercompany transactions and balances have been eliminated. ",
+        "offset": 229129,
+        "source": "FY2025-primary",
+        "source_body_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e"
+      },
+      {
+        "exact_excerpt": "NOTE 10 \u2014 DEBT Short-term Debt As of June 30, 2025, we had no commercial paper issued or outstanding. As of June 30, 2024, we had $ 6.7 billion of commercial paper issued and outstanding, with a weighted average interest rate of 5.4 % and maturities ranging from 28 days to 152 days. The estimated fair value of this commercial paper approximates its carrying value. Long-term Debt The components of long-term debt were as follows: (In millions, issuance by calendar year) Maturities (calendar year) Stated Interest Rate Effective Interest Rate June 30, 2025 June 30, 2024 2009 issuance of $ 3.8 billion 2039 5.20 % 5.24 % $ 520 $ 520 2010 issuance of $ 4.8 billion 2040 4.50 % 4.57 % 486 486 2011 issuance of $ 2.3 billion 2041 5.30 % 5.36 % 718 718 2012 issuance of $ 2.3 billion 2042 3.50 % 3.57 % 454 454 2013 issuance of $ 5.2 billion 2043 3.75 % \u2013 4.88 % 3.83 % \u2013 4.92 % 314 314 2013 issuance of \u20ac 4.1 billion 2028 \u2013 2033 2.63 % \u2013 3.13 % 2.69 % \u2013 3.22 % 2,700 2,465 2015 issuance of $ 23.8 billion 2025 \u2013 2055 3.13 % \u2013 4.75 % 3.18 % \u2013 4.78 % 7,555 9,805 2016 issuance of $ 19.8 billion 2026 \u2013 2056 2.40 % \u2013 3.95 % 2.46 % \u2013 4.03 % 7,930 7,930 2017 issuance of $ 17.1 billion 2026 \u2013 2057 3.30 % \u2013 4.50 % 3.38 % \u2013 5.49 % 6,833 6,833 2020 issuance of $ 10.1 billion 2030 \u2013 2060 1.35 % \u2013 2.68 % 2.53 % \u2013 5.43 % 10,111 10,111 2021 issuance of $ 8.2 billion 2052 \u2013 2062 2.92 % \u2013 3.04 % 2.92 % \u2013 3.04 % 8,185 8,185 2023 issuance of $ 0.1 billion 2026 \u2013 2050 1.35 % \u2013 4.50 % 5.16 % \u2013 5.49 % 56 56 2024 issuance of $ 3.3 billion 2026 \u2013 2050 1.35 % \u2013 4.50 % 5.16 % \u2013 5.49 % 3,344 3,344 Total face value 49,206 51,221 Unamortized discount and issuance costs ( 1,155 ) ( 1,227 ) Hedge fair value adjustments (a) ( 36 ) ( 81 ) Premium on debt exchange ( 4,864 ) ( 4,976 ) Total debt 43,151 44,937 Current portion of long-term debt ( 2,999 ) ( 2,249 ) Long-term debt $ 40,152 $ 42,688 (a) Refer to Note 5 \u2013 Derivatives for further information on the interest rate swaps related to fixed-rate debt. As of June 30, 2025 and 2024, the estimated fair value of long-term debt, including the current portion, was $ 40.4 billion and $ 42.3 billion, respectively. The estimated fair values are based on Level 2 inputs. Debt in the table above is comprised of senior unsecured obligations and ranks equally with our other outstanding obligations. Interest is paid semi-annually, except for the Euro-denominated debt, which is paid annually. Cash paid for interest on our debt for fiscal years 2025, 2024, and 2023 was $ 1.6 billion, $ 1.7 billion, and $ 1.7 billion, respectively. The following table outlines maturities of our long-term debt, including the current portion, as of June 30, 2025: (In millions) Year Ending June 30, 2026 $ 3,000 2027 9,250 2028 0 2029 2,054 2030 0 Thereafter 34,902 Total $ 49,206 73 PART II Item 8 ",
+        "offset": 280848,
+        "source": "FY2025-primary",
+        "source_body_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e"
+      },
+      {
+        "exact_excerpt": "NOTE 15 \u2014 STOCKHOLDERS\u2019 EQUITY Shares Outstanding Shares of common stock outstanding were as follows: (In millions) Year Ended June 30, 2025 2024 2023 Balance, beginning of year 7,434 7,432 7,464 Issued 31 34 37 Repurchased ( 31 ) ( 32 ) ( 69 ) Balance, end of year 7,434 7,434 7,432 ",
+        "offset": 297105,
+        "source": "FY2025-primary",
+        "source_body_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e"
+      },
+      {
+        "exact_excerpt": "Savings Plans We have savings plans in the U.S. that qualify under Section 401(k) of the Internal Revenue Code, and a number of savings plans in international locations. Eligible U.S. employees may contribute a portion of their salary into the savings plans, subject to certain limitations. We match a portion of each dollar a participant contributes into the plans. Employer-funded retirement benefits for all plans were $ 1.8 billion, $ 1.7 billion, and $ 1.6 billion in fiscal years 2025, 2024, and 2023, respectively, and were expensed as contributed. ",
+        "offset": 304783,
+        "source": "FY2025-primary",
+        "source_body_sha256": "9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e"
+      }
+    ],
+    "pending_families": 4,
+    "phase_closed": false,
+    "review_status": "PENDING_CONSOLIDATED_USER_APPROVAL",
+    "satisfied_families": 10,
+    "stopping_condition": "Stop for all seven FY2025 decisions together; no automatic next memo, research or company. FY2026 approvals do not apply.",
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
   "fy2026_analyst_checklist": {
     "analyst_complete": true,
     "audit_sha256": "5201c37c79866e62b57994d4da00de6abecb37d68d8f9f8fb71769f0d7e254b5",

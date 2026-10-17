@@ -1,6 +1,34 @@
 # Project Status
 
-## Current milestone — MSFT FY2026 financing acceptance and scoped checklist PASS
+## Current milestone — bounded MSFT FY2025 analyst-input review
+
+[Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
+[JSON](company-data-preparation/msft-analyst-input-package.json) add one revision-
+bound proposal-only review:14 families,10 satisfied within prior scope and4
+pending. Seven decisions are consolidated: FY2025 reported-movement path, residual
+exclusion, combined DTA/no pure NOL, presentation-based preferred/NCI/retirement
+assumptions, and named89,323 financing/no extra broader borrowing adjustment.
+None is active or inherited from FY2026. Source CP0 is affirmative CP-only proof,
+not a complete borrowing balance. Missing claims/other borrowing have no bound.
+
+Retained statement/notes/inline instances verify 14-term136,162 CFO equality,
+equity343,479 and balance619,003 partitions. Earlier prose13 terms is corrected:
+13 adjustments plus net income,14 terms; source numbers remain unchanged. New
+review preserves selected FY2025 presentation versus later comparative presentation.
+Original14 nulls are dispositioned; no filling, invented estimates, new required
+fields, research or financial approvals. FY2025 remains pending, FY2026 14/14 PASS
+and all old views/audits/sources/pilot/frozen bytes persist. No Phase2 or phase
+closure. Stop for all seven decisions together, not sequential memos/next issuer.
+
+Current validation:146 focused tests pass in79.219s (six new FY2025 tests plus
+existing financial-selection/approval, three packages, input/sidecar/NWC and
+assessment preservation). All-three exact package replays, compileall,558 links
+and diff checks pass. Exact primary/source facts,14-term arithmetic, proposal/
+null accounting and wrong-period/tamper rejection tested. Entire prior package,
+FY2026 PASS and audit chain preserved after stripping one additive review key.
+No full-suite/corpus rerun or SEC acquisition. Stop pending consolidated approval.
+
+## Prior milestone — MSFT FY2026 financing acceptance and scoped checklist PASS
 
 [Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
 [JSON](company-data-preparation/msft-analyst-input-package.json) append sequence4

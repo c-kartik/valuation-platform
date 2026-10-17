@@ -1,5 +1,20 @@
 # Phase 1 preparation pilots — outcomes and bounded remaining work
 
+## MSFT FY2025 review — no additional complete period yet
+
+[Existing package](company-data-preparation/MSFT-analyst-input-package.md) now
+assesses FY2025 independently:10/14 families satisfied within earlier scope,
+four pending seven proposed choices in one approval table. Original facts/partial
+approvals stay, including CP-only0 and named89,323 financing; no FY2026 assumption
+is active for FY2025. Missing claim/broader-borrowing amounts remain unquantified.
+FY2026 remains the sole scoped analyst-complete period. All original blockers,
+source nulls/approvals and future timing/consumption gates persist. Stop for
+consolidated approval, not another issuer/research or Phase1 closure.
+
+Validation:146 focused tests (79.219s), all-three package replays, exact prior
+package/audit preservation, compileall,558 links and diff checks pass; no requests
+or full-suite/corpus rerun.
+
 ## Current exact-period result — MSFT FY2026 scoped PASS
 
 [MSFT package](company-data-preparation/MSFT-analyst-input-package.md) records
