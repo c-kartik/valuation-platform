@@ -1,6 +1,41 @@
 # Project Status
 
-## Current milestone — one-period MSFT FY2026 completeness attempt
+## Current milestone — MSFT FY2026 operation approval and targeted official review
+
+[Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
+[JSON](company-data-preparation/msft-analyst-input-package.json) embed the explicit
+D1–D3 consent (recorded2026-10-17T08:04:57.424386+00:00), source commit/revision
+and original-audit hash link. Effective operation view accepts nine reported CF
+movements/14-term CFO reconciliation; excludes a separate residual **without zero**;
+retains combined loss/credit DTA, no pure-NOL economic asset. Old audit file,
+accepted parent, nulls and prior decisions are preserved exactly. No new sidecar.
+
+Fixed review reuses the exact official annual primary/instance. Full displayed
+current liabilities168825m, liabilities315989m, equity442387m and balance758376m
+tie to independently retained child populations. Relevant consolidation, debt,
+lease, equity and savings-plan disclosures are reviewed together, not keyword
+absence. No separate issued CP/short borrowing, preferred/NCI or pension funded
+status amount established:all four stay null. Named106888m financing unchanged;
+CP2987m is investment assets, common authorization24000m is not preferred issued,
+and retirement expense1800R is not pension debt or an extra adjustment.
+
+**Neither gap group resolved.** D1–D3 acceptance does not waive unrelated missing
+populations. No supported new numerical proposal, uncertainty bound or materiality
+claim. Zero new documents/HTTP requests:exact annual already retained; no precise
+incremental official source identified for the missing June30 allocations/claims.
+No earlier/later balances substituted. No source/policy/frozen/pilot value changes,
+SEC acquisition, Phase2 calculation, analyst completeness or phase closure.
+
+Current validation:129 focused tests pass in62.950s, including six new approval/
+population tests and relevant package/input/sidecar/NWC/assessment preservation.
+All-three exact package replays, compileall,472 affected local links and diff
+checks pass. Entire prior package/attempt is unchanged after stripping only the
+two additive keys; original audit and AAPL/Alphabet/frozen/source bytes preserved.
+Measured review-through-verification window638s,2026-10-17 08:01:44–08:12:22 UTC,
+includes reasoning and waits, not hypothetical reviewer effort. No full-suite or
+corpus rerun; stop after this fixed pass, without a new research queue.
+
+## Prior milestone — one-period MSFT FY2026 completeness attempt
 
 [Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
 [JSON](company-data-preparation/msft-analyst-input-package.json) append a decision-ready

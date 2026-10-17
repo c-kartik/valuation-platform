@@ -1,5 +1,26 @@
 # Company data preparation register
 
+## MSFT FY2026 D1–D3 accepted; population gaps remain
+
+[Same MSFT package](MSFT-analyst-input-package.md) now contains embedded immutable
+revision-bound operation consent and a separate effective view. Nine reported
+movements/14-term CFO control retained; residual operation excluded without zero;
+combined loss/credit DTA retained without pure-NOL valuation. Original audits,
+nulls, accepted AAPL/Alphabet views and all prior source data remain.
+
+Affirmative full balance/equity partitions and relevant policies/notes clarify
+four targeted populations:additional short borrowing, preferred equity, NCI and
+pension funded status remain unquantified, not separately established zeros.
+Retirement expense1800R is not a liability. Zero new documents/requests; no exact
+incremental official source identified that answers the selected June30 gaps.
+Neither gap group is resolved. No fresh assumption/exclusion, analyst-completeness
+certification, universe reassessment or phase closure; stop after this MSFT pass.
+
+Validation:129 focused tests (62.950s), all-three package replays, exact prior
+package/audit and pilot/frozen preservation, compileall,472 affected local links
+and diff checks pass. Zero acquisitions; no full-suite/corpus rerun. Measured
+review-through-verification window638s includes reasoning/tool waits.
+
 ## MSFT FY2026 bounded completion attempt — no certification
 
 [Updated existing MSFT package](MSFT-analyst-input-package.md) appends an exact

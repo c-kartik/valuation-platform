@@ -1,5 +1,40 @@
 # MSFT — company data preparation
 
+## FY2026 approved operations and targeted population disposition
+
+[Existing package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
+now embed the explicit D1–D3 user consent, actual UTC recording time, prior-attempt
+revision and link to the unchanged original treatment audit. No new sidecar.
+Current operation overlay approves nine reported cash movements/14-term CFO
+control, no separately computed residual (no zero), and combined loss/credit DTA
+without pure-NOL economic valuation. Original nulls/attempt/proposals and settled
+capital/D&A assumption/financing/current financial selections remain unchanged.
+
+The targeted official retained report review now binds full liability/equity
+display, Note1 consolidation, Notes4/10/13 borrowing/lease/investment populations,
+Note14 contingencies, Note15 common equity and Note17 savings plans. Current168825m,
+total liabilities315989m, equity442387m and balance758376m tie independently to
+their displayed children. This is presentation coverage, not absent-claim zeros.
+Extra short borrowing, preferred equity, NCI and pension funded-status amounts
+all remain null: no separate presentation/embedded allocation is established.
+Common authorization24000m is not preferred outstanding; CP2987m is assets.
+New retirement-cost observation1800R is expensed contributions, not pension debt
+or a new economic charge. No double-counting term/current debt, leases or claims.
+
+No new document/request:exact annual primary/instance already retained; duplicate
+IR/authorization-only/other-date sources would not supply the missing June30
+quantities. No specific incremental answering document identified; no new numeric
+proposal or materiality bound is defensible. Neither gap group resolved; D1–D3
+are accepted but not analyst completeness. Stop; no new research queue or phase
+closure. Earlier pending-choice wording below is historical, not current authority.
+
+Current validation:129 focused/preservation tests pass in62.950s, all-three exact
+package replays, compileall,472 affected local links and diff checks pass. Prior
+package/attempt is exactly unchanged after removing only the two additive keys;
+old audit, AAPL/Alphabet and frozen/source artifacts are preserved. Measured
+08:01:44–08:12:22 UTC review-through-verification window638s includes reasoning
+and waits, not an estimate of human-review effort. No full suite/corpus rerun.
+
 ## FY2026 bounded analyst-completeness attempt — INCOMPLETE
 
 [Existing package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)

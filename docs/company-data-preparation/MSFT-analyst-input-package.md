@@ -1,5 +1,109 @@
 # MSFT — analyst historical-input package, FY2025–FY2026
 
+## Current FY2026 D1–D3 acceptance and targeted official-population review
+
+**D1–D3 are accepted for FY2026 only; the period remains INCOMPLETE.** The new
+embedded `/fy2026_operation_approval` audit records the explicit user instruction,
+actual UTC recording time **2026-10-17T08:04:57.424386+00:00** (12:04:57 Dubai),
+source commit `81c6836549109c87e374f3ce0247011134e11ffe` and exact prior-attempt
+revision. Sequence2 links to the unchanged original treatment audit hash
+`b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2`.
+The original audit file, accepted view, original nulls and prior attempt/proposal
+history are unchanged. No additional sidecar or automatic approval is created.
+The separately versioned `/fy2026_operations_view` is the effective operation
+overlay. Strict scope/hash/source-revision checks fail closed on missing,
+malformed, conflicting or stale approval; normal replay cannot renew it.
+
+| Approved decision | Effective historical requirement | What remains prohibited/unproved |
+| --- | --- | --- |
+| D1 | Retain nine reported cash-movement rows and independently bound14-term CFO reconciliation. | No operating-only cash ΔNWC, complete NWC, organic cash or EBIT-based FCFF readiness. Partial capital−18,600m/book movement+7,155m keep their old labels. |
+| D2 | No separately computed residual for this fully bound displayed reconciliation. | Original residual null preserved; **no zero populated**. Mixed38,534m row stays mixed, not pure D&A or a new adjustment. |
+| D3 | Keep combined loss-and-credit DTA2,124m; no separate pure-NOL economic-asset operation. | Pure NOL source value remains null. No invented allocation, rate, benefit valuation or tax shield. |
+
+These approvals resolve the three operation choices, not unrelated source gaps.
+Every other required population retains its evidence/limitations; no generic
+policy, frozen schema, global coverage or source value is changed.
+
+### Fixed targeted source review — exact June30 position, not keyword inference
+
+Only selected FY2026 accession `0001193125-26-323660` was reviewed for additional
+short borrowing and recognized preferred/NCI/pension populations. The original
+official SEC annual primary/instance are already retained and integrity-checked
+(manifest artifacts20/21 and SHA256s below). Review binds complete consolidated
+liability/equity presentation, Note1 consolidation, Note4 investment classification,
+Note10 debt, Note13 lease locations, Note14 contingencies, Note15 common-share
+disclosure and Note17 savings-plan policy. No earlier/later balance substitutes.
+
+Affirmative displayed-population checks (USDm, instant2026-06-30, decimals−6):
+
+- Six current-liability captions42,416 +9,227 +14,945 +2,534 +72,965 +26,738
+  equal independently reported current liabilities168,825.
+- Current168,825 plus noncurrent31,067 +28,647 +2,747 +3,054 +16,532 +65,117
+  equal independently reported liabilities315,989.
+- Common stock/paid-in capital117,406 +retained earnings328,265 −OCI3,284
+  equal independently reported stockholders' equity442,387.
+- Liabilities315,989 +equity442,387 equal reported balance-sheet total/assets758,376.
+
+Every observation retains exact QName, context, raw value, unit, precision,
+confirming occurrences and primary inline bindings. These independently tied
+partitions establish **complete displayed coverage**, not zero balances inside
+mixed captions, economic equivalence or absence of unpresented/embedded claims.
+No balancing residual is assigned to a missing population.
+
+| Population | Selected amount/status | Exact coverage rationale / why it does not resolve the gap | Non-overlap / strongest supported disposition |
+| --- | --- | --- | --- |
+| Additional short borrowing / issued CP | **Null; not separately reported, possible embedded scope unquantified** | Full current/noncurrent display above and entire Note10 reviewed. Note10 explicitly covers term debt; mixed other current26,738 and other long65,117 are not a separate all-borrowing bridge. Net short-debt cash0 cannot establish ending0. Note4 CP2,987 is a classed investment asset. | Keep named term+finance106,888 only; no second addition of current term9,227 or CP assets. Rejected zero proposal stays **REJECTED_NOT_SELECTED**. No defensible amount/interval/new zero basis. |
+| Recognized preferred equity | **Null; no separate preferred-equity presentation, outstanding amount unproved** | All displayed equity442,387 is explained by common capital/retained/OCI. Note15's roll-forward concerns common shares; balance-sheet authorization24,000m is **common**, not outstanding preferred. Preferred-stock wording in investment policy concerns securities held. Complete display is not an affirmative outstanding-preferred zero or proof of no embedded claim. | No preferred claim/deduction selected. Authorization-only constitutional exhibits would not establish an outstanding June30 balance. No source-supported zero or new exclusion proposed. |
+| Recognized NCI | **Null; not separately presented, embedded coverage unproved** | Note1 includes Microsoft and subsidiaries and eliminates intercompany balances. Full equity presentation and Note15 identify no separate NCI population. These are affirmative scope checks, but not a quantified ownership/NCI allocation or explicit zero. | Do not allocate a residual of common capital/retained earnings to NCI, subtract total equity or add an unsupported claim. Source gap remains. |
+| Pension funded status / recognized obligation | **Null; no separate funded-status disclosure established** | Note17 describes US401(k) and international savings plans. Source `us-gaap:DefinedContributionPlanCostRecognized`, annual2025-07-01–2026-06-30, ordinal2190, decimals−8, reports employer-funded benefits1,800R **expensed as contributed**. This is expense, not closing obligation, plan assets, funded status or a contributions-payable balance. International plan descriptions do not establish all possible pension populations zero. | Retain1,800R only as a source-bound retirement-cost observation; already within historical expense, **not pension debt or an extra charge**. Do not add it to other liabilities or finance leases. Funded-status/embedded-location bridge remains unavailable in reviewed evidence. |
+
+Note13's finance-lease liability is already selected once; legal accrual553 versus
+possible additional exposure400 remain distinct from debt and retirement claims.
+Commitments/possible losses are not recognized balances or new adjustments.
+No missing amount is called immaterial and no numerical uncertainty bound exists.
+
+### Acquisition decision and consolidated result
+
+**Zero new documents / zero HTTP requests.** The exact official annual and its
+extracted instance were already retained. The precise unanswered evidence is an
+affirmative June30 issued-short-debt/embedded-caption allocation, outstanding
+preferred/NCI coverage, and pension obligation/plan-assets/funded-status/location
+disclosure. No precise incremental official document was established that provides
+those balances. A duplicate IR annual would repeat the same presentation;
+authorization-only documents and other-date balances would not establish the
+selected position. No speculative download, broad scrape or configuration access
+was needed. This is a bounded conclusion from the sources reviewed, **not proof
+that no other official evidence could ever exist**.
+
+**Neither original gap group is resolved.** The review materially narrows their
+status to the four populations above and binds affirmative presentation/plan
+evidence, rather than relying on absent tags/words. No defensible numerical
+proposal is offered; there is no new assumption/exclusion for user approval.
+D1–D3 need no further approval. Original pure-NOL/residual null history remains,
+but those specific operations are now accepted exclusions, separately represented.
+All unrelated essential requirements persist. Analyst completeness/financial
+sufficiency is not certified, and Phase1 is not closed.
+
+Stop after this fixed pass. Reopen only for a named exact FY2026-end issued or
+embedded balance, ownership/NCI bridge, or actuarial/funded-status disclosure (or
+an independently justified specifically approved alternative). No automatic
+sidecar/research cycle or next company work follows.
+
+Current-pass validation: **129 focused tests passed in62.950s**, including six
+new operation/population tests, original attempt/package checks, all three issuer
+packages, original reported inputs, sidecars, NWC and historical-assessment
+preservation. All three exact package replays, compileall,472 affected local links
+and `git diff --check` pass. The entire prior package (including original attempt)
+is equal after removing only the two new additive keys; original audit bytes,
+frozen/runtime/evidence files and AAPL/Alphabet views remain unchanged. Tests cover
+persist/restart, stale source and malformed approval rejection, exact primary
+amounts/precision, displayed partitions, nulls and rejected-zero preservation.
+Measured review-through-verification window: **638s**,2026-10-17 08:01:44–08:12:22
+UTC (12:01:44–12:12:22 Dubai), including reasoning and tool waits, not reviewer
+labor or a universe schedule. No full-suite/corpus rerun or SEC request.
+
+## Prior completeness attempt — original proposals retained as history
+
 ## Bounded FY2026 completeness attempt — decision-ready, still INCOMPLETE
 
 Exact selected `0001193125-26-323660`, CIK789019, **2025-07-01–2026-06-30**

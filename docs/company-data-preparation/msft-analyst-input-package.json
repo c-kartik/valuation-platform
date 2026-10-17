@@ -6197,6 +6197,1077 @@
       "started_at_utc": "2026-10-17T07:38:00+00:00"
     }
   },
+  "fy2026_operation_approval": {
+    "action": "ACCEPT_OPERATION_REQUIREMENTS",
+    "analyst_completeness_approved": false,
+    "author": "User, explicit MSFT FY2026 D1-D3 instruction",
+    "decisions": {
+      "D1": "Retain nine reported cash-movement rows and independent14-term CFO reconciliation for historical preparation only; no operating-only cash delta NWC, complete NWC or EBIT-based FCFF readiness.",
+      "D2": "No separately computed residual for this fully bound displayed reconciliation; preserve mixed rows, never populate a zero.",
+      "D3": "Retain combined loss-and-credit DTA without a separate pure-NOL economic-asset operation; no invented allocation or valuation."
+    },
+    "financial_sufficiency": "NOT_ASSESSED",
+    "phase_closed": false,
+    "previous": "b7229f3fc66139722fd743ccf12c69c8bb93a400d418b2fb63f0949abc43a0b2",
+    "rationale": "Accept only the three stated operation requirements; preserve original nulls and unrelated population gaps.",
+    "recorded_at_utc": "2026-10-17T08:04:57.424386+00:00",
+    "schema": "msft-operation-acceptance-audit-v1",
+    "sequence": 2,
+    "sha256": "0c89dd8b1dcf46cd9f6a7946f573883d28d001f6dc20594f820cd470ab56042f",
+    "source_commit": "81c6836549109c87e374f3ce0247011134e11ffe",
+    "source_revision": "54ff3a2c92b6f76d37acf75793cd08418bf8a2fe0552367419ccb684ac039e4b",
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
+  "fy2026_operations_view": {
+    "analyst_complete": false,
+    "audit_sha256": "0c89dd8b1dcf46cd9f6a7946f573883d28d001f6dc20594f820cd470ab56042f",
+    "book_delta_is_cash_delta": false,
+    "financial_sufficiency": "NOT_ASSESSED",
+    "identity": {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "cik": 789019,
+      "form": "10-K"
+    },
+    "operation_requirements": [
+      {
+        "decision_id": "D1",
+        "scope": "Retain nine reported cash-movement rows and independent14-term CFO reconciliation for historical preparation only; no operating-only cash delta NWC, complete NWC or EBIT-based FCFF readiness.",
+        "source_reference": "/fy2026_completeness_attempt/decisions/0",
+        "status": "accepted_for_stated_historical_preparation_scope"
+      },
+      {
+        "decision_id": "D2",
+        "scope": "No separately computed residual for this fully bound displayed reconciliation; preserve mixed rows, never populate a zero.",
+        "source_reference": "/fy2026_completeness_attempt/decisions/1",
+        "status": "accepted_for_stated_historical_preparation_scope"
+      },
+      {
+        "decision_id": "D3",
+        "scope": "Retain combined loss-and-credit DTA without a separate pure-NOL economic-asset operation; no invented allocation or valuation.",
+        "source_reference": "/fy2026_completeness_attempt/decisions/2",
+        "status": "accepted_for_stated_historical_preparation_scope"
+      }
+    ],
+    "original_nulls_preserved": true,
+    "phase_closed": false,
+    "population_review": {
+      "acquisition_disposition": "Exact selected official annual primary/instance already retained. No precise additional official document was established that answers these June30 outstanding/embedded/funded-status questions; duplicate IR annual, authorization-only exhibits or other-date balances would not supply that missing evidence. No speculative acquisition.",
+      "checks": [
+        {
+          "amount_usd": "168825000000",
+          "check": "current_liability_display",
+          "limit": "Complete displayed partition only; not proof that mixed captions contain no embedded obligations.",
+          "operands": [
+            "ap",
+            "term_current",
+            "compensation",
+            "tax_current",
+            "unearned_current",
+            "other_current"
+          ],
+          "parent": "current_total",
+          "result": "PASS"
+        },
+        {
+          "amount_usd": "315989000000",
+          "check": "liability_display",
+          "limit": "Complete displayed partition only; not proof that mixed captions contain no embedded obligations.",
+          "operands": [
+            "current_total",
+            "term_long",
+            "tax_long",
+            "unearned_long",
+            "deferred_tax",
+            "op_lease_long",
+            "other_long"
+          ],
+          "parent": "liabilities",
+          "result": "PASS"
+        },
+        {
+          "amount_usd": "442387000000",
+          "check": "equity_display",
+          "limit": "Complete displayed partition only; not proof that mixed captions contain no embedded obligations.",
+          "operands": [
+            "common_capital",
+            "retained",
+            "oci"
+          ],
+          "parent": "equity",
+          "result": "PASS"
+        },
+        {
+          "amount_usd": "758376000000",
+          "check": "balance_display",
+          "limit": "Complete displayed partition only; not proof that mixed captions contain no embedded obligations.",
+          "operands": [
+            "liabilities",
+            "equity"
+          ],
+          "parent": "balance_total",
+          "result": "PASS"
+        }
+      ],
+      "new_document_count": 0,
+      "new_requests": 0,
+      "observations": {
+        "ap": {
+          "as_of": "2026-06-30",
+          "concept": "AccountsPayableCurrent",
+          "display_unit": "USD millions",
+          "display_value": "42416",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 644,
+              "precision": "-6",
+              "primary_display": "42,416",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_41f7be4e-7882-41eb-bc38-7dd0307987b4",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "42416000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_41f7be4e-7882-41eb-bc38-7dd0307987b4"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "42416000000"
+        },
+        "assets": {
+          "as_of": "2026-06-30",
+          "concept": "Assets",
+          "display_unit": "USD millions",
+          "display_value": "758376",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 642,
+              "precision": "-6",
+              "primary_display": "758,376",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_4095b133-5f81-429c-b153-b2151268bddd",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "758376000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_4095b133-5f81-429c-b153-b2151268bddd"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "758376000000"
+        },
+        "balance_total": {
+          "as_of": "2026-06-30",
+          "concept": "LiabilitiesAndStockholdersEquity",
+          "display_unit": "USD millions",
+          "display_value": "758376",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 686,
+              "precision": "-6",
+              "primary_display": "758,376",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_55e92206-2115-44c7-a146-22d9254285d7",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "758376000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_55e92206-2115-44c7-a146-22d9254285d7"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "758376000000"
+        },
+        "common_capital": {
+          "as_of": "2026-06-30",
+          "concept": "CommonStocksIncludingAdditionalPaidInCapital",
+          "display_unit": "USD millions",
+          "display_value": "117406",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 678,
+              "precision": "-6",
+              "primary_display": "117,406",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_87f2e6ce-7198-4529-aa96-473ee8a20145",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "117406000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_87f2e6ce-7198-4529-aa96-473ee8a20145"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "117406000000"
+        },
+        "compensation": {
+          "as_of": "2026-06-30",
+          "concept": "EmployeeRelatedLiabilitiesCurrent",
+          "display_unit": "USD millions",
+          "display_value": "14945",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 648,
+              "precision": "-6",
+              "primary_display": "14,945",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_c3a89831-083e-406a-8d62-59e7eaafc74f",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "14945000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_c3a89831-083e-406a-8d62-59e7eaafc74f"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "14945000000"
+        },
+        "current_total": {
+          "as_of": "2026-06-30",
+          "concept": "LiabilitiesCurrent",
+          "display_unit": "USD millions",
+          "display_value": "168825",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 656,
+              "precision": "-6",
+              "primary_display": "168,825",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_5ae5af95-e4a9-4075-9673-63a7640e9ddc",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "168825000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_5ae5af95-e4a9-4075-9673-63a7640e9ddc"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "168825000000"
+        },
+        "deferred_tax": {
+          "as_of": "2026-06-30",
+          "concept": "DeferredIncomeTaxLiabilitiesNet",
+          "display_unit": "USD millions",
+          "display_value": "3054",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 2,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 664,
+              "precision": "-6",
+              "primary_display": "3,054",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_db124632-4586-486e-81a3-cf1149767857",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "3054000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_db124632-4586-486e-81a3-cf1149767857"
+            },
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 1792,
+              "precision": "-6",
+              "primary_display": "3,054",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_b6197931-831a-40d9-b227-0e33e7f4eef5",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "3054000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_b6197931-831a-40d9-b227-0e33e7f4eef5"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "3054000000"
+        },
+        "equity": {
+          "as_of": "2026-06-30",
+          "concept": "StockholdersEquity",
+          "display_unit": "USD millions",
+          "display_value": "442387",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 2,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 684,
+              "precision": "-6",
+              "primary_display": "442,387",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_20e5e11f-f61a-4613-bcc1-f349de6c079f",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "442387000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_20e5e11f-f61a-4613-bcc1-f349de6c079f"
+            },
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 832,
+              "precision": "-6",
+              "primary_display": "442,387",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_2b1d81b5-922b-4bd1-913b-9975df034d37",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "442387000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_2b1d81b5-922b-4bd1-913b-9975df034d37"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "442387000000"
+        },
+        "liabilities": {
+          "as_of": "2026-06-30",
+          "concept": "Liabilities",
+          "display_unit": "USD millions",
+          "display_value": "315989",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 670,
+              "precision": "-6",
+              "primary_display": "315,989",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_f3e1112d-3756-43f0-af11-f0f2655ee431",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "315989000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_f3e1112d-3756-43f0-af11-f0f2655ee431"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "315989000000"
+        },
+        "oci": {
+          "as_of": "2026-06-30",
+          "concept": "AccumulatedOtherComprehensiveIncomeLossNetOfTax",
+          "display_unit": "USD millions",
+          "display_value": "-3284",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 682,
+              "precision": "-6",
+              "primary_display": "3,284",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_97fc2a02-75d4-448e-a9e2-b2182fbb63d5",
+              "primary_scale": 6,
+              "primary_sign": "-",
+              "raw_value": "-3284000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_97fc2a02-75d4-448e-a9e2-b2182fbb63d5"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "-3284000000"
+        },
+        "op_lease_long": {
+          "as_of": "2026-06-30",
+          "concept": "OperatingLeaseLiabilityNoncurrent",
+          "display_unit": "USD millions",
+          "display_value": "16532",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 666,
+              "precision": "-6",
+              "primary_display": "16,532",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_36851ed9-64dd-4a76-8873-0e0e1580d071",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "16532000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_36851ed9-64dd-4a76-8873-0e0e1580d071"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "16532000000"
+        },
+        "other_current": {
+          "as_of": "2026-06-30",
+          "concept": "OtherLiabilitiesCurrent",
+          "display_unit": "USD millions",
+          "display_value": "26738",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 654,
+              "precision": "-6",
+              "primary_display": "26,738",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_4e2e55b6-b5cc-403e-9fb6-f8e52bc0bac0",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "26738000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_4e2e55b6-b5cc-403e-9fb6-f8e52bc0bac0"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "26738000000"
+        },
+        "other_long": {
+          "as_of": "2026-06-30",
+          "concept": "OtherLiabilitiesNoncurrent",
+          "display_unit": "USD millions",
+          "display_value": "65117",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 668,
+              "precision": "-6",
+              "primary_display": "65,117",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_c65edfa2-69cf-4863-a8d5-e4f28644b6d2",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "65117000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_c65edfa2-69cf-4863-a8d5-e4f28644b6d2"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "65117000000"
+        },
+        "retained": {
+          "as_of": "2026-06-30",
+          "concept": "RetainedEarningsAccumulatedDeficit",
+          "display_unit": "USD millions",
+          "display_value": "328265",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 680,
+              "precision": "-6",
+              "primary_display": "328,265",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_da98cce6-b07c-4b3a-a320-c7294b75aa40",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "328265000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_da98cce6-b07c-4b3a-a320-c7294b75aa40"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "328265000000"
+        },
+        "retirement_cost": {
+          "as_of": null,
+          "concept": "DefinedContributionPlanCostRecognized",
+          "display_unit": "USD millions",
+          "display_value": "1800",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "Note17: employer-funded retirement benefits expensed as contributed; annual expense, not closing funded status",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_29985a27-1d12-4b7e-9a06-156523f6e71e",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 2190,
+              "precision": "-8",
+              "primary_display": "1.8",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_f3306305-81f7-4476-8a58-8849175aab8e",
+              "primary_scale": 9,
+              "primary_sign": "+",
+              "raw_value": "1800000000",
+              "start": "2025-07-01",
+              "unit_id": "U_USD",
+              "xml_id": "F_f3306305-81f7-4476-8a58-8849175aab8e"
+            }
+          ],
+          "precision": "-8",
+          "precision_variants": [
+            "-8"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "1800000000"
+        },
+        "tax_current": {
+          "as_of": "2026-06-30",
+          "concept": "AccruedIncomeTaxesCurrent",
+          "display_unit": "USD millions",
+          "display_value": "2534",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 650,
+              "precision": "-6",
+              "primary_display": "2,534",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_b117366f-19df-4809-9bf3-9cc3e829c536",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "2534000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_b117366f-19df-4809-9bf3-9cc3e829c536"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "2534000000"
+        },
+        "tax_long": {
+          "as_of": "2026-06-30",
+          "concept": "AccruedIncomeTaxesNoncurrent",
+          "display_unit": "USD millions",
+          "display_value": "28647",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 660,
+              "precision": "-6",
+              "primary_display": "28,647",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_334cf65a-9b0c-4937-bd8b-23825347238e",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "28647000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_334cf65a-9b0c-4937-bd8b-23825347238e"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "28647000000"
+        },
+        "term_current": {
+          "as_of": "2026-06-30",
+          "concept": "LongTermDebtCurrent",
+          "display_unit": "USD millions",
+          "display_value": "9227",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 2,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 646,
+              "precision": "-6",
+              "primary_display": "9,227",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_ccc74744-8190-47f9-83d8-efcf043ad42d",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "9227000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_ccc74744-8190-47f9-83d8-efcf043ad42d"
+            },
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 1645,
+              "precision": "-6",
+              "primary_display": "9,227",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_6bdd3d02-00bf-4355-94dd-0fb1d0c0bb55",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "9227000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_6bdd3d02-00bf-4355-94dd-0fb1d0c0bb55"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "9227000000"
+        },
+        "term_long": {
+          "as_of": "2026-06-30",
+          "concept": "LongTermDebtNoncurrent",
+          "display_unit": "USD millions",
+          "display_value": "31067",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 2,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 658,
+              "precision": "-6",
+              "primary_display": "31,067",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_4bbc906c-68c8-4696-97ed-f11be329b64e",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "31067000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_4bbc906c-68c8-4696-97ed-f11be329b64e"
+            },
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 1647,
+              "precision": "-6",
+              "primary_display": "31,067",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_1d0baaa4-4424-484d-be99-dabe52c4be3b",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "31067000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_1d0baaa4-4424-484d-be99-dabe52c4be3b"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "31067000000"
+        },
+        "unearned_current": {
+          "as_of": "2026-06-30",
+          "concept": "ContractWithCustomerLiabilityCurrent",
+          "display_unit": "USD millions",
+          "display_value": "72965",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 652,
+              "precision": "-6",
+              "primary_display": "72,965",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_7449c6ab-99eb-42b4-a3c8-208504d59165",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "72965000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_7449c6ab-99eb-42b4-a3c8-208504d59165"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "72965000000"
+        },
+        "unearned_long": {
+          "as_of": "2026-06-30",
+          "concept": "ContractWithCustomerLiabilityNoncurrent",
+          "display_unit": "USD millions",
+          "display_value": "2747",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "FY2026 consolidated balance-sheet displayed population",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45",
+              "dimensions": [],
+              "end": "2026-06-30",
+              "ordinal": 662,
+              "precision": "-6",
+              "primary_display": "2,747",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_a483b965-27c1-4e01-b59d-479db2fb93c4",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "2747000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_a483b965-27c1-4e01-b59d-479db2fb93c4"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "2747000000"
+        }
+      },
+      "passages": [
+        {
+          "exact_excerpt": "Liabilities and stockholders\u2019 equity Current liabilities: Accounts payable $ 42,416 $ 27,724 Current portion of long-term debt 9,227 2,999 Accrued compensation 14,945 13,709 Short-term income taxes 2,534 7,211 Short-term unearned revenue 72,965 64,555 Other current liabilities 26,738 25,020 Total current liabilities 168,825 141,218 Long-term debt 31,067 40,152 Long-term income taxes 28,647 25,986 Long-term unearned revenue 2,747 2,710 Deferred income taxes 3,054 2,835 Operating lease liabilities 16,532 17,437 Other long-term liabilities 65,117 45,186 Total liabilities 315,989 275,524 Commitments and contingencies Stockholders\u2019 equity: Common stock and paid-in capital \u2013 shares authorized 24,000 ; outstanding 7,427 and 7,434 117,406 109,095 Retained earnings 328,265 237,731 Accumulated other comprehensive loss ( 3,284 ) ( 3,347 ) Total stockholders\u2019 equity 442,387 343,479 Total liabilities and stockholders\u2019 equity $ 758,376 $ 619,003 ",
+          "offset": 231110,
+          "source": "FY2026-primary",
+          "source_body_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f"
+        },
+        {
+          "exact_excerpt": "Principles of Consolidation The consolidated financial statements include the accounts of Microsoft Corporation and its subsidiaries. Intercompany transactions and balances have been eliminated. ",
+          "offset": 235567,
+          "source": "FY2026-primary",
+          "source_body_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f"
+        },
+        {
+          "exact_excerpt": "NOTE 10 \u2014 DEBT The components of long-term debt were as follows: (In millions, issuance by calendar year) Maturities (calendar year) Stated Interest Rate Effective Interest Rate June 30, 2026 June 30, 2025 2009 issuance of $ 3.8 billion 2039 5.20 % 5.24 % $ 520 $ 520 2010 issuance of $ 4.8 billion 2040 4.50 % 4.57 % 486 486 2011 issuance of $ 2.3 billion 2041 5.30 % 5.36 % 718 718 2012 issuance of $ 2.3 billion 2042 3.50 % 3.57 % 454 454 2013 issuance of $ 5.2 billion 2043 3.75 % \u2013 4.88 % 3.83 % \u2013 4.92 % 314 314 2013 issuance of \u20ac 4.1 billion 2028 \u2013 2033 2.63 % \u2013 3.13 % 2.69 % \u2013 3.22 % 2,630 2,700 2015 issuance of $ 23.8 billion 2035 \u2013 2055 3.50 % \u2013 4.75 % 3.60 % \u2013 4.78 % 4,555 7,555 2016 issuance of $ 19.8 billion 2026 \u2013 2056 2.40 % \u2013 3.95 % 2.46 % \u2013 4.03 % 7,930 7,930 2017 issuance of $ 17.1 billion 2026 \u2013 2057 3.30 % \u2013 4.50 % 3.38 % \u2013 5.49 % 6,833 6,833 2020 issuance of $ 10.1 billion 2030 \u2013 2060 1.35 % \u2013 2.68 % 2.53 % \u2013 5.43 % 10,111 10,111 2021 issuance of $ 8.2 billion 2052 \u2013 2062 2.92 % \u2013 3.04 % 2.92 % \u2013 3.04 % 8,185 8,185 2023 issuance of $ 0.1 billion 2026 \u2013 2050 1.35 % \u2013 4.50 % 5.16 % \u2013 5.49 % 56 56 2024 issuance of $ 3.3 billion 2026 \u2013 2050 1.35 % \u2013 4.50 % 5.16 % \u2013 5.49 % 3,344 3,344 Total face value 46,136 49,206 Unamortized discount and issuance costs ( 1,081 ) ( 1,155 ) Hedge fair value adjustments (a) ( 11 ) ( 36 ) Premium on debt exchange ( 4,750 ) ( 4,864 ) Total debt 40,294 43,151 Current portion of long-term debt ( 9,227 ) ( 2,999 ) Long-term debt $ 31,067 $ 40,152 (a) Refer to Note 5 \u2013 Derivatives for further information on the interest rate swaps related to fixed-rate debt. As of June 30, 2026 and 2025, the estimated fair value of long-term debt, including the current portion, was $ 36.5 billion and $ 40.4 billion, respectively. The estimated fair values are based on Level 2 inputs. Debt in the table above is comprised of senior unsecured obligations and ranks equally with our other outstanding obligations. Interest is paid semi-annually, except for the Euro-denominated debt, which is paid annually. Cash paid for interest on our debt for fiscal years 2026, 2025, and 2024 was $ 1.5 billion, $ 1.6 billion, and $ 1.7 billion, respectively. 72 PART II Item 8 The following table outlines maturities of our long-term debt, including the current portion, as of June 30, 2026: (In millions) Year Ending June 30, 2027 $ 9,250 2028 0 2029 2,001 2030 0 2031 500 Thereafter 34,385 Total $ 46,136 ",
+          "offset": 288002,
+          "source": "FY2026-primary",
+          "source_body_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f"
+        },
+        {
+          "exact_excerpt": "NOTE 15 \u2014 STOCKHOLDERS\u2019 EQUITY Shares Outstanding Shares of common stock outstanding were as follows: (In millions) Year Ended June 30, 2026 2025 2024 Balance, beginning of year 7,434 7,434 7,432 Issued 29 31 34 Repurchased ( 36 ) ( 31 ) ( 32 ) Balance, end of year 7,427 7,434 7,434 ",
+          "offset": 306273,
+          "source": "FY2026-primary",
+          "source_body_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f"
+        },
+        {
+          "exact_excerpt": "Savings Plans We have savings plans in the U.S. that qualify under Section 401(k) of the Internal Revenue Code, and a number of savings plans in international locations. Eligible U.S. employees may contribute a portion of their salary into the savings plans, subject to certain limitations. We match a portion of each dollar a participant contributes into the plans. Employer-funded retirement benefits for all plans were $ 1.8 billion, $ 1.8 billion, and $ 1.7 billion in fiscal years 2026, 2025, and 2024, respectively, and were expensed as contributed. 82 PART II Item 8 ",
+          "offset": 314048,
+          "source": "FY2026-primary",
+          "source_body_sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f"
+        }
+      ],
+      "populations": [
+        {
+          "evidence_reason": "Full current/noncurrent display and term Note10 reviewed. No separately displayed issued CP/short debt; other current26738 and other long65117 remain mixed. Term40294 is not all-borrowing coverage; net borrowing cash0 is not ending0. Investment CP2987 is an asset.",
+          "non_overlap": "Retain named term+finance106888. Do not add current9227 again or reuse asset CP; no complete debt amount.",
+          "population": "additional_short_borrowing",
+          "proposal": null,
+          "resolved": false,
+          "status": "NOT_SEPARATELY_REPORTED_POSSIBLE_EMBEDDED",
+          "uncertainty": "No supported numerical bound; no immateriality or zero assumption.",
+          "value_usd": null
+        },
+        {
+          "evidence_reason": "Common capital117406 + retained328265 + OCI(-3284) exhausts displayed equity442387; Note15 describes common share roll-forward. Authorized24000m is COMMON shares, not outstanding preferred. This proves presentation, not a separate affirmative outstanding-preferred zero.",
+          "non_overlap": "No extra preferred deduction or balance selected; no subtraction from already selected common/financial balances.",
+          "population": "preferred_equity",
+          "proposal": null,
+          "resolved": false,
+          "status": "NOT_SEPARATELY_PRESENTED_ISSUANCE_UNPROVED",
+          "uncertainty": "No supported numerical bound; no immateriality or zero assumption.",
+          "value_usd": null
+        },
+        {
+          "evidence_reason": "Note1 includes Microsoft and subsidiaries, eliminating intercompany balances. Balance/equity statements and Note15 have no separately identified NCI population. Full equity partition is affirmative displayed coverage, not proof an embedded NCI amount is zero.",
+          "non_overlap": "No residual equity deduction or invented NCI. Do not assign any part of common capital/retained earnings to NCI.",
+          "population": "noncontrolling_interests",
+          "proposal": null,
+          "resolved": false,
+          "status": "NOT_SEPARATELY_PRESENTED_EMBEDDED_COVERAGE_UNPROVED",
+          "uncertainty": "No supported numerical bound; no immateriality or zero assumption.",
+          "value_usd": null
+        },
+        {
+          "evidence_reason": "Note17 describes US401(k) and international savings plans;1800R employer-funded retirement benefits for all plans expensed as contributed. No funded-status/benefit-obligation/plan-asset bridge identifies a separate recognized pension balance or its location in mixed liabilities.",
+          "non_overlap": "Retirement expense1800R is not pension debt, plan assets, contributions payable or a new adjustment. Do not add expense to66594 finance leases or other liabilities.",
+          "population": "pension_funded_status",
+          "proposal": null,
+          "resolved": false,
+          "status": "NO_SEPARATE_FUNDED_STATUS_DISCLOSURE",
+          "uncertainty": "No supported numerical bound; no immateriality or zero assumption.",
+          "value_usd": null
+        }
+      ],
+      "schema": "msft-fy2026-recognized-population-review-v1",
+      "stopping_condition": "Stop this fixed pass: presentation scope clarified, amounts unresolved. Reopen only for exact FY2026-end issued/embedded balance or plan funded-status evidence, or a specifically justified proposal; no automatic acquisition/research cycle."
+    },
+    "pure_nol": {
+      "combined_dta_reference": "/periods/1/facts/loss_credit_dta",
+      "operation": "no_separate_economic_asset",
+      "value": null
+    },
+    "requirement_overlays": [
+      {
+        "decision_id": "D3",
+        "operation_requirement": "SATISFIED_BY_APPROVED_EXCLUSION",
+        "original_value": null,
+        "source_reference": "/fy2026_completeness_attempt/conditional_essential_input"
+      },
+      {
+        "decision_id": "D2",
+        "field": "unclassified_cfo_reconciliation_residual",
+        "operation_requirement": "SATISFIED_BY_APPROVED_EXCLUSION",
+        "original_value": null
+      },
+      {
+        "book_or_operating_only_cash_delta": false,
+        "decision_id": "D1",
+        "field": "reported_cash_flow_working_capital_movements",
+        "operation_requirement": "ACCEPTED_AS_REPORTED_ONLY"
+      }
+    ],
+    "residual": {
+      "operation": "excluded_for_fully_bound_display_only",
+      "value": null,
+      "zero_populated": false
+    },
+    "schema": "msft-fy2026-approved-operations-view-v1",
+    "unrelated_requirements_waived": false,
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
   "issuer": "MSFT",
   "new_sec_requests": 0,
   "original_artifacts_modified": false,

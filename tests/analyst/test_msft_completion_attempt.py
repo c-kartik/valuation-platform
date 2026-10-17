@@ -21,7 +21,7 @@ class MSFTCompletionAttemptTests(unittest.TestCase):
 
     def test_exact_replay_and_original_approved_payload_preserved(self):
         self.assertTrue(self.result==json.loads((ROOT/p.OUTPUT).read_text()),'Attempt replay differs')
-        parent={k:v for k,v in self.result.items() if k!='fy2026_completeness_attempt'}
+        parent={k:v for k,v in self.result.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view')}
         self.assertTrue(parent==self.original,'Prior facts/proposals/accepted view changed')
         self.assertEqual(self.attempt['base_package_revision'],p.digest(p.relevant(parent)))
         self.assertEqual(json.loads(json.dumps(self.result)),self.result)

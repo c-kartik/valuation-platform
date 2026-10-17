@@ -169,7 +169,7 @@ class Filing:
 def build():
     filings = [Filing(y) for y in (2025,2026)]
     for f in filings: populate(f)
-    return attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings))))
+    return apply_fy2026_operations(filings[1],attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings)))))
 
 
 def approval_record(proposal):
@@ -885,6 +885,133 @@ def attach_fy2026_attempt(filing,accepted):
         phase_closed=False,valuation_consumption_approved=False,
         stopping_condition='Stop after this one-period decision-ready attempt. Even approval of D1-D3 does not solve the two essential unknowns or certify completeness.')
     result=json.loads(json.dumps(base));result['fy2026_completeness_attempt']=attempt
+    return result
+
+
+FY2026_OPERATIONS_BASIS='81c6836549109c87e374f3ce0247011134e11ffe'
+FY2026_APPROVED_OPERATIONS={
+    'D1':'Retain nine reported cash-movement rows and independent14-term CFO reconciliation for historical preparation only; no operating-only cash delta NWC, complete NWC or EBIT-based FCFF readiness.',
+    'D2':'No separately computed residual for this fully bound displayed reconciliation; preserve mixed rows, never populate a zero.',
+    'D3':'Retain combined loss-and-credit DTA without a separate pure-NOL economic-asset operation; no invented allocation or valuation.'}
+
+
+def fy2026_operations_record(package):
+    """One explicit recording operation; no new sidecar or automatic renewal."""
+    if 'fy2026_operation_approval' in package:raise ValueError('Immutable FY2026 operation approval already exists')
+    attempt=package['fy2026_completeness_attempt']
+    if attempt['identity']['accession']!='0001193125-26-323660':raise ValueError('Wrong operation approval identity')
+    record=dict(schema='msft-operation-acceptance-audit-v1',version=1,sequence=2,
+        previous=package['accepted_view']['approval_audit']['sha256'],
+        action='ACCEPT_OPERATION_REQUIREMENTS',author='User, explicit MSFT FY2026 D1-D3 instruction',
+        recorded_at_utc=datetime.now(timezone.utc).isoformat(),
+        rationale='Accept only the three stated operation requirements; preserve original nulls and unrelated population gaps.',
+        source_commit=FY2026_OPERATIONS_BASIS,source_revision=digest(relevant(attempt)),
+        decisions=FY2026_APPROVED_OPERATIONS.copy(),analyst_completeness_approved=False,
+        financial_sufficiency='NOT_ASSESSED',phase_closed=False,valuation_consumption_approved=False)
+    record['sha256']=digest(record)
+    return record
+
+
+def review_fy2026_populations(f):
+    """Affirmative reported partitions, not a zero-from-absence rule."""
+    if (f.period.cik,f.period.accession,str(f.period.annual_start),str(f.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
+        raise ValueError('Wrong FY2026 population filing')
+    specs=[('ap','AccountsPayableCurrent'),('term_current','LongTermDebtCurrent'),
+        ('compensation','EmployeeRelatedLiabilitiesCurrent'),('tax_current','AccruedIncomeTaxesCurrent'),
+        ('unearned_current','ContractWithCustomerLiabilityCurrent'),('other_current','OtherLiabilitiesCurrent'),
+        ('current_total','LiabilitiesCurrent'),('term_long','LongTermDebtNoncurrent'),
+        ('tax_long','AccruedIncomeTaxesNoncurrent'),('unearned_long','ContractWithCustomerLiabilityNoncurrent'),
+        ('deferred_tax','DeferredIncomeTaxLiabilitiesNet'),('op_lease_long','OperatingLeaseLiabilityNoncurrent'),
+        ('other_long','OtherLiabilitiesNoncurrent'),('liabilities','Liabilities'),
+        ('common_capital','CommonStocksIncludingAdditionalPaidInCapital'),('retained','RetainedEarningsAccumulatedDeficit'),
+        ('oci','AccumulatedOtherComprehensiveIncomeLossNetOfTax'),('equity','StockholdersEquity'),
+        ('balance_total','LiabilitiesAndStockholdersEquity'),('assets','Assets')]
+    for key,concept in specs:f.fact('population_'+key,concept,'FY2026 consolidated balance-sheet displayed population',instant=True)
+    f.fact('population_retirement_cost','DefinedContributionPlanCostRecognized',
+        'Note17: employer-funded retirement benefits expensed as contributed; annual expense, not closing funded status')
+    obs={key:f.facts['population_'+key] for key,concept in specs}
+    obs['retirement_cost']=f.facts['population_retirement_cost']
+    checks=[]
+    for name,children,parent in [
+        ('current_liability_display',['ap','term_current','compensation','tax_current','unearned_current','other_current'],'current_total'),
+        ('liability_display',['current_total','term_long','tax_long','unearned_long','deferred_tax','op_lease_long','other_long'],'liabilities'),
+        ('equity_display',['common_capital','retained','oci'],'equity'),
+        ('balance_display',['liabilities','equity'],'balance_total')]:
+        amount=sum((Decimal(obs[k]['value']) for k in children),Decimal(0))
+        if amount!=Decimal(obs[parent]['value']):raise ValueError('Reported population partition changed: '+name)
+        checks.append(dict(check=name,operands=children,parent=parent,amount_usd=str(amount),result='PASS',
+            limit='Complete displayed partition only; not proof that mixed captions contain no embedded obligations.'))
+    if obs['balance_total']['value']!=obs['assets']['value']:raise ValueError('Balance-sheet totals differ')
+    passages=[]
+    for start,end in [('Liabilities and stockholders’ equity Current liabilities:','Refer to accompanying notes.'),
+        ('Principles of Consolidation','Recast of Certain Prior Period Information'),
+        ('NOTE 10 — DEBT','NOTE 11 — INCOME TAXES'),
+        ('NOTE 15 — STOCKHOLDERS’ EQUITY','Share Repurchases'),
+        ('Savings Plans We have savings plans','NOTE 18 — SEGMENT INFORMATION AND GEOGRAPHIC DATA')]:
+        begin=f.text.find(start);finish=f.text.find(end,begin)
+        if begin<0 or finish<begin:raise ValueError('Required population disclosure absent: '+start)
+        passages.append(dict(source='FY2026-primary',offset=begin,exact_excerpt=f.text[begin:finish],
+            source_body_sha256=f.primary.artifact.sha256))
+    common=f.text.find('Common stock and paid-in capital – shares authorized')
+    if common<0 or '24,000' not in f.text[common:common+130]:raise ValueError('Common authorization population differs')
+    populations=[dict(population=k,value_usd=None,status=status,evidence_reason=reason,non_overlap=overlap,
+        resolved=False,proposal=None,uncertainty='No supported numerical bound; no immateriality or zero assumption.')
+        for k,status,reason,overlap in (
+        ('additional_short_borrowing','NOT_SEPARATELY_REPORTED_POSSIBLE_EMBEDDED',
+            'Full current/noncurrent display and term Note10 reviewed. No separately displayed issued CP/short debt; other current26738 and other long65117 remain mixed. Term40294 is not all-borrowing coverage; net borrowing cash0 is not ending0. Investment CP2987 is an asset.',
+            'Retain named term+finance106888. Do not add current9227 again or reuse asset CP; no complete debt amount.'),
+        ('preferred_equity','NOT_SEPARATELY_PRESENTED_ISSUANCE_UNPROVED',
+            'Common capital117406 + retained328265 + OCI(-3284) exhausts displayed equity442387; Note15 describes common share roll-forward. Authorized24000m is COMMON shares, not outstanding preferred. This proves presentation, not a separate affirmative outstanding-preferred zero.',
+            'No extra preferred deduction or balance selected; no subtraction from already selected common/financial balances.'),
+        ('noncontrolling_interests','NOT_SEPARATELY_PRESENTED_EMBEDDED_COVERAGE_UNPROVED',
+            'Note1 includes Microsoft and subsidiaries, eliminating intercompany balances. Balance/equity statements and Note15 have no separately identified NCI population. Full equity partition is affirmative displayed coverage, not proof an embedded NCI amount is zero.',
+            'No residual equity deduction or invented NCI. Do not assign any part of common capital/retained earnings to NCI.'),
+        ('pension_funded_status','NO_SEPARATE_FUNDED_STATUS_DISCLOSURE',
+            'Note17 describes US401(k) and international savings plans;1800R employer-funded retirement benefits for all plans expensed as contributed. No funded-status/benefit-obligation/plan-asset bridge identifies a separate recognized pension balance or its location in mixed liabilities.',
+            'Retirement expense1800R is not pension debt, plan assets, contributions payable or a new adjustment. Do not add expense to66594 finance leases or other liabilities.'))]
+    return dict(schema='msft-fy2026-recognized-population-review-v1',observations=obs,checks=checks,
+        passages=passages,populations=populations,new_document_count=0,new_requests=0,
+        acquisition_disposition='Exact selected official annual primary/instance already retained. No precise additional official document was established that answers these June30 outstanding/embedded/funded-status questions; duplicate IR annual, authorization-only exhibits or other-date balances would not supply that missing evidence. No speculative acquisition.',
+        stopping_condition='Stop this fixed pass: presentation scope clarified, amounts unresolved. Reopen only for exact FY2026-end issued/embedded balance or plan funded-status evidence, or a specifically justified proposal; no automatic acquisition/research cycle.')
+
+
+def apply_fy2026_operations(filing,package):
+    if (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
+        raise ValueError('Wrong FY2026 operation filing')
+    parent={k:v for k,v in package.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view')}
+    if package['fy2026_completeness_attempt']['base_package_revision']!=digest(relevant(parent)):
+        raise ValueError('Stale FY2026 parent package')
+    if accepted_view({k:v for k,v in parent.items() if k!='accepted_view'})!=parent:
+        raise ValueError('Changed original accepted parent')
+    saved=_json((ROOT/OUTPUT).read_text())
+    record=saved['fy2026_operation_approval']
+    expected={'schema','version','sequence','previous','action','author','recorded_at_utc','rationale','source_commit',
+        'source_revision','decisions','analyst_completeness_approved','financial_sufficiency','phase_closed','valuation_consumption_approved','sha256'}
+    if type(record) is not dict or set(record)!=expected or record['sha256']!=digest({k:v for k,v in record.items() if k!='sha256'}):raise ValueError('Malformed FY2026 operation audit')
+    ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale'])
+    if (record['schema']!='msft-operation-acceptance-audit-v1' or type(record['version']) is not int or record['version']!=1
+        or type(record['sequence']) is not int or record['sequence']!=2 or record['previous']!=package['accepted_view']['approval_audit']['sha256']
+        or record['action']!='ACCEPT_OPERATION_REQUIREMENTS' or record['source_commit']!=FY2026_OPERATIONS_BASIS
+        or record['decisions']!=FY2026_APPROVED_OPERATIONS or record['analyst_completeness_approved'] is not False
+        or record['financial_sufficiency']!='NOT_ASSESSED' or record['phase_closed'] is not False or record['valuation_consumption_approved'] is not False):
+        raise ValueError('Unregistered FY2026 operation scope')
+    if record['source_revision']!=digest(relevant(package['fy2026_completeness_attempt'])):raise ValueError('Stale FY2026 operation approval; explicit revalidation required')
+    result=json.loads(json.dumps(package));result['fy2026_operation_approval']=record
+    result['fy2026_operations_view']=dict(schema='msft-fy2026-approved-operations-view-v1',version=1,
+        identity=package['fy2026_completeness_attempt']['identity'],audit_sha256=record['sha256'],
+        operation_requirements=[dict(decision_id=k,status=APPROVED_SCOPE,scope=v,
+            source_reference='/fy2026_completeness_attempt/decisions/'+str(i)) for i,(k,v) in enumerate(FY2026_APPROVED_OPERATIONS.items())],
+        residual=dict(operation='excluded_for_fully_bound_display_only',value=None,zero_populated=False),
+        pure_nol=dict(operation='no_separate_economic_asset',value=None,combined_dta_reference='/periods/1/facts/loss_credit_dta'),
+        requirement_overlays=[dict(source_reference='/fy2026_completeness_attempt/conditional_essential_input',
+            decision_id='D3',operation_requirement='SATISFIED_BY_APPROVED_EXCLUSION',original_value=None),
+            dict(field='unclassified_cfo_reconciliation_residual',decision_id='D2',
+                operation_requirement='SATISFIED_BY_APPROVED_EXCLUSION',original_value=None),
+            dict(field='reported_cash_flow_working_capital_movements',decision_id='D1',
+                operation_requirement='ACCEPTED_AS_REPORTED_ONLY',book_or_operating_only_cash_delta=False)],
+        original_nulls_preserved=True,book_delta_is_cash_delta=False,unrelated_requirements_waived=False,
+        population_review=review_fy2026_populations(filing),analyst_complete=False,financial_sufficiency='NOT_ASSESSED',
+        phase_closed=False,valuation_consumption_approved=False)
     return result
 
 
