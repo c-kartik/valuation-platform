@@ -228,6 +228,13 @@ def outputs():
     summary=dict(schema='retained-priority-review-batch-v1',source_commit=BASELINE,tickers=list(TICKERS),selected_periods=15,family_slots=210,
         companies={t:dict(periods=5,outcomes=p['outcomes'],review_revision=p['review_revision']) for t,p in packages.items()},decisions=[d for t in TICKERS for d in decisions(packages[t])],
         evidence_acquisition_requirements=missing,new_sec_requests=0,new_assumptions_active=False,completed_company_packages=11,approved_partial_company_packages=1,pending_review_company_packages=3,broad_assessment_only=27,phase1_closed=False)
+    import activate_company_review_batches as accepted
+    packages={t:accepted.load_if_approved(f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json',p,summary['decisions']) for t,p in packages.items()}
+    activation=accepted.summary_activation(packages)
+    if activation:
+        complete=sum(p['current_history']['company_completed_for_approved_historical_perimeter'] for p in packages.values() if 'current_history' in p)
+        activation['current_company_counts']=dict(broadly_assessed=42,completed_scoped=11+complete,approved_partial=1+len(activation['companies'])-complete,pending_reviews=3-len(activation['companies']),assessment_only=27)
+        summary['approval_activation']=activation
     return {**{f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json':p for t,p in packages.items()},SUMMARY:summary}
 
 
@@ -236,5 +243,5 @@ if __name__=='__main__':
     if '--check' in sys.argv:
         for path,p in result.items():
             if (ROOT/path).read_text()!=json.dumps(p,sort_keys=True,indent=2)+'\n':raise SystemExit('Priority batch replay differs: '+path)
-        print('Exact MU/AMD/JNJ review replay:15 selected annuals/210 families; all judgments inactive')
+        print('Exact MU/AMD/JNJ replay:15 selected annuals/210 families; stored revision-bound decisions applied, JNJ scope requirement OPEN')
     else:print(json.dumps(result,sort_keys=True,indent=2))

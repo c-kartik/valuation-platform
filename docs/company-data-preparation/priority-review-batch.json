@@ -1,4 +1,175 @@
 {
+  "approval_activation": {
+    "companies": {
+      "AMD": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "AMD-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMD-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMD-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMD-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMD-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMD-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMD-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMD-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMD-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "3a4d7467334dafa48aee3af5b034d54415841d1ab23dc44f6f2f29d88d7096e2",
+        "completed": true
+      },
+      "JNJ": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "JNJ-PERIMETER",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          },
+          {
+            "accepted": true,
+            "decision_id": "JNJ-CF",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          },
+          {
+            "accepted": true,
+            "decision_id": "JNJ-DA",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          },
+          {
+            "accepted": true,
+            "decision_id": "JNJ-INV",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          },
+          {
+            "accepted": true,
+            "decision_id": "JNJ-SBC",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          },
+          {
+            "accepted": true,
+            "decision_id": "JNJ-TAX",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          },
+          {
+            "accepted": true,
+            "decision_id": "JNJ-CASH",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          },
+          {
+            "accepted": true,
+            "decision_id": "JNJ-FIN",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          },
+          {
+            "accepted": true,
+            "decision_id": "JNJ-CLAIMS",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          },
+          {
+            "accepted": true,
+            "decision_id": "JNJ-SHARES",
+            "status": "ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT"
+          }
+        ],
+        "approval_sha256": "be034a5d9c1e78cc8e823f0275bbaa83139fb5e175f85d219d823749c14baa1b",
+        "completed": false
+      },
+      "MU": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "MU-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MU-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MU-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MU-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MU-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MU-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MU-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MU-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MU-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "27727eff4b5a5728dc00c372ddf47e732b0c3bfa92a5dc05fb21686820c6a4bb",
+        "completed": true
+      }
+    },
+    "current_company_counts": {
+      "approved_partial": 2,
+      "assessment_only": 27,
+      "broadly_assessed": 42,
+      "completed_scoped": 13,
+      "pending_reviews": 0
+    },
+    "original_proposals_retained": true,
+    "phase1_closed": false
+  },
   "approved_partial_company_packages": 1,
   "broad_assessment_only": 27,
   "companies": {

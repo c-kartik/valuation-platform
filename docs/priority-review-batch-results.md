@@ -1,5 +1,117 @@
 # MU / AMD / JNJ — ONE consolidated historical-input review batch
 
+## Current — explicit approval implemented; JNJ analyst-use scope remains OPEN
+
+The user approves all MU/AMD recommendations and JNJ original-as-filed historical
+selections, expressly retaining JNJ's continuing/consolidated mismatch as an OPEN
+analyst-use requirement. Existing revision-bound audit/current-history mechanisms
+now select actual values, not just acceptance text. The original28 proposed
+decisions and source `/periods` remain unchanged historical snapshots below.
+Exact actual UTC, user authority/rationale, source commit, five identities,
+source/review/proposal revisions and audit digests bind each company selection.
+Changed source/evidence/scope rejects stale approval; source nulls remain null.
+
+|Company / approved IDs|Effective disposition|Five-year checklist outcome|
+|---|---|---|
+|MU-CF, MU-DA, MU-INV, MU-SBC, MU-TAX, MU-CASH, MU-FIN, MU-CLAIMS, MU-SHARES|All9 ACTIVE; gross cash PP&E selected, incentive-net alternative non-default|FY2022–2026 each14/14;70/70. Scoped historical completion recorded.|
+|AMD-CF, AMD-DA, AMD-INV, AMD-SBC, AMD-TAX, AMD-CASH, AMD-FIN, AMD-CLAIMS, AMD-SHARES|All9 ACTIVE; exact extension-backed proxies, no generic policy change|FY2021–2025 each14/14;70/70. Scoped historical completion recorded.|
+|JNJ-PERIMETER, JNJ-CF, JNJ-DA, JNJ-INV, JNJ-SBC, JNJ-TAX, JNJ-CASH, JNJ-FIN, JNJ-CLAIMS, JNJ-SHARES|All10 original-as-filed selections ACTIVE WITH OPEN ANALYST-USE REQUIREMENT|FY2021–2025 each5/14 eligible-use families;25/70.45 flow-family slots OPEN; company remains partial. All14 families have approved historical selections/dispositions, not compatible-use approval.|
+
+[MU authoritative schedule](company-data-preparation/MU-analyst-input-package.md),
+[AMD authoritative schedule](company-data-preparation/AMD-analyst-input-package.md),
+[JNJ authoritative panels](company-data-preparation/JNJ-analyst-input-package.md).
+[Machine activation/counts](company-data-preparation/priority-review-batch.json)
+`/approval_activation` is current; original top-level proposed counts remain
+historical. No source number, unknown, alternative or prior decision is rewritten.
+
+### Selected treatments and safeguards
+
+MU retains limited manufacturing D&A, gross PP&E and separately positive incentive
+receipts; incentive-net cash remains non-default. Inventory capitalization/release,
+basis reductions and SBC expense/addback differences remain. Before-equity pretax
+and issuer ETR are historical context, not a new generic denominator or forecast
+rate. Debt/finance captions already include finance leases; never add them again.
+
+AMD selects continuing FY2025 CFO6,493m while retaining consolidated7,709m and
+discontinued1,216m separately. Selected movements/deferred-tax reconciliation detail
+are continuing populations, not consolidated parents plus children. Independent
+display checks preserve both original2022/2025 parser PARTIALs, with no changed
+tolerance or residual. Exact D&A407/4,174/3,453/3,064/3,004m remains a LIMITED
+proxy; source extension gates/negative findings are unchanged. Raw FY2023 ETR68
+stays explicitly unselected; deferred note252 and CFO248 are not plugged together.
+
+JNJ retains original approved EBIT derivations, original early Consumer Health
+versus later continuing sales, consolidated CFO/D&A, Kenvue reversal and later
+dated cover shares. Pension/talc balances, nominal alternatives and expense
+reversals remain overlapping bases/flows, never an additive adjustment. No later
+recast splice, missing allocation or continuing-only cash series is manufactured.
+
+### Exact remaining JNJ requirement — not waived
+
+`JNJ-ORIGINAL-AS-FILED-SCOPE` remains **OPEN** over all five original selections:
+FY2021 ending2022-01-02; FY2022 ending2023-01-01; FY2023 ending2023-12-31;
+FY2024 ending2024-12-29; FY2025 ending2025-12-28. The history-wide gate affects
+**Revenue, EBIT, D&A, cash Capex, reported cash-flow working-capital movements,
+deferred taxes, SBC, reported CFO and reported tax context**:9 flow families
+per year/45 family-period slots. This identifies use/comparability uncertainty,
+not a claim that every annual amount is numerically wrong. Original source
+selections are approved; coterminous combined analyst use is not.
+
+The five other families satisfy approved limited operations: no separate residual,
+named financial balances, named financing/leases, separately retained known claims
+and actual-date shares. That does not establish complete economic populations.
+JNJ stays partial,5/14 per year,25/70; source scope cannot be silently relabeled
+supporting-only to obtain completion. Addressing the gate requires either supported
+continuing/discontinued allocations and a consistent cross-year bridge, or an
+explicit separately justified analyst-use treatment defining permitted/restricted
+combinations. Neither is approved by this instruction. No new artifact is known
+to supply all allocations; no acquisition/research queue is launched.
+
+### Current counts and boundary
+
+**42 broadly assessed;15 packages =13 completed scoped histories +2 approved
+partial (CAT and JNJ);0 pending review packages;27 assessment-only.** All eleven
+previous completed histories and CAT's approved dual-perimeter/SBC exception are
+unchanged. XOM empty history, financial blockers, support classes, frozen policies/
+outputs, original bodies, pilot bytes, alternatives and nulls are preserved.
+Approved omission assumptions knowingly accept potentially unbounded omitted
+exposure, never reported zeros or immateriality. No complete expense D&A,
+debt/reinvestment, financial-sufficiency certification, Phase1 closure or Phase2.
+
+### Next candidates — identification only
+
+**V, INTC and WMT**, the next unreviewed non-specialized issuers in the retained
+[frozen snapshot order](universe/sp500-top-50-2026-10-02.csv), each with five
+selected periods in the existing income ledger. The existing assessment labels
+V STANDARD_REVIEW, INTC/WMT COMPLEX_REVIEW: V offers reusable operating-payment
+network treatments; INTC requires manufacturing/incentive/investment scope; WMT
+requires retail/inventory/lease scope. These are existing-backlog rationales, not
+new source reviews, live market-cap rankings or an assumption that they are easy.
+No candidate work or acquisition is executed. XOM remains a separate empty-history
+boundary, not an invented five-year candidate.
+
+### Current validation
+
+All40 focused approval/source/financial-selection/perimeter/serialization/
+persistence/stale-revision/preservation tests pass in57.037s
+(`/tmp/priority-activation-tests.log`). The source-review tests explicitly inspect
+the preserved historical parent; separate effective-view tests verify all28
+authorizations, actual values, original nulls, non-default incentive alternative,
+AMD continuing/consolidated reconciliation boundaries and the unwaived JNJ gate.
+Existing nine-company effective replay tests preserve earlier selections and CAT
+perimeters/SBC exception; frozen/pilot checks and all11 prior package bytes pass.
+
+Final shared CLI replay passes for all15 affected annuals/all four JSON files
+(`/tmp/priority-activation-replay.log`), including derived current company counts.
+Compileall,801 affected local links,472 local file/JSON references and1,259
+effective/source/audit pointers pass.15 unique identities/210 unique field slots
+reconcile to165 satisfied and45 OPEN;28 exact revision-bound authorizations and
+42-company current counts reconcile. Diff checks pass, including staged content
+before commit. No source acquisition, full-suite/corpus run, next-company review,
+automatic limitation acceptance beyond the explicit instruction, or Phase2 work.
+
+## Historical — original review snapshot before this explicit acceptance
+
 **28 new judgments PROPOSED, none active.**15 exact frozen annuals/210 family slots. [Machine decisions](company-data-preparation/priority-review-batch.json). Existing policy-backed values are source-supported, not approval of company completeness. No acquisition, runtime policy change or new approval architecture.
 
 |Company / schedule and matrix|Exact frozen fiscal years|S observation slots|P pending slots|Independent CFO evidence|

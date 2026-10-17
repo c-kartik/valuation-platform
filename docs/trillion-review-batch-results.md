@@ -1,6 +1,22 @@
 # NVDA / AMZN / META — ONE consolidated historical-input review batch
 
-## Current priority tracker — MU/AMD/JNJ reviewed, not approved
+## Current priority tracker — MU/AMD completed; JNJ qualified selections partial
+
+[Explicit activation](priority-review-batch-results.md) records MU/AMD at five
+years14/14 each; JNJ original-as-filed selections are active but its continuing/
+consolidated analyst-use scope remains OPEN. **13 completed scoped histories,
+2 approved partial CAT/JNJ,0 pending company reviews,27 assessment-only** across
+42 broadly assessed issuers. Prior11 complete views, CAT SBC exception, XOM empty
+history and frozen artifacts are unchanged. No whole-universe/Phase1 closure.
+
+Next three unreviewed candidates from the existing frozen snapshot order/backlog:
+**V, INTC, WMT**, each five selected periods. V is an existing STANDARD_REVIEW
+candidate with reusable operating-payment-network treatments; INTC/WMT are existing
+COMPLEX_REVIEW candidates with manufacturing/incentive and retail/lease scope
+work respectively. This is identification, not newly assessed financial coverage
+or a live market-cap ranking. No review/acquisition/Phase2 work is launched.
+
+## Historical priority tracker — MU/AMD/JNJ reviewed, not approved
 
 The separately authorized [MU/AMD/JNJ batch](priority-review-batch-results.md)
 now covers all15 frozen selections with28 inactive proposals. MU/AMD each10

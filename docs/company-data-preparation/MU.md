@@ -1,6 +1,29 @@
 # MU — company data preparation
 
-## Current — full frozen FY2022–FY2026 analyst review, inactive
+## Current — effective user-approved historical selections
+
+[Authoritative current schedule](MU-analyst-input-package.md) / [effective JSON](mu-analyst-input-package.json) / [approval and validation](../priority-review-batch-results.md).
+The user's explicit instruction is implemented through the existing revision-bound
+audit/current-history overlay, not acceptance documentation alone. Original `/periods`,
+proposals, alternatives, source nulls and fiscal labels remain byte-identical to
+the reviewed parent. Source/review/proposal revisions, exact identities, actual UTC
+recording time, rationale/authority and immutable audit digest are retained.
+Changed source or scope rejects stale approval; no SEC acquisition or frozen-policy change.
+
+All five years satisfy14/14 (70/70) within the expressly approved historical
+perimeter; MU is now a completed scoped company package, not complete financial
+disclosure or Phase2 readiness. Limited proxies and potentially unbounded omission
+assumptions remain distinguishable from reported values/zeros. Complete expense
+D&A, reinvestment/debt, restrictions/reserves and unidentified claims remain source
+unknowns. No movement already within CFO is deducted again. Company-specific
+timing, tax, lease and acquisition distinctions are retained in the selected view.
+
+Final focused approval/source/perimeter/serialization/staleness/persistence and
+preservation results are recorded in the batch sheet. Prior11 completed histories,
+CAT dual-perimeter/SBC exception, XOM history boundary and frozen artifacts remain
+unchanged. Stop after this activation; no next-company review or Phase2 work.
+
+## Historical — full frozen FY2022–FY2026 review before explicit approval
 
 [Five-year schedule/14-family matrix](MU-analyst-input-package.md) /
 [exact source package](mu-analyst-input-package.json) /

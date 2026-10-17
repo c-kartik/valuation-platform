@@ -1,5 +1,26 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## MU/AMD acceptance and explicitly open JNJ analyst-use requirement
+
+The user approves MU/AMD's exact five-year company-specific recommendations and
+JNJ's original-as-filed historical selections through the existing revision-bound
+audit/effective-view controls. MU FY2022–2026 and AMD FY2021–2025 each satisfy
+the existing14 operation-specific families, including approved limited proxies
+and explicit unbounded omissions; source unknowns remain unknown. AMD FY2025
+selects continuing CFO6,493, with original consolidated7,709/discontinued1,216
+separate and continuing movements/reconciliation correctly scoped. Generic
+extension/financial policies and original PARTIALs/tax anomalies remain unchanged.
+
+JNJ FY2021–2025 is **partial**: approved original-as-filed observations do not
+resolve the continuing-income/consolidated-cash scope mismatch or history-wide
+comparability. Nine flow families remain OPEN per period (45 slots); five other
+limited operations satisfy their approved scope. Exact identities, families and
+resolution conditions are bound to its audit. No uniform continuing-only series,
+recast splice or allocation is manufactured, and preserving a panel does not
+waive joint-use requirements. [Authoritative decisions](priority-review-batch-results.md).
+No complete expense D&A/debt/reinvestment, financial-sufficiency certificate,
+whole-universe/Phase1 closure, forecast formula or Phase2 use is approved.
+
 ## Scope-specific AVGO/TSLA/LLY acceptance — existing contract, not new criteria
 
 Explicit approval of all25 reviewed recommendations activates those three exact

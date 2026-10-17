@@ -1,4 +1,63 @@
-# MU — five-year historical-input review
+# MU — five-year historical-input package
+
+## Authoritative current selections — user-approved, scope-specific
+
+**Five years14/14;70/70. Completed for the explicitly approved historical-input perimeter only.**
+
+[Effective machine view](mu-analyst-input-package.json) `/current_history` / [approval dispositions](../priority-review-batch-results.md). `/periods` and original proposal statuses below are preserved historical snapshots, not the current analyst selection.
+
+Audit sequence1, actual recorded UTC `2026-10-17T20:07:40.693220+00:00`, SHA256 `27727eff4b5a5728dc00c372ddf47e732b0c3bfa92a5dc05fb21686820c6a4bb`. Exact user instruction, rationale, five identities, source/review/proposal revisions and immutable original decisions are retained at `/history_approval`. Changed source values, scopes, candidates, precision, identities or evidence rejects stale acceptance. No source null was changed to a reported zero.
+
+**USD millions**, except actual dated shares/pure ratios. Original units, scale, decimals/precision variants, signs, receipts and occurrence locators remain at every effective `source_reference`. A selected proxy is not verified complete expense D&A. Named borrowing/cash captions are not complete debt or unrestricted/excess cash. Omission assumptions knowingly omit potentially undisclosed exposure of unbounded size, not a finding of immateriality.
+
+|Selected input / operation|2022|2023|2024|2025|2026|
+|---|---:|---:|---:|---:|---:|
+|Revenue — original presentation|30,758|15,540|25,111|37,378|133,188|
+|EBIT — reported|9,702|-5,745|1,304|9,770|99,340|
+|Limited D&A — approved proxy|7,116|7,756|7,780|8,352|9,503|
+|Cash PP&E — negative outflow|-12,067|-7,676|-8,386|-15,857|-30,712|
+|Selected reported CFO|15,181|1,559|8,507|17,525|89,675|
+|Provision / benefit|888|177|451|1,124|14,761|
+|Pretax — original reviewed scope|9,571|-5,658|1,240|9,654|99,671|
+|Issuer reported ETR — pure, no new ratio|0.093|-0.031|0.364|0.116|0.148|
+|Cash taxes — outflow, original scope|-493|-532|-338|-583|-1,254|
+|SBC expense — proxy once|496|557|821|975|1,282|
+|CFO SBC — support only|514|596|833|972|1,333|
+|Gross current financial captions|9,331|9,594|8,106|10,307|43,434|
+|Named face carrying financing|6,906|13,330|13,397|14,577|5,179|
+|Reported movement rows, already within CFO (count)|3|3|4|4|5|
+|Separate residual operation|none; source null, not0|none; source null, not0|none; source null, not0|none; source null, not0|none; source null, not0|
+|Actual dated common shares (shares, not diluted)|1094000000 @ 2022-09-01 (decimals -6)|1098000000 @ 2023-08-31 (decimals -6)|1109000000 @ 2024-08-29 (decimals -6)|1122000000 @ 2025-08-28 (decimals -6)|1131000000 @ 2026-09-03 (decimals -6)|
+|Checklist — eligible use, not selection count|14/14|14/14|14/14|14/14|14/14|
+
+### Effective14-family matrix
+
+|Family|2022|2023|2024|2025|2026|
+|---|---|---|---|---|---|
+|revenue|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|ebit|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|depreciation_amortization|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|cash_capex|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|reported_cash_flow_working_capital_movements|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|deferred_taxes|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|stock_based_compensation|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|unclassified_cfo_reconciliation_residual|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|reported_cfo|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|reported_tax_context|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|cash_investment_components|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|debt_lease_components|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|other_equity_bridge_claims_assets|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|point_in_time_shares|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+
+### Exact qualifications
+
+Limited manufacturing D&A7,116/7,756/7,780/8,352/9,503 preserves inventory capitalization/release and incentive-reduced asset basis; no additional finance/ROU addback. Gross PP&E outflows stay selected. Cash incentives115/710/315/2,005/3,316 remain separate positive receipts; the estimated timing-dependent net cash alternative−11,952/−6,966/−8,071/−13,852/−27,396 stays **non-default**, not complete reinvestment.
+
+SBC expense/addback differences remain without plugs. Before-equity pretax and issuer ETR are accepted historical disclosures, not approval of a generic denominator or future rate; original generic tax gaps remain. Combined debt/finance face captions already contain finance leases, so the lease parent is never added twice. FY2026 is53 weeks. Unknown restrictions/reserves/claims, complete expense D&A and complete investment/debt stay unknown. No remaining essential input under this approved historical perimeter.
+
+No future tax rate, award valuation, forecast dilution, valuation-consumption approval, Phase1 closure or Phase2 authority. Existing source unknowns, alternatives, original financial blockers and frozen/pilot artifacts remain. Validation is recorded in the batch results.
+
+## Historical — original review snapshot (prior to this explicit approval)
 
 **All new company treatments PROPOSED, none active.** No completion, financial-sufficiency certification or Phase2 authority. Five frozen annuals/70 family slots. Source observations are not approved complete fields.
 

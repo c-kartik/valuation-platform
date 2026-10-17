@@ -1,6 +1,30 @@
 # JNJ — company data preparation
 
-## Current — full frozen FY2021–FY2025 analyst review, inactive
+## Current — effective user-approved historical selections
+
+[Authoritative current schedule](JNJ-analyst-input-package.md) / [effective JSON](jnj-analyst-input-package.json) / [approval and validation](../priority-review-batch-results.md).
+The user's explicit instruction is implemented through the existing revision-bound
+audit/current-history overlay, not acceptance documentation alone. Original `/periods`,
+proposals, alternatives, source nulls and fiscal labels remain byte-identical to
+the reviewed parent. Source/review/proposal revisions, exact identities, actual UTC
+recording time, rationale/authority and immutable audit digest are retained.
+Changed source or scope rejects stale approval; no SEC acquisition or frozen-policy change.
+
+JNJ remains PARTIAL: all five original-as-filed panels have approved selections,
+but nine flow families per year remain OPEN for joint analyst use (45 slots;
+5/14 eligible-use families per year,25/70). Continuing/consolidated compatibility
+is not accepted merely by preserving the panels. Exact affected identities/families
+and resolution conditions are in `/history_approval/open_analyst_use_requirements`.
+No recast splice, invented allocation or new research queue. Pension/talc bases,
+known claims, Kenvue and later dated cover shares stay separate. Existing EBIT
+proofs are preserved. Completion is not recorded.
+
+Final focused approval/source/perimeter/serialization/staleness/persistence and
+preservation results are recorded in the batch sheet. Prior11 completed histories,
+CAT dual-perimeter/SBC exception, XOM history boundary and frozen artifacts remain
+unchanged. Stop after this activation; no next-company review or Phase2 work.
+
+## Historical — full frozen FY2021–FY2025 review before qualified approval
 
 [Five-year schedule/14-family matrix](JNJ-analyst-input-package.md) /
 [source package](jnj-analyst-input-package.json) /

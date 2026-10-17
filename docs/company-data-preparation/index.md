@@ -1,6 +1,27 @@
 # Company data preparation register
 
-## Current — MU/AMD/JNJ review pending consolidated approval
+## Current —13 scoped complete,2 partial; MU/AMD effective and JNJ scope OPEN
+
+[MU](MU-analyst-input-package.md) and [AMD](AMD-analyst-input-package.md) now
+each pass the existing14-family checklist across all five selected annuals
+(70/70 per company) within their explicitly approved historical perimeters.
+[JNJ](JNJ-analyst-input-package.md) has approved original-as-filed selections
+but remains partial: its continuing/consolidated analyst-use requirement is OPEN
+across nine flow families in all five panels (45 slots);5/14 eligible-use families
+per year,25/70. Acceptance has not waived compatible joint-use requirements.
+[Exact28 dispositions and validation](../priority-review-batch-results.md) /
+[machine activation](priority-review-batch.json) `/approval_activation`.
+
+Existing audit/current-view controls retain exact source/proposal revisions,
+user authorization, actual UTC and immutable decision history; stale evidence
+cannot apply. All source nulls, alternatives and original policies remain.
+**42 broadly assessed;15 packages =13 completed scoped histories +2 approved
+partial (CAT/JNJ),0 pending reviews;27 assessment-only.** CAT SBC allocation,
+XOM empty history, prior11 complete packages and frozen/pilot bytes are unchanged.
+No generic issuer approval, complete debt/reinvestment, financial-sufficiency
+certification, Phase1 closure or Phase2 use. V/INTC/WMT are next identifiers only.
+
+## Historical — MU/AMD/JNJ review pending consolidated approval
 
 [MU](MU-analyst-input-package.md), [AMD](AMD-analyst-input-package.md) and
 [JNJ](JNJ-analyst-input-package.md) now each have five-year source schedules

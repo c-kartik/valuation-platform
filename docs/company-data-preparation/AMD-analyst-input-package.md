@@ -1,4 +1,65 @@
-# AMD — five-year historical-input review
+# AMD — five-year historical-input package
+
+## Authoritative current selections — user-approved, scope-specific
+
+**Five years14/14;70/70. Completed for the explicitly approved historical-input perimeter only.**
+
+[Effective machine view](amd-analyst-input-package.json) `/current_history` / [approval dispositions](../priority-review-batch-results.md). `/periods` and original proposal statuses below are preserved historical snapshots, not the current analyst selection.
+
+Audit sequence1, actual recorded UTC `2026-10-17T20:07:40.693220+00:00`, SHA256 `3a4d7467334dafa48aee3af5b034d54415841d1ab23dc44f6f2f29d88d7096e2`. Exact user instruction, rationale, five identities, source/review/proposal revisions and immutable original decisions are retained at `/history_approval`. Changed source values, scopes, candidates, precision, identities or evidence rejects stale acceptance. No source null was changed to a reported zero.
+
+**USD millions**, except actual dated shares/pure ratios. Original units, scale, decimals/precision variants, signs, receipts and occurrence locators remain at every effective `source_reference`. A selected proxy is not verified complete expense D&A. Named borrowing/cash captions are not complete debt or unrestricted/excess cash. Omission assumptions knowingly omit potentially undisclosed exposure of unbounded size, not a finding of immateriality.
+
+|Selected input / operation|2021|2022|2023|2024|2025|
+|---|---:|---:|---:|---:|---:|
+|Revenue — original presentation|16,434|23,601|22,680|25,785|34,639|
+|EBIT — reported|3,648|1,264|401|1,900|3,694|
+|Limited D&A — approved proxy|407|4,174|3,453|3,064|3,004|
+|Cash PP&E — negative outflow|-301|-450|-546|-636|-974|
+|Selected reported CFO|3,521|3,565|1,667|3,041|6,493|
+|Provision / benefit|513|-122|-346|381|-103|
+|Pretax — original reviewed scope|3,675|1,198|508|2,022|4,166|
+|Issuer reported ETR — pure, no new ratio|unknown|unknown|unknown|0.19|unknown|
+|Cash taxes — outflow, original scope|-35|-685|-523|-1,386|-884|
+|SBC expense — proxy once|379|1,081|1,384|1,407|1,638|
+|CFO SBC — support only|379|1,081|1,384|1,407|1,638|
+|Gross current financial captions|3,608|5,855|5,773|5,132|10,552|
+|Named face carrying financing|313|2,467|2,468|1,721|3,222|
+|Reported movement rows, already within CFO (count)|5|7|5|5|5|
+|Separate residual operation|none; source null, not0|none; source null, not0|none; source null, not0|none; source null, not0|none; source null, not0|
+|Actual dated common shares (shares, not diluted)|1207000000 @ 2021-12-25 (decimals -6)|1612000000 @ 2022-12-31 (decimals -6)|1616000000 @ 2023-12-30 (decimals -6)|1622000000 @ 2024-12-28 (decimals -6)|1630000000 @ 2025-12-27 (decimals -6)|
+|Checklist — eligible use, not selection count|14/14|14/14|14/14|14/14|14/14|
+
+### Effective14-family matrix
+
+|Family|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|revenue|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|ebit|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|depreciation_amortization|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|cash_capex|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|reported_cash_flow_working_capital_movements|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|deferred_taxes|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|stock_based_compensation|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|unclassified_cfo_reconciliation_residual|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|reported_cfo|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|reported_tax_context|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|cash_investment_components|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|debt_lease_components|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|other_equity_bridge_claims_assets|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|point_in_time_shares|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+
+### Exact qualifications
+
+Exact extension-backed D&A407/4,174/3,453/3,064/3,004 is an approved LIMITED proxy, not a generic policy change. FY2024/25 use only base671/750 plus separate CFO amortization2,393/2,254; no additional acquisition-amortization note, ROU or inventory step-up charge.
+
+**FY2025 selected continuing CFO6,493; discontinued1,216 and original consolidated7,709 remain separate.** Selected movement rows and deferred-tax reconciliation detail belong to continuing operations. The independent proof reconciles those continuing rows, then the separate parent bridge6,493+1,216=7,709. Original2022/2025 parser PARTIALs remain unchanged, alongside source-bound independent checks. Original2022 dimensioned inventory step-up189 is retained. No consolidated subtotal plus child duplication.
+
+FY2023 raw pure68 ETR observation remains **unselected**; no rescaling/sign repair or new rate. Deferred-tax note252 versus displayed FY2025 CFO248 remain separate. Current term-debt captions are not additional CP;874 in2025 is not added twice. Xilinx/Pensando/ZT, discontinued investment, unpaid Capex and noncash lease additions retain original scopes. No complete finance-lease coverage is inferred. No remaining essential input under this approved historical perimeter.
+
+No future tax rate, award valuation, forecast dilution, valuation-consumption approval, Phase1 closure or Phase2 authority. Existing source unknowns, alternatives, original financial blockers and frozen/pilot artifacts remain. Validation is recorded in the batch results.
+
+## Historical — original review snapshot (prior to this explicit approval)
 
 **All new company treatments PROPOSED, none active.** No completion, financial-sufficiency certification or Phase2 authority. Five frozen annuals/70 family slots. Source observations are not approved complete fields.
 

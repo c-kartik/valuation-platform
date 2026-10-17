@@ -18,6 +18,10 @@ BASELINE='9bb110cb208ce3abcac0365c4ecf4820c498d60d'
 TICKERS=('COST','CAT','KO','NVDA','AMZN','META')
 LARGE_TICKERS=('AVGO','TSLA','LLY')
 LARGE_BASELINE='4b5b93423fa84078dd6b19dcf68c52434ba9a6ac'
+PRIORITY_TICKERS=('MU','AMD','JNJ')
+PRIORITY_BASELINE='4234cb10e862c4bd95ccd017037f8db707263922'
+PRIORITY_AUTHORITY='Current user explicitly approves all MU/AMD recommendations and JNJ original-as-filed historical selections in docs/priority-review-batch-results.md; JNJ continuing/consolidated scope mismatch remains an OPEN analyst-use requirement, not accepted completeness.'
+JNJ_FLOW_FAMILIES=('revenue','ebit','depreciation_amortization','cash_capex','reported_cash_flow_working_capital_movements','deferred_taxes','stock_based_compensation','reported_cfo','reported_tax_context')
 LARGE_AUTHORITY='Current user instruction explicitly approves all25 recommendations in docs/large-company-review-batch-results.md for the exact AVGO/TSLA/LLY frozen histories, preserving each company-specific qualification and source unknown.'
 ADDITIONS=('history_approval','current_history')
 AUTHORITY='Current user instruction explicitly approves all23 standard-review and all25 trillion-review recommendations; AMZN2021 expanded81427 including318; CAT separate industrial/Financial Products perimeters; KO held-sale alternative not selected.'
@@ -80,15 +84,21 @@ def cat_evidence(package):
 
 def approval(package,decisions,recorded_at_utc):
     p=parent(package);ticker=p['ticker']
-    if ticker not in TICKERS+LARGE_TICKERS or len(p['periods'])!=5:raise ValueError('Fixed approved company history required')
+    if ticker not in TICKERS+LARGE_TICKERS+PRIORITY_TICKERS or len(p['periods'])!=5:raise ValueError('Fixed approved company history required')
     selected=[deepcopy(d) for d in decisions if d['ticker']==ticker]
     if not selected or len({d['decision_id'] for d in selected})!=len(selected):raise ValueError('Exact approved decision set required')
     large=ticker in LARGE_TICKERS
+    priority=ticker in PRIORITY_TICKERS
     if large:
         suffixes=('CF','SBC','CASH','CLAIMS','SHARES','DA','INV','FIN')+(('TAX',) if ticker=='TSLA' else ())
         identities=[r['identity'] for r in p['periods']]
         if ({d['decision_id'] for d in selected}!={ticker+'-'+key for key in suffixes}
                 or any(d['identities']!=identities for d in selected)):
+            raise ValueError('All exact approved company decisions and periods required')
+    if priority:
+        suffixes=('CF','DA','INV','SBC','TAX','CASH','FIN','CLAIMS','SHARES')+(('PERIMETER',) if ticker=='JNJ' else ())
+        if ({d['decision_id'] for d in selected}!={ticker+'-'+key for key in suffixes}
+                or any(d['identities']!=[r['identity'] for r in p['periods']] for d in selected)):
             raise ValueError('All exact approved company decisions and periods required')
     evidence=cat_evidence(p) if ticker=='CAT' else None
     record=dict(schema='company-treatment-acceptance-audit-v1',version=1,sequence=1,previous=None,
@@ -97,6 +107,14 @@ def approval(package,decisions,recorded_at_utc):
         source_revision=digest(relevant(p)),review_revision=p['review_revision'],proposal_revision=digest(relevant(selected)),
         decisions=selected,identities=[r['identity'] for r in p['periods']],additional_perimeter_evidence=evidence,
         financial_sufficiency='ONLY_APPROVED_HISTORICAL_PERIMETER',phase1_closed=False,valuation_consumption_approved=False)
+    if priority:
+        record.update(author='User, explicit MU/AMD approval and qualified JNJ historical-selection approval',
+            authority=PRIORITY_AUTHORITY,rationale=PRIORITY_AUTHORITY,source_commit=PRIORITY_BASELINE,
+            open_analyst_use_requirements=[dict(requirement_id='JNJ-ORIGINAL-AS-FILED-SCOPE',status='OPEN',
+                affected_identities=[r['identity'] for r in p['periods']],affected_families=list(JNJ_FLOW_FAMILIES),
+                reason='Original FY2021/22 Consumer Health-inclusive income versus later continuing income; consolidated cash/D&A/tax/investment populations cannot be assumed coterminous. Cross-year use remains unresolved.',
+                resolution='Evidence-bound consistent continuing/discontinued allocations and cross-year bridge, OR explicit separately justified analyst-use treatment accepting/restricting the mismatched populations; no such resolution approved by this instruction.') ] if ticker=='JNJ' else [])
+        if ticker=='JNJ':record['financial_sufficiency']='PARTIAL_OPEN_ANALYST_USE_REQUIREMENT'
     ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale']);record['sha256']=digest(record)
     return record
 
@@ -108,7 +126,7 @@ def activate(package,decisions,record):
     expected=approval(p,decisions,record.get('recorded_at_utc'))
     if record!=expected:raise ValueError('Stale or unregistered company approval; explicit revalidation required')
     result=deepcopy(p);result['history_approval']=deepcopy(record)
-    result['current_history']=cat_view(p,record) if p['ticker']=='CAT' else large_view(p,record) if p['ticker'] in LARGE_TICKERS else ordinary_view(p,record)
+    result['current_history']=cat_view(p,record) if p['ticker']=='CAT' else large_view(p,record) if p['ticker'] in LARGE_TICKERS+PRIORITY_TICKERS else ordinary_view(p,record)
     return result
 
 
@@ -141,17 +159,25 @@ def large_view(package,record):
     No new equation or population acceptance: named calculations and proofs are
     the unchanged reviewed source package. Acknowledged nulls remain source nulls.
     """
-    t=package['ticker'];periods=[];ids={d['decision_id'] for d in record['decisions']}
+    t=package['ticker'];periods=[];ids={d['decision_id'] for d in record['decisions']};priority=t in PRIORITY_TICKERS
     for i,row in enumerate(package['periods']):
         base='/periods/'+str(i)
         f=lambda k,m=1,origin='reported':fact(row,k,base,m,origin)
         c=lambda k,origin=None:calculation(row,k,base,origin)
         proof=row['cfo_reconciliation'];pop=proof['populations'][0]
+        manual=row.get('independent_display_check') if priority else None
+        if manual:
+            if manual['status']!='SUPPORTED' or D(manual['difference'])!=0 or D(manual['parent_difference'])!=0:raise ValueError('Exact independent CFO hierarchy required')
+            target=manual['continuing_cfo'] or manual['cfo']
+            if sum((D(x['value']) for x in manual['rows']),D(0))!=D(target['value']):raise ValueError('Displayed continuing reconciliation failed')
+            if manual['continuing_cfo'] and D(manual['continuing_cfo']['value'])+D(manual['discontinued_cfo']['value'])!=D(manual['cfo']['value']):raise ValueError('Consolidated CFO hierarchy failed')
+            proof=dict(status='SUPPORTED',populations=[dict(rows=manual['rows'],cfo=target)])
+            pop=proof['populations'][0]
         if (proof['status']!='SUPPORTED' or
                 sum((D(x['value']) for x in pop['rows']),D(0))!=D(pop['cfo']['value'])):
             raise ValueError('Supported independent displayed CFO arithmetic required')
         ebit=f('ebit')
-        if t=='LLY':
+        if t in ('LLY','JNJ'):
             ebit=deepcopy(row['derived_ebit'])
             if not ebit or ebit['origin']!='derived':raise ValueError('Existing registered EBIT proof required')
             ebit.update(source_reference=base+'/derived_ebit')
@@ -176,7 +202,7 @@ def large_view(package,record):
             stock_based_compensation=dict(selected=f('sbc_expense',origin='proxy'),addback=f('sbc_addback'),count_once=True),
             unclassified_cfo_reconciliation_residual=dict(value=None,disposition='APPROVED_NO_SEPARATE_OPERATION',not_reported_zero=True),
             reported_cfo=f('cfo'),
-            reported_tax_context=dict(provision=f('face_tax'),pretax=f('pretax'),reported_etr=f('reported_etr'),
+            reported_tax_context=dict(provision=f('tax' if priority else 'face_tax'),pretax=f('pretax'),reported_etr=None if row['facts'].get('reported_etr',{}).get('selection_status','').startswith('UNSELECTED') else f('reported_etr'),
                 cash_taxes=f('cash_tax' if 'cash_tax' in row['facts'] else 'cash_tax_gross',-1),
                 original_policy_context_reference=base+'/preparation_ledger_evidence/retained-reported-tax-context-ledger',
                 original_generic_conflicts_preserved=True,no_new_ratio_computed=True,future_rate_approved=False),
@@ -203,6 +229,34 @@ def large_view(package,record):
         if t=='TSLA':
             inputs['debt_lease_components']['perimeter']='Consolidated manufacturing/energy/leasing including related financing assets and funding; no netted industrial carve-out'
             inputs['cash_capex']['scope']='Original selected PP&E cash caption with stated gross/net-of-sales perimeter; later differing comparatives not substituted'
+        if priority:
+            inputs['reported_cfo']=f(row['proposed_cfo_fact'])
+            cashflow_scope='Continuing operations' if t=='AMD' and row['fiscal_year']==2025 else 'Original consolidated reported population'
+            inputs['reported_cfo'].update(scope=cashflow_scope,original_consolidated_observation=f('cfo'),
+                discontinued_observation=f('discontinued_cfo'),independent_reconciliation_reference=base+('/independent_display_check' if manual else '/cfo_reconciliation'),original_parser_status=row['cfo_reconciliation']['status'])
+            inputs['reported_cash_flow_working_capital_movements'].update(scope=cashflow_scope,source_reference=base+'/movement_rows',
+                reconciliation_reference=base+('/independent_display_check' if manual else '/cfo_reconciliation'))
+            inputs['deferred_taxes'].update(scope=cashflow_scope,source_reference=base+('/independent_display_check' if manual else '/cfo_reconciliation'))
+            if not deferred_rows:inputs['deferred_taxes']['separate_pure_operation']='APPROVED_NO_SEPARATE_PURE_OPERATION_MIXED_ROW_PRESERVED'
+            inputs['depreciation_amortization']['qualification']={'MU':'Limited manufacturing CFO proxy; inventory capitalization/release and incentive-reduced basis, not complete expense D&A',
+                'AMD':'Exact approved source extension-backed CFO populations; separate amortization only FY2024/25; generic extension gates unchanged',
+                'JNJ':'Limited original consolidated CFO D&A proxy; continuing/discontinued allocation unproved, analyst-use requirement OPEN'}[t]
+            tax=inputs['reported_tax_context']
+            tax.update(pretax=f('pretax_equity_scope') if t=='MU' else f('pretax'),generic_denominator_approval_changed=False,
+                original_etr_observation=f('reported_etr'),issuer_disclosure_not_new_ratio=True)
+            if t=='MU':tax['pretax']['scope']='Original before-equity pretax disclosure; not approval of generic positive-denominator ETR policy'
+            inputs['cash_capex']['other_disclosures'].update({k:f(k,row.get('cash_sign_multipliers',{}).get(k,1)) for k in
+                ('incentive_cash','acquisition_cash','iprd_face_impairment') if k in row['facts']})
+            if t=='MU':inputs['cash_capex']['nondefault_incentive_net_alternative']=dict(next(x for x in row['calculations'] if x['input_id']=='net_incentive_cash_alternative'),selected=False)
+            inputs['cash_investment_components']['other_balances'].update({k:f(k) for k in ('short_afs','current_investments','marketable_current','other_investments','cash_restricted_parent') if k in row['facts']})
+            inputs['debt_lease_components']['finance_leases_already_included']=True if t=='MU' else None
+            inputs['debt_lease_components']['embedded_finance_lease_scope']='MU combined face caption includes finance leases; no second addition' if t=='MU' else 'No complete finance-lease coverage proved; unknown additional populations remain source nulls'
+            claims=inputs['other_equity_bridge_claims_assets']
+            claims['known_populations'].update({k:f(k) for k in ('pension_recognized','other_postretirement_recognized','benefit_liabilities_noncurrent_parent','benefit_liabilities_current_parent','talc_carrying_reserve','talc_nominal_reserve','talc_reversal','retirement_expense') if k in row['facts']})
+            claims.update(carrying_nominal_and_expense_not_additive=True,original_claims_ledger_reference=base+'/preparation_ledger_evidence/retained-claims-shares-ledger')
+            if t=='JNJ':
+                for key,value in inputs.items():value['panel']='ORIGINAL_AS_FILED_NOT_HOMOGENEOUS_CONTINUING_SERIES'
+                claims['scope_requirement_reference']='/history_approval/open_analyst_use_requirements/0'
         for value in inputs.values():value.update(review='ACCEPTED_FOR_STATED_HISTORICAL_SCOPE',approval_reference='/history_approval')
         # Assess the existing operations, not a new demand for perfect disclosure.
         essentials={key:inputs[key] for key in ('revenue','ebit','depreciation_amortization','cash_capex','reported_cfo')}
@@ -211,6 +265,7 @@ def large_view(package,record):
         gaps={key:'Existing approved scalar selection unavailable' for key,value in essentials.items() if not value or value.get('value') is None}
         if not all((inputs['reported_tax_context']['provision'],inputs['reported_tax_context']['pretax'])):gaps['reported_tax_context']='Reviewed provision/pretax selection unavailable'
         if not shares or any(not s.get('as_of') for s in shares.values()):gaps['point_in_time_shares']='Approved actual-date common population unavailable'
+        if t=='JNJ':gaps.update({key:record['open_analyst_use_requirements'][0]['reason'] for key in JNJ_FLOW_FAMILIES})
         checklist=[]
         if len(row['family_checklist'])!=14 or {x['field'] for x in row['family_checklist']}!=set(inputs):raise ValueError('Exact14-family accounting required')
         for old in row['family_checklist']:
@@ -221,10 +276,16 @@ def large_view(package,record):
         periods.append(dict(identity=row['identity'],inputs=inputs,checklist=checklist,passed_family_slots=14-len(gaps),analyst_complete=not gaps,
             remaining_essential_inputs=[dict(field=k,reason=v) for k,v in gaps.items()],original_supporting_unknowns=deepcopy(row['original_supporting_unknowns']),
             complete_expense_basis_da=None,complete_debt=False,complete_reinvestment=False,source_reference=base,accepted_limitations_reference='/history_approval/decisions'))
-    return dict(version=1,authoritative_current_view=True,new_assumptions_active=True,periods=periods,family_slots=70,
+    view=dict(version=1,authoritative_current_view=True,new_assumptions_active=True,periods=periods,family_slots=70,
         passed_family_slots=sum(r['passed_family_slots'] for r in periods),company_completed_for_approved_historical_perimeter=all(r['analyst_complete'] for r in periods),
         approval_sha256=record['sha256'],active_decisions=[dict(decision_id=d['decision_id'],status='ACTIVE',accepted=True) for d in record['decisions']],
         historical_proposal_snapshot='/periods',phase1_closed=False,valuation_consumption_approved=False)
+    if priority:
+        view['open_analyst_use_requirements']=deepcopy(record['open_analyst_use_requirements'])
+        if t=='JNJ':
+            view['selected_values_approved']=True
+            for d in view['active_decisions']:d['status']='ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT'
+    return view
 
 
 def ordinary_view(package,record):

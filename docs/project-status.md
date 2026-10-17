@@ -1,6 +1,42 @@
 # Project Status
 
-## Current — MU/AMD/JNJ retained company review; proposals inactive
+## Current — MU/AMD complete within approved scope; JNJ historical selections active, scope OPEN
+
+The user's explicit instruction activates all18 MU/AMD recommendations and ten
+JNJ original-as-filed selections through existing revision-bound audits/effective
+views. [Authoritative schedules and dispositions](priority-review-batch-results.md)
+/ [machine current counts](company-data-preparation/priority-review-batch.json)
+`/approval_activation`. Original source/proposal snapshots, nulls and alternatives
+remain unchanged; actual UTC, user authority, rationale, identities, source/review/
+proposal revisions and audit SHA256 bind every selection and reject stale sources.
+
+MU FY2022–2026 and AMD FY2021–2025 each pass14/14 per year (70/70). Scoped
+historical completion is recorded, not complete financial disclosure. MU retains
+limited manufacturing D&A, gross PP&E/separate incentives, SBC differences,
+tax scopes and embedded finance safeguards. AMD retains exact approved extension
+proxies without generic policy changes; FY2025 continuing CFO6,493 versus separate
+discontinued1,216/consolidated7,709, original PARTIALs and tax-tag anomaly persist.
+
+JNJ remains **partial**. Its five original-as-filed panels are selected, while
+`JNJ-ORIGINAL-AS-FILED-SCOPE` remains OPEN across nine flow families per year:
+Revenue, EBIT, D&A, Capex, movements, deferred taxes, SBC, CFO and tax context.
+This history-wide compatibility gate is45 family-period slots, not a demonstrated
+error in all amounts.5/14 other limited-use operations per year satisfy the
+approved scope;25/70 eligible-use slots, no completion. Resolution requires a
+supported continuing/discontinued bridge/allocations or a separately justified
+explicit analyst-use treatment; none is approved or researched here. Kenvue,
+original presentations, dated cover shares and pension/talc overlaps remain.
+
+**42 broadly assessed;15 packages =13 completed scoped histories +2 approved
+partial CAT/JNJ;0 pending reviews;27 assessment-only.** Eleven prior completed
+packages, CAT dual-perimeter/SBC exception, XOM empty history, frozen policies/
+outputs and pilot bytes are unchanged. No source zeros, materiality findings,
+complete debt/reinvestment, Phase1 closure or Phase2 authority are implied.
+Final focused/replay/preservation and lightweight results are recorded in the
+batch sheet. No acquisitions/full-suite/corpus run. Next candidates V/INTC/WMT
+are identified from existing backlog/frozen order only; do not execute them here.
+
+## Historical — MU/AMD/JNJ retained company review before explicit approval
 
 [ONE consolidated decision sheet](priority-review-batch-results.md) and three
 five-year schedules now cover15 exact frozen annuals/210 existing-family slots.

@@ -1,4 +1,67 @@
-# JNJ — five-year historical-input review
+# JNJ — five-year historical-input package
+
+## Authoritative current selections — user-approved, scope-specific
+
+**Five years5/14 eligible-use families;25/70, with45 flow-family slots OPEN. Partial package, NOT analyst-complete.** All14 families have approved original-as-filed selections/dispositions; the open scope gate still restricts their combined analyst use.
+
+[Effective machine view](jnj-analyst-input-package.json) `/current_history` / [approval dispositions](../priority-review-batch-results.md). `/periods` and original proposal statuses below are preserved historical snapshots, not the current analyst selection.
+
+Audit sequence1, actual recorded UTC `2026-10-17T20:07:40.693220+00:00`, SHA256 `be034a5d9c1e78cc8e823f0275bbaa83139fb5e175f85d219d823749c14baa1b`. Exact user instruction, rationale, five identities, source/review/proposal revisions and immutable original decisions are retained at `/history_approval`. Changed source values, scopes, candidates, precision, identities or evidence rejects stale acceptance. No source null was changed to a reported zero.
+
+**USD millions**, except actual dated shares/pure ratios. Original units, scale, decimals/precision variants, signs, receipts and occurrence locators remain at every effective `source_reference`. A selected proxy is not verified complete expense D&A. Named borrowing/cash captions are not complete debt or unrestricted/excess cash. Omission assumptions knowingly omit potentially undisclosed exposure of unbounded size, not a finding of immateriality.
+
+|Selected input / operation|2021|2022|2023|2024|2025|
+|---|---:|---:|---:|---:|---:|
+|Revenue — original presentation|93,775|94,943|85,159|88,821|94,193|
+|EBIT — JNJ approved derived|23,395|23,382|21,207|20,804|25,287|
+|Limited D&A — approved proxy|7,390|6,970|7,486|7,339|7,503|
+|Cash PP&E — negative outflow|-3,652|-4,009|-4,543|-4,424|-4,832|
+|Selected reported CFO|23,410|21,194|22,791|24,266|24,530|
+|Provision / benefit|1,898|3,784|1,736|2,621|5,777|
+|Pretax — original reviewed scope|22,776|21,725|15,062|16,687|32,581|
+|Issuer reported ETR — pure, no new ratio|0.083|0.174|0.115|0.157|0.177|
+|Cash taxes — outflow, original scope|-4,768|-5,223|-8,574|-6,714|-6,539|
+|SBC expense — proxy once|1,135|1,138|1,087|1,176|1,400|
+|CFO SBC — support only|1,135|1,138|1,162|1,176|1,354|
+|Gross current financial captions|31,608|23,519|22,927|24,522|20,102|
+|Named face carrying financing|33,751|39,659|29,332|36,634|47,933|
+|Reported movement rows, already within CFO (count)|5|5|5|5|5|
+|Separate residual operation|none; source null, not0|none; source null, not0|none; source null, not0|none; source null, not0|none; source null, not0|
+|Actual dated common shares (shares, not diluted)|2629268158 @ 2022-02-10 (decimals INF)|2604286303 @ 2023-02-10 (decimals INF)|2408767228 @ 2024-02-09 (decimals INF)|2407616693 @ 2025-02-06 (decimals INF)|2409898936 @ 2026-02-06 (decimals INF)|
+|Checklist — eligible use, not selection count|5/14|5/14|5/14|5/14|5/14|
+
+### Effective14-family matrix
+
+|Family|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|revenue|OPEN scope|OPEN scope|OPEN scope|OPEN scope|OPEN scope|
+|ebit|OPEN scope|OPEN scope|OPEN scope|OPEN scope|OPEN scope|
+|depreciation_amortization|OPEN scope|OPEN scope|OPEN scope|OPEN scope|OPEN scope|
+|cash_capex|OPEN scope|OPEN scope|OPEN scope|OPEN scope|OPEN scope|
+|reported_cash_flow_working_capital_movements|OPEN scope|OPEN scope|OPEN scope|OPEN scope|OPEN scope|
+|deferred_taxes|OPEN scope|OPEN scope|OPEN scope|OPEN scope|OPEN scope|
+|stock_based_compensation|OPEN scope|OPEN scope|OPEN scope|OPEN scope|OPEN scope|
+|unclassified_cfo_reconciliation_residual|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|reported_cfo|OPEN scope|OPEN scope|OPEN scope|OPEN scope|OPEN scope|
+|reported_tax_context|OPEN scope|OPEN scope|OPEN scope|OPEN scope|OPEN scope|
+|cash_investment_components|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|debt_lease_components|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|other_equity_bridge_claims_assets|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+|point_in_time_shares|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|Satisfied, approved scope|
+
+### OPEN — JNJ-ORIGINAL-AS-FILED-SCOPE
+
+**Approval activates historical selections; it does NOT resolve continuing/consolidated compatibility.** All five FY2021–2025 panels remain original-as-filed. Original early sales include Consumer Health; later sales are continuing-business figures. Cash/D&A/tax/investment/SBC source populations cannot be assumed coterminous with continuing income. This is a history-wide analyst-use gate, not a demonstrated numerical error in every annual amount.
+
+Affected flow families in **each of the five original panels**: revenue, ebit, depreciation_amortization, cash_capex, reported_cash_flow_working_capital_movements, deferred_taxes, stock_based_compensation, reported_cfo, reported_tax_context.45 open family-period slots. The five other families (residual no-operation, cash/investments, borrowing/leases, known claims/assets and dated shares) satisfy their expressly approved operations, not complete source coverage. Period-level eligibility is5/14, even though all14 have approved selections/dispositions.
+
+Addressing the gate requires independently supported consistent continuing/discontinued allocations and a cross-year bridge, **or a separately justified explicit analyst-use treatment** specifying what mismatched populations may be used together or must remain separate. This instruction approves neither resolution. Existing continuing-only allocations remain unknown; no precise new-document target has been established and no research is launched. Do not splice later recasts, subtract Kenvue gain20,984 from CFO to manufacture continuing cash, or relabel this exception supporting-only.
+
+Original EBIT derivation proofs, Kenvue reversal, limited consolidated D&A and separate IPR&D expense/cash remain. Pension gross/net/recognized and broad benefit parents overlap; FY2024 talc carrying11,600 and nominal13,500 are alternatives, not an additive aggregate; FY2025 carrying3,400 and reversal7,000 are balance versus flow, not additions. No aggregate is computed. Dated cover shares retain actual later dates; no fiscal-end coercion or award aggregation.
+
+No future tax rate, award valuation, forecast dilution, valuation-consumption approval, Phase1 closure or Phase2 authority. Existing source unknowns, alternatives, original financial blockers and frozen/pilot artifacts remain. Validation is recorded in the batch results.
+
+## Historical — original review snapshot (prior to this explicit approval)
 
 **All new company treatments PROPOSED, none active.** No completion, financial-sufficiency certification or Phase2 authority. Five frozen annuals/70 family slots. Source observations are not approved complete fields.
 

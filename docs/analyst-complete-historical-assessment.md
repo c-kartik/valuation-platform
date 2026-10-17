@@ -1,6 +1,33 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
-## Current — MU/AMD/JNJ source review, not analyst completeness
+## Current — approved MU/AMD completion; JNJ remains partially usable history
+
+[Effective schedules and audit dispositions](priority-review-batch-results.md)
+activate all18 MU/AMD treatments and JNJ original-as-filed selections. MU five
+FY2022–2026 and AMD five FY2021–2025 selections each pass14/14 (70/70).
+Completion is only for those expressly approved historical operations/proxies,
+not complete expense/debt/reinvestment or generic financial sufficiency. Source
+unknowns, tax distinctions, incentive timing, acquisition/extension scope and
+potentially unbounded omission assumptions remain explicit and unchanged.
+
+JNJ retains an **OPEN continuing/consolidated analyst-use requirement** over
+all five FY2021–2025 panels/nine flow families (45 family-period slots). Original
+selections are active; joint compatibility is not approved. The five other limited
+operations satisfy their scope (25/70 eligible-use slots overall). Company remains
+partial, not a completion obtained by renaming the mismatch supporting-only.
+A consistent source-bound continuing/discontinued bridge or an explicitly
+justified separately approved analyst-use treatment could address it; no invented
+allocation/recast splice or research queue is authorized. Exact affected fields,
+dates, evidence and conditions are bound in the audit/current view.
+
+Current counts42 broad assessments;15 packages =13 scoped complete,2 approved
+partial CAT/JNJ,0 pending reviews,27 assessment-only. Prior11 completed packages,
+CAT dual-perimeter/SBC exception, XOM history boundary and frozen artifacts remain.
+The dated assessment JSON is still a historical baseline, not a current acceptance
+registry. V/INTC/WMT are the next existing-backlog candidates, identified only.
+No whole-universe closure, financial-sufficiency certificate or Phase2 authority.
+
+## Historical — MU/AMD/JNJ source review before explicit approval
 
 [Consolidated batch](priority-review-batch-results.md) adds three five-year
 packages/210 family slots with28 inactive company-specific proposals. MU and AMD
