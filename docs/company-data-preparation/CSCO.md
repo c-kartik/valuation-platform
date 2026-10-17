@@ -1,6 +1,15 @@
 # CSCO — company data preparation
 
-## Current — five-year company review, pending consolidated approval
+## Current — approved effective five-year historical package
+
+[Authoritative selected schedule](CSCO-analyst-input-package.md) / [effective JSON](csco-analyst-input-package.json) / [acceptance and validation](../pharma-network-tech-review-batch-results.md).
+All five selected years satisfy14/14 (70/70) under the expressly approved historical perimeter. Existing revision-bound audit/current-view machinery now activates actual selections, not documentation alone. Actual UTC, exact user authority, source/review/proposal revisions and audit digest preserve authorization and reject stale source/evidence changes. Original facts/proposals/alternatives/nulls remain unchanged.
+
+The rounded impairment-inclusive PP&E plus purchased-intangible proxy1,877/1,631/2,353/2,902/2,563 is active, with inherited−8/−6 operand precision. It is neither complete/pure expense D&A nor the opex-only amortization/CFO mixed-other caption; no extra ROU, inferred amortization or balancing item. Acquisition net-of-divestiture versus later net-of-acquired-cash and Splunk/calendar comparability remain. FY2026 selects exact face components15,918 USDm, with conflicting parent14,297 and unexplained1,621 difference retained as UNRESOLVED_SOURCE_SCOPE_DIFFERENCE. No plug, rounding explanation, conflict clearance or complete liquidity claim. All-year current financial captions19,267/26,146/17,854/16,110/15,918 are not excess/unrestricted cash; named financing9,515/8,391/30,962/28,093/29,533 does not add current maturities/CP again or infer finance-lease coverage. Restrictions/other claims remain unknown where not quantified.
+
+Reported movement detail is already in reconciled CFO, not a second deduction or reconstructed book NWC. Unbounded omission assumptions are not source zeros/immateriality. Complete expense D&A/debt/reinvestment and source unknowns remain unknown. Prior16 completed packages, CAT SBC and JNJ OPEN scope exceptions, original evidence, pilot bytes and frozen artifacts are unchanged. Validation is recorded in the batch sheet. No acquisitions, new issuer review, Phase1 closure or Phase2 authorization.
+
+## Historical checkpoint — five-year company review, pending consolidated approval
 
 [Source schedule and14-family matrix](CSCO-analyst-input-package.md) / [machine source package](csco-analyst-input-package.json) / [ONE consolidated approval sheet](../pharma-network-tech-review-batch-results.md).
 Exact frozen annuals from verified manifest/DEI, independent source receipts and displayed CFO reconcile in all five periods. 10 source-observation slots/60 pending choices; none active. The original conflicts and negative findings are retained; explicit company source choices/proxies and overlaps are not generic policies or complete financial coverage.

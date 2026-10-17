@@ -1,5 +1,19 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Scope-specific ABBV/MA/CSCO acceptance
+
+The user's explicit approval of28 recommendations activates ABBV/MA FY2021–2025
+and CSCO FY2022–2026 under the existing14 historical operations. ABBV limited
+D&A and FY2024 borrowing omission, MA face Net revenue/face expense D&A and
+exact curated Pretax, CSCO inherited-rounded impairment-inclusive proxy and
+face financial15,918 are scope-specific accepted selections/assumptions.
+CSCO's conflicting14,297 parent and unexplained1,621 remain unresolved, not a
+plug, rounding explanation or automatic generic conflict clearance. Source nulls,
+original policy alternatives and uncertainty remain; named selections are not
+complete debt/reinvestment, unrestricted cash or diluted shares.
+[Authoritative schedules/audit dispositions](pharma-network-tech-review-batch-results.md).
+CAT/JNJ requirements remain OPEN; no universe/Phase1 closure or Phase2 use.
+
 ## Scope-specific V/INTC/WMT acceptance
 
 The user's explicit approval of28 retained company recommendations activates V/INTC

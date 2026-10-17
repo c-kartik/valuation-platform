@@ -1,6 +1,15 @@
 # ABBV — company data preparation
 
-## Current — five-year company review, pending consolidated approval
+## Current — approved effective five-year historical package
+
+[Authoritative selected schedule](ABBV-analyst-input-package.md) / [effective JSON](abbv-analyst-input-package.json) / [acceptance and validation](../pharma-network-tech-review-batch-results.md).
+All five selected years satisfy14/14 (70/70) under the expressly approved historical perimeter. Existing revision-bound audit/current-view machinery now activates actual selections, not documentation alone. Actual UTC, exact user authority, source/review/proposal revisions and audit digest preserve authorization and reject stale source/evidence changes. Original facts/proposals/alternatives/nulls remain unchanged.
+
+Limited precise CFO depreciation/intangible proxy8,521/8,467/8,698/8,386/8,139 USDm is accepted, not complete expense D&A. Rounded note alternatives, separate impairment, IPR&D, PP&E787/695/777/974/1,214, business acquisitions525/255/0/17,493/204, other investing1,377/539/1,223/3,024/5,237 and source collaboration/fair-value adjustments remain distinct. Named carrying financing76,684/63,271/59,385/67,144/67,496 includes embedded finance liabilities once. FY2024 additional short borrowing remains SOURCE UNKNOWN; approval selects the named67,144 with no additional adjustment as an unbounded analyst omission, not CP-zero proof. Principal/fair value/carrying bases are not combined. Contingent parents/Level3/current/noncurrent overlap, pension/OPEB, litigation and NCI remain known claims; FY2021 contingent current subamount stays null, never backsolved.
+
+Reported movement detail is already in reconciled CFO, not a second deduction or reconstructed book NWC. Unbounded omission assumptions are not source zeros/immateriality. Complete expense D&A/debt/reinvestment and source unknowns remain unknown. Prior16 completed packages, CAT SBC and JNJ OPEN scope exceptions, original evidence, pilot bytes and frozen artifacts are unchanged. Validation is recorded in the batch sheet. No acquisitions, new issuer review, Phase1 closure or Phase2 authorization.
+
+## Historical checkpoint — five-year company review, pending consolidated approval
 
 [Source schedule and14-family matrix](ABBV-analyst-input-package.md) / [machine source package](abbv-analyst-input-package.json) / [ONE consolidated approval sheet](../pharma-network-tech-review-batch-results.md).
 Exact frozen annuals from verified manifest/DEI, independent source receipts and displayed CFO reconcile in all five periods. 10 source-observation slots/60 pending choices; none active. The original conflicts and negative findings are retained; explicit company source choices/proxies and overlaps are not generic policies or complete financial coverage.

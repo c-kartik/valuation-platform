@@ -1,6 +1,15 @@
 # MA — company data preparation
 
-## Current — five-year company review, pending consolidated approval
+## Current — approved effective five-year historical package
+
+[Authoritative selected schedule](MA-analyst-input-package.md) / [effective JSON](ma-analyst-input-package.json) / [acceptance and validation](../pharma-network-tech-review-batch-results.md).
+All five selected years satisfy14/14 (70/70) under the expressly approved historical perimeter. Existing revision-bound audit/current-view machinery now activates actual selections, not documentation alone. Actual UTC, exact user authority, source/review/proposal revisions and audit digest preserve authorization and reject stale source/evidence changes. Original facts/proposals/alternatives/nulls remain unchanged.
+
+Face Net revenue18,884/22,237/25,098/28,167/32,791 after rebates/incentives is active; the generic gross/net conflict and alternatives are unchanged. Face D&A726/750/799/897/1,143 is a reported expense selection, not a newly invented proxy or generic tag-equivalence rule. Finance amortization is already included; operating lease amortization/customer-incentive amortization are not added. Existing exact curated Pretax approvals for FY2021–23 and later direct scope retain original metadata/review/operand/ETR provenance. Current corporate cash/investments7,894/7,408/9,180/8,772/10,898 stay separate from customer collateral, settlement, restricted funds and strategic holdings. Named debt13,901/14,023/15,681/18,226/19,000 is not exhaustive financing; program-specific CP/credit-facility absence is not a whole-debt zero. Litigation, NCI/redeemable and gross/net pension populations remain separate.
+
+Reported movement detail is already in reconciled CFO, not a second deduction or reconstructed book NWC. Unbounded omission assumptions are not source zeros/immateriality. Complete expense D&A/debt/reinvestment and source unknowns remain unknown. Prior16 completed packages, CAT SBC and JNJ OPEN scope exceptions, original evidence, pilot bytes and frozen artifacts are unchanged. Validation is recorded in the batch sheet. No acquisitions, new issuer review, Phase1 closure or Phase2 authorization.
+
+## Historical checkpoint — five-year company review, pending consolidated approval
 
 [Source schedule and14-family matrix](MA-analyst-input-package.md) / [machine source package](ma-analyst-input-package.json) / [ONE consolidated approval sheet](../pharma-network-tech-review-batch-results.md).
 Exact frozen annuals from verified manifest/DEI, independent source receipts and displayed CFO reconcile in all five periods. 5 source-observation slots/65 pending choices; none active. The original conflicts and negative findings are retained; explicit company source choices/proxies and overlaps are not generic policies or complete financial coverage.

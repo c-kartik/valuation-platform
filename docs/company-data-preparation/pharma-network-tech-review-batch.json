@@ -1,4 +1,175 @@
 {
+  "approval_activation": {
+    "companies": {
+      "ABBV": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "ABBV-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "ABBV-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "ABBV-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "ABBV-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "ABBV-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "ABBV-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "ABBV-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "ABBV-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "ABBV-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "927320d530a6334f32503306fdab70359af122014630e5294a751b14c6075bb2",
+        "completed": true
+      },
+      "CSCO": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "CSCO-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CSCO-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CSCO-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CSCO-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CSCO-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CSCO-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CSCO-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CSCO-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CSCO-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "2f16dfb2becbbf7ff508680b42ab939ca29151fb5a1c477994bf79b07bff750d",
+        "completed": true
+      },
+      "MA": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "MA-REV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MA-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MA-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MA-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MA-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MA-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MA-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MA-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MA-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MA-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "fb63e5d60e93eeb9e1b666196bddc0dd349f71848dfce96d25a0ca821834cd7b",
+        "completed": true
+      }
+    },
+    "current_company_counts": {
+      "approved_partial": 2,
+      "assessment_only": 21,
+      "broadly_assessed": 42,
+      "completed_scoped": 19,
+      "pending_reviews": 0
+    },
+    "original_proposals_retained": true,
+    "phase1_closed": false
+  },
   "approved_partial_company_packages": 2,
   "broad_assessment_only": 21,
   "companies": {

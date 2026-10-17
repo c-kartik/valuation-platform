@@ -1,6 +1,38 @@
 # ABBV / MA / CSCO — ONE retained company-level review
 
-**28 recommendations PROPOSED, all INACTIVE.**15 selected annuals/210 existing-family slots; no acceptance audit or effective overlay is created. [Machine decisions](company-data-preparation/pharma-network-tech-review-batch.json). Prior exact financial approvals replay only within their existing scope, notably MA Pretax; they do not authorize these new company judgments.
+## Current — approved effective selections and three scoped completions
+
+All28 exact company recommendations are now ACTIVE through separate revision-bound audits/effective selections. ABBV/MA FY2021–2025 and CSCO FY2022–2026 each pass14/14 per year (70/70);15 annuals/210 family slots. Original proposal statuses and counts below/in the JSON root are historical snapshots; current counts are `/approval_activation/current_company_counts`.
+
+|Company / approved IDs|Disposition|Existing five-year checklist|
+|---|---|---|
+|ABBV-CF, ABBV-DA, ABBV-INV, ABBV-SBC, ABBV-TAX, ABBV-CASH, ABBV-FIN, ABBV-CLAIMS, ABBV-SHARES|ACTIVE, all approved qualifications retained|70/70, scoped company completion|
+|MA-REV, MA-CF, MA-DA, MA-INV, MA-SBC, MA-TAX, MA-CASH, MA-FIN, MA-CLAIMS, MA-SHARES|ACTIVE, all approved qualifications retained|70/70, scoped company completion|
+|CSCO-CF, CSCO-DA, CSCO-INV, CSCO-SBC, CSCO-TAX, CSCO-CASH, CSCO-FIN, CSCO-CLAIMS, CSCO-SHARES|ACTIVE, all approved qualifications retained|70/70, scoped company completion|
+
+**ABBV:** Limited precise CFO depreciation/intangible proxy8,521/8,467/8,698/8,386/8,139 USDm is accepted, not complete expense D&A. Rounded note alternatives, separate impairment, IPR&D, PP&E787/695/777/974/1,214, business acquisitions525/255/0/17,493/204, other investing1,377/539/1,223/3,024/5,237 and source collaboration/fair-value adjustments remain distinct. Named carrying financing76,684/63,271/59,385/67,144/67,496 includes embedded finance liabilities once. FY2024 additional short borrowing remains SOURCE UNKNOWN; approval selects the named67,144 with no additional adjustment as an unbounded analyst omission, not CP-zero proof. Principal/fair value/carrying bases are not combined. Contingent parents/Level3/current/noncurrent overlap, pension/OPEB, litigation and NCI remain known claims; FY2021 contingent current subamount stays null, never backsolved.
+
+**MA:** Face Net revenue18,884/22,237/25,098/28,167/32,791 after rebates/incentives is active; the generic gross/net conflict and alternatives are unchanged. Face D&A726/750/799/897/1,143 is a reported expense selection, not a newly invented proxy or generic tag-equivalence rule. Finance amortization is already included; operating lease amortization/customer-incentive amortization are not added. Existing exact curated Pretax approvals for FY2021–23 and later direct scope retain original metadata/review/operand/ETR provenance. Current corporate cash/investments7,894/7,408/9,180/8,772/10,898 stay separate from customer collateral, settlement, restricted funds and strategic holdings. Named debt13,901/14,023/15,681/18,226/19,000 is not exhaustive financing; program-specific CP/credit-facility absence is not a whole-debt zero. Litigation, NCI/redeemable and gross/net pension populations remain separate.
+
+**CSCO:** The rounded impairment-inclusive PP&E plus purchased-intangible proxy1,877/1,631/2,353/2,902/2,563 is active, with inherited−8/−6 operand precision. It is neither complete/pure expense D&A nor the opex-only amortization/CFO mixed-other caption; no extra ROU, inferred amortization or balancing item. Acquisition net-of-divestiture versus later net-of-acquired-cash and Splunk/calendar comparability remain. FY2026 selects exact face components15,918 USDm, with conflicting parent14,297 and unexplained1,621 difference retained as UNRESOLVED_SOURCE_SCOPE_DIFFERENCE. No plug, rounding explanation, conflict clearance or complete liquidity claim. All-year current financial captions19,267/26,146/17,854/16,110/15,918 are not excess/unrestricted cash; named financing9,515/8,391/30,962/28,093/29,533 does not add current maturities/CP again or infer finance-lease coverage. Restrictions/other claims remain unknown where not quantified.
+
+**Current counts:42 broadly assessed;21 packages =19 completed scoped histories +2 partial CAT/JNJ +0 pending;21 assessment-only.** No original generic Revenue/D&A conflict or support classification is cleared. CAT SBC allocation and JNJ five-year/nine-family scope requirements remain OPEN. Complete debt/reinvestment/expense disclosure, financial sufficiency, Phase1 closure and Phase2 use are not certified.
+
+### Activation validation
+
+57 distinct focused tests passed across targeted runs:18 final activation/source/replay tests (`/tmp/pharma-tech-activation-final-tests.log`,34.786s) plus39 unchanged network/priority/large/earlier-batch acceptance and legacy/pilot preservation regressions in `/tmp/pharma-tech-activation-tests.log`. Three initial new-test expectations were corrected to the retained source shape: ABBV pension uses `benefit_liabilities`; MA FY2023 restricted-cash selector remains null with its original diagnostic; and changed identities fail the exact-approved-period gate before the stale-revision gate. No financial value/assertion was weakened and no missing restriction became zero. The8 activation and10 source tests all passed on the final effective representation.
+
+Final replay verifies all three accepted histories and the batch summary exactly, including15 identities/210 family slots/28 active IDs, every source receipt/occurrence, curated tax operands, signs, inherited precision and overlaps. Tests cover audit hashes/authority, serialization, persistence/restart, stale value/precision/scope/evidence/alternative/tax/identity rejection, original parent-byte preservation and18 prior accepted/partial peer JSONs. All15 independent displayed CFO proofs remain SUPPORTED without residuals or tolerance changes. CAT SBC and JNJ OPEN scope exceptions, frozen policies/output directories, original ledgers/evidence and legacy/pilot bytes remain unchanged.
+
+Compileall (`src scripts tests`),814 affected local links,1,982 exact local/rooted source/ledger/approval references,42-company count reconciliation and final `git diff --check` passed. No acquisitions, full-suite or corpus run; no Phase1 closure or Phase2 work.
+
+### Next unreviewed candidates — identified only
+
+LRCX, PLTR and AMAT are the next unreviewed non-specialized candidates in the retained frozen snapshot/backlog order. Semiconductor mappings are reusable starting points for LRCX/AMAT; PLTR has existing direct income/source coverage. Their company-specific scopes and assumptions require independent review. This milestone does not execute those reviews, transfer treatments or acquire evidence.
+
+## Historical proposal snapshot — preserved, no longer current
+
+**At review time:28 recommendations PROPOSED, all INACTIVE.**15 selected annuals/210 existing-family slots; no acceptance audit or effective overlay is created. [Machine decisions](company-data-preparation/pharma-network-tech-review-batch.json). Prior exact financial approvals replay only within their existing scope, notably MA Pretax; they do not authorize these new company judgments.
 
 |Company / five-year source schedule and matrix|Exact fiscal years|Source observations|Pending choices|Displayed CFO|
 |---|---|---:|---:|---|

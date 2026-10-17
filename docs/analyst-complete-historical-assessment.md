@@ -1,6 +1,32 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
-## Current — ABBV/MA/CSCO company review, pending one consolidated approval
+## Current — ABBV/MA/CSCO approved scoped historical completion
+
+The user's explicit28-decision approval now activates ABBV/MA FY2021–2025 and
+CSCO FY2022–2026 via existing revision-bound analyst views/audits.
+[Authoritative schedules/dispositions/validation](pharma-network-tech-review-batch-results.md)
+/ [machine current counts](company-data-preparation/pharma-network-tech-review-batch.json)
+`/approval_activation`. Each company passes14/14 per year,70/70. Original facts,
+source nulls, alternatives and proposal history are unchanged; relevant-content
+revisions reject stale approval. Exact identities, actual UTC, authority and audit
+SHA bind the accepted choices, not a new generic financial policy.
+
+ABBV retains limited D&A, separate PP&E/acquisition/IPR&D, embedded financing/claim
+overlaps and FY2024 additional-borrowing omission. MA selects face Net revenue
+and face D&A, preserving generic gross/net ambiguity, exact curated Pretax and
+client/settlement/restricted/corporate populations. CSCO selects rounded
+impairment-inclusive D&A and FY2026 face financial15,918 while parent14,297 and
+unexplained1,621 remain UNRESOLVED; no plug, rounding explanation or conflict clearance.
+
+**42 broadly assessed;21 packages =19 completed scoped histories +2 partial CAT/JNJ;
+0 pending;21 assessment-only.** CAT SBC/JNJ OPEN scope and prior16 complete packages,
+frozen policies/outputs, pilot bytes and XOM/history exceptions remain unchanged.
+Omissions are unbounded analyst assumptions, not reported zeros/immateriality.
+No complete debt/reinvestment, Phase1 closure or Phase2 readiness certification.
+Next unreviewed frozen-order candidates LRCX/PLTR/AMAT are identified only; stop
+without new reviews, acquisitions or Phase2 work.
+
+## Historical checkpoint — ABBV/MA/CSCO company review, pending one consolidated approval
 
 [ONE28-decision sheet](pharma-network-tech-review-batch-results.md) /
 [machine review](company-data-preparation/pharma-network-tech-review-batch.json)
