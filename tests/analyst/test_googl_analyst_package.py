@@ -225,7 +225,7 @@ class AlphabetPackageTests(unittest.TestCase):
 
     def test_original_proposal_and_peer_views_unchanged(self):
         original=json.loads(subprocess.check_output(['git','show',p.ACCEPTANCE_BASIS+':'+p.OUTPUT],cwd=ROOT))
-        proposal={k:v for k,v in self.result.items() if k not in ('accepted_view','googl_history_review')}
+        proposal={k:v for k,v in self.result.items() if k not in ('accepted_view','googl_history_review','googl_history_approval','googl_current_history')}
         self.assertTrue(proposal==original,'Original Alphabet proposal changed')
         for path in ('scripts/prepare_aapl_analyst_package.py','scripts/prepare_msft_analyst_package.py',
             'docs/company-data-preparation/aapl-analyst-input-package.json',
@@ -236,11 +236,11 @@ class AlphabetPackageTests(unittest.TestCase):
             self.assertEqual(preservation_projection(path,(ROOT/path).read_bytes()),preservation_projection(path,expected),path)
 
     def test_audit_persistence_staleness_and_tamper_rejection(self):
-        proposal={k:v for k,v in self.result.items() if k not in ('accepted_view','googl_history_review')}
+        proposal={k:v for k,v in self.result.items() if k not in ('accepted_view','googl_history_review','googl_history_approval','googl_current_history')}
         audit=json.loads((ROOT/p.ACCEPTANCE_PATH).read_text())
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'audit.json';path.write_text(json.dumps(audit))
-            self.assertTrue(p.accepted_view(proposal,path)=={k:v for k,v in self.result.items() if k!='googl_history_review'},'Persisted replay differs')
+            self.assertTrue(p.accepted_view(proposal,path)=={k:v for k,v in self.result.items() if k not in ('googl_history_review','googl_history_approval','googl_current_history')},'Persisted replay differs')
             for key in ('facts','inputs','manual_note_input','sources','precision_candidates','unresolved_requirements'):
                 changed=copy.deepcopy(proposal)
                 changed[key]=dict(changed=changed[key])
@@ -262,7 +262,7 @@ class AlphabetPackageTests(unittest.TestCase):
                             '--record-approved-treatment-set'],capture_output=True,text=True,cwd=ROOT)
         self.assertNotEqual(run.returncode,0)
         self.assertIn('already exists',run.stderr)
-        proposal={k:copy.deepcopy(v) for k,v in self.result.items() if k not in ('accepted_view','googl_history_review')}
+        proposal={k:copy.deepcopy(v) for k,v in self.result.items() if k not in ('accepted_view','googl_history_review','googl_history_approval','googl_current_history')}
         out=p.accepted_view(proposal)
         out['accepted_view']['unresolved_requirements'].clear()
         self.assertEqual(len(proposal['unresolved_requirements']),9)

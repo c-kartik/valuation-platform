@@ -1,6 +1,25 @@
 # Company data preparation register
 
-## Current — Alphabet five-year review remains pending
+## Current — three completed scoped company histories
+
+[Alphabet's authoritative schedule](GOOGL-analyst-input-package.md) records
+revision-bound sequence2 G1–G8 user acceptance and FY2021–25 each14/14. The current
+view distinguishes limited D&A proxies from unknown complete expense D&A and
+approved claim/borrowing omissions from reported zeros. Gross balances retain
+restrictions; FY2025 operating-lease1m difference remains, financing51,043 unchanged.
+Original sources/audits/alternatives, refreshed receipt history and MSFT/AAPL
+completed views persist. Counts42 broad assessments,3 completed scoped company
+packages,0 partial packages,39 broad-only; no new support classification,
+whole-universe sufficiency, Phase1 closure or Phase2 approval. Older entries below
+are retained checkpoints, not current pending-approval instructions.
+
+Next candidates only: **COST/CAT/KO**, justified from retained standard-review
+backlog rows4/3/6 in the [assessment](../analyst-complete-historical-assessment.md).
+Five retained annuals and supported CFOs each, plus COST's independent latest
+sample, favor reusable company review. They are not approved packages and no
+review is begun here; source/claim/share/financing scope still requires decisions.
+
+## Historical — Alphabet five-year review remains pending
 
 [Alphabet full-history package](GOOGL-analyst-input-package.md) and additive JSON
 review cover FY2021–25/70 slots:29 source-supported/9 existing approvals/32 pending.

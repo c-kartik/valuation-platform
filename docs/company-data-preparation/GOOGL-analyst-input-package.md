@@ -1,6 +1,106 @@
 # Alphabet FY2021–FY2025 — one company-level analyst review
 
-## Current five-year review — new judgments pending
+## Authoritative current five-year schedule — G1–G8 explicitly accepted
+
+The user's exact FY2021–25 G1–G8 approval is recorded in additive
+`/googl_history_approval` (sequence2, schema `googl-treatment-acceptance-audit-v1`),
+linked to the original FY2024 audit, all five identities and exact source/company
+review revisions. Actual recording time **2026-10-17T16:54:52.741263+00:00**; audit SHA256
+`728eaf073b0ef2fb5234f835e018e2290f7c3eac652cc91cb05e14cdef41d847`. The new `/googl_current_history` is authoritative;
+all previous facts, nulls, proposals, precision competitors and approvals remain
+unchanged history. Audit integrity is not a cryptographic signature of the user.
+Normal replay validates the persisted approval, never creates or renews acceptance.
+
+**FY2021/2022/2023/2024/2025 each pass14/14:70/70. Alphabet is completed only
+for the explicitly approved historical-input perimeter.** There are no remaining
+essential inputs under that existing approved operation-specific checklist.
+This is not complete source disclosure, complete debt/reinvestment, valuation
+readiness, a frozen support-class change or Phase1 closure. Counts:42 broadly
+assessed issuers;3 completed company packages MSFT/AAPL/Alphabet;0 partial company
+packages;39 broad-assessment-only. Original four-period pilot approvals and all
+frozen financial outputs remain separately preserved.
+
+All figures below USDm unless dated shares. Main source monetary precision−6;
+R=decimals−8, preserving rounded100m evidence. Derived arithmetic never improves
+operand precision. Each current input points to the original fact/occurrence,
+source/receipt or calculation/operands in `/googl_history_review/periods/0..4`.
+Reported origins, approved proxy/omission status and source unknowns are distinct.
+
+| Selected historical input / approved operation |FY2021|FY2022|FY2023|FY2024|FY2025|Scope / evidence key|
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+|Revenue|257,637|282,836|307,394|350,018|402,836|`facts/revenue`, direct primary/instance|
+|EBIT|78,714|74,842|84,293|112,390|129,039|`facts/ebit`, reported operating income|
+|Limited PP&E noncash-cost proxy|11,555|15,287|11,946|15,311|21,136|G1; first two INCLUDE impairment; **complete expense D&A null all years**|
+|Cash PP&E outflow|−24,640|−31,485|−32,251|−52,535|−91,447|`PaymentsToAcquirePropertyPlantAndEquipment`; raw payments retained|
+|Reported CFO|91,652|91,495|101,746|125,299|164,713|14/14/13/13/13 independently bound terms|
+|Reported movement rows / residual operation|7 /none|7 /none|7 /none|7 /none|7 /none|G7: mixed rows retained, no residual scalar/zero; movements already in CFO|
+|CFO deferred-tax adjustment|+1,808|−8,081|−7,763|−5,257|+8,348|Separate from provision deferred1,883/−8,198/−7,729/−5,256/+8,250|
+|SBC expense cost proxy, once|15,700R|19,500R|22,100R|22,800R|27,100R|G2; add-backs15,376/19,362/22,460/22,785/24,953 separate; no plugs|
+|Tax provision|14,701|11,356|11,922|19,697|26,656|Historical provision, not cash or future rate|
+|Pretax income|90,734|71,328|85,717|119,815|158,826|Reported ETR exact existing-policy provision/positive pretax in JSON|
+|Cash tax payments|−13,412|−18,892|−19,164|−27,400R|−21,526|Distinct negative cash contribution|
+|Gross current financial balances|139,649|113,762|110,916|95,657|126,843|G4: not unrestricted/excess; known restrictions visible below|
+|Named financing only|14,930|14,999|14,616|15,859|51,043|G3: no extra unidentified borrowing adjustment, omitted amount unbounded|
+|Known total NCI|4,300R|3,800R|3,400R|4,200R|3,400R|G5: includes redeemable subset; no second addition|
+|Fiscal-end A/B/C common, millions|300.737/44.665/316.719|5,964/883/6,002|5,899/870/5,691|5,835/861/5,515|5,822/837/5,429|G8: exact December31 dates; FY2021 pre-split, later post20:1|
+|14-family checklist|14/14|14/14|14/14|14/14|14/14|Current overlay, not retroactive source completeness|
+
+### Approved assumptions, supporting history and remaining limitations
+
+- G1 accepts a **proxy**, not verified pure expense D&A. Early intangible
+  amortization/impairment886/641 and later finance amortization413/553 remain
+  separate support, not a new sum or inclusion assumption. Expense D&A and omitted
+  component/timing allocations remain unknown; no extra ROU add-back. Useful-life
+  changes2021/2023 and early impairment inclusion remain comparability limits.
+- G2 counts total recognized SBC expense once, preserving distinct CFO add-backs,
+  stock-settled-only alternatives and FY2025 Waymo valuation-based effects. No
+  difference becomes a rounding adjustment or duplicate charge.
+- G3 preserves early finance/other liabilities **already included** in the named
+  debt captions; no extra addition. Later term debt plus CP plus separately
+  reported finance liabilities uses the existing calculation. Additional borrowing
+  stays source-null; no adjustment is an approved **analyst omission**, potentially
+  economically zero for that adjustment, not a reported zero/immateriality finding.
+  FY2025 operating lease parent15,954 versus components15,953 is still a
+  **1m unresolved source difference**. It is neither plugged nor included in named
+  financing51,043. Finance principal405/1,988 in FY2024/25 already sits within
+  debt repayments12,701/32,427; early separate cash splits remain unknown.
+- G4 preserves restricted long marketable803/1,400/266 in FY2022/23/24 beside
+  current gross selections, not deducted again or treated as current restrictions.
+  FY2021/25 restriction subamounts, operating reserves and other restrictions
+  stay unknown. Strategic/nonmarketable parents29,549/30,492/31,008/37,982/68,687,
+  equity-method overlaps and all precision competitors stay separate/non-default.
+- G5/G6 retain known NCI including redeemable unknown/1,100R/1,100R/1,100R/841,
+  reported preferred0, fines, tax claims, gross NOL DTA and commitments separately.
+  No additional unidentified/pension adjustment is an approved assumption, with
+  **unbounded potentially omitted net claims/assets**, not an immateriality finding.
+  Source pension/unidentified amounts stay null; no exhaustive claims total or
+  pure-NOL economic valuation operation is required/created under this approval.
+- G7 uses displayed mixed rows with reconciled CFO; no residual0, balancing item,
+  reconstructed NWC prerequisite or second movement deduction. Acquisition effects
+  are excluded as stated in movement captions; all FX/reclassification/organic
+  allocations are not established. Combined purchases, investing Other, capital
+  creditors and noncash lease additions remain separate investment columns.
+- G8 keeps each actual class/date and independently reported aggregate, covers,
+  EPS denominators and awards separate. FY2022 executed20:1 split does not restate
+  the original FY2021 selection automatically. No class sum/equivalence, award
+  valuation or forecast dilution. FY2024 manual3,200R AP correction and non-default
+  whole-AP/fines/all-lease alternatives retain their original period/scope.
+
+All ten retained bodies/usable receipts are unchanged. Original instance retrieval
+metadata gaps remain null; explicit refreshed evidence does not recover historical
+metadata. No acquisition, new fallback, policy expansion or runtime financial
+integration. The earlier review below is a **historical proposal snapshot**, not
+current approval status. MSFT/AAPL completed views remain byte-identical.
+
+Validation of the current integration:72 focused tests pass (112.871s), including
+seven new acceptance tests and existing company-review/package/source/precision,
+cash/NWC, completed-peer and preparation-preservation regressions. Persisted audit
+restart, exact decision/identity/revision binding, stale/tamper rejection, original
+nulls/proposals/peer JSON and frozen/pilot bytes pass. All three exact package
+replays, compileall,600 affected local-path links,300 current-view references,
+five14-family checks and diff checks pass. No acquisition/full-suite/corpus run.
+
+## Historical five-year review — then-new judgments pending
 
 The additive `/googl_history_review` in the [machine companion](googl-analyst-input-package.json)
 accounts for all **70** family-period slots: **29 source-supported (S), nine existing

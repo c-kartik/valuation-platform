@@ -1,6 +1,49 @@
 # Project Status
 
-## Current — Alphabet five-year review, one consolidated approval table
+## Current — Alphabet approved five-year historical perimeter completed
+
+[Authoritative Alphabet schedule](company-data-preparation/GOOGL-analyst-input-package.md)
+and additive current JSON overlay record explicit G1–G8 user approval, sequence2,
+linked to the previous FY2024 audit and exact five-year source/review revisions.
+All five selected FY2021–25 periods pass14/14 (70/70) within the approved perimeter.
+Original facts/nulls/proposals/alternatives and completed MSFT/AAPL views persist.
+Counts:42 broad assessments;3 completed company packages MSFT/AAPL/Alphabet;
+0 partial company packages;39 broad-only. These are not42 complete issuers.
+
+Accepted D&A11,555/15,287/11,946/15,311/21,136 are labeled limited proxies, with
+early impairment inclusion and omitted components, not verified complete expense
+D&A (still null). Named financing14,930/14,999/14,616/15,859/51,043 retains early
+finance inclusion, source unknown extra borrowing and approved unbounded omission.
+Gross current financial balances retain known restrictions and unknown reserves;
+claims/pension omissions remain assumptions, not zeros/immateriality. FY2025
+operating lease parent15,954/components15,953m difference remains unresolved and
+never changes financing51,043. No residual scalar; movements already in CFO are
+not extra deductions. Dated share classes, original pre-split2021 and2022 split
+boundary stay distinct. No complete debt/reinvestment certification, support-class
+change, Phase1 closure or Phase2 authority. Prior review/count sections are dated
+history, not the authoritative current outcome.
+
+Validation:72 focused approval/company-review/package/cash/NWC/peer and legacy
+preservation tests pass in112.871s. All five14-family checks, exact G1–G8 wording
+and prior-audit linkage, proxy/null distinctions, named amounts, lease discrepancy,
+SBC precision, source receipt history, JSON round trips, persisted restart and
+stale/tampered/changed-identity rejection pass. All three exact package replays,
+compileall,600 affected local-path links,300 current-view internal references,
+three candidate/backlog joins and diff checks pass. MSFT/AAPL JSON bytes, previous
+Alphabet package (excluding only two additive current/audit keys), frozen/runtime
+source, original evidence and pilot hashes remain exact. Logs:
+`/tmp/googl-history-accepted-tests.log`, `/tmp/googl-history-accepted-replays.log`,
+`/tmp/googl-history-accepted-links.log`. No acquisitions/full-suite/corpus rerun.
+
+Next recommended standard-review candidates from the existing backlog: **COST,
+CAT, KO**. Each has five retained selected annuals, supported displayed CFOs and
+prepared scalar evidence; COST additionally has eight CHECKED latest independent
+fixtures. Reuse the company-wide source/overlap/approval mechanics, not accepted
+financial assumptions. Exact backlog rows4/3/6, rationale and outstanding scope
+checks are in the [current assessment](analyst-complete-historical-assessment.md).
+None has been reviewed/approved by this milestone; do not execute automatically.
+
+## Historical — Alphabet five-year review, one consolidated approval table
 
 [Alphabet company package](company-data-preparation/GOOGL-analyst-input-package.md)
 and its additive JSON review bind the five exact FY2021–25 annual selections and

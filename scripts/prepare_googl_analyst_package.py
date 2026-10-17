@@ -357,7 +357,7 @@ def accepted_view(proposal,audit_path=None):
 
 
 def build():
-    return review_company_history(accepted_view(build_proposal()))
+    return activate_company_history(review_company_history(accepted_view(build_proposal())))
 
 
 def review_company_history(package):
@@ -576,6 +576,80 @@ def review_company_history(package):
             'Acquisitions/combined purchases and2025 valuation-based Other Bets compensation/investment gains remain consolidated, no economic adjustments.',
             'FY2025 operating liability1m source partition difference remains unresolved; no balancing item or invented tolerance.'],
         stopping_condition='One consolidated G1-G8 approval/exception review; G9 source context only. No new assumption active, follow-on research or Phase1/Phase2 closure.')
+    return result
+
+
+def history_approval_record(package):
+    if 'googl_history_approval' in package:raise ValueError('Immutable Alphabet history approval already exists')
+    review=package['googl_history_review']
+    record=dict(schema='googl-treatment-acceptance-audit-v1',version=1,sequence=2,
+        previous=package['accepted_view']['approval_audit']['sha256'],action='ACCEPT_FY2021_FY2025_G1_G8',
+        author='User, explicit approval of Alphabet G1-G8 across frozen FY2021-FY2025',
+        recorded_at_utc=datetime.now(timezone.utc).isoformat(),
+        rationale='Accept limited D&A proxies including early impairment and omitted components, SBC expense once, named financing and gross financial balances, known claims without overlap and unbounded unidentified/pension omission, no CFO residual and dated classes/split boundary. Historical preparation only.',
+        authority='Current user instruction: explicitly approves Alphabet G1-G8; preserve source unknowns, alternatives, prior decisions and FY2025 operating-lease1m discrepancy without changing financing.',
+        source_commit='2b6b6504129b1eda1d595f54f34b0eded4acbc8b',source_revision=digest(relevant(package)),
+        review_revision=review['review_revision'],identities=[r['identity'] for r in review['periods']],
+        decisions={r['decision_id']:{k:v for k,v in r.items() if k not in ('decision_id','status','accepted','approval_required')} for r in review['consolidated_proposals'] if r['approval_required']},
+        financial_sufficiency='ONLY_APPROVED_HISTORICAL_PERIMETER',phase1_closed=False,valuation_consumption_approved=False)
+    record['sha256']=digest(record)
+    return record
+
+
+def activate_company_history(package):
+    parent={k:v for k,v in package.items() if k not in ('googl_history_approval','googl_current_history')}
+    if review_company_history(parent)!=parent:raise ValueError('Changed Alphabet source/company review')
+    record=_json((ROOT/OUTPUT).read_text())['googl_history_approval'];expected=history_approval_record(parent)
+    if type(record) is not dict or set(record)!=set(expected) or record['sha256']!=digest({k:v for k,v in record.items() if k!='sha256'}):raise ValueError('Malformed Alphabet history approval')
+    ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale'])
+    for k in set(expected)-{'recorded_at_utc','sha256','source_revision','review_revision'}:
+        if type(record[k]) is not type(expected[k]) or record[k]!=expected[k]:raise ValueError('Unregistered Alphabet history approval: '+k)
+    if any(record[k]!=expected[k] for k in ('source_revision','review_revision')):raise ValueError('Stale Alphabet history approval; explicit revalidation required')
+    if set(record['decisions'])!={f'G{i}' for i in range(1,9)} or parent['googl_history_review']['outcomes']['ESSENTIAL_EVIDENCE_EXCEPTION']:raise ValueError('Incomplete Alphabet authorization/evidence')
+    periods=[]
+    for i,row in enumerate(parent['googl_history_review']['periods']):
+        base=f'/googl_history_review/periods/{i}';facts=row['facts'];calcs={c['input_id']:c for c in row['calculations']}
+        def fact(key,multiplier=1):
+            f=facts[key]
+            return dict(value=str(Decimal(f['value'])*multiplier),unit=f['unit'],precision=f['precision'],origin='reported',raw_value=f['value'],multiplier=multiplier,as_of=f['as_of'],source_reference=base+'/facts/'+key)
+        def calculation(key):
+            return dict(calcs[key],source_reference=base+'/calculations/'+str(next(j for j,c in enumerate(row['calculations']) if c['input_id']==key)),review=APPROVED_SCOPE)
+        def observations(keys):return {k:fact(k) for k in keys if k in facts}
+        checklist=[]
+        if len(row['family_checklist'])!=14 or len({r['field'] for r in row['family_checklist']})!=14 or not row['cfo_reconciliation']['supported']:raise ValueError('Alphabet checklist/reconciliation incomplete')
+        for r in row['family_checklist']:
+            if r['status'] not in ('SOURCE_SUPPORTED','EXISTING_SCOPED_APPROVAL','PROPOSED_PENDING_APPROVAL') or any(k not in record['decisions'] for k in r['pending_decisions']):raise ValueError('Unresolved Alphabet family')
+            checklist.append(dict(r,status='SATISFIED_BY_EXPLICIT_APPROVAL' if r['pending_decisions'] else 'SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE',approval_reference='/googl_history_approval' if r['pending_decisions'] else r['existing_approval_reference']))
+        inputs=dict(revenue=fact('revenue'),ebit=fact('ebit'),
+            depreciation_amortization=dict(row['proposed_da_proxy'],accepted=True,status=APPROVED_SCOPE,approval_reference='/googl_history_approval'),
+            cash_capex=fact('PaymentsToAcquirePropertyPlantAndEquipment',-1),
+            reported_cash_flow_working_capital_movements=dict(rows=row['movement_rows'],source_reference=base+'/cfo_reconciliation',additional_deduction_permitted=False),
+            deferred_taxes=dict(selected=fact('DeferredIncomeTaxesAndTaxCredits'),provision=fact('DeferredIncomeTaxExpenseBenefit'),interchangeable=False),
+            stock_based_compensation=dict(selected=fact('AllocatedShareBasedCompensationExpense'),origin='proxy',count_once=True,addback=fact('ShareBasedCompensation'),rounding_adjustment=None),
+            unclassified_cfo_reconciliation_residual=dict(value=None,disposition='APPROVED_NO_SEPARATE_OPERATION',not_reported_zero=True,mixed_rows_reference=base+'/cfo_reconciliation'),
+            reported_cfo=fact('NetCashProvidedByUsedInOperatingActivities'),
+            reported_tax_context=dict(provision=fact('IncomeTaxExpenseBenefit'),pretax=fact('pretax'),reported_etr=calculation('reported_etr'),cash_taxes=fact('IncomeTaxesPaidNet',-1),future_rate_approved=False),
+            cash_investment_components=dict(selected=calculation('current_financial'),separate_observations=observations(['long_marketable','nonmarketable_parent','equity_method','listed_equity','restricted_combined']),
+                precision_alternatives_reference=base+'/precision_candidates',unknown_restrictions=None,operating_reserve=None,unrestricted_or_excess_cash=False),
+            debt_lease_components=dict(selected=calculation('named_financing'),additional_borrowing=None,no_additional_adjustment='Approved analyst assumption; omitted borrowing unbounded, not reported zero',complete_debt=False,
+                lease_classification=dict(operating='service_cost',finance='asset_financing'),operating_lease=fact('op_total'),finance_lease=fact('finance_total'),
+                early_finance_already_in_named_debt=i<3,current_maturities_already_included=True,source_partition_checks=row['partition_checks'],source_scope_reference=base+'/source_scope_overrides',
+                lease_cash_observations=observations(['OperatingLeasePayments','FinanceLeaseInterestPaymentOnLiability','FinanceLeasePrincipalPayments','RepaymentsOfDebtAndCapitalLeaseObligations']),
+                finance_principal_already_in_debt_repayments=True if i>=3 else None,complete_lease_cash=False,borrowing_cash_interest=None),
+            other_equity_bridge_claims_assets=dict(known_claims=observations(['nci_vie','redeemable_nci','preferred_value','ec_fines','tax_current','tax_long','nol_dta','vie_funding']),nci_includes_redeemable=True,
+                pension=None,unidentified_claims=None,pure_nol_economic_value=None,no_additional_adjustment='Approved analyst omission; potential undisclosed net obligation/asset unbounded, no immateriality finding',exhaustive_claims=False),
+            point_in_time_shares=dict(classes=observations(['year_end_a','year_end_b','year_end_c']),independently_reported_aggregate=fact('reported_common_total'),
+                cover=observations([k for k in facts if k.startswith('cover_')]),awards=observations(['rsu','future_sbc']),eps_denominators=observations(['weighted_basic','weighted_diluted']),
+                original_pre_split=i==0,aggregation_or_dilution_approved=False))
+        periods.append(dict(identity=row['identity'],inputs=inputs,checklist=checklist,analyst_complete=True,remaining_essential_inputs=[],
+            supporting_unknowns=row['supporting_unknowns'],sources_reference=base+'/sources',supporting_investment_reference=base+'/facts',complete_expense_basis_da=None,
+            original_metadata_gaps_preserved=True,source_comparability_reference='/googl_history_review/comparability'))
+    if len(periods)!=5:raise ValueError('Five selected Alphabet annuals required')
+    result=json.loads(json.dumps(parent));result['googl_history_approval']=record
+    result['googl_current_history']=dict(version=1,authoritative_current_view=True,periods=periods,company_completed_for_approved_historical_perimeter=True,
+        family_slots=70,passed_family_slots=70,complete_expense_basis_da=None,complete_debt=False,complete_reinvestment=False,phase1_closed=False,valuation_consumption_approved=False,
+        approval_sha256=record['sha256'],historical_proposal_snapshot='/googl_history_review',
+        company_counts=dict(broad_evidence_assessment=42,company_analyst_packages=3,completed_company_wide_packages=3,partial_company_packages=0,broad_assessment_only=39))
     return result
 
 

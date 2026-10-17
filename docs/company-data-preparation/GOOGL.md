@@ -1,6 +1,39 @@
 # GOOGL — company data preparation
 
-## Current FY2021–FY2025 company review — G1–G8 pending
+## Current FY2021–FY2025 completion under explicit G1–G8 approval
+
+The [authoritative package](GOOGL-analyst-input-package.md) /
+[JSON](googl-analyst-input-package.json) records sequence2 user authorization,
+actual UTC timestamp, rationale, exact identities, previous audit SHA256 and
+source/review revisions. Original conflict was32 pending treatment slots, not32
+missing-body defects. Chosen resolution activates the exact G1–G8 proposals in a
+separate current analyst overlay; original source facts/nulls, FY2024 approval,
+manual3,200R correction, alternatives and five-year review remain unchanged.
+
+All five years pass14/14 (70/70) **only under the approved historical-input
+perimeter**, no remaining essential checklist operation. D&A proxies retain
+impairment/omitted-component limitations and null complete expense D&A; no extra
+ROU or unproved finance inclusion. Gross current balances are not excess cash.
+Named financing14,930/14,999/14,616/15,859/51,043 avoids early finance double count;
+source additional borrowing stays null with approved unbounded omission. Claims
+and pension omissions likewise remain assumptions, not reported zeros or findings
+of immateriality. FY2025 op-lease1m partition discrepancy persists and does not
+alter financing. Known NCI includes redeemable; no aggregate duplication.
+
+Reported movements and independently reconciled CFO, no separate residual, dated
+classes/split boundary and source tax/SBC roles follow the accepted path. No
+complete reconstructed NWC requirement, investment sum, forecast, valuation,
+frozen blocker removal or Phase1 closure. Original receipt gaps/refresh history,
+pilot/frozen bytes and completed peers remain. Focused approval/restart/staleness,
+serialization, source/overlap/null and preservation gates validate this integration;
+normal replay cannot extend approval to another period/source revision.
+
+Validation:72 focused tests (112.871s), all three package replays, compileall,
+600 affected local-path links,300 current-view references and diff checks pass.
+Original peer/source/audit/pilot/frozen preservation is independently asserted;
+no new acquisition/full-suite/corpus run. No further company work is automatic.
+
+## Historical FY2021–FY2025 company review — G1–G8 then pending
 
 [Existing consolidated package](GOOGL-analyst-input-package.md) /
 [machine companion](googl-analyst-input-package.json) adds only

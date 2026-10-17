@@ -5,17 +5,19 @@ import json
 
 def preservation_projection(path,body):
     if path=='docs/company-data-preparation/googl-analyst-input-package.json':
-        value=json.loads(body);value.pop('googl_history_review',None)
+        value=json.loads(body)
+        for key in ('googl_history_review','googl_history_approval','googl_current_history'):value.pop(key,None)
         return (json.dumps(value,sort_keys=True,indent=2)+'\n').encode()
     if path=='scripts/prepare_googl_analyst_package.py':
         tree=ast.parse(body)
-        tree.body=[n for n in tree.body if not isinstance(n,ast.FunctionDef) or n.name!='review_company_history']
+        tree.body=[n for n in tree.body if not isinstance(n,ast.FunctionDef) or n.name not in ('review_company_history','history_approval_record','activate_company_history')]
         for node in tree.body:
             if isinstance(node,ast.FunctionDef) and node.name=='build':
                 call=node.body[-1].value
-                if isinstance(call,ast.Call) and isinstance(call.func,ast.Name) and call.func.id=='review_company_history':
+                while isinstance(call,ast.Call) and isinstance(call.func,ast.Name) and call.func.id in ('review_company_history','activate_company_history'):
                     assert len(call.args)==1 and not call.keywords
                     node.body[-1].value=call.args[0]
+                    call=node.body[-1].value
         return ast.dump(tree).encode()
     if path=='docs/company-data-preparation/aapl-analyst-input-package.json':
         value=json.loads(body)

@@ -1,6 +1,50 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
-## Current — Alphabet five-year review, one consolidated approval table
+## Current — Alphabet approved five-year historical perimeter completed
+
+[Authoritative Alphabet schedule](company-data-preparation/GOOGL-analyst-input-package.md)
+and additive current JSON overlay record explicit G1–G8 user approval, sequence2,
+linked to the previous FY2024 audit and exact five-year source/review revisions.
+All five selected FY2021–25 periods pass14/14 (70/70) within the approved perimeter.
+Original facts/nulls/proposals/alternatives and completed MSFT/AAPL views persist.
+Counts:42 broad assessments;3 completed company packages MSFT/AAPL/Alphabet;
+0 partial company packages;39 broad-only. These are not42 complete issuers.
+
+Accepted D&A11,555/15,287/11,946/15,311/21,136 are labeled limited proxies, with
+early impairment inclusion and omitted components, not verified complete expense
+D&A (still null). Named financing14,930/14,999/14,616/15,859/51,043 retains early
+finance inclusion, source unknown extra borrowing and approved unbounded omission.
+Gross current financial balances retain known restrictions and unknown reserves;
+claims/pension omissions remain assumptions, not zeros/immateriality. FY2025
+operating lease parent15,954/components15,953m difference remains unresolved and
+never changes financing51,043. No residual scalar; movements already in CFO are
+not extra deductions. Dated share classes, original pre-split2021 and2022 split
+boundary stay distinct. No complete debt/reinvestment certification, support-class
+change, Phase1 closure or Phase2 authority. Prior review/count sections are dated
+history, not the authoritative current outcome.
+
+### Next three standard-review candidates — recommendation only
+
+Existing [machine backlog](analyst-complete-historical-assessment.json), rows4/3/6,
+classifies COST/CAT/KO as `STANDARD_REVIEW`; each has five exact selected periods,
+five supported displayed-CFO checks and five prepared Revenue/EBIT/D&A/Capex
+values without screened conflicts. This is retained availability, not independent
+company-level acceptance or complete expense/bridge scope. No new source review,
+acquisition, assumption or work authorization is created by this recommendation.
+
+| Suggested order | Existing retained basis and reusable work | Still requires review |
+| --- | --- | --- |
+|1. COST|Backlog row4/rank5; FY2022–26 five selected annuals and eight CHECKED latest-period independent fixtures. Reuse displayed-CFO, source-selection and date/precision/audit checks.|Membership/revenue populations, cash/borrowing/lease scope, dated shares and fiscal-week comparability; SUPPORTED frozen classification is not analyst completeness.|
+|2. CAT|Backlog row3/rank4; FY2021–25 five selected annuals, all five CFO displays supported, prepared scalar sources. Reuse company-wide reconciliation, named component/overlap and revision-bound approval workflow.|Company-specific financing/claims and share population selections remain unapproved; no automatic peer treatment or complete-debt assumption.|
+|3. KO|Backlog row6/rank7; FY2021–25 five selected annuals and five supported CFO displays. Reuse scalar-source, mixed-movement/tax-role and component/scope review controls.|Gross financial balances, borrowing/lease/claims scope, historical comparability and analyst omissions need exact company evidence/approval.|
+
+For all three, reuse mechanics, not MSFT/AAPL/Alphabet financial assumptions.
+No full-history independent sample is implied; CAT/KO were not in that sample.
+Stop after selecting candidates. Subsequent company batches need separate user
+instructions and consolidated period-specific decisions. The dated universe JSON
+below remains its historical workload snapshot, not refreshed completeness counts.
+
+## Historical — Alphabet five-year review, one consolidated approval table
 
 [Alphabet company package](company-data-preparation/GOOGL-analyst-input-package.md)
 and its additive JSON review bind the five exact FY2021–25 annual selections and

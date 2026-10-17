@@ -2,7 +2,7 @@
 
 ## Active reported-cash-movement preparation path
 
-For the accepted MSFT and AAPL historical packages,
+For the accepted MSFT, AAPL and Alphabet historical packages,
 use source-bound reported cash-flow movement
 rows and independently reconciled reported CFO. Reconstructed complete operating
 NWC and book ΔNWC are **not prerequisites** for this historical path; existing NWC
@@ -15,7 +15,11 @@ neither frozen NWC policies nor missing values; it is not blanket issuer readine
 The AAPL batch follows the user's explicit reported-movement instruction and its
 separately approved A2–A10 proxies/exclusions/claim/financing judgments. These do
 not establish complete source expense D&A or debt; source unknowns remain.
-MSFT/AAPL assumptions are not authorizations for another issuer. A source-bound path is
+Alphabet's separate G1–G8 approval accepts limited impairment-inclusive/PP&E
+proxies, explicit unbounded omissions and dated classes only within FY2021–25;
+complete expense D&A and original source unknowns remain. Its FY2025 lease1m
+source difference is retained, not a financing adjustment. No issuer's assumptions
+authorize another issuer. A source-bound path is
 not a waiver of unrelated D&A, financing, claims or dated-share requirements.
 
 ## Additive v2 statement-binding contract

@@ -115,10 +115,11 @@ class AlphabetHistoryBatchTests(unittest.TestCase):
 
     def test_original_payload_peer_views_restart_and_revision_guard(self):
         prior=json.loads(subprocess.check_output(['git','show','685bd4c:'+p.OUTPUT],cwd=ROOT))
-        parent={k:v for k,v in self.result.items() if k!='googl_history_review'}
+        history_parent={k:v for k,v in self.result.items() if k not in ('googl_history_approval','googl_current_history')}
+        parent={k:v for k,v in history_parent.items() if k!='googl_history_review'}
         self.assertTrue(parent==prior,'Original Alphabet facts/approval changed')
         self.assertTrue(json.loads((ROOT/p.OUTPUT).read_text())==self.result,'Exact replay differs')
-        self.assertTrue(p.review_company_history(json.loads(json.dumps(parent,sort_keys=True)))==self.result,'Restart differs')
+        self.assertTrue(p.review_company_history(json.loads(json.dumps(parent,sort_keys=True)))==history_parent,'Restart differs')
         changed=copy.deepcopy(parent);changed['facts']['revenue']['value']='1'
         with self.assertRaisesRegex(ValueError,'Changed original Alphabet'):p.review_company_history(changed)
         for name in ['msft','aapl']:
