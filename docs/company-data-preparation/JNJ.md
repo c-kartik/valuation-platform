@@ -1,5 +1,41 @@
 # JNJ — company data preparation
 
+## Current — full frozen FY2021–FY2025 analyst review, inactive
+
+[Five-year schedule/14-family matrix](JNJ-analyst-input-package.md) /
+[source package](jnj-analyst-input-package.json) /
+[ONE decision sheet](../priority-review-batch-results.md).
+Five annuals/70 families, all pending10 concrete choices including the substantive
+original-as-filed perimeter. Exact DEI labels bind FY2021 end2022-01-02 and FY2022
+end2023-01-01, not calendar-end relabeling. Replayed registered EBIT derivations
+23,395/23,382/21,207/20,804/25,287m retain policy, verified operands, precision
+gates and authoritative repaired filing metadata; never relabeled direct.
+
+Original conflict: early sales include Consumer Health, later income is continuing,
+while selected CFO remains consolidated. All five independent CFO displays
+reconcile. Propose original-as-filed panels with visible boundaries, not a homogeneous
+continuing series or later-recast splice. Kenvue2023 gain20,984m reversal is not
+a continuing-CFO allocation. Uniform continuing-only history cannot be established
+by subtracting it; this alternative needs unsupported allocations, not a new
+automatic acquisition queue. Limited D&A7,390/6,970/7,486/7,339/7,503m retains
+that scope limitation. Rounded intangible expense and IPR&D are not added again.
+
+Separate cash PP&E/acquisitions/IPR&D, provision versus cash taxes, actual later
+cover shares and awards remain bound. Named current/noncurrent financing
+33,751/39,659/29,332/36,634/47,933m already includes current term maturities.
+Pension funded status, recognized gross liabilities and broader benefit parents
+remain different overlapping populations. Exact FY2024/25 talc carrying reserves
+11,600/3,400m (100m precision), FY2024 nominal13,500m and FY2025 reversal7,000m
+are separate bases/flows, not additive claims or valuation adjustments.
+
+All10 company decisions inactive; omission assumptions would accept potentially
+unbounded unknown exposure, not zero/immateriality. Exact source references,
+original dates/precision, ledger seals and alternatives are in JSON; no essential
+artifact acquisition target identified. Focused policy/source/arithmetic/replay
+and preservation results are recorded in the batch sheet. Prior decisions,
+frozen policies/outputs and accepted peer packages remain unchanged. No company
+completion, scope approval, financial sufficiency or Phase2 permission follows.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

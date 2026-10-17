@@ -1,6 +1,26 @@
 # Company data preparation register
 
-## Current — eleven scoped histories complete; CAT remains partial
+## Current — MU/AMD/JNJ review pending consolidated approval
+
+[MU](MU-analyst-input-package.md), [AMD](AMD-analyst-input-package.md) and
+[JNJ](JNJ-analyst-input-package.md) now each have five-year source schedules
+and14-family matrices. [ONE28-decision sheet](../priority-review-batch-results.md)
+/ [machine decisions](priority-review-batch.json). All new judgments are inactive.
+MU FY2022–2026:10S/60P; AMD FY2021–2025:10S/60P; JNJ FY2021–2025:0S/70P.
+S denotes a source observation, not complete coverage. JNJ's entire checklist
+awaits its substantive original-as-filed versus uniform-continuing perimeter choice.
+No later-recast splice, zero inference or automatic issuer assumption transfer.
+
+**42 broadly assessed;15 packages =11 completed scoped histories +1 approved
+partial CAT +3 pending reviews;27 assessment-only.** Existing completed views,
+CAT SBC allocation exception, XOM empty history, original financial blockers,
+support classes and frozen/pilot bytes are preserved. Thirty original receipts
+available; no essential acquisition target identified and no request. MU incentive
+and inventory timing, AMD extension gates/manual display versus original PARTIAL,
+and JNJ Kenvue/pension/litigation scope remain explicit. Stop for consolidated
+review; no phase closure, financial-sufficiency approval or Phase2 authority.
+
+## Historical — eleven scoped histories complete; CAT remains partial
 
 All25 AVGO/TSLA/LLY recommendations are explicitly approved and active in separate
 revision-bound analyst views, not altered reported facts. Each of the five exact

@@ -1,6 +1,19 @@
 # NVDA / AMZN / META — ONE consolidated historical-input review batch
 
-## Current market-cap-priority tracker — retained snapshot, not live market values
+## Current priority tracker — MU/AMD/JNJ reviewed, not approved
+
+The separately authorized [MU/AMD/JNJ batch](priority-review-batch-results.md)
+now covers all15 frozen selections with28 inactive proposals. MU/AMD each10
+source-observation/60 pending family slots; JNJ70 pending including its Kenvue
+perimeter decision. No completion or financial scope transfer is inferred.
+**11 completed scoped histories;1 approved partial CAT;3 pending reviews;
+27 assessment-only**, across42 broadly assessed issuers. XOM empty history and
+CAT's SBC allocation exception remain. All prior accepted package bytes and
+frozen artifacts are unchanged. No fresh market ranking or additional company
+review, request, Phase1 closure or Phase2 work is launched. Stop for consolidated
+approval; the prior candidate rationale below is preserved historical context.
+
+## Historical priority tracker — retained snapshot, not live market values
 
 The next approved batch [AVGO/TSLA/LLY](large-company-review-batch-results.md)
 is now implemented: all25 decisions ACTIVE, each company five years14/14.

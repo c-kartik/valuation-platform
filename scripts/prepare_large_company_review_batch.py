@@ -113,7 +113,7 @@ def excerpts(f, ticker):
     return result
 
 
-def prepare_income(case, row):
+def prepare_income(case, row, *, include_repairs=False):
     """Direct facts or exact unchanged registered derivation, never copied EBIT."""
     f = case['filing']
     for slot in row['fields']:
@@ -121,9 +121,9 @@ def prepare_income(case, row):
             candidate = slot['candidates'][slot['selected']]
             shared.monetary(case, slot['field'], candidate['concept'], namespace=candidate['namespace'])
         elif slot['status'] == 'POPULATED_DERIVED':
-            metadata = next(m['filing'] for m in approved.bindings()['filings']
+            metadata = next(m['filing'] for m in approved.bindings(include_repairs)['filings']
                 if m['filing']['accession_number'] == f.period.accession)
-            result = approved.execute(case['evidence'], metadata)
+            result = approved.execute(case['evidence'], metadata, include_repairs)
             proof = _serialize_operating_income_derivation(result.derivation_provenance)
             if proof != slot['provenance'] or str(result.value) != slot['value_usd']:
                 raise ValueError('Registered EBIT resolver/proof differs from retained integration')
@@ -159,6 +159,9 @@ def prepare_income(case, row):
                 policy_id=proof['policy_id'], policy_version=proof['policy_version'],
                 policy_proof=proof, operand_observations=operand_keys,
                 metadata=metadata, scope='Exact existing approved operating perimeter; not adjusted EBIT')
+            if include_repairs:
+                from valuation_platform.analyst.repaired_income_preparation import metadata_binding
+                case['derived_ebit']['official_metadata_binding']=metadata_binding(f.period.accession)
 
 
 def build():

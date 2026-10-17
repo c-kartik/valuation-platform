@@ -1,5 +1,35 @@
 # MU — company data preparation
 
+## Current — full frozen FY2022–FY2026 analyst review, inactive
+
+[Five-year schedule/14-family matrix](MU-analyst-input-package.md) /
+[exact source package](mu-analyst-input-package.json) /
+[ONE batch decision sheet](../priority-review-batch-results.md).
+Five exact annuals/70 families:10 source-observation slots and60 pending choices.
+Original conflict: manufacturing CFO D&A, expense/inventory capitalization and
+government-incentive cash/basis changes cannot be equated to complete expense
+D&A or ordinary reinvestment. Proposed limited proxy7,116/7,756/7,780/8,352/9,503m
+does not add finance amortization, inventory write-downs or ROU twice.
+Keep cash PP&E12,067/7,676/8,386/15,857/30,712m and incentive receipts
+115/710/315/2,005/3,316m separately; non-default net cash alternative is explicitly
+timing-dependent, not complete investment. FY2026 is a53-week boundary.
+
+All five displayed CFO checks independently reconcile. Current/noncurrent face
+financing already includes lease financing; proposed6,906/13,330/13,397/14,577/5,179m
+is not complete debt. Gross current financial balances9,331/9,594/8,106/10,307/43,434m
+are not excess/unrestricted cash. Before-equity pretax/issuer ETR observations
+do not fill the five original generic denominator gaps by a new formula. SBC
+expense/addback differences remain; shares retain fiscal-end and later dates.
+
+Exact source receipts/occurrences, DEI fiscal labels, precision, alternatives,
+note excerpts/locators and immutable ledger seals are in the JSON. No essential
+artifact acquisition target identified. All9 new judgments require explicit
+approval; omission choices would accept unbounded unknown exposure, not reported
+zeros or immateriality. Financial sufficiency/completion not established.
+Focused source/arithmetic/serialization/replay/preservation results are recorded
+centrally in the batch sheet. Original blockers, frozen policies/outputs, pilot
+bytes and prior decisions remain unchanged. Stop for one consolidated review.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

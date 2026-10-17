@@ -1,5 +1,25 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+## Current — MU/AMD/JNJ source review, not analyst completeness
+
+[Consolidated batch](priority-review-batch-results.md) adds three five-year
+packages/210 family slots with28 inactive company-specific proposals. MU and AMD
+each10 source-observation/60 pending slots; JNJ70 pending including its substantive
+original-as-filed panel decision across Kenvue separation. No source gap is
+waived by CFO availability, a proxy proposal, acknowledgment or presentation-only
+regrouping. Known talc/pension/financing populations and overlapping measurement
+bases remain separate. MU incentive-net investment is non-default; AMD's limited
+proxy does not reverse frozen extension gates or prior negative findings.
+
+42 broad assessments;15 packages =11 scoped complete,1 approved partial CAT,
+3 pending MU/AMD/JNJ,27 assessment-only. Existing11 completed packages and CAT's
+dual-perimeter/SBC exception are unchanged. XOM empty history and target deficits
+remain. All30 target primary/instance receipts retained; no exact essential
+acquisition requirement identified. Uniform continuing-only JNJ allocations,
+complete expense/investment/claims and unknown borrowing/restrictions remain
+unproved, not an automatic research queue. Explicit user decisions are needed
+before effective selection/checklist reassessment. No Phase1 closure or Phase2.
+
 ## Current — AVGO/TSLA/LLY approved scoped completion
 
 All25 recommendations are explicitly user-approved and effective through the

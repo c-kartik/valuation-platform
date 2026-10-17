@@ -1,5 +1,34 @@
 # Project Status
 
+## Current — MU/AMD/JNJ retained company review; proposals inactive
+
+[ONE consolidated decision sheet](priority-review-batch-results.md) and three
+five-year schedules now cover15 exact frozen annuals/210 existing-family slots.
+MU FY2022–2026 and AMD FY2021–2025 each have10 source-observation/60 pending
+slots; JNJ FY2021–2025 has70 pending slots because its original-as-filed
+continuing/consolidated perimeter requires a substantive explicit decision.
+All28 recommendations remain inactive; no audit authorization or company
+completion is inferred. Exact fiscal labels come from retained DEI, including
+JNJ FY2021 ending2022-01-02 and FY2022 ending2023-01-01.
+
+MU keeps incentive cash, manufacturing/capitalized D&A and inventory timing
+separate. AMD proposes narrow exact D&A populations without reversing extension
+gates; original two PARTIAL CFO proofs remain, alongside independently bound
+display checks. FY2025 continuing6,493/discontinued1,216/consolidated7,709 are
+not overlapping additions. JNJ replays five approved EBIT proofs, preserves
+Kenvue original presentations and separately binds pension/talc populations.
+No homogeneous continuing-only series or unsupported allocation is invented.
+
+**42 broadly assessed;15 packages =11 completed scoped histories +1 approved
+partial CAT +3 pending MU/AMD/JNJ;27 assessment-only.** Prior completed package
+bytes, CAT dual-perimeter/SBC exception, XOM empty history, source evidence,
+frozen financial policies/outputs and pilot artifacts remain unchanged.
+All30 required primary/instance receipts are retained; no essential acquisition
+target identified, no SEC request. Missing scope/allocations and unbounded
+omission proposals remain explicit. Focused results and replay/link checks are
+recorded in the decision sheet. Stop for consolidated approval; no other company,
+automatic research chain, Phase1 closure or Phase2 implementation.
+
 ## Current — AVGO/TSLA/LLY effective approvals; eleven scoped histories completed
 
 The user's explicit25-recommendation approval is now active through the existing

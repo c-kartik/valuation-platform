@@ -1,5 +1,35 @@
 # AMD — company data preparation
 
+## Current — full frozen FY2021–FY2025 analyst review, inactive
+
+[Five-year schedule/14-family matrix](AMD-analyst-input-package.md) /
+[source package](amd-analyst-input-package.json) /
+[ONE decision sheet](../priority-review-batch-results.md).
+Five annuals/70 families:10 source-observation/60 pending choices,9 proposed IDs.
+Original issuer-extension/scope D&A gates and negative findings remain unchanged.
+Propose limited407/4,174/3,453/3,064/3,004m CFO-based proxy; latest two combine
+only base671/750 and separately displayed amortization2,393/2,254. Do not add
+note COGS/Opex acquisition amortization, ROU or inventory step-up189 again.
+This is a proposed analyst perimeter, not a new direct-policy fallback.
+
+Original2022/2025 parser PARTIALs remain exact. Separate current-row source review
+includes the2022 dimensioned inventory adjustment;2025 independently reconciles
+continuing6,493 and separately discontinued1,216 to consolidated7,709. Proposed
+continuing6,493 is not an automatic replacement of source consolidated CFO.
+Xilinx/Pensando/ZT acquisition/discontinued boundaries remain, without invented
+cash/noncash investment splits. Unpaid Capex72/157/106/144/129m and noncash lease
+additions are separate. Named financing313/2,467/2,468/1,721/3,222m includes current
+term debt already;2025 DebtCurrent874 confirms, not another borrowing addition.
+
+Raw FY2023 ETR tag68 pure is explicitly unselected, not silently rescaled/signed;
+existing policy tax proof remains linked. Exact receipts/contexts/precision and
+comparisons, both CFO proof generations, alternatives and nulls survive replay.
+No essential artifact acquisition target identified; no requests. All judgments
+inactive pending approval. Unidentified exposure/reserves remain unbounded;
+no zeros, complete D&A/debt, financial sufficiency or company-completion claim.
+Focused validation is recorded in the batch sheet. Prior fields/policies, accepted
+peer packages and frozen/pilot artifacts are unchanged. Stop for consolidated review.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

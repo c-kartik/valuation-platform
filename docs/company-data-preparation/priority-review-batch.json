@@ -1,0 +1,1586 @@
+{
+  "approved_partial_company_packages": 1,
+  "broad_assessment_only": 27,
+  "companies": {
+    "AMD": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 60,
+        "SOURCE_SUPPORTED": 10
+      },
+      "periods": 5,
+      "review_revision": "f52a0fc357591b98515a002468f98dbb2c1377f7641ddb28f4a08084017849b5"
+    },
+    "JNJ": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 70
+      },
+      "periods": 5,
+      "review_revision": "b9fb802424cbf33316fc3916959dc4e21983c86ed0015392be9f8c51d6542215"
+    },
+    "MU": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 60,
+        "SOURCE_SUPPORTED": 10
+      },
+      "periods": 5,
+      "review_revision": "0e709accd50e095637ad330be9f895e3c3100a74b4e4d8b0aaceb55946f2a770"
+    }
+  },
+  "completed_company_packages": 11,
+  "decisions": [
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "MU-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000723125-22-000048",
+          "annual_end": "2022-09-01",
+          "annual_start": "2021-09-03",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-23-000054",
+          "annual_end": "2023-08-31",
+          "annual_start": "2022-09-02",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-24-000027",
+          "annual_end": "2024-08-29",
+          "annual_start": "2023-09-01",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-25-000028",
+          "annual_end": "2025-08-28",
+          "annual_start": "2024-08-30",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-26-000023",
+          "annual_end": "2026-09-03",
+          "annual_start": "2025-08-29",
+          "cik": 723125,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "15181/1559/8507/17525/89675 USDm",
+      "recommendation": "Retain source movements and independent displayed CFO; no second movement deduction or separate residual operation.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MU",
+      "uncertainty_and_alternative": "Not operating-only cash delta NWC or FCFF. Mixed/deferred/other adjustments remain source populations; pure tax note does not substitute for a mixed CFO row."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "MU-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000723125-22-000048",
+          "annual_end": "2022-09-01",
+          "annual_start": "2021-09-03",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-23-000054",
+          "annual_end": "2023-08-31",
+          "annual_start": "2022-09-02",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-24-000027",
+          "annual_end": "2024-08-29",
+          "annual_start": "2023-09-01",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-25-000028",
+          "annual_end": "2025-08-28",
+          "annual_start": "2024-08-30",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-26-000023",
+          "annual_end": "2026-09-03",
+          "annual_start": "2025-08-29",
+          "cik": 723125,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "7116/7756/7780/8352/9503 USDm",
+      "recommendation": "Select a labeled LIMITED historical D&A proxy with the explicit company-specific scope below.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MU",
+      "uncertainty_and_alternative": "Manufacturing D&A/expense versus inventory capitalization/release timing and incentive-reduced basis remain. Rounded depreciation plus amortization need not equal CFO, no rounding plugs; finance amortization not incremental. Alternative expense-note observations only, not complete expense certification."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "MU-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000723125-22-000048",
+          "annual_end": "2022-09-01",
+          "annual_start": "2021-09-03",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-23-000054",
+          "annual_end": "2023-08-31",
+          "annual_start": "2022-09-02",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-24-000027",
+          "annual_end": "2024-08-29",
+          "annual_start": "2023-09-01",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-25-000028",
+          "annual_end": "2025-08-28",
+          "annual_start": "2024-08-30",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-26-000023",
+          "annual_end": "2026-09-03",
+          "annual_start": "2025-08-29",
+          "cik": 723125,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "12067/7676/8386/15857/30712 USDm",
+      "recommendation": "Keep original cash PP&E as separate input, with acquisitions/IPR&D, noncash additions, capital creditors and source incentives separately visible.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MU",
+      "uncertainty_and_alternative": "Gross cash PP&E is default proposal. Separate cash incentives 115/710/315/2005/3316 USDm; nondefault PP&E-net-of-receipts alternative -11952/-6966/-8071/-13852/-27396 USDm. Government cash timing/basis reduction/receivables/earned benefits differ; no complete reinvestment, incentive forecast or gross depreciation normalization. Manufacturing inventory write-downs/idle capacity are not capex."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "MU-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000723125-22-000048",
+          "annual_end": "2022-09-01",
+          "annual_start": "2021-09-03",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-23-000054",
+          "annual_end": "2023-08-31",
+          "annual_start": "2022-09-02",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-24-000027",
+          "annual_end": "2024-08-29",
+          "annual_start": "2023-09-01",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-25-000028",
+          "annual_end": "2025-08-28",
+          "annual_start": "2024-08-30",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-26-000023",
+          "annual_end": "2026-09-03",
+          "annual_start": "2025-08-29",
+          "cik": 723125,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "496/557/821/975/1282 USDm; addback 514/596/833/972/1333 USDm",
+      "recommendation": "Use named recognized SBC expense as a once-only labeled cost proxy; preserve CFO addback, tax benefits and awards separately.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MU",
+      "uncertainty_and_alternative": "No duplicate charge, rounding adjustment or capitalized/unrecognized-award cost assumed expensed. MU capitalization/inventory recognition differs: expense and CFO SBC differ across all five years."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "MU-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000723125-22-000048",
+          "annual_end": "2022-09-01",
+          "annual_start": "2021-09-03",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-23-000054",
+          "annual_end": "2023-08-31",
+          "annual_start": "2022-09-02",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-24-000027",
+          "annual_end": "2024-08-29",
+          "annual_start": "2023-09-01",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-25-000028",
+          "annual_end": "2025-08-28",
+          "annual_start": "2024-08-30",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-26-000023",
+          "annual_end": "2026-09-03",
+          "annual_start": "2025-08-29",
+          "cik": 723125,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "888/177/451/1124/14761 USDm; cash net 493/532/338/583/1254 USDm; other cash tag unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain provision, exact original pretax scope and issuer/accounting tax context separately from cash/deferred taxes; no future rate.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MU",
+      "uncertainty_and_alternative": "No clamp, tax-shield or new ratio equation. Before-equity pretax 9571/-5658/1240/9654/99671 USDm is not the generic approved denominator; issuer ETR including2023 loss-year\u22123.1% remains a disclosure, not a derived positive-denominator override."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "MU-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000723125-22-000048",
+          "annual_end": "2022-09-01",
+          "annual_start": "2021-09-03",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-23-000054",
+          "annual_end": "2023-08-31",
+          "annual_start": "2022-09-02",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-24-000027",
+          "annual_end": "2024-08-29",
+          "annual_start": "2023-09-01",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-25-000028",
+          "annual_end": "2025-08-28",
+          "annual_start": "2024-08-30",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-26-000023",
+          "annual_end": "2026-09-03",
+          "annual_start": "2025-08-29",
+          "cik": 723125,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "9331/9594/8106/10307/43434 USDm",
+      "recommendation": "Select gross named current financial captions; keep restrictions, noncurrent/strategic holdings, grant receivables and parent totals separate.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MU",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash. Unknown reserves/restrictions remain unbounded; no cash-restricted parent addition. Alternative defer reserve-adjusted selection, no default reserve amount."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "MU-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000723125-22-000048",
+          "annual_end": "2022-09-01",
+          "annual_start": "2021-09-03",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-23-000054",
+          "annual_end": "2023-08-31",
+          "annual_start": "2022-09-02",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-24-000027",
+          "annual_end": "2024-08-29",
+          "annual_start": "2023-09-01",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-25-000028",
+          "annual_end": "2025-08-28",
+          "annual_start": "2024-08-30",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-26-000023",
+          "annual_end": "2026-09-03",
+          "annual_start": "2025-08-29",
+          "cik": 723125,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "6906/13330/13397/14577/5179 USDm",
+      "recommendation": "Select named face carrying current/noncurrent financing; operating leases service, finance leases asset financing with no additional unidentified-borrowing adjustment.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MU",
+      "uncertainty_and_alternative": "Current Debt plus noncurrent debt/finance caption already includes embedded gas/supply finance leases. Do not add finance parent886/1281/2054/3044/2387 again or use gross principal/fair value.2026 current491 is finance current, not an additional bond maturity. Approved omission would be an analyst assumption of potentially unbounded exposure, not reported zero/immateriality. Alternative leave unidentified borrowing operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "MU-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000723125-22-000048",
+          "annual_end": "2022-09-01",
+          "annual_start": "2021-09-03",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-23-000054",
+          "annual_end": "2023-08-31",
+          "annual_start": "2022-09-02",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-24-000027",
+          "annual_end": "2024-08-29",
+          "annual_start": "2023-09-01",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-25-000028",
+          "annual_end": "2025-08-28",
+          "annual_start": "2024-08-30",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-26-000023",
+          "annual_end": "2026-09-03",
+          "annual_start": "2025-08-29",
+          "cik": 723125,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact known populations in facts, note rows and claims ledger; missing subamounts remain unknown.",
+      "recommendation": "Retain known pension/benefit, litigation/tax, NCI and strategic populations without net/gross overlap; propose no additional unidentified preferred/NCI/pension adjustment.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MU",
+      "uncertainty_and_alternative": "Omission would be an explicit unbounded analyst assumption, not reported zero or immateriality. Do not net pension assets/liabilities or infer absent claims zero. Alternative retain that operation unresolved; no materiality estimate."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "MU-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mu-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000723125-22-000048",
+          "annual_end": "2022-09-01",
+          "annual_start": "2021-09-03",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-23-000054",
+          "annual_end": "2023-08-31",
+          "annual_start": "2022-09-02",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-24-000027",
+          "annual_end": "2024-08-29",
+          "annual_start": "2023-09-01",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-25-000028",
+          "annual_end": "2025-08-28",
+          "annual_start": "2024-08-30",
+          "cik": 723125,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000723125-26-000023",
+          "annual_end": "2026-09-03",
+          "annual_start": "2025-08-29",
+          "cik": 723125,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1094000000 shares @ 2022-09-01 (decimals -6); 1098000000 shares @ 2023-08-31 (decimals -6); 1109000000 shares @ 2024-08-29 (decimals -6); 1122000000 shares @ 2025-08-28 (decimals -6); 1131000000 shares @ 2026-09-03 (decimals -6)",
+      "recommendation": "Select fiscal-end unclassed common counts for MU/AMD, actual later cover counts for JNJ; retain other dated common populations, award classes, EPS denominators and acquisition issuance separately.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MU",
+      "uncertainty_and_alternative": "Fiscal-end MU/AMD counts retain reported million-share precision; the alternative later cover counts have different dates, not greater same-date accuracy. JNJ later cover counts are not fiscal-end counts. No award aggregation, EPS substitution, dilution estimate or automatic comparative restatement."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMD-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000002488-22-000016",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-23-000047",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-24-000012",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-25-000012",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-26-000018",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 2488,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "3521/3565/1667/3041/7709 USDm",
+      "recommendation": "Retain source movements and independent displayed CFO; no second movement deduction or separate residual operation.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMD",
+      "uncertainty_and_alternative": "Not operating-only cash delta NWC or FCFF. 2025 propose continuing CFO6493, with discontinued1216 and consolidated7709 retained separately;2022/2025 independent display checks do not replace original PARTIAL parser results."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMD-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000002488-22-000016",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-23-000047",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-24-000012",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-25-000012",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-26-000018",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 2488,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "407/4174/3453/3064/3004 USDm",
+      "recommendation": "Select a labeled LIMITED historical D&A proxy with the explicit company-specific scope below.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMD",
+      "uncertainty_and_alternative": "2021\u201323 OtherDepreciationAndAmortization already includes acquisition amortization;2024\u201325 add only separate CFO AdjustmentForAmortization2393/2254 to base671/750. Do not add COGS/opex acquisition captions again, operating ROU or inventory step-up189. Exact five extension/scope approvals remain pending; frozen gates/negative findings unchanged. Alternative expense/depreciation-only remains partial; no generic fallback."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMD-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000002488-22-000016",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-23-000047",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-24-000012",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-25-000012",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-26-000018",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 2488,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "301/450/546/636/974 USDm",
+      "recommendation": "Keep original cash PP&E as separate input, with acquisitions/IPR&D, noncash additions, capital creditors and source incentives separately visible.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMD",
+      "uncertainty_and_alternative": "Xilinx/Pensando/ZT acquisitions and inventory step-up are not ordinary PP&E. Separate noncash lease additions, unpaid capex72/157/106/144/129 and discontinued-business cash where reported; no manufactured pure acquisition split. Alternative broader investment perimeter requires separately approved sourced non-overlap, not a new sum."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMD-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000002488-22-000016",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-23-000047",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-24-000012",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-25-000012",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-26-000018",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 2488,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "379/1081/1384/1407/1638 USDm; addback 379/1081/1384/1407/1638 USDm",
+      "recommendation": "Use named recognized SBC expense as a once-only labeled cost proxy; preserve CFO addback, tax benefits and awards separately.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMD",
+      "uncertainty_and_alternative": "No duplicate charge, rounding adjustment or capitalized/unrecognized-award cost assumed expensed. Original expense/addback/scope differences remain; no numerical dilution/award valuation."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMD-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000002488-22-000016",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-23-000047",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-24-000012",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-25-000012",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-26-000018",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 2488,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "513/-122/-346/381/-103 USDm; cash net 35/685/523/1386/884 USDm; other cash tag unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain provision, exact original pretax scope and issuer/accounting tax context separately from cash/deferred taxes; no future rate.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMD",
+      "uncertainty_and_alternative": "No clamp, tax-shield or new ratio equation. AMD2023 tagged pure value68 is an unselected representation anomaly, not a68x rate or silently repaired\u22120.68; existing policy ETR/operands remain in the ledger.2025 note deferred252 versus CFO248 differ without a plug."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMD-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000002488-22-000016",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-23-000047",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-24-000012",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-25-000012",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-26-000018",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 2488,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "3608/5855/5773/5132/10552 USDm",
+      "recommendation": "Select gross named current financial captions; keep restrictions, noncurrent/strategic holdings, grant receivables and parent totals separate.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMD",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash. Unknown reserves/restrictions remain unbounded; no cash-restricted parent addition. Alternative defer reserve-adjusted selection, no default reserve amount."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMD-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000002488-22-000016",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-23-000047",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-24-000012",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-25-000012",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-26-000018",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 2488,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "313/2467/2468/1721/3222 USDm",
+      "recommendation": "Select named face carrying current/noncurrent financing; operating leases service, finance leases asset financing with no additional unidentified-borrowing adjustment.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMD",
+      "uncertainty_and_alternative": "ShortTermBorrowings is captioned current portion of long-term debt, not incremental CP; add noncurrent carrying only.2025 DebtCurrent874 confirms, not another874. Unquantified finance/other funding stays unknown; no source-zero inference. Approved omission would be an analyst assumption of potentially unbounded exposure, not reported zero/immateriality. Alternative leave unidentified borrowing operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMD-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000002488-22-000016",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-23-000047",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-24-000012",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-25-000012",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-26-000018",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 2488,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact known populations in facts, note rows and claims ledger; missing subamounts remain unknown.",
+      "recommendation": "Retain known pension/benefit, litigation/tax, NCI and strategic populations without net/gross overlap; propose no additional unidentified preferred/NCI/pension adjustment.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMD",
+      "uncertainty_and_alternative": "Omission would be an explicit unbounded analyst assumption, not reported zero or immateriality. Do not net pension assets/liabilities or infer absent claims zero. Alternative retain that operation unresolved; no materiality estimate."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMD-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amd-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000002488-22-000016",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-23-000047",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-24-000012",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-25-000012",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 2488,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000002488-26-000018",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 2488,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1207000000 shares @ 2021-12-25 (decimals -6); 1612000000 shares @ 2022-12-31 (decimals -6); 1616000000 shares @ 2023-12-30 (decimals -6); 1622000000 shares @ 2024-12-28 (decimals -6); 1630000000 shares @ 2025-12-27 (decimals -6)",
+      "recommendation": "Select fiscal-end unclassed common counts for MU/AMD, actual later cover counts for JNJ; retain other dated common populations, award classes, EPS denominators and acquisition issuance separately.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMD",
+      "uncertainty_and_alternative": "Fiscal-end MU/AMD counts retain reported million-share precision; the alternative later cover counts have different dates, not greater same-date accuracy. JNJ later cover counts are not fiscal-end counts. No award aggregation, EPS substitution, dilution estimate or automatic comparative restatement."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-PERIMETER",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "FY2021/22 original sales93775/94943 include Consumer Health;2023\u201325 continuing sales85159/88821/94193. Consolidated CFO23410/21194/22791/24266/24530 retained;2023 gain on Kenvue separation20984 is a separate CFO reversal.",
+      "recommendation": "Approve original-as-filed historical panels, NOT a homogeneous continuing-business cash/earnings series.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "This preserves actual selected presentations without splicing later recast comparatives. Continuing-income/combined-cash boundaries and related claims/tax/D&A allocations remain supporting limitations, not silently matched. Alternative a uniformly continuing-only five-year contract needs independently supported allocations absent from this reviewed package; not solved by subtracting sale gains or CFO. Entire JNJ checklist remains pending this substantive perimeter decision."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "23410/21194/22791/24266/24530 USDm",
+      "recommendation": "Retain source movements and independent displayed CFO; no second movement deduction or separate residual operation.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "Not operating-only cash delta NWC or FCFF. Mixed/deferred/other adjustments remain source populations; pure tax note does not substitute for a mixed CFO row."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "7390/6970/7486/7339/7503 USDm",
+      "recommendation": "Select a labeled LIMITED historical D&A proxy with the explicit company-specific scope below.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "Consolidated CFO proxy can include discontinued-business D&A; do not add rounded intangible expense4700/4300/4500/4500/4600 or IPR&D impairments again. Expense/continuing-only allocation unproved. Alternative uniformly continuing expense D&A remains unavailable without a supported allocation; no subtraction-based balancing amount."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "3652/4009/4543/4424/4832 USDm",
+      "recommendation": "Keep original cash PP&E as separate input, with acquisitions/IPR&D, noncash additions, capital creditors and source incentives separately visible.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "IPR&D impairment is an expense in approved EBIT; acquired-IPR&D/milestone cash and acquisition cash are separate and may differ. Do not reverse EBIT or add charged IPR&D again. Kenvue separation/continuing versus consolidated cash perimeter is explicit, not an organic normalized investment history."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1135/1138/1087/1176/1400 USDm; addback 1135/1138/1162/1176/1354 USDm",
+      "recommendation": "Use named recognized SBC expense as a once-only labeled cost proxy; preserve CFO addback, tax benefits and awards separately.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "No duplicate charge, rounding adjustment or capitalized/unrecognized-award cost assumed expensed. Original expense/addback/scope differences remain; no numerical dilution/award valuation."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1898/3784/1736/2621/5777 USDm; cash net unknown/unknown/unknown/unknown/6539 USDm; other cash tag 4768/5223/8574/6714/6539 USDm",
+      "recommendation": "Retain provision, exact original pretax scope and issuer/accounting tax context separately from cash/deferred taxes; no future rate.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "No clamp, tax-shield or new ratio equation. Original continuing tax context and consolidated cash taxes are different scopes around Kenvue; no unsupported operating-tax allocation or tax rate approval."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "31608/23519/22927/24522/20102 USDm",
+      "recommendation": "Select gross named current financial captions; keep restrictions, noncurrent/strategic holdings, grant receivables and parent totals separate.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash. Unknown reserves/restrictions remain unbounded; no cash-restricted parent addition. Alternative defer reserve-adjusted selection, no default reserve amount."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "33751/39659/29332/36634/47933 USDm",
+      "recommendation": "Select named face carrying current/noncurrent financing; operating leases service, finance leases asset financing with no additional unidentified-borrowing adjustment.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "Loans/notes payable is the current face parent; term-current maturities are included, not added again alongside noncurrent carrying. Operating leases/rounded finance/other funding remain distinct; no complete debt claim. Approved omission would be an analyst assumption of potentially unbounded exposure, not reported zero/immateriality. Alternative leave unidentified borrowing operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Pension recognized 4088/2698/3129/2968/2917 USDm; talc carrying unknown/unknown/unknown/11600/3400 USDm; nominal unknown/unknown/unknown/13500/unknown USDm; reversal unknown/unknown/unknown/unknown/7000 USDm",
+      "recommendation": "Retain known pension/benefit, litigation/tax, NCI and strategic populations without net/gross overlap; propose no additional unidentified preferred/NCI/pension adjustment.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "Omission would be an explicit unbounded analyst assumption, not reported zero or immateriality. JNJ pension funded status and recognized liabilities are distinct; talc reserve, related reversal/settlement expenses and other litigation may overlap already recorded liabilities. No aggregate claim sum or valuation deduction; leave unknown additional exposure unbounded."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "JNJ-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/jnj-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000200406-22-000022",
+          "annual_end": "2022-01-02",
+          "annual_start": "2021-01-04",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-23-000016",
+          "annual_end": "2023-01-01",
+          "annual_start": "2022-01-03",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-02",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-25-000038",
+          "annual_end": "2024-12-29",
+          "annual_start": "2024-01-01",
+          "cik": 200406,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000200406-26-000016",
+          "annual_end": "2025-12-28",
+          "annual_start": "2024-12-30",
+          "cik": 200406,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "2629268158 shares @ 2022-02-10 (decimals INF); 2604286303 shares @ 2023-02-10 (decimals INF); 2408767228 shares @ 2024-02-09 (decimals INF); 2407616693 shares @ 2025-02-06 (decimals INF); 2409898936 shares @ 2026-02-06 (decimals INF)",
+      "recommendation": "Select fiscal-end unclassed common counts for MU/AMD, actual later cover counts for JNJ; retain other dated common populations, award classes, EPS denominators and acquisition issuance separately.",
+      "recorded_at_utc": "2026-10-17T19:42:09+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "JNJ",
+      "uncertainty_and_alternative": "Fiscal-end MU/AMD counts retain reported million-share precision; the alternative later cover counts have different dates, not greater same-date accuracy. JNJ later cover counts are not fiscal-end counts. No award aggregation, EPS substitution, dilution estimate or automatic comparative restatement."
+    }
+  ],
+  "evidence_acquisition_requirements": [],
+  "family_slots": 210,
+  "new_assumptions_active": false,
+  "new_sec_requests": 0,
+  "pending_review_company_packages": 3,
+  "phase1_closed": false,
+  "schema": "retained-priority-review-batch-v1",
+  "selected_periods": 15,
+  "source_commit": "29baa8a1d5248d5219ffbd229295e5ccad096eba",
+  "tickers": [
+    "MU",
+    "AMD",
+    "JNJ"
+  ]
+}

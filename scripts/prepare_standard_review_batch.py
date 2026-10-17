@@ -323,7 +323,17 @@ def load(tickers=TICKERS):
         selected.append((r['identity_reference'],dict(ticker=r['issuer'],identity=r['identity'])))
     if len(selected)!=15 or any(sum(r['ticker']==t for i,r in selected)!=5 for t in tickers):raise ValueError('Fixed fifteen selected periods required')
     proofs={r['identity']['fields']['accession']:(i,r) for i,r in enumerate(ledger['rows']) if r['ticker'] in tickers}
-    needed={(s['url'],s['body_reference']) for i,r in proofs.values() for s in r['reconciliation']['populations'][0]['cfo']['sources']}
+    def retained_refs(proof):
+        # A PARTIAL displayed check need not have a selected CFO population.
+        # Reuse its separately verified bridge sources only for artifact loading;
+        # this cannot promote that bridge or the partial CFO proof to acceptance.
+        population=proof['reconciliation']['populations'][0]
+        if 'cfo' in population:return population['cfo']['sources']
+        refs=[s for c in proof['bridge']['candidates'] for s in c['sources']]
+        unique={(s['url'],s['body_reference'],s['retrieved_at_utc'],s['http_status']):s for s in refs}
+        if len({s['url'] for s in unique.values()})!=2:raise ValueError('Two exact retained sources required even for unresolved CFO')
+        return list(unique.values())
+    needed={(s['url'],s['body_reference']) for i,r in proofs.values() for s in retained_refs(r)}
     catalog={key:[] for key in needed}
     for path in sorted((ROOT/'docs/evidence').glob('*.json')):
         doc=json.loads(path.read_bytes());artifacts=doc if isinstance(doc,list) else doc.get('artifacts',[])
@@ -336,7 +346,7 @@ def load(tickers=TICKERS):
             catalog[key].append(dict(artifact=a,body=body,path=str(path.relative_to(ROOT)),pointer='/artifacts/'+str(i)))
     result=[];missing=[]
     for mi,row in selected:
-        identity=row['identity'];pi,proof=proofs[identity['accession']];refs=proof['reconciliation']['populations'][0]['cfo']['sources'];bound=[]
+        identity=row['identity'];pi,proof=proofs[identity['accession']];refs=retained_refs(proof);bound=[]
         for role in ('primary','instance'):
             ref=next(s for s in refs if s['url'].endswith('_htm.xml')==(role=='instance'))
             candidates=catalog[(ref['url'],ref['body_reference'])]
