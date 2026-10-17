@@ -1,5 +1,44 @@
 # WMT — company data preparation
 
+## Current — full frozen FY2022–FY2026 review; explicit Revenue choice proposed
+
+[Five-year schedule/14-family matrix](WMT-analyst-input-package.md) /
+[source package](wmt-analyst-input-package.json) /
+[ONE approval sheet](../network-retail-review-batch-results.md).
+Five exact fiscal selections/70 families:5 source-observation/65 pending choices.
+All10 new company decisions inactive. Original Revenue economic ambiguity is
+preserved, not resolved by generic precedence. Propose as-filed Total revenues
+572,754/611,289/648,125/680,985/713,163m, including membership/other income
+4,992/5,408/5,488/6,447/6,750m beyond net sales. Face presentation and independent
+addition corroborate the operating top line supporting reported EBIT. Net sales
+is a meaningful narrower alternative, not an equivalent number or a free-standing
+expense-compatible replacement. No later-recast splice or frozen output change.
+
+Propose exact CFO D&A10,658/10,945/11,853/12,973/14,203m as LIMITED proxy with
+original accretion/completeness boundary retained; source note includes finance
+property/intangibles. Finance amortization is not added twice. Exact SBC expense
+1,163/1,578/2,093/2,769/3,603m is a proposed once-only proxy over rounded note
+alternatives. Pure CFO SBC remains unknown inside Other, never allocated by guess.
+All five original independent CFO displays reconcile; five source balance changes
+per year are already included, not reconstructed NWC or additional deductions.
+
+Supplier-finance invoices5,300/5,725/5,989m FY2024–26 remain separately visible
+within AP/ordinary supplier terms; proposed no extra historical debt addition
+does not prove no financing economics. Earlier allocations unknown, not zero.
+Named borrowing42,831/44,622/46,891/45,790/51,523m adds separate finance-lease
+parent once, not its children again. Cash PP&E, noncash additions, acquisitions,
+NCI/redeemable claims and commitments remain separate. Exact face cash choice
+preserves generic conflicting alternatives, not unrestricted/excess cash.
+February–January fiscal years,2024 three-for-one split, international disposals/
+FX and actual cover-share dates remain; no mechanical calendar/split restatement.
+
+Exact source/period/context/sign/precision, observations/alternatives, body
+digests/receipts and source-ledger seals remain. No essential acquisition target
+identified, no requests. Financial completeness not established; omission choices
+would be unbounded analyst assumptions, not zeros/immateriality. Focused results
+are recorded in the batch sheet. Prior13 completed views, CAT SBC/JNJ OPEN scope,
+source unknowns and frozen artifacts remain unchanged. Stop for one approval.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

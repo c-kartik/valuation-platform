@@ -1,5 +1,26 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+## Current — V/INTC/WMT review adds proposed selections, not completions
+
+[Single batch approval sheet](network-retail-review-batch-results.md) adds15 exact
+annuals/210 existing-family slots,25 source observations and185 pending choices.
+Visa's exact D&A/Capex approvals replay without a generic scope expansion; network
+funds/classes and known preferred claims remain separate. Intel's limited D&A,
+exact SBC selection, grants/partner/NCI and manufacturing timing need company-level
+approval. Walmart's total-revenue proposal is economically distinct from net sales,
+not a cleared generic conflict. Source scope, supplier financing/AP, lease and
+fiscal-calendar alternatives remain explicit. No new judgment active or source
+unknown turned into zero; no policy rejection is silently reversed.
+
+42 broad assessments;18 packages =13 completed scoped histories +2 approved partial
+CAT/JNJ +3 pending V/INTC/WMT;24 assessment-only. Previous accepted packages,
+CAT SBC allocation, JNJ scope mismatch, XOM empty history and frozen artifacts
+remain unchanged. All selected primary/instance receipts retained and Visa original
+policy artifacts replay; no new acquisition target identified. Missing component
+allocations and scope judgments are not an automatic research queue. The original
+dated inventory JSON remains historical. Stop for one consolidated approval;
+no financial-sufficiency certificate, Phase1 closure or Phase2 implementation.
+
 ## Current — approved MU/AMD completion; JNJ remains partially usable history
 
 [Effective schedules and audit dispositions](priority-review-batch-results.md)

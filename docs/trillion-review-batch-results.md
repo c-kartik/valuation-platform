@@ -1,5 +1,16 @@
 # NVDA / AMZN / META — ONE consolidated historical-input review batch
 
+## Current backlog tracker — V/INTC/WMT reviewed, not approved
+
+[Authorized retained-only batch](network-retail-review-batch-results.md) now covers
+all15 exact selected V/INTC/WMT annuals with28 inactive company proposals. Existing
+Visa primitives remain approved within their original exact scope; new company
+classifications/omissions and Intel/Walmart selections await consolidated approval.
+13 completed scoped companies,2 approved partial CAT/JNJ,3 pending company
+reviews,24 assessment-only across42 broadly assessed issuers. XOM remains empty;
+CAT SBC and JNJ scope requirements stay open. No new live ranking, next-company
+review, request, Phase1 closure or Phase2 work is launched.
+
 ## Current priority tracker — MU/AMD completed; JNJ qualified selections partial
 
 [Explicit activation](priority-review-batch-results.md) records MU/AMD at five

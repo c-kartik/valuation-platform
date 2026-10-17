@@ -1,5 +1,41 @@
 # INTC — company data preparation
 
+## Current — full FY2021–FY2025 review; all new treatments inactive
+
+[Five-year schedule/14-family matrix](INTC-analyst-input-package.md) /
+[source package](intc-analyst-input-package.json) /
+[ONE approval sheet](../network-retail-review-batch-results.md).
+Five exact selections/70 families:10 source-observation/60 pending choices.
+Original scope gates remain; the proposed depreciation/intangible D&A proxy
+11,792/13,035/9,602/11,379/11,706m is a limited company-specific selection,
+not a generic sum/approval or complete expense claim. Manufacturing capitalization,
+inventory release, useful-life changes and incentives limit comparability;
+impairment/restructuring and noncash ROU are not incremental proxy charges.
+
+Independent CFO proofs retain complete displayed children and the explicit
+total-adjustments parent, not a parent-plus-children sum or residual. Six source
+balance movements per year remain distinct from book NWC. Exact displayed SBC
+2,036/3,128/3,229/3,410/2,434m is proposed over retained rounded alternatives;
+all five generic conflicts remain. Cost proxy counted once, no rounding plug.
+
+Gross PP&E cash18,733/24,844/25,750/23,944/14,646m stays separate from cash grants,
+noncash government transactions, partner contributions, unpaid amounts and
+commitments. FY2023–25 grants1,011/1,936/1,577m differ from FY2024/25 noncash
+transactions3,300/6,100m; missing earlier subamounts stay unknown. Consolidated
+Brookfield/Apollo/other financing assets and recognized NCI stay together, not an
+invented industrial carve-out or another deduction from Capex. Named carrying
+financing38,101/42,051/49,266/50,011/46,585m includes current maturities once;
+lease/fair-value/principal/commitment populations remain separate. Earlier face
+cash QName includes restricted scope, not an unrestricted/excess-cash finding.
+
+Historical tax benefits/loss context, strategic issuance/divestitures and actual
+dated shares remain source-specific. No new assumption active; all9 company
+decisions pending. Exact body receipts, primary/instance occurrences, precision,
+alternatives and ledger seals are in JSON. No essential acquisition target found,
+zero requests. Validation is recorded in the batch sheet. Prior13 completed views,
+CAT SBC/JNJ OPEN requirements, frozen outputs and source unknowns remain unchanged.
+Stop for consolidated approval; no company completion or Phase2 work.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

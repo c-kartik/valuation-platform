@@ -1,6 +1,26 @@
 # Company data preparation register
 
-## Current —13 scoped complete,2 partial; MU/AMD effective and JNJ scope OPEN
+## Current — V/INTC/WMT review awaits one consolidated approval
+
+[V](V-analyst-input-package.md), [INTC](INTC-analyst-input-package.md) and
+[WMT](WMT-analyst-input-package.md) now each have five-year source schedules and
+14-family matrices. [ONE28-decision sheet](../network-retail-review-batch-results.md)
+/ [machine review](network-retail-review-batch.json). All new judgments inactive;
+25 source-observation/185 pending family slots across15 exact annuals. Visa
+existing curated primitives replay without widening scope; WMT proposed face
+Revenue does not resolve frozen generic ambiguity, and Intel exact/rounded SBC
+alternatives stay source-distinct. Network/client/escrow/preferred, manufacturing/
+grant/NCI, retail/supplier-financing/lease and calendar boundaries remain explicit.
+
+42 broadly assessed;18 packages =13 completed scoped histories,2 approved partial
+CAT/JNJ,3 pending V/INTC/WMT,24 assessment-only. Prior completed bytes, CAT SBC
+exception, JNJ OPEN analyst-use requirement, XOM history boundary and frozen/pilot
+artifacts remain. No essential acquisition target identified; zero requests.
+Exact receipts, Visa policy proofs, context/precision/alternatives and original
+source gaps remain traceable. Stop for consolidated review, not automatic company
+completion, financial sufficiency, Phase1 closure or Phase2 authority.
+
+## Historical —13 scoped complete,2 partial; MU/AMD effective and JNJ scope OPEN
 
 [MU](MU-analyst-input-package.md) and [AMD](AMD-analyst-input-package.md) now
 each pass the existing14-family checklist across all five selected annuals

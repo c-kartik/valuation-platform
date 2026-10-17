@@ -1,5 +1,40 @@
 # V — company data preparation
 
+## Current — full FY2021–2025 review; company choices inactive
+
+[Five-year schedule/14-family matrix](V-analyst-input-package.md) /
+[exact package](v-analyst-input-package.json) /
+[ONE28-decision sheet](../network-retail-review-batch-results.md).
+Five exact selections/70 families:10 source-observation/60 pending choice slots.
+Existing D&A v1 and Capex v3 approvals replay against original artifacts within
+their reviewed scopes:804/861/943/1,034/1,220m D&A and705/970/1,059/1,257/1,482m
+cash purchases. No frozen value copy, broader software treatment or new policy.
+Original supporting-report retrieval metadata gaps remain null; all mandatory
+typed original bodies verify. The2025 rounded D&A corroboration is not a plug.
+
+Original company-level conflict is network/client funds and participating classes,
+not a bank-methodology reclassification. Propose consolidated reported CFO and
+eight source movements per year, including settlement/client populations, not
+organic cash or a second deduction. Propose named cash only, with investments,
+escrow/client collateral and restricted parent separate; unknown restrictions/
+reserves remain. Earlier client-collateral values are bound; later old-selector
+gaps remain null, not absent disclosure or inferred amounts from cash differences.
+Term carrying amounts do not include settlement payables as additional debt.
+
+Recognized series A/B/C preferred, retrospective litigation rights/obligations,
+common A/B/C and later B1/B2/classes retain exact dates and separate scopes.
+No fixed redemption interpretation, share conversion/sum or preferred/recovery
+netting is approved. CFO SBC542/602/765/850/897m is a proposed once-only historical
+cost proxy, not verified pure expense. Additional unidentified omission would be
+an explicit unbounded analyst assumption, not a source zero/immateriality finding.
+
+Exact receipts/context/precision/alternatives, source tables/excerpts and immutable
+ledger references are retained. No essential new acquisition target identified;
+zero requests. All9 proposed company decisions inactive, no completion. Focused
+validation/replay/preservation is recorded in the batch sheet. Prior13 completed
+views, CAT/JNJ exceptions and frozen/pilot artifacts remain unchanged. Stop for
+consolidated approval; no research chain, financial sufficiency or Phase2 use.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

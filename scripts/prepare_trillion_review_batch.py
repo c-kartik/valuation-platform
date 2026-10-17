@@ -26,7 +26,7 @@ EXTRA = {
 }
 
 
-def primary_fact(case, item, table, row, column, caption):
+def primary_fact(case, item, table, row, column, caption, *, instant=False):
     """Bind an actually displayed population, including explicit class dimensions.
 
     No selection by first tag/value/precision. Callers specify the displayed row
@@ -39,7 +39,7 @@ def primary_fact(case, item, table, row, column, caption):
     entity = context.findtext('.//'+xi+'identifier')
     if int(entity) != f.period.cik or end != str(f.period.annual_end):
         raise ValueError('Primary population is not selected issuer/year end')
-    if start != str(f.period.annual_start):
+    if start != (None if instant else str(f.period.annual_start)):
         raise ValueError('Primary population is not exact annual duration')
     if a.get('format') in ('ixt:fixed-zero','ixt:zerodash'):
         # Explicit tagged/displayed zero only, subsequently matched to a real
@@ -69,8 +69,8 @@ def primary_fact(case, item, table, row, column, caption):
         primary_source='primary',instance_source='instance')
 
 
-def displayed_selection(case, key, concept, captions):
-    """Exact reviewed caption/annual population, not automatic precedence."""
+def displayed_selection(case, key, concept, captions, *, instant=False):
+    """Exact reviewed caption/date population, not automatic precedence."""
     selections=[]; f=case['filing']
     for ti,t in enumerate(case['tables']):
         for ri,row in enumerate(t):
@@ -79,7 +79,7 @@ def displayed_selection(case, key, concept, captions):
             for ci,cell in enumerate(row):
                 for item in cell['facts']:
                     if item['attrs']['name'].split(':')[-1]!=concept: continue
-                    try: fact=primary_fact(case,item,ti,ri,ci,caption)
+                    try: fact=primary_fact(case,item,ti,ri,ci,caption,instant=instant)
                     except ValueError: continue
                     if any(o['dimensions'] for o in fact['occurrences']): continue
                     selections.append(fact)

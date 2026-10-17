@@ -1,0 +1,1587 @@
+{
+  "approved_partial_company_packages": 2,
+  "broad_assessment_only": 24,
+  "companies": {
+    "INTC": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 60,
+        "SOURCE_SUPPORTED": 10
+      },
+      "periods": 5,
+      "review_revision": "f6832b3c04e59a2482f25680cf5861b1ca47ea1a13257cf76d231df6e5b7c00f"
+    },
+    "V": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 60,
+        "SOURCE_SUPPORTED": 10
+      },
+      "periods": 5,
+      "review_revision": "8be8ccf6185ef414764f0598ff44696cf84bda8ea0ee3890314ae35ab989fd06"
+    },
+    "WMT": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 65,
+        "SOURCE_SUPPORTED": 5
+      },
+      "periods": 5,
+      "review_revision": "09fc26b6e12bd7e843f04e6a19a5f5fc8ea815d36f48709aa24585b64173ca73"
+    }
+  },
+  "completed_company_packages": 13,
+  "decisions": [
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "V-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001403161-21-000060",
+          "annual_end": "2021-09-30",
+          "annual_start": "2020-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-22-000081",
+          "annual_end": "2022-09-30",
+          "annual_start": "2021-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-23-000099",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-24-000058",
+          "annual_end": "2024-09-30",
+          "annual_start": "2023-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-25-000089",
+          "annual_end": "2025-09-30",
+          "annual_start": "2024-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "15227/18849/20755/19950/23059 USDm",
+      "recommendation": "Retain original consolidated reported CFO and source cash movements; preserve hierarchy, no separate residual or second deduction.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "V",
+      "uncertainty_and_alternative": "Not operating-only cash delta NWC or FCFF. Intel complete displayed adjustment children reconcile to the parent, not parent-plus-children. Visa settlement/client and Walmart tax/inventory rows retain source scope; mixed other rows unallocated. Alternative a narrower operating-only cash contract requires unsupported allocations."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "V-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001403161-21-000060",
+          "annual_end": "2021-09-30",
+          "annual_start": "2020-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-22-000081",
+          "annual_end": "2022-09-30",
+          "annual_start": "2021-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-23-000099",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-24-000058",
+          "annual_end": "2024-09-30",
+          "annual_start": "2023-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-25-000089",
+          "annual_end": "2025-09-30",
+          "annual_start": "2024-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "804/861/943/1034/1220 USDm",
+      "recommendation": "Use unchanged Visa curated D&A; propose company-specific LIMITED Intel/Walmart historical proxies, never new generic D&A policy.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "V",
+      "uncertainty_and_alternative": "Visa asset/technology/intangible scope is exactly approved;2025 rounded corroboration discrepancy is not a plug and client-incentive amortization is NOT D&A. Intel depreciation plus separately identified intangible amortization is a limited non-overlapping proxy, with capitalization/inventory timing, useful-life changes and incentive-reduced basis; no impairment/restructuring add-on. Walmart source caption retains accretion scope; finance amortization already reflected in source note perimeter, no second addition. Alternatives: retain raw observations and leave required expense D&A unresolved; no complete expense certification."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "V-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001403161-21-000060",
+          "annual_end": "2021-09-30",
+          "annual_start": "2020-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-22-000081",
+          "annual_end": "2022-09-30",
+          "annual_start": "2021-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-23-000099",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-24-000058",
+          "annual_end": "2024-09-30",
+          "annual_start": "2023-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-25-000089",
+          "annual_end": "2025-09-30",
+          "annual_start": "2024-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "705/970/1059/1257/1482 USDm",
+      "recommendation": "Select original gross cash-investment caption within existing exact approval/direct scope; keep incentives, noncash additions, creditors, acquisitions and proceeds separate.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "V",
+      "uncertainty_and_alternative": "Visa v3 operational software/property/technology scope only, no blanket software rule. Intel grant receipts unknown/unknown/unknown/unknown/unknown USDm and partner/noncash financing are not a reduction of gross cash PP&E or another lease debt. Walmart capex, noncash finance/operating ROU and acquired business consideration differ. No complete reinvestment or net-investment subtotal. Alternative explicitly defined net funding basis would need its own approved non-overlap/timing treatment; no default change."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "V-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001403161-21-000060",
+          "annual_end": "2021-09-30",
+          "annual_start": "2020-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-22-000081",
+          "annual_end": "2022-09-30",
+          "annual_start": "2021-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-23-000099",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-24-000058",
+          "annual_end": "2024-09-30",
+          "annual_start": "2023-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-25-000089",
+          "annual_end": "2025-09-30",
+          "annual_start": "2024-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "542/602/765/850/897 USDm",
+      "recommendation": "Select one labeled cost proxy, not duplicate expense plus CFO addback; preserve exact/rounded and missing reconciliation populations.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "V",
+      "uncertainty_and_alternative": "Intel propose exact displayed CFO SBC over rounded note alternatives explicitly, not generic precedence; retain rounded candidates and NCI/parent allocations. Visa CFO SBC is proposed as a historical cost proxy where pure expense observation is not independently selected. Walmart propose exact displayed recognized expense, preserving rounded alternatives; pure CFO SBC remains unknown inside Other, not a manufactured addback. Alternative no proxy/retain expense-only where available; awards/capitalization remain separate."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "V-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001403161-21-000060",
+          "annual_end": "2021-09-30",
+          "annual_start": "2020-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-22-000081",
+          "annual_end": "2022-09-30",
+          "annual_start": "2021-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-23-000099",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-24-000058",
+          "annual_end": "2024-09-30",
+          "annual_start": "2023-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-25-000089",
+          "annual_end": "2025-09-30",
+          "annual_start": "2024-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "3752/3179/3764/4173/4136 USDm; cash net 3012/3741/3433/5775/4541 USDm; other cash unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain source provision, pretax, reported accounting context and actual cash-tax scope separately; no future rate or normalization.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "V",
+      "uncertainty_and_alternative": "Keep note tax expense, cash movements and deferred reconciliation distinct. Intel losses/valuation allowance and historical unusual rates are not clamped. Missing generic denominators/precision conflicts stay in original policy ledger. Alternative no future operating-tax assumption; any later rate requires a separately justified design."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "V-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001403161-21-000060",
+          "annual_end": "2021-09-30",
+          "annual_start": "2020-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-22-000081",
+          "annual_end": "2022-09-30",
+          "annual_start": "2021-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-23-000099",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-24-000058",
+          "annual_end": "2024-09-30",
+          "annual_start": "2023-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-25-000089",
+          "annual_end": "2025-09-30",
+          "annual_start": "2024-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "16487/15689/16286/11975/17164 USDm",
+      "recommendation": "Select named face cash/current financial captions only, with source restrictions prominently retained and settlement/client funds separate.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "V",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash. Visa selects the named cash caption only; investment securities stay a separately disclosed population, not assumed absent/free cash. Escrow/client collateral and settlement receivable are not corporate cash additions; do not subtract exclusions already outside the face caption twice. Intel earlier face QName includes restricted scope, not silently unrestricted. Walmart exact face cash is a company selection, preserving competing generic observations. Unknown reserves/restrictions stay unbounded. Alternative a broader securities-inclusive balance needs explicit maturity/coverage/non-overlap acceptance; no invented reserve or automatic addition."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "V-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001403161-21-000060",
+          "annual_end": "2021-09-30",
+          "annual_start": "2020-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-22-000081",
+          "annual_end": "2022-09-30",
+          "annual_start": "2021-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-23-000099",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-24-000058",
+          "annual_end": "2024-09-30",
+          "annual_start": "2023-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-25-000089",
+          "annual_end": "2025-09-30",
+          "annual_start": "2024-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "20977/22450/20463/20836/25171 USDm",
+      "recommendation": "Operating leases service costs, finance leases asset financing; select named carrying financing with no additional unidentified-borrowing adjustment.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "V",
+      "uncertainty_and_alternative": "Current maturities/parent captions counted once. Walmart adds separate finance parent once, not parent+current+noncurrent. Supplier-finance invoices remain in operating AP where source says so, not automatically added again as debt. Intel co-investment NCI/funding and commitments remain separate, not all termed debt; Visa settlement payable is not CP. Omission is potentially unbounded analyst assumption, not source zero/immateriality. Alternative retain unidentified operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "V-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001403161-21-000060",
+          "annual_end": "2021-09-30",
+          "annual_start": "2020-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-22-000081",
+          "annual_end": "2022-09-30",
+          "annual_start": "2021-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-23-000099",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-24-000058",
+          "annual_end": "2024-09-30",
+          "annual_start": "2023-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-25-000089",
+          "annual_end": "2025-09-30",
+          "annual_start": "2024-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact populations and dates in facts/note rows/claims ledger; unknown subamounts remain null.",
+      "recommendation": "Retain recognized preferred/NCI/benefit/litigation populations and their measurement overlaps; propose no additional unidentified adjustment beyond those named.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "V",
+      "uncertainty_and_alternative": "Visa participating convertible preferred and retrospective litigation recoveries require separate class/claim treatment, not ordinary fixed debt or unrestricted recovery cash. Intel co-investment NCI is a known claim, not omitted with pension assumption. Walmart NCI/redeemable populations retain separate presentations. No net funded/gross double count, exhaustive claims claim or valuation deduction. Unknown extra exposure unbounded; alternative leave omission operation unapproved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "V-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/v-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001403161-21-000060",
+          "annual_end": "2021-09-30",
+          "annual_start": "2020-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-22-000081",
+          "annual_end": "2022-09-30",
+          "annual_start": "2021-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-23-000099",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-24-000058",
+          "annual_end": "2024-09-30",
+          "annual_start": "2023-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001403161-25-000089",
+          "annual_end": "2025-09-30",
+          "annual_start": "2024-10-01",
+          "cik": 1403161,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact counts, original precision/dates/dimensions in facts/shares:*; no automatic class/award sum.",
+      "recommendation": "Retain dated class-specific shares; choose fiscal-end common for Intel/Walmart and separate disclosed classes for Visa, without a class-conversion or diluted aggregate.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "V",
+      "uncertainty_and_alternative": "Visa A/B/C and later B1/B2/preferred conversion rights are not one economically equivalent class. Walmart three-for-one2024 split changes reported populations; retain original selected presentation and later cover date, no invented restatement. Intel strategic issuance, subsidiary NCI and awards are not parent diluted closing shares. Alternative later-cover observations preserve their different dates, not fiscal-end replacement."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "INTC-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000050863-22-000007",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-23-000006",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-24-000010",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-25-000009",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-26-000011",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 50863,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "29991/15433/11471/8288/9697 USDm",
+      "recommendation": "Retain original consolidated reported CFO and source cash movements; preserve hierarchy, no separate residual or second deduction.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "INTC",
+      "uncertainty_and_alternative": "Not operating-only cash delta NWC or FCFF. Intel complete displayed adjustment children reconcile to the parent, not parent-plus-children. Visa settlement/client and Walmart tax/inventory rows retain source scope; mixed other rows unallocated. Alternative a narrower operating-only cash contract requires unsupported allocations."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "INTC-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000050863-22-000007",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-23-000006",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-24-000010",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-25-000009",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-26-000011",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 50863,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "11792/13035/9602/11379/11706 USDm",
+      "recommendation": "Use unchanged Visa curated D&A; propose company-specific LIMITED Intel/Walmart historical proxies, never new generic D&A policy.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "INTC",
+      "uncertainty_and_alternative": "Visa asset/technology/intangible scope is exactly approved;2025 rounded corroboration discrepancy is not a plug and client-incentive amortization is NOT D&A. Intel depreciation plus separately identified intangible amortization is a limited non-overlapping proxy, with capitalization/inventory timing, useful-life changes and incentive-reduced basis; no impairment/restructuring add-on. Walmart source caption retains accretion scope; finance amortization already reflected in source note perimeter, no second addition. Alternatives: retain raw observations and leave required expense D&A unresolved; no complete expense certification."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "INTC-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000050863-22-000007",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-23-000006",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-24-000010",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-25-000009",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-26-000011",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 50863,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "18733/24844/25750/23944/14646 USDm",
+      "recommendation": "Select original gross cash-investment caption within existing exact approval/direct scope; keep incentives, noncash additions, creditors, acquisitions and proceeds separate.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "INTC",
+      "uncertainty_and_alternative": "Visa v3 operational software/property/technology scope only, no blanket software rule. Intel grant receipts unknown/unknown/1011/1936/1577 USDm and partner/noncash financing are not a reduction of gross cash PP&E or another lease debt. Walmart capex, noncash finance/operating ROU and acquired business consideration differ. No complete reinvestment or net-investment subtotal. Alternative explicitly defined net funding basis would need its own approved non-overlap/timing treatment; no default change."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "INTC-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000050863-22-000007",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-23-000006",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-24-000010",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-25-000009",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-26-000011",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 50863,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "2036/3128/3229/3410/2434 USDm",
+      "recommendation": "Select one labeled cost proxy, not duplicate expense plus CFO addback; preserve exact/rounded and missing reconciliation populations.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "INTC",
+      "uncertainty_and_alternative": "Intel propose exact displayed CFO SBC over rounded note alternatives explicitly, not generic precedence; retain rounded candidates and NCI/parent allocations. Visa CFO SBC is proposed as a historical cost proxy where pure expense observation is not independently selected. Walmart propose exact displayed recognized expense, preserving rounded alternatives; pure CFO SBC remains unknown inside Other, not a manufactured addback. Alternative no proxy/retain expense-only where available; awards/capitalization remain separate."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "INTC-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000050863-22-000007",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-23-000006",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-24-000010",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-25-000009",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-26-000011",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 50863,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1835/-249/-913/8023/1531 USDm; cash net 2263/4282/2621/2202/2299 USDm; other cash unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain source provision, pretax, reported accounting context and actual cash-tax scope separately; no future rate or normalization.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "INTC",
+      "uncertainty_and_alternative": "Keep note tax expense, cash movements and deferred reconciliation distinct. Intel losses/valuation allowance and historical unusual rates are not clamped. Missing generic denominators/precision conflicts stay in original policy ledger. Alternative no future operating-tax assumption; any later rate requires a separately justified design."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "INTC-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000050863-22-000007",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-23-000006",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-24-000010",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-25-000009",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-26-000011",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 50863,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "6930/28338/25034/22062/37416 USDm",
+      "recommendation": "Select named face cash/current financial captions only, with source restrictions prominently retained and settlement/client funds separate.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "INTC",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash. Visa selects the named cash caption only; investment securities stay a separately disclosed population, not assumed absent/free cash. Escrow/client collateral and settlement receivable are not corporate cash additions; do not subtract exclusions already outside the face caption twice. Intel earlier face QName includes restricted scope, not silently unrestricted. Walmart exact face cash is a company selection, preserving competing generic observations. Unknown reserves/restrictions stay unbounded. Alternative a broader securities-inclusive balance needs explicit maturity/coverage/non-overlap acceptance; no invented reserve or automatic addition."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "INTC-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000050863-22-000007",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-23-000006",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-24-000010",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-25-000009",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-26-000011",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 50863,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "38101/42051/49266/50011/46585 USDm",
+      "recommendation": "Operating leases service costs, finance leases asset financing; select named carrying financing with no additional unidentified-borrowing adjustment.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "INTC",
+      "uncertainty_and_alternative": "Current maturities/parent captions counted once. Walmart adds separate finance parent once, not parent+current+noncurrent. Supplier-finance invoices remain in operating AP where source says so, not automatically added again as debt. Intel co-investment NCI/funding and commitments remain separate, not all termed debt; Visa settlement payable is not CP. Omission is potentially unbounded analyst assumption, not source zero/immateriality. Alternative retain unidentified operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "INTC-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000050863-22-000007",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-23-000006",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-24-000010",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-25-000009",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-26-000011",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 50863,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact populations and dates in facts/note rows/claims ledger; unknown subamounts remain null.",
+      "recommendation": "Retain recognized preferred/NCI/benefit/litigation populations and their measurement overlaps; propose no additional unidentified adjustment beyond those named.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "INTC",
+      "uncertainty_and_alternative": "Visa participating convertible preferred and retrospective litigation recoveries require separate class/claim treatment, not ordinary fixed debt or unrestricted recovery cash. Intel co-investment NCI is a known claim, not omitted with pension assumption. Walmart NCI/redeemable populations retain separate presentations. No net funded/gross double count, exhaustive claims claim or valuation deduction. Unknown extra exposure unbounded; alternative leave omission operation unapproved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "INTC-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/intc-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000050863-22-000007",
+          "annual_end": "2021-12-25",
+          "annual_start": "2020-12-27",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-23-000006",
+          "annual_end": "2022-12-31",
+          "annual_start": "2021-12-26",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-24-000010",
+          "annual_end": "2023-12-30",
+          "annual_start": "2023-01-01",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-25-000009",
+          "annual_end": "2024-12-28",
+          "annual_start": "2023-12-31",
+          "cik": 50863,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000050863-26-000011",
+          "annual_end": "2025-12-27",
+          "annual_start": "2024-12-29",
+          "cik": 50863,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact counts, original precision/dates/dimensions in facts/shares:*; no automatic class/award sum.",
+      "recommendation": "Retain dated class-specific shares; choose fiscal-end common for Intel/Walmart and separate disclosed classes for Visa, without a class-conversion or diluted aggregate.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "INTC",
+      "uncertainty_and_alternative": "Visa A/B/C and later B1/B2/preferred conversion rights are not one economically equivalent class. Walmart three-for-one2024 split changes reported populations; retain original selected presentation and later cover date, no invented restatement. Intel strategic issuance, subsidiary NCI and awards are not parent diluted closing shares. Alternative later-cover observations preserve their different dates, not fiscal-end replacement."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-REV",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "572754/611289/648125/680985/713163 USDm versus net sales 567762/605881/642637/674538/706413 USDm; difference 4992/5408/5488/6447/6750 USDm",
+      "recommendation": "Select as-filed Total revenues = Net sales + Membership and other income for the consolidated operating history; preserve generic economic conflict.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Total revenues is the face-statement operating top line supporting reported EBIT, includes recurring membership/other operating income. Net sales-only is a meaningful narrower retail measure, not numerically equivalent; it would exclude the stated amounts and require a consistent expense/perimeter policy. No generic resolver precedence change, silent conflict clearance or splice of later comparatives."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "24181/28841/35726/36443/41565 USDm",
+      "recommendation": "Retain original consolidated reported CFO and source cash movements; preserve hierarchy, no separate residual or second deduction.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Not operating-only cash delta NWC or FCFF. Intel complete displayed adjustment children reconcile to the parent, not parent-plus-children. Visa settlement/client and Walmart tax/inventory rows retain source scope; mixed other rows unallocated. Alternative a narrower operating-only cash contract requires unsupported allocations."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "10658/10945/11853/12973/14203 USDm",
+      "recommendation": "Use unchanged Visa curated D&A; propose company-specific LIMITED Intel/Walmart historical proxies, never new generic D&A policy.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Visa asset/technology/intangible scope is exactly approved;2025 rounded corroboration discrepancy is not a plug and client-incentive amortization is NOT D&A. Intel depreciation plus separately identified intangible amortization is a limited non-overlapping proxy, with capitalization/inventory timing, useful-life changes and incentive-reduced basis; no impairment/restructuring add-on. Walmart source caption retains accretion scope; finance amortization already reflected in source note perimeter, no second addition. Alternatives: retain raw observations and leave required expense D&A unresolved; no complete expense certification."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "13106/16857/20606/23783/26642 USDm",
+      "recommendation": "Select original gross cash-investment caption within existing exact approval/direct scope; keep incentives, noncash additions, creditors, acquisitions and proceeds separate.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Visa v3 operational software/property/technology scope only, no blanket software rule. Intel grant receipts unknown/unknown/unknown/unknown/unknown USDm and partner/noncash financing are not a reduction of gross cash PP&E or another lease debt. Walmart capex, noncash finance/operating ROU and acquired business consideration differ. No complete reinvestment or net-investment subtotal. Alternative explicitly defined net funding basis would need its own approved non-overlap/timing treatment; no default change."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1163/1578/2093/2769/3603 USDm",
+      "recommendation": "Select one labeled cost proxy, not duplicate expense plus CFO addback; preserve exact/rounded and missing reconciliation populations.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Intel propose exact displayed CFO SBC over rounded note alternatives explicitly, not generic precedence; retain rounded candidates and NCI/parent allocations. Visa CFO SBC is proposed as a historical cost proxy where pure expense observation is not independently selected. Walmart propose exact displayed recognized expense, preserving rounded alternatives; pure CFO SBC remains unknown inside Other, not a manufactured addback. Alternative no proxy/retain expense-only where available; awards/capitalization remain separate."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "4756/5724/5578/6152/7199 USDm; cash net unknown/unknown/unknown/unknown/5364 USDm; other cash 5918/3310/5879/5884/unknown USDm",
+      "recommendation": "Retain source provision, pretax, reported accounting context and actual cash-tax scope separately; no future rate or normalization.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Keep note tax expense, cash movements and deferred reconciliation distinct. Intel losses/valuation allowance and historical unusual rates are not clamped. Missing generic denominators/precision conflicts stay in original policy ledger. Alternative no future operating-tax assumption; any later rate requires a separately justified design."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "14760/8625/9867/9037/10727 USDm",
+      "recommendation": "Select named face cash/current financial captions only, with source restrictions prominently retained and settlement/client funds separate.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash. Visa selects the named cash caption only; investment securities stay a separately disclosed population, not assumed absent/free cash. Escrow/client collateral and settlement receivable are not corporate cash additions; do not subtract exclusions already outside the face caption twice. Intel earlier face QName includes restricted scope, not silently unrestricted. Walmart exact face cash is a company selection, preserving competing generic observations. Unknown reserves/restrictions stay unbounded. Alternative a broader securities-inclusive balance needs explicit maturity/coverage/non-overlap acceptance; no invented reserve or automatic addition."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "42831/44622/46891/45790/51523 USDm",
+      "recommendation": "Operating leases service costs, finance leases asset financing; select named carrying financing with no additional unidentified-borrowing adjustment.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Current maturities/parent captions counted once. Walmart adds separate finance parent once, not parent+current+noncurrent. Supplier-finance invoices remain in operating AP where source says so, not automatically added again as debt. Intel co-investment NCI/funding and commitments remain separate, not all termed debt; Visa settlement payable is not CP. Omission is potentially unbounded analyst assumption, not source zero/immateriality. Alternative retain unidentified operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact populations and dates in facts/note rows/claims ledger; unknown subamounts remain null.",
+      "recommendation": "Retain recognized preferred/NCI/benefit/litigation populations and their measurement overlaps; propose no additional unidentified adjustment beyond those named.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Visa participating convertible preferred and retrospective litigation recoveries require separate class/claim treatment, not ordinary fixed debt or unrestricted recovery cash. Intel co-investment NCI is a known claim, not omitted with pension assumption. Walmart NCI/redeemable populations retain separate presentations. No net funded/gross double count, exhaustive claims claim or valuation deduction. Unknown extra exposure unbounded; alternative leave omission operation unapproved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "WMT-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/wmt-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000104169-22-000012",
+          "annual_end": "2022-01-31",
+          "annual_start": "2021-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-23-000020",
+          "annual_end": "2023-01-31",
+          "annual_start": "2022-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-24-000056",
+          "annual_end": "2024-01-31",
+          "annual_start": "2023-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-25-000021",
+          "annual_end": "2025-01-31",
+          "annual_start": "2024-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000104169-26-000055",
+          "annual_end": "2026-01-31",
+          "annual_start": "2025-02-01",
+          "cik": 104169,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact counts, original precision/dates/dimensions in facts/shares:*; no automatic class/award sum.",
+      "recommendation": "Retain dated class-specific shares; choose fiscal-end common for Intel/Walmart and separate disclosed classes for Visa, without a class-conversion or diluted aggregate.",
+      "recorded_at_utc": "2026-10-17T20:19:34+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "WMT",
+      "uncertainty_and_alternative": "Visa A/B/C and later B1/B2/preferred conversion rights are not one economically equivalent class. Walmart three-for-one2024 split changes reported populations; retain original selected presentation and later cover date, no invented restatement. Intel strategic issuance, subsidiary NCI and awards are not parent diluted closing shares. Alternative later-cover observations preserve their different dates, not fiscal-end replacement."
+    }
+  ],
+  "evidence_acquisition_requirements": [],
+  "family_slots": 210,
+  "new_assumptions_active": false,
+  "new_sec_requests": 0,
+  "pending_review_company_packages": 3,
+  "phase1_closed": false,
+  "schema": "retained-network-retail-review-batch-v1",
+  "selected_periods": 15,
+  "source_commit": "fe4bb39f93fe05a50c48d2f64927d487a7e27cb1",
+  "tickers": [
+    "V",
+    "INTC",
+    "WMT"
+  ]
+}

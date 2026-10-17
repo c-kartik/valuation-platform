@@ -1,5 +1,33 @@
 # Project Status
 
+## Current — V/INTC/WMT retained company review, pending one approval
+
+[Three source schedules/14-family matrices and ONE28-decision sheet](network-retail-review-batch-results.md)
+/ [machine review](company-data-preparation/network-retail-review-batch.json)
+cover15 exact selected annuals: V/INTC FY2021–2025, WMT FY2022–2026.
+25 source-observation slots/185 pending choices; none of the new company
+judgments is active. All15 original displayed CFO checks replay SUPPORTED,
+including Intel's independently bound child/adjustment-parent hierarchy.
+
+Visa D&A v1/Capex v3 replay exact original artifacts within their existing scope;
+client/settlement/escrow, investment and participating-preferred/class populations
+stay separate. Intel proposes limited depreciation/intangible proxy, exact CFO
+SBC over retained rounded alternatives, gross Capex/separate grants and related
+co-investment NCI/funding. WMT proposes face Total revenues (including membership/
+other income) while preserving every genuine generic Revenue conflict, exact
+face cash/SBC, source D&A scope and supplier-finance/AP/lease non-overlap.
+Calendar/split, acquisition, tax and missing-allocation limitations remain.
+
+**42 broadly assessed;18 packages =13 completed scoped histories +2 approved
+partial CAT/JNJ +3 pending V/INTC/WMT;24 assessment-only.** Prior13 complete
+packages, CAT SBC exception, JNJ OPEN scope gate, XOM empty history and frozen
+artifacts remain unchanged. All30 primary/instance pairs retained; Visa policy
+artifacts replay; no essential new acquisition target identified, zero requests.
+Legacy original report metadata gaps remain null. Field availability is not
+complete disclosure or financial sufficiency. Focused checks/replay/preservation
+and final lightweight results are recorded in the batch sheet. Stop for one
+consolidated approval; no next-company review, Phase1 closure or Phase2 work.
+
 ## Current — MU/AMD complete within approved scope; JNJ historical selections active, scope OPEN
 
 The user's explicit instruction activates all18 MU/AMD recommendations and ten
