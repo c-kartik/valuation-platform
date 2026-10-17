@@ -1,6 +1,32 @@
 # Project Status
 
-## Current milestone — bounded MSFT FY2026 short-borrowing bridge review
+## Current milestone — MSFT FY2026 financing acceptance and scoped checklist PASS
+
+[Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
+[JSON](company-data-preparation/msft-analyst-input-package.json) append sequence4
+user approval recorded2026-10-17T08:33:44.502600+00:00, exact source revision and
+supersession links. Active106,888m named financing/no additional short-borrowing
+adjustment is an approved analyst assumption. Source null, rejected-adjustment
+history and failed bridge remain. No reported zero, complete debt, immateriality
+or supported bound on omitted borrowing. Current maturities/CP assets not added.
+
+The existing14-row FY2026 checklist passes **only under the explicitly approved
+historical perimeter/assumptions/exclusions**; no essential requirement remains
+there. D1–D3 and prior claim/input approvals persist. Source/partial-scope gaps,
+six expanded-operation supporting limitations and five Phase2 operations remain
+explicit, not newly waived or certified. No whole-history/Phase1/universe closure
+or Phase2 readiness. Next existing target identified only: B1 MSFT FY2025,
+requiring independent assessment, not automatic transfer/execution. No SEC
+request, research, new policy or valuation calculation.
+
+Validation:140 focused tests in71.555s, all-three exact package replays,
+compileall,551 affected links/retained review anchor and diff checks pass.
+Entire prior package equals baseline after stripping only two additive keys;
+original nulls/audits/rejections, frozen/pilot artifacts and other issuer views
+preserved. Supersession, stale-source/revision, persistence/restart and round-trip
+checks pass. No full-suite/corpus rerun; stop after this exact-period milestone.
+
+## Prior milestone — bounded MSFT FY2026 short-borrowing bridge review
 
 [Existing MSFT package](company-data-preparation/MSFT-analyst-input-package.md)
 records outcome3: **unresolved**, no new assumption/approval or runtime integration.

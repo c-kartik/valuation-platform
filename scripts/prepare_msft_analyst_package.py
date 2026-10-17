@@ -169,7 +169,7 @@ class Filing:
 def build():
     filings = [Filing(y) for y in (2025,2026)]
     for f in filings: populate(f)
-    return apply_fy2026_claim_assumptions(filings[1],apply_fy2026_operations(filings[1],attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings))))))
+    return apply_fy2026_financing(filings[1],apply_fy2026_claim_assumptions(filings[1],apply_fy2026_operations(filings[1],attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings)))))))
 
 
 def approval_record(proposal):
@@ -978,7 +978,7 @@ def review_fy2026_populations(f):
 def apply_fy2026_operations(filing,package):
     if (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
         raise ValueError('Wrong FY2026 operation filing')
-    parent={k:v for k,v in package.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view')}
+    parent={k:v for k,v in package.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist')}
     if package['fy2026_completeness_attempt']['base_package_revision']!=digest(relevant(parent)):
         raise ValueError('Stale FY2026 parent package')
     if accepted_view({k:v for k,v in parent.items() if k!='accepted_view'})!=parent:
@@ -1041,7 +1041,7 @@ def apply_fy2026_claim_assumptions(filing,package):
     """No numerical override: requirements addressed by approved analyst judgments."""
     if (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
         raise ValueError('Wrong FY2026 claim filing')
-    parent={k:v for k,v in package.items() if k not in ('fy2026_claim_assumption_approval','fy2026_claim_assumptions_view')}
+    parent={k:v for k,v in package.items() if k not in ('fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist')}
     # Replay the already-approved operations and source review, not a stale saved view.
     if apply_fy2026_operations(filing,parent)!=parent:raise ValueError('Changed operation/source view')
     record=_json((ROOT/OUTPUT).read_text())['fy2026_claim_assumption_approval']
@@ -1076,6 +1076,79 @@ def apply_fy2026_claim_assumptions(filing,package):
         short_debt_zero_status='REJECTED_NOT_SELECTED',named_debt_subtotal_complete=False,
         original_nulls_preserved=True,unrelated_requirements_waived=False,
         analyst_complete=False,financial_sufficiency='NOT_ASSESSED',phase_closed=False,valuation_consumption_approved=False)
+    return result
+
+
+FY2026_FINANCING_BASIS='43027e15d3c459fdb8871f5809b5d56bdc279db8'
+FY2026_FINANCING_DECISION='Select106888 USDm named term-debt-plus-finance-lease financing input with no additional short-borrowing adjustment. Analyst assumption, not reported zero, complete debt or immateriality; omitted borrowing remains unquantified.'
+
+
+def fy2026_financing_record(package):
+    if 'fy2026_financing_approval' in package:raise ValueError('Immutable financing approval already exists')
+    record=dict(schema='msft-operation-acceptance-audit-v1',version=1,sequence=4,
+        previous=package['fy2026_claim_assumption_approval']['sha256'],action='ACCEPT_FINANCING_ASSUMPTION',
+        author='User, explicit MSFT FY2026 financing assumption and supersession instruction',
+        recorded_at_utc=datetime.now(timezone.utc).isoformat(),
+        rationale='Explicitly supersede the rejected no-additional-borrowing adjustment while preserving its history and source null; accept unquantified omitted-borrowing risk for this named financing input only.',
+        source_commit=FY2026_FINANCING_BASIS,source_revision=digest(relevant(package)),
+        identity=package['fy2026_claim_assumptions_view']['identity'],
+        decisions={'financing':FY2026_FINANCING_DECISION},
+        supersedes=['/accepted_view/short_debt_zero_proposal_status','/fy2026_claim_assumptions_view/short_debt_zero_status'],
+        evidence_references=['/accepted_view/periods/1/borrowings','/accepted_view/periods/1/additional_short_borrowing',
+            '/fy2026_operations_view/population_review/populations/0',
+            'docs/company-data-preparation/MSFT-analyst-input-package.md#current-bounded-short-borrowing-bridge-review--unresolved'],
+        analyst_completeness_approved=False,financial_sufficiency='NOT_ASSESSED',phase_closed=False,valuation_consumption_approved=False)
+    record['sha256']=digest(record)
+    return record
+
+
+def apply_fy2026_financing(filing,package):
+    parent={k:v for k,v in package.items() if k not in ('fy2026_financing_approval','fy2026_analyst_checklist')}
+    if apply_fy2026_claim_assumptions(filing,parent)!=parent:raise ValueError('Changed claim/source view')
+    record=_json((ROOT/OUTPUT).read_text())['fy2026_financing_approval']
+    expected=fy2026_financing_record(parent)
+    if type(record) is not dict or set(record)!=set(expected) or record['sha256']!=digest({k:v for k,v in record.items() if k!='sha256'}):raise ValueError('Malformed financing audit')
+    ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale'])
+    for key in set(expected)-{'sha256','recorded_at_utc','source_revision'}:
+        if type(record[key]) is not type(expected[key]) or record[key]!=expected[key]:raise ValueError('Unregistered financing scope: '+key)
+    if record['source_revision']!=expected['source_revision']:raise ValueError('Stale financing approval; explicit revalidation required')
+    selected=parent['accepted_view']['periods'][1]['borrowings']['selected']
+    if selected['value_usd']!='106888000000' or selected['terms']!=[dict(coefficient=1,operand='term_debt_parent'),dict(coefficient=1,operand='finance_liability')]:raise ValueError('Changed named financing population')
+    if parent['accepted_view']['periods'][1]['additional_short_borrowing']['value_usd'] is not None:raise ValueError('Source short borrowing must remain null')
+    # Reassess the existing fourteen rows; do not invent new requirements or drop one.
+    statuses={
+        'revenue':'SATISFIED_ACCEPTED','ebit':'SATISFIED_ACCEPTED','depreciation_amortization':'SATISFIED_ACCEPTED_ASSUMPTION',
+        'cash_capex':'SATISFIED_ACCEPTED_NARROW','reported_cash_flow_working_capital_movements':'SATISFIED_REPORTED',
+        'deferred_taxes':'SATISFIED_REPORTED','stock_based_compensation':'SATISFIED_ACCEPTED',
+        'unclassified_cfo_reconciliation_residual':'PENDING_D2_EXCLUSION','reported_cfo':'SATISFIED_ACCEPTED',
+        'reported_tax_context':'SATISFIED_ACCEPTED','cash_investment_components':'SATISFIED_ACCEPTED_NAMED',
+        'debt_lease_components':'UNSOLVED_ESSENTIAL','other_equity_bridge_claims_assets':'UNSOLVED_ESSENTIAL_AND_PENDING_D3',
+        'point_in_time_shares':'SATISFIED_ACCEPTED_DATED'}
+    original=parent['fy2026_completeness_attempt']['checklist']
+    if len(original)!=14 or {r['field']:r['status'] for r in original}!=statuses:raise ValueError('Changed existing completeness checklist')
+    rows=[]
+    for i,row in enumerate(original):
+        field=row['field'];status='SATISFIED_WITHIN_ACCEPTED_SCOPE';basis='Existing verified source selection and accepted historical scope'
+        references=[f'/fy2026_completeness_attempt/checklist/{i}']+row['evidence']
+        if field=='depreciation_amortization':status='SATISFIED_BY_APPROVED_ASSUMPTION';basis='Existing rounded39000 D&A; unproved finance-amortization inclusion assumption preserved'
+        if field=='reported_cash_flow_working_capital_movements':references+=['/fy2026_operation_approval/decisions/D1'];basis='D1 accepts nine reported rows, not operating-only cash delta NWC'
+        if field=='unclassified_cfo_reconciliation_residual':status='SATISFIED_BY_APPROVED_EXCLUSION';references+=['/fy2026_operation_approval/decisions/D2'];basis='D2: no separate residual for independently bound14-term display; no zero'
+        if field=='debt_lease_components':status='SATISFIED_BY_APPROVED_ASSUMPTION';references+=['/fy2026_financing_approval'];basis=FY2026_FINANCING_DECISION
+        if field=='other_equity_bridge_claims_assets':status='SATISFIED_BY_APPROVED_ASSUMPTIONS_AND_EXCLUSION';references+=['/fy2026_claim_assumptions_view','/fy2026_operation_approval/decisions/D3'];basis='Approved preferred/NCI/retirement assumptions; D3 excludes separate pure-NOL operation; legal accrual/exposure stay separate'
+        rows.append(dict(field=field,status=status,basis=basis,evidence_references=references))
+    result=json.loads(json.dumps(parent));result['fy2026_financing_approval']=record
+    result['fy2026_analyst_checklist']=dict(version=1,identity=record['identity'],audit_sha256=record['sha256'],
+        perimeter='Existing MSFT FY2026 consolidated as-reported historical income/cash movements and named financial populations, with explicitly approved classifications, assumptions and exclusions; not complete generic field totals.',
+        financing=dict(value_usd=selected['value_usd'],value_millions=selected['value_millions'],unit='USD',
+            label='Selected analyst financing: named term-debt-plus-finance-lease subtotal',origin='analyst_assumption',
+            precision=selected['precision'],source_reference='/accepted_view/periods/1/borrowings',
+            additional_adjustment='No additional short-borrowing adjustment selected',source_additional_short_borrowing=None,
+            complete_debt=False,reported_zero=False,immateriality_finding=False,omitted_borrowing='Unquantified; no supported bound',
+            supersession='Prior rejected adjustment knowingly superseded by sequence4; original rejection and failed-bridge reviews remain history'),
+        checklist=rows,remaining_essential_inputs=[],analyst_complete=True,
+        financial_sufficiency='SATISFIED_ONLY_FOR_THIS_APPROVED_HISTORICAL_PERIMETER',
+        complete_issuer_history=False,whole_universe_closed=False,phase_closed=False,valuation_consumption_approved=False,
+        original_nulls_preserved=True,supporting_and_phase2_requirements_reference='/fy2026_completeness_attempt/original_requirement_dispositions')
     return result
 
 

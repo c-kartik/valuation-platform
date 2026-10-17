@@ -1,5 +1,83 @@
 # MSFT — analyst historical-input package, FY2025–FY2026
 
+## Current FY2026 financing acceptance and scoped checklist PASS
+
+**Analyst-complete for the existing, explicitly approved FY2026 historical
+perimeter and assumptions only.** Exact identity: CIK789019,10-K accession
+`0001193125-26-323660`,2025-07-01–2026-06-30. All14 original checklist rows are
+retained and reassessed with evidence/approval references. No essential historical
+requirement remains **under this approved perimeter**, not under every possible
+future use. Partial balances and missing source disclosures remain unproved.
+
+User selects **106,888 USDm named term-debt-plus-finance-lease financing with no
+additional short-borrowing adjustment**. Existing operands40,294 term carrying
+and66,594 finance liability and their precision are preserved. Current term9,227
+is already included once; Note4 CP investment2,987 is excluded. The separate
+`/fy2026_analyst_checklist/financing` selection has origin `analyst_assumption`.
+No adjustment economically omits potentially undisclosed borrowing of unquantified
+amount/no supported bound. It is not reported zero, complete debt or immateriality.
+The source additional-short-borrowing **null** and original named subtotal remain.
+The failed bridge is not repaired; explicit user risk acceptance changes treatment.
+
+Embedded `/fy2026_financing_approval`, existing audit schema, sequence4/action
+`ACCEPT_FINANCING_ASSUMPTION`, records actual time **2026-10-17T08:33:44.502600+00:00**,
+exact identity, user authorization/rationale, source/evidence and supersession
+references. Source commit `43027e15d3c459fdb8871f5809b5d56bdc279db8`, revision
+`35c458fc11f1082c7ff4d7c5fbe7fc288ff8475f9ed57d17bdd0a1a559f34d4c`;
+audit SHA256 `5201c37c79866e62b57994d4da00de6abecb37d68d8f9f8fb71769f0d7e254b5`
+links unchanged sequence3. The active assumption knowingly **supersedes** the
+earlier rejected adjustment. Old `REJECTED_NOT_SELECTED` statuses/reviews remain
+history, not the effective treatment. No new annotation framework or source override.
+
+### Existing fourteen requirements — effective reassessment
+
+| Requirement(s) | Source/approved basis | Effective disposition |
+| --- | --- | --- |
+| Revenue; EBIT |331,839;155,237 reported, original exact bindings | Source-selected/accepted |
+| Expense D&A |39,000 rounded, existing unproved finance-amortization inclusion assumption | Approved assumption; no extra ROU add-back |
+| Cash Capex |115,948 cash outflow, existing narrow PP&E scope | Satisfied narrow, not complete reinvestment |
+| CF working-capital rows; CFO | D1: nine signed reported rows, independent14-term182,935 display | Satisfied as reported, not operating-only cash ΔNWC/FCFF |
+| Deferred taxes; SBC | CFO14,189 versus provision14,424; expense proxy12,405 once versus add-back | Satisfied in distinct roles |
+| Unclassified residual | D2: exclude separate scalar for this bound display; null, no zero | Approved exclusion |
+| Historical tax context | Provision32,185, Pretax165,934, reported ETR/net cash tax | Historical roles satisfied; no future rate |
+| Cash/investment components | Current73,043 less identified restrictions, LT36,348 separately | Named population satisfied, not unrestricted/excess |
+| Debt/lease components | New106,888 financing/no-additional-adjustment approval | Approved assumption, not complete debt |
+| Other claims/assets | Preferred/NCI/retirement assumptions, D3 combined DTA/no pure NOL; legal553/exposure400 separate | Approved assumptions/exclusion, source nulls preserved |
+| Dated shares | June30 common7,427m rounded; later exact cover/awards separate | Satisfied; no forecast dilution |
+
+Machine `/fy2026_analyst_checklist` has14 rows, `remaining_essential_inputs:[]`,
+`analyst_complete:true` and sufficiency **only for this approved historical
+perimeter**. Audit approval is not blanket completeness authority: scoped PASS
+is the checked result of existing requirements and prior validated overlays.
+Earlier `analyst_complete:false`/generic NOT_ASSESSED snapshots are preserved
+history, not current operation-specific results. No original null is populated.
+
+Six original supporting limitations remain: complete NWC, accrual PP&E bridge,
+all-interest scope, acquisition-only/continuing-only allocation and component
+acquisition/FX/reclassification bridge. They are not needed to reproduce the
+already-approved consolidated observations/named populations; expanded operations
+would still need evidence. Five Phase2 operations remain deferred: operating-only
+tax, joint timing, economic awards/dilution, excess cash, and CFO-to-EBIT conversion.
+No Phase2 readiness, whole-history/whole-universe or Phase1 closure is certified.
+
+Only two additive keys hold approval/reassessment. All prior package keys, audits,
+nulls, rejection history, D1–D3, claim assumptions and accepted FY2025/AAPL/Alphabet
+views remain unchanged. Changed source/scope/revision rejects application; replay
+cannot silently revalidate. No acquisition/research or valuation calculation.
+Next existing backlog target, **identified only**: B1 MSFT FY2025,
+`0000950170-25-100235`,2024-07-01–2025-06-30. Independent assessment is required;
+no FY2026 assumption transfer or automatic execution.
+
+Validation: **140 focused tests pass in71.555s**, including six new financing/
+supersession/checklist tests plus claim/operation/attempt, three issuer packages,
+reported inputs, sidecars, NWC and historical-assessment preservation. All three
+exact package replays, compileall,551 affected local links/review anchor and diff
+checks pass. Entire prior package equals baseline after removing only the two
+new keys; original nulls/audits/rejections, pilot/frozen artifacts and AAPL/Alphabet
+views preserved. Persistence/restart, serialization, missing/tampered scope,
+supersession/period mismatch and stale source/revision rejection verified.
+No SEC requests, full-suite or corpus rerun.
+
 ## Current bounded short-borrowing bridge review — UNRESOLVED
 
 **Outcome3: the retained evidence does not establish a complete opening-to-closing

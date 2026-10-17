@@ -5594,6 +5594,193 @@
     "scope": "Historical analyst proposals only; book movements are not cash delta NWC; no FCFF or enterprise-equity calculation."
   },
   "financial_sufficiency": "NOT_ASSESSED",
+  "fy2026_analyst_checklist": {
+    "analyst_complete": true,
+    "audit_sha256": "5201c37c79866e62b57994d4da00de6abecb37d68d8f9f8fb71769f0d7e254b5",
+    "checklist": [
+      {
+        "basis": "Existing verified source selection and accepted historical scope",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/0",
+          "/periods/1/inputs/38"
+        ],
+        "field": "revenue",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      },
+      {
+        "basis": "Existing verified source selection and accepted historical scope",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/1",
+          "/periods/1/inputs/39"
+        ],
+        "field": "ebit",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      },
+      {
+        "basis": "Existing rounded39000 D&A; unproved finance-amortization inclusion assumption preserved",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/2",
+          "/periods/1/inputs/42"
+        ],
+        "field": "depreciation_amortization",
+        "status": "SATISFIED_BY_APPROVED_ASSUMPTION"
+      },
+      {
+        "basis": "Existing verified source selection and accepted historical scope",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/3",
+          "/periods/1/inputs/7"
+        ],
+        "field": "cash_capex",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      },
+      {
+        "basis": "D1 accepts nine reported rows, not operating-only cash delta NWC",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/4",
+          "/periods/1/inputs/29",
+          "/periods/1/inputs/30",
+          "/periods/1/inputs/31",
+          "/periods/1/inputs/32",
+          "/periods/1/inputs/33",
+          "/periods/1/inputs/34",
+          "/periods/1/inputs/35",
+          "/periods/1/inputs/36",
+          "/periods/1/inputs/37",
+          "/fy2026_operation_approval/decisions/D1"
+        ],
+        "field": "reported_cash_flow_working_capital_movements",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      },
+      {
+        "basis": "Existing verified source selection and accepted historical scope",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/5",
+          "/periods/1/inputs/6",
+          "/periods/1/inputs/5"
+        ],
+        "field": "deferred_taxes",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      },
+      {
+        "basis": "Existing verified source selection and accepted historical scope",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/6",
+          "/periods/1/inputs/41",
+          "/periods/1/inputs/11"
+        ],
+        "field": "stock_based_compensation",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      },
+      {
+        "basis": "D2: no separate residual for independently bound14-term display; no zero",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/7",
+          "/periods/1/inputs/27",
+          "/fy2026_operation_approval/decisions/D2"
+        ],
+        "field": "unclassified_cfo_reconciliation_residual",
+        "status": "SATISFIED_BY_APPROVED_EXCLUSION"
+      },
+      {
+        "basis": "Existing verified source selection and accepted historical scope",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/8",
+          "/periods/1/inputs/0"
+        ],
+        "field": "reported_cfo",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      },
+      {
+        "basis": "Existing verified source selection and accepted historical scope",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/9",
+          "/periods/1/inputs/4",
+          "/periods/1/inputs/48",
+          "/periods/1/inputs/3"
+        ],
+        "field": "reported_tax_context",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      },
+      {
+        "basis": "Existing verified source selection and accepted historical scope",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/10",
+          "/periods/1/inputs/46",
+          "/periods/1/inputs/49"
+        ],
+        "field": "cash_investment_components",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      },
+      {
+        "basis": "Select106888 USDm named term-debt-plus-finance-lease financing input with no additional short-borrowing adjustment. Analyst assumption, not reported zero, complete debt or immateriality; omitted borrowing remains unquantified.",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/11",
+          "/periods/1/inputs/47",
+          "/periods/1/inputs/57",
+          "/periods/1/inputs/56",
+          "/fy2026_financing_approval"
+        ],
+        "field": "debt_lease_components",
+        "status": "SATISFIED_BY_APPROVED_ASSUMPTION"
+      },
+      {
+        "basis": "Approved preferred/NCI/retirement assumptions; D3 excludes separate pure-NOL operation; legal accrual/exposure stay separate",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/12",
+          "/periods/1/inputs/54",
+          "/fy2026_claim_assumptions_view",
+          "/fy2026_operation_approval/decisions/D3"
+        ],
+        "field": "other_equity_bridge_claims_assets",
+        "status": "SATISFIED_BY_APPROVED_ASSUMPTIONS_AND_EXCLUSION"
+      },
+      {
+        "basis": "Existing verified source selection and accepted historical scope",
+        "evidence_references": [
+          "/fy2026_completeness_attempt/checklist/13",
+          "/periods/1/inputs/55",
+          "/periods/1/inputs/59",
+          "/periods/1/inputs/60"
+        ],
+        "field": "point_in_time_shares",
+        "status": "SATISFIED_WITHIN_ACCEPTED_SCOPE"
+      }
+    ],
+    "complete_issuer_history": false,
+    "financial_sufficiency": "SATISFIED_ONLY_FOR_THIS_APPROVED_HISTORICAL_PERIMETER",
+    "financing": {
+      "additional_adjustment": "No additional short-borrowing adjustment selected",
+      "complete_debt": false,
+      "immateriality_finding": false,
+      "label": "Selected analyst financing: named term-debt-plus-finance-lease subtotal",
+      "omitted_borrowing": "Unquantified; no supported bound",
+      "origin": "analyst_assumption",
+      "precision": "Retains every reported operand precision; rounding is not reduced by arithmetic.",
+      "reported_zero": false,
+      "source_additional_short_borrowing": null,
+      "source_reference": "/accepted_view/periods/1/borrowings",
+      "supersession": "Prior rejected adjustment knowingly superseded by sequence4; original rejection and failed-bridge reviews remain history",
+      "unit": "USD",
+      "value_millions": "106888",
+      "value_usd": "106888000000"
+    },
+    "identity": {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "cik": 789019,
+      "form": "10-K"
+    },
+    "original_nulls_preserved": true,
+    "perimeter": "Existing MSFT FY2026 consolidated as-reported historical income/cash movements and named financial populations, with explicitly approved classifications, assumptions and exclusions; not complete generic field totals.",
+    "phase_closed": false,
+    "remaining_essential_inputs": [],
+    "supporting_and_phase2_requirements_reference": "/fy2026_completeness_attempt/original_requirement_dispositions",
+    "valuation_consumption_approved": false,
+    "version": 1,
+    "whole_universe_closed": false
+  },
   "fy2026_claim_assumption_approval": {
     "action": "ACCEPT_ANALYST_ASSUMPTIONS",
     "analyst_completeness_approved": false,
@@ -6297,6 +6484,43 @@
       "sec_requests": 0,
       "started_at_utc": "2026-10-17T07:38:00+00:00"
     }
+  },
+  "fy2026_financing_approval": {
+    "action": "ACCEPT_FINANCING_ASSUMPTION",
+    "analyst_completeness_approved": false,
+    "author": "User, explicit MSFT FY2026 financing assumption and supersession instruction",
+    "decisions": {
+      "financing": "Select106888 USDm named term-debt-plus-finance-lease financing input with no additional short-borrowing adjustment. Analyst assumption, not reported zero, complete debt or immateriality; omitted borrowing remains unquantified."
+    },
+    "evidence_references": [
+      "/accepted_view/periods/1/borrowings",
+      "/accepted_view/periods/1/additional_short_borrowing",
+      "/fy2026_operations_view/population_review/populations/0",
+      "docs/company-data-preparation/MSFT-analyst-input-package.md#current-bounded-short-borrowing-bridge-review--unresolved"
+    ],
+    "financial_sufficiency": "NOT_ASSESSED",
+    "identity": {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "cik": 789019,
+      "form": "10-K"
+    },
+    "phase_closed": false,
+    "previous": "04ce36c4c04e2c0f0af64919f1328398537adcfc3efd768a5d59989affa994ad",
+    "rationale": "Explicitly supersede the rejected no-additional-borrowing adjustment while preserving its history and source null; accept unquantified omitted-borrowing risk for this named financing input only.",
+    "recorded_at_utc": "2026-10-17T08:33:44.502600+00:00",
+    "schema": "msft-operation-acceptance-audit-v1",
+    "sequence": 4,
+    "sha256": "5201c37c79866e62b57994d4da00de6abecb37d68d8f9f8fb71769f0d7e254b5",
+    "source_commit": "43027e15d3c459fdb8871f5809b5d56bdc279db8",
+    "source_revision": "35c458fc11f1082c7ff4d7c5fbe7fc288ff8475f9ed57d17bdd0a1a559f34d4c",
+    "supersedes": [
+      "/accepted_view/short_debt_zero_proposal_status",
+      "/fy2026_claim_assumptions_view/short_debt_zero_status"
+    ],
+    "valuation_consumption_approved": false,
+    "version": 1
   },
   "fy2026_operation_approval": {
     "action": "ACCEPT_OPERATION_REQUIREMENTS",

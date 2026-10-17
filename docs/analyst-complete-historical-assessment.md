@@ -1,5 +1,12 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+Current exact-period update: [MSFT FY2026 package](company-data-preparation/MSFT-analyst-input-package.md)
+passes its existing approved historical checklist after explicit financing-risk
+acceptance, D1–D3 and claim assumptions. This does not approve complete debt or
+whole MSFT history. Machine assessment and original workload/counts below remain
+their dated baseline, not a regenerated universe assessment. Next existing B1
+target identified only: MSFT FY2025; no FY2026 assumption transfer or execution.
+
 Baseline `46a0b5729887e1b5fc2b54fafe840578f4c3abb7`; Phase 1 only.
 [Machine assessment](analyst-complete-historical-assessment.json) and
 [bounded replay/check helper](../scripts/assess_analyst_completion.py) join existing

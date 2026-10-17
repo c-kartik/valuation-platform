@@ -1,5 +1,30 @@
 # MSFT — company data preparation
 
+## Current FY2026 scoped analyst-completeness PASS
+
+[Same package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
+record sequence4 user authorization at2026-10-17T08:33:44.502600+00:00, exact period,
+prior revision and supersession. Active financing106,888m named term+finance
+with no additional short-borrowing adjustment knowingly supersedes the old
+rejection. Source null, old rejection/reviews and subtotal remain unchanged.
+Unquantified omitted borrowing remains a risk; no reported zero, complete debt
+or immateriality claim. Current maturities included once, CP investment excluded.
+
+Existing14-row FY2026 checklist now passes solely under its explicitly approved
+historical perimeter/assumptions; no existing essential requirement remains there.
+D1–D3, D&A inclusion and claim assumptions retain their limits. All original14
+nulls/dispositions persist, including six supporting expanded-scope limitations
+and five Phase2 operations. No complete generic field totals, whole MSFT history,
+Phase2 readiness or Phase1/universe closure. Earlier incomplete snapshots below
+remain history; new effective result is separate. Next existing B1 target is
+MSFT FY2025, identified only, independently assessed and not automatically executed.
+
+Validation:140 focused tests (71.555s), all-three exact package replays,
+compileall,551 local links/retained review anchor and diff checks pass. Full prior
+package/audit/null/rejection history preserved after stripping only two additive
+keys. Persistence, supersession, serialization and stale-source rejection pass;
+original pilot/frozen and AAPL/Alphabet views unchanged. No requests/full suite/corpus.
+
 ## Current bounded FY2026 short-borrowing bridge review — still unresolved
 
 [Same package](MSFT-analyst-input-package.md) now documents the one retained-only

@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## MSFT FY2026 scoped analyst-completeness PASS
+
+[Same package](MSFT-analyst-input-package.md) records explicit user-approved106,888m
+named financing/no additional short-borrowing adjustment, superseding the prior
+rejection without changing source nulls/history. Unquantified omitted borrowing
+and incomplete source debt coverage remain. All14 existing requirements pass
+under the approved historical perimeter/assumptions: **one period only**, not
+complete generic field totals, whole issuer history, Phase2 or universe closure.
+D1–D3/prior claim assumptions and original data persist. Next B1 MSFT FY2025 target
+is identified only; no automatic execution or assumption transfer.
+
+140 focused tests (71.555s), all-three package replays, exact prior-package/audit
+preservation, compileall,551 affected links and diff checks pass. No acquisitions,
+full-suite or corpus rerun.
+
 ## MSFT FY2026 short-borrowing bridge — fixed review exhausted
 
 [Existing package](MSFT-analyst-input-package.md) documents CP-only opening zero

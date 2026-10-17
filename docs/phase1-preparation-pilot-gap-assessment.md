@@ -1,5 +1,23 @@
 # Phase 1 preparation pilots — outcomes and bounded remaining work
 
+## Current exact-period result — MSFT FY2026 scoped PASS
+
+[MSFT package](company-data-preparation/MSFT-analyst-input-package.md) records
+explicit user-approved106,888m named financing/no additional short adjustment,
+sequence4 superseding the prior rejection while preserving history/source null
+and unquantified omitted-borrowing risk. With D1–D3 and claim assumptions,
+all14 existing FY2026 checklist requirements pass under the approved historical
+perimeter; no existing essential gap remains there. Source gaps/partial balances
+are not proved complete. This is **one**, not four analyst-complete pilot periods,
+not whole-company history/Phase2 readiness or Phase1 closure. Frozen blockers and
+future economic/timing gates remain. Next existing B1 target: MSFT FY2025,
+identified only, independently assessed; no assumption transfer or automatic work.
+Earlier incomplete assessments below remain historical, not current authority.
+
+Current validation:140 focused tests (71.555s), all-three exact package replays,
+source/audit/pilot preservation, compileall,551 local links and diff checks pass.
+No full-suite/corpus rerun, SEC acquisition or new universe assessment.
+
 ## MSFT FY2026 requirement update — approved claim assumptions
 
 The [same MSFT package](company-data-preparation/MSFT-analyst-input-package.md)
