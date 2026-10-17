@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## Current — Alphabet five-year review remains pending
+
+[Alphabet full-history package](GOOGL-analyst-input-package.md) and additive JSON
+review cover FY2021–25/70 slots:29 source-supported/9 existing approvals/32 pending.
+G1–G8 form ONE inactive approval table; G9 source context needs no new acceptance.
+All five displayed CFOs reconcile; original receipt gaps, prior FY2024 acceptance,
+nulls, precision alternatives and frozen/pilot artifacts persist. Early debt already
+includes finance leases; early D&A includes impairment. FY2025 operating lease
+parent/components differ1m and remain explicit, not plugged. No new acquisition.
+
+Counts42 broad assessments,2 completed MSFT/AAPL,1 partial Alphabet,39 broad-only.
+Stop for consolidated user review, not automatic company completion/next issuer.
+The FY2024 manual3,200R correction and existing approvals are not extended to
+other periods by review; proposed financial treatments remain inactive.
+
 ## Current — AAPL company-history acceptance
 
 [AAPL current schedule](AAPL-analyst-input-package.md) and current JSON overlay

@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 import sys
 import unittest
+from tests.analyst import preservation_projection
 from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'scripts'))
@@ -119,7 +120,7 @@ class AppleHistoryBatchTests(unittest.TestCase):
         self.assertTrue(json.loads((ROOT/p.OUTPUT).read_text())==self.result,'Replay differs')
         self.assertTrue(json.loads(json.dumps(self.result))==self.result,'Round trip differs')
         for path in ['docs/company-data-preparation/msft-analyst-input-package.json','docs/company-data-preparation/googl-analyst-input-package.json',p.ACCEPTANCE_PATH]:
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show','0697979:'+path],cwd=ROOT))
+            self.assertEqual(preservation_projection(path,(ROOT/path).read_bytes()),preservation_projection(path,subprocess.check_output(['git','show','0697979:'+path],cwd=ROOT)))
         self.assertEqual(self.review['source_revision'],p.digest(p.relevant(self.prior)))
         self.assertEqual(self.review['review_revision'],p.digest(p.relevant(dict(periods=self.rows,proposals=self.review['consolidated_proposals'],parent_revision=self.review['source_revision']))))
 

@@ -1,5 +1,34 @@
 # GOOGL — company data preparation
 
+## Current FY2021–FY2025 company review — G1–G8 pending
+
+[Existing consolidated package](GOOGL-analyst-input-package.md) /
+[machine companion](googl-analyst-input-package.json) adds only
+`googl_history_review`: exact five selected accession/date identities, source
+receipts, raw contexts/precision/confirmations, inline population evidence,
+CFO displays/signs, named calculations, comparability and one approval table.
+The original conflict is limited FY2024 review depth versus whole-history input
+requirements. Chosen resolution is retained-source review plus explicit inactive
+proposals, not extension of peer or FY2024 period-specific approvals.
+
+All70 families accounted:29 S/9 existing A/32 P. CFO91,652/91,495/101,746/125,299/
+164,713m independently reconciles; complete book NWC is unnecessary for this
+historical path, not a reason to waive claims/expense/financing requirements.
+Early depreciation/impairment11,555/15,287 differs from later depreciation;
+complete expense D&A stays unknown. Early carrying debt14,930/14,999/14,616
+already embeds finance/other;15,859/51,043 later uses separately presented finance.
+G1–G8 cover proxy, SBC, financing, gross financial balances, known claims,
+unidentified/pension omission, residual operation and dated classes. Each has
+exact evidence, numerical consequence, alternative and uncertainty; none active.
+FY2025 operating liability parent15,954/components15,953m remains unresolved.
+Original instance timestamp/status missing; verified existing refreshed bodies
+are byte-identical, not recovered metadata. No essential body acquisition need.
+
+Five exact dates/14-family coverage, receipt/inline checks, seven movement rows,
+share classes/split, overlap, nulls, revision/restart and original-package/pilot
+preservation are validation gates. Existing FY2024 acceptance remains unchanged;
+whole-company analyst completeness pending user choices, no Phase1/Phase2 closure.
+
 ## Approved FY2024 analyst selections — separate, revision-bound view
 
 The [package](GOOGL-analyst-input-package.md) / [JSON](googl-analyst-input-package.json)

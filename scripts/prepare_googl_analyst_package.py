@@ -357,7 +357,226 @@ def accepted_view(proposal,audit_path=None):
 
 
 def build():
-    return accepted_view(build_proposal())
+    return review_company_history(accepted_view(build_proposal()))
+
+
+def review_company_history(package):
+    """Bounded retained-source review, never new approval or a peer assumption."""
+    parent={k:v for k,v in package.items() if k!='googl_history_review'}
+    reviewed=accepted_view(build_proposal())
+    if reviewed!=parent:raise ValueError('Changed original Alphabet source/approval')
+    manifest=_json((ROOT/'docs/phase1-selected-filing-identity-manifest.json').read_text())
+    selected=[(i,r) for i,r in enumerate(manifest['rows']) if r['ticker']=='GOOGL']
+    if len(selected)!=5 or len({r['identity']['accession'] for i,r in selected})!=5:raise ValueError('Frozen Alphabet selections differ')
+    old_path='docs/evidence/analyst-operating-nwc-response-bodies.json';old=_json((ROOT/old_path).read_text())['artifacts']
+    refresh_path='docs/evidence/income-sweep-backlog-acquisition.json';refresh_body=(ROOT/refresh_path).read_bytes()
+    config=_json((ROOT/'docs/retained-income-sweep-sources.json').read_text())
+    if hashlib.sha256(refresh_body).hexdigest()!=config[refresh_path]:raise ValueError('Pinned retained receipt batch changed')
+    refresh=_json(refresh_body.decode());rows=[];acquisition=[]
+    for index,selection in selected:
+        identity=selection['identity'];year=int(identity['annual_end'][:4]);original=[(i,a) for i,a in enumerate(old) if a.get('accession')==identity['accession']]
+        primary=next(((i,a) for i,a in original if a['source_url'].endswith('.htm')),None)
+        instance=next(((i,a) for i,a in original if a['source_url'].endswith('_htm.xml')),None)
+        if primary is None or instance is None:raise ValueError('Retained selected primary/instance reference absent: '+identity['accession'])
+        receipts=[];sources=[]
+        for kind,(i,a) in [('primary',primary),('instance',instance)]:
+            path=old_path;pointer='/artifacts/'+str(i);basis='original_receipt';original_a=a
+            if kind=='instance' and year==2024:
+                path='docs/evidence/googl-fy2024-instance-provenance-refresh.json';a=_json((ROOT/path).read_text())['artifacts'][0];pointer='/artifacts/0';basis='explicit_FY2024_refresh_not_recovered_original_metadata'
+            elif kind=='instance':
+                proof=[r for r in refresh['rows'] if r['identity']==identity and r['status']=='VERIFIED']
+                matches=[(j,v) for j,v in enumerate(refresh['artifacts']) if v['source_url']==a['source_url']]
+                if len(proof)!=1 or len(matches)!=1:raise ValueError('Exact previously verified instance receipt unavailable: '+identity['accession'])
+                j,a=matches[0];path=refresh_path;pointer='/artifacts/'+str(j);basis='existing_authorized_refresh_not_recovered_original_metadata'
+            encoded=a['response_body_gzip_base64']
+            body=cash.gzip.decompress(cash.base64.b64decode(''.join(encoded) if isinstance(encoded,list) else encoded,validate=True))
+            receipt=cash._receipt(dict(a,accession=identity['accession']),body)
+            original_body=cash.gzip.decompress(cash.base64.b64decode(original_a['response_body_gzip_base64'],validate=True))
+            if body!=original_body:raise ValueError('Refreshed selected body differs from original; no new acceptance authorized')
+            receipts.append(receipt);sources.append(dict(source_id=f'FY{year}-'+kind,path=path,pointer=pointer,
+                **{k:a[k] for k in ('source_url','sha256','representation','digest_type','retrieved_at_utc','http_status','byte_length')},basis=basis,
+                prior_reference=old_path+'#/artifacts/'+str(i),original_retrieved_at_utc=original_a['retrieved_at_utc'],original_http_status=original_a['http_status'],original_sha256=original_a['sha256'],byte_equivalence_verified=True))
+        f=AlphabetFiling.__new__(AlphabetFiling);f.year=year;f.period=cash.Period(identity['cik'],identity['accession'],date.fromisoformat(identity['annual_start']),date.fromisoformat(identity['annual_end']))
+        f.primary,f.instance=receipts;f.root,f.contexts,f.units,f.namespaces=cash._instance(tuple(receipts),f.period)
+        f.inline=InlineFacts();f.inline.feed(f.primary.artifact.body.decode());f.text=re.sub(r'\s+',' ',' '.join(f.inline.text));f.facts={};f.entries=[];exceptions=[]
+        for key,spec in reviewed['facts'].items():
+            if key.startswith('cover_'):continue
+            try:f.fact(key,spec['concept'],'Selected primary population '+key+'; duration note is not a closing AP adjustment',
+                instant=spec['as_of'] is not None,namespace='goog' if spec['namespace'].startswith('http://www.google.com/') else 'us-gaap',unit=spec['unit'],
+                dimensions=tuple(tuple(x) for x in spec['occurrences'][0]['dimensions']))
+            except ValueError as exc:exceptions.append(dict(input_id=key,value=None,reason=str(exc),kind='RETAINED_BINDING_OR_SCOPE'))
+        for key,concept in [('ppe_depreciation_impairment','DepreciationAndImpairmentOnDispositionOfPropertyAndEquipment'),
+            ('intangible_amortization_impairment','AmortizationAndImpairmentOfIntangibleAssets'),
+            ('combined_nonc_debt','LongTermDebtAndCapitalLeaseObligations'),('debt_before_costs','LongTermDebtAndCapitalLeaseObligationsIncludingCurrentMaturities'),
+            ('retirement_expense','DefinedContributionPlanCostRecognized'),
+            ('equity','StockholdersEquity'),('common_capital','CommonStocksIncludingAdditionalPaidInCapital'),('retained','RetainedEarningsAccumulatedDeficit'),('oci','AccumulatedOtherComprehensiveIncomeLossNetOfTax')]:
+            try:f.fact(key,concept,'Exact selected statement/note population; preserve caption-specific scope',instant=key in ('equity','common_capital','retained','oci','combined_nonc_debt','debt_before_costs'),namespace='goog' if key in ('ppe_depreciation_impairment','intangible_amortization_impairment') else 'us-gaap')
+            except ValueError as exc:exceptions.append(dict(input_id=key,value=None,reason=str(exc),kind='RETAINED_BINDING_OR_SCOPE'))
+        for label,member in [('a','us-gaap:CommonClassAMember'),('b','us-gaap:CommonClassBMember'),('c','goog:CapitalClassCMember')]:
+            dates=set();dims=(('us-gaap:StatementClassOfStockAxis',member),)
+            for node in f.root:
+                if not node.tag.endswith('}EntityCommonStockSharesOutstanding'):continue
+                c=f.contexts[node.get('contextRef')];members=tuple((v.get('dimension'),v.text) for v in c.iter() if v.tag.endswith('}explicitMember'))
+                if members==dims:
+                    stamp=c.findtext(cash._XI+'period/'+cash._XI+'instant')
+                    if stamp:dates.add(stamp)
+            for stamp in sorted(dates):f.fact('cover_'+label+'_'+stamp,'EntityCommonStockSharesOutstanding','Actual class/date, not fiscal-end/dilution',instant=True,namespace='dei',unit='shares',as_of=stamp,dimensions=dims)
+        evidence=inspect.prepare(f.period,tuple(receipts),tuple(inspect.ArtifactBinding(r.artifact.url,r.artifact.sha256,'instance' if r is f.instance else 'support') for r in receipts))
+        from valuation_platform.analyst import retained_income_preparation as direct_income
+        from valuation_platform.analyst.historical_inputs import Field
+        income=direct_income.inspect(evidence,Field.REVENUE,());chosen,reason=direct_income.choose(income,Field.REVENUE)
+        if chosen is not None:f.fact('revenue',income.candidates[chosen].concept,'Approved direct revenue semantics, independently bound primary/instance')
+        income_selection=dict(policy=direct_income.POLICIES[Field.REVENUE].policy_id if hasattr(direct_income.POLICIES[Field.REVENUE],'policy_id') else 'existing_REVENUE_POLICY',
+            rationale=reason,candidates=[dict(concept=c.concept,value=str(c.value),precision=c.precision) for c in income.candidates])
+        # Existing inspector verifies date/unit/context. Only an explicitly tagged
+        # fixed-zero + instance zero is a zero, never a missing population.
+        for key,concept in [('cp','CommercialPaper'),('term_current','LongTermDebtCurrent')]:
+            if key in f.facts:continue
+            found=inspect.inspect(evidence,inspect.SelectionSpec(key,(inspect.Selector(f.namespaces['us-gaap'],concept,()),),'instant','USD','reported_zero','Exact declared fixed-zero observation, not absence',()))
+            if not found.candidates:continue
+            if found.competing_values or any(c.value!=0 for c in found.candidates):continue
+            occurrences=[]
+            for c in found.candidates:
+                for o in c.occurrences:
+                    node=f.root[o.ordinal];attrs,text=f.inline.facts[node.get('id')]
+                    if (attrs.get('format')!='ixt:fixed-zero' or text.strip() not in ('no','—','-','0') or Decimal(o.raw_value)!=0
+                        or attrs.get('contextref')!=o.context_id or attrs.get('unitref')!=o.unit_id or attrs.get('decimals')!=o.decimals):raise ValueError('Unproved explicit zero observation')
+                    occurrences.append(dict(ordinal=o.ordinal,context_id=o.context_id,raw_value=o.raw_value,precision=o.decimals,unit_id=o.unit_id,
+                        start=None,end=str(o.end),dimensions=[],primary_locator='inline#'+node.get('id'),primary_display=text,primary_format=attrs['format'],primary_scale=int(attrs.get('scale','0')),primary_sign=attrs.get('sign','+')))
+            f.facts[key]=dict(concept=concept,namespace=f.namespaces['us-gaap'],location='Explicit fixed-zero selected note/table',unit='USD',value='0',display_value='0',display_unit='USD millions',
+                precision=occurrences[0]['precision'],precision_variants=sorted({o['precision'] for o in occurrences}),as_of=identity['annual_end'],occurrences=occurrences,occurrence_count=len(occurrences),
+                primary_source=f'FY{year}-primary',instance_source=f'FY{year}-instance',source_reported_zero=True)
+        da_key='Depreciation' if 'Depreciation' in f.facts else 'ppe_depreciation_impairment'
+        terms=[('NetIncomeLoss',1),(da_key,1)]
+        if 'intangible_amortization_impairment' in f.facts:terms.append(('intangible_amortization_impairment',1))
+        terms += [('ShareBasedCompensation',1),('DeferredIncomeTaxesAndTaxCredits',1),('DebtAndEquitySecuritiesGainLoss',-1),('OtherNoncashIncomeExpense',-1),
+            ('IncreaseDecreaseInAccountsReceivable',-1),('IncreaseDecreaseInIncomeTaxes',1),('IncreaseDecreaseInOtherOperatingAssets',-1),
+            ('IncreaseDecreaseInAccountsPayable',1),('IncreaseDecreaseInAccruedLiabilities',1),('IncreaseDecreaseInAccruedRevenueShare',1),('IncreaseDecreaseInContractWithCustomerLiability',1)]
+        cf=[dict(fact=k,multiplier=c,contribution_usd=str(Decimal(f.facts[k]['value'])*c)) for k,c in terms]
+        total=sum((Decimal(t['contribution_usd']) for t in cf),Decimal(0))
+        if total!=Decimal(f.facts['NetCashProvidedByUsedInOperatingActivities']['value']):raise ValueError('Displayed selected Alphabet CFO does not reconcile: '+str(year))
+        start=f.text.find('Adjustments:');stop=f.text.find('Investing activities',start)
+        if start<0 or stop<0 or 'Net cash provided by operating activities' not in f.text[start:stop]:raise ValueError('Independent CFO display unavailable')
+        cfo_display=f.text[max(0,start-100):stop]
+        def calc(key,terms,scope,formula=None):
+            if any(k not in f.facts for k,c in terms):return
+            f.entry(key,scope,[k for k,c in terms],[c for k,c in terms],scope=scope,rationale='Retained source arithmetic only, not analyst approval',
+                completeness='complete_for_named_population',formula=formula,unit='pure' if formula=='DIVIDE' else None,policy='annual_reported_effective_tax_rate_v1' if formula=='DIVIDE' else None)
+        calc('current_financial',[('cash',1),('current_marketable',1)],'Named current cash/marketable parent; no unrestricted/excess assertion')
+        calc('reported_etr',[('IncomeTaxExpenseBenefit',1),('pretax',1)],'Existing positive-denominator historical ETR, not a future rate','DIVIDE')
+        if year<=2023:
+            # The source table already includes finance leases and, where stated,
+            # other financing. LongTermDebt is its future-maturity schedule here.
+            calc('named_financing',[('debt_before_costs',1),('debt_discount_signed',-1),('cp',1)],'Selected debt table net of costs, INCLUDING finance leases/other; no added finance liability')
+        else:calc('named_financing',[('term_current',1),('term_long',1),('cp',1),('finance_total',1)],'Named net term + CP + separately reported finance leases, no current-maturity duplication')
+        checks=[]
+        for label,parent_key,children in [('current_financial','current_financial_parent',['cash','current_marketable']),('equity','equity',['common_capital','retained','oci']),
+            ('operating_lease','op_total',['op_current','op_long']),('finance_lease','finance_total',['finance_current','finance_long'])]:
+            if all(k in f.facts for k in [parent_key,*children]):
+                difference=Decimal(f.facts[parent_key]['value'])-sum((Decimal(f.facts[k]['value']) for k in children),Decimal(0))
+                checks.append(dict(check_id=label,parent=parent_key,children=children,difference_usd=str(difference),status='EXACT' if not difference else 'SOURCE_DIFFERENCE_UNRESOLVED',not_an_adjustment=True))
+        precision={}
+        for key,concept in [('nonmarketable_equity','EquitySecuritiesWithoutReadilyDeterminableFairValueAmount'),('uncertain_tax','UnrecognizedTaxBenefits')]:
+            precision[key]=variants(f,evidence,key,concept)
+            for c in precision[key]['candidates']:c.update(primary_source=f'FY{year}-primary',instance_source=f'FY{year}-instance')
+        passages=[]
+        for marker in ('Adjustments:','Adjustments to reconcile','Changes in assets and liabilities','Net cash provided by operating activities',
+            'Depreciation','amortization of intangible','useful lives','share-based compensation expense','total stock-based compensation expense',
+            'noncontrolling interests','redeemable noncontrolling','Finance lease liabilities are included','financing leases are included',
+            'Net of effects of acquisitions','stock split','Cash, Cash Equivalents','pension','retirement','Note 1.',
+            'Total long-term debt','Total noncontrolling interests','finance lease costs were not material','Future finance lease payments',
+            'total SBC expense was','total stock-based compensation expense was','valuation-based compensation charge related to Waymo'):
+            m=re.search(re.escape(marker),f.text,re.I)
+            if m:passages.append(dict(marker=marker,offset=m.start(),exact_excerpt=f.text[max(0,m.start()-90):m.end()+1800],source_sha256=f.primary.artifact.sha256))
+        passages.append(dict(marker='independently_displayed_cfo',offset=max(0,start-100),exact_excerpt=cfo_display,source_sha256=f.primary.artifact.sha256))
+        rows.append(dict(identity=identity,source_manifest_reference='docs/phase1-selected-filing-identity-manifest.json#/rows/'+str(index),sources=sources,
+            facts=f.facts,calculations=f.entries,exceptions=exceptions,precision_candidates=precision,passages=passages,partition_checks=checks,
+            income_selection=income_selection,da_proxy_source=da_key,cfo_reconciliation=dict(terms=cf,value_usd=str(total),supported=True,residual_used=False),new_assumptions_active=False,analyst_complete=False,
+            existing_approval_reference='/accepted_view' if year==2024 else None,original_metadata_gaps_preserved=True))
+    from valuation_platform.analyst.historical_inputs import Field
+    family_facts={'revenue':['revenue'],'ebit':['ebit'],'depreciation_amortization':[],
+        'cash_capex':['PaymentsToAcquirePropertyPlantAndEquipment'],'reported_cash_flow_working_capital_movements':[],
+        'deferred_taxes':['DeferredIncomeTaxesAndTaxCredits','DeferredIncomeTaxExpenseBenefit'],
+        'stock_based_compensation':['AllocatedShareBasedCompensationExpense','ShareBasedCompensation'],
+        'unclassified_cfo_reconciliation_residual':['OtherNoncashIncomeExpense'],'reported_cfo':['NetCashProvidedByUsedInOperatingActivities'],
+        'reported_tax_context':['IncomeTaxExpenseBenefit','pretax','IncomeTaxesPaidNet'],
+        'cash_investment_components':['cash','current_marketable','nonmarketable_parent'],
+        'debt_lease_components':['cp','finance_total','op_total'],
+        'other_equity_bridge_claims_assets':['nci_vie','preferred_value','ec_fines','nol_dta'],
+        'point_in_time_shares':['year_end_a','year_end_b','year_end_c','reported_common_total','rsu']}
+    pending={'depreciation_amortization':['G1'],'stock_based_compensation':['G2'],'debt_lease_components':['G3'],
+        'cash_investment_components':['G4'],'other_equity_bridge_claims_assets':['G5','G6'],
+        'unclassified_cfo_reconciliation_residual':['G7'],'point_in_time_shares':['G8']}
+    existing={'revenue','ebit','cash_capex','deferred_taxes','stock_based_compensation','reported_cfo','reported_tax_context','cash_investment_components','point_in_time_shares'}
+    for i,row in enumerate(rows):
+        base=f'/googl_history_review/periods/{i}';year=int(row['identity']['annual_end'][:4]);facts=row['facts'];checklist=[]
+        row['movement_rows']=[dict(t,already_in_reported_cfo=True,not_book_delta_nwc=True) for t in row['cfo_reconciliation']['terms'] if t['fact'].startswith('IncreaseDecrease')]
+        for field in Field:
+            keys=family_facts[field.value]
+            if field is Field.DA:keys=[row['da_proxy_source']]
+            elif field is Field.CF_WORKING_CAPITAL:keys=[t['fact'] for t in row['movement_rows']]
+            decisions=[] if year==2024 and field.value in existing else pending.get(field.value,[])
+            status='PROPOSED_PENDING_APPROVAL' if decisions else 'EXISTING_SCOPED_APPROVAL' if year==2024 and field.value in existing else 'SOURCE_SUPPORTED'
+            if not keys or any(k not in facts for k in keys):status='ESSENTIAL_EVIDENCE_EXCEPTION'
+            checklist.append(dict(field=field.value,status=status,pending_decisions=decisions,evidence_references=[base+'/facts/'+k for k in keys if k in facts],
+                existing_approval_reference='/accepted_view' if year==2024 else None,completeness='Named historical population only, no economic completeness'))
+        row['family_checklist']=checklist;source=facts[row['da_proxy_source']]
+        row['proposed_da_proxy']=dict(value_usd=source['value'],unit='USD',precision=source['precision'],origin='proxy',status=PROPOSED,accepted=False,
+            source_reference=base+'/facts/'+row['da_proxy_source'],author='Analyst preparation review, pending user approval',recorded_at_utc='2026-10-17T16:13:48+00:00',
+            scope='PP&E noncash-cost proxy; FY2021/22 includes impairment, later reported depreciation; not complete expense D&A',
+            complete_expense_da=None,finance_amortization_inclusion_assumption=None,intangible_amortization_allocation=None,additional_rou_addback=False)
+        row['cash_signs']={k:-1 for k in ['PaymentsToAcquirePropertyPlantAndEquipment','AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets','PaymentsForProceedsFromOtherInvestingActivities','IncomeTaxesPaidNet','OperatingLeasePayments','FinanceLeaseInterestPaymentOnLiability','FinanceLeasePrincipalPayments']}
+        row['source_scope_overrides']=dict(term_face='Future principal/payment schedule including finance leases, not pure notes or carrying amount' if year<=2023 else 'Reported term face/principal, not carrying',
+            combined_nonc_debt='Reported noncurrent debt INCLUDING finance leases/other' if year<=2023 else 'Reported noncurrent term debt; finance leases separately presented',
+            sbc='Total expense includes awards not expected to settle in Alphabet stock; add-back is a different reconciliation population',
+            shares='FY2021 as-reported pre20:1 split; FY2022 onward post-split. Do not use later restated comparatives as original selections.')
+        row['supporting_unknowns']={k:None for k in ['complete_expense_da','inventory_completeness','supplier_ap_scope','cash_borrowing_interest','complete_lease_cash','acquisition_allocation','unrestricted_cash','operating_reserve','pension_funded_status','additional_borrowing']}
+        row['book_nwc_support']='Existing FY2024 rounded manual3200 correction remains authorized only there; do not extend duration-tag interpretations or infer inventory/supplier allocations.'
+    identities=[r['identity'] for r in rows];other=[r for r in identities if r['annual_end']!='2024-12-31']
+    specs=[
+        ('G1',identities,'Select reported PP&E noncash-cost observations as explicitly limited historical proxies, not complete expense D&A; no extra ROU addition or assumed finance/intangible inclusion.',
+         '11555/15287/11946/15311/21136 USDm. FY2021/22 captions INCLUDE impairment; separate intangible amortization/impairment886/641 remains support. Early broad two-caption alternative12441/15928 includes impairment, not pure D&A.',
+         'Alternative leave D&A required input unresolved. Later finance amortization413/553 stays separate with unproved overlap; no sum, residual amortization or invented zero. Useful-life changes reduce comparability; omitted intangible/timing effects unquantified.'),
+        ('G2',other,'Use rounded total recognized SBC expense as cost proxy once in other years, preserving FY2024 approval and distinct CFO add-backs. Retain Other Bets/valuation-based scope, not just Alphabet-share awards.',
+         'Total15700/19500/22100/22800/27100R versus add-back15376/19362/22460/22785/24953. Differences324/138/-360/15/2147 are not rounding adjustments. Stock-settled-only alternative15000/18800/21700/22000/24100R has narrower scope.',
+         'FY2025 includes increased Waymo valuation-based compensation; no supported allocation to the add-back gap. No duplicate charge, award valuation or assumption that every difference is rounding. Alternative narrower proxy omits other compensation.'),
+        ('G3',identities,'Operating leases service, finance asset financing; select the period-specific named reported debt/finance population with no additional undisclosed borrowing adjustment. Respect the changed debt table perimeter.',
+         '14930/14999/14616/15859/51043 USDm. FY2021-23 debt table already includes finance leases/other: before-costs15086/15142/14746 less156/143/130, CP explicitly0. FY2024 term11882+CP2300+finance1677; FY2025 term48543+CP0+finance2500.',
+         'Omitted borrowing unbounded, not complete debt or immateriality. Never add older finance2086/2142/1746 again. Early LongTermDebt15440/15312/14862 is a future-payment schedule, not carrying. FY2024/25 finance principal405/1988 already in debt repayments12701/32427; early separate cash splits unavailable. FY2025 operating lease parent15954 versus components15953 is an unresolved1m source difference, not a plug or amended tolerance.'),
+        ('G4',other,'Select gross named current cash/marketable balances in other periods, keeping strategic/nonmarketable/restricted observations and precision alternatives separately. Preserve FY2024 selected95657.',
+         '139649/113762/110916/95657/126843 USDm. Nonmarketable parent29549/30492/31008/37982/68687 separate. Candidate pairs27571/27600R,28529/28500R,28766/28800R,35531/35500R,64094/64100R remain unselected alternatives, not amounts to add.',
+         'Not unrestricted/excess cash; unknown restrictions/reserves remain. Long restricted marketable803/1400/266 in FY2022/23/24 only; absent FY2021/25 binding is not zero. Equity-method holdings overlap parents; FY2025 unbound subamount is not a residual-derived allocation.'),
+        ('G5',identities,'Retain disclosed total NCI INCLUDING redeemable subsets, source-reported preferred0, legal/tax claims and gross NOL DTA separately; no all-claims sum or pure-NOL economic-value operation.',
+         'NCI4300/3800/3400/4200/3400R; redeemable unknown/1100R/1100R/1100R/841 is included, never added. Fines9799/9106/9525/6322/15594; gross NOL DTA1790/2557/2965/3472/4953 before valuation/realizability.',
+         'Source-preferred zero is actual tagged presentation, not an inferred no-claims assumption. Existing claims remain; no exhaustive undisclosed-claim coverage or deduction. UTB precision alternatives are not recognized liability totals or amounts to add to tax captions; no economic tax-asset valuation.'),
+        ('G6',identities,'Propose no separately selected pension funded-status or other unidentified claim adjustment, preserving source unknowns and the disclosed recognized claims.',
+         'No new quantified adjustment; omitted net obligations/assets remain unbounded. No invented pension amount or retirement expense.',
+         'Retained disclosures do not establish full funded-status coverage. This is a new weak-evidence analyst omission, not a peer approval or immateriality finding. Alternative keep requirement blocked; explicit user acceptance is essential if this omission is to satisfy the historical perimeter.'),
+        ('G7',identities,'No separate residual scalar for independently bound displayed CFO; preserve every mixed row and source sign.',
+         '14/14/13/13/13 terms independently tie91652/91495/101746/125299/164713. Other-213/+1030/+4330/+3419/+2108 retained; no residual0 or balancing item.',
+         'CFO is consolidated, not organic/unlevered cash. Seven movements are net of acquisition effects as stated, not book delta NWC or proof of all FX/reclassification allocations. Alternative classify all mixed subamounts unsupported.'),
+        ('G8',other,'Retain each actual dated A/B/C common population and independently reported aggregate as source observations; no automatic class/award sum or economic class equivalence. Preserve FY2024 accepted view.',
+         'A/B/C millions:300.737/44.665/316.719;5964/883/6002;5899/870/5691;5835/861/5515;5822/837/5429. Reported aggregate662.121/12849/12460/12211/12088 independently observed. FY2022 executed20:1 split; FY2021 remains original pre-split.',
+         'Alternative explicitly split-normalized FY2021 classes would be20x the original, not extra shares or forecast dilution; not selected here. Cover dates and annual EPS/RSUs remain separate; early EPS nondimensional totals unbound are supporting gaps, not invented issuer totals.'),
+        ('G9',identities,'Retain reported cash PP&E and combined acquisition/intangible, other investing, capital-creditor and noncash-lease observations separately; no new investment subtotal. This is source-supported packaging, not a new assumption request.',
+         'Cash PP&E-24640/-31485/-32251/-52535/-91447; combined purchases-2618/-6969/-495/-2931/-1592. FY2024 manual AP3200R remains only FY2024, not a template for duration tags15090 in FY2025 or earlier absent bindings.',
+         'Acquisition allocations, supplier AP/inventory completeness and reinvestment scope stay unknown. Gross accruals, unrecorded commitments, finance cash payments and sale proceeds are not additive purchases. Mandiant2022 and Character2024 affect comparability; no organic normalization.')]
+    proposals=[dict(decision_id=k,periods=periods,recommendation=rec,numerical_consequence=n,uncertainty_and_alternative=u,status=SUPPORTED if k=='G9' else PROPOSED,
+        approval_required=k!='G9',accepted=False,evidence_reference='/googl_history_review/periods') for k,periods,rec,n,u in specs]
+    result=json.loads(json.dumps(parent));result['googl_history_review']=dict(version=1,periods=rows,source_revision=digest(relevant(parent)),
+        review_revision=digest(relevant(dict(periods=rows,proposals=proposals,parent_revision=digest(relevant(parent))))),family_slots=70,consolidated_proposals=proposals,
+        outcomes={status:sum(c['status']==status for r in rows for c in r['family_checklist']) for status in ['SOURCE_SUPPORTED','EXISTING_SCOPED_APPROVAL','PROPOSED_PENDING_APPROVAL','ESSENTIAL_EVIDENCE_EXCEPTION']},
+        evidence_acquisition_requirements=acquisition,new_sec_requests=0,new_assumptions_active=False,analyst_complete=False,phase1_closed=False,valuation_consumption_approved=False,
+        evidence_limits='All ten selected bodies and usable original/refreshed receipts verified; original instance timestamp/status gaps remain null. No acquisition required; unavailable allocations are not repaired by inventing metadata.',
+        source_path='User-instructed reported movements and independently reconciled CFO; complete reconstructed NWC/book delta not required, movements not additional deductions.',
+        company_counts=dict(broad_evidence_assessment=42,completed_company_wide_packages=2,partial_company_packages=1,broad_assessment_only=39),
+        comparability=['FY2021/22 impairment-inclusive asset captions versus later depreciation; useful-life estimates change in2021/2023; no recast.',
+            'FY2024 debt presentation separates finance leases from term borrowing; earlier combined debt already includes them.',
+            'FY2021 shares as reported pre-split; FY2022 execution20:1 and later comparative restatements do not overwrite originals.',
+            'Acquisitions/combined purchases and2025 valuation-based Other Bets compensation/investment gains remain consolidated, no economic adjustments.',
+            'FY2025 operating liability1m source partition difference remains unresolved; no balancing item or invented tolerance.'],
+        stopping_condition='One consolidated G1-G8 approval/exception review; G9 source context only. No new assumption active, follow-on research or Phase1/Phase2 closure.')
+    return result
 
 
 if __name__=='__main__':

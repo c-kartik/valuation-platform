@@ -1,4 +1,147 @@
-# Alphabet FY2024 — consolidated analyst-input decision package
+# Alphabet FY2021–FY2025 — one company-level analyst review
+
+## Current five-year review — new judgments pending
+
+The additive `/googl_history_review` in the [machine companion](googl-analyst-input-package.json)
+accounts for all **70** family-period slots: **29 source-supported (S), nine existing
+FY2024 scoped approvals (A), 32 pending treatment slots (P)**. These are review
+dispositions, not a claim that S/A observations establish complete financial scope.
+No new assumption is active; Alphabet remains a partial company package. MSFT and
+AAPL remain completed only within their separately approved historical perimeters.
+Company counts: **42 broad assessments; two completed, one partial, 39 broad-only**.
+The prior FY2024 package and audit below remain exactly preserved and period-limited.
+
+### Exact selections, sources and precision
+
+All annuals are January1–December31, CIK1652044, non-amended10-K. The [frozen manifest](../phase1-selected-filing-identity-manifest.json)
+binds each accession; no comparative column creates a new selection. Each review
+period records `source_manifest_reference`, `sources`, every fact's concept/context,
+confirmations, dimensions, raw USD/share value, inline locator, sign and precision.
+`passages` contains exact primary-text excerpts/offsets and original-body SHA256,
+including each independently displayed CFO reconciliation. Calculations retain
+operands/multipliers; they are not automatically analyst-selected financial totals.
+
+| FY | Exact accession | Original primary / instance artifact indices | Usable instance receipt |
+| --- | --- | --- | --- |
+|2021|0001652044-22-000019|24 /25|Batch artifact0|
+|2022|0001652044-23-000016|26 /27|Batch artifact1|
+|2023|0001652044-24-000022|28 /29|Batch artifact2|
+|2024|0001652044-25-000014|30 /31|Explicit FY2024 refresh artifact0|
+|2025|0001652044-26-000018|32 /33|Batch artifact3|
+
+Original [retained bodies](../evidence/analyst-operating-nwc-response-bodies.json),
+[previously authorized batch receipts](../evidence/income-sweep-backlog-acquisition.json)
+and [explicit FY2024 refresh](../evidence/googl-fy2024-instance-provenance-refresh.json)
+are all available. Ten bodies and their usable receipts independently replay.
+All refreshed instance bodies are byte-identical to originals; **original instance
+retrieval timestamp/status gaps remain null**, not recovered by refresh. Actual
+URLs/time/status/digest types/SHA256 are retained in each period's two `sources`.
+No new acquisition requirement or SEC request. Financial allocations that remain
+unknown are not missing-response-body defects.
+
+Numbers below are **USDm**, except shares; source amounts generally decimals−6.
+**R** preserves source decimals−8 (rounded100m); INF declarations and their display
+limits remain as supplied, not unlimited economic precision. Arithmetic inherits
+operand precision. FY2021 actual share counts are pre-split, not restated.
+
+### Period-by-family coverage
+
+| Existing family |2021|2022|2023|2024|2025|
+| --- | --- | --- | --- | --- | --- |
+|Revenue|S|S|S|A|S|
+|EBIT|S|S|S|A|S|
+|D&A proxy / complete expense D&A unknown|P|P|P|P|P|
+|Cash Capex|S|S|S|A|S|
+|Reported cash-flow movements|S|S|S|S|S|
+|Deferred tax roles|S|S|S|A|S|
+|SBC expense proxy vs add-back|P|P|P|A|P|
+|Residual operation / mixed rows|P|P|P|P|P|
+|Reported CFO|S|S|S|A|S|
+|Historical tax context|S|S|S|A|S|
+|Cash/investment treatment|P|P|P|A|P|
+|Debt/lease treatment|P|P|P|P|P|
+|Claims/assets treatment|P|P|P|P|P|
+|Dated shares/classes|P|P|P|A|P|
+
+FY2024 debt/claims remain P for the **additional whole-history requirements**, not
+withdrawal of its existing named subtotal or known-NCI overlap approval. No new
+complete NWC requirement: seven reported movement rows already explain CFO and
+are not extra deductions. Acquisition exclusions are stated in the source; they
+do not establish all FX/reclassification allocations or cash book-ΔNWC equivalence.
+
+### Source-supported five-year schedule — not approval of new economic uses
+
+| Input |2021|2022|2023|2024|2025|
+| --- | ---: | ---: | ---: | ---: | ---: |
+|Revenue|257,637|282,836|307,394|350,018|402,836|
+|EBIT|78,714|74,842|84,293|112,390|129,039|
+|Reported CFO|91,652|91,495|101,746|125,299|164,713|
+|Displayed reconciliation terms|14|14|13|13|13|
+|PP&E noncash-cost observation|11,555|15,287|11,946|15,311|21,136|
+|Separate intangible amortization/impairment|886|641|unknown|unknown|unknown|
+|Separate finance ROU amortization|unknown|unknown|unknown|413|553|
+|SBC expense, rounded|15,700R|19,500R|22,100R|22,800R|27,100R|
+|SBC CFO add-back|15,376|19,362|22,460|22,785|24,953|
+|Cash PP&E contribution|−24,640|−31,485|−32,251|−52,535|−91,447|
+|Combined acquisition/intangible purchases|−2,618|−6,969|−495|−2,931|−1,592|
+|Investing Other cash contribution|+541|+1,589|−1,051|−2,667|−2,370|
+|Capital expenditure accrual observation|2,415|3,019|4,679|7,104|8,877|
+|Noncash operating ROU additions|2,951|4,383|2,877|2,510|4,070|
+|Noncash finance ROU additions|unknown|unknown|unknown|313|1,606|
+|Current cash + marketable balances|139,649|113,762|110,916|95,657|126,843|
+|Named financing candidate|14,930|14,999|14,616|15,859|51,043|
+|Tax provision|14,701|11,356|11,922|19,697|26,656|
+|Pretax income|90,734|71,328|85,717|119,815|158,826|
+|Cash taxes, payment magnitude|13,412|18,892|19,164|27,400R|21,526|
+|CFO deferred-tax adjustment|+1,808|−8,081|−7,763|−5,257|+8,348|
+|Provision deferred-tax observation|+1,883|−8,198|−7,729|−5,256|+8,250|
+
+Reported ETR is the existing provision/positive-pretax calculation, exact decimal
+operands/policy in JSON; not a future tax rate. The two deferred-tax series are
+not interchangeable and their differences do not create adjustments. Cash taxes
+retain payment signs separately. No complete reinvestment sum or new equation.
+
+### ONE consolidated approval / exception sheet
+
+All G1–G8 are **proposed, inactive, requiring explicit user approval**. FY2024
+accepted choices stay effective within original scope. Evidence for each is the
+exact period's `facts`, `passages`, `calculations`, `partition_checks` and sources;
+JSON includes recommendation, affected identities, numerical consequence and alternative.
+
+|ID / scope|Concrete recommendation / numerical effect|Alternative, uncertainty and stopping condition|
+| --- | --- | --- |
+|G1 / all five|Use PP&E noncash-cost11,555/15,287/11,946/15,311/21,136 as a **limited historical proxy**, not verified complete expense D&A. No extra ROU add-back.|Early captions explicitly include impairment; separate886/641 intangible amortization/impairment stays support. Broad two-caption12,441/15,928 alternative is also impairment-inclusive, not pure D&A. Later finance413/553 overlap unproved. Alternative leave required proxy unresolved; useful-life changes2021/2023, omitted expense/timing effects unquantified.|
+|G2 / other four years|Rounded total SBC15,700/19,500/22,100/27,100R once; preserve FY2024 22,800R. Add-backs separate.|Narrow Alphabet-share-settled expense alternative15,000/18,800/21,700/22,000/24,100R omits other compensation. Expense/add-back gaps324/138/−360/15/2,147 are **not rounding plugs**. FY2025 Waymo valuation-based compensation changes comparability; no allocation or duplicate charge.|
+|G3 / all five|Operating service, finance asset financing; named financing14,930/14,999/14,616/15,859/51,043, with no additional unidentified borrowing adjustment.|Early combined before-cost debt15,086/15,142/14,746 less156/143/130 already includes finance/other; **do not add2,086/2,142/1,746 again**. Early future-maturity15,440/15,312/14,862 is not carrying. FY2024/25 net term11,882/48,543 +CP2,300/explicit0 +finance1,677/2,500. Extra omitted borrowing unbounded; alternative retain a requirement. Finance principal405/1,988 already in repayments12,701/32,427. FY2025 operating lease parent15,954 vs components15,953 remains an unresolved **1m source difference**, not a plug.|
+|G4 / other four|Gross current financial139,649/113,762/110,916/126,843; preserve FY2024 95,657.|Not unrestricted/excess. Nonmarketable parent29,549/30,492/31,008/37,982/68,687 separate. Restricted long803/1,400/266 onlyFY2022–24, other years unknown. Nonmarketable equity precision competitors remain unselected, overlap with parent; no residual strategic allocation. Alternative no liquid-balance selection pending reserve/restriction assumption.|
+|G5 / all five|Known NCI4,300/3,800/3,400/4,200/3,400R **includes** redeemable unknown/1,100R/1,100R/1,100R/841; source-reported preferred0. Keep legal/tax/gross NOL DTA separate; no pure-NOL economic-asset operation.|No NCI-plus-redeemable sum, tax liability duplication or gross-DTA valuation. Fines9,799/9,106/9,525/6,322/15,594 remain distinct; UTB precision competitors are not amounts to add. Alternative claims-specific financial operation needs separate design, not invented amounts.|
+|G6 / all five|No separately selected pension funded-status or unidentified-claim adjustment, preserving nulls.|Weak-evidence **analyst omission**, not a reported zero, peer transfer or immateriality finding. Potential omitted net obligation/asset unbounded; no retirement expense manufactured. Alternative leave this requirement blocked. User may reject; no automatic research chain.|
+|G7 / all five|No separately computed residual scalar for independently bound14/14/13/13/13-term CFO displays; preserve mixed rows.|Other contributions−213/+1,030/+4,330/+3,419/+2,108 remain. Do not populate zero or derive a balancing item. Alternative needs supported mixed allocations, currently unavailable. CFO is not organic/unlevered cash.|
+|G8 / other four|Keep actual fiscal-end A/B/C classes and independent reported aggregate, plus separate cover dates/EPS/RSUs. Preserve FY2024 scope.|A/B/C millions300.737/44.665/316.719;5,964/883/6,002;5,899/870/5,691;5,835/861/5,515;5,822/837/5,429. FY2022 executed20:1 split; FY2021 remains original, optional20x normalized presentation not selected. No automatic class/award sum, class equivalence or forecast dilution.|
+|G9 / source context only, **not new approval**|Keep cash PP&E, combined purchases, investing Other, creditors, noncash additions and existing FY2024 manual3,200R correction separate.|No complete reinvestment or acquisition/supplier/inventory allocation. Do not reinterpret FY2025 duration-tag15,090 as approved closing AP adjustment or infer earlier zero. Mandiant2022/Character2024 and retained acquisitions remain comparability limits.|
+
+Cover observations are2022-01-25/2023-01-26/2024-01-23/2025-01-28/2026-01-28,
+not fiscal ends. Independently reported common totals662.121/12,849/12,460/12,211/12,088m
+are not manufactured class sums. RSUs16,894,713 pre-split /324m/338m/299m/282m
+stay separate. Award valuation, future tax/dilution/forecast assumptions and all
+valuation calculations remain Phase2; not required to settle historical facts.
+
+**Stopping point:** consolidated G1–G8 user review, including explicit risks and
+FY2025 source discrepancy. No new approvals, follow-on acquisition, automatic
+company completion, generic policy change, Phase1 closure or Phase2 permission.
+
+Validation:70 focused tests (60.129s) and five additional preparation-preservation
+tests (21.207s) pass. Exact five selected identities/70 families,175 family fact
+references, ten receipt/body bindings, every raw/inline fact occurrence, cash
+signs,34-digit reported ETR arithmetic, debt population changes, source-reported
+zeros, classes/dates, CFO displays, inactive proposals and deterministic restart
+are checked. Original approval rejects changed source revisions; original
+package, MSFT/AAPL views, legacy serialization, pilot hashes and frozen artifacts
+are preserved. All three exact package replays, compileall,576 affected local-path
+links and diff checks pass. No SEC request or full-suite/corpus rerun.
+
+## Prior accepted FY2024 view and original proposal — retained verbatim
+
 
 ## Current user-approved separate analyst view
 

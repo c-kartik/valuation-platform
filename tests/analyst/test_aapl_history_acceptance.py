@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from tests.analyst import preservation_projection
 from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'scripts'))
@@ -79,7 +80,7 @@ class AppleHistoryAcceptanceTests(unittest.TestCase):
         self.assertEqual(self.view['company_counts'],dict(broad_evidence_assessment=42,company_analyst_packages=3,completed_company_wide_packages=2,partial_company_packages=1,broad_assessment_only=39))
         for name in ['msft','googl']:
             path='docs/company-data-preparation/'+name+'-analyst-input-package.json'
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show','d6e0ea5:'+path],cwd=ROOT))
+            self.assertEqual(preservation_projection(path,(ROOT/path).read_bytes()),preservation_projection(path,subprocess.check_output(['git','show','d6e0ea5:'+path],cwd=ROOT)))
 
 
 if __name__=='__main__':unittest.main()

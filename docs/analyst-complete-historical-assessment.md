@@ -1,5 +1,29 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+## Current — Alphabet five-year review, one consolidated approval table
+
+[Alphabet company package](company-data-preparation/GOOGL-analyst-input-package.md)
+and its additive JSON review bind the five exact FY2021–25 annual selections and
+70 family slots:29 source-supported,9 original FY2024 scoped approvals,32 pending
+new treatment slots. No new judgment is active; G1–G8 await one consolidated user
+review, G9 is source packaging context only. All five independently displayed CFOs
+reconcile (14/14/13/13/13 terms, seven acquisition-excluded movement rows each).
+Ten retained bodies/usable receipts verify; original instance metadata gaps remain
+null and explicit refresh history survives. No new acquisition requirement.
+
+Critical limits: early D&A includes impairment; complete expense D&A unknown.
+Early debt captions already include finance leases/other, unlike FY2024 onward;
+no double addition. FY2025 operating lease parent15,954 versus components15,953m
+is a retained1m source difference, not a balancing adjustment. Pension/extra
+borrowing omissions remain unbounded proposed assumptions, not zero/immateriality.
+Rounded SBC expense and CFO add-back remain distinct;2025 Waymo valuation-based
+compensation, acquisitions, useful lives and2022 share split limit comparability.
+
+Counts unchanged:42 broad assessments;2 completed MSFT/AAPL packages,1 partial
+Alphabet,39 broad-only. AAPL's five-year approval and MSFT completion are preserved;
+no whole-universe sufficiency, frozen-blocker removal, Phase1 closure or Phase2.
+Prior dated assessments below are historical snapshots, not current defaults.
+
 ## Current completion checkpoint — MSFT and AAPL
 
 [AAPL current schedule](company-data-preparation/AAPL-analyst-input-package.md)
