@@ -1,5 +1,18 @@
 # ABBV — company data preparation
 
+## Current — five-year company review, pending consolidated approval
+
+[Source schedule and14-family matrix](ABBV-analyst-input-package.md) / [machine source package](abbv-analyst-input-package.json) / [ONE consolidated approval sheet](../pharma-network-tech-review-batch-results.md).
+Exact frozen annuals from verified manifest/DEI, independent source receipts and displayed CFO reconcile in all five periods. 10 source-observation slots/60 pending choices; none active. The original conflicts and negative findings are retained; explicit company source choices/proxies and overlaps are not generic policies or complete financial coverage.
+
+Precise CFO depreciation plus intangible amortization gives8,521/8,467/8,698/8,386/8,139 USDm. Rounded note amortization7,700/7,700/7,900/7,600/7,400 would instead give8,503/8,478/8,652/8,364/8,162; differences+18/−11/+46/+22/−23 are source precision/population differences, NOT adjustments. Separate intangible impairment unavailable/770/4,229/4,476/847 is not added; the later FY2021 comparative50 is not spliced. Finance-lease costs described insignificant are not zero and do not prove complete amortization coverage.
+
+Cash PP&E787/695/777/974/1,214, business acquisition525/255/0/17,493/204 and other acquisition/investment1,377/539/1,223/3,024/5,237 stay separate; FY2025 investing caption adds net-of-acquired-cash. Acquired-IPR&D expense962/697/778/2,757/5,016 differs from FY2021 collaboration reconciliation1,624; no expense/cash identity or allocation. Contingent fair-value changes, financing payments698/1,132/752/0/0 and later separately displayed operating payments870/1,995/2,865 have different roles; earlier operating subamounts are not manufactured from note totals.
+
+Debt carrying parent76,670/63,270/59,385/67,144/64,997 equals reported current/noncurrent parts, including finance liabilities34/34/42/40/41 and later financing liability328/378. Separately reported short borrowing14/1/0/unknown/2,499 gives proposed named financing76,684/63,271/59,385/67,144/67,496; FY2024 omission remains a proposal, NOT a reported zero. FY2025 CP499 and term loan2,000 already comprise2,499. Contractual principal75,962/63,128/59,245/66,841/64,503 is not a second debt amount or carrying-value replacement. Contingent fair-value parent14,887/16,384/19,890/21,666/25,374 and Level3/current/noncurrent views overlap; FY2021 current subamount stays unknown, never backsolved. Pension/OPEB3,153/1,638/1,538/1,234/1,410, NCI28/33/37/39/42, litigation and tax exposures remain separately visible. ImmunoGen/Cerevel and collaboration changes make as-filed EBIT/cash/expense history non-organic; no pro-forma recast.
+
+New judgments await one consolidated user approval. Retained original facts/unknowns, selected history and all previous policies stay unchanged; scope/materiality omissions are proposals, not source zeros. No acquisition or automatic new research. Exact validation/preservation results are in the batch sheet; historical financial sufficiency/consumer gates are not certified.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

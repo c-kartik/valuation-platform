@@ -1,5 +1,18 @@
 # CSCO — company data preparation
 
+## Current — five-year company review, pending consolidated approval
+
+[Source schedule and14-family matrix](CSCO-analyst-input-package.md) / [machine source package](csco-analyst-input-package.json) / [ONE consolidated approval sheet](../pharma-network-tech-review-batch-results.md).
+Exact frozen annuals from verified manifest/DEI, independent source receipts and displayed CFO reconcile in all five periods. 10 source-observation slots/60 pending choices; none active. The original conflicts and negative findings are retained; explicit company source choices/proxies and overlaps are not generic policies or complete financial coverage.
+
+Recommend a limited, inherited-rounded-precision PP&E D&A plus purchased-intangible note proxy1,877/1,631/2,353/2,902/2,563. PP&E expense800/700/700/700/700 is NOT complete D&A. Total purchased amortization1,077/931/1,653/2,202/1,863 includes both cost-of-sales and opex and source impairment scope; smaller opex-only observations313/282/698/1,028/916 are not total amortization. Non-overlap is a proposed asset-population classification; no complete/pure expense claim or extra ROU. Broader CFO “Depreciation, amortization, and other”1,957/1,726/2,507/2,811/2,540 remains separate. Proposed proxy minus that mixed caption is−80/−95/−154/+91/+23, NOT a residual amortization or correction; rounding, impairment and unallocated other scope remain.
+
+Cash PP&E477/849/670/905/1,410 and acquisition cash373/301/25,994/291/516 stay separate. Earlier acquisition caption is net of divestitures; later net of cash acquired is not the same perimeter. Splunk FY2024 timing changes amortization, financing and subsequent comparability; no earlier-year splice or organic adjustment. Restructuring, stock compensation, restricted escrow and noncash ROU are not arbitrary investment additions.
+
+Gross current financial captions19,267/26,146/17,854/16,110/15,918 retain securities/availability scope, not unrestricted cash. The FY2026 separate reported cash/current-investment parent14,297 does NOT equal selected face cash7,218 plus Investments8,700; retain it as a different-scope/conflicting alternative, not a plug or numerical equivalence. The proposed selected perimeter is the explicit balance-sheet captions, not that parent. Known restricted current/noncurrent amounts and customer-financing/strategic balances remain separate. Face current debt plus noncurrent borrowing proposes9,515/8,391/30,962/28,093/29,533. Current maturities and CP already within the face short-term caption are not added again. Finance-lease scope is unproved; operating lease liabilities1,046/1,020/1,270/1,550/1,652 stay separate. Unknown claims/restrictions are not immaterial by non-disclosure. Exact fiscal2022–26 Saturday dates are retained; each selected duration is364 days inclusive (52 weeks); do not splice the supporting FY2021 53-week comparative or convert to calendar-year history.
+
+New judgments await one consolidated user approval. Retained original facts/unknowns, selected history and all previous policies stay unchanged; scope/materiality omissions are proposals, not source zeros. No acquisition or automatic new research. Exact validation/preservation results are in the batch sheet; historical financial sufficiency/consumer gates are not certified.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

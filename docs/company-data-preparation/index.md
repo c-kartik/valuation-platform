@@ -1,6 +1,30 @@
 # Company data preparation register
 
-## Current — V/INTC/WMT approved scoped historical completion
+## Current — ABBV/MA/CSCO company review, pending one consolidated approval
+
+[ONE28-decision sheet](../pharma-network-tech-review-batch-results.md) /
+[machine review](pharma-network-tech-review-batch.json)
+and three source schedules/matrices cover ABBV/MA FY2021–2025 and CSCO FY2022–2026.
+15 exact annuals/210 existing families:25 source observations/185 pending company
+choices. All15 displayed CFO proofs remain SUPPORTED; movements stay within CFO,
+not complete NWC/book delta or extra deductions. New treatments are inactive.
+
+ABBV separates exact CFO amortization from rounded note expense, impairment/IPR&D,
+cash investment and contingency roles; financing/claims parent overlaps remain.
+MA proposes face net Revenue, preserving gross/rebate generic conflict; exact
+curated Pretax approvals replay, corporate/client/settlement/restrictions and
+claims remain separate. CSCO proposes rounded PPE plus total acquired-amortization
+proxy, not opex-only or mixed CFO-other; Splunk/calendar and FY2026 cash-parent
+scope alternatives remain explicit. No new financial policy or inferred zero.
+
+**42 broadly assessed;21 packages =16 completed scoped histories +2 partial CAT/JNJ
++3 pending ABBV/MA/CSCO;21 assessment-only.** Prior18 accepted/partial package
+JSONs, CAT SBC, JNJ OPEN scope, XOM/history boundaries and frozen artifacts remain.
+No essential new acquisition target identified; zero requests. Source unknowns,
+proxy precision and unbounded proposed omissions remain. Stop for consolidated
+review; no automatic acceptance/completion, Phase1 closure or Phase2 use.
+
+## Historical checkpoint — V/INTC/WMT approved scoped historical completion
 
 The user-approved28 V/INTC/WMT treatments are now effective through revision-bound
 analyst views. [Authoritative schedules, dispositions and validation](../network-retail-review-batch-results.md)

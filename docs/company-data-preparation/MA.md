@@ -1,5 +1,18 @@
 # MA — company data preparation
 
+## Current — five-year company review, pending consolidated approval
+
+[Source schedule and14-family matrix](MA-analyst-input-package.md) / [machine source package](ma-analyst-input-package.json) / [ONE consolidated approval sheet](../pharma-network-tech-review-batch-results.md).
+Exact frozen annuals from verified manifest/DEI, independent source receipts and displayed CFO reconcile in all five periods. 5 source-observation slots/65 pending choices; none active. The original conflicts and negative findings are retained; explicit company source choices/proxies and overlaps are not generic policies or complete financial coverage.
+
+Recommend face Net revenue18,884/22,237/25,098/28,167/32,791. FY2021 gross29,845 minus rebates10,961 equals face18,884; gross versus net is economically meaningful, not numerical equivalence. Later gross/rebate note columns remain supporting populations where no exact selector is established. The original generic conflict remains. Face D&A726/750/799/897/1,143 explicitly includes finance amortization; operating-lease amortization is in G&A. Do not add customer-incentive amortization1,371/1,586/1,622/1,830/2,098 or another ROU amount.
+
+Corporate current cash plus Investments proposes7,894/7,408/9,180/8,772/10,898, not unrestricted or excess cash. Customer collateral1,873/1,568/1,845/1,874/2,121 has a matching recorded liability; standby letters/guarantees are not recorded assets. Settlement assets1,319/1,270/1,233/1,821/1,626 and obligations913/1,111/1,399/2,316/2,409 remain separate operating-network populations. Litigation-restricted586/589/explicit0/492/561 does not cover other restricted22/31/32 in2021–23; no double subtraction from captions already excluding those funds. Current Investments include AFS/HTM time deposits by stated maturity; strategic equity is not corporate cash.
+
+Named carrying debt13,901/14,023/15,681/18,226/19,000 equals note parent and current/noncurrent parts. All five notes affirm no outstanding borrowings under the named CP/credit facility; this does not establish no other borrowing or complete finance-lease coverage. Operating lease liabilities772/770/775/760/833 stay separate. Litigation840/1,094/723/930/800, ordinary NCI71/58/46/30/9, separately reported redeemable NCI29/21/22/explicit2024dash/unknown2025, and pension/OPEB remain named claims. Pension surplus92/38/29/44/47 does not erase liabilities of underfunded individual plans; later OPEB immaterial wording is not a valuation zero. The first three exact curated Pretax approvals10,307/11,732/13,639 replay with original metadata/equity-method scope; later15,254/18,578 are direct. No new generic equivalence, tax assumption or netting. A/B/convertible classes, actual dates and incentives/award counts are not summed or converted.
+
+New judgments await one consolidated user approval. Retained original facts/unknowns, selected history and all previous policies stay unchanged; scope/materiality omissions are proposals, not source zeros. No acquisition or automatic new research. Exact validation/preservation results are in the batch sheet; historical financial sufficiency/consumer gates are not certified.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).
