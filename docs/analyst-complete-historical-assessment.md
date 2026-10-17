@@ -1,6 +1,25 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
-## Current — V/INTC/WMT review adds proposed selections, not completions
+## Current — V/INTC/WMT approved scoped historical completion
+
+The user-approved28 V/INTC/WMT treatments are now effective through revision-bound
+analyst views. [Authoritative schedules, dispositions and validation](network-retail-review-batch-results.md)
+/ [machine counts](company-data-preparation/network-retail-review-batch.json) `/approval_activation`.
+V/INTC FY2021–2025 and WMT FY2022–2026 each satisfy14/14 per selected year (70/70),
+with curated/limited-proxy/assumption labels and unbounded omissions retained.
+Visa preferred/client/settlement/classes, Intel exact SBC/grants/NCI, Walmart face
+Total revenues/generic conflicts/supplier-finance/lease/split boundaries remain explicit.
+Original source snapshots, unknowns, proposals and alternatives are unchanged;
+no new generic financial policy or reported zero. Relevant evidence changes reject stale audits.
+
+**42 broad assessments;18 packages =16 completed scoped histories +2 partial CAT/JNJ;
+0 pending reviews;24 assessment-only.** CAT SBC and JNJ OPEN scope requirements remain.
+Prior13 completed histories, frozen artifacts, XOM and other history exceptions are preserved.
+Scope completion is not exhaustive debt/reinvestment/expense disclosure, Phase1 closure
+or Phase2 readiness. Next unreviewed retained-backlog candidates: ABBV, MA, CSCO,
+identified only; no automatic new review, research or acquisitions.
+
+## Historical checkpoint — V/INTC/WMT review adds proposed selections, not completions
 
 [Single batch approval sheet](network-retail-review-batch-results.md) adds15 exact
 annuals/210 existing-family slots,25 source observations and185 pending choices.

@@ -1,5 +1,17 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Scope-specific V/INTC/WMT acceptance
+
+The user's explicit approval of28 retained company recommendations activates V/INTC
+FY2021–2025 and WMT FY2022–2026 under the existing14 operation-specific families.
+Exact curated Visa scope, Intel/Walmart limited proxies, cost-proxy source choices,
+Walmart face Total revenues and explicit unbounded omissions are company-specific,
+not generic policies. Source nulls, alternatives and original conflicts remain.
+Named financing/cash, separately dated/classed shares and overlap safeguards do not
+establish exhaustive debt, excess cash, diluted shares or complete expense D&A.
+[Effective schedules and audit dispositions](network-retail-review-batch-results.md).
+CAT/JNJ requirements remain OPEN. No Phase1 closure or Phase2 consumer is approved.
+
 ## MU/AMD acceptance and explicitly open JNJ analyst-use requirement
 
 The user approves MU/AMD's exact five-year company-specific recommendations and

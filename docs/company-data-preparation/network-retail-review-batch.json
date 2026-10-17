@@ -1,4 +1,175 @@
 {
+  "approval_activation": {
+    "companies": {
+      "INTC": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "INTC-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "INTC-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "INTC-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "INTC-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "INTC-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "INTC-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "INTC-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "INTC-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "INTC-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "8c3b16bedea5099601d09f41edb7f1fc642758f7fee2d1ff31de01fcac47381a",
+        "completed": true
+      },
+      "V": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "V-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "V-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "V-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "V-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "V-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "V-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "V-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "V-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "V-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "cb70f601e52374b4fdbe2440143b728914977796c640ea4d392cb3d368a9463a",
+        "completed": true
+      },
+      "WMT": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "WMT-REV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "WMT-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "WMT-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "WMT-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "WMT-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "WMT-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "WMT-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "WMT-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "WMT-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "WMT-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "e006dacfb80a50d8952d34ba02f41c6e4e6c39442d081c69e423f80972737b70",
+        "completed": true
+      }
+    },
+    "current_company_counts": {
+      "approved_partial": 2,
+      "assessment_only": 24,
+      "broadly_assessed": 42,
+      "completed_scoped": 16,
+      "pending_reviews": 0
+    },
+    "original_proposals_retained": true,
+    "phase1_closed": false
+  },
   "approved_partial_company_packages": 2,
   "broad_assessment_only": 24,
   "companies": {

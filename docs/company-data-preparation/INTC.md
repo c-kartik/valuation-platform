@@ -1,6 +1,13 @@
 # INTC — company data preparation
 
-## Current — full FY2021–FY2025 review; all new treatments inactive
+## Current — user-approved effective five-year package
+
+[Authoritative schedule](INTC-analyst-input-package.md) / [effective JSON](intc-analyst-input-package.json) / [activation and checks](../network-retail-review-batch-results.md).
+All five exact selected years pass14/14 (70/70) under the user's expressly approved historical perimeter. Existing audit/current-view controls activate actual selections; original facts, review proposals, alternatives, nulls and source metadata remain unchanged. Relevant-content revisions, actual UTC, user authority and immutable audit digest reject stale sources. D&A is the approved LIMITED depreciation plus intangible-amortization proxy, not complete expense D&A; inventory capitalization/release, useful-life changes and incentive-reduced basis remain relevant. No impairment/restructuring or ROU add-on. Exact displayed CFO SBC is selected as the cost proxy once; rounded expense alternatives remain unchanged. The displayed adjustment parent and independently bound children reconcile separately, never parent-plus-children. Gross PP&E, grant receipts, noncash incentives, partner funding and known NCI are distinct. Earlier face cash carries restricted-scope QName; no unrestricted claim or invented reserve. Commitments and partner NCI are not automatically debt.
+
+Potentially unbounded unidentified-borrowing/claim omissions are approved assumptions, not reported zeros or immateriality. Complete expense D&A/debt/reinvestment and unknown restrictions remain unknown. Reported cash movements support reconciled CFO, never a second deduction. No whole-universe closure, Phase2 use, acquisitions or generic policy change. Prior13 complete packages and CAT/JNJ exceptions are preserved; validation is in the batch sheet.
+
+## Historical checkpoint — full FY2021–FY2025 review; all new treatments inactive
 
 [Five-year schedule/14-family matrix](INTC-analyst-input-package.md) /
 [source package](intc-analyst-input-package.json) /

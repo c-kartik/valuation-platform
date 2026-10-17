@@ -1,4 +1,57 @@
-# WMT — full frozen-history analyst-input review
+# WMT — five-year historical-input package
+
+## Authoritative current selections — approved historical perimeter
+
+**All five selected years14/14;70/70. Company completion is recorded only for the explicitly approved historical-input perimeter.** No Phase1 closure, financial-sufficiency certificate or Phase2 authorization.
+
+[Machine effective view](wmt-analyst-input-package.json) `/current_history`; [28-decision dispositions](../network-retail-review-batch-results.md). Original `/periods` and prior proposed statuses remain historical and unchanged, not active defaults.
+
+User authorization, rationale, exact identities and source/review/proposal revisions are bound in `/history_approval`, sequence1, actual UTC `2026-10-17T20:39:07.396840+00:00`, SHA256 `e006dacfb80a50d8952d34ba02f41c6e4e6c39442d081c69e423f80972737b70`. Relevant source/evidence changes reject stale approval.
+
+USDm below; source observations retain their original units, scale, signs, precision variants and occurrence/receipt bindings. Each effective input has a source pointer into the unchanged historical parent. Proxy acceptance is not complete expense D&A.
+
+|Selected input / operation|2022|2023|2024|2025|2026|
+|---|---:|---:|---:|---:|---:|
+|Revenue|572754|611289|648125|680985|713163|
+|EBIT|25942|20428|27012|29348|29825|
+|D&A (limited proxy)|10658|10945|11853|12973|14203|
+|Cash investment (outflow)|-13106|-16857|-20606|-23783|-26642|
+|Reported CFO|24181|28841|35726|36443|41565|
+|SBC cost proxy, once|1163|1578|2093|2769|3603|
+|Tax provision|4756|5724|5578|6152|7199|
+|Pretax context|18696|17016|21848|26309|29469|
+|Cash taxes (outflow; net/gross per source)|-5918|-3310|-5879|-5884|-5364|
+|Named financial captions; NOT excess cash|14760|8625|9867|9037|10727|
+|Named financing; NOT complete debt|42831|44622|46891|45790|51523|
+
+## All14 existing families — effective checklist
+
+|Family|2022|2023|2024|2025|2026|
+|---|---|---|---|---|---|
+|revenue|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|ebit|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|depreciation_amortization|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|cash_capex|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|reported_cash_flow_working_capital_movements|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|deferred_taxes|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|stock_based_compensation|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|unclassified_cfo_reconciliation_residual|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|reported_cfo|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|reported_tax_context|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|cash_investment_components|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|debt_lease_components|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|other_equity_bridge_claims_assets|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+|point_in_time_shares|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|PASS under approved scope|
+
+Movement rows remain supporting detail already within independently reconciled CFO, not book delta NWC or another deduction. Deferred adjustments/mixed rows and tax contexts retain their own source roles. No residual is calculated or populated as zero. Dated shares/classes, awards and EPS denominators remain distinct in `/current_history/periods/*/inputs/point_in_time_shares` and source facts; no diluted total.
+
+## Accepted qualifications and unchanged unknowns
+
+Approved Revenue is as-filed Total revenues, including membership/other income, not net sales alone. Genuine generic Revenue conflicts and alternatives remain unchanged. The limited D&A proxy retains source accretion scope; no extra finance amortization. Exact note SBC expense is selected once; pure CFO SBC remains unknown within Other. Supplier financing already reported in operating AP is separately visible, not another debt addition. The separate finance-lease parent is included once, not parent plus current/noncurrent components. NCI/redeemable claims, acquisitions, noncash investment and the2024 three-for-one split preserve their original dates/presentations.
+
+No additional unidentified borrowing/claims adjustment is an explicit approved analyst assumption with potentially unbounded omitted amounts, never a source zero or immateriality finding. Complete expense D&A, reinvestment/debt/lease coverage, unknown restrictions/reserves and unallocated claims remain null. Original source-binding diagnostics and alternatives remain reachable, not waived as verified facts.
+
+## Historical review snapshot — superseded as current selection
 
 **Proposed only; no new company assumption/selection active.** Five exact annuals/70 family slots. S means source observation, not complete financial scope. P means a concrete company-specific decision pending user approval.
 

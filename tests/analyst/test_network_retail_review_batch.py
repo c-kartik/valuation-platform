@@ -9,13 +9,14 @@ import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'scripts'))
 import prepare_network_retail_review_batch as p
+import activate_company_review_batches as accepted
 import tests.analyst.test_standard_review_batch as source_tests
 
 
 class NetworkRetailReviewTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.outputs=p.outputs();cls.packages={t:cls.outputs[f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json'] for t in p.TICKERS}
+        cls.outputs=p.outputs();cls.packages={t:accepted.parent(cls.outputs[f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json']) for t in p.TICKERS}
         cls.summary=cls.outputs[p.SUMMARY];cls.artifact_files={}
 
     _artifact=source_tests.StandardReviewBatchTests._artifact

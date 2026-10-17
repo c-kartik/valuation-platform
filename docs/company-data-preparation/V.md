@@ -1,6 +1,13 @@
 # V — company data preparation
 
-## Current — full FY2021–2025 review; company choices inactive
+## Current — user-approved effective five-year package
+
+[Authoritative schedule](V-analyst-input-package.md) / [effective JSON](v-analyst-input-package.json) / [activation and checks](../network-retail-review-batch-results.md).
+All five exact selected years pass14/14 (70/70) under the user's expressly approved historical perimeter. Existing audit/current-view controls activate actual selections; original facts, review proposals, alternatives, nulls and source metadata remain unchanged. Relevant-content revisions, actual UTC, user authority and immutable audit digest reject stale sources. D&A and productive-asset cash purchases retain the exact existing curated policy proofs and artifact bindings, not a generic software/D&A expansion. FY2025 rounded note corroboration differs by42m; no rounding plug. Client incentives are not D&A. Cash/current financial selection excludes separately disclosed securities additions, client/settlement/escrow populations; no unrestricted-cash claim or double subtraction. Known participating preferred claims, conversion rights, class/parent share overlap and retrospective litigation remain separate. Later client-collateral subamounts absent from the reviewed selector remain unknown; they are not zeros. No automatic class conversion, aggregation or dilution.
+
+Potentially unbounded unidentified-borrowing/claim omissions are approved assumptions, not reported zeros or immateriality. Complete expense D&A/debt/reinvestment and unknown restrictions remain unknown. Reported cash movements support reconciled CFO, never a second deduction. No whole-universe closure, Phase2 use, acquisitions or generic policy change. Prior13 complete packages and CAT/JNJ exceptions are preserved; validation is in the batch sheet.
+
+## Historical checkpoint — full FY2021–2025 review; company choices inactive
 
 [Five-year schedule/14-family matrix](V-analyst-input-package.md) /
 [exact package](v-analyst-input-package.json) /

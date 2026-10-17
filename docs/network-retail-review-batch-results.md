@@ -1,6 +1,36 @@
 # V / INTC / WMT — ONE consolidated retained historical-input review
 
-**28 proposed company decisions, all INACTIVE.**15 frozen annual selections/210 family slots. [Machine decisions](company-data-preparation/network-retail-review-batch.json). Existing exact curated primitives remain approved within their original scope; no new company-wide assumption is active.
+## Current — all28 user approvals effective; three scoped completions
+
+V FY2021–2025, INTC FY2021–2025 and WMT FY2022–2026 each pass14/14 per year (70/70);15 annuals/210 family slots. Exact user authority, actual UTC, source/review/proposal revisions, identities and audit SHA bind separate `history_approval` / `current_history` views. Original proposal statuses below and in `/decisions` remain historical, not current selections.
+
+|Approved IDs|Disposition|Five-year outcome|
+|---|---|---|
+|V-CF, V-DA, V-INV, V-SBC, V-TAX, V-CASH, V-FIN, V-CLAIMS, V-SHARES|ACTIVE, preserving all stated qualifications|70/70, scoped completion|
+|INTC-CF, INTC-DA, INTC-INV, INTC-SBC, INTC-TAX, INTC-CASH, INTC-FIN, INTC-CLAIMS, INTC-SHARES|ACTIVE, preserving all stated qualifications|70/70, scoped completion|
+|WMT-REV, WMT-CF, WMT-DA, WMT-INV, WMT-SBC, WMT-TAX, WMT-CASH, WMT-FIN, WMT-CLAIMS, WMT-SHARES|ACTIVE, preserving all stated qualifications|70/70, scoped completion|
+
+**V:** D&A and productive-asset cash purchases retain the exact existing curated policy proofs and artifact bindings, not a generic software/D&A expansion. FY2025 rounded note corroboration differs by42m; no rounding plug. Client incentives are not D&A. Cash/current financial selection excludes separately disclosed securities additions, client/settlement/escrow populations; no unrestricted-cash claim or double subtraction. Known participating preferred claims, conversion rights, class/parent share overlap and retrospective litigation remain separate. Later client-collateral subamounts absent from the reviewed selector remain unknown; they are not zeros. No automatic class conversion, aggregation or dilution.
+
+**INTC:** D&A is the approved LIMITED depreciation plus intangible-amortization proxy, not complete expense D&A; inventory capitalization/release, useful-life changes and incentive-reduced basis remain relevant. No impairment/restructuring or ROU add-on. Exact displayed CFO SBC is selected as the cost proxy once; rounded expense alternatives remain unchanged. The displayed adjustment parent and independently bound children reconcile separately, never parent-plus-children. Gross PP&E, grant receipts, noncash incentives, partner funding and known NCI are distinct. Earlier face cash carries restricted-scope QName; no unrestricted claim or invented reserve. Commitments and partner NCI are not automatically debt.
+
+**WMT:** Approved Revenue is as-filed Total revenues, including membership/other income, not net sales alone. Genuine generic Revenue conflicts and alternatives remain unchanged. The limited D&A proxy retains source accretion scope; no extra finance amortization. Exact note SBC expense is selected once; pure CFO SBC remains unknown within Other. Supplier financing already reported in operating AP is separately visible, not another debt addition. The separate finance-lease parent is included once, not parent plus current/noncurrent components. NCI/redeemable claims, acquisitions, noncash investment and the2024 three-for-one split preserve their original dates/presentations.
+
+**Current counts:42 broadly assessed;18 packages =16 completed scoped histories +2 approved partial CAT/JNJ +0 pending;24 assessment-only.** CAT SBC allocation and JNJ nine-family/all-five-year scope gate remain OPEN and unchanged. XOM/history exceptions and frozen support classifications remain unchanged. Complete financial disclosure, arbitrary zero assumptions, Phase1 closure and Phase2 are not certified.
+
+### Validation
+
+69 distinct focused tests passed across targeted runs:8 new activation tests,9 retained-source/replay tests,17 priority/large-company acceptance regressions,9 earlier batch activation tests,5 legacy/pilot preservation tests and21 MSFT/AAPL/Alphabet acceptance tests. The8 activation tests were rerun successfully after the final reference-only Visa proof representation; original curated proofs remain unchanged and are bound by exact pointer/policy digest, not copied into another proof generation. Tests cover effective arithmetic/signs/precision, claims/classes/overlap, serialization, persistence/restart, missing authorization, forged authority and stale value/precision/scope/alternative rejection. Durable execution logs: `/tmp/network-activation-tests.log` (34 tests), `/tmp/network-activation-final-tests.log` (22), `/tmp/network-activation-final-replay-tests.log` (8 final activation), `/tmp/network-peer-package-tests.log` (21); counts overlap, not85 distinct tests.
+
+Final `prepare_network_retail_review_batch.py --check` passed exact deterministic replay of all three accepted package JSONs and the batch summary:15 unique annuals/210 passed family slots/28 ACTIVE decisions. Compileall (`src scripts tests`),799 affected local links,1,936 exact local/rooted source/ledger/approval references,42-company count reconciliation and `git diff --check` passed. Original parent package bytes, all15 prior accepted/partial peer JSONs, pilot/legacy serialization and frozen artifact directories are pinned unchanged. No acquisition, full-suite or corpus rerun. No financial shortfall or unresolved source amount was accepted beyond the expressly authorized treatments.
+
+### Next candidates — identify only
+
+ABBV, MA and CSCO are the next unreviewed operating candidates in the retained frozen snapshot order. MA benefits from payment-network/client/settlement review experience; ABBV from acquisition/amortization/IPR&D distinctions; CSCO from existing technology/deferred-revenue mappings. These are review candidates, not transferred approvals or claims of completeness. No review or research is started.
+
+## Historical proposal snapshot — superseded by the active views above
+
+**At review time:28 proposed company decisions, all INACTIVE.**15 frozen annual selections/210 family slots. [Machine decisions](company-data-preparation/network-retail-review-batch.json). This section preserves the original review; current acceptance is recorded separately above and in `/approval_activation`.
 
 |Company / schedule and14-family matrix|Frozen fiscal years|Source observations S|Pending choices P|Displayed CFO|
 |---|---|---:|---:|---|

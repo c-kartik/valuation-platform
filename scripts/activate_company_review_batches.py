@@ -19,6 +19,9 @@ TICKERS=('COST','CAT','KO','NVDA','AMZN','META')
 LARGE_TICKERS=('AVGO','TSLA','LLY')
 LARGE_BASELINE='4b5b93423fa84078dd6b19dcf68c52434ba9a6ac'
 PRIORITY_TICKERS=('MU','AMD','JNJ')
+NETWORK_TICKERS=('V','INTC','WMT')
+NETWORK_BASELINE='5a0f606399893aa67b96f6660ef43a4fb4fdeafb'
+NETWORK_AUTHORITY='Current user explicitly approves all28 recommendations in docs/network-retail-review-batch-results.md for V/INTC/WMT exact frozen histories, including curated Visa scope, exact Intel CFO SBC cost proxy and Walmart face Total revenues; preserve source unknowns and company-specific qualifications.'
 PRIORITY_BASELINE='4234cb10e862c4bd95ccd017037f8db707263922'
 PRIORITY_AUTHORITY='Current user explicitly approves all MU/AMD recommendations and JNJ original-as-filed historical selections in docs/priority-review-batch-results.md; JNJ continuing/consolidated scope mismatch remains an OPEN analyst-use requirement, not accepted completeness.'
 JNJ_FLOW_FAMILIES=('revenue','ebit','depreciation_amortization','cash_capex','reported_cash_flow_working_capital_movements','deferred_taxes','stock_based_compensation','reported_cfo','reported_tax_context')
@@ -84,19 +87,20 @@ def cat_evidence(package):
 
 def approval(package,decisions,recorded_at_utc):
     p=parent(package);ticker=p['ticker']
-    if ticker not in TICKERS+LARGE_TICKERS+PRIORITY_TICKERS or len(p['periods'])!=5:raise ValueError('Fixed approved company history required')
+    if ticker not in TICKERS+LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS or len(p['periods'])!=5:raise ValueError('Fixed approved company history required')
     selected=[deepcopy(d) for d in decisions if d['ticker']==ticker]
     if not selected or len({d['decision_id'] for d in selected})!=len(selected):raise ValueError('Exact approved decision set required')
     large=ticker in LARGE_TICKERS
     priority=ticker in PRIORITY_TICKERS
+    network=ticker in NETWORK_TICKERS
     if large:
         suffixes=('CF','SBC','CASH','CLAIMS','SHARES','DA','INV','FIN')+(('TAX',) if ticker=='TSLA' else ())
         identities=[r['identity'] for r in p['periods']]
         if ({d['decision_id'] for d in selected}!={ticker+'-'+key for key in suffixes}
                 or any(d['identities']!=identities for d in selected)):
             raise ValueError('All exact approved company decisions and periods required')
-    if priority:
-        suffixes=('CF','DA','INV','SBC','TAX','CASH','FIN','CLAIMS','SHARES')+(('PERIMETER',) if ticker=='JNJ' else ())
+    if priority or network:
+        suffixes=('CF','DA','INV','SBC','TAX','CASH','FIN','CLAIMS','SHARES')+(('PERIMETER',) if ticker=='JNJ' else ('REV',) if ticker=='WMT' else ())
         if ({d['decision_id'] for d in selected}!={ticker+'-'+key for key in suffixes}
                 or any(d['identities']!=[r['identity'] for r in p['periods']] for d in selected)):
             raise ValueError('All exact approved company decisions and periods required')
@@ -115,6 +119,8 @@ def approval(package,decisions,recorded_at_utc):
                 reason='Original FY2021/22 Consumer Health-inclusive income versus later continuing income; consolidated cash/D&A/tax/investment populations cannot be assumed coterminous. Cross-year use remains unresolved.',
                 resolution='Evidence-bound consistent continuing/discontinued allocations and cross-year bridge, OR explicit separately justified analyst-use treatment accepting/restricting the mismatched populations; no such resolution approved by this instruction.') ] if ticker=='JNJ' else [])
         if ticker=='JNJ':record['financial_sufficiency']='PARTIAL_OPEN_ANALYST_USE_REQUIREMENT'
+    if network:
+        record.update(author='User, explicit approval of all28 V/INTC/WMT recommendations',authority=NETWORK_AUTHORITY,rationale=NETWORK_AUTHORITY,source_commit=NETWORK_BASELINE)
     ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale']);record['sha256']=digest(record)
     return record
 
@@ -126,7 +132,7 @@ def activate(package,decisions,record):
     expected=approval(p,decisions,record.get('recorded_at_utc'))
     if record!=expected:raise ValueError('Stale or unregistered company approval; explicit revalidation required')
     result=deepcopy(p);result['history_approval']=deepcopy(record)
-    result['current_history']=cat_view(p,record) if p['ticker']=='CAT' else large_view(p,record) if p['ticker'] in LARGE_TICKERS+PRIORITY_TICKERS else ordinary_view(p,record)
+    result['current_history']=cat_view(p,record) if p['ticker']=='CAT' else large_view(p,record) if p['ticker'] in LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS else ordinary_view(p,record)
     return result
 
 
@@ -159,7 +165,7 @@ def large_view(package,record):
     No new equation or population acceptance: named calculations and proofs are
     the unchanged reviewed source package. Acknowledged nulls remain source nulls.
     """
-    t=package['ticker'];periods=[];ids={d['decision_id'] for d in record['decisions']};priority=t in PRIORITY_TICKERS
+    t=package['ticker'];periods=[];ids={d['decision_id'] for d in record['decisions']};priority=t in PRIORITY_TICKERS;network=t in NETWORK_TICKERS
     for i,row in enumerate(package['periods']):
         base='/periods/'+str(i)
         f=lambda k,m=1,origin='reported':fact(row,k,base,m,origin)
@@ -181,7 +187,7 @@ def large_view(package,record):
             ebit=deepcopy(row['derived_ebit'])
             if not ebit or ebit['origin']!='derived':raise ValueError('Existing registered EBIT proof required')
             ebit.update(source_reference=base+'/derived_ebit')
-        capex=f('other_ppe_cash' if t=='LLY' else 'cash_capex',-1)
+        capex=f('productive_cash' if t=='V' else 'other_ppe_cash' if t=='LLY' else 'cash_capex',-1)
         if t=='LLY':
             generation=row['refreshed_capex']
             if (not generation or generation['original_byte_equivalence']!='UNPROVED'
@@ -193,20 +199,21 @@ def large_view(package,record):
         # approved separately dated cover population. Neither is a diluted total.
         shares={k:f(k) for k in row['facts'] if k.startswith('shares:CommonStockSharesOutstanding:')}
         if not shares:shares={k:f(k) for k in row['facts'] if k.startswith('shares:EntityCommonStockSharesOutstanding:')}
-        deferred_rows=[deepcopy(x) for x in pop['rows'] if 'deferred' in x.get('caption',x.get('label','')).lower()]
+        detail=pop['hierarchy_proof']['children'] if t=='INTC' and network else pop['rows']
+        deferred_rows=[deepcopy(x) for x in detail if 'deferred' in x.get('caption',x.get('label','')).lower()]
         inputs=dict(
-            revenue=f('revenue'),ebit=ebit,depreciation_amortization=c('limited_da_proxy','proxy'),cash_capex=capex,
+            revenue=f('face_revenue' if t=='WMT' else 'revenue'),ebit=ebit,depreciation_amortization=c('limited_da_proxy','proxy'),cash_capex=capex,
             reported_cash_flow_working_capital_movements=dict(rows=deepcopy(row['movement_rows']),source_reference=base+'/cfo_reconciliation',additional_deduction_permitted=False,book_delta_nwc=False),
             deferred_taxes=dict(displayed_rows=deferred_rows,note_observation=f('deferred_tax'),other_observation=f('deferred_movement'),
                 source_reference=base+'/cfo_reconciliation',separate_pure_operation='APPROVED_NO_SEPARATE_PURE_OPERATION_MIXED_ROW_PRESERVED' if t=='AVGO' else 'REPORTED_DISPLAYED_POPULATION',value_if_unavailable=None),
-            stock_based_compensation=dict(selected=f('sbc_expense',origin='proxy'),addback=f('sbc_addback'),count_once=True),
+            stock_based_compensation=dict(selected=f(row['proposed_selections']['sbc'] if network else 'sbc_expense',origin='proxy'),addback=f('face_sbc' if t=='INTC' else 'sbc_addback'),count_once=True),
             unclassified_cfo_reconciliation_residual=dict(value=None,disposition='APPROVED_NO_SEPARATE_OPERATION',not_reported_zero=True),
             reported_cfo=f('cfo'),
-            reported_tax_context=dict(provision=f('tax' if priority else 'face_tax'),pretax=f('pretax'),reported_etr=None if row['facts'].get('reported_etr',{}).get('selection_status','').startswith('UNSELECTED') else f('reported_etr'),
+            reported_tax_context=dict(provision=f('tax' if priority or network else 'face_tax'),pretax=f('pretax'),reported_etr=None if row['facts'].get('reported_etr',{}).get('selection_status','').startswith('UNSELECTED') else f('reported_etr'),
                 cash_taxes=f('cash_tax' if 'cash_tax' in row['facts'] else 'cash_tax_gross',-1),
                 original_policy_context_reference=base+'/preparation_ledger_evidence/retained-reported-tax-context-ledger',
                 original_generic_conflicts_preserved=True,no_new_ratio_computed=True,future_rate_approved=False),
-            cash_investment_components=dict(selected=c('gross_current_financial'),unrestricted_or_excess_cash=False,unknown_restrictions=None,operating_reserve=None,
+            cash_investment_components=dict(selected=c('current_financial_captions' if network else 'gross_current_financial'),unrestricted_or_excess_cash=False,unknown_restrictions=None,operating_reserve=None,
                 other_balances={k:f(k) for k in ('restricted_current','restricted_noncurrent','restricted_cash','noncurrent_investments','marketable_long','equity_method','lessor_net_receivable','lessor_net_current','lessor_net_noncurrent') if k in row['facts']},
                 parent_child_overlap_not_additive=True,other_populations_reference=base+'/supporting_note_rows'),
             debt_lease_components=dict(selected=c('named_financing'),additional_borrowing=None,no_additional_adjustment=dict(origin='analyst_assumption',approved=True,value=None,
@@ -229,6 +236,32 @@ def large_view(package,record):
         if t=='TSLA':
             inputs['debt_lease_components']['perimeter']='Consolidated manufacturing/energy/leasing including related financing assets and funding; no netted industrial carve-out'
             inputs['cash_capex']['scope']='Original selected PP&E cash caption with stated gross/net-of-sales perimeter; later differing comparatives not substituted'
+        if network:
+            inputs['depreciation_amortization']['qualification']={'V':'Existing exact curated D&A scope; client-incentive amortization excluded; rounded note discrepancy not plugged',
+                'INTC':'Limited depreciation plus intangible amortization proxy; inventory capitalization/useful-life/incentive basis limitations; no impairment/restructuring add-on',
+                'WMT':'Limited CFO depreciation/amortization/accretion proxy; accretion retained; no extra finance amortization'}[t]
+            if t=='V':
+                for family,key in (('depreciation_amortization','d_and_a'),('cash_capex','capex')):
+                    replay=row['curated_policy_replays'][key]
+                    if not replay['existing_approval'] or D(replay['value'])!=abs(D(inputs[family]['value'])):raise ValueError('Exact curated policy replay required')
+                    inputs[family]['curated_policy_replay']=dict(value=replay['value'],existing_approval=True,reviewed_scope_only=replay['reviewed_scope_only'],
+                        policy_id=replay['policy']['policy_id'],version=replay['policy']['version'],policy_sha256=digest(replay['policy']))
+                    inputs[family]['curated_policy_reference']=base+'/curated_policy_replays/'+key
+            if t=='INTC':
+                hierarchy=pop['hierarchy_proof']
+                if sum((D(x['value']) for x in hierarchy['children']),D(0))!=D(hierarchy['parent']['value']):raise ValueError('Intel bound adjustment hierarchy required')
+                inputs['deferred_taxes'].update(hierarchy_reference=base+'/cfo_reconciliation/populations/0/hierarchy_proof')
+            inputs['stock_based_compensation'].update(alternatives_reference=base+'/alternatives/sbc',
+                selection_rationale='Exact approved company cost proxy; distinct from pure expense and original reconciliation role; count once')
+            inputs['cash_investment_components']['other_balances'].update({k:f(k) for k in ('investment_securities','short_afs','cash_restricted_parent','settlement_receivable','client_asset_current','client_asset_noncurrent','litigation_escrow','client_cash_collateral') if k in row['facts']})
+            inputs['debt_lease_components'].update(finance_leases_already_included=True if t=='WMT' else None,
+                scope='Named carrying financing only; no inferred lease coverage or complete debt',
+                supplier_finance=f('supplier_finance'),supplier_finance_already_in_operating_ap=t=='WMT')
+            inputs['other_equity_bridge_claims_assets']['known_populations'].update({k:f(k) for k in row['facts'] if k.startswith('claim:') or k in ('preferred_outstanding','settlement_payable','client_liability','litigation_escrow','client_cash_collateral')})
+            inputs['point_in_time_shares'].update(class_parent_overlap_not_additive=True,conversion_or_dilution_approved=False)
+            inputs['cash_capex']['other_disclosures'].update({k:f(k,row.get('cash_sign_multipliers',{}).get(k,1)) for k in ('capital_grant_cash','noncash_incentive','grant_basis_reduction','supplier_finance') if k in row['facts']})
+            if t=='WMT':inputs['revenue'].update(selection_rationale='Approved face Total revenues, including membership/other income; generic economic conflicts unchanged',
+                original_conflicts_reference=base+'/alternatives',face_statement_identity_reference=base+'/revenue_display_identity')
         if priority:
             inputs['reported_cfo']=f(row['proposed_cfo_fact'])
             cashflow_scope='Continuing operations' if t=='AMD' and row['fiscal_year']==2025 else 'Original consolidated reported population'

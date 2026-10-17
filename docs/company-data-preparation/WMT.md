@@ -1,6 +1,13 @@
 # WMT — company data preparation
 
-## Current — full frozen FY2022–FY2026 review; explicit Revenue choice proposed
+## Current — user-approved effective five-year package
+
+[Authoritative schedule](WMT-analyst-input-package.md) / [effective JSON](wmt-analyst-input-package.json) / [activation and checks](../network-retail-review-batch-results.md).
+All five exact selected years pass14/14 (70/70) under the user's expressly approved historical perimeter. Existing audit/current-view controls activate actual selections; original facts, review proposals, alternatives, nulls and source metadata remain unchanged. Relevant-content revisions, actual UTC, user authority and immutable audit digest reject stale sources. Approved Revenue is as-filed Total revenues, including membership/other income, not net sales alone. Genuine generic Revenue conflicts and alternatives remain unchanged. The limited D&A proxy retains source accretion scope; no extra finance amortization. Exact note SBC expense is selected once; pure CFO SBC remains unknown within Other. Supplier financing already reported in operating AP is separately visible, not another debt addition. The separate finance-lease parent is included once, not parent plus current/noncurrent components. NCI/redeemable claims, acquisitions, noncash investment and the2024 three-for-one split preserve their original dates/presentations.
+
+Potentially unbounded unidentified-borrowing/claim omissions are approved assumptions, not reported zeros or immateriality. Complete expense D&A/debt/reinvestment and unknown restrictions remain unknown. Reported cash movements support reconciled CFO, never a second deduction. No whole-universe closure, Phase2 use, acquisitions or generic policy change. Prior13 complete packages and CAT/JNJ exceptions are preserved; validation is in the batch sheet.
+
+## Historical checkpoint — full frozen FY2022–FY2026 review; explicit Revenue choice proposed
 
 [Five-year schedule/14-family matrix](WMT-analyst-input-package.md) /
 [source package](wmt-analyst-input-package.json) /
