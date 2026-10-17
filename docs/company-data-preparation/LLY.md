@@ -1,5 +1,37 @@
 # LLY — company data preparation
 
+## Current — one company-wide FY2021–2025 review, choices pending
+
+[Five-year schedule and14-family matrix](LLY-analyst-input-package.md) /
+[exact source package](lly-analyst-input-package.json) /
+[ONE consolidated batch sheet](../large-company-review-batch-results.md).
+All five frozen selections replay; all five displayed CFO checks SUPPORTED.
+20 source-observation/50 pending-treatment family slots, not financial completeness.
+
+Original conflict: prepared direct/derived values did not resolve historical
+economic perimeter. The unchanged EBIT registry is executed with exact original
+operands, precision gates, reviewed alternatives and complete proof, not copied
+from frozen output. Existing preparation-v2 cash PP&E refresh approvals replay
+all15 reports; historical fingerprints/original-body unavailability and UNPROVED
+byte equivalence persist. No new refresh approval, equation or hash substitution.
+
+Propose limited CFO D&A1,547.6/1,522.5/1,527.3/1,766.6/1,997m, separately from
+depreciation/intangible expense and acquired IPR&D.2022 expense908.5 includes
+milestones versus CFO addback420.9;487.6 is not a plug or investment adjustment.
+Cash IPR&D563.4/629.7/3,944.5/3,345.8/3,008m and acquisitions stay outside cash
+PP&E1,309.8/1,854.3/3,447.6/5,057.8/7,841m. Named carrying financing
+16,884.7/16,238.6/25,225.3/33,644.2/42,503m includes CP/current maturities and
+embedded finance leases, not principal/fair-value additions. Known pension/health
+assets/liabilities and NCI remain separate. FY2025 note short investment105m uses
+its carrying-basis dimension; later cover shares are not fiscal-end/diluted shares.
+
+All new treatments remain proposed, with precise alternatives/uncertainty in one
+sheet. Source unknowns, original financial blockers and support class persist.
+All essential bodies/review reports retained; no acquisition target/request or
+automatic follow-on research. Focused independent source/registered-policy,
+arithmetic/overlap/serialization and preservation checks are in batch results.
+Stop for consolidated approval; no company completion, phase closure or Phase2.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

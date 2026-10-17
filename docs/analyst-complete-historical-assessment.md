@@ -1,5 +1,24 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+## Current — next three requested company reviews delivered, not approved
+
+[AVGO/TSLA/LLY single batch](large-company-review-batch-results.md) now accounts
+for15 frozen annuals/210 existing-family slots with source-supported schedules,
+exact source/policy provenance and25 inactive company-specific decisions.
+50 source-observation slots/160 pending choices are not accepted financial inputs.
+All15 CFO displays reconcile; complete reconstructed NWC is not prerequisite to
+the proposed reported-movement path, but does not waive D&A, financing, claims,
+investment or dated-share decisions. All required bodies retained; no exact
+acquisition requirement found, no request or exhausted-search repetition.
+
+42 broad assessments;12 packages =8 completed scoped company histories,
+1 approved partial CAT +3 pending AVGO/TSLA/LLY;30 assessment-only. Eight complete
+packages and CAT's essential SBC allocation gap stay unchanged. New limited
+proxies/omissions are proposals, not automatic transfer of peer approvals or
+reversal of frozen negative findings. Original dated backlog JSON remains a
+baseline, not an automatically rewritten completion inventory. Stop for review;
+no company-completion, universe closure or Phase2 readiness follows this batch.
+
 ## Current — approved six-company historical selections are effective
 
 User approves all48 recommendations across the

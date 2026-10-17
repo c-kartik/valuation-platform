@@ -1,5 +1,31 @@
 # Project Status
 
+## Current — AVGO/TSLA/LLY retained full-history decision batch, proposals inactive
+
+Delivered [three schedules and14-family matrices plus ONE approval sheet](large-company-review-batch-results.md)
+and [machine decisions](company-data-preparation/large-company-review-batch.json).
+15 exact annuals /210 family slots:50 source-observation,160 pending company-choice
+slots; all15 independently displayed CFO checks SUPPORTED. No new acceptance,
+financial-policy/runtime change, research acquisition or phase closure.
+
+AVGO proposes narrow depreciation/acquisition-amortization proxy, not mixed ROU,
+with VMware/restructuring/53-week and split boundaries. TSLA proposes explicit
+impairment-inclusive limited proxy and consolidated manufacturing/energy/leasing
+perimeter; finance receivables/funding, net cash-purchase captions and tax conflicts
+remain separately evidenced. LLY replays approved EBIT operands and five exact
+refreshed-Capex reviews, preserving unavailable originals/UNPROVED equivalence;
+cash/licensing/IPR&D, expense milestones and CFO addbacks are not interchangeable.
+Named financing already includes finance leases; no second addition or complete-
+debt claim. Restrictions, claims, allocations and complete expense scope remain
+unknown; only explicit future user approval can activate proposed assumptions.
+
+42 broadly assessed;12 packages = **8 completed scoped histories +1 approved
+partial CAT +3 pending reviews**;30 assessment-only. Completed peers and CAT's
+dual perimeters/SBC exception are unchanged. Frozen artifacts, source histories,
+financial blockers and support classes persist. No requests/full-suite/corpus run.
+Focused results/replay/preservation and final checks are recorded in batch results.
+Stop for consolidated approval, not another company or Phase2 implementation.
+
 ## Current — six-company approvals implemented; eight scoped histories complete
 
 Explicit user approval activates all23 standard-batch and25 trillion-batch

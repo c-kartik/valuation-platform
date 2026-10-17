@@ -1,5 +1,32 @@
 # AVGO — company data preparation
 
+## Current — one company-wide FY2021–2025 review, choices pending
+
+[Five-year schedule and14-family matrix](AVGO-analyst-input-package.md) /
+[exact source package](avgo-analyst-input-package.json) /
+[ONE consolidated batch sheet](../large-company-review-batch-results.md).
+All five exact frozen accessions replay; all five displayed CFO checks SUPPORTED.
+15 source-observation/55 pending-treatment family slots, not financial completeness.
+
+Original conflict: generic null D&A and component debt/cash observations did not
+define a company-specific historical selection. The review binds depreciation,
+separate cost-of-revenue/operating acquisition amortization, mixed intangible/ROU,
+cash investment and finance-inclusive carrying captions independently. Proposed
+limited D&A5,942/4,888/3,749/9,860/8,636m excludes mixed ROU/impairment; named
+financing39,730/39,515/39,229/67,566/65,136m does not add embedded finance leases.
+VMware acquisition/restructuring,53-week2024, stock split and71m2024 expense/SBC
+add-back difference retain accession-specific scope. Known benefit claims and
+source zero captions do not prove unidentified exposures zero/immaterial.
+
+No new assumption is active. Prior policies, exact facts, source nulls, financial
+blockers and support classification remain. Remaining complete expense D&A,
+unknown restrictions/claims/borrowing and reinvestment allocations are explicit,
+with concrete proposed scope/omission choices and alternatives in the single
+sheet. All required source bodies are retained; no acquisition target/request or
+automatic research chain. Focused source/arithmetic/overlap/serialization replay
+and unchanged-peer/frozen preservation are recorded in batch results. Stop for
+consolidated approval; not company completion, Phase1 closure or Phase2 authority.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

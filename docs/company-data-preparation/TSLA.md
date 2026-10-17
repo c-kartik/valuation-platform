@@ -1,5 +1,33 @@
 # TSLA — company data preparation
 
+## Current — one company-wide FY2021–2025 review, choices pending
+
+[Five-year schedule and14-family matrix](TSLA-analyst-input-package.md) /
+[exact source package](tsla-analyst-input-package.json) /
+[ONE consolidated batch sheet](../large-company-review-batch-results.md).
+All five exact frozen accessions replay; all five displayed CFO checks SUPPORTED.
+15 source-observation/55 pending-treatment family slots, not financial completeness.
+
+Original conflict: mixed D&A and tax candidates plus overlapping financing/lease
+populations did not establish company-specific selections. Recommend consolidated
+manufacturing/energy/leasing history with its financing assets/funding retained,
+not a fabricated industrial carve-out. Proposed impairment-inclusive CFO proxy
+2,911/3,747/4,667/5,368/6,148m is not pure expense D&A or a reversal of frozen
+scope findings. Named carrying financing6,834/3,099/5,230/8,213/8,376m includes
+finance leases already; the LongTermDebt observation is noncurrent, not total.
+Net sales-type receivables, restricted cash, NCI/redeemable claims and source note
+funding populations remain separate, never netted into cash/debt.2023 face tax
+benefit−5,001 differs from rounded−5,000 without a plug; source cash-tax captions
+are net of refunds despite older IncomeTaxesPaid tags. Original comparative/split,
+award conditions and actual cover-date boundaries remain explicit.
+
+All new judgments stay inactive. Missing allocations/complete expense D&A and
+unknown exposures remain null, not zero or immaterial. Prior facts, policies,
+financial blockers and support class persist. All required source bodies retained;
+zero acquisitions/requests and no new research chain. Exact source/precision/sign,
+scope/overlap and serialization/preservation checks are recorded centrally. Stop
+for one consolidated decision, not completion, Phase1 closure or Phase2 use.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

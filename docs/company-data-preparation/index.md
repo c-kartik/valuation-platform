@@ -1,5 +1,26 @@
 # Company data preparation register
 
+## Current — AVGO/TSLA/LLY full-history review, one pending decision batch
+
+[AVGO](AVGO-analyst-input-package.md), [TSLA](TSLA-analyst-input-package.md) and
+[LLY](LLY-analyst-input-package.md) now have five exact annual schedules and
+14-family matrices:15 periods/210 slots,50 source-observation slots and160 pending
+company-treatment slots. All15 independent CFO displays SUPPORTED. One
+[25-proposal sheet](../large-company-review-batch-results.md) and
+[machine companion](large-company-review-batch.json) retain all new judgments
+inactive; no approval audit, runtime integration or company-completion claim.
+Acquisition/restructuring/IPR&D, finance/lessor populations, scope/precision,
+share split/date boundaries and original unknowns remain explicit. LLY executes
+unchanged EBIT derivations and explicitly reviewed refreshed Capex provenance.
+
+42 broadly assessed;12 company packages =8 completed scoped histories,
+1 approved partial CAT and3 pending reviews;30 assessment-only. Eight completed
+views remain byte-unchanged; CAT dual perimeters and essential SBC allocation
+exception persist. Prior counts below are historical checkpoints. All required
+source bodies retained; no acquisition target/request or automatic next research.
+No frozen support classification, financial-policy change, Phase1 closure or
+Phase2 authority. Stop for one consolidated user review.
+
 ## Current — approved effective six-company views
 
 [COST](COST-analyst-input-package.md), [KO](KO-analyst-input-package.md),

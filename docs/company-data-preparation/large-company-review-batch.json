@@ -1,0 +1,1422 @@
+{
+  "approved_partial_company_packages": 1,
+  "broad_assessment_only": 30,
+  "companies": {
+    "AVGO": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 55,
+        "SOURCE_SUPPORTED": 15
+      },
+      "periods": 5,
+      "review_revision": "9d80e3196ee38de156902103726ebeaad6c6d93d3be634015ca0f0dd36607c9f"
+    },
+    "LLY": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 50,
+        "SOURCE_SUPPORTED": 20
+      },
+      "periods": 5,
+      "review_revision": "c568dc0caa1fc648a8b9478f64abbc63fdc7d0d91be406ef1f0af913ed73d215"
+    },
+    "TSLA": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 55,
+        "SOURCE_SUPPORTED": 15
+      },
+      "periods": 5,
+      "review_revision": "6e7e14287a73d636cc959b90ff50873f348449cdcab04378bc94e7b316011059"
+    }
+  },
+  "completed_company_packages": 8,
+  "decisions": [
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AVGO-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001730168-21-000153",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-11-02",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-22-000118",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-23-000096",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-24-000139",
+          "annual_end": "2024-11-03",
+          "annual_start": "2023-10-30",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-25-000121",
+          "annual_end": "2025-11-02",
+          "annual_start": "2024-11-04",
+          "cik": 1730168,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "13764/16736/18085/19962/27537 USDm",
+      "recommendation": "Use source-bound displayed cash movements and independently reconciled consolidated CFO, without a separate CFO residual operation.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AVGO",
+      "uncertainty_and_alternative": "Supporting movements already in CFO: no second deduction, book delta NWC or organic/unlevered-cash claim. Alternative separately evidenced allocations; stop at displayed mixed populations, not a balancing plug. AVGO mixed deferred/other noncash taxes stay mixed; note deferred tax is not substituted for that row."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AVGO-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001730168-21-000153",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-11-02",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-22-000118",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-23-000096",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-24-000139",
+          "annual_end": "2024-11-03",
+          "annual_start": "2023-10-30",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-25-000121",
+          "annual_end": "2025-11-02",
+          "annual_start": "2024-11-04",
+          "cik": 1730168,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1704/1533/2171/5670/7568 USDm",
+      "recommendation": "Use separately recognized SBC expense once as a labeled historical cost proxy; retain reconciliation, awards and tax/withholding cash separately.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AVGO",
+      "uncertainty_and_alternative": "No duplicate charge, rounding plug or forecast dilution. AVGO2024 expense5670 versus addback5741 differs71; preserve acquisition/compensation scope, not an adjustment. TSLA2025 awards/legal vesting conditions remain source uncertainty, not a diluted-share estimate. Alternative retain expense only without an economic-cost selection."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AVGO-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001730168-21-000153",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-11-02",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-22-000118",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-23-000096",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-24-000139",
+          "annual_end": "2024-11-03",
+          "annual_start": "2023-10-30",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-25-000121",
+          "annual_end": "2025-11-02",
+          "annual_start": "2024-11-04",
+          "cik": 1730168,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "12163/12416/14189/9348/16178 USDm",
+      "recommendation": "Select gross named CURRENT financial captions only; restrictions, long investments, strategic holdings and finance receivables remain separate.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AVGO",
+      "uncertainty_and_alternative": "Not excess/unrestricted cash. No reserve estimate, absent-investment zero or restricted-cash parent addition. TSLA digital assets and collateral/lessor receivables are not equivalent cash; LLY noncurrent investments include strategic holdings. Alternative defer liquid-balance operation; omitted restrictions/reserves unbounded."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AVGO-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001730168-21-000153",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-11-02",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-22-000118",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-23-000096",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-24-000139",
+          "annual_end": "2024-11-03",
+          "annual_start": "2023-10-30",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-25-000121",
+          "annual_end": "2025-11-02",
+          "annual_start": "2024-11-04",
+          "cik": 1730168,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "NCI unknown/unknown/unknown/unknown/unknown USDm; redeemable unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain named recognized NCI/redeemable claims and benefit-plan populations separately; propose no additional unidentified preferred/NCI/pension adjustment beyond those known disclosures.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AVGO",
+      "uncertainty_and_alternative": "Presentation-based analyst assumption, not reported zero or immateriality; undisclosed exposure unbounded. Never omit identified pension liabilities/strategic assets or add net funded status to its gross assets/liabilities. TSLA nonrecourse consolidated funding and NCI are different populations. Alternative leave additional-claims operation unresolved; no valuation netting."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AVGO-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001730168-21-000153",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-11-02",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-22-000118",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-23-000096",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-24-000139",
+          "annual_end": "2024-11-03",
+          "annual_start": "2023-10-30",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-25-000121",
+          "annual_end": "2025-11-02",
+          "annual_start": "2024-11-04",
+          "cik": 1730168,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Actual source dates/classes/precision in facts/shares:*; no estimate of dilution.",
+      "recommendation": "Select separately dated common populations, keeping cover dates, class/award boundaries and EPS denominators separate; no automatic restatement/aggregation.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AVGO",
+      "uncertainty_and_alternative": "2024 ten-for-one split and VMware equity consideration break comparability with original2021\u201323 observations; preserve original counts, no invented split-restated schedule. Alternative require a separately designed comparison/award operation, not Phase1 numerical dilution."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AVGO-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001730168-21-000153",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-11-02",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-22-000118",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-23-000096",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-24-000139",
+          "annual_end": "2024-11-03",
+          "annual_start": "2023-10-30",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-25-000121",
+          "annual_end": "2025-11-02",
+          "annual_start": "2024-11-04",
+          "cik": 1730168,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "5942/4888/3749/9860/8636 USDm",
+      "recommendation": "Select depreciation plus the two separately expensed acquisition-intangible amortization captions as a LIMITED historical proxy.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AVGO",
+      "uncertainty_and_alternative": "Exclude combined intangible/ROU CFO row5502/4455/3333/9417/8201; it includes operating ROU. Do not add finance amortization16/18/16/27/unknown again or impairments/restructuring. Alternative mixed CFO proxy6041/4984/3835/10010/8775 is broader by99/96/86/150/139; not pure D&A. Complete expense coverage/overlap still unproved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AVGO-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001730168-21-000153",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-11-02",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-22-000118",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-23-000096",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-24-000139",
+          "annual_end": "2024-11-03",
+          "annual_start": "2023-10-30",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-25-000121",
+          "annual_end": "2025-11-02",
+          "annual_start": "2024-11-04",
+          "cik": 1730168,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "443/424/452/548/623 USDm; acquisition cash 8/246/53/25978/0 USDm",
+      "recommendation": "Keep cash PP&E separate from acquisition consideration, noncash ROU, unpaid capex and restructuring; no complete reinvestment sum.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AVGO",
+      "uncertainty_and_alternative": "VMware closes in FY2024:25978 net acquisition cash is not ordinary cash PP&E548; acquired intangibles are not a new PP&E allocation.53-week FY2024 and integration/held-sale populations affect comparability; no organic normalization. Alternative broader acquisition-inclusive investment requires explicit purpose/allocations, not accepted here."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "AVGO-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/avgo-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001730168-21-000153",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-11-02",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-22-000118",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-23-000096",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-24-000139",
+          "annual_end": "2024-11-03",
+          "annual_start": "2023-10-30",
+          "cik": 1730168,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001730168-25-000121",
+          "annual_end": "2025-11-02",
+          "annual_start": "2024-11-04",
+          "cik": 1730168,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "39730/39515/39229/67566/65136 USDm",
+      "recommendation": "Select named current/noncurrent debt CARRYING captions including embedded finance leases, operating leases service; propose no additional unidentified-borrowing adjustment.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AVGO",
+      "uncertainty_and_alternative": "2021 note parent39665 excludes finance65; face39730 includes it.2022\u201325 parent current/noncurrent already finance-inclusive: do not add finance59/49/39/unknown.2025 face65136 differs principal67120; retain discounts/hedge/fair-value observations, not a plug. Source non-disclosure is not zero; omission unbounded. Alternative additional borrowing operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "TSLA-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000950170-22-000796",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000950170-23-001409",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-002390",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-003063",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003952",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "11497/14724/13256/14923/14747 USDm",
+      "recommendation": "Use source-bound displayed cash movements and independently reconciled consolidated CFO, without a separate CFO residual operation.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "TSLA",
+      "uncertainty_and_alternative": "Supporting movements already in CFO: no second deduction, book delta NWC or organic/unlevered-cash claim. Alternative separately evidenced allocations; stop at displayed mixed populations, not a balancing plug. AVGO mixed deferred/other noncash taxes stay mixed; note deferred tax is not substituted for that row."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "TSLA-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000950170-22-000796",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000950170-23-001409",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-002390",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-003063",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003952",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "2121/1560/1812/1999/2825 USDm",
+      "recommendation": "Use separately recognized SBC expense once as a labeled historical cost proxy; retain reconciliation, awards and tax/withholding cash separately.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "TSLA",
+      "uncertainty_and_alternative": "No duplicate charge, rounding plug or forecast dilution. AVGO2024 expense5670 versus addback5741 differs71; preserve acquisition/compensation scope, not an adjustment. TSLA2025 awards/legal vesting conditions remain source uncertainty, not a diluted-share estimate. Alternative retain expense only without an economic-cost selection."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "TSLA-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000950170-22-000796",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000950170-23-001409",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-002390",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-003063",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003952",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "17707/22185/29094/36563/44059 USDm",
+      "recommendation": "Select gross named CURRENT financial captions only; restrictions, long investments, strategic holdings and finance receivables remain separate.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "TSLA",
+      "uncertainty_and_alternative": "Not excess/unrestricted cash. No reserve estimate, absent-investment zero or restricted-cash parent addition. TSLA digital assets and collateral/lessor receivables are not equivalent cash; LLY noncurrent investments include strategic holdings. Alternative defer liquid-balance operation; omitted restrictions/reserves unbounded."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "TSLA-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000950170-22-000796",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000950170-23-001409",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-002390",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-003063",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003952",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "NCI 826/785/733/704/670 USDm; redeemable 568/409/242/63/58 USDm",
+      "recommendation": "Retain named recognized NCI/redeemable claims and benefit-plan populations separately; propose no additional unidentified preferred/NCI/pension adjustment beyond those known disclosures.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "TSLA",
+      "uncertainty_and_alternative": "Presentation-based analyst assumption, not reported zero or immateriality; undisclosed exposure unbounded. Never omit identified pension liabilities/strategic assets or add net funded status to its gross assets/liabilities. TSLA nonrecourse consolidated funding and NCI are different populations. Alternative leave additional-claims operation unresolved; no valuation netting."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "TSLA-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000950170-22-000796",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000950170-23-001409",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-002390",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-003063",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003952",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Actual source dates/classes/precision in facts/shares:*; no estimate of dilution.",
+      "recommendation": "Select separately dated common populations, keeping cover dates, class/award boundaries and EPS denominators separate; no automatic restatement/aggregation.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "TSLA",
+      "uncertainty_and_alternative": "2021 original shares predate2022 three-for-one; retain actual cover date if year-end population is not independently bound.2025 award issuance changes dated counts; weighted averages are not closing shares. Alternative require a separately designed comparison/award operation, not Phase1 numerical dilution."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "TSLA-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000950170-22-000796",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000950170-23-001409",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-002390",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-003063",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003952",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "2911/3747/4667/5368/6148 USDm",
+      "recommendation": "Select the displayed impairment-inclusive CFO row as a LIMITED historical proxy, explicitly not pure expense D&A.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "TSLA",
+      "uncertainty_and_alternative": "Includes manufacturing, energy, leased vehicles/solar and impairment; complete source D&A remains unproved and frozen negative scope is unchanged. Depreciation1910/2420/3330/4120/5030 and finance amort415/493/506/409/118 are SUPPORT, not incremental. Alternative depreciation-only omits other amortization/leased populations; do not infer residual amortization."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "TSLA-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000950170-22-000796",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000950170-23-001409",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-002390",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-003063",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003952",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "6482/7158/8898/11339/8527 USDm",
+      "recommendation": "Retain exact originally selected PP&E cash caption, including any stated net-of-sales scope; keep leased-vehicle movement and noncash equipment separate.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "TSLA",
+      "uncertainty_and_alternative": "2025 caption explicitly net of sales; original2024/2023 amounts11339/8898 differ later11342/8899 comparatives. Do not silently restate. Noncash finance additions486/58/10/144/0 and operating additions818/1059/2170/1808/1643 are not cash. Accrued purchases are mixed, not a pure unpaid-capex allocation. Alternative broader leased-asset investment requires sourced non-overlap, no new sum."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "TSLA-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000950170-22-000796",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000950170-23-001409",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-002390",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-003063",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003952",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "6834/3099/5230/8213/8376 USDm",
+      "recommendation": "Use consolidated manufacturing/energy/leasing perimeter, named face debt+finance carrying captions, with operating lessee leases service; retain financing assets and related funding, not a netted industrial-only view.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "TSLA",
+      "uncertainty_and_alternative": "Nonrecourse lending/vehicle/solar funding remains alongside related assets and NCI; no separate captive carve-out inferred by subtraction. LongTermDebt tag alone is NONCURRENT here, not whole debt; note principal/fair value/capacity are alternatives. Finance1492/1054/573/335/223 already inside face subtotal; no second add. Propose no unidentified-borrowing adjustment, unbounded omission; alternative a separately sourced narrower operating perimeter, not automatically substituted."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "TSLA-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/tsla-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000950170-22-000796",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000950170-23-001409",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-002390",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-003063",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-003952",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1318605,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "699/1132/-5001/1837/1423 USDm; cash net (IncomeTaxesPaidNet tag) unknown/unknown/unknown/unknown/1232 USDm; cash net (IncomeTaxesPaid tag) 561/1203/1119/1331/unknown USDm",
+      "recommendation": "Select exact face-statement provision with existing pretax/reported accounting tax context; preserve competing rounded candidates and original generic conflicts.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "TSLA",
+      "uncertainty_and_alternative": "2023 valuation-allowance release makes provision negative; no rate clamp, rounding adjustment, forecast rate or tax-shield operation. Actual earlier cash caption says net of refunds despite IncomeTaxesPaid tag; retain that scope without rewriting original ledger. Alternative keep generic conflict unresolved; any new denominator/economic rate requires separate approval."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "LLY-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000059478-22-000068",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-23-000082",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-24-000065",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-25-000067",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-26-000013",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "7260.7/7084.4/4240.1/8817.9/16813 USDm",
+      "recommendation": "Use source-bound displayed cash movements and independently reconciled consolidated CFO, without a separate CFO residual operation.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LLY",
+      "uncertainty_and_alternative": "Supporting movements already in CFO: no second deduction, book delta NWC or organic/unlevered-cash claim. Alternative separately evidenced allocations; stop at displayed mixed populations, not a balancing plug. AVGO mixed deferred/other noncash taxes stay mixed; note deferred tax is not substituted for that row."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "LLY-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000059478-22-000068",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-23-000082",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-24-000065",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-25-000067",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-26-000013",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "342.8/371.1/628.5/645.6/626 USDm",
+      "recommendation": "Use separately recognized SBC expense once as a labeled historical cost proxy; retain reconciliation, awards and tax/withholding cash separately.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LLY",
+      "uncertainty_and_alternative": "No duplicate charge, rounding plug or forecast dilution. AVGO2024 expense5670 versus addback5741 differs71; preserve acquisition/compensation scope, not an adjustment. TSLA2025 awards/legal vesting conditions remain source uncertainty, not a diluted-share estimate. Alternative retain expense only without an economic-cost selection."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "LLY-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000059478-22-000068",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-23-000082",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-24-000065",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-25-000067",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-26-000013",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "3908.6/2211.8/2927.7/3423.2/7373 USDm",
+      "recommendation": "Select gross named CURRENT financial captions only; restrictions, long investments, strategic holdings and finance receivables remain separate.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LLY",
+      "uncertainty_and_alternative": "Not excess/unrestricted cash. No reserve estimate, absent-investment zero or restricted-cash parent addition. TSLA digital assets and collateral/lessor receivables are not equivalent cash; LLY noncurrent investments include strategic holdings. Alternative defer liquid-balance operation; omitted restrictions/reserves unbounded."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "LLY-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000059478-22-000068",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-23-000082",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-24-000065",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-25-000067",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-26-000013",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "NCI 175.6/125.6/91.8/79.5/unknown USDm; redeemable unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain named recognized NCI/redeemable claims and benefit-plan populations separately; propose no additional unidentified preferred/NCI/pension adjustment beyond those known disclosures.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LLY",
+      "uncertainty_and_alternative": "Presentation-based analyst assumption, not reported zero or immateriality; undisclosed exposure unbounded. Never omit identified pension liabilities/strategic assets or add net funded status to its gross assets/liabilities. TSLA nonrecourse consolidated funding and NCI are different populations. Alternative leave additional-claims operation unresolved; no valuation netting."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "LLY-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000059478-22-000068",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-23-000082",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-24-000065",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-25-000067",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-26-000013",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Actual source dates/classes/precision in facts/shares:*; no estimate of dilution.",
+      "recommendation": "Select separately dated common populations, keeping cover dates, class/award boundaries and EPS denominators separate; no automatic restatement/aggregation.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LLY",
+      "uncertainty_and_alternative": "Selected annuals supply later dated cover counts; these are not fiscal-end or diluted counts. Awards/performance shares may have different conditions, no automatic award total. Alternative require a separately designed comparison/award operation, not Phase1 numerical dilution."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "LLY-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000059478-22-000068",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-23-000082",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-24-000065",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-25-000067",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-26-000013",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1547.6/1522.5/1527.3/1766.6/1997 USDm",
+      "recommendation": "Use CFO D&A as a LIMITED historical proxy; preserve depreciation and finite-lived intangible expense separately.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LLY",
+      "uncertainty_and_alternative": "Expense components do not prove complete non-overlap or justify a new sum; no acquired/IPR&D, impairment or ROU add-on and no balancing amortization. Alternative retain component observations without proxy selection.2025 USDm rounding versus earlier0.1m affects comparability."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "LLY-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000059478-22-000068",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-23-000082",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-24-000065",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-25-000067",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-26-000013",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1309.8/1854.3/3447.6/5057.8/7841 USDm; cash IPRD 563.4/629.7/3944.5/3345.8/3008 USDm; expensed IPRD 874.9/908.5/3799.8/3280.4/2910 USDm",
+      "recommendation": "Retain reviewed refreshed-evidence cash PP&E under unchanged original policy; keep cash IPR&D/licensing, asset acquisitions and expense IPR&D separately.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LLY",
+      "uncertainty_and_alternative": "Prior fingerprints remain mismatched/unavailable; original byte equivalence UNPROVED, independently reviewed refresh is the basis.2022 expense908.5 includes development milestones; CFO acquired-IPRD420.9 is a different population, difference487.6 NOT an adjustment. Cash IPRD and expensed IPRD differ in timing/recognition; do not reverse EBIT charge or double-count CFO addback. Acquisition/licensing/success milestones not exhaustive ordinary capex; alternative explicit broader investment contract needs sourced allocations, no new equation."
+    },
+    {
+      "accepted": false,
+      "author": "Retained-evidence company review; not user approval",
+      "decision_id": "LLY-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lly-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000059478-22-000068",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-23-000082",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-24-000065",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-25-000067",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000059478-26-000013",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 59478,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "16884.7/16238.6/25225.3/33644.2/42503 USDm",
+      "recommendation": "Select combined short-borrowing/current maturities plus noncurrent carrying debt, operating leases service; finance leases already embedded, no added estimate.",
+      "recorded_at_utc": "2026-10-17T18:51:31+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LLY",
+      "uncertainty_and_alternative": "Do not add CP0/1498/6189.4/4337.6/0 or gross long-note principal again. Source says finance leases embedded/not material to financial statements, not valuation immateriality; missing amount stays unknown. Propose no additional unidentified-borrowing adjustment, unbounded omission. Alternative leave that operation unresolved; current maturities not duplicated."
+    }
+  ],
+  "evidence_acquisition_requirements": [],
+  "family_slots": 210,
+  "new_assumptions_active": false,
+  "new_sec_requests": 0,
+  "pending_review_company_packages": 3,
+  "phase1_closed": false,
+  "schema": "retained-large-company-review-batch-v1",
+  "selected_periods": 15,
+  "source_commit": "dad351527cbbf30f4f6df5f19f43ca57484a0cfe",
+  "tickers": [
+    "AVGO",
+    "TSLA",
+    "LLY"
+  ]
+}
