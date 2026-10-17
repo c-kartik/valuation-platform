@@ -1,5 +1,31 @@
 # META — supplemental supported-seed preparation note
 
+## Current — user-approved effective five-year historical view
+
+[META authoritative schedule](../META-analyst-input-package.md) /
+[effective JSON](../meta-analyst-input-package.json), FY2021–FY2025.
+All five exact selected annuals satisfy14/14 under the approved historical perimeter; company completed only within that scope. Proxies/omission assumptions are not complete source expense D&A, debt or reinvestment, financial sufficiency or Phase2 readiness.
+
+Original conflict/treatment rationale and alternatives are preserved in the prior
+review below. The user explicitly approves the batch recommendations; revision-bound
+sequence1 audit at `2026-10-17T18:17:50.735170+00:00` records exact source/review/proposal
+identity, authorization and rationale. Actual selections are in `current_history`;
+original pending flags, source nulls and proposals remain historical snapshots.
+Relevant source/candidate/scope/precision/period changes reject stale acceptance.
+
+Independent displayed CFO checks coexist with original2022–24 shared-parser PARTIALs. No source/tolerance or deferred-tax precision plug; expense/add-back and original comparative differences remain. Limited D&A, named financing, gross financial balances and dated class/aggregate shares are accepted without automated aggregation.
+
+Known restrictions, claims, source unknowns and unbounded potential omissions remain
+visible. No immateriality/zero inference, complete NWC prerequisite, extra movement
+deduction or separate CFO residual. Reported cash movements and independent CFO
+proofs support the approved historical path, not a future formula or financial
+readiness certificate. [Approval/validation results](../../trillion-review-batch-results.md).
+Focused audit/selection/source/perimeter/serialization/staleness tests and package
+replays preserve original sources, policies, prior approvals, completed peers and
+frozen/pilot artifacts. No SEC/full-suite/corpus run; stop after approval integration.
+
+## Historical preparation checkpoints — preserved
+
 ## Current — FY2021–FY2025 company review, proposals inactive
 
 [Schedule/matrix](../META-analyst-input-package.md) /

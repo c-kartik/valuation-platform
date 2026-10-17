@@ -1,5 +1,49 @@
 # NVDA / AMZN / META — ONE consolidated historical-input review batch
 
+## Current — explicit approval implemented as effective analyst selections
+
+All recommendations below are now explicitly user-approved within their stated historical scope; original table text/pending flags are preserved as proposal history. Additive `history_approval` and `current_history` fields in each company JSON contain revision-bound authorization and actual selected inputs, not just acceptance documentation. Actual UTC, identities, source/proposal revisions, rationale and immutable audit hashes are retained. Changed relevant source/evidence/scope rejects stale approval.
+
+|Company / exact approved IDs|Current activation/disposition|Five-year result|
+|---|---|---|
+|NVDA: NVDA-CF, NVDA-SBC, NVDA-CASH, NVDA-CLAIMS, NVDA-SHARES, NVDA-DA, NVDA-INV, NVDA-FIN|All ACTIVE; alternatives non-default and source unknowns preserved.|Each year14/14,70/70 within approved historical perimeter.|
+|AMZN: AMZN-CF, AMZN-SBC, AMZN-CASH, AMZN-CLAIMS, AMZN-SHARES, AMZN-DA, AMZN-INV, AMZN-TAX, AMZN-FIN|All ACTIVE; alternatives non-default and source unknowns preserved.|Each year14/14,70/70 within approved historical perimeter.|
+|META: META-CF, META-SBC, META-CASH, META-CLAIMS, META-SHARES, META-DA, META-INV, META-FIN|All ACTIVE; alternatives non-default and source unknowns preserved.|Each year14/14,70/70 within approved historical perimeter.|
+
+Updated counts:42 broadly evidence-assessed issuers;9 company packages = **8 completed scoped histories** (MSFT/AAPL/Alphabet/COST/KO/NVDA/AMZN/META), **1 approved partial CAT**,33 assessment-only. None of these counts certifies whole-universe financial sufficiency or closes Phase1. Original MSFT/AAPL/Alphabet entire packages and frozen artifacts are unchanged.
+
+### Exact accepted limitations and remaining essentials
+
+- COST accepts its D&A non-overlap assumption; NVDA accepts combined PP&E/intangible cash including exact extension-year evidence, not a pure PP&E split. AMZN accepts the narrow proxy without reversing broad-D&A rejection and explicitly selects expanded FY2021 financing81,427 including source-bound318. META source-specific independent CFO checks preserve original parser PARTIALs.
+- KO does NOT select conditional expanded financing46,927. Named45,492 and known held-sale borrowing1,435 remain separate effective schedules with duplication/omission warnings; no combined-debt or valuation total is certified.
+- CAT selects direct industrial/Financial Products/adjustment columns, not generic consolidated treatment. Perimeter SBC expense is the one essential family across all five years in both perimeters; consolidated200/193/208/223/242 cannot supply an allocation. CAT-FIN already approves named funding/no-unidentified-adjustment, so unallocated lease detail stays supporting uncertainty, not an additional completeness gate. Omitted financing is potentially unbounded, not zero. Direct perimeter CFO checks pass; eliminations are not a separately complete company. No new numerical allocation is authorized.
+- Complete source expense D&A, debt/reinvestment, unknown restrictions/reserves, unquantified claims and comparability/split/precision limitations remain. Approved no-additional-adjustment choices are analyst omissions of potentially unbounded amounts, never reported zeros or materiality findings. Reconstructed NWC/book delta is not required for this approved path; movements already in CFO are not extra deductions. No future tax rate, dilution estimate, assumption engine or valuation is approved.
+
+### Current validation
+
+The final contract cross-check activates CAT-FIN's already-approved named-funding/no-unidentified-adjustment assumption. Missing lease allocation remains supporting uncertainty, not a newly imposed complete-debt gate. CAT therefore satisfies13/14 per perimeter; only SBC allocation remains essential. No new assumption or numerical allocation was approved by the implementation.
+
+All36 focused approval/source/selection/perimeter/serialization/stale-revision/persistence/preservation tests pass in84.309s (`/tmp/six-company-current-tests.log`). This includes exact six-history/two-batch replay, unchanged original proposal/source projections,30 selected identities and420 source family slots, direct CAT supplemental columns and independent perimeter CFO arithmetic. All three unchanged completed peer package CLI replays pass once (`/tmp/six-company-completed-peer-replays.log`; legacy success banners name original pilot periods, but entire current JSON is compared). No full-suite/corpus or SEC run. Compileall, affected links/references and diff checks pass; staged diff is checked before commit.
+
+The first focused approval check rejected a stale generated CAT view; whole-file exact replacement restored the actual computed checklist without changing financial values. Initial Financial Products CFO fixture entries were corrected against the retained supplemental source tables (1,420/1,517/1,106/1,445/1,074), not derived by subtraction or changed to fit a resolver. Final equality and source assertions are preserved.
+
+Stop after this approval implementation. No new company, acquisition, research queue, Phase2 or automatic resolution of CAT gaps.
+
+## Historical review proposal snapshot — preserved
+
+Final lightweight checks: compileall and diff checks pass;1,028 affected local
+links and2,553 current source/selection/audit references resolve.48 unique
+approvals cover30 selected annuals;350 effective family slots for the five
+completed companies plus140 CAT approved-perimeter slots (130 satisfied/10
+unresolved), with elimination data excluded from completeness scoring. Source
+inventory remains420 slots; CAT's two-perimeter assessment is not two issuers.
+CLI replay confirmations, including corrected active/inactive presentation, are
+in `/tmp/six-company-final-cli-replays.log`. Frozen policies/outputs, source bodies,
+original pilot bytes and MSFT/AAPL/Alphabet entire packages remain unchanged.
+
+The paragraphs/tables below are the original pre-approval review, not current
+instructions or acceptance statuses.
+
 **All25 decisions below are proposed and inactive.** [Machine decision table](company-data-preparation/trillion-review-batch.json). Scope15 exact selected annuals/210 family slots. No new acquisition, automatic acceptance, company completion, frozen support reclassification or Phase2 authorization. COST/CAT/KO proposals remain inactive and unchanged.
 
 ## Coverage and source-supported schedules

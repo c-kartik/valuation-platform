@@ -159,12 +159,17 @@ class TrillionReviewBatchTests(unittest.TestCase):
 
     def test_revision_binding_and_all_prior_package_bytes_unchanged(self):
         for package in self.packages.values():
-            value=deepcopy(package);revision=value.pop('review_revision');self.assertEqual(p.digest(p.relevant(value)),revision)
+            value=deepcopy(package);value.pop('history_approval',None);value.pop('current_history',None);revision=value.pop('review_revision');self.assertEqual(p.digest(p.relevant(value)),revision)
             value['periods'][0]['facts']['cfo']['value']='1';self.assertNotEqual(p.digest(p.relevant(value)),revision)
         names=[f'docs/company-data-preparation/{t}-analyst-input-package.json' for t in ('msft','aapl','googl','cost','cat','ko')]
         names+=['docs/company-data-preparation/standard-review-batch.json']
         for name in names:
-            self.assertEqual((ROOT/name).read_bytes(),subprocess.check_output(['git','show',p.BASELINE+':'+name],cwd=ROOT),name)
+            original=subprocess.check_output(['git','show',p.BASELINE+':'+name],cwd=ROOT)
+            current=json.loads((ROOT/name).read_text())
+            # Only additive approved views/audits may differ; original proposal
+            # snapshots remain exact, not replaced by newly accepted numbers.
+            for key in ('history_approval','current_history','approval_activation'):current.pop(key,None)
+            self.assertEqual(json.dumps(current,sort_keys=True,indent=2).encode()+b'\n',original,name)
         diff=subprocess.check_output(['git','diff','--name-only',p.BASELINE,'--','src','docs/evidence','docs/universe','tests/fixtures'],cwd=ROOT,text=True)
         self.assertEqual(diff,'')
 

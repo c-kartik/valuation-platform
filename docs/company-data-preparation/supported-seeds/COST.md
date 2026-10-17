@@ -1,5 +1,31 @@
 # COST — supplemental supported-seed preparation note
 
+## Current — user-approved effective five-year historical view
+
+[COST authoritative schedule](../COST-analyst-input-package.md) /
+[effective JSON](../cost-analyst-input-package.json), FY2022–FY2026.
+All five exact selected annuals satisfy14/14 under the approved historical perimeter; company completed only within that scope. Proxies/omission assumptions are not complete source expense D&A, debt or reinvestment, financial sufficiency or Phase2 readiness.
+
+Original conflict/treatment rationale and alternatives are preserved in the prior
+review below. The user explicitly approves the batch recommendations; revision-bound
+sequence1 audit at `2026-10-17T18:17:43.456728+00:00` records exact source/review/proposal
+identity, authorization and rationale. Actual selections are in `current_history`;
+original pending flags, source nulls and proposals remain historical snapshots.
+Relevant source/candidate/scope/precision/period changes reject stale acceptance.
+
+Accepted finance-amortization non-overlap produces limited D&A2,028/2,246/2,334/2,528/2,780; no fresh source proof of overlap absence. Mixed deferred/impairment rows stay mixed, no pure component/zero. Gross expense proxy once and named financing retain their individual source precision.
+
+Known restrictions, claims, source unknowns and unbounded potential omissions remain
+visible. No immateriality/zero inference, complete NWC prerequisite, extra movement
+deduction or separate CFO residual. Reported cash movements and independent CFO
+proofs support the approved historical path, not a future formula or financial
+readiness certificate. [Approval/validation results](../../standard-review-batch-results.md).
+Focused audit/selection/source/perimeter/serialization/staleness tests and package
+replays preserve original sources, policies, prior approvals, completed peers and
+frozen/pilot artifacts. No SEC/full-suite/corpus run; stop after approval integration.
+
+## Historical preparation checkpoints — preserved
+
 ## Current company-wide review — all new assumptions pending
 
 [COST five-year schedule/matrix](../COST-analyst-input-package.md) and

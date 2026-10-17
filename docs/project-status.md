@@ -1,5 +1,45 @@
 # Project Status
 
+## Current — six-company approvals implemented; eight scoped histories complete
+
+Explicit user approval activates all23 standard-batch and25 trillion-batch
+recommendations through revision-bound company audits and separate effective
+`current_history` views. Original proposals/source nulls/flags remain historical;
+the active view, not an edited reported fact, selects the approved values.
+[Standard results](standard-review-batch-results.md) /
+[trillion results](trillion-review-batch-results.md) and six authoritative schedules
+record sources, assumptions, precision, alternatives, actual UTC authorization
+records and stale-content rejection. No acquisition or generic financial policy.
+
+COST, KO, NVDA, AMZN and META each satisfy five selected years×14 families within
+their approved historical perimeters. COST's finance-amortization non-overlap is
+an accepted assumption. NVDA combined PP&E/intangible proxy includes exact extension
+years without supplying pure PP&E. AMZN selects narrow D&A and2021 expanded
+financing81,427 including the later-source-bound318; broad D&A rejection persists.
+META independent display checks coexist with three original parser PARTIALs.
+KO named financing stays45,492 in2025, with held-sale borrowing1,435 separately
+visible; conditional46,927 is not selected or silently combined.
+
+CAT's industrial and Financial Products supplemental perimeters are active,
+each13/14 in all five years. Consolidated observations remain descriptive and
+direct consolidating adjustments are support, not a standalone company. Exact
+essential gap: perimeter SBC expense allocation. Consolidated expense cannot
+fill it. CAT-FIN's approved named-funding/no-unidentified-adjustment treatment
+is active; unallocated lease detail remains a supporting unknown, not a demand
+for complete-debt proof. Named funding,
+tax/cash/operating inputs and independently reconciled perimeter CFO are active;
+CAT-SBC is approved but its effective perimeter number remains blocked. No
+standalone subtraction, funding/asset mixing, support reclassification or segment
+valuation. CAT is not completed; continue no further batch automatically.
+
+Counts:42 broadly evidence-assessed;9 company packages = **8 completed scoped
+histories** (MSFT/AAPL/Alphabet/COST/KO/NVDA/AMZN/META) + **1 approved partial CAT**;
+33 assessment-only. Original five-year deficits, source unknowns, financial
+blockers and frozen/pilot outputs persist. Scoped completion does not certify
+complete economic balances, financial sufficiency, whole-universe completion,
+Phase1 closure or Phase2 readiness. Validation below is historical unless the
+current approval results sections explicitly identify it as current.
+
 ## Current — NVDA/AMZN/META consolidated review, proposals inactive
 
 [ONE decision/exception sheet](trillion-review-batch-results.md) and

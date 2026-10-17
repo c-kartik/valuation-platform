@@ -1,5 +1,57 @@
 # AMZN — consolidated five-year analyst-input review
 
+## Authoritative current five-year schedule — user-approved historical perimeter
+
+**Approved: AMZN-CF, AMZN-SBC, AMZN-CASH, AMZN-CLAIMS, AMZN-SHARES, AMZN-DA, AMZN-INV, AMZN-TAX, AMZN-FIN.** [Effective JSON](amzn-analyst-input-package.json) `/current_history` is active. Original `/periods`, proposals and pending flags remain historical snapshots, not current approval status.
+
+Audit sequence1 at `2026-10-17T18:17:50.586766+00:00`, SHA256 `977eeb9298bcbb65c98ecb1a096ba6e5655b200d4b3704e126c732d43f7e2cfc`, binds source commit `9bb110cb208ce3abcac0365c4ecf4820c498d60d`, exact source/review/proposal revisions, five identities, user authorization and rationale in `/history_approval`. Source/candidate/period/scope/precision changes reject stale acceptance. Original nulls, alternatives, rejected findings and prior history are preserved.
+
+FY2021 expanded financing **81,427** is active, not81,109. The318 working facility is explicitly2021-end in the selected FY2022 comparative, with actual later provenance retained. Narrow D&A23,421/25,528/30,931/32,905/42,677 is active; all five prior broad-CFO-D&A negative reviews and complete expense-D&A nulls remain. Content/ROU exclusions, cash/noncash equipment, facility financing, rounded alternatives, tax denominator restrictions and2022 share split remain explicit.
+
+All monetary schedules below are **USD millions**. Exact raw units/signs, source decimals/precision variants and operand precision are retained at every selected source reference; arithmetic never improves precision. Sources/receipt URLs, digests and authoritative dates remain in the exact-source section below and JSON.
+
+**No** financial-sufficiency certification, complete debt/reinvestment/expense disclosure, Phase1 closure or Phase2 authority. Approved no-additional-adjustment assumptions knowingly omit potentially undisclosed claims/borrowing of unbounded size; not reported zero or immateriality. Movements already in independently reconciled CFO are supporting detail, never additional deductions. Complete reconstructed NWC/book delta is not required; supporting NWC/source history persists.
+
+**Five years each14/14 (70/70): completed for the approved historical-input perimeter only.**
+
+|Selected input / operation|2021|2022|2023|2024|2025|
+|---|---:|---:|---:|---:|---:|
+|Revenue|469,822|513,983|574,785|637,959|716,924|
+|Operating profit / EBIT, stated scope|24,879|12,248|36,852|68,593|79,975|
+|Accepted limited D&A proxy|23,421|25,528|30,931|32,905|42,677|
+|Cash investment, stated scope|-61,053|-63,645|-52,729|-82,999|-131,819|
+|Independently reconciled reported CFO|46,327|46,752|84,946|115,877|139,514|
+|Historical tax provision|4,791|-3,217|7,120|9,265|19,087|
+|Historical pretax, original scope|38,151|-5,936|37,557|68,614|97,311|
+|Current financial balances, not excess cash|96,049|70,026|86,780|101,202|123,029|
+|Named borrowing/financing, not complete debt|81,427|100,898|85,935|75,805|89,295|
+|SBC expense proxy once|12,757|19,621|24,023|22,011|19,467|
+|Cash taxes, source net/gross role|-3,688|-6,035|-11,179|-12,308|-8,295|
+|Existing14-family checklist|14/14|14/14|14/14|14/14|14/14|
+
+|Family|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|revenue|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|ebit|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|depreciation_amortization|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_capex|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cash_flow_working_capital_movements|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|deferred_taxes|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|stock_based_compensation|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|unclassified_cfo_reconciliation_residual|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cfo|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_tax_context|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_investment_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|debt_lease_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|other_equity_bridge_claims_assets|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|point_in_time_shares|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+
+Current inputs preserve separately named deferred taxes versus mixed reconciliation rows, no separately computed residual (null, not zero), source SBC expense/add-back differences, historical tax roles without future-rate approval, cash/investment restrictions and claims, operating-service/finance-asset classifications, actual share dates/classes/EPS/awards and all comparability limitations. Current JSON contains source-reference selections, approved assumptions and the complete14-family checklist. Unknown complete expense D&A, borrowing, reserves/restrictions and investment coverage remain unknown despite scoped completion.
+
+Validation/current dispositions: [standard batch](../standard-review-batch-results.md) / [trillion batch](../trillion-review-batch-results.md). All earlier review text below is historical, not an instruction to seek the same approval again.
+
+## Historical proposed review and source schedule — preserved
+
 **PROPOSED ONLY.** No new user acceptance, runtime integration or company-completion claim. [Machine companion](amzn-analyst-input-package.json) and the [ONE consolidated approval/exception sheet](../trillion-review-batch-results.md) retain reported facts, calculations, original policy dispositions, alternatives, unknowns and inactive judgments separately. Prior MSFT/AAPL/Alphabet approvals do not authorize these proposals.
 
 Recommended historical perimeter: consolidated retail/subscription/AWS history, not organic cash or a financial-services carve-out. Existing approvals for gross equipment cash remain within their curated accessions/scopes; the new judgments below are inactive.

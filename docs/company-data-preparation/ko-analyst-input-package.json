@@ -1,6 +1,3574 @@
 {
   "analyst_complete": false,
   "approval_table_reference": "docs/company-data-preparation/standard-review-batch.json#/decisions",
+  "current_history": {
+    "active_decisions": [
+      {
+        "accepted": true,
+        "decision_id": "KO-CF",
+        "status": "ACTIVE"
+      },
+      {
+        "accepted": true,
+        "decision_id": "KO-DA",
+        "status": "ACTIVE"
+      },
+      {
+        "accepted": true,
+        "decision_id": "KO-SBC",
+        "status": "ACTIVE"
+      },
+      {
+        "accepted": true,
+        "decision_id": "KO-CASH",
+        "status": "ACTIVE"
+      },
+      {
+        "accepted": true,
+        "decision_id": "KO-FIN",
+        "status": "ACTIVE"
+      },
+      {
+        "accepted": true,
+        "decision_id": "KO-CLAIMS",
+        "status": "ACTIVE"
+      },
+      {
+        "accepted": true,
+        "decision_id": "KO-SHARES",
+        "status": "ACTIVE"
+      }
+    ],
+    "approval_sha256": "f41c4963c9ceb4101077e645bbed71f92efe0923493096ea2009a1e88ea157cc",
+    "authoritative_current_view": true,
+    "company_completed_for_approved_historical_perimeter": true,
+    "family_slots": 70,
+    "historical_proposal_snapshot": "/periods",
+    "new_assumptions_active": true,
+    "passed_family_slots": 70,
+    "periods": [
+      {
+        "accepted_limitations_reference": "/history_approval/decisions",
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/revenue",
+            "field": "revenue",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/ebit",
+            "field": "ebit",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/depreciation_amortization",
+            "field": "depreciation_amortization",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/cash_capex",
+            "field": "cash_capex",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/reported_cash_flow_working_capital_movements",
+            "field": "reported_cash_flow_working_capital_movements",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/deferred_taxes",
+            "field": "deferred_taxes",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/stock_based_compensation",
+            "field": "stock_based_compensation",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/unclassified_cfo_reconciliation_residual",
+            "field": "unclassified_cfo_reconciliation_residual",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/reported_cfo",
+            "field": "reported_cfo",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/reported_tax_context",
+            "field": "reported_tax_context",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/cash_investment_components",
+            "field": "cash_investment_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/debt_lease_components",
+            "field": "debt_lease_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/other_equity_bridge_claims_assets",
+            "field": "other_equity_bridge_claims_assets",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/0/inputs/point_in_time_shares",
+            "field": "point_in_time_shares",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          }
+        ],
+        "complete_debt": false,
+        "complete_expense_basis_da": null,
+        "complete_reinvestment": false,
+        "identity": {
+          "accession": "0000021344-22-000009",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "1367000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": -1,
+            "source_origin": "reported",
+            "source_reference": "/periods/0/facts/cash_capex",
+            "unit": "USD",
+            "value": "-1367000000"
+          },
+          "cash_investment_components": {
+            "additional_candidates_reference": "/periods/0/passages",
+            "approval_reference": "/history_approval",
+            "operating_reserve": null,
+            "restrictions_and_other_holdings_reference": "/periods/0/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "10926",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "gross_current_financial",
+              "label": "gross_current_financial",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "cash",
+                "other_current_investments"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Reported current cash plus other short-term investments; restrictions/held-sale/strategic excluded",
+              "source_dates": [
+                {
+                  "annual_end": "2021-12-31",
+                  "annual_start": null,
+                  "as_of": "2021-12-31",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2021-12-31",
+                  "annual_start": null,
+                  "as_of": "2021-12-31",
+                  "operand": "other_current_investments"
+                }
+              ],
+              "source_reference": "/periods/0/calculations/0",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "10926000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "approval_reference": "/history_approval",
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "expanded_alternative_selected": false,
+            "finance_lease_treatment": "asset_financing",
+            "known_separate_held_sale": null,
+            "known_separate_held_sale_treatment": "Visible recognized separate schedule; must not be silently omitted or added twice. Conditional expanded financing not selected.",
+            "no_additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "Approved omission of unquantified additional borrowing, not reported zero or immateriality; amount unbounded",
+              "value": null
+            },
+            "operating_lease_treatment": "service_cost",
+            "other_population_reference": "/periods/0/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "42761",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "debt_current",
+                "debt_long",
+                "short_borrowing"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Named reported term carrying + short borrowing; tag name does not certify lease scope. CP not added again to parent; known held-sale borrowing separate",
+              "source_dates": [
+                {
+                  "annual_end": "2021-12-31",
+                  "annual_start": null,
+                  "as_of": "2021-12-31",
+                  "operand": "debt_current"
+                },
+                {
+                  "annual_end": "2021-12-31",
+                  "annual_start": null,
+                  "as_of": "2021-12-31",
+                  "operand": "debt_long"
+                },
+                {
+                  "annual_end": "2021-12-31",
+                  "annual_start": null,
+                  "as_of": "2021-12-31",
+                  "operand": "short_borrowing"
+                }
+              ],
+              "source_reference": "/periods/0/calculations/1",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "42761000000"
+            }
+          },
+          "deferred_taxes": {
+            "approval_reference": "/history_approval",
+            "displayed_rows": [
+              {
+                "caption": "Deferred income taxes",
+                "competing_occurrences": [],
+                "concept": "DeferredIncomeTaxExpenseBenefit",
+                "context_id": "ibc141d791dcd4352a4a01df1e9cdcb60_D20210101-20211231",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                "nested_parent": null,
+                "ordinal": 1112,
+                "precision": "-6",
+                "raw": "894000000",
+                "role": "displayed_adjustment",
+                "row": 6,
+                "scale": 1,
+                "sign": 1,
+                "sources": [
+                  {
+                    "accession": "0000021344-22-000009",
+                    "body_reference": "da3240cf2f3043e14c479d8f11375e00afc58f6326756d04ef3295698f2acf4c",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "ibc141d791dcd4352a4a01df1e9cdcb60_D20210101-20211231",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2021-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                    "ordinal": 1112,
+                    "precision": "-6",
+                    "raw_value": "894000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:58.000552+00:00",
+                    "source_id": "statement-instance:1112",
+                    "start": "2021-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134422000009/ko-20211231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-22-000009",
+                    "body_reference": "da3240cf2f3043e14c479d8f11375e00afc58f6326756d04ef3295698f2acf4c",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "ibc141d791dcd4352a4a01df1e9cdcb60_D20210101-20211231",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2021-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                    "ordinal": 2665,
+                    "precision": "-6",
+                    "raw_value": "894000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:58.000552+00:00",
+                    "source_id": "statement-instance:2665",
+                    "start": "2021-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134422000009/ko-20211231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-22-000009",
+                    "body_reference": "e8a4909419a6193ad714232455e39c112af1c42286667ce78fb5a501c55d9fa6",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2021-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":1,\"cell_name\":\"us-gaap:DeferredIncomeTaxExpenseBenefit\",\"context_id\":\"ibc141d791dcd4352a4a01df1e9cdcb60_D20210101-20211231\",\"display\":\"894\",\"inline_sign\":null,\"row\":6,\"scale\":1000000,\"table\":29}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "894000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:38.663149+00:00",
+                    "source_id": "statement-primary:29:6:DeferredIncomeTaxExpenseBenefit",
+                    "start": "2021-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134422000009/ko-20211231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 29,
+                "value": "894000000"
+              }
+            ],
+            "note_observation": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "894000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/0/facts/deferred_tax",
+              "unit": "USD",
+              "value": "894000000"
+            },
+            "other_observation": null,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "separate_pure_operation": "REPORTED_DISPLAYED_POPULATION",
+            "source_reference": "/periods/0/cfo_reconciliation",
+            "value_if_unavailable": null
+          },
+          "depreciation_amortization": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "1452000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/0/facts/da",
+            "unit": "USD",
+            "value": "1452000000"
+          },
+          "ebit": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "10308000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/0/facts/ebit",
+            "unit": "USD",
+            "value": "10308000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "No additional unidentified preferred/NCI/pension adjustment selected; potentially omitted claim unbounded, source nulls unchanged",
+              "value": null
+            },
+            "additional_population_reference": "/periods/0/passages",
+            "approval_reference": "/history_approval",
+            "known_population_reference": "/periods/0/facts",
+            "pure_nol_economic_operation": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "point_in_time_shares": {
+            "approval_reference": "/history_approval",
+            "automatic_aggregation_or_dilution": false,
+            "other_dated_classes_eps_awards_reference": "/periods/0/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected_populations": {
+              "shares:CommonStockSharesOutstanding:2021-12-31:e7683adf": {
+                "as_of": "2021-12-31",
+                "origin": "reported",
+                "precision": "-6",
+                "precision_variants": [
+                  "-6"
+                ],
+                "raw_value": "4325000000",
+                "scope": "Actual dated/classed shares or awards; no aggregation/dilution",
+                "sign_multiplier": 1,
+                "source_origin": "reported",
+                "source_reference": "/periods/0/facts/shares:CommonStockSharesOutstanding:2021-12-31:e7683adf",
+                "unit": "shares",
+                "value": "4325000000"
+              }
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "approval_reference": "/history_approval",
+            "book_delta_nwc": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "rows": [
+              {
+                "caption": "Net change in operating assets and liabilities",
+                "competing_occurrences": [],
+                "concept": "IncreaseDecreaseInOperatingCapital",
+                "context_id": "ibc141d791dcd4352a4a01df1e9cdcb60_D20210101-20211231",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                "nested_parent": null,
+                "ordinal": 1130,
+                "precision": "-6",
+                "raw": "-1325000000",
+                "role": "displayed_movement",
+                "row": 12,
+                "scale": 1,
+                "sign": -1,
+                "sources": [
+                  {
+                    "accession": "0000021344-22-000009",
+                    "body_reference": "da3240cf2f3043e14c479d8f11375e00afc58f6326756d04ef3295698f2acf4c",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "ibc141d791dcd4352a4a01df1e9cdcb60_D20210101-20211231",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2021-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                    "ordinal": 1130,
+                    "precision": "-6",
+                    "raw_value": "-1325000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:58.000552+00:00",
+                    "source_id": "statement-instance:1130",
+                    "start": "2021-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134422000009/ko-20211231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-22-000009",
+                    "body_reference": "da3240cf2f3043e14c479d8f11375e00afc58f6326756d04ef3295698f2acf4c",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "ibc141d791dcd4352a4a01df1e9cdcb60_D20210101-20211231",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2021-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2021-01-31",
+                    "ordinal": 3974,
+                    "precision": "-6",
+                    "raw_value": "-1325000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:58.000552+00:00",
+                    "source_id": "statement-instance:3974",
+                    "start": "2021-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134422000009/ko-20211231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-22-000009",
+                    "body_reference": "e8a4909419a6193ad714232455e39c112af1c42286667ce78fb5a501c55d9fa6",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2021-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":-1,\"cell_name\":\"us-gaap:IncreaseDecreaseInOperatingCapital\",\"context_id\":\"ibc141d791dcd4352a4a01df1e9cdcb60_D20210101-20211231\",\"display\":\"1,325\",\"inline_sign\":\"-\",\"row\":12,\"scale\":1000000,\"table\":29}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "-1325000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:38.663149+00:00",
+                    "source_id": "statement-primary:29:12:IncreaseDecreaseInOperatingCapital",
+                    "start": "2021-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134422000009/ko-20211231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 29,
+                "value": "1325000000"
+              }
+            ],
+            "source_reference": "/periods/0/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "12625000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/0/facts/cfo",
+            "unit": "USD",
+            "value": "12625000000"
+          },
+          "reported_tax_context": {
+            "approval_reference": "/history_approval",
+            "cash_taxes": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "2168000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": -1,
+              "source_origin": "reported",
+              "source_reference": "/periods/0/facts/cash_tax_gross",
+              "unit": "USD",
+              "value": "-2168000000"
+            },
+            "future_rate_approved": false,
+            "generic_denominator_status": "Existing reported scope",
+            "pretax": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "12425000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/0/facts/pretax",
+              "unit": "USD",
+              "value": "12425000000"
+            },
+            "provision": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "2621000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/0/facts/tax",
+              "unit": "USD",
+              "value": "2621000000"
+            },
+            "reported_etr": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "3",
+              "precision_variants": [
+                "3"
+              ],
+              "raw_value": "0.211",
+              "scope": "Issuer reported accounting ETR, not forecast rate",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/0/facts/reported_etr",
+              "unit": "pure",
+              "value": "0.211"
+            },
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "revenue": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "38655000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/0/facts/revenue",
+            "unit": "USD",
+            "value": "38655000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "337000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/0/facts/sbc_addback",
+              "unit": "USD",
+              "value": "337000000"
+            },
+            "approval_reference": "/history_approval",
+            "count_once": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "as_of": null,
+              "origin": "proxy",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "337000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/0/facts/sbc_expense",
+              "unit": "USD",
+              "value": "337000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "approval_reference": "/history_approval",
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "value": null
+          }
+        },
+        "original_supporting_unknowns": {
+          "additional_borrowing": null,
+          "complete_expense_da": null,
+          "complete_reinvestment": null,
+          "operating_reserve": null,
+          "unknown_cash_restrictions": null
+        },
+        "passed_family_slots": 14,
+        "remaining_essential_inputs": [],
+        "source_reference": "/periods/0"
+      },
+      {
+        "accepted_limitations_reference": "/history_approval/decisions",
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/revenue",
+            "field": "revenue",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/ebit",
+            "field": "ebit",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/depreciation_amortization",
+            "field": "depreciation_amortization",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/cash_capex",
+            "field": "cash_capex",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/reported_cash_flow_working_capital_movements",
+            "field": "reported_cash_flow_working_capital_movements",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/deferred_taxes",
+            "field": "deferred_taxes",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/stock_based_compensation",
+            "field": "stock_based_compensation",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/unclassified_cfo_reconciliation_residual",
+            "field": "unclassified_cfo_reconciliation_residual",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/reported_cfo",
+            "field": "reported_cfo",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/reported_tax_context",
+            "field": "reported_tax_context",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/cash_investment_components",
+            "field": "cash_investment_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/debt_lease_components",
+            "field": "debt_lease_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/other_equity_bridge_claims_assets",
+            "field": "other_equity_bridge_claims_assets",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/1/inputs/point_in_time_shares",
+            "field": "point_in_time_shares",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          }
+        ],
+        "complete_debt": false,
+        "complete_expense_basis_da": null,
+        "complete_reinvestment": false,
+        "identity": {
+          "accession": "0000021344-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "1484000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": -1,
+            "source_origin": "reported",
+            "source_reference": "/periods/1/facts/cash_capex",
+            "unit": "USD",
+            "value": "-1484000000"
+          },
+          "cash_investment_components": {
+            "additional_candidates_reference": "/periods/1/passages",
+            "approval_reference": "/history_approval",
+            "operating_reserve": null,
+            "restrictions_and_other_holdings_reference": "/periods/1/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "10562",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "gross_current_financial",
+              "label": "gross_current_financial",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "cash",
+                "other_current_investments"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Reported current cash plus other short-term investments; restrictions/held-sale/strategic excluded",
+              "source_dates": [
+                {
+                  "annual_end": "2022-12-31",
+                  "annual_start": null,
+                  "as_of": "2022-12-31",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2022-12-31",
+                  "annual_start": null,
+                  "as_of": "2022-12-31",
+                  "operand": "other_current_investments"
+                }
+              ],
+              "source_reference": "/periods/1/calculations/0",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "10562000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "approval_reference": "/history_approval",
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "expanded_alternative_selected": false,
+            "finance_lease_treatment": "asset_financing",
+            "known_separate_held_sale": null,
+            "known_separate_held_sale_treatment": "Visible recognized separate schedule; must not be silently omitted or added twice. Conditional expanded financing not selected.",
+            "no_additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "Approved omission of unquantified additional borrowing, not reported zero or immateriality; amount unbounded",
+              "value": null
+            },
+            "operating_lease_treatment": "service_cost",
+            "other_population_reference": "/periods/1/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "39149",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "debt_current",
+                "debt_long",
+                "short_borrowing"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Named reported term carrying + short borrowing; tag name does not certify lease scope. CP not added again to parent; known held-sale borrowing separate",
+              "source_dates": [
+                {
+                  "annual_end": "2022-12-31",
+                  "annual_start": null,
+                  "as_of": "2022-12-31",
+                  "operand": "debt_current"
+                },
+                {
+                  "annual_end": "2022-12-31",
+                  "annual_start": null,
+                  "as_of": "2022-12-31",
+                  "operand": "debt_long"
+                },
+                {
+                  "annual_end": "2022-12-31",
+                  "annual_start": null,
+                  "as_of": "2022-12-31",
+                  "operand": "short_borrowing"
+                }
+              ],
+              "source_reference": "/periods/1/calculations/1",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "39149000000"
+            }
+          },
+          "deferred_taxes": {
+            "approval_reference": "/history_approval",
+            "displayed_rows": [
+              {
+                "caption": "Deferred income taxes",
+                "competing_occurrences": [],
+                "concept": "DeferredIncomeTaxExpenseBenefit",
+                "context_id": "i1adaa1c3b19d45558888e91b5e5f4870_D20220101-20221231",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2022",
+                "nested_parent": null,
+                "ordinal": 1108,
+                "precision": "-6",
+                "raw": "-122000000",
+                "role": "displayed_adjustment",
+                "row": 6,
+                "scale": 1,
+                "sign": 1,
+                "sources": [
+                  {
+                    "accession": "0000021344-23-000011",
+                    "body_reference": "692a7b7e1f4b25d26a77a98ba0b0ebe4e426ca1a547d0aaeb9ff741e84155790",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "i1adaa1c3b19d45558888e91b5e5f4870_D20220101-20221231",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2022-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2022",
+                    "ordinal": 1108,
+                    "precision": "-6",
+                    "raw_value": "-122000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:59.011293+00:00",
+                    "source_id": "statement-instance:1108",
+                    "start": "2022-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134423000011/ko-20221231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-23-000011",
+                    "body_reference": "692a7b7e1f4b25d26a77a98ba0b0ebe4e426ca1a547d0aaeb9ff741e84155790",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "i1adaa1c3b19d45558888e91b5e5f4870_D20220101-20221231",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2022-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2022",
+                    "ordinal": 2650,
+                    "precision": "-6",
+                    "raw_value": "-122000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:59.011293+00:00",
+                    "source_id": "statement-instance:2650",
+                    "start": "2022-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134423000011/ko-20221231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-23-000011",
+                    "body_reference": "800589cb9959870dafcd4aeaba7a1fbc65ff1ccee55ea044bcd32dad0e253990",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2022-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":1,\"cell_name\":\"us-gaap:DeferredIncomeTaxExpenseBenefit\",\"context_id\":\"i1adaa1c3b19d45558888e91b5e5f4870_D20220101-20221231\",\"display\":\"(122)\",\"inline_sign\":\"-\",\"row\":6,\"scale\":1000000,\"table\":29}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "-122000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:39.535176+00:00",
+                    "source_id": "statement-primary:29:6:DeferredIncomeTaxExpenseBenefit",
+                    "start": "2022-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134423000011/ko-20221231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 29,
+                "value": "-122000000"
+              }
+            ],
+            "note_observation": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "-122000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/1/facts/deferred_tax",
+              "unit": "USD",
+              "value": "-122000000"
+            },
+            "other_observation": null,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "separate_pure_operation": "REPORTED_DISPLAYED_POPULATION",
+            "source_reference": "/periods/1/cfo_reconciliation",
+            "value_if_unavailable": null
+          },
+          "depreciation_amortization": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "1260000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/1/facts/da",
+            "unit": "USD",
+            "value": "1260000000"
+          },
+          "ebit": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "10909000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/1/facts/ebit",
+            "unit": "USD",
+            "value": "10909000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "No additional unidentified preferred/NCI/pension adjustment selected; potentially omitted claim unbounded, source nulls unchanged",
+              "value": null
+            },
+            "additional_population_reference": "/periods/1/passages",
+            "approval_reference": "/history_approval",
+            "known_population_reference": "/periods/1/facts",
+            "pure_nol_economic_operation": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "point_in_time_shares": {
+            "approval_reference": "/history_approval",
+            "automatic_aggregation_or_dilution": false,
+            "other_dated_classes_eps_awards_reference": "/periods/1/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected_populations": {
+              "shares:CommonStockSharesOutstanding:2022-12-31:e7683adf": {
+                "as_of": "2022-12-31",
+                "origin": "reported",
+                "precision": "-6",
+                "precision_variants": [
+                  "-6"
+                ],
+                "raw_value": "4328000000",
+                "scope": "Actual dated/classed shares or awards; no aggregation/dilution",
+                "sign_multiplier": 1,
+                "source_origin": "reported",
+                "source_reference": "/periods/1/facts/shares:CommonStockSharesOutstanding:2022-12-31:e7683adf",
+                "unit": "shares",
+                "value": "4328000000"
+              }
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "approval_reference": "/history_approval",
+            "book_delta_nwc": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "rows": [
+              {
+                "caption": "Net change in operating assets and liabilities",
+                "competing_occurrences": [],
+                "concept": "IncreaseDecreaseInOperatingCapital",
+                "context_id": "i1adaa1c3b19d45558888e91b5e5f4870_D20220101-20221231",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2022",
+                "nested_parent": null,
+                "ordinal": 1126,
+                "precision": "-6",
+                "raw": "605000000",
+                "role": "displayed_movement",
+                "row": 12,
+                "scale": 1,
+                "sign": -1,
+                "sources": [
+                  {
+                    "accession": "0000021344-23-000011",
+                    "body_reference": "692a7b7e1f4b25d26a77a98ba0b0ebe4e426ca1a547d0aaeb9ff741e84155790",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "i1adaa1c3b19d45558888e91b5e5f4870_D20220101-20221231",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2022-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2022",
+                    "ordinal": 1126,
+                    "precision": "-6",
+                    "raw_value": "605000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:59.011293+00:00",
+                    "source_id": "statement-instance:1126",
+                    "start": "2022-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134423000011/ko-20221231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-23-000011",
+                    "body_reference": "692a7b7e1f4b25d26a77a98ba0b0ebe4e426ca1a547d0aaeb9ff741e84155790",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "i1adaa1c3b19d45558888e91b5e5f4870_D20220101-20221231",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2022-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2022",
+                    "ordinal": 3955,
+                    "precision": "-6",
+                    "raw_value": "605000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:59.011293+00:00",
+                    "source_id": "statement-instance:3955",
+                    "start": "2022-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134423000011/ko-20221231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-23-000011",
+                    "body_reference": "800589cb9959870dafcd4aeaba7a1fbc65ff1ccee55ea044bcd32dad0e253990",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2022-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":-1,\"cell_name\":\"us-gaap:IncreaseDecreaseInOperatingCapital\",\"context_id\":\"i1adaa1c3b19d45558888e91b5e5f4870_D20220101-20221231\",\"display\":\"(605)\",\"inline_sign\":null,\"row\":12,\"scale\":1000000,\"table\":29}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "605000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:39.535176+00:00",
+                    "source_id": "statement-primary:29:12:IncreaseDecreaseInOperatingCapital",
+                    "start": "2022-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134423000011/ko-20221231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 29,
+                "value": "-605000000"
+              }
+            ],
+            "source_reference": "/periods/1/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "11018000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/1/facts/cfo",
+            "unit": "USD",
+            "value": "11018000000"
+          },
+          "reported_tax_context": {
+            "approval_reference": "/history_approval",
+            "cash_taxes": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "2403000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": -1,
+              "source_origin": "reported",
+              "source_reference": "/periods/1/facts/cash_tax_gross",
+              "unit": "USD",
+              "value": "-2403000000"
+            },
+            "future_rate_approved": false,
+            "generic_denominator_status": "Existing reported scope",
+            "pretax": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "11686000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/1/facts/pretax",
+              "unit": "USD",
+              "value": "11686000000"
+            },
+            "provision": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "2115000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/1/facts/tax",
+              "unit": "USD",
+              "value": "2115000000"
+            },
+            "reported_etr": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "3",
+              "precision_variants": [
+                "3"
+              ],
+              "raw_value": "0.181",
+              "scope": "Issuer reported accounting ETR, not forecast rate",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/1/facts/reported_etr",
+              "unit": "pure",
+              "value": "0.181"
+            },
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "revenue": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "43004000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/1/facts/revenue",
+            "unit": "USD",
+            "value": "43004000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "356000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/1/facts/sbc_addback",
+              "unit": "USD",
+              "value": "356000000"
+            },
+            "approval_reference": "/history_approval",
+            "count_once": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "as_of": null,
+              "origin": "proxy",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "361000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/1/facts/sbc_expense",
+              "unit": "USD",
+              "value": "361000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "approval_reference": "/history_approval",
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "value": null
+          }
+        },
+        "original_supporting_unknowns": {
+          "additional_borrowing": null,
+          "complete_expense_da": null,
+          "complete_reinvestment": null,
+          "operating_reserve": null,
+          "unknown_cash_restrictions": null
+        },
+        "passed_family_slots": 14,
+        "remaining_essential_inputs": [],
+        "source_reference": "/periods/1"
+      },
+      {
+        "accepted_limitations_reference": "/history_approval/decisions",
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/revenue",
+            "field": "revenue",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/ebit",
+            "field": "ebit",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/depreciation_amortization",
+            "field": "depreciation_amortization",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/cash_capex",
+            "field": "cash_capex",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/reported_cash_flow_working_capital_movements",
+            "field": "reported_cash_flow_working_capital_movements",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/deferred_taxes",
+            "field": "deferred_taxes",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/stock_based_compensation",
+            "field": "stock_based_compensation",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/unclassified_cfo_reconciliation_residual",
+            "field": "unclassified_cfo_reconciliation_residual",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/reported_cfo",
+            "field": "reported_cfo",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/reported_tax_context",
+            "field": "reported_tax_context",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/cash_investment_components",
+            "field": "cash_investment_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/debt_lease_components",
+            "field": "debt_lease_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/other_equity_bridge_claims_assets",
+            "field": "other_equity_bridge_claims_assets",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/2/inputs/point_in_time_shares",
+            "field": "point_in_time_shares",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          }
+        ],
+        "complete_debt": false,
+        "complete_expense_basis_da": null,
+        "complete_reinvestment": false,
+        "identity": {
+          "accession": "0000021344-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "1852000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": -1,
+            "source_origin": "reported",
+            "source_reference": "/periods/2/facts/cash_capex",
+            "unit": "USD",
+            "value": "-1852000000"
+          },
+          "cash_investment_components": {
+            "additional_candidates_reference": "/periods/2/passages",
+            "approval_reference": "/history_approval",
+            "operating_reserve": null,
+            "restrictions_and_other_holdings_reference": "/periods/2/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "12363",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "gross_current_financial",
+              "label": "gross_current_financial",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "cash",
+                "other_current_investments"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Reported current cash plus other short-term investments; restrictions/held-sale/strategic excluded",
+              "source_dates": [
+                {
+                  "annual_end": "2023-12-31",
+                  "annual_start": null,
+                  "as_of": "2023-12-31",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2023-12-31",
+                  "annual_start": null,
+                  "as_of": "2023-12-31",
+                  "operand": "other_current_investments"
+                }
+              ],
+              "source_reference": "/periods/2/calculations/0",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "12363000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "approval_reference": "/history_approval",
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "expanded_alternative_selected": false,
+            "finance_lease_treatment": "asset_financing",
+            "known_separate_held_sale": null,
+            "known_separate_held_sale_treatment": "Visible recognized separate schedule; must not be silently omitted or added twice. Conditional expanded financing not selected.",
+            "no_additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "Approved omission of unquantified additional borrowing, not reported zero or immateriality; amount unbounded",
+              "value": null
+            },
+            "operating_lease_treatment": "service_cost",
+            "other_population_reference": "/periods/2/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "42064",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6",
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "debt_current",
+                "debt_long",
+                "cp",
+                "other_short_borrowing"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Named reported term carrying + short borrowing; tag name does not certify lease scope. CP not added again to parent; known held-sale borrowing separate",
+              "source_dates": [
+                {
+                  "annual_end": "2023-12-31",
+                  "annual_start": null,
+                  "as_of": "2023-12-31",
+                  "operand": "debt_current"
+                },
+                {
+                  "annual_end": "2023-12-31",
+                  "annual_start": null,
+                  "as_of": "2023-12-31",
+                  "operand": "debt_long"
+                },
+                {
+                  "annual_end": "2023-12-31",
+                  "annual_start": null,
+                  "as_of": "2023-12-31",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2023-12-31",
+                  "annual_start": null,
+                  "as_of": "2023-12-31",
+                  "operand": "other_short_borrowing"
+                }
+              ],
+              "source_reference": "/periods/2/calculations/1",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "42064000000"
+            }
+          },
+          "deferred_taxes": {
+            "approval_reference": "/history_approval",
+            "displayed_rows": [
+              {
+                "caption": "Deferred income taxes",
+                "competing_occurrences": [],
+                "concept": "DeferredIncomeTaxExpenseBenefit",
+                "context_id": "c-1",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2023",
+                "nested_parent": null,
+                "ordinal": 1083,
+                "precision": "-6",
+                "raw": "-2000000",
+                "role": "displayed_adjustment",
+                "row": 7,
+                "scale": 1,
+                "sign": 1,
+                "sources": [
+                  {
+                    "accession": "0000021344-24-000009",
+                    "body_reference": "90b8db4641f60b57d18fb4609989fa787c8cd66835029c1e5dd19044a5eb9cfb",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2023-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2023",
+                    "ordinal": 1083,
+                    "precision": "-6",
+                    "raw_value": "-2000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:59.968668+00:00",
+                    "source_id": "statement-instance:1083",
+                    "start": "2023-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134424000009/ko-20231231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-24-000009",
+                    "body_reference": "90b8db4641f60b57d18fb4609989fa787c8cd66835029c1e5dd19044a5eb9cfb",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2023-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2023",
+                    "ordinal": 2586,
+                    "precision": "-6",
+                    "raw_value": "-2000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:59.968668+00:00",
+                    "source_id": "statement-instance:2586",
+                    "start": "2023-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134424000009/ko-20231231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-24-000009",
+                    "body_reference": "4c61b460b56e48e1a09fc96dafa10edfdc2a843dd7f7d59ce43a0cdffa8d404b",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2023-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":1,\"cell_name\":\"us-gaap:DeferredIncomeTaxExpenseBenefit\",\"context_id\":\"c-1\",\"display\":\"(2)\",\"inline_sign\":\"-\",\"row\":7,\"scale\":1000000,\"table\":29}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "-2000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:40.303789+00:00",
+                    "source_id": "statement-primary:29:7:DeferredIncomeTaxExpenseBenefit",
+                    "start": "2023-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134424000009/ko-20231231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 29,
+                "value": "-2000000"
+              }
+            ],
+            "note_observation": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "-2000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/2/facts/deferred_tax",
+              "unit": "USD",
+              "value": "-2000000"
+            },
+            "other_observation": null,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "separate_pure_operation": "REPORTED_DISPLAYED_POPULATION",
+            "source_reference": "/periods/2/cfo_reconciliation",
+            "value_if_unavailable": null
+          },
+          "depreciation_amortization": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "1128000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/2/facts/da",
+            "unit": "USD",
+            "value": "1128000000"
+          },
+          "ebit": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "11311000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/2/facts/ebit",
+            "unit": "USD",
+            "value": "11311000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "No additional unidentified preferred/NCI/pension adjustment selected; potentially omitted claim unbounded, source nulls unchanged",
+              "value": null
+            },
+            "additional_population_reference": "/periods/2/passages",
+            "approval_reference": "/history_approval",
+            "known_population_reference": "/periods/2/facts",
+            "pure_nol_economic_operation": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "point_in_time_shares": {
+            "approval_reference": "/history_approval",
+            "automatic_aggregation_or_dilution": false,
+            "other_dated_classes_eps_awards_reference": "/periods/2/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected_populations": {
+              "shares:CommonStockSharesOutstanding:2023-12-31:e7683adf": {
+                "as_of": "2023-12-31",
+                "origin": "reported",
+                "precision": "-6",
+                "precision_variants": [
+                  "-6"
+                ],
+                "raw_value": "4308000000",
+                "scope": "Actual dated/classed shares or awards; no aggregation/dilution",
+                "sign_multiplier": 1,
+                "source_origin": "reported",
+                "source_reference": "/periods/2/facts/shares:CommonStockSharesOutstanding:2023-12-31:e7683adf",
+                "unit": "shares",
+                "value": "4308000000"
+              }
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "approval_reference": "/history_approval",
+            "book_delta_nwc": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "rows": [
+              {
+                "caption": "Net change in operating assets and liabilities",
+                "competing_occurrences": [],
+                "concept": "IncreaseDecreaseInOperatingCapital",
+                "context_id": "c-1",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2023",
+                "nested_parent": null,
+                "ordinal": 1101,
+                "precision": "-6",
+                "raw": "846000000",
+                "role": "displayed_movement",
+                "row": 13,
+                "scale": 1,
+                "sign": -1,
+                "sources": [
+                  {
+                    "accession": "0000021344-24-000009",
+                    "body_reference": "90b8db4641f60b57d18fb4609989fa787c8cd66835029c1e5dd19044a5eb9cfb",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2023-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2023",
+                    "ordinal": 1101,
+                    "precision": "-6",
+                    "raw_value": "846000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:59.968668+00:00",
+                    "source_id": "statement-instance:1101",
+                    "start": "2023-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134424000009/ko-20231231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-24-000009",
+                    "body_reference": "90b8db4641f60b57d18fb4609989fa787c8cd66835029c1e5dd19044a5eb9cfb",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2023-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2023",
+                    "ordinal": 3905,
+                    "precision": "-6",
+                    "raw_value": "846000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:42:59.968668+00:00",
+                    "source_id": "statement-instance:3905",
+                    "start": "2023-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134424000009/ko-20231231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-24-000009",
+                    "body_reference": "4c61b460b56e48e1a09fc96dafa10edfdc2a843dd7f7d59ce43a0cdffa8d404b",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2023-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":-1,\"cell_name\":\"us-gaap:IncreaseDecreaseInOperatingCapital\",\"context_id\":\"c-1\",\"display\":\"(846)\",\"inline_sign\":null,\"row\":13,\"scale\":1000000,\"table\":29}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "846000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:40.303789+00:00",
+                    "source_id": "statement-primary:29:13:IncreaseDecreaseInOperatingCapital",
+                    "start": "2023-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134424000009/ko-20231231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 29,
+                "value": "-846000000"
+              }
+            ],
+            "source_reference": "/periods/2/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "11599000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/2/facts/cfo",
+            "unit": "USD",
+            "value": "11599000000"
+          },
+          "reported_tax_context": {
+            "approval_reference": "/history_approval",
+            "cash_taxes": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "2580000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": -1,
+              "source_origin": "reported",
+              "source_reference": "/periods/2/facts/cash_tax_gross",
+              "unit": "USD",
+              "value": "-2580000000"
+            },
+            "future_rate_approved": false,
+            "generic_denominator_status": "Existing reported scope",
+            "pretax": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "12952000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/2/facts/pretax",
+              "unit": "USD",
+              "value": "12952000000"
+            },
+            "provision": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "2249000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/2/facts/tax",
+              "unit": "USD",
+              "value": "2249000000"
+            },
+            "reported_etr": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "3",
+              "precision_variants": [
+                "3"
+              ],
+              "raw_value": "0.174",
+              "scope": "Issuer reported accounting ETR, not forecast rate",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/2/facts/reported_etr",
+              "unit": "pure",
+              "value": "0.174"
+            },
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "revenue": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "45754000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/2/facts/revenue",
+            "unit": "USD",
+            "value": "45754000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "254000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/2/facts/sbc_addback",
+              "unit": "USD",
+              "value": "254000000"
+            },
+            "approval_reference": "/history_approval",
+            "count_once": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "as_of": null,
+              "origin": "proxy",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "251000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/2/facts/sbc_expense",
+              "unit": "USD",
+              "value": "251000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "approval_reference": "/history_approval",
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "value": null
+          }
+        },
+        "original_supporting_unknowns": {
+          "additional_borrowing": null,
+          "complete_expense_da": null,
+          "complete_reinvestment": null,
+          "operating_reserve": null,
+          "unknown_cash_restrictions": null
+        },
+        "passed_family_slots": 14,
+        "remaining_essential_inputs": [],
+        "source_reference": "/periods/2"
+      },
+      {
+        "accepted_limitations_reference": "/history_approval/decisions",
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/revenue",
+            "field": "revenue",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/ebit",
+            "field": "ebit",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/depreciation_amortization",
+            "field": "depreciation_amortization",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/cash_capex",
+            "field": "cash_capex",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/reported_cash_flow_working_capital_movements",
+            "field": "reported_cash_flow_working_capital_movements",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/deferred_taxes",
+            "field": "deferred_taxes",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/stock_based_compensation",
+            "field": "stock_based_compensation",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/unclassified_cfo_reconciliation_residual",
+            "field": "unclassified_cfo_reconciliation_residual",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/reported_cfo",
+            "field": "reported_cfo",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/reported_tax_context",
+            "field": "reported_tax_context",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/cash_investment_components",
+            "field": "cash_investment_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/debt_lease_components",
+            "field": "debt_lease_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/other_equity_bridge_claims_assets",
+            "field": "other_equity_bridge_claims_assets",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/3/inputs/point_in_time_shares",
+            "field": "point_in_time_shares",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          }
+        ],
+        "complete_debt": false,
+        "complete_expense_basis_da": null,
+        "complete_reinvestment": false,
+        "identity": {
+          "accession": "0000021344-25-000011",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "2064000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": -1,
+            "source_origin": "reported",
+            "source_reference": "/periods/3/facts/cash_capex",
+            "unit": "USD",
+            "value": "-2064000000"
+          },
+          "cash_investment_components": {
+            "additional_candidates_reference": "/periods/3/passages",
+            "approval_reference": "/history_approval",
+            "operating_reserve": null,
+            "restrictions_and_other_holdings_reference": "/periods/3/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "12848",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "gross_current_financial",
+              "label": "gross_current_financial",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "cash",
+                "other_current_investments"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Reported current cash plus other short-term investments; restrictions/held-sale/strategic excluded",
+              "source_dates": [
+                {
+                  "annual_end": "2024-12-31",
+                  "annual_start": null,
+                  "as_of": "2024-12-31",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2024-12-31",
+                  "annual_start": null,
+                  "as_of": "2024-12-31",
+                  "operand": "other_current_investments"
+                }
+              ],
+              "source_reference": "/periods/3/calculations/0",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "12848000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "approval_reference": "/history_approval",
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "expanded_alternative_selected": false,
+            "finance_lease_treatment": "asset_financing",
+            "known_separate_held_sale": null,
+            "known_separate_held_sale_treatment": "Visible recognized separate schedule; must not be silently omitted or added twice. Conditional expanded financing not selected.",
+            "no_additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "Approved omission of unquantified additional borrowing, not reported zero or immateriality; amount unbounded",
+              "value": null
+            },
+            "operating_lease_treatment": "service_cost",
+            "other_population_reference": "/periods/3/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "44522",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "debt_finance_parent",
+                "cp",
+                "other_short_borrowing"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Named reported term carrying + short borrowing; tag name does not certify lease scope. CP not added again to parent; known held-sale borrowing separate",
+              "source_dates": [
+                {
+                  "annual_end": "2024-12-31",
+                  "annual_start": null,
+                  "as_of": "2024-12-31",
+                  "operand": "debt_finance_parent"
+                },
+                {
+                  "annual_end": "2024-12-31",
+                  "annual_start": null,
+                  "as_of": "2024-12-31",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2024-12-31",
+                  "annual_start": null,
+                  "as_of": "2024-12-31",
+                  "operand": "other_short_borrowing"
+                }
+              ],
+              "source_reference": "/periods/3/calculations/1",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "44522000000"
+            }
+          },
+          "deferred_taxes": {
+            "approval_reference": "/history_approval",
+            "displayed_rows": [
+              {
+                "caption": "Deferred income taxes",
+                "competing_occurrences": [],
+                "concept": "DeferredIncomeTaxExpenseBenefit",
+                "context_id": "c-1",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "nested_parent": null,
+                "ordinal": 998,
+                "precision": "-6",
+                "raw": "-11000000",
+                "role": "displayed_adjustment",
+                "row": 7,
+                "scale": 1,
+                "sign": 1,
+                "sources": [
+                  {
+                    "accession": "0000021344-25-000011",
+                    "body_reference": "3dc90b92878c497c9eb087fc70b8b7ad60506ad6392b06eb11742f3c15183731",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2024-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2024",
+                    "ordinal": 998,
+                    "precision": "-6",
+                    "raw_value": "-11000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:43:01.095797+00:00",
+                    "source_id": "statement-instance:998",
+                    "start": "2024-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134425000011/ko-20241231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-25-000011",
+                    "body_reference": "3dc90b92878c497c9eb087fc70b8b7ad60506ad6392b06eb11742f3c15183731",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2024-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2024",
+                    "ordinal": 2412,
+                    "precision": "-6",
+                    "raw_value": "-11000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:43:01.095797+00:00",
+                    "source_id": "statement-instance:2412",
+                    "start": "2024-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134425000011/ko-20241231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-25-000011",
+                    "body_reference": "20d62b4595101591c5a230b0651e743c75c0e54b7ebdefb3c735b9631cd4baf7",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2024-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":1,\"cell_name\":\"us-gaap:DeferredIncomeTaxExpenseBenefit\",\"context_id\":\"c-1\",\"display\":\"(11)\",\"inline_sign\":\"-\",\"row\":7,\"scale\":1000000,\"table\":29}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "-11000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:40.797025+00:00",
+                    "source_id": "statement-primary:29:7:DeferredIncomeTaxExpenseBenefit",
+                    "start": "2024-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134425000011/ko-20241231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 29,
+                "value": "-11000000"
+              }
+            ],
+            "note_observation": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "-11000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/3/facts/deferred_tax",
+              "unit": "USD",
+              "value": "-11000000"
+            },
+            "other_observation": null,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "separate_pure_operation": "REPORTED_DISPLAYED_POPULATION",
+            "source_reference": "/periods/3/cfo_reconciliation",
+            "value_if_unavailable": null
+          },
+          "depreciation_amortization": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "1075000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/3/facts/da",
+            "unit": "USD",
+            "value": "1075000000"
+          },
+          "ebit": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "9992000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/3/facts/ebit",
+            "unit": "USD",
+            "value": "9992000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "No additional unidentified preferred/NCI/pension adjustment selected; potentially omitted claim unbounded, source nulls unchanged",
+              "value": null
+            },
+            "additional_population_reference": "/periods/3/passages",
+            "approval_reference": "/history_approval",
+            "known_population_reference": "/periods/3/facts",
+            "pure_nol_economic_operation": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "point_in_time_shares": {
+            "approval_reference": "/history_approval",
+            "automatic_aggregation_or_dilution": false,
+            "other_dated_classes_eps_awards_reference": "/periods/3/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected_populations": {
+              "shares:CommonStockSharesOutstanding:2024-12-31:e7683adf": {
+                "as_of": "2024-12-31",
+                "origin": "reported",
+                "precision": "-6",
+                "precision_variants": [
+                  "-6"
+                ],
+                "raw_value": "4302000000",
+                "scope": "Actual dated/classed shares or awards; no aggregation/dilution",
+                "sign_multiplier": 1,
+                "source_origin": "reported",
+                "source_reference": "/periods/3/facts/shares:CommonStockSharesOutstanding:2024-12-31:e7683adf",
+                "unit": "shares",
+                "value": "4302000000"
+              }
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "approval_reference": "/history_approval",
+            "book_delta_nwc": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "rows": [
+              {
+                "caption": "Net change in operating assets and liabilities",
+                "competing_occurrences": [],
+                "concept": "IncreaseDecreaseInOperatingCapital",
+                "context_id": "c-1",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2024",
+                "nested_parent": null,
+                "ordinal": 1016,
+                "precision": "-6",
+                "raw": "6234000000",
+                "role": "displayed_movement",
+                "row": 13,
+                "scale": 1,
+                "sign": -1,
+                "sources": [
+                  {
+                    "accession": "0000021344-25-000011",
+                    "body_reference": "3dc90b92878c497c9eb087fc70b8b7ad60506ad6392b06eb11742f3c15183731",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2024-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2024",
+                    "ordinal": 1016,
+                    "precision": "-6",
+                    "raw_value": "6234000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:43:01.095797+00:00",
+                    "source_id": "statement-instance:1016",
+                    "start": "2024-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134425000011/ko-20241231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-25-000011",
+                    "body_reference": "3dc90b92878c497c9eb087fc70b8b7ad60506ad6392b06eb11742f3c15183731",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2024-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2024",
+                    "ordinal": 3473,
+                    "precision": "-6",
+                    "raw_value": "6234000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:43:01.095797+00:00",
+                    "source_id": "statement-instance:3473",
+                    "start": "2024-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134425000011/ko-20241231_htm.xml"
+                  },
+                  {
+                    "accession": "0000021344-25-000011",
+                    "body_reference": "20d62b4595101591c5a230b0651e743c75c0e54b7ebdefb3c735b9631cd4baf7",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2024-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":-1,\"cell_name\":\"us-gaap:IncreaseDecreaseInOperatingCapital\",\"context_id\":\"c-1\",\"display\":\"(6,234)\",\"inline_sign\":null,\"row\":13,\"scale\":1000000,\"table\":29}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "6234000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:40.797025+00:00",
+                    "source_id": "statement-primary:29:13:IncreaseDecreaseInOperatingCapital",
+                    "start": "2024-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134425000011/ko-20241231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 29,
+                "value": "-6234000000"
+              }
+            ],
+            "source_reference": "/periods/3/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "6805000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/3/facts/cfo",
+            "unit": "USD",
+            "value": "6805000000"
+          },
+          "reported_tax_context": {
+            "approval_reference": "/history_approval",
+            "cash_taxes": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "3262000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": -1,
+              "source_origin": "reported",
+              "source_reference": "/periods/3/facts/cash_tax_gross",
+              "unit": "USD",
+              "value": "-3262000000"
+            },
+            "future_rate_approved": false,
+            "generic_denominator_status": "Existing reported scope",
+            "pretax": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "13086000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/3/facts/pretax",
+              "unit": "USD",
+              "value": "13086000000"
+            },
+            "provision": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "2437000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/3/facts/tax",
+              "unit": "USD",
+              "value": "2437000000"
+            },
+            "reported_etr": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "3",
+              "precision_variants": [
+                "3"
+              ],
+              "raw_value": "0.186",
+              "scope": "Issuer reported accounting ETR, not forecast rate",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/3/facts/reported_etr",
+              "unit": "pure",
+              "value": "0.186"
+            },
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "revenue": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "47061000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/3/facts/revenue",
+            "unit": "USD",
+            "value": "47061000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "286000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/3/facts/sbc_addback",
+              "unit": "USD",
+              "value": "286000000"
+            },
+            "approval_reference": "/history_approval",
+            "count_once": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "as_of": null,
+              "origin": "proxy",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "286000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/3/facts/sbc_expense",
+              "unit": "USD",
+              "value": "286000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "approval_reference": "/history_approval",
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "value": null
+          }
+        },
+        "original_supporting_unknowns": {
+          "additional_borrowing": null,
+          "complete_expense_da": null,
+          "complete_reinvestment": null,
+          "operating_reserve": null,
+          "unknown_cash_restrictions": null
+        },
+        "passed_family_slots": 14,
+        "remaining_essential_inputs": [],
+        "source_reference": "/periods/3"
+      },
+      {
+        "accepted_limitations_reference": "/history_approval/decisions",
+        "analyst_complete": true,
+        "checklist": [
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/revenue",
+            "field": "revenue",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/ebit",
+            "field": "ebit",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/depreciation_amortization",
+            "field": "depreciation_amortization",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/cash_capex",
+            "field": "cash_capex",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/reported_cash_flow_working_capital_movements",
+            "field": "reported_cash_flow_working_capital_movements",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/deferred_taxes",
+            "field": "deferred_taxes",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/stock_based_compensation",
+            "field": "stock_based_compensation",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/unclassified_cfo_reconciliation_residual",
+            "field": "unclassified_cfo_reconciliation_residual",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/reported_cfo",
+            "field": "reported_cfo",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/reported_tax_context",
+            "field": "reported_tax_context",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/cash_investment_components",
+            "field": "cash_investment_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/debt_lease_components",
+            "field": "debt_lease_components",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/other_equity_bridge_claims_assets",
+            "field": "other_equity_bridge_claims_assets",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          },
+          {
+            "approval_reference": "/history_approval",
+            "effective_input_reference": "/current_history/periods/4/inputs/point_in_time_shares",
+            "field": "point_in_time_shares",
+            "status": "SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER"
+          }
+        ],
+        "complete_debt": false,
+        "complete_expense_basis_da": null,
+        "complete_reinvestment": false,
+        "identity": {
+          "accession": "0001628280-26-010047",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        "inputs": {
+          "cash_capex": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "2112000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": -1,
+            "source_origin": "reported",
+            "source_reference": "/periods/4/facts/cash_capex",
+            "unit": "USD",
+            "value": "-2112000000"
+          },
+          "cash_investment_components": {
+            "additional_candidates_reference": "/periods/4/passages",
+            "approval_reference": "/history_approval",
+            "operating_reserve": null,
+            "restrictions_and_other_holdings_reference": "/periods/4/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "13872",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "gross_current_financial",
+              "label": "gross_current_financial",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "cash",
+                "other_current_investments"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Reported current cash plus other short-term investments; restrictions/held-sale/strategic excluded",
+              "source_dates": [
+                {
+                  "annual_end": "2025-12-31",
+                  "annual_start": null,
+                  "as_of": "2025-12-31",
+                  "operand": "cash"
+                },
+                {
+                  "annual_end": "2025-12-31",
+                  "annual_start": null,
+                  "as_of": "2025-12-31",
+                  "operand": "other_current_investments"
+                }
+              ],
+              "source_reference": "/periods/4/calculations/0",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "13872000000"
+            },
+            "unknown_restrictions": null,
+            "unrestricted_or_excess_cash": false
+          },
+          "debt_lease_components": {
+            "additional_borrowing": null,
+            "approval_reference": "/history_approval",
+            "complete_debt": false,
+            "current_maturities_already_included": true,
+            "expanded_alternative_selected": false,
+            "finance_lease_treatment": "asset_financing",
+            "known_separate_held_sale": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "1435",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "held_sale_named_borrowing",
+              "label": "held_sale_named_borrowing",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "held_sale_short",
+                "held_sale_current_debt",
+                "held_sale_long_debt"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Separate recognized held-sale borrowing captions, not all held-sale liabilities",
+              "source_dates": [
+                {
+                  "annual_end": "2025-12-31",
+                  "annual_start": null,
+                  "as_of": "2025-12-31",
+                  "operand": "held_sale_short"
+                },
+                {
+                  "annual_end": "2025-12-31",
+                  "annual_start": null,
+                  "as_of": "2025-12-31",
+                  "operand": "held_sale_current_debt"
+                },
+                {
+                  "annual_end": "2025-12-31",
+                  "annual_start": null,
+                  "as_of": "2025-12-31",
+                  "operand": "held_sale_long_debt"
+                }
+              ],
+              "source_reference": "/periods/4/calculations/2",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "1435000000"
+            },
+            "known_separate_held_sale_treatment": "Visible recognized separate schedule; must not be silently omitted or added twice. Conditional expanded financing not selected.",
+            "no_additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "Approved omission of unquantified additional borrowing, not reported zero or immateriality; amount unbounded",
+              "value": null
+            },
+            "operating_lease_treatment": "service_cost",
+            "other_population_reference": "/periods/4/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "coefficients": [
+                1,
+                1,
+                1
+              ],
+              "completeness": "complete_for_named_population",
+              "display_unit": "USD millions",
+              "display_value": "45492",
+              "evidence_label": "derived_calculation",
+              "formula": "LINEAR_COMPONENTS",
+              "formula_version": "retained-standard-review-batch-v1",
+              "input_id": "named_financing",
+              "label": "named_financing",
+              "limitations": [],
+              "operand_precision": [
+                "-6",
+                "-6",
+                "-6"
+              ],
+              "operands": [
+                "debt_finance_parent",
+                "cp",
+                "other_short_borrowing"
+              ],
+              "origin": "derived",
+              "policy": null,
+              "precision": {
+                "operand_decimals": [
+                  "-6",
+                  "-6",
+                  "-6"
+                ],
+                "treatment": "Reported rounded points; calculation does not improve source precision."
+              },
+              "rationale": "Exact named source arithmetic; no financial acceptance",
+              "role": "reported_observation",
+              "scope": "Named reported term carrying + short borrowing; tag name does not certify lease scope. CP not added again to parent; known held-sale borrowing separate",
+              "source_dates": [
+                {
+                  "annual_end": "2025-12-31",
+                  "annual_start": null,
+                  "as_of": "2025-12-31",
+                  "operand": "debt_finance_parent"
+                },
+                {
+                  "annual_end": "2025-12-31",
+                  "annual_start": null,
+                  "as_of": "2025-12-31",
+                  "operand": "cp"
+                },
+                {
+                  "annual_end": "2025-12-31",
+                  "annual_start": null,
+                  "as_of": "2025-12-31",
+                  "operand": "other_short_borrowing"
+                }
+              ],
+              "source_reference": "/periods/4/calculations/1",
+              "status": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+              "unit": "USD",
+              "value": "45492000000"
+            }
+          },
+          "deferred_taxes": {
+            "approval_reference": "/history_approval",
+            "displayed_rows": [
+              {
+                "caption": "Deferred income taxes",
+                "competing_occurrences": [],
+                "concept": "DeferredIncomeTaxExpenseBenefit",
+                "context_id": "c-1",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "nested_parent": null,
+                "ordinal": 993,
+                "precision": "-6",
+                "raw": "517000000",
+                "role": "displayed_adjustment",
+                "row": 7,
+                "scale": 1,
+                "sign": 1,
+                "sources": [
+                  {
+                    "accession": "0001628280-26-010047",
+                    "body_reference": "5428e5c422a5b88dd967793d3b04411d226272acdc3c040efe3d870bb5b56d31",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2025-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2025",
+                    "ordinal": 993,
+                    "precision": "-6",
+                    "raw_value": "517000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:43:02.114545+00:00",
+                    "source_id": "statement-instance:993",
+                    "start": "2025-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231_htm.xml"
+                  },
+                  {
+                    "accession": "0001628280-26-010047",
+                    "body_reference": "5428e5c422a5b88dd967793d3b04411d226272acdc3c040efe3d870bb5b56d31",
+                    "concept": "DeferredIncomeTaxExpenseBenefit",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2025-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2025",
+                    "ordinal": 2433,
+                    "precision": "-6",
+                    "raw_value": "517000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:43:02.114545+00:00",
+                    "source_id": "statement-instance:2433",
+                    "start": "2025-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231_htm.xml"
+                  },
+                  {
+                    "accession": "0001628280-26-010047",
+                    "body_reference": "2d9ea20f69103a1c2c9b7fbd5b17060b3a98370435fa53158514d0f7f80e6bea",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2025-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":1,\"cell_name\":\"us-gaap:DeferredIncomeTaxExpenseBenefit\",\"context_id\":\"c-1\",\"display\":\"517\",\"inline_sign\":null,\"row\":7,\"scale\":1000000,\"table\":26}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "517000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:41.445723+00:00",
+                    "source_id": "statement-primary:26:7:DeferredIncomeTaxExpenseBenefit",
+                    "start": "2025-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 26,
+                "value": "517000000"
+              }
+            ],
+            "note_observation": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "517000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/4/facts/deferred_tax",
+              "unit": "USD",
+              "value": "517000000"
+            },
+            "other_observation": null,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "separate_pure_operation": "REPORTED_DISPLAYED_POPULATION",
+            "source_reference": "/periods/4/cfo_reconciliation",
+            "value_if_unavailable": null
+          },
+          "depreciation_amortization": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "proxy",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "1050000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/4/facts/da",
+            "unit": "USD",
+            "value": "1050000000"
+          },
+          "ebit": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "13762000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/4/facts/ebit",
+            "unit": "USD",
+            "value": "13762000000"
+          },
+          "other_equity_bridge_claims_assets": {
+            "additional_adjustment": {
+              "approved": true,
+              "origin": "analyst_assumption",
+              "rationale": "No additional unidentified preferred/NCI/pension adjustment selected; potentially omitted claim unbounded, source nulls unchanged",
+              "value": null
+            },
+            "additional_population_reference": "/periods/4/passages",
+            "approval_reference": "/history_approval",
+            "known_population_reference": "/periods/4/facts",
+            "pure_nol_economic_operation": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "point_in_time_shares": {
+            "approval_reference": "/history_approval",
+            "automatic_aggregation_or_dilution": false,
+            "other_dated_classes_eps_awards_reference": "/periods/4/facts",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected_populations": {
+              "shares:CommonStockSharesOutstanding:2025-12-31:e7683adf": {
+                "as_of": "2025-12-31",
+                "origin": "reported",
+                "precision": "-6",
+                "precision_variants": [
+                  "-6"
+                ],
+                "raw_value": "4302000000",
+                "scope": "Actual dated/classed shares or awards; no aggregation/dilution",
+                "sign_multiplier": 1,
+                "source_origin": "reported",
+                "source_reference": "/periods/4/facts/shares:CommonStockSharesOutstanding:2025-12-31:e7683adf",
+                "unit": "shares",
+                "value": "4302000000"
+              }
+            }
+          },
+          "reported_cash_flow_working_capital_movements": {
+            "additional_deduction_permitted": false,
+            "approval_reference": "/history_approval",
+            "book_delta_nwc": false,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "rows": [
+              {
+                "caption": "Net change in operating assets and liabilities",
+                "competing_occurrences": [],
+                "concept": "IncreaseDecreaseInOperatingCapital",
+                "context_id": "c-1",
+                "display_scale": 1000000,
+                "display_selection": "Exact independently displayed row and matching instance amount/precision; no primitive or economic equivalence approval",
+                "namespace": "http://fasb.org/us-gaap/2025",
+                "nested_parent": null,
+                "ordinal": 1011,
+                "precision": "-6",
+                "raw": "7208000000",
+                "role": "displayed_movement",
+                "row": 13,
+                "scale": 1,
+                "sign": -1,
+                "sources": [
+                  {
+                    "accession": "0001628280-26-010047",
+                    "body_reference": "5428e5c422a5b88dd967793d3b04411d226272acdc3c040efe3d870bb5b56d31",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2025-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2025",
+                    "ordinal": 1011,
+                    "precision": "-6",
+                    "raw_value": "7208000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:43:02.114545+00:00",
+                    "source_id": "statement-instance:1011",
+                    "start": "2025-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231_htm.xml"
+                  },
+                  {
+                    "accession": "0001628280-26-010047",
+                    "body_reference": "5428e5c422a5b88dd967793d3b04411d226272acdc3c040efe3d870bb5b56d31",
+                    "concept": "IncreaseDecreaseInOperatingCapital",
+                    "context_id": "c-1",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2025-12-31",
+                    "http_status": 200,
+                    "locator": "{\"unit_id\":\"usd\"}",
+                    "namespace": "http://fasb.org/us-gaap/2025",
+                    "ordinal": 3461,
+                    "precision": "-6",
+                    "raw_value": "7208000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-12T08:43:02.114545+00:00",
+                    "source_id": "statement-instance:3461",
+                    "start": "2025-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231_htm.xml"
+                  },
+                  {
+                    "accession": "0001628280-26-010047",
+                    "body_reference": "2d9ea20f69103a1c2c9b7fbd5b17060b3a98370435fa53158514d0f7f80e6bea",
+                    "concept": "",
+                    "context_id": "",
+                    "digest_type": "sha256_sec_response_body_bytes",
+                    "dimensions": [],
+                    "end": "2025-12-31",
+                    "http_status": 200,
+                    "locator": "{\"cash_sign_multiplier\":-1,\"cell_name\":\"us-gaap:IncreaseDecreaseInOperatingCapital\",\"context_id\":\"c-1\",\"display\":\"(7,208)\",\"inline_sign\":null,\"row\":13,\"scale\":1000000,\"table\":26}",
+                    "namespace": "",
+                    "ordinal": null,
+                    "precision": "-6",
+                    "raw_value": "7208000000",
+                    "representation": "sec_response_body_bytes",
+                    "retrieved_at_utc": "2026-10-14T17:22:41.445723+00:00",
+                    "source_id": "statement-primary:26:13:IncreaseDecreaseInOperatingCapital",
+                    "start": "2025-01-01",
+                    "unit": "USD",
+                    "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm"
+                  }
+                ],
+                "split_sign_cells": [],
+                "table": 26,
+                "value": "-7208000000"
+              }
+            ],
+            "source_reference": "/periods/4/cfo_reconciliation"
+          },
+          "reported_cfo": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "7408000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Exact selected statement/note observation; not automatic completeness",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/4/facts/cfo",
+            "unit": "USD",
+            "value": "7408000000"
+          },
+          "reported_tax_context": {
+            "approval_reference": "/history_approval",
+            "cash_taxes": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "2873000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": -1,
+              "source_origin": "reported",
+              "source_reference": "/periods/4/facts/cash_tax",
+              "unit": "USD",
+              "value": "-2873000000"
+            },
+            "future_rate_approved": false,
+            "generic_denominator_status": "Existing reported scope",
+            "pretax": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "15998000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/4/facts/pretax",
+              "unit": "USD",
+              "value": "15998000000"
+            },
+            "provision": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "2861000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/4/facts/tax",
+              "unit": "USD",
+              "value": "2861000000"
+            },
+            "reported_etr": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "3",
+              "precision_variants": [
+                "3"
+              ],
+              "raw_value": "0.179",
+              "scope": "Issuer reported accounting ETR, not forecast rate",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/4/facts/reported_etr",
+              "unit": "pure",
+              "value": "0.179"
+            },
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE"
+          },
+          "revenue": {
+            "approval_reference": "/history_approval",
+            "as_of": null,
+            "origin": "reported",
+            "precision": "-6",
+            "precision_variants": [
+              "-6"
+            ],
+            "raw_value": "47941000000",
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "scope": "Existing direct income policy plus exact primary population",
+            "sign_multiplier": 1,
+            "source_origin": "reported",
+            "source_reference": "/periods/4/facts/revenue",
+            "unit": "USD",
+            "value": "47941000000"
+          },
+          "stock_based_compensation": {
+            "addback": {
+              "as_of": null,
+              "origin": "reported",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "279000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/4/facts/sbc_addback",
+              "unit": "USD",
+              "value": "279000000"
+            },
+            "approval_reference": "/history_approval",
+            "count_once": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "selected": {
+              "as_of": null,
+              "origin": "proxy",
+              "precision": "-6",
+              "precision_variants": [
+                "-6"
+              ],
+              "raw_value": "279000000",
+              "scope": "Exact selected statement/note observation; not automatic completeness",
+              "sign_multiplier": 1,
+              "source_origin": "reported",
+              "source_reference": "/periods/4/facts/sbc_expense",
+              "unit": "USD",
+              "value": "279000000"
+            }
+          },
+          "unclassified_cfo_reconciliation_residual": {
+            "approval_reference": "/history_approval",
+            "disposition": "APPROVED_NO_SEPARATE_OPERATION",
+            "not_reported_zero": true,
+            "review": "ACCEPTED_FOR_STATED_HISTORICAL_SCOPE",
+            "value": null
+          }
+        },
+        "original_supporting_unknowns": {
+          "additional_borrowing": null,
+          "complete_expense_da": null,
+          "complete_reinvestment": null,
+          "operating_reserve": null,
+          "unknown_cash_restrictions": null
+        },
+        "passed_family_slots": 14,
+        "remaining_essential_inputs": [],
+        "source_reference": "/periods/4"
+      }
+    ],
+    "phase1_closed": false,
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
   "decision_ids": [
     "KO-CF",
     "KO-DA",
@@ -12,6 +3580,452 @@
   ],
   "evidence_acquisition_requirements": [],
   "family_slots": 70,
+  "history_approval": {
+    "action": "ACCEPT_RETAINED_COMPANY_BATCH",
+    "additional_perimeter_evidence": null,
+    "author": "User, explicit approval of the48 company-batch recommendations",
+    "authority": "Current user instruction explicitly approves all23 standard-review and all25 trillion-review recommendations; AMZN2021 expanded81427 including318; CAT separate industrial/Financial Products perimeters; KO held-sale alternative not selected.",
+    "decisions": [
+      {
+        "accepted": false,
+        "author": "Analyst preparation review; all judgments pending user approval",
+        "decision_id": "KO-CF",
+        "evidence_references": [
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+        ],
+        "identities": [
+          {
+            "accession": "0000021344-22-000009",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-23-000011",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-24-000009",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-25-000011",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001628280-26-010047",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          }
+        ],
+        "numerical_effect": "12625/11018/11599/6805/7408 USDm",
+        "recommendation": "Use source-bound reported CFO and displayed movements; no separate residual scalar or second movement deduction.",
+        "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+        "status": "proposed_pending_user_approval",
+        "ticker": "KO",
+        "uncertainty_and_alternative": "Alternative require separately evidenced allocations. Mixed rows stay mixed; no zero, book delta NWC or extra deductions. CFO may include material nonrecurring/acquisition/financing-business effects."
+      },
+      {
+        "accepted": false,
+        "author": "Analyst preparation review; all judgments pending user approval",
+        "decision_id": "KO-DA",
+        "evidence_references": [
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+        ],
+        "identities": [
+          {
+            "accession": "0000021344-22-000009",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-23-000011",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-24-000009",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-25-000011",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001628280-26-010047",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          }
+        ],
+        "numerical_effect": "1452/1260/1128/1075/1050 USDm",
+        "recommendation": "Select a labeled limited historical D&A proxy; retain expense/impairment/ROU observations separately.",
+        "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+        "status": "proposed_pending_user_approval",
+        "ticker": "KO",
+        "uncertainty_and_alternative": "CAT consolidated proxy includes leased-to-others/Financial Products depreciation; industrial supplemental1550/1439/1361/1368/1497 is a DIFFERENT perimeter, not a substitute without CAT-PERIMETER. KO depreciation includes finance assets; no extra finance amortization or subtraction-based intangible estimate. CFO versus expense-basis completeness unproved."
+      },
+      {
+        "accepted": false,
+        "author": "Analyst preparation review; all judgments pending user approval",
+        "decision_id": "KO-SBC",
+        "evidence_references": [
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+        ],
+        "identities": [
+          {
+            "accession": "0000021344-22-000009",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-23-000011",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-24-000009",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-25-000011",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001628280-26-010047",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          }
+        ],
+        "numerical_effect": "337/361/251/286/279 USDm",
+        "recommendation": "Use recognized gross SBC expense as labeled cost proxy once; preserve add-back/mixed CFO roles.",
+        "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+        "status": "proposed_pending_user_approval",
+        "ticker": "KO",
+        "uncertainty_and_alternative": "COST derives gross note expense from net expense + related expense tax benefit, not exercise cash benefits. KO expense337/361/251/286/279 differs from CFO337/356/254/286/279, no plugs. CAT expense200/193/208/223/242 is separately reported; no invented standalone add-back from Other. Alternative keep reported expense only without economic-cost proxy; awards remain separate."
+      },
+      {
+        "accepted": false,
+        "author": "Analyst preparation review; all judgments pending user approval",
+        "decision_id": "KO-CASH",
+        "evidence_references": [
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+        ],
+        "identities": [
+          {
+            "accession": "0000021344-22-000009",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-23-000011",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-24-000009",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-25-000011",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001628280-26-010047",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          }
+        ],
+        "numerical_effect": "10926/10562/12363/12848/13872 USDm",
+        "recommendation": "Select gross named current financial balances only; retain restrictions, strategic/insurance holdings and alternatives separately.",
+        "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+        "status": "proposed_pending_user_approval",
+        "ticker": "KO",
+        "uncertainty_and_alternative": "Not unrestricted/excess cash; unknown reserves/restrictions remain. CAT consolidated cash versus industrial8428/6042/6106/6165/9333 requires perimeter choice; do not move Financial Products cash into industrial balances. KO restrictedcash138/455/326/660/740 and equity-method holdings remain separate; held-sale populations are not automatically added. Alternative no liquid-balance selection pending reserve restrictions."
+      },
+      {
+        "accepted": false,
+        "author": "Analyst preparation review; all judgments pending user approval",
+        "decision_id": "KO-FIN",
+        "evidence_references": [
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+        ],
+        "identities": [
+          {
+            "accession": "0000021344-22-000009",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-23-000011",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-24-000009",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-25-000011",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001628280-26-010047",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          }
+        ],
+        "numerical_effect": "42761/39149/42064/44522/45492 USDm",
+        "recommendation": "Use source-named carrying borrowing/finance populations, operating LESSEE leases service and finance LESSEE leases asset financing, with no unidentified-borrowing adjustment only if expressly approved. CAT lessor receivables/leased-to-others assets remain financing-business operations, not lessee debt adjustments.",
+        "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+        "status": "proposed_pending_user_approval",
+        "ticker": "KO",
+        "uncertainty_and_alternative": "CAT consolidated/industrial/Financial Products columns and eliminations must remain separate; do not deduct funding debt without its financing assets. COST FY2022 known short borrowing88 is included, not omitted; finance note245+1383,129+1303,147+1351,78+1401,94+1319 is outside term debt. KO named reported long-term borrowing parent is not certified complete finance-lease coverage merely from its tag name; no duplicate CP or unproved lease addition. FY2025 held-sale loans187/current debt398/long debt850 remain separate recognized populations; expanded46927 alternative depends on their separate balance-sheet classification, not adding all held-sale liabilities1437. Missing finance coverage/other borrowing stays unquantified, no immateriality inference. Alternative retain requirement pending a broader defensible perimeter."
+      },
+      {
+        "accepted": false,
+        "author": "Analyst preparation review; all judgments pending user approval",
+        "decision_id": "KO-CLAIMS",
+        "evidence_references": [
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+        ],
+        "identities": [
+          {
+            "accession": "0000021344-22-000009",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-23-000011",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-24-000009",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-25-000011",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001628280-26-010047",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          }
+        ],
+        "numerical_effect": "1861/1721/1539/1516/2106 USDm; postemployment unknown/unknown/unknown/unknown/unknown USDm",
+        "recommendation": "Retain known NCI, pension/benefit and other claims separately without parent/child netting; propose no additional unidentified claim adjustment.",
+        "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+        "status": "proposed_pending_user_approval",
+        "ticker": "KO",
+        "uncertainty_and_alternative": "Potential unidentified claims unbounded; no immateriality assumption. COST retirement824/889/963/1061/1174 includes international plans: source says some immaterial, not valuation proof; no funded-status allocation. CAT recognized postemployment5592/4203/4098/3757/3838 remains. KO pension net assets325/782/716/390/295 and OPEB liabilities277/122/121/116/112 plus gross recognized components are separate, not netted; IRS/contingent consideration/held-sale claims remain, no automatic valuation deduction. Alternative leave unspecified-claim operation unresolved."
+      },
+      {
+        "accepted": false,
+        "author": "Analyst preparation review; all judgments pending user approval",
+        "decision_id": "KO-SHARES",
+        "evidence_references": [
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+          "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+        ],
+        "identities": [
+          {
+            "accession": "0000021344-22-000009",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-23-000011",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-24-000009",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000021344-25-000011",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001628280-26-010047",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 21344,
+            "form": "10-K"
+          }
+        ],
+        "numerical_effect": "Exact dated shares/awards in each period facts; no numerical dilution estimate.",
+        "recommendation": "Select the actual fiscal-end reported common population; preserve cover date/class observations, EPS and awards separately. No automatic class sum/dilution.",
+        "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+        "status": "proposed_pending_user_approval",
+        "ticker": "KO",
+        "uncertainty_and_alternative": "COST unclassed and CommonClassA confirmations have the same amount, not additional shares. CAT/KO common observations and separately dated cover counts are not interchangeable. Alternative retain class/date scope unresolved; no forecast shares/award valuation approved."
+      }
+    ],
+    "financial_sufficiency": "ONLY_APPROVED_HISTORICAL_PERIMETER",
+    "identities": [
+      {
+        "accession": "0000021344-22-000009",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 21344,
+        "form": "10-K"
+      },
+      {
+        "accession": "0000021344-23-000011",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 21344,
+        "form": "10-K"
+      },
+      {
+        "accession": "0000021344-24-000009",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 21344,
+        "form": "10-K"
+      },
+      {
+        "accession": "0000021344-25-000011",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 21344,
+        "form": "10-K"
+      },
+      {
+        "accession": "0001628280-26-010047",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 21344,
+        "form": "10-K"
+      }
+    ],
+    "phase1_closed": false,
+    "previous": null,
+    "proposal_revision": "ac1a6178f645de9cf3a5fcff7d5ceacda6a98f035666b005569bac0064aadfdf",
+    "rationale": "Current user instruction explicitly approves all23 standard-review and all25 trillion-review recommendations; AMZN2021 expanded81427 including318; CAT separate industrial/Financial Products perimeters; KO held-sale alternative not selected.",
+    "recorded_at_utc": "2026-10-17T18:17:50.478703+00:00",
+    "review_revision": "4aae598964a4b07a70ec34714c93935b8e35f496285716b70fa69047e17e4ab5",
+    "schema": "company-treatment-acceptance-audit-v1",
+    "scope": "Accepted company-specific historical preparation only; no Phase2, complete debt/reinvestment or financial-sufficiency certification.",
+    "sequence": 1,
+    "sha256": "f41c4963c9ceb4101077e645bbed71f92efe0923493096ea2009a1e88ea157cc",
+    "source_commit": "9bb110cb208ce3abcac0365c4ecf4820c498d60d",
+    "source_revision": "9e3aea64d930c13427019842e9bbf6cf87229e7b54bbd4c1ebaac69e329386c9",
+    "ticker": "KO",
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
   "new_assumptions_active": false,
   "outcomes": {
     "PROPOSED_PENDING_APPROVAL": 35,

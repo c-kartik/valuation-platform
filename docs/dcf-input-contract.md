@@ -1,5 +1,29 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Scope-specific six-company acceptance and effective selections
+
+The user's explicit23+25 approval activates existing company-specific reviews
+through their separate revision-bound `history_approval`/`current_history` views.
+COST/KO/NVDA/AMZN/META each complete the existing14-family historical perimeter
+for their five exact selections. Approved limited proxies, no-additional-adjustment
+assumptions and operation-specific exclusions remain distinct from reported facts
+and complete economic populations. Source unknowns and original frozen policies
+do not change. NVDA's investment proxy is explicitly broader than pure PP&E;
+AMZN's broad D&A remains rejected; COST non-overlap remains an assumption.
+
+CAT approval selects separate industrial and Financial Products supplemental
+perimeters, not generic consolidated use. Each satisfies13/14 per year while
+perimeter SBC expense remains essential. CAT-FIN activates named funding with
+the expressly approved no-unidentified-adjustment assumption; missing lease
+allocation remains supporting uncertainty, not a new complete-debt gate. Direct
+consolidating adjustments are supporting data, not standalone inputs inferred
+by subtraction. Issuer shares are shared parent support, not segment shares.
+KO held-sale borrowing remains separately visible without selecting its
+conditional expanded financing alternative. None of these views calculates
+complete debt, reinvestment, FCFF, net debt or valuation; no future formula/rate
+or Phase2 readiness follows acceptance. Full reconstructed NWC is not a
+prerequisite for the approved reported-movement/reconciled-CFO historical path.
+
 ## Active reported-cash-movement preparation path
 
 For the accepted MSFT, AAPL and Alphabet historical packages,

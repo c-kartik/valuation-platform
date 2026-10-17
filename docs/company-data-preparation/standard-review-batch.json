@@ -1,4 +1,143 @@
 {
+  "approval_activation": {
+    "companies": {
+      "CAT": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "CAT-PERIMETER",
+            "status": "ACTIVE_WITH_EXPLICIT_PERIMETER_LIMITATIONS"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CAT-TAX",
+            "status": "ACTIVE_WITH_EXPLICIT_PERIMETER_LIMITATIONS"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CAT-CF",
+            "status": "ACTIVE_WITH_EXPLICIT_PERIMETER_LIMITATIONS"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CAT-DA",
+            "status": "ACTIVE_WITH_EXPLICIT_PERIMETER_LIMITATIONS"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CAT-SBC",
+            "status": "APPROVED_EFFECTIVE_VALUE_BLOCKED_BY_PERIMETER_ALLOCATION"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CAT-CASH",
+            "status": "ACTIVE_WITH_EXPLICIT_PERIMETER_LIMITATIONS"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CAT-FIN",
+            "status": "ACTIVE_WITH_EXPLICIT_PERIMETER_LIMITATIONS"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CAT-CLAIMS",
+            "status": "ACTIVE_WITH_EXPLICIT_PERIMETER_LIMITATIONS"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CAT-SHARES",
+            "status": "ACTIVE_WITH_EXPLICIT_PERIMETER_LIMITATIONS"
+          }
+        ],
+        "approval_sha256": "d263d02b0a0c25b578627293e334897f09650a8d4432c44152032e5ddcdeed79",
+        "completed": false
+      },
+      "COST": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "COST-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "COST-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "COST-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "COST-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "COST-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "COST-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "COST-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "7c7e22c680dececf08914262b1f07f0f7d690397aea37f9a9ec31340bd1148ea",
+        "completed": true
+      },
+      "KO": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "KO-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "KO-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "KO-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "KO-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "KO-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "KO-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "KO-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "f41c4963c9ceb4101077e645bbed71f92efe0923493096ea2009a1e88ea157cc",
+        "completed": true
+      }
+    },
+    "original_proposals_retained": true,
+    "phase1_closed": false
+  },
   "broad_assessment_only": 36,
   "companies": {
     "CAT": {

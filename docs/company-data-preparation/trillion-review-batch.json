@@ -1,4 +1,153 @@
 {
+  "approval_activation": {
+    "companies": {
+      "AMZN": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "AMZN-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMZN-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMZN-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMZN-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMZN-SHARES",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMZN-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMZN-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMZN-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMZN-FIN",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "977eeb9298bcbb65c98ecb1a096ba6e5655b200d4b3704e126c732d43f7e2cfc",
+        "completed": true
+      },
+      "META": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "META-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "META-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "META-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "META-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "META-SHARES",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "META-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "META-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "META-FIN",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "ac2514aa5c57e8959f38f90e9cd8687748b490a01d75647e172b2922fed54927",
+        "completed": true
+      },
+      "NVDA": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "NVDA-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "NVDA-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "NVDA-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "NVDA-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "NVDA-SHARES",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "NVDA-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "NVDA-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "NVDA-FIN",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "4e7ec7c715a0e7ec50e58228debe906e5e8848f814ec610f858e042f5c9d8d45",
+        "completed": true
+      }
+    },
+    "original_proposals_retained": true,
+    "phase1_closed": false
+  },
   "broad_assessment_only": 33,
   "companies": {
     "AMZN": {

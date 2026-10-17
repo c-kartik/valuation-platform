@@ -1,5 +1,31 @@
 # CAT — company data preparation
 
+## Current — user-approved effective five-year historical view
+
+[CAT authoritative schedule](CAT-analyst-input-package.md) /
+[effective JSON](cat-analyst-input-package.json), FY2021–FY2025.
+Approved separate industrial/Financial Products structures each13/14 per year; CAT remains incomplete. Exact essential gap: perimeter SBC expense. CAT-FIN named funding/no-unidentified-adjustment is active; unallocated lease detail remains supporting uncertainty, not a complete-debt prerequisite. Income/tax/cash/CFO schedules are active, consolidated observations descriptive; eliminations support only. No standalone subtraction or reassignment of funding/financing assets.
+
+Original conflict/treatment rationale and alternatives are preserved in the prior
+review below. The user explicitly approves the batch recommendations; revision-bound
+sequence1 audit at `2026-10-17T18:17:43.489326+00:00` records exact source/review/proposal
+identity, authorization and rationale. Actual selections are in `current_history`;
+original pending flags, source nulls and proposals remain historical snapshots.
+Relevant source/candidate/scope/precision/period changes reject stale acceptance.
+
+Consolidated SBC200/193/208/223/242 remains parent support, never an invented perimeter expense. Known lease disclosures are not allocated through silence/subtraction. Consolidated operating-lease current liabilities158/151/147/143/158m, noncurrent484/428/427/459/570m and service expense214/187/189/185/192m remain issuer support, not extra financing. Finance coverage stays unquantified, with approved potentially unbounded no-additional-financing omission. Supplemental columns retain intercompany entries, funding assets and direct eliminations. Parent shares are issuer support, not segment shares. One essential-family gap remains without acquisition/research.
+
+Known restrictions, claims, source unknowns and unbounded potential omissions remain
+visible. No immateriality/zero inference, complete NWC prerequisite, extra movement
+deduction or separate CFO residual. Reported cash movements and independent CFO
+proofs support the approved historical path, not a future formula or financial
+readiness certificate. [Approval/validation results](../standard-review-batch-results.md).
+Focused audit/selection/source/perimeter/serialization/staleness tests and package
+replays preserve original sources, policies, prior approvals, completed peers and
+frozen/pilot artifacts. No SEC/full-suite/corpus run; stop after approval integration.
+
+## Historical preparation checkpoints — preserved
+
 ## Current company-wide review — all new assumptions pending
 
 [CAT five-year schedule/matrix](CAT-analyst-input-package.md) and

@@ -1,5 +1,25 @@
 # Architecture
 
+## Six-company historical approval overlays
+
+`scripts/activate_company_review_batches.py` applies the explicitly authorized
+COST/CAT/KO/NVDA/AMZN/META review set using the existing company-package pattern:
+ManualIdentity, closed immutable hash-sealed audit, relevant-content source and
+proposal revisions, preserved historical proposals and a separate effective view.
+Both retained batch replayers reconstruct source packages before checking exact
+authorization and stale-input rejection. No database, generic policy/approval
+registry, source-fact mutation or valuation consumer is added. Original package
+serialization remains a preserved parent projection plus additive audit/view.
+
+CAT additionally binds actual supplemental year/perimeter columns by original
+HTML colspan coordinates, preserving direct eliminations and checking displayed
+CFO sums independently. Missing SBC allocation remains an essential null;
+lease allocation stays a supporting unknown under CAT-FIN's approved named
+funding/no-additional-adjustment operation, not a consolidated substitution or
+reported zero. Five other histories
+activate named/proxy selections and explicit omission assumptions while retaining
+raw unknowns, alternatives, precision, source receipts and negative reviews.
+
 ## Fixed COST/CAT/KO company-review batch — report-only
 
 `scripts/prepare_standard_review_batch.py` joins only15 selected periods to the

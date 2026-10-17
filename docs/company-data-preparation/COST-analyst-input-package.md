@@ -1,5 +1,57 @@
 # COST — one five-year historical-input review
 
+## Authoritative current five-year schedule — user-approved historical perimeter
+
+**Approved: COST-CF, COST-DA, COST-SBC, COST-CASH, COST-FIN, COST-CLAIMS, COST-SHARES.** [Effective JSON](cost-analyst-input-package.json) `/current_history` is active. Original `/periods`, proposals and pending flags remain historical snapshots, not current approval status.
+
+Audit sequence1 at `2026-10-17T18:17:43.456728+00:00`, SHA256 `7c7e22c680dececf08914262b1f07f0f7d690397aea37f9a9ec31340bd1148ea`, binds source commit `9bb110cb208ce3abcac0365c4ecf4820c498d60d`, exact source/review/proposal revisions, five identities, user authorization and rationale in `/history_approval`. Source/candidate/period/scope/precision changes reject stale acceptance. Original nulls, alternatives, rejected findings and prior history are preserved.
+
+Accepted D&A non-overlap assumption: CFO D&A plus separate finance amortization gives2,028/2,246/2,334/2,528/2,780. It is an analyst assumption, not newly proved expense completeness; no operating ROU add-back. FY2023–25 mixed impairment/deferred-tax/Other remains mixed, not pure deferred taxes or zero. Known FY2022 short borrowing88 is included; finance note liabilities are not added twice to term debt.
+
+All monetary schedules below are **USD millions**. Exact raw units/signs, source decimals/precision variants and operand precision are retained at every selected source reference; arithmetic never improves precision. Sources/receipt URLs, digests and authoritative dates remain in the exact-source section below and JSON.
+
+**No** financial-sufficiency certification, complete debt/reinvestment/expense disclosure, Phase1 closure or Phase2 authority. Approved no-additional-adjustment assumptions knowingly omit potentially undisclosed claims/borrowing of unbounded size; not reported zero or immateriality. Movements already in independently reconciled CFO are supporting detail, never additional deductions. Complete reconstructed NWC/book delta is not required; supporting NWC/source history persists.
+
+**Five years each14/14 (70/70): completed for the approved historical-input perimeter only.**
+
+|Selected input / operation|2022|2023|2024|2025|2026|
+|---|---:|---:|---:|---:|---:|
+|Revenue|226,954|242,290|254,453|275,235|303,154|
+|Operating profit / EBIT, stated scope|7,793|8,114|9,285|10,383|11,685|
+|Accepted limited D&A proxy|2,028|2,246|2,334|2,528|2,780|
+|Cash investment, stated scope|-3,891|-4,323|-4,710|-5,498|-6,435|
+|Independently reconciled reported CFO|7,392|11,068|11,339|13,335|15,817|
+|Historical tax provision|1,925|2,195|2,373|2,719|3,025|
+|Historical pretax, original scope|7,840|8,487|9,740|10,818|12,251|
+|Current financial balances, not excess cash|11,049|15,234|11,144|15,284|21,301|
+|Named borrowing/financing, not complete debt|8,273|7,890|7,395|7,267|7,575|
+|SBC expense proxy once|724|774|818|860|924|
+|Cash taxes, source net/gross role|-1,940|-2,234|-2,319|-2,917|-2,839|
+|Existing14-family checklist|14/14|14/14|14/14|14/14|14/14|
+
+|Family|2022|2023|2024|2025|2026|
+|---|---|---|---|---|---|
+|revenue|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|ebit|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|depreciation_amortization|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_capex|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cash_flow_working_capital_movements|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|deferred_taxes|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|stock_based_compensation|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|unclassified_cfo_reconciliation_residual|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cfo|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_tax_context|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_investment_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|debt_lease_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|other_equity_bridge_claims_assets|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|point_in_time_shares|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+
+Current inputs preserve separately named deferred taxes versus mixed reconciliation rows, no separately computed residual (null, not zero), source SBC expense/add-back differences, historical tax roles without future-rate approval, cash/investment restrictions and claims, operating-service/finance-asset classifications, actual share dates/classes/EPS/awards and all comparability limitations. Current JSON contains source-reference selections, approved assumptions and the complete14-family checklist. Unknown complete expense D&A, borrowing, reserves/restrictions and investment coverage remain unknown despite scoped completion.
+
+Validation/current dispositions: [standard batch](../standard-review-batch-results.md) / [trillion batch](../trillion-review-batch-results.md). All earlier review text below is historical, not an instruction to seek the same approval again.
+
+## Historical proposed review and source schedule — preserved
+
 **Proposed only; no new treatment accepted.** [Machine companion](cost-analyst-input-package.json) records exact sources, signs, scales, precision, contexts/occurrences, notes, calculations and unknowns. All company judgments are in the [ONE batch approval/exception table](../standard-review-batch-results.md); no separate annual approval cycles.
 
 Recommended perimeter: reported consolidated warehouse/retail history, **total revenue including membership fees**, not merchandise net sales alone. FY2023 is53 weeks; the other selected years52. Fees are recognized over membership periods and fee increases from September2024 affect later comparability. No calendar-year/date substitution, annualization or restatement of old selected filings.

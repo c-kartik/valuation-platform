@@ -1,5 +1,57 @@
 # KO — one five-year historical-input review
 
+## Authoritative current five-year schedule — user-approved historical perimeter
+
+**Approved: KO-CF, KO-DA, KO-SBC, KO-CASH, KO-FIN, KO-CLAIMS, KO-SHARES.** [Effective JSON](ko-analyst-input-package.json) `/current_history` is active. Original `/periods`, proposals and pending flags remain historical snapshots, not current approval status.
+
+Audit sequence1 at `2026-10-17T18:17:50.478703+00:00`, SHA256 `f41c4963c9ceb4101077e645bbed71f92efe0923493096ea2009a1e88ea157cc`, binds source commit `9bb110cb208ce3abcac0365c4ecf4820c498d60d`, exact source/review/proposal revisions, five identities, user authorization and rationale in `/history_approval`. Source/candidate/period/scope/precision changes reject stale acceptance. Original nulls, alternatives, rejected findings and prior history are preserved.
+
+Named financing42,761/39,149/42,064/44,522/45,492 is selected. FY2025 recognized held-sale borrowing1,435 (187+398+850) remains a **separate effective side schedule**, never silently omitted from review or added twice. Conditional46,927 is NOT selected. This is not complete combined debt. Pension/NCI, IRS, fairlife and held-sale claims keep their gross/net scope; no netting/valuation deduction or normalized CFO.
+
+All monetary schedules below are **USD millions**. Exact raw units/signs, source decimals/precision variants and operand precision are retained at every selected source reference; arithmetic never improves precision. Sources/receipt URLs, digests and authoritative dates remain in the exact-source section below and JSON.
+
+**No** financial-sufficiency certification, complete debt/reinvestment/expense disclosure, Phase1 closure or Phase2 authority. Approved no-additional-adjustment assumptions knowingly omit potentially undisclosed claims/borrowing of unbounded size; not reported zero or immateriality. Movements already in independently reconciled CFO are supporting detail, never additional deductions. Complete reconstructed NWC/book delta is not required; supporting NWC/source history persists.
+
+**Five years each14/14 (70/70): completed for the approved historical-input perimeter only.**
+
+|Selected input / operation|2021|2022|2023|2024|2025|
+|---|---:|---:|---:|---:|---:|
+|Revenue|38,655|43,004|45,754|47,061|47,941|
+|Operating profit / EBIT, stated scope|10,308|10,909|11,311|9,992|13,762|
+|Accepted limited D&A proxy|1,452|1,260|1,128|1,075|1,050|
+|Cash investment, stated scope|-1,367|-1,484|-1,852|-2,064|-2,112|
+|Independently reconciled reported CFO|12,625|11,018|11,599|6,805|7,408|
+|Historical tax provision|2,621|2,115|2,249|2,437|2,861|
+|Historical pretax, original scope|12,425|11,686|12,952|13,086|15,998|
+|Current financial balances, not excess cash|10,926|10,562|12,363|12,848|13,872|
+|Named borrowing/financing, not complete debt|42,761|39,149|42,064|44,522|45,492|
+|SBC expense proxy once|337|361|251|286|279|
+|Cash taxes, source net/gross role|-2,168|-2,403|-2,580|-3,262|-2,873|
+|Existing14-family checklist|14/14|14/14|14/14|14/14|14/14|
+
+|Family|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|revenue|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|ebit|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|depreciation_amortization|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_capex|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cash_flow_working_capital_movements|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|deferred_taxes|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|stock_based_compensation|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|unclassified_cfo_reconciliation_residual|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cfo|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_tax_context|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_investment_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|debt_lease_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|other_equity_bridge_claims_assets|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|point_in_time_shares|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+
+Current inputs preserve separately named deferred taxes versus mixed reconciliation rows, no separately computed residual (null, not zero), source SBC expense/add-back differences, historical tax roles without future-rate approval, cash/investment restrictions and claims, operating-service/finance-asset classifications, actual share dates/classes/EPS/awards and all comparability limitations. Current JSON contains source-reference selections, approved assumptions and the complete14-family checklist. Unknown complete expense D&A, borrowing, reserves/restrictions and investment coverage remain unknown despite scoped completion.
+
+Validation/current dispositions: [standard batch](../standard-review-batch-results.md) / [trillion batch](../trillion-review-batch-results.md). All earlier review text below is historical, not an instruction to seek the same approval again.
+
+## Historical proposed review and source schedule — preserved
+
 **Proposed only; no new treatment accepted.** [Machine companion](ko-analyst-input-package.json) records exact sources, signs, scales, precision, contexts/occurrences, notes, calculations and unknowns. All company judgments are in the [ONE batch approval/exception table](../standard-review-batch-results.md); no separate annual approval cycles.
 
 Recommended perimeter: reported consolidated history with net operating revenue and operating income, not organic/refranchising-adjusted results. The IRS tax litigation deposit6.0bn is included in FY2024 operating cash flow; FY2025 operating cash flow includes6.1bn of the rounded6.2bn final fairlife milestone payment. Preserve these source effects, their precision and notes; do not add them back, deduct them again or infer the exact financing portion by subtraction. Equity-method cash/income rows, FX, exceptional operating charges, refranchising and held-for-sale groups remain separate comparability limits.

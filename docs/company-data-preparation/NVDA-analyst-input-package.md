@@ -1,5 +1,57 @@
 # NVDA — consolidated five-year analyst-input review
 
+## Authoritative current five-year schedule — user-approved historical perimeter
+
+**Approved: NVDA-CF, NVDA-SBC, NVDA-CASH, NVDA-CLAIMS, NVDA-SHARES, NVDA-DA, NVDA-INV, NVDA-FIN.** [Effective JSON](nvda-analyst-input-package.json) `/current_history` is active. Original `/periods`, proposals and pending flags remain historical snapshots, not current approval status.
+
+Audit sequence1 at `2026-10-17T18:17:50.523264+00:00`, SHA256 `4e7ec7c715a0e7ec50e58228debe906e5e8848f814ec610f858e042f5c9d8d45`, binds source commit `9bb110cb208ce3abcac0365c4ecf4820c498d60d`, exact source/review/proposal revisions, five identities, user authorization and rationale in `/history_approval`. Source/candidate/period/scope/precision changes reject stale acceptance. Original nulls, alternatives, rejected findings and prior history are preserved.
+
+Combined PP&E/intangible cash−976/−1,833/−1,069/−3,236/−6,042 is the approved broader proxy, including the two exact extension years and three standard-caption years. Pure PP&E cash stays null; no inferred split or subtraction of unpaid purchases/acquisition consideration. Original negative scope findings remain. Noncash additions, acquisition/Groq13,000, finance/license limitations and2021/2024 split boundaries remain separate.
+
+All monetary schedules below are **USD millions**. Exact raw units/signs, source decimals/precision variants and operand precision are retained at every selected source reference; arithmetic never improves precision. Sources/receipt URLs, digests and authoritative dates remain in the exact-source section below and JSON.
+
+**No** financial-sufficiency certification, complete debt/reinvestment/expense disclosure, Phase1 closure or Phase2 authority. Approved no-additional-adjustment assumptions knowingly omit potentially undisclosed claims/borrowing of unbounded size; not reported zero or immateriality. Movements already in independently reconciled CFO are supporting detail, never additional deductions. Complete reconstructed NWC/book delta is not required; supporting NWC/source history persists.
+
+**Five years each14/14 (70/70): completed for the approved historical-input perimeter only.**
+
+|Selected input / operation|2022|2023|2024|2025|2026|
+|---|---:|---:|---:|---:|---:|
+|Revenue|26,914|26,974|60,922|130,497|215,938|
+|Operating profit / EBIT, stated scope|10,041|4,224|32,972|81,453|130,387|
+|Accepted limited D&A proxy|1,174|1,544|1,508|1,864|2,843|
+|Cash investment, stated scope|-976|-1,833|-1,069|-3,236|-6,042|
+|Independently reconciled reported CFO|9,108|5,641|28,090|64,089|102,718|
+|Historical tax provision|189|-187|4,058|11,146|21,383|
+|Historical pretax, original scope|9,941|4,181|33,818|84,026|141,450|
+|Current financial balances, not excess cash|21,208|13,296|25,984|43,210|62,556|
+|Named borrowing/financing, not complete debt|10,946|10,953|9,709|8,463|8,468|
+|SBC expense proxy once|2,004|2,710|3,549|4,737|6,386|
+|Cash taxes, source net/gross role|-396|-1,404|-6,549|-15,118|-20,288|
+|Existing14-family checklist|14/14|14/14|14/14|14/14|14/14|
+
+|Family|2022|2023|2024|2025|2026|
+|---|---|---|---|---|---|
+|revenue|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|ebit|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|depreciation_amortization|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_capex|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cash_flow_working_capital_movements|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|deferred_taxes|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|stock_based_compensation|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|unclassified_cfo_reconciliation_residual|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cfo|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_tax_context|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_investment_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|debt_lease_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|other_equity_bridge_claims_assets|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|point_in_time_shares|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+
+Current inputs preserve separately named deferred taxes versus mixed reconciliation rows, no separately computed residual (null, not zero), source SBC expense/add-back differences, historical tax roles without future-rate approval, cash/investment restrictions and claims, operating-service/finance-asset classifications, actual share dates/classes/EPS/awards and all comparability limitations. Current JSON contains source-reference selections, approved assumptions and the complete14-family checklist. Unknown complete expense D&A, borrowing, reserves/restrictions and investment coverage remain unknown despite scoped completion.
+
+Validation/current dispositions: [standard batch](../standard-review-batch-results.md) / [trillion batch](../trillion-review-batch-results.md). All earlier review text below is historical, not an instruction to seek the same approval again.
+
+## Historical proposed review and source schedule — preserved
+
 **PROPOSED ONLY.** No new user acceptance, runtime integration or company-completion claim. [Machine companion](nvda-analyst-input-package.json) and the [ONE consolidated approval/exception sheet](../trillion-review-batch-results.md) retain reported facts, calculations, original policy dispositions, alternatives, unknowns and inactive judgments separately. Prior MSFT/AAPL/Alphabet approvals do not authorize these proposals.
 
 Recommended historical perimeter: consolidated reported revenue/operating income/CFO and displayed movements. **Pure PP&E cash remains unknown.** The prior [negative scope review](../capex-nvda-combined-scope.md) and separately gated extensions remain authoritative: a proposed broader PP&E/intangible cash proxy is a different analyst operation, not a reversal of the original primitive or registry. The two extension periods and three standard-concept periods each need the explicit NVDA-INV approval. No split or reinvestment sum is computed.

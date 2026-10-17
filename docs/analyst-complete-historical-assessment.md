@@ -1,5 +1,33 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+## Current — approved six-company historical selections are effective
+
+User approves all48 recommendations across the
+[standard](standard-review-batch-results.md) and
+[trillion](trillion-review-batch-results.md) batches. Revision-bound audits and
+current analyst views select actual approved values, retaining original facts,
+proposal history, negative findings, nulls and non-default alternatives.
+COST/KO/NVDA/AMZN/META each pass70/70 under the specifically approved historical
+perimeter; this does not supply complete expense D&A/debt/reinvestment or establish
+financial sufficiency. AMZN2021 selects81,427 including the explicitly bound318
+comparative; KO's conditional expansion remains non-default and its known
+held-sale borrowing1,435 stays visible separately.
+
+CAT's chosen industrial/captive-financing structure is implemented from direct
+supplemental income/balance/cash-flow columns including eliminations. Each approved
+perimeter is13/14 per year, not completed. The remaining essential family is
+perimeter SBC expense, which cannot be filled from a consolidated number or a
+subtraction. CAT-FIN named funding/no-unidentified-adjustment is active; missing
+lease allocation remains supporting uncertainty under that approved operation,
+not an added complete-debt prerequisite. Other accepted scoped
+observations remain active; no new automatic research queue or company-wide waiver.
+
+42 broadly assessed;9 packages =8 completed scoped company histories (original
+MSFT/AAPL/Alphabet plus five above),1 approved partial CAT,33 assessment-only.
+History deficits, support classifications, original financial blockers and the
+dated assessment JSON remain preserved. No Phase1 closure or Phase2 authority;
+prior pending counts below are historical checkpoints, not current instructions.
+
 ## Current — NVDA/AMZN/META consolidated company reviews remain pending
 
 [ONE batch sheet](trillion-review-batch-results.md) /

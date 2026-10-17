@@ -1,5 +1,30 @@
 # Company data preparation register
 
+## Current — approved effective six-company views
+
+[COST](COST-analyst-input-package.md), [KO](KO-analyst-input-package.md),
+[NVDA](NVDA-analyst-input-package.md), [AMZN](AMZN-analyst-input-package.md) and
+[META](META-analyst-input-package.md) now each satisfy five selected years14/14
+under explicitly approved historical perimeters. [CAT](CAT-analyst-input-package.md)
+has active separate industrial/Financial Products structures,13/14 each/year,
+with essential SBC expense allocation missing. CAT-FIN named funding and its
+approved no-additional-adjustment assumption are active; unallocated lease detail
+remains supporting uncertainty, not a complete-debt prerequisite. Consolidated data stay
+descriptive; elimination columns are direct supporting observations only.
+
+[23 approvals](../standard-review-batch-results.md) /
+[25 approvals](../trillion-review-batch-results.md) are revision-bound to preserved
+proposals, exact sources and actual UTC audit records. `current_history` contains
+effective selections, not just acceptance flags; original root pending flags
+remain historical snapshots. Known unknowns/alternatives and rejected broad
+scope results survive. KO held-sale debt is visible separately, not the selected
+expanded subtotal. No Phase2, generic policy expansion or support reclassification.
+
+42 broad assessments;9 packages =8 completed scoped histories +1 approved partial
+CAT;33 assessment-only. MSFT/AAPL/Alphabet complete views remain byte-unchanged.
+No Phase1/universe closure or financial-sufficiency certification. Stop after this
+approval implementation; do not start another company/acquisition automatically.
+
 ## Current — unfinished trillion-dollar company review batch
 
 [NVDA](NVDA-analyst-input-package.md), [AMZN](AMZN-analyst-input-package.md)

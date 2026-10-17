@@ -149,7 +149,7 @@ class StandardReviewBatchTests(unittest.TestCase):
         for name,value in self.outputs.items():
             self.assertTrue(json.loads((ROOT/name).read_text())==value,'Batch replay differs: '+name)
             self.assertTrue(json.loads(json.dumps(value))==value,'Round trip differs: '+name)
-        for package in self.packages.values():self.assertEqual(package['review_revision'],p.digest(p.relevant({k:v for k,v in package.items() if k!='review_revision'})))
+        for package in self.packages.values():self.assertEqual(package['review_revision'],p.digest(p.relevant({k:v for k,v in package.items() if k not in ('review_revision','history_approval','current_history')})))
         for t in ['aapl','msft','googl']:
             name=f'docs/company-data-preparation/{t}-analyst-input-package.json';self.assertEqual((ROOT/name).read_bytes(),subprocess.check_output(['git','show',p.BASELINE+':'+name],cwd=ROOT))
         paths=subprocess.check_output(['git','ls-tree','-r','--name-only',p.BASELINE,'src','docs/evidence','docs/universe'],cwd=ROOT,text=True).splitlines()

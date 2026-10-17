@@ -1,5 +1,57 @@
 # META — consolidated five-year analyst-input review
 
+## Authoritative current five-year schedule — user-approved historical perimeter
+
+**Approved: META-CF, META-SBC, META-CASH, META-CLAIMS, META-SHARES, META-DA, META-INV, META-FIN.** [Effective JSON](meta-analyst-input-package.json) `/current_history` is active. Original `/periods`, proposals and pending flags remain historical snapshots, not current approval status.
+
+Audit sequence1 at `2026-10-17T18:17:50.735170+00:00`, SHA256 `ac2514aa5c57e8959f38f90e9cd8687748b490a01d75647e172b2922fed54927`, binds source commit `9bb110cb208ce3abcac0365c4ecf4820c498d60d`, exact source/review/proposal revisions, five identities, user authorization and rationale in `/history_approval`. Source/candidate/period/scope/precision changes reject stale acceptance. Original nulls, alternatives, rejected findings and prior history are preserved.
+
+Independent caption/dimension-specific CFO display checks coexist with original parser PARTIALs FY2022–24; no source/parser/tolerance is overwritten. Original2021 PP&E18,567 is not later18,690. FY2024 deferred tax−4,737 note versus−4,738 cash row remains, no plug. Finance amortization is not added to the D&A proxy; dated A/B shares and independently reported aggregate remain separate, no automatic aggregation.
+
+All monetary schedules below are **USD millions**. Exact raw units/signs, source decimals/precision variants and operand precision are retained at every selected source reference; arithmetic never improves precision. Sources/receipt URLs, digests and authoritative dates remain in the exact-source section below and JSON.
+
+**No** financial-sufficiency certification, complete debt/reinvestment/expense disclosure, Phase1 closure or Phase2 authority. Approved no-additional-adjustment assumptions knowingly omit potentially undisclosed claims/borrowing of unbounded size; not reported zero or immateriality. Movements already in independently reconciled CFO are supporting detail, never additional deductions. Complete reconstructed NWC/book delta is not required; supporting NWC/source history persists.
+
+**Five years each14/14 (70/70): completed for the approved historical-input perimeter only.**
+
+|Selected input / operation|2021|2022|2023|2024|2025|
+|---|---:|---:|---:|---:|---:|
+|Revenue|117,929|116,609|134,902|164,501|200,966|
+|Operating profit / EBIT, stated scope|46,753|28,944|46,751|69,380|83,276|
+|Accepted limited D&A proxy|7,967|8,686|11,178|15,498|18,616|
+|Cash investment, stated scope|-18,567|-31,431|-27,266|-37,256|-69,691|
+|Independently reconciled reported CFO|57,683|50,475|71,113|91,328|115,800|
+|Historical tax provision|7,914|5,619|8,330|8,303|25,474|
+|Historical pretax, original scope|47,284|28,819|47,428|70,663|85,932|
+|Current financial balances, not excess cash|47,998|40,738|65,403|77,815|81,592|
+|Named borrowing/financing, not complete debt|581|10,610|19,075|29,535|59,928|
+|SBC expense proxy once|9,164|11,992|14,027|16,690|20,427|
+|Cash taxes, source net/gross role|-8,525|-6,407|-6,607|-10,554|-7,578|
+|Existing14-family checklist|14/14|14/14|14/14|14/14|14/14|
+
+|Family|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|revenue|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|ebit|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|depreciation_amortization|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_capex|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cash_flow_working_capital_movements|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|deferred_taxes|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|stock_based_compensation|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|unclassified_cfo_reconciliation_residual|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_cfo|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|reported_tax_context|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|cash_investment_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|debt_lease_components|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|other_equity_bridge_claims_assets|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+|point_in_time_shares|Satisfied|Satisfied|Satisfied|Satisfied|Satisfied|
+
+Current inputs preserve separately named deferred taxes versus mixed reconciliation rows, no separately computed residual (null, not zero), source SBC expense/add-back differences, historical tax roles without future-rate approval, cash/investment restrictions and claims, operating-service/finance-asset classifications, actual share dates/classes/EPS/awards and all comparability limitations. Current JSON contains source-reference selections, approved assumptions and the complete14-family checklist. Unknown complete expense D&A, borrowing, reserves/restrictions and investment coverage remain unknown despite scoped completion.
+
+Validation/current dispositions: [standard batch](../standard-review-batch-results.md) / [trillion batch](../trillion-review-batch-results.md). All earlier review text below is historical, not an instruction to seek the same approval again.
+
+## Historical proposed review and source schedule — preserved
+
 **PROPOSED ONLY.** No new user acceptance, runtime integration or company-completion claim. [Machine companion](meta-analyst-input-package.json) and the [ONE consolidated approval/exception sheet](../trillion-review-batch-results.md) retain reported facts, calculations, original policy dispositions, alternatives, unknowns and inactive judgments separately. Prior MSFT/AAPL/Alphabet approvals do not authorize these proposals.
 
 Recommended historical perimeter: consolidated Family of Apps/Reality Labs history; seed SUPPORTED status is not checklist approval. All new company treatments remain proposed. Revenue/EBIT are direct selected statement populations, not segment sums; FY2022 restructuring, changing estimated equipment lives,2024/25 tax effects and2025 strategic investment transactions remain comparability limits, not normalization adjustments.
