@@ -1,5 +1,58 @@
 # Project Status
 
+## Current — COST/CAT/KO one retained-evidence review batch, all choices pending
+
+[ONE batch approval/exception table](standard-review-batch-results.md) and three
+company packages cover15 exact frozen annuals/210 family slots: COST FY2022–26
+32 source-supported/38 pending; CAT FY2021–25 0/70 (financial perimeter gate,
+not missing facts); KO FY2021–25 35/35. All15 displayed CFOs independently replay
+exactly against the existing source-bound ledger. All30 primary/instance bodies
+and actual receipts retained; no acquisition list or new SEC request.
+
+COST proposes limited D&A+finance-amortization proxies2,028/2,246/2,334/2,528/
+2,780, not complete expense D&A; direct note finance components repair missing
+old selectors, and known FY2022 short borrowing88 is included. Mixed FY2023–25
+deferred-tax/impairment rows remain mixed, no invented pure component or zero.
+CAT needs an explicit industrial/captive-financing perimeter, not ordinary
+consolidated operating-only use. Supplemental industrial CFO7,177/6,358/11,688/
+11,437/12,278 and funding/cash/lessor assets differ from consolidated scopes;
+intercompany eliminations and financial receivable/insurance populations prevent
+mechanical mixing. No support reclassification or analyst-complete result.
+KO retains reported CFO impacts from IRS deposit6.0bn in2024 and fairlife6.1bn
+operating cash in2025; D&A proxy/expense roles, restricted cash, pension gross/net
+and held-sale debt1,435m stay explicit. No normalized CFO, unproved lease addition,
+claim netting, future tax rate or economic adjustment.
+
+All23 company/period-bound proposals are inactive, in ONE consolidated table;
+review does not record approval. Counts42 broadly assessed;6 company packages =
+3 previously completed MSFT/AAPL/Alphabet +3 reviewed/pending COST/CAT/KO;
+36 broad-only. Original completed views, evidence, frozen policies/outputs and
+pilot bytes remain unchanged. Stop for consolidated user review, not another
+company/research queue, Phase1 closure or Phase2 implementation.
+
+Validation:16 distinct focused gates are satisfied:15 cases (including five
+legacy/pilot/frozen preservation tests) passed on the final executable code in
+`/tmp/standard-review-batch-final-tests.log`; its remaining exact generated-file
+replay gate passed after regeneration in30.754s in
+`/tmp/standard-review-batch-final-replay.log`. Do not describe that earlier16-test
+command as an all-green run: it rejected a stale CAT support snapshot after
+leased-to-others rows were added. Regeneration preserved the exact equality check.
+An earlier financial/source test also exposed KO held-sale facts' extension
+namespace; the selector was corrected, not the expected1,435m amount or scope.
+No source assertion/financial expectation was weakened to obtain a pass.
+
+All15 annual CFOs replay exactly; original body/receipt, raw occurrence, unit,
+precision, sign, primary table/inline, CAT supplemental and COST note arithmetic,
+KO overlap/benefit/share roles, inactive proposals and serialization checks pass.
+All three completed company package replays, compileall,745 affected/new local
+links,604 batch/field/selection references,15-period/210-slot reconciliation and
+diff checks pass. Original three completed JSON views, runtime/normalization,
+source/evidence, original pilots and frozen artifacts remain unchanged. No
+acquisition/full-suite/corpus run. Logs also:
+`/tmp/standard-review-completed-peer-replays.log`,
+`/tmp/standard-review-batch-links.log`. No remaining technical failure is known;
+financial judgments/perimeter requirements in the ONE decision table remain open.
+
 ## Current — Alphabet approved five-year historical perimeter completed
 
 [Authoritative Alphabet schedule](company-data-preparation/GOOGL-analyst-input-package.md)

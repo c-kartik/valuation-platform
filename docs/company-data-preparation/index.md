@@ -1,5 +1,23 @@
 # Company data preparation register
 
+## Current — three-company review batch awaiting one consolidated decision
+
+[COST](COST-analyst-input-package.md), [CAT](CAT-analyst-input-package.md) and
+[KO](KO-analyst-input-package.md) now have initial company-wide five-year
+packages/JSON under existing review conventions (previously preparation records
+only), with ONE [batch decision sheet](../standard-review-batch-results.md).
+15 exact annuals/210 families:67 source-supported observations and143 pending
+financial-treatment slots; no new acceptance. All15 CFO displays and30 retained
+source receipts replay. CAT's industrial/captive-financing perimeter remains an
+essential decision; consolidated data cannot be forced into operating-only scope.
+COST/KO proxies, financing/claims, restrictions and mixed rows stay proposed.
+
+42 broad assessments;6 packages =3 completed scoped MSFT/AAPL/Alphabet +3 pending
+COST/CAT/KO;36 broad-only. The40-issuer register plus supported seeds and frozen
+classes remain intact. No new acquisition, accepted assumption, Phase1 closure or
+Phase2 authority. Earlier candidate-only recommendations are now historical;
+stop for this batch's consolidated review, not automatic backlog execution.
+
 ## Current — three completed scoped company histories
 
 [Alphabet's authoritative schedule](GOOGL-analyst-input-package.md) records

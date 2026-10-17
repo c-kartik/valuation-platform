@@ -1,5 +1,37 @@
 # KO — company data preparation
 
+## Current company-wide review — all new assumptions pending
+
+[KO five-year schedule/matrix](KO-analyst-input-package.md) and
+[machine package](ko-analyst-input-package.json) now bind all five
+selected annuals/70 families to exact original primary/instance bodies, actual
+receipts, raw facts/contexts/precision/confirmations, independently displayed CFO
+and retained notes. Original conflict was broad field evidence without a coherent
+company-specific financial selection/approval. Chosen resolution is one retained
+batch review, not normalization/policy changes or peer-assumption transfer.
+
+Outcome: 35 source-supported /35 pending financial slots.
+ONE [batch approval/exception table](../standard-review-batch-results.md)
+contains all new company judgments, numerical consequences, evidence and
+alternatives. No new audit accepts them; source unknowns and original blockers
+persist. All five source CFO displays replay; all required bodies/receipts are
+available, no acquisition. Original completed peers and frozen/pilot artifacts
+are preserved. Prior sections below retain their historical outcomes.
+
+Retain reported IRS deposit6.0bn (FY2024 CFO) and fairlife6.1bn operating milestone
+cash (FY2025); no organic normalization/add-back. D&A limited proxy is proposed;
+depreciation explicitly includes finance assets, but complete lease liability/cash
+coverage remains unproved. SBC expense/add-back differences stay distinct. Known
+pension net assets/OPEB liabilities overlap gross recognized components, not a sum.
+KO held-sale borrowing is in its extension taxonomy: FY2025 short187/current398/
+long850 totals1,435 separately; no all-liabilities1,437 or tag-name-only finance
+coverage claim. Restricted/strategic assets, tax litigation asset/claims and share
+classes/dates remain separate. Future tax/forecast/valuation remains Phase2.
+
+Stop for ONE consolidated batch review. Financial sufficiency and analyst
+completeness are not approved; original classifications/history and financial
+blockers remain. No repeated source acquisition or automatic next issuer.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

@@ -1,5 +1,36 @@
 # COST — supplemental supported-seed preparation note
 
+## Current company-wide review — all new assumptions pending
+
+[COST five-year schedule/matrix](../COST-analyst-input-package.md) and
+[machine package](../cost-analyst-input-package.json) now bind all five
+selected annuals/70 families to exact original primary/instance bodies, actual
+receipts, raw facts/contexts/precision/confirmations, independently displayed CFO
+and retained notes. Original conflict was broad field evidence without a coherent
+company-specific financial selection/approval. Chosen resolution is one retained
+batch review, not normalization/policy changes or peer-assumption transfer.
+
+Outcome: 32 source-supported /38 pending financial slots.
+ONE [batch approval/exception table](../../standard-review-batch-results.md)
+contains all new company judgments, numerical consequences, evidence and
+alternatives. No new audit accepts them; source unknowns and original blockers
+persist. All five source CFO displays replay; all required bodies/receipts are
+available, no acquisition. Original completed peers and frozen/pilot artifacts
+are preserved. Prior sections below retain their historical outcomes.
+
+Period-specific treatment: FY2023 has53 weeks. Total revenue includes membership
+fees. D&A+separate finance amortization2,028/2,246/2,334/2,528/2,780 is a proposed
+limited proxy with explicit non-overlap, not complete expense D&A. Finance note
+current245/129/147/78/94 and long1,383/1,303/1,351/1,401/1,319 are directly
+reported primary-table cells, not residual allocations or fabricated XBRL facts.
+Known FY2022 short borrowing88 must not be dropped. Gross financial balances,
+net-to-gross SBC expense, mixed deferred/impairment rows, international benefit
+uncertainty and dated shares/awards retain distinct roles. No source-missing zero.
+
+Stop for ONE consolidated batch review. Financial sufficiency and analyst
+completeness are not approved; original classifications/history and financial
+blockers remain. No repeated source acquisition or automatic next issuer.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../../statement-binding-repair-results.md) / [cause disposition](../../statement-repair-disposition.json).

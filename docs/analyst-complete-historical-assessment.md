@@ -1,5 +1,35 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+## Current — COST/CAT/KO one retained-evidence review batch, all choices pending
+
+[ONE batch approval/exception table](standard-review-batch-results.md) and three
+company packages cover15 exact frozen annuals/210 family slots: COST FY2022–26
+32 source-supported/38 pending; CAT FY2021–25 0/70 (financial perimeter gate,
+not missing facts); KO FY2021–25 35/35. All15 displayed CFOs independently replay
+exactly against the existing source-bound ledger. All30 primary/instance bodies
+and actual receipts retained; no acquisition list or new SEC request.
+
+COST proposes limited D&A+finance-amortization proxies2,028/2,246/2,334/2,528/
+2,780, not complete expense D&A; direct note finance components repair missing
+old selectors, and known FY2022 short borrowing88 is included. Mixed FY2023–25
+deferred-tax/impairment rows remain mixed, no invented pure component or zero.
+CAT needs an explicit industrial/captive-financing perimeter, not ordinary
+consolidated operating-only use. Supplemental industrial CFO7,177/6,358/11,688/
+11,437/12,278 and funding/cash/lessor assets differ from consolidated scopes;
+intercompany eliminations and financial receivable/insurance populations prevent
+mechanical mixing. No support reclassification or analyst-complete result.
+KO retains reported CFO impacts from IRS deposit6.0bn in2024 and fairlife6.1bn
+operating cash in2025; D&A proxy/expense roles, restricted cash, pension gross/net
+and held-sale debt1,435m stay explicit. No normalized CFO, unproved lease addition,
+claim netting, future tax rate or economic adjustment.
+
+All23 company/period-bound proposals are inactive, in ONE consolidated table;
+review does not record approval. Counts42 broadly assessed;6 company packages =
+3 previously completed MSFT/AAPL/Alphabet +3 reviewed/pending COST/CAT/KO;
+36 broad-only. Original completed views, evidence, frozen policies/outputs and
+pilot bytes remain unchanged. Stop for consolidated user review, not another
+company/research queue, Phase1 closure or Phase2 implementation.
+
 ## Current — Alphabet approved five-year historical perimeter completed
 
 [Authoritative Alphabet schedule](company-data-preparation/GOOGL-analyst-input-package.md)

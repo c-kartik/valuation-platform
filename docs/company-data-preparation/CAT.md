@@ -1,5 +1,38 @@
 # CAT — company data preparation
 
+## Current company-wide review — all new assumptions pending
+
+[CAT five-year schedule/matrix](CAT-analyst-input-package.md) and
+[machine package](cat-analyst-input-package.json) now bind all five
+selected annuals/70 families to exact original primary/instance bodies, actual
+receipts, raw facts/contexts/precision/confirmations, independently displayed CFO
+and retained notes. Original conflict was broad field evidence without a coherent
+company-specific financial selection/approval. Chosen resolution is one retained
+batch review, not normalization/policy changes or peer-assumption transfer.
+
+Outcome: 0 source-supported /70 pending financial slots.
+ONE [batch approval/exception table](../standard-review-batch-results.md)
+contains all new company judgments, numerical consequences, evidence and
+alternatives. No new audit accepts them; source unknowns and original blockers
+persist. All five source CFO displays replay; all required bodies/receipts are
+available, no acquisition. Original completed peers and frozen/pilot artifacts
+are preserved. Prior sections below retain their historical outcomes.
+
+Essential decision: the consolidated group includes Financial Products' finance
+receivables, leased assets, insurance holdings and funding. Supplemental industrial
+and financial columns plus intercompany eliminations are not standalone sums.
+Industrial CFO7,177/6,358/11,688/11,437/12,278 differs from consolidated figures;
+named industrial borrowing9,826/9,652/9,670/8,777/10,990 is not consolidated debt.
+Generic Capex excludes leased-to-others equipment. Do not mechanically apply
+lessee or operating-only treatments to lessor/captive assets. Issuer ETR and
+before-equity-affiliate pretax retain their source scope; generic denied
+pretax/ETR stays unchanged. No automatic specialized reclassification, complete
+company contract or numerical allocation is approved here.
+
+Stop for ONE consolidated batch review. Financial sufficiency and analyst
+completeness are not approved; original classifications/history and financial
+blockers remain. No repeated source acquisition or automatic next issuer.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

@@ -1,0 +1,1312 @@
+{
+  "broad_assessment_only": 36,
+  "companies": {
+    "CAT": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 70,
+        "SOURCE_SUPPORTED": 0
+      },
+      "periods": 5,
+      "review_revision": "cf4952c7ab03f035b32bac96130f96408f50c99d8235143d2c3b6323bfc2c663"
+    },
+    "COST": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 38,
+        "SOURCE_SUPPORTED": 32
+      },
+      "periods": 5,
+      "review_revision": "7cb77a154eb642d097caf760c6fc09bb16ec79869e073d4ac54e27dbcd1fbd0a"
+    },
+    "KO": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 35,
+        "SOURCE_SUPPORTED": 35
+      },
+      "periods": 5,
+      "review_revision": "4aae598964a4b07a70ec34714c93935b8e35f496285716b70fa69047e17e4ab5"
+    }
+  },
+  "completed_company_packages": 3,
+  "decisions": [
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "COST-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000909832-22-000021",
+          "annual_end": "2022-08-28",
+          "annual_start": "2021-08-30",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-23-000042",
+          "annual_end": "2023-09-03",
+          "annual_start": "2022-08-29",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-24-000049",
+          "annual_end": "2024-09-01",
+          "annual_start": "2023-09-04",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-25-000101",
+          "annual_end": "2025-08-31",
+          "annual_start": "2024-09-02",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-26-000093",
+          "annual_end": "2026-08-30",
+          "annual_start": "2025-09-01",
+          "cik": 909832,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "7392/11068/11339/13335/15817 USDm",
+      "recommendation": "Use source-bound reported CFO and displayed movements; no separate residual scalar or second movement deduction.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "COST",
+      "uncertainty_and_alternative": "Alternative require supported mixed-row allocations, not a residual plug. Consolidated CFO is not organic/unlevered cash; acquisitions/FX/reclasses retain stated scopes. COST FY2023-25 mixed impairment/deferred-tax/other row does not establish pure deferred taxes; propose no separate pure-CFO-deferred operation, source amount remains unknown."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "COST-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000909832-22-000021",
+          "annual_end": "2022-08-28",
+          "annual_start": "2021-08-30",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-23-000042",
+          "annual_end": "2023-09-03",
+          "annual_start": "2022-08-29",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-24-000049",
+          "annual_end": "2024-09-01",
+          "annual_start": "2023-09-04",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-25-000101",
+          "annual_end": "2025-08-31",
+          "annual_start": "2024-09-02",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-26-000093",
+          "annual_end": "2026-08-30",
+          "annual_start": "2025-09-01",
+          "cik": 909832,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "2028/2246/2334/2528/2780 USDm",
+      "recommendation": "Select a labeled limited historical D&A proxy; retain expense/impairment/ROU observations separately.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "COST",
+      "uncertainty_and_alternative": "COST proposes D&A + separately reported finance amortization, supported by separate CFO lease-ROU line and finance assets in other noncurrent assets, with explicit non-overlap assumption. Alternative D&A-only1900/2077/2237/2426/2674 omits128/169/97/102/106; never add operating ROU. Complete expense D&A unknown."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "COST-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000909832-22-000021",
+          "annual_end": "2022-08-28",
+          "annual_start": "2021-08-30",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-23-000042",
+          "annual_end": "2023-09-03",
+          "annual_start": "2022-08-29",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-24-000049",
+          "annual_end": "2024-09-01",
+          "annual_start": "2023-09-04",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-25-000101",
+          "annual_end": "2025-08-31",
+          "annual_start": "2024-09-02",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-26-000093",
+          "annual_end": "2026-08-30",
+          "annual_start": "2025-09-01",
+          "cik": 909832,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "724/774/818/860/924 USDm",
+      "recommendation": "Use recognized gross SBC expense as labeled cost proxy once; preserve add-back/mixed CFO roles.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "COST",
+      "uncertainty_and_alternative": "COST derives gross note expense from net expense + related expense tax benefit, not exercise cash benefits. KO expense337/361/251/286/279 differs from CFO337/356/254/286/279, no plugs. CAT expense200/193/208/223/242 is separately reported; no invented standalone add-back from Other. Alternative keep reported expense only without economic-cost proxy; awards remain separate."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "COST-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000909832-22-000021",
+          "annual_end": "2022-08-28",
+          "annual_start": "2021-08-30",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-23-000042",
+          "annual_end": "2023-09-03",
+          "annual_start": "2022-08-29",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-24-000049",
+          "annual_end": "2024-09-01",
+          "annual_start": "2023-09-04",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-25-000101",
+          "annual_end": "2025-08-31",
+          "annual_start": "2024-09-02",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-26-000093",
+          "annual_end": "2026-08-30",
+          "annual_start": "2025-09-01",
+          "cik": 909832,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "11049/15234/11144/15284/21301 USDm",
+      "recommendation": "Select gross named current financial balances only; retain restrictions, strategic/insurance holdings and alternatives separately.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "COST",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash; unknown reserves/restrictions remain. CAT consolidated cash versus industrial8428/6042/6106/6165/9333 requires perimeter choice; do not move Financial Products cash into industrial balances. KO restrictedcash138/455/326/660/740 and equity-method holdings remain separate; held-sale populations are not automatically added. Alternative no liquid-balance selection pending reserve restrictions."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "COST-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000909832-22-000021",
+          "annual_end": "2022-08-28",
+          "annual_start": "2021-08-30",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-23-000042",
+          "annual_end": "2023-09-03",
+          "annual_start": "2022-08-29",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-24-000049",
+          "annual_end": "2024-09-01",
+          "annual_start": "2023-09-04",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-25-000101",
+          "annual_end": "2025-08-31",
+          "annual_start": "2024-09-02",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-26-000093",
+          "annual_end": "2026-08-30",
+          "annual_start": "2025-09-01",
+          "cik": 909832,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "8273/7890/7395/7267/7575 USDm",
+      "recommendation": "Use source-named carrying borrowing/finance populations, operating LESSEE leases service and finance LESSEE leases asset financing, with no unidentified-borrowing adjustment only if expressly approved. CAT lessor receivables/leased-to-others assets remain financing-business operations, not lessee debt adjustments.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "COST",
+      "uncertainty_and_alternative": "CAT consolidated/industrial/Financial Products columns and eliminations must remain separate; do not deduct funding debt without its financing assets. COST FY2022 known short borrowing88 is included, not omitted; finance note245+1383,129+1303,147+1351,78+1401,94+1319 is outside term debt. KO named reported long-term borrowing parent is not certified complete finance-lease coverage merely from its tag name; no duplicate CP or unproved lease addition. FY2025 held-sale loans187/current debt398/long debt850 remain separate recognized populations; expanded46927 alternative depends on their separate balance-sheet classification, not adding all held-sale liabilities1437. Missing finance coverage/other borrowing stays unquantified, no immateriality inference. Alternative retain requirement pending a broader defensible perimeter."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "COST-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000909832-22-000021",
+          "annual_end": "2022-08-28",
+          "annual_start": "2021-08-30",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-23-000042",
+          "annual_end": "2023-09-03",
+          "annual_start": "2022-08-29",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-24-000049",
+          "annual_end": "2024-09-01",
+          "annual_start": "2023-09-04",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-25-000101",
+          "annual_end": "2025-08-31",
+          "annual_start": "2024-09-02",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-26-000093",
+          "annual_end": "2026-08-30",
+          "annual_start": "2025-09-01",
+          "cik": 909832,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "5/0/unknown/unknown/unknown USDm; postemployment unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain known NCI, pension/benefit and other claims separately without parent/child netting; propose no additional unidentified claim adjustment.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "COST",
+      "uncertainty_and_alternative": "Potential unidentified claims unbounded; no immateriality assumption. COST retirement824/889/963/1061/1174 includes international plans: source says some immaterial, not valuation proof; no funded-status allocation. CAT recognized postemployment5592/4203/4098/3757/3838 remains. KO pension net assets325/782/716/390/295 and OPEB liabilities277/122/121/116/112 plus gross recognized components are separate, not netted; IRS/contingent consideration/held-sale claims remain, no automatic valuation deduction. Alternative leave unspecified-claim operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "COST-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cost-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000909832-22-000021",
+          "annual_end": "2022-08-28",
+          "annual_start": "2021-08-30",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-23-000042",
+          "annual_end": "2023-09-03",
+          "annual_start": "2022-08-29",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-24-000049",
+          "annual_end": "2024-09-01",
+          "annual_start": "2023-09-04",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-25-000101",
+          "annual_end": "2025-08-31",
+          "annual_start": "2024-09-02",
+          "cik": 909832,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000909832-26-000093",
+          "annual_end": "2026-08-30",
+          "annual_start": "2025-09-01",
+          "cik": 909832,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact dated shares/awards in each period facts; no numerical dilution estimate.",
+      "recommendation": "Select the actual fiscal-end reported common population; preserve cover date/class observations, EPS and awards separately. No automatic class sum/dilution.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "COST",
+      "uncertainty_and_alternative": "COST unclassed and CommonClassA confirmations have the same amount, not additional shares. CAT/KO common observations and separately dated cover counts are not interchangeable. Alternative retain class/date scope unresolved; no forecast shares/award valuation approved."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "CAT-PERIMETER",
+      "evidence_references": [
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000018230-22-000050",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-25-000008",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-26-000008",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Consolidated CFO7198/7766/12885/12035/11739 versus industrial7177/6358/11688/11437/12278. Named borrowing37789/36993/37878/38409/43330 versus industrial9826/9652/9670/8777/10990 and Financial Products27989/27372/28255/29799/33617.",
+      "recommendation": "Do NOT approve generic consolidated operating-company preparation. Retain consolidated history as descriptive; propose separate industrial and captive-financing historical perimeters using supplemental columns, with intercompany eliminations explicit.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CAT",
+      "uncertainty_and_alternative": "Alternative a specifically approved consolidated financial-services-inclusive contract, not ordinary operating-only inputs. Neither is active; do not reconstruct standalone figures by subtraction. Financial-products receivables, leased assets, funding and eliminations change economics. Source2025 industrial caption changes to Machinery, Power & Energy; retain accession-specific names."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "CAT-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000018230-22-000050",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-25-000008",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-26-000008",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "8204/8752/13050/13373/11541 USDm; issuer ETR ratios in facts/reported_etr",
+      "recommendation": "Retain reported provision and issuer ETR with its before-tax/equity-affiliate scope; leave the generic denied denominator/ETR unchanged.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CAT",
+      "uncertainty_and_alternative": "Generic pretax policy excludes this before-equity-affiliate concept; after-tax affiliate income must not be added without a supported tax bridge. Alternative approve a separately scoped historical ratio only; no new generic resolver/rate/forecast assumption."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "CAT-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000018230-22-000050",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-25-000008",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-26-000008",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "7198/7766/12885/12035/11739 USDm",
+      "recommendation": "Use source-bound reported CFO and displayed movements; no separate residual scalar or second movement deduction.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CAT",
+      "uncertainty_and_alternative": "Alternative require separately evidenced allocations. Mixed rows stay mixed; no zero, book delta NWC or extra deductions. CFO may include material nonrecurring/acquisition/financing-business effects."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "CAT-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000018230-22-000050",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-25-000008",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-26-000008",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "2352/2219/2144/2153/2262 USDm",
+      "recommendation": "Select a labeled limited historical D&A proxy; retain expense/impairment/ROU observations separately.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CAT",
+      "uncertainty_and_alternative": "CAT consolidated proxy includes leased-to-others/Financial Products depreciation; industrial supplemental1550/1439/1361/1368/1497 is a DIFFERENT perimeter, not a substitute without CAT-PERIMETER. KO depreciation includes finance assets; no extra finance amortization or subtraction-based intangible estimate. CFO versus expense-basis completeness unproved."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "CAT-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000018230-22-000050",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-25-000008",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-26-000008",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "200/193/208/223/242 USDm",
+      "recommendation": "Use recognized gross SBC expense as labeled cost proxy once; preserve add-back/mixed CFO roles.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CAT",
+      "uncertainty_and_alternative": "COST derives gross note expense from net expense + related expense tax benefit, not exercise cash benefits. KO expense337/361/251/286/279 differs from CFO337/356/254/286/279, no plugs. CAT expense200/193/208/223/242 is separately reported; no invented standalone add-back from Other. Alternative keep reported expense only without economic-cost proxy; awards remain separate."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "CAT-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000018230-22-000050",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-25-000008",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-26-000008",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "9254/7004/6978/6889/9980 USDm",
+      "recommendation": "Select gross named current financial balances only; retain restrictions, strategic/insurance holdings and alternatives separately.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CAT",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash; unknown reserves/restrictions remain. CAT consolidated cash versus industrial8428/6042/6106/6165/9333 requires perimeter choice; do not move Financial Products cash into industrial balances. KO restrictedcash138/455/326/660/740 and equity-method holdings remain separate; held-sale populations are not automatically added. Alternative no liquid-balance selection pending reserve restrictions."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "CAT-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000018230-22-000050",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-25-000008",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-26-000008",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "37789/36993/37878/38409/43330 USDm",
+      "recommendation": "Use source-named carrying borrowing/finance populations, operating LESSEE leases service and finance LESSEE leases asset financing, with no unidentified-borrowing adjustment only if expressly approved. CAT lessor receivables/leased-to-others assets remain financing-business operations, not lessee debt adjustments.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CAT",
+      "uncertainty_and_alternative": "CAT consolidated/industrial/Financial Products columns and eliminations must remain separate; do not deduct funding debt without its financing assets. COST FY2022 known short borrowing88 is included, not omitted; finance note245+1383,129+1303,147+1351,78+1401,94+1319 is outside term debt. KO named reported long-term borrowing parent is not certified complete finance-lease coverage merely from its tag name; no duplicate CP or unproved lease addition. FY2025 held-sale loans187/current debt398/long debt850 remain separate recognized populations; expanded46927 alternative depends on their separate balance-sheet classification, not adding all held-sale liabilities1437. Missing finance coverage/other borrowing stays unquantified, no immateriality inference. Alternative retain requirement pending a broader defensible perimeter."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "CAT-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000018230-22-000050",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-25-000008",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-26-000008",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "32/22/9/3/0 USDm; postemployment 5592/4203/4098/3757/3838 USDm",
+      "recommendation": "Retain known NCI, pension/benefit and other claims separately without parent/child netting; propose no additional unidentified claim adjustment.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CAT",
+      "uncertainty_and_alternative": "Potential unidentified claims unbounded; no immateriality assumption. COST retirement824/889/963/1061/1174 includes international plans: source says some immaterial, not valuation proof; no funded-status allocation. CAT recognized postemployment5592/4203/4098/3757/3838 remains. KO pension net assets325/782/716/390/295 and OPEB liabilities277/122/121/116/112 plus gross recognized components are separate, not netted; IRS/contingent consideration/held-sale claims remain, no automatic valuation deduction. Alternative leave unspecified-claim operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "CAT-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000018230-22-000050",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-25-000008",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000018230-26-000008",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 18230,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact dated shares/awards in each period facts; no numerical dilution estimate.",
+      "recommendation": "Select the actual fiscal-end reported common population; preserve cover date/class observations, EPS and awards separately. No automatic class sum/dilution.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CAT",
+      "uncertainty_and_alternative": "COST unclassed and CommonClassA confirmations have the same amount, not additional shares. CAT/KO common observations and separately dated cover counts are not interchangeable. Alternative retain class/date scope unresolved; no forecast shares/award valuation approved."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "KO-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000021344-22-000009",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-25-000011",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-010047",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "12625/11018/11599/6805/7408 USDm",
+      "recommendation": "Use source-bound reported CFO and displayed movements; no separate residual scalar or second movement deduction.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "KO",
+      "uncertainty_and_alternative": "Alternative require separately evidenced allocations. Mixed rows stay mixed; no zero, book delta NWC or extra deductions. CFO may include material nonrecurring/acquisition/financing-business effects."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "KO-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000021344-22-000009",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-25-000011",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-010047",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1452/1260/1128/1075/1050 USDm",
+      "recommendation": "Select a labeled limited historical D&A proxy; retain expense/impairment/ROU observations separately.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "KO",
+      "uncertainty_and_alternative": "CAT consolidated proxy includes leased-to-others/Financial Products depreciation; industrial supplemental1550/1439/1361/1368/1497 is a DIFFERENT perimeter, not a substitute without CAT-PERIMETER. KO depreciation includes finance assets; no extra finance amortization or subtraction-based intangible estimate. CFO versus expense-basis completeness unproved."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "KO-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000021344-22-000009",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-25-000011",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-010047",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "337/361/251/286/279 USDm",
+      "recommendation": "Use recognized gross SBC expense as labeled cost proxy once; preserve add-back/mixed CFO roles.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "KO",
+      "uncertainty_and_alternative": "COST derives gross note expense from net expense + related expense tax benefit, not exercise cash benefits. KO expense337/361/251/286/279 differs from CFO337/356/254/286/279, no plugs. CAT expense200/193/208/223/242 is separately reported; no invented standalone add-back from Other. Alternative keep reported expense only without economic-cost proxy; awards remain separate."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "KO-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000021344-22-000009",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-25-000011",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-010047",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "10926/10562/12363/12848/13872 USDm",
+      "recommendation": "Select gross named current financial balances only; retain restrictions, strategic/insurance holdings and alternatives separately.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "KO",
+      "uncertainty_and_alternative": "Not unrestricted/excess cash; unknown reserves/restrictions remain. CAT consolidated cash versus industrial8428/6042/6106/6165/9333 requires perimeter choice; do not move Financial Products cash into industrial balances. KO restrictedcash138/455/326/660/740 and equity-method holdings remain separate; held-sale populations are not automatically added. Alternative no liquid-balance selection pending reserve restrictions."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "KO-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000021344-22-000009",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-25-000011",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-010047",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "42761/39149/42064/44522/45492 USDm",
+      "recommendation": "Use source-named carrying borrowing/finance populations, operating LESSEE leases service and finance LESSEE leases asset financing, with no unidentified-borrowing adjustment only if expressly approved. CAT lessor receivables/leased-to-others assets remain financing-business operations, not lessee debt adjustments.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "KO",
+      "uncertainty_and_alternative": "CAT consolidated/industrial/Financial Products columns and eliminations must remain separate; do not deduct funding debt without its financing assets. COST FY2022 known short borrowing88 is included, not omitted; finance note245+1383,129+1303,147+1351,78+1401,94+1319 is outside term debt. KO named reported long-term borrowing parent is not certified complete finance-lease coverage merely from its tag name; no duplicate CP or unproved lease addition. FY2025 held-sale loans187/current debt398/long debt850 remain separate recognized populations; expanded46927 alternative depends on their separate balance-sheet classification, not adding all held-sale liabilities1437. Missing finance coverage/other borrowing stays unquantified, no immateriality inference. Alternative retain requirement pending a broader defensible perimeter."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "KO-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000021344-22-000009",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-25-000011",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-010047",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1861/1721/1539/1516/2106 USDm; postemployment unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain known NCI, pension/benefit and other claims separately without parent/child netting; propose no additional unidentified claim adjustment.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "KO",
+      "uncertainty_and_alternative": "Potential unidentified claims unbounded; no immateriality assumption. COST retirement824/889/963/1061/1174 includes international plans: source says some immaterial, not valuation proof; no funded-status allocation. CAT recognized postemployment5592/4203/4098/3757/3838 remains. KO pension net assets325/782/716/390/295 and OPEB liabilities277/122/121/116/112 plus gross recognized components are separate, not netted; IRS/contingent consideration/held-sale claims remain, no automatic valuation deduction. Alternative leave unspecified-claim operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Analyst preparation review; all judgments pending user approval",
+      "decision_id": "KO-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/ko-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000021344-22-000009",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-24-000009",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000021344-25-000011",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-26-010047",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 21344,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact dated shares/awards in each period facts; no numerical dilution estimate.",
+      "recommendation": "Select the actual fiscal-end reported common population; preserve cover date/class observations, EPS and awards separately. No automatic class sum/dilution.",
+      "recorded_at_utc": "2026-10-17T17:09:55+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "KO",
+      "uncertainty_and_alternative": "COST unclassed and CommonClassA confirmations have the same amount, not additional shares. CAT/KO common observations and separately dated cover counts are not interchangeable. Alternative retain class/date scope unresolved; no forecast shares/award valuation approved."
+    }
+  ],
+  "evidence_acquisition_requirements": [],
+  "family_slots": 210,
+  "new_assumptions_active": false,
+  "new_sec_requests": 0,
+  "phase1_closed": false,
+  "reviewed_pending_company_packages": 3,
+  "schema": "retained-standard-review-batch-v1",
+  "selected_periods": 15,
+  "source_commit": "7d0e3006f2d64691f4eb67c072ce6b5efbdbeff1",
+  "tickers": [
+    "COST",
+    "CAT",
+    "KO"
+  ],
+  "valuation_consumption_approved": false
+}

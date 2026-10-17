@@ -1,5 +1,27 @@
 # Architecture
 
+## Fixed COST/CAT/KO company-review batch — report-only
+
+`scripts/prepare_standard_review_batch.py` joins only15 selected periods to the
+existing exact manifest/official-seed and displayed-statement proof bindings.
+It reuses immutable receipts/period identity, retained-component inspection,
+existing Filing fact/calculation helpers and unchanged v2 CFO reconciliation.
+The three company JSON/Markdown packages and ONE batch decision table are
+separate proposed reviews, not new production schemas, financial policies,
+approval registries or a general-purpose framework. No new assumptions are active.
+Any future acceptance must bind both the exact company source/review revision
+and its full corresponding batch decision payload; an ID or file link alone
+is not authorization, and this milestone creates no acceptance audit.
+
+Actual primary/instance QName/context/USD/unit/precision/amount checks retain
+both real locators when opaque extracted-instance IDs differ; ID equivalence
+is never fabricated. Direct COST lease note cells carry table/row/column and
+body digest without invented XBRL facts; sums require those explicit cells,
+not residual-defined balances. CAT supplemental industrial/financing columns
+remain consolidating, not standalone financial statements or generic FCFF scope.
+Original ledgers/accepted views/pilot/frozen bytes stay unchanged. See the
+[batch disposition and one approval sheet](standard-review-batch-results.md).
+
 ## Additive statement delivery v2
 
 [Bounded statement repair](statement-binding-repair-results.md) reuses exact
