@@ -22,7 +22,8 @@ class MSFTAnalystPackageTests(unittest.TestCase):
         cls.result=package.resolve_decisions(cls.filings,package.finish(cls.filings))
 
     def test_exact_package_replay_and_registered_identity(self):
-        self.assertTrue(package.accepted_view(self.result)==json.loads((ROOT/package.OUTPUT).read_text()),'Exact accepted package replay differs')
+        saved=json.loads((ROOT/package.OUTPUT).read_text());saved.pop('fy2026_completeness_attempt')
+        self.assertTrue(package.accepted_view(self.result)==saved,'Exact original accepted package replay differs')
         self.assertEqual([p['identity']['accession'] for p in self.result['periods']],
             ['0000950170-25-100235','0001193125-26-323660'])
         self.assertEqual([p['identity']['annual_start'] for p in self.result['periods']],['2024-07-01','2025-07-01'])

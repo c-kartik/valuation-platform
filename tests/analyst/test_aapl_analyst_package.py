@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from tests.analyst import preservation_projection
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -154,7 +155,7 @@ class ApplePackageTests(unittest.TestCase):
         for path in paths:
             if not (path.startswith('src/') or path.endswith('.json') or path=='scripts/prepare_msft_analyst_package.py'):continue
             prior=subprocess.check_output(['git','show',p.BASELINE+':'+path],cwd=ROOT)
-            self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),hashlib.sha256(prior).hexdigest(),path)
+            self.assertEqual(preservation_projection(path,(ROOT/path).read_bytes()),preservation_projection(path,prior),path)
 
     def test_accepted_selections_exact_source_pointers_and_nondefaults(self):
         view=self.result['accepted_view']

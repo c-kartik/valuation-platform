@@ -1,6 +1,51 @@
 # Project Status
 
-## Current milestone — analyst-complete historical-input work assessment
+## Current milestone — one-period MSFT FY2026 completeness attempt
+
+[Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
+[JSON](company-data-preparation/msft-analyst-input-package.json) append a decision-ready
+review for exact `0001193125-26-323660`, FY2026 only, after unchanged acceptance
+verification. Proposed historical purpose identifies required named observations
+and operations, not a demand for every conceivable component. Eleven named
+requirements are satisfied in their scoped sense, residual exclusion pending and
+two essential financial populations unresolved. This is **not eleven complete
+generic field families** or a completeness approval.
+
+The14 original nulls now have explicit operation/evidence/reason dispositions:
+6 supporting,5 future-operation requirements,1 pending pure-NOL exclusion and
+2 unsolved essentials. All originals remain. Correct descriptive CFO count to14
+in FY2026 (deferred-tax14189 separate), versus13 in FY2025; original182935m
+equality already correct. Bind dimensioned Note4 CP2987m as investment assets,
+never a substitute for missing issued debt. Keep legal553m accrual and400m
+possible additional loss separate; no artificial953m deduction.
+
+Proposed D1 reported-movement path, D2 no residual scalar in complete displayed
+reconciliation, D3 combined DTA disclosure/no separate pure-NOL economic asset
+remain pending. Even acceptance would not resolve short borrowing or complete
+recognized preferred/NCI/pension populations. No defensible number/bound supplied;
+short borrowing remains null, rejected zero not revived. Settled partial capital,
+rounded D&A inclusion assumption, named financing/current financial balances and
+all prior proposals/accepted views/frozen values persist unchanged.
+
+Actual measured implementation checkpoint471s (2026-10-17 07:38–07:45:51 UTC)
+includes interactive reasoning and waits, not reviewer-days or a new all42 deadline.
+No SEC requests, universe reassessment, generic policy change, economic calculation,
+financial sufficiency, phase closure or automatic next research/company work.
+
+Final current-tree validation: **123 focused tests pass in59.790s** (new attempt8,
+MSFT package21, AAPL17, Alphabet18, original inputs22, sidecars24, NWC8,
+historical assessment preservation5). All-three package replays, exact original
+accepted parent and extraction/audit logic, original pilot/frozen artifacts,
+source/class/date/unit/precision/pointers, persisted audit/stale rejection,
+compileall,467 affected local links and diff checks pass. Historical assessment
+tests now pin their stated original baseline; no new universe inventory generated.
+An intermediate test-only uncached JSON parsing bottleneck was interrupted and
+fixed by memoizing the identical baseline; no weakened financial checks or new
+expected values. Only the completed final run is claimed current. Instrumented
+review-through-verification window813s,07:38–07:51:33 UTC includes reasoning,
+waits and the interruption, not hypothetical human reviewer budgets.
+
+## Prior milestone — analyst-complete historical-input work assessment
 
 [Consolidated assessment](analyst-complete-historical-assessment.md) /
 [reproducible JSON](analyst-complete-historical-assessment.json) join current

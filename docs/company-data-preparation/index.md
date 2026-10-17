@@ -1,5 +1,23 @@
 # Company data preparation register
 
+## MSFT FY2026 bounded completion attempt — no certification
+
+[Updated existing MSFT package](MSFT-analyst-input-package.md) appends an exact
+14-family/14-original-requirement operation checklist, retained-source findings
+and three proposed decisions. FY2026 has14 displayed CFO terms including deferred
+tax, not FY2025's13. CP2987m is a dimensioned investment, not borrowing. Accepted
+partial capital/D&A assumption/financing/cash selections and all prior bytes of
+source/pilot/accepted parent content remain; no approval or generic policy change.
+Two essential populations remain unsolved:additional short borrowing and complete
+recognized preferred/NCI/pension claim coverage. Pure NOL additionally remains
+unresolved unless its proposed exclusion is approved. No zero, materiality bound,
+full issuer-history extension, universe reassessment or phase closure.
+Validation:123 focused/preservation tests (59.790s), all-three exact package
+replays, unchanged accepted parent/source/pilot/frozen data, strict stale/audit
+checks, compileall,467 affected local links and diff checks pass. Measured813s
+review-through-verification window includes reasoning/tool waits; no deadline
+extrapolation. The prior all42 assessment is preserved as its historical baseline.
+
 ## Current analyst-completeness work assessment — not certification
 
 [42-issuer assessment](../analyst-complete-historical-assessment.md) /

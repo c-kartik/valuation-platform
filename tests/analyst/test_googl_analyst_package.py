@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from tests.analyst import preservation_projection
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -160,7 +161,7 @@ class AlphabetPackageTests(unittest.TestCase):
         for path in paths:
             if not (path.startswith('src/') or path.endswith('.json') or path in ('scripts/prepare_msft_analyst_package.py','scripts/prepare_aapl_analyst_package.py')):continue
             before=subprocess.check_output(['git','show',p.BASELINE+':'+path],cwd=ROOT)
-            self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),hashlib.sha256(before).hexdigest(),path)
+            self.assertEqual(preservation_projection(path,(ROOT/path).read_bytes()),preservation_projection(path,before),path)
 
     def test_missing_inventory_and_duration_note_are_not_zero_or_instant(self):
         with self.assertRaisesRegex(ValueError,'absent'):
@@ -232,7 +233,7 @@ class AlphabetPackageTests(unittest.TestCase):
             'docs/company-data-preparation/aapl-analyst-treatment-acceptance.json',
             'docs/company-data-preparation/msft-analyst-treatment-acceptance.json'):
             expected=subprocess.check_output(['git','show',p.ACCEPTANCE_BASIS+':'+path],cwd=ROOT)
-            self.assertTrue((ROOT/path).read_bytes()==expected,path)
+            self.assertEqual(preservation_projection(path,(ROOT/path).read_bytes()),preservation_projection(path,expected),path)
 
     def test_audit_persistence_staleness_and_tamper_rejection(self):
         proposal={k:v for k,v in self.result.items() if k!='accepted_view'}

@@ -5594,6 +5594,609 @@
     "scope": "Historical analyst proposals only; book movements are not cash delta NWC; no FCFF or enterprise-equity calculation."
   },
   "financial_sufficiency": "NOT_ASSESSED",
+  "fy2026_completeness_attempt": {
+    "analyst_complete": false,
+    "approvals_added": 0,
+    "base_package_revision": "d5baea9d6ee69e4155745b5b1b18d4f98a313d92e452581f56a0372c7cb7b452",
+    "baseline": "4cd8a48f33e80a1c86e9a3b34607b7413cdbbf4e",
+    "checklist": [
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/38"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "revenue",
+        "importance": "essential_historical",
+        "required_operation": "Reported consolidated sales, no new economic classification.",
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/39"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "ebit",
+        "importance": "essential_historical",
+        "required_operation": "Reported operating income; no CFO-to-EBIT conversion.",
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/42"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "depreciation_amortization",
+        "importance": "essential_historical",
+        "required_operation": "Rounded39000 retains approved finance-amortization-inclusion assumption, not source-confirmed overlap; no ROU add-back.",
+        "status": "SATISFIED_ACCEPTED_ASSUMPTION"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/7"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "cash_capex",
+        "importance": "essential_historical",
+        "required_operation": "Required cash PP&E purchases115948 outflow; no accrual/organic/complete-reinvestment operation.",
+        "status": "SATISFIED_ACCEPTED_NARROW"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/29",
+          "/periods/1/inputs/30",
+          "/periods/1/inputs/31",
+          "/periods/1/inputs/32",
+          "/periods/1/inputs/33",
+          "/periods/1/inputs/34",
+          "/periods/1/inputs/35",
+          "/periods/1/inputs/36",
+          "/periods/1/inputs/37"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "reported_cash_flow_working_capital_movements",
+        "importance": "essential_historical",
+        "required_operation": "All nine displayed cash-contribution rows selected as reported, including tax/noncurrent; not operating-only book delta NWC.",
+        "status": "SATISFIED_REPORTED"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/6",
+          "/periods/1/inputs/5"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "deferred_taxes",
+        "importance": "essential_historical",
+        "required_operation": "CFO14189 versus deferred provision14424 are separate source roles; no255 plug.",
+        "status": "SATISFIED_REPORTED"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/41",
+          "/periods/1/inputs/11"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "stock_based_compensation",
+        "importance": "essential_historical",
+        "required_operation": "Recognized12405 proxy once; linked12405 add-back is not a second cost.",
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/27"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "unclassified_cfo_reconciliation_residual",
+        "importance": "essential_historical",
+        "required_operation": "No unclassified remainder is populated. Propose no residual scalar where the independently bound fourteen displayed terms reconcile; mixed38534 D&A-and-other row remains unchanged.",
+        "status": "PENDING_D2_EXCLUSION"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/0"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "reported_cfo",
+        "importance": "essential_historical",
+        "required_operation": "Consolidated182935; independent displayed14-term equality, not organic/unlevered cash.",
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/4",
+          "/periods/1/inputs/48",
+          "/periods/1/inputs/3"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "reported_tax_context",
+        "importance": "essential_historical",
+        "required_operation": "Provision32185, Pretax165934, accounting ETR and cash21188 in distinct roles; no future rate.",
+        "status": "SATISFIED_ACCEPTED"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/46",
+          "/periods/1/inputs/49"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "cash_investment_components",
+        "importance": "essential_historical",
+        "required_operation": "Current restriction-adjusted73043 and separate reported LT investments36348; no unrestricted/excess or reserve calculation.",
+        "status": "SATISFIED_ACCEPTED_NAMED"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/47",
+          "/periods/1/inputs/57",
+          "/periods/1/inputs/56"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "debt_lease_components",
+        "importance": "essential_historical",
+        "required_operation": "Named term40294 + finance66594 =106888 retained; issued CP/additional short borrowing null. Note4 investment2987 cannot fill it.",
+        "status": "UNSOLVED_ESSENTIAL"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/54"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "other_equity_bridge_claims_assets",
+        "importance": "essential_historical",
+        "required_operation": "Reported legal accrual553 and possible additional exposure400 separate; pure NOL DTA and preferred/NCI/pension completeness unestablished.",
+        "status": "UNSOLVED_ESSENTIAL_AND_PENDING_D3"
+      },
+      {
+        "caveat": "Status applies only to this named required input, never complete economic coverage.",
+        "evidence": [
+          "/periods/1/inputs/55",
+          "/periods/1/inputs/59",
+          "/periods/1/inputs/60"
+        ],
+        "existing_view_reference": "/accepted_view/periods/1",
+        "field": "point_in_time_shares",
+        "importance": "essential_historical",
+        "required_operation": "June30 common7427m rounded; July23 exact cover7425545491 and nonvested78m separate; no forecast dilution.",
+        "status": "SATISFIED_ACCEPTED_DATED"
+      }
+    ],
+    "conditional_essential_input": {
+      "depends_on": "D3",
+      "input_id": "pure_nol_dta",
+      "status": "unresolved_under_existing_perimeter",
+      "value": null
+    },
+    "contract_status": "proposed_pending_user_approval",
+    "decisions": [
+      {
+        "accepted": false,
+        "alternative": "Require complete reconstructed operating capital: matching facilitation obligations/current allocations and book-to-cash bridge remain unavailable, so that alternative stays incomplete.",
+        "decision_id": "D1",
+        "numerical_consequence": "No new numerical value or aggregate. Retain partial capital-18600 and book movement7155 only in their original labels.",
+        "recommendation": "Approve the company-specific as-reported historical path: all9 disclosed CF movement rows plus independent14-term CFO control; partial book operating capital remains support, not reconstructed cash delta NWC.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "Does not remove acquisition/FX/reclassification effects from the reported rows or approve an organic/EBIT cash conversion."
+      },
+      {
+        "accepted": false,
+        "alternative": "Require an individually classified remainder: complete mixed-row allocation is not evidenced, so leave the residual requirement unresolved.",
+        "decision_id": "D2",
+        "numerical_consequence": "No zero fill, D&A38534-versus39000 adjustment or residual-defined balance. Existing14-term182935 equality retained.",
+        "recommendation": "Approve excluding a separately computed unclassified residual scalar for this exact complete displayed reconciliation; retain every mixed source row and its scope.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "Does not classify the mixed D&A-and-other contents or prove an economic adjustment."
+      },
+      {
+        "accepted": false,
+        "alternative": "Require pure-NOL asset: no defensible numerical alternative exists in retained evidence; remain incomplete.",
+        "decision_id": "D3",
+        "numerical_consequence": "Keep2124 combined only; pure NOL value remains null, no allocation/rate/valuation or tax shield.",
+        "recommendation": "Approve reporting the combined loss-and-credit DTA as a combined historical disclosure without requiring a standalone pure-NOL economic asset in this historical contract.",
+        "status": "proposed_pending_user_approval",
+        "uncertainty": "No supported pure-NOL allocation or uncertainty bound; not an assertion that a pure component is immaterial."
+      }
+    ],
+    "financial_sufficiency": "NOT_ASSESSED",
+    "identity": {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "cik": 789019,
+      "form": "10-K"
+    },
+    "original_requirement_dispositions": [
+      {
+        "classification": "SUPPORTING_DISCLOSURE",
+        "disposition": "Named partial operating capital remains accepted. All nine source cash movements exist; no book movement is substituted. D1 proposes the independently evidenced as-reported path, not complete NWC.",
+        "evidence": [
+          "/accepted_view/periods/1/operating_capital",
+          "/periods/1/facts/component_receivables",
+          "/decision_resolution/periods/1/additional_facts/customer_finance"
+        ],
+        "input_id": "complete_operating_nwc",
+        "original_null_preserved": true,
+        "original_reason": "Mixed other current assets/liabilities, current customer-financing allocation and noncurrent operating accounts remain incomplete; no zero or uncertainty bound.",
+        "original_reference": "/periods/1/unresolved_requirements/0"
+      },
+      {
+        "classification": "SUPPORTING_DISCLOSURE",
+        "disposition": "No accrual-addition operation is performed: required cash purchases and creditor/noncash stocks stay separate. Unknown bridge cannot change cash PP&E.",
+        "evidence": [
+          "/periods/1/inputs/7",
+          "/periods/1/inputs/8",
+          "/periods/1/inputs/24"
+        ],
+        "input_id": "accrual_ppe_additions_cash_bridge",
+        "original_null_preserved": true,
+        "original_reason": "Cash purchases, creditor stocks and noncash lease additions do not prove complete accrual additions.",
+        "original_reference": "/periods/1/unresolved_requirements/1"
+      },
+      {
+        "classification": "SUPPORTING_DISCLOSURE",
+        "disposition": "Debt cash1500R and finance interest2547 are retained separately. A total/unlevering operation would need overlap and capitalization evidence; no total is required or approved here.",
+        "evidence": [
+          "/periods/1/inputs/1",
+          "/periods/1/inputs/21",
+          "/periods/1/inputs/2"
+        ],
+        "input_id": "all_in_cash_interest",
+        "original_null_preserved": true,
+        "original_reason": "Debt-scoped rounded interest does not establish all-in interest or capitalized-interest allocation.",
+        "original_reference": "/periods/1/unresolved_requirements/2"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "disposition": "Required historical provision/Pretax/ETR/net cash tax are present. Operating tax/tax shield is a different future operation, not a missing reported historical number.",
+        "evidence": [
+          "/periods/1/inputs/3",
+          "/periods/1/inputs/4"
+        ],
+        "input_id": "operating_only_cash_tax",
+        "original_null_preserved": true,
+        "original_reason": "Net consolidated cash taxes do not establish operating-only tax or a tax shield.",
+        "original_reference": "/periods/1/unresolved_requirements/3"
+      },
+      {
+        "classification": "SUPPORTING_DISCLOSURE",
+        "disposition": "Combined1743 is source-selected and remains unallocated. No acquisition-only/organic subtotal is performed; cannot relabel it acquisition-only.",
+        "evidence": [
+          "/periods/1/inputs/9"
+        ],
+        "input_id": "acquisition_only_cash_purchases",
+        "original_null_preserved": true,
+        "original_reason": "Reported investing line combines acquisitions, intangible and other purchases without complete allocation.",
+        "original_reference": "/periods/1/unresolved_requirements/4"
+      },
+      {
+        "classification": "SUPPORTING_DISCLOSURE",
+        "disposition": "Consolidated source identity is retained, not relabeled continuing-only. No affirmative absence of discontinued effects is inferred.",
+        "evidence": [
+          "/periods/1/cfo_reconciliation"
+        ],
+        "input_id": "discontinued_operations_cash_allocation",
+        "original_null_preserved": true,
+        "original_reason": "An independently quantified continuing-only cash perimeter is not established.",
+        "original_reference": "/periods/1/unresolved_requirements/5"
+      },
+      {
+        "classification": "SUPPORTING_DISCLOSURE",
+        "disposition": "Reported current-year cash movements do not require deriving cash from two book stocks; bridge required only for organic/comparable/book-to-cash claim, which is not made.",
+        "evidence": [
+          "/periods/1/cfo_reconciliation",
+          "/decision_resolution/periods/1/schedules/named_expansion"
+        ],
+        "input_id": "component_acquisition_fx_reclassification_effects",
+        "original_null_preserved": true,
+        "original_reason": "Component cash effects cannot be inferred from book movement or the cash FX reconciliation.",
+        "original_reference": "/periods/1/unresolved_requirements/6"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "disposition": "Joint EBIT/D&A/inventory/tax/lease compatibility remains a required gate before consumption, not resolved by this historical schedule.",
+        "evidence": [
+          "/accepted_view/periods/1/expense_da",
+          "/accepted_view/periods/1/lease_classification"
+        ],
+        "input_id": "joint_timing_compatibility",
+        "original_null_preserved": true,
+        "original_reason": "D&A, EBIT, inventory, leases, Capex and taxes are not jointly certified.",
+        "original_reference": "/periods/1/unresolved_requirements/7"
+      },
+      {
+        "classification": "PENDING_D3_EXCLUSION",
+        "disposition": "Loss-and-credit DTA2124 is combined. Pure NOL has no supported value or allocation; D3 proposes no separate economic NOL asset operation, not a proxy2124 or zero.",
+        "evidence": [
+          "/periods/1/facts/loss_credit_dta"
+        ],
+        "input_id": "pure_nol_dta",
+        "original_null_preserved": true,
+        "original_reason": "Only a combined loss-and-credit carryforward DTA is established; no pure NOL allocation.",
+        "original_reference": "/periods/1/unresolved_requirements/8"
+      },
+      {
+        "classification": "UNSOLVED_ESSENTIAL",
+        "disposition": "One retained review finds no affirmative complete recognized-population/absence evidence. Search absence and investment preferred-stock wording cannot supply issuer-claim zeros.",
+        "evidence": [
+          "/decision_resolution/periods/1/additional_facts/legal_accrual"
+        ],
+        "input_id": "preferred_nci_pension",
+        "original_null_preserved": true,
+        "original_reason": "No affirmative complete preferred/NCI/pension population or absence established by this bounded review; not zero.",
+        "original_reference": "/periods/1/unresolved_requirements/9"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "disposition": "Dated common and disclosed stock awards are present. Award valuation/incremental forecast dilution is a separate operation; complete economic award claim is not certified.",
+        "evidence": [
+          "/accepted_view/periods/1/shares_awards"
+        ],
+        "input_id": "outstanding_options_and_dilution",
+        "original_null_preserved": true,
+        "original_reason": "Restricted stock awards are disclosed, but a complete option/award economic claim and incremental dilution are not established.",
+        "original_reference": "/periods/1/unresolved_requirements/10"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "disposition": "73043 is accepted only as current balances less identified restrictions. Reserve/excess-cash valuation is not the selected historical population.",
+        "evidence": [
+          "/accepted_view/periods/1/cash"
+        ],
+        "input_id": "excess_unrestricted_cash",
+        "original_null_preserved": true,
+        "original_reason": "Current-liquidity reported population does not prove unrestricted/excess availability or strategic investment valuation.",
+        "original_reference": "/periods/1/unresolved_requirements/11"
+      },
+      {
+        "classification": "PHASE2_OPERATION",
+        "disposition": "Both statements are reported independently; no transformation between them or FCFF is performed.",
+        "evidence": [
+          "/periods/1/cfo_reconciliation",
+          "/periods/1/inputs/39"
+        ],
+        "input_id": "cfo_to_ebit_compatibility",
+        "original_null_preserved": true,
+        "original_reason": "No operating-only tax/interest/lease or complete book-to-cash/FX/acquisition bridge; reported CFO check does not approve EBIT-based consumption.",
+        "original_reference": "/periods/1/unresolved_requirements/12"
+      },
+      {
+        "classification": "UNSOLVED_ESSENTIAL",
+        "disposition": "No FY2026 issued CP/short-borrowing balance or explicit absence; net short-debt cash0 is a flow, not an ending balance or bound. Zero proposal stays rejected.",
+        "evidence": [
+          "/accepted_view/periods/1/additional_short_borrowing",
+          "/decision_resolution/periods/1/additional_facts/short_debt_cash_net"
+        ],
+        "input_id": "commercial_paper",
+        "original_null_preserved": true,
+        "original_reason": "No FY2026 borrowing CP fact or affirmative no-outstanding disclosure; term-debt table is not proof of absent other borrowing.",
+        "original_reference": "/periods/1/unresolved_requirements/13"
+      }
+    ],
+    "phase_closed": false,
+    "purpose": "Company-specific consolidated as-reported income/cash movements and named fiscal-end balances/claims/shares; no economic conversion or valuation.",
+    "retained_review": {
+      "lexical_counts": {
+        "commercial paper": 4,
+        "noncontrolling": 0,
+        "pension": 0,
+        "preferred stock": 2,
+        "short-term borrowing": 0,
+        "short-term debt": 0
+      },
+      "negative_search_limit": "Search counts are availability diagnostics, not proof of zero or no obligation.",
+      "passages": [
+        {
+          "exact_excerpt": ",141 2029 1,944 2030 1,477 2031 1,128 Thereafter 8,822 Total $ 18,609 NOTE 10 \u2014 DEBT The components of long-term debt were as follows: (In millions, issuance by calendar year) Maturities (calendar year) Stated Interest Rate Effective Interest Rate June 30, 2026 June 30, 2025 2009 issuance of $ 3.8 billion 2039 5.20 % 5.24 % $ 520 $ 520 2010 issuance of $ 4.8 billion 2040 4.50 % 4.5",
+          "offset": 288002,
+          "source": "FY2026-primary"
+        },
+        {
+          "exact_excerpt": " 2030 1,477 2031 1,128 Thereafter 8,822 Total $ 18,609 NOTE 10 \u2014 DEBT The components of long-term debt were as follows: (In millions, issuance by calendar year) Maturities (calendar year) Stated Interest Rate Effective Interest Rate June 30, 2026 June 30, 2025 2009 issuance of $ 3.8 billion 2039 5.20 % 5.24 % $ 520 $ 520 2010 issuance of $ 4.8 billion 2040 4.50 % 4.57 % 486 486 2011 issuance of $ 2.3 billion 2041 5.",
+          "offset": 288017,
+          "source": "FY2026-primary"
+        },
+        {
+          "exact_excerpt": "nually, except for the Euro-denominated debt, which is paid annually. Cash paid for interest on our debt for fiscal years 2026, 2025, and 2024 was $ 1.5 billion, $ 1.6 billion, and $ 1.7 billion, respectively. 72 PART II Item 8 The following table outlines maturities of our long-term debt, including the current portion, as of June 30, 2026: (In millions) Year Ending June 30, 2027 $ 9,250 2028 0 2029 2",
+          "offset": 290058,
+          "source": "FY2026-primary"
+        },
+        {
+          "exact_excerpt": "nts Short-term Investments Equity and Other Investments June 30, 2026 Changes in Fair Value Recorded in Other Comprehensive Income Commercial paper Level 2 $ 2,987 $ 0 $ 0 $ 2,987 $ 2,373 $ 614 $ 0 Certificates of deposit Level 2 1,745 0 0 1,745 1,701 44 0 U.S. government securities Level 1 49,714 2 ( 1,154 ) 48,562 399 40,675 7,488 U.S. agency securities Level 2 3,133 0 0 3,133 1,787 1,346 0 Foreign government bonds Level 2 221 12 ( 7 ) 226 0",
+          "offset": 269859,
+          "source": "FY2026-primary"
+        },
+        {
+          "exact_excerpt": "comprehensive loss, end of period $ ( 3,284 ) $ ( 3,347 ) $ ( 5,590 ) NOTE 17 \u2014 EMPLOYEE STOCK AND SAVINGS PLANS We grant stock-based compensation to employees and directors. Awards that expire or are canceled without delivery of shares generally become available for issuance under the plans. We issue new shares of Microsoft common stock to satisfy vesting of awards granted under our stock plans. We also have",
+          "offset": 310730,
+          "source": "FY2026-primary"
+        },
+        {
+          "exact_excerpt": "As of June 30, 2026, we had federal, state, and foreign net operating loss carryforwards of $ 369 million, $ 715 million, and $ 2.9 billion, respectively. The federal and state net operating loss carryforwards have varying expiration dates ranging from fiscal year 2027 to 2046 or indefinite carryforward periods, if not utilized. The majority of our foreign net operating loss carryforwards",
+          "offset": 297000,
+          "source": "FY2026-primary"
+        },
+        {
+          "exact_excerpt": "quipment and a $22.2 billion increase in cash used in other investing primarily to facilitate the purchase of components, offset in part by a $4.2 billion decrease in cash used in the acquisition of companies, net of cash acquired and divestitures, and purchases of intangible and other assets and a $2.4 billion decrease in cash used in net investment purchases, sales, and maturities. Debt Proceeds We issue debt to ta",
+          "offset": 208321,
+          "source": "FY2026-primary"
+        }
+      ],
+      "sources": [
+        {
+          "accession": "0001193125-26-323660",
+          "byte_length": 8585612,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "http_status": 200,
+          "representation": "sec_response_body_bytes",
+          "retained_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+          "retained_pointer": "/artifacts/20",
+          "retrieved_at_utc": "2026-10-11T17:12:54.079847+00:00",
+          "sha256": "cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f",
+          "source_id": "FY2026-primary",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+        },
+        {
+          "accession": "0001193125-26-323660",
+          "byte_length": 10948157,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "http_status": 200,
+          "representation": "sec_response_body_bytes",
+          "retained_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+          "retained_pointer": "/artifacts/21",
+          "retrieved_at_utc": "2026-10-11T17:12:54.747914+00:00",
+          "sha256": "56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886",
+          "source_id": "FY2026-instance",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630_htm.xml"
+        }
+      ]
+    },
+    "schema": "msft-fy2026-completeness-attempt-v1",
+    "source_defaults_changed": false,
+    "stopping_condition": "Stop after this one-period decision-ready attempt. Even approval of D1-D3 does not solve the two essential unknowns or certify completeness.",
+    "supported_resolutions": [
+      {
+        "finding": "Note4 CP2987 is an investment asset, explicitly classed; cannot populate the missing borrowing input.",
+        "fix": "SOURCE_ROLE_BINDING",
+        "observation": {
+          "as_of": "2026-06-30",
+          "concept": "AvailableForSaleSecuritiesDebtSecurities",
+          "display_unit": "USD millions",
+          "display_value": "2987",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "evidence_label": "fact_source_reported",
+          "instance_source": "FY2026-instance",
+          "location": "Note 4: commercial-paper INVESTMENT fair value, not issued borrowing",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "C_11b3bff6-c9f9-4a63-b244-b76e4061f721",
+              "dimensions": [
+                [
+                  "us-gaap:FairValueByAssetClassAxis",
+                  "us-gaap:DebtSecuritiesMember"
+                ],
+                [
+                  "us-gaap:FairValueByFairValueHierarchyLevelAxis",
+                  "us-gaap:FairValueInputsLevel2Member"
+                ],
+                [
+                  "us-gaap:FinancialInstrumentAxis",
+                  "us-gaap:CommercialPaperMember"
+                ]
+              ],
+              "end": "2026-06-30",
+              "ordinal": 959,
+              "precision": "-6",
+              "primary_display": "2,987",
+              "primary_format": "ixt:num-dot-decimal",
+              "primary_locator": "inline#F_fc94247a-8695-4353-89f9-07f30153b97d",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "2987000000",
+              "start": null,
+              "unit_id": "U_USD",
+              "xml_id": "F_fc94247a-8695-4353-89f9-07f30153b97d"
+            }
+          ],
+          "precision": "-6",
+          "precision_variants": [
+            "-6"
+          ],
+          "primary_source": "FY2026-primary",
+          "unit": "USD",
+          "value": "2987000000"
+        }
+      },
+      {
+        "finding": "Nine signed cash movements and all14 displayed terms bound independently; no residual or book reconstruction needed to verify this source equality. FY2026 includes deferred-tax14189 as its own term; FY2025 has13 terms.",
+        "fix": "RECONCILIATION_ROLE_BINDING",
+        "movement_references": [
+          "/periods/1/inputs/29",
+          "/periods/1/inputs/30",
+          "/periods/1/inputs/31",
+          "/periods/1/inputs/32",
+          "/periods/1/inputs/33",
+          "/periods/1/inputs/34",
+          "/periods/1/inputs/35",
+          "/periods/1/inputs/36",
+          "/periods/1/inputs/37"
+        ],
+        "reported_cfo_usd": "182935000000",
+        "sum_usd": "182935000000",
+        "term_references": [
+          "/periods/1/inputs/26",
+          "/periods/1/inputs/27",
+          "/periods/1/inputs/11",
+          "/periods/1/inputs/28",
+          "/periods/1/inputs/6",
+          "/periods/1/inputs/29",
+          "/periods/1/inputs/30",
+          "/periods/1/inputs/31",
+          "/periods/1/inputs/32",
+          "/periods/1/inputs/33",
+          "/periods/1/inputs/34",
+          "/periods/1/inputs/35",
+          "/periods/1/inputs/36",
+          "/periods/1/inputs/37"
+        ]
+      },
+      {
+        "finding": "Legal accrual553 is recorded;400 is possible additional loss, not an expected-value liability or another553. No automatic additive claim.",
+        "fix": "CLAIM_OVERLAP_BINDING",
+        "references": [
+          "/decision_resolution/periods/1/additional_facts/legal_accrual",
+          "/decision_resolution/periods/1/additional_facts/legal_additional_exposure"
+        ]
+      }
+    ],
+    "unsolved_essential_inputs": [
+      {
+        "input_id": "commercial_paper",
+        "reason": "No FY2026 issued CP/short-borrowing balance or explicit absence; net short-debt cash0 is a flow, not an ending balance or bound. Zero proposal stays rejected.",
+        "stopping_condition": "Retained scope exhausted once; no numerical proxy/bound is defensible. Remain incomplete unless exact evidence or an independently justified approved alternative is later supplied.",
+        "value": null
+      },
+      {
+        "input_id": "preferred_nci_pension",
+        "reason": "One retained review finds no affirmative complete recognized-population/absence evidence. Search absence and investment preferred-stock wording cannot supply issuer-claim zeros.",
+        "stopping_condition": "Retained scope exhausted once; no numerical proxy/bound is defensible. Remain incomplete unless exact evidence or an independently justified approved alternative is later supplied.",
+        "value": null
+      }
+    ],
+    "valuation_consumption_approved": false,
+    "version": 1,
+    "work_record": {
+      "elapsed_scope": "Interactive retained review, reasoning, implementation and initial focused checks through checkpoint; includes tool waits, not professional reviewer labor or a completion SLA.",
+      "implementation_checkpoint_at_utc": "2026-10-17T07:45:51+00:00",
+      "no_universe_extrapolation": "One unusually well-prepared two-period pilot; no evidence for staffing, other issuers or an all-universe deadline.",
+      "observed_checkpoint_elapsed_seconds": 471,
+      "performed": [
+        "Read exact FY2026 retained primary/instance and existing approved inputs; no acquisitions.",
+        "Inspect debt/investment/claim/tax/stock-plan passages once for remaining questions; bind CP investment dimensions independently.",
+        "Map14 inventory families and14 original null requirements to named operations; verify14 displayed CFO terms and9 movements.",
+        "Append proposed decision-ready review only; preserve complete accepted parent and reject stale/tampered sources."
+      ],
+      "retained_selected_filings_inspected": 1,
+      "reusable": [
+        "Operation-specific requirement classification, not a missing-component count.",
+        "Parent-preserving report extension, exact source binding and audit/staleness tests."
+      ],
+      "sec_requests": 0,
+      "started_at_utc": "2026-10-17T07:38:00+00:00"
+    }
+  },
   "issuer": "MSFT",
   "new_sec_requests": 0,
   "original_artifacts_modified": false,

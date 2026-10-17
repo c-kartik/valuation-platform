@@ -5,6 +5,8 @@ import importlib.util
 from pathlib import Path
 import subprocess
 import unittest
+from functools import lru_cache
+from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[2]
 spec=importlib.util.spec_from_file_location('completion_assessment',ROOT/'scripts/assess_analyst_completion.py')
@@ -13,7 +15,26 @@ a=importlib.util.module_from_spec(spec);spec.loader.exec_module(a)
 
 class CompletionAssessmentTests(unittest.TestCase):
     @classmethod
-    def setUpClass(cls):cls.data=a.validate(a.build())
+    def setUpClass(cls):
+        # This is a historical planning snapshot, not a demand that subsequent
+        # authorized issuer records/packages retain old whole-file hashes forever.
+        # Verify its stated baseline, without producing a new universe assessment.
+        original_load=a.load
+        @lru_cache(maxsize=None)
+        def baseline_bytes(path):
+            return subprocess.check_output(['git','show',a.BASELINE+':'+path],cwd=ROOT)
+        @lru_cache(maxsize=None)
+        def baseline_load(path):
+            import json
+            return original_load(path) if path==a.OUTPUT else json.loads(baseline_bytes(path))
+        cls.load_patch=patch.object(a,'load',baseline_load)
+        cls.seal_patch=patch.object(a,'seal',lambda path:hashlib.sha256(baseline_bytes(path)).hexdigest())
+        cls.load_patch.start();cls.seal_patch.start()
+        cls.data=a.validate(a.build())
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.seal_patch.stop();cls.load_patch.stop()
 
     def test_exact_scope_and_reproducibility(self):
         d=self.data

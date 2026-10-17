@@ -1,5 +1,156 @@
 # MSFT — analyst historical-input package, FY2025–FY2026
 
+## Bounded FY2026 completeness attempt — decision-ready, still INCOMPLETE
+
+Exact selected `0001193125-26-323660`, CIK789019, **2025-07-01–2026-06-30**
+only. JSON `fy2026_completeness_attempt` is appended **after** verification of the
+unchanged accepted parent. Its base revision, exact source bindings, operation
+checklist, all14 original null dispositions and three proposed decisions are
+machine-readable. Original proposals, FY2025, all accepted selections, immutable
+user audit and rejected FY2026 short-debt-zero history remain unchanged. This
+attempt records **no approval**, numerical assumption, completeness or phase closure.
+
+### Exact proposed historical contract and fourteen-family checklist
+
+Purpose: a coherent **consolidated as-reported historical income/cash-movement
+schedule and named fiscal-end financial populations**, not an adjusted/organic
+cash flow, EBIT-to-cash conversion, excess-cash/net-debt or valuation schedule.
+Each required reported population must be selected with its source/precision;
+approved assumptions remain labeled. Any proposed omission below requires explicit
+approval and cannot remove an unknown merely because it is inconvenient. Eleven
+named requirements are supported/previously accepted within this proposed purpose;
+this is **not eleven universally complete field families**. One residual-perimeter
+decision and two essential population gaps still prevent completeness. Pure NOL
+additionally remains required under the old perimeter until D3 is decided.
+
+All USD amounts below are **millions**, monetary decimals−6 except R=−8; share
+precision/dates explicitly separate. Exact JSON pointers retain every original
+occurrence, raw sign, primary inline ID and unit.
+
+| Required historical input / operation | Result in this pass | Evidence / remaining requirement |
+| --- | --- | --- |
+| Revenue | Satisfied within accepted scope:331,839 | `/periods/1/inputs`, `revenue`; income statement. |
+| EBIT | Satisfied within accepted scope:155,237 | `ebit`; operating income, no conversion from CFO. |
+| Expense D&A | Accepted assumption retained:39,000R | `expense_da`; finance-amortization inclusion **unproved**, no extra ROU add-back. Timing consumer gate unchanged. |
+| Cash Capex | Accepted narrow cash PP&E **−115,948** | `reported:PaymentsToAcquirePropertyPlantAndEquipment`; not accrual/organic/complete reinvestment. |
+| Reported CF working-capital movements | Source-verified **nine** signed rows | AR−12,737; inventory−461; other current assets−2,627; other noncurrent assets−3,964; AP+5,268; contract liabilities+9,361; taxes−1,875; other current liabilities+6,847; other noncurrent liabilities−4,707. No sum, book ΔNWC or operating-only relabeling. |
+| Deferred taxes | Source-verified CFO+14,189 vs provision+14,424 | `DeferredIncomeTaxesAndTaxCredits` versus `DeferredIncomeTaxExpenseBenefit`; no255 adjustment. |
+| SBC | Accepted expense proxy12,405 once | Separate CFO add-back12,405, not another economic charge; awards separate. |
+| Unclassified CFO residual | **D2 pending**, no scalar populated | All14 displayed terms independently reconcile. Mixed D&A-and-other38,534 retained as mixed, not pure D&A or an invented residual. |
+| Reported CFO / reconciliation | Accepted182,935; displayed equality verified | **14 terms in FY2026**, including deferred tax14,189; FY2025 has13. Prior shorthand13 is inapplicable to FY2026; existing source sums and values were already correct. |
+| Historical tax context | Accepted named schedule | Provision32,185; Pretax165,934; existing ratio19.396265985…% (source rounded19.4%); net cash tax−21,188. Not a future/operating rate. |
+| Cash/investment components | Accepted named balances retained | Current gross76,843 less identified restriction3,800 =73,043, not unrestricted/excess. LT36,348 separately; Note4 partition9,108 debt securities +2,673 listed equities +24,567 other equities +explicit0 derivatives. Restricted LT7,500 is a **subset**, not another asset/deduction from current pool. |
+| Borrowing/lease populations | **Unsolved essential short borrowing** | Named40,294 term+66,594 finance=106,888 unchanged; operating21,925 separate/service. Additional short borrowing null. No complete debt certification. |
+| Other claims/assets | **Unsolved essential recognized-claim coverage; D3 pending** | Recorded legal553 vs possible additional400 separate, no953 claim. Combined loss/credit DTA2,124 not pure NOL. Complete preferred/NCI/pension quantities/absence not established. |
+| Dated common / awards | Accepted named observations | June30 common7,427m shares (decimals−6); July23 cover7,425,545,491 (decimals0); nonvested awards78m separately, no automatic diluted/award sum. |
+
+### Work resolved using retained evidence, not new financial approvals
+
+1. **Correct FY2026 population count to14** and bind all nine source cash-movement
+   roles. No financial amount or reconciliation tolerance changed; no balancing
+   residual or CFO-minus-Capex/economic subtotal is calculated. A complete display
+   check does not classify the mixed38,534 source row or establish organic cash.
+2. **Bind Note4 commercial-paper2,987 as an investment asset**, not issued debt.
+   QName `us-gaap:AvailableForSaleSecuritiesDebtSecurities`, instant2026-06-30,
+   USD, decimals−6, ordinal959, context
+   `C_11b3bff6-c9f9-4a63-b244-b76e4061f721`, inline
+   `F_fc94247a-8695-4353-89f9-07f30153b97d`; explicit debt-securities/Level2/
+   commercial-paper class dimensions. This closes a tempting wrong-population
+   mapping route; it **does not recover the missing borrowing number**.
+3. Reverify the named term carrying partition:46,136 face −1,081 discounts/costs
+   −11 signed hedge adjustment −4,750 exchange premium =40,294, independently
+   equal9,227 current+31,067 noncurrent. Fair value36,500R is not substituted.
+   Existing financing106,888 already adds the disjoint recognized finance lease
+   population once. No broader borrowing number or debt adjustment added.
+4. Bind legal553 as recorded accrual and400 as reasonably possible *additional*
+   exposure. Neither source supports an expected-value953 deduction or proof of
+   exhaustive other claims. Existing source facts remain unchanged.
+
+Retained proof: [original body manifest](../evidence/analyst-operating-nwc-response-bodies.json)
+`/artifacts/20` primary SHA256
+`cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f`,
+`/artifacts/21` instance SHA256
+`56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886`.
+Actual original receipt metadata remains unchanged. Note10, Note4, Note11,
+Note14, Note17 and investing discussion are bound by exact retained passages /
+offsets in the new section and existing source occurrence payloads. No SEC request.
+
+### Every original remaining requirement: necessity, not an indiscriminate null list
+
+| Original requirement(s) | Necessity for this historical operation | Concrete disposition and residual uncertainty |
+| --- | --- | --- |
+| Complete operating NWC | Supporting book disclosure; D1 broader path decision pending | Accepted named partial operating capital−18,600 and book movement+7,155 stay separately labeled. Nine reported cash rows are independently available; reconstructing stocks is not necessary to reproduce them. Matching facilitation obligations/current allocations remain unknown, not zero. |
+| Accrual PP&E cash bridge | Supporting | Cash purchases−115,948, creditors26,700R, noncash finance additions24,608 and combined purchases−1,743 remain separate. No operation computing accrual additions, complete reinvestment or organic acquisition allocation is performed. |
+| All-in cash interest | Supporting disclosed historical classes | Debt cash−1,500R, finance interest−2,547 and operating lease cash−6,443 stay separate. Overlap/capitalization/unmeasured lease coverage prevent a certified total; expense3,051 is not a cash bridge. Any unlevering/lease conversion is Phase2. |
+| Acquisition-only cash purchases | Supporting combined disclosure | Combined−1,743 cannot be allocated, but is retained in its reported scope rather than forced into PP&E/organic cash. If an acquisition-only operation is required later, unavailable allocation blocks it. |
+| Discontinued-operation cash allocation | Supporting | Required source is consolidated, not continuing-only; no affirmative no-discontinued-effects claim follows text absence. A continuing-only cash operation would remain unproved. |
+| Acquisition/FX/reclassification effects by component | Supporting comparability | Needed for a book-to-cash or organic/comparable movement operation, not to copy the signed annual reported rows. No FX allocation inferred from cash FX−196. |
+| Pure NOL DTA | **D3 pending; required null under original perimeter** | Combined loss-and-credit2,124 is evidenced; no pure allocation, bound or proxy. D3 proposes a substantive non-valuation reporting exclusion, not an acknowledgment-as-number. |
+| Preferred/NCI/pension completeness | **Unsolved essential** | No affirmative recognized-population/absence bridge. Preferred-stock wording found in investment valuation describes holdings, not MSFT-issued preferred. No zeros or immateriality assertion. |
+| FY2026 commercial paper / additional short debt | **Unsolved essential** | Note10 explicitly covers term debt, not all borrowings. Net short-debt cash0 is not gross or ending0. No borrowing balance/explicit absence found in bounded retained review; no defensible number, interval or zero recommendation. |
+| Operating-only tax; joint timing; complete award value/dilution; excess/unrestricted cash; CFO-to-EBIT conversion | Phase2 operations (five distinct original requirements) | Reported taxes/dates/awards/financial balances remain. These future operations have no selected numerical assumption and are not conditions to finish named historical observations. Joint timing remains required **before consumption**, not silently passed. |
+
+Thus the original14 nulls are **6 supporting disclosures / 5 Phase2-operation
+requirements / 1 pending exclusion / 2 unsolved essentials**. All original null
+objects remain unchanged. This classification does not change generic policies,
+runtime requirements or accepted scopes. Unknown amounts are not proved immaterial;
+there is no supported uncertainty bound on missing short debt/claim allocations.
+
+### One consolidated set of decisions — all proposed, none accepted
+
+| Decision | Recommendation and numerical consequence | Alternative / consequence |
+| --- | --- | --- |
+| D1 — as-reported movement path | Approve using the nine reported annual CF movement rows plus the independent14-term CFO check for this historical path. No new aggregate or numerical value; partial book capital−18,600/+7,155 movement is support, never cash ΔNWC. | Require complete reconstructed operating capital instead: current/matching facilitation and other allocations/book-to-cash effects are unavailable, so it remains incomplete. CFO does not waive D&A, cash investment or financing requirements. |
+| D2 — residual operation | Approve no separately computed unclassified residual for this exact fully bound display; retain every mixed source row. **Do not fill a zero** or subtract38,534 from39,000 to invent amortization. | Require individually classified residual/other contents: full allocation is not disclosed; keep that requirement unresolved. No balancing item. |
+| D3 — combined DTA reporting | Approve no separate pure-NOL economic-asset operation in this historical reporting contract; retain2,124 as **loss-and-credit DTA**, not pure NOL or a rate-derived benefit. | Require pure NOL asset: no defensible value/allocation exists; remain incomplete. No zero, proxy2,124 or materiality shortcut. |
+
+Even approving D1–D3 would **not solve short borrowing or recognized-claim
+coverage**, certify complete financial sufficiency, or change the original NWC
+blockers. Recommendation on those two essentials: **retain INCOMPLETE**, no
+numerical assumption. Stopping condition: one retained pass exhausted; reopen only
+for exact affirmative balance/scope evidence or an independently justified,
+specifically approved alternative. No automatic evidence/research queue follows.
+
+### Measured work and reuse
+
+Review started **2026-10-17 07:38:00 UTC (11:38 Dubai)**. Implementation checkpoint
+**07:45:51 UTC (11:45:51 Dubai)**: **471 seconds elapsed**, including reasoning,
+source inspection, drafting, tool waits and initial checks, not professional
+reviewer person-days or a guaranteed completion time. One selected filing's retained
+primary/instance was inspected; repeated validation reads are not new acquisitions.
+The initial63 focused checks passed in23.908s before final metadata/pointer edits;
+final current-tree gates are recorded below separately.
+
+Reusable work is the operation-specific checklist, parent-preserving append,
+exact-class/source binding and stale-audit tests. This unusually prepared pilot
+does not establish the effort to resolve another issuer's disclosure/scope, does
+not validate the hypothetical4-day financial-review budget, and yields **no new
+all-universe deadline**. No invented financial number, assumption approval, generic
+runtime/policy change, full-suite/corpus run, Phase1 closure or Phase2 calculation.
+
+Final current-tree focused validation: **123 tests pass in59.790s**:8 new attempt,
+21 MSFT package/audit,17 AAPL package,18 Alphabet package,22 original reported
+inputs,24 interest sidecar,8 original NWC and5 historical-assessment preservation
+tests. Exact all-three package replays, original accepted-parent equality,
+source/unit/class/date/sign/precision and pointer bindings, audit persistence/
+staleness, original pilot/frozen preservation, compileall, **467 affected local
+links** and `git diff --check` pass. The prior planning assessment remains its
+original baseline snapshot; only its tests explicitly pin that baseline, not a
+fresh universe reassessment. Preservation guards allow only this appended section
+and build wrapper; every old extraction/audit routine and every original financial
+payload still matches its baseline. No financial assertion was relaxed.
+
+One intermediate combined focused run was interrupted during an uncached historical
+JSON pointer test, not a financial failure; memoizing the same immutable parsed
+baseline fixed repeated parsing without changing its assertions. That interrupted
+run is not claimed as passing. The final123-test run above covers the completed
+executable tree. Instrumented window through final verification **07:38:00–07:51:33
+UTC, 813 seconds** includes the interrupted wait, checks, reasoning and drafting;
+it is not a professional-review effort estimate. Subsequent doc/commit handoff is
+outside that measured window. Stop after this FY2026 attempt for user review.
+
+## Existing accepted view — preserved without amendment
+
 ## Accepted separate view — scope-specific user decision
 
 The user's explicit six-part instruction is recorded in the immutable

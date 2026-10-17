@@ -1,5 +1,42 @@
 # MSFT — company data preparation
 
+## FY2026 bounded analyst-completeness attempt — INCOMPLETE
+
+[Existing package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
+append one revision-bound-to-parent `fy2026_completeness_attempt` for selected
+`0001193125-26-323660`, 2025-07-01–2026-06-30 only. Original conflict was an
+inventory-wide unknown list without identifying the operation needing each input.
+The operation checklist now maps14 families and all14 original null requirements:
+6 supporting disclosures,5 future-operation requirements,1 pending pure-NOL
+exclusion and2 genuine essential gaps. No original requirement/null is deleted.
+
+Retained primary/instance (`analyst-operating-nwc-response-bodies.json`, artifacts20/21)
+confirm **14 FY2026 CFO terms** (FY2025 has13), nine signed CF movements and
+unchanged182935m source equality; no residual, cash ΔNWC or economic conversion.
+New exact Note4/ordinal959 binding identifies2987m CP as an investment asset,
+not issued borrowing. Note10 term table/explicit net cash0 do not establish ending
+short borrowing0. Legal553m accrual versus possible additional400m is not a953m
+claim. No missing preferred/NCI/pension absence proof is inferred from text searches.
+
+Named partial capital−18600m, rounded D&A39000m with accepted/unproved finance
+inclusion assumption, financing106888m and restriction-adjusted current73043m
+are unchanged and not complete totals. Three specific decisions remain proposed:
+D1 reported-movement path, D2 no separate residual in fully bound display, D3
+combined loss/credit DTA2124m without pure-NOL economic asset. Even approval would
+leave **additional short borrowing and recognized-claim coverage unresolved**.
+No defensible number/bound exists in this retained pass; no zero/immateriality claim.
+
+All old evidence/receipts, original scenarios/bundles/sidecars, accepted parent/audit
+and proposal history remain exact. Original NWC and timing blockers persist; no
+user approval or financial sufficiency/Phase1 closure. The measured471-second
+implementation checkpoint is elapsed interactive work, not a human-review budget;
+no inference about other issuers' effort. Stop after the consolidated decision.
+Final validation:123 focused/preservation tests in59.790s, all-three package
+replays, exact accepted-parent/old extraction-audit preservation, source/pointer/
+class/date/sign bindings, audit persistence/staleness, compileall,467 affected
+local links and diff checks pass. Instrumented review-through-verification window
+813s includes waits/interruption, not reviewer-days. No full suite/corpus rerun.
+
 ## User-approved separate analyst view — FY2025–FY2026 only
 
 The [same package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
