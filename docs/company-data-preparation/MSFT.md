@@ -1,5 +1,52 @@
 # MSFT — company data preparation
 
+## Current company batch — FY2025 approved; older three years pending together
+
+[Same package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
+record explicit acceptance of25-D1–25-D7 exactly as proposed, audit sequence5 at
+2026-10-17T14:46:27.138553+00:00, revision-bound to prior package/sequence4.
+FY2025 now passes its existing14-family checklist under the approved historical
+perimeter, including89,323m named financing/no further borrowing adjustment.
+CP0 remains CP-only; broader source borrowing is null, not a reported zero or
+complete-debt claim. Old proposal sheet/audits remain exact; effective acceptance
+is separate. FY2026's scoped14/14 is preserved without extending its authority.
+
+The selected manifest establishes five periods, not a presumed latest-five search:
+FY2022 `0001564590-22-026876`,FY2023 `0000950170-23-035122`,FY2024
+`0000950170-24-087843`,FY2025 `0000950170-25-100235`,FY2026
+`0001193125-26-323660`. All older exact reports/instances already retained with
+receipts/digests. The one company review covers all70 period/family slots, with
+FY2022–24 proposed in ONE H1–H9/E1–E2 approval/exception table in the package.
+No older financial assumption is active. Revenue198,270/211,915/245,122,
+EBIT83,383/88,523/109,433 and14-term CFO89,035/87,582/118,548 are source-supported.
+Rounded expense D&A14,600/13,500/20,000 and named financing64,683/64,304/78,775
+are draft treatments awaiting approval. FY2024 financing includes faceCP6,693;
+note6,700 rounded alternative retained, no7m adjustment. FY2023 CP0 is an explicit
+dated FY2024 confirmation, not invented in the selected FY2023 instance; FY2022
+CP remains unknown. Equity/term/cash/total-balance partitions independently tie.
+
+Active historical path: reported movement rows plus independently reconciled
+CFO; reconstructed complete NWC/book ΔNWC is not prerequisite. NWC schedules are
+supporting history. Movement rows already in CFO are **not deducted again**.
+No Phase2 formula, forecasting or valuation consumption is selected.
+
+Remaining scope/binding exceptions: capital creditors and equity-method subamounts
+unbound in three older instances, FY2022/23 CP not separately tagged, FY2024 CP
+precision alternatives, and FY2022 legal accrual supplied by exact note364 rather
+than invented XBRL. Legal/possible additional, investment/noncash, lease cash/stock,
+dated common/awards and source precision stay separate. No new artifact acquisition
+identified; no missing body or new SEC request. International plans, restrictions,
+omitted claims/borrowings and joint timing remain unproved, not immaterial.
+Stop for the ONE consolidated table; no annual cycles, whole-company completeness,
+new company or Phase1 closure. Prior sections below preserve historical statuses.
+
+Validation:153 focused tests (90.114s), all-three exact package replays,
+compileall,606 affected links and diff checks pass. Five identities/70 slots;
+older24 source-supported versus18 pending family treatments. Entire prior package,
+FY2026 PASS, old audit/proposal/source/pilot/frozen bytes preserved after removing
+only two additions. Staleness, exact authorization, round trips, CFO/sign/precision
+and CP alternatives tested. No acquisitions/full-suite/corpus rerun.
+
 ## Current FY2025 bounded review — pending consolidated approval
 
 [Same package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)

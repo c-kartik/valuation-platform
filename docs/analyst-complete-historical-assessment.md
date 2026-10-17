@@ -1,5 +1,13 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
+Current company checkpoint: [MSFT package](company-data-preparation/MSFT-analyst-input-package.md)
+now has scoped14/14 PASS for FY2025 (explicit new approval) and FY2026 (unchanged).
+All remaining frozen FY2022–24 were reviewed in one retained-source batch, with
+ONE proposed assumption/exception table; none of those older treatments is active.
+No whole MSFT history or new issuer is certified. Original machine workload/count
+assessment remains its dated baseline, not a regenerated universe result. Stop
+for consolidated MSFT decisions; do not automatically execute B1's other issuers.
+
 Current B1 checkpoint: [MSFT FY2025](company-data-preparation/MSFT-analyst-input-package.md)
 has one bounded independent review,10 satisfied families/four pending seven
 consolidated proposals. No new approval or complete period. FY2026's scoped14/14

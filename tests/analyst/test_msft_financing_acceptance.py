@@ -19,7 +19,7 @@ class MSFTFinancingAcceptanceTests(unittest.TestCase):
         cls.prior=json.loads(subprocess.check_output(['git','show',p.FY2026_FINANCING_BASIS+':'+p.OUTPUT],cwd=ROOT))
 
     def test_entire_prior_package_nulls_rejection_and_audits_preserved(self):
-        parent={k:v for k,v in self.result.items() if k not in ('fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review')}
+        parent={k:v for k,v in self.result.items() if k not in ('fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review')}
         self.assertTrue(parent==self.prior,'Prior sources, selections or audit history changed')
         self.assertEqual(self.result['accepted_view']['short_debt_zero_proposal_status'],'REJECTED_NOT_SELECTED')
         self.assertIsNone(self.result['accepted_view']['periods'][1]['additional_short_borrowing']['value_usd'])
@@ -60,7 +60,7 @@ class MSFTFinancingAcceptanceTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'package.json';path.write_text(json.dumps(self.result))
             with patch.object(p,'OUTPUT',str(path)):
-                expected={k:v for k,v in self.result.items() if k!='fy2025_completeness_review'}
+                expected={k:v for k,v in self.result.items() if k not in ('fy2025_completeness_review','fy2025_approval','msft_history_review')}
                 self.assertTrue(p.apply_fy2026_financing(self.f,self.prior)==expected,'Prior financing restart differs')
         with self.assertRaisesRegex(ValueError,'already exists'):p.fy2026_financing_record(self.result)
 

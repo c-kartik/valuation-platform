@@ -1,5 +1,23 @@
 # Company data preparation register
 
+## MSFT company batch — two scoped accepted periods, three pending together
+
+[One updated package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
+now record explicit25-D1–25-D7 acceptance with immutable sequence5 authorization.
+FY2025 and FY2026 each pass14/14 only under their approved historical perimeters.
+Source unknowns/CP-only zero, original proposals/audits and frozen blockers remain.
+Manifest-discovered FY2022–24 have one retained-only14-family review per period;
+all70 company slots are accounted for, with ONE H1–H9/E1–E2 table. Older assumptions
+remain inactive; no whole-history certification, transfer or Phase1 closure.
+Reported CF movements explain reconciled CFO, not further deductions; complete
+NWC/book ΔNWC is not a prerequisite for this path. No Phase2 formula selected.
+Six older source bodies/receipts verified; no new artifact acquisition identified.
+Stop for consolidated company review, not another annual/research sequence.
+
+Validation:153 focused tests (90.114s), all-three package replays, exact prior
+package/audit/source/pilot preservation, compileall,606 links and diff checks pass.
+Older family counts24 source-supported/18 pending, not approved complete fields.
+
 ## MSFT FY2025 — one consolidated review, approvals pending
 
 [Same package](MSFT-analyst-input-package.md) adds a retained-source FY2025

@@ -1,5 +1,26 @@
 # Phase 1 preparation pilots — outcomes and bounded remaining work
 
+## Current MSFT company batch — two scoped PASS periods, not whole history
+
+[MSFT package](company-data-preparation/MSFT-analyst-input-package.md) now records
+explicit FY2025 seven-decision acceptance and14/14 PASS, preserving FY2026's
+14/14. Source nulls, CP-only0, old reviews/audits and all financial limitations
+persist. Active historical path uses reported movements/reconciled CFO, not
+reconstructed complete NWC/book ΔNWC; already-included movements are not deducted
+again. No forecast/valuation formula or Phase2 readiness selected.
+
+All remaining frozen FY2022–24 are reviewed together from retained reports and
+instances, with70 total company family slots and ONE H1–H9/E1–E2 table. Older
+expense/lease/SBC, cash, financing and claims/residual treatments stay proposed.
+No source-body acquisition required/identified, no fresh research or annual cycles.
+Company history remains incomplete pending consolidated user decisions and
+retained limitations. No change to four-period pilot coverage of other issuers,
+generic support classes, original NWC blockers or Phase1/universe closure.
+
+153 focused tests (90.114s), all-three replays, exact previous-package/audit/
+source/pilot preservation, compileall,606 local links and diff checks pass. Older
+24 source-supported/18 pending family counts do not establish accepted completeness.
+
 ## MSFT FY2025 review — no additional complete period yet
 
 [Existing package](company-data-preparation/MSFT-analyst-input-package.md) now

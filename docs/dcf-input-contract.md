@@ -1,5 +1,17 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Active reported-cash-movement preparation path
+
+For the MSFT historical package, use source-bound reported cash-flow movement
+rows and independently reconciled reported CFO. Reconstructed complete operating
+NWC and book ΔNWC are **not prerequisites** for this historical path; existing NWC
+schedules remain separately labeled supporting history. Movement rows already
+included in CFO explain that subtotal: **do not deduct them again**. This is not
+an approval to substitute CFO for EBIT, derive organic/unlevered cash, or choose
+a Phase2 forecast/valuation formula. Source tax/lease/acquisition/FX scope and
+period-specific assumption approvals remain explicit. This clarification changes
+neither frozen NWC policies nor missing values; it is not blanket issuer readiness.
+
 ## Additive v2 statement-binding contract
 
 [Bounded repair](statement-binding-repair-results.md) retains exact incorporated

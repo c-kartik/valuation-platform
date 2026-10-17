@@ -1,6 +1,133 @@
-# MSFT — analyst historical-input package, FY2025–FY2026
+# MSFT — analyst historical-input package, frozen FY2022–FY2026
 
-## Current FY2025 review — one consolidated approval request, not completeness
+## Current company batch — FY2025 accepted; FY2022–FY2024 proposed together
+
+The original two-period payload/approvals remain untouched. The additive
+`/fy2025_approval` and `/msft_history_review` now hold the FY2025 effective result
+and **all five frozen identities/70 family slots**, including three older review
+drafts. This is one updated company package, not new annual registrations or
+an annotation framework. No original financial value/receipt or FY2026 result changed.
+
+User explicitly accepts **25-D1 through25-D7 exactly as proposed**. Sequence5
+`ACCEPT_FY2025_DECISIONS` records actual UTC time
+**2026-10-17T14:46:27.138553+00:00**, exact FY2025 identity, full proposal wording,
+rationale, uncertainty and evidence. Audit SHA256
+`d16ddef4de23895fde6098dfd04cb17b16e2f0102cab793df24f5dba66ea2825`
+links to unchanged sequence4. Source commit `b170bb16128f12b5558d578a08341cd9129e3882`,
+revision `ea07f60e3d626b06a2b31f8f5bdf3d413524da7b7c1569135089c8aae535e625`.
+Replayed source/review changes invalidate acceptance; no implicit renewal.
+FY2025 now passes **14/14 only under its approved historical perimeter**: selected
+financing89,323m with no additional borrowing adjustment; source CP0 is CP-only,
+broader borrowing stays null and omitted claims remain unbounded. Residual and
+pure-NOL values remain null, not zero. The old proposal sheet remains history.
+FY2026's separate14/14 remains exact. Neither result approves whole MSFT history,
+generic complete field totals, Phase2 readiness or phase closure.
+
+### Active historical path and discovered frozen periods
+
+Use reported cash-flow movement rows and independently reconciled CFO. Complete
+reconstructed NWC/book ΔNWC is **not a prerequisite**; existing NWC schedules
+remain supporting history. The movement rows are **already included in CFO**,
+never extra deductions. This selects no Phase2 forecast/valuation formula or
+EBIT-to-CFO adjustment. All tax, lease, acquisition/FX and presentation limitations
+remain; no assumption approval automatically crosses periods.
+
+Manifest `docs/phase1-selected-filing-identity-manifest.json`, MSFT rows10–14,
+selects these exact annuals (all July1–June30):
+
+- FY2022: `0001564590-22-026876`,2021-07-01–2022-06-30.
+- FY2023: `0000950170-23-035122`,2022-07-01–2023-06-30.
+- FY2024: `0000950170-24-087843`,2023-07-01–2024-06-30.
+- FY2025: `0000950170-25-100235`,2024-07-01–2025-06-30.
+- FY2026: `0001193125-26-323660`,2025-07-01–2026-06-30.
+
+All six older exact primary/instance bodies and original receipts are present in
+`docs/evidence/analyst-operating-nwc-response-bodies.json`, artifacts12–17. New
+drafts bind URLs, SHA256 raw-body digests, actual timestamps/status, annual DEI,
+contexts/units/precision, all confirming occurrences, notes and source alternatives.
+No metadata is synthesized. FY2022/23/24 use MSFT extensions for mixed D&A,
+investment gains/losses and combined purchases; these are reviewed as those exact
+captions, not generic financial approvals. Their debt/intangible/lease note numbers
+differ from FY2025/26; the body captions, not assumed note numbers, bind scope.
+
+### Period-by-family coverage
+
+USDm except shares; R=source rounded precision, retained per operand (FY2023
+depreciation decimals−9). **S**=verified reported observation/derived draft only,
+not an accepted complete analyst family; **P**=proposed treatment; **A**=existing
+or newly explicit period-specific acceptance. All older-year P entries are inactive.
+
+| Family | FY2022 | FY2023 | FY2024 | FY2025 | FY2026 |
+| --- | --- | --- | --- | --- | --- |
+| Revenue | S198,270 | S211,915 | S245,122 | A281,724 | A331,839 |
+| EBIT | S83,383 | S88,523 | S109,433 | A128,528 | A155,237 |
+| Expense D&A | P14,600R | P13,500R | P20,000R | A28,000R | A39,000R |
+| Cash Capex | S−23,886 | S−28,107 | S−44,477 | A−64,551 | A−115,948 |
+| CF movements | S9 signed rows | S9 signed rows | S9 signed rows | A9 reported rows | A9 reported rows |
+| Deferred taxes | S−5,702 | S−6,059 | S−4,738 | A−7,056 | A+14,189 CFO |
+| SBC expense proxy | P7,502 | P9,611 | P10,734 | A11,974 | A12,405 |
+| Separate residual | Pexclude, null | Pexclude, null | Pexclude, null | Aexcluded, null | Aexcluded, null |
+| CFO | S89,035 | S87,582 | S118,548 | A136,162 | A182,935 |
+| Tax context | Sprovision10,978/Pretax83,716; cash16,000R | S16,950/89,311; cash23,100R | S19,651/107,787; cash23,400R | A21,795/123,627; cash28,700R | A32,185/165,934; cash21,188 |
+| Current financial/LT separate | P104,757/S6,891 | P111,262/S9,879 | P75,543/S14,600 | A94,565/S15,405 | A73,043/S36,348 |
+| Named financing | P64,683 | P64,304 | P78,775 incl CP6,693 | A89,323 | A106,888 |
+| Other claims/assets | Scombined DTA1,546; Pclaims assumptions | S1,441; Pclaims assumptions | S1,741; Pclaims assumptions | Acombined2,114/scoped assumptions | Acombined2,124/scoped assumptions |
+| Dated common/awards | S7,464m/93m awards | S7,432m/96m | S7,434m/88m | A7,434m/82m | A7,427m/78m |
+
+Each older year has14 independently source-bound CFO terms including net income,
+which tie89,035/87,582/118,548; contribution multipliers and raw signs are retained.
+These are consolidated displayed checks, not organic cash or book ΔNWC. Rounded
+depreciation/amortization, mixed CFO rows and finance amortization remain distinct.
+Historical ETR uses the existing positive-denominator policy only; no future rate.
+July25,2022 common7,457,891,872 (precisionINF), July24,2023 common7,429,763,722 and
+July25,2024 common7,433,038,381 (precision0) remain separate from June30 rounded
+counts and restricted-stock awards; no aggregation or dilution estimate.
+
+### ONE consolidated approval / exception table — remaining three years
+
+All H1–H9 apply **only if approved** to FY2022/FY2023/FY2024 together or with explicit
+year-specific choices. Numerical sequences below are in that order. FY2025/26
+approvals are precedent for a defensible approach, **not authority for these years**.
+
+| ID | Proposed treatment / exact evidence | Numerical consequence / alternative | Risk / decision or exception |
+| --- | --- | --- | --- |
+| H1 | Operating leases service, finance leases financing; expense D&A includes finance amortization as an explicitly unproved assumption. Selected PP&E/intangible and lease notes. | D&A14,600/13,500/20,000R; finance amort980/1,352/1,800 not added. Alternative whole financing convention needs aligned expense/assets/taxes. | Overlap/timing not proved; coarse FY2023 depreciation precision preserved. **Approval required.** |
+| H2 | Recognized SBC expense proxy once, distinct from CFO add-back. Exact expense/CFO occurrences. |7,502/9,611/10,734; no duplicate cost or awards value. Replacement-cost alternative unavailable. | Expense is not cash replacement compensation. **Approval required.** |
+| H3 | Select named term+finance and observed FY2024 CP, no further undisclosed-borrowing adjustment. Debt/lease/face statements. |64,683/64,304/78,775; term49,781/47,237/44,937 +finance14,902/17,067/27,145; FY2024 CP6,693 added once. Alternative all-lease populations add operating13,717/15,137/19,077 and change convention. | Current term2,749/5,247/2,249 already included. FY2022 CP unknown; FY2023 CP0 is corroborated in FY2024's explicit June2023 disclosure, not invented in the FY2023 instance. Broader omitted borrowing unbounded. **Approval required**, not complete debt. |
+| H4 | Current reported financial balances, LT/restricted/strategic separate. Independent cash-parent checks and investment notes. |104,757/111,262/75,543; LT6,891/9,879/14,600 separately; nonmarketable3,800/4,200/3,900 overlaps investment parents. Excess/unrestricted alternative unquantifiable. | Reserves/restrictions/complete allocations unknown; no FY2026 restriction deduction transferred. **Approval required.** |
+| H5 | No additional preferred adjustment based on each common-equity presentation. Exact equity partitions/notes. | No incremental adjustment, source preferred amount unknown. Quantified-claim alternative unavailable. | Potential omitted claim unbounded; no immateriality/zero finding. **Approval required.** |
+| H6 | No additional NCI adjustment based on each consolidated-equity presentation/policy. | No incremental adjustment; ownership-by-ownership bridge unavailable. | Potential omitted minority claim unbounded. **Approval required.** |
+| H7 | Retirement expense without separate pension adjustment; savings-plan notes. |1,400/1,600/1,700R expense retained, not closing liability. Funded-status alternative unavailable. | International coverage incomplete, potential obligation/surplus unbounded. **Approval required.** |
+| H8 | Combined loss/credit DTA, no separate pure NOL; preserve recorded legal claims versus possible additional exposure. | DTA1,546/1,441/1,741; recorded legal364/617/641, additional possible600 each—not sums. Pure-NOL allocation/value unavailable. | No economic NOL asset or invented claim zero. FY2022 legal364 is dated note transcription, not a fabricated XBRL fact. **Approval required** for NOL exclusion. |
+| H9 | No separate residual for each independently reconciled14-term display. | CFO89,035/87,582/118,548; mixed D&A/other14,460/13,861/22,287 retained. No residual zero or subtraction-derived amortization. | Mixed contents remain unclassified; no FCFF compatibility. **Approval required.** |
+| E1 | Exact concept bindings for capital creditors/equity-method subpopulation absent in all three selected instances; original bodies are present. | Amounts remain unknown, not zero. Noncash finance additions4,234/3,128/11,633 and combined cash purchases−22,038/−1,670/−69,132 are separately source-bound. | Supporting scope/binding gaps, not missing-body proof or permission to infer complete reinvestment/asset allocation. No exact incremental official artifact identified; no acquisition queue. |
+| E2 | FY2024 face Short-term debt6,693 taggedCP versus note6.7bn tagged6,700 at decimals−8. Both exact occurrences retained. | Independently reviewed face6,693 feeds draft78,775; rounded-note alternative would give78,782 (+7). No7m liability/rounding adjustment. | Precision alternatives, not silent precedence/economic equivalence. Both source points remain; the named financing draft is still proposed. |
+
+Comparability remains accession-specific: Nuance/acquisitions affect FY2022;
+Activision closes in FY2024, and combined purchases69,132 remain unallocated.
+The original narratives/table populations are retained, not recast from FY2025/26
+comparative columns. Cash interest1,900/1,700/1,700R versus lease interest429/501/734
+and principal896/1,056/1,286 stay separate; no certified all-interest/service total.
+Face/principal55,511/52,866/51,221, carrying49,781/47,237/44,937 and fair50,900/
+46,200/42,300R are different bases, never substitutes or additions to each other.
+
+**Acquisition requirements: none identified.** All selected bodies/receipts exist;
+remaining named binding/disclosure limitations above have no identified missing
+original document. No new request, estimate, default zero or older-period financial
+approval. Stop for the ONE H1–H9/E1–E2 table, not annual memo/research cycles.
+
+Validation: **153 focused tests passed in90.114s**, including seven new company-
+batch tests plus all prior MSFT approvals/reviews, AAPL/Alphabet, reported inputs,
+interest sidecars, NWC and assessment preservation. Five manifest identities/70
+family slots reconcile: older24 source-supported observations/families and18
+pending family treatments; two scoped accepted periods, three inactive drafts.
+All three package replays, compileall,606 affected local links and diff checks pass.
+Exact prior package equals baseline after stripping only the two additive keys;
+original sources/audits/proposals/pilot/frozen artifacts preserved. Authorization
+supersession chain, serialization, stale/malformed input rejection, exact CFO
+arithmetic and CP precision alternatives tested. No SEC/full-suite/corpus run.
+
+## Prior FY2025 review — proposals preserved after explicit acceptance
 
 Exact CIK789019,10-K `0000950170-25-100235`, annual2024-07-01–2025-06-30;
 instant balances2025-06-30 unless explicitly dated otherwise. Existing fourteen

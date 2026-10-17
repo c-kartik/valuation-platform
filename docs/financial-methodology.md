@@ -1,5 +1,14 @@
 # Financial Methodology
 
+## MSFT reported-cash-movement historical preparation
+
+The active Phase1 MSFT path retains reported movement rows and independently
+reconciled reported CFO. Complete reconstructed NWC/book ΔNWC is not required to
+prepare those observations; NWC schedules remain supporting history, not cash
+investment. Movements already inside CFO are explanatory detail, **not additional
+deductions**. No Phase2 forecast/FCFF formula is selected; EBIT/tax/lease/timing
+consumption gates and period-specific financial assumptions remain separate.
+
 ## Current Phase 1 preparation boundary
 
 WP0 now adds the [analyst-reviewable historical-input contract](dcf-input-contract.md)

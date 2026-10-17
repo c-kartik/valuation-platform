@@ -20,7 +20,7 @@ class MSFTClaimAssumptionTests(unittest.TestCase):
         cls.f=p.Filing(2026)
 
     def test_entire_prior_package_and_audit_history_preserved(self):
-        parent={k:v for k,v in self.result.items() if k not in ('fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review')}
+        parent={k:v for k,v in self.result.items() if k not in ('fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review')}
         self.assertTrue(parent==self.prior,'Original facts, nulls, D1-D3 or proposal history changed')
         self.assertEqual((ROOT/p.ACCEPTANCE_PATH).read_bytes(),subprocess.check_output(['git','show',p.FY2026_CLAIMS_BASIS+':'+p.ACCEPTANCE_PATH],cwd=ROOT))
         self.assertEqual(self.result,json.loads(json.dumps(self.result)))
@@ -63,7 +63,7 @@ class MSFTClaimAssumptionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'package.json';path.write_text(json.dumps(self.result))
             with patch.object(p,'OUTPUT',str(path)):
-                expected={k:v for k,v in self.result.items() if k not in ('fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review')}
+                expected={k:v for k,v in self.result.items() if k not in ('fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review')}
                 self.assertTrue(p.apply_fy2026_claim_assumptions(self.f,self.prior)==expected,'Prior claim overlay changed')
                 for key,value,error in [('decisions',{'preferred_equity':'reported zero'},'Unregistered'),
                                         ('source_revision','0'*64,'Stale'),('previous','0'*64,'Unregistered'),

@@ -21,7 +21,7 @@ class MSFTOperationPopulationTests(unittest.TestCase):
         cls.f=p.Filing(2026)
 
     def test_prior_parent_attempt_nulls_and_audit_unchanged(self):
-        parent={k:v for k,v in self.result.items() if k not in ('fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review')}
+        parent={k:v for k,v in self.result.items() if k not in ('fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review')}
         self.assertTrue(parent==self.prior,'Prior attempt/source/accepted view changed')
         self.assertEqual((ROOT/p.ACCEPTANCE_PATH).read_bytes(),subprocess.check_output(['git','show',p.FY2026_OPERATIONS_BASIS+':'+p.ACCEPTANCE_PATH],cwd=ROOT))
         self.assertTrue(self.result==json.loads((ROOT/p.OUTPUT).read_text()),'Exact operation view replay differs')

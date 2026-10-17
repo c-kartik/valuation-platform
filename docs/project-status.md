@@ -1,6 +1,43 @@
 # Project Status
 
-## Current milestone — bounded MSFT FY2025 analyst-input review
+## Current milestone — MSFT company-history batch and FY2025 acceptance
+
+[Updated existing package](company-data-preparation/MSFT-analyst-input-package.md) /
+[JSON](company-data-preparation/msft-analyst-input-package.json) record explicit
+approval25-D1–25-D7 at2026-10-17T14:46:27.138553+00:00, sequence5 linking prior
+audit/revision. FY2025 scoped14/14 now passes, named89,323m financing/no extra
+borrowing adjustment; source unknowns and CP-only zero preserved. FY2026 scoped
+14/14 remains exact. No original facts/audits/proposals or AAPL/Alphabet changed.
+
+Manifest selects FY2022–26. All remaining FY2022–24 are reviewed together, using
+six retained exact primary/instance bodies/receipts and existing fact/context/
+precision/sign/provenance machinery. All70 period/family slots covered. Older
+14-term CFO displays independently tie89,035/87,582/118,548. Proposed expense
+D&A14,600/13,500/20,000R, current financial104,757/111,262/75,543 and named
+financing64,683/64,304/78,775 remain inactive. FY2024 includes faceCP6,693; rounded
+note6,700 remains alternative, no plug. Older MSFT extension namespaces and actual
+note numbers, acquisition scope, dated shares/awards and rounded precision retained.
+
+ONE H1–H9/E1–E2 approval/exception table consolidates all older choices and named
+binding/scope gaps. No missing original body or identified new official artifact;
+no SEC acquisition/research queue. Supporting creditor/equity-method gaps remain,
+not zero/immateriality. No older-period assumption approval or issuer certification.
+
+Contract/methodology clarify active reported-movement/reconciled-CFO path: complete
+reconstructed NWC/book ΔNWC is not prerequisite; NWC stays supporting; movements
+already included in CFO are not additional deductions. No Phase2 formula,
+valuation consumption, universe/Phase1 closure or automatic next company.
+
+Validation:153 focused tests pass in90.114s (seven new company-batch tests plus
+all earlier approval/package/input/sidecar/NWC/assessment preservation). All-three
+exact package replays, compileall,606 links and diff checks pass. Five identities/
+70 slots reconcile; older24 source-supported versus18 pending family treatments.
+Entire prior package/audit/proposal history preserved after stripping only two
+additive keys; original pilot/frozen/AAPL/Alphabet sources unchanged. Receipt,
+source arithmetic, CP precision, audit persistence/staleness and serialization
+tested. No full-suite/corpus rerun; stop for the consolidated MSFT table.
+
+## Prior milestone — bounded MSFT FY2025 analyst-input review
 
 [Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
 [JSON](company-data-preparation/msft-analyst-input-package.json) add one revision-
