@@ -1,6 +1,30 @@
 # Company data preparation register
 
-## MSFT company batch — two scoped accepted periods, three pending together
+## Current — MSFT five-year historical perimeter completed, not Phase1 closure
+
+[MSFT current schedule](MSFT-analyst-input-package.md) /
+[revision-bound JSON](msft-analyst-input-package.json) record explicit H1–H9 and
+E1/E2 approval in sequence6. All five frozen FY2022–26 annuals pass14/14 within
+their accepted historical-input perimeter, preserving source unknowns, original
+facts/audits/pilot bytes, frozen blockers and historical proposal snapshots.
+No complete debt/reinvestment or valuation-readiness certification.
+
+Report separate populations: **42** broad evidence-assessed non-specialized
+issuers; **3** company analyst packages = **1** completed company-wide MSFT +
+**2** partial AAPL/Alphabet; **39** broad-only, not independently company-reviewed.
+The standing40-issuer GENERALIZATION_REQUIRED register mapping and two supported
+seeds are unchanged; these are not42 complete companies. Four original pilot
+bundle approvals remain period-limited and byte-preserved.
+
+Current assembly uses reported movements/reconciled CFO, not required complete
+book NWC; rows already in CFO are not deducted again. Assumptions and supporting
+limitations do not silently populate source nulls. No Phase2 or universe closure.
+Next existing-backlog company batch: AAPL frozen FY2021–25, not executed.
+Validation:161 focused tests (117.223s), three exact package replays, preceding
+package/source/audit and pilot/frozen preservation, compileall,576 local-path
+links and diff checks pass. Older checkpoints below are historical.
+
+## Historical MSFT company batch — two scoped accepted periods, three then pending
 
 [One updated package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
 now record explicit25-D1–25-D7 acceptance with immutable sequence5 authorization.

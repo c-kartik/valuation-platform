@@ -20,7 +20,7 @@ class MSFTHistoryBatchTests(unittest.TestCase):
         cls.prior=json.loads(subprocess.check_output(['git','show','b170bb1:'+p.OUTPUT],cwd=ROOT))
 
     def test_exact_authorization_and_all_prior_history_preserved(self):
-        parent={k:v for k,v in self.result.items() if k not in ('fy2025_approval','msft_history_review')}
+        parent={k:v for k,v in self.result.items() if k not in ('fy2025_approval','msft_history_review','msft_history_approval','msft_current_history')}
         self.assertTrue(parent==self.prior,'Prior facts, proposals, approvals or FY2026 PASS changed')
         record=self.result['fy2025_approval'];self.assertEqual(record['sequence'],5)
         self.assertEqual(record['previous'],self.prior['fy2026_financing_approval']['sha256'])
@@ -100,7 +100,7 @@ class MSFTHistoryBatchTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'package.json';path.write_text(json.dumps(self.result))
             with patch.object(p,'OUTPUT',str(path)):
-                self.assertTrue(p.finish_msft_history(self.f,self.prior)==self.result,'Restart differs')
+                self.assertTrue(p.finish_msft_history(self.f,self.prior)=={k:v for k,v in self.result.items() if k not in ('msft_history_approval','msft_current_history')},'Restart differs')
                 for key,value,error in [('source_revision','0'*64,'Stale'),('decisions',{},'Unregistered'),('previous','0'*64,'Unregistered')]:
                     bad=copy.deepcopy(self.result);record=bad['fy2025_approval'];record[key]=value
                     record['sha256']=p.digest({k:v for k,v in record.items() if k!='sha256'});path.write_text(json.dumps(bad))

@@ -1,6 +1,24 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
-Current company checkpoint: [MSFT package](company-data-preparation/MSFT-analyst-input-package.md)
+## Current completion checkpoint — MSFT FY2022–FY2026
+
+[Current MSFT schedule](company-data-preparation/MSFT-analyst-input-package.md)
+records explicit H1–H9/E1/E2 approval and all70 existing family slots satisfied
+within the approved historical perimeter. MSFT is the **one completed company-wide
+package**; AAPL and Alphabet remain **two partial company packages**. Across42
+broad evidence-assessed issuers,39 have no company-level analyst package. Broad
+assessment, partial packages and completed packages are separate counts, not
+financial-sufficiency/support certifications. The dated machine assessment below
+is preserved, not silently regenerated or treated as today's approval ledger.
+
+MSFT source nulls, unbounded omitted claims/borrowing, partial reinvestment,
+rounding and acquisition/timing limits remain. No complete debt/reinvestment,
+Phase2 readiness or phase closure follows. Next existing B1 company-level batch
+is AAPL frozen FY2021–25, including checking FY2025's accepted scope rather than
+extrapolating it to the earlier four years; not executed. Older checkpoints below
+are historical, superseded only within the explicit current MSFT scope.
+
+Historical company checkpoint: [MSFT package](company-data-preparation/MSFT-analyst-input-package.md)
 now has scoped14/14 PASS for FY2025 (explicit new approval) and FY2026 (unchanged).
 All remaining frozen FY2022–24 were reviewed in one retained-source batch, with
 ONE proposed assumption/exception table; none of those older treatments is active.

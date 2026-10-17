@@ -1,6 +1,36 @@
 # Phase 1 preparation pilots — outcomes and bounded remaining work
 
-## Current MSFT company batch — two scoped PASS periods, not whole history
+## Current — one completed company-wide historical package, two partial packages
+
+[MSFT's authoritative current schedule](company-data-preparation/MSFT-analyst-input-package.md)
+now has FY2022–26 **5×14/14**, after explicit sequence6 H1–H9/E1/E2 approval.
+This is company completion under the approved reported-movement/reconciled-CFO
+historical perimeter, not complete disclosure, original-normalization blocker
+resolution or Phase2 readiness. FY2025/FY2026 approvals, four original pilot
+bundles, source nulls and rejected/superseded decisions remain unchanged.
+
+Counts are separate:42 broad evidence-assessed;3 company analyst packages comprise
+1 completed MSFT and2 partial AAPL/Alphabet;39 broad-only. AAPL FY2025 and Alphabet
+FY2024 accepted views do not establish their whole-history completeness. The
+original four-period pilot inventory remains history; additional MSFT annuals
+are current company-view selections, not new pilot-bundle registrations.
+
+Source-supported observations and named calculations remain distinguishable from
+approved assumptions: lease classification/unproved D&A inclusion, SBC proxy once,
+no extra undisclosed borrowing/preferred/NCI/pension adjustments and no separate
+residual/pure-NOL operation. Unbounded omitted claims, older unknown creditor/
+equity-method amounts, partial investment scope, rounding, restrictions/reserves,
+acquisition comparability and timing limits are retained, not waived as facts.
+FY2024 CP6,693 selected; rounded6,700 non-default with no adjustment.
+
+Remaining Phase1 obligations: assess/obtain scoped company decisions for AAPL and
+Alphabet's available histories and remaining39 packages under the existing
+backlog; retain history exceptions and coverage shortfalls until explicit user
+decisions. No automatic issuer certification, new research queue or phase closure.
+Next finite batch identified only: AAPL FY2021–25. Prior checkpoints below record
+their then-current scope, not superseding this current five-year result.
+
+## Historical MSFT company batch — two then-scoped PASS periods, not whole history
 
 [MSFT package](company-data-preparation/MSFT-analyst-input-package.md) now records
 explicit FY2025 seven-decision acceptance and14/14 PASS, preserving FY2026's

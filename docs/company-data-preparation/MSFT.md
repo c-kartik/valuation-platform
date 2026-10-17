@@ -1,5 +1,36 @@
 # MSFT — company data preparation
 
+## Current — five selected annuals completed for the approved historical perimeter
+
+[Authoritative five-year schedule](MSFT-analyst-input-package.md) and
+[current JSON view](msft-analyst-input-package.json) `/msft_current_history` activate
+the user's exact H1–H9 approvals plus E1 supporting limitations and E2 faceCP6,693m.
+Sequence6 at2026-10-17T15:20:51.650842+00:00 links the prior audit, exact three older
+identities and preceding package revision. FY2022–26 each pass the unchanged
+14-family checklist (70/70), including FY2025/FY2026's prior accepted results.
+MSFT is completed company-wide **only for this approved historical-input path**.
+The following review sections are historical snapshots, not current pending work.
+
+Reported movements plus independently reconciled14-term CFO are the active path;
+NWC stays supporting, already-included rows are not further deductions. Approved
+D&A overlap is an assumption, not verified inclusion. Named financing is
+64,683/64,304/78,775/89,323/106,888m, not complete debt. FY2024 roundedCP6,700 is
+non-default, no7m adjustment; current term maturities are not added again.
+Source additional borrowing/claims unknowns remain; omissions are unbounded, not
+immaterial. Older capital-creditor/equity-method subamounts stay unknown (E1).
+Restriction/reserve, acquisition, lease/timing, shares/awards and incomplete
+reinvestment limitations remain in the schedule. No Phase2/FCFF or phase closure.
+
+Prior facts, source receipts, proposals/rejections, approvals and two-period pilot
+bytes remain exact; acceptance is a separate revision-bound view. Current counts
+are42 broad evidence-assessed,3 company packages:1 complete MSFT/2 partial AAPL
+and Alphabet;39 broad-only. Next AAPL company-history batch is identified, not run.
+Validation:161 focused tests pass (117.223s), three package replays, exact prior
+package/audit/source and pilot/frozen preservation, compileall,576 local-path
+links and diff checks pass; see current project-status checkpoint.
+
+## Historical checkpoints below
+
 ## Current company batch — FY2025 approved; older three years pending together
 
 [Same package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)

@@ -169,7 +169,7 @@ class Filing:
 def build():
     filings = [Filing(y) for y in (2025,2026)]
     for f in filings: populate(f)
-    return finish_msft_history(filings[0],attach_fy2025_review(filings[0],apply_fy2026_financing(filings[1],apply_fy2026_claim_assumptions(filings[1],apply_fy2026_operations(filings[1],attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings)))))))))
+    return activate_msft_history(filings[0],finish_msft_history(filings[0],attach_fy2025_review(filings[0],apply_fy2026_financing(filings[1],apply_fy2026_claim_assumptions(filings[1],apply_fy2026_operations(filings[1],attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings))))))))))
 
 
 def approval_record(proposal):
@@ -978,7 +978,7 @@ def review_fy2026_populations(f):
 def apply_fy2026_operations(filing,package):
     if (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
         raise ValueError('Wrong FY2026 operation filing')
-    parent={k:v for k,v in package.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review')}
+    parent={k:v for k,v in package.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review','msft_history_approval','msft_current_history')}
     if package['fy2026_completeness_attempt']['base_package_revision']!=digest(relevant(parent)):
         raise ValueError('Stale FY2026 parent package')
     if accepted_view({k:v for k,v in parent.items() if k!='accepted_view'})!=parent:
@@ -1041,7 +1041,7 @@ def apply_fy2026_claim_assumptions(filing,package):
     """No numerical override: requirements addressed by approved analyst judgments."""
     if (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
         raise ValueError('Wrong FY2026 claim filing')
-    parent={k:v for k,v in package.items() if k not in ('fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review')}
+    parent={k:v for k,v in package.items() if k not in ('fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review','msft_history_approval','msft_current_history')}
     # Replay the already-approved operations and source review, not a stale saved view.
     if apply_fy2026_operations(filing,parent)!=parent:raise ValueError('Changed operation/source view')
     record=_json((ROOT/OUTPUT).read_text())['fy2026_claim_assumption_approval']
@@ -1103,7 +1103,7 @@ def fy2026_financing_record(package):
 
 
 def apply_fy2026_financing(filing,package):
-    parent={k:v for k,v in package.items() if k not in ('fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review')}
+    parent={k:v for k,v in package.items() if k not in ('fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review','msft_history_approval','msft_current_history')}
     if apply_fy2026_claim_assumptions(filing,parent)!=parent:raise ValueError('Changed claim/source view')
     record=_json((ROOT/OUTPUT).read_text())['fy2026_financing_approval']
     expected=fy2026_financing_record(parent)
@@ -1388,7 +1388,7 @@ def review_msft_remaining(manifest):
 
 
 def finish_msft_history(filing,package):
-    parent={k:v for k,v in package.items() if k not in ('fy2025_approval','msft_history_review')}
+    parent={k:v for k,v in package.items() if k not in ('fy2025_approval','msft_history_review','msft_history_approval','msft_current_history')}
     if attach_fy2025_review(filing,parent)!=parent:raise ValueError('Changed FY2025 review/source')
     record=_json((ROOT/OUTPUT).read_text())['fy2025_approval'];expected=fy2025_acceptance_record(parent)
     if type(record) is not dict or set(record)!=set(expected) or record['sha256']!=digest({k:v for k,v in record.items() if k!='sha256'}):raise ValueError('Malformed FY2025 acceptance')
@@ -1465,6 +1465,98 @@ def finish_msft_history(filing,package):
         evidence_limits='All six older exact primary/instance bodies/receipts present. Remaining exceptions are named-concept/coverage gaps or retained precision alternatives, not a missing-body acquisition queue. No acquisition authorized here.',
         stopping_condition='One company batch finished; stop for H1-H9 together and review of retained binding/coverage exceptions. No annual memo cycle or automatic new research.',
         new_older_period_approvals=0,phase_closed=False,valuation_consumption_approved=False)
+    return result
+
+
+def msft_history_acceptance_record(package):
+    if 'msft_history_approval' in package:raise ValueError('Immutable history approval already exists')
+    review=package['msft_history_review']
+    record=dict(schema='msft-operation-acceptance-audit-v1',version=1,sequence=6,
+        previous=package['fy2025_approval']['sha256'],action='ACCEPT_FY2022_FY2024_CONSOLIDATED_PACKAGE',
+        author='User, explicit approval of consolidated MSFT FY2022-FY2024 H1-H9 exactly as proposed and E1/E2 dispositions',
+        recorded_at_utc=datetime.now(timezone.utc).isoformat(),
+        rationale='Activate only the reviewed three-year package alongside existing FY2025/FY2026 approvals. Supporting unknowns remain unknown; no complete debt/reinvestment, immateriality or Phase2 certification.',
+        source_commit='5ac9ea2c0d4f710182082b343760f26660fabd35',source_revision=digest(relevant(package)),
+        identities=[r['identity'] for r in review['remaining_periods']],
+        decisions={r['decision_id']:{k:v for k,v in r.items() if k not in ('decision_id','status','accepted')} for r in review['consolidated_proposals']},
+        exceptions=dict(E1='Accepted supporting limitation: capital-creditor and equity-method subamount bindings remain unknown, not zero; no complete reinvestment/assets claim.',
+            E2='Select FY2024 face-statement CP6693 USDm; retain rounded note6700 USDm as non-default precision alternative, without a7m adjustment.'),
+        financial_sufficiency='ONLY_APPROVED_HISTORICAL_INPUT_PERIMETER',phase_closed=False,valuation_consumption_approved=False)
+    record['sha256']=digest(record)
+    return record
+
+
+def activate_msft_history(filing,package):
+    """Additive current view; never mutate the source/proposal/audit snapshots."""
+    parent={k:v for k,v in package.items() if k not in ('msft_history_approval','msft_current_history')}
+    if finish_msft_history(filing,parent)!=parent:raise ValueError('Changed preceding company review/source')
+    record=_json((ROOT/OUTPUT).read_text())['msft_history_approval'];expected=msft_history_acceptance_record(parent)
+    if type(record) is not dict or set(record)!=set(expected) or record['sha256']!=digest({k:v for k,v in record.items() if k!='sha256'}):raise ValueError('Malformed history acceptance')
+    ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale'])
+    for k in set(expected)-{'recorded_at_utc','sha256','source_revision'}:
+        if type(record[k]) is not type(expected[k]) or record[k]!=expected[k]:raise ValueError('Unregistered history acceptance: '+k)
+    if record['source_revision']!=expected['source_revision']:raise ValueError('Stale history acceptance; explicit revalidation required')
+    if set(record['decisions'])!={f'H{i}' for i in range(1,10)}:raise ValueError('Incomplete history authorization')
+    families=[r['field'] for r in parent['fy2026_analyst_checklist']['checklist']];periods=[]
+    def selection(value,reference,unit='USD',precision=None,origin='reported',**scope):
+        return dict(value=value,unit=unit,precision=precision,origin=origin,source_reference=reference,**scope)
+    for i,row in enumerate(parent['msft_history_review']['remaining_periods']):
+        base=f'/msft_history_review/remaining_periods/{i}';facts=row['facts'];calc=row['calculations']
+        if [r['field'] for r in row['family_coverage']]!=families or not all(row['partition_checks'].values()) or not row['cfo_reconciliation']['supported'] or len(row['cfo_reconciliation']['terms'])!=14:raise ValueError('Incomplete older source/checklist binding')
+        if any(r['status'] not in ('SOURCE_SUPPORTED','PENDING_ANALYST_APPROVAL') or not r['fact_references'] for r in row['family_coverage']):raise ValueError('Unresolved essential history requirement')
+        def fact(key,multiplier=1):
+            f=facts[key]
+            return selection(str(Decimal(f['value'])*multiplier),base+'/facts/'+key,f['unit'],f['precision'],raw_value=f['value'],multiplier=multiplier)
+        def calculation(key):
+            c=calc[key]
+            return selection(c['value_usd'],base+'/calculations/'+key,precision=[facts[k]['precision'] if k in facts else row['face_cp_observation']['decimals'] for k in c['operands']],origin='derived',accepted_under='/msft_history_approval',scope='Named approved population only; retains operand precision')
+        inputs=dict(revenue=fact('revenue'),ebit=fact('ebit'),depreciation_amortization=calculation('expense_da'),cash_capex=fact('capex',-1),
+            reported_cash_flow_working_capital_movements=dict(value=None,rows=[dict(fact(t['fact'],t['multiplier']),role='already_in_reported_cfo') for t in row['cfo_reconciliation']['terms'][5:]],additional_deduction_permitted=False,book_delta_nwc=False),
+            deferred_taxes=fact('deferred_tax'),stock_based_compensation=dict(selected=fact('sbc_expense'),addback=fact('sbc_addback'),economic_proxy_once=True),
+            unclassified_cfo_reconciliation_residual=dict(value=None,disposition='APPROVED_NO_SEPARATE_OPERATION',not_reported_zero=True,mixed_observation=fact('mixed_da')),
+            reported_cfo=fact('cfo'),reported_tax_context=dict(provision=fact('provision'),pretax=fact('pretax'),cash_taxes=fact('cash_taxes',-1),reported_etr=dict(calc['reported_etr'],unit='pure',source_reference=base+'/calculations/reported_etr')),
+            cash_investment_components=dict(selected=calculation('current_financial'),long_term=fact('long_investments'),nonmarketable=fact('nonmarketable'),restrictions=None,operating_reserve=None,unrestricted_or_excess_cash=False),
+            debt_lease_components=dict(selected=calculation('named_financing'),term=fact('term_debt'),finance_lease=fact('finance_liability'),operating_lease=fact('operating_liability'),additional_borrowing=None,no_additional_adjustment='approved analyst assumption; omitted amount unbounded',complete_debt=False,precision_alternatives_reference=base+'/cp_candidates'),
+            other_equity_bridge_claims_assets=dict(preferred=None,nci=None,pension=None,pure_nol=None,loss_credit_dta=fact('loss_credit_dta'),retirement_expense=fact('retirement_expense'),legal_reference=base+'/note_observations',additional_exposure=fact('legal_additional_exposure'),no_additional_claim_adjustments='approved analyst assumptions; omitted size unbounded'),
+            point_in_time_shares=dict(selected=fact('common'),observation_date=row['identity']['annual_end'],cover=[fact(k) for k in facts if k.startswith('cover_common_')],awards=fact('nonvested_awards'),aggregation_or_dilution_approved=False))
+        inputs['depreciation_amortization'].update(finance_amortization_included='approved unproved assumption',additional_rou_addback=False)
+        checklist=[dict(field=r['field'],status='SATISFIED_BY_EXPLICIT_HISTORY_APPROVAL' if r['decisions'] else 'SATISFIED_WITHIN_REVIEWED_SOURCE_SCOPE',evidence_references=r['fact_references'],decisions=r['decisions']) for r in row['family_coverage']]
+        periods.append(dict(identity=row['identity'],inputs=inputs,checklist=checklist,analyst_complete=True,remaining_essential_inputs=[],approval_reference='/msft_history_approval',
+            sources_reference=base+'/sources',supporting_limitations_reference=base+'/exceptions',cfo_reconciliation_reference=base+'/cfo_reconciliation',supporting_investment_references=[base+'/facts/acquisition_combined',base+'/facts/finance_additions'],
+            capital_creditors=None,equity_method_subamount=None))
+    for i,row in enumerate(parent['periods']):
+        base=f'/periods/{i}';accepted=parent['accepted_view']['periods'][i]
+        original=parent['msft_history_review']['accepted_fy2025'] if i==0 else parent['fy2026_analyst_checklist']
+        if not original['analyst_complete'] or original['remaining_essential_inputs'] or len(original['checklist'])!=14 or any(not r['status'].startswith('SATISFIED') for r in original['checklist']):raise ValueError('Prior period checklist not satisfied')
+        def input_value(key):
+            j,v=next((j,v) for j,v in enumerate(row['inputs']) if v['input_id']==key)
+            return dict(v,source_reference=base+'/inputs/'+str(j))
+        def observed(key):return input_value('reported:'+key)
+        movements=[input_value(k) for k in row['cfo_reconciliation']['terms'][5:]]
+        inputs=dict(revenue=input_value('revenue'),ebit=input_value('ebit'),depreciation_amortization=dict(accepted['expense_da'],source_reference=f'/accepted_view/periods/{i}/expense_da'),cash_capex=observed('PaymentsToAcquirePropertyPlantAndEquipment'),
+            reported_cash_flow_working_capital_movements=dict(value=None,rows=movements,additional_deduction_permitted=False,book_delta_nwc=False),
+            deferred_taxes=observed('DeferredIncomeTaxExpenseBenefit' if i==0 else 'DeferredIncomeTaxesAndTaxCredits'),
+            stock_based_compensation=dict(selected=input_value('sbc_cost_proxy'),addback=observed('ShareBasedCompensation'),economic_proxy_once=True),
+            unclassified_cfo_reconciliation_residual=dict(value=None,disposition='APPROVED_NO_SEPARATE_OPERATION',not_reported_zero=True,mixed_observation=observed('DepreciationAmortizationAndOther')),
+            reported_cfo=observed('NetCashProvidedByUsedInOperatingActivities'),reported_tax_context=dict(provision=observed('IncomeTaxExpenseBenefit'),pretax=dict(row['facts']['pretax'],source_reference=base+'/facts/pretax'),cash_taxes=observed('IncomeTaxesPaidNet'),reported_etr=input_value('reported_etr')),
+            cash_investment_components=dict(accepted['cash'],source_reference=f'/accepted_view/periods/{i}/cash',long_term=input_value('long_investments')),
+            debt_lease_components=dict(selected=accepted['borrowings']['selected'],source_reference=f'/accepted_view/periods/{i}/borrowings',no_additional_adjustment_approval='/fy2025_approval' if i==0 else '/fy2026_financing_approval',additional_borrowing=None,complete_debt=False),
+            other_equity_bridge_claims_assets=dict(preferred=None,nci=None,pension=None,pure_nol=None,source_reference='/fy2025_completeness_review' if i==0 else '/fy2026_claim_assumptions_view',loss_credit_dta=input_value('loss_credit_dta')),
+            point_in_time_shares=dict(selected=input_value('year_end_common'),observation_date=row['identity']['annual_end'],cover=input_value('cover_common'),awards=input_value('nonvested_awards'),aggregation_or_dilution_approved=False))
+        periods.append(dict(identity=row['identity'],inputs=inputs,checklist=original['checklist'],analyst_complete=True,remaining_essential_inputs=[],sources_reference='/sources',cfo_reconciliation_reference=base+'/cfo_reconciliation',supporting_limitations_reference=base+'/unresolved_requirements',supporting_investment_reference=f'/accepted_view/periods/{i}/investment_columns'))
+    if len(periods)!=5 or any(set(r['inputs'])!=set(families) for r in periods) or [r['identity'] for r in periods]!=parent['msft_history_review']['selected_identities']:raise ValueError('Five-year identity/family accounting differs')
+    result=json.loads(json.dumps(parent));result['msft_history_approval']=record
+    result['msft_current_history']=dict(version=1,authoritative_current_view=True,periods=periods,company_completed_for_approved_historical_perimeter=True,
+        family_slots=70,passed_family_slots=70,complete_debt=False,complete_reinvestment=False,phase_closed=False,valuation_consumption_approved=False,
+        historical_proposal_snapshot='/msft_history_review',approval_sha256=record['sha256'],
+        active_path='Reported movements already included in independently reconciled CFO; no reconstructed complete NWC/book delta prerequisite or extra deduction.',
+        company_counts=dict(broad_evidence_assessment=42,company_analyst_packages=3,completed_company_wide_packages=1,partial_company_packages=2,broad_assessment_only=39),
+        next_company_batch='AAPL frozen FY2021-FY2025, existing completion-assessment B1; not started',
+        comparability=['Exact accession presentations retained; Nuance FY2022 and Activision FY2024 acquisitions remain within consolidated scope, not organic.',
+            'FY2024 CP face6693 versus rounded6700 alternative: select face, no adjustment; current term maturities already included.',
+            'FY2023 coarse depreciation precision-9 retained; expense D&A and mixed CFO observations differ.',
+            'FY2025 selected mixed34153/gain609 differs from FY2026 comparative29433/5329; no recast or plug.',
+            'Capital creditors/equity-method subamounts unknown in older years (E1); no complete reinvestment or investment allocation.'])
     return result
 
 

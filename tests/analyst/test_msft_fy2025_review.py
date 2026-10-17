@@ -18,7 +18,7 @@ class MSFTFY2025ReviewTests(unittest.TestCase):
         cls.prior=json.loads(subprocess.check_output(['git','show',cls.view['basis_commit']+':'+p.OUTPUT],cwd=ROOT))
 
     def test_entire_prior_package_and_fy2026_pass_preserved(self):
-        parent={k:v for k,v in self.result.items() if k not in ('fy2025_completeness_review','fy2025_approval','msft_history_review')}
+        parent={k:v for k,v in self.result.items() if k not in ('fy2025_completeness_review','fy2025_approval','msft_history_review','msft_history_approval','msft_current_history')}
         self.assertTrue(parent==self.prior,'Prior source/approval/selection changed')
         self.assertEqual(self.view['parent_revision'],p.digest(p.relevant(parent)))
         self.assertTrue(self.result['fy2026_analyst_checklist']['analyst_complete'])

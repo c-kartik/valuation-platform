@@ -1,6 +1,48 @@
 # Project Status
 
-## Current milestone — MSFT company-history batch and FY2025 acceptance
+## Current milestone — MSFT approved five-year historical-input completion
+
+[Authoritative current schedule](company-data-preparation/MSFT-analyst-input-package.md)
+and [JSON](company-data-preparation/msft-analyst-input-package.json)
+`/msft_current_history` activate exact user H1–H9 approval, E1 supporting
+limitations and E2 FY2024 faceCP6,693m (rounded6,700 alternative, no adjustment).
+Revision-bound audit sequence6 at2026-10-17T15:20:51.650842+00:00 links the exact
+preceding package and sequence5, preserving all earlier source/approval/proposal
+history. All five frozen FY2022–FY2026 periods pass the existing14 families:
+**70/70; MSFT completed for the approved historical-input perimeter**.
+
+Reported movements and independently reconciled14-term CFO are the active path;
+complete reconstructed NWC/book delta is not required, supporting movements
+already in CFO are not additional deductions. Approved unproved finance-D&A
+overlap, named financing/no extra adjustment, SBC proxy once, claim assumptions
+and operation exclusions remain explicit. Source borrowing/claims and older
+capital-creditor/equity-method subamounts stay unknown. No complete debt,
+reinvestment, unrestricted/excess cash, organic cash, FCFF or Phase2 certification.
+Acquisition/presentation/precision, restriction/reserve and timing limits persist.
+
+Company counts:42 broad evidence-assessed;3 company analyst packages comprise
+1 completed company-wide MSFT and2 partial AAPL/Alphabet;39 broad-only. Original
+40-register/42 non-specialized/199-period/210-target/11-deficit inventory,
+eight specialized exclusions, frozen classifications/outputs and original four
+pilot bundles are unchanged. No universe/Phase1 closure or automatic next issuer.
+Next company-level backlog batch identified: AAPL frozen FY2021–25; not begun.
+
+Validation: **161 focused tests pass in117.223s**, including8 new whole-history
+acceptance checks plus all earlier MSFT approvals, three issuer packages, original
+input/sidecar/NWC and assessment preservation. All three exact package replays,
+compileall (`src scripts tests`),576 affected Markdown local-path links and
+`git diff --check` pass. Exact preceding MSFT package equality after stripping
+only the two new keys proves original sources/proposals/audits unchanged; frozen,
+pilot and AAPL/Alphabet preservation tests pass. Receipt/source replay,70-slot
+accounting, cash signs/precision, E1 unknowns, CP alternatives, audit restart,
+tamper/stale rejection and current source references are covered. Logs retained
+in `/tmp/msft-history-acceptance-tests.log`, `/tmp/msft-history-package-replays.log`
+and `/tmp/msft-history-links-and-preservation.log` (local diagnostics, not source
+evidence). Link validation checks local paths, not live URLs/all historical
+anchors. No full-suite/corpus run or SEC requests. Earlier milestones below are
+historical checkpoints.
+
+## Prior milestone — MSFT company-history batch and FY2025 acceptance
 
 [Updated existing package](company-data-preparation/MSFT-analyst-input-package.md) /
 [JSON](company-data-preparation/msft-analyst-input-package.json) record explicit
