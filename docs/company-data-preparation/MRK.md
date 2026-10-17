@@ -1,5 +1,17 @@
 # MRK — company data preparation
 
+## Current — CVX/MRK/PG consolidated retained company review
+
+FY2021–2025 original-as-filed continuing panels FY2021–23/root FY2024–25 are proposed; retained sales/approved EBIT/taxes/continuing cash support them without an invented mismatch or recast splice. Approved EBIT12538/17945/2355/19912/21218 replays exact registered policy/operands. Five independent displayed CFO checks13122/19095/13006/21468/16472 are exact; original PARTIAL5 remains. Organon discontinued987 FY2021 is separate. Limited D&A3214/3909/3872/4499/5838 is proposed; accelerated/impairment/manufacturing scope remains. First2 broader cash productive4448/4388 proposals preserve prior pure-PP&E denial. Continuing expense479 differs from total498; acquisition/IPR&D add-backs and cash remain separate. Named financing33102/30691/35055/37111/49339 uses exact current face total, not rounded maturities. Ten proposed decisions, none active.
+
+[Full selected-history schedule/14-family matrix](MRK-analyst-input-package.md) /
+[exact sources, alternatives, calculations and limitations](mrk-analyst-input-package.json) /
+[ONE consolidated approval/exception sheet and validation](../energy-pharma-staples-review-batch-results.md).
+No acquisition target identified after this bounded review; no source absence is
+turned into zero. No financial acceptance, whole-company completion or new policy.
+Evidence-accounted status and original blockers are unchanged;22 completed peers,
+CAT SBC/JNJ scope, frozen outputs and pilot bytes remain. Earlier records follow.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

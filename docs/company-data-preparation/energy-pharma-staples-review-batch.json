@@ -1,0 +1,1698 @@
+{
+  "approved_partial_company_packages": 2,
+  "broad_assessment_only": 15,
+  "companies": {
+    "CVX": {
+      "outcomes": {
+        "ESSENTIAL_EXCEPTION": 5,
+        "PROPOSED_PENDING_APPROVAL": 65
+      },
+      "periods": 5,
+      "review_revision": "aebaae513eee859c1fc87f9340ed5eecb07e689250938d093ff603144edb0d63"
+    },
+    "MRK": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 60,
+        "SOURCE_SUPPORTED": 10
+      },
+      "periods": 5,
+      "review_revision": "fbe70cf899070b1890aae2b602bc2c100dbbe7539a4270365dc0f1b678f1ad25"
+    },
+    "PG": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 60,
+        "SOURCE_SUPPORTED": 10
+      },
+      "periods": 5,
+      "review_revision": "ec52e359e0fb0a9dbc72a10b9ccc0ae3b4f5e0a1f99e0f8f582878197c347b7d"
+    }
+  },
+  "completed_company_packages": 22,
+  "decisions": [
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-REV",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "155606/235717/196913/193414/184432 USDm; broader 162465/246252/200949/202792/189031 USDm",
+      "recommendation": "Select explicit face Sales and other operating revenues, preserving broader Revenues alternative and unchanged generic conflict.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "Sales selection does not solve affiliate/industrial operating perimeter. Alternative broader revenue includes non-sales/affiliate income and changes intended scope."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "29187/49602/35609/31492/33939 USDm",
+      "recommendation": "Select reported movement detail and independently reconciled CFO under original-as-filed scope; no separately computed residual or second movement deduction.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "MRK original PARTIAL5 remains alongside independent exact continuing/root checks; FY2021 discontinued CFO987 is separate. Cash movements are not book delta NWC, operating-only cash NWC or FCFF. Mixed rows remain visible."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "17925/16319/17326/17282/20132 USDm",
+      "recommendation": "Use explicitly limited historical D&A proxy, not verified complete expense D&A.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "Depletion-inclusive energy DD&A; cannot establish compatible industrial EBIT. Retain dry-hole exploration, ARO accretion/settlements, impairments and affiliate distributions separately. Alternative strict matched industrial D&A remains unavailable."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "7515/10349/14788/15544/16830 USDm",
+      "recommendation": "Retain exact five existing curated cash-investment v2 approvals7515/10349/14788/15544/16830 with replayed proof. Do not substitute total capital/exploratory expenditure, affiliate capital budgets or ARO additions. Hess/PDC/REG acquisition and noncash populations stay separate.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "Payment magnitudes; cash sign\u22121. Noncash, acquisition/IPR&D, incentives and creditor timing remain separate. No generic policy expansion or complete reinvestment sum."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "701/1013/-100/510/399 USDm; CFO add-back unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Select source expense as a labeled cost proxy once, preserving add-back/award/capitalization roles.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "CVX liability-award remeasurement benefit\u2212100 stays negative; named extension scope is explicit. MRK2021 total498 versus continuing479 differs19, not an allocation inferred by subtraction. PG exact face caption is expense; absence of Allocated tag does not mean absent cost. No duplicate charge."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "5950/14066/8173/9757/7258 USDm provision; pretax extension unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain original provision, cash/deferred roles and unchanged approved policy Pretax/ETR. PG first2 explicit pretax-extension selection proposed.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "CVX affiliate after-tax/before-tax incompatibility remains an EBIT exception. MRK tax follows continuing panels. PG2022/23 exact pg extension17995/18353 has independent face confirmation; generic policy nulls stay. Issuer reported rates retained without new ratio, future rate or tax-scope equivalence."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "5675/17901/8223/6781/6293 USDm",
+      "recommendation": "Select named gross current financial captions, not unrestricted/excess cash.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "Face cash excludes time deposits/restricted populations; current securities35/223/45/0/0 added once. Restricted current333/630/275/281/174 and noncurrent822/813/822/1200/818 remain separate. Affiliate holdings40357/44610/46113/46618/43037 are strategic, not cash. Alternative broader cash/restricted parent changes scope, not free liquidity. Unknown restrictions/reserves remain unquantified. No immateriality finding."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "31369/23339/20836/24541/40758 USDm",
+      "recommendation": "Treat operating leases as service cost and finance leases as asset financing; select named carrying financing with no additional unidentified-borrowing adjustment only if approved.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "Short borrowing plus noncurrent debt/finance captions; CP0/0/0/5386/4642 and finance497/448/634/604/1445 are already children. Note19 reclassification to long-term prevents adding CP again. Different carrying/principal/fair-value measures remain separate. Potential omitted exposure unbounded. Alternative retain unidentified operation unresolved; not complete debt or reported zero."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Source-bound claims retained, no bridge/valuation calculation.",
+      "recommendation": "Retain known claim/asset populations without overlap; propose no additional unidentified claim or separate pure-NOL adjustment beyond disclosed populations.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "Retain ARO12808/12701/13833/12667/14988; noncurrent pension/benefit6248/4357/4082/3857/4111; NCI873/960/972/839/5726 and redeemable populations without adding equity parents/children twice. Pension noncurrent carrying is not full funded status. No industrial EBIT perimeter is repaired by this omission proposal. Additional unknown claim amounts are unbounded; no non-disclosure/audit immateriality inference. Alternative leave omission operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact source counts/dates/precision in shares:*; no numerical dilution assumption.",
+      "recommendation": "Retain actual dated common/class observations, preferred conversions, EPS denominators and awards separately; no class/dilution sum.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "MRK Jan31 cover observations are not fiscal-end counts. PG common closing shares coexist with ESOP preferred and actual later covers; diluted EPS is an annual average. CVX Hess2025 consideration changes comparability. Alternative cover or recast history requires explicit different date/scope, never silent replacement."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "CVX-PERIMETER",
+      "evidence_references": [
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/cvx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000093410-22-000019",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-23-000009",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-24-000013",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-25-000009",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000093410-26-000078",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 93410,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "No defensible EBIT numerical selection established.",
+      "recommendation": "OPEN essential EBIT/business-perimeter exception: retain required EBIT null for all five years; do not approve an incomplete industrial equation.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "OPEN_ESSENTIAL_EXCEPTION",
+      "ticker": "CVX",
+      "uncertainty_and_alternative": "Mixed-tax affiliate earnings, operating/nonoperating Other and incomplete benefit allocation prevent exact approved operating perimeter. Neither Pretax+interest, segment after-tax income nor expressionC with unknown U_operating is a substitute. Requires a defensible matched historical operation and explicit scope approval; no specific missing artifact proved, no automatic research queue."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-PERIMETER",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Continuing CFO13122/19095/13006; root21468/16472, not FY2021 implied consolidated14109.",
+      "recommendation": "Select original-as-filed continuing-operation panels FY2021\u201323 and root presentation FY2024\u201325; retain Organon separately.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "Approved EBIT derivations, continuing sales, taxes, CFO D&A and Capex align in retained statements. FY2021 broader SBC498 alternative is not selected; independent continuing expense479. Acquisition/separation comparability persists, no recast splice."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "13122/19095/13006/21468/16472 USDm",
+      "recommendation": "Select reported movement detail and independently reconciled CFO under original-as-filed scope; no separately computed residual or second movement deduction.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "MRK original PARTIAL5 remains alongside independent exact continuing/root checks; FY2021 discontinued CFO987 is separate. Cash movements are not book delta NWC, operating-only cash NWC or FCFF. Mixed rows remain visible."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "3214/3909/3872/4499/5838 USDm",
+      "recommendation": "Use explicitly limited historical D&A proxy, not verified complete expense D&A.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "Depreciation plus separately reported CFO amortization, excluding separate impairments. Segment depreciation excludes accelerated164/182/203/261/287; do not use a residual or call the proxy complete expense D&A. Manufacturing/inventory timing remains."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "4448/4388/unknown/unknown/unknown USDm broader first2; direct unknown/unknown/3863/3372/4112 USDm",
+      "recommendation": "Select broader continuing capital-expenditures proxy4448/4388 for FY2021/22, not pure PP&E; preserve prior negative scope findings. Later direct PP&E3863/3372/4112. Pandion1556 add-back versus1554 cash; Prometheus10217 versus10705; Imago1192 versus1327; acquired R&D, licensing and acquisitions remain distinct, no allocation or complete reinvestment claim.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "Payment magnitudes; cash sign\u22121. Noncash, acquisition/IPR&D, incentives and creditor timing remain separate. No generic policy expansion or complete reinvestment sum."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "479/541/645/761/820 USDm; CFO add-back 479/541/645/761/820 USDm",
+      "recommendation": "Select source expense as a labeled cost proxy once, preserving add-back/award/capitalization roles.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "CVX liability-award remeasurement benefit\u2212100 stays negative; named extension scope is explicit. MRK2021 total498 versus continuing479 differs19, not an allocation inferred by subtraction. PG exact face caption is expense; absence of Allocated tag does not mean absent cost. No duplicate charge."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "1521/1918/1512/2803/2804 USDm provision; pretax extension unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain original provision, cash/deferred roles and unchanged approved policy Pretax/ETR. PG first2 explicit pretax-extension selection proposed.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "CVX affiliate after-tax/before-tax incompatibility remains an EBIT exception. MRK tax follows continuing panels. PG2022/23 exact pg extension17995/18353 has independent face confirmation; generic policy nulls stay. Issuer reported rates retained without new ratio, future rate or tax-scope equivalence."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "8096/13192/7093/13689/14565 USDm",
+      "recommendation": "Select named gross current financial captions, not unrestricted/excess cash.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "Gross face cash plus disclosed current short-term investments only. FY2021 no independently bound investment zero is inserted. Restricted cash in Other assets remains separate and not deducted twice. Alternative cash-only is a narrower observed perimeter, not an operating reserve estimate. Unknown restrictions/reserves remain unquantified. No immateriality finding."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "33102/30691/35055/37111/49339 USDm",
+      "recommendation": "Treat operating leases as service cost and finance leases as asset financing; select named carrying financing with no additional unidentified-borrowing adjustment only if approved.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "Exact face Loans payable/current debt includes puttable notes, CP and FY2025 foreign facility63; rounded maturity observations are not the face total. Finance subamounts remain unknown, never zero. No ending borrowing from net financing flows. Potential omitted exposure unbounded. Alternative retain unidentified operation unresolved; not complete debt or reported zero."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Source-bound claims retained, no bridge/valuation calculation.",
+      "recommendation": "Retain known claim/asset populations without overlap; propose no additional unidentified claim or separate pure-NOL adjustment beyond disclosed populations.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "Retain NCI73/67/54/59/56, pension assets/liabilities/funded status by plan and known litigation/tax claims. Original-as-filed Organon continuing panels preserve acquisition/separation scope; no recast splice or claim allocation. Additional unknown claim amounts are unbounded; no non-disclosure/audit immateriality inference. Alternative leave omission operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "MRK-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/mrk-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000310158-22-000003",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-23-005061",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-24-006850",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-007732",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000310158-26-000063",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 310158,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact source counts/dates/precision in shares:*; no numerical dilution assumption.",
+      "recommendation": "Retain actual dated common/class observations, preferred conversions, EPS denominators and awards separately; no class/dilution sum.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "MRK",
+      "uncertainty_and_alternative": "MRK Jan31 cover observations are not fiscal-end counts. PG common closing shares coexist with ESOP preferred and actual later covers; diluted EPS is an annual average. CVX Hess2025 consideration changes comparability. Alternative cover or recast history requires explicit different date/scope, never silent replacement."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "PG-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000080424-22-000064",
+          "annual_end": "2022-06-30",
+          "annual_start": "2021-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-23-000073",
+          "annual_end": "2023-06-30",
+          "annual_start": "2022-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-24-000083",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-25-000076",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-26-000103",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "16723/16848/19846/17817/19556 USDm",
+      "recommendation": "Select reported movement detail and independently reconciled CFO under original-as-filed scope; no separately computed residual or second movement deduction.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PG",
+      "uncertainty_and_alternative": "MRK original PARTIAL5 remains alongside independent exact continuing/root checks; FY2021 discontinued CFO987 is separate. Cash movements are not book delta NWC, operating-only cash NWC or FCFF. Mixed rows remain visible."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "PG-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000080424-22-000064",
+          "annual_end": "2022-06-30",
+          "annual_start": "2021-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-23-000073",
+          "annual_end": "2023-06-30",
+          "annual_start": "2022-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-24-000083",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-25-000076",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-26-000103",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "2807/2714/2896/2847/3160 USDm",
+      "recommendation": "Use explicitly limited historical D&A proxy, not verified complete expense D&A.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PG",
+      "uncertainty_and_alternative": "Manufacturing depreciation may be inventoried; SG&A includes corporate D&A. Intangible amortization312/327/338/320/308 is not a second addition to combined D&A. Keep FY2024 Gillette impairment1341, disposal/restructuring rows separate; no normalization adjustment."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "PG-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000080424-22-000064",
+          "annual_end": "2022-06-30",
+          "annual_start": "2021-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-23-000073",
+          "annual_end": "2023-06-30",
+          "annual_start": "2022-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-24-000083",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-25-000076",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-26-000103",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "unknown/unknown/unknown/unknown/unknown USDm broader first2; direct 3156/3062/3322/3773/4409 USDm",
+      "recommendation": "Select direct cash PP&E3156/3062/3322/3773/4409, retaining source capitalized software scope. Acquisition cash1381/765/21/11/85, noncash operating ROU217/213/357/261/168, disposals and creditors remain separate. Alternative broader investment requires defined acquisition/intangible allocation, not a new sum.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PG",
+      "uncertainty_and_alternative": "Payment magnitudes; cash sign\u22121. Noncash, acquisition/IPR&D, incentives and creditor timing remain separate. No generic policy expansion or complete reinvestment sum."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "PG-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000080424-22-000064",
+          "annual_end": "2022-06-30",
+          "annual_start": "2021-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-23-000073",
+          "annual_end": "2023-06-30",
+          "annual_start": "2022-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-24-000083",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-25-000076",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-26-000103",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "528/545/562/476/524 USDm; CFO add-back 528/545/562/476/524 USDm",
+      "recommendation": "Select source expense as a labeled cost proxy once, preserving add-back/award/capitalization roles.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PG",
+      "uncertainty_and_alternative": "CVX liability-award remeasurement benefit\u2212100 stays negative; named extension scope is explicit. MRK2021 total498 versus continuing479 differs19, not an allocation inferred by subtraction. PG exact face caption is expense; absence of Allocated tag does not mean absent cost. No duplicate charge."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "PG-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000080424-22-000064",
+          "annual_end": "2022-06-30",
+          "annual_start": "2021-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-23-000073",
+          "annual_end": "2023-06-30",
+          "annual_start": "2022-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-24-000083",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-25-000076",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-26-000103",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "3202/3615/3787/4102/4233 USDm provision; pretax extension 17995/18353/unknown/unknown/unknown USDm",
+      "recommendation": "Retain original provision, cash/deferred roles and unchanged approved policy Pretax/ETR. PG first2 explicit pretax-extension selection proposed.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PG",
+      "uncertainty_and_alternative": "CVX affiliate after-tax/before-tax incompatibility remains an EBIT exception. MRK tax follows continuing panels. PG2022/23 exact pg extension17995/18353 has independent face confirmation; generic policy nulls stay. Issuer reported rates retained without new ratio, future rate or tax-scope equivalence."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "PG-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000080424-22-000064",
+          "annual_end": "2022-06-30",
+          "annual_start": "2021-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-23-000073",
+          "annual_end": "2023-06-30",
+          "annual_start": "2022-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-24-000083",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-25-000076",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-26-000103",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "7214/8246/9482/9556/9942 USDm",
+      "recommendation": "Select named gross current financial captions, not unrestricted/excess cash.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PG",
+      "uncertainty_and_alternative": "Select actual face cash caption, preserving broader cash/restricted QName and unknown restrictions rather than silently treating concepts equivalent. No current investment or unrestricted/excess-cash completeness inferred. Alternative broader liquidity is unavailable without evidenced components. Unknown restrictions/reserves remain unquantified. No immateriality finding."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "PG-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000080424-22-000064",
+          "annual_end": "2022-06-30",
+          "annual_start": "2021-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-23-000073",
+          "annual_end": "2023-06-30",
+          "annual_start": "2022-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-24-000083",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-25-000076",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-26-000103",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "31493/34607/32460/34508/34138 USDm",
+      "recommendation": "Treat operating leases as service cost and finance leases as asset financing; select named carrying financing with no additional unidentified-borrowing adjustment only if approved.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PG",
+      "uncertainty_and_alternative": "DebtCurrent includes CP/current maturities/other short debt; add only noncurrent debt. Do not add4805/6236/3327/4108/4837 CP again. FY2025 child sum9512 versus face9513 differs\u22121m; FY2026 child sum11297 versus face11296 differs+1m. Preserve these unexplained differences: no plug or inferred rounding explanation, and do not replace the selected face parent with a component sum. Source finance-leases-not-material language does not prove zero or valuation immateriality. ESOP funding/reserve overlaps require no second debt addition. Potential omitted exposure unbounded. Alternative retain unidentified operation unresolved; not complete debt or reported zero."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "PG-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000080424-22-000064",
+          "annual_end": "2022-06-30",
+          "annual_start": "2021-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-23-000073",
+          "annual_end": "2023-06-30",
+          "annual_start": "2022-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-24-000083",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-25-000076",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-26-000103",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Source-bound claims retained, no bridge/valuation calculation.",
+      "recommendation": "Retain known claim/asset populations without overlap; propose no additional unidentified claim or separate pure-NOL adjustment beyond disclosed populations.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PG",
+      "uncertainty_and_alternative": "Retain ESOP convertible preferred, NCI265/288/272/272/230, plan funded statuses and noncurrent pension3139/3116/2884/3026/2204. ESOP preferred is also plan funding; reserves/Company advances and guaranteed debt overlap. SeriesA/B one-for-one conversion and diluted EPS convention do not authorize a valuation deduction or share aggregation. Do not approve no-preferred treatment. Additional unknown claim amounts are unbounded; no non-disclosure/audit immateriality inference. Alternative leave omission operation unresolved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review; no user acceptance",
+      "decision_id": "PG-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pg-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000080424-22-000064",
+          "annual_end": "2022-06-30",
+          "annual_start": "2021-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-23-000073",
+          "annual_end": "2023-06-30",
+          "annual_start": "2022-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-24-000083",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-25-000076",
+          "annual_end": "2025-06-30",
+          "annual_start": "2024-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000080424-26-000103",
+          "annual_end": "2026-06-30",
+          "annual_start": "2025-07-01",
+          "cik": 80424,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact source counts/dates/precision in shares:*; no numerical dilution assumption.",
+      "recommendation": "Retain actual dated common/class observations, preferred conversions, EPS denominators and awards separately; no class/dilution sum.",
+      "recorded_at_utc": "2026-10-17T21:51:27+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PG",
+      "uncertainty_and_alternative": "MRK Jan31 cover observations are not fiscal-end counts. PG common closing shares coexist with ESOP preferred and actual later covers; diluted EPS is an annual average. CVX Hess2025 consideration changes comparability. Alternative cover or recast history requires explicit different date/scope, never silent replacement."
+    }
+  ],
+  "evidence_acquisition_requirements": [],
+  "family_slots": 210,
+  "new_assumptions_active": false,
+  "new_sec_requests": 0,
+  "pending_review_company_packages": 3,
+  "phase1_closed": false,
+  "schema": "retained-energy-pharma-staples-review-batch-v1",
+  "selected_periods": 15,
+  "source_commit": "956c5c488247eb27ad432b3d1a0fd942a4f29e6e",
+  "tickers": [
+    "CVX",
+    "MRK",
+    "PG"
+  ],
+  "valuation_consumption_approved": false
+}

@@ -1,5 +1,17 @@
 # CVX — company data preparation
 
+## Current — CVX/MRK/PG consolidated retained company review
+
+FY2021–2025 source-supported schedules retain5 essential EBIT/business-perimeter exceptions. Mixed-tax affiliate earnings, operating Other and benefit allocation remain unproved; no industrial equation or scope waiver. Face Sales155606/235717/196913/193414/184432 is proposed against broader Revenues alternatives. Depletion-inclusive DD&A17925/16319/17326/17282/20132 and current financial5675/17901/8223/6781/6293 are limited proxies/perimeters, not industrial equivalence or excess cash. All5 CFO proofs SUPPORTED; exact Capex v2 approvals7515/10349/14788/15544/16830 independently replay unchanged. Finance embedded in carrying captions, CP/reclassification, ARO, pension and NCI/affiliate scope remain explicit. Ten proposed decisions plus one OPEN perimeter exception; none active.
+
+[Full selected-history schedule/14-family matrix](CVX-analyst-input-package.md) /
+[exact sources, alternatives, calculations and limitations](cvx-analyst-input-package.json) /
+[ONE consolidated approval/exception sheet and validation](../energy-pharma-staples-review-batch-results.md).
+No acquisition target identified after this bounded review; no source absence is
+turned into zero. No financial acceptance, whole-company completion or new policy.
+Evidence-accounted status and original blockers are unchanged;22 completed peers,
+CAT SBC/JNJ scope, frozen outputs and pilot bytes remain. Earlier records follow.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

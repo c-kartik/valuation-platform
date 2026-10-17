@@ -1,6 +1,30 @@
 # Company data preparation register
 
-## Current — LRCX/PLTR/AMAT approved historical completion
+## Current — CVX/MRK/PG retained review, pending consolidated approval
+
+[ONE decision/exception sheet](../energy-pharma-staples-review-batch-results.md) /
+[machine review](energy-pharma-staples-review-batch.json).
+CVX/MRK FY2021–2025 and PG FY2022–2026 cover15 exact annuals/210 families:
+20 source-supported slots,185 proposed treatments,5 essential CVX EBIT exceptions.
+Twenty-nine proposed decisions remain INACTIVE; the additional CVX perimeter row is
+an OPEN exception, not an approval that can waive EBIT. No company completion.
+
+CVX's mixed-tax affiliate/operating-benefit perimeter remains unproved; face Sales,
+energy depletion-inclusive DD&A and exact replayed Capex do not repair EBIT.
+MRK's original-as-filed continuing panels preserve Organon and acquisition scope;
+five independently exact CFO checks coexist with original PARTIAL5, and first2
+broader capital-expenditure proxies do not reverse the pure-PP&E NO-GO. PG exact
+pretax extensions, broader cash QName, ESOP preferred/pension funding, D&A and
+current borrowing/CP overlap are explicitly reviewed, not generic policies.
+
+**42 broadly assessed;27 packages =22 completed scoped histories +2 approved partial
+CAT/JNJ +3 pending CVX/MRK/PG;15 assessment-only.** CAT SBC/JNJ scope and all
+original financial/history exceptions remain.0 missing essential artifact targets,
+0 acquisitions. Sources, accepted views, frozen artifacts/pilot bytes are unchanged.
+Validation is recorded in the batch results. Stop for ONE consolidated review;
+no automatic approval, next-company cycle, Phase1 closure or Phase2 use.
+
+## Historical checkpoint — LRCX/PLTR/AMAT approved historical completion
 
 The user explicitly approves all27 LRCX/PLTR/AMAT recommendations. Effective
 revision-bound analyst views/audits now select LRCX FY2022–2026 and PLTR/AMAT

@@ -1,5 +1,22 @@
 # PG — company data preparation
 
+## Current — CVX/MRK/PG consolidated retained company review
+
+FY2022–2026 schedules propose a limited manufacturing/corporate CFO D&A proxy2807/2714/2896/2847/3160 without adding intangible amortization again; impairment/disposal/restructuring stay separate. Exact first2 pretax extensions17995/18353 and issuer reported ETR are source-bound; original generic policy nulls remain. Cash7214/8246/9482/9556/9942 uses actual face caption while preserving broader cash/restricted QName and restriction unknowns. Financing31493/34607/32460/34508/34138 uses DebtCurrent plus noncurrent debt, no extra CP/current maturities. ESOP preferred, reserve/Company advances, pension funding, NCI and actual-date shares/conversion/EPS populations remain separate, not a no-preferred assumption. All5 original CFO proofs SUPPORTED; cash PP&E3156/3062/3322/3773/4409 remains separate from acquisition/noncash investment. Nine proposed decisions, none active.
+
+The current-borrowing children sum to9,512m versus face9,513m in FY2025 and
+11,297m versus face11,296m in FY2026. These −1m/+1m differences remain unexplained;
+the proposed named financing uses the face parent, never a plug or assumed
+rounding correction. Source components and the alternative remain visible.
+
+[Full selected-history schedule/14-family matrix](PG-analyst-input-package.md) /
+[exact sources, alternatives, calculations and limitations](pg-analyst-input-package.json) /
+[ONE consolidated approval/exception sheet and validation](../energy-pharma-staples-review-batch-results.md).
+No acquisition target identified after this bounded review; no source absence is
+turned into zero. No financial acceptance, whole-company completion or new policy.
+Evidence-accounted status and original blockers are unchanged;22 completed peers,
+CAT SBC/JNJ scope, frozen outputs and pilot bytes remain. Earlier records follow.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).
