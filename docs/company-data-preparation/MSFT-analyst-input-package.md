@@ -1,5 +1,106 @@
 # MSFT — analyst historical-input package, FY2025–FY2026
 
+## Current bounded short-borrowing bridge review — UNRESOLVED
+
+**Outcome3: the retained evidence does not establish a complete opening-to-closing
+bridge for FY2026 additional short borrowing.** No new assumption is proposed or
+approved. Existing JSON, audit records, source nulls, rejected-zero proposal and
+named106,888m financing subtotal remain byte-for-byte unchanged; all earlier
+accepted decisions, including D1–D3 and the three claim assumptions, persist.
+This is a documentary review only, not a new runtime derivation or completeness
+certification. No SEC requests or new documents.
+
+### Population and exact retained source binding
+
+Opening filing: `0000950170-25-100235`, CIK789019, instant2025-06-30;
+FY2026 filing: `0001193125-26-323660`, annual2025-07-01–2026-06-30.
+All amounts below USDm. Retained primary/instance receipt sources are the existing
+[package JSON](msft-analyst-input-package.json) `/sources/0..3`, manifest
+`docs/evidence/analyst-operating-nwc-response-bodies.json` artifacts18..21.
+FY2025 primary SHA256 `9aee86c47d2e3fffc438c671493b709d0e0ba3960917cd5831d145b916eb2c7e`;
+instance `b90704839beab78c428874d38eaaf2582e048439d53a79f52af3d2cd4ee5e792`.
+FY2026 primary `cec8684979a7b9f8af4003dcab01ac6b85cbe760aaa8dfbc2d266fdcbf8ac67f`;
+instance `56e56d82ee2d82cb75d37b85df51d4807ffc1e1a3cc4e02ec87513b7574aa886`.
+Existing exact QName/context/inline IDs are retained in the pointers below;
+review rechecked primary/instance agreement and all four original-body digests.
+
+| Bridge item | Evidence / precision | What it establishes, and does not |
+| --- | --- | --- |
+| Opening CP0 | FY2025 `/periods/0/facts/commercial_paper`: `us-gaap:CommercialPaper`, nondimensional instant2025-06-30, ordinals639/1504; decimals−6/−9. Face0 and Note10 explicit no CP issued/outstanding. | **CP only**, despite the Note10 heading Short-term Debt. It is not an all-category additional-short-borrowing opening balance. The same paragraph says FY2024 CP6.7bn had maturities28–152 days: CP is not necessarily coextensive with ≤90-day debt. |
+| FY2026 short-debt cash net0 | `/decision_resolution/periods/1/additional_facts/short_debt_cash_net`: `ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess`, ordinal733, context `C_29985a27-1d12-4b7e-9a06-156523f6e71e`, USD/decimals−6, scale6. Face label: proceeds/repayments of debt with maturities90 days or less, **net**. | Annual cash flow, not closing stock; not CP-only; no gross issuance/repayment split. Displayed zero at USDm precision is not an infinitely precise, all-population debt roll-forward. |
+| Other borrowing cash | Same annual context/precision: `ProceedsFromDebtMaturingInMoreThanThreeMonths`0, ordinal736; `RepaymentsOfDebtMaturingInMoreThanThreeMonths`3,000, ordinal739 (raw positive payment, face cash outflow−3,000). Existing `long_debt_cash_proceeds/repayments` pointers. | >3-month cash population is not synonymous with a fiscal-end current/noncurrent class or necessarily solely CP/term debt. Cannot allocate the0/3,000 to an unreported short-debt category by residual. FY2025 comparatives: ≤90-day net−5,746, >3-month proceeds0 and repayments−3,216; not a complete CP bridge either. |
+
+### One bounded review of changes outside cash flows
+
+Retained FY2026 primary text locations below are offsets in the existing helper's
+whitespace-normalized text, not replacement receipt representations/digests:
+liquidity/MD&A203805–209650, Note1 foreign-currency policy237406,
+Note7 acquisition282112–284781, Note8 goodwill284781–286410,
+Note10 debt288002 to Note11, Note13 lease supplement about302958.
+
+- **Term debt, not the missing short-debt population:** Note10 face49,206→46,136
+  changes−3,070. The2015 issuance falls3,000; the Euro issuance2,700→2,630 falls70.
+  Carrying43,151→40,294 changes−2,857: descriptive arithmetic
+  −3,000−70+74 discount/cost change+25 hedge change+114 premium change=−2,857.
+  Note1 translates foreign-currency liabilities at closing exchange rates. The
+  Euro-row change is consistent with translation, but no new cash/FX causal
+  allocation or all-debt reconciliation is certified. This demonstrates why
+  cash movement and carrying movement differ; it does **not** bridge missing CP.
+- **Maturity reclassification:** current term2,999→9,227 (+6,228) and noncurrent
+ 40,152→31,067 are classifications inside the same term parent. Current9,227 is
+  already included in40,294 and the named106,888; never add it again. No retained
+  schedule identifies movements into/out of an additional short-borrowing class.
+- **Acquisitions:** Note7 describes Activision's October2023 acquisition and
+  finalized September2024 allocation, including acquired long-term debt2,799;
+  that is not FY2026 new borrowing. FY2026 goodwill additions108 (Note8), acquired
+  intangibles804 (Note9), and combined acquisition/intangible/other cash1,743 do
+  not establish acquired short debt or its absence. No complete FY2026 assumed-
+  borrowing/noncash category schedule is supplied by these disclosures.
+- **Noncash financing / other categories:** Note13 reports finance-lease ROU
+  additions24,608, finance-principal cash3,101, closing finance liability66,594
+  inside other current/long liabilities. These are already selected separately,
+  not evidence of additional CP, nor proof that every other financing change is
+  zero. Undiscounted commitments do not create an issued borrowing balance.
+- **FX and liquidity:** the liability-translation policy and term Euro exposure
+  exist; cash FX−196 is cash/equivalents only, not a debt FX bridge. MD&A liquidity
+  and Debt Proceeds describe funding capacity/general purposes and refer to Note10,
+  without a June30 all-short-borrowing balance or category-level movement table.
+  Financing Other, net−2,839 is mixed, not an independently allocable missing-debt
+  movement. Note4 CP investment2,987 remains an asset and is excluded throughout.
+
+### Failed bridge requirement and stopping decision
+
+A valid bridge would need the **same issued-borrowing population** at both ends,
+its complete cash movements across maturity buckets, and acquisitions/noncash,
+FX/reclassification and other changes. The opening CP-only stock and ≤90-day net
+cash row fail population equivalence; broader opening short borrowing and the
+noncash/category bridge are unquantified. No omitted amount or bound is supported.
+No gross-flow-to-ending-zero or missing-to-zero inference is made.
+
+This adds concrete tenor, cash-bucket, signed-flow, term-table change and
+acquisition-period checks beyond the earlier ending-presentation review. They
+**weaken**, rather than materially strengthen, the rejected zero proposal.
+Remaining requirement: exact June30,2026 additional issued short-borrowing amount
+or an independently justified approved alternative. None is supplied here.
+
+No specific existing incremental official document has been identified that
+contains the missing schedule. The precise missing evidence would be an issuer
+FY2026 supplemental debt-outstanding/roll-forward disclosure separating issued
+CP and other short borrowing, opening/closing stocks, maturity-bucket cash and
+noncash/FX/reclassification changes. This describes the required disclosure,
+**not a claim such a document exists**. Another copy of the retained annual or an
+other-date filing would not answer it. Stop this pass; no acquisition/research
+queue or another claim review follows.
+
+Validation: retained four-body SHA256s, exact existing CP/cash fact occurrences,
+dates/contexts/currency/scale/precision and term-table change arithmetic pass;
+source null/rejected-zero preservation checked. No executable files or JSON
+changed, so no tests/full-suite/corpus rerun is needed. Prior approvals remain
+revision-valid; no runtime integration, financial assumption or Phase2 operation.
+All481 affected local links and `git diff --check` pass; only four Markdown files
+change. No tests are claimed current for this documentary addition; the prior
+134-test result below belongs to the unchanged executable implementation.
+
 ## Current FY2026 approved preferred/NCI/retirement assumptions
 
 Exact period: CIK789019, accession `0001193125-26-323660`, annual

@@ -1,6 +1,27 @@
 # Project Status
 
-## Current milestone — MSFT FY2026 approved claim assumptions
+## Current milestone — bounded MSFT FY2026 short-borrowing bridge review
+
+[Existing MSFT package](company-data-preparation/MSFT-analyst-input-package.md)
+records outcome3: **unresolved**, no new assumption/approval or runtime integration.
+Opening FY2025 zero covers CP only, while FY2026 reported net0 covers ≤90-day debt
+cash flows; prior CP tenors28–152 days establish a concrete population mismatch.
+FY2026 >3-month cash proceeds0/repayments3,000 and disclosed term-table movements
+do not close the missing issued-short-borrowing bridge. Noncash/acquisition/FX/
+reclassification and broader opening-population coverage remain unquantified.
+Current term9,227 remains inside named106,888m financing; CP investment excluded.
+
+One bounded retained review of debt/liquidity/cash flow, acquisition/FX policies
+and lease financing adds exact scope/precision and descriptive change checks.
+No named existing incremental official document established; required disclosure
+and stop condition documented without an acquisition queue. All four body digests,
+existing fact occurrences and arithmetic verified. Original package JSON/audits,
+nulls/rejected zero, prior assumptions and frozen/pilot data unchanged. No SEC
+requests, executable changes, tests/full-suite/corpus or Phase2 work/closure.
+481 affected local links and diff checks pass. Only four Markdown files change;
+earlier test results below remain historical validation of unchanged code.
+
+## Prior milestone — MSFT FY2026 approved claim assumptions
 
 [Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
 [JSON](company-data-preparation/msft-analyst-input-package.json) append sequence3

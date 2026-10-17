@@ -1,5 +1,27 @@
 # MSFT — company data preparation
 
+## Current bounded FY2026 short-borrowing bridge review — still unresolved
+
+[Same package](MSFT-analyst-input-package.md) now documents the one retained-only
+opening/closing bridge attempt, exact evidence pointers/precision and failure.
+FY2025 explicit0 is CP only; historical CP tenors28–152 days show it cannot be
+identified with FY2026 ≤90-day debt cash net0. Greater-than-three-month proceeds0
+and repayments3,000 do not provide a category bridge. Note10 term-face change
+−3,070 and carrying change−2,857 tie to disclosed row changes, not missing CP;
+current term9,227 is already included once. Acquired/noncash debt, category FX
+and reclassification coverage for the missing population remain unquantified.
+Prior Activision assumed debt is not a FY2026 acquisition; lease additions,
+investment CP and cash FX are not substitutes for the missing borrowing bridge.
+
+Conclusion3: unresolved, no materially stronger zero assumption proposed. No
+specific existing official supplemental document is established; exact missing
+disclosure and stopping condition are stated in the package, not a research queue.
+Four retained-body digests, exact CP/cash occurrences and descriptive arithmetic
+checked. JSON/audits, all source nulls/rejections, named106,888m subtotal, D1–D3,
+claim assumptions and frozen/pilot values are unchanged. No requests, executable
+change, tests, automatic completeness or Phase1 closure.
+All481 affected local links and diff checks pass; only four Markdown files change.
+
 ## Current FY2026 claim assumptions — approved, not source zeros
 
 [Existing package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)

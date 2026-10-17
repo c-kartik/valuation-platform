@@ -1,5 +1,15 @@
 # Company data preparation register
 
+## MSFT FY2026 short-borrowing bridge — fixed review exhausted
+
+[Existing package](MSFT-analyst-input-package.md) documents CP-only opening zero
+versus ≤90-day debt net-cash0, including historical CP tenors28–152 days and the
+unquantified acquisition/noncash/FX/reclassification bridge. No closing-zero
+derivation or new assumption is supported. Additional short borrowing remains
+essential/null; rejected zero and named106,888m incomplete subtotal unchanged.
+Prior claim assumptions/D1–D3 remain accepted, all JSON/audit/source/pilot bytes
+preserved. Documentation-only retained review; no requests/research queue.
+
 ## Current MSFT FY2026 approved claim assumptions
 
 [Existing MSFT package](MSFT-analyst-input-package.md) records explicit user
