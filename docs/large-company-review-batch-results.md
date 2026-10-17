@@ -1,5 +1,93 @@
 # AVGO / TSLA / LLY — one consolidated retained-evidence review batch
 
+## Current — all25 approvals implemented as effective historical selections
+
+The user explicitly approves every recommendation in the original review below.
+The existing revision-bound audit/analyst overlay now adds `history_approval` and
+authoritative `current_history` to each company JSON. Effective selections, not
+reported facts or source policies, have changed. Original `/periods`, proposal
+flags/table and alternatives remain byte-preserved historical snapshots.
+
+|Company / exact decision IDs|Activation|FY2021|FY2022|FY2023|FY2024|FY2025|Company result|
+|---|---|---|---|---|---|---|---|
+|AVGO-CF, AVGO-SBC, AVGO-CASH, AVGO-CLAIMS, AVGO-SHARES, AVGO-DA, AVGO-INV, AVGO-FIN|All8 ACTIVE|14/14|14/14|14/14|14/14|14/14|70/70; scoped complete|
+|TSLA-CF, TSLA-SBC, TSLA-CASH, TSLA-CLAIMS, TSLA-SHARES, TSLA-DA, TSLA-INV, TSLA-FIN, TSLA-TAX|All9 ACTIVE|14/14|14/14|14/14|14/14|14/14|70/70; scoped complete|
+|LLY-CF, LLY-SBC, LLY-CASH, LLY-CLAIMS, LLY-SHARES, LLY-DA, LLY-INV, LLY-FIN|All8 ACTIVE|14/14|14/14|14/14|14/14|14/14|70/70; scoped complete|
+
+Authoritative current five-year schedules retain exact identities, dates, precision
+and source/proxy/assumption labels: [AVGO](company-data-preparation/AVGO-analyst-input-package.md),
+[TSLA](company-data-preparation/TSLA-analyst-input-package.md),
+[LLY](company-data-preparation/LLY-analyst-input-package.md).
+[Machine status](company-data-preparation/large-company-review-batch.json)
+`/approval_activation` supersedes original review-only counts. No substantive
+essential input remains under these expressly approved historical perimeters.
+This is not exhaustive financial disclosure, generic-policy approval, whole-
+universe sufficiency, Phase1 closure or Phase2 readiness.
+
+### Exact approval provenance and preservation
+
+All three immutable sequence1 audits record actual UTC
+`2026-10-17T19:12:40.394371+00:00`, explicit current user authorization/rationale,
+scope, source commit `4b5b93423fa84078dd6b19dcf68c52434ba9a6ac`, five exact
+identities, source/review/proposal revisions and the full original decision set.
+Audit hashes: AVGO `9802ae1ef0ba4c76cd195cc87b902dc444f239916972934f010e54c1fc1a002b`,
+TSLA `fa791440f5f85c63162a8028c647c050d61bba19549c6551f62b55b5e7b79ceb`,
+LLY `686e5818dc48992d2d65acda559ce8dbf0e68e8bc7e793119feb474470ba513f`.
+Missing/changed authorization or relevant values/precision/scope/evidence/alternatives
+fails closed; persistence/restart does not accept stale input. Earlier proposals
+and original source nulls are retained, not overwritten or silently accepted.
+
+### Accepted supporting limitations — not newly essential defects
+
+- AVGO selects limited depreciation/acquisition-amortization5,942/4,888/3,749/
+  9,860/8,636m; mixed intangible/ROU and extra finance amortization are excluded.
+  Named carrying financing39,730/39,515/39,229/67,566/65,136m already includes
+  finance leases. VMware/restructuring,53-week/split and SBC comparability persist.
+- TSLA selects impairment-inclusive proxy2,911/3,747/4,667/5,368/6,148m under
+  consolidated manufacturing/energy/leasing with related financing assets/funding.
+  Named financing6,834/3,099/5,230/8,213/8,376m includes finance leases once.
+  Tax benefit−5,001/rounded alternative−5,000, original cash-purchase8,898/11,339
+  versus later8,899/11,342 comparatives, gross/net scope and split/date boundaries
+  remain. Known restrictions, receivables and NCI/redeemable claims stay separate.
+- LLY limited CFO proxy1,547.6/1,522.5/1,527.3/1,766.6/1,997m is not complete
+  expense D&A. PP&E, cash IPR&D, expensed IPR&D/milestones and acquisitions/licensing
+  are separate, with no reinvestment sum. Registered derived EBIT retains exact
+  operand/policy proof. Refreshed Capex acceptance retains historical unavailable
+  fingerprints, UNPROVED original byte equivalence and exact review generation;
+  it is not original-digest verification. Later cover shares keep actual dates.
+- Approved no-additional-adjustment choices are analyst assumptions knowingly
+  omitting potentially unquantified/unbounded borrowing or claims, **not reported
+  zeros or immateriality findings**. Complete expense D&A, reinvestment, debt,
+  restrictions/reserves and exhaustive lease/claim coverage remain unknown.
+  CFO movements remain support, not book delta NWC or additional deductions.
+
+Current counts: **42 broad assessments;12 company packages =11 completed scoped
+histories +1 approved partial CAT;0 pending reviews;30 assessment-only.** Eight
+previously completed views and CAT's dual perimeters/SBC allocation exception
+are unchanged. [Priority tracker and next three identified only](trillion-review-batch-results.md).
+
+### Current validation — approval implementation
+
+**32 focused tests passed in64.986s** (`/tmp/large-company-activation-tests.log`):
+nine new activation checks, nine full source-review/replay checks, nine existing
+six-company acceptance checks and five frozen/pilot preservation checks.
+All three affected histories reconstruct exact retained source packages and
+effective JSON, not just selected numbers. All25 audit/decision activations,
+210 checklist slots, financing/cash arithmetic, proxy/expense distinctions,
+cash signs, overlap exclusions, tax/date/split boundaries, serialization,
+persistence/restart and stale/forged/missing authorization rejection pass.
+Source parent projections equal exact pre-approval bytes; eight completed peers
+and CAT package bytes are unchanged. No new source acquisition or financial
+approval beyond the user's25 recommendations.
+
+Compileall of `src`, `scripts` and `tests` passes;850 affected local Markdown
+links,108 cross-document JSON pointers and1,199 effective/source/audit click-through
+pointers validate (`/tmp/large-company-activation-links.log`). Staged and unstaged
+`git diff --check` pass. No full-suite/corpus rerun or SEC requests. Stop
+after approval implementation; no further company review or Phase2 work.
+
+## Historical — original review and one then-pending approval sheet
+
 **All new judgments proposed, none active.**15 exact frozen annuals/210 family slots; zero SEC requests. [Machine decisions](company-data-preparation/large-company-review-batch.json). Historical facts, existing policy approvals, proposed calculations and source unknowns are separate. No new review/approval framework or financial-policy change.
 
 |Company|Frozen periods|Source observation slots|Pending treatment slots|CFO|

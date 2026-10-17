@@ -1,6 +1,24 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
-## Current — next three requested company reviews delivered, not approved
+## Current — AVGO/TSLA/LLY approved scoped completion
+
+All25 recommendations are explicitly user-approved and effective through the
+existing audit/current-view mechanism. [Five-year schedules and exact qualifications](large-company-review-batch-results.md)
+record each company FY2021–2025 at14/14 per year (70/70). No remaining essential
+input under these approved perimeters; source unknowns, limited proxies and
+unbounded analyst omission assumptions remain distinct from complete disclosures.
+Original eight complete histories and CAT's13/14 dual-perimeter/SBC exception
+are unchanged. No frozen policy/classification or financial value is rewritten.
+
+Current counts:42 broad assessments;12 company packages =11 scoped complete,
+1 approved partial CAT,0 pending reviews,30 assessment-only. The original dated
+inventory JSON and review snapshots below remain historical evidence, not active
+completion status. No whole-universe closure, forecast/valuation readiness or
+Phase2 authority. Next identified batch only: MU/AMD/JNJ, following retained
+priority order with five selected periods; XOM's empty history remains separate.
+See [priority tracker](trillion-review-batch-results.md). Do not execute it here.
+
+## Historical — AVGO/TSLA/LLY review before explicit approval
 
 [AVGO/TSLA/LLY single batch](large-company-review-batch-results.md) now accounts
 for15 frozen annuals/210 existing-family slots with source-supported schedules,

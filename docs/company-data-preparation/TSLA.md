@@ -1,6 +1,35 @@
 # TSLA — company data preparation
 
-## Current — one company-wide FY2021–2025 review, choices pending
+## Current — approved five-year historical perimeter completed
+
+User explicitly approves all9 TSLA recommendations in the
+[25-decision batch](../large-company-review-batch-results.md). Existing audited
+analyst overlay activates [five-year selections](TSLA-analyst-input-package.md) /
+[JSON](tsla-analyst-input-package.json) separately from unchanged reported facts
+and source/proposal history. Five exact FY2021–2025 selections each14/14 (70/70)
+within the approved consolidated manufacturing/energy/leasing historical perimeter;
+no remaining essential exception under that perimeter.
+
+Approved impairment-inclusive D&A2,911/3,747/4,667/5,368/6,148m is a limited
+proxy, not pure expense D&A. Named financing6,834/3,099/5,230/8,213/8,376m
+includes finance liabilities already; financing assets and related funding stay
+together. No manufactured industrial carve-out, funding/asset netting or second
+lease addition. Original Capex8,898/11,339m in2023/2024 stays, not later
+8,899/11,342m; gross/net caption scope persists. Tax benefit−5,001 versus rounded
+−5,000, stock-split, dated cover/fiscal-end shares, awards and known restricted
+cash/NCI populations remain explicit. No adjusted tax rate or diluted-share guess.
+
+Approved omission assumptions are analyst decisions, not reported zeros or
+immateriality; potential omitted borrowing/claims is unbounded. Source unknowns
+and complete expense D&A/debt/reinvestment remain unproved despite scoped completion.
+Immutable actual-UTC authorization binds exact source/review/proposal revisions;
+changed evidence/values/scope reject stale application. Focused selection,
+source/overlap, serialization, audit restart/staleness and preservation checks
+pass with peer package replay. Existing policies, eight completed peer packages,
+CAT SBC exception and frozen/pilot bytes remain. No acquisitions, new financial
+policy, phase closure or Phase2 use; stop after this implementation.
+
+## Historical — one company-wide FY2021–2025 review, then pending
 
 [Five-year schedule and14-family matrix](TSLA-analyst-input-package.md) /
 [exact source package](tsla-analyst-input-package.json) /

@@ -367,11 +367,17 @@ def decisions(p):
 
 def outputs():
     packages, missing = build()
+    import activate_company_review_batches as accepted
+    packages={t:accepted.load_if_approved(f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json',p,decisions(p)) for t,p in packages.items()}
     summary=dict(schema='retained-large-company-review-batch-v1',source_commit=BASELINE,tickers=list(TICKERS),
         selected_periods=15,family_slots=210,companies={t:dict(periods=5,outcomes=p['outcomes'],review_revision=p['review_revision']) for t,p in packages.items()},
         decisions=[d for t in TICKERS for d in decisions(packages[t])],evidence_acquisition_requirements=missing,
         new_sec_requests=0,new_assumptions_active=False,completed_company_packages=8,
         approved_partial_company_packages=1,pending_review_company_packages=3,broad_assessment_only=30,phase1_closed=False)
+    activation=accepted.summary_activation(packages)
+    if activation:
+        activation['current_company_counts']=dict(broadly_assessed=42,completed_scoped=8+sum(p['current_history']['company_completed_for_approved_historical_perimeter'] for p in packages.values()),approved_partial=1+sum(not p['current_history']['company_completed_for_approved_historical_perimeter'] for p in packages.values()),pending_reviews=0,assessment_only=30)
+        summary['approval_activation']=activation
     return {**{f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json':p for t,p in packages.items()},SUMMARY:summary}
 
 
@@ -381,5 +387,5 @@ if __name__=='__main__':
         for path,payload in result.items():
             if (ROOT/path).read_text()!=json.dumps(payload,sort_keys=True,indent=2)+'\n':
                 raise SystemExit('Company batch replay differs: '+path)
-        print('Exact AVGO/TSLA/LLY replay:15 selected periods/210 family slots; all proposals inactive')
+        print('Exact AVGO/TSLA/LLY replay:15 selected periods/210 family slots; '+('approved effective views present' if 'approval_activation' in result[SUMMARY] else 'proposals inactive'))
     else:print(json.dumps(result,sort_keys=True,indent=2))

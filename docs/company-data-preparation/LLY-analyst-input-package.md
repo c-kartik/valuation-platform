@@ -1,6 +1,44 @@
 # LLY — consolidated five-year historical-input review
 
-## Review status and boundary
+## Authoritative current five-year schedule — explicitly approved historical perimeter
+
+**All 8 company recommendations ACTIVE; all five years14/14 (70/70).** Completed for the specifically approved historical-input perimeter only. [Effective JSON](lly-analyst-input-package.json) `/current_history` is authoritative. Original `/periods`, pending flags and proposals remain unchanged historical snapshots, not active status.
+
+Audit sequence1, actual recording UTC `2026-10-17T19:12:40.394371+00:00`, SHA256 `686e5818dc48992d2d65acda559ce8dbf0e68e8bc7e793119feb474470ba513f`. `/history_approval` retains explicit user authorization, exact identities, source commit `4b5b93423fa84078dd6b19dcf68c52434ba9a6ac`, source/review/proposal revisions, rationale, scope and full original decisions. Changed source values, precision, alternatives, evidence or period rejects stale acceptance. No source null is replaced by a reported zero.
+
+Limited CFO D&A proxy remains distinct from complete expense D&A. Cash PP&E, cash IPR&D, expensed IPR&D/development milestones, acquisitions/licensing and noncash additions stay separate: no reinvestment sum or adjusted EBIT. FY2022 expense908.5m versus CFO IPR&D420.9m remains, not a487.6m adjustment. EBIT retains unchanged registered derivation proof/operand precision. Capex retains full independently reviewed refresh generation, historical fingerprints and unavailable-original/UNPROVED byte-equivalence status. Selected cover shares retain actual later dates; no fiscal-end rewrite or dilution estimate.
+
+Known claims and populations remain source-bound. Approved no-additional-adjustment choices are **analyst assumptions** that knowingly omit potentially undisclosed amounts of **unbounded size**, not reported zeros or findings of immateriality. Unknown restrictions/reserves remain unknown; financial balances are not unrestricted/excess cash. Reconciled CFO/movements do not prove operating-only cash delta NWC; movements already in CFO are not deducted again. Reconstructed complete NWC/book delta is not required for this approved historical path.
+
+No complete expense D&A, debt/reinvestment, future tax rate, forecast dilution, valuation-consumption or Phase2 approval. No whole-universe/Phase1 closure. Alternatives, prior proposals, original source metadata and frozen outputs remain unchanged.
+
+Monetary values below are **USD millions** except explicitly pure ratios/shares. Source/proxy/assumption roles remain distinct. Original source decimals/precision variants, operand precision, signs, context/occurrences, authoritative dates and original-body receipts remain at each `source_reference` and the unchanged exact-source section below. Display arithmetic never improves precision.
+
+|Selected input / operation|Origin / scope|2021|2022|2023|2024|2025|
+|---|---|---:|---:|---:|---:|---:|
+|Revenue|reported|28,318.4|28,541.4|34,124.1|45,042.7|65,179|
+|EBIT|derived existing policy|6,357.1|7,127.3|6,457.9|12,899|26,302|
+|Limited D&A|approved proxy, NOT complete expense|1,547.6|1,522.5|1,527.3|1,766.6|1,997|
+|Cash PP&E, stated perimeter|reported; LLY refresh generation retained|-1,309.8|-1,854.3|-3,447.6|-5,057.8|-7,841|
+|Reported consolidated CFO|reported, independent display check|7,260.7|7,084.4|4,240.1|8,817.9|16,813|
+|Tax provision / benefit|reported exact reviewed face|573.8|561.6|1,314.2|2,090.4|5,091|
+|Pretax, original scope|reported|6,155.5|6,806.4|6,554.6|12,680.4|25,731|
+|Cash taxes, original caption scope|reported cash outflow|-1,598.8|-2,672.9|-5,558.8|-6,562.1|-10,814|
+|SBC expense once|approved cost proxy|342.8|371.1|628.5|645.6|626|
+|CFO SBC addback — support|reported, not another cost|342.8|371.1|628.5|645.6|626|
+|Current financial captions|derived named scope, not excess cash|3,908.6|2,211.8|2,927.7|3,423.2|7,373|
+|Named financing|derived carrying, not complete debt|16,884.7|16,238.6|25,225.3|33,644.2|42,503|
+|Reported cash-movement rows (count)|reported support, no second deduction|5|5|4|4|4|
+|Deferred-tax displayed populations|reported/mixed, not provision or suggested tax rate|-802.3|-2,185.2|-2,341|-2,683.1|-1,707|
+|Separate CFO residual|approved no separate operation|null, not0|null, not0|null, not0|null, not0|null, not0|
+|Additional unidentified borrowing|approved omission assumption|source unknown; no adjustment selected|source unknown; no adjustment selected|source unknown; no adjustment selected|source unknown; no adjustment selected|source unknown; no adjustment selected|
+|Additional unidentified claims/pension|approved omission beyond known populations|source unknown; no adjustment selected|source unknown; no adjustment selected|source unknown; no adjustment selected|source unknown; no adjustment selected|source unknown; no adjustment selected|
+|Dated common shares (actual count @ date)|reported, NOT diluted / not restated|952,347,126 @ 2022-02-18|950,296,118 @ 2023-02-17|950,164,452 @ 2024-02-16|948,169,999 @ 2025-02-14|943,357,420 @ 2026-02-09|
+|Existing14-family checklist|approved operation-specific perimeter|14/14|14/14|14/14|14/14|14/14|
+
+Each of the14 named families has an effective input or expressly approved operation-specific disposition and exact pointer in `/current_history/periods/*/checklist`. **No remaining essential requirement under this approved perimeter.** Supporting unknowns remain in the original nulls and effective view; acceptance does not establish exhaustive financial disclosures. Non-default alternatives remain in the historical package; no source amount has been rewritten. Full source schedules below remain supporting evidence, not a second active choice.
+
+## Historical — original unapproved review snapshot
 
 **Proposed only; no new assumption active.** Five exact frozen annuals /70 family slots: 20 source-supported observation slots and 50 pending company-treatment slots. No company completion or financial-sufficiency certification.
 
@@ -18,7 +56,7 @@
 
 CIK59478, form10-K. Every source has exact original-body SHA256/digest type, byte length, actual receipt UTC/status and URL. Every fact retains taxonomy, context/occurrence, dates/dimensions, raw unit/sign/scale and source decimals; confirming and competing observations remain. The JSON links exact immutable preparation-ledger records with SHA256. Identity alone is not fact verification.
 
-## Fourteen-family matrix
+## Historical — original source/proposal matrix
 
 S = source-supported observation, **not complete financial coverage**. P = concrete inactive company-specific proxy/classification/omission decision. Null source requirements remain even if a proposal would make a specific operation unnecessary.
 
@@ -39,7 +77,7 @@ S = source-supported observation, **not complete financial coverage**. P = concr
 |other_equity_bridge_claims_assets|P|P|P|P|P|
 |point_in_time_shares|P|P|P|P|P|
 
-## Source schedule and proposed selections
+## Historical — source schedule and then-proposed selections
 
 Monetary values are **USD millions**; calculations inherit operand precision, never improve it. Cash payments below are negative contributions; original positive XBRL payment representations and−1 multipliers remain separately recorded. Calculated named populations/proxies are **proposed**, not accepted totals.
 
@@ -103,7 +141,7 @@ The selected sources bind later cover shares, not fiscal-end or diluted shares. 
 |2024|2025-02-14: 948,169,999 shares (EntityCommonStockSharesOutstanding, decimals `INF`)|
 |2025|2026-02-09: 943,357,420 shares (EntityCommonStockSharesOutstanding, decimals `INF`)|
 
-## Unresolved inputs and stopping condition
+## Historical — supporting unknowns and original approval stopping condition
 
 Complete expense D&A, reinvestment, unidentified borrowing/claims, unknown restrictions/operating reserve and exhaustive lease-cash coverage stay null. Reported amounts are not invented when a selector is absent or conflicting. Source-binding exceptions distinguish unselected selectors from true missing disclosure; exact evidence remains in alternatives, supporting note rows and original ledgers. No zero/immateriality conclusion follows silence.
 

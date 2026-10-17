@@ -1,6 +1,39 @@
 # Project Status
 
-## Current — AVGO/TSLA/LLY retained full-history decision batch, proposals inactive
+## Current — AVGO/TSLA/LLY effective approvals; eleven scoped histories completed
+
+The user's explicit25-recommendation approval is now active through the existing
+revision-bound company audit/analyst overlay. Each FY2021–2025 selection for
+AVGO, TSLA and LLY passes the existing14-family checklist:70/70 per company,
+210/210 across the batch. [Authoritative schedules and validation](large-company-review-batch-results.md)
+/ [machine effective status](company-data-preparation/large-company-review-batch.json).
+No remaining essential exception under those expressly approved historical
+perimeters; original facts, nulls, proposal history and alternatives are preserved.
+
+AVGO limited acquisition-amortization/depreciation excludes overlapping ROU;
+embedded finance leases are not added again. TSLA's impairment-inclusive proxy,
+consolidated manufacturing/energy/leasing financing assets/funding, tax benefit,
+Capex gross/net/comparative and split boundaries remain. LLY retains limited
+D&A, separate PP&E/cash-IPR&D/expense-IPR&D/acquisition populations, unchanged
+derived EBIT and explicitly reviewed refreshed evidence with unavailable original
+fingerprints/UNPROVED byte equivalence. Cover shares retain actual later dates.
+Omission assumptions are analyst choices of unbounded possible exposure, not
+reported zeros or immateriality; complete expense/reinvestment/debt remains unproved.
+
+**42 broadly assessed;12 packages =11 completed scoped histories +1 approved
+partial CAT;0 pending reviews;30 assessment-only.** Eight earlier completed views
+and CAT's dual perimeters/SBC allocation exception are byte-unchanged. Original
+financial blockers, support classes, history deficits and frozen/pilot artifacts
+remain. No financial-sufficiency/Phase1 closure or Phase2 permission follows.
+Focused checks/current replay/preservation, compileall and links/diff checks are
+recorded in the batch results; no SEC/full-suite/corpus run.
+
+[Updated market-cap-priority tracker](trillion-review-batch-results.md) recommends
+MU, AMD and JNJ next using the retained snapshot order and five-year availability;
+XOM's empty history is not invented. Recommendations only—stop after this
+implementation, without acquisitions or another company review.
+
+## Historical — AVGO/TSLA/LLY review before explicit approval
 
 Delivered [three schedules and14-family matrices plus ONE approval sheet](large-company-review-batch-results.md)
 and [machine decisions](company-data-preparation/large-company-review-batch.json).

@@ -1,5 +1,37 @@
 # NVDA / AMZN / META — ONE consolidated historical-input review batch
 
+## Current market-cap-priority tracker — retained snapshot, not live market values
+
+The next approved batch [AVGO/TSLA/LLY](large-company-review-batch-results.md)
+is now implemented: all25 decisions ACTIVE, each company five years14/14.
+Earlier NVDA/AMZN/META remain scoped complete and byte-unchanged alongside
+MSFT/AAPL/Alphabet/COST/KO. **11 completed scoped companies;1 approved partial
+CAT (SBC allocation open);30 assessment-only;0 pending company reviews**, across
+42 broadly assessed issuers. CAT is not counted completed. No whole-universe or
+Phase1 closure and no Phase2 authority.
+
+|Requested high-priority company|Current historical status|
+|---|---|
+|NVDA, AAPL, MSFT, AMZN, Alphabet (GOOGL/GOOG one issuer), META|Five selected years scoped complete; original accepted views unchanged|
+|AVGO, TSLA, LLY|New effective approved views; each70/70, source unknowns/proxy/omission qualifications retained|
+|MU, AMD, JNJ|Next three unreviewed candidates identified only, no review/approval launched|
+|XOM|Higher-priority empty selected history remains explicit; not a five-year review candidate on existing evidence|
+
+Next selection uses the existing [frozen universe snapshot](universe/sp500-top-50-2026-10-02.csv)
+security order (not a new live capitalization ranking): MU position9, AMD position11,
+JNJ position16 (excluding the CSV header), each with five selections in the existing income ledger. Already
+reviewed issuers and duplicate Alphabet security are skipped; BRK-B/JPM and
+other specialized methodologies are not forced into this path. XOM position15 has
+zero selections and is retained as a separate history boundary, not silently
+dropped or assigned invented dates. MU/AMD are reusable semiconductor operating
+reviews; JNJ is the next available unreviewed operating issuer, with its existing
+derivation/claims complexity to respect if separately authorized. No new issuer
+evidence inspection, numerical selection or market-cap claim is made here.
+
+The earlier approval counts below are historical checkpoints. Source/proxy/
+assumption limitations, acquisitions, splits and original financial blockers
+persist; stop after this approval implementation and validation.
+
 ## Current — explicit approval implemented as effective analyst selections
 
 All recommendations below are now explicitly user-approved within their stated historical scope; original table text/pending flags are preserved as proposal history. Additive `history_approval` and `current_history` fields in each company JSON contain revision-bound authorization and actual selected inputs, not just acceptance documentation. Actual UTC, identities, source/proposal revisions, rationale and immutable audit hashes are retained. Changed relevant source/evidence/scope rejects stale approval.

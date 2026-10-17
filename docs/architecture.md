@@ -1,5 +1,23 @@
 # Architecture
 
+## AVGO/TSLA/LLY approvals — reuse of the company audit/view mechanism
+
+The existing `activate_company_review_batches.py` accepts this explicitly
+authorized25-decision cohort with its own source commit/user-authorization text;
+old six-company audit bytes and behavior remain unchanged. It requires the exact
+company decision IDs and identities, verifies the sealed record/source/proposal
+revision and adds a separate effective `current_history` without mutating the
+original reviewed package. New `large_view` selects only already-reviewed source
+facts/calculations and existing policy proofs: no formula engine, generic registry,
+database or financial fallback. LLY retains derived EBIT and exact refreshed-
+evidence generation with unavailable originals. Dates, partial scopes, known
+claims/funding assets, alternatives and source unknowns survive serialization.
+The fixed large-company replayer reconstructs source bindings before activating
+the saved audit; missing approval does not activate, changed input rejects stale
+authorization.14-family outcomes assess only approved historical operations,
+not exhaustive disclosures or valuation use. Eight existing completed peers,
+CAT's SBC exception, pilots, frozen schema5 and production policies are unchanged.
+
 ## Six-company historical approval overlays
 
 `scripts/activate_company_review_batches.py` applies the explicitly authorized

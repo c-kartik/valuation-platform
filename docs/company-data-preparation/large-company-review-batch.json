@@ -1,4 +1,160 @@
 {
+  "approval_activation": {
+    "companies": {
+      "AVGO": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "AVGO-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AVGO-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AVGO-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AVGO-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AVGO-SHARES",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AVGO-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AVGO-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AVGO-FIN",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "9802ae1ef0ba4c76cd195cc87b902dc444f239916972934f010e54c1fc1a002b",
+        "completed": true
+      },
+      "LLY": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "LLY-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LLY-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LLY-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LLY-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LLY-SHARES",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LLY-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LLY-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LLY-FIN",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "686e5818dc48992d2d65acda559ce8dbf0e68e8bc7e793119feb474470ba513f",
+        "completed": true
+      },
+      "TSLA": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "TSLA-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "TSLA-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "TSLA-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "TSLA-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "TSLA-SHARES",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "TSLA-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "TSLA-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "TSLA-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "TSLA-TAX",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "fa791440f5f85c63162a8028c647c050d61bba19549c6551f62b55b5e7b79ceb",
+        "completed": true
+      }
+    },
+    "current_company_counts": {
+      "approved_partial": 1,
+      "assessment_only": 30,
+      "broadly_assessed": 42,
+      "completed_scoped": 11,
+      "pending_reviews": 0
+    },
+    "original_proposals_retained": true,
+    "phase1_closed": false
+  },
   "approved_partial_company_packages": 1,
   "broad_assessment_only": 30,
   "companies": {

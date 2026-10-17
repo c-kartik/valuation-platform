@@ -1,6 +1,35 @@
 # AVGO — company data preparation
 
-## Current — one company-wide FY2021–2025 review, choices pending
+## Current — approved five-year historical perimeter completed
+
+User explicitly approves all8 AVGO recommendations in the
+[25-decision batch](../large-company-review-batch-results.md). Existing
+revision-bound `history_approval`/`current_history` controls now select actual
+inputs in the [authoritative schedule](AVGO-analyst-input-package.md) /
+[JSON](avgo-analyst-input-package.json), not merely acceptance documentation.
+All five frozen FY2021–2025 periods satisfy14/14 (70/70); no essential exception
+within the approved historical perimeter. Original pending flags/proposals below
+are historical; their source amounts, nulls, alternatives and policy proofs persist.
+
+Limited D&A5,942/4,888/3,749/9,860/8,636m excludes mixed ROU and an additional
+finance add-back. Named carrying financing39,730/39,515/39,229/67,566/65,136m
+already includes finance leases. Approved gross current cash captions remain
+12,163/12,416/14,189/9,348/16,178m, not unrestricted/excess cash. Acquisition,
+restructuring,53-week and split boundaries, benefit claims and SBC differences
+remain supporting limitations, not adjustments. Unknown additional borrowing,
+claims, restrictions/reserves and complete reinvestment/expense D&A remain null.
+No-additional-adjustment choices are analyst assumptions of potentially unbounded
+omission, never source zeros/immateriality findings.
+
+Actual UTC authorization, rationale, identities and source/review/proposal
+revisions bind an immutable audit; stale content rejects application. Focused
+approval/selection/overlap/serialization/restart/staleness and exact package/source
+replay pass; eight prior completed packages, CAT's essential SBC exception,
+original evidence and frozen/pilot bytes stay unchanged. No acquisition,
+generic policy expansion, financial-sufficiency certification, phase closure or
+Phase2 authority. Stop after this approval implementation.
+
+## Historical — one company-wide FY2021–2025 review, then pending
 
 [Five-year schedule and14-family matrix](AVGO-analyst-input-package.md) /
 [exact source package](avgo-analyst-input-package.json) /

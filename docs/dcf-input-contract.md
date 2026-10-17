@@ -1,5 +1,20 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Scope-specific AVGO/TSLA/LLY acceptance — existing contract, not new criteria
+
+Explicit approval of all25 reviewed recommendations activates those three exact
+FY2021–2025 histories through the existing revision-bound audit/analyst overlay.
+Each period satisfies the existing14 operation-specific historical families,
+including approved limited proxies and no-separate-operation/omission decisions.
+Source nulls and complete-population unknowns remain; acknowledgment alone still
+cannot fill a required value. [Exact acceptance and schedules](large-company-review-batch-results.md).
+AVGO excludes mixed ROU from its limited proxy and avoids embedded-lease duplication;
+TSLA retains its impairment-inclusive consolidated financing-assets/funding scope;
+LLY retains derived EBIT and exact refreshed Capex provenance/unavailable originals,
+separate IPR&D roles and actual later cover-share dates. No complete expense
+D&A/debt/reinvestment, source zero/immateriality, generic treatment or Phase2
+consumer is approved. CAT's separate SBC allocation requirement is unchanged.
+
 ## Scope-specific six-company acceptance and effective selections
 
 The user's explicit23+25 approval activates existing company-specific reviews

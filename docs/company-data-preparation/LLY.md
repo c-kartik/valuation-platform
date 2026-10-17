@@ -1,6 +1,36 @@
 # LLY — company data preparation
 
-## Current — one company-wide FY2021–2025 review, choices pending
+## Current — approved five-year historical perimeter completed
+
+User explicitly approves all8 LLY recommendations in the
+[25-decision batch](../large-company-review-batch-results.md). Existing audit/
+analyst overlay now selects the [authoritative schedule](LLY-analyst-input-package.md)
+and [JSON current view](lly-analyst-input-package.json), preserving original source
+nulls, proposals and alternatives. All five exact FY2021–2025 periods14/14 (70/70)
+within the approved historical perimeter, with no remaining essential exception.
+
+Limited D&A1,547.6/1,522.5/1,527.3/1,766.6/1,997m is an approved proxy, not
+verified complete expense D&A. Cash PP&E, cash IPR&D, expensed IPR&D/milestones,
+acquisition/licensing and noncash additions remain separate.2022 expense908.5
+versus CFO420.9 is not an adjustment. Registered derived EBIT retains unchanged
+operand/policy/precision proof. Cash PP&E's effective selection carries its exact
+reviewed refreshed generation: original fingerprints unavailable/mismatched,
+byte equivalence UNPROVED, never successful legacy verification. Later dated
+cover shares retain actual dates and precision, not fiscal-end/diluted labels.
+
+Named financing16,884.7/16,238.6/25,225.3/33,644.2/42,503m includes CP/current
+maturities and embedded finance leases. No duplicate/additional-lease estimate.
+Known pension/health/NCI claims and noncurrent investments stay separate. Omission
+assumptions retain unbounded uncertainty; no zero/immateriality finding. Source
+unknowns and complete reinvestment/debt/expense coverage stay unproved.
+Actual UTC, source/review/proposal revisions, rationale and exact identities bind
+immutable authorization; stale input rejects application. Focused approval,
+selection/refresh/overlap, restart, serialization and preservation checks and
+source/package replay pass. Eight completed peers, CAT SBC exception, all prior
+evidence and frozen/pilot bytes persist. No acquisition, new policy, financial-
+sufficiency certification, Phase1 closure or Phase2 authority; stop here.
+
+## Historical — one company-wide FY2021–2025 review, then pending
 
 [Five-year schedule and14-family matrix](LLY-analyst-input-package.md) /
 [exact source package](lly-analyst-input-package.json) /

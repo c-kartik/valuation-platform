@@ -1,6 +1,32 @@
 # Company data preparation register
 
-## Current — AVGO/TSLA/LLY full-history review, one pending decision batch
+## Current — eleven scoped histories complete; CAT remains partial
+
+All25 AVGO/TSLA/LLY recommendations are explicitly approved and active in separate
+revision-bound analyst views, not altered reported facts. Each of the five exact
+annuals for [AVGO](AVGO-analyst-input-package.md),
+[TSLA](TSLA-analyst-input-package.md) and [LLY](LLY-analyst-input-package.md)
+satisfies14/14 under its approved perimeter (70/70 each).
+[Activation/checks](../large-company-review-batch-results.md) /
+[machine current status](large-company-review-batch.json).
+
+**42 broadly assessed;12 packages =11 completed scoped histories +1 approved
+partial CAT;0 pending reviews;30 assessment-only.** Eight previously completed
+package bytes and CAT's approved dual perimeters/essential SBC allocation gap
+remain unchanged. Original review/pending flags below are historical snapshots.
+Approved limited proxies, carrying subtotals and omission assumptions do not
+certify complete expense D&A/debt/reinvestment or turn unknowns into zeros.
+LLY's refreshed provenance/unavailable originals and actual cover-share dates,
+TSLA consolidated funding/assets and comparability, AVGO embedded leases/ROU
+exclusions survive. No generic policy, acquisition, phase closure or Phase2 use.
+
+Next recommended unreviewed batch: MU, AMD, JNJ in retained snapshot order,
+each with five selected annuals. XOM remains an explicit empty-history boundary,
+not a fabricated reviewable history; specialized issuers stay excluded from this
+path. [Priority tracker](../trillion-review-batch-results.md) records the rationale.
+Identify only: no review or acquisition launched.
+
+## Historical — AVGO/TSLA/LLY full-history review before acceptance
 
 [AVGO](AVGO-analyst-input-package.md), [TSLA](TSLA-analyst-input-package.md) and
 [LLY](LLY-analyst-input-package.md) now have five exact annual schedules and
