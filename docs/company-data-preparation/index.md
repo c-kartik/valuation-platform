@@ -1,5 +1,21 @@
 # Company data preparation register
 
+## Current MSFT FY2026 approved claim assumptions
+
+[Existing MSFT package](MSFT-analyst-input-package.md) records explicit user
+approval of no additional preferred/NCI adjustment and retirement expense without
+a separate pension adjustment. Sequence3 uses existing revision-bound embedded
+audit/overlay controls. These three requirements are addressed only by **approved
+analyst assumptions**; source nulls remain, no zero or immateriality finding.
+Unbounded undisclosed-claim risk and incomplete international retirement coverage
+are accepted within this scope. Additional short borrowing remains essential/null;
+rejected zero and incomplete named106,888m financing remain. D1–D3/prior views and
+all original data persist. No whole-history/issuer certification or Phase1 closure.
+
+134 focused tests (67.643s), all-three package replays, exact prior-package/audit
+preservation, compileall,488 affected local links and diff checks pass. No source
+acquisition, full-suite or corpus rerun. Prior sections retain their dated scope.
+
 ## MSFT FY2026 D1–D3 accepted; population gaps remain
 
 [Same MSFT package](MSFT-analyst-input-package.md) now contains embedded immutable

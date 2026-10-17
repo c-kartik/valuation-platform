@@ -1,6 +1,34 @@
 # Project Status
 
-## Current milestone — MSFT FY2026 operation approval and targeted official review
+## Current milestone — MSFT FY2026 approved claim assumptions
+
+[Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
+[JSON](company-data-preparation/msft-analyst-input-package.json) append sequence3
+explicit user approval recorded2026-10-17T08:23:38.084820+00:00. No additional
+preferred/NCI adjustment, and retirement expense without a separate pension
+adjustment, are approved **analyst assumptions** for FY2026 only. Exact prior
+package revision, evidence/rationale and sequence2 predecessor are bound through
+the existing embedded audit/overlay mechanism. Original nulls, sources, rejected
+alternatives, D1–D3, accepted selections and all prior package keys are unchanged.
+
+No adjustment economically omits a potentially undisclosed claim; size is not
+bounded. International retirement coverage remains incomplete. Only those three
+adjustment requirements are addressed, not source disclosure gaps. Additional
+issued short borrowing remains the essential historical requirement for this
+attempt: null, rejected zero unchanged, named106,888m financing incomplete.
+Expanded-scope supporting gaps remain visible; tax/economic/timing/dilution
+consumption decisions remain Phase2. No automatic completeness/sufficiency or
+Phase1 closure, research, acquisition, generic policy or valuation changes.
+
+Validation:134 focused tests pass in67.643s (five new assumption tests plus
+operations/attempt, MSFT/AAPL/Alphabet, original inputs/sidecars/NWC and assessment
+preservation). All-three exact package replays, compileall,488 local links and
+diff checks pass. Entire prior package and audit chain remain equal after
+stripping only the two additive keys; source/pilot/frozen and other accepted
+views preserved. Persistence/restart, stale/malformed authorization and changed
+source rejection pass. No full-suite/corpus rerun. Stop after this milestone.
+
+## Prior milestone — MSFT FY2026 operation approval and targeted official review
 
 [Existing package](company-data-preparation/MSFT-analyst-input-package.md) /
 [JSON](company-data-preparation/msft-analyst-input-package.json) embed the explicit

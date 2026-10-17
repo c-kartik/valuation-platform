@@ -1,5 +1,27 @@
 # Phase 1 preparation pilots — outcomes and bounded remaining work
 
+## MSFT FY2026 requirement update — approved claim assumptions
+
+The [same MSFT package](company-data-preparation/MSFT-analyst-input-package.md)
+now records revision-bound user approval of no additional preferred-equity/NCI
+adjustment and retirement expense without a separate pension adjustment. These
+address only the three named analyst-operation requirements; source amounts stay
+null and potential omitted claims remain unbounded, with incomplete international
+retirement coverage. This is neither reported zero nor immateriality. D1–D3 remain
+approved; original facts, proposal/rejection history and accepted views persist.
+
+For the one-period FY2026 attempt, **additional issued CP/short borrowing remains
+essential and unresolved**; zero stays rejected and named financing106,888m is
+incomplete. Other expanded-scope supporting gaps and Phase2 timing/tax/award
+decisions remain as explained in the package. No analyst-completeness certification
+or phase closure follows; four scoped pilot periods still do not approve histories.
+Earlier broad assessments are historical inventories, not automatic overrides of
+these exact operation-specific approvals. No new research task is launched.
+
+Validation:134 focused tests (67.643s), all-three package replays, exact previous
+package/audit/source/pilot preservation, compileall,488 local links and diff
+checks pass; no full-suite/corpus rerun or SEC acquisition.
+
 ## Current consolidated assessment — four scoped analyst views, not phase closure
 
 The explicit user approvals now select company-specific historical inputs in

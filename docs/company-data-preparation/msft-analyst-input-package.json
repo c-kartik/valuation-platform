@@ -5594,6 +5594,107 @@
     "scope": "Historical analyst proposals only; book movements are not cash delta NWC; no FCFF or enterprise-equity calculation."
   },
   "financial_sufficiency": "NOT_ASSESSED",
+  "fy2026_claim_assumption_approval": {
+    "action": "ACCEPT_ANALYST_ASSUMPTIONS",
+    "analyst_completeness_approved": false,
+    "author": "User, explicit MSFT FY2026 preferred-equity/NCI/retirement instruction",
+    "decisions": {
+      "noncontrolling_interests": "No additional NCI adjustment selected, relying on reviewed consolidated-equity presentation.",
+      "pension_funded_status": "Retain disclosed retirement expense without a separate pension adjustment, acknowledging incomplete coverage of international arrangements.",
+      "preferred_equity": "No additional preferred-equity adjustment selected, relying on reviewed common-equity presentation."
+    },
+    "financial_sufficiency": "NOT_ASSESSED",
+    "phase_closed": false,
+    "previous": "0c89dd8b1dcf46cd9f6a7946f573883d28d001f6dc20594f820cd470ab56042f",
+    "rationale": "Approve only the three named analyst assumptions; preserve reported nulls, unbounded omitted-claim risk and unresolved additional short borrowing.",
+    "recorded_at_utc": "2026-10-17T08:23:38.084820+00:00",
+    "schema": "msft-operation-acceptance-audit-v1",
+    "sequence": 3,
+    "sha256": "04ce36c4c04e2c0f0af64919f1328398537adcfc3efd768a5d59989affa994ad",
+    "source_commit": "a681803387f54bd690f2c61476662104ef4c83c6",
+    "source_revision": "c13dc416d952a8c9de7ebeb734d6539ab2123e0964c221eb2cbf5da82d88624d",
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
+  "fy2026_claim_assumptions_view": {
+    "additional_short_borrowing_reference": "/accepted_view/periods/1/additional_short_borrowing",
+    "addressed_requirement_reference": "/fy2026_completeness_attempt/unsolved_essential_inputs/1",
+    "analyst_complete": false,
+    "assumptions": [
+      {
+        "adjustment_value": null,
+        "economic_consequence": "No incremental adjustment economically omits a potentially undisclosed claim; not proof of zero.",
+        "evidence_reference": "/fy2026_operations_view/population_review/populations/1",
+        "immateriality_finding": false,
+        "non_overlap": "No extra preferred deduction or balance selected; no subtraction from already selected common/financial balances.",
+        "origin": "analyst_assumption",
+        "population": "preferred_equity",
+        "rationale": "Common capital117406 + retained328265 + OCI(-3284) exhausts displayed equity442387; Note15 describes common share roll-forward. Authorized24000m is COMMON shares, not outstanding preferred. This proves presentation, not a separate affirmative outstanding-preferred zero.",
+        "reported_zero": false,
+        "source_gap_resolved": false,
+        "source_value": null,
+        "status": "ADDRESSED_BY_APPROVED_ASSUMPTION",
+        "treatment": "No additional preferred-equity adjustment selected, relying on reviewed common-equity presentation.",
+        "uncertainty": "Potential omitted amount is not bounded by available evidence."
+      },
+      {
+        "adjustment_value": null,
+        "economic_consequence": "No incremental adjustment economically omits a potentially undisclosed claim; not proof of zero.",
+        "evidence_reference": "/fy2026_operations_view/population_review/populations/2",
+        "immateriality_finding": false,
+        "non_overlap": "No residual equity deduction or invented NCI. Do not assign any part of common capital/retained earnings to NCI.",
+        "origin": "analyst_assumption",
+        "population": "noncontrolling_interests",
+        "rationale": "Note1 includes Microsoft and subsidiaries, eliminating intercompany balances. Balance/equity statements and Note15 have no separately identified NCI population. Full equity partition is affirmative displayed coverage, not proof an embedded NCI amount is zero.",
+        "reported_zero": false,
+        "source_gap_resolved": false,
+        "source_value": null,
+        "status": "ADDRESSED_BY_APPROVED_ASSUMPTION",
+        "treatment": "No additional NCI adjustment selected, relying on reviewed consolidated-equity presentation.",
+        "uncertainty": "Potential omitted amount is not bounded by available evidence."
+      },
+      {
+        "adjustment_value": null,
+        "economic_consequence": "No incremental adjustment economically omits a potentially undisclosed claim; not proof of zero.",
+        "evidence_reference": "/fy2026_operations_view/population_review/populations/3",
+        "immateriality_finding": false,
+        "non_overlap": "Retirement expense1800R is not pension debt, plan assets, contributions payable or a new adjustment. Do not add expense to66594 finance leases or other liabilities.",
+        "origin": "analyst_assumption",
+        "population": "pension_funded_status",
+        "rationale": "Note17 describes US401(k) and international savings plans;1800R employer-funded retirement benefits for all plans expensed as contributed. No funded-status/benefit-obligation/plan-asset bridge identifies a separate recognized pension balance or its location in mixed liabilities.",
+        "reported_zero": false,
+        "source_gap_resolved": false,
+        "source_value": null,
+        "status": "ADDRESSED_BY_APPROVED_ASSUMPTION",
+        "treatment": "Retain disclosed retirement expense without a separate pension adjustment, acknowledging incomplete coverage of international arrangements.",
+        "uncertainty": "Potential omitted amount is not bounded by available evidence; international retirement coverage remains incomplete."
+      }
+    ],
+    "audit_sha256": "04ce36c4c04e2c0f0af64919f1328398537adcfc3efd768a5d59989affa994ad",
+    "financial_sufficiency": "NOT_ASSESSED",
+    "identity": {
+      "accession": "0001193125-26-323660",
+      "annual_end": "2026-06-30",
+      "annual_start": "2025-07-01",
+      "cik": 789019,
+      "form": "10-K"
+    },
+    "named_debt_subtotal_complete": false,
+    "original_nulls_preserved": true,
+    "phase_closed": false,
+    "remaining_essential_inputs": [
+      {
+        "input_id": "commercial_paper",
+        "reason": "No FY2026 issued CP/short-borrowing balance or explicit absence; net short-debt cash0 is a flow, not an ending balance or bound. Zero proposal stays rejected.",
+        "stopping_condition": "Retained scope exhausted once; no numerical proxy/bound is defensible. Remain incomplete unless exact evidence or an independently justified approved alternative is later supplied.",
+        "value": null
+      }
+    ],
+    "short_debt_zero_status": "REJECTED_NOT_SELECTED",
+    "unrelated_requirements_waived": false,
+    "valuation_consumption_approved": false,
+    "version": 1
+  },
   "fy2026_completeness_attempt": {
     "analyst_complete": false,
     "approvals_added": 0,

@@ -1,5 +1,39 @@
 # MSFT — company data preparation
 
+## Current FY2026 claim assumptions — approved, not source zeros
+
+[Existing package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)
+now append sequence3 user authorization and an effective analyst-assumption view,
+revision-bound to the exact prior package and FY2026 accession
+`0001193125-26-323660` (2025-07-01–2026-06-30). Actual recording time
+2026-10-17T08:23:38.084820+00:00. The original conflict was demanding complete
+preferred/NCI/pension quantities or explicit absence. User now approves no
+additional preferred or NCI adjustment based on reviewed equity presentation,
+and retained retirement expense without pension adjustment despite incomplete
+international coverage. Exact evidence/rationale and audit hashes are in the
+same package; no MSFT/AAPL/Alphabet financial values are changed.
+
+These are **analyst assumptions**, not reported zeros or immateriality findings.
+Each economically omits a potentially undisclosed claim of unbounded amount.
+Original source nulls/evidence gaps, proposal history, D1–D3 and accepted treatments
+are unchanged. Only the three adjustment requirements are addressed; no source
+disclosure is deemed complete. Original frozen NWC/timing blockers persist.
+
+The remaining essential historical requirement in this FY2026 attempt is extra
+issued CP/short borrowing: null, rejected-zero history unchanged, named106,888m
+financing still incomplete. Complete interest/NWC/accrual/organic purchase bridges
+remain supporting limitations for expanded operations. Future tax, joint timing,
+excess cash and award/dilution treatment remain Phase2 decisions. No completeness
+certification, sufficiency approval or Phase1 closure. Stop; no new research.
+
+Validation:134 focused tests in67.643s, all-three exact package replays,
+compileall,488 affected local links and diff checks pass. Full prior package
+equals its committed baseline after stripping only two additive keys. Audit
+persistence/restart, staleness, evidence/period mismatch rejection, original
+nulls/rejections, accepted AAPL/Alphabet and pilot/frozen preservation pass.
+No SEC requests, full-suite or corpus rerun. Earlier source-review statuses below
+are preserved history; only the current analyst-operation disposition supersedes.
+
 ## FY2026 approved operations and targeted population disposition
 
 [Existing package](MSFT-analyst-input-package.md) / [JSON](msft-analyst-input-package.json)

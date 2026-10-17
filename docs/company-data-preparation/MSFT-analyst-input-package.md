@@ -1,6 +1,64 @@
 # MSFT — analyst historical-input package, FY2025–FY2026
 
-## Current FY2026 D1–D3 acceptance and targeted official-population review
+## Current FY2026 approved preferred/NCI/retirement assumptions
+
+Exact period: CIK789019, accession `0001193125-26-323660`, annual
+2025-07-01–2026-06-30, closing population2026-06-30 only. Explicit user consent
+is recorded at **2026-10-17T08:23:38.084820+00:00** in the existing embedded
+audit mechanism, sequence3/action `ACCEPT_ANALYST_ASSUMPTIONS`. Source commit
+`a681803387f54bd690f2c61476662104ef4c83c6` and relevant-content revision
+`c13dc416d952a8c9de7ebeb734d6539ab2123e0964c221eb2cbf5da82d88624d`
+bind the entire prior package, including D1–D3 and its source population review.
+Audit SHA256 `04ce36c4c04e2c0f0af64919f1328398537adcfc3efd768a5d59989affa994ad`
+links to unchanged sequence2. No automatic renewal, new sidecar, acquisition or
+reported numerical override. JSON `/fy2026_claim_assumption_approval` and
+`/fy2026_claim_assumptions_view` are additive; every prior key is preserved.
+
+| Approved analyst assumption | Evidence and rationale | Unchanged source / limitation |
+| --- | --- | --- |
+| No additional preferred-equity adjustment selected | Reviewed common-equity display and Note15 common-share movements; source-review population1. | Preferred amount stays null. No reported zero, issuance-absence proof or immateriality finding. |
+| No additional NCI adjustment selected | Consolidated equity partition and Note1 consolidation policy; source-review population2. | NCI amount stays null; no ownership-by-ownership absence proof. |
+| Retain retirement expense without separate pension adjustment | Note17 savings-plan policy and1,800m rounded annual expense, source-review population3 and retirement-cost observation. | Funded-status amount stays null. International arrangement coverage incomplete; expense is not a closing liability or another charge. |
+
+For **each** assumption, selecting no incremental adjustment economically omits a
+potentially undisclosed claim. Its amount is **not bounded** by available evidence.
+The user accepts this analyst judgment, not source certainty or immateriality.
+No quantity, interval, actuarial allocation or zero is invented. The source-review
+nulls/`resolved:false`, original rejected alternatives and prior decision history
+remain intact. The separate effective statuses are
+`ADDRESSED_BY_APPROVED_ASSUMPTION`; only the three named adjustment requirements
+are addressed. Missing source evidence has not been repaired.
+
+**Remaining essential historical requirement for this FY2026 attempt:** additional
+issued CP/short borrowing (original `commercial_paper` requirement), still null.
+The rejected zero remains `REJECTED_NOT_SELECTED`; named term+finance106,888m is
+still incomplete. No other unresolved historical requirement is automatically
+waived. D1–D3 remain accepted; original operating-capital, D&A inclusion assumption,
+investment, cash, tax and dated-share selections keep their exact earlier scope.
+
+Supporting unknowns remain visible: complete NWC and book-to-cash/acquisition/FX
+bridges, complete interest coverage, accrual PP&E bridge, purchase allocations and
+continuing-only allocation. They are not required to restate the selected reported
+observations, but would be required for the corresponding expanded operation.
+Operating tax/rates, timing/EBIT-to-CFO compatibility, excess-cash/strategic-value
+judgments and award valuation/dilution remain **Phase2 consumption decisions**,
+not quantities supplied or approved by this milestone. No FCFF calculation,
+analyst-completeness certification, global sufficiency or Phase1 closure.
+
+Earlier sections below preserve the chronology of proposals/source findings;
+their then-unresolved claim-operation status is superseded only by this explicit
+assumption overlay. Stop after recording these decisions; no research queue.
+
+Validation: **134 focused tests pass in67.643s** (five new assumption tests plus
+existing operations, attempt, all-three packages, reported inputs, sidecars,
+NWC and assessment preservation). Persistence/restart, malformed authorization,
+stale revision/evidence, wrong period and immutable-record checks pass. All three
+exact package replays, compileall,488 affected local links and diff checks pass.
+Entire prior package equals the committed baseline after stripping only the two
+new keys; old audits, source nulls, D1–D3 and AAPL/Alphabet/pilot/frozen artifacts
+are preserved. No full-suite/corpus rerun or SEC request.
+
+## Prior FY2026 D1–D3 acceptance and targeted official-population review
 
 **D1–D3 are accepted for FY2026 only; the period remains INCOMPLETE.** The new
 embedded `/fy2026_operation_approval` audit records the explicit user instruction,

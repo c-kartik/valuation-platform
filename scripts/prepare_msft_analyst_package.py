@@ -169,7 +169,7 @@ class Filing:
 def build():
     filings = [Filing(y) for y in (2025,2026)]
     for f in filings: populate(f)
-    return apply_fy2026_operations(filings[1],attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings)))))
+    return apply_fy2026_claim_assumptions(filings[1],apply_fy2026_operations(filings[1],attach_fy2026_attempt(filings[1],accepted_view(resolve_decisions(filings, finish(filings))))))
 
 
 def approval_record(proposal):
@@ -978,7 +978,7 @@ def review_fy2026_populations(f):
 def apply_fy2026_operations(filing,package):
     if (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
         raise ValueError('Wrong FY2026 operation filing')
-    parent={k:v for k,v in package.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view')}
+    parent={k:v for k,v in package.items() if k not in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view')}
     if package['fy2026_completeness_attempt']['base_package_revision']!=digest(relevant(parent)):
         raise ValueError('Stale FY2026 parent package')
     if accepted_view({k:v for k,v in parent.items() if k!='accepted_view'})!=parent:
@@ -1012,6 +1012,70 @@ def apply_fy2026_operations(filing,package):
         original_nulls_preserved=True,book_delta_is_cash_delta=False,unrelated_requirements_waived=False,
         population_review=review_fy2026_populations(filing),analyst_complete=False,financial_sufficiency='NOT_ASSESSED',
         phase_closed=False,valuation_consumption_approved=False)
+    return result
+
+
+FY2026_CLAIMS_BASIS='a681803387f54bd690f2c61476662104ef4c83c6'
+FY2026_APPROVED_CLAIM_ASSUMPTIONS={
+    'preferred_equity':'No additional preferred-equity adjustment selected, relying on reviewed common-equity presentation.',
+    'noncontrolling_interests':'No additional NCI adjustment selected, relying on reviewed consolidated-equity presentation.',
+    'pension_funded_status':'Retain disclosed retirement expense without a separate pension adjustment, acknowledging incomplete coverage of international arrangements.'}
+
+
+def fy2026_claim_assumption_record(package):
+    """Explicit user authorization, appended to the existing embedded audit chain."""
+    if 'fy2026_claim_assumption_approval' in package:raise ValueError('Immutable claim approval already exists')
+    record=dict(schema='msft-operation-acceptance-audit-v1',version=1,sequence=3,
+        previous=package['fy2026_operation_approval']['sha256'],action='ACCEPT_ANALYST_ASSUMPTIONS',
+        author='User, explicit MSFT FY2026 preferred-equity/NCI/retirement instruction',
+        recorded_at_utc=datetime.now(timezone.utc).isoformat(),
+        rationale='Approve only the three named analyst assumptions; preserve reported nulls, unbounded omitted-claim risk and unresolved additional short borrowing.',
+        source_commit=FY2026_CLAIMS_BASIS,source_revision=digest(relevant(package)),
+        decisions=FY2026_APPROVED_CLAIM_ASSUMPTIONS.copy(),analyst_completeness_approved=False,
+        financial_sufficiency='NOT_ASSESSED',phase_closed=False,valuation_consumption_approved=False)
+    record['sha256']=digest(record)
+    return record
+
+
+def apply_fy2026_claim_assumptions(filing,package):
+    """No numerical override: requirements addressed by approved analyst judgments."""
+    if (filing.period.cik,filing.period.accession,str(filing.period.annual_start),str(filing.period.annual_end))!=(789019,'0001193125-26-323660','2025-07-01','2026-06-30'):
+        raise ValueError('Wrong FY2026 claim filing')
+    parent={k:v for k,v in package.items() if k not in ('fy2026_claim_assumption_approval','fy2026_claim_assumptions_view')}
+    # Replay the already-approved operations and source review, not a stale saved view.
+    if apply_fy2026_operations(filing,parent)!=parent:raise ValueError('Changed operation/source view')
+    record=_json((ROOT/OUTPUT).read_text())['fy2026_claim_assumption_approval']
+    expected=set(parent['fy2026_operation_approval'])
+    if type(record) is not dict or set(record)!=expected or record['sha256']!=digest({k:v for k,v in record.items() if k!='sha256'}):raise ValueError('Malformed claim audit')
+    ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale'])
+    if (record['schema']!='msft-operation-acceptance-audit-v1' or type(record['version']) is not int or record['version']!=1
+        or type(record['sequence']) is not int or record['sequence']!=3 or record['previous']!=parent['fy2026_operation_approval']['sha256']
+        or record['action']!='ACCEPT_ANALYST_ASSUMPTIONS' or record['source_commit']!=FY2026_CLAIMS_BASIS
+        or record['decisions']!=FY2026_APPROVED_CLAIM_ASSUMPTIONS or record['analyst_completeness_approved'] is not False
+        or record['financial_sufficiency']!='NOT_ASSESSED' or record['phase_closed'] is not False or record['valuation_consumption_approved'] is not False):
+        raise ValueError('Unregistered claim assumption scope')
+    if record['source_revision']!=digest(relevant(parent)):raise ValueError('Stale claim approval; explicit revalidation required')
+    rows=[]
+    for i,source in enumerate(parent['fy2026_operations_view']['population_review']['populations']):
+        population=source['population']
+        if population not in FY2026_APPROVED_CLAIM_ASSUMPTIONS:continue
+        rows.append(dict(population=population,origin='analyst_assumption',status='ADDRESSED_BY_APPROVED_ASSUMPTION',
+            treatment=record['decisions'][population],source_value=None,adjustment_value=None,reported_zero=False,
+            immateriality_finding=False,source_gap_resolved=False,
+            evidence_reference='/fy2026_operations_view/population_review/populations/'+str(i),
+            rationale=source['evidence_reason'],non_overlap=source['non_overlap'],
+            economic_consequence='No incremental adjustment economically omits a potentially undisclosed claim; not proof of zero.',
+            uncertainty='Potential omitted amount is not bounded by available evidence; international retirement coverage remains incomplete.' if population=='pension_funded_status' else 'Potential omitted amount is not bounded by available evidence.'))
+    if {r['population'] for r in rows}!=set(FY2026_APPROVED_CLAIM_ASSUMPTIONS):raise ValueError('Incomplete claim evidence')
+    result=json.loads(json.dumps(parent));result['fy2026_claim_assumption_approval']=record
+    result['fy2026_claim_assumptions_view']=dict(version=1,identity=parent['fy2026_operations_view']['identity'],
+        audit_sha256=record['sha256'],assumptions=rows,
+        addressed_requirement_reference='/fy2026_completeness_attempt/unsolved_essential_inputs/1',
+        remaining_essential_inputs=[parent['fy2026_completeness_attempt']['unsolved_essential_inputs'][0]],
+        additional_short_borrowing_reference='/accepted_view/periods/1/additional_short_borrowing',
+        short_debt_zero_status='REJECTED_NOT_SELECTED',named_debt_subtotal_complete=False,
+        original_nulls_preserved=True,unrelated_requirements_waived=False,
+        analyst_complete=False,financial_sufficiency='NOT_ASSESSED',phase_closed=False,valuation_consumption_approved=False)
     return result
 
 
