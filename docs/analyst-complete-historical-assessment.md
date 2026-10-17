@@ -1,6 +1,23 @@
 # Analyst-complete historical inputs — retained-evidence completion assessment
 
-## Current completion checkpoint — MSFT FY2022–FY2026
+## Current AAPL B1 checkpoint — company review complete, approvals pending
+
+[AAPL company package](company-data-preparation/AAPL-analyst-input-package.md)
+now reviews its complete selected FY2021–25 history as one retained-source batch.
+All70 family slots have source/approval/proposal dispositions:27 S/8 A/35 P.
+Ten original bodies/receipts are available and all displayed CFOs independently
+reconcile; there is no identified acquisition requirement. Missing expense D&A,
+allocations/claims and scope/timing are not secretly filled. Nine new judgments
+remain pending in ONE table; original FY2025 approvals are not extended by review.
+No new assumption or completion is active. B1 stops for consolidated AAPL review.
+
+Counts remain42 broad evidence assessments;3 company packages =1 completed MSFT
+and2 partial AAPL/Alphabet;39 broad-only. MSFT's approved five-year result and
+Alphabet's accepted FY2024 view remain exact. The dated machine universe/workload
+assessment is historical, not regenerated or used to certify new completeness.
+No additional issuer, research queue, Phase1 closure or Phase2 follows this pass.
+
+## Prior completion checkpoint — MSFT FY2022–FY2026
 
 [Current MSFT schedule](company-data-preparation/MSFT-analyst-input-package.md)
 records explicit H1–H9/E1/E2 approval and all70 existing family slots satisfied

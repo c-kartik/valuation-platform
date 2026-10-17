@@ -1,6 +1,30 @@
 # Company data preparation register
 
-## Current — MSFT five-year historical perimeter completed, not Phase1 closure
+## Current — AAPL five-year source review, nine new judgments pending
+
+[AAPL company package](AAPL-analyst-input-package.md) /
+[machine review](aapl-analyst-input-package.json) now cover the five exact frozen
+FY2021–25 selections/70 families as one company batch. Ten original retained
+source bodies/receipts verify; no SEC request or new artifact requirement. All
+five CFO displays reconcile, preserving12/12/10/10/10 terms and7/7/6/6/6 movement
+rows rather than overwriting earlier presentations with later comparatives.
+
+Outcomes27 source-supported/8 existing scoped approvals/35 pending new treatments;
+not35 missing-body defects or proof the other35 are complete financial inputs.
+Complete expense D&A remains null; CFO-D&A proxy and other new financial choices
+are inactive. ONE A2–A10 approval table covers all years; A1 is source-supported
+execution of the instructed cash-movement path, not a repeated approval request.
+Existing FY2025 selections/nulls, MSFT5×14/14 and Alphabet accepted view remain
+exact, with no reclassification, generic policy expansion or Phase1 closure.
+
+Company counts remain42 broad evidence-assessed,1 completed company-wide MSFT,
+2 partial packages AAPL/Alphabet and39 broad-only. AAPL review depth is five
+years but accepted scope is still FY2025 only. Stop for consolidated AAPL choices,
+not another issuer or research queue. Validation:104 focused tests (52.020s),
+three exact package replays, source/audit/pilot/frozen/peer preservation,
+compileall,574 local-path links and diff checks pass; details in project status.
+
+## Prior checkpoint — MSFT five-year historical perimeter completed
 
 [MSFT current schedule](MSFT-analyst-input-package.md) /
 [revision-bound JSON](msft-analyst-input-package.json) record explicit H1–H9 and

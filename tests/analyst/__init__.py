@@ -4,6 +4,19 @@ import json
 
 
 def preservation_projection(path,body):
+    if path=='docs/company-data-preparation/aapl-analyst-input-package.json':
+        value=json.loads(body);value.pop('aapl_history_review',None)
+        return (json.dumps(value,sort_keys=True,indent=2)+'\n').encode()
+    if path=='scripts/prepare_aapl_analyst_package.py':
+        tree=ast.parse(body)
+        tree.body=[n for n in tree.body if not isinstance(n,ast.FunctionDef) or n.name!='review_company_history']
+        for node in tree.body:
+            if isinstance(node,ast.FunctionDef) and node.name=='build':
+                call=node.body[-1].value
+                if isinstance(call,ast.Call) and isinstance(call.func,ast.Name) and call.func.id=='review_company_history':
+                    assert len(call.args)==1 and not call.keywords
+                    node.body[-1].value=call.args[0]
+        return ast.dump(tree).encode()
     if path=='docs/company-data-preparation/msft-analyst-input-package.json':
         value=json.loads(body)
         for key in ('fy2026_completeness_attempt','fy2026_operation_approval','fy2026_operations_view','fy2026_claim_assumption_approval','fy2026_claim_assumptions_view','fy2026_financing_approval','fy2026_analyst_checklist','fy2025_completeness_review','fy2025_approval','msft_history_review','msft_history_approval','msft_current_history'):value.pop(key,None)

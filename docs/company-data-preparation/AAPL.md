@@ -1,5 +1,60 @@
 # AAPL — company data preparation
 
+## Current — frozen FY2021–FY2025 reviewed together, decisions pending
+
+[One company package](AAPL-analyst-input-package.md) and
+[JSON](aapl-analyst-input-package.json) `/aapl_history_review` add all five exact
+manifest selections (rows5–9), using ten retained primary/instance originals and
+receipts at evidence artifacts1–10. Annual DEI, raw-body typed SHA256, exact
+contexts/dates, units/precision, all confirming primary inline/instance occurrences
+and note transcriptions replay. Original FY2025 proposal/approval audit/accepted
+view, source nulls, MSFT completion, Alphabet and frozen/pilot bytes stay exact.
+
+The original conflict is broader than missing current NWC: only FY2025 had a
+reviewed package, complete expense D&A remained unknown and earlier source
+presentations/claim decisions were not reviewed. This company batch accounts for
+all70 family slots:27 source-supported,8 previously scoped approved,35 pending
+new treatment. **No AAPL period or company is now certified analyst-complete.**
+Existing FY2025 approvals remain active only within original scope; earlier
+years do not inherit them. Reported-movement/reconciled-CFO path follows this
+user instruction, not another proposed methodology. Reconstructed complete NWC
+is not prerequisite, supporting movement rows are not further deductions.
+
+All five displayed CFOs independently tie104,038/122,151/110,543/118,254/111,482m.
+FY2021–22 have12 terms/7 movements including separate deferred tax/revenue;
+FY2023–25 have10/6 with broader Other/liabilities. FY2023 is53 weeks. Preserve
+selected-period presentations, later comparative regroupings and acquisition/FX/
+Ireland effects without recasting source values or inventing balancing items.
+
+ONE table has nine pending judgments A2–A10 plus source-supported A1 context:
+proposed labeled CFO-D&A proxies11,284/11,104/11,519/11,445/11,698 (complete expense
+D&A still null, no finance-inclusion assumption); earlier SBC cost proxies once;
+named financing125,567/121,010/112,112/107,525/99,887 with explicit proposed
+no-additional-borrowing omission; gross current financial62,639/48,304/61,555/
+65,171/54,697 (not available cash); unbounded claim assumptions, deferred/mixed
+and residual operation exclusions, dated shares/awards kept separate. No choice
+is newly active. Broader no-additional-borrowing adjustment in FY2025 is proposed,
+not smuggled into its accepted named subtotal. A weaker pension omission proposal
+requires an explicit unbounded-risk choice, not a claim of immateriality.
+
+Known restricted marketable balances17,900/12,700/13,800R in FY2021–23 lack a
+selected current/LT split. FY2024 cash2,600R and marketable13,200R escrow remain
+visible; exact FY2025 comparative confirms FY2024 current securities. Alternative
+FY2024 current less identified escrow49,371R is non-default, not an adjustment
+to accepted FY2025. Employee/capital creditors, investment allocations, finance
+cash/expense splits and claim amounts remain unknown. Reported interest cash
+2,687/2,865/3,803 exists only FY2021–23; later unknown is not zero or a proxy.
+
+All required source bodies are present; no exact new document identified that
+would supply the missing allocations. Stop for consolidated review, no acquisition
+or issuer research queue. Source support is not approval or Phase2 readiness.
+Validation:104 focused tests (52.020s), all-three exact package replays, original
+AAPL/audit/MSFT/Alphabet/pilot/frozen preservation, source/precision/arithmetic,
+date/digest rejection and inactive-proposal checks pass. Compileall,574 affected
+local-path links and diff checks pass; see current project-status checkpoint.
+
+## Preserved earlier FY2025 checkpoints
+
 ## User-approved separate FY2025 analyst view
 
 [Same package](AAPL-analyst-input-package.md) / [JSON](aapl-analyst-input-package.json)

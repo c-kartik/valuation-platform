@@ -1,6 +1,60 @@
 # Project Status
 
-## Current milestone — MSFT approved five-year historical-input completion
+## Current milestone — AAPL one five-year retained-evidence company review
+
+[Existing package](company-data-preparation/AAPL-analyst-input-package.md) /
+[JSON](company-data-preparation/aapl-analyst-input-package.json) add only
+`/aapl_history_review`, preserving the whole previous FY2025 payload and audit.
+Manifest confirms FY2021–25 rows5–9, ten original primary/instance receipts and
+authoritative dates, including53-week FY2023. All70 family slots accounted for:
+27 source-supported/8 previously scoped approvals/35 pending new treatments.
+No newly active numerical assumption or analyst-completeness result.
+
+All five independently displayed CFOs tie104,038/122,151/110,543/118,254/111,482m;
+selected displays have12/12/10/10/10 terms,7/7/6/6/6 movements. Earlier separate
+deferred-tax/revenue rows and later comparative regroupings are preserved. Follow
+the instructed reported-movement/CFO path without requiring reconstructed NWC or
+deducting rows again; no Phase2 formula. Existing FY2025 partial operating capital
+and other approvals stay within original scope, not extended to older annuals.
+
+One consolidated table has nine pending judgments A2–A10 (A1 is source-supported
+context, not another methodology approval): explicit CFO-D&A proxy versus unknown
+complete expense D&A, SBC once, lease/financing convention and unbounded additional
+borrowing omission, gross financial balances/known restrictions, preferred/NCI/
+pension omissions, deferred-tax/claims and residual operation scope, dated shares.
+No MSFT financial assumption is transferred. Source nulls and alternative
+perimeters/precision persist. Source-supported principal/carrying bridges and
+FY2024 restricted-current alternative49,371R are separately identified, not
+complete debt/excess cash or accepted new adjustments. No amount is deemed
+immaterial, no amortization inferred by subtraction, and no balancing item.
+
+All ten bodies/receipts are retained; no exact additional artifact identified.
+Remaining gaps are disclosure/scope/timing or user choices, not an acquisition
+queue. MSFT completed5×14/14, Alphabet accepted view, original AAPL approvals,
+pilot bytes and frozen policies/outputs stay unchanged. Counts remain42 broad
+assessments,1 completed company-wide MSFT,2 partial AAPL/Alphabet,39 broad-only.
+No universe/Phase1 closure; stop for consolidated AAPL review.
+
+Validation: **104 focused tests pass in52.020s**, including10 new company-history
+checks and existing AAPL package/acceptance, MSFT five-year acceptance/history,
+MSFT/Alphabet package preservation, original AAPL cash-input and NWC-bundle tests.
+All three exact package replays, compileall (`src scripts tests`),574 affected
+Markdown local-path links and `git diff --check` pass. Tests pin selected statement
+values,12/10-term CFO arithmetic, signs, rounded precision, manual-note versus
+XBRL provenance, principal alternatives/hedge signs, restriction dates/scope,
+dated shares/awards, inactive proposals, serialization and receipt/date rejection.
+Original AAPL package equals prior HEAD after removing only the one additive
+review; its audit and MSFT/Alphabet package bytes are unchanged. Existing approval
+restart/stale/tamper tests and original/frozen/pilot preservation pass. Local-path
+checks do not verify live URLs/all historical anchors. Durable local logs:
+`/tmp/aapl-company-history-final-tests.log`,
+`/tmp/aapl-company-history-package-replays.log`,
+`/tmp/aapl-company-history-links-and-counts.log`. An initial focused invocation
+named a nonexistent NWC test module; the corrected final104-test gate above passes,
+without changing source assertions. No full-suite/corpus run or SEC requests.
+Earlier checkpoints below retain their then-current scope.
+
+## Prior milestone — MSFT approved five-year historical-input completion
 
 [Authoritative current schedule](company-data-preparation/MSFT-analyst-input-package.md)
 and [JSON](company-data-preparation/msft-analyst-input-package.json)

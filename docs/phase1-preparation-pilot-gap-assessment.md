@@ -1,5 +1,25 @@
 # Phase 1 preparation pilots — outcomes and bounded remaining work
 
+## Current AAPL company-level batch — review depth is not accepted completeness
+
+[Updated AAPL package](company-data-preparation/AAPL-analyst-input-package.md)
+and existing JSON add all five frozen FY2021–25 periods/70 family slots, without
+altering the prior FY2025 accepted view.27 source-supported/8 prior scoped
+approvals/35 pending treatment slots are not70 complete financial inputs. New
+CFO-D&A proxy, unbounded financing/claims omissions and other choices stay inactive
+in ONE nine-decision table, with source-supported A1 path context. All displays
+reconcile from original12/12/10/10/10 terms; no residual plug, NWC prerequisite or
+second deduction. Original pure/mixed deferred-tax presentations stay distinct.
+
+No missing original source body; no exact new acquisition requirement. Unknown
+amortization/timing, employee/capital-creditor allocations, finance cash splits,
+later cash interest, restrictions/reserves/strategic allocations and claim sizes
+remain explicit; no immateriality finding or MSFT assumption transfer. Stop for
+consolidated AAPL review, not automatic research/issuer work. Company counts and
+completion remain1 completed MSFT/2 partial AAPL and Alphabet/39 broad-only among
+42 broad assessments. Frozen/pilot artifacts and original blockers remain exact;
+no Phase1 closure or Phase2 readiness.
+
 ## Current — one completed company-wide historical package, two partial packages
 
 [MSFT's authoritative current schedule](company-data-preparation/MSFT-analyst-input-package.md)

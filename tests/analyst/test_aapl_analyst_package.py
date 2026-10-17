@@ -205,7 +205,7 @@ class ApplePackageTests(unittest.TestCase):
 
     def test_entire_original_proposal_and_approval_history_remain_unchanged(self):
         original=json.loads(subprocess.check_output(['git','show',p.ACCEPTANCE_BASIS+':'+p.OUTPUT],cwd=ROOT))
-        result=copy.deepcopy(self.result);view=result.pop('accepted_view')
+        result=copy.deepcopy(self.result);result.pop('aapl_history_review');view=result.pop('accepted_view')
         self.assertTrue(result==original,'Original facts, proposals, sources or unknowns changed')
         self.assertTrue(p.build_proposal()==original,'Original report replay changed')
         view['historical_taxes'][0]['value']='synthetic mutation'
@@ -215,12 +215,13 @@ class ApplePackageTests(unittest.TestCase):
 
     def test_persisted_approval_restart_stale_revision_and_tamper_rejection(self):
         body=(ROOT/p.ACCEPTANCE_PATH).read_text();record=json.loads(body)
-        proposal=copy.deepcopy(self.result);proposal.pop('accepted_view')
+        proposal=copy.deepcopy(self.result);proposal.pop('aapl_history_review');proposal.pop('accepted_view')
         support=self.result['accepted_view']['weighted_average_observations']
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'audit.json';path.write_text(body)
-            self.assertTrue(p.accepted_view(proposal,support,path)==self.result)
-            self.assertTrue(json.loads(json.dumps(p.accepted_view(proposal,support,path)))==self.result)
+            original={k:v for k,v in self.result.items() if k!='aapl_history_review'}
+            self.assertTrue(p.accepted_view(proposal,support,path)==original)
+            self.assertTrue(json.loads(json.dumps(p.accepted_view(proposal,support,path)))==original)
             for item in ('value','scope','precision','candidates','source_digest','null'):
                 changed=copy.deepcopy(proposal)
                 if item=='source_digest':changed['sources'][0]['sha256']='0'*64
@@ -238,7 +239,7 @@ class ApplePackageTests(unittest.TestCase):
         self.assertEqual((ROOT/p.ACCEPTANCE_PATH).read_text(),body)
 
     def test_missing_duplicate_or_existing_audit_cannot_auto_accept(self):
-        proposal=copy.deepcopy(self.result);proposal.pop('accepted_view')
+        proposal=copy.deepcopy(self.result);proposal.pop('aapl_history_review');proposal.pop('accepted_view')
         support=self.result['accepted_view']['weighted_average_observations']
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'audit.json'
