@@ -63,7 +63,7 @@ def primary_fact(case, item, table, row, column, caption, *, instant=False):
         namespace=f.namespaces[prefix],concept=concept,as_of=end if not start else None,
         scope=caption,occurrence_count=len(matches),occurrences=[dict(ordinal=i,xml_id=n.get('id'),
             context_id=a['contextref'],unit_id=a['unitref'],raw_value=n.text,precision=a['decimals'],
-            start=start,end=end,dimensions=dims,primary_locator='inline#'+a['id'],
+            start=start,end=end,dimensions=dims,primary_locator='inline#'+a['id'] if a.get('id') else f'table#{table}/row#{row}/column#{column}',
             primary_display=item['text'],primary_scale=int(a.get('scale','0')),primary_sign=a.get('sign','+'),primary_format=a.get('format')) for i,n in matches],
         primary_table=dict(table=table,row=row,column=column,caption=caption),
         primary_source='primary',instance_source='instance')
@@ -111,8 +111,9 @@ def manual_meta_reconciliation(case, original):
     """
     if original['status']!='PARTIAL': return None
     pop=original['populations'][0];table=case['tables'][pop['table']];f=case['filing']
-    first=next(i for i,r in enumerate(table) if r and r[0]['text'].strip().startswith('Net income'))
-    last=next(i for i,r in enumerate(table) if r and r[0]['text'].strip()=='Net cash provided by operating activities')
+    first=next(i for i,r in enumerate(table) if r and r[0]['text'].strip().startswith(('Net income','Net loss')))
+    cfo_captions=('Net cash provided by operating activities','Net cash provided by (used in) operating activities')
+    last=next(i for i,r in enumerate(table) if r and r[0]['text'].strip() in cfo_captions)
     rows=[]
     for ri in range(first,last+1):
         row=table[ri]; bound=[]
@@ -128,7 +129,7 @@ def manual_meta_reconciliation(case, original):
         if not bound: continue  # section headings have no monetary facts
         if len(bound)!=1: raise ValueError('Manual displayed row still has multiple populations')
         rows.extend(bound)
-    if not rows or rows[-1]['caption']!='Net cash provided by operating activities':raise ValueError('Displayed CFO boundary absent')
+    if not rows or rows[-1]['caption'] not in cfo_captions:raise ValueError('Displayed CFO boundary absent')
     total=sum((D(x['value']) for x in rows[:-1]),D(0));difference=total-D(rows[-1]['value'])
     return dict(status='SUPPORTED' if difference==0 else 'FAILED',basis='Independent selected primary table row inspection, not replacement shared parser result',
         rows=rows[:-1],cfo=rows[-1],row_sum=str(total),difference=str(difference),tolerance='0',

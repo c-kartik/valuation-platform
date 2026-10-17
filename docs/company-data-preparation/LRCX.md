@@ -1,5 +1,18 @@
 # LRCX — company data preparation
 
+## Current — LRCX/PLTR/AMAT retained review, pending consolidated approval
+
+Five exact FY2022–2026 annuals/70 families are reviewed, not approved:10 source-supported income slots/60 proposed company choices. Existing pure-PP&E denial remains; combined capital-expenditure/intangible cash546.034/501.568/396.670/759.186/966.405 USDm requires an explicitly broader investment perimeter. Limited CFO D&A333.739/342.432/359.699/386.277/441.533 is proposed, no extra finance amortization. Named debt-plus-finance5005.830/5011.541/4983.334/4484.505/3734.563 already includes finance leases; restricted cash, unfunded deferred-plan liabilities and correlated holdings are separate. All5 original displayed CFO proofs remain SUPPORTED. FY2024 53weeks, later unquantified finance/intangible subamounts and October2024 ten-for-one split remain. No new SEC requests or change to original negative findings/policies.
+
+[Five-year source schedule and14-family matrix](LRCX-analyst-input-package.md) /
+[exact facts, alternatives, receipt/ledger references](lrcx-analyst-input-package.json) /
+[ONE consolidated decisions and validation](../semiconductor-software-review-batch-results.md).
+All9 new company decisions are inactive. Complete debt/reinvestment, pure expense
+D&A, unidentified restrictions/claims and additional borrowing remain unknown.
+Evidence-accounted status is unchanged; analyst completeness/financial sufficiency
+is not newly established.19 completed histories, CAT/JNJ open exceptions and
+frozen/pilot artifacts are preserved. Prior records below remain historical.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

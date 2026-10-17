@@ -1,6 +1,38 @@
 # Project Status
 
-## Current — ABBV/MA/CSCO approved scoped historical completion
+## Current — LRCX/PLTR/AMAT retained review, pending consolidated approval
+
+[ONE27-decision sheet](semiconductor-software-review-batch-results.md) /
+[machine review](company-data-preparation/semiconductor-software-review-batch.json)
+and three company schedules/matrices cover LRCX FY2022–2026 and PLTR/AMAT
+FY2021–2025:15 exact annuals/210 existing-family slots,30 source-supported income
+observations and180 proposed company choices. All new treatments are INACTIVE.
+Nineteen completed scoped histories remain unchanged; no new company completion.
+
+LRCX's prior negative pure-PP&E split stands; broader combined productive-asset
+investment and limited CFO D&A are proposed explicitly. Deferred-plan obligations
+and correlated holdings, embedded finance leases, FY2024 53weeks and October2024
+split remain separate. PLTR has five exact independent displayed CFO checks,
+coexisting with original PARTIAL4/SUPPORTED1; face tax versus rounded prose,
+expense/APIC/add-back, strategic customer investments and A/B/F voting/classes
+are not conflated. AMAT preserves first-two direct D&A policies and later limited
+proxies, manufacturing/inventory timing, gross investment versus incentives,
+SBC660/668 and current-maturity/finance overlaps. No inferred zero or scope waiver.
+
+**42 broadly assessed;24 packages =19 completed scoped histories +2 approved partial
+CAT/JNJ +3 pending LRCX/PLTR/AMAT;18 assessment-only.** CAT SBC/JNJ OPEN scope,
+XOM/history exceptions, original sources/ledgers, accepted views and frozen artifacts
+remain unchanged.0 essential new acquisition targets/0 requests. Complete expense
+D&A/reinvestment/debt, additional claims/restrictions/reserves and omission risks
+remain explicit; proposals do not establish completeness or materiality.
+
+A narrow no-inline-ID binding repair preserves actual parser/table locators,
+exact context/unit/precision/value checks and existing ID-bearing serialized
+outputs. Final focused validation is recorded in the batch results. No full-suite
+or corpus rerun, financial acceptance, Phase1 closure or Phase2 use. Stop for one
+consolidated user review; no automatic next-company research.
+
+## Historical checkpoint — ABBV/MA/CSCO approved scoped historical completion
 
 The user's explicit28-decision approval now activates ABBV/MA FY2021–2025 and
 CSCO FY2022–2026 via existing revision-bound analyst views/audits.

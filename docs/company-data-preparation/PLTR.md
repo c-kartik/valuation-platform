@@ -1,5 +1,18 @@
 # PLTR — company data preparation
 
+## Current — LRCX/PLTR/AMAT retained review, pending consolidated approval
+
+Five exact FY2021–2025 annuals/70 families are reviewed, not approved:10 source-supported income slots/60 proposed company choices. Five independent displayed CFO sums match333.851/223.737/712.183/1153.865/2134.473 USDm; original PARTIAL4/SUPPORTED1 proofs remain unchanged. Actual no-ID primary facts use structural/parser locators with exact XML confirmations, never invented IDs. Face provision31.885/10.067/19.716/21.255/22.724 is proposed while original rounded-prose conflicts remain. SBC expense and CFO add-back stay distinct from APIC/capitalization/awards. Current marketable/public/Treasury holdings, restricted CDs, private/strategic customer investments and contractual financing scope are separate. Explicit no-debt notes are program/scope bound, especially FY2025's2014 facility; omission proposal is not whole-debt zero. Dated A/B/F, founder voting/conversion, reported totals and awards are not aggregated. No acquisition or financial acceptance.
+
+[Five-year source schedule and14-family matrix](PLTR-analyst-input-package.md) /
+[exact facts, alternatives, receipt/ledger references](pltr-analyst-input-package.json) /
+[ONE consolidated decisions and validation](../semiconductor-software-review-batch-results.md).
+All9 new company decisions are inactive. Complete debt/reinvestment, pure expense
+D&A, unidentified restrictions/claims and additional borrowing remain unknown.
+Evidence-accounted status is unchanged; analyst completeness/financial sufficiency
+is not newly established.19 completed histories, CAT/JNJ open exceptions and
+frozen/pilot artifacts are preserved. Prior records below remain historical.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).

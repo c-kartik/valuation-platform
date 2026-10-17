@@ -42,7 +42,7 @@ USER_DECISIONS = {
 class InlineFacts(HTMLParser):
     """One bounded pass over the retained inline document, including note prose."""
     def __init__(self):
-        super().__init__(); self.stack = []; self.facts = {}; self.text = []
+        super().__init__(); self.stack = []; self.facts = {}; self.text = []; self.unaddressed_facts = []
 
     def handle_starttag(self, tag, attrs):
         if tag == 'ix:nonfraction': self.stack.append([dict(attrs), []])
@@ -53,7 +53,12 @@ class InlineFacts(HTMLParser):
 
     def handle_endtag(self, tag):
         if tag == 'ix:nonfraction' and self.stack:
-            attrs, parts = self.stack.pop(); key = attrs['id']
+            attrs, parts = self.stack.pop(); key = attrs.get('id')
+            if not key:
+                # Valid retained filings can omit IDs. Preserve the observation,
+                # but never manufacture an inline locator or index it as an ID.
+                self.unaddressed_facts.append((attrs, ''.join(parts).strip()))
+                return
             if key in self.facts: raise ValueError('Duplicate primary inline ID')
             self.facts[key] = (attrs, ''.join(parts).strip())
 
@@ -115,15 +120,30 @@ class Filing:
             if self.namespaces[prefix] != expected_ns or local != unit: raise ValueError('Wrong selected unit')
             value = Decimal(f.text)
             if not value.is_finite(): raise ValueError('Nonfinite selected fact')
-            attrs, text = self.inline.facts[f.attrib['id']]
+            locator = 'inline#'+f.attrib['id'] if f.get('id') else None
+            if f.get('id') in self.inline.facts:
+                attrs, text = self.inline.facts[f.attrib['id']]
+            else:
+                matches=[]
+                for index,(a,t) in enumerate(self.inline.unaddressed_facts):
+                    prefix,_,local=a.get('name','').partition(':')
+                    if (self.namespaces.get(prefix)!=namespace or local!=concept or a.get('contextref')!=f.attrib['contextRef']
+                            or a.get('unitref')!=f.attrib['unitRef'] or a.get('decimals')!=f.attrib['decimals']):continue
+                    try:amount=inline_amount(a,t)
+                    except ValueError:continue
+                    if amount==value:matches.append((index,a,t))
+                if not matches:raise ValueError('No exact unaddressed primary confirmation: '+key)
+                index,attrs,text=matches[0]
+                locator='unaddressed-inline#'+str(index)
             if (attrs['name'].split(':')[-1] != concept or attrs['contextref'] != f.attrib['contextRef']
                     or attrs['unitref'] != f.attrib['unitRef'] or attrs['decimals'] != f.attrib['decimals']
                     or inline_amount(attrs, text) != value): raise ValueError('Primary/instance representation mismatch')
-            occurrences.append(dict(ordinal=ordinal, xml_id=f.attrib['id'], context_id=f.attrib['contextRef'],
+            occurrences.append(dict(ordinal=ordinal, xml_id=f.get('id'), context_id=f.attrib['contextRef'],
                 raw_value=f.text, precision=f.attrib['decimals'], unit_id=f.attrib['unitRef'],
                 start=str(identity[1]) if identity[1] else None, end=str(identity[2]),
                 dimensions=[list(x) for x in members], primary_display=text, primary_scale=int(attrs.get('scale', '0')),
-                primary_sign=attrs.get('sign', '+'), primary_format=attrs.get('format'),primary_locator='inline#'+f.attrib['id']))
+                primary_sign=attrs.get('sign', '+'), primary_format=attrs.get('format'),primary_locator=locator,
+                **({'primary_confirmations':[dict(primary_locator='unaddressed-inline#'+str(i),primary_display=t) for i,a,t in matches]} if locator.startswith('unaddressed-inline#') else {})))
         if not occurrences: raise ValueError('Required exact source fact absent: '+key)
         if len({Decimal(o['raw_value']) for o in occurrences}) != 1:
             raise ValueError('Competing eligible values: '+key)

@@ -1,0 +1,1533 @@
+{
+  "approved_partial_company_packages": 2,
+  "broad_assessment_only": 18,
+  "companies": {
+    "AMAT": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 60,
+        "SOURCE_SUPPORTED": 10
+      },
+      "periods": 5,
+      "review_revision": "909b96577b0c28518775d9070f1db61956c00e4114d85324397a5f74d76e10cf"
+    },
+    "LRCX": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 60,
+        "SOURCE_SUPPORTED": 10
+      },
+      "periods": 5,
+      "review_revision": "098aff581e84e803344fa5fe3efb3ad065b9d0117eb1deb0e6d741f7846e2615"
+    },
+    "PLTR": {
+      "outcomes": {
+        "PROPOSED_PENDING_APPROVAL": 60,
+        "SOURCE_SUPPORTED": 10
+      },
+      "periods": 5,
+      "review_revision": "a70ada61223488cfad135636a86a3298151ff7341d8df2c07fade92ce2ec70e5"
+    }
+  },
+  "completed_company_packages": 19,
+  "decisions": [
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "LRCX-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000707549-22-000107",
+          "annual_end": "2022-06-26",
+          "annual_start": "2021-06-28",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-23-000102",
+          "annual_end": "2023-06-25",
+          "annual_start": "2022-06-27",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-24-000106",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-06-26",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-25-000075",
+          "annual_end": "2025-06-29",
+          "annual_start": "2024-07-01",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-26-000037",
+          "annual_end": "2026-06-28",
+          "annual_start": "2025-06-30",
+          "cik": 707549,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "3099.674/5178.938/4652.269/6173.264/5857.657 USDm",
+      "recommendation": "Use reported movement detail and independently reconciled CFO; no separately calculated residual and no second movement deduction.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LRCX",
+      "uncertainty_and_alternative": "Consolidated reported CFO is not FCFF, organic cash or cash delta NWC. PLTR four original PARTIAL results remain, alongside independently exact displayed-row checks. Mixed tax/noncurrent/lease/customer populations retained; no residual plug."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "LRCX-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000707549-22-000107",
+          "annual_end": "2022-06-26",
+          "annual_start": "2021-06-28",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-23-000102",
+          "annual_end": "2023-06-25",
+          "annual_start": "2022-06-27",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-24-000106",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-06-26",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-25-000075",
+          "annual_end": "2025-06-29",
+          "annual_start": "2024-07-01",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-26-000037",
+          "annual_end": "2026-06-28",
+          "annual_start": "2025-06-30",
+          "cik": 707549,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "333.739/342.432/359.699/386.277/441.533 USDm",
+      "recommendation": "Select a labeled limited historical CFO D&A proxy, not complete expense-basis D&A.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LRCX",
+      "uncertainty_and_alternative": "Finance amortization is explicitly included with depreciation under the source policy: do not add7.439/7.899/5.175m again. Separate depreciation/intangible notes are rounded/incomplete later. Alternative strict pure operating expense D&A remains unresolved; no source zero for later not-material amortization."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "LRCX-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000707549-22-000107",
+          "annual_end": "2022-06-26",
+          "annual_start": "2021-06-28",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-23-000102",
+          "annual_end": "2023-06-25",
+          "annual_start": "2022-06-27",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-24-000106",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-06-26",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-25-000075",
+          "annual_end": "2025-06-29",
+          "annual_start": "2024-07-01",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-26-000037",
+          "annual_end": "2026-06-28",
+          "annual_start": "2025-06-30",
+          "cik": 707549,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "546.034/501.568/396.67/759.186/966.405 USDm payment magnitudes; cash sign -1",
+      "recommendation": "Approve an explicitly BROADER combined PP&E/intangible cash-investment proxy; strict pure-PP&E split stays null and prior negative component-completeness findings unchanged. Unpaid capital80.296/31.899/60.826/80.799/119.605 and inventory transfers75.068/76.856/71.267/90.873/125.691 are separate noncash/timing observations, not a split equation. Alternative reject broader perimeter and keep required narrow investment unresolved.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LRCX",
+      "uncertainty_and_alternative": "Acquisitions, software/intangibles, noncash ROU and capital-creditor timing stay separate. No complete reinvestment subtotal or policy/registry expansion."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "LRCX-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000707549-22-000107",
+          "annual_end": "2022-06-26",
+          "annual_start": "2021-06-28",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-23-000102",
+          "annual_end": "2023-06-25",
+          "annual_start": "2022-06-27",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-24-000106",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-06-26",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-25-000075",
+          "annual_end": "2025-06-29",
+          "annual_start": "2024-07-01",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-26-000037",
+          "annual_end": "2026-06-28",
+          "annual_start": "2025-06-30",
+          "cik": 707549,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "259.064/286.6/293.058/343.371/386.381 USDm expense; add-back 259.064/286.6/293.058/343.371/386.381 USDm",
+      "recommendation": "Select expense as a labeled cost proxy once, keeping CFO add-back, APIC recognition, capitalization and awards distinct.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LRCX",
+      "uncertainty_and_alternative": "LRCX note expense uses ShareBasedCompensation rather than an inferred Allocated expense; AMAT FY2025 expense660 versus add-back668. PLTR APIC recognition is not expense. No duplicate cost, rounding adjustment or dilution assumption."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "LRCX-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000707549-22-000107",
+          "annual_end": "2022-06-26",
+          "annual_start": "2021-06-28",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-23-000102",
+          "annual_end": "2023-06-25",
+          "annual_start": "2022-06-27",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-24-000106",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-06-26",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-25-000075",
+          "annual_end": "2025-06-29",
+          "annual_start": "2024-07-01",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-26-000037",
+          "annual_end": "2026-06-28",
+          "annual_start": "2025-06-30",
+          "cik": 707549,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "587.828/598.279/532.45/599.912/997.077 USDm provision; cash net 807.669/809.748/991.821/972.513/1333.996 USDm; gross unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain historical provision, cash taxes, deferred rows and existing policy Pretax/ETR separately; select PLTR face provision explicitly.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LRCX",
+      "uncertainty_and_alternative": "PLTR rounded prose alternatives10.1/19.7/21.3/22.7 retain original generic conflicts versus face10.067/19.716/21.255/22.724. No automatic ratio from selected provision or negative pretax; no forecast rate. AMAT cash refunds/tax incentives differ from provision/deferred movements."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "LRCX-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000707549-22-000107",
+          "annual_end": "2022-06-26",
+          "annual_start": "2021-06-28",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-23-000102",
+          "annual_end": "2023-06-25",
+          "annual_start": "2022-06-27",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-24-000106",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-06-26",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-25-000075",
+          "annual_end": "2025-06-29",
+          "annual_start": "2024-07-01",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-26-000037",
+          "annual_end": "2026-06-28",
+          "annual_start": "2025-06-30",
+          "cik": 707549,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "3657.732/5374.697/5847.856/6390.659/5579.171 USDm",
+      "recommendation": "Select named gross current financial captions; no unrestricted/excess-cash assertion.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LRCX",
+      "uncertainty_and_alternative": "Cash plus disclosed current Investments FY2022/23; cash-only thereafter, NOT a claim absent investments are zero. Restricted cash251.534/250.316/2.947/16.997/18.772 and correlated plan holdings remain separate. Unknown restrictions/reserves stay unknown. Alternative cash only 3522.001/5337.056/5847.856/6390.659/5579.171 USDm changes known perimeter, not an operating-reserve estimate."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "LRCX-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000707549-22-000107",
+          "annual_end": "2022-06-26",
+          "annual_start": "2021-06-28",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-23-000102",
+          "annual_end": "2023-06-25",
+          "annual_start": "2022-06-27",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-24-000106",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-06-26",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-25-000075",
+          "annual_end": "2025-06-29",
+          "annual_start": "2024-07-01",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-26-000037",
+          "annual_end": "2026-06-28",
+          "annual_start": "2025-06-30",
+          "cik": 707549,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "5005.83/5011.541/4983.334/4484.505/3734.563 USDm",
+      "recommendation": "Operating leases as service costs, finance leases as asset financing; select named carrying subtotal with no additional unidentified-borrowing adjustment only if approved.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LRCX",
+      "uncertainty_and_alternative": "Current/noncurrent debt-plus-finance captions include finance leases once; borrowing-only carrying parent is an alternative, not additional. Explicit no CP at year end covers CP only. Finance liability separately43.371/46.176/15.973 then unquantified, not zero. Carrying, principal, fair value and maturity schedules are different measurements. Omitted exposure remains unquantified/unbounded. Alternative leave additional operation unresolved; not reported zero or complete debt."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "LRCX-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000707549-22-000107",
+          "annual_end": "2022-06-26",
+          "annual_start": "2021-06-28",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-23-000102",
+          "annual_end": "2023-06-25",
+          "annual_start": "2022-06-27",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-24-000106",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-06-26",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-25-000075",
+          "annual_end": "2025-06-29",
+          "annual_start": "2024-07-01",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-26-000037",
+          "annual_end": "2026-06-28",
+          "annual_start": "2025-06-30",
+          "cik": 707549,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Named observations remain visible; no valuation deduction or new source zero.",
+      "recommendation": "Retain disclosed named claims/assets, with no additional unidentified/preferred/NCI/pension adjustment beyond bound populations only if approved.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LRCX",
+      "uncertainty_and_alternative": "Preserve unfunded deferred-plan obligation280/318/385.5/423.9/498.5 and correlated Other-assets investments291.3/318.1/393.5/438.8/511.8 separately, never automatically netted. Accrued-compensation tag is broader, not that plan. Known pension/OPEB, tax and warranty obligations overlap captions. Potential undisclosed claim size is unbounded; no financial-statement or valuation immateriality inference. Alternative keep omission unapproved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "LRCX-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/lrcx-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000707549-22-000107",
+          "annual_end": "2022-06-26",
+          "annual_start": "2021-06-28",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-23-000102",
+          "annual_end": "2023-06-25",
+          "annual_start": "2022-06-27",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-24-000106",
+          "annual_end": "2024-06-30",
+          "annual_start": "2023-06-26",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-25-000075",
+          "annual_end": "2025-06-29",
+          "annual_start": "2024-07-01",
+          "cik": 707549,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000707549-26-000037",
+          "annual_end": "2026-06-28",
+          "annual_start": "2025-06-30",
+          "cik": 707549,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact source counts, dates, dimensions and precision in shares:*; no automatic sum.",
+      "recommendation": "Use actual fiscal-end common populations/classes and retain separately dated covers, EPS denominators and awards.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "LRCX",
+      "uncertainty_and_alternative": "LRCX October2024 ten-for-one split and FY2024 53weeks remain original-as-filed boundaries. PLTR A/B/F retain1/10/founder voting, F-to-B conversion and separate reported aggregate; no class equivalence or award/dilution sum. AMAT fiscal52/53weeks/cover dates preserved. Alternative cover dates are not year-end replacements."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "PLTR-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001193125-22-050913",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-24-000022",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-25-000022",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-26-000011",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "333.851/223.737/712.183/1153.865/2134.473 USDm",
+      "recommendation": "Use reported movement detail and independently reconciled CFO; no separately calculated residual and no second movement deduction.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PLTR",
+      "uncertainty_and_alternative": "Consolidated reported CFO is not FCFF, organic cash or cash delta NWC. PLTR four original PARTIAL results remain, alongside independently exact displayed-row checks. Mixed tax/noncurrent/lease/customer populations retained; no residual plug."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "PLTR-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001193125-22-050913",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-24-000022",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-25-000022",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-26-000011",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "14.897/22.522/33.354/31.587/26.145 USDm",
+      "recommendation": "Select a labeled limited historical CFO D&A proxy, not complete expense-basis D&A.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PLTR",
+      "uncertainty_and_alternative": "Keep noncash operating-lease expense, impairment and investment losses separate. Alternative pure expense D&A requires complete scope not established by CFO; do not infer amortization by subtraction."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "PLTR-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001193125-22-050913",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-24-000022",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-25-000022",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-26-000011",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "12.627/40.027/15.114/12.634/33.882 USDm payment magnitudes; cash sign -1",
+      "recommendation": "Select direct cash PP&E; keep marketable/private investments, strategic commercial customer agreements and gold purchases/disposal separate. Customer/investee cash may be commercially related, not an invented loan population or ordinary Capex. Alternative broader investment requires a separately defined scope; no double deduction with CFO.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PLTR",
+      "uncertainty_and_alternative": "Acquisitions, software/intangibles, noncash ROU and capital-creditor timing stay separate. No complete reinvestment subtotal or policy/registry expansion."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "PLTR-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001193125-22-050913",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-24-000022",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-25-000022",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-26-000011",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "778.215/564.798/475.903/691.638/684.033 USDm expense; add-back 778.215/564.798/475.903/691.638/684.033 USDm",
+      "recommendation": "Select expense as a labeled cost proxy once, keeping CFO add-back, APIC recognition, capitalization and awards distinct.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PLTR",
+      "uncertainty_and_alternative": "LRCX note expense uses ShareBasedCompensation rather than an inferred Allocated expense; AMAT FY2025 expense660 versus add-back668. PLTR APIC recognition is not expense. No duplicate cost, rounding adjustment or dilution assumption."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "PLTR-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001193125-22-050913",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-24-000022",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-25-000022",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-26-000011",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "31.885/10.067/19.716/21.255/22.724 USDm provision; cash net 4.131/2.904/13.515/16.179/21.686 USDm; gross unknown/unknown/unknown/unknown/unknown USDm",
+      "recommendation": "Retain historical provision, cash taxes, deferred rows and existing policy Pretax/ETR separately; select PLTR face provision explicitly.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PLTR",
+      "uncertainty_and_alternative": "PLTR rounded prose alternatives10.1/19.7/21.3/22.7 retain original generic conflicts versus face10.067/19.716/21.255/22.724. No automatic ratio from selected provision or negative pretax; no forecast rate. AMAT cash refunds/tax incentives differ from provision/deferred movements."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "PLTR-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001193125-22-050913",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-24-000022",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-25-000022",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-26-000011",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "2524.827/2633.675/3674.179/5229.987/7177.043 USDm",
+      "recommendation": "Select named gross current financial captions; no unrestricted/excess-cash assertion.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PLTR",
+      "uncertainty_and_alternative": "FY2021/22 current marketable securities are public equities, later balances include Treasury securities: preserve composition change and private/strategic/gold scope. Restricted CDs and customer relationships remain outside gross face selection; do not subtract already excluded restrictions again. Unknown restrictions/reserves stay unknown. Alternative cash only 2290.674/2598.54/831.047/2098.524/1423.796 USDm changes known perimeter, not an operating-reserve estimate."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "PLTR-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001193125-22-050913",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-24-000022",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-25-000022",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-26-000011",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "0/0/0/0/0 USDm",
+      "recommendation": "Operating leases as service costs, finance leases as asset financing; select named carrying subtotal with no additional unidentified-borrowing adjustment only if approved.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PLTR",
+      "uncertainty_and_alternative": "Source explicitly says no debt outstanding after2021 repayment and in later liquidity notes. Select the disclosed named debt population only; retain undrawn facilities, operating leases and customer deposits separately. Do not infer debt from mis-tagged FY2021 financing cash rows or net flows. Unquantified additional/finance obligations remain unknown. Omitted exposure remains unquantified/unbounded. Alternative leave additional operation unresolved; not reported zero or complete debt."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "PLTR-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001193125-22-050913",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-24-000022",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-25-000022",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-26-000011",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Named observations remain visible; no valuation deduction or new source zero.",
+      "recommendation": "Retain disclosed named claims/assets, with no additional unidentified/preferred/NCI/pension adjustment beyond bound populations only if approved.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PLTR",
+      "uncertainty_and_alternative": "Preserve NCI, legal/tax/customer claims, investment commitments and strategic holdings. Preferred authorization and incorrectly tagged share counts do not prove outstanding preferred value; face preferred dollar row and equity note control the proposed scope. No separate pension claim is a proposed omission, not source absence. Potential undisclosed claim size is unbounded; no financial-statement or valuation immateriality inference. Alternative keep omission unapproved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "PLTR-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/pltr-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0001193125-22-050913",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-23-000011",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-24-000022",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-25-000022",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001321655-26-000011",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1321655,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact source counts, dates, dimensions and precision in shares:*; no automatic sum.",
+      "recommendation": "Use actual fiscal-end common populations/classes and retain separately dated covers, EPS denominators and awards.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "PLTR",
+      "uncertainty_and_alternative": "LRCX October2024 ten-for-one split and FY2024 53weeks remain original-as-filed boundaries. PLTR A/B/F retain1/10/founder voting, F-to-B conversion and separate reported aggregate; no class equivalence or award/dilution sum. AMAT fiscal52/53weeks/cover dates preserved. Alternative cover dates are not year-end replacements."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMAT-CF",
+      "evidence_references": [
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000006951-21-000043",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-10-26",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-22-000043",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-23-000041",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-24-000044",
+          "annual_end": "2024-10-27",
+          "annual_start": "2023-10-30",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-056742",
+          "annual_end": "2025-10-26",
+          "annual_start": "2024-10-28",
+          "cik": 6951,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "5442/5399/8700/8677/7958 USDm",
+      "recommendation": "Use reported movement detail and independently reconciled CFO; no separately calculated residual and no second movement deduction.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMAT",
+      "uncertainty_and_alternative": "Consolidated reported CFO is not FCFF, organic cash or cash delta NWC. PLTR four original PARTIAL results remain, alongside independently exact displayed-row checks. Mixed tax/noncurrent/lease/customer populations retained; no residual plug."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMAT-DA",
+      "evidence_references": [
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000006951-21-000043",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-10-26",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-22-000043",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-23-000041",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-24-000044",
+          "annual_end": "2024-10-27",
+          "annual_start": "2023-10-30",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-056742",
+          "annual_end": "2025-10-26",
+          "annual_start": "2024-10-28",
+          "cik": 6951,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "394/444/515/392/435 USDm",
+      "recommendation": "Select a labeled limited historical CFO D&A proxy, not complete expense-basis D&A.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMAT",
+      "uncertainty_and_alternative": "First two direct-policy observations remain source verified; later combined CFO caption515/392/435 is a proposed limited proxy, not reversal of frozen concept-scope denial. Manufacturing depreciation may be inventoried before sale; amortization described not material is not zero. No extra finance ROU or component sum."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMAT-INV",
+      "evidence_references": [
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000006951-21-000043",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-10-26",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-22-000043",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-23-000041",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-24-000044",
+          "annual_end": "2024-10-27",
+          "annual_start": "2023-10-30",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-056742",
+          "annual_end": "2025-10-26",
+          "annual_start": "2024-10-28",
+          "cik": 6951,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "668/787/1106/1190/2260 USDm payment magnitudes; cash sign -1",
+      "recommendation": "Select direct cash PP&E with source software scope, not a manufactured pure tangible split. Retain acquisitions, capital creditors, finance additions and incentives separately. FY2025 capex incentives reduce recorded gross PPE by1200m and tax-related balances by781m (233current/548noncurrent); these stock measures are not annual cash receipts to net against2260m Capex. Inventory timing and grant contra-depreciation remain; alternative net economic investment requires unavailable cash allocation.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMAT",
+      "uncertainty_and_alternative": "Acquisitions, software/intangibles, noncash ROU and capital-creditor timing stay separate. No complete reinvestment subtotal or policy/registry expansion."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMAT-SBC",
+      "evidence_references": [
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000006951-21-000043",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-10-26",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-22-000043",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-23-000041",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-24-000044",
+          "annual_end": "2024-10-27",
+          "annual_start": "2023-10-30",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-056742",
+          "annual_end": "2025-10-26",
+          "annual_start": "2024-10-28",
+          "cik": 6951,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "346/413/490/577/660 USDm expense; add-back 346/413/490/577/668 USDm",
+      "recommendation": "Select expense as a labeled cost proxy once, keeping CFO add-back, APIC recognition, capitalization and awards distinct.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMAT",
+      "uncertainty_and_alternative": "LRCX note expense uses ShareBasedCompensation rather than an inferred Allocated expense; AMAT FY2025 expense660 versus add-back668. PLTR APIC recognition is not expense. No duplicate cost, rounding adjustment or dilution assumption."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMAT-TAX",
+      "evidence_references": [
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000006951-21-000043",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-10-26",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-22-000043",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-23-000041",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-24-000044",
+          "annual_end": "2024-10-27",
+          "annual_start": "2023-10-30",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-056742",
+          "annual_end": "2025-10-26",
+          "annual_start": "2024-10-28",
+          "cik": 6951,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "883/1074/860/975/2273 USDm provision; cash net unknown/unknown/unknown/unknown/unknown USDm; gross 851/1869/1006/957/1504 USDm",
+      "recommendation": "Retain historical provision, cash taxes, deferred rows and existing policy Pretax/ETR separately; select PLTR face provision explicitly.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMAT",
+      "uncertainty_and_alternative": "PLTR rounded prose alternatives10.1/19.7/21.3/22.7 retain original generic conflicts versus face10.067/19.716/21.255/22.724. No automatic ratio from selected provision or negative pretax; no forecast rate. AMAT cash refunds/tax incentives differ from provision/deferred movements."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMAT-CASH",
+      "evidence_references": [
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000006951-21-000043",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-10-26",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-22-000043",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-23-000041",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-24-000044",
+          "annual_end": "2024-10-27",
+          "annual_start": "2023-10-30",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-056742",
+          "annual_end": "2025-10-26",
+          "annual_start": "2024-10-28",
+          "cik": 6951,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "5459/2581/6869/9471/8573 USDm",
+      "recommendation": "Select named gross current financial captions; no unrestricted/excess-cash assertion.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMAT",
+      "uncertainty_and_alternative": "Current cash and short-term investments only; long-term available-for-sale, strategic/equity holdings, restricted cash and deferred-plan assets remain separate. Restricted cash106/105/101/91/71 is not part of face cash, not a second deduction. Unknown restrictions/reserves stay unknown. Alternative cash only 4995/1995/6132/8022/7241 USDm changes known perimeter, not an operating-reserve estimate."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMAT-FIN",
+      "evidence_references": [
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000006951-21-000043",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-10-26",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-22-000043",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-23-000041",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-24-000044",
+          "annual_end": "2024-10-27",
+          "annual_start": "2023-10-30",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-056742",
+          "annual_end": "2025-10-26",
+          "annual_start": "2024-10-28",
+          "cik": 6951,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "5452/5457/5663/6259/6555 USDm",
+      "recommendation": "Operating leases as service costs, finance leases as asset financing; select named carrying subtotal with no additional unidentified-borrowing adjustment only if approved.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMAT",
+      "uncertainty_and_alternative": "Face short debt contains current note maturities (FY2024 799 includes700) and CP; do not add them twice. FY2023 separately disclosed102 finance lease added once to named borrowings; later repayment102 and current finance0 do not prove exhaustive noncurrent absence. Missing finance/short subamounts remain unknown; bank facilities/CP and principal/fair-value observations remain separate. Omitted exposure remains unquantified/unbounded. Alternative leave additional operation unresolved; not reported zero or complete debt."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMAT-CLAIMS",
+      "evidence_references": [
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000006951-21-000043",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-10-26",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-22-000043",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-23-000041",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-24-000044",
+          "annual_end": "2024-10-27",
+          "annual_start": "2023-10-30",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-056742",
+          "annual_end": "2025-10-26",
+          "annual_start": "2024-10-28",
+          "cik": 6951,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Named observations remain visible; no valuation deduction or new source zero.",
+      "recommendation": "Retain disclosed named claims/assets, with no additional unidentified/preferred/NCI/pension adjustment beyond bound populations only if approved.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMAT",
+      "uncertainty_and_alternative": "Retain defined/postretirement liabilities, pension funded populations, deferred-compensation investments, uncertain taxes and legal commitments without double addition to accrued/other liabilities. Strategic/equity-method investments are not free cash; no netting plan assets against obligations by default. Potential undisclosed claim size is unbounded; no financial-statement or valuation immateriality inference. Alternative keep omission unapproved."
+    },
+    {
+      "accepted": false,
+      "author": "Retained company review, no user acceptance",
+      "decision_id": "AMAT-SHARES",
+      "evidence_references": [
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/0",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/1",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/2",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/3",
+        "docs/company-data-preparation/amat-analyst-input-package.json#/periods/4"
+      ],
+      "identities": [
+        {
+          "accession": "0000006951-21-000043",
+          "annual_end": "2021-10-31",
+          "annual_start": "2020-10-26",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-22-000043",
+          "annual_end": "2022-10-30",
+          "annual_start": "2021-11-01",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-23-000041",
+          "annual_end": "2023-10-29",
+          "annual_start": "2022-10-31",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0000006951-24-000044",
+          "annual_end": "2024-10-27",
+          "annual_start": "2023-10-30",
+          "cik": 6951,
+          "form": "10-K"
+        },
+        {
+          "accession": "0001628280-25-056742",
+          "annual_end": "2025-10-26",
+          "annual_start": "2024-10-28",
+          "cik": 6951,
+          "form": "10-K"
+        }
+      ],
+      "numerical_effect": "Exact source counts, dates, dimensions and precision in shares:*; no automatic sum.",
+      "recommendation": "Use actual fiscal-end common populations/classes and retain separately dated covers, EPS denominators and awards.",
+      "recorded_at_utc": "2026-10-17T21:23:08+00:00",
+      "status": "proposed_pending_user_approval",
+      "ticker": "AMAT",
+      "uncertainty_and_alternative": "LRCX October2024 ten-for-one split and FY2024 53weeks remain original-as-filed boundaries. PLTR A/B/F retain1/10/founder voting, F-to-B conversion and separate reported aggregate; no class equivalence or award/dilution sum. AMAT fiscal52/53weeks/cover dates preserved. Alternative cover dates are not year-end replacements."
+    }
+  ],
+  "evidence_acquisition_requirements": [],
+  "family_slots": 210,
+  "new_assumptions_active": false,
+  "new_sec_requests": 0,
+  "pending_review_company_packages": 3,
+  "phase1_closed": false,
+  "schema": "retained-semiconductor-software-review-batch-v1",
+  "selected_periods": 15,
+  "source_commit": "67545e76752a42c4800aa32b10445441a09366f1",
+  "tickers": [
+    "LRCX",
+    "PLTR",
+    "AMAT"
+  ],
+  "valuation_consumption_approved": false
+}

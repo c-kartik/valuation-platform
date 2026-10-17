@@ -1,5 +1,18 @@
 # AMAT — company data preparation
 
+## Current — LRCX/PLTR/AMAT retained review, pending consolidated approval
+
+Five exact FY2021–2025 annuals/70 families are reviewed, not approved:10 source-supported income slots/60 proposed company choices. First-two direct D&A approvals remain; later combined CFO515/392/435 USDm is proposed as a limited proxy, not complete expense D&A or inferred zero amortization. Manufacturing inventory/capitalization timing and software scope remain. Cash PP&E668/787/1106/1190/2260 is separate from acquisitions, finance additions and incentives; FY2025 PPE/tax incentive stock amounts1200/781 are not cash receipts to net. SBC expense660 versus add-back668 is retained. Named financing5452/5457/5663/6259/6555 avoids adding FY2024 current maturities700 again to short799. Restrictions, strategic/plan holdings and pension/claims overlaps remain separate. All5 original CFO proofs remain SUPPORTED. No new SEC requests, approval or frozen-policy changes.
+
+[Five-year source schedule and14-family matrix](AMAT-analyst-input-package.md) /
+[exact facts, alternatives, receipt/ledger references](amat-analyst-input-package.json) /
+[ONE consolidated decisions and validation](../semiconductor-software-review-batch-results.md).
+All9 new company decisions are inactive. Complete debt/reinvestment, pure expense
+D&A, unidentified restrictions/claims and additional borrowing remain unknown.
+Evidence-accounted status is unchanged; analyst completeness/financial sufficiency
+is not newly established.19 completed histories, CAT/JNJ open exceptions and
+frozen/pilot artifacts are preserved. Prior records below remain historical.
+
 ## Bounded v2 statement-binding/shared repair
 
 [Exact sources, rationale and limitations](../statement-binding-repair-results.md) / [cause disposition](../statement-repair-disposition.json).
