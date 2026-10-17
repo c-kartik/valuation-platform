@@ -1,6 +1,15 @@
 # AMAT — company data preparation
 
-## Current — LRCX/PLTR/AMAT retained review, pending consolidated approval
+## Current — user-approved five-year historical completion
+
+[Authoritative schedule and checklist](AMAT-analyst-input-package.md) / [effective JSON](amat-analyst-input-package.json) / [approval/validation](../semiconductor-software-review-batch-results.md).
+All five selected years now satisfy14/14,70/70, within the approved historical-input perimeter. The existing revision-bound audit and separate effective view implement all9 company recommendations. User authorization, actual UTC, source/review/proposal revisions and audit SHA preserve history and reject stale evidence. Source facts/nulls, alternatives and original proposals remain unchanged.
+
+Limited manufacturing CFO D&A394/444/515/392/435 USDm is accepted, retaining first-two direct-source policies, later concept-scope negatives, inventory capitalization/timing and omitted amortization uncertainty. Cash PP&E668/787/1106/1190/2260 retains its source software scope. Incentive-related PPE1200 and tax781 (233current/548noncurrent) stock balances are not annual cash receipts and are not netted against Capex. Acquisitions/noncash additions and missing splits remain separate. FY2025 SBC expense660 versus add-back668 is preserved, once only, without a rounding plug. Named financing5452/5457/5663/6259/6555 avoids repeating current maturities700 within FY2024 short799 and includes separately disclosed FY2023 finance102 once; missing later lease subamounts remain unknown. Restrictions, strategic/plan assets, pension/claims overlaps and fiscal/cover dates remain explicit.
+
+Approved omissions remain analyst assumptions with unquantified/unbounded exposure. Reported movements/reconciled CFO are the historical path; complete reconstructed NWC is not required and movements are not deducted again. No extra residual scalar, future tax/dilution/valuation assumption or full financial-disclosure certificate. Nineteen prior completed histories, CAT SBC/JNJ scope exceptions and frozen/pilot artifacts remain unchanged. Current counts:22 completed scoped histories,2 partial,18 assessment-only (42 total),0 pending. No acquisitions, new issuer review, Phase1 closure or Phase2 use.
+
+## Historical checkpoint — LRCX/PLTR/AMAT retained review, pending consolidated approval
 
 Five exact FY2021–2025 annuals/70 families are reviewed, not approved:10 source-supported income slots/60 proposed company choices. First-two direct D&A approvals remain; later combined CFO515/392/435 USDm is proposed as a limited proxy, not complete expense D&A or inferred zero amortization. Manufacturing inventory/capitalization timing and software scope remain. Cash PP&E668/787/1106/1190/2260 is separate from acquisitions, finance additions and incentives; FY2025 PPE/tax incentive stock amounts1200/781 are not cash receipts to net. SBC expense660 versus add-back668 is retained. Named financing5452/5457/5663/6259/6555 avoids adding FY2024 current maturities700 again to short799. Restrictions, strategic/plan holdings and pension/claims overlaps remain separate. All5 original CFO proofs remain SUPPORTED. No new SEC requests, approval or frozen-policy changes.
 

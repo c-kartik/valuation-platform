@@ -1,6 +1,36 @@
 # LRCX / PLTR / AMAT — ONE retained historical-input review
 
-**27 proposed decisions, all INACTIVE.** No approval audit/effective selection or company completion is created. [Machine decisions](company-data-preparation/semiconductor-software-review-batch.json).
+## Current — approved effective selections and scoped company completions
+
+All27 exact recommendations are ACTIVE through existing revision-bound audits/effective views. LRCX FY2022–2026, PLTR/AMAT FY2021–2025 each satisfy14/14 per year,70/70 per company. Original proposal statuses/counts in the JSON root and historical review below are preserved snapshots; `/approval_activation/current_company_counts` is current.
+
+|Company / all approved IDs|Disposition|Five-year result|
+|---|---|---|
+|LRCX-CF, LRCX-DA, LRCX-INV, LRCX-SBC, LRCX-TAX, LRCX-CASH, LRCX-FIN, LRCX-CLAIMS, LRCX-SHARES|ACTIVE; source unknowns and all qualifications retained|70/70, scoped historical completion|
+|PLTR-CF, PLTR-DA, PLTR-INV, PLTR-SBC, PLTR-TAX, PLTR-CASH, PLTR-FIN, PLTR-CLAIMS, PLTR-SHARES|ACTIVE; source unknowns and all qualifications retained|70/70, scoped historical completion|
+|AMAT-CF, AMAT-DA, AMAT-INV, AMAT-SBC, AMAT-TAX, AMAT-CASH, AMAT-FIN, AMAT-CLAIMS, AMAT-SHARES|ACTIVE; source unknowns and all qualifications retained|70/70, scoped historical completion|
+
+**LRCX:** Limited CFO D&A333.739/342.432/359.699/386.277/441.533 USDm and explicitly broader combined PP&E/intangible cash-investment proxy546.034/501.568/396.670/759.186/966.405 are accepted for historical preparation. Pure PP&E stays UNKNOWN; the earlier negative component-split policy findings remain unchanged. No extra finance ROU/amortization, split equation or complete reinvestment claim. Named debt-plus-finance5005.830/5011.541/4983.334/4484.505/3734.563 includes finance liabilities once; later unquantified lease subamounts stay unknown. Unfunded plan obligations280.0/318.0/385.5/423.9/498.5 and related Other-assets investments291.3/318.1/393.5/438.8/511.8 retain rounded precision and are never automatically netted or confused with broader accrued compensation. Restrictions, FY2024 53weeks and October2024 ten-for-one split remain explicit.
+
+**PLTR:** Original parser PARTIAL4/SUPPORTED1 is preserved alongside all five independently exact displayed CFO checks. Face tax provisions31.885/10.067/19.716/21.255/22.724 USDm are active, with rounded prose10.1/19.7/21.3/22.7 and generic policy conflicts retained. No new ratio/forecast tax rate. Limited CFO D&A14.897/22.522/33.354/31.587/26.145 excludes separate operating ROU cost, impairment and investment losses from extra additions. Zero named financing is a source-scoped note observation, especially FY2025's2014 facility; the separate approved omission is not exhaustive zero financing or immateriality. Cash/marketable/restricted/strategic customer-related populations and SBC expense/add-back/APIC roles remain distinct. Dated A/B/F, source-reported aggregate, voting/conversion rights, EPS and awards remain separate with no class/dilution sum.
+
+**AMAT:** Limited manufacturing CFO D&A394/444/515/392/435 USDm is accepted, retaining first-two direct-source policies, later concept-scope negatives, inventory capitalization/timing and omitted amortization uncertainty. Cash PP&E668/787/1106/1190/2260 retains its source software scope. Incentive-related PPE1200 and tax781 (233current/548noncurrent) stock balances are not annual cash receipts and are not netted against Capex. Acquisitions/noncash additions and missing splits remain separate. FY2025 SBC expense660 versus add-back668 is preserved, once only, without a rounding plug. Named financing5452/5457/5663/6259/6555 avoids repeating current maturities700 within FY2024 short799 and includes separately disclosed FY2023 finance102 once; missing later lease subamounts remain unknown. Restrictions, strategic/plan assets, pension/claims overlaps and fiscal/cover dates remain explicit.
+
+**Current counts:42 broadly assessed;24 packages =22 completed scoped histories +2 partial CAT/JNJ +0 pending;18 assessment-only.** No generic support classification or frozen blocker is cleared. CAT SBC allocation/JNJ scope remain OPEN. Financial-disclosure completeness, whole-universe/Phase1 closure and Phase2 readiness are not certified.
+
+### Activation validation
+
+48 distinct focused tests pass:18 final activation/source-replay tests in26.339s (`/tmp/semicon-software-activation-final-tests.log`), plus30 unchanged prior pharma/priority/earlier-company approval and legacy/pilot preservation regressions from the initial48-test run (`/tmp/semicon-software-activation-tests.log`,59.255s). Final review tightened only the new companies' deferred-tax role filter: deferred revenue stays movement detail, never deferred-tax detail; no note tax amount is inserted into CFO. The18 affected tests reran successfully; unrelated peer tests were not duplicated. Checks verify all27 exact authorities/identities and real UTC audits; inherited precision/signs;15 annuals/210 checklist operations; partial/proxy/null/alternative retention; LRCX plan and embedded financing scope; PLTR independent/original proof coexistence and tax/class scope; AMAT incentive/SBC/lease distinctions; serialization, persistence/restart and stale value/precision/scope/tax/evidence/alternative/identity/operand rejection. Source packages before approval are byte-identical after removing only the two additive audit/current-view keys.
+
+The final retained-source batch replay rebuilds all three accepted histories and the summary exactly, not just the acceptance documents. All21 prior accepted/partial peer packages, original ledgers/evidence/negative findings, frozen normalization policies/outputs, fixtures, pilot bytes and CAT/JNJ exceptions remain unchanged. Actual audit times/hashes and selected source references are in each authoritative package. Compileall (`src scripts tests`),1,314 affected local/source/ledger references,1,414 effective root pointers,15-identity/210-slot/42-company reconciliation and `git diff --check` passed. No acquisition, full-suite/corpus rerun or Phase2 work.
+
+### Next three unreviewed candidates — identified only
+
+CVX, MRK and PG are the next five-period unreviewed non-specialized candidates in the frozen snapshot order after excluding reviewed packages and XOM’s empty history. This is backlog/retained-snapshot priority, not a live market-cap claim. CVX retains its5 unregistered EBIT gaps; MRK needs company-specific pharma/IPR&D/claims review; PG is an existing STANDARD_REVIEW candidate. Their source evidence and treatments require review; nothing is executed or approved here. XOM stays an explicit0-period history exception, not a fabricated next five-year package.
+
+## Historical proposal snapshot — preserved, not current
+
+**At review time:27 proposed decisions, all INACTIVE.** No approval audit/effective selection or company completion is created. [Machine decisions](company-data-preparation/semiconductor-software-review-batch.json).
 
 |Company / five-year schedule and14-family matrix|Frozen fiscal years|Source-supported slots|Pending company choices|Displayed CFO|
 |---|---|---|---|---|

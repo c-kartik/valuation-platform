@@ -21,6 +21,9 @@ LARGE_BASELINE='4b5b93423fa84078dd6b19dcf68c52434ba9a6ac'
 PRIORITY_TICKERS=('MU','AMD','JNJ')
 NETWORK_TICKERS=('V','INTC','WMT')
 PHARMA_TECH_TICKERS=('ABBV','MA','CSCO')
+SEMICON_SOFTWARE_TICKERS=('LRCX','PLTR','AMAT')
+SEMICON_SOFTWARE_BASELINE='7b06e5c88ac8d3763929680ce459eb837b742d1c'
+SEMICON_SOFTWARE_AUTHORITY='Current user explicitly approves all27 recommendations in docs/semiconductor-software-review-batch-results.md for the exact frozen LRCX/PLTR/AMAT histories. LRCX limited D&A and broader combined PP&E/intangible investment proxy preserve pure-PP&E unknowns and separate plan claims/assets. PLTR face tax selections preserve rounded alternatives and original parser PARTIALs; zero named debt is not exhaustive zero financing. AMAT limited D&A/PP&E-software scope preserves incentive stocks, SBC expense660 versus add-back668 and finance-lease overlaps/missing subamounts. Approve the stated unbounded omission assumptions, not reported zeros, immateriality or Phase2 use.'
 PHARMA_TECH_BASELINE='5332e07dca08e81ea499df8d4f41715e4cc0baf8'
 PHARMA_TECH_AUTHORITY='Current user explicitly approves all28 recommendations in docs/pharma-network-tech-review-batch-results.md for exact ABBV/MA/CSCO frozen histories: limited ABBV/CSCO D&A proxies, MA face Net revenue and face D&A with exact curated Pretax, and CSCO FY2026 face financial components15918m with unresolved conflicting parent14297m/difference1621m. Preserve source unknowns, proposals, alternatives and all approved qualifications; no conflict clearance or Phase2 authority.'
 NETWORK_BASELINE='5a0f606399893aa67b96f6660ef43a4fb4fdeafb'
@@ -90,20 +93,21 @@ def cat_evidence(package):
 
 def approval(package,decisions,recorded_at_utc):
     p=parent(package);ticker=p['ticker']
-    if ticker not in TICKERS+LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS+PHARMA_TECH_TICKERS or len(p['periods'])!=5:raise ValueError('Fixed approved company history required')
+    if ticker not in TICKERS+LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS+PHARMA_TECH_TICKERS+SEMICON_SOFTWARE_TICKERS or len(p['periods'])!=5:raise ValueError('Fixed approved company history required')
     selected=[deepcopy(d) for d in decisions if d['ticker']==ticker]
     if not selected or len({d['decision_id'] for d in selected})!=len(selected):raise ValueError('Exact approved decision set required')
     large=ticker in LARGE_TICKERS
     priority=ticker in PRIORITY_TICKERS
     network=ticker in NETWORK_TICKERS
     pharma=ticker in PHARMA_TECH_TICKERS
+    semicon=ticker in SEMICON_SOFTWARE_TICKERS
     if large:
         suffixes=('CF','SBC','CASH','CLAIMS','SHARES','DA','INV','FIN')+(('TAX',) if ticker=='TSLA' else ())
         identities=[r['identity'] for r in p['periods']]
         if ({d['decision_id'] for d in selected}!={ticker+'-'+key for key in suffixes}
                 or any(d['identities']!=identities for d in selected)):
             raise ValueError('All exact approved company decisions and periods required')
-    if priority or network or pharma:
+    if priority or network or pharma or semicon:
         suffixes=('CF','DA','INV','SBC','TAX','CASH','FIN','CLAIMS','SHARES')+(('PERIMETER',) if ticker=='JNJ' else ('REV',) if ticker in ('WMT','MA') else ())
         if ({d['decision_id'] for d in selected}!={ticker+'-'+key for key in suffixes}
                 or any(d['identities']!=[r['identity'] for r in p['periods']] for d in selected)):
@@ -127,6 +131,8 @@ def approval(package,decisions,recorded_at_utc):
         record.update(author='User, explicit approval of all28 V/INTC/WMT recommendations',authority=NETWORK_AUTHORITY,rationale=NETWORK_AUTHORITY,source_commit=NETWORK_BASELINE)
     if pharma:
         record.update(author='User, explicit approval of all28 ABBV/MA/CSCO recommendations',authority=PHARMA_TECH_AUTHORITY,rationale=PHARMA_TECH_AUTHORITY,source_commit=PHARMA_TECH_BASELINE)
+    if semicon:
+        record.update(author='User, explicit approval of all27 LRCX/PLTR/AMAT recommendations',authority=SEMICON_SOFTWARE_AUTHORITY,rationale=SEMICON_SOFTWARE_AUTHORITY,source_commit=SEMICON_SOFTWARE_BASELINE)
     ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale']);record['sha256']=digest(record)
     return record
 
@@ -138,7 +144,7 @@ def activate(package,decisions,record):
     expected=approval(p,decisions,record.get('recorded_at_utc'))
     if record!=expected:raise ValueError('Stale or unregistered company approval; explicit revalidation required')
     result=deepcopy(p);result['history_approval']=deepcopy(record)
-    result['current_history']=cat_view(p,record) if p['ticker']=='CAT' else large_view(p,record) if p['ticker'] in LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS+PHARMA_TECH_TICKERS else ordinary_view(p,record)
+    result['current_history']=cat_view(p,record) if p['ticker']=='CAT' else large_view(p,record) if p['ticker'] in LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS+PHARMA_TECH_TICKERS+SEMICON_SOFTWARE_TICKERS else ordinary_view(p,record)
     return result
 
 
@@ -171,7 +177,7 @@ def large_view(package,record):
     No new equation or population acceptance: named calculations and proofs are
     the unchanged reviewed source package. Acknowledged nulls remain source nulls.
     """
-    t=package['ticker'];periods=[];ids={d['decision_id'] for d in record['decisions']};priority=t in PRIORITY_TICKERS;network=t in NETWORK_TICKERS;pharma=t in PHARMA_TECH_TICKERS
+    t=package['ticker'];periods=[];ids={d['decision_id'] for d in record['decisions']};priority=t in PRIORITY_TICKERS;network=t in NETWORK_TICKERS;pharma=t in PHARMA_TECH_TICKERS;semicon=t in SEMICON_SOFTWARE_TICKERS
     for i,row in enumerate(package['periods']):
         base='/periods/'+str(i)
         f=lambda k,m=1,origin='reported':fact(row,k,base,m,origin)
@@ -185,6 +191,14 @@ def large_view(package,record):
             if manual['continuing_cfo'] and D(manual['continuing_cfo']['value'])+D(manual['discontinued_cfo']['value'])!=D(manual['cfo']['value']):raise ValueError('Consolidated CFO hierarchy failed')
             proof=dict(status='SUPPORTED',populations=[dict(rows=manual['rows'],cfo=target)])
             pop=proof['populations'][0]
+        displayed=row.get('independent_displayed_cfo') if semicon else None
+        if displayed:
+            if (displayed['status']!='SUPPORTED' or D(displayed['difference'])!=0
+                    or sum((D(x['value']) for x in displayed['rows']),D(0))!=D(displayed['cfo']['value'])
+                    or D(displayed['cfo']['value'])!=D(row['facts']['cfo']['value'])):raise ValueError('Exact independent displayed CFO proof required')
+            # Local effective proof only: original parser PARTIAL remains in the
+            # unchanged source package, never overwritten or called repaired.
+            proof=dict(status='SUPPORTED',populations=[dict(rows=displayed['rows'],cfo=displayed['cfo'])]);pop=proof['populations'][0]
         if (proof['status']!='SUPPORTED' or
                 sum((D(x['value']) for x in pop['rows']),D(0))!=D(pop['cfo']['value'])):
             raise ValueError('Supported independent displayed CFO arithmetic required')
@@ -193,7 +207,7 @@ def large_view(package,record):
             ebit=deepcopy(row['derived_ebit'])
             if not ebit or ebit['origin']!='derived':raise ValueError('Existing registered EBIT proof required')
             ebit.update(source_reference=base+'/derived_ebit')
-        capex=f('productive_cash' if t=='V' else 'other_ppe_cash' if t=='LLY' else 'cash_capex',-1)
+        capex=f('productive_cash' if t in ('V','LRCX') else 'other_ppe_cash' if t=='LLY' else 'cash_capex',-1,origin='proxy' if t=='LRCX' else 'reported')
         if t=='LLY':
             generation=row['refreshed_capex']
             if (not generation or generation['original_byte_equivalence']!='UNPROVED'
@@ -212,14 +226,14 @@ def large_view(package,record):
             reported_cash_flow_working_capital_movements=dict(rows=deepcopy(row['movement_rows']),source_reference=base+'/cfo_reconciliation',additional_deduction_permitted=False,book_delta_nwc=False),
             deferred_taxes=dict(displayed_rows=deferred_rows,note_observation=f('deferred_tax'),other_observation=f('deferred_movement'),
                 source_reference=base+'/cfo_reconciliation',separate_pure_operation='APPROVED_NO_SEPARATE_PURE_OPERATION_MIXED_ROW_PRESERVED' if t=='AVGO' else 'REPORTED_DISPLAYED_POPULATION',value_if_unavailable=None),
-            stock_based_compensation=dict(selected=f(row['proposed_selections']['sbc'] if network or pharma else 'sbc_expense',origin='proxy'),addback=f('face_sbc' if t=='INTC' else 'sbc_addback'),count_once=True),
+            stock_based_compensation=dict(selected=f(row['proposed_selections']['sbc'] if network or pharma or semicon else 'sbc_expense',origin='proxy'),addback=f('face_sbc' if t=='INTC' else 'sbc_addback'),count_once=True),
             unclassified_cfo_reconciliation_residual=dict(value=None,disposition='APPROVED_NO_SEPARATE_OPERATION',not_reported_zero=True),
             reported_cfo=f('cfo'),
-            reported_tax_context=dict(provision=f('tax' if priority or network or pharma else 'face_tax'),pretax=f('pretax'),reported_etr=None if row['facts'].get('reported_etr',{}).get('selection_status','').startswith('UNSELECTED') else f('reported_etr'),
+            reported_tax_context=dict(provision=f(row['proposed_selections']['tax'] if semicon else 'tax' if priority or network or pharma else 'face_tax'),pretax=f('pretax'),reported_etr=None if row['facts'].get('reported_etr',{}).get('selection_status','').startswith('UNSELECTED') else f('reported_etr'),
                 cash_taxes=f('cash_tax' if 'cash_tax' in row['facts'] else 'cash_tax_gross',-1),
                 original_policy_context_reference=base+'/preparation_ledger_evidence/retained-reported-tax-context-ledger',
                 original_generic_conflicts_preserved=True,no_new_ratio_computed=True,future_rate_approved=False),
-            cash_investment_components=dict(selected=c('current_financial_captions' if network or pharma else 'gross_current_financial'),unrestricted_or_excess_cash=False,unknown_restrictions=None,operating_reserve=None,
+            cash_investment_components=dict(selected=c('current_financial_captions' if network or pharma or semicon else 'gross_current_financial'),unrestricted_or_excess_cash=False,unknown_restrictions=None,operating_reserve=None,
                 other_balances={k:f(k) for k in ('restricted_current','restricted_noncurrent','restricted_cash','noncurrent_investments','marketable_long','equity_method','lessor_net_receivable','lessor_net_current','lessor_net_noncurrent') if k in row['facts']},
                 parent_child_overlap_not_additive=True,other_populations_reference=base+'/supporting_note_rows'),
             debt_lease_components=dict(selected=c('named_financing'),additional_borrowing=None,no_additional_adjustment=dict(origin='analyst_assumption',approved=True,value=None,
@@ -301,6 +315,36 @@ def large_view(package,record):
             claims['known_populations'].update({k:f(k) for k in row['facts'] if k.startswith('claim:') or k in ('postemployment_liability','contingent_liability','contingent_current','contingent_noncurrent','litigation_current','strategic_equity')})
             claims['population_relationships_reference']=base+'/population_relationships'
             inputs['point_in_time_shares'].update(class_parent_overlap_not_additive=True,conversion_or_dilution_approved=False)
+        if semicon:
+            cf_reference=base+('/independent_displayed_cfo' if displayed else '/cfo_reconciliation')
+            inputs['reported_cfo'].update(original_parser_status=row['cfo_reconciliation']['status'],independent_reconciliation_reference=cf_reference)
+            inputs['reported_cash_flow_working_capital_movements'].update(source_reference=base+'/movement_rows',reconciliation_reference=cf_reference)
+            inputs['deferred_taxes'].update(displayed_rows=[deepcopy(x) for x in detail if x.get('caption','').strip().lower().startswith('deferred income tax')],
+                source_reference=cf_reference,separate_pure_operation='RETAIN_DISPLAYED_TAX_ROWS_ONLY_NO_NOTE_INSERTION',value_if_unavailable=None)
+            inputs['depreciation_amortization']['qualification']={
+                'LRCX':'Limited CFO D&A proxy; source finance amortization included with depreciation; no additional ROU, later unquantified components not zero',
+                'PLTR':'Limited CFO D&A proxy; noncash operating-lease cost, impairment and investment losses separate, complete expense D&A unknown',
+                'AMAT':'Limited manufacturing CFO D&A proxy; first-two direct observations preserved, later concept-scope negatives unchanged; inventory/timing, incentives and missing amortization remain'}[t]
+            investment=inputs['cash_capex']
+            investment.update(pure_cash_ppe=None if t=='LRCX' else None,
+                investment_perimeter='BROADER_COMBINED_PPE_INTANGIBLES_APPROVED_PROXY' if t=='LRCX' else 'SOURCE_CASH_PPE_SCOPE_SOFTWARE_NOT_ALLOCATED',
+                pure_ppe_scope_approved=False if t=='LRCX' else None)
+            investment['other_disclosures'].update({k:f(k,row.get('cash_sign_multipliers',{}).get(k,1)) for k in ('inventory_transfers','investment_cash','investment_purchases','capitalized_software_cash','alternative_investment_cash','sale_ppe') if k in row['facts']})
+            if t=='AMAT':investment['incentive_limitation']='PPE/tax incentive stock balances are not annual cash receipts; no netting against cash Capex'
+            tax=inputs['reported_tax_context'];tax.update(original_policy_provenance_reference=base+'/reported_tax_policy_replay',
+                original_policy_etr=deepcopy(row['reported_tax_policy_replay']['etr']),cash_tax_refund=f('cash_tax_refund'),face_provision_selected=t=='PLTR',
+                alternatives_reference=base+'/alternatives/tax',generic_tax_conflicts_cleared=False,no_new_ratio_computed=True)
+            cash=inputs['cash_investment_components'];cash['other_balances'].update({k:f(k) for k in ('face_investments','current_investments','marketable_current','restricted_note_current','restricted_note_noncurrent','restricted_cash','restricted_current','restricted_noncurrent','strategic_equity','deferred_plan_investments') if k in row['facts']})
+            cash.update(population_relationships_reference=base+'/population_relationships',unresolved_populations_reference=base+'/source_binding_exceptions')
+            debt=inputs['debt_lease_components'];debt.update(finance_leases_already_included=True if t=='LRCX' else None,
+                scope='Named reported carrying/facility population with explicitly approved omission; NOT complete financing',
+                population_relationships_reference=base+'/population_relationships',other_reported_populations={k:f(k) for k in ('debt_current','debt_long','debt_parent','debt_fair_value','debt_finance_current','debt_finance_long','face_short_debt','short_borrowing','cp','finance_lease','finance_current','finance_long','op_lease','op_current','op_long','facility_balance_explicit_none') if k in row['facts']})
+            if t=='PLTR':debt['named_zero_scope']='Affirmative note population; FY2025 limited to2014 facility. Zero named balance plus approved no-additional adjustment is NOT exhaustive reported zero financing.'
+            if t=='AMAT':debt['nonoverlap_limitation']='FY2024 short799 contains current maturities700; FY2023 separately disclosed finance102 included once; missing later finance subamounts remain unknown'
+            claims=inputs['other_equity_bridge_claims_assets'];claims['known_populations'].update({k:f(k) for k in ('deferred_plan_obligation','deferred_plan_investments','accrued_compensation_caption','strategic_equity','postemployment_liability') if k in row['facts']})
+            claims.update(population_relationships_reference=base+'/population_relationships',plan_assets_liabilities_not_automatically_netted=True,
+                plan_obligation_is_not_broader_accrued_compensation=t=='LRCX')
+            inputs['point_in_time_shares'].update(class_parent_overlap_not_additive=True,conversion_or_dilution_approved=False,source_comparability_reference=base+'/passages')
         if priority:
             inputs['reported_cfo']=f(row['proposed_cfo_fact'])
             cashflow_scope='Continuing operations' if t=='AMD' and row['fiscal_year']==2025 else 'Original consolidated reported population'

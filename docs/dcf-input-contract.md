@@ -1,5 +1,21 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Scope-specific LRCX/PLTR/AMAT acceptance
+
+The user approves all27 company-specific recommendations through existing
+revision-bound audits/effective selections. LRCX FY2022–2026, PLTR/AMAT FY2021–2025
+each satisfy the existing14 historical operations under the expressly approved
+perimeters/proxies and unbounded omission assumptions. LRCX's combined cash
+PP&E/intangible proxy does not resolve pure-PP&E scope. PLTR original PARTIAL4,
+face/rounded tax alternatives, restricted/strategic holdings and class boundaries
+remain; named financing zero plus no additional adjustment is not exhaustive
+reported zero financing. AMAT incentive stocks are not cash receipts; limited
+manufacturing D&A, software scope, SBC660/668 and lease/subamount limits remain.
+All source unknowns and financial-policy blockers survive scoped completion.
+[Authoritative schedules and approval provenance](semiconductor-software-review-batch-results.md).
+No complete expense D&A/debt/reinvestment, whole-universe/Phase1 closure or Phase2 use.
+CAT SBC and JNJ scope remain OPEN.
+
 ## Scope-specific ABBV/MA/CSCO acceptance
 
 The user's explicit approval of28 recommendations activates ABBV/MA FY2021–2025

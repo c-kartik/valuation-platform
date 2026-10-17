@@ -1,4 +1,73 @@
-# AMAT — five-year historical-input review
+# AMAT — five-year historical-input package
+
+## Authoritative current selections — user-approved scope
+
+**All five selected periods satisfy14/14 (70/70) under the explicitly approved historical-input perimeter.** This is scoped company completion, not complete financial disclosure, whole-universe/Phase1 closure or Phase2 readiness.
+
+[Effective machine view](amat-analyst-input-package.json) `/current_history` / [27-decision acceptance and validation](../semiconductor-software-review-batch-results.md). Original `/periods`, source unknowns, proposals and alternatives below remain immutable historical snapshots, not active defaults.
+
+Approval sequence1; actual recording UTC `2026-10-17T21:43:02.534922+00:00`; audit SHA256 `4260eaa3e136bbc6107bd85aab52fa0c95107737f98881160ad33770bdaadffc`. Exact user authority/rationale, five identities, source/review/proposal revisions and original27 decisions bind the overlay. Relevant source/evidence, precision, scope, alternative or operand changes reject stale approval; original facts are not rewritten.
+
+USDm below except shares/ratios. Effective source references resolve to the original exact filing/period, raw signs/units, precision, occurrences and receipts. Source-supported values, accepted proxies and unbounded omission assumptions remain distinguishable.
+
+|Selected input / operation|2021|2022|2023|2024|2025|
+|---|---:|---:|---:|---:|---:|
+|Revenue|23063|25785|26517|27176|28368|
+|EBIT|6889|7788|7654|7867|8289|
+|Limited historical CFO D&A proxy|394|444|515|392|435|
+|Cash PP&E/software-scope outflow|-668|-787|-1106|-1190|-2260|
+|Reported CFO|5442|5399|8700|8677|7958|
+|SBC expense cost proxy once|346|413|490|577|660|
+|SBC CFO add-back; not another cost|346|413|490|577|668|
+|Face tax provision|883|1074|860|975|2273|
+|Historical Pretax|6771|7599|7716|8152|9271|
+|Cash taxes; original net/gross scope|-851|-1869|-1006|-957|-1504|
+|Named gross current financial captions; NOT excess cash|5459|2581|6869|9471|8573|
+|Named financing; NOT exhaustive debt|5452|5457|5663|6259|6555|
+
+## Existing14-family checklist
+
+|Family|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|revenue|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|ebit|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|depreciation_amortization|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|cash_capex|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|reported_cash_flow_working_capital_movements|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|deferred_taxes|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|stock_based_compensation|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|unclassified_cfo_reconciliation_residual|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|reported_cfo|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|reported_tax_context|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|cash_investment_components|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|debt_lease_components|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|other_equity_bridge_claims_assets|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+|point_in_time_shares|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|PASS approved scope|
+
+Movements already included in independently reconciled CFO are support, not another deduction, complete operating NWC or book ΔNWC. No separate CFO residual is populated as zero. Tax provision, policy/issuer ETR, deferred displayed/note populations and cash taxes remain separate; no new ratio or future rate.
+
+## Selected dated shares/classes — no aggregation
+
+|FY|Actual date / source population|Count / decimals|
+|---|---|---|
+|2021|2021-10-31 / `shares:CommonStockSharesOutstanding:2021-10-31:4f53cda1`|892000000 / `-6`|
+|2022|2022-10-30 / `shares:CommonStockSharesOutstanding:2022-10-30:4f53cda1`|844000000 / `-6`|
+|2023|2023-10-29 / `shares:CommonStockSharesOutstanding:2023-10-29:4f53cda1`|833000000 / `-6`|
+|2023|2023-10-29 / `shares:CommonStockSharesOutstanding:2023-10-29:e7683adf`|833000000 / `-6`|
+|2024|2024-10-27 / `shares:CommonStockSharesOutstanding:2024-10-27:4f53cda1`|818000000 / `-6`|
+|2024|2024-10-27 / `shares:CommonStockSharesOutstanding:2024-10-27:e7683adf`|818000000 / `-6`|
+|2025|2025-10-26 / `shares:CommonStockSharesOutstanding:2025-10-26:4f53cda1`|793000000 / `-6`|
+|2025|2025-10-26 / `shares:CommonStockSharesOutstanding:2025-10-26:e7683adf`|793000000 / `-6`|
+
+Covers, EPS denominators, award populations and class/parent confirmations remain separately visible. No share-class sum, split recast, dilution estimate or award valuation.
+
+## Accepted qualifications and retained source limitations
+
+Limited manufacturing CFO D&A394/444/515/392/435 USDm is accepted, retaining first-two direct-source policies, later concept-scope negatives, inventory capitalization/timing and omitted amortization uncertainty. Cash PP&E668/787/1106/1190/2260 retains its source software scope. Incentive-related PPE1200 and tax781 (233current/548noncurrent) stock balances are not annual cash receipts and are not netted against Capex. Acquisitions/noncash additions and missing splits remain separate. FY2025 SBC expense660 versus add-back668 is preserved, once only, without a rounding plug. Named financing5452/5457/5663/6259/6555 avoids repeating current maturities700 within FY2024 short799 and includes separately disclosed FY2023 finance102 once; missing later lease subamounts remain unknown. Restrictions, strategic/plan assets, pension/claims overlaps and fiscal/cover dates remain explicit.
+
+Additional unidentified borrowing/claims omissions are approved analyst assumptions; amounts remain unknown/unbounded, not reported zeros or findings of immateriality. Unknown restrictions/reserves, pure/complete expense D&A, complete debt/reinvestment and missing subamounts stay unknown. Known populations retain overlaps without automatic netting or extra deductions. No substantive essential requirement remains under this approved historical perimeter; this does not erase original generic blockers, CAT/JNJ exceptions or authorize Phase2.
+
+## Historical review snapshot — preserved, not current defaults
 
 **PROPOSED ONLY. No new selection/assumption is active; no company completion.**
 

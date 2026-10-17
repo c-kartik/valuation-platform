@@ -1,6 +1,15 @@
 # PLTR — company data preparation
 
-## Current — LRCX/PLTR/AMAT retained review, pending consolidated approval
+## Current — user-approved five-year historical completion
+
+[Authoritative schedule and checklist](PLTR-analyst-input-package.md) / [effective JSON](pltr-analyst-input-package.json) / [approval/validation](../semiconductor-software-review-batch-results.md).
+All five selected years now satisfy14/14,70/70, within the approved historical-input perimeter. The existing revision-bound audit and separate effective view implement all9 company recommendations. User authorization, actual UTC, source/review/proposal revisions and audit SHA preserve history and reject stale evidence. Source facts/nulls, alternatives and original proposals remain unchanged.
+
+Original parser PARTIAL4/SUPPORTED1 is preserved alongside all five independently exact displayed CFO checks. Face tax provisions31.885/10.067/19.716/21.255/22.724 USDm are active, with rounded prose10.1/19.7/21.3/22.7 and generic policy conflicts retained. No new ratio/forecast tax rate. Limited CFO D&A14.897/22.522/33.354/31.587/26.145 excludes separate operating ROU cost, impairment and investment losses from extra additions. Zero named financing is a source-scoped note observation, especially FY2025's2014 facility; the separate approved omission is not exhaustive zero financing or immateriality. Cash/marketable/restricted/strategic customer-related populations and SBC expense/add-back/APIC roles remain distinct. Dated A/B/F, source-reported aggregate, voting/conversion rights, EPS and awards remain separate with no class/dilution sum.
+
+Approved omissions remain analyst assumptions with unquantified/unbounded exposure. Reported movements/reconciled CFO are the historical path; complete reconstructed NWC is not required and movements are not deducted again. No extra residual scalar, future tax/dilution/valuation assumption or full financial-disclosure certificate. Nineteen prior completed histories, CAT SBC/JNJ scope exceptions and frozen/pilot artifacts remain unchanged. Current counts:22 completed scoped histories,2 partial,18 assessment-only (42 total),0 pending. No acquisitions, new issuer review, Phase1 closure or Phase2 use.
+
+## Historical checkpoint — LRCX/PLTR/AMAT retained review, pending consolidated approval
 
 Five exact FY2021–2025 annuals/70 families are reviewed, not approved:10 source-supported income slots/60 proposed company choices. Five independent displayed CFO sums match333.851/223.737/712.183/1153.865/2134.473 USDm; original PARTIAL4/SUPPORTED1 proofs remain unchanged. Actual no-ID primary facts use structural/parser locators with exact XML confirmations, never invented IDs. Face provision31.885/10.067/19.716/21.255/22.724 is proposed while original rounded-prose conflicts remain. SBC expense and CFO add-back stay distinct from APIC/capitalization/awards. Current marketable/public/Treasury holdings, restricted CDs, private/strategic customer investments and contractual financing scope are separate. Explicit no-debt notes are program/scope bound, especially FY2025's2014 facility; omission proposal is not whole-debt zero. Dated A/B/F, founder voting/conversion, reported totals and awards are not aggregated. No acquisition or financial acceptance.
 

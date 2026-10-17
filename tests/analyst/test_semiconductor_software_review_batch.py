@@ -8,6 +8,7 @@ import hashlib,json,re,subprocess,sys,types,unittest
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'scripts'))
 import prepare_semiconductor_software_review_batch as p
+import activate_company_review_batches as accepted
 from prepare_msft_analyst_package import InlineFacts
 import tests.analyst.test_standard_review_batch as sources
 
@@ -15,7 +16,7 @@ import tests.analyst.test_standard_review_batch as sources
 class SemiconductorSoftwareReviewTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.outputs=p.outputs();cls.packages={t:cls.outputs[f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json'] for t in p.TICKERS};cls.artifact_files={}
+        cls.outputs=p.outputs();cls.packages={t:accepted.parent(cls.outputs[f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json']) for t in p.TICKERS};cls.artifact_files={}
     _artifact=sources.StandardReviewBatchTests._artifact
 
     def test_fifteen_exact_selections_and210_families(self):

@@ -1,6 +1,15 @@
 # LRCX — company data preparation
 
-## Current — LRCX/PLTR/AMAT retained review, pending consolidated approval
+## Current — user-approved five-year historical completion
+
+[Authoritative schedule and checklist](LRCX-analyst-input-package.md) / [effective JSON](lrcx-analyst-input-package.json) / [approval/validation](../semiconductor-software-review-batch-results.md).
+All five selected years now satisfy14/14,70/70, within the approved historical-input perimeter. The existing revision-bound audit and separate effective view implement all9 company recommendations. User authorization, actual UTC, source/review/proposal revisions and audit SHA preserve history and reject stale evidence. Source facts/nulls, alternatives and original proposals remain unchanged.
+
+Limited CFO D&A333.739/342.432/359.699/386.277/441.533 USDm and explicitly broader combined PP&E/intangible cash-investment proxy546.034/501.568/396.670/759.186/966.405 are accepted for historical preparation. Pure PP&E stays UNKNOWN; the earlier negative component-split policy findings remain unchanged. No extra finance ROU/amortization, split equation or complete reinvestment claim. Named debt-plus-finance5005.830/5011.541/4983.334/4484.505/3734.563 includes finance liabilities once; later unquantified lease subamounts stay unknown. Unfunded plan obligations280.0/318.0/385.5/423.9/498.5 and related Other-assets investments291.3/318.1/393.5/438.8/511.8 retain rounded precision and are never automatically netted or confused with broader accrued compensation. Restrictions, FY2024 53weeks and October2024 ten-for-one split remain explicit.
+
+Approved omissions remain analyst assumptions with unquantified/unbounded exposure. Reported movements/reconciled CFO are the historical path; complete reconstructed NWC is not required and movements are not deducted again. No extra residual scalar, future tax/dilution/valuation assumption or full financial-disclosure certificate. Nineteen prior completed histories, CAT SBC/JNJ scope exceptions and frozen/pilot artifacts remain unchanged. Current counts:22 completed scoped histories,2 partial,18 assessment-only (42 total),0 pending. No acquisitions, new issuer review, Phase1 closure or Phase2 use.
+
+## Historical checkpoint — LRCX/PLTR/AMAT retained review, pending consolidated approval
 
 Five exact FY2022–2026 annuals/70 families are reviewed, not approved:10 source-supported income slots/60 proposed company choices. Existing pure-PP&E denial remains; combined capital-expenditure/intangible cash546.034/501.568/396.670/759.186/966.405 USDm requires an explicitly broader investment perimeter. Limited CFO D&A333.739/342.432/359.699/386.277/441.533 is proposed, no extra finance amortization. Named debt-plus-finance5005.830/5011.541/4983.334/4484.505/3734.563 already includes finance leases; restricted cash, unfunded deferred-plan liabilities and correlated holdings are separate. All5 original displayed CFO proofs remain SUPPORTED. FY2024 53weeks, later unquantified finance/intangible subamounts and October2024 ten-for-one split remain. No new SEC requests or change to original negative findings/policies.
 

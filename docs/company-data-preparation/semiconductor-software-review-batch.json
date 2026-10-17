@@ -1,4 +1,170 @@
 {
+  "approval_activation": {
+    "companies": {
+      "AMAT": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "AMAT-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMAT-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMAT-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMAT-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMAT-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMAT-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMAT-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMAT-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "AMAT-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "4260eaa3e136bbc6107bd85aab52fa0c95107737f98881160ad33770bdaadffc",
+        "completed": true
+      },
+      "LRCX": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "LRCX-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LRCX-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LRCX-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LRCX-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LRCX-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LRCX-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LRCX-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LRCX-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "LRCX-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "2a2506484cfeac927d84dc431c7e9c15f99bea730f5110d310c959f902ebf4fc",
+        "completed": true
+      },
+      "PLTR": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "PLTR-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PLTR-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PLTR-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PLTR-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PLTR-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PLTR-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PLTR-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PLTR-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PLTR-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "5863d0fd3e8f16ef905369c08e86058092f95f63b94061fc1b38942bb18bf9a4",
+        "completed": true
+      }
+    },
+    "current_company_counts": {
+      "approved_partial": 2,
+      "assessment_only": 18,
+      "broadly_assessed": 42,
+      "completed_scoped": 22,
+      "pending_reviews": 0
+    },
+    "original_proposals_retained": true,
+    "phase1_closed": false
+  },
   "approved_partial_company_packages": 2,
   "broad_assessment_only": 18,
   "companies": {

@@ -1,6 +1,33 @@
 # Company data preparation register
 
-## Current — LRCX/PLTR/AMAT retained review, pending consolidated approval
+## Current — LRCX/PLTR/AMAT approved historical completion
+
+The user explicitly approves all27 LRCX/PLTR/AMAT recommendations. Effective
+revision-bound analyst views/audits now select LRCX FY2022–2026 and PLTR/AMAT
+FY2021–2025, each14/14 per year,70/70 per company.
+[Authoritative schedules/dispositions/validation](../semiconductor-software-review-batch-results.md)
+/ [machine current counts](semiconductor-software-review-batch.json)
+`/approval_activation`. Original source facts, nulls, proposals, alternatives,
+timestamps and prior approvals remain unchanged; relevant revision changes reject
+stale acceptance. Actual UTC, exact authority and source/decision hashes bind each audit.
+
+LRCX accepts limited D&A and a broader combined PP&E/intangible investment proxy;
+pure PP&E remains unknown. Plan obligations/assets are separate, not netted, and
+finance leases are not added twice. PLTR preserves original PARTIAL4 and separate
+exact displayed CFO proofs, selects face taxes without clearing rounded alternatives,
+and treats no additional financing as an unbounded omission, not exhaustive debt zero.
+AMAT preserves manufacturing/limited D&A, PP&E/software cash scope, noncash incentive
+stock balances, SBC expense660/add-back668 and current-maturity/lease overlap limits.
+
+**42 broadly assessed;24 packages =22 completed scoped histories +2 approved partial
+CAT/JNJ;0 pending;18 assessment-only.** Nineteen previous completed histories,
+CAT SBC/JNJ OPEN scope, XOM/history exceptions and frozen/pilot bytes remain unchanged.
+No exhaustive debt/reinvestment, unrestricted cash, complete expense D&A, source
+zero or immateriality claim is introduced. No Phase1 closure or Phase2 approval.
+Next candidates CVX/MRK/PG are identified only from the existing retained backlog;
+XOM remains empty and no new company review/acquisition is launched.
+
+## Historical checkpoint — LRCX/PLTR/AMAT retained review, pending consolidated approval
 
 [ONE27-decision sheet](../semiconductor-software-review-batch-results.md) /
 [machine review](semiconductor-software-review-batch.json)
