@@ -1,5 +1,86 @@
 # CVX — full selected-history analyst-input review
 
+## Authoritative current five-year accepted schedule
+
+**PARTIAL —65/70 scoped requirements satisfied; EBIT OPEN in all5 years.** No Phase1 closure, complete expense D&A/debt/reinvestment, financial-sufficiency certification or Phase2 use.
+
+[Effective selections and immutable approval](cvx-analyst-input-package.json#/current_history) / [revision-bound audit](cvx-analyst-input-package.json#/history_approval) / [consolidated outcomes and validation](../energy-pharma-staples-review-batch-results.md).
+
+User authority: all29 recommendations, explicitly excluding CVX-PERIMETER. Actual recording UTC `2026-10-18T07:02:20.709294+00:00`; audit `c45dc9630bbad45400ada7ae14b5c82065c6f1b5ee1e1e9e14f1dc54394baa39`; source revision `a440fa76a319481854ed4e6057a9983b12408db7f1e10f810bd13edabad4f67c`; approved proposal revision `c470c8e22cc3042a9a16a9847bc5dfabdf2f0cfdf69cbd83c3dae727d17bed7a`; source baseline `70d0feed195fcb605935c4849f3c371b7cbe9c34`. Original source/proposal bytes remain unchanged beneath the separate overlay. Relevant source, evidence, precision, scope, candidate, calculation or decision changes reject stale acceptance.
+
+Amounts USDm unless stated. Linked cells expose exact source/period, precision, role and policy/occurrence provenance. **Proxy is not verified complete expense.** All amounts and uncertainty remain within each approved company perimeter.
+
+|Selected operation / role|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|Revenue|[155606](cvx-analyst-input-package.json#/current_history/periods/0/inputs/revenue) (reported; decimals -6)|[235717](cvx-analyst-input-package.json#/current_history/periods/1/inputs/revenue) (reported; decimals -6)|[196913](cvx-analyst-input-package.json#/current_history/periods/2/inputs/revenue) (reported; decimals -6)|[193414](cvx-analyst-input-package.json#/current_history/periods/3/inputs/revenue) (reported; decimals -6)|[184432](cvx-analyst-input-package.json#/current_history/periods/4/inputs/revenue) (reported; decimals -6)|
+|EBIT — OPEN, not zero|[unavailable](cvx-analyst-input-package.json#/current_history/periods/0/inputs/ebit)|[unavailable](cvx-analyst-input-package.json#/current_history/periods/1/inputs/ebit)|[unavailable](cvx-analyst-input-package.json#/current_history/periods/2/inputs/ebit)|[unavailable](cvx-analyst-input-package.json#/current_history/periods/3/inputs/ebit)|[unavailable](cvx-analyst-input-package.json#/current_history/periods/4/inputs/ebit)|
+|Limited D&A proxy|[17925](cvx-analyst-input-package.json#/current_history/periods/0/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|[16319](cvx-analyst-input-package.json#/current_history/periods/1/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|[17326](cvx-analyst-input-package.json#/current_history/periods/2/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|[17282](cvx-analyst-input-package.json#/current_history/periods/3/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|[20132](cvx-analyst-input-package.json#/current_history/periods/4/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|
+|Cash investment outflow|[-7515](cvx-analyst-input-package.json#/current_history/periods/0/inputs/cash_capex) (reported; decimals -6)|[-10349](cvx-analyst-input-package.json#/current_history/periods/1/inputs/cash_capex) (reported; decimals -6)|[-14788](cvx-analyst-input-package.json#/current_history/periods/2/inputs/cash_capex) (reported; decimals -6)|[-15544](cvx-analyst-input-package.json#/current_history/periods/3/inputs/cash_capex) (reported; decimals -6)|[-16830](cvx-analyst-input-package.json#/current_history/periods/4/inputs/cash_capex) (reported; decimals -6)|
+|Reported CFO|[29187](cvx-analyst-input-package.json#/current_history/periods/0/inputs/reported_cfo) (reported; decimals -6)|[49602](cvx-analyst-input-package.json#/current_history/periods/1/inputs/reported_cfo) (reported; decimals -6)|[35609](cvx-analyst-input-package.json#/current_history/periods/2/inputs/reported_cfo) (reported; decimals -6)|[31492](cvx-analyst-input-package.json#/current_history/periods/3/inputs/reported_cfo) (reported; decimals -6)|[33939](cvx-analyst-input-package.json#/current_history/periods/4/inputs/reported_cfo) (reported; decimals -6)|
+|SBC cost proxy — once|[701](cvx-analyst-input-package.json#/current_history/periods/0/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[1013](cvx-analyst-input-package.json#/current_history/periods/1/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[-100](cvx-analyst-input-package.json#/current_history/periods/2/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[510](cvx-analyst-input-package.json#/current_history/periods/3/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[399](cvx-analyst-input-package.json#/current_history/periods/4/inputs/stock_based_compensation/selected) (proxy; decimals -6)|
+|SBC CFO add-back — distinct role|[unavailable](cvx-analyst-input-package.json#/current_history/periods/0/inputs/stock_based_compensation/addback)|[unavailable](cvx-analyst-input-package.json#/current_history/periods/1/inputs/stock_based_compensation/addback)|[unavailable](cvx-analyst-input-package.json#/current_history/periods/2/inputs/stock_based_compensation/addback)|[unavailable](cvx-analyst-input-package.json#/current_history/periods/3/inputs/stock_based_compensation/addback)|[unavailable](cvx-analyst-input-package.json#/current_history/periods/4/inputs/stock_based_compensation/addback)|
+|Historical tax provision|[5950](cvx-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/provision) (reported; decimals -6)|[14066](cvx-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/provision) (reported; decimals -6)|[8173](cvx-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/provision) (reported; decimals -6)|[9757](cvx-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/provision) (reported; decimals -6)|[7258](cvx-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/provision) (reported; decimals -6)|
+|Historical Pretax selection|[21639](cvx-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/pretax) (reported; decimals -6)|[49674](cvx-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/pretax) (reported; decimals -6)|[29584](cvx-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/pretax) (reported; decimals -6)|[27506](cvx-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/pretax) (reported; decimals -6)|[19743](cvx-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/pretax) (reported; decimals -6)|
+|Issuer reported ETR — pure ratio, not forecast|[0.275](cvx-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.283](cvx-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.276](cvx-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.355](cvx-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.368](cvx-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|
+|Cash taxes — net/gross source scope retained|[-4355](cvx-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-9148](cvx-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-10416](cvx-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-8458](cvx-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-7304](cvx-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|
+|Named gross financial captions — not excess cash|[5675](cvx-analyst-input-package.json#/current_history/periods/0/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6/-6)|[17901](cvx-analyst-input-package.json#/current_history/periods/1/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6/-6)|[8223](cvx-analyst-input-package.json#/current_history/periods/2/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6/-6)|[6781](cvx-analyst-input-package.json#/current_history/periods/3/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6/-6)|[6293](cvx-analyst-input-package.json#/current_history/periods/4/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6/-6)|
+|Named financing — not complete debt|[31369](cvx-analyst-input-package.json#/current_history/periods/0/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[23339](cvx-analyst-input-package.json#/current_history/periods/1/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[20836](cvx-analyst-input-package.json#/current_history/periods/2/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[24541](cvx-analyst-input-package.json#/current_history/periods/3/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[40758](cvx-analyst-input-package.json#/current_history/periods/4/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|
+|Movement detail — observations, already in CFO|[3 rows; partial scope](cvx-analyst-input-package.json#/current_history/periods/0/inputs/reported_cash_flow_working_capital_movements)|[3 rows; partial scope](cvx-analyst-input-package.json#/current_history/periods/1/inputs/reported_cash_flow_working_capital_movements)|[3 rows; partial scope](cvx-analyst-input-package.json#/current_history/periods/2/inputs/reported_cash_flow_working_capital_movements)|[3 rows; partial scope](cvx-analyst-input-package.json#/current_history/periods/3/inputs/reported_cash_flow_working_capital_movements)|[3 rows; partial scope](cvx-analyst-input-package.json#/current_history/periods/4/inputs/reported_cash_flow_working_capital_movements)|
+|Deferred TAX reconciliation detail|[700](cvx-analyst-input-package.json#/current_history/periods/0/inputs/deferred_taxes)|[2124](cvx-analyst-input-package.json#/current_history/periods/1/inputs/deferred_taxes)|[298](cvx-analyst-input-package.json#/current_history/periods/2/inputs/deferred_taxes)|[1240](cvx-analyst-input-package.json#/current_history/periods/3/inputs/deferred_taxes)|[986](cvx-analyst-input-package.json#/current_history/periods/4/inputs/deferred_taxes)|
+|CFO residual — approved no separate operation, not zero|[not computed; no zero](cvx-analyst-input-package.json#/current_history/periods/0/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](cvx-analyst-input-package.json#/current_history/periods/1/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](cvx-analyst-input-package.json#/current_history/periods/2/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](cvx-analyst-input-package.json#/current_history/periods/3/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](cvx-analyst-input-package.json#/current_history/periods/4/inputs/unclassified_cfo_reconciliation_residual)|
+|Known claims/assets — no aggregate or netting|[20 separate observations](cvx-analyst-input-package.json#/current_history/periods/0/inputs/other_equity_bridge_claims_assets)|[20 separate observations](cvx-analyst-input-package.json#/current_history/periods/1/inputs/other_equity_bridge_claims_assets)|[20 separate observations](cvx-analyst-input-package.json#/current_history/periods/2/inputs/other_equity_bridge_claims_assets)|[20 separate observations](cvx-analyst-input-package.json#/current_history/periods/3/inputs/other_equity_bridge_claims_assets)|[19 separate observations](cvx-analyst-input-package.json#/current_history/periods/4/inputs/other_equity_bridge_claims_assets)|
+
+All component/claim counts are inventories, not complete financial fields. Movements are supporting cash contributions already included in CFO, never second deductions or reconstructed book ΔNWC. Noncash additions, creditors, acquisitions/IPR&D, impairments, restricted/strategic holdings and different debt measurements remain separate source observations in the linked payload. No new subtotal or balancing adjustment is created.
+
+## Current14-family checklist
+
+S = satisfied only within the explicitly approved historical operation; E = unresolved essential input, not approved.
+
+|Family|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|revenue|S|S|S|S|S|
+|ebit|E|E|E|E|E|
+|depreciation_amortization|S|S|S|S|S|
+|cash_capex|S|S|S|S|S|
+|reported_cash_flow_working_capital_movements|S|S|S|S|S|
+|deferred_taxes|S|S|S|S|S|
+|stock_based_compensation|S|S|S|S|S|
+|unclassified_cfo_reconciliation_residual|S|S|S|S|S|
+|reported_cfo|S|S|S|S|S|
+|reported_tax_context|S|S|S|S|S|
+|cash_investment_components|S|S|S|S|S|
+|debt_lease_components|S|S|S|S|S|
+|other_equity_bridge_claims_assets|S|S|S|S|S|
+|point_in_time_shares|S|S|S|S|S|
+
+|FY|Passed /14|Remaining essential inputs|Original parser / effective independent basis|
+|---|---|---|---|
+|2021|13|ebit|SUPPORTED / exact displayed source arithmetic|
+|2022|13|ebit|SUPPORTED / exact displayed source arithmetic|
+|2023|13|ebit|SUPPORTED / exact displayed source arithmetic|
+|2024|13|ebit|SUPPORTED / exact displayed source arithmetic|
+|2025|13|ebit|SUPPORTED / exact displayed source arithmetic|
+
+**OPEN CVX-PERIMETER, all5 EBIT slots:** mixed-tax affiliate earnings, operating/nonoperating Other and incomplete benefit allocation prevent a matched industrial EBIT selection. No equation, source zero, estimate or perimeter waiver is approved. Face Sales and consolidated depletion-inclusive DD&A do not repair this; accepted historical observations are not jointly eligible as a completed operating-income package. The10 approved IDs are active; CVX-PERIMETER is excluded from active decisions and retained in `/history_approval/open_analyst_use_requirements`. FY2023 SBC remains a **−100m expense benefit**. Exact original Capex v2 evidence, CP/current/embedded-finance relationships, ARO, pension, NCI and affiliate/restricted balances remain separately visible. No automatic research cycle.
+
+## Current dated share selections — no automatic aggregation
+
+|FY|Selected source population|Shares|Actual date|Source decimals|
+|---|---|---|---|---|
+|2021|shares:EntityCommonStockSharesOutstanding:2022-02-10:4f53cda1|1947553346|2022-02-10|INF|
+|2022|shares:CommonStockSharesOutstanding:2022-12-31:e72bedf9|1915216343|2022-12-31|INF|
+|2023|shares:CommonStockSharesOutstanding:2023-12-31:e72bedf9|1865647804|2023-12-31|INF|
+|2024|shares:CommonStockSharesOutstanding:2024-12-31:e72bedf9|1769012274|2024-12-31|0|
+|2025|shares:CommonStockSharesOutstanding:2025-12-31:e72bedf9|1994416122|2025-12-31|0|
+
+Other dated covers/classes, weighted-average basic/diluted counts, awards and conversion rights remain in the unchanged source facts. No inferred diluted issuer total or forecast dilution.
+
+Unknown restrictions, reserves, unidentified borrowing/claims, pure expense D&A, complete reinvestment and lease coverage stay null/unquantified despite scoped acceptance. Omission assumptions economically leave potentially undisclosed amounts unadjusted; their size is not bounded, and no immateriality finding is made. Future tax rates, award valuation, forecasts and all valuation calculations remain Phase2 decisions.
+
+## Historical pre-acceptance review — preserved proposal snapshot
+
+The material below is the original review, including its then-inactive labels. Current decisions and selections above supersede only its approval status; source facts, alternatives and limitations remain unchanged.
+
 **PROPOSED ONLY. No new assumption or selection is active; no company completion.**
 
 [Machine facts/proposed calculations](cvx-analyst-input-package.json) / [ONE consolidated approval and exception sheet](../energy-pharma-staples-review-batch-results.md) / [company record](CVX.md). Baseline `956c5c488247eb27ad432b3d1a0fd942a4f29e6e`; actual review UTC `2026-10-17T21:51:27+00:00`; revision `aebaae513eee859c1fc87f9340ed5eecb07e689250938d093ff603144edb0d63`.

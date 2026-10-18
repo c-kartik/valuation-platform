@@ -22,6 +22,9 @@ PRIORITY_TICKERS=('MU','AMD','JNJ')
 NETWORK_TICKERS=('V','INTC','WMT')
 PHARMA_TECH_TICKERS=('ABBV','MA','CSCO')
 SEMICON_SOFTWARE_TICKERS=('LRCX','PLTR','AMAT')
+ENERGY_PHARMA_STAPLES_TICKERS=('CVX','MRK','PG')
+ENERGY_PHARMA_STAPLES_BASELINE='70d0feed195fcb605935c4849f3c371b7cbe9c34'
+ENERGY_PHARMA_STAPLES_AUTHORITY='Current user explicitly approves all29 recommendations in docs/energy-pharma-staples-review-batch-results.md for exact CVX/MRK/PG frozen histories. CVX-PERIMETER remains OPEN: required EBIT null in all5 years, no substitute equation, zero or waiver. Approve CVX face Sales, depletion-inclusive DD&A, exact approved Capex, negative FY2023 SBC benefit and named financing/claims; MRK continuing panels, existing EBIT derivations, separate discontinued CFO and broader FY2021/22 investment proxies; PG exact Pretax extensions, face borrowing parents with unexplained component differences and retained ESOP preferred/pension overlaps. Preserve source unknowns, prior proposals and unbounded omission assumptions; no reported zeros, financial-sufficiency certification or Phase2 authority.'
 SEMICON_SOFTWARE_BASELINE='7b06e5c88ac8d3763929680ce459eb837b742d1c'
 SEMICON_SOFTWARE_AUTHORITY='Current user explicitly approves all27 recommendations in docs/semiconductor-software-review-batch-results.md for the exact frozen LRCX/PLTR/AMAT histories. LRCX limited D&A and broader combined PP&E/intangible investment proxy preserve pure-PP&E unknowns and separate plan claims/assets. PLTR face tax selections preserve rounded alternatives and original parser PARTIALs; zero named debt is not exhaustive zero financing. AMAT limited D&A/PP&E-software scope preserves incentive stocks, SBC expense660 versus add-back668 and finance-lease overlaps/missing subamounts. Approve the stated unbounded omission assumptions, not reported zeros, immateriality or Phase2 use.'
 PHARMA_TECH_BASELINE='5332e07dca08e81ea499df8d4f41715e4cc0baf8'
@@ -93,8 +96,17 @@ def cat_evidence(package):
 
 def approval(package,decisions,recorded_at_utc):
     p=parent(package);ticker=p['ticker']
-    if ticker not in TICKERS+LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS+PHARMA_TECH_TICKERS+SEMICON_SOFTWARE_TICKERS or len(p['periods'])!=5:raise ValueError('Fixed approved company history required')
+    if ticker not in TICKERS+LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS+PHARMA_TECH_TICKERS+SEMICON_SOFTWARE_TICKERS+ENERGY_PHARMA_STAPLES_TICKERS or len(p['periods'])!=5:raise ValueError('Fixed approved company history required')
     selected=[deepcopy(d) for d in decisions if d['ticker']==ticker]
+    energy=ticker in ENERGY_PHARMA_STAPLES_TICKERS
+    open_review=None
+    if energy and ticker=='CVX':
+        exceptions=[d for d in selected if d['decision_id']=='CVX-PERIMETER']
+        if (len(exceptions)!=1 or exceptions[0]['status']!='OPEN_ESSENTIAL_EXCEPTION'
+                or exceptions[0]['accepted'] or exceptions[0]['identities']!=[r['identity'] for r in p['periods']]):
+            raise ValueError('Exact OPEN CVX perimeter exception required; never an EBIT approval')
+        open_review=exceptions[0]
+        selected=[d for d in selected if d['decision_id']!='CVX-PERIMETER']
     if not selected or len({d['decision_id'] for d in selected})!=len(selected):raise ValueError('Exact approved decision set required')
     large=ticker in LARGE_TICKERS
     priority=ticker in PRIORITY_TICKERS
@@ -107,8 +119,8 @@ def approval(package,decisions,recorded_at_utc):
         if ({d['decision_id'] for d in selected}!={ticker+'-'+key for key in suffixes}
                 or any(d['identities']!=identities for d in selected)):
             raise ValueError('All exact approved company decisions and periods required')
-    if priority or network or pharma or semicon:
-        suffixes=('CF','DA','INV','SBC','TAX','CASH','FIN','CLAIMS','SHARES')+(('PERIMETER',) if ticker=='JNJ' else ('REV',) if ticker in ('WMT','MA') else ())
+    if priority or network or pharma or semicon or energy:
+        suffixes=('CF','DA','INV','SBC','TAX','CASH','FIN','CLAIMS','SHARES')+(('PERIMETER',) if ticker in ('JNJ','MRK') else ('REV',) if ticker in ('WMT','MA','CVX') else ())
         if ({d['decision_id'] for d in selected}!={ticker+'-'+key for key in suffixes}
                 or any(d['identities']!=[r['identity'] for r in p['periods']] for d in selected)):
             raise ValueError('All exact approved company decisions and periods required')
@@ -133,6 +145,15 @@ def approval(package,decisions,recorded_at_utc):
         record.update(author='User, explicit approval of all28 ABBV/MA/CSCO recommendations',authority=PHARMA_TECH_AUTHORITY,rationale=PHARMA_TECH_AUTHORITY,source_commit=PHARMA_TECH_BASELINE)
     if semicon:
         record.update(author='User, explicit approval of all27 LRCX/PLTR/AMAT recommendations',authority=SEMICON_SOFTWARE_AUTHORITY,rationale=SEMICON_SOFTWARE_AUTHORITY,source_commit=SEMICON_SOFTWARE_BASELINE)
+    if energy:
+        record.update(author='User, explicit approval of29 CVX/MRK/PG recommendations, excluding CVX-PERIMETER',
+            authority=ENERGY_PHARMA_STAPLES_AUTHORITY,rationale=ENERGY_PHARMA_STAPLES_AUTHORITY,source_commit=ENERGY_PHARMA_STAPLES_BASELINE,
+            open_analyst_use_requirements=[dict(requirement_id='CVX-EBIT-BUSINESS-PERIMETER',status='OPEN',
+                affected_identities=[r['identity'] for r in p['periods']],affected_families=['ebit'],
+                reason='BUSINESS_PERIMETER_UNRESOLVED: mixed-tax affiliate earnings, operating/nonoperating Other and incomplete benefit allocation; required EBIT remains unavailable.',
+                review_decision=deepcopy(open_review),explicitly_not_approved=True,
+                resolution='A defensible matched historical operating perimeter and evidence-bound EBIT selection with explicit approval; no substitute equation, zero or waiver is authorized.')] if ticker=='CVX' else [])
+        if ticker=='CVX':record['financial_sufficiency']='PARTIAL_OPEN_ESSENTIAL_EBIT_REQUIREMENT'
     ManualIdentity(record['author'],record['recorded_at_utc'],record['rationale']);record['sha256']=digest(record)
     return record
 
@@ -144,7 +165,7 @@ def activate(package,decisions,record):
     expected=approval(p,decisions,record.get('recorded_at_utc'))
     if record!=expected:raise ValueError('Stale or unregistered company approval; explicit revalidation required')
     result=deepcopy(p);result['history_approval']=deepcopy(record)
-    result['current_history']=cat_view(p,record) if p['ticker']=='CAT' else large_view(p,record) if p['ticker'] in LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS+PHARMA_TECH_TICKERS+SEMICON_SOFTWARE_TICKERS else ordinary_view(p,record)
+    result['current_history']=cat_view(p,record) if p['ticker']=='CAT' else large_view(p,record) if p['ticker'] in LARGE_TICKERS+PRIORITY_TICKERS+NETWORK_TICKERS+PHARMA_TECH_TICKERS+SEMICON_SOFTWARE_TICKERS+ENERGY_PHARMA_STAPLES_TICKERS else ordinary_view(p,record)
     return result
 
 
@@ -177,7 +198,7 @@ def large_view(package,record):
     No new equation or population acceptance: named calculations and proofs are
     the unchanged reviewed source package. Acknowledged nulls remain source nulls.
     """
-    t=package['ticker'];periods=[];ids={d['decision_id'] for d in record['decisions']};priority=t in PRIORITY_TICKERS;network=t in NETWORK_TICKERS;pharma=t in PHARMA_TECH_TICKERS;semicon=t in SEMICON_SOFTWARE_TICKERS
+    t=package['ticker'];periods=[];ids={d['decision_id'] for d in record['decisions']};priority=t in PRIORITY_TICKERS;network=t in NETWORK_TICKERS;pharma=t in PHARMA_TECH_TICKERS;semicon=t in SEMICON_SOFTWARE_TICKERS;energy=t in ENERGY_PHARMA_STAPLES_TICKERS
     for i,row in enumerate(package['periods']):
         base='/periods/'+str(i)
         f=lambda k,m=1,origin='reported':fact(row,k,base,m,origin)
@@ -191,23 +212,53 @@ def large_view(package,record):
             if manual['continuing_cfo'] and D(manual['continuing_cfo']['value'])+D(manual['discontinued_cfo']['value'])!=D(manual['cfo']['value']):raise ValueError('Consolidated CFO hierarchy failed')
             proof=dict(status='SUPPORTED',populations=[dict(rows=manual['rows'],cfo=target)])
             pop=proof['populations'][0]
-        displayed=row.get('independent_displayed_cfo') if semicon else None
+        displayed=row.get('independent_displayed_cfo') if semicon or energy else None
         if displayed:
             if (displayed['status']!='SUPPORTED' or D(displayed['difference'])!=0
                     or sum((D(x['value']) for x in displayed['rows']),D(0))!=D(displayed['cfo']['value'])
-                    or D(displayed['cfo']['value'])!=D(row['facts']['cfo']['value'])):raise ValueError('Exact independent displayed CFO proof required')
+                    or D(displayed['cfo']['value'])!=D(row['facts']['selected_cfo' if energy else 'cfo']['value'])):raise ValueError('Exact independent displayed CFO proof required')
             # Local effective proof only: original parser PARTIAL remains in the
             # unchanged source package, never overwritten or called repaired.
             proof=dict(status='SUPPORTED',populations=[dict(rows=displayed['rows'],cfo=displayed['cfo'])]);pop=proof['populations'][0]
-        if (proof['status']!='SUPPORTED' or
+        precision_check=None
+        if energy and t=='PG':
+            # Replay the EXISTING displayed-precision rule, not a new tolerance
+            # or relaxation of other companies' exact arithmetic requirements.
+            from valuation_platform.analyst import cfo_statement_reconciliation as cfo_check
+            precision_check=cfo_check.check_rows(pop['rows'],pop['cfo'],complete=True,non_overlapping=True,scope=pop['scope'])
+            if (proof['status']!='SUPPORTED' or pop['status']!='SUPPORTED'
+                    or any(precision_check[k]!=pop[k] for k in ('status','difference','tolerance','precision_rule'))
+                    or precision_check['status']!='SUPPORTED'
+                    or D(pop['cfo']['value'])!=D(row['facts']['selected_cfo']['value'])):
+                raise ValueError('Unchanged supported PG displayed-precision proof required')
+        elif (proof['status']!='SUPPORTED' or
                 sum((D(x['value']) for x in pop['rows']),D(0))!=D(pop['cfo']['value'])):
             raise ValueError('Supported independent displayed CFO arithmetic required')
-        ebit=f('ebit')
-        if t in ('LLY','JNJ'):
+        ebit=None if energy and t=='CVX' else f('ebit')
+        if t in ('LLY','JNJ','MRK'):
             ebit=deepcopy(row['derived_ebit'])
             if not ebit or ebit['origin']!='derived':raise ValueError('Existing registered EBIT proof required')
             ebit.update(source_reference=base+'/derived_ebit')
+        if energy and t=='CVX':
+            if row['proposed_selections']['ebit'] is not None or row['facts'].get('ebit') is not None or row['derived_ebit'] is not None:
+                raise ValueError('CVX approved source retains EBIT null; no substitute permitted')
+            ebit=dict(value=None,unit='USD',origin='unavailable',null_reason='OPEN_CVX_EBIT_BUSINESS_PERIMETER',
+                source_reference=base+'/proposed_selections/ebit',not_reported_zero=True,
+                open_requirement_reference='/history_approval/open_analyst_use_requirements/0')
         capex=f('productive_cash' if t in ('V','LRCX') else 'other_ppe_cash' if t=='LLY' else 'cash_capex',-1,origin='proxy' if t=='LRCX' else 'reported')
+        if energy:
+            if t=='CVX':
+                replay=row['existing_capex_policy_replay'];policy=replay['policy'];scope=policy['capex_scope']
+                selected=[o['fact'] for o in scope['occurrences'] if o['original_instance_ordinal'] in scope['confirming_original_ordinals']]
+                if (not replay['existing_approval'] or replay['gaps'] or not selected
+                        or any(D(x['numeric_value'])!=D(replay['value']) or x['accession_number']!=row['identity']['accession'] or x['start']!=row['identity']['annual_start'] or x['end']!=row['identity']['annual_end'] for x in selected)):
+                    raise ValueError('Exact approved CVX Capex occurrence/policy binding required')
+                capex=dict(value=str(-D(replay['value'])),raw_value=replay['value'],unit='USD',precision=selected[0]['decimals'],
+                    precision_variants=sorted({x['decimals'] for x in selected}),origin='reported',source_origin='reported',sign_multiplier=-1,
+                    source_reference=base+'/existing_capex_policy_replay',scope='Exact approved gross cash PP&E-equivalent scope only',
+                    curated_policy_replay=dict(policy_id=policy['policy_id'],version=policy['version'],policy_sha256=digest(policy),existing_approval=True))
+            elif t=='MRK' and row['fiscal_year']<2023:
+                capex=f('productive_cash',-1,origin='proxy')
         if t=='LLY':
             generation=row['refreshed_capex']
             if (not generation or generation['original_byte_equivalence']!='UNPROVED'
@@ -226,14 +277,14 @@ def large_view(package,record):
             reported_cash_flow_working_capital_movements=dict(rows=deepcopy(row['movement_rows']),source_reference=base+'/cfo_reconciliation',additional_deduction_permitted=False,book_delta_nwc=False),
             deferred_taxes=dict(displayed_rows=deferred_rows,note_observation=f('deferred_tax'),other_observation=f('deferred_movement'),
                 source_reference=base+'/cfo_reconciliation',separate_pure_operation='APPROVED_NO_SEPARATE_PURE_OPERATION_MIXED_ROW_PRESERVED' if t=='AVGO' else 'REPORTED_DISPLAYED_POPULATION',value_if_unavailable=None),
-            stock_based_compensation=dict(selected=f(row['proposed_selections']['sbc'] if network or pharma or semicon else 'sbc_expense',origin='proxy'),addback=f('face_sbc' if t=='INTC' else 'sbc_addback'),count_once=True),
+            stock_based_compensation=dict(selected=f(row['proposed_selections']['sbc'] if network or pharma or semicon or energy else 'sbc_expense',origin='proxy'),addback=f('face_sbc' if t=='INTC' else 'sbc_addback'),count_once=True),
             unclassified_cfo_reconciliation_residual=dict(value=None,disposition='APPROVED_NO_SEPARATE_OPERATION',not_reported_zero=True),
-            reported_cfo=f('cfo'),
+            reported_cfo=f('selected_cfo' if energy else 'cfo'),
             reported_tax_context=dict(provision=f(row['proposed_selections']['tax'] if semicon else 'tax' if priority or network or pharma else 'face_tax'),pretax=f('pretax'),reported_etr=None if row['facts'].get('reported_etr',{}).get('selection_status','').startswith('UNSELECTED') else f('reported_etr'),
                 cash_taxes=f('cash_tax' if 'cash_tax' in row['facts'] else 'cash_tax_gross',-1),
                 original_policy_context_reference=base+'/preparation_ledger_evidence/retained-reported-tax-context-ledger',
                 original_generic_conflicts_preserved=True,no_new_ratio_computed=True,future_rate_approved=False),
-            cash_investment_components=dict(selected=c('current_financial_captions' if network or pharma or semicon else 'gross_current_financial'),unrestricted_or_excess_cash=False,unknown_restrictions=None,operating_reserve=None,
+            cash_investment_components=dict(selected=c('current_financial_captions' if network or pharma or semicon or energy else 'gross_current_financial'),unrestricted_or_excess_cash=False,unknown_restrictions=None,operating_reserve=None,
                 other_balances={k:f(k) for k in ('restricted_current','restricted_noncurrent','restricted_cash','noncurrent_investments','marketable_long','equity_method','lessor_net_receivable','lessor_net_current','lessor_net_noncurrent') if k in row['facts']},
                 parent_child_overlap_not_additive=True,other_populations_reference=base+'/supporting_note_rows'),
             debt_lease_components=dict(selected=c('named_financing'),additional_borrowing=None,no_additional_adjustment=dict(origin='analyst_assumption',approved=True,value=None,
@@ -345,6 +396,61 @@ def large_view(package,record):
             claims.update(population_relationships_reference=base+'/population_relationships',plan_assets_liabilities_not_automatically_netted=True,
                 plan_obligation_is_not_broader_accrued_compensation=t=='LRCX')
             inputs['point_in_time_shares'].update(class_parent_overlap_not_additive=True,conversion_or_dilution_approved=False,source_comparability_reference=base+'/passages')
+        if energy:
+            cf_reference=base+('/independent_displayed_cfo' if displayed else '/cfo_reconciliation')
+            perimeter='Original-as-filed continuing operations' if t=='MRK' and row['fiscal_year']<2024 else 'Original-as-filed consolidated/root presentation'
+            inputs['revenue']=f('face_revenue' if t=='CVX' else 'revenue')
+            if t=='CVX':inputs['revenue'].update(generic_conflict_preserved=True,alternatives_reference=base+'/alternatives/revenue',
+                selection_rationale='Explicitly approved face Sales; broader Revenues is not economically equivalent and does not repair EBIT')
+            inputs['reported_cfo'].update(perimeter=perimeter,original_parser_status=row['cfo_reconciliation']['status'],
+                independent_reconciliation_reference=cf_reference,discontinued_observation=f('discontinued_cfo'))
+            if precision_check:
+                inputs['reported_cfo']['displayed_precision_check']=dict(precision_check,exact_arithmetic=D(precision_check['difference'])==0,
+                    unchanged_existing_rule=True,no_plug=True,source_discrepancy_cause=None)
+            inputs['reported_cash_flow_working_capital_movements'].update(perimeter=perimeter,source_reference=base+'/movement_rows',reconciliation_reference=cf_reference)
+            # Do not misclassify CVX other deferred charges as deferred TAX.
+            inputs['deferred_taxes'].update(displayed_rows=[deepcopy(x) for x in detail if x.get('caption','').strip().lower().startswith('deferred income tax')],
+                source_reference=cf_reference,perimeter=perimeter,separate_pure_operation='RETAIN_DISPLAYED_TAX_ROWS_ONLY_NO_NOTE_INSERTION')
+            inputs['depreciation_amortization']['qualification']={
+                'CVX':'Depletion-inclusive consolidated energy DD&A proxy; no equivalence to industrial D&A or repair of unavailable EBIT',
+                'MRK':'Limited continuing CFO depreciation plus amortization proxy; separate impairment excluded, accelerated/manufacturing/inventory scope retained',
+                'PG':'Limited manufacturing/corporate CFO D&A proxy; no second intangible amortization, impairment or restructuring addition'}[t]
+            inv=inputs['cash_capex'];inv.update(pure_cash_ppe=None,
+                investment_perimeter='BROADER_CONTINUING_CAPITAL_EXPENDITURES_APPROVED_PROXY' if t=='MRK' and row['fiscal_year']<2023 else 'EXISTING_APPROVED_CASH_PPE_EQUIVALENT' if t=='CVX' else 'EXISTING_DIRECT_CASH_PPE_SCOPE',
+                pure_ppe_scope_approved=False if t=='MRK' and row['fiscal_year']<2023 else None,
+                prior_negative_findings_preserved=t=='MRK',other_cash_investment_reference=base+'/supporting_note_rows')
+            inv['other_disclosures'].update({k:f(k,row.get('cash_sign_multipliers',{}).get(k,1)) for k in ('productive_cash','investment_acquisitions','investment_cash','other_ppe_cash','sale_ppe') if k in row['facts']})
+            tax=inputs['reported_tax_context'];replay=row['reported_tax_policy_replay']
+            pretax_key='pretax_extension' if t=='PG' and row['fiscal_year']<2024 else 'pretax_equity_scope' if t=='CVX' else 'pretax'
+            tax.update(provision=f('tax'),pretax=f(pretax_key),reported_etr=f('reported_etr'),
+                original_policy_etr=deepcopy(replay['etr']),original_policy_provenance_reference=base+'/reported_tax_policy_replay',
+                generic_denominator_approval_changed=False,issuer_disclosure_not_new_ratio=True,perimeter=perimeter)
+            if not tax['provision'] or D(tax['provision']['value'])!=D(replay['fields']['provision']['value']):raise ValueError('Exact reported provision binding required')
+            if pretax_key=='pretax_extension':
+                if replay['fields']['pretax']['status']!='UNAVAILABLE' or replay['etr']['value'] is not None or not tax['pretax']:
+                    raise ValueError('PG company extension must preserve generic Pretax/ETR nulls')
+                tax['pretax'].update(company_specific_selection=True,generic_extension_policy_changed=False)
+            elif not tax['pretax'] or D(tax['pretax']['value'])!=D(replay['fields']['pretax']['value']):raise ValueError('Existing approved Pretax scope binding required')
+            cash=inputs['cash_investment_components'];cash['other_balances'].update({k:f(k) for k in ('face_cash','current_investments','marketable_current','marketable_long','cash_restricted_parent','restricted_cash_current','restricted_current','restricted_noncurrent','equity_method','other_investments') if k in row['facts']})
+            cash.update(population_relationships_reference=base+'/population_relationships',unresolved_populations_reference=base+'/source_binding_exceptions',
+                face_cash_uses_broader_qname=t=='PG',restrictions_not_proven_absent=True)
+            debt=inputs['debt_lease_components'];debt.update(finance_leases_already_included=True if t=='CVX' else None,
+                scope='Named carrying captions only; missing subamounts and unquantified additional borrowing remain unknown',
+                population_relationships_reference=base+'/population_relationships',other_reported_populations={k:f(k) for k in ('face_current_borrowing','short_borrowing','cp','other_short_borrowing','debt_current','debt_long','debt_parent','debt_finance_long','debt_fair_value','finance_lease','finance_current','finance_long','op_lease','op_current','op_long') if k in row['facts']})
+            if t=='PG':
+                components={k:f(k) for k in ('cp','debt_current','other_short_borrowing')};face=f('face_current_borrowing')
+                total=sum((D(x['value']) for x in components.values()),D(0));difference=total-D(face['value'])
+                debt['retained_component_check']=dict(components=components,face_parent=face,component_sum_usd=str(total),difference_usd=str(difference),
+                    status='UNEXPLAINED_DIFFERENCE' if difference else 'EXACT',difference_role='Source comparison only, NOT an adjustment or accepted input',
+                    face_parent_selected=True,no_plug=True,rounding_explanation=None,conflict_cleared=False)
+            claims=inputs['other_equity_bridge_claims_assets']
+            claims['known_populations'].update({k:f(k) for k in row['facts'] if k.startswith('claim:') or k in ('asset_retirement','pension_noncurrent','benefit_liabilities','retirement_expense','equity_method')})
+            claims.update(population_relationships_reference=base+'/population_relationships',plan_assets_liabilities_not_automatically_netted=True,
+                preferred_population_retained=t=='PG',other_source_observations_reference=base+'/facts')
+            claims['additional_adjustment']['rationale']='Approved no additional unidentified claim adjustment BEYOND retained known preferred/NCI/pension/ARO populations; not a no-preferred assumption, reported zero or immateriality. Potential omitted amounts remain unbounded.'
+            inputs['stock_based_compensation'].update(selection_rationale='Explicit company expense cost proxy, counted once; source expense and CFO add-back remain separate',
+                negative_expense_benefit_preserved=True,alternatives_reference=base+'/alternatives/sbc')
+            inputs['point_in_time_shares'].update(class_parent_overlap_not_additive=True,conversion_or_dilution_approved=False,source_comparability_reference=base+'/passages')
         if priority:
             inputs['reported_cfo']=f(row['proposed_cfo_fact'])
             cashflow_scope='Continuing operations' if t=='AMD' and row['fiscal_year']==2025 else 'Original consolidated reported population'
@@ -374,6 +480,7 @@ def large_view(package,record):
                 for key,value in inputs.items():value['panel']='ORIGINAL_AS_FILED_NOT_HOMOGENEOUS_CONTINUING_SERIES'
                 claims['scope_requirement_reference']='/history_approval/open_analyst_use_requirements/0'
         for value in inputs.values():value.update(review='ACCEPTED_FOR_STATED_HISTORICAL_SCOPE',approval_reference='/history_approval')
+        if energy and t=='CVX':inputs['ebit']['review']='OPEN_ESSENTIAL_REQUIREMENT_NOT_APPROVED'
         # Assess the existing operations, not a new demand for perfect disclosure.
         essentials={key:inputs[key] for key in ('revenue','ebit','depreciation_amortization','cash_capex','reported_cfo')}
         essentials.update(stock_based_compensation=inputs['stock_based_compensation']['selected'],
@@ -382,10 +489,13 @@ def large_view(package,record):
         if not all((inputs['reported_tax_context']['provision'],inputs['reported_tax_context']['pretax'])):gaps['reported_tax_context']='Reviewed provision/pretax selection unavailable'
         if not shares or any(not s.get('as_of') for s in shares.values()):gaps['point_in_time_shares']='Approved actual-date common population unavailable'
         if t=='JNJ':gaps.update({key:record['open_analyst_use_requirements'][0]['reason'] for key in JNJ_FLOW_FAMILIES})
+        if energy and t=='CVX':gaps['ebit']=record['open_analyst_use_requirements'][0]['reason']
         checklist=[]
         if len(row['family_checklist'])!=14 or {x['field'] for x in row['family_checklist']}!=set(inputs):raise ValueError('Exact14-family accounting required')
         for old in row['family_checklist']:
-            if any(key not in ids for key in old['pending_decisions']):raise ValueError('Missing exact family authorization')
+            missing_ids=[key for key in old['pending_decisions'] if key not in ids]
+            open_cvx_ebit=(energy and t=='CVX' and old['field']=='ebit' and old['status']=='ESSENTIAL_EXCEPTION' and missing_ids==['CVX-PERIMETER'])
+            if missing_ids and not open_cvx_ebit:raise ValueError('Missing exact family authorization')
             key=old['field'];gap=gaps.get(key)
             checklist.append(dict(field=key,status='UNRESOLVED_ESSENTIAL_INPUT' if gap else 'SATISFIED_WITHIN_APPROVED_HISTORICAL_PERIMETER',reason=gap,
                 approval_reference='/history_approval',effective_input_reference='/current_history/periods/'+str(i)+'/inputs/'+key))
@@ -401,6 +511,9 @@ def large_view(package,record):
         if t=='JNJ':
             view['selected_values_approved']=True
             for d in view['active_decisions']:d['status']='ACTIVE_HISTORICAL_SELECTION_OPEN_ANALYST_USE_REQUIREMENT'
+    if energy:
+        view['open_analyst_use_requirements']=deepcopy(record['open_analyst_use_requirements'])
+        if t=='CVX':view.update(selected_values_approved=True,joint_use_eligibility='NOT_ELIGIBLE_OPEN_EBIT_BUSINESS_PERIMETER')
     return view
 
 

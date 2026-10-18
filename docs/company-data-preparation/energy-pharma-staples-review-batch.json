@@ -1,4 +1,180 @@
 {
+  "approval_activation": {
+    "companies": {
+      "CVX": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "CVX-REV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CVX-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CVX-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CVX-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CVX-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CVX-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CVX-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CVX-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CVX-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "CVX-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "c45dc9630bbad45400ada7ae14b5c82065c6f1b5ee1e1e9e14f1dc54394baa39",
+        "completed": false
+      },
+      "MRK": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "MRK-PERIMETER",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MRK-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MRK-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MRK-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MRK-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MRK-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MRK-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MRK-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MRK-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "MRK-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "da891c5b864d0513f8849286d9214dbffbf86ffe4870f13af6b6640f123b6cbe",
+        "completed": true
+      },
+      "PG": {
+        "active_decisions": [
+          {
+            "accepted": true,
+            "decision_id": "PG-CF",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PG-DA",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PG-INV",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PG-SBC",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PG-TAX",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PG-CASH",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PG-FIN",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PG-CLAIMS",
+            "status": "ACTIVE"
+          },
+          {
+            "accepted": true,
+            "decision_id": "PG-SHARES",
+            "status": "ACTIVE"
+          }
+        ],
+        "approval_sha256": "a4e5fb7ca190f0db76c1f9a8cec71c25882c246cd76e723d26cbf4a2bba1c1ae",
+        "completed": true
+      }
+    },
+    "current_company_counts": {
+      "approved_partial": 3,
+      "assessment_only": 15,
+      "broadly_assessed": 42,
+      "completed_scoped": 24,
+      "pending_reviews": 0
+    },
+    "original_proposals_retained": true,
+    "phase1_closed": false
+  },
   "approved_partial_company_packages": 2,
   "broad_assessment_only": 15,
   "companies": {

@@ -1,6 +1,21 @@
 # PG — company data preparation
 
-## Current — CVX/MRK/PG consolidated retained company review
+## Current — approved company historical-input selections
+
+All9 recommendations activate through the existing revision-bound overlay. FY2022–2026 passes14/14 each,70/70, completed only for the approved historical perimeter. Exact first2 Pretax extensions17995/18353m are effective source-bound company selections while original generic Pretax/ETR nulls remain. Named financing uses unchanged face parents, with unexplained component differences−1/+1m in FY2025/26 retained; no plug or inferred rounding explanation. ESOP preferred, pension/plan assets, reserve/advances and debt overlaps remain visible, not a no-preferred assumption. Limited manufacturing/corporate D&A, broader cash QName/restrictions, source tax/SBC roles and class/date/award boundaries persist. Displayed CFO differences+1m in FY2024–26 remain SUPPORTED under the original precision rule, not exact equality or changed reported CFO.
+
+[Authoritative five-year schedule and checklist](PG-analyst-input-package.md) /
+[immutable authorization and active view](pg-analyst-input-package.json#/history_approval) /
+[consolidated validation and company counts](../energy-pharma-staples-review-batch-results.md).
+Source parents/proposals and unknowns are preserved exactly. Actual UTC, author,
+source/decision revisions, identity and audit digest bind acceptance; changed
+relevant inputs reject stale use. Omitted unidentified amounts remain unquantified,
+not reported zero or immaterial. No complete expense D&A/debt/reinvestment,
+financial-sufficiency certification, Phase1 closure or Phase2 approval.24 scoped
+completed histories,3 partial CAT/JNJ/CVX and15 assessment-only; no new acquisition.
+Prior records below remain historical.
+
+## Historical checkpoint — CVX/MRK/PG consolidated retained company review
 
 FY2022–2026 schedules propose a limited manufacturing/corporate CFO D&A proxy2807/2714/2896/2847/3160 without adding intangible amortization again; impairment/disposal/restructuring stay separate. Exact first2 pretax extensions17995/18353 and issuer reported ETR are source-bound; original generic policy nulls remain. Cash7214/8246/9482/9556/9942 uses actual face caption while preserving broader cash/restricted QName and restriction unknowns. Financing31493/34607/32460/34508/34138 uses DebtCurrent plus noncurrent debt, no extra CP/current maturities. ESOP preferred, reserve/Company advances, pension funding, NCI and actual-date shares/conversion/EPS populations remain separate, not a no-preferred assumption. All5 original CFO proofs SUPPORTED; cash PP&E3156/3062/3322/3773/4409 remains separate from acquisition/noncash investment. Nine proposed decisions, none active.
 

@@ -1,5 +1,92 @@
 # CVX / MRK / PG — ONE retained historical-input review
 
+## Authoritative approval activation and company outcomes
+
+**29 approved recommendations are ACTIVE; CVX-PERIMETER remains OPEN and excluded from approval.** Original proposals/facts remain below as a historical snapshot and unchanged in JSON. No acquisition, unapproved assumption, new equation, scope waiver, generic financial policy or Phase2 operation.
+
+|Company / current five-year schedule|Frozen FY|Per-year checklist|Company result|Active / open IDs|
+|---|---|---|---|---|
+|[CVX](company-data-preparation/CVX-analyst-input-package.md)|2021/2022/2023/2024/2025|13/14 ×5 =65/70|PARTIAL — essential EBIT null5|10 active / CVX-PERIMETER OPEN|
+|[MRK](company-data-preparation/MRK-analyst-input-package.md)|2021/2022/2023/2024/2025|14/14 ×5 =70/70|COMPLETED, approved historical perimeter|10 active|
+|[PG](company-data-preparation/PG-analyst-input-package.md)|2022/2023/2024/2025/2026|14/14 ×5 =70/70|COMPLETED, approved historical perimeter|9 active|
+
+**205/210 existing family-period operations satisfied; five CVX EBIT requirements remain essential.** No whole-issuer readiness is inferred from reported CFO. Qualified MRK/PG completion preserves proxy/assumption distinctions and financial limitations.
+
+### All29 approved IDs and the one unapproved exception
+
+|ID|Disposition|Approved numerical effect / source observations|
+|---|---|---|
+|CVX-REV|ACTIVE, revision-bound|155606/235717/196913/193414/184432 USDm; broader 162465/246252/200949/202792/189031 USDm|
+|CVX-CF|ACTIVE, revision-bound|29187/49602/35609/31492/33939 USDm|
+|CVX-DA|ACTIVE, revision-bound|17925/16319/17326/17282/20132 USDm|
+|CVX-INV|ACTIVE, revision-bound|7515/10349/14788/15544/16830 USDm|
+|CVX-SBC|ACTIVE, revision-bound|701/1013/-100/510/399 USDm; CFO add-back unknown/unknown/unknown/unknown/unknown USDm|
+|CVX-TAX|ACTIVE, revision-bound|5950/14066/8173/9757/7258 USDm provision; pretax extension unknown/unknown/unknown/unknown/unknown USDm|
+|CVX-CASH|ACTIVE, revision-bound|5675/17901/8223/6781/6293 USDm|
+|CVX-FIN|ACTIVE, revision-bound|31369/23339/20836/24541/40758 USDm|
+|CVX-CLAIMS|ACTIVE, revision-bound|Source-bound claims retained, no bridge/valuation calculation.|
+|CVX-SHARES|ACTIVE, revision-bound|Exact source counts/dates/precision in shares:*; no numerical dilution assumption.|
+|CVX-PERIMETER|OPEN_ESSENTIAL_EXCEPTION — NOT APPROVED|No defensible EBIT numerical selection established.|
+|MRK-PERIMETER|ACTIVE, revision-bound|Continuing CFO13122/19095/13006; root21468/16472, not FY2021 implied consolidated14109.|
+|MRK-CF|ACTIVE, revision-bound|13122/19095/13006/21468/16472 USDm|
+|MRK-DA|ACTIVE, revision-bound|3214/3909/3872/4499/5838 USDm|
+|MRK-INV|ACTIVE, revision-bound|4448/4388/unknown/unknown/unknown USDm broader first2; direct unknown/unknown/3863/3372/4112 USDm|
+|MRK-SBC|ACTIVE, revision-bound|479/541/645/761/820 USDm; CFO add-back 479/541/645/761/820 USDm|
+|MRK-TAX|ACTIVE, revision-bound|1521/1918/1512/2803/2804 USDm provision; pretax extension unknown/unknown/unknown/unknown/unknown USDm|
+|MRK-CASH|ACTIVE, revision-bound|8096/13192/7093/13689/14565 USDm|
+|MRK-FIN|ACTIVE, revision-bound|33102/30691/35055/37111/49339 USDm|
+|MRK-CLAIMS|ACTIVE, revision-bound|Source-bound claims retained, no bridge/valuation calculation.|
+|MRK-SHARES|ACTIVE, revision-bound|Exact source counts/dates/precision in shares:*; no numerical dilution assumption.|
+|PG-CF|ACTIVE, revision-bound|16723/16848/19846/17817/19556 USDm|
+|PG-DA|ACTIVE, revision-bound|2807/2714/2896/2847/3160 USDm|
+|PG-INV|ACTIVE, revision-bound|unknown/unknown/unknown/unknown/unknown USDm broader first2; direct 3156/3062/3322/3773/4409 USDm|
+|PG-SBC|ACTIVE, revision-bound|528/545/562/476/524 USDm; CFO add-back 528/545/562/476/524 USDm|
+|PG-TAX|ACTIVE, revision-bound|3202/3615/3787/4102/4233 USDm provision; pretax extension 17995/18353/unknown/unknown/unknown USDm|
+|PG-CASH|ACTIVE, revision-bound|7214/8246/9482/9556/9942 USDm|
+|PG-FIN|ACTIVE, revision-bound|31493/34607/32460/34508/34138 USDm|
+|PG-CLAIMS|ACTIVE, revision-bound|Source-bound claims retained, no bridge/valuation calculation.|
+|PG-SHARES|ACTIVE, revision-bound|Exact source counts/dates/precision in shares:*; no numerical dilution assumption.|
+
+The [machine current view and audits](company-data-preparation/energy-pharma-staples-review-batch.json#/approval_activation) bind actual authorization, UTC, exact five identities, source/proposal revisions and immutable audit hashes. Relevant evidence/value/scope/precision/candidate/calculation/decision changes reject stale use. Source nulls, negative SBC, earlier proposals and alternatives remain byte-identical to the pre-approval parent. No missing-value acknowledgment supplies a number.
+
+CVX retains face Sales, depletion-inclusive DD&A, exact unchanged Capex v2, FY2023 SBC−100m, carrying-caption financing and ARO/pension/NCI/affiliate populations. **Only EBIT remains essential:** mixed-tax affiliate income, unknown operating/nonoperating Other and incomplete benefit allocation prevent the matched industrial EBIT population in all5 years. No substitute Pretax+interest, after-tax segment subtotal, expressionC, source zero or waiver. These accepted observations are not jointly eligible as a completed operating-income package; no new research queue is launched.
+
+MRK retains source-compatible continuing panels, exact existing EBIT derivations, continuing CFO13122m versus discontinued987m in FY2021 and original parser PARTIAL5 alongside independent exact arithmetic. Broader FY2021/22 cash-investment proxies4448/4388m do not reverse pure-PP&E negative findings. PG first2 exact Pretax-extension selections17995/18353m preserve generic nulls; source tax roles and issuer ETR remain separate with no new ratio. Known ESOP preferred, pension/funding/reserve overlaps remain, never a no-preferred assumption. Named debt uses the face parent; unexplained child/parent differences−1m/+1m in FY2025/26 stay visible without a plug or rounding explanation.
+
+### PG CFO precision outcome — distinct from borrowing-component differences
+
+|FY|Displayed-row sum USDm|Reported CFO USDm|Difference USDm|Unchanged precision interval USDm|Result|
+|---|---|---|---|---|---|
+|2022|16723|16723|0|6|SUPPORTED — exact|
+|2023|16848|16848|0|6|SUPPORTED — exact|
+|2024|19847|19846|1|6|SUPPORTED within existing precision, NOT exact|
+|2025|17818|17817|1|5.5|SUPPORTED within existing precision, NOT exact|
+|2026|19557|19556|1|5.5|SUPPORTED within existing precision, NOT exact|
+
+An initial common-view exact-sum guard exposed the existing PG+1m differences. The overlay now replays the **unchanged existing** `cfo_statement_reconciliation.check_rows` rule, verifying original status/difference/tolerance/precision and rejecting unsupported proofs. It does not widen tolerances, assert rounding as the proved cause, add a residual or change reported CFO. Other-company exact checks stay unchanged.
+
+### Counts, preserved exceptions and next candidates
+
+**42 broadly assessed;27 packages =24 completed scoped histories +3 approved partial CAT/JNJ/CVX;0 pending recommendations;15 assessment-only.** The22 completed peers, CAT SBC/JNJ scope, XOM empty history, source/financial-policy blockers, frozen artifacts and pilot bytes remain unchanged. No complete debt/reinvestment/pure expense D&A, excess cash, diluted total, financial-sufficiency certification or Phase1 closure is claimed. Future tax rates, forecast assumptions, award valuation and all valuation calculations remain Phase2 decisions.
+
+Next unreviewed candidates **PM, HD, NFLX**, identified only from frozen snapshot order after excluding reviewed packages, specialized classifications and empty histories. Each has five exact manifest selections (rows125–129,130–134,135–139 respectively); XOM has none and remains a separate exception. [Frozen order](universe/sp500-top-50-2026-10-02.csv) / [authoritative classifications](universe/phase-1h5-issuer-validation.json) / [identity manifest](phase1-selected-filing-identity-manifest.json). No review or new acquisition is started.
+
+### Current milestone validation
+
+**PASS — current activation validation, separate from historical review results below.**
+
+- **65 tests passed in62.148s:** `test_energy_pharma_staples_activation` plus the existing semiconductor/software, pharma/tech, network, priority, large-company, original company-batch activation and preparation-preservation modules. Exact29 authorizations, source/decision revisions and actual UTC, immutable audits, effective financial selections, negative SBC, scope/overlap, CFO precision-proof replay, null EBIT, serialization, persistence/restart, missing/forged/stale rejection, CAT/JNJ exceptions and original package/frozen/pilot preservation are covered. This comprises10 new approval tests and55 existing regressions; no full-suite/corpus run.
+- **10 retained-source tests passed in70.239s:** `PYTHONPATH=src:scripts .venv/bin/python -m unittest tests.analyst.test_energy_pharma_staples_review_batch -v`. This rebuilds the15 exact selected annuals and checks all4 committed JSON outputs including effective views/audits,210 family slots, original source occurrences/receipts, exact Capex/EBIT policy proofs, roles/signs/precision and source-parent preservation. Review-only assertions read the unchanged historical parent; effective outcomes are separately checked, not substituted for old source statuses.
+- MSFT/AAPL/Alphabet `build()` results each exactly equal their unchanged accepted package bytes, including source/audit/current views. All24 earlier company package bytes remain unchanged; the three new source/proposal parents exactly equal their pre-approval versions at `70d0feed195fcb605935c4849f3c371b7cbe9c34`.
+- **1,850 affected local/source/ledger references and1,667 root view/audit pointers passed.**15 identities/210 slots reconcile to29 ACTIVE IDs and one OPEN exception; current counts reconcile to42 issuers:24 scoped complete,3 partial,15 assessment-only. PM/HD/NFLX candidate identities/counts were checked against frozen order, actual classifications and manifest selections only.
+- `.venv/bin/python -m compileall -q src scripts tests` and `git diff --check`: **PASS**. No `src` policy/schema/runtime, retained evidence, frozen universe or original fixture changes; existing financial blockers and history exceptions remain.
+
+The shared acceptance mechanism gained only a gated integration for these explicitly approved companies. PG uses the existing displayed-precision checker and retains source discrepancies; no tolerance, source amount or financial assertion was relaxed. CVX rejects any supplied EBIT value, including zero, before interpreting it as a candidate. Reported/derived facts, approved proxies and unbounded analyst omissions remain distinct through serialization. No new generic treatment, acquisition, company review, financial-sufficiency certification, Phase1 closure or Phase2 work.
+
+## Historical pre-acceptance review — preserved snapshot
+
+The original29 proposals and one OPEN exception below are retained for history. Current approval status and effective selections are above; historical then-inactive labels are not the current view.
+
 **All new judgments are INACTIVE.** One sheet covers29 proposed company decisions plus1 OPEN essential CVX exception, not30 approvals. [Machine companion](company-data-preparation/energy-pharma-staples-review-batch.json). Source baseline `956c5c488247eb27ad432b3d1a0fd942a4f29e6e`.
 
 |Company / schedule and14-family matrix|Exact fiscal years|Source-supported|Proposed|Essential exception|

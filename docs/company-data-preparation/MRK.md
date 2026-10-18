@@ -1,6 +1,21 @@
 # MRK — company data preparation
 
-## Current — CVX/MRK/PG consolidated retained company review
+## Current — approved company historical-input selections
+
+All10 recommendations activate through the existing revision-bound overlay. FY2021–2025 passes14/14 each,70/70, completed only for the approved historical perimeter. Original-as-filed continuing FY2021–23/root FY2024–25 panels use existing EBIT derivations and independently exact displayed CFO proofs; original parser PARTIAL5 remains unchanged. FY2021 continuing13122m/discontinued987m, continuing SBC479m/broader498m, acquired-IPR&D expense versus deal cash remain separate. Broader capital-expenditures proxies4448/4388m activate for FY2021/22 without reversing pure-PP&E NO-GO or inventing software/cloud allocations. Limited D&A, named financing, unknown lease/claim subamounts and Jan31 cover-date shares retain their approved scope.
+
+[Authoritative five-year schedule and checklist](MRK-analyst-input-package.md) /
+[immutable authorization and active view](mrk-analyst-input-package.json#/history_approval) /
+[consolidated validation and company counts](../energy-pharma-staples-review-batch-results.md).
+Source parents/proposals and unknowns are preserved exactly. Actual UTC, author,
+source/decision revisions, identity and audit digest bind acceptance; changed
+relevant inputs reject stale use. Omitted unidentified amounts remain unquantified,
+not reported zero or immaterial. No complete expense D&A/debt/reinvestment,
+financial-sufficiency certification, Phase1 closure or Phase2 approval.24 scoped
+completed histories,3 partial CAT/JNJ/CVX and15 assessment-only; no new acquisition.
+Prior records below remain historical.
+
+## Historical checkpoint — CVX/MRK/PG consolidated retained company review
 
 FY2021–2025 original-as-filed continuing panels FY2021–23/root FY2024–25 are proposed; retained sales/approved EBIT/taxes/continuing cash support them without an invented mismatch or recast splice. Approved EBIT12538/17945/2355/19912/21218 replays exact registered policy/operands. Five independent displayed CFO checks13122/19095/13006/21468/16472 are exact; original PARTIAL5 remains. Organon discontinued987 FY2021 is separate. Limited D&A3214/3909/3872/4499/5838 is proposed; accelerated/impairment/manufacturing scope remains. First2 broader cash productive4448/4388 proposals preserve prior pure-PP&E denial. Continuing expense479 differs from total498; acquisition/IPR&D add-backs and cash remain separate. Named financing33102/30691/35055/37111/49339 uses exact current face total, not rounded maturities. Ten proposed decisions, none active.
 

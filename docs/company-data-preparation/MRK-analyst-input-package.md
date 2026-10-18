@@ -1,5 +1,86 @@
 # MRK — full selected-history analyst-input review
 
+## Authoritative current five-year accepted schedule
+
+**Completed for the expressly approved historical-input perimeter —70/70 existing requirements.** No Phase1 closure, complete expense D&A/debt/reinvestment, financial-sufficiency certification or Phase2 use.
+
+[Effective selections and immutable approval](mrk-analyst-input-package.json#/current_history) / [revision-bound audit](mrk-analyst-input-package.json#/history_approval) / [consolidated outcomes and validation](../energy-pharma-staples-review-batch-results.md).
+
+User authority: all29 recommendations, explicitly excluding CVX-PERIMETER. Actual recording UTC `2026-10-18T07:02:20.709294+00:00`; audit `da891c5b864d0513f8849286d9214dbffbf86ffe4870f13af6b6640f123b6cbe`; source revision `ebd73a2a4df9fce237042bcfbc3cc2d28f031e6c61145360200a16f96fb1cdab`; approved proposal revision `e2dc9f99ee5b39b40c72b6b215a2ae46b2e4635656d71dd865e78db703e1aad2`; source baseline `70d0feed195fcb605935c4849f3c371b7cbe9c34`. Original source/proposal bytes remain unchanged beneath the separate overlay. Relevant source, evidence, precision, scope, candidate, calculation or decision changes reject stale acceptance.
+
+Amounts USDm unless stated. Linked cells expose exact source/period, precision, role and policy/occurrence provenance. **Proxy is not verified complete expense.** All amounts and uncertainty remain within each approved company perimeter.
+
+|Selected operation / role|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|Revenue|[48704](mrk-analyst-input-package.json#/current_history/periods/0/inputs/revenue) (reported; decimals -6)|[59283](mrk-analyst-input-package.json#/current_history/periods/1/inputs/revenue) (reported; decimals -6)|[60115](mrk-analyst-input-package.json#/current_history/periods/2/inputs/revenue) (reported; decimals -6)|[64168](mrk-analyst-input-package.json#/current_history/periods/3/inputs/revenue) (reported; decimals -6)|[65011](mrk-analyst-input-package.json#/current_history/periods/4/inputs/revenue) (reported; decimals -6)|
+|EBIT — existing derived policy|[12538](mrk-analyst-input-package.json#/current_history/periods/0/inputs/ebit) (derived; decimals derived_exact_from_registered_operand_precision)|[17945](mrk-analyst-input-package.json#/current_history/periods/1/inputs/ebit) (derived; decimals derived_exact_from_registered_operand_precision)|[2355](mrk-analyst-input-package.json#/current_history/periods/2/inputs/ebit) (derived; decimals derived_exact_from_registered_operand_precision)|[19912](mrk-analyst-input-package.json#/current_history/periods/3/inputs/ebit) (derived; decimals derived_exact_from_registered_operand_precision)|[21218](mrk-analyst-input-package.json#/current_history/periods/4/inputs/ebit) (derived; decimals derived_exact_from_registered_operand_precision)|
+|Limited D&A proxy|[3214](mrk-analyst-input-package.json#/current_history/periods/0/inputs/depreciation_amortization) (proxy; inherited operand decimals -6/-6)|[3909](mrk-analyst-input-package.json#/current_history/periods/1/inputs/depreciation_amortization) (proxy; inherited operand decimals -6/-6)|[3872](mrk-analyst-input-package.json#/current_history/periods/2/inputs/depreciation_amortization) (proxy; inherited operand decimals -6/-6)|[4499](mrk-analyst-input-package.json#/current_history/periods/3/inputs/depreciation_amortization) (proxy; inherited operand decimals -6/-6)|[5838](mrk-analyst-input-package.json#/current_history/periods/4/inputs/depreciation_amortization) (proxy; inherited operand decimals -6/-6)|
+|Cash investment outflow|[-4448](mrk-analyst-input-package.json#/current_history/periods/0/inputs/cash_capex) (proxy; decimals -6)|[-4388](mrk-analyst-input-package.json#/current_history/periods/1/inputs/cash_capex) (proxy; decimals -6)|[-3863](mrk-analyst-input-package.json#/current_history/periods/2/inputs/cash_capex) (reported; decimals -6)|[-3372](mrk-analyst-input-package.json#/current_history/periods/3/inputs/cash_capex) (reported; decimals -6)|[-4112](mrk-analyst-input-package.json#/current_history/periods/4/inputs/cash_capex) (reported; decimals -6)|
+|Reported CFO|[13122](mrk-analyst-input-package.json#/current_history/periods/0/inputs/reported_cfo) (reported; decimals -6)|[19095](mrk-analyst-input-package.json#/current_history/periods/1/inputs/reported_cfo) (reported; decimals -6)|[13006](mrk-analyst-input-package.json#/current_history/periods/2/inputs/reported_cfo) (reported; decimals -6)|[21468](mrk-analyst-input-package.json#/current_history/periods/3/inputs/reported_cfo) (reported; decimals -6)|[16472](mrk-analyst-input-package.json#/current_history/periods/4/inputs/reported_cfo) (reported; decimals -6)|
+|SBC cost proxy — once|[479](mrk-analyst-input-package.json#/current_history/periods/0/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[541](mrk-analyst-input-package.json#/current_history/periods/1/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[645](mrk-analyst-input-package.json#/current_history/periods/2/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[761](mrk-analyst-input-package.json#/current_history/periods/3/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[820](mrk-analyst-input-package.json#/current_history/periods/4/inputs/stock_based_compensation/selected) (proxy; decimals -6)|
+|SBC CFO add-back — distinct role|[479](mrk-analyst-input-package.json#/current_history/periods/0/inputs/stock_based_compensation/addback) (reported; decimals -6)|[541](mrk-analyst-input-package.json#/current_history/periods/1/inputs/stock_based_compensation/addback) (reported; decimals -6)|[645](mrk-analyst-input-package.json#/current_history/periods/2/inputs/stock_based_compensation/addback) (reported; decimals -6)|[761](mrk-analyst-input-package.json#/current_history/periods/3/inputs/stock_based_compensation/addback) (reported; decimals -6)|[820](mrk-analyst-input-package.json#/current_history/periods/4/inputs/stock_based_compensation/addback) (reported; decimals -6)|
+|Historical tax provision|[1521](mrk-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/provision) (reported; decimals -6)|[1918](mrk-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/provision) (reported; decimals -6)|[1512](mrk-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/provision) (reported; decimals -6)|[2803](mrk-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/provision) (reported; decimals -6)|[2804](mrk-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/provision) (reported; decimals -6)|
+|Historical Pretax selection|[13879](mrk-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/pretax) (reported; decimals -6)|[16444](mrk-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/pretax) (reported; decimals -6)|[1889](mrk-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/pretax) (reported; decimals -6)|[19936](mrk-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/pretax) (reported; decimals -6)|[21067](mrk-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/pretax) (reported; decimals -6)|
+|Issuer reported ETR — pure ratio, not forecast|[0.110](mrk-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.117](mrk-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.800](mrk-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.141](mrk-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.133](mrk-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|
+|Cash taxes — net/gross source scope retained|[-2400](mrk-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/cash_taxes) (reported; decimals -8)|[unavailable](mrk-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/cash_taxes)|[-4338](mrk-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-3928](mrk-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-6086](mrk-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|
+|Named gross financial captions — not excess cash|[8096](mrk-analyst-input-package.json#/current_history/periods/0/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6)|[13192](mrk-analyst-input-package.json#/current_history/periods/1/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6/-6)|[7093](mrk-analyst-input-package.json#/current_history/periods/2/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6/-6)|[13689](mrk-analyst-input-package.json#/current_history/periods/3/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6/-6)|[14565](mrk-analyst-input-package.json#/current_history/periods/4/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6/-6)|
+|Named financing — not complete debt|[33102](mrk-analyst-input-package.json#/current_history/periods/0/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[30691](mrk-analyst-input-package.json#/current_history/periods/1/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[35055](mrk-analyst-input-package.json#/current_history/periods/2/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[37111](mrk-analyst-input-package.json#/current_history/periods/3/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[49339](mrk-analyst-input-package.json#/current_history/periods/4/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|
+|Movement detail — observations, already in CFO|[7 rows; partial scope](mrk-analyst-input-package.json#/current_history/periods/0/inputs/reported_cash_flow_working_capital_movements)|[7 rows; partial scope](mrk-analyst-input-package.json#/current_history/periods/1/inputs/reported_cash_flow_working_capital_movements)|[7 rows; partial scope](mrk-analyst-input-package.json#/current_history/periods/2/inputs/reported_cash_flow_working_capital_movements)|[7 rows; partial scope](mrk-analyst-input-package.json#/current_history/periods/3/inputs/reported_cash_flow_working_capital_movements)|[7 rows; partial scope](mrk-analyst-input-package.json#/current_history/periods/4/inputs/reported_cash_flow_working_capital_movements)|
+|Deferred TAX reconciliation detail|[187](mrk-analyst-input-package.json#/current_history/periods/0/inputs/deferred_taxes)|[-1568](mrk-analyst-input-package.json#/current_history/periods/1/inputs/deferred_taxes)|[-1899](mrk-analyst-input-package.json#/current_history/periods/2/inputs/deferred_taxes)|[-1249](mrk-analyst-input-package.json#/current_history/periods/3/inputs/deferred_taxes)|[-1671](mrk-analyst-input-package.json#/current_history/periods/4/inputs/deferred_taxes)|
+|CFO residual — approved no separate operation, not zero|[not computed; no zero](mrk-analyst-input-package.json#/current_history/periods/0/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](mrk-analyst-input-package.json#/current_history/periods/1/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](mrk-analyst-input-package.json#/current_history/periods/2/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](mrk-analyst-input-package.json#/current_history/periods/3/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](mrk-analyst-input-package.json#/current_history/periods/4/inputs/unclassified_cfo_reconciliation_residual)|
+|Known claims/assets — no aggregate or netting|[11 separate observations](mrk-analyst-input-package.json#/current_history/periods/0/inputs/other_equity_bridge_claims_assets)|[11 separate observations](mrk-analyst-input-package.json#/current_history/periods/1/inputs/other_equity_bridge_claims_assets)|[11 separate observations](mrk-analyst-input-package.json#/current_history/periods/2/inputs/other_equity_bridge_claims_assets)|[11 separate observations](mrk-analyst-input-package.json#/current_history/periods/3/inputs/other_equity_bridge_claims_assets)|[11 separate observations](mrk-analyst-input-package.json#/current_history/periods/4/inputs/other_equity_bridge_claims_assets)|
+
+All component/claim counts are inventories, not complete financial fields. Movements are supporting cash contributions already included in CFO, never second deductions or reconstructed book ΔNWC. Noncash additions, creditors, acquisitions/IPR&D, impairments, restricted/strategic holdings and different debt measurements remain separate source observations in the linked payload. No new subtotal or balancing adjustment is created.
+
+## Current14-family checklist
+
+S = satisfied only within the explicitly approved historical operation; E = unresolved essential input, not approved.
+
+|Family|2021|2022|2023|2024|2025|
+|---|---|---|---|---|---|
+|revenue|S|S|S|S|S|
+|ebit|S|S|S|S|S|
+|depreciation_amortization|S|S|S|S|S|
+|cash_capex|S|S|S|S|S|
+|reported_cash_flow_working_capital_movements|S|S|S|S|S|
+|deferred_taxes|S|S|S|S|S|
+|stock_based_compensation|S|S|S|S|S|
+|unclassified_cfo_reconciliation_residual|S|S|S|S|S|
+|reported_cfo|S|S|S|S|S|
+|reported_tax_context|S|S|S|S|S|
+|cash_investment_components|S|S|S|S|S|
+|debt_lease_components|S|S|S|S|S|
+|other_equity_bridge_claims_assets|S|S|S|S|S|
+|point_in_time_shares|S|S|S|S|S|
+
+|FY|Passed /14|Remaining essential inputs|Original parser / effective independent basis|
+|---|---|---|---|
+|2021|14|none|PARTIAL / independent continuing/root displayed rows, exact difference0|
+|2022|14|none|PARTIAL / independent continuing/root displayed rows, exact difference0|
+|2023|14|none|PARTIAL / independent continuing/root displayed rows, exact difference0|
+|2024|14|none|PARTIAL / independent continuing/root displayed rows, exact difference0|
+|2025|14|none|PARTIAL / independent continuing/root displayed rows, exact difference0|
+
+FY2021–2023 original-as-filed continuing panels align retained income/approved EBIT/tax, CFO/D&A and investment; FY2024–2025 retain root presentation, not spliced recasts. FY2021 selected continuing CFO **13,122m** and discontinued **987m** stay separate. Original parser PARTIAL5 remains; exact displayed18/17/18/16/16term checks are effective supporting proofs. FY2021/22 broader **4,448/4,388m** investment proxies are active, **not pure PP&E**; prior negative findings and missing software/cloud split remain. Limited D&A, continuing SBC479 versus broader498, acquisitions/IPR&D cash versus expense, unknown lease subamounts and actual Jan31 cover shares remain explicit.
+
+## Current dated share selections — no automatic aggregation
+
+|FY|Selected source population|Shares|Actual date|Source decimals|
+|---|---|---|---|---|
+|2021|shares:EntityCommonStockSharesOutstanding:2022-01-31:4f53cda1|2527733606|2022-01-31|INF|
+|2022|shares:EntityCommonStockSharesOutstanding:2023-01-31:4f53cda1|2538592467|2023-01-31|INF|
+|2023|shares:EntityCommonStockSharesOutstanding:2024-01-31:4f53cda1|2532643872|2024-01-31|INF|
+|2024|shares:EntityCommonStockSharesOutstanding:2025-01-31:4f53cda1|2526036240|2025-01-31|INF|
+|2025|shares:EntityCommonStockSharesOutstanding:2026-01-31:4f53cda1|2472392003|2026-01-31|INF|
+
+Other dated covers/classes, weighted-average basic/diluted counts, awards and conversion rights remain in the unchanged source facts. No inferred diluted issuer total or forecast dilution.
+
+Unknown restrictions, reserves, unidentified borrowing/claims, pure expense D&A, complete reinvestment and lease coverage stay null/unquantified despite scoped acceptance. Omission assumptions economically leave potentially undisclosed amounts unadjusted; their size is not bounded, and no immateriality finding is made. Future tax rates, award valuation, forecasts and all valuation calculations remain Phase2 decisions.
+
+## Historical pre-acceptance review — preserved proposal snapshot
+
+The material below is the original review, including its then-inactive labels. Current decisions and selections above supersede only its approval status; source facts, alternatives and limitations remain unchanged.
+
 **PROPOSED ONLY. No new assumption or selection is active; no company completion.**
 
 [Machine facts/proposed calculations](mrk-analyst-input-package.json) / [ONE consolidated approval and exception sheet](../energy-pharma-staples-review-batch-results.md) / [company record](MRK.md). Baseline `956c5c488247eb27ad432b3d1a0fd942a4f29e6e`; actual review UTC `2026-10-17T21:51:27+00:00`; revision `fbe70cf899070b1890aae2b602bc2c100dbbe7539a4270365dc0f1b678f1ad25`.

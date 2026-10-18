@@ -1,5 +1,28 @@
 # Phase 1 historical-input preparation contract — WP0
 
+## Scope-specific CVX/MRK/PG acceptance — CVX essential EBIT remains open
+
+The user approves29 retained company recommendations through the existing
+revision-bound audit/overlay. MRK FY2021–2025 and PG FY2022–2026 each satisfy
+the existing14 operation-specific historical families under their approved
+source/proxy/omission perimeters. MRK keeps continuing/discontinued scope,
+existing EBIT derivations and broader first2 investment proxies; prior pure-PP&E
+findings stand. PG exact first2 Pretax extensions do not change generic policies;
+preferred/ESOP/pension overlap and unexplained borrowing differences remain.
+Its existing displayed CFO precision rule supports+1m differences in FY2024–26;
+no balancing item, new tolerance or exact-equality claim is introduced.
+
+CVX accepts10 selections/assumptions but retains five essential EBIT gaps
+(65/70): mixed-tax affiliates, operating/nonoperating Other and benefit allocation
+remain unproved. CVX-PERIMETER is OPEN, never an authorization to infer EBIT,
+substitute an equation or narrow away the requirement. Its depletion-inclusive
+DD&A, face Sales, exact approved Capex and known financing/claims do not make
+it a completed joint operating-income package. Negative SBC benefit remains.
+[Authoritative selections, audit and limitations](energy-pharma-staples-review-batch-results.md).
+All source unknowns and earlier decisions remain. Scoped completion does not
+certify complete financial disclosure, financial sufficiency, Phase1 closure
+or Phase2 readiness. CAT SBC/JNJ scope remain OPEN.
+
 ## Scope-specific LRCX/PLTR/AMAT acceptance
 
 The user approves all27 company-specific recommendations through existing

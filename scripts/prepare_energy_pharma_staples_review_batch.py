@@ -290,8 +290,15 @@ def decisions(p):
 
 
 def outputs():
+    import activate_company_review_batches as accepted
     packages,missing=build()
     summary=dict(schema='retained-energy-pharma-staples-review-batch-v1',source_commit=BASELINE,tickers=list(TICKERS),selected_periods=15,family_slots=210,companies={t:dict(periods=5,outcomes=p['outcomes'],review_revision=p['review_revision']) for t,p in packages.items()},decisions=[d for t in TICKERS for d in decisions(packages[t])],evidence_acquisition_requirements=missing,new_sec_requests=0,new_assumptions_active=False,completed_company_packages=22,approved_partial_company_packages=2,pending_review_company_packages=3,broad_assessment_only=15,phase1_closed=False,valuation_consumption_approved=False)
+    packages={t:accepted.load_if_approved(f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json',p,summary['decisions']) for t,p in packages.items()}
+    activation=accepted.summary_activation(packages)
+    if activation:
+        completed=sum(x['completed'] for x in activation['companies'].values())
+        activation['current_company_counts']=dict(broadly_assessed=42,completed_scoped=22+completed,approved_partial=2+len(activation['companies'])-completed,pending_reviews=3-len(activation['companies']),assessment_only=15)
+        summary['approval_activation']=activation
     return {**{f'docs/company-data-preparation/{t.lower()}-analyst-input-package.json':p for t,p in packages.items()},SUMMARY:summary}
 
 
@@ -300,5 +307,5 @@ if __name__=='__main__':
     if '--check' in sys.argv:
         for path,payload in result.items():
             if (ROOT/path).read_text()!=json.dumps(payload,sort_keys=True,indent=2)+'\n': raise SystemExit('Review differs: '+path)
-        print('Exact CVX/MRK/PG replay:15 annuals/210 families; proposals inactive, CVX EBIT5 OPEN')
+        print('Exact CVX/MRK/PG replay:15 annuals/210 families; original proposals plus separate approval view, CVX EBIT5 OPEN')
     else: print(json.dumps(result,sort_keys=True,indent=2))

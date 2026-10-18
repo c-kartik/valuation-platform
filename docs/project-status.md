@@ -1,6 +1,39 @@
 # Project Status
 
-## Current — CVX/MRK/PG retained review, pending consolidated approval
+## Current — CVX/MRK/PG approved scoped histories, CVX EBIT remains OPEN
+
+The user explicitly approves all29 recommendations in the retained batch,
+excluding CVX-PERIMETER. Existing revision-bound audits/effective views now select
+MRK FY2021–2025 and PG FY2022–2026 at14/14 each year,70/70 each company.
+CVX FY2021–2025 remains PARTIAL at13/14 each year,65/70: required EBIT is null
+in all5 years because its affiliate/operating-business perimeter is unproved.
+No source zero, substitute EBIT equation, exclusion or scope waiver is authorized.
+[Current schedules, dispositions and validation](energy-pharma-staples-review-batch-results.md)
+/ [machine audit and current counts](company-data-preparation/energy-pharma-staples-review-batch.json)
+`/approval_activation`. All original facts, nulls, proposals, alternatives and
+earlier approvals remain unchanged beneath the separate accepted views.
+
+CVX retains depletion-inclusive DD&A, exact approved Capex, FY2023 SBC benefit−100,
+named financing, ARO/claims and separate affiliate/restricted holdings; it is not
+joint-use eligible as a complete operating-income package. MRK continuing panels
+retain source-compatible existing EBIT derivations, continuing13122/discontinued987
+in FY2021, original PARTIAL5 plus exact independent CFO proofs, and broader4448/4388
+investment proxies without reversing prior pure-PP&E findings. PG uses exact first2
+Pretax extensions, preserving generic nulls; ESOP preferred/pension/funding overlap,
+broader cash QName and unexplained borrowing−1/+1 remain explicit. PG displayed CFO
+differences+1m in FY2024–2026 are SUPPORTED under the unchanged existing precision
+rule, not exact ties, plugs or proved rounding explanations.
+
+**42 broadly assessed;27 packages =24 completed scoped histories +3 approved partial
+CAT/JNJ/CVX;0 pending recommendations;15 assessment-only.** CAT SBC/JNJ scope,
+history exceptions,22 previously completed packages and frozen/pilot bytes remain.
+Known carrying captions are not complete debt/reinvestment, unrestricted cash or
+verified pure expense D&A. Approval is not financial-sufficiency certification,
+whole-universe/Phase1 closure or Phase2 use. No acquisition/research is launched.
+Next unreviewed five-period frozen-order candidates: PM, HD, NFLX, identified only;
+XOM's empty history remains an exception, not a reviewable invented history.
+
+## Historical checkpoint — CVX/MRK/PG retained review, pending consolidated approval
 
 [ONE decision/exception sheet](energy-pharma-staples-review-batch-results.md) /
 [machine review](company-data-preparation/energy-pharma-staples-review-batch.json).

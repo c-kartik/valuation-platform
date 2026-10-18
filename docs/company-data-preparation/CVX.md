@@ -1,6 +1,21 @@
 # CVX — company data preparation
 
-## Current — CVX/MRK/PG consolidated retained company review
+## Current — approved company historical-input selections
+
+All10 recommendations activate through the existing revision-bound overlay; CVX-PERIMETER stays explicitly OPEN, not approved. Five exact FY2021–2025 selections pass13/14 each,65/70; EBIT remains null in every year and joint operating-income use is ineligible. No substitute equation, zero or waiver. Face Sales, energy depletion-inclusive proxy, exact Capex v2, negative FY2023 SBC benefit−100m, named financing/claims and actual dated shares are effective; known overlaps and source unknowns remain. Affiliate mixed-tax/operating Other/benefit allocation is the one existing essential exception across five EBIT slots.
+
+[Authoritative five-year schedule and checklist](CVX-analyst-input-package.md) /
+[immutable authorization and active view](cvx-analyst-input-package.json#/history_approval) /
+[consolidated validation and company counts](../energy-pharma-staples-review-batch-results.md).
+Source parents/proposals and unknowns are preserved exactly. Actual UTC, author,
+source/decision revisions, identity and audit digest bind acceptance; changed
+relevant inputs reject stale use. Omitted unidentified amounts remain unquantified,
+not reported zero or immaterial. No complete expense D&A/debt/reinvestment,
+financial-sufficiency certification, Phase1 closure or Phase2 approval.24 scoped
+completed histories,3 partial CAT/JNJ/CVX and15 assessment-only; no new acquisition.
+Prior records below remain historical.
+
+## Historical checkpoint — CVX/MRK/PG consolidated retained company review
 
 FY2021–2025 source-supported schedules retain5 essential EBIT/business-perimeter exceptions. Mixed-tax affiliate earnings, operating Other and benefit allocation remain unproved; no industrial equation or scope waiver. Face Sales155606/235717/196913/193414/184432 is proposed against broader Revenues alternatives. Depletion-inclusive DD&A17925/16319/17326/17282/20132 and current financial5675/17901/8223/6781/6293 are limited proxies/perimeters, not industrial equivalence or excess cash. All5 CFO proofs SUPPORTED; exact Capex v2 approvals7515/10349/14788/15544/16830 independently replay unchanged. Finance embedded in carrying captions, CP/reclassification, ARO, pension and NCI/affiliate scope remain explicit. Ten proposed decisions plus one OPEN perimeter exception; none active.
 

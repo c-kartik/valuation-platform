@@ -1,5 +1,96 @@
 # PG — full selected-history analyst-input review
 
+## Authoritative current five-year accepted schedule
+
+**Completed for the expressly approved historical-input perimeter —70/70 existing requirements.** No Phase1 closure, complete expense D&A/debt/reinvestment, financial-sufficiency certification or Phase2 use.
+
+[Effective selections and immutable approval](pg-analyst-input-package.json#/current_history) / [revision-bound audit](pg-analyst-input-package.json#/history_approval) / [consolidated outcomes and validation](../energy-pharma-staples-review-batch-results.md).
+
+User authority: all29 recommendations, explicitly excluding CVX-PERIMETER. Actual recording UTC `2026-10-18T07:02:20.709294+00:00`; audit `a4e5fb7ca190f0db76c1f9a8cec71c25882c246cd76e723d26cbf4a2bba1c1ae`; source revision `28b9f21a76e3708ca2c2b01572bcfff67239d78cb30b5be1a9a55e93fbc62c00`; approved proposal revision `c70a0ac75ad575e1ae3ea906ff3f262cc8b0a809587928262fc058ee0209ba2e`; source baseline `70d0feed195fcb605935c4849f3c371b7cbe9c34`. Original source/proposal bytes remain unchanged beneath the separate overlay. Relevant source, evidence, precision, scope, candidate, calculation or decision changes reject stale acceptance.
+
+Amounts USDm unless stated. Linked cells expose exact source/period, precision, role and policy/occurrence provenance. **Proxy is not verified complete expense.** All amounts and uncertainty remain within each approved company perimeter.
+
+|Selected operation / role|2022|2023|2024|2025|2026|
+|---|---|---|---|---|---|
+|Revenue|[80187](pg-analyst-input-package.json#/current_history/periods/0/inputs/revenue) (reported; decimals -6)|[82006](pg-analyst-input-package.json#/current_history/periods/1/inputs/revenue) (reported; decimals -6)|[84039](pg-analyst-input-package.json#/current_history/periods/2/inputs/revenue) (reported; decimals -6)|[84284](pg-analyst-input-package.json#/current_history/periods/3/inputs/revenue) (reported; decimals -6)|[87032](pg-analyst-input-package.json#/current_history/periods/4/inputs/revenue) (reported; decimals -6)|
+|EBIT|[17813](pg-analyst-input-package.json#/current_history/periods/0/inputs/ebit) (reported; decimals -6)|[18134](pg-analyst-input-package.json#/current_history/periods/1/inputs/ebit) (reported; decimals -6)|[18545](pg-analyst-input-package.json#/current_history/periods/2/inputs/ebit) (reported; decimals -6)|[20451](pg-analyst-input-package.json#/current_history/periods/3/inputs/ebit) (reported; decimals -6)|[19748](pg-analyst-input-package.json#/current_history/periods/4/inputs/ebit) (reported; decimals -6)|
+|Limited D&A proxy|[2807](pg-analyst-input-package.json#/current_history/periods/0/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|[2714](pg-analyst-input-package.json#/current_history/periods/1/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|[2896](pg-analyst-input-package.json#/current_history/periods/2/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|[2847](pg-analyst-input-package.json#/current_history/periods/3/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|[3160](pg-analyst-input-package.json#/current_history/periods/4/inputs/depreciation_amortization) (proxy; inherited operand decimals -6)|
+|Cash investment outflow|[-3156](pg-analyst-input-package.json#/current_history/periods/0/inputs/cash_capex) (reported; decimals -6)|[-3062](pg-analyst-input-package.json#/current_history/periods/1/inputs/cash_capex) (reported; decimals -6)|[-3322](pg-analyst-input-package.json#/current_history/periods/2/inputs/cash_capex) (reported; decimals -6)|[-3773](pg-analyst-input-package.json#/current_history/periods/3/inputs/cash_capex) (reported; decimals -6)|[-4409](pg-analyst-input-package.json#/current_history/periods/4/inputs/cash_capex) (reported; decimals -6)|
+|Reported CFO|[16723](pg-analyst-input-package.json#/current_history/periods/0/inputs/reported_cfo) (reported; decimals -6)|[16848](pg-analyst-input-package.json#/current_history/periods/1/inputs/reported_cfo) (reported; decimals -6)|[19846](pg-analyst-input-package.json#/current_history/periods/2/inputs/reported_cfo) (reported; decimals -6)|[17817](pg-analyst-input-package.json#/current_history/periods/3/inputs/reported_cfo) (reported; decimals -6)|[19556](pg-analyst-input-package.json#/current_history/periods/4/inputs/reported_cfo) (reported; decimals -6)|
+|SBC cost proxy — once|[528](pg-analyst-input-package.json#/current_history/periods/0/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[545](pg-analyst-input-package.json#/current_history/periods/1/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[562](pg-analyst-input-package.json#/current_history/periods/2/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[476](pg-analyst-input-package.json#/current_history/periods/3/inputs/stock_based_compensation/selected) (proxy; decimals -6)|[524](pg-analyst-input-package.json#/current_history/periods/4/inputs/stock_based_compensation/selected) (proxy; decimals -6)|
+|SBC CFO add-back — distinct role|[528](pg-analyst-input-package.json#/current_history/periods/0/inputs/stock_based_compensation/addback) (reported; decimals -6)|[545](pg-analyst-input-package.json#/current_history/periods/1/inputs/stock_based_compensation/addback) (reported; decimals -6)|[562](pg-analyst-input-package.json#/current_history/periods/2/inputs/stock_based_compensation/addback) (reported; decimals -6)|[476](pg-analyst-input-package.json#/current_history/periods/3/inputs/stock_based_compensation/addback) (reported; decimals -6)|[524](pg-analyst-input-package.json#/current_history/periods/4/inputs/stock_based_compensation/addback) (reported; decimals -6)|
+|Historical tax provision|[3202](pg-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/provision) (reported; decimals -6)|[3615](pg-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/provision) (reported; decimals -6)|[3787](pg-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/provision) (reported; decimals -6)|[4102](pg-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/provision) (reported; decimals -6)|[4233](pg-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/provision) (reported; decimals -6)|
+|Historical Pretax selection|[17995](pg-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/pretax) (reported; decimals -6)|[18353](pg-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/pretax) (reported; decimals -6)|[18761](pg-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/pretax) (reported; decimals -6)|[20167](pg-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/pretax) (reported; decimals -6)|[20377](pg-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/pretax) (reported; decimals -6)|
+|Issuer reported ETR — pure ratio, not forecast|[0.178](pg-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.197](pg-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.202](pg-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.203](pg-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|[0.208](pg-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/reported_etr) (reported; decimals 3)|
+|Cash taxes — net/gross source scope retained|[-3818](pg-analyst-input-package.json#/current_history/periods/0/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-4278](pg-analyst-input-package.json#/current_history/periods/1/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-4363](pg-analyst-input-package.json#/current_history/periods/2/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-4554](pg-analyst-input-package.json#/current_history/periods/3/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|[-4678](pg-analyst-input-package.json#/current_history/periods/4/inputs/reported_tax_context/cash_taxes) (reported; decimals -6)|
+|Named gross financial captions — not excess cash|[7214](pg-analyst-input-package.json#/current_history/periods/0/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6)|[8246](pg-analyst-input-package.json#/current_history/periods/1/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6)|[9482](pg-analyst-input-package.json#/current_history/periods/2/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6)|[9556](pg-analyst-input-package.json#/current_history/periods/3/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6)|[9942](pg-analyst-input-package.json#/current_history/periods/4/inputs/cash_investment_components/selected) (derived; inherited operand decimals -6)|
+|Named financing — not complete debt|[31493](pg-analyst-input-package.json#/current_history/periods/0/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[34607](pg-analyst-input-package.json#/current_history/periods/1/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[32460](pg-analyst-input-package.json#/current_history/periods/2/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[34508](pg-analyst-input-package.json#/current_history/periods/3/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|[34138](pg-analyst-input-package.json#/current_history/periods/4/inputs/debt_lease_components/selected) (derived; inherited operand decimals -6/-6)|
+|Movement detail — observations, already in CFO|[4 rows; partial scope](pg-analyst-input-package.json#/current_history/periods/0/inputs/reported_cash_flow_working_capital_movements)|[4 rows; partial scope](pg-analyst-input-package.json#/current_history/periods/1/inputs/reported_cash_flow_working_capital_movements)|[4 rows; partial scope](pg-analyst-input-package.json#/current_history/periods/2/inputs/reported_cash_flow_working_capital_movements)|[3 rows; partial scope](pg-analyst-input-package.json#/current_history/periods/3/inputs/reported_cash_flow_working_capital_movements)|[3 rows; partial scope](pg-analyst-input-package.json#/current_history/periods/4/inputs/reported_cash_flow_working_capital_movements)|
+|Deferred TAX reconciliation detail|[-402](pg-analyst-input-package.json#/current_history/periods/0/inputs/deferred_taxes)|[-453](pg-analyst-input-package.json#/current_history/periods/1/inputs/deferred_taxes)|[-244](pg-analyst-input-package.json#/current_history/periods/2/inputs/deferred_taxes)|[149](pg-analyst-input-package.json#/current_history/periods/3/inputs/deferred_taxes)|[51](pg-analyst-input-package.json#/current_history/periods/4/inputs/deferred_taxes)|
+|CFO residual — approved no separate operation, not zero|[not computed; no zero](pg-analyst-input-package.json#/current_history/periods/0/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](pg-analyst-input-package.json#/current_history/periods/1/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](pg-analyst-input-package.json#/current_history/periods/2/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](pg-analyst-input-package.json#/current_history/periods/3/inputs/unclassified_cfo_reconciliation_residual)|[not computed; no zero](pg-analyst-input-package.json#/current_history/periods/4/inputs/unclassified_cfo_reconciliation_residual)|
+|Known claims/assets — no aggregate or netting|[13 separate observations](pg-analyst-input-package.json#/current_history/periods/0/inputs/other_equity_bridge_claims_assets)|[13 separate observations](pg-analyst-input-package.json#/current_history/periods/1/inputs/other_equity_bridge_claims_assets)|[13 separate observations](pg-analyst-input-package.json#/current_history/periods/2/inputs/other_equity_bridge_claims_assets)|[13 separate observations](pg-analyst-input-package.json#/current_history/periods/3/inputs/other_equity_bridge_claims_assets)|[13 separate observations](pg-analyst-input-package.json#/current_history/periods/4/inputs/other_equity_bridge_claims_assets)|
+
+All component/claim counts are inventories, not complete financial fields. Movements are supporting cash contributions already included in CFO, never second deductions or reconstructed book ΔNWC. Noncash additions, creditors, acquisitions/IPR&D, impairments, restricted/strategic holdings and different debt measurements remain separate source observations in the linked payload. No new subtotal or balancing adjustment is created.
+
+## Current14-family checklist
+
+S = satisfied only within the explicitly approved historical operation; E = unresolved essential input, not approved.
+
+|Family|2022|2023|2024|2025|2026|
+|---|---|---|---|---|---|
+|revenue|S|S|S|S|S|
+|ebit|S|S|S|S|S|
+|depreciation_amortization|S|S|S|S|S|
+|cash_capex|S|S|S|S|S|
+|reported_cash_flow_working_capital_movements|S|S|S|S|S|
+|deferred_taxes|S|S|S|S|S|
+|stock_based_compensation|S|S|S|S|S|
+|unclassified_cfo_reconciliation_residual|S|S|S|S|S|
+|reported_cfo|S|S|S|S|S|
+|reported_tax_context|S|S|S|S|S|
+|cash_investment_components|S|S|S|S|S|
+|debt_lease_components|S|S|S|S|S|
+|other_equity_bridge_claims_assets|S|S|S|S|S|
+|point_in_time_shares|S|S|S|S|S|
+
+|FY|Passed /14|Remaining essential inputs|Original parser / effective independent basis|
+|---|---|---|---|
+|2022|14|none|SUPPORTED / existing independently displayed precision rule; see differences below|
+|2023|14|none|SUPPORTED / existing independently displayed precision rule; see differences below|
+|2024|14|none|SUPPORTED / existing independently displayed precision rule; see differences below|
+|2025|14|none|SUPPORTED / existing independently displayed precision rule; see differences below|
+|2026|14|none|SUPPORTED / existing independently displayed precision rule; see differences below|
+
+Exact FY2022/23 Pretax extensions **17,995/18,353m** are active company selections with original source provenance. Generic Pretax/ETR nulls remain unchanged; issuer reported ETR and original policy ETR remain distinct, with no new ratio. Face current-debt parents stay selected: component differences **−1m/+1m in FY2025/26** are unexplained, not plugs or assumed rounding. Known ESOP preferred, plan assets/funding, reserves/Company advances and pension/NCI populations remain separate and overlapping; no no-preferred assumption or share-conversion aggregate. Gross cash retains its broader QName/restriction uncertainty.
+
+|FY|Displayed CFO row sum|Reported CFO|Difference USDm|Existing tolerance USDm|Disposition|
+|---|---|---|---|---|---|
+|2022|16723|16723|0|6|SUPPORTED under unchanged source precision; exact|
+|2023|16848|16848|0|6|SUPPORTED under unchanged source precision; exact|
+|2024|19847|19846|1|6|SUPPORTED within existing precision; NOT exact, cause unproved|
+|2025|17818|17817|1|5.5|SUPPORTED within existing precision; NOT exact, cause unproved|
+|2026|19557|19556|1|5.5|SUPPORTED within existing precision; NOT exact, cause unproved|
+
+The existing rule sums half-unit displayed rounding intervals for each independently bound operand and CFO (−6decimals here). It is replayed unchanged, not expanded. FY2024–2026 retain **+1m source arithmetic differences**, no balancing residual, altered reported CFO or claim that rounding is the proved cause. These are distinct from current-debt component differences.
+
+## Current dated share selections — no automatic aggregation
+
+|FY|Selected source population|Shares|Actual date|Source decimals|
+|---|---|---|---|---|
+|2022|shares:CommonStockSharesOutstanding:2022-06-30:e7683adf|2393877000|2022-06-30|-3|
+|2023|shares:CommonStockSharesOutstanding:2023-06-30:e7683adf|2362120000|2023-06-30|-3|
+|2024|shares:CommonStockSharesOutstanding:2024-06-30:e7683adf|2357051000|2024-06-30|-3|
+|2025|shares:CommonStockSharesOutstanding:2025-06-30:e7683adf|2341994000|2025-06-30|-3|
+|2026|shares:CommonStockSharesOutstanding:2026-06-30:e7683adf|2323859000|2026-06-30|-3|
+
+Other dated covers/classes, weighted-average basic/diluted counts, awards and conversion rights remain in the unchanged source facts. No inferred diluted issuer total or forecast dilution.
+
+Unknown restrictions, reserves, unidentified borrowing/claims, pure expense D&A, complete reinvestment and lease coverage stay null/unquantified despite scoped acceptance. Omission assumptions economically leave potentially undisclosed amounts unadjusted; their size is not bounded, and no immateriality finding is made. Future tax rates, award valuation, forecasts and all valuation calculations remain Phase2 decisions.
+
+## Historical pre-acceptance review — preserved proposal snapshot
+
+The material below is the original review, including its then-inactive labels. Current decisions and selections above supersede only its approval status; source facts, alternatives and limitations remain unchanged.
+
 **PROPOSED ONLY. No new assumption or selection is active; no company completion.**
 
 [Machine facts/proposed calculations](pg-analyst-input-package.json) / [ONE consolidated approval and exception sheet](../energy-pharma-staples-review-batch-results.md) / [company record](PG.md). Baseline `956c5c488247eb27ad432b3d1a0fd942a4f29e6e`; actual review UTC `2026-10-17T21:51:27+00:00`; revision `ec52e359e0fb0a9dbc72a10b9ccc0ae3b4f5e0a1f99e0f8f582878197c347b7d`.
