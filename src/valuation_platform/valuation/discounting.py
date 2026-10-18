@@ -16,7 +16,7 @@ from .assumptions import (
     AssumptionValidationError, ForecastYearAssumptions, ValuationAssumptions, _require_rate,
 )
 from .forecast import (
-    CONVENTION_VERSION, ForecastResult, ForecastValidationError, ForecastYearResult,
+    CONVENTION_VERSION, SUPPORTED_CONVENTIONS, ForecastResult, ForecastValidationError, ForecastYearResult,
     RevenueAnchor, _operating_year, forecast_five_years, forecast_to_dict,
 )
 
@@ -53,10 +53,11 @@ class TerminalAssumptions:
                      "investment_percent_revenue", "working_capital_cash_requirement_percent_revenue"):
             _require_rate(getattr(self, name), "Terminal " + name)
         if not Decimal(0) <= self.operating_tax_rate <= Decimal(1):
-            raise AssumptionValidationError("Terminal operating tax rate must be between 0 and 1")
-        if self.d_and_a_percent_revenue < 0 or self.investment_percent_revenue < 0:
-            raise AssumptionValidationError("Terminal D&A/investment ratios must not be negative")
-        if self.convention_version != CONVENTION_VERSION:
+            raise AssumptionValidationError("Terminal operating tax rate must be between 0 and 1", "operating_tax_rate")
+        for name in ("d_and_a_percent_revenue", "investment_percent_revenue"):
+            if getattr(self, name) < 0:
+                raise AssumptionValidationError("Terminal D&A/investment ratios must not be negative", name)
+        if self.convention_version not in SUPPORTED_CONVENTIONS:
             raise AssumptionValidationError("Unsupported declared terminal economic convention")
 
 

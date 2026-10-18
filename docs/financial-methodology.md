@@ -11,10 +11,23 @@ and separately authorized temporary META trials. The first-company, scope-qualif
 end-to-end testing milestone is complete; the [milestone record](phase2-meta-milestone.md)
 preserves its assumptions, results and limitations. This is not complete financial-input
 sufficiency, investment readiness, complete claims coverage or fully diluted fair value.
-Standing META Base-case and award/claim selections remain pending. Next is separately
-scoped GOOGL validation, not begun here; completing all eligible companies is not
+Standing META Base-case and award/claim selections remain pending. The
+[GOOGL/AAPL integration](phase2-anchor-integration.md) adds source-bound revenue
+seeds and synthetic engineering checks only, without forecasts or financial
+acceptance. Completing all eligible companies is not
 required before incremental Phase 2 engine milestones. Scenarios, sensitivities
 and reverse DCF remain later capabilities.
+
+The shared `manual-fcff-v1` / `manual-equity-bridge-v1` identifiers name the same
+engine equations and declared lease/SBC behavior as the legacy META spellings;
+the latter remain backward compatible. Neither identifier approves an issuer's
+actual inputs. GOOGL/AAPL require independently reviewed expense D&A, investment,
+operating tax/WC, eligible assets/claims, classes and awards. Historical proxy or
+omission approvals do not transfer into valuation-use selections. The boundary
+consumes positive base-USD revenue only and does not require complete historical
+NWC or optional D&A/debt/share coverage. AAPL's September 27, 2025 analytical
+anchor retains its fiscal calendar with ordinal annual discount periods; no
+automatic week normalization, December date or information cutoff is introduced.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.

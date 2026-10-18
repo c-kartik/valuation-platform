@@ -22,6 +22,8 @@ from .forecast import ForecastValidationError, ForecastYearResult
 
 
 CONVENTION_VERSION = "meta-base-equity-bridge-v1"
+SHARED_CONVENTION_VERSION = "manual-equity-bridge-v1"
+SUPPORTED_CONVENTIONS = (CONVENTION_VERSION, SHARED_CONVENTION_VERSION)
 RESULT_SCHEMA = "stage-c-equity-bridge-v1"
 AWARD_POLICY = "sbc_expensed_no_duplicate_service_charge_v1"
 CLASS_CONVENTIONS = ("single_common_class", "explicit_common_unit_equivalence")
@@ -213,7 +215,7 @@ class BridgeInputs:
     convention_version: str = CONVENTION_VERSION
 
     def __post_init__(self) -> None:
-        if (self.convention_version != CONVENTION_VERSION
+        if (self.convention_version not in SUPPORTED_CONVENTIONS
                 or self.input_basis not in ("SYNTHETIC_FIXTURE", "MANUAL_INPUT")):
             raise BridgeValidationError("Supported bridge convention and explicit input basis required")
         for values, cls in ((self.components, BridgeComponent),
@@ -365,7 +367,9 @@ def bridge_to_dict(result: BridgeResult) -> dict[str, object]:
         "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
         "limitations": ["Source/decision/review references are declarations, not authenticated approvals.",
                         "Declared coverage/class/overlap checks cannot prove completeness or hidden economic overlap.",
-                        "No automatic award valuation, dilution, proceeds or actual META selections."],
+                        ("No automatic award valuation, dilution, proceeds or actual META selections."
+                         if inputs.convention_version == CONVENTION_VERSION else
+                         "No automatic award valuation, dilution, proceeds or actual company selections.")],
         "stage_b": enterprise_value_to_dict(result.stage_b),
         "inputs": {"input_basis": inputs.input_basis,
                    "valuation_class_id": inputs.valuation_class_id,

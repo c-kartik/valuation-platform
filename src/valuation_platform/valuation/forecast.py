@@ -16,6 +16,10 @@ from .assumptions import ValuationAssumptions, valuation_assumptions_to_dict
 
 
 CONVENTION_VERSION = "meta-base-fcff-v1"
+SHARED_CONVENTION_VERSION = "manual-fcff-v1"
+# The legacy spelling remains byte-compatible. These identifiers declare engine
+# behavior, not issuer-specific financial acceptance or economic completeness.
+SUPPORTED_CONVENTIONS = (CONVENTION_VERSION, SHARED_CONVENTION_VERSION)
 RESULT_SCHEMA = "stage-a-forecast-v1"
 
 
@@ -131,7 +135,7 @@ def forecast_five_years(
         raise ForecastValidationError("RevenueAnchor and ValuationAssumptions required")
     if assumptions.schema_version != "1":
         raise ForecastValidationError("Unsupported assumption schema")
-    if convention_version != CONVENTION_VERSION:
+    if convention_version not in SUPPORTED_CONVENTIONS:
         raise ForecastValidationError("Unsupported declared forecast convention")
     if (assumptions.company_cik, assumptions.anchor_accession_number,
             assumptions.anchor_fiscal_end) != (

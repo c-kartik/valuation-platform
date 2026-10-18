@@ -10,6 +10,10 @@ from decimal import Decimal
 class AssumptionValidationError(ValueError):
     """Raised when a manual valuation assumption is structurally invalid."""
 
+    def __init__(self, message, field=None):
+        self.field = field
+        super().__init__(message)
+
 
 @dataclass(frozen=True)
 class ForecastYearAssumptions:
@@ -36,26 +40,26 @@ class ForecastYearAssumptions:
 
         _require_rate(self.revenue_growth, "Revenue growth")
         if self.revenue_growth < Decimal("-1"):
-            raise AssumptionValidationError("Revenue growth must be at least -1")
+            raise AssumptionValidationError("Revenue growth must be at least -1", "revenue_growth")
 
         _require_rate(self.operating_margin, "Operating margin")
 
         _require_rate(self.forecast_tax_rate, "Forecast tax rate")
         if not Decimal("0") <= self.forecast_tax_rate <= Decimal("1"):
             raise AssumptionValidationError(
-                "Forecast tax rate must be between 0 and 1"
+                "Forecast tax rate must be between 0 and 1", "forecast_tax_rate"
             )
 
         _require_rate(self.d_and_a_percent_revenue, "D&A percent of revenue")
         if self.d_and_a_percent_revenue < Decimal("0"):
             raise AssumptionValidationError(
-                "D&A percent of revenue must not be negative"
+                "D&A percent of revenue must not be negative", "d_and_a_percent_revenue"
             )
 
         _require_rate(self.capex_percent_revenue, "Capex percent of revenue")
         if self.capex_percent_revenue < Decimal("0"):
             raise AssumptionValidationError(
-                "Capex percent of revenue must not be negative"
+                "Capex percent of revenue must not be negative", "capex_percent_revenue"
             )
 
         _require_rate(
@@ -100,18 +104,18 @@ class ValuationAssumptions:
             )
         labels = tuple(item.fiscal_year_label for item in self.forecast_years)
         if len(set(labels)) != len(labels):
-            raise AssumptionValidationError("Forecast fiscal-year labels must be unique")
+            raise AssumptionValidationError("Forecast fiscal-year labels must be unique", "forecast_years")
 
         _require_rate(self.wacc, "WACC")
         if self.wacc <= Decimal("0"):
-            raise AssumptionValidationError("WACC must be greater than zero")
+            raise AssumptionValidationError("WACC must be greater than zero", "wacc")
 
         _require_rate(self.terminal_growth, "Terminal growth")
         if self.terminal_growth <= Decimal("-1"):
-            raise AssumptionValidationError("Terminal growth must be greater than -1")
+            raise AssumptionValidationError("Terminal growth must be greater than -1", "terminal_growth")
         if self.terminal_growth >= self.wacc:
             raise AssumptionValidationError(
-                "Terminal growth must be less than WACC"
+                "Terminal growth must be less than WACC", "terminal_growth (relative to wacc)"
             )
 
 

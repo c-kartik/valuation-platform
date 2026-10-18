@@ -1,0 +1,156 @@
+{
+  "schema_version": "analyst-case-v2",
+  "case_name": "AAPL FY2025 equity/share \u2014 UNSET review template",
+  "input_basis": "MANUAL_INPUT",
+  "analyst": {
+    "author": null,
+    "timestamp_utc": null,
+    "rationale": null
+  },
+  "scope": "AAPL consolidated FY2026\u2013FY2030 manual forecast; ordinal annual periods after the selected fiscal end, using later-filed information. Financial scope/rationale and information cutoff must be supplied and reviewed. Equity/per-share scope is requested but bridge/share inputs remain unresolved; this template cannot calculate.",
+  "limitations": [
+    "All 37 numerical assumptions and analyst identity/date/rationale are unset; no defaults or historical calibration.",
+    "Revenue-only retained historical binding; no forecast, WACC, terminal, asset/claim, class-equivalence or award inputs approved.",
+    "Manual margins include SBC and operating-lease service costs. Expense D&A, financed investment and WC scope require issuer-specific semantic review; historical proxies remain incomplete.",
+    "Historical cash movements are not automatic forecast WC inputs. Gross financial assets are not automatically eligible assets; historical omissions do not approve valuation omissions.",
+    "Fiscal-end analytical date using later-filed information; no contemporaneous backtest or established information cutoff.",
+    "Anchor fiscal year is September 29, 2024\u2013September 27, 2025; FY2026\u2013FY2030 are ordinal fiscal labels, not assumed December year-ends. No automatic 52/53-week adjustment.",
+    "Bridge/share populations, amounts, coverage, class equivalence and award treatment are UNSET; no META financial selections transfer."
+  ],
+  "conventions": {
+    "forecast": "manual-fcff-v1",
+    "discounting": "fiscal-end-annual-gordon-v1"
+  },
+  "anchor": {
+    "kind": "aapl-fy2025",
+    "cik": 320193,
+    "accession": "0000320193-25-000079",
+    "annual_start": "2024-09-29",
+    "annual_end": "2025-09-27",
+    "form": "10-K"
+  },
+  "forecast_years": [
+    {
+      "period_index": 1,
+      "fiscal_year_label": "FY2026",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    },
+    {
+      "period_index": 2,
+      "fiscal_year_label": "FY2027",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    },
+    {
+      "period_index": 3,
+      "fiscal_year_label": "FY2028",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    },
+    {
+      "period_index": 4,
+      "fiscal_year_label": "FY2029",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    },
+    {
+      "period_index": 5,
+      "fiscal_year_label": "FY2030",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    }
+  ],
+  "wacc": null,
+  "terminal_growth": null,
+  "terminal": {
+    "operating_margin": null,
+    "operating_tax_rate": null,
+    "d_and_a_percent_revenue": null,
+    "investment_percent_revenue": null,
+    "working_capital_cash_requirement_percent_revenue": null
+  },
+  "calculation_scope": "EQUITY_PER_SHARE",
+  "bridge": {
+    "components": null,
+    "observations": [],
+    "coverage": [
+      {
+        "role": "ELIGIBLE_ASSET",
+        "population_ids": [],
+        "omission_references": [],
+        "review": {
+          "author": null,
+          "timestamp_utc": null,
+          "rationale": null
+        },
+        "decision_references": []
+      },
+      {
+        "role": "FINANCING_CLAIM",
+        "population_ids": [],
+        "omission_references": [],
+        "review": {
+          "author": null,
+          "timestamp_utc": null,
+          "rationale": null
+        },
+        "decision_references": []
+      },
+      {
+        "role": "OTHER_EQUITY_CLAIM",
+        "population_ids": [],
+        "omission_references": [],
+        "review": {
+          "author": null,
+          "timestamp_utc": null,
+          "rationale": null
+        },
+        "decision_references": []
+      }
+    ],
+    "shares": {
+      "company_cik": 320193,
+      "shares": null,
+      "observation_date": "2025-09-27",
+      "class_id": null,
+      "equivalence_convention": null,
+      "award_policy": null,
+      "award_policy_references": null,
+      "source_references": null,
+      "decision_references": null,
+      "precision": null,
+      "rationale": null,
+      "unit": "shares",
+      "scale": 1
+    },
+    "input_basis": "MANUAL_INPUT",
+    "valuation_class_id": null,
+    "unresolved_requirements": [
+      "Eligible asset/reserve/restriction selections",
+      "Financing and other-claim coverage and supported omissions",
+      "Dated shares, class equivalence, existing awards/proceeds and non-overlap"
+    ],
+    "convention_version": "manual-equity-bridge-v1"
+  }
+}

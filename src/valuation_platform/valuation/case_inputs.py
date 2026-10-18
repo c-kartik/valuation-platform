@@ -10,15 +10,19 @@ import re
 from valuation_platform.analyst.historical_inputs import ManualIdentity
 from valuation_platform.analyst.nwc import Period
 from .assumptions import ForecastYearAssumptions, ValuationAssumptions
-from .consumer import IDENTITY, load_meta_revenue_anchor
+from .consumer import ANCHORS, IDENTITY, load_meta_revenue_anchor, load_revenue_anchor
 from .discounting import (
     DISCOUNTING_CONVENTION_VERSION, TerminalAssumptions,
     discount_to_enterprise_value, enterprise_value_to_dict,
 )
-from .forecast import CONVENTION_VERSION, RevenueAnchor, forecast_five_years
+from .forecast import (
+    CONVENTION_VERSION, SHARED_CONVENTION_VERSION, SUPPORTED_CONVENTIONS,
+    RevenueAnchor, forecast_five_years,
+)
 from .bridge import (
     BridgeComponent, BridgeObservation, PopulationCoverage, ValuationShares,
     BridgeInputs, ComponentRole, bridge_to_per_share, bridge_to_dict,
+    SHARED_CONVENTION_VERSION as SHARED_BRIDGE_CONVENTION,
 )
 
 
@@ -49,21 +53,37 @@ class CaseInputError(ValueError):
 
 
 def _strict_json(text):
-    # Same duplicate-key rejection pattern as analyst_overrides._json, with
-    # explicit float/NaN rejection before JSON can lose the submitted precision.
-    def pairs(items):
-        result = {}
-        for key, value in items:
-            if key in result:
-                raise CaseInputError([f"Duplicate JSON key: {key}"])
-            result[key] = value
-        return result
+    # Retain tokens/pairs until paths are known; never construct a float or
+    # discard duplicate keys. Integers remain valid only where the schema allows.
+    class Number(str):
+        pass
 
-    def number(token):
-        raise CaseInputError([f"JSON number {token} is not allowed here; use fractional Decimal strings for rates"])
+    class Pairs(list):
+        pass
+
+    errors = []
+
+    def decode(value, path):
+        if type(value) is Number:
+            errors.append(f"{path}: JSON number {value} is not allowed here; use finite fractional Decimal strings for rates")
+        elif type(value) is Pairs:
+            result = {}
+            for key, child in value:
+                location = f"{path}.{key}" if path else key
+                if key in result:
+                    errors.append(f"{location}: Duplicate JSON key: {key}")
+                result[key] = decode(child, location)
+            return result
+        elif type(value) is list:
+            return [decode(child, f"{path}[{i}]") for i, child in enumerate(value)]
+        return value
 
     try:
-        return json.loads(text, object_pairs_hook=pairs, parse_float=number, parse_constant=number)
+        result = decode(json.loads(text, object_pairs_hook=Pairs,
+                                   parse_float=Number, parse_constant=Number), "")
+        if errors:
+            raise CaseInputError(errors)
+        return result
     except CaseInputError:
         raise
     except (ValueError, TypeError) as exc:
@@ -234,14 +254,17 @@ def read_case(text: str) -> AnalystCase:
         except (ValueError, TypeError) as exc:
             errors.append(f"analyst: {exc}")
     conventions = obj(doc.get("conventions"), ("forecast", "discounting"), "conventions")
-    for key, expected in (("forecast", CONVENTION_VERSION), ("discounting", DISCOUNTING_CONVENTION_VERSION)):
-        if conventions.get(key) != expected:
-            errors.append(f"conventions.{key}: supported convention is {expected}")
+    if conventions.get("forecast") not in SUPPORTED_CONVENTIONS:
+        errors.append(f"conventions.forecast: choose {' or '.join(SUPPORTED_CONVENTIONS)}")
+    if conventions.get("discounting") != DISCOUNTING_CONVENTION_VERSION:
+        errors.append(f"conventions.discounting: supported convention is {DISCOUNTING_CONVENTION_VERSION}")
     anchor = obj(doc.get("anchor"), ("kind", *IDENTITY), "anchor")
     kind = anchor.get("kind")
-    expected = {"synthetic-fixture-v1": SYNTHETIC_IDENTITY, "meta-fy2025": IDENTITY}.get(kind) if type(kind) is str else None
+    selections = {key: spec["identity"] for key, spec in ANCHORS.items()}
+    selections["synthetic-fixture-v1"] = SYNTHETIC_IDENTITY
+    expected = selections.get(kind) if type(kind) is str else None
     if expected is None:
-        errors.append("anchor.kind: choose synthetic-fixture-v1 or pinned meta-fy2025")
+        errors.append("anchor.kind: choose synthetic-fixture-v1 or pinned " + ", ".join(ANCHORS))
     else:
         for key, value in expected.items():
             if type(anchor.get(key)) is not type(value) or anchor.get(key) != value:
@@ -249,6 +272,12 @@ def read_case(text: str) -> AnalystCase:
         basis = "SYNTHETIC_FIXTURE" if kind == "synthetic-fixture-v1" else "MANUAL_INPUT"
         if doc.get("input_basis") != basis:
             errors.append(f"case.input_basis: {kind} requires {basis}")
+        if kind in ("googl-fy2025", "aapl-fy2025"):
+            if conventions.get("forecast") != SHARED_CONVENTION_VERSION:
+                errors.append(f"conventions.forecast: {kind} requires {SHARED_CONVENTION_VERSION}; no META economic approval transfers")
+            if equity and (type(doc.get("bridge")) is not dict or
+                           doc["bridge"].get("convention_version") != SHARED_BRIDGE_CONVENTION):
+                errors.append(f"bridge.convention_version: {kind} requires {SHARED_BRIDGE_CONVENTION}; actual selections remain unapproved")
     years = doc.get("forecast_years")
     annuals = []
     if type(years) is not list or len(years) != 5:
@@ -265,7 +294,8 @@ def read_case(text: str) -> AnalystCase:
                 try:
                     annuals.append(ForecastYearAssumptions(raw.get("period_index"), raw.get("fiscal_year_label"), **rates))
                 except (ValueError, TypeError) as exc:
-                    errors.append(f"{path}: {exc}")
+                    location = path + "." + exc.field if getattr(exc, "field", None) else path
+                    errors.append(f"{location}: {exc}")
     wacc = rate(doc.get("wacc"), "wacc")
     growth = rate(doc.get("terminal_growth"), "terminal_growth")
     raw_terminal = obj(doc.get("terminal"), TERMINAL_RATES, "terminal")
@@ -273,9 +303,10 @@ def read_case(text: str) -> AnalystCase:
     terminal = None
     if all(v is not None for v in terminal_rates.values()):
         try:
-            terminal = TerminalAssumptions(**terminal_rates, convention_version=CONVENTION_VERSION)
+            terminal = TerminalAssumptions(**terminal_rates, convention_version=conventions.get("forecast"))
         except (ValueError, TypeError) as exc:
-            errors.append(f"terminal: {exc}")
+            location = "terminal." + exc.field if getattr(exc, "field", None) else "terminal"
+            errors.append(f"{location}: {exc}")
     bridge = _read_bridge(doc.get("bridge"), anchor, doc.get("input_basis"), errors) if equity else None
     if errors:
         raise CaseInputError(errors)
@@ -285,7 +316,8 @@ def read_case(text: str) -> AnalystCase:
             tuple(annuals), wacc, growth,
         )
     except (ValueError, TypeError) as exc:
-        raise CaseInputError([f"assumptions (wacc/terminal_growth/year labels): {exc}"]) from exc
+        location = getattr(exc, "field", None) or "assumptions (wacc/terminal_growth/year labels)"
+        raise CaseInputError([f"{location}: {exc}"]) from exc
     return AnalystCase(text, identity, kind, assumptions, terminal, bridge)
 
 
@@ -300,6 +332,8 @@ def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
     doc = _strict_json(case.submitted_json)
     if case.anchor_kind == "meta-fy2025":
         anchor = load_meta_revenue_anchor(repository_root)
+    elif case.anchor_kind in ANCHORS:
+        anchor = load_revenue_anchor(case.anchor_kind, repository_root)
     else:
         source = SYNTHETIC_IDENTITY
         anchor = RevenueAnchor(
@@ -319,7 +353,9 @@ def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
         "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
         "limitations": [*doc["limitations"],
                         "Analyst identity, rationale and scope are submitted declarations, not authenticated approval.",
-                        "No economic consistency, evidence completeness or actual META execution approval is inferred.",
+                        ("No economic consistency, evidence completeness or actual META execution approval is inferred."
+                         if case.anchor_kind in ("meta-fy2025", "synthetic-fixture-v1") else
+                         "No economic consistency, evidence completeness or company execution approval is inferred."),
                         "Enterprise value only; no bridge/share inputs or automatic historical forecasts."],
         "stage_b": enterprise_value_to_dict(stage_b),
     }

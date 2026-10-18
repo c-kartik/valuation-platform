@@ -1,0 +1,92 @@
+{
+  "schema_version": "analyst-case-v1",
+  "case_name": "GOOGL FY2025 \u2014 UNSET review template",
+  "input_basis": "MANUAL_INPUT",
+  "analyst": {
+    "author": null,
+    "timestamp_utc": null,
+    "rationale": null
+  },
+  "scope": "GOOGL consolidated FY2026\u2013FY2030 manual forecast; ordinal annual periods after the selected fiscal end, using later-filed information. Financial scope/rationale and information cutoff must be supplied and reviewed.",
+  "limitations": [
+    "All 37 numerical assumptions and analyst identity/date/rationale are unset; no defaults or historical calibration.",
+    "Revenue-only retained historical binding; no forecast, WACC, terminal, asset/claim, class-equivalence or award inputs approved.",
+    "Manual margins include SBC and operating-lease service costs. Expense D&A, financed investment and WC scope require issuer-specific semantic review; historical proxies remain incomplete.",
+    "Historical cash movements are not automatic forecast WC inputs. Gross financial assets are not automatically eligible assets; historical omissions do not approve valuation omissions.",
+    "Fiscal-end analytical date using later-filed information; no contemporaneous backtest or established information cutoff.",
+    "Alphabet Class A/B/C economic equivalence, share denominator and awards remain unresolved; the GOOGL label selects consolidated revenue only."
+  ],
+  "conventions": {
+    "forecast": "manual-fcff-v1",
+    "discounting": "fiscal-end-annual-gordon-v1"
+  },
+  "anchor": {
+    "kind": "googl-fy2025",
+    "cik": 1652044,
+    "accession": "0001652044-26-000018",
+    "annual_start": "2025-01-01",
+    "annual_end": "2025-12-31",
+    "form": "10-K"
+  },
+  "forecast_years": [
+    {
+      "period_index": 1,
+      "fiscal_year_label": "FY2026",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    },
+    {
+      "period_index": 2,
+      "fiscal_year_label": "FY2027",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    },
+    {
+      "period_index": 3,
+      "fiscal_year_label": "FY2028",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    },
+    {
+      "period_index": 4,
+      "fiscal_year_label": "FY2029",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    },
+    {
+      "period_index": 5,
+      "fiscal_year_label": "FY2030",
+      "revenue_growth": null,
+      "operating_margin": null,
+      "forecast_tax_rate": null,
+      "d_and_a_percent_revenue": null,
+      "capex_percent_revenue": null,
+      "change_in_operating_nwc_percent_revenue": null
+    }
+  ],
+  "wacc": null,
+  "terminal_growth": null,
+  "terminal": {
+    "operating_margin": null,
+    "operating_tax_rate": null,
+    "d_and_a_percent_revenue": null,
+    "investment_percent_revenue": null,
+    "working_capital_cash_requirement_percent_revenue": null
+  }
+}

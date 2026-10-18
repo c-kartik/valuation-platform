@@ -1,6 +1,45 @@
 # Project Status
 
-## Current — META scope-qualified end-to-end testing milestone complete
+## Current — GOOGL/AAPL revenue-anchor engineering integration
+
+The [integration record](phase2-anchor-integration.md) documents explicit read-only
+META/GOOGL/AAPL revenue dispatch, exact filing/calendar/precision selections and
+source/review/audit/effective-view checks. GOOGL FY2025 revenue is 402836000000 USD;
+AAPL is 416161000000 USD for 2024-09-29–2025-09-27. These are retained reported
+anchors only: no actual-company forecast or valuation is executed. Optional
+historical D&A/NWC/debt/share completeness is not a revenue-only prerequisite.
+No preparation, historical source, approval or frozen artifact changes.
+
+New GOOGL/AAPL v1 EV and v2 equity/share templates retain all **37 numerical
+inputs and analyst metadata unset**, with actual bridge/share requirements
+unresolved. Shared technical names `manual-fcff-v1` / `manual-equity-bridge-v1`
+reuse existing arithmetic without transferring META financial acceptance. Legacy
+examples and complete synthetic JSON bytes remain identical. Validation-only
+stays calculation-free; strict malformed-number/duplicate errors now identify
+paths such as `forecast_years[2].revenue_growth`. Bounds, conventions, annual/
+terminal and missing Stage C errors identify the affected input.
+
+Verification: **147 focused tests PASS**: 134 anchor/intake/valuation/CLI/summary/
+approval/preservation checks (16 new), plus 13 existing GOOGL/AAPL historical
+acceptance/replay/staleness checks. Manually checked
+all six incomplete company templates: expected exit 2, 37 unset numerical inputs,
+no calculations. Synthetic validation, JSON/summary execution, explicit new-file
+output and overwrite rejection pass; input bytes unchanged and temporary outputs
+removed. Calculation-function ASTs and original assumption validation rules are
+preserved. **392 local link destinations** and whitespace checks pass. Full offline
+discovery was attempted with socket connections disabled, then interrupted at the
+approximate two-hour engineering budget while an unrelated historical income
+binding setup reparsed retained XML (`test_income_binding_repair`). It did not
+complete; no full-suite pass or complete failure classification is claimed.
+
+The [META milestone](phase2-meta-milestone.md) remains unchanged. GOOGL/AAPL
+engineering integration is not financial sufficiency, an investment valuation or
+approval of historical omissions for valuation use. Next: separately scoped
+financial input review for one issuer, retaining unresolved D&A/investment/tax/WC,
+WACC/terminal and any equity/share decisions. Phase 1 expansion remains paused;
+scenarios, sensitivities and reverse DCF remain later capabilities. Nothing pushed.
+
+## Earlier milestone — META scope-qualified end-to-end testing milestone complete
 
 The [milestone record](phase2-meta-milestone.md) documents historical anchor →
 manual forecast → FCFF/DCF → EV → explicit equity bridge → value/share, with

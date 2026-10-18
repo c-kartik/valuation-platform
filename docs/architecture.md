@@ -10,9 +10,11 @@ terminal and equity/per-share mathematical conventions. Synthetic tests and
 separately authorized temporary META trials complete the first-company,
 scope-qualified end-to-end testing milestone; see the
 [milestone record](phase2-meta-milestone.md). Standing META assumptions and complete
-bridge/share/award coverage remain pending. Next is separately scoped GOOGL
-validation of the approved package and necessary consumer boundary only; it has
-not started. Scenarios, sensitivities and reverse DCF remain later work.
+bridge/share/award coverage remain pending. The separately scoped
+[GOOGL/AAPL anchor integration](phase2-anchor-integration.md) now adds read-only
+revenue bindings and synthetic workflow regression coverage; no actual-company
+financial trial or valuation is performed. Scenarios, sensitivities and reverse
+DCF remain later work.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.
@@ -33,6 +35,17 @@ selection. It reuses existing hash/manual-identity helpers, without creating or
 activating an approval, rebuilding history or inspecting optional effective
 families for financial sufficiency. Source occurrences/precision and exact
 source/effective/approval references survive an immutable `RevenueAnchor`.
+
+An explicit `ANCHORS` dispatch adds GOOGL/AAPL's exact FY2025 selections through
+`prepare_revenue_anchor` / `load_revenue_anchor`. Their sequence-2 history audits
+remain distinct from prior scoped sequence-1 acceptance. Source, review/proposal,
+audit-chain, effective identity/revenue and revenue-checklist bindings are checked
+with existing relevant-content/hash helpers, without rebuilding/activating views.
+Only revenue is consumed; optional effective financial families are not gates.
+AAPL's September fiscal end is retained; discount periods remain ordinal 1–5.
+Shared technical aliases `manual-fcff-v1` / `manual-equity-bridge-v1` retain the
+legacy formulas/default identifiers and JSON behavior. New issuers must declare
+the shared names; no META financial judgment or company approval transfers.
 
 `valuation.forecast` accepts that anchor (or explicitly synthetic fixture
 metadata) and the unchanged assumption models. Network-free pure arithmetic
@@ -93,13 +106,16 @@ uses schema `analyst-case-v1` and immutable `AnalystCase` metadata, reusing
 `ManualIdentity`, `ValuationAssumptions` and `TerminalAssumptions`. `read_case`/
 `load_case` check strict JSON (duplicate keys, floating JSON numbers/constants,
 unknown fields/versions), fractional Decimal strings, all 37 explicit rates,
-declared conventions and one of two exact anchor identities. Nulls stay unset;
+declared conventions and one of four exact anchor identities. Nulls stay unset;
 missing paths are collected. Parsing/validation calls no valuation function and
 loads no historical package. Submitted strings/rationale remain declarations,
 not authenticated review or automatic historical calibration.
+JSON number tokens and duplicate object pairs are retained until field paths are
+known, then rejected without float conversion. Existing assumption validation
+errors carry optional field metadata; bounds and financial equations are unchanged.
 
 `run_case` separately resolves the fixed synthetic revenue-100 fixture or the
-existing pinned META boundary, then delegates all financial formulas to Stages
+existing pinned META/GOOGL/AAPL boundary, then delegates all financial formulas to Stages
 A/B. Schema `analyst-case-enterprise-value-v1` retains submitted inputs and full
 A/B output without changing engine models. The small
 [CLI](../scripts/run_analyst_case.py) validates by default; only `--run` calculates.
@@ -127,7 +143,9 @@ only display scaling/rounding uses an isolated Decimal context. Both versions
 share exclusive output creation/protected paths. A separate
 [synthetic equity example](../examples/valuation/synthetic-equity.json) and
 [unset META equity template](../examples/valuation/meta-fy2025-equity-unset.json)
-add no actual selection, forecast default, company adapter or approval framework.
+add no actual selection or forecast default. GOOGL/AAPL have separate incomplete
+EV/equity templates; bridge/share/class/award inputs remain unresolved. No new
+approval framework is introduced.
 
 ## AVGO/TSLA/LLY approvals — reuse of the company audit/view mechanism
 

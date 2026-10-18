@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from valuation_platform.valuation.case_inputs import CaseInputError, load_case, run_case
+from valuation_platform.valuation.consumer import ANCHORS
 
 
 def render_summary(result):
@@ -34,7 +35,7 @@ def render_summary(result):
 
         years = a["years"]
         headers = row("Period", [f"Year {y['period_index']}" for y in years])
-        company = "META" if doc["anchor"]["kind"] == "meta-fy2025" else "Synthetic fixture"
+        company = ANCHORS.get(doc["anchor"]["kind"], {}).get("ticker", "Synthetic fixture")
         stage_c = result.get("stage_c")
         lines = [
             "ANALYST REVIEW — EQUITY / VALUE PER SHARE" if stage_c else "ANALYST REVIEW — ENTERPRISE VALUE ONLY",

@@ -2,6 +2,7 @@
 from copy import deepcopy
 from datetime import datetime, timezone
 from decimal import Decimal as D
+import ast
 import json
 from pathlib import Path
 import subprocess
@@ -155,14 +156,31 @@ class CompanyBatchActivationTests(unittest.TestCase):
             self.assertEqual((ROOT/name).read_bytes(),subprocess.check_output(['git','show',a.BASELINE+':'+name],cwd=ROOT))
         # Stages A/B/C and editable inputs add separate modules; every pre-existing source,
         # evidence/universe artifact and fixture remains byte-preserved. Permit
-        # only these additions, never modifications of the historical boundary.
+        # only these additions and field-path error metadata in the existing
+        # assumption models, never modifications of the historical boundary.
         changes=subprocess.check_output(['git','diff','--name-status',a.BASELINE,'--','src','docs/evidence','docs/universe','tests/fixtures'],cwd=ROOT,text=True).splitlines()
         allowed={'A\tsrc/valuation_platform/valuation/consumer.py',
                  'A\tsrc/valuation_platform/valuation/forecast.py',
                  'A\tsrc/valuation_platform/valuation/discounting.py',
                  'A\tsrc/valuation_platform/valuation/bridge.py',
-                 'A\tsrc/valuation_platform/valuation/case_inputs.py'}
+                 'A\tsrc/valuation_platform/valuation/case_inputs.py',
+                 'M\tsrc/valuation_platform/valuation/assumptions.py'}
         self.assertTrue(set(changes)<=allowed,changes)
+        # Permit error annotations only: remove their optional field argument
+        # and exception initializer, then compare every original validation AST.
+        class ErrorMetadata(ast.NodeTransformer):
+            def visit_ClassDef(self,node):
+                if node.name=='AssumptionValidationError':
+                    node.body=[n for n in node.body if not (isinstance(n,ast.FunctionDef) and n.name=='__init__')]
+                return self.generic_visit(node)
+            def visit_Call(self,node):
+                if isinstance(node.func,ast.Name) and node.func.id=='AssumptionValidationError':
+                    node.args=node.args[:1]
+                return self.generic_visit(node)
+        name='src/valuation_platform/valuation/assumptions.py'
+        original=subprocess.check_output(['git','show',a.BASELINE+':'+name],cwd=ROOT,text=True)
+        self.assertEqual(ast.dump(ErrorMetadata().visit(ast.parse(original))),
+                         ast.dump(ErrorMetadata().visit(ast.parse((ROOT/name).read_text()))))
 
 
 if __name__=='__main__':unittest.main()
