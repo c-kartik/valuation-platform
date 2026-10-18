@@ -19,23 +19,32 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+**Phase 1 universe analyst-review expansion is paused.** The authoritative
+[pause/resumption and Phase 2 handoff checkpoint](docs/phase1-universe-pause-checkpoint.md)
+records 24 completed scoped company histories, 3 partial (CAT/JNJ/CVX) and
+15 assessment-only among 42 eligible issuers; 8 specialized exclusions remain.
+There are 199 selected annuals / 210 target slots, with 11 explicit deficits.
+This is not full-universe completion or valuation-consumer certification.
+The user will begin separately scoped Phase 2 work in separate chats, initially
+one company and a traceable Base case; no engine or economic convention is
+approved by this checkpoint. Universe reviews do not resume automatically.
+
 **Phase 1H complete with qualified scope: historical normalization v1 frozen.**
 See the [frozen contract and artifact digests](docs/historical-normalization-v1-freeze.md)
 and [all-issuer validation](docs/universe/phase-1h5-issuer-validation.md).
 
-Current milestone:
+Completed freeze milestone (historical):
 
 **Phase 1H.6 — historical-normalization-v1 scope freeze (complete)**
 
-Phase 2 remains postponed. The isolated analyst Operating-NWC foundation and
-[forty-issuer preparation register](docs/company-data-preparation/index.md)
-are implemented without changing frozen values or removing blockers.
-Next: **review explicit MSFT FY2025–2026 partial scenario input bundles** under
-the [implemented contract](docs/analyst-operating-nwc-design.md#implemented-isolated-foundation).
-No estimates or complete NWC/FCFF certification are implied. The timing-readiness valuation
-boundary remains required before historical-ratio forecast or FCFF consumption.
-No integrated FCFF bundle is certified; the existing Phase 2A manual assumptions
-model remains available. Valuation UI/deployment remain out of scope.
+The separate analyst preparation layers and [company register](docs/company-data-preparation/index.md)
+preserve frozen v1. Their current accepted company schedules supersede the earlier
+pilot-only review queue, not its source history. The historical path uses reported
+movements and reconciled CFO, without requiring complete reconstructed NWC or
+deducting CFO movements twice. Older [timing/readiness designs](docs/financial-timing-readiness-design.md)
+must be reconciled with that path and explicit manual forecasts when specifying
+a future consumer; existing Phase 2A assumption models do not by themselves
+certify valuation use. See the checkpoint for the exact unfinished backlog.
 
 See [`docs/project-status.md`](docs/project-status.md) for current progress and next steps.
 

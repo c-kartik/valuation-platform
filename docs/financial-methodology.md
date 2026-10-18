@@ -1,5 +1,24 @@
 # Financial Methodology
 
+## Current direction — universe pause and separately scoped Phase 2 handoff
+
+The [authoritative pause/resumption checkpoint](phase1-universe-pause-checkpoint.md) records
+24 completed scoped company histories, CAT/JNJ/CVX partial, and 15 assessment-only.
+Frozen-v1, original policies, source history and accepted overlays remain unchanged.
+The user will begin Phase 2 in separate chats, initially one company and a
+traceable Base case; forecasting, FCFF, discounting, terminal value and equity/share
+bridging remain future implementation, not approved conventions or code here.
+
+The approved historical path uses reported cash-flow movements and independently
+reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.
+Movements already inside CFO are not deducted again. Older timing/readiness and
+Phase 2 postponement sections below describe earlier boundaries and must be
+reconciled with the newer movement/manual-forecast approach in a separately scoped
+consumer design—not silently reinstated as a universal historical-NWC requirement.
+Historical acceptance and valuation-use decisions remain separately identifiable;
+no source limitation, overlap, timing issue or consumer obligation is waived.
+Existing manual-assumption models are reusable, not a valuation engine.
+
 ## MSFT reported-cash-movement historical preparation
 
 The active Phase1 MSFT path retains reported movement rows and independently

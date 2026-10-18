@@ -1,6 +1,19 @@
 # Project Status
 
-## Current — CVX/MRK/PG approved scoped histories, CVX EBIT remains OPEN
+## Current — universe expansion paused; authoritative resumption checkpoint
+
+[Pause checkpoint and Phase 2 handoff](phase1-universe-pause-checkpoint.md) is the authoritative current
+resumption document: **24 completed scoped histories, 3 partial CAT/JNJ/CVX,
+15 assessment-only; 42 eligible issuers, 8 specialized exclusions; 199 selected
+annuals / 210 target slots, 11 deficits**. Full-universe analyst completion is
+not claimed. PM/HD/NFLX are retained next candidates, not an active review queue.
+The user intends separately scoped Phase 2 work in separate chats, initially
+one company and a traceable Base case; this documentation authorizes no engine,
+economic convention or financial acceptance. Historical source/approval records
+below remain intact. Older assessment estimates/status snapshots do not override
+current accepted package views. No company review or acquisition resumes automatically.
+
+## Latest accepted milestone — CVX/MRK/PG approved scoped histories, CVX EBIT remains OPEN
 
 The user explicitly approves all29 recommendations in the retained batch,
 excluding CVX-PERIMETER. Existing revision-bound audits/effective views now select

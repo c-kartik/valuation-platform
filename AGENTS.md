@@ -17,6 +17,15 @@ operating-company FCFF model.
 
 ## Current Phase
 
+Phase 1 universe analyst-review expansion is **paused** at the user's direction.
+The authoritative resumption/handoff is
+`docs/phase1-universe-pause-checkpoint.md`: 24 completed scoped histories,
+3 partial (CAT/JNJ/CVX), 15 assessment-only; 199 selected annuals and 11 target
+deficits remain. Preserve unfinished work and do not automatically resume reviews.
+The user intends Phase 2 in separate chats, starting with one company and a
+traceable Base case; this checkpoint authorizes no engine or economic convention.
+Future Phase 2 work requires its own explicit scope and valuation-use decisions.
+
 Phase 1H expands the operational Python SEC/XBRL historical pipeline from the
 five-company validation corpus (META, GOOGL, MSFT, AAPL, and COST) to a defined
 S&P 500 Top 50 snapshot. Use corpus failures to improve normalization
@@ -35,12 +44,19 @@ This is not complete financial-input sufficiency, whole-history fact provenance
 or five-year completeness. Financial blockers/history exceptions remain explicit;
 no further research chain is required by this preparation standard.
 Freeze completion is necessary but is not authority to start Phase 2.
-Phase 2 remains postponed: do not implement FCFF, forecasting, DCF, WACC,
+The earlier Phase 2 postponement applied to the preparation milestones. Under
+the current pause/handoff direction, do not begin FCFF, forecasting, DCF, WACC,
 terminal value, sensitivities, equity/per-share valuation, valuation UI or
-deployment infrastructure. Existing Phase 2A assumption models do not authorize
+deployment without a separately scoped user request. Existing Phase 2A
+assumption models do not authorize
 consumption of incomplete historical inputs. Preserve frozen-v1 schemas,
 policies, values and blockers; reported cash-flow input preparation must remain
 separate from adjusted cash-flow calculations and valuation readiness.
+The approved historical path uses reported movement rows and independently
+reconciled CFO; complete reconstructed NWC/book ΔNWC is not a prerequisite.
+Movements already included in CFO are supporting detail, not additional deductions.
+Reconcile older timing/readiness designs with this path before consumer design;
+historical acceptance does not itself approve a valuation formula or consumer.
 
 ## Engineering Principles
 
