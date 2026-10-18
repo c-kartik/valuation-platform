@@ -1,6 +1,83 @@
 # Project Status
 
-## Current — editable local analyst cases, synthetic verification only
+## Current — META scope-qualified end-to-end testing milestone complete
+
+The [milestone record](phase2-meta-milestone.md) documents historical anchor →
+manual forecast → FCFF/DCF → EV → explicit equity bridge → value/share, with
+editable assumptions separate from formulas. Synthetic tests and separately
+authorized temporary META-anchored trials exercised this first-company workflow.
+Temporary assumption-led results were approximately **945.742bn USD EV** and
+**369.42 USD per dated basic common share**, before omitted legacy/venture claims
+and awards, with **90.02% terminal contribution**. These are historical validation
+records, not a permanent Base case, defaults, approved target or fully diluted
+fair value. The prior trial's reported **694 independent comparisons** are
+attributed to that temporary trial; they are not rerun at this checkpoint.
+
+Historical/financial-input sufficiency, complete claims coverage and investment
+readiness are not certified. Awards, financing/other claims, venture economics,
+unpaid acquisition obligations and settlement overlap remain open; some omissions
+are unbounded, so diagnostic alternatives do not bound total META value.
+Both META templates retain all 37 forecast inputs unset and unresolved actual
+bridge/share selections. Historical artifacts and approvals remain unchanged.
+Phase 1 expansion remains paused.
+
+Next: **separately scoped GOOGL validation**, inspecting its approved historical
+package and generalizing only the necessary consumer boundary; no work has begun.
+Scenarios, sensitivities and reverse DCF remain later capabilities. Completing
+every eligible company is not a prerequisite for defined Phase 2 engine milestones.
+
+Checkpoint verification: **118 affected tests PASS**, EV-only JSON compatibility
+and engine/historical preservation confirmed; local links and whitespace checked.
+Only reviewed implementation, synthetic examples/tests, incomplete templates and
+milestone documentation belong in the local checkpoint; no temporary META case
+or valuation output is retained. Nothing is pushed.
+
+## Earlier milestone — editable equity/share cases, synthetic verification only
+
+`analyst-case-v2` adds explicit `EQUITY_PER_SHARE` scope and editable Stage C
+intake through the existing models and `bridge_to_per_share`. V1 cases retain
+EV-only JSON behavior. Validation remains calculation-free; missing/unresolved
+bridge data fail explicitly with no EV-only downgrade. References, coverage and
+class/award declarations are not authenticated approvals or proof of hidden
+economic non-overlap. JSON preserves submitted inputs and full A/B/C provenance;
+the existing summary now includes signed components, subtotals, equity, actual
+shares/class/award basis, USD/share and exclusions/unknown omissions. Output
+creation/protections and isolated Decimal display rounding are preserved.
+
+[Usage](../README.md#editable-analyst-inputs--forecast-through-value-per-share),
+[synthetic example](../examples/valuation/synthetic-equity.json) and
+[incomplete META extension](../examples/valuation/meta-fy2025-equity-unset.json).
+The original synthetic EV example and 37-unset META forecast template remain
+unchanged; no prior temporary forecast or actual bridge/share proposal is saved.
+Actual META eligibility, financing/claims coverage, awards and per-share execution
+remain pending; Phase 1 expansion stays paused.
+
+**118 focused tests PASS** (12 new equity-interface +16 EV-interface +13 summary
++21 bridge +15 discounting +14 forecast +18 assumptions +9 company
+approval/preservation). Only synthetic numerical cases execute; no full suite,
+new evidence, historical/frozen changes, formula changes, commit or push.
+No preservation allowance change was needed.
+
+## Earlier milestone — analyst-facing CLI summary, presentation only
+
+[CLI](../scripts/run_analyst_case.py) adds explicit `--format summary|json`;
+JSON remains the default, byte-identical full-precision output. Validation-only
+behavior stays calculation-free, and both formats share the unchanged exclusive
+output creation and protected-path rules. The summary renders existing A/B
+components, annual percentage inputs, USD-million cash flows, explicit terminal
+inputs, EV reconciliation and discounted terminal contribution; zero EV produces
+an undefined ratio and signed/>100% ratios retain an explanation. Only display
+scaling/percentages use isolated precision-50/HALF_EVEN arithmetic. Analyst
+rationale, supplied limitations and later-filed timing remain visible; no input
+approval or economic validation is implied. [Usage](../README.md#editable-analyst-inputs--forecast-through-value-per-share).
+
+**85 focused tests PASS** (13 summary +16 case interface +14 forecast +15
+discounting +18 assumption +9 company approval/preservation). Only synthetic
+cases execute. Engine formulas/schemas, historical/frozen data, Phase 1's pause
+and the META template's 37 unset inputs remain unchanged. No actual META
+valuation, evidence acquisition, infrastructure, commit or push.
+
+## Earlier milestone — editable local analyst cases, synthetic verification only
 
 [Case reader](../src/valuation_platform/valuation/case_inputs.py) and
 [CLI](../scripts/run_analyst_case.py) add versioned local JSON inputs through EV,
@@ -11,7 +88,7 @@ Validation performs no calculation. Explicit `--run` uses only the fixed synthet
 fixture or existing pinned META boundary; stdout is default, and explicit output
 must be a new file outside protected source/history paths. Exact submitted rate
 strings, identity/date/rationale/scope/limitations and complete A/B provenance
-survive. [Examples and commands](../README.md#editable-analyst-inputs--forecast-through-enterprise-value)
+survive. [Examples and commands](../README.md#editable-analyst-inputs--forecast-through-value-per-share)
 include a runnable synthetic case and META FY2025 template with 37 null numerical
 entries and unset analyst metadata. Actual META inputs/execution remain pending;
 the [consolidated review](phase2-meta-base-input-review.md) is unchanged.

@@ -6,9 +6,13 @@ The [authoritative pause/resumption checkpoint](phase1-universe-pause-checkpoint
 24 completed scoped company histories, CAT/JNJ/CVX partial, and 15 assessment-only.
 Frozen-v1, original policies, source history and accepted overlays remain unchanged.
 Phase 2 Stages A–C implement separately approved forecast, fiscal-end discounting/
-terminal and equity/per-share mathematical conventions, verified with synthetic
-inputs only. Actual META assumptions, bridge/share/award selections and execution
-remain pending.
+terminal and equity/per-share mathematical conventions. Synthetic tests and
+separately authorized temporary META trials complete the first-company,
+scope-qualified end-to-end testing milestone; see the
+[milestone record](phase2-meta-milestone.md). Standing META assumptions and complete
+bridge/share/award coverage remain pending. Next is separately scoped GOOGL
+validation of the approved package and necessary consumer boundary only; it has
+not started. Scenarios, sensitivities and reverse DCF remain later work.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.
@@ -18,7 +22,7 @@ reconciled with the newer movement/manual-forecast approach in a separately scop
 consumer design—not silently reinstated as a universal historical-NWC requirement.
 Historical acceptance and valuation-use decisions remain separately identifiable;
 no source limitation, overlap, timing issue or consumer obligation is waived.
-Existing manual-assumption models are reusable, not a valuation engine.
+Assumption models alone do not establish financial-input sufficiency.
 
 The [META Base-case consumer contract](phase2-meta-base-consumer-contract.md)
 records approval of P2M-01–13 mathematical/interface conventions and Stages A–C
@@ -79,8 +83,10 @@ contributions, subtotals, supplied decisions/coverage/omissions and limitations;
 schema `stage-c-equity-bridge-v1`, convention `meta-base-equity-bridge-v1`, local
 precision 50/HALF_EVEN and deterministic Decimal strings. No generic framework,
 candidate loader, award/dilution calculation or hidden-overlap certification is
-added. All actual META selections, semantic input review and execution remain
-pending; synthetic fixtures alone exercise the A→B→C calculation.
+added. Synthetic fixtures and temporary scope-qualified META trials exercised
+A→B→C; standing actual selections, complete semantic coverage and fully diluted
+fair value remain unapproved. The milestone records trial limitations without
+changing models, financial formulas or historical approvals.
 
 The additive [case input reader](../src/valuation_platform/valuation/case_inputs.py)
 uses schema `analyst-case-v1` and immutable `AnalystCase` metadata, reusing
@@ -100,9 +106,28 @@ A/B output without changing engine models. The small
 It prints unless explicitly given `--output`, creates files exclusively and
 protects source/history paths. [Editable examples](../examples/valuation/synthetic-base.json)
 are separate from tests and evidence; the [META template](../examples/valuation/meta-fy2025-unset.json)
-has all 37 rates and analyst identity/date/rationale unset. No bridge/share intake,
-new company adapter, policy/approval system or actual META run is added. See
-[usage](../README.md#editable-analyst-inputs--forecast-through-enterprise-value).
+has all 37 rates and analyst identity/date/rationale unset. See
+[usage](../README.md#editable-analyst-inputs--forecast-through-value-per-share).
+
+The narrow `analyst-case-v2` extension explicitly requires `EQUITY_PER_SHARE`
+calculation scope and a complete editable bridge. It decodes only the existing
+`BridgeComponent`, `BridgeObservation`, `PopulationCoverage`, `ValuationShares`
+and `BridgeInputs` models, with `ManualIdentity` coverage reviews. Structural,
+company/date, unit/scale, coverage, declared overlap/class/award compatibility
+and unresolved-requirement checks occur without calculation or historical reads.
+Missing/unresolved Stage C data fail rather than downgrade to EV. References
+remain declarations, not authenticated approvals or proof of economic completeness.
+
+At explicit execution, `run_case` passes the Stage B result and bridge inputs to
+`bridge_to_per_share`; no bridge formulas are repeated in intake or rendering.
+`analyst-case-equity-per-share-v1` retains submitted declarations and the existing
+Stage C serializer's complete nested A/B provenance. V1 results remain unchanged.
+The CLI summary consumes serialized contributions/subtotals and share results;
+only display scaling/rounding uses an isolated Decimal context. Both versions
+share exclusive output creation/protected paths. A separate
+[synthetic equity example](../examples/valuation/synthetic-equity.json) and
+[unset META equity template](../examples/valuation/meta-fy2025-equity-unset.json)
+add no actual selection, forecast default, company adapter or approval framework.
 
 ## AVGO/TSLA/LLY approvals — reuse of the company audit/view mechanism
 

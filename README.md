@@ -92,7 +92,15 @@ artifact](docs/universe/sp500-top-50-failure-taxonomy.md) records the complete
 17-measure coverage matrix, all 24 ambiguities, schema and identity blockers,
 and the ranked Phase 1H.4 backlog.
 
-## Editable analyst inputs — forecast through enterprise value
+## Editable analyst inputs — forecast through value per share
+
+The [META milestone record](docs/phase2-meta-milestone.md) completes the first-company,
+scope-qualified end-to-end testing milestone: historical anchor → manual forecast →
+FCFF/DCF → EV → explicit equity bridge → value/share. Synthetic tests and temporary
+META-anchored trials exercised the workflow; no permanent META Base case, complete
+claims coverage, financial-input sufficiency or fully diluted fair value is certified.
+Phase 1 remains paused. Next is separately scoped GOOGL validation, not started here;
+scenarios, sensitivities and reverse DCF remain later capabilities.
 
 Edit a copy of [synthetic-base.json](examples/valuation/synthetic-base.json) or
 [meta-fy2025-unset.json](examples/valuation/meta-fy2025-unset.json); keep the
@@ -111,6 +119,8 @@ synthetic example (revenue anchor 100, all assumptions synthetic):
 python3 scripts/run_analyst_case.py examples/valuation/synthetic-base.json
 python3 scripts/run_analyst_case.py examples/valuation/synthetic-base.json --run
 python3 scripts/run_analyst_case.py examples/valuation/synthetic-base.json --run --output /tmp/synthetic-base-ev.json
+python3 scripts/run_analyst_case.py examples/valuation/synthetic-base.json --run --format summary
+python3 scripts/run_analyst_case.py examples/valuation/synthetic-base.json --run --format summary --output /tmp/synthetic-review.txt
 python3 scripts/run_analyst_case.py examples/valuation/meta-fy2025-unset.json
 ```
 
@@ -120,21 +130,95 @@ The synthetic example reproduces the independently checked A/B fixture EV
 77.5770603520 in synthetic USD units, not a META value or recommended assumption.
 
 The [runner](scripts/run_analyst_case.py) validates by default; `--run` requests
-A/B computation. Results print to stdout unless `--output` names a **new** file
+A/B computation for v1 or A/B/C for explicitly scoped v2 cases. `--format json` is the unchanged default with full-precision
+values and provenance; `--format summary` renders a compact analyst report from
+the same result. Without `--run`, either format validates only, with no valuation
+or report calculation. Results print to stdout unless `--output` names a **new** file
 outside the repository or under `output/`; its parent must exist. Existing
 files, inputs and repository source/history paths cannot be overwritten.
-Errors go to stderr with exit 2. Output retains the case identity, exact submitted
-rate strings, author/date/rationale/scope/limitations and complete Stage A/B
+`--output` saves the selected format, independent of filename extension, and
+requires `--run`. Errors go to stderr with exit 2. JSON output retains the case identity, exact submitted
+rate strings, author/date/rationale/scope/limitations and complete Stage A/B (and requested Stage C)
 provenance. Validation checks JSON/models and the declared pinned identity only;
 the retained META audit/revenue boundary is resolved at run time, without network
 retrieval or automatic refresh. Only the fixed synthetic fixture and META FY2025
-anchor are supported; no bridge/share intake is added.
+anchor are supported.
 
-The engine is synthetically verified. Editable inputs and `--run` do not certify
-economic consistency, evidence completeness or financial acceptance. Actual META
-assumptions and execution remain pending under the
-[input review](docs/phase2-meta-base-input-review.md); no approval workflow is
-required for editing or validating a case.
+The additive `analyst-case-v2` extension requires
+`"calculation_scope": "EQUITY_PER_SHARE"` and an explicit `bridge` object.
+`analyst-case-v1` and its EV-only JSON remain unchanged. Copy
+[synthetic-equity.json](examples/valuation/synthetic-equity.json) for a complete
+synthetic example, or [meta-fy2025-equity-unset.json](examples/valuation/meta-fy2025-equity-unset.json)
+for the deliberately incomplete META extension. It preserves all 37 unset
+forecast inputs and adds no pending actual bridge/share numbers.
+
+```sh
+python3 scripts/run_analyst_case.py examples/valuation/synthetic-equity.json
+python3 scripts/run_analyst_case.py examples/valuation/synthetic-equity.json --run --format summary
+python3 scripts/run_analyst_case.py examples/valuation/synthetic-equity.json --run --output /tmp/synthetic-equity.json
+python3 scripts/run_analyst_case.py examples/valuation/meta-fy2025-equity-unset.json
+```
+
+The last command fails with unset forecast, bridge/share and unresolved-requirement
+errors; it never runs META. The synthetic example has EV 77.577060352 + eligible
+assets (10+2) − financing 20 − other claims 3 = equity 66.577060352;
+4 actual shares yield **16.644265088 USD/share**. These are synthetic USD units,
+not millions. The summary labels money in USD millions and the denominator in
+actual shares; per-share output is USD/share, displayed to eight decimals.
+
+The `bridge` mirrors the existing [Stage C models](src/valuation_platform/valuation/bridge.py):
+`components` (`BridgeComponent`), non-operand `observations` (`BridgeObservation`),
+three-role `coverage` (`PopulationCoverage`), `shares` (`ValuationShares`),
+`input_basis`, `valuation_class_id`, `unresolved_requirements` and
+`convention_version: "meta-base-equity-bridge-v1"`. Supply every model field
+explicitly, including empty reference arrays and booleans. Monetary amounts and
+share counts use Decimal strings in base USD/actual shares at scale 1; CIK and
+scale are JSON integers. Dates are `YYYY-MM-DD`. Component roles are
+`ELIGIBLE_ASSET`, `FINANCING_CLAIM`, `OTHER_EQUITY_CLAIM`; magnitudes are nonnegative
+and the engine supplies signs. Keep reported/derived/proxy/manual origins,
+source precision, source/decision references and rationale explicit. Overlap and
+alternative references name component/observation IDs; two selected operands
+cannot overlap or be alternative measurements, nor overlap the forecast.
+Selected components/shares match the anchor company and date; supporting
+observations may retain different dates/units without becoming operands.
+
+Coverage must name exactly each role's selected populations; an empty role needs
+a referenced `OMISSION` observation with `value: null` and explicit rationale.
+An omission is an assumption, never reported zero or a numeric deduction.
+Coverage reviews carry author/UTC timestamp/rationale and decision references.
+Shares require company/date/class, declared equivalence and the existing SBC/award
+convention plus references/rationale. Examples show the exact editable structure.
+Nonempty references authenticate no approval, economic completeness or hidden
+overlap. Unresolved requirements must be resolved explicitly before running;
+requested per-share cases never silently fall back to EV-only output.
+
+Equity JSON uses `analyst-case-equity-per-share-v1`, retains submitted inputs and
+full Stage A/B/C provenance, and records signed components, subtotals, shares and
+raw negative results. The summary includes class/award declarations, material
+exclusions, unknown omissions and supplied limitations. Actual META eligibility,
+claims, share equivalence and existing awards remain pending for a standing case;
+the milestone records separately authorized temporary trials. No standing actual
+selections are inferred from historical approvals or example metadata.
+
+The summary shows the analyst/input basis and anchor, annual percentage inputs,
+USD-million cash flows with discount factors/PVs, explicit terminal inputs and an
+enterprise-value reconciliation. Investment means cash PP&E plus non-overlapping
+new finance-leased operating assets, excluding finance principal. Working-capital
+cash requirement uses full forecast revenue; positive uses cash and negative
+releases it. EV is enterprise value, not equity or per-share value.
+Discounted terminal value / EV is undefined for zero EV; signed or >100% ratios
+remain visible with an explanation. Display-only HALF_EVEN rounding uses 8
+decimals for USD millions, 2 for percentages and 6 for factors; rounded components
+may not sum exactly and display digits do not improve source precision. Supplied
+scope/rationale/limitations and later-filed-information timing remain visible;
+the JSON result and inputs are never rounded or mutated by the renderer.
+
+The engine has synthetic verification and temporary scope-qualified META trial
+coverage. Editable inputs and `--run` do not certify economic consistency, evidence
+completeness or financial acceptance. A permanent META case and further execution
+require separately scoped decisions; the [input review](docs/phase2-meta-base-input-review.md)
+remains review material. No approval workflow is required for editing or validating
+a case, and neither unset template contains the trial assumptions.
 
 ## Development
 

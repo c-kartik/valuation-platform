@@ -7,7 +7,14 @@ The [authoritative pause/resumption checkpoint](phase1-universe-pause-checkpoint
 Frozen-v1, original policies, source history and accepted overlays remain unchanged.
 Phase 2 Stages A–C implement separately approved forecast, fiscal-end discounting/
 terminal and equity/per-share mathematical conventions with synthetic verification
-only. Actual META assumptions, bridge/share/award selections and execution remain pending.
+and separately authorized temporary META trials. The first-company, scope-qualified
+end-to-end testing milestone is complete; the [milestone record](phase2-meta-milestone.md)
+preserves its assumptions, results and limitations. This is not complete financial-input
+sufficiency, investment readiness, complete claims coverage or fully diluted fair value.
+Standing META Base-case and award/claim selections remain pending. Next is separately
+scoped GOOGL validation, not begun here; completing all eligible companies is not
+required before incremental Phase 2 engine milestones. Scenarios, sensitivities
+and reverse DCF remain later capabilities.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.
@@ -17,7 +24,7 @@ reconciled with the newer movement/manual-forecast approach in a separately scop
 consumer design—not silently reinstated as a universal historical-NWC requirement.
 Historical acceptance and valuation-use decisions remain separately identifiable;
 no source limitation, overlap, timing issue or consumer obligation is waived.
-Existing manual-assumption models are reusable, not a valuation engine.
+Assumption models alone do not establish financial-input sufficiency.
 
 The [META Base-case consumer contract](phase2-meta-base-consumer-contract.md)
 now records approved P2M-01–09 conventions and Stage A synthetic implementation:
@@ -36,8 +43,9 @@ Base USD and exact Decimal strings retain original source precision; arithmetic
 uses isolated local precision 50/HALF_EVEN without display quantization. Six
 aggregate rates cannot prove economic consistency or expose embedded overlap.
 Actual rates, authored rationale and joint EBIT/D&A/lease/investment/WC review
-remain pending before META execution; independent manual forecasts do not
-universally require historical reconstruction or new evidence.
+remain required for separately scoped META execution. Temporary trial assumptions
+do not establish a permanent case; independent manual forecasts do not universally
+require historical reconstruction or new evidence.
 
 P2M-10–11 now approve fiscal-end analytical t=0, annual end-year discounting at
 integer years 1–5, constant manual WACC and Gordon growth. Stage B consumes
@@ -54,8 +62,9 @@ Terminal assumptions must sustain growth, replacement/growth investment and WC
 needs. Aggregate rates cannot prove that sustainability. The output preserves
 source/filing dates as supplied and discloses later-filed information at fiscal-end
 analytical t=0; it is not a contemporaneous historical-information backtest or a
-current market-date valuation. Information cutoff and actual input review remain
-unestablished.
+current market-date valuation. The engine establishes no information cutoff or
+financial approval automatically; the milestone records the temporary trial's
+January 29, 2026 cutoff separately from its December 31, 2025 analytical date.
 
 P2M-12–13 now approve Stage C mathematical/interface conventions only:
 `Equity = EV + eligible nonoperating assets − financing claims − other equity claims`;
@@ -75,8 +84,9 @@ measurement/lease overlap, other claims and unbounded historical omissions still
 need separate actual-use treatment. The declared award policy retains SBC in
 margins without a duplicate service charge; it does not value existing awards,
 approve class equivalence or calculate dilution, exercise proceeds or future
-issuance. No META shares/balances are selected automatically. Actual META
-populations, share/award adjustments, semantic review and execution remain pending.
+issuance. No META shares/balances are selected automatically. Standing META
+populations, share/award adjustments, complete semantic coverage and further
+execution remain pending beyond the separately authorized temporary trials.
 Older postponement/design sections below retain historical scope and do not
 override bounded Stages A–C approvals.
 

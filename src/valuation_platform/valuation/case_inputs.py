@@ -1,6 +1,6 @@
-"""Editable local A/B inputs; parsing is not calculation or economic approval."""
+"""Editable local A/B/C inputs; parsing is not calculation or economic approval."""
 
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 from datetime import date
 from decimal import Decimal
 import json
@@ -16,10 +16,17 @@ from .discounting import (
     discount_to_enterprise_value, enterprise_value_to_dict,
 )
 from .forecast import CONVENTION_VERSION, RevenueAnchor, forecast_five_years
+from .bridge import (
+    BridgeComponent, BridgeObservation, PopulationCoverage, ValuationShares,
+    BridgeInputs, ComponentRole, bridge_to_per_share, bridge_to_dict,
+)
 
 
 CASE_SCHEMA = "analyst-case-v1"
 RESULT_SCHEMA = "analyst-case-enterprise-value-v1"
+EQUITY_CASE_SCHEMA = "analyst-case-v2"
+EQUITY_RESULT_SCHEMA = "analyst-case-equity-per-share-v1"
+EQUITY_SCOPE = "EQUITY_PER_SHARE"
 ANNUAL_RATES = (
     "revenue_growth", "operating_margin", "forecast_tax_rate",
     "d_and_a_percent_revenue", "capex_percent_revenue",
@@ -70,6 +77,98 @@ class AnalystCase:
     anchor_kind: str
     assumptions: ValuationAssumptions
     terminal: TerminalAssumptions
+    bridge: BridgeInputs | None = None
+
+
+def _read_bridge(raw, anchor, basis, errors):
+    """Decode the six existing fixed models; no calculation or source retrieval."""
+    def record(value, cls, path):
+        names = {f.name for f in fields(cls)}
+        if type(value) is not dict:
+            errors.append(f"{path}: UNSET; required {cls.__name__} object")
+            return None
+        missing = names - value.keys()
+        for name in sorted(missing):
+            errors.append(f"{path}.{name}: missing required field")
+        for name in sorted(value.keys() - names):
+            errors.append(f"{path}.{name}: unknown field")
+        if missing or value.keys() - names:
+            return None
+        data = dict(value)
+        for name, value in data.items():
+            location = f"{path}.{name}"
+            nullable = cls is BridgeObservation and name in ("value", "as_of", "precision")
+            if value is None and nullable:
+                continue
+            try:
+                if name in ("amount", "shares", "value"):
+                    if type(value) is not str or not re.fullmatch(
+                            r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?", value):
+                        raise ValueError("UNSET/invalid; supply a finite Decimal string, not a JSON number")
+                    data[name] = Decimal(value)
+                elif name in ("as_of", "observation_date"):
+                    if type(value) is not str:
+                        raise ValueError("UNSET; supply YYYY-MM-DD")
+                    data[name] = date.fromisoformat(value)
+                    if data[name].isoformat() != value:
+                        raise ValueError("supply YYYY-MM-DD")
+                elif name == "role":
+                    data[name] = ComponentRole(value)
+                elif name.endswith("_references") or name == "population_ids":
+                    if type(value) is not list:
+                        raise ValueError("required array of explicit references")
+                    data[name] = tuple(value)
+                elif name == "review":
+                    data[name] = record(value, ManualIdentity, location)
+            except (ValueError, TypeError, ArithmeticError) as exc:
+                errors.append(f"{location}: {exc}")
+                return None
+        try:
+            return cls(**data)
+        except (ValueError, TypeError, ArithmeticError) as exc:
+            errors.append(f"{path}: {exc}")
+            return None
+
+    if type(raw) is not dict:
+        errors.append("bridge: UNSET; required explicit Stage C inputs for EQUITY_PER_SHARE")
+        return None
+    names = {f.name for f in fields(BridgeInputs)}
+    for name in sorted(names - raw.keys()):
+        errors.append(f"bridge.{name}: missing required field")
+    for name in sorted(raw.keys() - names):
+        errors.append(f"bridge.{name}: unknown field")
+    start = len(errors)
+    decoded = {}
+    for key, cls in (("components", BridgeComponent), ("observations", BridgeObservation),
+                     ("coverage", PopulationCoverage)):
+        values = raw.get(key)
+        if type(values) is not list:
+            errors.append(f"bridge.{key}: UNSET; required explicit array")
+            continue
+        decoded[key] = tuple(record(v, cls, f"bridge.{key}[{i}]") for i, v in enumerate(values))
+    decoded["shares"] = record(raw.get("shares"), ValuationShares, "bridge.shares")
+    unresolved = raw.get("unresolved_requirements")
+    if type(unresolved) is not list or unresolved:
+        errors.append(f"bridge.unresolved_requirements: must be an explicit empty array before calculation; pending: {unresolved!r}")
+    if len(errors) != start or names != raw.keys():
+        return None
+    try:
+        result = BridgeInputs(**decoded, input_basis=raw["input_basis"],
+                              valuation_class_id=raw["valuation_class_id"],
+                              unresolved_requirements=tuple(unresolved),
+                              convention_version=raw["convention_version"])
+        if result.input_basis != basis:
+            raise ValueError("input_basis must match case.input_basis")
+        for item in (*result.components, result.shares):
+            observed = item.observation_date if type(item) is ValuationShares else item.as_of
+            if item.company_cik != anchor.get("cik") or observed.isoformat() != anchor.get("annual_end"):
+                raise ValueError("component/share company/date mismatch with anchor")
+        if any(n.company_cik != anchor.get("cik") for n in result.observations):
+            raise ValueError("observation company mismatch with anchor")
+        return result
+    except (ValueError, TypeError, ArithmeticError) as exc:
+        errors.append(f"bridge: {exc}")
+        return None
 
 
 def read_case(text: str) -> AnalystCase:
@@ -108,11 +207,15 @@ def read_case(text: str) -> AnalystCase:
             errors.append(f"{path}: invalid Decimal string")
             return None
 
+    equity = type(doc) is dict and doc.get("schema_version") == EQUITY_CASE_SCHEMA
+    extra = ("calculation_scope", "bridge") if equity else ()
     doc = obj(doc, ("schema_version", "case_name", "input_basis", "analyst", "scope",
                     "limitations", "conventions", "anchor", "forecast_years", "wacc",
-                    "terminal_growth", "terminal"), "case")
-    if doc.get("schema_version") != CASE_SCHEMA:
-        errors.append(f"case.schema_version: supported version is {CASE_SCHEMA}")
+                    "terminal_growth", "terminal", *extra), "case")
+    if doc.get("schema_version") not in (CASE_SCHEMA, EQUITY_CASE_SCHEMA):
+        errors.append(f"case.schema_version: supported versions are {CASE_SCHEMA}, {EQUITY_CASE_SCHEMA}")
+    if equity and doc.get("calculation_scope") != EQUITY_SCOPE:
+        errors.append(f"case.calculation_scope: {EQUITY_CASE_SCHEMA} requires {EQUITY_SCOPE}")
     text_field(doc.get("case_name"), "case.case_name")
     text_field(doc.get("scope"), "case.scope")
     limitations = doc.get("limitations")
@@ -173,6 +276,7 @@ def read_case(text: str) -> AnalystCase:
             terminal = TerminalAssumptions(**terminal_rates, convention_version=CONVENTION_VERSION)
         except (ValueError, TypeError) as exc:
             errors.append(f"terminal: {exc}")
+    bridge = _read_bridge(doc.get("bridge"), anchor, doc.get("input_basis"), errors) if equity else None
     if errors:
         raise CaseInputError(errors)
     try:
@@ -182,7 +286,7 @@ def read_case(text: str) -> AnalystCase:
         )
     except (ValueError, TypeError) as exc:
         raise CaseInputError([f"assumptions (wacc/terminal_growth/year labels): {exc}"]) from exc
-    return AnalystCase(text, identity, kind, assumptions, terminal)
+    return AnalystCase(text, identity, kind, assumptions, terminal, bridge)
 
 
 def load_case(path: Path) -> AnalystCase:
@@ -190,7 +294,7 @@ def load_case(path: Path) -> AnalystCase:
 
 
 def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
-    """Explicit A/B run; no files written, no approvals or bridge/share intake."""
+    """Explicit A/B or A/B/C run; no files written or approvals inferred."""
     if type(case) is not AnalystCase or read_case(case.submitted_json) != case:
         raise CaseInputError(["Validated AnalystCase required; submitted declarations disagree"])
     doc = _strict_json(case.submitted_json)
@@ -208,7 +312,7 @@ def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
     stage_a = forecast_five_years(anchor, case.assumptions, convention_version=doc["conventions"]["forecast"])
     stage_b = discount_to_enterprise_value(stage_a, case.terminal,
                                           convention_version=doc["conventions"]["discounting"])
-    return {
+    result = {
         "schema_version": RESULT_SCHEMA,
         "case_name": doc["case_name"], "input_basis": doc["input_basis"],
         "submitted_inputs": doc,
@@ -219,3 +323,10 @@ def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
                         "Enterprise value only; no bridge/share inputs or automatic historical forecasts."],
         "stage_b": enterprise_value_to_dict(stage_b),
     }
+    if case.bridge is not None:
+        stage_c = bridge_to_dict(bridge_to_per_share(stage_b, case.bridge))
+        result["schema_version"] = EQUITY_RESULT_SCHEMA
+        result["calculation_scope"] = EQUITY_SCOPE
+        result["stage_c"] = stage_c
+        result["limitations"][-1:] = stage_c["limitations"]
+    return result
