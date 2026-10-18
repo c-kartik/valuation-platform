@@ -153,7 +153,16 @@ class CompanyBatchActivationTests(unittest.TestCase):
         for t in ('msft','aapl','googl'):
             name=f'docs/company-data-preparation/{t}-analyst-input-package.json'
             self.assertEqual((ROOT/name).read_bytes(),subprocess.check_output(['git','show',a.BASELINE+':'+name],cwd=ROOT))
-        self.assertEqual(subprocess.check_output(['git','diff','--name-only',a.BASELINE,'--','src','docs/evidence','docs/universe','tests/fixtures'],cwd=ROOT,text=True),'')
+        # Stages A/B/C and editable inputs add separate modules; every pre-existing source,
+        # evidence/universe artifact and fixture remains byte-preserved. Permit
+        # only these additions, never modifications of the historical boundary.
+        changes=subprocess.check_output(['git','diff','--name-status',a.BASELINE,'--','src','docs/evidence','docs/universe','tests/fixtures'],cwd=ROOT,text=True).splitlines()
+        allowed={'A\tsrc/valuation_platform/valuation/consumer.py',
+                 'A\tsrc/valuation_platform/valuation/forecast.py',
+                 'A\tsrc/valuation_platform/valuation/discounting.py',
+                 'A\tsrc/valuation_platform/valuation/bridge.py',
+                 'A\tsrc/valuation_platform/valuation/case_inputs.py'}
+        self.assertTrue(set(changes)<=allowed,changes)
 
 
 if __name__=='__main__':unittest.main()

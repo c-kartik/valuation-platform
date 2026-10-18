@@ -5,9 +5,10 @@
 The [authoritative pause/resumption checkpoint](phase1-universe-pause-checkpoint.md) records
 24 completed scoped company histories, CAT/JNJ/CVX partial, and 15 assessment-only.
 Frozen-v1, original policies, source history and accepted overlays remain unchanged.
-The user will begin Phase 2 in separate chats, initially one company and a
-traceable Base case; forecasting, FCFF, discounting, terminal value and equity/share
-bridging remain future implementation, not approved conventions or code here.
+Phase 2 Stages A–C implement separately approved forecast, fiscal-end discounting/
+terminal and equity/per-share mathematical conventions, verified with synthetic
+inputs only. Actual META assumptions, bridge/share/award selections and execution
+remain pending.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.
@@ -18,6 +19,90 @@ consumer design—not silently reinstated as a universal historical-NWC requirem
 Historical acceptance and valuation-use decisions remain separately identifiable;
 no source limitation, overlap, timing issue or consumer obligation is waived.
 Existing manual-assumption models are reusable, not a valuation engine.
+
+The [META Base-case consumer contract](phase2-meta-base-consumer-contract.md)
+records approval of P2M-01–13 mathematical/interface conventions and Stages A–C
+implementation/synthetic verification under P2M-14, separately from actual inputs.
+`valuation.consumer` reads the existing accepted META package/decisions and checks
+the pinned audit, relevant-content revisions, exact FY2025 identity and revenue
+selection. It reuses existing hash/manual-identity helpers, without creating or
+activating an approval, rebuilding history or inspecting optional effective
+families for financial sufficiency. Source occurrences/precision and exact
+source/effective/approval references survive an immutable `RevenueAnchor`.
+
+`valuation.forecast` accepts that anchor (or explicitly synthetic fixture
+metadata) and the unchanged assumption models. Network-free pure arithmetic
+returns immutable five-period components through FCFF under `meta-base-fcff-v1`.
+It validates schema, anchor match and declared convention; exact Decimal-string
+serialization retains the supplied assumptions and provenance. A fresh local
+precision-50/HALF_EVEN context isolates rounding/traps/flags. No historical proxy,
+CFO/movement, SBC add-back or lease-principal operand is accepted. Aggregate
+rates cannot prove non-overlap: output records semantic review as not assessed.
+Actual input author/rationale and semantic review remain requirements for future
+authorized META execution, not a new intake/approval framework in Stage A.
+
+`valuation.discounting` adds immutable `TerminalAssumptions`, five independently
+supplied ratios under the same economic convention; WACC/g remain in the existing
+assumption set. `discount_to_enterprise_value` revalidates the nested Stage A
+anchor/assumptions and five finite ordered annuals, then recomputes their exact
+components before consumption. This narrow check addresses public unchecked
+result constructors without a general validation framework. Stage A and terminal
+components share `_operating_year`; Stage A schema/output behavior is preserved.
+
+Annual discount factors use integer exponents 1–5 and a constant manual WACC.
+Terminal revenue uses existing g, while all other terminal ratios are explicit;
+Gordon value is at Year 5 and discounted five periods. Immutable output and
+deterministic Decimal strings retain the entire Stage A serialization and all
+terminal components/PVs/EV. The local numeric policy remains precision 50 /
+HALF_EVEN with no global-context mutation. Timing is anchor-fiscal-end analytical
+t=0 using later-filed information, not a contemporaneous backtest/current date;
+source/filing dates are preserved as supplied, and no information cutoff is
+invented. No clipping of negative values or sustainability certification occurs.
+
+`valuation.bridge` adds immutable `BridgeComponent`, non-additive
+`BridgeObservation`, fixed-role `PopulationCoverage`, `ValuationShares` and
+`BridgeInputs`. Coverage reuses `ManualIdentity` author/date/rationale metadata;
+each of three roles must explicitly name its numeric populations and/or null
+omissions. References are declarations, not authenticated evidence or approvals.
+No empty tuple implies absence. Numeric populations/IDs must be unique, declared
+overlap/alternative links must resolve, and conflicting numeric operands or
+declared forecast overlap reject. Company, fiscal-end date, base USD/share units,
+output class and the declared SBC-expense-compatible award policy must align.
+Non-additive observations preserve their own dates/units and missing amounts.
+
+`bridge_to_per_share` revalidates nested Stage B models/finite values/order and
+recomputes via the existing discounting function before consuming EV. It adds
+eligible assets, subtracts financing/other claims and divides by explicit positive
+shares, preserving negative results. Explicit unresolved requirements block it.
+`bridge_to_dict`/`serialize_bridge` retain complete A/B provenance, signed
+contributions, subtotals, supplied decisions/coverage/omissions and limitations;
+schema `stage-c-equity-bridge-v1`, convention `meta-base-equity-bridge-v1`, local
+precision 50/HALF_EVEN and deterministic Decimal strings. No generic framework,
+candidate loader, award/dilution calculation or hidden-overlap certification is
+added. All actual META selections, semantic input review and execution remain
+pending; synthetic fixtures alone exercise the A→B→C calculation.
+
+The additive [case input reader](../src/valuation_platform/valuation/case_inputs.py)
+uses schema `analyst-case-v1` and immutable `AnalystCase` metadata, reusing
+`ManualIdentity`, `ValuationAssumptions` and `TerminalAssumptions`. `read_case`/
+`load_case` check strict JSON (duplicate keys, floating JSON numbers/constants,
+unknown fields/versions), fractional Decimal strings, all 37 explicit rates,
+declared conventions and one of two exact anchor identities. Nulls stay unset;
+missing paths are collected. Parsing/validation calls no valuation function and
+loads no historical package. Submitted strings/rationale remain declarations,
+not authenticated review or automatic historical calibration.
+
+`run_case` separately resolves the fixed synthetic revenue-100 fixture or the
+existing pinned META boundary, then delegates all financial formulas to Stages
+A/B. Schema `analyst-case-enterprise-value-v1` retains submitted inputs and full
+A/B output without changing engine models. The small
+[CLI](../scripts/run_analyst_case.py) validates by default; only `--run` calculates.
+It prints unless explicitly given `--output`, creates files exclusively and
+protects source/history paths. [Editable examples](../examples/valuation/synthetic-base.json)
+are separate from tests and evidence; the [META template](../examples/valuation/meta-fy2025-unset.json)
+has all 37 rates and analyst identity/date/rationale unset. No bridge/share intake,
+new company adapter, policy/approval system or actual META run is added. See
+[usage](../README.md#editable-analyst-inputs--forecast-through-enterprise-value).
 
 ## AVGO/TSLA/LLY approvals — reuse of the company audit/view mechanism
 
@@ -452,7 +537,8 @@ The additive [analyst-NWC foundation](analyst-operating-nwc-design.md#implemente
 now uses its own scenario/assumption identities and provenance, not mutations of
 schema 5 or active v1 policies. The [company preparation register](company-data-preparation/index.md)
 covers all forty generalization-required issuers without fresh financial review.
-No joint timing-readiness model or valuation calculator is implemented.
+No joint historical timing-readiness model is implemented. The separately
+approved Stage A forecast above does not certify historical FCFF compatibility.
 
 ### WP0 historical-input preparation foundation
 
@@ -758,8 +844,9 @@ serialization emits Decimal strings and preserves period order.
 This layer validates assumptions only. It does not inspect standardized
 history, populate assumptions, calculate forecast financials, define
 loss-period tax treatment, derive WACC, or calculate FCFF, terminal value, DCF,
-an equity bridge, or per-share value. A future forecast boundary will validate
-the historical anchor against `StandardizedHistoricalCompany`.
+an equity bridge, or per-share value. `valuation.consumer` now validates the
+specific accepted META analyst view directly; `valuation.forecast` consumes its
+revenue anchor without changing or rebuilding `StandardizedHistoricalCompany`.
 
 ## Phase 1 SEC Boundary
 

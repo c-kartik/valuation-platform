@@ -1,5 +1,80 @@
 # Project Status
 
+## Current — editable local analyst cases, synthetic verification only
+
+[Case reader](../src/valuation_platform/valuation/case_inputs.py) and
+[CLI](../scripts/run_analyst_case.py) add versioned local JSON inputs through EV,
+reusing the existing assumption/terminal models and unchanged A/B engine.
+Analysts can edit each annual rate, WACC/g and every terminal ratio independently;
+no averages, defaults, terminal copies, policies or approval workflow are created.
+Validation performs no calculation. Explicit `--run` uses only the fixed synthetic
+fixture or existing pinned META boundary; stdout is default, and explicit output
+must be a new file outside protected source/history paths. Exact submitted rate
+strings, identity/date/rationale/scope/limitations and complete A/B provenance
+survive. [Examples and commands](../README.md#editable-analyst-inputs--forecast-through-enterprise-value)
+include a runnable synthetic case and META FY2025 template with 37 null numerical
+entries and unset analyst metadata. Actual META inputs/execution remain pending;
+the [consolidated review](phase2-meta-base-input-review.md) is unchanged.
+
+**93 focused tests PASS** (16 case interface +77 valuation/assumption/company
+approval-preservation checks). Execution tests use synthetic values only; no full
+suite, actual META valuation, evidence acquisition, historical approval/frozen
+change, commit or push. Preservation permits only the five named added valuation
+modules; all pre-existing historical source bytes remain protected.
+
+## Current — Phase 2 Stages A–C implemented and synthetically verified
+
+[Consumer contract](phase2-meta-base-consumer-contract.md): the user approves
+P2M-01–13 mathematical/interface conventions and P2M-14 Stages A–C implementation/
+synthetic verification only. Earlier proposals, clarifications and Stage A/B
+authority are preserved there. Added a
+narrow read-only META FY2025 revenue adapter with pinned audit/revision/source
+bindings, and a separate pure five-year forecast through FCFF. Immutable results
+retain every component, supplied assumptions, approved convention version and
+source precision, with deterministic Decimal-string serialization and isolated
+precision-50/HALF_EVEN arithmetic. Existing assumption models and all historical
+facts/approvals/frozen artifacts are unchanged; no issuer preparation treatment
+changes, so issuer records remain untouched.
+
+Stage B adds `TerminalAssumptions` (five explicit sustainable operating/
+reinvestment ratios, no duplicated WACC/g) and `discount_to_enterprise_value`.
+It revalidates/recomputes the Stage A handoff, uses shared operating equations,
+discounts years 1–5 and explicit Gordon terminal cash flow through EV, retaining
+zero/negative mathematical results. Immutable output retains all Stage A
+provenance, terminal components, factors/PVs, assumptions and versions. Analytical
+t=0 is anchor fiscal end using later-filed information, not a contemporaneous
+backtest/current market-date valuation; only integer end-year exponents apply.
+
+Stage C adds `BridgeComponent`, non-additive `BridgeObservation`, fixed-role
+`PopulationCoverage` reusing `ManualIdentity`, `ValuationShares`, `BridgeInputs`
+and `bridge_to_per_share`. It revalidates/recomputes the Stage B handoff, requires
+explicit reviewed coverage/omissions and compatible declared class/award policy,
+then returns signed components/subtotals, equity and raw per-share arithmetic.
+It preserves full A/B provenance, supplied source/decision/review declarations,
+null unknowns and deterministic immutable output with isolated Decimal arithmetic.
+No candidate loader, evidence authentication or automatic award/dilution engine.
+
+Actual META rates, reviewed scope/rationale, population/share/award selections,
+unresolved requirements and execution remain pending; financial-input sufficiency
+remains NOT_ASSESSED. Code checks structure/declared compatibility and explicit operands,
+not hidden duplication or economic completeness. Phase 1 expansion stays paused.
+**77 focused tests PASS** (21 Stage C +15 Stage B +14 Stage A +18 existing assumption +9
+company approval/preservation); checks are recorded in the contract. No full-suite/corpus
+run, evidence acquisition, company review, commit or push.
+
+[Stage C decision sheet](phase2-meta-base-consumer-contract.md#7-proposed-stage-c-decision-sheet)
+preserves its original proposal history: implementation conventions are now
+approved and synthetically verified; retained META population/share candidates
+remain **PROPOSED**, and unresolved actual-use requirements remain open. No actual
+META input/valuation approval follows.
+
+[First actual META input review](phase2-meta-base-input-review.md) is prepared for
+one consolidated review only: all 37 forecast/WACC/terminal entries are UNSET;
+retained bridge/share candidates remain proposed, and actual-input consistency,
+coverage, award treatment and execution authority remain pending. It recommends
+reviewing an EV-only first case before resolving equity/per-share inputs; no
+actual calculation, financial acceptance or historical approval change is made.
+
 ## Current — universe expansion paused; authoritative resumption checkpoint
 
 [Pause checkpoint and Phase 2 handoff](phase1-universe-pause-checkpoint.md) is the authoritative current

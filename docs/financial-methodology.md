@@ -5,9 +5,9 @@
 The [authoritative pause/resumption checkpoint](phase1-universe-pause-checkpoint.md) records
 24 completed scoped company histories, CAT/JNJ/CVX partial, and 15 assessment-only.
 Frozen-v1, original policies, source history and accepted overlays remain unchanged.
-The user will begin Phase 2 in separate chats, initially one company and a
-traceable Base case; forecasting, FCFF, discounting, terminal value and equity/share
-bridging remain future implementation, not approved conventions or code here.
+Phase 2 Stages A–C implement separately approved forecast, fiscal-end discounting/
+terminal and equity/per-share mathematical conventions with synthetic verification
+only. Actual META assumptions, bridge/share/award selections and execution remain pending.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.
@@ -18,6 +18,67 @@ consumer design—not silently reinstated as a universal historical-NWC requirem
 Historical acceptance and valuation-use decisions remain separately identifiable;
 no source limitation, overlap, timing issue or consumer obligation is waived.
 Existing manual-assumption models are reusable, not a valuation engine.
+
+The [META Base-case consumer contract](phase2-meta-base-consumer-contract.md)
+now records approved P2M-01–09 conventions and Stage A synthetic implementation:
+compound manually supplied growth from the validated FY2025 revenue seed;
+apply manual margins and tax positive EBIT only, with no immediate loss benefit;
+add expense-basis forecast D&A once; subtract forecast investment and a signed
+cash working-capital requirement, both ratios applied to full forecast revenue.
+SBC and operating-lease service expenses remain inside margins. Finance leases
+are financing: forecast investment includes cash PP&E plus non-overlapping new
+finance-leased operating assets, excluding principal. This approved **forecast**
+Capex meaning does not broaden historical cash-Capex facts or resolve limited
+D&A/reinvestment proxies. No automatic historical calibration, reconstructed NWC
+prerequisite, CFO/movement deduction or extra SBC/lease amortization add-back.
+
+Base USD and exact Decimal strings retain original source precision; arithmetic
+uses isolated local precision 50/HALF_EVEN without display quantization. Six
+aggregate rates cannot prove economic consistency or expose embedded overlap.
+Actual rates, authored rationale and joint EBIT/D&A/lease/investment/WC review
+remain pending before META execution; independent manual forecasts do not
+universally require historical reconstruction or new evidence.
+
+P2M-10–11 now approve fiscal-end analytical t=0, annual end-year discounting at
+integer years 1–5, constant manual WACC and Gordon growth. Stage B consumes
+existing WACC/g and five separately supplied terminal ratios: margin, operating
+tax, D&A/revenue, investment/revenue and WC cash requirement/revenue. There is no
+independent terminal revenue-growth input or automatic Year-5 ratio copy.
+Terminal revenue is Year-5 revenue ×(1+g); shared Stage A equations produce all
+terminal components, including no immediate loss-tax benefit. Terminal value is
+terminal FCFF /(WACC−g), its PV discounts five periods, and EV adds the five
+explicit-period PVs. Preserve zero/negative flows and values; WACC >0 and
+−1 <g<WACC remain required. No mid-year/stub timing or market WACC derivation.
+
+Terminal assumptions must sustain growth, replacement/growth investment and WC
+needs. Aggregate rates cannot prove that sustainability. The output preserves
+source/filing dates as supplied and discloses later-filed information at fiscal-end
+analytical t=0; it is not a contemporaneous historical-information backtest or a
+current market-date valuation. Information cutoff and actual input review remain
+unestablished.
+
+P2M-12–13 now approve Stage C mathematical/interface conventions only:
+`Equity = EV + eligible nonoperating assets − financing claims − other equity claims`;
+`Value per share = Equity / valuation shares`. Explicit role signs apply to
+nonnegative base-USD magnitudes; shares are positive actual units, all selected
+operands match company and fiscal-end analytical date. Negative equity/per-share
+results are preserved. Supporting/excluded observations and null omission
+decisions are not operands. Explicit reviewed coverage declarations per role
+name the numeric populations and/or omissions; empty populations never imply zero.
+Supplied author/date/rationale and references are not authenticated approvals.
+
+Only declared overlaps, duplicate numeric populations, incompatible declared
+class/award conventions and structural/numerical inconsistency can be checked.
+The calculator recomputes the Stage B handoff, not source evidence or economic
+eligibility. Gross cash is not automatically excess; strategic assets, financing
+measurement/lease overlap, other claims and unbounded historical omissions still
+need separate actual-use treatment. The declared award policy retains SBC in
+margins without a duplicate service charge; it does not value existing awards,
+approve class equivalence or calculate dilution, exercise proceeds or future
+issuance. No META shares/balances are selected automatically. Actual META
+populations, share/award adjustments, semantic review and execution remain pending.
+Older postponement/design sections below retain historical scope and do not
+override bounded Stages A–C approvals.
 
 ## MSFT reported-cash-movement historical preparation
 

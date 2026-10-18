@@ -29,6 +29,14 @@ The user will begin separately scoped Phase 2 work in separate chats, initially
 one company and a traceable Base case; no engine or economic convention is
 approved by this checkpoint. Universe reviews do not resume automatically.
 
+The [META Base-case consumer contract](docs/phase2-meta-base-consumer-contract.md)
+records approved Stages A–C mathematical/interface conventions, a read-only
+revenue-anchor boundary, five-year FCFF forecast, terminal/annual discounting
+through EV and explicit equity/per-share arithmetic, verified with synthetic
+fixtures only. Actual META assumptions, bridge/share/award selections and
+execution remain unapproved. Timing is fiscal-end analytical using later-filed information,
+not a contemporaneous backtest or current market-date valuation.
+
 **Phase 1H complete with qualified scope: historical normalization v1 frozen.**
 See the [frozen contract and artifact digests](docs/historical-normalization-v1-freeze.md)
 and [all-issuer validation](docs/universe/phase-1h5-issuer-validation.md).
@@ -83,6 +91,50 @@ At that historical smoke stage, two were `SUPPORTED`, 41 were
 artifact](docs/universe/sp500-top-50-failure-taxonomy.md) records the complete
 17-measure coverage matrix, all 24 ambiguities, schema and identity blockers,
 and the ranked Phase 1H.4 backlog.
+
+## Editable analyst inputs — forecast through enterprise value
+
+Edit a copy of [synthetic-base.json](examples/valuation/synthetic-base.json) or
+[meta-fy2025-unset.json](examples/valuation/meta-fy2025-unset.json); keep the
+provided examples as references. Each year's six rates, WACC/g and all five
+terminal ratios are independent fields. Rates must be fractional Decimal
+**strings**: `"0.12"` means 12%, `"1"` means 100%; no percent signs, JSON numeric
+rates, historical defaults or automatic Year-5 terminal copies. `null` means
+unset, never zero. Supply analyst author, UTC timestamp and rationale, plus the
+case's declared scope/limitations. Ordinary edits create no company policy or
+approval record.
+
+From the repository root, validate without calculating, then explicitly run the
+synthetic example (revenue anchor 100, all assumptions synthetic):
+
+```sh
+python3 scripts/run_analyst_case.py examples/valuation/synthetic-base.json
+python3 scripts/run_analyst_case.py examples/valuation/synthetic-base.json --run
+python3 scripts/run_analyst_case.py examples/valuation/synthetic-base.json --run --output /tmp/synthetic-base-ev.json
+python3 scripts/run_analyst_case.py examples/valuation/meta-fy2025-unset.json
+```
+
+The final command intentionally exits 2 and lists all 37 missing numerical
+entries plus unset analyst metadata. It performs no META forecast/valuation.
+The synthetic example reproduces the independently checked A/B fixture EV
+77.5770603520 in synthetic USD units, not a META value or recommended assumption.
+
+The [runner](scripts/run_analyst_case.py) validates by default; `--run` requests
+A/B computation. Results print to stdout unless `--output` names a **new** file
+outside the repository or under `output/`; its parent must exist. Existing
+files, inputs and repository source/history paths cannot be overwritten.
+Errors go to stderr with exit 2. Output retains the case identity, exact submitted
+rate strings, author/date/rationale/scope/limitations and complete Stage A/B
+provenance. Validation checks JSON/models and the declared pinned identity only;
+the retained META audit/revenue boundary is resolved at run time, without network
+retrieval or automatic refresh. Only the fixed synthetic fixture and META FY2025
+anchor are supported; no bridge/share intake is added.
+
+The engine is synthetically verified. Editable inputs and `--run` do not certify
+economic consistency, evidence completeness or financial acceptance. Actual META
+assumptions and execution remain pending under the
+[input review](docs/phase2-meta-base-input-review.md); no approval workflow is
+required for editing or validating a case.
 
 ## Development
 
@@ -170,8 +222,9 @@ Non-Current Long-Term Debt. Direct values use selected-filing Company Facts at
 carrying value. Three validated GOOGL periods use explicit, accession-scoped
 identities to remove finance-lease balances from combined debt-and-lease facts;
 direct facts retain precedence and conflicts remain ambiguous. Missing debt is
-never inferred as zero. Total debt, net debt, lease capitalization, and the
-enterprise-value-to-equity-value bridge remain unimplemented.
+never inferred as zero. Automatic total/net debt and lease capitalization remain
+unimplemented in historical normalization. The separate Stage C bridge consumes
+explicit manual components; it does not infer a complete financing population.
 Strict reconstruction policies continue to report whether each
 annual period has complete evidence. Separate versioned valuation-perimeter
 policies now determine whether the explicitly required components are ready for
@@ -198,8 +251,9 @@ ordered component/side/normalized-metric perimeter; a perimeter change is reject
 rather than presented as cash flow. Results use actual fiscal dates, exact
 `Decimal` arithmetic, and retain both complete level results and their SEC
 provenance. Five current META or COST levels therefore produce four changes.
-Positive change means operating NWC increased; the future FCFF layer will
-subtract that amount. FCFF itself remains unimplemented.
+Positive change means operating NWC increased. A book-delta FCFF consumer remains
+unimplemented; approved Stage A instead consumes a direct manual cash-requirement
+ratio and does not subtract these historical changes.
 Signed tax-evidence normalization preserves filing-displayed signs separately
 from raw XBRL magnitudes and supports both rate and dollar reconciliations with
 arithmetic validation. Callers supply explicit sign evidence; unresolved source
