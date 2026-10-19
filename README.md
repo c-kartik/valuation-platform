@@ -19,6 +19,13 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The [local single-case FastAPI boundary](docs/local-case-api.md) now supports
+calculation-free validation and explicit EV/equity-share runs, using strict raw
+JSON intake, a 35-second terminable child process, one active calculation per API
+process and verified private read-only resource bundles. It is tested locally only;
+there is no public launch, cloud deployment, UI or live retrieval. Financial
+formulas/approvals and all unset company templates remain unchanged.
+
 **Phase 2 software milestone COMPLETE for the retained META, GOOGL and AAPL
 FY2025 anchors.** The [final checkpoint](docs/phase2-completion-checkpoint.md)
 records continuous single-case → scenarios → WACC/g sensitivity → bounded reverse
@@ -111,6 +118,32 @@ At that historical smoke stage, two were `SUPPORTED`, 41 were
 artifact](docs/universe/sp500-top-50-failure-taxonomy.md) records the complete
 17-measure coverage matrix, all 24 ambiguities, schema and identity blockers,
 and the ranked Phase 1H.4 backlog.
+
+## Local single-case HTTP API
+
+Install the separately pinned API dependencies and build a **new private directory
+outside the repository**:
+
+```bash
+.venv/bin/python -m pip install -r requirements-api.lock
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python -m valuation_platform.api.bundle /tmp/valuation-case-api
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/valuation-case-api/src VALUATION_APP_ROOT=/tmp/valuation-case-api .venv/bin/python -m uvicorn valuation_platform.api.app:create_app --factory --host 127.0.0.1 --port 8000 --workers 1 --limit-concurrency 16 --backlog 32 --timeout-keep-alive 5 --timeout-graceful-shutdown 2 --no-access-log
+```
+
+Routes: `GET /health`, `POST /api/v1/cases/validate` and explicit
+`POST /api/v1/cases/run`. Send an existing v1/v2 case directly, e.g.:
+
+```bash
+curl -sS -H 'Content-Type: application/json' --data-binary @examples/valuation/synthetic-equity.json http://127.0.0.1:8000/api/v1/cases/run
+```
+
+Runs return the existing full-precision result object. The [API contract](docs/local-case-api.md)
+documents 256-KiB streamed intake, bounded JSON/text/numeric/bridge work, 2-MiB
+results, structured errors, process deadlines/cleanup, pinned resource packaging
+and measured local verification. No CORS/public access, client filesystem paths or
+output saving are added. Per-process capacity is not a distributed quota; there is
+no claimed memory cap or cloud measurement. CLI/scenario/sensitivity/reverse usage
+below remains unchanged; only single cases have HTTP routes.
 
 ## Editable analyst inputs — forecast through value per share
 

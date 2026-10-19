@@ -1,6 +1,46 @@
 # Project Status
 
-## Current — scoped Phase 2 software COMPLETE; economic acceptance qualified
+## Current — local-only single-case API implemented and verified
+
+The [local API](local-case-api.md) adds lightweight `/health`, structural
+`/api/v1/cases/validate` and explicit `/api/v1/cases/run` for existing EV/equity
+case payloads. Raw strict parsing preserves duplicate/type/unknown-field rejection;
+HTTP budgets bound 256-KiB streaming bodies, nesting/nodes/text/numeric magnitudes,
+bridge populations and 2-MiB results. Existing financial readers/formulas/schemas
+are unchanged. One spawned calculation per API process has a server-controlled
+35-second wall deadline, Unix CPU limits, bounded IPC and real terminate/kill/reap
+cleanup on timeout, disconnect, cancellation and shutdown; excess work returns busy.
+There is no execution queue, client policy/root/path choice or scope downgrade.
+
+An offline allowlisted builder preserves exact resource bytes/layout, pins eight
+required resources and generates a deterministic 79-entry private runtime manifest.
+Startup and workers verify it; normal source/audit checks remain active. New copies
+are read-only, and worker audit hooks deny mutation/network operations; no working
+original is chmod'd. Isolated six-case API execution used synthetic assumptions on
+all three retained anchors without `.git`, unrelated corpus or SEC response archives.
+
+Verification: **17 API/process/bundle tests + 174 valuation/CLI/adapter tests + five
+preparation-preservation tests = 196 passed**; dependency check passed. Real-child
+tests cover deadline/forced kill/reap, CPU exhaustion, busy recovery, health,
+disconnect, cancellation, shutdown and output limits. No preservation pin/allowlist
+or economic rule was relaxed. Actual localhost Uvicorn profiling over three fresh
+server starts/36 calculations observed readiness 0.508–0.823s, validation 1.60–6.74ms,
+runs 0.393–1.241s, sampled parent/tree RSS maxima 74.6/150.4 MiB; a separate trusted
+0.5s deadline probe returned 504 in 0.506s. These are macOS measurements, not Cloud
+Run, a memory cap or worst-case proof. Temporary profiles/bundles/cases are removed.
+
+API dependencies/locks are separate from historical CLI requirements. No system
+Python/cloud tooling, resources, login, deployment, UI, live retrieval, database,
+queue or cache. No company assumptions/defaults are saved; six 37-unset and three
+111-unset templates, historical/frozen data, approvals and engines remain unchanged.
+Phase 2 remains complete within its existing scope; Phase 1 remains paused.
+
+Next separately scoped launch work includes admission/distributed-abuse policy,
+container size, Linux enforcement/memory, cold starts, Firebase routing and billed
+transfer checks. One API process/worker is the supported local start; scaling it
+does not create a global quota. No public launch is authorized by this checkpoint.
+
+## Earlier milestone — scoped Phase 2 software COMPLETE; economic acceptance qualified
 
 The [final three-company checkpoint](phase2-completion-checkpoint.md) closes the
 local analyst-controlled workflow for retained META, GOOGL and AAPL FY2025 anchors:

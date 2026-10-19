@@ -1,5 +1,28 @@
 # Architecture
 
+## Latest application milestone — local-only single-case HTTP boundary
+
+[Local API contract and verification](local-case-api.md): `api.app` accepts raw
+UTF-8 JSON and delegates financial semantics to existing `read_case` / `run_case`.
+`api.budget` bounds bytes, depth/tree/text/numeric/population work without changing
+engine rules. `api.process` reserves one calculation slot, spawns a fresh direct
+Python worker and terminates/reaps it on deadline, disconnect, cancellation or
+shutdown. Bounded serialization/IPC preserves the existing result object; no
+unresolved equity request downgrades. Health/validation remain calculation-free.
+
+`api.bundle` copies an explicit code/resource allowlist to a new private directory,
+preserving bytes and relative paths with deterministic manifest/hash checks and
+read-only copy permissions. Existing adapters retain all revision/audit validation;
+no historical root refactor or financial-source duplication is needed. Three
+packages, the META decision batch and four import-time registries are required.
+No `.git`, unrelated corpus or SEC archives are needed in the runtime bundle.
+
+Local lifecycle/isolation and actual localhost HTTP profiles are recorded in the
+contract. This adds no UI, public service, deployment, live retrieval, other
+workflow HTTP endpoints or general infrastructure. No memory cap, Linux/cloud
+enforcement or deployment-wide quota is claimed. The Phase 2 software completion
+and financial qualifications below remain intact; Phase 1 stays paused.
+
 ## Latest status — scoped Phase 2 software complete
 
 The [final checkpoint](phase2-completion-checkpoint.md) verifies the existing local

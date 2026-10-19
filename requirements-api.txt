@@ -1,0 +1,3 @@
+-r requirements.txt
+fastapi>=0.149,<0.150
+uvicorn>=0.54,<0.55

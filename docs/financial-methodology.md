@@ -2,6 +2,10 @@
 
 ## Latest status — software closure, qualified economics
 
+The subsequent [local single-case API](local-case-api.md) adds HTTP resource budgets
+and terminable execution only. These restrictions are not financial conventions,
+new approvals or changes to the underlying CLI/model validation rules.
+
 The [final three-company checkpoint](phase2-completion-checkpoint.md) completes
 scoped Phase 2 software acceptance without changing any financial convention.
 [Reverse acceptance](phase2-reverse-dcf-acceptance.md) separates certified arithmetic
