@@ -19,6 +19,14 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The [compiled-build developer walkthrough](docs/local-workbench-acceptance.md)
+verified all three retained-anchor workflows, CLI equivalence and 254 affected tests,
+with bounded error-recovery fixes. The [local API image candidate](docs/local-api-image.md)
+keeps private resources separate from static assets. Linux/container tooling was
+unavailable: no image execution or staging readiness is certified, and no cloud
+resources or deployment were configured. The next step is the bounded local image
+test matrix on an available runtime.
+
 The [local React/TypeScript calculator](docs/local-calculator-ui.md) now provides
 retained META/GOOGL/AAPL basis review, eight unset quick-entry rates, explicit
 apply-to-five-years actions, independent annual/terminal editing and EV calculation

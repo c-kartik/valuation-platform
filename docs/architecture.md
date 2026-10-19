@@ -1,6 +1,20 @@
 # Architecture
 
-## Latest application milestone — local quick EV workbench
+## Latest application milestone — local production-artifact review
+
+The [compiled EV walkthrough](local-workbench-acceptance.md) verified static frontend
+→ relative `/api` → packaged private API using a temporary trusted loopback harness.
+Only known percentage diagnostics and field-versus-service recovery copy changed;
+financial logic and API schemas are untouched. No production proxy is added.
+The [image candidate](local-api-image.md) copies only a freshly generated verified
+bundle plus locked dependencies into a separate nonroot Python image, with validated
+PORT and one exec'd Uvicorn process. Context preparation and host launcher tests
+passed; absent container tooling leaves Linux/image execution unverified. No
+Firebase project/routing, IAM, cloud deployment or public admission is configured.
+Existing process budgets/audit protections remain; no RSS cap or global quota is
+claimed. Qualified Phase 2 completion and the Phase 1 pause remain intact.
+
+## Earlier application milestone — local quick EV workbench
 
 The [local calculator UI](local-calculator-ui.md) is a Vite/React/TypeScript client
 in `frontend/`, with a committed npm lock. A compact workbench edits a single legacy

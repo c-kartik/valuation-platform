@@ -1,0 +1,8 @@
+# Build ONLY the newly prepared context, never the repository root.
+**
+!Dockerfile
+!.dockerignore
+!requirements-api.lock
+!start.py
+!runtime/
+!runtime/**

@@ -1,6 +1,30 @@
 # Project Status
 
-## Current — quick EV workbench with advanced annual editing
+## Current — compiled EV walkthrough and local API image candidate
+
+The [developer investor walkthrough](local-workbench-acceptance.md) completed
+continuous synthetic engineering sessions on all three retained anchors through
+the compiled frontend and packaged API. Fourteen actual browser submissions matched
+CLI full result JSON; an independent exact-rational oracle passed 882 equalities.
+**254 affected tests passed** (54 frontend, 21 API/catalog/launcher, 174 valuation/CLI,
+five preservation), plus build, dependency, link, whitespace and protected-scope
+checks. No human participant testing or economic acceptance is claimed.
+
+Observed missing/tax diagnostics now speak percentage units; backend failures use
+service/retry guidance without blaming valid assumptions. No financial formulas,
+API schemas, source approvals, historical/frozen artifacts or nine unset templates
+changed. Temporary engineering cases/captures/bundles/servers are removed.
+
+A [local API image recipe](local-api-image.md) prepares 89 allowlisted files separately
+from four compiled frontend files; it is not a deployment. No Docker/Podman/Colima
+executable was available, so Linux/image execution remains a gate. Restricted cloud
+experimentation is **not yet ready** pending Linux tests and configuration/access/
+budget approval; anonymous staging and public production are **not ready**. No
+cloud login, provisioning, deployment, push or separate website change occurred.
+Phase 1 remains paused; qualified Phase 2 closure and financial unknowns persist.
+Next bounded step: test the local image matrix with an already available runtime.
+
+## Earlier — quick EV workbench with advanced annual editing
 
 The [local workbench](local-calculator-ui.md) supersedes the original four-section
 presentation below. Select a retained company, enter eight compact required rates,
@@ -32,8 +56,8 @@ Developer checks exercised actual Safari and the packaged API, explicit syntheti
 flat paths on all three retained anchors, terminal copying, META annual refinement
 and confirmation/collapse behavior. Four separate proxy/API cases matched CLI full
 JSON; browser EV/contribution displays matched. No investor acceptance, company
-forecasts/defaults or financial approvals follow. See the
-[current verification record](local-calculator-ui.md#quick-workbench-verification).
+forecasts/defaults or financial approvals follow. See that milestone's
+[verification record](local-calculator-ui.md#quick-workbench-verification).
 Financial engine/API code, historical/frozen resources, approvals and all six
 37-unset plus three 111-unset templates are byte-unchanged. Phase 2 qualified
 completion and Phase 1 pause remain intact. No hosting/cloud/website changes.
@@ -68,7 +92,7 @@ passed (233 total)**; TypeScript/Vite build, Python dependency check and npm ful
 audit passed. Safari desktop/390×844 responsive checks covered keyboard
 entry, labels, field errors, stale results and populated switching; a fresh load
 had no console errors after adding the missing favicon. This is not exhaustive
-browser/accessibility certification. Details are in the [UI verification record](local-calculator-ui.md#verification-record).
+browser/accessibility certification. Details are in the [UI verification record](local-calculator-ui.md#earlier-four-section-verification-record).
 Actual Safari sessions used the synthetic demo and synthetic forecasts on all
 three retained anchors; separate proxy/API results matched CLI full JSON in four
 cases. No company economics/defaults were saved. No full historical suite,

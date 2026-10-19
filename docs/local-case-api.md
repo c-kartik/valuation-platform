@@ -1,5 +1,17 @@
 # Local single-case API
 
+## Current local-build acceptance
+
+The [compiled workbench review](local-workbench-acceptance.md) adds new browser/CLI
+comparisons and 254 passing affected checks, including existing API lifecycle tests.
+A [minimal API image candidate](local-api-image.md) now provides a separate generated
+context, official Python base, locked dependencies, nonroot/read-only resources and
+one-worker PORT launcher. No Docker/Podman/Colima executable was available; no Linux
+image, RSS/size/startup or cloud measurement is claimed. The earlier host profiling
+below remains an attributed earlier record. No financial/API convention changed;
+restricted cloud experimentation still requires the explicit Linux/configuration
+gates. Anonymous staging and public production remain not ready.
+
 ## Scope and local operation
 
 This is a local-only FastAPI boundary over existing `read_case` / `run_case`.

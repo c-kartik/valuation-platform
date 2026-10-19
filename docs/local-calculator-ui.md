@@ -37,7 +37,9 @@ middleware is added. Private bundles stay outside the frontend root. Vite's
 filesystem allowlist is restricted to the frontend directory. Stop both servers
 with Ctrl+C. `npm --prefix frontend run build` checks TypeScript and produces
 ignored local `frontend/dist`; it is not deployment configuration. Vite preview
-alone does not proxy the API; use the documented dev command for this milestone.
+alone does not proxy the API; use the dev command above for development. The
+[compiled-build review](local-workbench-acceptance.md) used a temporary local
+static-plus-API harness; Vite preview is not a hosting/routing configuration.
 
 ## Quick-entry and review contract
 
@@ -163,9 +165,21 @@ unchanged. Client timeout is 50 seconds; cancellation/late-reply guards are UI
 behavior, not a replacement for server deadlines. No cloud/static-host routing,
 production CORS or public admission controls are configured.
 
+## Compiled-build investor walkthrough — current
+
+The [new developer walkthrough](local-workbench-acceptance.md) records continuous
+META/GOOGL/AAPL entry/edit/recalculation on the actual compiled build, captured
+browser-request/full-result CLI comparisons, zero/negative probes and 254 passing
+checks. Two observed recovery blockers were fixed: recognized missing/tax diagnostics
+now use percentage units; service failures no longer ask for assumption correction.
+This is developer verification, not human investor research or economic approval.
+The [API image candidate](local-api-image.md) separates static/private artifacts;
+Linux/container and cloud execution remain unverified, with no staging deployment.
+
 ## Quick workbench verification
 
-Current verification used the actual packaged API and Safari desktop/narrow-screen
+**Earlier milestone record, superseded by the compiled-build review above.**
+That verification used the actual packaged API and Safari desktop/narrow-screen
 sessions. Company selection began unset; compact synthetic rates were explicitly
 applied, year-five terminal ratios copied, required metadata supplied and Calculate
 run. A META FY2028 growth edit marked output stale/Varies by year, survived table

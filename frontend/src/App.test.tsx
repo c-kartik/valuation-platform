@@ -107,3 +107,19 @@ it('maps a limitation-array error beside its editable declaration',async()=>{
  render(<App load={transport(async()=>{throw new ApiError('invalid_case','Correct limitations',['case.limitations[0]: required nonempty text']);})}/>);await selectDemo();fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));await screen.findByText('invalid_case: Correct limitations');
  expect(input('Limitations — review retained wording (one per line)').getAttribute('aria-invalid')).toBe('true');fireEvent.click(screen.getByRole('button',{name:/Limitations: required nonempty text/}));expect(screen.getByText('Case details (0 missing)').closest('details')?.open).toBe(true);
 });
+
+it('expresses known missing/range diagnostics in the percentage editor units',async()=>{
+ const details=['terminal.operating_margin: UNSET; supply a fractional Decimal string','forecast_years[0].forecast_tax_rate: Forecast tax rate must be between 0 and 1'];
+ render(<App load={transport(async()=>{throw new ApiError('invalid_case','Case validation failed.',details);})}/>);await selectDemo();
+ fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));
+ await screen.findByRole('button',{name:'Terminal operating margin: Required. Enter a percentage; 20 means 20%.'});
+ const link=screen.getByRole('button',{name:'Operating tax — Synthetic period 1: Operating tax must be between 0% and 100%.'});fireEvent.click(link);
+ expect(input('Operating tax Synthetic period 1 (%)').value).toBe('25');expect(screen.queryByText(/fractional Decimal string/)).toBeNull();expect(details[0]).toContain('fractional Decimal');
+});
+it('distinguishes service failure from field correction and preserves the request for retry',async()=>{
+ const sent:unknown[]=[];let fail=true;
+ render(<App load={transport(async(_,body)=>{sent.push(body);if(fail)throw new ApiError('busy','One calculation is running; retry later.');return result();})}/>);await selectDemo();
+ fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await screen.findByText('busy: One calculation is running; retry later.');
+ expect(screen.queryByText('Inputs need attention')).toBeNull();expect(screen.getByText(/changing assumptions is not required/)).toBeTruthy();
+ fail=false;fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await screen.findByText('Synthetic result');expect(sent[0]).toEqual(sent[1]);expect(sent[1]).toEqual(demo);
+});

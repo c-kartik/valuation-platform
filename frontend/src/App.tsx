@@ -5,6 +5,19 @@ import {ApiError, request, Revisions} from './api';
 import {ResultReview} from './Results';
 export {ResultReview} from './Results';
 
+function percentageDiagnostic(detail: string): string {
+  const colon = detail.indexOf(':');
+  if (colon < 0) return detail;
+  const path = detail.slice(0,colon).replace(/^case\./,'');
+  if (!/^(forecast_years\[\d+\]\.|terminal\.|wacc$|terminal_growth$)/.test(path)) return detail;
+  const message = detail.slice(colon+1).trim();
+  const translated = message === 'UNSET; supply a fractional Decimal string'
+    ? 'Required. Enter a percentage; 20 means 20%.'
+    : /^(Forecast|Terminal operating) tax rate must be between 0 and 1$/.test(message)
+      ? 'Operating tax must be between 0% and 100%.' : message;
+  return `${detail.slice(0,colon)}: ${translated}`;
+}
+
 type Props = {load?: typeof request};
 export default function App({load = request}: Props) {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
@@ -74,9 +87,14 @@ export default function App({load = request}: Props) {
     } catch (e) {
       if (!revisions.current.current(token)) return;
       if (e instanceof InputErrors) {setErrors(e.fields); setMessages(Object.entries(e.fields).map(([p,m]) => `${p}: ${m}`));}
-      else if (e instanceof ApiError) {setErrors(fieldErrors(e.details)); setMessages([`${e.code}: ${e.message}`, ...e.details]);}
+      else if (e instanceof ApiError) {
+        // Translate only known fraction-based diagnostics for percentage editors.
+        // The raw API response and financial validation remain unchanged.
+        const details = e.details.map(percentageDiagnostic);
+        setErrors(fieldErrors(details)); setMessages([`${e.code}: ${e.message}`, ...details]);
+      }
       else setMessages(['Unexpected local UI error. Entries are preserved.']);
-      setStatus('Request did not succeed. Correct the inputs or retry explicitly; entries are preserved.');
+      setStatus('Request did not succeed. Review the message below and retry explicitly; entries are preserved.');
     } finally {
       if (revisions.current.current(token)) {setBusy(null); active.current = null;}
     }
@@ -212,10 +230,10 @@ export default function App({load = request}: Props) {
           {detailMissing.length>0 && <p className="missing-note">Case details required: {detailMissing.join(', ')}. <button className="text-button" onClick={()=>setDetailsOpen(true)}>Complete case details</button></p>}
           <div className="actions"><button className="primary" disabled={Boolean(busy)} onClick={()=>void submit('run')}>Calculate enterprise value</button><button disabled={Boolean(busy)} onClick={()=>void submit('validate')}>Check inputs</button></div>
           <p role="status" aria-live="polite">{busy ? `${busy==='run'?'Calculating':'Checking inputs'}… Edits cancel this request.` : status}</p>
-          {messages.length>0 && <div role="alert" className="errors"><h3>Inputs need attention</h3><ul>{messages.map((message,i)=>{
+          {messages.length>0 && <div role="alert" className="errors"><h3>{Object.keys(errors).length ? 'Inputs need attention' : 'Request did not succeed'}</h3><ul>{messages.map((message,i)=>{
             const colon=message.indexOf(':');const path=message.slice(0,colon);
             return <li key={i}>{errors[path.replace(/^case\./,'')] ? <button className="text-button" onClick={()=>goToField(path)}>{pathLabel(path)}: {message.slice(colon+1)}</button> : message}</li>;
-          })}</ul><p>Correct these inputs and check again; server error lists are bounded. Inputs are preserved.</p></div>}
+          })}</ul><p>{Object.keys(errors).length ? 'Correct the indicated inputs and check again; server error lists are bounded.' : 'Review the service message and retry explicitly when available; changing assumptions is not required to recover from a service failure.'} Inputs are preserved.</p></div>}
         </div>
       </section><aside aria-label="Valuation review">{result ? <ResultReview result={result} stale={stale}/> : <section className="result-placeholder"><div className="section-number">ENTERPRISE VALUE</div><h2>Your result appears here.</h2><p>Supply six annual assumptions, WACC, terminal growth, five terminal ratios and the required case details, then calculate explicitly.</p><p>EV values the operating business. It is not equity value or value per share.</p></section>}</aside></div>
     </> : <section className="empty-state"><h2>Select a retained company to begin.</h2><p>Company forecasts start unset. The separate demonstration uses a synthetic $100 revenue anchor.</p></section>}
