@@ -30,9 +30,20 @@ requires separate decisions/authority for any further methodology changes and
 affected-case reruns. Completing all eligible companies or resolving
 every historical unknown is not required before scoped engine milestones.
 The [editable scenario workflow](phase2-scenario-workflow.md) now supports three
-complete independent Bear/Base/Bull input cases; actual economic scenario review
-remains pending. Sensitivities/reverse DCF remain later capabilities with decisions
-still needed; existing financial formulas and conventions remain unchanged.
+complete independent Bear/Base/Bull input cases; the
+[attributed three-company review](phase2-scenario-acceptance.md) completes software
+acceptance with qualified economic acceptance, funding flags and unbounded
+claims/awards limitations. Investment readiness is not established.
+[Explicit WACC × terminal-g sensitivity](phase2-sensitivity-workflow.md) now holds
+annual operating paths, terminal operating ratios and bridge/shares fixed while
+reusing existing calculations. g changes terminal revenue/FCFF as well as the
+Gordon denominator; each cell still needs economic consistency review. Explicit
+absolute grids imply no probabilities or total-value bounds. Invalid g≥WACC
+cells remain null; all-invalid grids fail. Percentage changes use signed reference
+denominators and are undefined at zero; signed/over-100% terminal contributions
+are retained. Actual sensitivity review, operating-driver sensitivities and reverse
+DCF remain pending/unimplemented as applicable. Existing formulas and conventions
+remain unchanged.
 
 Scenario labels encode no growth/margin/WACC adjustment, valuation ordering or
 probability. Each case explicitly supplies all annual and terminal rates; no Year-5

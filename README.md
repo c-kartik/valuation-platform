@@ -114,9 +114,10 @@ have also completed with explicit limitations, without standing financial approv
 The [remaining Phase 2 scope](docs/phase2-completion-checklist.md) is META, GOOGL and
 AAPL: market-input reconciliation, editable Bear/Base/Bull scenarios, reusable
 sensitivities, bounded reverse DCF and final analyst acceptance/regression.
-Scenario engineering is now implemented under the bounded contract below; actual
-economic scenario acceptance remains pending. Sensitivities and reverse DCF are
-not implemented and their conventions remain undecided.
+The [scenario acceptance record](docs/phase2-scenario-acceptance.md) marks software
+acceptance complete and economic acceptance qualified. Explicit WACC × terminal-g
+sensitivity engineering/synthetic integration is complete; actual sensitivity
+review remains pending. Operating-driver sensitivities and reverse DCF are not implemented.
 
 Edit a copy of [synthetic-base.json](examples/valuation/synthetic-base.json) or
 [meta-fy2025-unset.json](examples/valuation/meta-fy2025-unset.json); keep the
@@ -293,7 +294,42 @@ file outside protected source/history paths or under `output/`, with no overwrit
 The existing single-case CLI and JSON contract are unchanged.
 
 Scenario engineering/synthetic integration is complete; actual META/GOOGL/AAPL
-economic scenario review remains separately scoped. Phase 1 expansion stays paused.
+economic scenario review is now [recorded with qualifications](docs/phase2-scenario-acceptance.md).
+Phase 1 expansion stays paused.
+
+## WACC × terminal-growth sensitivity
+
+The [bounded sensitivity contract](docs/phase2-sensitivity-workflow.md) embeds a
+complete v1/v2 single case with explicit analytical date/cutoff, or a complete
+scenario set with an **explicit** Bear/Base/Bull selection. Only WACC/g change;
+annual operating inputs, terminal operating ratios and bridge/shares stay fixed.
+Changing g recomputes terminal revenue/FCFF through the existing engine.
+
+Supply 1–11 explicit fractional Decimal strings per axis, strictly increasing and
+numerically unique. No automatic grid or company ranges. WACC rows/g columns with
+g≥WACC remain invalid cells; all-invalid grids fail. The original case result is a
+separate reference, even if its rates are absent from the grid. JSON retains full
+reference/provenance, cell PV/EV reconciliation, terminal contribution, optional
+equity/share and signed-reference absolute/fractional changes (undefined at zero).
+
+```bash
+python3 scripts/run_analyst_sensitivity.py examples/valuation/synthetic-sensitivity-ev.json
+python3 scripts/run_analyst_sensitivity.py examples/valuation/synthetic-sensitivity-ev.json --run
+python3 scripts/run_analyst_sensitivity.py examples/valuation/synthetic-sensitivity-equity.json --run --format summary
+python3 scripts/run_analyst_sensitivity.py examples/valuation/synthetic-sensitivity-equity.json --run --output /tmp/synthetic-sensitivity.json
+```
+
+Validation is calculation-free by default; `--run` is explicit. JSON is default;
+summary labels EV in USD millions and a separate qualified USD/share matrix.
+`--output` requires a run and a new file outside the repository or under `output/`;
+exclusive creation rejects overwrites, input files and protected source paths.
+Ordinary stdout runs leave inputs/repository unchanged. Existing CLIs remain valid.
+
+Examples contain synthetic economics only; all actual-company templates remain
+unset. Engineering checks cover all three retained anchors with temporary synthetic
+inputs. Actual analyst sensitivity review is pending; grids are neither probabilities
+nor fair-value bounds. Broader market/terminal judgments, funding, claims and awards
+remain qualified. Operating-driver sensitivity and bounded reverse DCF are unimplemented.
 
 ## Development
 

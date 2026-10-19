@@ -1,6 +1,62 @@
 # Project Status
 
-## Current — editable Bear/Base/Bull engineering and synthetic integration complete
+## Current — qualified scenario acceptance and WACC × g sensitivity engineering complete
+
+The [scenario acceptance record](phase2-scenario-acceptance.md) attributes the supplied
+META/GOOGL/AAPL review: software acceptance complete, economic acceptance qualified,
+investment readiness not established. Base inputs were reconstructed, not exact
+replays; Bear/Bull are agent estimates. Fixed dates/cutoffs/WACC/g/bridges, funding
+flags, GOOGL Bear's 99.26% terminal dependence, AAPL's qualified incremental-return
+diagnostics and potentially unbounded omissions remain explicit. Prior 657 rational
+comparisons, preservation-pin AST review, six checks and isolated mutation probes
+are attributed records, **not rerun checks in this milestone**. No actual-company
+cases, outputs, scenarios or grids were saved as defaults.
+
+The [bounded sensitivity workflow](phase2-sensitivity-workflow.md) adds
+`analyst-sensitivity-request-v1`: one complete embedded single case with explicit
+dates/cutoff, or an explicit Bear/Base/Bull selection from a fully validated set.
+WACC rows/g columns each contain 1–11 strictly increasing unique fractional Decimal
+strings. Invalid g≥WACC cells remain null with reasons; all-invalid grids reject.
+The original reference is separate. Valid cells change only WACC/g and revalidate/
+execute through existing A/B/C; g changes terminal revenue/FCFF, not just the Gordon
+spread. Operating paths, terminal ratios, bridge/shares and metadata stay fixed.
+JSON retains reference/provenance, reproducible cells, PV/EV reconciliation,
+contribution and signed-reference absolute/fractional changes; zero denominators
+are undefined, negative and over-100% ratios are retained.
+
+The dedicated CLI validates without calculation by default, supports explicit
+`--run`, JSON/summary, and existing new-file-only/protected-path output behavior.
+Summary shows exact axes with display percentages, USD-million EV and separate
+qualified USD/share matrices. Inputs and caller Decimal context remain immutable.
+Existing engines/readers/single-case and scenario CLIs remain byte-unchanged.
+
+**Newly performed verification:** 154 valuation/CLI checks (12 new sensitivity tests)
+and five preparation-preservation checks passed using the documented `PYTHONPATH=src`
+unittest invocation. Independent rational synthetic-cell arithmetic covers the g
+numerator effect, PV/EV/bridge/share and signed reference changes; valid cells match
+separate single-case submissions. Checks also cover mixed/all-invalid grids, strict
+field-qualified errors, zero/negative values, Decimal isolation, summary rounding,
+validation without calculation, deterministic JSON and file protections. Legacy
+single-case JSON byte compatibility and unchanged source pins pass. No full
+historical suite or prior actual-company valuation rerun was performed.
+
+Temporary engineering requests exercised all three retained revenue anchors with
+**synthetic** operating/bridge inputs, both output scopes and explicit scenario
+selection, without network access; input bytes/packages were unchanged and temporary
+files/results removed. Two synthetic request examples are runnable. Six existing
+single-case templates remain 37-unset and three scenario templates 111-unset;
+historical/frozen data, approvals and all preservation pins/allowlists are unchanged.
+Local links/anchors, whitespace and staged/protected scope are checked for the
+checkpoint. No evidence acquisition, historical research, additional company or push.
+
+Actual analyst sensitivity review remains pending: choose justified grids and
+review economic consistency/funding/terminal dependence without interpreting a
+table as probabilities or total-value bounds. Broader market-input judgments,
+operating-driver sensitivity, bounded reverse DCF and final three-company analyst/
+regression checkpoint remain under the [completion checklist](phase2-completion-checklist.md).
+Phase 1 universe expansion stays paused.
+
+## Earlier milestone — editable Bear/Base/Bull engineering and synthetic integration complete
 
 The [bounded scenario workflow](phase2-scenario-workflow.md) wraps exactly three
 complete existing analyst cases in `analyst-scenario-set-v1`. Each independently

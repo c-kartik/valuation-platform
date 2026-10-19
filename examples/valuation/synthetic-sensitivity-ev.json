@@ -1,0 +1,107 @@
+{
+  "schema_version": "analyst-sensitivity-request-v1",
+  "sensitivity_name": "Synthetic ev sensitivity example",
+  "source": {
+    "kind": "single_case",
+    "analytical_date": "2025-12-31",
+    "information_cutoff": "2026-01-31",
+    "case": {
+      "schema_version": "analyst-case-v1",
+      "case_name": "Synthetic editable Base example",
+      "input_basis": "SYNTHETIC_FIXTURE",
+      "analyst": {
+        "author": "Synthetic example author",
+        "timestamp_utc": "2000-01-01T00:00:00+00:00",
+        "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+      },
+      "scope": "Synthetic consolidated operating case; margins include synthetic SBC/service leases and aligned depreciation; cash investment includes non-overlapping financed assets.",
+      "limitations": [
+        "SYNTHETIC example only; anchor revenue 100 and every rate are synthetic, not SEC or META data.",
+        "No economic completeness or sustainable terminal economics certified; no equity/share bridge."
+      ],
+      "conventions": {
+        "forecast": "meta-base-fcff-v1",
+        "discounting": "fiscal-end-annual-gordon-v1"
+      },
+      "anchor": {
+        "kind": "synthetic-fixture-v1",
+        "cik": 123,
+        "accession": "0000000123-26-000001",
+        "annual_start": "2025-01-01",
+        "annual_end": "2025-12-31",
+        "form": "10-K"
+      },
+      "forecast_years": [
+        {
+          "period_index": 1,
+          "fiscal_year_label": "Synthetic period 1",
+          "revenue_growth": "0.10",
+          "operating_margin": "0.20",
+          "forecast_tax_rate": "0.25",
+          "d_and_a_percent_revenue": "0.05",
+          "capex_percent_revenue": "0.10",
+          "change_in_operating_nwc_percent_revenue": "0.02"
+        },
+        {
+          "period_index": 2,
+          "fiscal_year_label": "Synthetic period 2",
+          "revenue_growth": "0.10",
+          "operating_margin": "0.20",
+          "forecast_tax_rate": "0.25",
+          "d_and_a_percent_revenue": "0.05",
+          "capex_percent_revenue": "0.10",
+          "change_in_operating_nwc_percent_revenue": "0.02"
+        },
+        {
+          "period_index": 3,
+          "fiscal_year_label": "Synthetic period 3",
+          "revenue_growth": "0.10",
+          "operating_margin": "0.20",
+          "forecast_tax_rate": "0.25",
+          "d_and_a_percent_revenue": "0.05",
+          "capex_percent_revenue": "0.10",
+          "change_in_operating_nwc_percent_revenue": "0.02"
+        },
+        {
+          "period_index": 4,
+          "fiscal_year_label": "Synthetic period 4",
+          "revenue_growth": "0.10",
+          "operating_margin": "0.20",
+          "forecast_tax_rate": "0.25",
+          "d_and_a_percent_revenue": "0.05",
+          "capex_percent_revenue": "0.10",
+          "change_in_operating_nwc_percent_revenue": "0.02"
+        },
+        {
+          "period_index": 5,
+          "fiscal_year_label": "Synthetic period 5",
+          "revenue_growth": "0.10",
+          "operating_margin": "0.20",
+          "forecast_tax_rate": "0.25",
+          "d_and_a_percent_revenue": "0.05",
+          "capex_percent_revenue": "0.10",
+          "change_in_operating_nwc_percent_revenue": "0.02"
+        }
+      ],
+      "wacc": "0.25",
+      "terminal_growth": "0.05",
+      "terminal": {
+        "operating_margin": "0.30",
+        "operating_tax_rate": "0.20",
+        "d_and_a_percent_revenue": "0.04",
+        "investment_percent_revenue": "0.09",
+        "working_capital_cash_requirement_percent_revenue": "0.01"
+      }
+    }
+  },
+  "wacc_values": [
+    "0.04",
+    "0.25",
+    "0.30"
+  ],
+  "terminal_growth_values": [
+    "0.00",
+    "0.05",
+    "0.25"
+  ]
+}

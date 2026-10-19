@@ -19,9 +19,17 @@ The [three-company completion checklist](phase2-completion-checklist.md) separat
 software acceptance from investment readiness. The dated
 [GOOGL ERP correction](phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19)
 used the existing interface unchanged. The [scenario workflow](phase2-scenario-workflow.md)
-now wraps three complete existing cases without new financial formulas; economic
-scenario acceptance, broader market-input review, sensitivities, bounded reverse
-DCF and final regression remain.
+wraps three complete existing cases without new financial formulas.
+[Scenario software acceptance is complete, economic acceptance qualified](phase2-scenario-acceptance.md).
+The [sensitivity wrapper](phase2-sensitivity-workflow.md) embeds one complete case
+or explicitly selects one case from a fully validated scenario set. It validates
+explicit WACC/g axes, preserves invalid cells, and reuses `read_case` / `run_case`
+for the original reference and every valid cell; only WACC/g change. Full reference
+provenance and reproducible cell metadata survive, with isolated Decimal derived
+ratios/deltas. No engine formulas, existing readers/CLI contracts or JSON bytes
+change. Engineering/synthetic integration is complete; actual sensitivity review,
+broader market-input review, operating-driver sensitivity, bounded reverse DCF
+and final regression remain.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.

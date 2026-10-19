@@ -76,10 +76,15 @@ unchanged, each still 37-unset; no trial assumptions or bridge selections transf
 Engineering verification uses synthetic economics, including temporary integration
 sets on all three actual retained revenue anchors in both output scopes. Synthetic
 bridge quantities in those checks are not company balances/shares. Temporary
-files/results are removed. Actual-company Bear/Base/Bull economic review remains
-pending: growth, margins, tax, D&A/investment/WC consistency, market/terminal inputs
-and scope-qualified bridge eligibility/claims/awards require their own review.
+files/results are removed. **Subsequent status:**
+[three-company scenario software acceptance is complete and economic acceptance
+qualified](phase2-scenario-acceptance.md). The earlier engineering-only boundary is
+preserved here; growth, margins, tax, D&A/investment/WC consistency, market/terminal
+inputs and scope-qualified bridge eligibility/claims/awards retain the reported
+limitations and require case-specific review.
 Historical acceptance and declarations do not supply that approval; unknown and
 unbounded omissions remain visible. [Phase 1 stays paused](phase1-universe-pause-checkpoint.md).
-Sensitivity tables and bounded reverse DCF are not implemented; see the
+[WACC × g sensitivity engineering](phase2-sensitivity-workflow.md) is now implemented;
+actual sensitivity review remains pending. Operating-driver sensitivities and
+bounded reverse DCF are unimplemented; see the
 [three-company completion checklist](phase2-completion-checklist.md).
