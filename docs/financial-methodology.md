@@ -41,9 +41,21 @@ Gordon denominator; each cell still needs economic consistency review. Explicit
 absolute grids imply no probabilities or total-value bounds. Invalid g≥WACC
 cells remain null; all-invalid grids fail. Percentage changes use signed reference
 denominators and are undefined at zero; signed/over-100% terminal contributions
-are retained. Actual sensitivity review, operating-driver sensitivities and reverse
-DCF remain pending/unimplemented as applicable. Existing formulas and conventions
-remain unchanged.
+are retained. [Actual sensitivity acceptance](phase2-sensitivity-acceptance.md) is
+complete with economic qualifications.
+[Bounded reverse DCF](phase2-reverse-dcf-workflow.md) now solves one constant annual
+revenue-growth rate replacing all five annual rates, at fixed terminal growth and
+all other operating/bridge/share assumptions. Targets are explicitly dated EV/USD
+or qualified USD/share; no current-price substitution. Exact shared operating
+components support an interval-wide rational derivative certificate for increasing
+or decreasing responses. A certified mathematical root still requires residual,
+growth bracket and fresh forward verification; an inconclusive certificate does
+not prove multiple solutions. Technical tolerances are distinct from financial
+inputs. This is conditional implied growth, not unique market expectations or
+validation of reinvestment/productivity, claims or awards. Reverse engineering is
+verified synthetically; actual reverse analyst review and final acceptance remain
+pending. Operating-driver sensitivity is unimplemented. Existing formulas and
+conventions remain unchanged.
 
 Scenario labels encode no growth/margin/WACC adjustment, valuation ordering or
 probability. Each case explicitly supplies all annual and terminal rates; no Year-5

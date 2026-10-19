@@ -27,9 +27,19 @@ explicit WACC/g axes, preserves invalid cells, and reuses `read_case` / `run_cas
 for the original reference and every valid cell; only WACC/g change. Full reference
 provenance and reproducible cell metadata survive, with isolated Decimal derived
 ratios/deltas. No engine formulas, existing readers/CLI contracts or JSON bytes
-change. Engineering/synthetic integration is complete; actual sensitivity review,
-broader market-input review, operating-driver sensitivity, bounded reverse DCF
-and final regression remain.
+change. [Sensitivity software acceptance is complete and economic acceptance
+qualified](phase2-sensitivity-acceptance.md).
+The [reverse wrapper](phase2-reverse-dcf-workflow.md) reuses complete source readers
+and forward execution, replacing all five annual growth rates with one constant.
+Shared `_operating_year` components calculated exactly for proof yield a degree-five
+polynomial; exact-rational Bernstein derivative bounds certify strict increase or
+decrease across the whole supplied interval. No new valuation formula layer or
+sampled-uniqueness assumption. Conservative certification failures return no
+solution. Bisection uses existing forward valuations, with fresh final
+execution plus exact bracket/residual/width checks. Original/solution provenance
+and technical policy remain explicit. Engineering/synthetic integration is complete;
+actual reverse analyst review, broader market-input judgments, operating-driver
+sensitivity and final three-company acceptance/regression remain.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.

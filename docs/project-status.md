@@ -1,6 +1,67 @@
 # Project Status
 
-## Current — qualified scenario acceptance and WACC × g sensitivity engineering complete
+## Current — qualified sensitivity acceptance and bounded reverse-DCF engineering complete
+
+The [sensitivity acceptance record](phase2-sensitivity-acceptance.md) records the
+preceding temporary META/GOOGL/AAPL review: all Base references reproduced, 75
+cells matched single-case execution, 375 component comparisons and 375 independent
+rational comparisons reportedly passed, with no correctness defect. Those checks
+are attributed prior results, **not rerun actual-company trials in this milestone**.
+Software acceptance is complete; economic acceptance remains qualified by terminal
+dependence/productivity, early funding, asset accessibility, settlements, incomplete
+claims/awards and potentially unbounded omissions. No standing company inputs,
+grids or financial approvals follow. Phase 1 universe expansion remains paused.
+
+The [approved reverse workflow](phase2-reverse-dcf-workflow.md) adds
+`analyst-reverse-dcf-request-v1`: complete embedded single case or explicit scenario
+selection from a fully validated set, dated EV/USD or qualified USD/share target,
+and explicit growth bounds. One constant annual growth **replaces all five annual
+rates**; terminal g, other ratios, WACC and bridge/shares stay fixed. Revenue-dependent
+amounts recalculate through unchanged existing A/B/C. A degree-five mathematical
+representation derived from shared exact operating components supports rational
+Bernstein derivative bounds across the full interval. Increasing/decreasing proofs
+are supported; sampled monotonicity is insufficient. Flat, unsupported uniqueness,
+unreachable, iteration-limit and numerical-verification failures expose no solution.
+Bisection uses existing forward evaluations and success requires residual and width
+checks, exact bracket existence and a fresh forward execution. This is conditional
+implied growth, not market expectations, a financial endorsement or price target.
+
+The dedicated CLI validates structure without valuation/certification by default;
+`--run`, JSON/summary and explicit protected/new-file-only output follow existing
+patterns. Exit 0 means validation/success; completed unsuccessful solves have
+structured diagnostics, null solution and exit 3; malformed/execution/I/O errors
+have exit 2 and no result file. Actual technical settings, original growth path,
+source/scenario, certificate, bracket, counts, forward components and provenance
+remain traceable. Existing case/scenario/sensitivity sources/JSON are unchanged.
+
+**New verification:** 174 valuation/CLI tests (20 new reverse tests) and five
+preparation-preservation tests passed using documented `PYTHONPATH=src` unittest
+invocations. Checks include independent synthetic arithmetic, positive/negative
+responses, exact endpoints (including −100% growth), flat/unreachable/nonmonotone
+and truly monotone-but-uncertifiable cases, residual/width/fresh-verification and
+iteration limits, technical resource caps, strict fields/date/unit/scope, explicit
+scenario selection, immutable inputs/Decimal contexts, deterministic output and
+file protection. Legacy case/scenario/sensitivity JSON bytes and original engine
+sources remain unchanged. No full historical suite or actual-company reverse
+valuation was run.
+
+Six temporary integrations exercised all three retained anchors in both EV and
+per-share scope, including scenario selection, using **synthetic** operating/bridge
+assumptions and forward-generated targets. Temporary inputs/results were removed;
+packages were byte-preserved. Two runnable synthetic examples are added. Six
+single-company templates remain 37-unset; three scenario templates remain 111-unset;
+no company forecasts/targets/bounds became defaults. Historical/frozen artifacts,
+source approvals and preservation pins/allowlists remain unchanged. Links/anchors,
+whitespace and staged/protected scope are checked for the local checkpoint; no
+new evidence, extra issuers, infrastructure, UI or push.
+
+Actual three-company reverse-DCF analyst review and final analyst/regression
+acceptance remain pending under the [completion checklist](phase2-completion-checklist.md).
+Operating-driver sensitivity remains unimplemented/out of scope. Broader dated
+market-input judgments and financial completeness remain separate from the
+scoped engine's software completion.
+
+## Earlier milestone — qualified scenario acceptance and WACC × g sensitivity engineering complete
 
 The [scenario acceptance record](phase2-scenario-acceptance.md) attributes the supplied
 META/GOOGL/AAPL review: software acceptance complete, economic acceptance qualified,

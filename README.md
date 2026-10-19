@@ -116,8 +116,10 @@ AAPL: market-input reconciliation, editable Bear/Base/Bull scenarios, reusable
 sensitivities, bounded reverse DCF and final analyst acceptance/regression.
 The [scenario acceptance record](docs/phase2-scenario-acceptance.md) marks software
 acceptance complete and economic acceptance qualified. Explicit WACC × terminal-g
-sensitivity engineering/synthetic integration is complete; actual sensitivity
-review remains pending. Operating-driver sensitivities and reverse DCF are not implemented.
+sensitivity acceptance is [complete with economic qualifications](docs/phase2-sensitivity-acceptance.md).
+[Bounded reverse DCF](docs/phase2-reverse-dcf-workflow.md) is implemented and
+synthetically verified; actual reverse analyst review/final three-company
+acceptance remain pending. Operating-driver sensitivity is not implemented.
 
 Edit a copy of [synthetic-base.json](examples/valuation/synthetic-base.json) or
 [meta-fy2025-unset.json](examples/valuation/meta-fy2025-unset.json); keep the
@@ -327,9 +329,48 @@ Ordinary stdout runs leave inputs/repository unchanged. Existing CLIs remain val
 
 Examples contain synthetic economics only; all actual-company templates remain
 unset. Engineering checks cover all three retained anchors with temporary synthetic
-inputs. Actual analyst sensitivity review is pending; grids are neither probabilities
-nor fair-value bounds. Broader market/terminal judgments, funding, claims and awards
-remain qualified. Operating-driver sensitivity and bounded reverse DCF are unimplemented.
+inputs. [Actual sensitivity review](docs/phase2-sensitivity-acceptance.md) completed
+with qualified economic acceptance; grids are neither probabilities nor fair-value
+bounds. Broader market/terminal judgments, funding, claims and awards remain
+qualified. Operating-driver sensitivity is unimplemented.
+
+## Bounded reverse DCF
+
+The [approved reverse workflow](docs/phase2-reverse-dcf-workflow.md) embeds a
+complete single case, or explicitly selects Bear/Base/Bull from a fully validated
+set. Supply a dated target EV in base USD, or USD/share for a complete equity case,
+and explicit fractional lower/upper growth bounds. Target date must equal the
+fiscal-end analytical date. No prices, targets or company bounds are retrieved.
+
+The solver replaces **all five annual growth rates with one constant rate**;
+terminal growth and all other operating ratios, WACC, bridge/shares and dates stay
+fixed. Exact-rational derivative bounds certify interval-wide increasing or
+decreasing behavior; unsupported certificates reject rather than assume uniqueness.
+Existing forward calculations own every valuation and fresh final verification.
+Both residual and growth-bracket tolerances must pass (exact endpoints excepted).
+A result is conditional implied growth, not unique market expectations or a target.
+
+```bash
+python3 scripts/run_analyst_reverse_dcf.py examples/valuation/synthetic-reverse-ev.json
+python3 scripts/run_analyst_reverse_dcf.py examples/valuation/synthetic-reverse-ev.json --run
+python3 scripts/run_analyst_reverse_dcf.py examples/valuation/synthetic-reverse-equity.json --run --format summary
+python3 scripts/run_analyst_reverse_dcf.py examples/valuation/synthetic-reverse-equity.json --run --output /tmp/synthetic-reverse.json
+```
+
+Default validation is calculation-free and assesses no uniqueness. JSON is default;
+summary shows certificate/status, target/bounds/policy, original/solved growth,
+forward revenue/FCFF/EV and qualified equity/share. Exit 0 means valid structure
+or successful solve, 3 a completed unsuccessful solve with null solution, 2 an
+invalid request/execution/I/O error. `--output` requires `--run` and exclusively
+creates a new file outside the repository or under `output/`; it can save explicit
+failed-solve diagnostics with exit 3. Existing files/inputs/source paths are protected.
+No approximate failed iterate is labeled a solution. Full provenance, declared
+classes/awards, omissions and financial limitations remain visible.
+
+Only synthetic requests are runnable examples. All nine company templates remain
+unset/unchanged; no company targets, bounds or forecasts become defaults. Reverse
+engineering/integration is complete; actual META/GOOGL/AAPL reverse analyst review
+and final acceptance remain separately scoped. Phase 1 remains paused.
 
 ## Development
 

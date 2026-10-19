@@ -36,8 +36,9 @@ Annual operating inputs/flows, all five terminal operating ratios, bridge/shares
 conventions, dates and metadata stay fixed. Discount factors/PVs respond to WACC;
 g changes terminal revenue **and FCFF**, as well as the Gordon denominator.
 Reinvestment ratios do not adjust automatically to support each g; economic
-consistency is an analyst review question. Operating-driver sensitivities and
-reverse DCF are unimplemented.
+consistency is an analyst review question. Operating-driver sensitivity is
+unimplemented. The subsequently approved
+[bounded reverse DCF](phase2-reverse-dcf-workflow.md) is now separately implemented.
 
 `analyst-sensitivity-results-v1` retains the full submitted request, selected case,
 source/scenario identity/dates, full original reference result and row-major grid.
@@ -87,8 +88,9 @@ revenue anchors, both scopes and explicit scenario selection; files are removed.
 
 Engineering/synthetic integration is complete after the focused checks recorded in
 [project status](project-status.md). The [qualified scenario acceptance](phase2-scenario-acceptance.md)
-is a separate attributed record; **actual analyst sensitivity review remains
-pending**, including user-selected grid/rationale, economic consistency, funding
-and unbounded claims/awards qualifications. The
+is a separate attributed record. **Subsequent actual sensitivity review is
+[complete with qualified economic acceptance](phase2-sensitivity-acceptance.md)**,
+including explicit diagnostic grids, terminal/productivity/funding and unbounded
+claims/awards limitations; its prior checks are attributed, not rerun here. The
 [completion checklist](phase2-completion-checklist.md) retains the remaining scoped
 work. [Phase 1 expansion stays paused](phase1-universe-pause-checkpoint.md).
