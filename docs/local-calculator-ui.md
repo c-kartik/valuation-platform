@@ -2,7 +2,7 @@
 
 ## Scope and startup
 
-The first React/TypeScript/Vite interface edits one `analyst-case-v1` through
+The React/TypeScript/Vite quick workbench edits one `analyst-case-v1` through
 enterprise value only. The [packaged Python API](local-case-api.md) remains the
 financial calculation/validation authority. No formulas, schemas, conventions,
 financial approvals or historical resources changed. Phase 1 expansion remains
@@ -39,62 +39,108 @@ with Ctrl+C. `npm --prefix frontend run build` checks TypeScript and produces
 ignored local `frontend/dist`; it is not deployment configuration. Vite preview
 alone does not proxy the API; use the documented dev command for this milestone.
 
-## Entry and review contract
+## Quick-entry and review contract
 
-Four sections cover retained basis/metadata, five annual operating forecasts,
-explicit terminal/discount inputs, and separate Validate / Calculate actions.
-META/GOOGL/AAPL selections show source-bound FY2025 revenue, fiscal dates, filing
-accession/form/SEC links, source precision and limitations. These are fixed retained
-selections, not current/refreshed data; a separate filing-acceptance timestamp is
-not exposed by this catalog. Only the separately labeled synthetic demonstration
-loads the existing synthetic fixture ($100 revenue); it is not company data.
+The quick workbench supersedes the original four-section presentation. The journey
+is now company → compact assumptions → explicit apply/calculate → result → optional
+annual refinement. It reuses the existing reader, API, revision/cancellation guards,
+exact rate conversion and returned values; it is not a replacement for professional
+Excel modeling or evidence/financial review.
 
-Each company starts with **37 unset numerical fields** and blank case name,
-preparer, timestamp, rationale and scope. Retained limitations are visibly supplied
-as editable text, not analyst approvals; update them to describe submitted inputs.
-No declarations or current timestamps are silently filled to obtain validation.
-All six original single-case templates and three scenario templates are unchanged.
+The header selects retained META/GOOGL/AAPL FY2025 data and shows reported revenue,
+fiscal period and fixed data vintage separately from forecast assumptions. Filing
+identity, SEC links, precision and limitations expand on demand. These are not
+current/refreshed data; a separate filing-acceptance timestamp is not in the catalog.
+The separate **Load synthetic demonstration** action explicitly loads the existing
+$100 synthetic fixture; it is absent from the company selector and never supplies
+company forecasts automatically.
 
-Percentage fields use ordinary decimal percentage text: `10` → exact API string
-`"0.10"`, `-2.5` → `"-0.025"`; blank → `null`. The decimal point moves as text,
-without Number/parseFloat arithmetic. Percent signs, exponent notation, nonfinite
-values and commas are rejected beside the field. Financial ranges/model semantics
-remain Python checks. The UI constructs the existing strict EV-only schema; no
-bridge, calculation-scope extension or structured cutoff field is invented.
+The main view has **eight initially unset rates**: growth, margin, WACC, terminal
+growth and four required FCFF cash-flow assumptions (operating tax, expense D&A,
+investment and WC). Four headline inputs alone are insufficient. Six annual quick
+entries are independent draft text; WACC/g edit their existing single-case fields.
+Each annual row has Apply; **Apply all six to five years** requires all six values.
+Applying creates a flat five-year path once, with no hidden continuing link.
 
-The single-case reader does **not** enforce an information cutoff. Disclose it in
-scope/limitations; the interface preserves the fiscal-end analytical/later-filed
-notice and does not claim a contemporaneous backtest. Annual WC ratios apply to
-full forecast revenue; positive uses cash, negative releases cash. Investment is
-cash PP&E plus non-overlapping new finance-leased operating assets, excluding
-principal. D&A must align with margin expense; SBC and operating-lease services
-remain expensed. Joint economic consistency is a human review requirement.
+The authoritative numerical inputs remain the existing **30 annual + 2 discount
++ 5 terminal fields**. Quick typing does not change them. Unapplied drafts are
+marked and block both Calculate and Check inputs until applied or discarded.
+Discard restores the displayed quick value to the current flat path, or blank if
+annual values vary; it never changes annual inputs. Bulk application is atomic.
+Changing populated annual values requires **Replace annual inputs** confirmation;
+keeping annual edits leaves them intact. Any intervening input edit cancels the
+pending replacement. Quick-only populated drafts also require company-switch
+confirmation. No company selection or collapse/reopen action fills or resets rates.
 
-Validate calls only `/api/v1/cases/validate`; Calculate explicitly calls `/run`.
-Structural success is not economic approval. API field paths appear beside
-matching fields and in a bounded error summary; subsequent validation may reveal
-further errors beyond the API's 20-detail ceiling. Busy, deadlines, resource limits,
-connection and internal errors preserve entries and require explicit retry.
-Edits immediately mark existing results stale, cancel the local request and advance
-revision tokens; obsolete responses are ignored even if abort is ineffective.
-Populated entries require discard confirmation before changing basis. No automatic
-saving, import/export or case management is added.
+**Advanced annual editing** exposes the same individually editable five-year rates.
+A divergent row says **Varies by year — annual inputs used**. A flat path displays
+its actual annual rate, even if the old quick entry differs. Calculate consumes the
+annual path, never a silently linked quick draft. Collapsing preserves every value.
 
-Returned annual components, discount factors/PVs, terminal FCFF/value and
-explicit-period PV + terminal PV = EV are displayed directly. Money is **USD
-millions**, ordinarily two decimals; nonzero amounts below USD 10,000 use eight
-places to keep the small synthetic-dollar demonstration visible. An isolated
-Decimal.js constructor performs display scaling/rounding only. Original inputs and
-full-precision API strings remain in state and in the expandable review trace.
-Negative values are preserved; EV is not equity or per-share value.
+Five terminal operating/reinvestment ratios remain explicit and independent.
+**Use year-five operating ratios for the terminal year** copies margin, tax, expense
+D&A, investment and WC once. Missing/invalid year-five values reject the copy
+atomically; it does not copy WACC or growth. The disclosed assumption is sustainable
+year-five margins/reinvestment, requiring human consistency review. Later annual
+edits never update terminal values. Every terminal ratio remains separately editable;
+the main view lists missing terminal requirements even while the editors are closed.
 
-**Terminal contribution ratio is deferred:** the existing result object supplies
-terminal PV and EV, but no ratio. The UI shows both, states the gap, and does not
-introduce browser financial diagnostics. The existing CLI summary supplies the
-ratio (undefined at zero EV; signed/over-100% values are not clamped). This follows
-the milestone's instruction to defer diagnostics absent from the API rather than
-change the existing result contract. An additive server presentation contract can
-be separately scoped if needed.
+**Case details** moves name, preparer, preparation timestamp, rationale, scope/cutoff
+and limitations out of the main entry area. Missing required declarations remain
+listed beside Calculate with a direct opening action. Company name/scope/preparer/
+rationale/time start blank. **Use current UTC time** is an explicit convenience
+only; there is no silent author, generic rationale or approval. Retained limitations
+are initially visible when expanded and must be reviewed for the submitted case.
+Identity/version/conventions remain derived from trusted templates. The exact
+request and mechanical bindings expand inside Case details; no schema is redesigned.
+
+Percentage text remains exact: `10` → `"0.10"`, `-2.5` → `"-0.025"`; blank → null.
+No financial input passes through Number/parseFloat arithmetic. Percent signs,
+commas, exponents and nonfinite text reject locally; Python owns financial ranges
+and model validation. The existing contract has no structured enforced cutoff:
+disclose it in scope/limitations. Fiscal-end analytical timing uses later-filed
+information; it is not a contemporaneous backtest or an authenticated cutoff.
+
+WC uses full forecast revenue: positive consumes cash, negative releases cash.
+Investment is cash PP&E plus non-overlapping new finance-leased operating assets,
+excluding principal. Expense D&A must align with margin expenses; SBC and operating
+leases remain expensed once. Interface copy/apply actions approve no company
+forecast, sustainability, calibration, coverage or financial convention.
+
+Calculate explicitly calls the unchanged run route; **Check inputs** calls the
+calculation-free validation route. Input errors link to labeled fields/editors;
+API errors remain bounded and may require another check after correction. Busy,
+deadline and connection errors preserve entries. Every input edit immediately
+marks prior output stale, cancels requests and advances revision tokens, so old
+responses cannot attach after editing or switching companies. Expanding/collapsing
+review panels changes no inputs. There is no automatic saving, analytics, import/
+export or case management.
+
+## Result presentation and precision
+
+The result panel prominently shows **enterprise value**, explicitly distinct from
+equity/value per share, and **terminal contribution**. A newly authorized display-only
+exception computes terminal PV / EV with an isolated Decimal.js precision-50 /
+HALF_EVEN constructor, matching CLI summary semantics: undefined at zero EV, signed
+and over-100% ratios retained, with explanatory notes before display rounding.
+The API result contract and all raw returned strings are unchanged. The original
+milestone's deferred-ratio decision is superseded by this explicit UI exception;
+no server presentation endpoint or financial formula change was needed.
+
+Revenue/FCFF SVG trends use returned strings, normalize in isolated Decimal.js and
+convert only bounded coordinates to ordinary JS numbers. Coordinates never feed
+back into financial inputs or calculations. Nonfinite/excessive magnitudes reject
+chart rendering; tables/trace retain data. The compact table shows five years of
+revenue, EBIT and FCFF in **USD millions**. Detailed FCFF components, discount factors,
+PVs and explicit-period PV + terminal PV = EV expand separately. Submitted assumptions,
+rationale, timing and limitations expand alongside a full-precision trace containing
+an exact unrounded annual USD table. Compact cells also retain unrounded USD tooltips.
+
+Money is normally two decimals in USD millions; small nonzero amounts below USD
+10,000 use eight places for the synthetic-dollar demonstration. Display rounding
+does not change raw strings; displayed components may not sum, and display digits
+improve neither source precision nor economic validity. Negative flows/values remain
+visible. No share-price comparison, rating, recommendation or economic approval.
 
 ## Read-only catalog and runtime boundary
 
@@ -117,7 +163,46 @@ unchanged. Client timeout is 50 seconds; cancellation/late-reply guards are UI
 behavior, not a replacement for server deadlines. No cloud/static-host routing,
 production CORS or public admission controls are configured.
 
-## Verification record
+## Quick workbench verification
+
+Current verification used the actual packaged API and Safari desktop/narrow-screen
+sessions. Company selection began unset; compact synthetic rates were explicitly
+applied, year-five terminal ratios copied, required metadata supplied and Calculate
+run. A META FY2028 growth edit marked output stale/Varies by year, survived table
+collapse/reopen, required confirmation before replacement and recalculated with
+terminal inputs unchanged. Other retained companies were separately entered from
+blank selections; no synthetic company defaults were saved.
+
+All temporary annual rates came from the existing synthetic EV fixture; the copy
+action deliberately made terminal ratios equal to year five instead of the fixture's
+independent terminal ratios. This tests an explicit convenience assumption, not
+company economics or approval. The separate proxy/API executions matched ordinary
+CLI **full JSON exactly** for all three flat cases and the META edit. Browser EV /
+contribution displays matched CLI: META 100,224.02m / 44.44%; edited FY2028 growth
+15% (other annual growth 10%) 103,570.65m / 44.96%; GOOGL 200,898.88m / 44.44%;
+AAPL 207,544.21m / 44.44%. All are synthetic engineering outcomes on retained
+revenue, not actual-company valuation conclusions or saved cases/defaults.
+
+The focused frontend tests include actual CLI comparison of terminal-contribution
+formatting at zero/negative EV, signed/over-100% ratios and HALF_EVEN ties. Chart
+coordinates are bounded for signed/zero/extreme values. Existing API/engine contracts
+and all nine template bytes remain unchanged. **52 frontend + 19 API/catalog + 174 valuation/CLI + five preparation-preservation
+tests passed (250 total)**, plus TypeScript/Vite build, Python dependency check and
+full npm audit. Frontend CLI-comparison tests require the project Python `.venv`;
+Node type declarations were added as a dev dependency only. Safari desktop and
+390×844 checks exercised keyboard entry and scrollable result tables; a responsive
+grid overflow found during review was corrected and rechecked. No unexpected
+browser-console errors were observed in the workflow or fresh-load check. Temporary cases/results and
+the test bundle are removed; actual review screenshots are emitted without adding
+screenshots to the repository. Developer verification is not investor acceptance
+or exhaustive accessibility/device certification.
+
+## Earlier four-section verification record
+
+The following is the **prior interface milestone's record**, preserved for context;
+its original counts/results are not a claim that those trial sessions were replayed.
+The commands remain the affected test invocations:
+
 
 Commands for affected checks:
 
@@ -156,10 +241,10 @@ No full historical suite or new financial research was run.
 
 ## Next boundary
 
-Next bounded UI work can add an explicitly designed server presentation contract
-for terminal contribution and improve review/field navigation, before separately
-scoping JSON import/export or equity/share entry. Scenarios, sensitivity and reverse
-screens remain outside this first UI. Public deployment still needs the separately
-scoped [API launch checks](local-case-api.md#remaining-launch-boundary), Linux and
-admission/load verification. Nothing is provisioned, deployed, connected to Netlify,
-or changed in the separate personal website repository.
+JSON import/export or equity/share entry require separately bounded work. No equity,
+scenario, sensitivity or reverse-DCF screens are added here. The current cutoff
+remains free text, analyst declarations unauthenticated, and economic completeness
+unproven. Public deployment still requires the separately scoped
+[API launch checks](local-case-api.md#remaining-launch-boundary), Linux/admission/
+load verification and hosting decisions. Phase 2 qualified completion and Phase 1
+pause are unchanged. No hosting, cloud, DNS or separate website files are changed.

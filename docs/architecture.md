@@ -1,12 +1,17 @@
 # Architecture
 
-## Latest application milestone — local React/TypeScript EV calculator
+## Latest application milestone — local quick EV workbench
 
 The [local calculator UI](local-calculator-ui.md) is a Vite/React/TypeScript client
-in `frontend/`, with a committed npm lock. Four sections edit a single legacy
-EV-only case. String decimal-point conversion maps familiar percentage entries to
-fractional Decimal strings; isolated Decimal.js display scaling is the only browser
-arithmetic. Existing Python readers/engine remain the financial authority.
+in `frontend/`, with a committed npm lock. A compact workbench edits a single legacy
+EV-only case. Six quick-entry drafts
+apply once to the authoritative annual inputs; unapplied drafts block submission,
+annual replacements need confirmation and explicit year-five terminal copying
+never establishes a link. Metadata, annual/terminal editors and result detail
+expand without changing state. String decimal-point conversion maps familiar
+percentage entries to fractional Decimal strings. Isolated Decimal.js arithmetic
+is limited to display scaling, the authorized contribution ratio and chart
+normalization. Python readers/engine remain the financial authority.
 Loopback Vite proxies `/api` to the loopback packaged API. No wildcard CORS,
 financial-schema changes, persistence or production configuration is introduced.
 Input revisions and abort signals isolate obsolete replies and mark results stale.
@@ -15,9 +20,12 @@ Input revisions and abort signals isolate obsolete replies and mark results stal
 bindings at startup, with a 64-KiB encoded ceiling; it exposes no package/audit body
 or arbitrary file access. The private bundle adds that module and four pinned
 example resources (84 entries total); original resource pins and execution budgets
-remain unchanged. Current result JSON is unchanged. Terminal contribution is
-explicitly deferred because it is absent from that API contract; no JS diagnostic
-is substituted. Cutoff remains a free-text scope/limitation declaration in v1.
+remain unchanged. Current result JSON is unchanged. The separately authorized
+UI display-only
+terminal-contribution exception uses isolated Decimal.js precision 50/HALF_EVEN
+and matches CLI zero/signed/over-100% semantics. Revenue/FCFF SVG coordinates are
+bounded display conversions of returned strings, never financial inputs. Cutoff
+remains a free-text scope/limitation declaration in v1.
 No equity/scenario/sensitivity/reverse screens or deployment in this milestone.
 Phase 1 remains paused; Phase 2 qualified software closure is unchanged.
 

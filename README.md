@@ -20,8 +20,11 @@ where the operating-company FCFF framework is not appropriate.
 ## Current Status
 
 The [local React/TypeScript calculator](docs/local-calculator-ui.md) now provides
-retained META/GOOGL/AAPL basis review, 37 unset manual rates, explicit validation
-and EV-only calculation through the Python API. Run from the repository root:
+retained META/GOOGL/AAPL basis review, eight unset quick-entry rates, explicit
+apply-to-five-years actions, independent annual/terminal editing and EV calculation
+through the Python API. Case details and detailed cash flows expand on demand;
+terminal contribution and returned-value charts support review. The underlying
+37 company inputs remain unset until explicitly supplied/applied. Run from the repository root:
 `npm --prefix frontend ci` then `npm --prefix frontend run dev` with Node 22.12+,
 after [starting the packaged API](docs/local-calculator-ui.md#scope-and-startup).
 Open <http://127.0.0.1:5173/>. No company forecast defaults, saving or deployment.

@@ -104,3 +104,53 @@ export function fieldErrors(details: string[]): Errors {
   });
   return result;
 }
+
+export type AnnualKey = typeof annual[number][0];
+export type QuickValues = Record<AnnualKey, string>;
+export const annualPath = (key: AnnualKey, i: number) => `forecast_years[${i}].${key}`;
+export function samePercentage(a: string, b: string): boolean {
+  try {
+    const x = percentageToFraction(a), y = percentageToFraction(b);
+    return x === null || y === null ? x === y : new DisplayDecimal(x).eq(y);
+  } catch { return a === b; }
+}
+export function annualState(draft: Draft, key: AnnualKey): {value: string; varies: boolean; missing: number} {
+  const values = draft.doc.forecast_years.map((_,i) => draft.rates[annualPath(key,i)]);
+  return {value: values[0], varies: values.some(v => !samePercentage(v, values[0])), missing: values.filter(v => !v.trim()).length};
+}
+export function quickValues(draft: Draft): QuickValues {
+  return Object.fromEntries(annual.map(([key]) => {
+    const state = annualState(draft,key);
+    return [key, state.varies ? '' : state.value];
+  })) as QuickValues;
+}
+export function applyQuick(draft: Draft, values: Partial<QuickValues>): Draft {
+  const errors: Errors = {};
+  for (const [key,value] of Object.entries(values)) {
+    try { if (percentageToFraction(value!) === null) errors[`quick.${key}`] = 'Enter a percentage before applying.'; }
+    catch(e) { errors[`quick.${key}`] = (e as Error).message; }
+  }
+  if (Object.keys(errors).length) throw new InputErrors(errors);
+  const next = structuredClone(draft);
+  for (const [key,value] of Object.entries(values)) {
+    next.doc.forecast_years.forEach((_,i) => { next.rates[annualPath(key as AnnualKey,i)] = value!; });
+  }
+  return next;
+}
+export const terminalSources = [
+  ['operating_margin','operating_margin'], ['operating_tax_rate','forecast_tax_rate'],
+  ['d_and_a_percent_revenue','d_and_a_percent_revenue'], ['investment_percent_revenue','capex_percent_revenue'],
+  ['working_capital_cash_requirement_percent_revenue','change_in_operating_nwc_percent_revenue'],
+] as const;
+export function copyYearFive(draft: Draft): Draft {
+  const errors: Errors = {};
+  for (const [,source] of terminalSources) {
+    const path = annualPath(source,4);
+    try { if (percentageToFraction(draft.rates[path]) === null) errors[path] = 'Enter year five before copying terminal ratios.'; }
+    catch(e) {errors[path] = (e as Error).message;}
+  }
+  if (Object.keys(errors).length) throw new InputErrors(errors);
+  const next = structuredClone(draft);
+  terminalSources.forEach(([target,source]) => {next.rates[`terminal.${target}`] = draft.rates[annualPath(source,4)];});
+  return next;
+}

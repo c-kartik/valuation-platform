@@ -1,6 +1,48 @@
 # Project Status
 
-## Current — local EV-only React/TypeScript calculator
+## Current — quick EV workbench with advanced annual editing
+
+The [local workbench](local-calculator-ui.md) supersedes the original four-section
+presentation below. Select a retained company, enter eight compact required rates,
+explicitly apply six annual values, supply/copy five terminal operating ratios and
+complete Case details, then Calculate. Advanced annual edits remain authoritative;
+quick drafts are independent, visibly unapplied and block submission. Replacing
+annual values needs confirmation; collapsing preserves inputs. Terminal copying
+is one-time only and does not copy growth/WACC or follow later annual edits.
+
+Reported history/source limitations remain separate from forecast assumptions.
+Missing cash-flow, terminal and metadata requirements are visible without a
+technical trace. Authored rationale/scope remain explicit; cutoff remains unenforced
+free text. Result review shows EV, the expressly authorized display-only terminal
+contribution ratio, revenue/FCFF trends and a compact forecast table. Components,
+reconciliation, full-precision table/provenance expand. Ratio/coordinate/display
+arithmetic never changes financial operands or the API contract. Existing revision,
+abort, stale-result, error-recovery and company-switch protection are preserved.
+
+**52 frontend + 19 API/catalog + 174 valuation/CLI + five preservation tests
+passed (250 total)**; TypeScript/Vite build, Python dependency check and full npm
+audit passed. New frontend CLI-display tests use the existing Python virtual
+environment; the only new dependency is Node type declarations for those tests.
+Safari desktop and 390×844 checks included keyboard input, explicit apply/copy,
+advanced edits and results. A responsive grid overflow was corrected and rechecked;
+no unexpected browser-console errors were observed. Screenshots were emitted,
+not added to the repository.
+
+Developer checks exercised actual Safari and the packaged API, explicit synthetic
+flat paths on all three retained anchors, terminal copying, META annual refinement
+and confirmation/collapse behavior. Four separate proxy/API cases matched CLI full
+JSON; browser EV/contribution displays matched. No investor acceptance, company
+forecasts/defaults or financial approvals follow. See the
+[current verification record](local-calculator-ui.md#quick-workbench-verification).
+Financial engine/API code, historical/frozen resources, approvals and all six
+37-unset plus three 111-unset templates are byte-unchanged. Phase 2 qualified
+completion and Phase 1 pause remain intact. No hosting/cloud/website changes.
+
+Next bounded UI work may address JSON import/export or richer case-detail
+usability. Equity/share and other screens, production deployment and public
+admission controls remain separate scope.
+
+## Earlier — first local EV-only React/TypeScript calculator
 
 The [local calculator](local-calculator-ui.md) connects manual single-case entry
 to the existing packaged Python API. Four sections cover retained basis/metadata,

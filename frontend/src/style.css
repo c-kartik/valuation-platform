@@ -49,3 +49,53 @@ a {color: #205e77;}
 dd {font-variant-numeric: tabular-nums; margin: 0; font-weight: 650;}
 footer {font-size: .85rem; color: #526860; padding: 20px 0;}
 @media(max-width: 640px) {main {padding: 24px 12px;} section {padding: 20px 14px;} .metadata,.rate-grid {grid-template-columns: 1fr;} .ev strong {overflow-wrap: anywhere;} }
+/* Quick workbench: reuse the entry controls and responsive tables. */
+main {max-width: 1460px; padding-top: 30px;}
+.workbench-header {max-width: none; display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-bottom: 20px;}
+.workbench-header h1 {font-size: clamp(1.8rem,3vw,2.5rem); margin: 8px 0;}
+.workbench-header p {margin: 6px 0; color: #526860;}
+.company-choice {min-width: 250px; display: grid; gap: 6px;}
+.history-strip {padding: 16px 22px; margin-bottom: 20px; background: #eaf2ed;}
+.history-strip p {margin: 5px 0; font-size: .87rem;}
+.history-strip details {margin: 8px 0 0; font-size: .85rem;}
+.workbench-grid {display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); gap: 24px; align-items: start;}
+.workbench-grid section {padding: 22px;}
+.assumption-columns {display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 22px;}
+.assumption-columns h3 {font-size: .96rem; margin-top: 10px;}
+.quick-row {display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 5px 8px; margin: 16px 0; align-items: end;}
+.quick-row .field {margin: 0;}
+.quick-row > small,.quick-status {grid-column: 1/-1; margin: 0; font-size: .76rem;}
+.quick-status {color: #286045; font-weight: 600;}
+.quick-status.pending,.missing-note {color: #7a451a;}
+.quick-row button {padding: 9px 12px;}
+.quick-row .text-button {grid-column: 1/-1; justify-self: start; padding: 0;}
+.text-button {background: transparent; border: 0; padding: 0; color: #205e77; text-align: left; text-decoration: underline; font-size: .85rem; cursor: pointer;}
+.discount-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 12px;}
+.terminal-section {border-top: 1px solid #d8e2dd; border-bottom: 1px solid #d8e2dd; margin: 22px 0; padding: 14px 0;}
+.terminal-section h3 {margin: 0;}
+.missing-note {font-size: .82rem; margin: 8px 0;}
+.run-controls {border-top: 1px solid #d8e2dd; padding-top: 12px;}
+.run-controls [role=status] {font-size: .85rem;}
+.result {background: white; border: 1px solid #d5dfd9; border-radius: 14px; padding: 22px;}
+.result h2 {font-size: 1.1rem; margin: 10px 0;}
+.ev {padding: 12px 0;}
+.ev strong {font-size: clamp(1.8rem,3.4vw,2.7rem);}
+.terminal-metric {display: flex; flex-direction: column; padding: 15px 0;}
+.terminal-metric strong {font-size: 1.7rem;}
+.charts {display: grid; grid-template-columns: 1fr 1fr; gap: 12px;}
+.trend {min-width: 0; margin: 6px 0; border: 1px solid #dce5df; border-radius: 8px; padding: 10px;}
+.trend figcaption {font-size: .85rem; font-weight: 600;}
+.trend figcaption small {display: block; font-size: .68rem;}
+.trend svg {width: 100%; display: block; overflow: hidden;}
+.trend svg text {font: 13px system-ui; fill: #526860;}
+.trend-range {display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; font-size: .68rem;}
+.compact-table {min-width: 450px;}
+.compact-table th:first-child {min-width: 80px;}
+.compact-table td,.compact-table th {padding: 9px; font-size: .8rem;}
+.compact-table caption {font-size: .82rem;}
+.result details {font-size: .85rem;}
+.result details table {min-width: 760px;}
+@media(max-width: 1050px) {.workbench-grid {grid-template-columns: minmax(0,1fr);} .workbench-header {align-items: flex-start;} .metadata {grid-template-columns: 1fr 1fr;} }
+@media(max-width: 600px) {.workbench-header {display: block;} .company-choice {min-width: 0;} .assumption-columns,.metadata {grid-template-columns: 1fr;} .workbench-grid section,.result {padding: 16px;} .charts {gap: 7px;} }
+
+.workbench-grid > *, .assumption-columns > * {min-width: 0;}
