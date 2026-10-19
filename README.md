@@ -25,18 +25,23 @@ records 24 completed scoped company histories, 3 partial (CAT/JNJ/CVX) and
 15 assessment-only among 42 eligible issuers; 8 specialized exclusions remain.
 There are 199 selected annuals / 210 target slots, with 11 explicit deficits.
 This is not full-universe completion or valuation-consumer certification.
-The user will begin separately scoped Phase 2 work in separate chats, initially
-one company and a traceable Base case; no engine or economic convention is
-approved by this checkpoint. Universe reviews do not resume automatically.
+That pause checkpoint proposed separately scoped Phase 2 work, initially one
+company and a traceable Base case; it approved no engine or economic convention.
+Subsequent Phase 2 milestones are recorded below. Universe reviews do not resume
+automatically.
 
 The [META Base-case consumer contract](docs/phase2-meta-base-consumer-contract.md)
 records approved Stages A–C mathematical/interface conventions, a read-only
 revenue-anchor boundary, five-year FCFF forecast, terminal/annual discounting
 through EV and explicit equity/per-share arithmetic, verified with synthetic
-fixtures and separately authorized temporary META trials. Standing META
+fixtures and separately authorized temporary META, GOOGL and AAPL trials. Standing META
 assumptions and bridge/share/award selections remain pending. The read-only
 [anchor integration](docs/phase2-anchor-integration.md) also supports exact retained
 GOOGL/AAPL revenue selections without approving their forecast or bridge inputs.
+The [GOOGL/AAPL trial records](docs/phase2-googl-aapl-milestones.md) document the
+completed, scope-qualified temporary trials; the
+[three-company completion checklist](docs/phase2-completion-checklist.md) defines
+remaining work, including unresolved cross-company ERP methodology.
 Timing is fiscal-end analytical using later-filed information,
 not a contemporaneous backtest or current market-date valuation.
 
@@ -102,9 +107,12 @@ scope-qualified end-to-end testing milestone: historical anchor → manual forec
 FCFF/DCF → EV → explicit equity bridge → value/share. Synthetic tests and temporary
 META-anchored trials exercised the workflow; no permanent META Base case, complete
 claims coverage, financial-input sufficiency or fully diluted fair value is certified.
-Phase 1 remains paused. GOOGL/AAPL revenue-anchor engineering integration is
-complete; financial-input review and actual-company trials remain separately
-scoped. Scenarios, sensitivities and reverse DCF remain later capabilities.
+Phase 1 remains paused. [GOOGL/AAPL temporary trials](docs/phase2-googl-aapl-milestones.md)
+have also completed with explicit limitations, without standing financial approval.
+The [remaining Phase 2 scope](docs/phase2-completion-checklist.md) is META, GOOGL and
+AAPL: market-input reconciliation, editable Bear/Base/Bull scenarios, reusable
+sensitivities, bounded reverse DCF and final analyst acceptance/regression.
+Those features and their economic conventions are not approved or implemented here.
 
 Edit a copy of [synthetic-base.json](examples/valuation/synthetic-base.json) or
 [meta-fy2025-unset.json](examples/valuation/meta-fy2025-unset.json); keep the
@@ -231,7 +239,7 @@ may not sum exactly and display digits do not improve source precision. Supplied
 scope/rationale/limitations and later-filed-information timing remain visible;
 the JSON result and inputs are never rounded or mutated by the renderer.
 
-The engine has synthetic verification and temporary scope-qualified META trial
+The engine has synthetic verification and temporary scope-qualified META/GOOGL/AAPL trial
 coverage. Editable inputs and `--run` do not certify economic consistency, evidence
 completeness or financial acceptance. A permanent META case and further execution
 require separately scoped decisions; the [input review](docs/phase2-meta-base-input-review.md)

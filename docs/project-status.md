@@ -1,6 +1,47 @@
 # Project Status
 
-## Current — GOOGL/AAPL revenue-anchor engineering integration
+## Current — three-company scope-qualified trials recorded; remaining Phase 2 scoped
+
+The [GOOGL/AAPL milestone record](phase2-googl-aapl-milestones.md) preserves the two
+supplied reports as attributed historical trial records, alongside the unchanged
+[META milestone](phase2-meta-milestone.md). The existing editable single-case
+historical anchor → manual forecast → FCFF/DCF → EV → equity/share workflow has
+now been exercised in temporary, scope-qualified trials for **META, GOOGL and AAPL**.
+Reported GOOGL results were **1,178.675bn USD EV / 97.08 USD per dated basic-common
+equivalent share** (2025-12-31 analytical date, 2026-02-05 cutoff); AAPL results
+were **1,865.092bn USD EV / 124.92 USD per fiscal-end basic share** (2025-09-27 /
+2025-10-31). All are temporary assumption-led results, not defaults, standing Base
+cases, fully diluted values or investment-readiness certification.
+
+Each report attributes 219 independent arithmetic checks to its prior trial,
+with 26 GOOGL / 33 AAPL inline observations checked. These checks were **not rerun
+or independently authenticated at this documentation checkpoint**. The reports
+state temporary files were removed and no actual case/default was saved. Claims,
+awards, reserve/asset eligibility, financing proxies and settlement overlap remain
+qualified; omissions may be unbounded and do not bound total company value.
+
+The [completion checklist](phase2-completion-checklist.md) limits remaining work
+to these three issuers: market-input methodology reconciliation, editable
+Bear/Base/Bull scenarios, reusable sensitivity tables, bounded reverse DCF, then
+final analyst acceptance/regression. AAPL used the same specified Damodaran ERP
+variant as META with an earlier dated observation; GOOGL used a 5% judgment.
+The cases are not yet harmonized for comparison. Reconciliation and any affected
+temporary reruns need separate scope; prior results are unchanged. Future feature
+economics/ranges/conventions are not approved here. Complete historical sufficiency
+or all 42 issuers is not a software-completion prerequisite.
+
+This checkpoint changes documentation only. All six issuer templates retain 37
+unset numerical inputs each; equity templates retain unresolved actual bridge/share
+selections. Protected code, schemas, examples, historical/frozen artifacts and
+source approvals are unchanged, including the META milestone and Phase 1 pause.
+Validation is limited to retained-reference/report consistency, changed local
+links/anchors, static unset-template checks, protected/staged scope and whitespace;
+no tests, valuation execution or evidence acquisition are performed. Nothing pushed.
+
+## Earlier milestone — GOOGL/AAPL revenue-anchor engineering integration
+
+The synthetic-only scope and next financial-review step below describe that
+earlier milestone; the current trial records/checklist above supersede its next step.
 
 The [integration record](phase2-anchor-integration.md) documents explicit read-only
 META/GOOGL/AAPL revenue dispatch, exact filing/calendar/precision selections and
@@ -60,8 +101,9 @@ Both META templates retain all 37 forecast inputs unset and unresolved actual
 bridge/share selections. Historical artifacts and approvals remain unchanged.
 Phase 1 expansion remains paused.
 
-Next: **separately scoped GOOGL validation**, inspecting its approved historical
-package and generalizing only the necessary consumer boundary; no work has begun.
+At that milestone, next was **separately scoped GOOGL validation**, inspecting its approved historical
+package and generalizing only the necessary consumer boundary; no work had begun.
+The current integration/trial records above supersede that next step.
 Scenarios, sensitivities and reverse DCF remain later capabilities. Completing
 every eligible company is not a prerequisite for defined Phase 2 engine milestones.
 

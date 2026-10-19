@@ -13,10 +13,19 @@ preserves its assumptions, results and limitations. This is not complete financi
 sufficiency, investment readiness, complete claims coverage or fully diluted fair value.
 Standing META Base-case and award/claim selections remain pending. The
 [GOOGL/AAPL integration](phase2-anchor-integration.md) adds source-bound revenue
-seeds and synthetic engineering checks only, without forecasts or financial
-acceptance. Completing all eligible companies is not
-required before incremental Phase 2 engine milestones. Scenarios, sensitivities
-and reverse DCF remain later capabilities.
+seeds and synthetic engineering checks without financial acceptance. Subsequent
+[GOOGL/AAPL temporary trials](phase2-googl-aapl-milestones.md) completed scope-qualified
+end-to-end review using agent estimates; no standing financial approval follows.
+Their assumptions, results and prior verification remain attributed historical
+records. AAPL used the same specified Damodaran trailing-12-month cash-yield ERP
+variant as META, at an earlier date-appropriate observation; GOOGL used a 5%
+judgment. They are not yet harmonized for direct comparison. The bounded
+[reconciliation and three-company checklist](phase2-completion-checklist.md)
+requires a methodology decision and separately authorized affected-case reruns,
+without changing prior results now. Completing all eligible companies or resolving
+every historical unknown is not required before scoped engine milestones.
+Scenarios, sensitivities and reverse DCF remain later capabilities with decisions
+still needed; existing financial formulas and conventions remain unchanged.
 
 The shared `manual-fcff-v1` / `manual-equity-bridge-v1` identifiers name the same
 engine equations and declared lease/SBC behavior as the legacy META spellings;

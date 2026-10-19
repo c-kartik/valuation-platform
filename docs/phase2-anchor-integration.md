@@ -7,6 +7,12 @@ class equivalence or award treatment and transfers no META financial approval.
 The [completed META milestone](phase2-meta-milestone.md) remains a historical
 record. [Phase 1 expansion remains paused](phase1-universe-pause-checkpoint.md).
 
+**Subsequent status:** the separately scoped [GOOGL/AAPL temporary trials](phase2-googl-aapl-milestones.md)
+are now complete with explicit financial limitations. This document preserves the
+earlier engineering milestone, whose synthetic-only scope and next-review boundary
+below remain historical. The [three-company checklist](phase2-completion-checklist.md)
+supersedes that next step; no financial approval or historical input changes follow.
+
 ## Fixed selections and provenance
 
 | Kind | CIK / accession / form | Selected annual | Revenue, base USD / precision |
@@ -114,7 +120,7 @@ No issuer preparation record is rewritten because no preparation changed.
 Current test totals and manual acceptance checks are recorded in
 [project status](project-status.md).
 
-Next is a separately scoped financial input review for one issuer, including
+At this engineering milestone, next was a separately scoped financial input review for one issuer, including
 expense D&A/investment consistency, operating taxes/WC, WACC/terminal economics
 and any actual bridge/share policy. Engineering support is not an investment
 valuation or financial-sufficiency certification. Scenarios, sensitivities and

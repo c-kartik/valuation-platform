@@ -12,9 +12,13 @@ scope-qualified end-to-end testing milestone; see the
 [milestone record](phase2-meta-milestone.md). Standing META assumptions and complete
 bridge/share/award coverage remain pending. The separately scoped
 [GOOGL/AAPL anchor integration](phase2-anchor-integration.md) now adds read-only
-revenue bindings and synthetic workflow regression coverage; no actual-company
-financial trial or valuation is performed. Scenarios, sensitivities and reverse
-DCF remain later work.
+revenue bindings and synthetic workflow regression coverage. Subsequent
+[GOOGL/AAPL temporary trials](phase2-googl-aapl-milestones.md) exercised A→B→C with
+scope-qualified inputs; their reported checks are attributed, not rerun here.
+The [three-company completion checklist](phase2-completion-checklist.md) separates
+software acceptance from investment readiness and defines remaining ERP-method
+reconciliation, scenarios, sensitivities, bounded reverse DCF and final regression.
+No new architecture or feature conventions are approved by this documentation.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.
@@ -96,7 +100,7 @@ contributions, subtotals, supplied decisions/coverage/omissions and limitations;
 schema `stage-c-equity-bridge-v1`, convention `meta-base-equity-bridge-v1`, local
 precision 50/HALF_EVEN and deterministic Decimal strings. No generic framework,
 candidate loader, award/dilution calculation or hidden-overlap certification is
-added. Synthetic fixtures and temporary scope-qualified META trials exercised
+added. Synthetic fixtures and temporary scope-qualified META/GOOGL/AAPL trials exercised
 A→B→C; standing actual selections, complete semantic coverage and fully diluted
 fair value remain unapproved. The milestone records trial limitations without
 changing models, financial formulas or historical approvals.
