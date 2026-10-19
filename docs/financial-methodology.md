@@ -18,11 +18,16 @@ seeds and synthetic engineering checks without financial acceptance. Subsequent
 end-to-end review using agent estimates; no standing financial approval follows.
 Their assumptions, results and prior verification remain attributed historical
 records. AAPL used the same specified Damodaran trailing-12-month cash-yield ERP
-variant as META, at an earlier date-appropriate observation; GOOGL used a 5%
-judgment. They are not yet harmonized for direct comparison. The bounded
+variant as META, at an earlier date-appropriate observation; GOOGL originally used
+a 5% judgment. Its separately authorized [ERP reconciliation](phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19)
+now verifies and applies the same start-2026 **4.23% T12m ERP over unadjusted
+Treasury** as META, changing only GOOGL WACC/discounting and resulting value.
+Publication evidence is distinct from observation date; old results and META/AAPL
+remain unchanged. This completes that specific ERP correction, not full market-input
+approval or direct three-company comparability. The bounded
 [reconciliation and three-company checklist](phase2-completion-checklist.md)
-requires a methodology decision and separately authorized affected-case reruns,
-without changing prior results now. Completing all eligible companies or resolving
+requires separate decisions/authority for any further methodology changes and
+affected-case reruns. Completing all eligible companies or resolving
 every historical unknown is not required before scoped engine milestones.
 Scenarios, sensitivities and reverse DCF remain later capabilities with decisions
 still needed; existing financial formulas and conventions remain unchanged.

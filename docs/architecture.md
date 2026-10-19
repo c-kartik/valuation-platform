@@ -16,8 +16,10 @@ revenue bindings and synthetic workflow regression coverage. Subsequent
 [GOOGL/AAPL temporary trials](phase2-googl-aapl-milestones.md) exercised A→B→C with
 scope-qualified inputs; their reported checks are attributed, not rerun here.
 The [three-company completion checklist](phase2-completion-checklist.md) separates
-software acceptance from investment readiness and defines remaining ERP-method
-reconciliation, scenarios, sensitivities, bounded reverse DCF and final regression.
+software acceptance from investment readiness. The dated
+[GOOGL ERP correction](phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19)
+used the existing interface unchanged; broader market-input review, scenarios,
+sensitivities, bounded reverse DCF and final regression remain.
 No new architecture or feature conventions are approved by this documentation.
 
 The approved historical path uses reported cash-flow movements and independently

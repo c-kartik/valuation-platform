@@ -41,7 +41,9 @@ GOOGL/AAPL revenue selections without approving their forecast or bridge inputs.
 The [GOOGL/AAPL trial records](docs/phase2-googl-aapl-milestones.md) document the
 completed, scope-qualified temporary trials; the
 [three-company completion checklist](docs/phase2-completion-checklist.md) defines
-remaining work, including unresolved cross-company ERP methodology.
+remaining work. The [GOOGL ERP correction](docs/phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19)
+aligns its specified ERP variant with META/AAPL; broader market judgments and
+full valuation comparability remain open.
 Timing is fiscal-end analytical using later-filed information,
 not a contemporaneous backtest or current market-date valuation.
 

@@ -1,6 +1,41 @@
 # Project Status
 
-## Current — three-company scope-qualified trials recorded; remaining Phase 2 scoped
+## Current — GOOGL ERP reconciled and temporary trial rerun
+
+The [2026-10-19 reconciliation](phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19)
+supersedes only GOOGL's ERP/WACC and resulting trial reference. Damodaran's
+January workbook verifies **4.23% T12m ERP over unadjusted Treasury**, the same
+specified variant as META/AAPL, distinct from sustainable payout/net cash yield.
+Start-2026 measurement is separate from the January 23 author publication record,
+within both relevant cutoffs; no December 31 publication or first-upload claim.
+Treasury/beta/spread/weights/shield remain unchanged. WACC is **8.73522% unrounded,
+8.74% applied**, replacing 9.57% in the temporary GOOGL case.
+
+The disclosed original economic inputs reproduced **1,178.675bn USD EV /97.08
+USD/basic-equivalent share** at prior reported precision. Removed original JSON
+bytes/full-precision outputs were not recovered or authenticated. Reconciled trial:
+**1,387.933bn EV**, **1,382.810bn equity reference**, **114.40 USD/basic-equivalent
+share**, **93.014656% terminal contribution**. Annual operating flows, terminal
+FCFF, signed bridge and 12.088bn issued A/B/C denominator are unchanged.
+
+Four cases (original reconstruction, reconciled, and two separate diagnostics)
+passed calculation-free validation and explicit CLI JSON/summary execution.
+**292 new independent rational output comparisons**, plus two WACC equalities,
+passed; maximum difference approximately **8.69e−38**, under documented tolerances.
+The earlier 219/26 GOOGL checks remain attributed, not rerun. All 573 tracked files
+were byte-unchanged after runs, before documentation updates; temporary cases,
+outputs, workbooks and scripts removed. No engine/interface defect found.
+
+[P2-03](phase2-completion-checklist.md) marks the specific ERP reconciliation
+complete; broader market judgments/comparability remain open. No META/AAPL rerun,
+financial acceptance, standing Base case, defaults or investment-readiness claim.
+Claims/awards, eligibility, settlement non-overlap and carrying proxies retain
+unbounded limitations. Phase 1 remains paused; scenarios, sensitivities, bounded
+reverse DCF and final three-company acceptance/regression remain separately scoped.
+Only documentation is checkpointed; six templates remain 37-unset, protected
+code/history/approvals/frozen artifacts unchanged. No full-suite run or push.
+
+## Earlier milestone — three-company scope-qualified trials recorded; remaining Phase 2 scoped
 
 The [GOOGL/AAPL milestone record](phase2-googl-aapl-milestones.md) preserves the two
 supplied reports as attributed historical trial records, alongside the unchanged

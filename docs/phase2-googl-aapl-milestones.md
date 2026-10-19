@@ -1,5 +1,10 @@
 # Phase 2 — GOOGL and AAPL scope-qualified trial records
 
+**Latest GOOGL reference:** the [2026-10-19 ERP reconciliation](#googl-erp-reconciliation--2026-10-19)
+supersedes the original GOOGL ERP/WACC and resulting valuation reference below.
+The original trial and AAPL record remain historical and unchanged; financial
+limitations persist. ERP alignment does not establish full valuation comparability.
+
 ## Status and attribution
 
 The separately authorized temporary GOOGL and AAPL trials completed the existing
@@ -11,11 +16,12 @@ claims coverage or fully diluted fair value. No permanent Base case, defaults,
 financial approval, rating, current-price comparison or approved target follows.
 [Phase 1 expansion remains paused](phase1-universe-pause-checkpoint.md).
 
-This document transcribes the two user-supplied trial reports as **attributed
+The original documentation checkpoint transcribed the two user-supplied trial reports as **attributed
 records**, not independently authenticated evidence, new approvals or recreated
-test logs. Figures and verification below are reported from those trials; no
+test logs. Figures and verification in the original trial sections are reported from those trials; no
 valuation, source-body comparison or prior arithmetic check was rerun for this
-documentation checkpoint. Rounded tables are interpretive records, not executable
+original documentation checkpoint. New reconciliation checks are recorded separately
+in the dated section below. Rounded tables are interpretive records, not executable
 cases or full-precision saved outputs; displayed components may not sum exactly.
 
 | Record | Supplied attachment (`Pasted text.txt` under `/Users/kc/.codex/attachments/`) | SHA256 of supplied report bytes |
@@ -257,3 +263,164 @@ depreciation, investment, dated market judgments and incomplete awards/claims
 drive limitations; displayed cents do not imply economic precision. Results are
 neither conservative total-value bounds nor a harmonized company comparison.
 See the [ERP reconciliation and remaining three-company checklist](phase2-completion-checklist.md).
+
+## GOOGL ERP reconciliation — 2026-10-19
+
+### Authority, source and dates
+
+The separately authorized reconciliation replaced only GOOGL's 5% judgment ERP
+and resulting applied WACC. Analytical date **2025-12-31** and cutoff
+**2026-02-05** remain fixed. OpenAI Codex (AI analyst) prepared the temporary
+reconstruction at **2026-10-19T11:17:48+00:00**; this is execution metadata, not the
+historical information date or a claim that estimates came directly from the user.
+
+The original [Damodaran January workbook](https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPJan26.xlsx),
+`Impl premium calculator`, selects trailing-12-month dividends plus buybacks
+(B6=`C`), top-down growth (B8=`TD`), and no sustainable-payout adjustment (B16=`No`).
+C45 is the ERP over the unadjusted US Treasury rate: cached value
+**4.2312372103557351%**, reported as **4.23%**. The workbook's monthly sheet,
+`Implied ERP (Monthly from 9-08)`, labels A210 **2026-01-01** (1904 date system),
+J210 **ERP (T12m) =4.23%**. It is neither I210 sustainable-payout **4.18%**, K210
+adjusted-risk-free **4.46%**, nor N210 net-cash-yield **3.96%**. Thus the earlier
+descriptive phrase “trailing-12-month cash-yield” means column J, **not** the
+distinct “Net Cash Yield” column. No misidentified META/AAPL number or variant
+was found: September 1 AAPL's J206 is **3.94%** in this archived workbook.
+
+Measurement is **start-2026 / December 31 closing market basis**, not publication
+on January 1. The workbook metadata says modified **2026-01-06T20:42:16Z**; that
+is not proof of upload or first publication. Damodaran's dated
+[January 23, 2026 author post](https://aswathdamodaran.blogspot.com/2026/01/data-update-2-for-2026-equities-get.html?m=1)
+documents the 4.23% result and links that workbook. This supports a publication
+record within both META's January 29 and GOOGL's February 5 cutoffs, without
+authenticating the first upload instant or contemporaneous December 31 availability.
+Using the same observation is appropriate to the shared analytical date and
+later-filed framing; no current observation or alternate ERP was substituted.
+
+The [Treasury December table](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202512&type=daily_treasury_yield_curve)
+confirms the unchanged **4.18% ten-year par yield on 2025-12-31**. It remains the
+trial's Treasury proxy, not a default-risk-adjusted dollar risk-free rate.
+
+Retrieved January workbook SHA256:
+`d3cb1d01898431c31f5a0192934ff2b9859947efb2d6b9febd7da3a1a662ae4d`.
+The current [rolling monthly workbook](https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPbymonth.xlsx)
+corroborated the historical January J210 / September J206 values only; its
+October-modified contents were not evidence of pre-cutoff publication or a source
+of later market inputs. Retrieved SHA256:
+`56605b608bad9fb49b24206954b3b38eedb364ebee0cc2663e5020e28449cc9f`.
+These source checks did not change historical packages, source ledgers or approvals.
+
+### Reconstruction and isolated WACC change
+
+The disclosed economic inputs were reconstructed through the existing v2 reader
+and CLI, with the same revenue/audit bindings and `manual-fcff-v1`,
+`fiscal-end-annual-gordon-v1`, `manual-equity-bridge-v1` conventions. Annual growth,
+margins, operating tax, WC and all terminal ratios remain exactly as in the
+original table. First-three-year D&A ratios were recalculated from **38/62/85bn**
+and compounded revenue, FY2026 investment from **183bn**, using isolated
+precision-50/HALF_EVEN Decimal divisions. Rounded displayed ratios were not inputs.
+
+The original reserve rule gives **70.4125915bn**:
+`(FY2026 revenue × (1−31%) −38bn)/4`, retaining SBC. Gross current financial
+balances **126.843bn** less that reserve give **56.4304085bn** eligible assets.
+Notes **45.6bn**, finance leases **2.5bn**, consolidated NCI **3.4bn** including
+redeemable NCI, and opening tax payables **10.054bn** are unchanged. Thus the
+signed bridge is **−5.1235915bn**, with **12.088bn issued A/B/C common-equivalent
+shares** fixed. Opening tax settlements remain outside forecast operating tax/WC;
+capital creditors stay in cash PP&E, not WC or another bridge deduction.
+
+The reconstruction reproduced original **1,178.675bn EV /97.08 USD/share** at
+the supplied report's precision. The removed original JSON, metadata and
+full-precision output were not recovered or independently authenticated; this is
+a deterministic economic reconstruction from disclosed exact amounts/rules,
+not a claim of byte-identical recovery or verification beyond the published digits.
+No material numerical input needed for this reconstruction was left unspecified.
+
+The selected ERP input is the published/series **4.23%**, matching META's disclosed
+precision, rather than the calculator's extra cached digits. Unchanged judgments:
+beta **1.10**, debt spread **0.75%**, equity/debt **98/2**, debt tax shield **20%**.
+
+| WACC building block | Original | Reconciled |
+| --- | ---: | ---: |
+| Treasury proxy / ERP | 4.18% /5% | 4.18% /4.23% |
+| Cost of equity = Treasury + beta × ERP | 9.68% | 8.833% |
+| Pretax debt cost = Treasury + spread | 4.93% | 4.93% |
+| Weighted after-tax WACC = 98% × Ke +2% × Kd ×(1−20%) | 9.56528% | 8.73522% |
+| **Applied WACC**, rounded to 0.01 percentage point | **9.57%** | **8.74%** |
+
+### Reconciled temporary results
+
+Money is USD billions except USD/share. Original values here are the newly
+reconstructed case, matching the earlier rounded record; percentage changes use
+full-precision engine results. These remain assumption-led trial results, not a
+standing Base case, defaults, fully diluted value or investment recommendation.
+
+| Metric | Original reconstruction | ERP-reconciled | Absolute change | Relative change |
+| --- | ---: | ---: | ---: | ---: |
+| ERP | 5% | 4.23% | −0.77 pp | −15.40% |
+| Applied WACC | 9.57% | 8.74% | −0.83 pp | −8.67% |
+| Explicit-period PV | 92.862533 | 96.951930 | +4.089397 | +4.40% |
+| Year-5 terminal value | 1,714.798910 | 1,962.757637 | +247.958727 | +14.46% |
+| Discounted terminal value | 1,085.812634 | 1,290.981541 | +205.168907 | +18.90% |
+| **Enterprise value** | **1,178.675167** | **1,387.933471** | **+209.258305** | **+17.75%** |
+| Terminal contribution | 92.121448% | 93.014656% | +0.893208 pp | +0.97% |
+| Equity reference | 1,173.551575 | 1,382.809880 | +209.258305 | +17.83% |
+| **Basic-common-equivalent USD/share** | **97.084015** | **114.395258** | **+17.311243** | **+17.83%** |
+
+| Fiscal year | Unchanged FCFF | Original discount factor | Reconciled discount factor | Original PV | Reconciled PV |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| FY2026 | −30.481782 | 0.9126585744 | 0.9196247931 | −27.819460 | −28.031802 |
+| FY2027 | −15.161745 | 0.8329456735 | 0.8457097601 | −12.628910 | −12.822436 |
+| FY2028 | 24.220206 | 0.7601950109 | 0.7777356631 | 18.412080 | 18.836918 |
+| FY2029 | 69.986828 | 0.6937984950 | 0.7152249983 | 48.556756 | 50.056329 |
+| FY2030 | 104.772499 | 0.6332011454 | 0.6577386410 | 66.342066 | 68.912921 |
+
+Terminal FCFF remains **112.662288bn**. The lower WACC both reduces the Gordon
+denominator and discounts future flows less; negative early FCFF has a more
+negative PV. The rise in EV is predominantly discounted terminal value, without
+any operating improvement or changed bridge/denominator. No unexpected numerical
+differences or engine/interface defects were found.
+
+| Separate diagnostic around reconciled case | Applied WACC | EV | Equity reference | USD/basic-equivalent share | EV change vs reconciled |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Central reconciled | 8.74% | 1,387.933471 | 1,382.809880 | 114.395258 | — |
+| WACC +1 percentage point | 9.74% | 1,142.299748 | 1,137.176156 | 94.074798 | −17.70% |
+| Investment/revenue +2 percentage points, annual and terminal | 8.74% | 1,183.572351 | 1,178.448759 | 97.489143 | −14.72% |
+
+Each diagnostic changed only its named group, holding bridge/reserve/shares fixed;
+these are temporary standalone stresses, not scenarios, implemented sensitivity
+features or bounds on total value.
+
+### Verification performed in this reconciliation and retained limits
+
+All four temporary cases passed calculation-free CLI validation, then explicit
+JSON and summary runs using the unchanged reader/Stages A–C. **292 independent
+exact-rational output comparisons** checked revenue compounding, eight annual
+operating components, FCFF handoffs, five discount factors/PVs, terminal operating
+components, terminal/explicit PV/EV and bridge/subtotals/shares/per-share across
+the four cases. Two additional exact-rational equalities checked the WACC builds.
+Arithmetic comparison policy: absolute tolerance **1e−33** plus **1e−47 × |reference|**;
+maximum observed absolute difference approximately **8.69e−38** (base USD or
+dimensionless factors as applicable). The independent implementation did not call
+engine calculation functions. JSON/summary units, dates and reconciliation were
+inspected; summary rounding remains display-only.
+
+Central submitted cases differed only in WACC; annual operating results, terminal
+components, Stage C inputs and signed contributions matched exactly. Case bytes
+were unchanged by execution. All **573 tracked-file hashes** matched the starting
+checkpoint after execution, before these documentation edits. No full suite or
+prior source-body/219-check trial verification was rerun. This section records
+new checks separately from those earlier attributed checks.
+
+Temporary cases, JSON/summary outputs, downloaded workbooks and verification
+scripts were removed after review; nothing executable or valuation output was
+saved in the repository. All six templates retain their 37 numerical inputs unset.
+No META/AAPL rerun was needed or performed, and their results remain unchanged.
+
+ERP variant/dated-observation reconciliation is complete for this authorized
+correction. Broader market judgments and direct three-company comparability are
+not approved: beta, weights, spread/shield, cutoff/observation lag and operating
+economics differ. Strategic-asset eligibility, NCI/lease/tax measurement proxies,
+net fines/escrow settlement, existing awards, venture commitments/guarantees and
+unidentified financing/claims retain the original uncertainty, including unbounded
+omissions. No total-value bound, fully diluted fair value or investment-readiness
+claim follows; [Phase 1 remains paused](phase1-universe-pause-checkpoint.md).
