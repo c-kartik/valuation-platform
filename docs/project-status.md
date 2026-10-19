@@ -1,6 +1,23 @@
 # Project Status
 
-## Current — compiled EV walkthrough and local API image candidate
+## Current — reviewed source pushed; GCP staging deferred
+
+The [push/staging checkpoint](cloud-staging-checkpoint.md) records the normal push
+of reviewed source `0d9698996ecdd50f897f1991c37a950ff317a4f1` to the existing
+`c-kartik/valuation-platform` main branch. Available GitHub configuration showed no
+deployment triggers. The authorized GCP project had no linked billing account;
+the user then deferred GCP setup. No remote build, image, IAM/API/resource changes
+or service deployment occurred. Cloud Shell credential authorization was not
+accepted and its panel was closed. Deployment identifiers, authentication tests,
+cloud timings/memory and actual charges therefore remain unavailable.
+
+This is a local-only documentation checkpoint after the source push. No new
+financial/code changes or local valuation tests occurred; the prior checks below
+retain their original attribution. The live website, Netlify, DNS and separate
+portfolio repository are unchanged. Phase 1 remains paused and qualified Phase 2
+closure persists. Resume only after billing linkage and the user's direction.
+
+## Earlier — compiled EV walkthrough and local API image candidate
 
 The [developer investor walkthrough](local-workbench-acceptance.md) completed
 continuous synthetic engineering sessions on all three retained anchors through

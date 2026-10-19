@@ -19,6 +19,10 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+Reviewed source is now pushed to GitHub. [Authenticated GCP staging is deferred](docs/cloud-staging-checkpoint.md)
+at the user's request while project billing linkage is pending; no cloud API has
+been built or deployed. The live website remains unchanged.
+
 The [compiled-build developer walkthrough](docs/local-workbench-acceptance.md)
 verified all three retained-anchor workflows, CLI equivalence and 254 affected tests,
 with bounded error-recovery fixes. The [local API image candidate](docs/local-api-image.md)
