@@ -2,6 +2,12 @@
 
 ## Latest status — software closure, qualified economics
 
+The subsequent [local EV-only calculator UI](local-calculator-ui.md) changes
+entry/presentation only. Python formulas and financial validation remain authoritative;
+no company assumptions, cutoff enforcement, calibration or financial approval are
+introduced. Phase 1 remains paused and all scoped Phase 2 qualifications remain.
+
+
 The subsequent [local single-case API](local-case-api.md) adds HTTP resource budgets
 and terminable execution only. These restrictions are not financial conventions,
 new approvals or changes to the underlying CLI/model validation rules.

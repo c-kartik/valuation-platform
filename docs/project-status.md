@@ -1,6 +1,43 @@
 # Project Status
 
-## Current — local-only single-case API implemented and verified
+## Current — local EV-only React/TypeScript calculator
+
+The [local calculator](local-calculator-ui.md) connects manual single-case entry
+to the existing packaged Python API. Four sections cover retained basis/metadata,
+five annual forecasts, independent terminal/discount assumptions and explicit
+Validate/Calculate review. All 37 company rates start unset; no analyst declarations
+are silently completed. The separate $100 synthetic fixture is explicit. API/model
+semantics remain authoritative; no formulas, schemas, historical resources or
+financial approvals change. Phase 1 remains paused.
+
+A bounded versioned read-only catalog projects three retained anchors and unchanged
+templates from existing verified resources, without private package/audit exposure.
+The bundle now has 84 entries with original pins preserved. Both development
+servers bind to loopback; Vite proxies `/api` without CORS expansion. Inputs remain
+in memory; edits cancel/invalidate old requests/results, populated switching needs
+confirmation and field/resource/busy/deadline errors preserve entries. The UI
+renders returned full-precision strings in USD millions with display-only rounding.
+Terminal contribution is explicitly deferred because the current result contract
+supplies no ratio; no financial diagnostics are added in JS. Single-case cutoff
+is disclosed in free text, not enforced by a new field.
+
+**35 frontend + 19 API/catalog + 174 valuation/CLI + five preservation tests
+passed (233 total)**; TypeScript/Vite build, Python dependency check and npm full dependency
+audit passed. Safari desktop/390×844 responsive checks covered keyboard
+entry, labels, field errors, stale results and populated switching; a fresh load
+had no console errors after adding the missing favicon. This is not exhaustive
+browser/accessibility certification. Details are in the [UI verification record](local-calculator-ui.md#verification-record).
+Actual Safari sessions used the synthetic demo and synthetic forecasts on all
+three retained anchors; separate proxy/API results matched CLI full JSON in four
+cases. No company economics/defaults were saved. No full historical suite,
+research, cloud provisioning, deployment or personal-website change.
+
+Next bounded UI milestone: an explicit server presentation contract for terminal
+contribution and focused review/navigation improvements; import/export and
+bridge/share entry require separate scope. Public deployment remains behind the
+existing API launch checks. Software acceptance does not certify investment readiness.
+
+## Earlier application milestone — local-only single-case API implemented and verified
 
 The [local API](local-case-api.md) adds lightweight `/health`, structural
 `/api/v1/cases/validate` and explicit `/api/v1/cases/run` for existing EV/equity

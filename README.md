@@ -19,11 +19,19 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The [local React/TypeScript calculator](docs/local-calculator-ui.md) now provides
+retained META/GOOGL/AAPL basis review, 37 unset manual rates, explicit validation
+and EV-only calculation through the Python API. Run from the repository root:
+`npm --prefix frontend ci` then `npm --prefix frontend run dev` with Node 22.12+,
+after [starting the packaged API](docs/local-calculator-ui.md#scope-and-startup).
+Open <http://127.0.0.1:5173/>. No company forecast defaults, saving or deployment.
+
+
 The [local single-case FastAPI boundary](docs/local-case-api.md) now supports
 calculation-free validation and explicit EV/equity-share runs, using strict raw
 JSON intake, a 35-second terminable child process, one active calculation per API
 process and verified private read-only resource bundles. It is tested locally only;
-there is no public launch, cloud deployment, UI or live retrieval. Financial
+there is no public launch, cloud deployment or live retrieval. Financial
 formulas/approvals and all unset company templates remain unchanged.
 
 **Phase 2 software milestone COMPLETE for the retained META, GOOGL and AAPL
@@ -34,7 +42,7 @@ through EV/equity/share is scope-qualified: no standing company Base/default,
 investment-readiness or fully diluted fair-value certification. Operating-driver
 sensitivities are **DEFERRED, not a closure blocker**; broader market harmonization
 is outside this software checkpoint. No arbitrary-ticker/latest-filing support,
-UI or deployment is certified. Phase 3 requires a separately scoped prompt.
+deployment is certified. The subsequent local EV-only UI is scoped separately above.
 
 **Phase 1 universe analyst-review expansion is paused.** The authoritative
 [pause/resumption and Phase 2 handoff checkpoint](docs/phase1-universe-pause-checkpoint.md)

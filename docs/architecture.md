@@ -1,6 +1,27 @@
 # Architecture
 
-## Latest application milestone — local-only single-case HTTP boundary
+## Latest application milestone — local React/TypeScript EV calculator
+
+The [local calculator UI](local-calculator-ui.md) is a Vite/React/TypeScript client
+in `frontend/`, with a committed npm lock. Four sections edit a single legacy
+EV-only case. String decimal-point conversion maps familiar percentage entries to
+fractional Decimal strings; isolated Decimal.js display scaling is the only browser
+arithmetic. Existing Python readers/engine remain the financial authority.
+Loopback Vite proxies `/api` to the loopback packaged API. No wildcard CORS,
+financial-schema changes, persistence or production configuration is introduced.
+Input revisions and abort signals isolate obsolete replies and mark results stale.
+
+`api.catalog` projects only intended metadata and unchanged templates from verified
+bindings at startup, with a 64-KiB encoded ceiling; it exposes no package/audit body
+or arbitrary file access. The private bundle adds that module and four pinned
+example resources (84 entries total); original resource pins and execution budgets
+remain unchanged. Current result JSON is unchanged. Terminal contribution is
+explicitly deferred because it is absent from that API contract; no JS diagnostic
+is substituted. Cutoff remains a free-text scope/limitation declaration in v1.
+No equity/scenario/sensitivity/reverse screens or deployment in this milestone.
+Phase 1 remains paused; Phase 2 qualified software closure is unchanged.
+
+## Earlier application milestone — local-only single-case HTTP boundary
 
 [Local API contract and verification](local-case-api.md): `api.app` accepts raw
 UTF-8 JSON and delegates financial semantics to existing `read_case` / `run_case`.

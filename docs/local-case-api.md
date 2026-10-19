@@ -3,10 +3,19 @@
 ## Scope and local operation
 
 This is a local-only FastAPI boundary over existing `read_case` / `run_case`.
+The subsequent [local EV calculator](local-calculator-ui.md) adds a React client
+and `GET /api/v1/catalog` without changing case/result schemas or execution budgets.
+Catalog responses are startup-built public projections, capped at 64 KiB, with
+three original unset EV templates and the explicit synthetic fixture. No package/
+audit bodies or arbitrary file access are served; query operands reject.
+The current bundle has 84 entries (71 Python, 12 pinned resources and allowlist),
+adding only catalog code and four unchanged example resources to the original
+79-entry API milestone described below.
 It supports `analyst-case-v1` EV and explicit `analyst-case-v2` equity/share without
 changing schemas, formulas, conventions, historical approvals or company templates.
 [Phase 2 remains complete within its scope](phase2-completion-checkpoint.md);
-[Phase 1 expansion stays paused](phase1-universe-pause-checkpoint.md). No UI, live
+[Phase 1 expansion stays paused](phase1-universe-pause-checkpoint.md). The original
+API milestone added no UI; the separately scoped UI above now exists. No live
 retrieval, other issuers, scenario/sensitivity/reverse HTTP routes, database, queue,
 cache, authentication system or cloud deployment is added. Public launch is not approved.
 
@@ -51,6 +60,7 @@ reference strings nor successful HTTP validation authenticate financial approval
 
 | Route | Behavior |
 | --- | --- |
+| `GET /api/v1/catalog` | Bounded read-only `local-ev-catalog-v1`; fixed public retained metadata/templates, no valuation or file-path operands. |
 | `GET /health` | Lightweight readiness flag, no valuation or per-request resource load. Successful startup is required for `ready`. |
 | `POST /api/v1/cases/validate` | Structural/model validation only; no anchor loading, calculation, output saving or approval activation. Returns status, requested scope, `calculation_performed=false` and semantic-review limitation. |
 | `POST /api/v1/cases/run` | Explicit direct A/B or A/B/C execution in a child process. Successful JSON is the **existing single-case result object**, with no API envelope or financial changes; formatting has no terminal newline. |

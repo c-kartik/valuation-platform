@@ -13,6 +13,7 @@ from .budget import DEFAULT_POLICY, BudgetError, error_body, read_http_case
 from .bundle import verify_bundle
 from .process import Calculator, ExecutionError
 from .worker import calculate
+from .catalog import build_catalog
 
 
 class SanitizedErrors:
@@ -82,6 +83,7 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
             # Imports may read the four pinned registries, once at startup.
             from valuation_platform.valuation.case_inputs import read_case
             assert callable(read_case)
+            app.state.catalog = build_catalog(root)
         except Exception:
             raise RuntimeError('Private runtime bundle failed readiness checks') from None
         app.state.calculator = Calculator(root, policy, worker_target, worker_args)
@@ -104,6 +106,14 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
     @app.get('/health')
     async def health():
         return JSONResponse({'status': 'ready' if app.state.ready else 'not_ready'}, status_code=200 if app.state.ready else 503)
+
+    @app.get('/api/v1/catalog')
+    async def catalog(request: Request):
+        if request.query_params:
+            raise ExecutionError(422, 'invalid_case', 'Query parameters are not accepted.')
+        if not app.state.ready:
+            raise ExecutionError(503, 'not_ready', 'Service is not ready.')
+        return Response(app.state.catalog, media_type='application/json', headers={'Cache-Control': 'no-store'})
 
     async def intake(request):
         if request.query_params:
