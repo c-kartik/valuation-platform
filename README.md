@@ -19,6 +19,16 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+**Phase 2 software milestone COMPLETE for the retained META, GOOGL and AAPL
+FY2025 anchors.** The [final checkpoint](docs/phase2-completion-checkpoint.md)
+records continuous single-case → scenarios → WACC/g sensitivity → bounded reverse
+sessions and 179 passing affected regression/preservation tests. Editable FCFF
+through EV/equity/share is scope-qualified: no standing company Base/default,
+investment-readiness or fully diluted fair-value certification. Operating-driver
+sensitivities are **DEFERRED, not a closure blocker**; broader market harmonization
+is outside this software checkpoint. No arbitrary-ticker/latest-filing support,
+UI or deployment is certified. Phase 3 requires a separately scoped prompt.
+
 **Phase 1 universe analyst-review expansion is paused.** The authoritative
 [pause/resumption and Phase 2 handoff checkpoint](docs/phase1-universe-pause-checkpoint.md)
 records 24 completed scoped company histories, 3 partial (CAT/JNJ/CVX) and
@@ -40,8 +50,8 @@ assumptions and bridge/share/award selections remain pending. The read-only
 GOOGL/AAPL revenue selections without approving their forecast or bridge inputs.
 The [GOOGL/AAPL trial records](docs/phase2-googl-aapl-milestones.md) document the
 completed, scope-qualified temporary trials; the
-[three-company completion checklist](docs/phase2-completion-checklist.md) defines
-remaining work. The [GOOGL ERP correction](docs/phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19)
+[three-company completion checklist](docs/phase2-completion-checklist.md) records
+scoped closure and remaining financial limitations. The [GOOGL ERP correction](docs/phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19)
 aligns its specified ERP variant with META/AAPL; broader market judgments and
 full valuation comparability remain open.
 Timing is fiscal-end analytical using later-filed information,
@@ -111,15 +121,15 @@ META-anchored trials exercised the workflow; no permanent META Base case, comple
 claims coverage, financial-input sufficiency or fully diluted fair value is certified.
 Phase 1 remains paused. [GOOGL/AAPL temporary trials](docs/phase2-googl-aapl-milestones.md)
 have also completed with explicit limitations, without standing financial approval.
-The [remaining Phase 2 scope](docs/phase2-completion-checklist.md) is META, GOOGL and
-AAPL: market-input reconciliation, editable Bear/Base/Bull scenarios, reusable
-sensitivities, bounded reverse DCF and final analyst acceptance/regression.
+The [completed Phase 2 scope](docs/phase2-completion-checklist.md) is limited to
+META, GOOGL and AAPL; financial-input qualifications remain separate.
 The [scenario acceptance record](docs/phase2-scenario-acceptance.md) marks software
 acceptance complete and economic acceptance qualified. Explicit WACC × terminal-g
 sensitivity acceptance is [complete with economic qualifications](docs/phase2-sensitivity-acceptance.md).
-[Bounded reverse DCF](docs/phase2-reverse-dcf-workflow.md) is implemented and
-synthetically verified; actual reverse analyst review/final three-company
-acceptance remain pending. Operating-driver sensitivity is not implemented.
+[Bounded reverse DCF](docs/phase2-reverse-dcf-workflow.md) has
+[qualified analyst acceptance](docs/phase2-reverse-dcf-acceptance.md), followed by
+the [final workflow/regression checkpoint](docs/phase2-completion-checkpoint.md).
+Operating-driver sensitivity is deferred and is not a closure blocker.
 
 Edit a copy of [synthetic-base.json](examples/valuation/synthetic-base.json) or
 [meta-fy2025-unset.json](examples/valuation/meta-fy2025-unset.json); keep the
@@ -332,7 +342,7 @@ unset. Engineering checks cover all three retained anchors with temporary synthe
 inputs. [Actual sensitivity review](docs/phase2-sensitivity-acceptance.md) completed
 with qualified economic acceptance; grids are neither probabilities nor fair-value
 bounds. Broader market/terminal judgments, funding, claims and awards remain
-qualified. Operating-driver sensitivity is unimplemented.
+qualified. Operating-driver sensitivity is deferred, not a closure blocker.
 
 ## Bounded reverse DCF
 
@@ -368,9 +378,10 @@ No approximate failed iterate is labeled a solution. Full provenance, declared
 classes/awards, omissions and financial limitations remain visible.
 
 Only synthetic requests are runnable examples. All nine company templates remain
-unset/unchanged; no company targets, bounds or forecasts become defaults. Reverse
-engineering/integration is complete; actual META/GOOGL/AAPL reverse analyst review
-and final acceptance remain separately scoped. Phase 1 remains paused.
+unset/unchanged; no company targets, bounds or forecasts become defaults.
+[Reverse analyst acceptance](docs/phase2-reverse-dcf-acceptance.md) and
+[final scoped Phase 2 acceptance](docs/phase2-completion-checkpoint.md) are complete,
+with economic qualifications. Phase 1 remains paused.
 
 ## Development
 

@@ -1,9 +1,20 @@
 # Phase 2 — META, GOOGL and AAPL completion checklist
 
+## Latest status — scoped software milestone COMPLETE
+
+The [final workflow/regression checkpoint](phase2-completion-checkpoint.md) closes
+Phase 2 for these three retained anchors only. [Reverse software acceptance](phase2-reverse-dcf-acceptance.md)
+is complete with qualified economic interpretation; final continuous sessions and
+179 affected regression/preservation tests passed. Operating-driver sensitivities
+are **DEFERRED, not a closure blocker**. Further broad market-input harmonization
+is outside this software checkpoint; the scoped ERP correction is already recorded.
+No standing company Base/default, investment-readiness or fully diluted fair-value
+certification follows. Phase 3 UI/application work requires separate scope.
+
 ## Scope and completed foundation
 
-This checklist defines remaining work for **META, GOOGL and AAPL only**. It records
-status and decisions needed before separately scoped implementation; it approves
+This checklist defines the completion boundary for **META, GOOGL and AAPL only**.
+It preserves earlier decisions and remaining financial limitations; it approves
 no new economics, ranges, calculation conventions or execution. The existing
 [consumer conventions](phase2-meta-base-consumer-contract.md) and
 [anchor integration](phase2-anchor-integration.md) remain authoritative.
@@ -13,11 +24,11 @@ no new economics, ranges, calculation conventions or execution. The existing
 | --- | --- | --- |
 | P2-01 | **Complete:** editable single-case manual FCFF → EV → explicit equity/share workflow | Existing v1 EV / v2 equity scope, strict Decimal inputs, calculation-free validation, provenance, JSON/summary and file protection remain the foundation; no redesign implied. |
 | P2-02 | **Complete, scope-qualified:** actual-company end-to-end trials for all three | [META record](phase2-meta-milestone.md) and [GOOGL/AAPL records](phase2-googl-aapl-milestones.md) preserve temporary estimates, omissions and attributed prior checks. Completion is workflow exercise, not a standing Base-case approval or complete financial sufficiency. |
-| P2-03 | **ERP reconciliation complete, scope-qualified; broader market-input review outstanding** | [2026-10-19 GOOGL correction](phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19) verifies the specified ERP variant/date/publication basis and reruns only GOOGL. Company beta, weights, debt/shield judgments and wider comparability remain separate; no general market-input policy/default is approved. Further changed inputs require separate authority and reconciliation. |
+| P2-03 | **Scoped ERP reconciliation complete; broader harmonization outside software closure** | [2026-10-19 GOOGL correction](phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19) verifies the specified ERP variant/date/publication basis and reruns only GOOGL. Company beta, weights, debt/shield judgments and wider comparability remain separate; no general market-input policy/default is approved. Further changed inputs require separate authority and reconciliation. |
 | P2-04 | **Software acceptance complete; economic acceptance qualified:** editable Bear/Base/Bull scenarios | [Bounded v1 contract](phase2-scenario-workflow.md): three embedded complete cases, explicit matching anchor/date/cutoff/basis/conventions/scope/period identities, identical entire equity bridge/share inputs, no inheritance or overrides. Whole-set validation is calculation-free; explicit runs reuse existing A/B/C and preserve single-case compatibility. [Attributed three-company acceptance](phase2-scenario-acceptance.md) records Base reconstructions and estimated Bear/Bull economics, funding flags, terminal dependence and unbounded omissions. Names imply no ordering, defaults or probabilities; investment readiness is not established. |
-| P2-05 | **WACC × g software acceptance complete; economic acceptance qualified:** reusable sensitivity tables | [Bounded v1 workflow](phase2-sensitivity-workflow.md): explicit 1–11 absolute rates/axis, selected complete case or named scenario, fixed operating/bridge/share scope, separate original reference and invalid-cell handling. No automatic grids/ranges or repair. [Attributed sensitivity review](phase2-sensitivity-acceptance.md) records reconstructed references, explicit grids, prior checks and terminal/reinvestment/funding/claims limitations; no company grids or financial defaults were saved. Operating-driver sensitivities remain unimplemented; axes, coupling and held-fixed scope require separate decisions. |
-| P2-06 | **Engineering/synthetic integration complete; actual analyst review pending:** bounded reverse DCF | [Approved v1 contract](phase2-reverse-dcf-workflow.md): explicitly dated EV/USD or qualified USD/share, one constant annual growth replacing all five rates, fixed other inputs, user bounds, exact interval-wide monotonicity certificate, bounded forward-engine bisection and fresh verification. Unsupported uniqueness/flat/unreachable/numerical-limit cases expose no solution. Actual three-company review must supply justified dated targets/bounds and interpret implied growth against operating/reinvestment/funding/claims limitations. No actual reverse valuations, market expectations or price targets are approved. |
-| P2-07 | **Pending:** final three-company analyst acceptance and regression checkpoint | After the preceding decisions/features, agree a bounded review matrix across these three anchors, editable single/scenario inputs, sensitivity/reverse outputs, dates, units, traceability, error paths and file protection. Run affected synthetic regressions and separately authorized temporary issuer trials; attribute old checks separately. Preserve unresolved financial scopes and all unset templates. |
+| P2-05 | **WACC × g software acceptance complete; economic acceptance qualified:** reusable sensitivity tables | [Bounded v1 workflow](phase2-sensitivity-workflow.md): explicit 1–11 absolute rates/axis, selected complete case or named scenario, fixed operating/bridge/share scope, separate original reference and invalid-cell handling. No automatic grids/ranges or repair. [Attributed sensitivity review](phase2-sensitivity-acceptance.md) and [final sessions](phase2-completion-checkpoint.md) preserve economic limitations; no company grids/defaults were saved. **Operating-driver sensitivities DEFERRED, not a closure blocker**; future axes, coupling and held-fixed scope need separate decisions. |
+| P2-06 | **Software acceptance complete; economic interpretation qualified:** bounded reverse DCF | [Approved v1 contract](phase2-reverse-dcf-workflow.md), [attributed analyst acceptance](phase2-reverse-dcf-acceptance.md) and [new final sessions](phase2-completion-checkpoint.md): dated EV/USD or qualified USD/share, one constant replacing all five growth rates, fixed other inputs, exact interval certificate and fresh forward verification. Failures expose no solution. META's expense/outlook conflict, GOOGL terminal dependence, AAPL productivity, funding/claims/awards and unbounded omissions persist. No target/default or economic endorsement follows. |
+| P2-07 | **Complete within scope:** final three-company analyst acceptance and regression checkpoint | [Completion record](phase2-completion-checkpoint.md): one continuous session per issuer through single/scenario/explicit-Base sensitivity/reverse CLIs; independent arithmetic, error/output/preservation checks; 174 valuation/CLI and five preparation-preservation tests passed. Historical/frozen sources, pins and unset templates preserved. Software closure does not establish investment readiness. |
 
 ## Bounded market-input reconciliation
 

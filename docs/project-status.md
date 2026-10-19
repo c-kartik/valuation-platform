@@ -1,6 +1,55 @@
 # Project Status
 
-## Current — qualified sensitivity acceptance and bounded reverse-DCF engineering complete
+## Current — scoped Phase 2 software COMPLETE; economic acceptance qualified
+
+The [final three-company checkpoint](phase2-completion-checkpoint.md) closes the
+local analyst-controlled workflow for retained META, GOOGL and AAPL FY2025 anchors:
+editable five-year FCFF → EV → explicit equity/share; complete Bear/Base/Bull;
+explicit WACC × g sensitivities; certified bounded constant-growth reverse DCF;
+traceable inputs/limitations, strict validation and protected JSON/summary output.
+The [reverse acceptance record](phase2-reverse-dcf-acceptance.md) attributes the
+preceding report's 1,668 arithmetic and 405 certificate equalities; those prior
+checks are not represented as newly executed here. Earlier records below preserve
+their historical boundaries, superseded by this latest status.
+
+**Newly executed:** one continuous linked CLI/reader session per company, using
+reconstructed disclosed provisional economics, not authenticated replays of deleted
+original cases. Single-case EV/equity JSON/summary and assumption edits, complete
+scenarios/isolated edits, explicit Base-selected 2×2 WACC/g grids and known-growth /
+Base-EV / equivalent-unrounded-share reverse targets passed. Twelve cells matched
+separate single-case submissions; nine reverse successes matched ordinary forward
+execution; unreachable requests exposed no solution. **162 CLI invocations**, twelve
+instrumented calculation-free validations and **1,737 independent exact-rational
+comparisons** passed. Oracle tolerance was `1e−32 + 1e−46 × |reference|`, maximum
+absolute difference about 1.047e−37. No correctness defect/fix was required.
+
+Against the same unchanged code, documented unittest invocations passed **174
+valuation/CLI/adapter tests + five preparation-preservation tests = 179**. Tests
+cover stale/mismatched bindings, dates/units/scope, no downgrade, validation without
+calculation/writes, compatibility, deterministic serialization, caller Decimal/input
+isolation, certificate/failure policy and output protections. No full slow Phase 1
+suite or evidence acquisition. Code/formulas/tests/pins/allowlists, historical/frozen
+artifacts and approvals are unchanged. All six 37-unset and three 111-unset templates
+remain byte-preserved. Temporary cases, outputs and scripts were removed; only
+Markdown records/references enter this local checkpoint. No push.
+
+**Operating-driver sensitivities DEFERRED, not a closure blocker.** The scoped
+GOOGL ERP reconciliation is recorded; further broad market-input harmonization
+is outside this software checkpoint. No standing company Base/default, financial
+approval, investment-readiness or fully diluted fair-value certification follows.
+META's reverse expense/outlook conflict, GOOGL terminal dependence, AAPL terminal
+productivity, funding, asset eligibility, ventures, claims/awards and potentially
+unbounded omissions persist. No arbitrary-ticker/latest-filing support, UI or
+deployment. The [checklist](phase2-completion-checklist.md) distinguishes software
+closure from financial sufficiency; every historical unknown/all 42 issuers need
+not be resolved for this scoped milestone. Phase 1 expansion remains paused.
+
+Recommended next bounded milestone: separately scope a local case-entry/review UI
+over the existing validated interfaces for these three anchors, using synthetic/
+unset inputs and explicit validation/run/traceable output. No Phase 3 implementation
+starts here.
+
+## Earlier milestone — qualified sensitivity acceptance and bounded reverse-DCF engineering complete
 
 The [sensitivity acceptance record](phase2-sensitivity-acceptance.md) records the
 preceding temporary META/GOOGL/AAPL review: all Base references reproduced, 75

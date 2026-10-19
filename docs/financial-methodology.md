@@ -1,5 +1,19 @@
 # Financial Methodology
 
+## Latest status — software closure, qualified economics
+
+The [final three-company checkpoint](phase2-completion-checkpoint.md) completes
+scoped Phase 2 software acceptance without changing any financial convention.
+[Reverse acceptance](phase2-reverse-dcf-acceptance.md) separates certified arithmetic
+from economic coherence: META's solved expense path conflicts with the documented
+outlook, GOOGL remains terminal-dependent and AAPL's demanding terminal productivity
+diagnostic persists. Funding, claims, awards, eligibility and settlement omissions
+remain potentially unbounded. No standing Base/default, investment-readiness or
+fully diluted fair-value certification follows. Operating-driver sensitivities
+are **DEFERRED, not a closure blocker**. The scoped ERP correction is recorded;
+broader market-input harmonization is outside this software checkpoint. Phase 1
+remains paused; Phase 3 application/UI work requires a separately scoped prompt.
+
 ## Current direction — universe pause and separately scoped Phase 2 handoff
 
 The [authoritative pause/resumption checkpoint](phase1-universe-pause-checkpoint.md) records
@@ -53,9 +67,9 @@ growth bracket and fresh forward verification; an inconclusive certificate does
 not prove multiple solutions. Technical tolerances are distinct from financial
 inputs. This is conditional implied growth, not unique market expectations or
 validation of reinvestment/productivity, claims or awards. Reverse engineering is
-verified synthetically; actual reverse analyst review and final acceptance remain
-pending. Operating-driver sensitivity is unimplemented. Existing formulas and
-conventions remain unchanged.
+verified synthetically and through [qualified reverse analyst acceptance](phase2-reverse-dcf-acceptance.md)
+and the [final workflow checkpoint](phase2-completion-checkpoint.md).
+Operating-driver sensitivity is deferred. Existing formulas and conventions remain unchanged.
 
 Scenario labels encode no growth/margin/WACC adjustment, valuation ordering or
 probability. Each case explicitly supplies all annual and terminal rates; no Year-5

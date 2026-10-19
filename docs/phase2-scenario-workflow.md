@@ -84,7 +84,8 @@ inputs and scope-qualified bridge eligibility/claims/awards retain the reported
 limitations and require case-specific review.
 Historical acceptance and declarations do not supply that approval; unknown and
 unbounded omissions remain visible. [Phase 1 stays paused](phase1-universe-pause-checkpoint.md).
-[WACC × g sensitivity engineering](phase2-sensitivity-workflow.md) is now implemented;
-actual sensitivity review remains pending. Operating-driver sensitivities and
-bounded reverse DCF are unimplemented; see the
-[three-company completion checklist](phase2-completion-checklist.md).
+The earlier next-step boundary is superseded by [qualified sensitivity acceptance](phase2-sensitivity-acceptance.md),
+[qualified reverse acceptance](phase2-reverse-dcf-acceptance.md) and the
+[final three-company checkpoint](phase2-completion-checkpoint.md). Scoped Phase 2
+software acceptance is complete; operating-driver sensitivities are **DEFERRED,
+not a closure blocker**. Earlier economic qualifications remain unchanged.

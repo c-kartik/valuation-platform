@@ -1,5 +1,17 @@
 # Architecture
 
+## Latest status — scoped Phase 2 software complete
+
+The [final checkpoint](phase2-completion-checkpoint.md) verifies the existing local
+single-case A→B→C, complete Bear/Base/Bull, explicit WACC/g sensitivity and certified
+bounded constant-growth reverse workflow for three retained META/GOOGL/AAPL anchors.
+No code, interface or formula changes accompany this closure. [Reverse acceptance](phase2-reverse-dcf-acceptance.md)
+is software-complete with qualified economic interpretation. Operating-driver
+sensitivities are **DEFERRED, not a closure blocker**; wider market harmonization
+is outside this software checkpoint. No arbitrary ticker/latest filing, UI or
+deployment is supported by this milestone. Phase 3 requires separate scope;
+Phase 1 remains paused. Prior milestone boundaries below retain their history.
+
 ## Current direction — universe pause and separately scoped Phase 2 handoff
 
 The [authoritative pause/resumption checkpoint](phase1-universe-pause-checkpoint.md) records
@@ -37,9 +49,9 @@ decrease across the whole supplied interval. No new valuation formula layer or
 sampled-uniqueness assumption. Conservative certification failures return no
 solution. Bisection uses existing forward valuations, with fresh final
 execution plus exact bracket/residual/width checks. Original/solution provenance
-and technical policy remain explicit. Engineering/synthetic integration is complete;
-actual reverse analyst review, broader market-input judgments, operating-driver
-sensitivity and final three-company acceptance/regression remain.
+and technical policy remain explicit. Engineering/synthetic integration and
+[qualified analyst/final acceptance](phase2-completion-checkpoint.md) are complete.
+Broader financial judgments remain open; operating-driver sensitivity is deferred.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.

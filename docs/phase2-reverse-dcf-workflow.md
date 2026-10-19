@@ -137,7 +137,7 @@ or under `output/`, and rejects inputs, overwrites and protected paths. Complete
 unsuccessful diagnostics may be explicitly saved with exit 3; a file is not a
 success assertion. Ordinary stdout runs and validation write nothing.
 
-## Synthetic verification and remaining acceptance
+## Synthetic verification and subsequent acceptance
 
 Runnable [EV](../examples/valuation/synthetic-reverse-ev.json) and
 [per-share](../examples/valuation/synthetic-reverse-equity.json) requests use only
@@ -148,10 +148,11 @@ Temporary synthetic forward-generated targets exercise all three retained anchor
 in both scopes, including explicit scenario selection; inputs/results are removed.
 Six single-company templates remain 37-unset and three scenario templates 111-unset.
 
-Engineering/synthetic integration is complete only within the checks in
+Engineering/synthetic integration was complete within the checks in
 [project status](project-status.md). [Actual sensitivity acceptance](phase2-sensitivity-acceptance.md)
-is a separate attributed record. **Actual three-company reverse analyst review and
-final analyst/regression acceptance remain pending**; operating-driver sensitivity
-is unimplemented/out of scope. [Phase 1 remains paused](phase1-universe-pause-checkpoint.md).
+is a separate attributed record. **Subsequent status:** [reverse analyst acceptance](phase2-reverse-dcf-acceptance.md)
+is complete with economic qualifications, and the [final three-company checkpoint](phase2-completion-checkpoint.md)
+closes scoped Phase 2 software acceptance. Operating-driver sensitivities are
+**DEFERRED, not a closure blocker**. [Phase 1 remains paused](phase1-universe-pause-checkpoint.md).
 Claims, awards, funding, settlement and asset-accessibility limits are not solved
 by a certified implied-growth calculation. See the [completion checklist](phase2-completion-checklist.md).
