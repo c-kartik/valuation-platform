@@ -1,0 +1,294 @@
+{
+  "schema_version": "analyst-scenario-set-v1",
+  "scenario_set_name": "META FY2025 scenario review \u2014 UNSET template",
+  "scenarios": [
+    {
+      "label": "Bear",
+      "analytical_date": "2025-12-31",
+      "information_cutoff": null,
+      "case": {
+        "schema_version": "analyst-case-v1",
+        "case_name": "META Bear \u2014 UNSET review template",
+        "input_basis": "MANUAL_INPUT",
+        "analyst": {
+          "author": null,
+          "timestamp_utc": null,
+          "rationale": null
+        },
+        "scope": "Proposed META consolidated FY2026\u2013FY2030 forecast/EV case; fiscal-end analytical t=0 using later-filed information. Actual scope/rationale must be supplied and reviewed.",
+        "limitations": [
+          "All 37 numerical assumptions and analyst identity/date/rationale are unset; no defaults or historical calibration.",
+          "Actual-input review, operating/tax/investment/venture scope and execution remain pending; see docs/phase2-meta-base-input-review.md.",
+          "Later-filed information at fiscal-end analytical date; no contemporaneous backtest or established information cutoff.",
+          "No bridge/share intake; historical debt/reinvestment/D&A limitations and unbounded omissions remain unchanged.",
+          "Scenario economics and rationale are UNSET/unapproved. This is a complete embedded EV-only case, with no inheritance or forecasts copied at runtime. Supply and review a common information cutoff."
+        ],
+        "conventions": {
+          "forecast": "meta-base-fcff-v1",
+          "discounting": "fiscal-end-annual-gordon-v1"
+        },
+        "anchor": {
+          "kind": "meta-fy2025",
+          "cik": 1326801,
+          "accession": "0001628280-26-003942",
+          "annual_start": "2025-01-01",
+          "annual_end": "2025-12-31",
+          "form": "10-K"
+        },
+        "forecast_years": [
+          {
+            "period_index": 1,
+            "fiscal_year_label": "FY2026",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 2,
+            "fiscal_year_label": "FY2027",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 3,
+            "fiscal_year_label": "FY2028",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 4,
+            "fiscal_year_label": "FY2029",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 5,
+            "fiscal_year_label": "FY2030",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          }
+        ],
+        "wacc": null,
+        "terminal_growth": null,
+        "terminal": {
+          "operating_margin": null,
+          "operating_tax_rate": null,
+          "d_and_a_percent_revenue": null,
+          "investment_percent_revenue": null,
+          "working_capital_cash_requirement_percent_revenue": null
+        }
+      }
+    },
+    {
+      "label": "Base",
+      "analytical_date": "2025-12-31",
+      "information_cutoff": null,
+      "case": {
+        "schema_version": "analyst-case-v1",
+        "case_name": "META Base \u2014 UNSET review template",
+        "input_basis": "MANUAL_INPUT",
+        "analyst": {
+          "author": null,
+          "timestamp_utc": null,
+          "rationale": null
+        },
+        "scope": "Proposed META consolidated FY2026\u2013FY2030 forecast/EV case; fiscal-end analytical t=0 using later-filed information. Actual scope/rationale must be supplied and reviewed.",
+        "limitations": [
+          "All 37 numerical assumptions and analyst identity/date/rationale are unset; no defaults or historical calibration.",
+          "Actual-input review, operating/tax/investment/venture scope and execution remain pending; see docs/phase2-meta-base-input-review.md.",
+          "Later-filed information at fiscal-end analytical date; no contemporaneous backtest or established information cutoff.",
+          "No bridge/share intake; historical debt/reinvestment/D&A limitations and unbounded omissions remain unchanged.",
+          "Scenario economics and rationale are UNSET/unapproved. This is a complete embedded EV-only case, with no inheritance or forecasts copied at runtime. Supply and review a common information cutoff."
+        ],
+        "conventions": {
+          "forecast": "meta-base-fcff-v1",
+          "discounting": "fiscal-end-annual-gordon-v1"
+        },
+        "anchor": {
+          "kind": "meta-fy2025",
+          "cik": 1326801,
+          "accession": "0001628280-26-003942",
+          "annual_start": "2025-01-01",
+          "annual_end": "2025-12-31",
+          "form": "10-K"
+        },
+        "forecast_years": [
+          {
+            "period_index": 1,
+            "fiscal_year_label": "FY2026",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 2,
+            "fiscal_year_label": "FY2027",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 3,
+            "fiscal_year_label": "FY2028",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 4,
+            "fiscal_year_label": "FY2029",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 5,
+            "fiscal_year_label": "FY2030",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          }
+        ],
+        "wacc": null,
+        "terminal_growth": null,
+        "terminal": {
+          "operating_margin": null,
+          "operating_tax_rate": null,
+          "d_and_a_percent_revenue": null,
+          "investment_percent_revenue": null,
+          "working_capital_cash_requirement_percent_revenue": null
+        }
+      }
+    },
+    {
+      "label": "Bull",
+      "analytical_date": "2025-12-31",
+      "information_cutoff": null,
+      "case": {
+        "schema_version": "analyst-case-v1",
+        "case_name": "META Bull \u2014 UNSET review template",
+        "input_basis": "MANUAL_INPUT",
+        "analyst": {
+          "author": null,
+          "timestamp_utc": null,
+          "rationale": null
+        },
+        "scope": "Proposed META consolidated FY2026\u2013FY2030 forecast/EV case; fiscal-end analytical t=0 using later-filed information. Actual scope/rationale must be supplied and reviewed.",
+        "limitations": [
+          "All 37 numerical assumptions and analyst identity/date/rationale are unset; no defaults or historical calibration.",
+          "Actual-input review, operating/tax/investment/venture scope and execution remain pending; see docs/phase2-meta-base-input-review.md.",
+          "Later-filed information at fiscal-end analytical date; no contemporaneous backtest or established information cutoff.",
+          "No bridge/share intake; historical debt/reinvestment/D&A limitations and unbounded omissions remain unchanged.",
+          "Scenario economics and rationale are UNSET/unapproved. This is a complete embedded EV-only case, with no inheritance or forecasts copied at runtime. Supply and review a common information cutoff."
+        ],
+        "conventions": {
+          "forecast": "meta-base-fcff-v1",
+          "discounting": "fiscal-end-annual-gordon-v1"
+        },
+        "anchor": {
+          "kind": "meta-fy2025",
+          "cik": 1326801,
+          "accession": "0001628280-26-003942",
+          "annual_start": "2025-01-01",
+          "annual_end": "2025-12-31",
+          "form": "10-K"
+        },
+        "forecast_years": [
+          {
+            "period_index": 1,
+            "fiscal_year_label": "FY2026",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 2,
+            "fiscal_year_label": "FY2027",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 3,
+            "fiscal_year_label": "FY2028",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 4,
+            "fiscal_year_label": "FY2029",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          },
+          {
+            "period_index": 5,
+            "fiscal_year_label": "FY2030",
+            "revenue_growth": null,
+            "operating_margin": null,
+            "forecast_tax_rate": null,
+            "d_and_a_percent_revenue": null,
+            "capex_percent_revenue": null,
+            "change_in_operating_nwc_percent_revenue": null
+          }
+        ],
+        "wacc": null,
+        "terminal_growth": null,
+        "terminal": {
+          "operating_margin": null,
+          "operating_tax_rate": null,
+          "d_and_a_percent_revenue": null,
+          "investment_percent_revenue": null,
+          "working_capital_cash_requirement_percent_revenue": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,978 @@
+{
+  "schema_version": "analyst-scenario-set-v1",
+  "scenario_set_name": "Synthetic equity/share Bear/Base/Bull illustration",
+  "scenarios": [
+    {
+      "label": "Bear",
+      "analytical_date": "2025-12-31",
+      "information_cutoff": "2026-01-31",
+      "case": {
+        "schema_version": "analyst-case-v2",
+        "case_name": "Synthetic Bear complete case",
+        "input_basis": "SYNTHETIC_FIXTURE",
+        "analyst": {
+          "author": "Synthetic example author",
+          "timestamp_utc": "2000-01-01T00:00:00+00:00",
+          "rationale": "Synthetic Bear illustration: growth 0.00; all other numerical fields explicitly supplied. No economic forecasts, probabilities or company defaults."
+        },
+        "scope": "Synthetic consolidated operating case; margins include synthetic SBC/service leases and aligned depreciation; cash investment includes non-overlapping financed assets. Explicit synthetic bridge/share arithmetic; no actual-company selections.",
+        "limitations": [
+          "SYNTHETIC only: every amount, share count and review declaration is invented for verification, not META data.",
+          "Coverage and references do not authenticate approval or economic completeness. The additional-claims omission has unknown amount, not zero."
+        ],
+        "conventions": {
+          "forecast": "meta-base-fcff-v1",
+          "discounting": "fiscal-end-annual-gordon-v1"
+        },
+        "anchor": {
+          "kind": "synthetic-fixture-v1",
+          "cik": 123,
+          "accession": "0000000123-26-000001",
+          "annual_start": "2025-01-01",
+          "annual_end": "2025-12-31",
+          "form": "10-K"
+        },
+        "forecast_years": [
+          {
+            "period_index": 1,
+            "fiscal_year_label": "Synthetic period 1",
+            "revenue_growth": "0.00",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 2,
+            "fiscal_year_label": "Synthetic period 2",
+            "revenue_growth": "0.00",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 3,
+            "fiscal_year_label": "Synthetic period 3",
+            "revenue_growth": "0.00",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 4,
+            "fiscal_year_label": "Synthetic period 4",
+            "revenue_growth": "0.00",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 5,
+            "fiscal_year_label": "Synthetic period 5",
+            "revenue_growth": "0.00",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          }
+        ],
+        "wacc": "0.25",
+        "terminal_growth": "0.05",
+        "terminal": {
+          "operating_margin": "0.30",
+          "operating_tax_rate": "0.20",
+          "d_and_a_percent_revenue": "0.04",
+          "investment_percent_revenue": "0.09",
+          "working_capital_cash_requirement_percent_revenue": "0.01"
+        },
+        "calculation_scope": "EQUITY_PER_SHARE",
+        "bridge": {
+          "components": [
+            {
+              "component_id": "asset-a",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "amount": "10",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:asset-a",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:asset-a"
+              ],
+              "decision_references": [
+                "synthetic:decision:asset-a"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [
+                "gross-assets"
+              ],
+              "alternative_references": [
+                "alternative-asset"
+              ],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            },
+            {
+              "component_id": "asset-b",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "amount": "2",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:asset-b",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:asset-b"
+              ],
+              "decision_references": [
+                "synthetic:decision:asset-b"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [
+                "gross-assets"
+              ],
+              "alternative_references": [],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            },
+            {
+              "component_id": "financing",
+              "company_cik": 123,
+              "role": "FINANCING_CLAIM",
+              "amount": "20",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:financing",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:financing"
+              ],
+              "decision_references": [
+                "synthetic:decision:financing"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [],
+              "alternative_references": [],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            },
+            {
+              "component_id": "claim",
+              "company_cik": 123,
+              "role": "OTHER_EQUITY_CLAIM",
+              "amount": "3",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:claim",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:claim"
+              ],
+              "decision_references": [
+                "synthetic:decision:claim"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [],
+              "alternative_references": [],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            }
+          ],
+          "observations": [
+            {
+              "observation_id": "gross-assets",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "disposition": "EXCLUDED",
+              "population_id": "synthetic:gross-assets",
+              "value": "999",
+              "as_of": "2025-12-31",
+              "unit": "USD",
+              "precision": "INF",
+              "origin": "synthetic",
+              "source_references": [
+                "synthetic:source:gross-assets"
+              ],
+              "decision_references": [
+                "synthetic:decision:gross-assets"
+              ],
+              "rationale": "Excluded parent includes selected asset children; never add parent again."
+            },
+            {
+              "observation_id": "alternative-asset",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "disposition": "SUPPORT",
+              "population_id": "synthetic:asset-a",
+              "value": "15",
+              "as_of": "2025-12-31",
+              "unit": "USD",
+              "precision": "INF",
+              "origin": "synthetic",
+              "source_references": [
+                "synthetic:source:alternative-asset"
+              ],
+              "decision_references": [
+                "synthetic:decision:alternative-asset"
+              ],
+              "rationale": "Alternative measurement for asset-a; not an additional operand."
+            },
+            {
+              "observation_id": "extra-unknown",
+              "company_cik": 123,
+              "role": "OTHER_EQUITY_CLAIM",
+              "disposition": "OMISSION",
+              "population_id": "synthetic:extra-unknown",
+              "value": null,
+              "as_of": null,
+              "unit": "USD",
+              "precision": null,
+              "origin": "synthetic",
+              "source_references": [],
+              "decision_references": [
+                "synthetic:decision:extra-unknown"
+              ],
+              "rationale": "Explicit synthetic omission of unidentified claims; unbounded unknown amount, not a reported zero."
+            }
+          ],
+          "coverage": [
+            {
+              "role": "ELIGIBLE_ASSET",
+              "population_ids": [
+                "synthetic:asset-a",
+                "synthetic:asset-b"
+              ],
+              "omission_references": [],
+              "review": {
+                "author": "Synthetic example author",
+                "timestamp_utc": "2000-01-01T00:00:00+00:00",
+                "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+              },
+              "decision_references": [
+                "synthetic:coverage:ELIGIBLE_ASSET"
+              ]
+            },
+            {
+              "role": "FINANCING_CLAIM",
+              "population_ids": [
+                "synthetic:financing"
+              ],
+              "omission_references": [],
+              "review": {
+                "author": "Synthetic example author",
+                "timestamp_utc": "2000-01-01T00:00:00+00:00",
+                "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+              },
+              "decision_references": [
+                "synthetic:coverage:FINANCING_CLAIM"
+              ]
+            },
+            {
+              "role": "OTHER_EQUITY_CLAIM",
+              "population_ids": [
+                "synthetic:claim"
+              ],
+              "omission_references": [
+                "extra-unknown"
+              ],
+              "review": {
+                "author": "Synthetic example author",
+                "timestamp_utc": "2000-01-01T00:00:00+00:00",
+                "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+              },
+              "decision_references": [
+                "synthetic:coverage:OTHER_EQUITY_CLAIM"
+              ]
+            }
+          ],
+          "shares": {
+            "company_cik": 123,
+            "shares": "4",
+            "observation_date": "2025-12-31",
+            "class_id": "synthetic-common",
+            "equivalence_convention": "single_common_class",
+            "award_policy": "sbc_expensed_no_duplicate_service_charge_v1",
+            "award_policy_references": [
+              "synthetic:award-policy"
+            ],
+            "source_references": [
+              "synthetic:share-source"
+            ],
+            "decision_references": [
+              "synthetic:share-decision"
+            ],
+            "precision": "INF",
+            "rationale": "Four synthetic common shares; future service SBC remains in margins; synthetic existing-award treatment only.",
+            "unit": "shares",
+            "scale": 1
+          },
+          "input_basis": "SYNTHETIC_FIXTURE",
+          "valuation_class_id": "synthetic-common",
+          "unresolved_requirements": [],
+          "convention_version": "meta-base-equity-bridge-v1"
+        }
+      }
+    },
+    {
+      "label": "Base",
+      "analytical_date": "2025-12-31",
+      "information_cutoff": "2026-01-31",
+      "case": {
+        "schema_version": "analyst-case-v2",
+        "case_name": "Synthetic Base complete case",
+        "input_basis": "SYNTHETIC_FIXTURE",
+        "analyst": {
+          "author": "Synthetic example author",
+          "timestamp_utc": "2000-01-01T00:00:00+00:00",
+          "rationale": "Synthetic Base illustration: growth 0.10; all other numerical fields explicitly supplied. No economic forecasts, probabilities or company defaults."
+        },
+        "scope": "Synthetic consolidated operating case; margins include synthetic SBC/service leases and aligned depreciation; cash investment includes non-overlapping financed assets. Explicit synthetic bridge/share arithmetic; no actual-company selections.",
+        "limitations": [
+          "SYNTHETIC only: every amount, share count and review declaration is invented for verification, not META data.",
+          "Coverage and references do not authenticate approval or economic completeness. The additional-claims omission has unknown amount, not zero."
+        ],
+        "conventions": {
+          "forecast": "meta-base-fcff-v1",
+          "discounting": "fiscal-end-annual-gordon-v1"
+        },
+        "anchor": {
+          "kind": "synthetic-fixture-v1",
+          "cik": 123,
+          "accession": "0000000123-26-000001",
+          "annual_start": "2025-01-01",
+          "annual_end": "2025-12-31",
+          "form": "10-K"
+        },
+        "forecast_years": [
+          {
+            "period_index": 1,
+            "fiscal_year_label": "Synthetic period 1",
+            "revenue_growth": "0.10",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 2,
+            "fiscal_year_label": "Synthetic period 2",
+            "revenue_growth": "0.10",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 3,
+            "fiscal_year_label": "Synthetic period 3",
+            "revenue_growth": "0.10",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 4,
+            "fiscal_year_label": "Synthetic period 4",
+            "revenue_growth": "0.10",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 5,
+            "fiscal_year_label": "Synthetic period 5",
+            "revenue_growth": "0.10",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          }
+        ],
+        "wacc": "0.25",
+        "terminal_growth": "0.05",
+        "terminal": {
+          "operating_margin": "0.30",
+          "operating_tax_rate": "0.20",
+          "d_and_a_percent_revenue": "0.04",
+          "investment_percent_revenue": "0.09",
+          "working_capital_cash_requirement_percent_revenue": "0.01"
+        },
+        "calculation_scope": "EQUITY_PER_SHARE",
+        "bridge": {
+          "components": [
+            {
+              "component_id": "asset-a",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "amount": "10",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:asset-a",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:asset-a"
+              ],
+              "decision_references": [
+                "synthetic:decision:asset-a"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [
+                "gross-assets"
+              ],
+              "alternative_references": [
+                "alternative-asset"
+              ],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            },
+            {
+              "component_id": "asset-b",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "amount": "2",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:asset-b",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:asset-b"
+              ],
+              "decision_references": [
+                "synthetic:decision:asset-b"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [
+                "gross-assets"
+              ],
+              "alternative_references": [],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            },
+            {
+              "component_id": "financing",
+              "company_cik": 123,
+              "role": "FINANCING_CLAIM",
+              "amount": "20",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:financing",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:financing"
+              ],
+              "decision_references": [
+                "synthetic:decision:financing"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [],
+              "alternative_references": [],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            },
+            {
+              "component_id": "claim",
+              "company_cik": 123,
+              "role": "OTHER_EQUITY_CLAIM",
+              "amount": "3",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:claim",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:claim"
+              ],
+              "decision_references": [
+                "synthetic:decision:claim"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [],
+              "alternative_references": [],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            }
+          ],
+          "observations": [
+            {
+              "observation_id": "gross-assets",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "disposition": "EXCLUDED",
+              "population_id": "synthetic:gross-assets",
+              "value": "999",
+              "as_of": "2025-12-31",
+              "unit": "USD",
+              "precision": "INF",
+              "origin": "synthetic",
+              "source_references": [
+                "synthetic:source:gross-assets"
+              ],
+              "decision_references": [
+                "synthetic:decision:gross-assets"
+              ],
+              "rationale": "Excluded parent includes selected asset children; never add parent again."
+            },
+            {
+              "observation_id": "alternative-asset",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "disposition": "SUPPORT",
+              "population_id": "synthetic:asset-a",
+              "value": "15",
+              "as_of": "2025-12-31",
+              "unit": "USD",
+              "precision": "INF",
+              "origin": "synthetic",
+              "source_references": [
+                "synthetic:source:alternative-asset"
+              ],
+              "decision_references": [
+                "synthetic:decision:alternative-asset"
+              ],
+              "rationale": "Alternative measurement for asset-a; not an additional operand."
+            },
+            {
+              "observation_id": "extra-unknown",
+              "company_cik": 123,
+              "role": "OTHER_EQUITY_CLAIM",
+              "disposition": "OMISSION",
+              "population_id": "synthetic:extra-unknown",
+              "value": null,
+              "as_of": null,
+              "unit": "USD",
+              "precision": null,
+              "origin": "synthetic",
+              "source_references": [],
+              "decision_references": [
+                "synthetic:decision:extra-unknown"
+              ],
+              "rationale": "Explicit synthetic omission of unidentified claims; unbounded unknown amount, not a reported zero."
+            }
+          ],
+          "coverage": [
+            {
+              "role": "ELIGIBLE_ASSET",
+              "population_ids": [
+                "synthetic:asset-a",
+                "synthetic:asset-b"
+              ],
+              "omission_references": [],
+              "review": {
+                "author": "Synthetic example author",
+                "timestamp_utc": "2000-01-01T00:00:00+00:00",
+                "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+              },
+              "decision_references": [
+                "synthetic:coverage:ELIGIBLE_ASSET"
+              ]
+            },
+            {
+              "role": "FINANCING_CLAIM",
+              "population_ids": [
+                "synthetic:financing"
+              ],
+              "omission_references": [],
+              "review": {
+                "author": "Synthetic example author",
+                "timestamp_utc": "2000-01-01T00:00:00+00:00",
+                "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+              },
+              "decision_references": [
+                "synthetic:coverage:FINANCING_CLAIM"
+              ]
+            },
+            {
+              "role": "OTHER_EQUITY_CLAIM",
+              "population_ids": [
+                "synthetic:claim"
+              ],
+              "omission_references": [
+                "extra-unknown"
+              ],
+              "review": {
+                "author": "Synthetic example author",
+                "timestamp_utc": "2000-01-01T00:00:00+00:00",
+                "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+              },
+              "decision_references": [
+                "synthetic:coverage:OTHER_EQUITY_CLAIM"
+              ]
+            }
+          ],
+          "shares": {
+            "company_cik": 123,
+            "shares": "4",
+            "observation_date": "2025-12-31",
+            "class_id": "synthetic-common",
+            "equivalence_convention": "single_common_class",
+            "award_policy": "sbc_expensed_no_duplicate_service_charge_v1",
+            "award_policy_references": [
+              "synthetic:award-policy"
+            ],
+            "source_references": [
+              "synthetic:share-source"
+            ],
+            "decision_references": [
+              "synthetic:share-decision"
+            ],
+            "precision": "INF",
+            "rationale": "Four synthetic common shares; future service SBC remains in margins; synthetic existing-award treatment only.",
+            "unit": "shares",
+            "scale": 1
+          },
+          "input_basis": "SYNTHETIC_FIXTURE",
+          "valuation_class_id": "synthetic-common",
+          "unresolved_requirements": [],
+          "convention_version": "meta-base-equity-bridge-v1"
+        }
+      }
+    },
+    {
+      "label": "Bull",
+      "analytical_date": "2025-12-31",
+      "information_cutoff": "2026-01-31",
+      "case": {
+        "schema_version": "analyst-case-v2",
+        "case_name": "Synthetic Bull complete case",
+        "input_basis": "SYNTHETIC_FIXTURE",
+        "analyst": {
+          "author": "Synthetic example author",
+          "timestamp_utc": "2000-01-01T00:00:00+00:00",
+          "rationale": "Synthetic Bull illustration: growth 0.20; all other numerical fields explicitly supplied. No economic forecasts, probabilities or company defaults."
+        },
+        "scope": "Synthetic consolidated operating case; margins include synthetic SBC/service leases and aligned depreciation; cash investment includes non-overlapping financed assets. Explicit synthetic bridge/share arithmetic; no actual-company selections.",
+        "limitations": [
+          "SYNTHETIC only: every amount, share count and review declaration is invented for verification, not META data.",
+          "Coverage and references do not authenticate approval or economic completeness. The additional-claims omission has unknown amount, not zero."
+        ],
+        "conventions": {
+          "forecast": "meta-base-fcff-v1",
+          "discounting": "fiscal-end-annual-gordon-v1"
+        },
+        "anchor": {
+          "kind": "synthetic-fixture-v1",
+          "cik": 123,
+          "accession": "0000000123-26-000001",
+          "annual_start": "2025-01-01",
+          "annual_end": "2025-12-31",
+          "form": "10-K"
+        },
+        "forecast_years": [
+          {
+            "period_index": 1,
+            "fiscal_year_label": "Synthetic period 1",
+            "revenue_growth": "0.20",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 2,
+            "fiscal_year_label": "Synthetic period 2",
+            "revenue_growth": "0.20",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 3,
+            "fiscal_year_label": "Synthetic period 3",
+            "revenue_growth": "0.20",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 4,
+            "fiscal_year_label": "Synthetic period 4",
+            "revenue_growth": "0.20",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          },
+          {
+            "period_index": 5,
+            "fiscal_year_label": "Synthetic period 5",
+            "revenue_growth": "0.20",
+            "operating_margin": "0.20",
+            "forecast_tax_rate": "0.25",
+            "d_and_a_percent_revenue": "0.05",
+            "capex_percent_revenue": "0.10",
+            "change_in_operating_nwc_percent_revenue": "0.02"
+          }
+        ],
+        "wacc": "0.25",
+        "terminal_growth": "0.05",
+        "terminal": {
+          "operating_margin": "0.30",
+          "operating_tax_rate": "0.20",
+          "d_and_a_percent_revenue": "0.04",
+          "investment_percent_revenue": "0.09",
+          "working_capital_cash_requirement_percent_revenue": "0.01"
+        },
+        "calculation_scope": "EQUITY_PER_SHARE",
+        "bridge": {
+          "components": [
+            {
+              "component_id": "asset-a",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "amount": "10",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:asset-a",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:asset-a"
+              ],
+              "decision_references": [
+                "synthetic:decision:asset-a"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [
+                "gross-assets"
+              ],
+              "alternative_references": [
+                "alternative-asset"
+              ],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            },
+            {
+              "component_id": "asset-b",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "amount": "2",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:asset-b",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:asset-b"
+              ],
+              "decision_references": [
+                "synthetic:decision:asset-b"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [
+                "gross-assets"
+              ],
+              "alternative_references": [],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            },
+            {
+              "component_id": "financing",
+              "company_cik": 123,
+              "role": "FINANCING_CLAIM",
+              "amount": "20",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:financing",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:financing"
+              ],
+              "decision_references": [
+                "synthetic:decision:financing"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [],
+              "alternative_references": [],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            },
+            {
+              "component_id": "claim",
+              "company_cik": 123,
+              "role": "OTHER_EQUITY_CLAIM",
+              "amount": "3",
+              "as_of": "2025-12-31",
+              "population_id": "synthetic:claim",
+              "origin": "synthetic",
+              "precision": "INF",
+              "source_references": [
+                "synthetic:source:claim"
+              ],
+              "decision_references": [
+                "synthetic:decision:claim"
+              ],
+              "rationale": "Synthetic selected magnitude; no actual valuation approval.",
+              "overlap_references": [],
+              "alternative_references": [],
+              "overlaps_forecast": false,
+              "unit": "USD",
+              "scale": 1
+            }
+          ],
+          "observations": [
+            {
+              "observation_id": "gross-assets",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "disposition": "EXCLUDED",
+              "population_id": "synthetic:gross-assets",
+              "value": "999",
+              "as_of": "2025-12-31",
+              "unit": "USD",
+              "precision": "INF",
+              "origin": "synthetic",
+              "source_references": [
+                "synthetic:source:gross-assets"
+              ],
+              "decision_references": [
+                "synthetic:decision:gross-assets"
+              ],
+              "rationale": "Excluded parent includes selected asset children; never add parent again."
+            },
+            {
+              "observation_id": "alternative-asset",
+              "company_cik": 123,
+              "role": "ELIGIBLE_ASSET",
+              "disposition": "SUPPORT",
+              "population_id": "synthetic:asset-a",
+              "value": "15",
+              "as_of": "2025-12-31",
+              "unit": "USD",
+              "precision": "INF",
+              "origin": "synthetic",
+              "source_references": [
+                "synthetic:source:alternative-asset"
+              ],
+              "decision_references": [
+                "synthetic:decision:alternative-asset"
+              ],
+              "rationale": "Alternative measurement for asset-a; not an additional operand."
+            },
+            {
+              "observation_id": "extra-unknown",
+              "company_cik": 123,
+              "role": "OTHER_EQUITY_CLAIM",
+              "disposition": "OMISSION",
+              "population_id": "synthetic:extra-unknown",
+              "value": null,
+              "as_of": null,
+              "unit": "USD",
+              "precision": null,
+              "origin": "synthetic",
+              "source_references": [],
+              "decision_references": [
+                "synthetic:decision:extra-unknown"
+              ],
+              "rationale": "Explicit synthetic omission of unidentified claims; unbounded unknown amount, not a reported zero."
+            }
+          ],
+          "coverage": [
+            {
+              "role": "ELIGIBLE_ASSET",
+              "population_ids": [
+                "synthetic:asset-a",
+                "synthetic:asset-b"
+              ],
+              "omission_references": [],
+              "review": {
+                "author": "Synthetic example author",
+                "timestamp_utc": "2000-01-01T00:00:00+00:00",
+                "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+              },
+              "decision_references": [
+                "synthetic:coverage:ELIGIBLE_ASSET"
+              ]
+            },
+            {
+              "role": "FINANCING_CLAIM",
+              "population_ids": [
+                "synthetic:financing"
+              ],
+              "omission_references": [],
+              "review": {
+                "author": "Synthetic example author",
+                "timestamp_utc": "2000-01-01T00:00:00+00:00",
+                "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+              },
+              "decision_references": [
+                "synthetic:coverage:FINANCING_CLAIM"
+              ]
+            },
+            {
+              "role": "OTHER_EQUITY_CLAIM",
+              "population_ids": [
+                "synthetic:claim"
+              ],
+              "omission_references": [
+                "extra-unknown"
+              ],
+              "review": {
+                "author": "Synthetic example author",
+                "timestamp_utc": "2000-01-01T00:00:00+00:00",
+                "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval."
+              },
+              "decision_references": [
+                "synthetic:coverage:OTHER_EQUITY_CLAIM"
+              ]
+            }
+          ],
+          "shares": {
+            "company_cik": 123,
+            "shares": "4",
+            "observation_date": "2025-12-31",
+            "class_id": "synthetic-common",
+            "equivalence_convention": "single_common_class",
+            "award_policy": "sbc_expensed_no_duplicate_service_charge_v1",
+            "award_policy_references": [
+              "synthetic:award-policy"
+            ],
+            "source_references": [
+              "synthetic:share-source"
+            ],
+            "decision_references": [
+              "synthetic:share-decision"
+            ],
+            "precision": "INF",
+            "rationale": "Four synthetic common shares; future service SBC remains in margins; synthetic existing-award treatment only.",
+            "unit": "shares",
+            "scale": 1
+          },
+          "input_basis": "SYNTHETIC_FIXTURE",
+          "valuation_class_id": "synthetic-common",
+          "unresolved_requirements": [],
+          "convention_version": "meta-base-equity-bridge-v1"
+        }
+      }
+    }
+  ]
+}

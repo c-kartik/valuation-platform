@@ -114,7 +114,9 @@ have also completed with explicit limitations, without standing financial approv
 The [remaining Phase 2 scope](docs/phase2-completion-checklist.md) is META, GOOGL and
 AAPL: market-input reconciliation, editable Bear/Base/Bull scenarios, reusable
 sensitivities, bounded reverse DCF and final analyst acceptance/regression.
-Those features and their economic conventions are not approved or implemented here.
+Scenario engineering is now implemented under the bounded contract below; actual
+economic scenario acceptance remains pending. Sensitivities and reverse DCF are
+not implemented and their conventions remain undecided.
 
 Edit a copy of [synthetic-base.json](examples/valuation/synthetic-base.json) or
 [meta-fy2025-unset.json](examples/valuation/meta-fy2025-unset.json); keep the
@@ -247,6 +249,51 @@ completeness or financial acceptance. A permanent META case and further executio
 require separately scoped decisions; the [input review](docs/phase2-meta-base-input-review.md)
 remains review material. No approval workflow is required for editing or validating
 a case, and none of the incomplete company templates contains trial assumptions.
+
+## Editable Bear/Base/Bull scenarios
+
+The [scenario workflow](docs/phase2-scenario-workflow.md) accepts a flat
+`analyst-scenario-set-v1`: a name and exactly three entries labeled `Bear`, `Base`
+and `Bull`, each with `analytical_date`, `information_cutoff` and a complete
+existing `case` payload. Independently enter all 37 inputs and rationale in every
+case. No inheritance, copying at runtime, cross-case defaults, probabilities or
+valuation-order enforcement occurs. Rates use the same fractional Decimal strings.
+
+Require the same anchor/company/fiscal period, date/cutoff, input basis,
+conventions, five period identities/labels and EV-only or equity/share scope.
+For equity sets the entire bridge/share payload must be identical, including
+metadata, eligibility, claims and class/award treatment. Differences reject;
+nothing is silently overwritten. Dates/cutoffs and input reviews are declarations,
+not authenticated evidence availability or economic approval. Validation checks
+the whole set before calculation and performs no history retrieval or activation.
+
+```sh
+python3 scripts/run_analyst_scenarios.py examples/valuation/synthetic-scenarios-ev.json
+python3 scripts/run_analyst_scenarios.py examples/valuation/synthetic-scenarios-ev.json --run
+python3 scripts/run_analyst_scenarios.py examples/valuation/synthetic-scenarios-equity.json --run --format summary
+python3 scripts/run_analyst_scenarios.py examples/valuation/synthetic-scenarios-equity.json --run --output /tmp/synthetic-scenarios.json
+python3 scripts/run_analyst_scenarios.py examples/valuation/meta-fy2025-scenarios-unset.json
+python3 scripts/run_analyst_scenarios.py examples/valuation/googl-fy2025-scenarios-unset.json
+python3 scripts/run_analyst_scenarios.py examples/valuation/aapl-fy2025-scenarios-unset.json
+```
+
+The last three commands intentionally fail: each company template has **111 unset
+numerical inputs**, plus unset analyst metadata/rationale and cutoff. They are
+EV-only templates; no company scenarios or prior trial forecasts are defaults.
+The six single-case company templates remain unchanged and 37-unset each.
+
+JSON is the default and retains each full single-case result in Bear/Base/Bull
+order. The summary compares annual revenue/FCFF and EV reconciliation, terminal
+contribution and, when requested, the fixed bridge and scope-qualified USD/share.
+Money is USD millions, shares actual shares; display rounding alone uses isolated
+Decimal arithmetic. Zero EV has undefined terminal contribution; negative or
+over-100% ratios are explained and retained. No expected value or recommendation.
+Validation and ordinary runs write nothing; `--output` requires `--run` and a new
+file outside protected source/history paths or under `output/`, with no overwrite.
+The existing single-case CLI and JSON contract are unchanged.
+
+Scenario engineering/synthetic integration is complete; actual META/GOOGL/AAPL
+economic scenario review remains separately scoped. Phase 1 expansion stays paused.
 
 ## Development
 

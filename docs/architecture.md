@@ -18,9 +18,10 @@ scope-qualified inputs; their reported checks are attributed, not rerun here.
 The [three-company completion checklist](phase2-completion-checklist.md) separates
 software acceptance from investment readiness. The dated
 [GOOGL ERP correction](phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19)
-used the existing interface unchanged; broader market-input review, scenarios,
-sensitivities, bounded reverse DCF and final regression remain.
-No new architecture or feature conventions are approved by this documentation.
+used the existing interface unchanged. The [scenario workflow](phase2-scenario-workflow.md)
+now wraps three complete existing cases without new financial formulas; economic
+scenario acceptance, broader market-input review, sensitivities, bounded reverse
+DCF and final regression remain.
 
 The approved historical path uses reported cash-flow movements and independently
 reconciled CFO; complete reconstructed historical NWC/book ΔNWC is not a prerequisite.
@@ -152,6 +153,25 @@ share exclusive output creation/protected paths. A separate
 add no actual selection or forecast default. GOOGL/AAPL have separate incomplete
 EV/equity templates; bridge/share/class/award inputs remain unresolved. No new
 approval framework is introduced.
+
+## Scenario-set boundary
+
+[scenario_inputs.py](../src/valuation_platform/valuation/scenario_inputs.py) adds
+immutable `ScenarioCase` / `ScenarioSet` with strict versioned parsing. Each entry
+holds one complete legacy case plus explicit analytical date/cutoff. Exact anchor,
+timing, basis, convention, output scope, period-label and entire equity-bridge
+comparability checks precede any calculation; no external case resolver,
+inheritance, patches or fallback. `run_scenario_set` revalidates all declarations,
+then delegates to existing `run_case`, returning three full results in fixed order
+without partial success. Single-case code/results and engine formulas are unchanged.
+
+The dedicated [scenario CLI](../scripts/run_analyst_scenarios.py) validates by
+default, calculates only on `--run`, and uses the same explicit new-file/protected
+output behavior. JSON preserves complete provenance; comparison rendering only
+scales/formats existing results in an isolated Decimal context. Cutoffs remain
+declarations, not authenticated evidence dates. There is no market-data derivation,
+probability model, sensitivity infrastructure or new approval framework. See the
+[bounded contract and examples](phase2-scenario-workflow.md).
 
 ## AVGO/TSLA/LLY approvals — reuse of the company audit/view mechanism
 

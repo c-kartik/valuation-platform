@@ -1,6 +1,51 @@
 # Project Status
 
-## Current — GOOGL ERP reconciled and temporary trial rerun
+## Current — editable Bear/Base/Bull engineering and synthetic integration complete
+
+The [bounded scenario workflow](phase2-scenario-workflow.md) wraps exactly three
+complete existing analyst cases in `analyst-scenario-set-v1`. Each independently
+supplies all 37 inputs and rationale. Validation checks matching company/anchor,
+fiscal periods, date/cutoff, basis, conventions, output scope and period labels;
+equity sets require identical entire bridge/share payloads. No inheritance,
+patches, automatic forecasts, probabilities or valuation ordering. Complete-set
+validation performs no calculation/retrieval; explicit execution reuses existing
+Stages A–C and retains full results/provenance in Bear/Base/Bull order.
+
+The [dedicated CLI](../scripts/run_analyst_scenarios.py) supports validation by
+default, `--run`, JSON/summary and explicit protected/new-file-only output. Summary
+compares five annual revenue/FCFF paths, WACC/g, terminal economics, PV/EV and,
+when requested, the fixed bridge, dated shares, qualified USD/share and omissions.
+Negative values and undefined/signed/over-100% terminal contributions are preserved.
+Single-case CLI/JSON, assumption validation rules and all engine formulas are
+byte-unchanged from starting HEAD `9da4a348858fb6e5ec1cc72e1c04746afc4b92ec`.
+
+Verification: **147 distinct focused checks passed** across invocations: 142
+valuation checks (including 17 new scenario tests) and five preparation-preservation
+checks. The initial
+preparation-preservation run exposed a pre-existing stale assumptions-file pin:
+it predated `1d2e918`'s error-field metadata. The diff was reviewed and only that
+test pin advanced to the existing integration commit; no source rule/formula,
+historical or frozen pin changed. Existing single-case JSON output bytes match
+the starting implementation. No full historical suite was run.
+
+Temporary, explicitly synthetic forecast/bridge assumptions exercised both scopes
+on all three real retained revenue anchors without network access; inputs were
+unchanged, packages/approvals preserved and trial files/results removed. Two
+runnable synthetic examples and three incomplete EV-only company scenario
+templates were added. Each new company template has **111 numerical inputs unset**
+and unset analyst rationale/cutoff; all six existing templates remain unchanged,
+37-unset each. No prior actual-company forecasts/results became executable cases,
+financial approvals or defaults. Local links/anchors, whitespace and staged/
+protected scope checked; no evidence acquisition, company reviews or push.
+
+[P2-04](phase2-completion-checklist.md) is complete for engineering/synthetic
+integration only. Actual META/GOOGL/AAPL economic scenario acceptance remains
+pending, alongside broader market judgments and existing eligibility/claims/
+awards limitations. Sensitivity tables, bounded reverse DCF and final
+three-company analyst acceptance/regression remain later separately scoped work.
+Phase 1 universe expansion stays paused.
+
+## Earlier milestone — GOOGL ERP reconciled and temporary trial rerun
 
 The [2026-10-19 reconciliation](phase2-googl-aapl-milestones.md#googl-erp-reconciliation--2026-10-19)
 supersedes only GOOGL's ERP/WACC and resulting trial reference. Damodaran's

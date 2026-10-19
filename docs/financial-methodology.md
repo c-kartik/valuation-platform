@@ -29,8 +29,19 @@ approval or direct three-company comparability. The bounded
 requires separate decisions/authority for any further methodology changes and
 affected-case reruns. Completing all eligible companies or resolving
 every historical unknown is not required before scoped engine milestones.
-Scenarios, sensitivities and reverse DCF remain later capabilities with decisions
+The [editable scenario workflow](phase2-scenario-workflow.md) now supports three
+complete independent Bear/Base/Bull input cases; actual economic scenario review
+remains pending. Sensitivities/reverse DCF remain later capabilities with decisions
 still needed; existing financial formulas and conventions remain unchanged.
+
+Scenario labels encode no growth/margin/WACC adjustment, valuation ordering or
+probability. Each case explicitly supplies all annual and terminal rates; no Year-5
+copy or historical calibration is introduced. The first version fixes the entire
+equity bridge/share inputs across scenarios, so differences reflect operating and
+discount assumptions alone. Shared dates/cutoffs are enforceable declarations,
+not proof of evidence sufficiency, sustainability, eligibility or completeness.
+Synthetic integration on retained revenue is engineering verification, not actual
+company scenario economics; claims/awards and unbounded omissions remain qualified.
 
 The shared `manual-fcff-v1` / `manual-equity-bridge-v1` identifiers name the same
 engine equations and declared lease/SBC behavior as the legacy META spellings;
