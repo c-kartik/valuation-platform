@@ -38,6 +38,9 @@ caption {text-align: left; padding: 12px; font-weight: 650;}
 button {font: inherit; font-weight: 600; border: 1px solid #537b68; border-radius: 6px; padding: 10px 18px; background: #f4f8f5; color: #1d513b; cursor: pointer;}
 button.primary {background: #20533e; color: #fff;}
 button:disabled {opacity: .5; cursor: wait;}
+.confirmation {width: min(480px,calc(100% - 24px)); max-height: calc(100% - 24px); overflow: auto; margin: auto; padding: 22px; color: #202d34; background: #eaf2ed; border: 1px solid #456f5c; border-radius: 10px;}
+.confirmation::backdrop {background: rgb(20 35 30 / 45%);}
+input,textarea,select,button,summary {scroll-margin: 16px;}
 .actions {display: flex; flex-wrap: wrap; gap: 12px;}
 details {margin: 20px 0;}
 summary {cursor: pointer; font-weight: 600;}

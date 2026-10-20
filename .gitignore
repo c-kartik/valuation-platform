@@ -24,5 +24,9 @@ dist/
 # macOS
 .DS_Store
 
+# Local Firebase CLI cache/logs (never hosting content)
+.firebase/
+firebase-debug.log
+
 # VS Code local settings
 .vscode/

@@ -14,6 +14,35 @@ const input=(label:string)=>screen.getByLabelText(label) as HTMLInputElement;
 const set=(label:string,value:string)=>fireEvent.change(input(label),{target:{value}});
 const openAnnual=()=>fireEvent.click(screen.getByText('Advanced annual editing'));
 
+it('focuses safe cancellation and restores the apply trigger without losing annual edits',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();
+ set('Annual revenue growth (%)','12');
+ const trigger=screen.getByRole('button',{name:'Apply Annual revenue growth to five years'});
+ trigger.focus();fireEvent.click(trigger);
+ const dialog=screen.getByRole('alertdialog',{name:'Replace annual inputs?'});
+ expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Keep annual edits'}));
+ const user=userEvent.setup();await user.tab();
+ expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Replace annual inputs'}));
+ await user.tab({shift:true});
+ expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Keep annual edits'}));
+ fireEvent(dialog,new Event('cancel',{bubbles:true,cancelable:true}));
+ expect(screen.queryByRole('alertdialog')).toBeNull();expect(document.activeElement).toBe(trigger);
+ expect(input('Revenue growth Synthetic period 1 (%)').value).toBe('10');
+ expect(input('Annual revenue growth (%)').value).toBe('12');
+});
+it('restores the selector after cancelling a company change and restores apply after confirmation',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();
+ const company=screen.getByLabelText('Company');company.focus();
+ fireEvent.change(company,{target:{value:'test-anchor'}});
+ const dialog=screen.getByRole('alertdialog',{name:'Discard populated edits?'});
+ expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Keep editing'}));
+ fireEvent.click(within(dialog).getByRole('button',{name:'Keep editing'}));
+ expect(document.activeElement).toBe(company);expect(input('Operating margin (%)').value).toBe('20');
+ set('Operating margin (%)','21');const trigger=screen.getByRole('button',{name:'Apply Operating margin to five years'});
+ trigger.focus();fireEvent.click(trigger);fireEvent.click(screen.getByRole('button',{name:'Replace annual inputs'}));
+ expect(document.activeElement).toBe(trigger);expect(input('Operating margin Synthetic period 5 (%)').value).toBe('21');
+});
+
 it('shows unset company quick inputs, missing terminal requirements and explicit metadata',async()=>{
  render(<App load={transport(async()=>({status:'valid'}))}/>);await waitFor(()=>expect((screen.getByLabelText('Company') as HTMLSelectElement).disabled).toBe(false));
  fireEvent.change(screen.getByLabelText('Company'),{target:{value:'test-anchor'}});

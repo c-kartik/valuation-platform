@@ -1,5 +1,12 @@
 # Local single-case calculator UI
 
+The subsequent [390×844 desktop keyboard review](narrow-keyboard-review.md) closes
+the earlier narrow-keyboard qualification after focused confirmation fixes: native
+modal, safe Keep focus, explicit Tab cycle, Escape cancellation and trigger restoration.
+This is not mobile virtual-keyboard or complete accessibility certification.
+[Firebase/public-preview preparation](public-preview-preparation.md) remains local
+and blocked on site identity/access/cost decisions; the deployed API is unchanged.
+
 ## Scope and startup
 
 The React/TypeScript/Vite quick workbench edits one `analyst-case-v1` through

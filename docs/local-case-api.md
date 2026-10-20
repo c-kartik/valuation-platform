@@ -1,5 +1,16 @@
 # Local single-case API
 
+## Local protection update — pending cloud deployment
+
+The [public-preview review](public-preview-preparation.md) adds uniform application
+`Cache-Control: no-store` and nosniff, including 4xx/5xx/health, plus an early **403
+`cross_site_request`** for known cross-site browser metadata. This is not authentication
+or bot/rate protection; non-browser/headerless callers remain supported. Existing
+valid case/result JSON, parser ceilings and calculation/cleanup are unchanged.
+These changes are tested **locally only**, absent from the original deployed image.
+Prepared Firebase routing/public access still requires explicit authorization and
+resolution of the existing Hosting site. No new public service exists.
+
 ## Current — authenticated staging host
 
 The subsequent [remote staging checkpoint](cloud-staging-deployment.md) deploys this

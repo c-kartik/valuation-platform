@@ -1,6 +1,24 @@
 # Architecture
 
-## Latest application review — compiled frontend / authenticated cloud
+## Latest application preparation — bounded anonymous preview
+
+[Public-preview preparation](public-preview-preparation.md) adds no deployed service.
+The local API response/error boundary now sets no-store/nosniff uniformly and rejects
+known `Sec-Fetch-Site: cross-site` traffic before reading bodies. Headerless/scripted
+callers remain possible; this is neither authentication nor a distributed quota.
+Existing parser, financial/worker budgets and JSON schemas are unchanged.
+
+[Firebase configuration](../firebase.preview.json) points only at compiled dist,
+an unresolved existing site and a separately proposed new public API name, with API
+rewrite before SPA fallback and explicit revision pinning. A small publication guard
+rejects additional files/symlinks, private markers and unresolved deployment identity.
+No new site/target, cloud resource or automatic deploy is configured remotely.
+The [keyboard fix](narrow-keyboard-review.md) uses native modal confirmations with
+safe initial focus, two-action Tab cycle, Escape and trigger restoration; financial
+inputs and formulas are untouched. Access/cost acceptance and actual hosted routing
+verification remain future gates.
+
+## Earlier application review — compiled frontend / authenticated cloud
 
 The [browser integration checkpoint](cloud-frontend-acceptance.md) connects unchanged
 compiled assets → relative `/api` → a fixed loopback preview → official authenticated

@@ -19,6 +19,15 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The [anonymous-preview preparation](docs/public-preview-preparation.md) assesses
+existing abuse limits and residual cost/availability risks, adds uniform API no-store
+and known cross-site browser rejection, and prepares **undeployed**
+[Firebase preview configuration](firebase.preview.json). The existing site identity
+remains unresolved; no public access is authorized. The [390×844 keyboard review](docs/narrow-keyboard-review.md)
+passed after focused confirmation-dialog fixes; 95 affected tests passed. Next:
+identify an existing Hosting site and approve only a bounded new-service preview,
+its direct anonymous URL, costs and withdrawal policy. Cloud Run staging stays private.
+
 The [compiled frontend/cloud review](docs/cloud-frontend-acceptance.md) passed through
 a loopback authenticated proxy: 11 browser runs matched full CLI JSON, with 682
 independent arithmetic checks and 84 focused tests. This is synthetic engineering

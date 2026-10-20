@@ -17,7 +17,11 @@ from .catalog import build_catalog
 
 
 class SanitizedErrors:
-    """Keep unexpected HTTP failures out of responses and exception-body logs."""
+    """Bound disclosure/caching and cheaply reject known cross-site browsers.
+
+    Fetch Metadata is a browser courtesy barrier, not caller authentication or
+    a bot quota: non-browser clients can omit/spoof it and remain anonymous.
+    """
     def __init__(self, app):
         self.app = app
 
@@ -28,16 +32,27 @@ class SanitizedErrors:
             nonlocal started
             if message['type'] == 'http.response.start':
                 started = True
+                message = dict(message)
+                headers = [(key, value) for key, value in message.get('headers', [])
+                           if key.lower() not in (b'cache-control', b'x-content-type-options')]
+                message['headers'] = headers + [(b'cache-control', b'no-store'),
+                                                (b'x-content-type-options', b'nosniff')]
             await send(message)
 
         try:
+            if scope['type'] == 'http' and any(
+                    key.lower() == b'sec-fetch-site' and value.strip().lower() == b'cross-site'
+                    for key, value in scope.get('headers', [])):
+                response = JSONResponse(error_body('cross_site_request', 'Cross-site browser requests are not accepted.'), status_code=403)
+                await response(scope, receive, tracked_send)
+                return
             await self.app(scope, receive, tracked_send)
         except Exception:
             if scope['type'] != 'http':
                 raise
             if not started:
                 response = JSONResponse(error_body('internal_error', 'Internal service error; no result returned.'), status_code=500)
-                await response(scope, receive, send)
+                await response(scope, receive, tracked_send)
 
 
 async def body_bytes(request, policy):

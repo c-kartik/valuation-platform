@@ -1,6 +1,32 @@
 # Project Status
 
-## Current — compiled frontend / authenticated cloud integration verified
+## Current — anonymous preview prepared locally; deployment blocked
+
+The [public-preview assessment](public-preview-preparation.md) records enforced
+request/parser/result budgets, worker deadlines/cleanup and residual anonymous
+availability/cost risks. Added early known cross-site browser rejection and uniform
+no-store/nosniff across application responses. These changes are **local only**;
+the current authenticated cloud revision is unchanged. No distributed quota, hard
+total spending cap, peak-memory bound or bot-resistance guarantee is claimed.
+
+The [narrow desktop keyboard journey](narrow-keyboard-review.md) passed at 390×844
+after replacing inline confirmations with safe-focus native modals, explicit Tab
+cycle, Escape cancellation and trigger restoration. This is not a mobile virtual-
+keyboard/device test. **95 focused tests passed**, with build and publication guard.
+Prior cloud arithmetic/image evidence was not rerun.
+
+[Firebase preview configuration](../firebase.preview.json) prepares root calculator
+assets and ordered `/api` rewrite with pinTag to the **unprovisioned**
+`valuation-api-public-preview`. Existing Firebase site identity is unresolved;
+read-only Console navigation reached add-Firebase onboarding and was stopped.
+The publication guard rejects deployment until reviewed. Next authorization must
+name an existing site/channel and approve the new service's anonymous/direct access,
+bounded settings, monitored residual costs and withdrawal plan. No cloud build,
+provisioning, IAM/public grant, Hosting deployment, Netlify/DNS change or push.
+All nine unset templates, financial formulas, historical approvals and Phase 1 pause
+remain unchanged; qualified Phase 2 software closure persists.
+
+## Earlier — compiled frontend / authenticated cloud integration verified
 
 The [browser/cloud review](cloud-frontend-acceptance.md) exercised the unchanged
 compiled frontend against revision `valuation-api-staging-00001-2rk` through the

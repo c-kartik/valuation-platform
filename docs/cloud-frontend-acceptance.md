@@ -1,5 +1,9 @@
 # Compiled frontend → authenticated Cloud Run review
 
+Subsequent [local narrow-keyboard review](narrow-keyboard-review.md) closes the specific
+desktop viewport qualification below after confirmation-focus fixes. The original
+cloud measurements remain historical; no cloud arithmetic rerun is implied.
+
 ## Result and artifact binding
 
 **PASS within the tested integration scope**, reviewed by Codex on 2026-10-20

@@ -19,6 +19,37 @@ function percentageDiagnostic(detail: string): string {
 }
 
 type Props = {load?: typeof request};
+function Confirmation({title, children, confirmLabel, cancelLabel, confirm, cancel}: {
+  title: string; children: React.ReactNode; confirmLabel: string; cancelLabel: string;
+  confirm: () => void; cancel: () => void;
+}) {
+  const dialog = useRef<HTMLDialogElement>(null);
+  const accept = useRef<HTMLButtonElement>(null);
+  const keep = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const opener = document.activeElement as HTMLElement | null;
+    const modal = dialog.current!;
+    modal.showModal();
+    keep.current?.focus(); // Enter must not discard/replace by default.
+    return () => {
+      modal.close();
+      if (opener?.isConnected) opener.focus();
+    };
+  }, []);
+  return <dialog ref={dialog} role="alertdialog" aria-modal="true" aria-label={title}
+    className="confirmation" onCancel={event=>{event.preventDefault();cancel();}}
+    onKeyDown={event=>{
+      if (event.key === 'Tab') {
+        event.preventDefault();
+        (document.activeElement === keep.current ? accept : keep).current?.focus();
+      }
+    }}>
+    <h2>{title}</h2><p>{children}</p><div className="actions">
+      <button ref={accept} onClick={confirm}>{confirmLabel}</button>
+      <button ref={keep} onClick={cancel}>{cancelLabel}</button>
+    </div>
+  </dialog>;
+}
 export default function App({load = request}: Props) {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [selected, setSelected] = useState('');
@@ -188,7 +219,7 @@ export default function App({load = request}: Props) {
       </select><button className="text-button" disabled={!catalog} onClick={()=>choose('demo')}>Load synthetic demonstration</button></div>
     </header>
     {!catalog && <p role="status">Loading retained company data… Check the local server if it is unavailable.</p>}
-    {pendingSelection!==null && <div role="alertdialog" aria-label="Discard populated edits?" className="notice"><p>Switching will discard populated annual inputs, quick-entry drafts, case details and results. No copy is saved.</p><button onClick={()=>switchTo(pendingSelection)}>Discard and switch</button> <button onClick={()=>setPendingSelection(null)}>Keep editing</button></div>}
+    {pendingSelection!==null && <Confirmation title="Discard populated edits?" confirmLabel="Discard and switch" cancelLabel="Keep editing" confirm={()=>switchTo(pendingSelection)} cancel={()=>setPendingSelection(null)}>Switching will discard populated annual inputs, quick-entry drafts, case details and results. No copy is saved.</Confirmation>}
     {entry && <section className="history-strip"><div><strong>{entry.company} · reported FY2025 revenue: {money(entry.revenue)} USD millions</strong><p>{entry.identity.annual_start} → {entry.identity.annual_end}. Fixed retained data, not automatically refreshed. Forecast inputs below are your estimates.</p></div>
       <details><summary>Filing, sources and historical limitations</summary><p>{entry.identity.form} · {entry.identity.accession} · CIK {entry.identity.cik}. Source precision {entry.precision} (−6: nearest million). Base unit {entry.unit}.</p><p>Fiscal-end analytical date: {entry.identity.annual_end}; later-filed information is used. A separate filing-acceptance timestamp is not supplied.</p><ul>{entry.source_links.map((url,i)=><li key={url}><a href={url} target="_blank" rel="noreferrer">Retained SEC filing source {i+1}</a></li>)}</ul><p>{catalog?.timing_notice}</p><ul>{entry.limitations.map((line,i)=><li key={i}>{line}</li>)}</ul></details>
     </section>}
@@ -207,7 +238,7 @@ export default function App({load = request}: Props) {
         </div></div>
         <button onClick={()=>proposeApply(annual.map(([key])=>key))}>Apply all six to five years</button>
         <p className="hint">Only applied annual inputs are submitted. Quick entries are drafts, never continuing links.</p>
-        {pendingApply && <div role="alertdialog" aria-label="Replace annual inputs?" className="notice"><p>This replaces existing annual values with a flat path for: {Object.keys(pendingApply).map(key=>annual.find(([k])=>k===key)?.[1]).join(', ')}. Other rows and terminal assumptions stay independent.</p><button onClick={()=>performApply(pendingApply)}>Replace annual inputs</button> <button onClick={()=>setPendingApply(null)}>Keep annual edits</button></div>}
+        {pendingApply && <Confirmation title="Replace annual inputs?" confirmLabel="Replace annual inputs" cancelLabel="Keep annual edits" confirm={()=>performApply(pendingApply)} cancel={()=>setPendingApply(null)}>This replaces existing annual values with a flat path for: {Object.keys(pendingApply).map(key=>annual.find(([k])=>k===key)?.[1]).join(', ')}. Other rows and terminal assumptions stay independent.</Confirmation>}
         <details open={annualOpen} onToggle={e=>setAnnualOpen(e.currentTarget.open)}><summary>Advanced annual editing</summary><p>These are the authoritative annual inputs. Editing a year changes no other year or terminal ratio.</p>
           <div className="table-scroll" tabIndex={0} role="region" aria-label="Five-year assumption table"><table><thead><tr><th scope="col">Assumption (%)</th>{draft.doc.forecast_years.map(y=><th scope="col" key={y.period_index}>{y.fiscal_year_label}</th>)}</tr></thead><tbody>{annual.map(([key,label])=><tr key={key}><th scope="row">{label}</th>{draft.doc.forecast_years.map((year,i)=><td key={i}>{rateInput(annualPath(key,i),`${label} ${year.fiscal_year_label} (%)`)}</td>)}</tr>)}</tbody></table></div>
         </details>
