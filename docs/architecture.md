@@ -1,6 +1,22 @@
 # Architecture
 
-## Latest application milestone — local production-artifact review
+## Latest application milestone — authenticated remote staging
+
+The [Cloud Run checkpoint](cloud-staging-deployment.md) runs the unchanged API image
+on gen2 in us-central1 with required invoker IAM, one Uvicorn worker, concurrency 1,
+1 vCPU/1GiB, min 0/max 1, 50s HTTP and the existing 35s child deadline. A dedicated
+runtime identity has no project roles; the separate builder has repository writer,
+source-bucket reader and log-writer access. One explicit remote Cloud Build used
+an exact allowlisted context from pushed source, not a GitHub deployment trigger.
+The deployed image is pinned by digest; no frontend/static private-file exposure,
+Firebase rewrite, domain change, public invocation or extra infrastructure is added.
+
+Full synthetic API/CLI matches and a same-image trusted Linux lifecycle probe passed.
+Cloud Run forced deadline/abrupt-death behavior, peak-memory limits and public abuse
+controls remain qualified. Details distinguish sparse cloud metrics from Linux
+probe results. No formulas, schemas, historical approvals or source pins change.
+
+## Earlier application milestone — local production-artifact review
 
 The [compiled EV walkthrough](local-workbench-acceptance.md) verified static frontend
 → relative `/api` → packaged private API using a temporary trusted loopback harness.

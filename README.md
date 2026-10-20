@@ -19,9 +19,11 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-Reviewed source is now pushed to GitHub. [Authenticated GCP staging is deferred](docs/cloud-staging-checkpoint.md)
-at the user's request while project billing linkage is pending; no cloud API has
-been built or deployed. The live website remains unchanged.
+The [authenticated staging API](docs/cloud-staging-deployment.md) is now deployed
+in us-central1 from pushed source `ebf6139`, with a digest-pinned image, required IAM
+and min 0 / max 1 instances. Synthetic EV/equity smoke tests matched local CLI;
+anonymous requests returned 403. Frontend/public launch remains separate, and the
+live website is unchanged. The deployment documentation commit remains local.
 
 The [compiled-build developer walkthrough](docs/local-workbench-acceptance.md)
 verified all three retained-anchor workflows, CLI equivalence and 254 affected tests,

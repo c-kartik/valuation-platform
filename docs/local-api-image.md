@@ -1,6 +1,12 @@
-# Local API image candidate — execution still unverified
+# API image recipe — local candidate and subsequent remote verification
 
-This is local build preparation, not deployment configuration. The frontend artifact
+The [subsequent remote checkpoint](cloud-staging-deployment.md) built this unchanged
+recipe with Cloud Build, deployed authenticated staging and ran a same-image probe
+on preinstalled Cloud Shell Docker. No local Docker was installed. The **earlier
+local candidate record below** preserves what was unverified at that time; the new
+checkpoint lists exactly which gates were exercised and which remain open.
+
+This earlier milestone was local build preparation, not deployment configuration. The frontend artifact
 is only `frontend/dist`; private API resources belong only in the separate image.
 The [walkthrough record](local-workbench-acceptance.md) states the actual checks.
 No Firebase project, IAM, cloud command, deployment or automatic integration is added.

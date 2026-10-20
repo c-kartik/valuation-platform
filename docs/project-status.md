@@ -1,6 +1,32 @@
 # Project Status
 
-## Current — reviewed source pushed; GCP staging deferred
+## Current — authenticated Cloud Run staging API verified
+
+The [deployment checkpoint](cloud-staging-deployment.md) supersedes the earlier
+billing deferral below. Pushed source `ebf6139df600580f6aa92cd759a8a67fc7aea823`
+produced one successful remote Cloud Build and one authenticated us-central1 service,
+`valuation-api-staging`, revision `valuation-api-staging-00001-2rk`. Its image digest,
+context origin, dedicated resources/IAM, measured behavior and teardown are recorded.
+One vCPU/1GiB, min 0/max 1, concurrency 1, request-based billing, 50s HTTP and the
+unchanged 35s calculation deadline are retained; runtime has no project roles.
+
+Six synthetic retained-anchor EV/equity cases and three repeats matched full local
+CLI results; validation, invalid/oversized input, private-route rejection and final
+anonymous 403 checks passed. A trusted same-image probe on preinstalled **remote**
+Cloud Shell Docker verified linux/amd64, read-only resources, tamper rejection,
+forced deadline kill/reap/recovery and shutdown. No local Docker/SDK installation,
+financial/code changes or repeat of the earlier 254-test suite occurred.
+
+This closes the bounded authenticated experiment, not anonymous staging, public
+production or investment readiness. Sparse sampled memory/startup measurements do
+not establish peak-memory bounds or forced cleanup inside Cloud Run. Existing $10
+billing alerts are not a hard spending cap. Active service/image and source-build
+storage remain; temporary trial files and remote cache were removed. Deployment
+documentation is committed **locally only**, without rebuilding or pushing it.
+The live website, Netlify, DNS, historical/frozen approvals and nine unset templates
+are unchanged. Qualified Phase 2 completion and the Phase 1 pause persist.
+
+## Earlier — reviewed source pushed; GCP staging deferred
 
 The [push/staging checkpoint](cloud-staging-checkpoint.md) records the normal push
 of reviewed source `0d9698996ecdd50f897f1991c37a950ff317a4f1` to the existing

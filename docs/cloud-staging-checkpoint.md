@@ -1,5 +1,9 @@
 # GitHub push and deferred authenticated staging
 
+This is the **historical deferral record**. The subsequent user-authorized
+[remote deployment checkpoint](cloud-staging-deployment.md) supersedes its current
+state; the original observations and pause below are preserved.
+
 ## Status — 2026-10-20 (Asia/Dubai)
 
 **Reviewed source pushed; GCP setup deferred at the user's request. No API deployed.**

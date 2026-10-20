@@ -1,6 +1,16 @@
 # Local single-case API
 
-## Current local-build acceptance
+## Current — authenticated staging host
+
+The subsequent [remote staging checkpoint](cloud-staging-deployment.md) deploys this
+unchanged API from pushed source `ebf6139`, with required IAM and an explicit image
+digest. The same routes/budgets/private bundle now have bounded Cloud Run smoke
+verification and a same-image Linux probe. No public/anonymous access or frontend
+integration is configured. The original local records below retain their dates,
+counts and qualifications; their unverified Linux/build gates are superseded only
+by the specific new checks recorded there. No financial convention changes.
+
+## Earlier local-build acceptance
 
 The [compiled workbench review](local-workbench-acceptance.md) adds new browser/CLI
 comparisons and 254 passing affected checks, including existing API lifecycle tests.
