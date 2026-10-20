@@ -1,5 +1,9 @@
 # Authenticated Cloud Run staging — first remote checkpoint
 
+Subsequent [compiled-browser integration review](cloud-frontend-acceptance.md) tested
+this same revision through an authenticated localhost proxy without redeployment.
+The measurements below remain this original deployment's record.
+
 ## Result and exact artifact — 2026-10-20 (Asia/Dubai)
 
 **Authenticated single-case staging API deployed and smoke-tested.** This resumes

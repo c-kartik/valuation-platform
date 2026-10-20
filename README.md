@@ -19,6 +19,14 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The [compiled frontend/cloud review](docs/cloud-frontend-acceptance.md) passed through
+a loopback authenticated proxy: 11 browser runs matched full CLI JSON, with 682
+independent arithmetic checks and 84 focused tests. This is synthetic engineering
+verification, not public hosting or financial approval. A bounded compiled preview
+is available via `python3 scripts/preview_cloud_frontend.py` after starting the
+documented fixed-service gcloud proxy; Google credentials stay outside the browser.
+Next decide Firebase preview access/authentication; no preview deployment is implied.
+
 The [authenticated staging API](docs/cloud-staging-deployment.md) is now deployed
 in us-central1 from pushed source `ebf6139`, with a digest-pinned image, required IAM
 and min 0 / max 1 instances. Synthetic EV/equity smoke tests matched local CLI;
@@ -28,10 +36,9 @@ live website is unchanged. The deployment documentation commit remains local.
 The [compiled-build developer walkthrough](docs/local-workbench-acceptance.md)
 verified all three retained-anchor workflows, CLI equivalence and 254 affected tests,
 with bounded error-recovery fixes. The [local API image candidate](docs/local-api-image.md)
-keeps private resources separate from static assets. Linux/container tooling was
-unavailable: no image execution or staging readiness is certified, and no cloud
-resources or deployment were configured. The next step is the bounded local image
-test matrix on an available runtime.
+keeps private resources separate from static assets. At that earlier checkpoint,
+Linux/container tooling was unavailable. The subsequent authenticated staging record
+above supersedes its unexecuted Linux/cloud gates within the documented scope.
 
 The [local React/TypeScript calculator](docs/local-calculator-ui.md) now provides
 retained META/GOOGL/AAPL basis review, eight unset quick-entry rates, explicit
@@ -47,8 +54,8 @@ Open <http://127.0.0.1:5173/>. No company forecast defaults, saving or deploymen
 The [local single-case FastAPI boundary](docs/local-case-api.md) now supports
 calculation-free validation and explicit EV/equity-share runs, using strict raw
 JSON intake, a 35-second terminable child process, one active calculation per API
-process and verified private read-only resource bundles. It is tested locally only;
-there is no public launch, cloud deployment or live retrieval. Financial
+process and verified private read-only resource bundles. Restricted authenticated
+staging is now verified above; there is no public launch or live retrieval. Financial
 formulas/approvals and all unset company templates remain unchanged.
 
 **Phase 2 software milestone COMPLETE for the retained META, GOOGL and AAPL

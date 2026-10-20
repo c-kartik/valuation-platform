@@ -1,6 +1,25 @@
 # Project Status
 
-## Current — authenticated Cloud Run staging API verified
+## Current — compiled frontend / authenticated cloud integration verified
+
+The [browser/cloud review](cloud-frontend-acceptance.md) exercised the unchanged
+compiled frontend against revision `valuation-api-staging-00001-2rk` through the
+official authenticated loopback proxy. Eleven captured successful browser runs
+matched full local CLI JSON; 682 independent arithmetic comparisons, four valid
+validation-only submissions and 84 focused automated tests passed. Synthetic demo
+and retained META/GOOGL/AAPL anchors, annual edits, negative flows, error recovery,
+desktop keyboard use and narrow layout were checked. Narrow keyboard and forced
+remote late-response/busy/deadline faults remain qualified; host tests cover those
+logic paths. Sparse timings/metrics are not peak-memory or load guarantees.
+
+Added a bounded localhost compiled-preview harness and six tests; no financial,
+API/frontend contract, history/approval or nine-template changes. Temporary test
+captures/inputs, SDK/configuration and servers were removed. Anonymous Cloud Run
+still returns 403; no IAM, cloud build/redeployment, push or website/DNS change.
+Next separately decide Firebase preview access and hosted API authentication/routing.
+Phase 1 stays paused and qualified Phase 2 software closure is unchanged.
+
+## Earlier — authenticated Cloud Run staging API verified
 
 The [deployment checkpoint](cloud-staging-deployment.md) supersedes the earlier
 billing deferral below. Pushed source `ebf6139df600580f6aa92cd759a8a67fc7aea823`

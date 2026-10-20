@@ -1,6 +1,19 @@
 # Architecture
 
-## Latest application milestone — authenticated remote staging
+## Latest application review — compiled frontend / authenticated cloud
+
+The [browser integration checkpoint](cloud-frontend-acceptance.md) connects unchanged
+compiled assets → relative `/api` → a fixed loopback preview → official authenticated
+gcloud proxy → existing Cloud Run revision. Google credentials stay in the proxy.
+The preview serves build files only, allowlists three API routes, bounds bodies/
+responses/socket timeouts, drops browser credentials and uses no-store/same-origin
+headers. It has no arbitrary upstream/file operands or body logging. This is a local
+engineering harness, not hosted Firebase authentication or public infrastructure.
+Captured browser/full-CLI matches and independent arithmetic passed; no financial
+formulas, API schemas, frontend source or private resources changed. Remaining
+access/routing/public-exposure decisions are explicit in the checkpoint.
+
+## Earlier application milestone — authenticated remote staging
 
 The [Cloud Run checkpoint](cloud-staging-deployment.md) runs the unchanged API image
 on gen2 in us-central1 with required invoker IAM, one Uvicorn worker, concurrency 1,

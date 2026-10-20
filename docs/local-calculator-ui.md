@@ -173,8 +173,10 @@ browser-request/full-result CLI comparisons, zero/negative probes and 254 passin
 checks. Two observed recovery blockers were fixed: recognized missing/tax diagnostics
 now use percentage units; service failures no longer ask for assumption correction.
 This is developer verification, not human investor research or economic approval.
-The [API image candidate](local-api-image.md) separates static/private artifacts;
-Linux/container and cloud execution remain unverified, with no staging deployment.
+The [API image candidate](local-api-image.md) separates static/private artifacts.
+Its originally unexecuted Linux/cloud gates are superseded within scope by the
+[authenticated deployment](cloud-staging-deployment.md) and subsequent
+[compiled frontend/cloud review](cloud-frontend-acceptance.md); no public launch.
 
 ## Quick workbench verification
 
