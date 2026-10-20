@@ -34,6 +34,131 @@ code has no `pinTag` handling. The literal unresolved site in
 [firebase.preview.json](../firebase.preview.json) and the local publication guard
 deliberately prevent treating this as deploy-ready. No identifiers are guessed.
 
+## Read-only Firebase inspection — 2026-10-20 (Asia/Dubai)
+
+This follow-up started clean at `14ba781b1d9e55dc596dcf7c79b8cccafd56ca2c`,
+three ahead of the local `origin/main`. Only this document changes; no application
+checks, financial runs, installation, login or cloud mutation occurred. The 95 tests
+and build below belong to the preceding preparation checkpoint, not this inspection.
+
+| Question | Verified observation / limitation |
+| --- | --- |
+| Cloud project identity | Signed-in Cloud Console **Settings** shows name Personal Website, ID `kartikchaturvedi-website`, number `378340095652`. |
+| Firebase enabled? | Hosting navigation again redirects to the add-Firebase **Get started** form. Cloud **Labels** shows no labels, including no `firebase:enabled`; Firebase Management API and Firebase Hosting API library pages each offer **enable this API**. This supports an incomplete/unavailable Firebase setup, but is not an authenticated Firebase project-resource lookup or proof the project was never enabled. |
+| Hosting initialized / sites | **Unverified**, not an empty inventory. No site listing is available through the observed Console state. No site ID is verified; do not substitute the Cloud project ID. |
+| Default / custom domains | **Unavailable** without a verified site inventory and domain listing. No custom-domain association or absence is established. |
+| Live releases / preview channels | **Unavailable**; no release/version/channel IDs or collision check can be recorded. The proposed `ev-public-review` name is not verified unused. |
+| Local tooling / permissions | Firebase CLI remains **11.3.0**; fresh `firebase login:list --json` returned success without accounts. No `gcloud` is on PATH. The prior unauthenticated site-list failure remains attributed to preparation. There is no new `PERMISSION_DENIED` result establishing insufficient IAM; the blockers are unavailable authenticated CLI access and Console onboarding. |
+| Checkout selection | No `.firebaserc`, Hosting targets or default `firebase.json`; the sole prepared config is `firebase.preview.json`, with explicit `hosting.site=UNRESOLVED_EXISTING_HOSTING_SITE`. It selects **no verified destination** and its deploy guard fails closed. No config identifier was changed. |
+
+Read-only pages used: Cloud Console project Settings, Labels, and the API library
+entries for `firebase.googleapis.com` and `firebasehosting.googleapis.com`, plus the
+Firebase Hosting URL. No Enable, Continue, Save, setup confirmation or Cloud Shell
+action was taken; task tabs were closed. Existing private staging was not modified
+or reauthenticated/retested in this follow-up. Its recorded configuration remains
+in the [deployment checkpoint](cloud-staging-deployment.md).
+
+### Onboarding meaning and the smallest destination
+
+The observed **Continue** belongs to an informational add-Firebase form. Its notice
+says adding Firebase cannot be fully undone and billing, IAM and resources are shared
+with Google Cloud. It does not show what the next button or screen will do. Do not
+claim Continue alone completes setup. Official documentation says completed onboarding
+adds Firebase configuration, enables APIs, creates managed service accounts and a
+restricted Browser API key, and adds the project label. Existing billing implies
+Blaze; adding Firebase is not a separate billing account. Terms acceptance may be
+required; Analytics and AI assistance are optional. None was accepted or enabled.
+[Adding Firebase: effects, permissions and terms](https://firebase.google.com/docs/projects/use-firebase-with-existing-cloud-project).
+
+**Recommendation remains conditional:** reuse a verified suitable site and create
+only its `ev-public-review` preview channel, expiring **one day after deployment**.
+First record that site's live version, domains and channels; require the channel name
+to be unused rather than overwrite another preview. Preview deployment publishes a
+separate public preview URL, not the site's live channel or custom-domain release.
+`firebase deploy --only hosting` would publish live and is outside this plan.
+[Channel lifecycle](https://firebase.google.com/docs/hosting/manage-hosting-resources).
+
+If inspection confirms Firebase has not been added, authorize that one-time setup
+first, then inspect any resulting default site. Do not create an additional site if
+an unused suitable default site suffices. If no suitable site exists, separately
+approve creation of **one calculator-only site**, proposed ID `kc-valuation-preview`
+(global availability unverified), with no custom domains or live deployment. Its
+prospective default domains would be `kc-valuation-preview.web.app` and
+`kc-valuation-preview.firebaseapp.com`; these are **not verified existing domains**.
+Site IDs are global and at most 30 characters; do not silently choose a different ID
+on collision. [Sites and default-domain rules](https://firebase.google.com/docs/hosting/multisites).
+
+Once verified, an explicit site in this single-site config plus explicit `--project`
+and `--config` would remove default-project/target ambiguity. No target or initialization wizard is needed to regenerate the prepared local files. Within that
+preview origin the calculator is at `/`, API rewrite precedes SPA fallback, and
+`pinTag` binds the latest backend revision at deploy time. A dedicated new backend
+and a deployment freeze prevent another application's revision being pinned. These
+are configuration/documentation checks, not an executed CDN test.
+[Cloud Run pinning](https://firebase.google.com/docs/hosting/cloud-run).
+
+### Required actions and permissions — ordered, not executed
+
+Use existing authorized access; **do not grant Owner/Editor to solve this inspection**.
+Permissions below describe future operations, not evidence of current effective IAM.
+
+| Order / scope | Required action and minimum access | Change / billing or access consequence |
+| --- | --- | --- |
+| 1 — read-only access | User supplies an authenticated current Firebase CLI session (or authorizes its update and interactive login); use Hosting Viewer for read-only inventory (`firebase.projects.get`, `firebasehosting.sites.get/list`, project get/list). Existing browser login is not a CLI login. | No resource creation; interactive credential handling is a separate step. Inventory sites, domains, live version and channels before selecting anything. No new IAM grant is requested now. |
+| 2 — conditional one-time setup | Only if confirmed needed: add Firebase to this exact project. Required: `firebase.projects.update`, project get, `serviceusage.services.enable/get`; user handles any Firebase Terms. Then inspect default site; create one named site only if needed, using Hosting Admin's site-create capability. | Project-wide APIs/managed identities/key/configuration; not fully reversible. Shared existing billing/IAM. Site creation reserves default domains; no DNS or live content deployment. No Analytics, database, Auth application, SDK or workflow setup. |
+| 3 — local preparation | Resolve only the verified `hosting.site`, use current pinTag-capable CLI, locked frontend build and publication checks; prepare allowlisted backend context from reviewed source. | Local artifacts only. No remote permission required until submission; keep private files outside public root. |
+| 4 — build / private new service | Build submitter needs build-create/read, source-upload and `iam.serviceAccounts.actAs` on the existing builder; reuse its scoped registry-write, source-read and log-write grants. Deployer needs Run create/update/get, operations get, registry download and actAs on the existing runtime identity. | New image/source/log storage and compute charges; new **authenticated** service first. No change to old staging, runtime project roles, billing linkage or shared APIs is proposed. Confirm service name unused first. |
+| 5 — public preview deployment | Service-only `run.services.getIamPolicy/setIamPolicy` to grant `allUsers` `roles/run.invoker`; Hosting Admin for channel/version/release writes. Pinning also needs Run service get/update for revision tags; Hosting-only access is insufficient. | New service becomes anonymously invokable, including direct URLs; Hosting creates preview content/release and backend tag. Separate explicit exposure authorization required. |
+| 6 — verify / manually withdraw | Read service/revision/IAM/log/usage state; Hosting Admin for channel deletion and service policy set/get to remove public invoker. Reuse existing monitoring access. | Withdrawing public access ends anonymous calculations; retained images, versions and storage can still cost money. Service deletion/storage cleanup requires its own reviewed scope. |
+
+Hosting uses predefined product roles; custom roles cannot currently control its
+resources. No broad new grants are implied by the operation list.
+[Hosting roles](https://docs.cloud.google.com/iam/docs/roles-permissions/firebasehosting),
+[Hosting access restriction](https://firebase.google.com/docs/projects/iam/permissions),
+[Run deployment permissions](https://docs.cloud.google.com/run/docs/reference/iam/roles).
+
+### Concrete authorization checklist for a future step
+
+- **Inspection/tool access first:** current Firebase CLI login and read-only inventory;
+  exact project above is verified, site/domains/live version/channel collisions remain
+  unresolved. Do not initialize Firebase merely to discover them.
+- **Separate one-time setup approval, if needed:** add Firebase with its documented
+  project-wide effects and user-handled terms; then verify/reuse default site, or
+  separately approve the named calculator-only site. This grants no deployment authority.
+- **Build/deploy/public approval later:** channel `ev-public-review`, `--expires=1d`,
+  exact verified site, calculator at preview root; separate new service
+  `valuation-api-public-preview` in us-central1 with the resource/deadline settings
+  above and existing runtime identity. Preserve authenticated `valuation-api-staging`.
+- **Source/image:** build runtime changes from reviewed commit
+  `14ba781b1d9e55dc596dcf7c79b8cccafd56ca2c` (or explicitly reviewed successor including
+  resolved site). Record exact new image digest; **none exists from this inspection**.
+  The current staging digest/source `ebf6139` lacks new HTTP protections.
+- **Exposure/cost acceptance:** anonymous Hosting URL **and direct backend invocation**;
+  no login/bot/global-quota promise. Build, registry/source/Hosting storage, Run
+  CPU/memory/requests, transfer and logs can charge. Existing $10 alerts are not a
+  cap; no optional spend-cap budget was configured or verified. Name a human to
+  monitor the one-day window and withdraw early if needed.
+- **Before sharing:** verify new digest/revision/limits/IAM, synthetic CLI equality,
+  validation/errors/oversize, same-origin routing, no-store/CSP, cross-site handling,
+  no private bytes, desktop browser journey; confirm old staging denies anonymous
+  access and recorded live Hosting release/custom domains remain unchanged.
+- **Withdrawal:** at the recorded one-day deadline, or earlier, remove the **new
+  service's** allUsers binding and delete only the verified preview channel using
+  the commands below. Check channel unavailable and default/tagged backend URLs
+  deny anonymous health/catalog/run. **Hosting expiry alone does not disable the
+  backend.** If backend denial cannot be verified, investigate remaining effective
+  invoker grants and withdraw the new service under explicit shutdown authority;
+  never modify old staging. No scheduler or automatic shutdown was created.
+
+Next user action: authorize only the current CLI authentication/read-only inventory
+step, or provide its resulting project/site/domain/channel inventory. If that confirms
+missing Firebase setup, request the distinct one-time setup scope above before any
+Continue/Enable action. Public build/deployment remains a later authorization.
+
+Documentation checks: all nine local links/anchors in this document resolve;
+whitespace and the staged one-document scope were reviewed. Configuration, code,
+templates, financial/history/source approvals and frozen artifacts are unchanged.
+No application tests or financial checks were rerun.
+
 ## Implemented attack surface, inspected in code
 
 | Surface | Already enforced / newly verified locally | Residual risk |
@@ -117,11 +242,11 @@ Hosting headers for dynamic content. Verify headers through the actual CDN, incl
 
 ## Future sequence — proposal only, do not execute in this checkpoint
 
-1. Obtain approval for one-day anonymous exposure of the **new service only**, direct
-   URL access, bounded settings above, monitored cost/availability risk and shutdown
-   authority. Identify an already existing Hosting site in this project read-only
-   using an authenticated current Firebase CLI. If Firebase is not enabled or no
-   suitable site exists, **stop** for separate scope; do not initialize/create one.
+1. Complete the separately authorized inspection and, only if required, one-time
+   Firebase setup described above. Then obtain approval for one-day anonymous exposure
+   of the **new service only**, direct URL access, bounded settings above, monitored
+   cost/availability risk and shutdown authority. If no verified suitable site exists,
+   **stop** for the named setup/site scope; do not initialize/create one implicitly.
    Review existing live channel/config/domains and record its version without changing it.
    Check the proposed new Cloud Run name is unused; if it exists, stop rather than
    overwrite or silently reuse it. No authenticated remote absence check was performed here.
@@ -204,7 +329,7 @@ firebase hosting:clone "${VERIFIED_EXISTING_SITE_ID}:@${REVIEWED_PRIOR_VERSION_I
   "${VERIFIED_EXISTING_SITE_ID}:ev-public-review" --project=kartikchaturvedi-website
 ```
 
-## Local verification and decisions remaining
+## Prior preparation verification and decisions remaining
 
 [Narrow keyboard record](narrow-keyboard-review.md) completes the earlier outstanding
 desktop-viewport check, with observed confirmation fixes and actual screenshots.
