@@ -27,7 +27,7 @@ class FirebasePreviewTests(unittest.TestCase):
     def test_api_rewrite_precedes_spa_and_pins_only_future_service(self):
         hosting = self.config['hosting']
         self.assertEqual(hosting['public'], 'frontend/dist')
-        self.assertEqual(hosting['site'], 'UNRESOLVED_EXISTING_HOSTING_SITE')
+        self.assertEqual(hosting['site'], 'kartikchaturvedi-website')
         self.assertEqual(hosting['rewrites'], [
             {'source': '/api{,/**}', 'run': {'serviceId': 'valuation-api-public-preview', 'region': 'us-central1', 'pinTag': True}},
             {'source': '**', 'destination': '/index.html'}])
@@ -35,8 +35,11 @@ class FirebasePreviewTests(unittest.TestCase):
         self.assertNotIn('valuation-api-staging', json.dumps(self.config))
         self.assertEqual(hosting['headers'][-1], {'source': '/api{,/**}', 'headers': [{'key': 'Cache-Control', 'value': 'no-store'}]})
 
-    def test_artifact_passes_but_unresolved_deployment_fails_closed(self):
+    def test_artifact_and_resolved_site_pass_but_unresolved_site_fails_closed(self):
         self.assertEqual(len(check(self.root)), 4)
+        self.assertEqual(len(check(self.root, for_deploy=True)), 4)
+        self.config['hosting']['site'] = 'UNRESOLVED_EXISTING_HOSTING_SITE'
+        (self.root / 'firebase.preview.json').write_text(json.dumps(self.config))
         with self.assertRaisesRegex(ValueError, 'unresolved'):
             check(self.root, for_deploy=True)
 

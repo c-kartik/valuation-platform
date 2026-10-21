@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "UNRESOLVED_EXISTING_HOSTING_SITE",
+    "site": "kartikchaturvedi-website",
     "public": "frontend/dist",
     "ignore": ["**/.*", "**/node_modules/**", "**/*.map", "**/*.json"],
     "predeploy": ["python3 scripts/check_firebase_preview.py --for-deploy"],

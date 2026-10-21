@@ -1,5 +1,11 @@
 # Authenticated Cloud Run staging — first remote checkpoint
 
+The subsequent [public-preview attempt](public-preview-preparation.md#deployment-attempt-and-withdrawal--2026-10-21)
+built a separate image/service, then withdrew public access after Firebase revision-tag
+naming failed. This original private service's full configuration/IAM and revision
+were verified unchanged before/after. No hosted-preview PASS or new arithmetic/lifecycle
+rerun is implied; this document preserves the original staging measurements.
+
 Subsequent [compiled-browser integration review](cloud-frontend-acceptance.md) tested
 this same revision through an authenticated localhost proxy without redeployment.
 The measurements below remain this original deployment's record.

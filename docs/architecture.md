@@ -1,18 +1,32 @@
 # Architecture
 
-## Latest application preparation — bounded anonymous preview
+## Latest deployment attempt — preview pinning blocked and withdrawn
 
-[Public-preview preparation](public-preview-preparation.md) adds no deployed service.
+The [attempt/withdrawal record](public-preview-preparation.md#deployment-attempt-and-withdrawal--2026-10-21)
+binds a new allowlisted remote image to source 02888f4 and the isolated service
+valuation-api-public-preview. Resource/worker limits and financial formulas are
+unchanged. Firebase enrollment/default site are verified; the config selects that
+single site, API before SPA and revision pinning. Official CLI 15.34.0 generated a
+19-character tag which, combined with the 28-character service name, violates Run's
+46-character limit. No pin/release was published. The brief service-only allUsers
+grant and empty preview channel were removed; anonymous backend calls now return 403.
+No hosted-browser acceptance follows from the 95 passing local tests. Original staging
+configuration/IAM are unchanged. A shorter isolated name and fresh window need separate
+scope; no unsupported CLI patch, unpinned fallback or automatic deployment is added.
+
+## Earlier application preparation — bounded anonymous preview
+
+The earlier [public-preview preparation](public-preview-preparation.md) added no deployed service.
 The local API response/error boundary now sets no-store/nosniff uniformly and rejects
 known `Sec-Fetch-Site: cross-site` traffic before reading bodies. Headerless/scripted
 callers remain possible; this is neither authentication nor a distributed quota.
 Existing parser, financial/worker budgets and JSON schemas are unchanged.
 
 [Firebase configuration](../firebase.preview.json) points only at compiled dist,
-an unresolved existing site and a separately proposed new public API name, with API
+the now-verified default site and the isolated API name, with API
 rewrite before SPA fallback and explicit revision pinning. A small publication guard
 rejects additional files/symlinks, private markers and unresolved deployment identity.
-No new site/target, cloud resource or automatic deploy is configured remotely.
+At that preparation checkpoint no site/target, cloud resource or automatic deploy was configured remotely.
 The [keyboard fix](narrow-keyboard-review.md) uses native modal confirmations with
 safe initial focus, two-action Tab cycle, Escape and trigger restoration; financial
 inputs and formulas are untouched. Access/cost acceptance and actual hosted routing

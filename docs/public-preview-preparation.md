@@ -1,5 +1,11 @@
 # Anonymous EV preview — local preparation and abuse review
 
+> **Current checkpoint, 2026-10-21: deployment BLOCKED; anonymous access withdrawn.**
+> Firebase/site identity is verified. The attempt failed on the combined service/tag
+> name limit; no Hosting release or hosted-browser acceptance occurred.
+> See the [attempt and withdrawal record](#deployment-attempt-and-withdrawal--2026-10-21).
+> Earlier preparation/inspection statements below retain their original scope.
+
 Reviewed 2026-10-20 (Asia/Dubai), starting clean `main` at
 `70a9b4fea6a5e1046ae1eb4c742a51b90c35df6a`, two ahead of `origin/main`.
 **No deployment/public access is authorized or performed.** Phase 1 remains
@@ -351,3 +357,143 @@ separately reviewed Cloud Run spend-cap budget is wanted, and who will monitor/w
 the trial; **(4)** authorize the reviewed new build/deployment and its actual remote
 routing/security checks. Stronger global abuse protection remains optional only if
 these bounded-preview risks are accepted; it is required for a stronger service promise.
+
+
+## Deployment attempt and withdrawal — 2026-10-21
+
+**BLOCKED, safely withdrawn; not a hosted-preview PASS.** Started clean at
+02888f4454f47247946b7ddd57960073cbfdfe85, four ahead of origin/main.
+The user separately authorized Firebase enrollment, then this bounded public trial,
+ordinary scoped charges and a reviewed commit/push. Phase 1 remains paused.
+
+### Preflight and exact artifacts
+
+Firebase project kartikchaturvedi-website / 378340095652 is ACTIVE. The preceding
+authorized enrollment created its default site and domains
+kartikchaturvedi-website.web.app / kartikchaturvedi-website.firebaseapp.com.
+Analytics details GET returned 404 (unlinked). Before deployment: live channel only,
+no releases/preview channels/custom domains; the new backend name returned 404.
+The config now names this verified single site; no extra site or target was added.
+
+GitHub workflows, webhooks and deployments were empty, as were regional/global Cloud
+Build triggers. The signed-in GitHub account settings showed **No installed GitHub Apps**.
+The OAuth CLI could not list installations (403); no broader token was requested. Reused builder grants: repository Writer, source-bucket Viewer,
+project Logs Writer. Runtime identity still has no project roles. No new project
+grants, keys, API enablement, billing setting or automatic workflow in this attempt.
+
+Official Firebase CLI **15.34.0** was installed temporarily outside the repository,
+using existing login; system CLI 11.3.0 was not used for pinning. Current docs and
+installed code confirm run.pinTag selects the newest revision at preview deployment.
+Used --no-authorized-domains to skip optional Firebase Auth domain synchronization.
+No Analytics, Auth application, local Docker or other infrastructure was added.
+[Official pinning behavior](https://firebase.google.com/docs/hosting/cloud-run).
+
+| Binding | Actual value |
+| --- | --- |
+| Clean API/frontend source | 02888f4454f47247946b7ddd57960073cbfdfe85 |
+| API context | 89 allowlisted files: generated private bundle plus four recipe inputs; no full checkout/corpus, credentials or frontend |
+| Context SHA256 | 5a16ecc3e31b8e675b3fe69cbdef4d53c9eb7e493542aa890328a382efe53125, canonical sorted path/hash JSON |
+| Source archive | 834345 bytes; SHA256 50bf7506937408766e357878588f269da94abdf3b7dfa17c80e7637cbcc38d78; uploaded size/MD5 verified, object generation pinned |
+| Remote build | 3f749624-8bfd-4819-85de-c09fe176da6d, us-central1, SUCCESS; existing builder, logging-only, 900s ceiling |
+| Build interval, October 21 | 08:36:20.244530175–08:36:59.739907 UTC / 12:36:20.244530175–12:36:59.739907 Dubai; build duration, not request/cold-start latency |
+| Image | us-central1-docker.pkg.dev/kartikchaturvedi-website/valuation-staging/valuation-api@sha256:28cf0f0b8161ef39d0ccd169aee56621dd1544c622750c8357f31cc27de9a471 |
+| New service / revision | valuation-api-public-preview / valuation-api-public-preview-00001-hdj |
+| Direct URLs, now anonymous 403 | <https://valuation-api-public-preview-378340095652.us-central1.run.app> / <https://valuation-api-public-preview-ailnp3irra-uc.a.run.app> |
+| Created / ready, October 21 | 08:38:24.148166 / 08:38:38.638788 UTC; 12:38:24.148166 / 12:38:38.638788 Dubai |
+| Static artifact | Four files / 291006 bytes; same JS index-Dm91Ibhh.js and CSS index-BUsYcr5G.css hashes as the [keyboard record](narrow-keyboard-review.md); not released |
+
+Remote linux/amd64 Docker build, recipe dependency/manifest checks and image-inspection
+step succeeded. Prior container lifecycle probes remain attributed to the
+[original staging record](cloud-staging-deployment.md), not rerun. Initial REST create
+body was rejected for including service.name; corrected before creation. Anonymous
+health was initially 403. Firebase's user token was not accepted for private
+application invocation (401); no authenticated application-success claim is made.
+
+Verified new configuration: 1 vCPU/1GiB, service/revision min 0/max 1, concurrency 1,
+gen2, request-based CPU, startup boost off, HTTP 50s, existing runtime identity;
+one Uvicorn worker and unchanged request/parser/result/35s-child/CPU/cleanup/logging
+limits. Only this service briefly received allUsers Run Invoker; anonymous health
+then returned ready/200. No remote calculations or assumption/body logging.
+
+### Exact deployment blocker and completed withdrawal
+
+The command selected only ev-public-review, explicit project/site/config, --expires=1d,
+API-before-SPA routing and pinTag:true. It created an empty channel/unreleased version,
+then Run rejected its tag update. Cloud Audit Logs recorded the combined-name error:
+service valuation-api-public-preview (28 characters) + CLI tag fh-2bf2e8b7a6e0faa6
+(19) = **47, exceeding 46**. No pin or Hosting release was published. No CLI patch,
+shortened tag, unpinned fallback, service rename, redeployment or second build.
+
+Removed the new service's allUsers binding and deleted the empty preview channel.
+IAM propagation was not immediate: an early health probe still returned 200 despite
+the empty policy. Later **both direct aliases returned 403**; withdrawal verified
+**2026-10-21 08:44:31.114 UTC / 12:44:31.114 Asia/Dubai**. Private staging's complete
+service JSON/IAM policy matched preflight exactly: revision valuation-api-staging-00001-2rk,
+same image/configuration, no public grants, anonymous health 403.
+Live Hosting still has zero releases; no preview channels or custom domains remain.
+
+Generated URL: <https://kartikchaturvedi-website--ev-public-review-55e9alzx.web.app>,
+**withdrawn, never a working calculator preview**. Actual channel creation/expiry:
+October 21 08:40:58.031730007 / October 22 08:40:58.031730007 UTC
+(12:40:58.031730007 Dubai each respective day); deletion superseded expiry.
+Public-grant request began October 21 08:40:18.819 UTC and completed 08:40:20.383
+(12:40:18.819–12:40:20.383 Dubai). Conservative manual deadline:
+**October 22, 2026, 08:40:18.819 UTC / 12:40:18.819 Dubai**, earlier than Hosting expiry.
+Early withdrawal satisfied it. Recording a deadline did not enforce it; no automation
+was scheduled. Revocation does not cancel in-flight requests. Channel expiry alone
+would not disable the backend.
+
+### Verification, retained costs and next decision
+
+**95 focused local tests passed: 56 frontend + 39 API/catalog/lifecycle/preview/
+launcher/publication/preservation**, plus locked install (zero reported vulnerabilities),
+TypeScript/Vite build and the resolved-site publication guard. An explicit unresolved
+fixture still rejects deployment. No formulas/schemas/financial resources changed.
+
+**Not performed:** hosted browser journey, full hosted API/CLI comparisons, company-bound
+synthetic remote calculations, malformed/oversized probes, CDN/SPA/API-error/cache/CSP,
+responsive/keyboard or console acceptance. The blocker occurred before these gates.
+Earlier checks are not newly executed evidence. Sparse health probes establish access
+only; no measured application request timings or cold-start claim.
+
+Retained resources/costs: authenticated new service/revision/image above; source
+gs://kartikchaturvedi-website-valuation-build-uscentral1/public-preview/source-02888f4454f4-1792571775732.tar.gz
+(generation 1792571778921103); unreleased Hosting version
+sites/kartikchaturvedi-website/versions/2bf2e8b7a6e0faa6, status CREATED, empty config.
+No shared resource was deleted. Build, invocation, registry/source/Hosting storage,
+transfer/logging and soft-delete retention can charge. Existing $10 alerts are not a
+hard cap. No bot resistance, fair-availability, peak-memory or global-quota guarantee.
+
+Next decision: authorize a **shorter isolated backend name**, e.g. valuation-api-preview
+(21 characters), compatible with the CLI's 19-character tag, and separately scope
+cleanup of the unused attempted service/version. Preserve private staging. The reviewed
+digest can be reused if still appropriate; documentation push must not rebuild.
+Recheck collisions/settings/site/live state, authorize a fresh one-day window, and
+complete all hosted acceptance gates. No unsupported CLI modification is recommended.
+
+Exact withdrawal commands for a future authorized reopening of these same resources,
+using authenticated Cloud Shell gcloud and a local Firebase CLI:
+
+    gcloud run services remove-iam-policy-binding valuation-api-public-preview \
+      --project=kartikchaturvedi-website --region=us-central1 \
+      --member=allUsers --role=roles/run.invoker
+    curl --silent --output /dev/null --write-out '%{http_code}\n' \
+      https://valuation-api-public-preview-378340095652.us-central1.run.app/health
+    firebase hosting:channel:delete ev-public-review --site=kartikchaturvedi-website \
+      --project=kartikchaturvedi-website --config=firebase.preview.json
+
+Names/routes were verified; the binding/channel are already removed. Allow IAM
+propagation and confirm direct/tagged URLs deny anonymous access and channel absence.
+Do not delete another channel/shared resource. Netlify, DNS, live Hosting content and
+portfolio remain unchanged. No forecasts/defaults were saved; all nine unset templates,
+historical/frozen/source approvals, formulas and Phase 1 pause are preserved.
+Temporary scripts/context/tooling/logs are removed after this checkpoint; normal CLI
+credentials remain outside the repository. No hosted-preview PASS is implied.
+
+Final checkpoint checks: **451 changed-document local links/anchors** resolved;
+whitespace, exact staged scope and credential patterns were checked. All nine company
+templates are byte-identical to the starting commit (six with 37 unset numerical
+inputs, three with 111); protected financial/history/source files are unchanged.
+The narrow site/config test adjustment is the only test change. No application fix
+or repeat of the full historical/valuation suites; prior four local reviewed commits
+plus this checkpoint are intended for the normal push after the integration checks.

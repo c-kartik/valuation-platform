@@ -1,6 +1,26 @@
 # Project Status
 
-## Current — anonymous preview prepared locally; deployment blocked
+## Current — public-preview attempt blocked; access withdrawn
+
+The [deployment/withdrawal record](public-preview-preparation.md#deployment-attempt-and-withdrawal--2026-10-21)
+records the authorized one-day attempt from clean source 02888f4. Firebase enrollment
+and default site are verified. One remote build succeeded; the isolated backend
+was deployed, briefly made public, then returned to authenticated access. Firebase
+CLI revision pinning failed because its generated tag plus the required service name
+exceeds Cloud Run's 46-character combined limit. No Hosting release or hosted-browser
+acceptance occurred. The empty preview channel was removed; both backend URLs now
+return anonymous 403. Original private staging JSON/IAM/revision are unchanged.
+
+95 focused local tests, locked build and publication guard passed. No new hosted
+arithmetic/browser PASS is claimed. Source archive, new authenticated image/service
+and unreleased Hosting version remain and can cost money. The original October 22
+12:40:18.819 Dubai withdrawal deadline was satisfied early on October 21 at 12:44:31.114.
+Next separately authorize a shorter isolated name, a fresh window and all hosted
+acceptance checks; no second build is needed merely for documentation. Netlify/DNS,
+live Hosting releases, portfolio, nine unset templates, financial approvals/formulas
+and Phase 1 pause remain unchanged. No automated deployment trigger was introduced.
+
+## Earlier — anonymous preview prepared locally; deployment blocked
 
 The [public-preview assessment](public-preview-preparation.md) records enforced
 request/parser/result budgets, worker deadlines/cleanup and residual anonymous
