@@ -17,6 +17,10 @@ coverage/class/award declarations expand on errors; omissions stay null and
 prominent. UI aggregates three roles; richer existing CLI/API cases remain available.
 No financial convention, source binding, template or hosted runtime changes.
 
+The [local equity acceptance review](equity-workflow-acceptance.md) adds only
+translation/focus for existing Python diagnostics and exact isolated-Decimal
+share-unit display. No validation or bridge arithmetic moves into the frontend.
+
 ## Local update — compact investor presentation
 
 The [calculator](local-calculator-ui.md#quick-entry-and-review-contract) groups eight

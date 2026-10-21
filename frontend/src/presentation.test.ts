@@ -44,3 +44,8 @@ it('preserves financial unknowns while removing a known internal reference from 
  expect(readableLimitation(original)).toContain('unbounded omissions');expect(readableLimitation(original)).toContain('Cash/debt/share adjustments are excluded');
  expect(readableLimitation('A supplied limitation')).toBe('A supplied limitation');expect(original).toContain('intake');
 });
+
+it('keeps a positive fractional share denominator exact in millions and isolates Decimal context',async()=>{
+ const {shareMillions}=await import('./presentation');const old={precision:Decimal.precision,rounding:Decimal.rounding};
+ try{Decimal.set({precision:2,rounding:Decimal.ROUND_UP});expect(shareMillions('0.1')).toBe('0.0000001');expect(shareMillions('20000000')).toBe('20');expect(shareMillions('1234567890.123456789')).toBe('1,234.567890123456789');expect(Decimal.precision).toBe(2);}finally{Decimal.set(old);}
+});

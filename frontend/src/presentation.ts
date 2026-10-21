@@ -42,3 +42,9 @@ export function readableLimitation(line: string): string {
     .replace('No bridge/share intake;', 'Cash/debt/share adjustments are excluded;')
     .replace('Revenue-only retained historical binding;', 'Historical data establishes revenue only;');
 }
+
+/** Exact share-unit display; a positive denominator must never round to zero. */
+export function shareMillions(raw:string):string {
+  const [whole,fraction]=new DisplayDecimal(raw).div('1000000').toFixed().split('.');
+  return whole.replace(/\B(?=(\d{3})+(?!\d))/g,',')+(fraction===undefined?'':'.'+fraction);
+}

@@ -75,3 +75,27 @@ export function buildEquityRequest(draft:Draft,e:EquityDraft):EquityDoc {
  const classId=`${e.shareBasis}: ${e.classes.trim()}`;
  return {...doc,limitations:[...doc.limitations,'The optional equity bridge is a separate manual, unverified extension. EV-only template bridge exclusions describe historical/source scope; they do not select or approve these manual assets, claims or shares.'],schema_version:'investor-case-v2',calculation_scope:'EQUITY_PER_SHARE',bridge:{components,observations,coverage,shares:{company_cik:cik,shares:millionsToUnits(e.shares),observation_date:e.date,class_id:classId,equivalence_convention:e.equivalence,award_policy:'sbc_expensed_no_duplicate_service_charge_v1',award_policy_references:[`manual:awards:${e.awards}: ${awards[e.awards as keyof typeof awards]}`],source_references:['unverified:user-entry:shares'],decision_references:[`manual:shares:${e.shareBasis}`],precision:'INF',rationale:`User-selected ${e.shareBasis==='issued'?'issued':'basic-equivalent'} population: ${e.classes.trim()}. ${awards[e.awards as keyof typeof awards]}. SBC service cost remains in margins once; no automatic dilution or proceeds.`,unit:'shares',scale:1},input_basis:doc.input_basis,valuation_class_id:classId,unresolved_requirements:[],convention_version:'manual-equity-bridge-v1'}};
 }
+
+/** Translate existing server rejections; financial domains stay in Python. */
+export function equityDiagnostics(details:string[],values:EquityDraft):Errors {
+ const mapped:Errors={};
+ const references=['overlapAssets','alternativeAssets','overlapFinancing','alternativeFinancing','overlapClaims','alternativeClaims'] as const;
+ for(const line of details){
+  const colon=line.indexOf(':');const path=colon<0?'':line.slice(0,colon),message=colon<0?line:line.slice(colon+1).trim();
+  let key='issues',text=message;
+  if(/overlap|alternative|Repeated reference/i.test(message)){
+   const index=/bridge.components\[(\d+)\]/.exec(path)?.[1];
+   const relevant=index===undefined?references:references.filter(name=>name.endsWith(['Assets','Financing','Claims'][Number(index)]??''));
+   key=relevant.find(name=>values[name].trim())??'components';
+   text='Review the declared component references. Selected populations and forecast settlements must not overlap; alternatives cannot also be selected. '+message;
+  }else if(path.startsWith('bridge.shares.observation_date'))key='date';
+  else if(path.startsWith('bridge.shares.shares')||(path==='bridge.shares'&&message==='Amount outside permitted sign domain')){
+   key='shares';if(message==='Amount outside permitted sign domain')text='Enter shares greater than zero, in millions of shares.';
+  }else if(path.startsWith('bridge.components[')){
+   const index=/\[(\d+)\]/.exec(path)?.[1];key=['assets','financing','claims'][Number(index)]??'issues';
+   if(message==='Amount outside permitted sign domain')text='Enter zero or a positive amount, in USD millions. The component role determines its sign.';
+  }
+  mapped[key]=text;
+ }
+ return mapped;
+}

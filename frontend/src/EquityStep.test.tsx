@@ -59,3 +59,16 @@ it('expands advanced declarations for focused missing class errors and blocks in
  await waitFor(()=>expect(document.activeElement).toBe(screen.getByLabelText('Class treatment')));expect(screen.getByText('Coverage, classes & awards').closest('details')?.open).toBe(true);expect(load).not.toHaveBeenCalled();
  set('Class treatment','single_common_class');set('Existing awards','shares');run();await waitFor(()=>expect(document.activeElement).toBe(screen.getByLabelText('Share population')));expect(load).not.toHaveBeenCalled();
 });
+
+it('does not display a valid positive fractional share denominator as zero millions',async()=>{
+ const b=ev(),fractional=reply(b);fractional.stage_c!.valuation_shares='0.1';fractional.stage_c!.value_per_share='665.770603520';
+ render(<EquityStep draft={draft()} evResult={b} operatingStale={false} load={vi.fn(async()=>fractional) as unknown as typeof request}/>);fill();run();await screen.findByText('665.77');
+ expect(screen.getByText('0.0000001')).toBeTruthy();expect(screen.queryByText('0.000000')).toBeNull();
+});
+it('opens a collapsed reference editor and associates an engine overlap error with its declaration',async()=>{
+ const load=vi.fn(async()=>{throw new ApiError('invalid_case','Invalid',['bridge: Declared numeric population/forecast overlap']);});
+ render(<EquityStep draft={draft()} evResult={ev()} operatingStale={false} load={load as unknown as typeof request}/>);fill();
+ fireEvent.click(screen.getByText('Component details & overlap references'));set('Assets overlap references','financing');fireEvent.click(screen.getByText('Component details & overlap references'));run();
+ await waitFor(()=>expect(document.activeElement).toBe(screen.getByLabelText('Assets overlap references')));expect(screen.getByText('Component details & overlap references').closest('details')?.open).toBe(true);
+ expect(screen.getByLabelText('Assets overlap references').getAttribute('aria-invalid')).toBe('true');expect(screen.getByLabelText('Assets overlap references').getAttribute('aria-describedby')).toBe('equity.overlapAssets-error');
+});

@@ -264,6 +264,11 @@ whole populated draft, including its optional bridge.
 
 ## Optional equity verification (local)
 
+The subsequent [three-anchor investor acceptance review](equity-workflow-acceptance.md)
+records actual browser/CLI comparisons, independent arithmetic, responsive/error
+recovery checks and three presentation fixes. The checks below describe the
+earlier implementation checkpoint, not a newly rerun review.
+
 **78 frontend tests** and **101 distinct focused Python checks** passed across the
 focused run and targeted corrected-fixture rerun. Python scope covers intake,
 legacy EV/equity/CLI-summary, bridge, API/catalog/public boundaries and preparation

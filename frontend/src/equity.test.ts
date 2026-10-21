@@ -34,3 +34,13 @@ it('matches complete financial components against equivalent temporary CLI equit
  const root=resolve('..');const out=execFileSync(resolve(root,'.venv/bin/python'),['-c',program],{cwd:root,input:JSON.stringify(req),encoding:'utf8',env:{...process.env,PYTHONPATH:'src',PYTHONDONTWRITEBYTECODE:'1'}});
  expect(out).toContain('Complete Stage B/C financial components match');expect(JSON.stringify(req)).toBe(before);
 });
+
+it('translates existing numerical and overlap diagnostics without adding financial validation',async()=>{
+ const {equityDiagnostics}=await import('./equity');const values=completeBridge();
+ expect(equityDiagnostics(['bridge.shares: Amount outside permitted sign domain'],values)).toEqual({shares:'Enter shares greater than zero, in millions of shares.'});
+ expect(equityDiagnostics(['bridge.components[1]: Amount outside permitted sign domain'],values).financing).toContain('USD millions');
+ const overlap=equityDiagnostics(['bridge: Declared numeric population/forecast overlap'],{...values,alternativeFinancing:'assets'});expect(overlap).toHaveProperty('alternativeFinancing');
+ expect(equityDiagnostics(['bridge.components[0]: Repeated reference'],{...values,overlapAssets:'financing,financing'})).toHaveProperty('overlapAssets');
+ expect(equityDiagnostics(['bridge: Declared numeric population/forecast overlap'],values)).toHaveProperty('components');
+ expect(equityDiagnostics(['bridge: An unknown engine diagnostic'],values)).toEqual({issues:'An unknown engine diagnostic'});
+});

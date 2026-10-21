@@ -2,9 +2,9 @@ import {useEffect,useRef,useState} from 'react';
 import {request,ApiError} from './api';
 import {InputErrors,display} from './model';
 import type {Draft,Result,Errors} from './model';
-import {awards,coverageOptions,emptyEquity,equityErrors,buildEquityRequest} from './equity';
+import {awards,coverageOptions,emptyEquity,equityErrors,buildEquityRequest,equityDiagnostics} from './equity';
 import type {EquityDraft} from './equity';
-import {readableMoney} from './presentation';
+import {readableMoney,shareMillions} from './presentation';
 
 type Props={draft:Draft;evResult:Result;operatingStale:boolean;load?:typeof request};
 export function EquityStep({draft,evResult,operatingStale,load=request}:Props){
@@ -18,10 +18,11 @@ export function EquityStep({draft,evResult,operatingStale,load=request}:Props){
   sequence.current++;active.current?.abort();setBusy(false);setStale(true);setFailure('');setServerErrors({});setValues(old=>({...old,[key]:value}));
  }
  const errors=submitted?{...serverErrors,...equityErrors(values,draft.doc.anchor.annual_end)}:{};
- const fieldLabels:Record<string,string>={assets:'Eligible assets',financing:'Financing',claims:'Other claims',shares:'Valuation shares',date:'Share date',claimsTreatment:'Other-claims assessment',assetsCoverage:'Eligible-asset coverage',financingCoverage:'Financing coverage',claimsCoverage:'Other-claims coverage',shareBasis:'Share population',classes:'Included classes',equivalence:'Class treatment',awards:'Existing awards',nonOverlap:'Date, eligibility & non-overlap',issues:'Bridge declarations'};
+ const fieldLabels:Record<string,string>={assets:'Eligible assets',financing:'Financing',claims:'Other claims',shares:'Valuation shares',date:'Share date',claimsTreatment:'Other-claims assessment',assetsCoverage:'Eligible-asset coverage',financingCoverage:'Financing coverage',claimsCoverage:'Other-claims coverage',shareBasis:'Share population',classes:'Included classes',equivalence:'Class treatment',awards:'Existing awards',nonOverlap:'Date, eligibility & non-overlap',issues:'Bridge declarations',components:'Component references',overlapAssets:'Assets overlap references',alternativeAssets:'Assets alternative references',overlapFinancing:'Financing overlap references',alternativeFinancing:'Financing alternative references',overlapClaims:'Claims overlap references',alternativeClaims:'Claims alternative references'};
  const advancedFields=['assetsCoverage','financingCoverage','claimsCoverage','shareBasis','classes','equivalence','awards','nonOverlap'];
  function focusError(key:string){
   setOpen(true);if(advancedFields.includes(key))setAdvanced(true);
+  if(key==='components'||/^(overlap|alternative)/.test(key))setComponentsOpen(true);
   requestAnimationFrame(()=>{const target=document.getElementById(`equity.${key}`)??document.getElementById('equity.issues');target?.focus();});
  }
  async function calculate(){
@@ -41,15 +42,7 @@ export function EquityStep({draft,evResult,operatingStale,load=request}:Props){
    if(token!==sequence.current)return;
    if(error instanceof InputErrors){setServerErrors(error.fields);focusError(Object.keys(error.fields)[0]);}
    else if(error instanceof ApiError&&error.code==='invalid_case'){
-    const mapped:Errors={};
-    for(const line of error.details){
-     const [path,...message]=line.split(':');let key='issues';
-     if(path.startsWith('bridge.shares.observation_date'))key='date';
-     else if(path==='bridge.shares'&&line.includes('sign domain'))key='shares';
-     else if(path.startsWith('bridge.shares.shares'))key='shares';
-     else if(path.startsWith('bridge.components[')){const i=/\[(\d+)\]/.exec(path)?.[1];key=['assets','financing','claims'][Number(i)]??'issues';}
-     mapped[key]=message.join(':').trim()||line;
-    }
+    const mapped=equityDiagnostics(error.details,values);
     setServerErrors(mapped);focusError(Object.keys(mapped)[0]);
    }else setFailure(error instanceof Error?error.message:'Request failed. Entries are preserved; retry explicitly.');
   }finally{if(token===sequence.current)setBusy(false);}
@@ -84,9 +77,9 @@ export function EquityStep({draft,evResult,operatingStale,load=request}:Props){
     <label className="check-row"><input id="equity.nonOverlap" type="checkbox" checked={values.nonOverlap} onChange={e=>edit('nonOverlap',e.target.checked)} aria-invalid={Boolean(errors.nonOverlap)} aria-describedby={errors.nonOverlap?'equity.nonOverlap-error':undefined}/>I declare these amounts are dated {draft.doc.anchor.annual_end}, assets exclude operating reserves/value, and selected populations do not duplicate each other or forecast settlements; finance leases count once.</label>
     {errors.nonOverlap&&<p className="field-error" id="equity.nonOverlap-error">{errors.nonOverlap}</p>}
    </details>
-   <details open={componentsOpen} onToggle={e=>setComponentsOpen(e.currentTarget.open)}><summary>Component details &amp; overlap references</summary>
+   <details open={componentsOpen} onToggle={e=>setComponentsOpen(e.currentTarget.open)}><summary id="equity.components">Component details &amp; overlap references</summary>
     <p className="hint">Three manual aggregate components: assets (+), financing (−), claims (− when entered). No reported balances are supplied. Optional comma-separated component references declare overlap or alternative measurements; selected overlapping operands reject. Detailed multi-component cases remain available through the existing CLI/API.</p>
-    {(['Assets','Financing','Claims'] as const).map((name,i)=><div key={name}><b>{['assets','financing','claims'][i]}</b>{(['overlap','alternative'] as const).map(kind=>{const key=`${kind}${name}` as keyof EquityDraft;return <div className="field" key={key}><label htmlFor={`equity.${key}`}>{name} {kind} references</label><input id={`equity.${key}`} value={String(values[key])} onChange={e=>edit(key,e.target.value)}/></div>;})}</div>)}
+    {(['Assets','Financing','Claims'] as const).map((name,i)=><div key={name}><b>{['assets','financing','claims'][i]}</b>{(['overlap','alternative'] as const).map(kind=>{const key=`${kind}${name}` as keyof EquityDraft;return <div className="field" key={key}><label htmlFor={`equity.${key}`}>{name} {kind} references</label><input id={`equity.${key}`} value={String(values[key])} onChange={e=>edit(key,e.target.value)} aria-invalid={Boolean(errors[key])} aria-describedby={errors[key]?`equity.${key}-error`:undefined}/>{errors[key]&&<span className="field-error" id={`equity.${key}-error`}>{errors[key]}</span>}</div>;})}</div>)}
    </details>
    {operatingStale&&<p className="errors" role="status">Operating inputs changed. Recalculate enterprise value before calculating value per share.</p>}
    <button disabled={busy||operatingStale} onClick={()=>void calculate()}>Calculate value per share</button>
@@ -100,7 +93,7 @@ export function EquityStep({draft,evResult,operatingStale,load=request}:Props){
    <p className="hint">Unverified selected populations; not fully diluted fair value or complete claims certification.</p>
    {provisional.length>0&&<div className="notice"><b>Explicit omissions — total value is not bounded</b><ul>{provisional.map(o=><li key={o.observation_id}>{o.rationale}</li>)}</ul></div>}
    <dl className="reconciliation">{[['Enterprise value',c.stage_b.enterprise_value],['+ Eligible assets',c.eligible_assets],['− Financing obligations',c.financing_claims],['− Other claims',c.other_equity_claims],['= Equity value',c.equity_value]].map(([label,value])=><div key={label}><dt>{label} (USD)</dt><dd>{readableMoney(value)}</dd></div>)}
-    <div><dt>÷ Valuation shares (millions)</dt><dd>{display(c.valuation_shares,'1000000',6)}</dd></div>
+    <div><dt>÷ Valuation shares (millions)</dt><dd>{shareMillions(c.valuation_shares)}</dd></div>
     <div><dt>= Value {c.inputs.shares.class_id.startsWith('issued:')?'per issued share':'per basic-equivalent share'} (USD/share)</dt><dd>{display(c.value_per_share,'1',2)}</dd></div>
    </dl>
    <p className="hint">{c.inputs.shares.class_id} · {c.inputs.shares.observation_date}. {c.inputs.shares.rationale}</p>

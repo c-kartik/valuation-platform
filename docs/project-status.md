@@ -1,6 +1,27 @@
 # Project Status
 
-## Current — optional manual equity/share calculator
+## Current — optional equity workflow acceptance
+
+The [local investor walkthrough](equity-workflow-acceptance.md) passed synthetic
+EV → manual bridge → issued-share review through all three retained anchors.
+It fixed generic share-sign guidance, hidden overlap-error focus and a fractional
+share denominator rounding to zero. Financial formulas/domains and all nine
+unset templates remain unchanged. Actual-company economic selections remain open.
+
+Fresh checks: **82 frontend + 101 focused Python tests**, production build,
+33 browser/HTTP-to-CLI JSON comparisons with equivalent legacy financial matches,
+30 independent rational bridge reconciliations, 25 invalid HTTP rejections,
+links/whitespace and protected-scope checks. Actual desktop/390×844 Chrome review
+covered qualified results, stale edits, switching, keyboard errors, local outage
+and explicit retry. Timing/race/busy coverage is automated; mobile keyboard and
+complete accessibility acceptance remain unverified. Trial captures/cases/outputs
+were temporary and removed. Phase 1 remains paused.
+
+Local checkpoint only; loopback frontend/API remain running for review. No push or
+hosted changes. Public-preview backend withdrawal remains **October 22, 2026,
+13:04:19 Dubai / 09:04:19 UTC**; no extension.
+
+## Earlier — optional manual equity/share calculator
 
 The [optional second step](local-calculator-ui.md#optional-cash-debt-and-shares)
 adds manual eligible assets, financing/other claims and dated shares to EV using

@@ -71,6 +71,9 @@ results sit beside desktop inputs and below the narrow-screen action; exact valu
 class/award and date declarations through the existing equity engine. Unassessed
 requirements block per-share results; omissions qualify a provisional reference.
 No company balances or dilution estimates are prefilled. See the [optional flow](docs/local-calculator-ui.md#optional-cash-debt-and-shares).
+The [local equity workflow review](docs/equity-workflow-acceptance.md) records
+three-anchor synthetic browser/CLI and independent arithmetic checks; it does not
+approve actual-company bridge/share inputs.
 Run from the repository root:
 `npm --prefix frontend ci` then `npm --prefix frontend run dev` with Node 22.12+,
 after [starting the packaged API](docs/local-calculator-ui.md#scope-and-startup).
