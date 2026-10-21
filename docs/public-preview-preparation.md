@@ -1,6 +1,11 @@
 # Anonymous EV preview — local preparation and abuse review
 
-> **Current checkpoint, 2026-10-21: deployment BLOCKED; anonymous access withdrawn.**
+> **Current: the shorter-name retry is deployed and verified within its bounded scope.**
+> [Active preview and manual withdrawal record](firebase-public-preview.md).
+> Withdraw backend access by **October 22, 2026, 13:04:19.869 Dubai / 09:04:19.869 UTC**.
+> The failed-name attempt and earlier inspection records below are historical.
+
+> **Earlier checkpoint, 2026-10-21: deployment BLOCKED; anonymous access withdrawn.**
 > Firebase/site identity is verified. The attempt failed on the combined service/tag
 > name limit; no Hosting release or hosted-browser acceptance occurred.
 > See the [attempt and withdrawal record](#deployment-attempt-and-withdrawal--2026-10-21).

@@ -1,6 +1,27 @@
 # Project Status
 
-## Current — public-preview attempt blocked; access withdrawn
+## Current — one-day anonymous preview deployed and developer-tested
+
+The [hosted acceptance/withdrawal record](firebase-public-preview.md) binds Firebase
+channel ev-public-review to valuation-api-preview revision 00001-mf4, reusing the
+reviewed immutable image without a rebuild. Name/tag length passed local and Cloud
+Run validateOnly checks. Six successful actual Chrome submissions matched complete
+CLI JSON; synthetic demo and retained META/GOOGL/AAPL anchors, explicit apply,
+terminal/annual refinement, stale/recalculate, validation/correction, root reload,
+desktop and 390×844 keyboard focus passed. Four affected local config tests/build/
+publication checks passed; the prior 95-test suite was not repeated unchanged.
+No financial-input, actual forecast, per-share or production-readiness approval.
+
+**Manual backend withdrawal: October 22, 2026, 13:04:19.869 Dubai / 09:04:19.869 UTC**,
+earlier than Hosting expiry at 13:04:55.672076339 Dubai / 09:04:55.672076339 UTC.
+No automation enforces it. Direct backend access is anonymous; max one and budget
+alerts are not hard spend/global quotas. Existing local-branding copy remains a
+minor hosted-preview limitation. Private staging and the failed-attempt service are
+unchanged/private; live Hosting still has no release. Retained resources/costs and
+withdrawal commands are explicit. Netlify/DNS/portfolio, nine unset templates,
+financial formulas/source approvals and Phase 1 pause remain unchanged.
+
+## Earlier — public-preview attempt blocked; access withdrawn
 
 The [deployment/withdrawal record](public-preview-preparation.md#deployment-attempt-and-withdrawal--2026-10-21)
 records the authorized one-day attempt from clean source 02888f4. Firebase enrollment

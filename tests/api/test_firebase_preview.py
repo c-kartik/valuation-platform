@@ -29,10 +29,11 @@ class FirebasePreviewTests(unittest.TestCase):
         self.assertEqual(hosting['public'], 'frontend/dist')
         self.assertEqual(hosting['site'], 'kartikchaturvedi-website')
         self.assertEqual(hosting['rewrites'], [
-            {'source': '/api{,/**}', 'run': {'serviceId': 'valuation-api-public-preview', 'region': 'us-central1', 'pinTag': True}},
+            {'source': '/api{,/**}', 'run': {'serviceId': 'valuation-api-preview', 'region': 'us-central1', 'pinTag': True}},
             {'source': '**', 'destination': '/index.html'}])
         self.assertNotIn('functions', self.config)
         self.assertNotIn('valuation-api-staging', json.dumps(self.config))
+        self.assertLessEqual(len(hosting['rewrites'][0]['run']['serviceId']) + len('fh-' + '0' * 16), 46)
         self.assertEqual(hosting['headers'][-1], {'source': '/api{,/**}', 'headers': [{'key': 'Cache-Control', 'value': 'no-store'}]})
 
     def test_artifact_and_resolved_site_pass_but_unresolved_site_fails_closed(self):

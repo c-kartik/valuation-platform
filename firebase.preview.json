@@ -27,7 +27,7 @@
     "rewrites": [
       {
         "source": "/api{,/**}",
-        "run": {"serviceId": "valuation-api-public-preview", "region": "us-central1", "pinTag": true}
+        "run": {"serviceId": "valuation-api-preview", "region": "us-central1", "pinTag": true}
       },
       {"source": "**", "destination": "/index.html"}
     ]

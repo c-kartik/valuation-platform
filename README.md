@@ -19,14 +19,16 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-The [anonymous-preview attempt](docs/public-preview-preparation.md#deployment-attempt-and-withdrawal--2026-10-21)
-is **blocked and withdrawn**: Firebase is enrolled and the default site verified,
-but the required backend name plus the CLI-generated revision tag exceeds Cloud Run's
-46-character limit. The new image built successfully; its backend is now authenticated
-again, and the empty preview channel was removed. No Hosting release or hosted-browser
-acceptance occurred. 95 focused local tests/build/publication checks passed. Next
-separately authorize a shorter isolated name and fresh preview window; original private
-staging, live Hosting, Netlify/DNS, portfolio and financial state remain unchanged.
+The [one-day Firebase preview](https://kartikchaturvedi-website--ev-public-review-ztr805i5.web.app/)
+is deployed with isolated backend valuation-api-preview. Six actual hosted browser
+runs matched complete local CLI JSON using synthetic economics only; four affected
+config tests, build and publication checks passed. See the [acceptance and withdrawal
+record](docs/firebase-public-preview.md) for limits and retained resources.
+**Manual backend withdrawal by October 22, 2026, 13:04:19.869 Dubai / 09:04:19.869 UTC**
+is required; Hosting expiry does not disable it. No automated shutdown or hard spend
+cap. Original private staging and the failed-name service remain private; Netlify,
+DNS, live Hosting and portfolio are unchanged. This is developer verification,
+not approved company forecasts or investment/production readiness.
 
 The [compiled frontend/cloud review](docs/cloud-frontend-acceptance.md) passed through
 a loopback authenticated proxy: 11 browser runs matched full CLI JSON, with 682

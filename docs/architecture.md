@@ -1,6 +1,21 @@
 # Architecture
 
-## Latest deployment attempt — preview pinning blocked and withdrawn
+## Latest deployment — isolated one-day preview
+
+The [hosted preview record](firebase-public-preview.md) binds relative API requests
+through Firebase channel ev-public-review to a tagged revision of valuation-api-preview.
+The shorter name plus current CLI tag totals 40 ≤ 46 characters and passed a Cloud
+Run validateOnly check. The previously reviewed image digest was reused, preserving
+all resource/worker/financial limits; no rebuild, API/schema or formula changes.
+Six actual browser full-result comparisons matched local CLI. Anonymous invocation
+is service-only and includes direct/tagged URLs; original private services are
+unchanged. The project owner must withdraw manually by October 22, 2026,
+13:04:19.869 Dubai / 09:04:19.869 UTC. Hosting expiry alone is insufficient.
+The public version contains four app files plus two platform-reserved Firebase SDK
+configuration files, unused by the calculator. No Firebase SDK/Auth app or automatic
+deployment was added. The original failed-name attempt remains recorded below.
+
+## Earlier deployment attempt — preview pinning blocked and withdrawn
 
 The [attempt/withdrawal record](public-preview-preparation.md#deployment-attempt-and-withdrawal--2026-10-21)
 binds a new allowlisted remote image to source 02888f4 and the isolated service

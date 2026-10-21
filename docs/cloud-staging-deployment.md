@@ -1,5 +1,10 @@
 # Authenticated Cloud Run staging — first remote checkpoint
 
+The [shorter-name public preview](firebase-public-preview.md) subsequently reused
+its reviewed newer image on valuation-api-preview. This original private staging
+service remains configuration/IAM/revision-identical and rejects anonymous health
+with 403; its original measurements below were not rerun or superseded by new claims.
+
 The subsequent [public-preview attempt](public-preview-preparation.md#deployment-attempt-and-withdrawal--2026-10-21)
 built a separate image/service, then withdrew public access after Firebase revision-tag
 naming failed. This original private service's full configuration/IAM and revision
