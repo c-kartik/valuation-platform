@@ -66,7 +66,12 @@ generated name, anonymous preparation timestamp and optional personal notes;
 no rationale or verified information cutoff is invented. Detailed cash flows expand on demand;
 terminal contribution and returned-value charts support review. Readable USD
 results sit beside desktop inputs and below the narrow-screen action; exact values and qualifications expand on demand. The underlying
-37 company inputs remain unset until explicitly supplied. Run from the repository root:
+37 company inputs remain unset until explicitly supplied. An optional
+**Add cash, debt & shares** step uses manual amounts and explicit coverage,
+class/award and date declarations through the existing equity engine. Unassessed
+requirements block per-share results; omissions qualify a provisional reference.
+No company balances or dilution estimates are prefilled. See the [optional flow](docs/local-calculator-ui.md#optional-cash-debt-and-shares).
+Run from the repository root:
 `npm --prefix frontend ci` then `npm --prefix frontend run dev` with Node 22.12+,
 after [starting the packaged API](docs/local-calculator-ui.md#scope-and-startup).
 Open <http://127.0.0.1:5173/>. No company forecast defaults, saving or deployment.

@@ -98,3 +98,11 @@ footer span {color: #647469;}
 @media(max-width: 1000px) {.assumption-columns {grid-template-columns: 1fr;} }
 @media(max-width: 800px) {.workbench-grid {grid-template-columns: minmax(0,1fr);} .assumption-columns {grid-template-columns: repeat(2,minmax(0,1fr));} }
 @media(max-width: 600px) {main {padding: 16px 12px;} .workbench-header {display: block;} .company-choice {margin-top: 14px; grid-template-columns: 1fr;} section,.result {padding: 14px;} .assumption-columns {grid-template-columns: 1fr;} .field-help summary {width: 34px; min-height: 34px;} .field:has(.field-help) > label {padding-right: 36px;} input,textarea,select {font-size: 16px; min-height: 42px;} button {min-height: 42px;} .terminal-section .section-heading {align-items: flex-start;} }
+
+.equity-step {margin-top: 12px;}
+.equity-step > details > summary {font-size: 1rem;}
+.equity-step select {white-space: normal;}
+.check-row {display: flex; align-items: flex-start; gap: 10px; margin: 12px 0; font-weight: 400; line-height: 1.5;}
+.check-row input {width: 20px; min-width: 20px; min-height: 20px; margin: 2px 0 0;}
+.equity-step .notice {font-size: .8rem;}
+@media(max-width: 500px) {.equity-step .rate-grid {grid-template-columns: 1fr;}}

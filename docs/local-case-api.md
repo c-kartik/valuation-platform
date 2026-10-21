@@ -1,5 +1,39 @@
 # Local single-case API
 
+## Optional anonymous equity/share extension (local)
+
+The same POST routes accept **`investor-case-v2`**, with the v1 anonymous
+`preparation` contract and exactly two additional fields: `calculation_scope:
+"EQUITY_PER_SHARE"` and `bridge`. The bridge is the existing Stage C input object:
+components, observations, coverage, shares, input basis, valuation class,
+unresolved requirements and convention version. The existing `_read_bridge`
+constructs the same immutable models and `bridge_to_per_share` performs all
+arithmetic. No new bridge equations or weakened domains/approval checks.
+
+Missing scope/bridge, nonempty unresolved requirements, invalid dated shares,
+unit/class/award incompatibilities, missing coverage and declared overlaps reject;
+there is no EV-only fallback for v2. Validation remains calculation-free.
+Results use **`investor-case-equity-per-share-v1`**, retain the complete Stage B/C
+trace and original submitted anonymous metadata, and authenticate no declarations.
+`investor-case-v1` EV-only JSON and both legacy analyst versions are unchanged.
+CLI JSON supports the same extension; its summary heading identifies equity scope.
+
+The [local UI](local-calculator-ui.md#optional-cash-debt-and-shares) supplies three
+manual aggregate components, not historical balances. Base-unit amounts and
+shares are exact decimal strings converted from millions as text. Coverage's
+existing `ManualIdentity`-shaped attribution is explicitly **Anonymous investor
+(unverified declaration)** with the draft preparation timestamp and a faithful
+record of the user's selected coverage choice. It is not a professional analyst,
+authenticated review or coverage approval. Manual source/decision references name
+form entries, not filings or evidence. `INF` denotes the entered string's exactness,
+not reporting accuracy. No rationale or identity is invented for the investor.
+
+“None identified” and explicit unbounded omissions become null-valued omission
+observations bound to the proper role coverage. Unknown required declarations
+still block; the engine cannot establish hidden completeness from a nonempty
+reference. No actual-company assets, claims, classes or awards are selected.
+This checkpoint is local only and changes no deployed runtime or preview deadline.
+
 ## Anonymous investor metadata (local update)
 
 Metadata audit: annual/terminal numerical rates feed the financial calculations;

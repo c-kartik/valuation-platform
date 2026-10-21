@@ -107,6 +107,27 @@ class ApiTests(BundleFixture, unittest.TestCase):
                 self.assertNotIn('access-control-allow-origin', out.headers)
                 self.assertEqual('stage_c' in out.json(), equity)
 
+    def test_investor_equity_validation_run_and_unresolved_no_downgrade(self):
+        from tests.valuation.test_investor_equity import investor_equity
+        d=investor_equity();before=deepcopy(d)
+        with TestClient(create_app(self.bundle)) as client:
+            with patch.object(c,'run_case',side_effect=AssertionError('calculation')):
+                checked=client.post('/api/v1/cases/validate',json=d)
+                self.assertEqual(checked.status_code,200,checked.text)
+                self.assertEqual(checked.json()['calculation_scope'],'EQUITY_PER_SHARE')
+                self.assertFalse(checked.json()['calculation_performed'])
+            out=client.post('/api/v1/cases/run',json=d)
+            self.assertEqual(out.status_code,200,out.text)
+            expected=c.run_case(c.read_case(json.dumps(payload(equity=True))),ROOT)
+            self.assertEqual(out.json()['stage_b'],expected['stage_b'])
+            self.assertEqual(out.json()['stage_c'],expected['stage_c'])
+            self.assertEqual(out.json()['submitted_inputs'],before)
+            d['bridge']['unresolved_requirements']=['Unassessed claims']
+            for route in ('validate','run'):
+                out=client.post('/api/v1/cases/'+route,json=d)
+                self.assertEqual(out.status_code,422,out.text);self.assertNotIn('stage_b',out.json())
+            self.assertEqual(before['preparation']['notes'],None)
+
     def test_investor_no_notes_same_finances_validation_and_budgets(self):
         with TestClient(create_app(self.bundle)) as client:
             for kind in (None, *c.ANCHORS):

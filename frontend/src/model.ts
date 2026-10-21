@@ -31,11 +31,17 @@ export type InvestorDoc = Omit<CaseDoc, 'schema_version' | 'analyst' | 'scope'> 
   schema_version: 'investor-case-v1';
   preparation: {provenance: 'ANONYMOUS_INVESTOR'; timestamp_utc: string; notes: string | null};
 };
+export type InvestorEquityDoc = Omit<InvestorDoc,'schema_version'> & {schema_version:'investor-case-v2';calculation_scope:'EQUITY_PER_SHARE';bridge:Record<string,unknown>};
 export type Draft = { doc: InvestorDoc; rates: Record<string, string>; replacements: Partial<QuickValues> };
 export type Errors = Record<string, string>;
 export type Year = Record<string, string | number>;
 export type Result = {
-  case_name: string; input_basis: string; submitted_inputs: CaseDoc | InvestorDoc; limitations: string[];
+  case_name: string; input_basis: string; submitted_inputs: CaseDoc | InvestorDoc | InvestorEquityDoc; limitations: string[];
+  stage_c?: {
+    stage_b:{enterprise_value:string}; eligible_assets:string;financing_claims:string;other_equity_claims:string;equity_value:string;valuation_shares:string;value_per_share:string;
+    inputs:{observations:{observation_id:string;disposition:string;rationale:string}[];shares:{class_id:string;observation_date:string;rationale:string}};
+    contributions:{component:{component_id:string};signed_contribution:string}[];
+  };
   stage_b: {
     timing: {analytical_t0: string; notice: string; information_cutoff: string};
     stage_a: {anchor: Record<string, unknown>; years: Year[]}; years: Year[]; terminal: Year;

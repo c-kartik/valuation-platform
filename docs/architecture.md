@@ -1,5 +1,22 @@
 # Architecture
 
+## Local update — optional anonymous Stage C
+
+`investor-case-v2` adds explicit equity scope and the existing bridge object to
+anonymous v1 preparation. The same reader constructs BridgeInputs; the unchanged
+Stage C engine recomputes/validates Stage B and performs the signed bridge.
+Legacy analyst and investor EV-only contracts remain unchanged. The [API contract](local-case-api.md#optional-anonymous-equityshare-extension-local)
+explains the manual unverified coverage attribution; it authenticates no review.
+
+The separate frontend `EquityStep` owns session-only bridge state, exact textual
+million-unit conversion and explicit submission. It consumes the returned Stage C
+reconciliation, never computing equity in JavaScript. Its independent revision/
+abort guard stales equity on bridge edits; operating staleness or EV replacement
+invalidates equity without erasing inputs or making old output current. Required
+coverage/class/award declarations expand on errors; omissions stay null and
+prominent. UI aggregates three roles; richer existing CLI/API cases remain available.
+No financial convention, source binding, template or hosted runtime changes.
+
 ## Local update — compact investor presentation
 
 The [calculator](local-calculator-ui.md#quick-entry-and-review-contract) groups eight

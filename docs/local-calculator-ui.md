@@ -10,8 +10,8 @@ is not deployed and changes no preview access or withdrawal deadline.
 
 ## Scope and startup
 
-The React/TypeScript/Vite calculator constructs one `investor-case-v1` through
-enterprise value only. The [packaged Python API](local-case-api.md) remains the
+The React/TypeScript/Vite calculator constructs `investor-case-v1` through enterprise value, with an optional
+explicit `investor-case-v2` equity/share step. The [packaged Python API](local-case-api.md) remains the
 financial calculation/validation authority. The narrow
 [metadata extension](local-case-api.md#anonymous-investor-metadata-local-update)
 leaves formulas, conventions, financial approvals and historical resources unchanged.
@@ -206,6 +206,88 @@ strings remain in full-precision traces. Detailed money is normally two decimals
 does not change raw strings; displayed components may not sum, and display digits
 improve neither source precision nor economic validity. Negative flows/values remain
 visible. No share-price comparison, rating, recommendation or economic approval.
+
+## Optional cash, debt and shares
+
+**Add cash, debt & shares** appears below EV and starts closed. EV calculation
+requires no bridge entries. Opening reveals eligible cash/investments, financing,
+other claims, shares and their observation date, all initially unset. Inputs use
+USD millions and millions of shares, converted exactly as decimal text to base
+USD/shares. Blank stays missing; explicit zero is distinct. Negative equity and
+per-share results are preserved; role-based nonnegative magnitudes determine
+adjustment signs, with positive adjustments in eligible assets.
+
+**Coverage, classes & awards** and **Component details & overlap references**
+start closed. Required declarations remain discoverable in the main bridge text;
+submission expands/focuses missing declarations. Assets exclude operating reserves
+and operating value; financing includes finance leases once, without duplicate
+forecast settlements. A mandatory explicit declaration records date, eligibility
+and non-overlap. The user selects each role's population-only coverage or explicit
+unbounded omissions; neither establishes complete economic coverage. Other claims
+have separate amount, none-identified and not-assessed choices. None identified
+is an unverified scoped omission with null amount, not an invented zero. Not
+assessed blocks the requested equity result while EV remains available.
+
+Shares require an explicit fiscal-end date, issued/basic-equivalent basis, named
+class(es), single-class or one-for-one economic-equivalence declaration and award
+treatment. No META/Alphabet class equivalence is assumed. Existing awards can be
+explicitly declared absent within the user's population (unverified), omitted
+provisionally, included as non-overlapping pre-anchor adjusted shares, or included
+as an other-claims amount. Adjusted-share treatment requires the basic-equivalent
+basis; claim treatment requires an explicit claim amount. SBC service costs stay
+in margins once. The calculator supplies no automatic RSU addition, award value,
+proceeds or dilution. These choices do not prove semantic consistency.
+
+This compact form supplies three aggregate role components. Collapsed component
+details name those populations and permit explicit overlap/alternative references;
+selected overlapping operands reject in the existing engine. Richer named
+multi-component/exclusion cases remain supported by the existing CLI/API.
+The [anonymous v2 contract](local-case-api.md#optional-anonymous-equityshare-extension-local)
+records unverified manual source references and coverage-choice attribution, never
+fabricated financial review. Optional personal notes remain optional.
+
+**Calculate value per share** explicitly submits the full operating case and bridge
+to the existing A/B/C engine, checking returned Stage B against the current EV.
+The UI does no bridge arithmetic. It shows server EV + assets − financing − claims
+= equity, divided by dated valuation shares, with USD/share and issued or
+basic-equivalent labels. Disclosed omissions are prominent beside a provisional
+reference and retain potentially unbounded amounts. No result certifies fully
+diluted fair value or complete claims coverage. Exact signed contributions and
+submitted provenance expand separately; scaling/rounding is display-only.
+
+Closing the bridge preserves values in the current page session; there is no
+saving. Bridge edits stale only equity. Operating/metadata edits stale both and
+require EV recalculation first. A fresh EV never makes an earlier equity result
+current: per-share calculation stays explicit. Revision/abort guards ignore late
+replies; failure preserves input and EV. Switching company confirms/discards the
+whole populated draft, including its optional bridge.
+
+## Optional equity verification (local)
+
+**78 frontend tests** and **101 distinct focused Python checks** passed across the
+focused run and targeted corrected-fixture rerun. Python scope covers intake,
+legacy EV/equity/CLI-summary, bridge, API/catalog/public boundaries and preparation
+preservation. Production TypeScript/Vite build passed. No historical suite or
+actual-company valuation. The new frontend comparison writes equivalent anonymous
+and legacy synthetic equity cases only in an automatically cleaned external
+temporary directory, runs the real CLI and matches **complete Stage B and C
+components**; submitted metadata intentionally differs. Independent fixture:
+EV 77.577060352 +12 −20 −3 = equity 66.577060352, /4 shares =16.644265088 USD/share.
+UI tests cover exact conversion, blank/zero/omissions, declarations, signed output,
+focus, scope switching, service recovery and independent stale/revision handling.
+
+Actual Chrome desktop and approximately 390×844 checks use the separate synthetic
+$100 fixture and manual bridge amounts 0.000012/0.000020/0.000003 USD millions,
+0.000004 million issued synthetic common shares, date 2025-12-31. Coverage is
+explicitly population-only, single-class; existing awards are omitted provisionally.
+EV succeeded without bridge inputs; unassessed claims blocked equity. Bridge
+close/reopen, advanced disclosure, keyboard declaration/error navigation, bridge
+edits, operating edits, EV refresh and explicit equity recalculation were checked.
+Screenshots capture the compact bridge/reconciliation. This is desktop responsive
+verification, not mobile virtual-keyboard or complete accessibility certification.
+No company forecasts, balances, cases or outputs were saved. All nine unset
+templates, engine formulas, historical approvals, Phase 1 pause and hosted preview
+window remain unchanged. Only loopback frontend/API review servers remain running.
 
 ## Read-only catalog and runtime boundary
 

@@ -1,6 +1,30 @@
 # Project Status
 
-## Current — compact local investor calculator
+## Current — optional manual equity/share calculator
+
+The [optional second step](local-calculator-ui.md#optional-cash-debt-and-shares)
+adds manual eligible assets, financing/other claims and dated shares to EV using
+the existing Stage C engine. Coverage, class/equivalence, award and non-overlap
+choices are explicit and initially unset. Unassessed requirements block equity;
+null-valued omissions remain prominent on a provisional reference. No financial
+review or automatic company selections are inferred. Bridge edits stale only
+equity; operating edits and EV refresh require explicit per-share recalculation.
+The [anonymous v2 extension](local-case-api.md#optional-anonymous-equityshare-extension-local)
+preserves investor v1 EV and legacy analyst JSON behavior.
+
+78 frontend tests and 101 distinct focused Python checks passed, plus production
+build, local links/whitespace and protected-scope checks. A temporary synthetic CLI
+comparison matched complete Stage B/C components with intentional metadata
+differences. Desktop and 390×844 browser review exercised the optional flow,
+qualifications and editing. No actual-company case, bridge selection or output
+was saved; all nine templates and historical approvals remain unchanged.
+Phase 1 stays [paused](phase1-universe-pause-checkpoint.md).
+
+Local commit only, with compatible loopback API/frontend running for review.
+No push or hosted changes. The public preview still has its **October 22, 2026
+13:04:19 Dubai / 09:04:19 UTC** manual backend-withdrawal deadline; no extension.
+
+## Earlier — compact local investor calculator
 
 The [calculator redesign](local-calculator-ui.md#compact-investor-redesign-verification-local)
 replaces the oversized workbench with a compact company/revenue summary, grouped

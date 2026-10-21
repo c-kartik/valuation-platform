@@ -3,6 +3,7 @@ import {annual, terminal, makeDraft, buildRequest, fieldErrors, InputErrors, ann
 import type {Catalog, Draft, Errors, Result, AnnualKey} from './model';
 import {ApiError, request, Revisions} from './api';
 import {ResultReview} from './Results';
+import {EquityStep} from './EquityStep';
 import {readableMoney, readableLimitation} from './presentation';
 export {ResultReview} from './Results';
 
@@ -322,7 +323,7 @@ export default function App({load = request}: Props) {
           </div>}
           {messages.length>0 && <div role="alert" className="errors"><h3>Service request did not succeed</h3>{messages.map((message,i)=><p key={i}>{message}</p>)}<p>Retry explicitly when the service is available. Entries are preserved; changing assumptions is not required to recover from a service failure.</p></div>}
         </div>
-      </section><aside aria-label="Valuation review">{result ? <ResultReview result={result} stale={stale}/> : <section className="result-placeholder"><h2>Enterprise value</h2><p>Enter assumptions, then calculate.</p><small>Operating business value; excludes the cash/debt/share bridge.</small></section>}</aside></div>
+      </section><aside aria-label="Valuation review">{result ? <><ResultReview result={result} stale={stale}/><EquityStep draft={draft} evResult={result} operatingStale={stale} load={load}/></> : <section className="result-placeholder"><h2>Enterprise value</h2><p>Enter assumptions, then calculate.</p><small>Operating business value; excludes the cash/debt/share bridge.</small></section>}</aside></div>
     </> : <section className="empty-state"><h2>Select a company to begin.</h2><p>Company forecasts start unset. The separate demonstration uses a synthetic $100 revenue anchor.</p></section>}
     {!draft && messages.length>0 && <div role="alert" className="errors">{messages.join(' ')}</div>}
     <footer>No automatic saving <span>· Local environment</span></footer>

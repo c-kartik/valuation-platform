@@ -174,3 +174,11 @@ it('retains precise source/timing and financial limitations without internal ord
  expect(screen.getByText('Edit individual years').closest('details')?.open).toBe(false);
  expect(screen.getByText('Analysis details').closest('details')?.open).toBe(false);
 });
+
+it('keeps EV-only requests independent of optional bridge entry and discards bridge state on company switch',async()=>{
+ const sent:InvestorDoc[]=[];render(<App load={transport(async(_,body)=>{sent.push(body as InvestorDoc);return result();})}/>);await selectDemo();run();await screen.findByText('Synthetic result');
+ expect(sent[0].schema_version).toBe('investor-case-v1');expect(sent[0]).not.toHaveProperty('bridge');
+ const bridge=screen.getByText('Add cash, debt & shares');expect(bridge.closest('details')?.open).toBe(false);fireEvent.click(bridge);set('Eligible cash & investments (USD millions)','1.25');
+ fireEvent.change(screen.getByLabelText('Company'),{target:{value:'test-anchor'}});fireEvent.click(screen.getByRole('button',{name:'Discard and switch'}));
+ expect(screen.queryByText('Add cash, debt & shares')).toBeNull();expect(input(grow).value).toBe('');expect(sent).toHaveLength(1);
+});

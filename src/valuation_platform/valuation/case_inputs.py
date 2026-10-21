@@ -33,6 +33,8 @@ EQUITY_RESULT_SCHEMA = "analyst-case-equity-per-share-v1"
 EQUITY_SCOPE = "EQUITY_PER_SHARE"
 INVESTOR_CASE_SCHEMA = "investor-case-v1"
 INVESTOR_RESULT_SCHEMA = "investor-case-enterprise-value-v1"
+INVESTOR_EQUITY_CASE_SCHEMA = "investor-case-v2"
+INVESTOR_EQUITY_RESULT_SCHEMA = "investor-case-equity-per-share-v1"
 ANNUAL_RATES = (
     "revenue_growth", "operating_margin", "forecast_tax_rate",
     "d_and_a_percent_revenue", "capex_percent_revenue",
@@ -229,17 +231,17 @@ def read_case(text: str) -> AnalystCase:
             errors.append(f"{path}: invalid Decimal string")
             return None
 
-    investor = type(doc) is dict and doc.get("schema_version") == INVESTOR_CASE_SCHEMA
-    equity = type(doc) is dict and doc.get("schema_version") == EQUITY_CASE_SCHEMA
+    investor = type(doc) is dict and doc.get("schema_version") in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA)
+    equity = type(doc) is dict and doc.get("schema_version") in (EQUITY_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA)
     extra = ("calculation_scope", "bridge") if equity else ()
     metadata = ("preparation",) if investor else ("analyst", "scope")
     doc = obj(doc, ("schema_version", "case_name", "input_basis", *metadata,
                     "limitations", "conventions", "anchor", "forecast_years", "wacc",
                     "terminal_growth", "terminal", *extra), "case")
-    if doc.get("schema_version") not in (CASE_SCHEMA, EQUITY_CASE_SCHEMA, INVESTOR_CASE_SCHEMA):
-        errors.append(f"case.schema_version: supported versions are {CASE_SCHEMA}, {EQUITY_CASE_SCHEMA}, {INVESTOR_CASE_SCHEMA}")
+    if doc.get("schema_version") not in (CASE_SCHEMA, EQUITY_CASE_SCHEMA, INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA):
+        errors.append(f"case.schema_version: supported versions are {CASE_SCHEMA}, {EQUITY_CASE_SCHEMA}, {INVESTOR_CASE_SCHEMA}, {INVESTOR_EQUITY_CASE_SCHEMA}")
     if equity and doc.get("calculation_scope") != EQUITY_SCOPE:
-        errors.append(f"case.calculation_scope: {EQUITY_CASE_SCHEMA} requires {EQUITY_SCOPE}")
+        errors.append(f"case.calculation_scope: {doc.get('schema_version')} requires {EQUITY_SCOPE}")
     text_field(doc.get("case_name"), "case.case_name")
     if not investor:
         text_field(doc.get("scope"), "case.scope")
@@ -366,13 +368,13 @@ def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
     stage_b = discount_to_enterprise_value(stage_a, case.terminal,
                                           convention_version=doc["conventions"]["discounting"])
     result = {
-        "schema_version": INVESTOR_RESULT_SCHEMA if doc["schema_version"] == INVESTOR_CASE_SCHEMA else RESULT_SCHEMA,
+        "schema_version": INVESTOR_RESULT_SCHEMA if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA) else RESULT_SCHEMA,
         "case_name": doc["case_name"], "input_basis": doc["input_basis"],
         "submitted_inputs": doc,
         "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
         "limitations": [*doc["limitations"],
                         ("Anonymous investor preparation; no verified identity or supplied investment rationale. Optional personal notes are not evidence or approval. Preparation timestamp is not a valuation date, information cutoff or evidence review. Forecast inputs are user-entered and not independently reviewed."
-                         if doc["schema_version"] == INVESTOR_CASE_SCHEMA else
+                         if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA) else
                          "Analyst identity, rationale and scope are submitted declarations, not authenticated approval."),
                         ("No economic consistency, evidence completeness or actual META execution approval is inferred."
                          if case.anchor_kind in ("meta-fy2025", "synthetic-fixture-v1") else
@@ -382,7 +384,7 @@ def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
     }
     if case.bridge is not None:
         stage_c = bridge_to_dict(bridge_to_per_share(stage_b, case.bridge))
-        result["schema_version"] = EQUITY_RESULT_SCHEMA
+        result["schema_version"] = INVESTOR_EQUITY_RESULT_SCHEMA if doc["schema_version"] == INVESTOR_EQUITY_CASE_SCHEMA else EQUITY_RESULT_SCHEMA
         result["calculation_scope"] = EQUITY_SCOPE
         result["stage_c"] = stage_c
         result["limitations"][-1:] = stage_c["limitations"]

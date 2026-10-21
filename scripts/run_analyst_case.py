@@ -39,7 +39,8 @@ def render_summary(result):
         stage_c = result.get("stage_c")
         investor = "preparation" in doc
         lines = [
-            ("INVESTOR CALCULATION — ENTERPRISE VALUE ONLY" if investor else
+            ("INVESTOR CALCULATION — EQUITY / VALUE PER SHARE" if investor and stage_c else
+             "INVESTOR CALCULATION — ENTERPRISE VALUE ONLY" if investor else
              "ANALYST REVIEW — EQUITY / VALUE PER SHARE" if stage_c else "ANALYST REVIEW — ENTERPRISE VALUE ONLY"),
             f"Case: {result['case_name']}",
             (f"Anonymous investor | Prepared: {doc['preparation']['timestamp_utc']} (not an information cutoff)" if investor else
