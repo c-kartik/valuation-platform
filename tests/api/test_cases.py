@@ -107,6 +107,29 @@ class ApiTests(BundleFixture, unittest.TestCase):
                 self.assertNotIn('access-control-allow-origin', out.headers)
                 self.assertEqual('stage_c' in out.json(), equity)
 
+    def test_investor_no_notes_same_finances_validation_and_budgets(self):
+        with TestClient(create_app(self.bundle)) as client:
+            for kind in (None, *c.ANCHORS):
+                legacy = payload(kind=kind)
+                d = deepcopy(legacy); d.pop('analyst'); d.pop('scope')
+                d.update(schema_version=c.INVESTOR_CASE_SCHEMA,
+                         preparation={'provenance':'ANONYMOUS_INVESTOR',
+                                      'timestamp_utc':'2026-10-21T10:00:00Z', 'notes':None})
+                with patch.object(c, 'run_case', side_effect=AssertionError('calculation')):
+                    out = client.post('/api/v1/cases/validate', json=d)
+                    self.assertEqual(out.status_code, 200, out.text)
+                    self.assertFalse(out.json()['calculation_performed'])
+                out = client.post('/api/v1/cases/run', json=d)
+                self.assertEqual(out.status_code, 200, out.text)
+                self.assertEqual(out.json()['stage_b'], c.run_case(c.read_case(json.dumps(legacy)), ROOT)['stage_b'])
+                self.assertEqual(out.json()['submitted_inputs']['preparation'], d['preparation'])
+                d['preparation']['notes'] = 'x' * 2049
+                out = client.post('/api/v1/cases/run', json=d)
+                self.assertEqual(out.status_code, 422); self.assertIn('preparation.notes', out.text)
+                d['preparation']['notes'] = None; d['anchor']['accession'] = 'wrong'
+                out = client.post('/api/v1/cases/run', json=d)
+                self.assertEqual(out.status_code, 422); self.assertIn('anchor.accession', out.text)
+
     def test_validation_calls_no_financial_loaders_or_calculators(self):
         with TestClient(create_app(self.bundle)) as client:
             with patch.object(c, 'run_case', side_effect=AssertionError('calculation')), patch.object(c, 'load_revenue_anchor', side_effect=AssertionError('load')), patch.object(c, 'load_meta_revenue_anchor', side_effect=AssertionError('load')), patch.object(c, 'forecast_five_years', side_effect=AssertionError('forecast')), patch.object(c, 'bridge_to_per_share', side_effect=AssertionError('bridge')):

@@ -37,10 +37,13 @@ def render_summary(result):
         headers = row("Period", [f"Year {y['period_index']}" for y in years])
         company = ANCHORS.get(doc["anchor"]["kind"], {}).get("ticker", "Synthetic fixture")
         stage_c = result.get("stage_c")
+        investor = "preparation" in doc
         lines = [
-            "ANALYST REVIEW — EQUITY / VALUE PER SHARE" if stage_c else "ANALYST REVIEW — ENTERPRISE VALUE ONLY",
+            ("INVESTOR CALCULATION — ENTERPRISE VALUE ONLY" if investor else
+             "ANALYST REVIEW — EQUITY / VALUE PER SHARE" if stage_c else "ANALYST REVIEW — ENTERPRISE VALUE ONLY"),
             f"Case: {result['case_name']}",
-            f"Analyst: {doc['analyst']['author']} | Entered: {doc['analyst']['timestamp_utc']}",
+            (f"Anonymous investor | Prepared: {doc['preparation']['timestamp_utc']} (not an information cutoff)" if investor else
+             f"Analyst: {doc['analyst']['author']} | Entered: {doc['analyst']['timestamp_utc']}"),
             f"Input basis: {result['input_basis']} (supplied declarations; not economic approval)",
             f"Company: {company} | CIK {anchor['cik']}",
             f"Historical anchor: {anchor['form']} {anchor['accession']} | {anchor['annual_start']} to {anchor['annual_end']}",
@@ -144,8 +147,9 @@ def render_summary(result):
                              f"rationale={item['review']['rationale']}")
         lines += [
             "", "Timing: " + b["timing"]["notice"],
-            "Scope: " + doc["scope"],
-            "Analyst rationale: " + doc["analyst"]["rationale"],
+            *(["Investment rationale: absent; inputs not independently reviewed.",
+                "Optional personal notes: " + (doc["preparation"]["notes"] or "absent")]
+              if investor else ["Scope: " + doc["scope"], "Analyst rationale: " + doc["analyst"]["rationale"]]),
             "Limitations (supplied inputs are not authenticated or economically validated):",
             *["- " + limitation for limitation in result["limitations"]],
         ]

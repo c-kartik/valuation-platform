@@ -27,11 +27,15 @@ export type Entry = {
 };
 export type Catalog = {schema_version: string; entries: Entry[]; synthetic_demo: CaseDoc;
   timing_notice: string; input_definitions: Record<string, string>};
-export type Draft = { doc: CaseDoc; rates: Record<string, string> };
+export type InvestorDoc = Omit<CaseDoc, 'schema_version' | 'analyst' | 'scope'> & {
+  schema_version: 'investor-case-v1';
+  preparation: {provenance: 'ANONYMOUS_INVESTOR'; timestamp_utc: string; notes: string | null};
+};
+export type Draft = { doc: InvestorDoc; rates: Record<string, string> };
 export type Errors = Record<string, string>;
 export type Year = Record<string, string | number>;
 export type Result = {
-  case_name: string; input_basis: string; submitted_inputs: CaseDoc; limitations: string[];
+  case_name: string; input_basis: string; submitted_inputs: CaseDoc | InvestorDoc; limitations: string[];
   stage_b: {
     timing: {analytical_t0: string; notice: string; information_cutoff: string};
     stage_a: {anchor: Record<string, unknown>; years: Year[]}; years: Year[]; terminal: Year;
@@ -51,11 +55,17 @@ function shift(text: string, places: number): string {
 }
 export const percentageToFraction = (value: string): string | null => value.trim() === '' ? null : shift(value, -2);
 export const fractionToPercentage = (value: string | null): string => value === null ? '' : shift(value, 2);
-export function makeDraft(template: CaseDoc, demo = false): Draft {
-  const doc = structuredClone(template);
-  if (!demo) {
-    doc.case_name = ''; doc.scope = ''; doc.analyst = {author: null, timestamp_utc: null, rationale: null};
-  }
+const templateInstruction = 'All 37 numerical assumptions and analyst identity/date/rationale are unset; no defaults or historical calibration.';
+export const enduringLimitations = (lines: string[]) => lines.filter(line => line !== templateInstruction);
+export const generatedCaseName = (kind: string) => `${kind === 'synthetic-fixture-v1' ? 'Synthetic demonstration' : kind.toUpperCase()} · Investor calculation`;
+export function makeDraft(template: CaseDoc, timestamp = new Date().toISOString()): Draft {
+  // Legacy template declarations are not anonymous users' rationale or identity.
+  const {analyst: _analyst, scope: _scope, schema_version: _version, ...financial} = structuredClone(template);
+  const doc: InvestorDoc = {...financial, schema_version: 'investor-case-v1',
+    case_name: generatedCaseName(template.anchor.kind),
+    preparation: {provenance: 'ANONYMOUS_INVESTOR', timestamp_utc: timestamp, notes: null},
+    limitations: enduringLimitations(financial.limitations),
+  };
   const rates: Record<string, string> = {};
   doc.forecast_years.forEach((year, i) => annual.forEach(([key]) => {
     rates[`forecast_years[${i}].${key}`] = fractionToPercentage(year[key]);
@@ -64,8 +74,9 @@ export function makeDraft(template: CaseDoc, demo = false): Draft {
   terminal.forEach(([key]) => { rates[`terminal.${key}`] = fractionToPercentage(doc.terminal[key]); });
   return {doc, rates};
 }
-export function buildRequest(draft: Draft): CaseDoc {
+export function buildRequest(draft: Draft): InvestorDoc {
   const doc = structuredClone(draft.doc);
+  if (!doc.preparation.notes?.trim()) doc.preparation.notes = null;
   const errors: Errors = {};
   const convert = (path: string) => {
     try { return percentageToFraction(draft.rates[path]); }
@@ -75,7 +86,7 @@ export function buildRequest(draft: Draft): CaseDoc {
   doc.wacc = convert('wacc'); doc.terminal_growth = convert('terminal_growth');
   terminal.forEach(([key]) => { doc.terminal[key] = convert(`terminal.${key}`); });
   if (Object.keys(errors).length) throw new InputErrors(errors);
-  return doc; // Explicit legacy v1 EV-only object: never add Stage C or cutoff fields.
+  return doc; // Explicit investor EV-only object: no invented analyst rationale or cutoff.
 }
 export class InputErrors extends Error {
   constructor(public fields: Errors) { super('Correct the highlighted percentage entries.'); }

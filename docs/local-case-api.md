@@ -1,6 +1,52 @@
 # Local single-case API
 
-## Local protection update — pending cloud deployment
+## Anonymous investor metadata (local update)
+
+Metadata audit: annual/terminal numerical rates feed the financial calculations;
+pinned anchor identity and conventions bind historical sources and approved engine
+conventions. Case name, preparer, preparation time, rationale and scope document
+provenance only; they are not numerical operands or authenticated approvals.
+Limitations document unresolved scope. Investor metadata changes only this last layer.
+
+Both existing POST routes also accept **`investor-case-v1`**, EV only. It retains
+all v1 financial/anchor/convention/limitations fields and required `case_name`,
+replacing `analyst` and `scope` with exactly:
+
+```json
+"preparation": {
+  "provenance": "ANONYMOUS_INVESTOR",
+  "timestamp_utc": "2026-10-21T10:00:00.000Z",
+  "notes": null
+}
+```
+
+This timestamp example describes draft creation/preparation, retained through
+submissions, not a historical valuation date, verified information cutoff or
+source review. The UI generates it once on selection and generates an editable
+name; neither asserts an authenticated person or professional analyst. API clients
+submit the timestamp as an unauthenticated declaration. UTC is required. Notes
+are required as a key: null explicitly means absent, otherwise nonblank text up
+to the existing **2,048-character** general-text ceiling. Nonempty wording,
+including surrounding whitespace/newlines, is preserved. There is no supplied
+investment rationale; notes are personal text, not source evidence. Unknown fields
+(including analyst, scope, cutoff or bridge in this version) reject strictly.
+
+The result version is **`investor-case-enterprise-value-v1`**. It preserves the
+submitted request, semantic-review status, existing Stage B trace and enduring
+limitations, adding an explicit anonymous/unreviewed/timestamp qualification.
+No financial formulas, historical binding/approval checks, API execution budgets
+or calculation-free validation behavior change. Financial result components,
+rather than metadata-bearing full JSON, are compared against legacy cases.
+Legacy `analyst-case-v1`/`analyst-case-v2` retain required analyst identity,
+UTC time, rationale, scope and existing result JSON. CLI JSON/summary additionally
+accept this narrow investor version; no existing case is migrated or weakened.
+
+This is local implementation only. The deployed [preview](firebase-public-preview.md)
+remains unchanged and cannot consume the new version without separately authorized
+deployment. Its October 22 withdrawal deadline is not extended. The earlier
+staging/preparation sections below preserve their original scope and qualifications.
+
+## Earlier local protection update — before preview deployment
 
 The [public-preview review](public-preview-preparation.md) adds uniform application
 `Cache-Control: no-store` and nosniff, including 4xx/5xx/health, plus an early **403
@@ -11,7 +57,7 @@ These changes are tested **locally only**, absent from the original deployed ima
 Prepared Firebase routing/public access still requires explicit authorization and
 resolution of the existing Hosting site. No new public service exists.
 
-## Current — authenticated staging host
+## Earlier — authenticated staging host
 
 The subsequent [remote staging checkpoint](cloud-staging-deployment.md) deploys this
 unchanged API from pushed source `ebf6139`, with required IAM and an explicit image

@@ -1,7 +1,7 @@
 """Editable local A/B/C inputs; parsing is not calculation or economic approval."""
 
 from dataclasses import dataclass, fields
-from datetime import date
+from datetime import date, datetime
 from decimal import Decimal
 import json
 from pathlib import Path
@@ -31,6 +31,8 @@ RESULT_SCHEMA = "analyst-case-enterprise-value-v1"
 EQUITY_CASE_SCHEMA = "analyst-case-v2"
 EQUITY_RESULT_SCHEMA = "analyst-case-equity-per-share-v1"
 EQUITY_SCOPE = "EQUITY_PER_SHARE"
+INVESTOR_CASE_SCHEMA = "investor-case-v1"
+INVESTOR_RESULT_SCHEMA = "investor-case-enterprise-value-v1"
 ANNUAL_RATES = (
     "revenue_growth", "operating_margin", "forecast_tax_rate",
     "d_and_a_percent_revenue", "capex_percent_revenue",
@@ -93,7 +95,7 @@ def _strict_json(text):
 @dataclass(frozen=True)
 class AnalystCase:
     submitted_json: str
-    analyst: ManualIdentity
+    analyst: ManualIdentity | None
     anchor_kind: str
     assumptions: ValuationAssumptions
     terminal: TerminalAssumptions
@@ -227,32 +229,49 @@ def read_case(text: str) -> AnalystCase:
             errors.append(f"{path}: invalid Decimal string")
             return None
 
+    investor = type(doc) is dict and doc.get("schema_version") == INVESTOR_CASE_SCHEMA
     equity = type(doc) is dict and doc.get("schema_version") == EQUITY_CASE_SCHEMA
     extra = ("calculation_scope", "bridge") if equity else ()
-    doc = obj(doc, ("schema_version", "case_name", "input_basis", "analyst", "scope",
+    metadata = ("preparation",) if investor else ("analyst", "scope")
+    doc = obj(doc, ("schema_version", "case_name", "input_basis", *metadata,
                     "limitations", "conventions", "anchor", "forecast_years", "wacc",
                     "terminal_growth", "terminal", *extra), "case")
-    if doc.get("schema_version") not in (CASE_SCHEMA, EQUITY_CASE_SCHEMA):
-        errors.append(f"case.schema_version: supported versions are {CASE_SCHEMA}, {EQUITY_CASE_SCHEMA}")
+    if doc.get("schema_version") not in (CASE_SCHEMA, EQUITY_CASE_SCHEMA, INVESTOR_CASE_SCHEMA):
+        errors.append(f"case.schema_version: supported versions are {CASE_SCHEMA}, {EQUITY_CASE_SCHEMA}, {INVESTOR_CASE_SCHEMA}")
     if equity and doc.get("calculation_scope") != EQUITY_SCOPE:
         errors.append(f"case.calculation_scope: {EQUITY_CASE_SCHEMA} requires {EQUITY_SCOPE}")
     text_field(doc.get("case_name"), "case.case_name")
-    text_field(doc.get("scope"), "case.scope")
+    if not investor:
+        text_field(doc.get("scope"), "case.scope")
     limitations = doc.get("limitations")
     if type(limitations) is not list or not limitations:
         errors.append("case.limitations: required nonempty list of declared limitations")
     else:
         for i, value in enumerate(limitations):
             text_field(value, f"case.limitations[{i}]")
-    analyst = obj(doc.get("analyst"), ("author", "timestamp_utc", "rationale"), "analyst")
-    for key in ("author", "timestamp_utc", "rationale"):
-        text_field(analyst.get(key), "analyst." + key)
     identity = None
-    if all(type(analyst.get(k)) is str and analyst[k].strip() for k in ("author", "timestamp_utc", "rationale")):
+    if investor:
+        preparation = obj(doc.get("preparation"), ("provenance", "timestamp_utc", "notes"), "preparation")
+        if preparation.get("provenance") != "ANONYMOUS_INVESTOR":
+            errors.append("preparation.provenance: must be ANONYMOUS_INVESTOR; no authenticated identity")
         try:
-            identity = ManualIdentity(**analyst)
-        except (ValueError, TypeError) as exc:
-            errors.append(f"analyst: {exc}")
+            stamp = datetime.fromisoformat(preparation.get("timestamp_utc"))
+            if stamp.utcoffset() is None or stamp.utcoffset().total_seconds() != 0:
+                raise ValueError()
+        except (ValueError, TypeError):
+            errors.append("preparation.timestamp_utc: required UTC preparation timestamp; not an information cutoff")
+        notes = preparation.get("notes")
+        if notes is not None and (type(notes) is not str or not notes.strip() or len(notes) > 2048):
+            errors.append("preparation.notes: use null for absent notes or nonempty text up to 2048 characters")
+    else:
+        analyst = obj(doc.get("analyst"), ("author", "timestamp_utc", "rationale"), "analyst")
+        for key in ("author", "timestamp_utc", "rationale"):
+            text_field(analyst.get(key), "analyst." + key)
+        if all(type(analyst.get(k)) is str and analyst[k].strip() for k in ("author", "timestamp_utc", "rationale")):
+            try:
+                identity = ManualIdentity(**analyst)
+            except (ValueError, TypeError) as exc:
+                errors.append(f"analyst: {exc}")
     conventions = obj(doc.get("conventions"), ("forecast", "discounting"), "conventions")
     if conventions.get("forecast") not in SUPPORTED_CONVENTIONS:
         errors.append(f"conventions.forecast: choose {' or '.join(SUPPORTED_CONVENTIONS)}")
@@ -347,12 +366,14 @@ def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
     stage_b = discount_to_enterprise_value(stage_a, case.terminal,
                                           convention_version=doc["conventions"]["discounting"])
     result = {
-        "schema_version": RESULT_SCHEMA,
+        "schema_version": INVESTOR_RESULT_SCHEMA if doc["schema_version"] == INVESTOR_CASE_SCHEMA else RESULT_SCHEMA,
         "case_name": doc["case_name"], "input_basis": doc["input_basis"],
         "submitted_inputs": doc,
         "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
         "limitations": [*doc["limitations"],
-                        "Analyst identity, rationale and scope are submitted declarations, not authenticated approval.",
+                        ("Anonymous investor preparation; no verified identity or supplied investment rationale. Optional personal notes are not evidence or approval. Preparation timestamp is not a valuation date, information cutoff or evidence review. Forecast inputs are user-entered and not independently reviewed."
+                         if doc["schema_version"] == INVESTOR_CASE_SCHEMA else
+                         "Analyst identity, rationale and scope are submitted declarations, not authenticated approval."),
                         ("No economic consistency, evidence completeness or actual META execution approval is inferred."
                          if case.anchor_kind in ("meta-fy2025", "synthetic-fixture-v1") else
                          "No economic consistency, evidence completeness or company execution approval is inferred."),

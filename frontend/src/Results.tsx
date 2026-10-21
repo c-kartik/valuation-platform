@@ -34,8 +34,12 @@ export function ResultReview({result,stale}: {result:Result;stale:boolean}) {
       </tbody></table></div>
       <dl className="reconciliation">{[['Explicit-period PV',b.pv_explicit_fcff],['+ Discounted terminal value',b.pv_terminal_value],['= Enterprise value',b.enterprise_value],['Terminal FCFF',String(b.terminal.fcff)],['Terminal value at year 5',b.terminal_value]].map(([label,value])=><div key={label}><dt>{label} (USD millions)</dt><dd>{money(value)}</dd></div>)}</dl>
     </details>
-    <details><summary>Submitted assumptions, rationale and timing</summary><p>{b.timing.notice}</p><p>Analytical date: {b.timing.analytical_t0}. Information cutoff is a free-text disclosure, not authenticated or enforced.</p>
-      <p><strong>Rationale:</strong> {result.submitted_inputs.analyst.rationale}</p><p><strong>Scope:</strong> {result.submitted_inputs.scope}</p>
+    <details><summary>Submitted assumptions, rationale and timing</summary><p>{b.timing.notice}</p><p>Analytical date: {b.timing.analytical_t0}. No verified information cutoff is established by this calculator.</p>
+      {'preparation' in result.submitted_inputs ? <>
+        <p>Anonymous investor calculation · prepared at {result.submitted_inputs.preparation.timestamp_utc}. Preparation time is not the analytical date, information cutoff or evidence review.</p>
+        <p>No investment rationale supplied. Forecast inputs are user-entered and not independently reviewed.</p>
+        <p className="personal-notes"><strong>Optional personal notes:</strong> {result.submitted_inputs.preparation.notes ?? 'Absent'}</p>
+      </> : <><p><strong>Rationale:</strong> {result.submitted_inputs.analyst.rationale}</p><p><strong>Scope:</strong> {result.submitted_inputs.scope}</p></>}
       <ul>{result.limitations.map((line,i)=><li key={i}>{line}</li>)}</ul>
       <details><summary>Full-precision inputs and calculation trace</summary>
         <div className="table-scroll" tabIndex={0} role="region" aria-label="Unrounded annual values in USD"><table className="compact-table"><caption>Exact returned annual values · USD (unrounded strings)</caption><thead><tr><th scope="col">Year</th><th scope="col">Revenue</th><th scope="col">EBIT</th><th scope="col">FCFF</th></tr></thead><tbody>{b.stage_a.years.map(y=><tr key={String(y.period_index)}><th scope="row">{y.fiscal_year_label}</th><td>{y.revenue}</td><td>{y.ebit}</td><td>{y.fcff}</td></tr>)}</tbody></table></div>

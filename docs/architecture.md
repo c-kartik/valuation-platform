@@ -1,5 +1,19 @@
 # Architecture
 
+## Local update — anonymous investor preparation
+
+The local workbench constructs `investor-case-v1` from unchanged catalog templates.
+Only documentation metadata differs from legacy analyst cases: generated editable
+name, anonymous provenance, UTC draft-preparation time and nullable optional notes.
+No `ManualIdentity`, rationale or scope is invented. The same `read_case` validates
+all financial rates/conventions/source identities and `run_case` calls the unchanged
+A/B engine. `investor-case-enterprise-value-v1` keeps submitted metadata traceable;
+its Stage B financial components match legacy cases with identical numerical inputs.
+Legacy v1/v2 requirements and output remain unchanged. Preparation is no information
+cutoff or approval. See the [exact contract](local-case-api.md#anonymous-investor-metadata-local-update).
+This local checkpoint changes no deployment; the existing preview/withdrawal record
+below remains authoritative. Phase 1 remains paused.
+
 ## Latest deployment — isolated one-day preview
 
 The [hosted preview record](firebase-public-preview.md) binds relative API requests

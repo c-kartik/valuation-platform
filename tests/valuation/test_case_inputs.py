@@ -243,5 +243,66 @@ class CaseInputTests(unittest.TestCase):
             self.assertEqual((ctx.prec,ctx.rounding,ctx.flags,ctx.traps),(before.prec,before.rounding,before.flags,before.traps))
 
 
+class InvestorCaseTests(unittest.TestCase):
+    def investor(self, kind=None):
+        d = document()
+        d.pop('analyst'); d.pop('scope')
+        d['schema_version'] = c.INVESTOR_CASE_SCHEMA
+        d['preparation'] = {'provenance': 'ANONYMOUS_INVESTOR',
+                            'timestamp_utc': '2026-10-21T10:00:00Z', 'notes': None}
+        if kind:
+            d['anchor'] = dict(kind=kind, **c.ANCHORS[kind]['identity'])
+            d['input_basis'] = 'MANUAL_INPUT'
+            d['conventions']['forecast'] = 'manual-fcff-v1'
+        return d
+
+    def test_no_paperwork_same_financial_components_all_anchors(self):
+        for kind in (None, *c.ANCHORS):
+            d = self.investor(kind); before = deepcopy(d)
+            investor = c.run_case(parse(d), ROOT)
+            legacy = deepcopy(d); legacy.pop('preparation')
+            legacy.update(schema_version=c.CASE_SCHEMA, analyst=document()['analyst'], scope=document()['scope'])
+            expected = c.run_case(parse(legacy), ROOT)
+            self.assertEqual(investor['stage_b'], expected['stage_b'])
+            self.assertEqual(investor['schema_version'], c.INVESTOR_RESULT_SCHEMA)
+            self.assertIsNone(parse(d).analyst)
+            self.assertEqual(investor['submitted_inputs'], d)
+            self.assertNotIn('analyst', investor['submitted_inputs'])
+            self.assertNotIn('scope', investor['submitted_inputs'])
+            self.assertEqual(d, before)
+            summary = cli.render_summary(investor)
+            self.assertIn('Investment rationale: absent', summary)
+            self.assertIn('Optional personal notes: absent', summary)
+
+    def test_notes_and_metadata_strictness_without_legacy_relaxation(self):
+        d = self.investor()
+        for notes in (None, '  My words\nonly  ', 'Edited', 'x' * 2048):
+            d['preparation']['notes'] = notes
+            self.assertEqual(c.run_case(parse(d), ROOT)['submitted_inputs']['preparation']['notes'], notes)
+        for field, value in [('notes', ''), ('notes', ' '), ('notes', 5), ('notes', 'x'*2049),
+                             ('provenance', 'VERIFIED_ANALYST'), ('timestamp_utc', None),
+                             ('timestamp_utc', '2026-10-21'), ('timestamp_utc', '2026-10-21T10:00:00+04:00')]:
+            bad = self.investor(); bad['preparation'][field] = value
+            with self.assertRaisesRegex(c.CaseInputError, 'preparation.' + field): parse(bad)
+        for field, value in [('analyst', document()['analyst']), ('scope', 'Invented scope'),
+                             ('information_cutoff', '2026-10-21'), ('bridge', {})]:
+            bad = self.investor(); bad[field] = value
+            with self.assertRaisesRegex(c.CaseInputError, 'unknown field'): parse(bad)
+        legacy = document(); legacy['analyst']['rationale'] = None
+        with self.assertRaisesRegex(c.CaseInputError, 'analyst.rationale'): parse(legacy)
+
+    def test_same_bindings_and_numerical_validation(self):
+        for field, value in [('cik', 999), ('annual_end', '2026-12-31'), ('accession', 'wrong')]:
+            d = self.investor('meta-fy2025'); d['anchor'][field] = value
+            with self.assertRaisesRegex(c.CaseInputError, 'anchor.' + field): parse(d)
+        for field, value in [('wacc', None), ('wacc', '0'), ('terminal_growth', '0.25'), ('wacc', 0.25)]:
+            d = self.investor(); d[field] = value
+            with self.assertRaises(c.CaseInputError): parse(d)
+        d = self.investor(); d['forecast_years'][0]['forecast_tax_rate'] = '1.01'
+        with self.assertRaisesRegex(c.CaseInputError, 'forecast_tax_rate'): parse(d)
+        text = json.dumps(self.investor()).replace('"wacc": "0.25"', '"wacc":"0.25","wacc":"0.3"')
+        with self.assertRaisesRegex(c.CaseInputError, 'Duplicate JSON key'): c.read_case(text)
+
+
 if __name__ == "__main__":
     unittest.main()

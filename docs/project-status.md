@@ -1,6 +1,32 @@
 # Project Status
 
-## Current — one-day anonymous preview deployed and developer-tested
+## Current — local investor calculation without analyst paperwork
+
+The [local workbench](local-calculator-ui.md) now supports company → enter/apply
+assumptions → calculate without required identity, rationale or scope/cutoff entry.
+Collapsed Analysis details holds an editable generated name, a stable UTC
+preparation timestamp, explicit anonymous investor provenance and nullable optional
+personal notes. No rationale, verified identity/cutoff or financial approval is
+invented. The narrow [investor metadata contract](local-case-api.md#anonymous-investor-metadata-local-update)
+reuses all financial/source validation and A/B calculations; legacy analyst v1/v2
+CLI/API requirements and JSON remain compatible. Runtime template instructions
+are separated from current completeness and enduring financial limitations.
+
+**59 frontend + 72 focused Python tests passed (131 total)**, covering case inputs,
+CLI/summary, API/catalog/public boundary and preparation preservation; production
+frontend build passed. Actual local compiled-build Chrome desktop and 390×844
+walkthroughs exercised unset selections, explicitly synthetic inputs, no-details
+calculation, notes, stale edits and recalculation. These are developer workflow
+checks, not mobile virtual-keyboard testing or investment acceptance. All nine
+unset templates and financial formulas/history/approvals are unchanged. No actual
+company forecasts or cases were saved; temporary bundle/session removed.
+
+This checkpoint is local only: no push, remote build, deployment or cloud changes.
+The existing public preview below is unchanged and does not support the new version.
+Its **October 22, 2026 13:04:19 Dubai / 09:04:19 UTC** manual backend-withdrawal
+deadline remains in force; this work does not extend it. Phase 1 stays paused.
+
+## Deployed preview — one-day anonymous window unchanged
 
 The [hosted acceptance/withdrawal record](firebase-public-preview.md) binds Firebase
 channel ev-public-review to valuation-api-preview revision 00001-mf4, reusing the

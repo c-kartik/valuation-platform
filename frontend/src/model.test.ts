@@ -10,9 +10,11 @@ describe('exact input and presentation boundary', () => {
     expect(percentageToFraction(value) ?? 'UNSET').toBe(expected);
   });
   it.each(['10%','NaN','Infinity','1e2','1,000','0x10','--2','.'])('rejects %s', value => expect(() => percentageToFraction(value)).toThrow());
-  it('round trips an EV-only fixture, preserves originals and never copies terminal', () => {
-    const before = JSON.stringify(fixture); const draft = makeDraft(fixture as CaseDoc,true);
-    expect(buildRequest(draft)).toEqual(fixture);
+  it('preserves fixture financial inputs and originals during metadata conversion without terminal copying', () => {
+    const before = JSON.stringify(fixture); const draft = makeDraft(fixture as CaseDoc);
+    expect(buildRequest(draft).forecast_years).toEqual(fixture.forecast_years);
+    expect(buildRequest(draft)).not.toHaveProperty('analyst');
+    expect(buildRequest(draft)).not.toHaveProperty('scope');
     draft.rates['forecast_years[4].operating_margin']='99';
     expect(buildRequest(draft).terminal.operating_margin).toBe('0.30');
     expect(JSON.stringify(fixture)).toBe(before);
@@ -20,7 +22,7 @@ describe('exact input and presentation boundary', () => {
     expect(buildRequest(draft)).not.toHaveProperty('calculation_scope');
     expect(buildRequest(draft)).not.toHaveProperty('information_cutoff');
   });
-  it('keeps 37 unset fields and analyst declarations blank for an unset template', () => {
+  it('keeps 37 unset fields without analyst declarations for an unset template', () => {
     const empty = structuredClone(fixture) as CaseDoc;
     empty.forecast_years.forEach(y => Object.keys(y).filter(k => !['period_index','fiscal_year_label'].includes(k)).forEach(k => {(y as unknown as Record<string,unknown>)[k]=null;}));
     empty.wacc=null;empty.terminal_growth=null;
@@ -28,11 +30,11 @@ describe('exact input and presentation boundary', () => {
     const draft = makeDraft(empty);
     expect(Object.values(draft.rates)).toHaveLength(37);
     expect(Object.values(draft.rates).every(v=>v==='')).toBe(true);
-    expect(draft.doc.analyst.author).toBeNull();expect(draft.doc.scope).toBe('');
+    expect(draft.doc.preparation.notes).toBeNull();expect(draft.doc.preparation.provenance).toBe('ANONYMOUS_INVESTOR');
     expect(buildRequest(draft).terminal.operating_margin).toBeNull();
   });
   it('retains field paths on conversion errors and maps API paths', () => {
-    const draft=makeDraft(fixture as CaseDoc,true);draft.rates.wacc='10%';
+    const draft=makeDraft(fixture as CaseDoc);draft.rates.wacc='10%';
     try {buildRequest(draft); throw Error('expected error');} catch(e) {expect(e).toBeInstanceOf(InputErrors);expect((e as InputErrors).fields.wacc).toMatch(/decimal percentage/);}
     expect(fieldErrors(['forecast_years[2].forecast_tax_rate: bad tax','case.scope: required'])).toEqual({'forecast_years[2].forecast_tax_rate':'bad tax',scope:'required'});
   });
@@ -72,4 +74,18 @@ it('bounds a stalled local request with a client deadline',async()=>{
     const check=expect(pending).rejects.toMatchObject({code:'request_cancelled'});
     await vi.advanceTimersByTimeAsync(50001);await check;
   }finally{vi.useRealTimers();globalThis.fetch=original;}
+});
+
+it('generates stable anonymous details, filters only template instructions and preserves notes verbatim',()=>{
+ const template=structuredClone(fixture) as CaseDoc;
+ template.limitations=['All 37 numerical assumptions and analyst identity/date/rationale are unset; no defaults or historical calibration.','Enduring historical unknown'];
+ const d=makeDraft(template,'2026-10-21T10:00:00.000Z');
+ expect(d.doc.case_name).toBe('Synthetic demonstration · Investor calculation');
+ expect(buildRequest(d).preparation).toEqual({provenance:'ANONYMOUS_INVESTOR',timestamp_utc:'2026-10-21T10:00:00.000Z',notes:null});
+ expect(buildRequest(d).limitations).toEqual(['Enduring historical unknown']);
+ d.doc.preparation.notes='  ';expect(buildRequest(d).preparation.notes).toBeNull();expect(d.doc.preparation.notes).toBe('  ');
+ d.doc.preparation.notes='  My words.\nNot source evidence.  ';
+ expect(buildRequest(d).preparation.notes).toBe('  My words.\nNot source evidence.  ');
+ expect(buildRequest(d)).toEqual(buildRequest(d));
+ expect(template.limitations).toHaveLength(2);
 });

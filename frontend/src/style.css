@@ -102,3 +102,5 @@ main {max-width: 1460px; padding-top: 30px;}
 @media(max-width: 600px) {.workbench-header {display: block;} .company-choice {min-width: 0;} .assumption-columns,.metadata {grid-template-columns: 1fr;} .workbench-grid section,.result {padding: 16px;} .charts {gap: 7px;} }
 
 .workbench-grid > *, .assumption-columns > * {min-width: 0;}
+
+.personal-notes { white-space: pre-wrap; overflow-wrap: anywhere; }

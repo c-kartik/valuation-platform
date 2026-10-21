@@ -1,5 +1,5 @@
 import {useEffect, useRef, useState} from 'react';
-import {annual, terminal, makeDraft, buildRequest, fieldErrors, InputErrors, money, annualState, annualPath, quickValues, applyQuick, copyYearFive, samePercentage} from './model';
+import {annual, terminal, makeDraft, buildRequest, fieldErrors, InputErrors, money, annualState, annualPath, quickValues, applyQuick, copyYearFive, samePercentage, generatedCaseName, enduringLimitations} from './model';
 import type {Catalog, Draft, Errors, Result, AnnualKey, QuickValues} from './model';
 import {ApiError, request, Revisions} from './api';
 import {ResultReview} from './Results';
@@ -89,17 +89,15 @@ export default function App({load = request}: Props) {
     if (!catalog) return;
     invalidate(); setSelected(kind); setResult(null); setStale(false);
     const template = kind === 'demo' ? catalog.synthetic_demo : catalog.entries.find(e => e.kind === kind)?.template;
-    const next = template ? makeDraft(template, kind === 'demo') : null;
+    const next = template ? makeDraft(template) : null;
     setDraft(next); setQuick(next ? quickValues(next) : null); setUnapplied([]);
     setAnnualOpen(false); setTerminalOpen(false); setDetailsOpen(false);
-    setStatus(kind === 'demo' ? 'Synthetic demonstration loaded explicitly. Anchor revenue is synthetic $100; all rates and declarations are examples.' : 'All company assumptions start unset. Apply annual values, set terminal ratios and complete Case details.');
+    setStatus(kind === 'demo' ? 'Synthetic demonstration loaded explicitly. Anchor revenue is synthetic $100; all rates and declarations are examples.' : 'All company assumptions start unset. Apply annual values, set terminal ratios and calculate. Analysis details are optional.');
     setPendingSelection(null);
   };
   const choose = (kind: string) => {
     if (kind === selected) return;
-    const templateLimits = selected==='demo' ? catalog?.synthetic_demo.limitations : catalog?.entries.find(e=>e.kind===selected)?.template.limitations;
-    const changedLimitations = draft && JSON.stringify(draft.doc.limitations)!==JSON.stringify(templateLimits);
-    const populated = draft && (changedLimitations || unapplied.length > 0 || quick && Object.values(quick).some(v => v.trim()) || Object.values(draft.rates).some(v => v.trim()) || draft.doc.case_name || Object.values(draft.doc.analyst).some(Boolean) || draft.doc.scope);
+    const populated = draft && (unapplied.length > 0 || quick && Object.values(quick).some(v => v.trim()) || Object.values(draft.rates).some(v => v.trim()) || draft.doc.preparation.notes !== null || draft.doc.case_name !== generatedCaseName(draft.doc.anchor.kind));
     if (populated) setPendingSelection(kind); else switchTo(kind);
   };
   async function submit(action: 'validate' | 'run') {
@@ -172,14 +170,6 @@ export default function App({load = request}: Props) {
     } catch(e) {reportInputError(e); setAnnualOpen(true);}
   };
   const entry = catalog?.entries.find(e => e.kind === selected);
-  const detailMissing = draft ? [
-    ...(!draft.doc.case_name.trim() ? ['case name'] : []),
-    ...(!draft.doc.analyst.author?.trim() ? ['preparer'] : []),
-    ...(!draft.doc.analyst.timestamp_utc?.trim() ? ['preparation time'] : []),
-    ...(!draft.doc.analyst.rationale?.trim() ? ['rationale'] : []),
-    ...(!draft.doc.scope.trim() ? ['scope / cutoff disclosure'] : []),
-    ...(!draft.doc.limitations.length || draft.doc.limitations.some(v=>!v.trim()) ? ['limitations'] : []),
-  ] : [];
   const missingTerminal = draft ? terminal.filter(([key])=>!draft.rates[`terminal.${key}`].trim()).map(([,label])=>label.replace('Terminal ','')) : [];
   const pathLabel = (path: string) => {
     const match = /^forecast_years\[(\d)\]\.(.+)$/.exec(path);
@@ -187,7 +177,7 @@ export default function App({load = request}: Props) {
     if (/^(?:case\.)?limitations(?:\[|$)/.test(path)) return 'Limitations';
     if (path.startsWith('quick.')) return `${annual.find(([key])=>key===path.slice(6))?.[1] ?? path} quick entry`;
     if (path.startsWith('terminal.')) return terminal.find(([key])=>key===path.slice(9))?.[1] ?? path;
-    return ({'case.case_name':'Case name',case_name:'Case name','analyst.author':'Preparer','analyst.timestamp_utc':'Preparation time','analyst.rationale':'Rationale','case.scope':'Scope / cutoff disclosure',scope:'Scope / cutoff disclosure',wacc:'WACC',terminal_growth:'Terminal growth'} as Record<string,string>)[path] ?? path;
+    return ({'case.case_name':'Case name',case_name:'Case name','preparation.notes':'Optional personal notes','preparation.timestamp_utc':'Preparation time',wacc:'WACC',terminal_growth:'Terminal growth'} as Record<string,string>)[path] ?? path;
   };
   const goToField = (path: string) => {
     const field=path.replace(/^case\./,'').replace(/^limitations\[\d+\]$/,'limitations');
@@ -221,7 +211,7 @@ export default function App({load = request}: Props) {
     {!catalog && <p role="status">Loading retained company data… Check the local server if it is unavailable.</p>}
     {pendingSelection!==null && <Confirmation title="Discard populated edits?" confirmLabel="Discard and switch" cancelLabel="Keep editing" confirm={()=>switchTo(pendingSelection)} cancel={()=>setPendingSelection(null)}>Switching will discard populated annual inputs, quick-entry drafts, case details and results. No copy is saved.</Confirmation>}
     {entry && <section className="history-strip"><div><strong>{entry.company} · reported FY2025 revenue: {money(entry.revenue)} USD millions</strong><p>{entry.identity.annual_start} → {entry.identity.annual_end}. Fixed retained data, not automatically refreshed. Forecast inputs below are your estimates.</p></div>
-      <details><summary>Filing, sources and historical limitations</summary><p>{entry.identity.form} · {entry.identity.accession} · CIK {entry.identity.cik}. Source precision {entry.precision} (−6: nearest million). Base unit {entry.unit}.</p><p>Fiscal-end analytical date: {entry.identity.annual_end}; later-filed information is used. A separate filing-acceptance timestamp is not supplied.</p><ul>{entry.source_links.map((url,i)=><li key={url}><a href={url} target="_blank" rel="noreferrer">Retained SEC filing source {i+1}</a></li>)}</ul><p>{catalog?.timing_notice}</p><ul>{entry.limitations.map((line,i)=><li key={i}>{line}</li>)}</ul></details>
+      <details><summary>Filing, sources and historical limitations</summary><p>{entry.identity.form} · {entry.identity.accession} · CIK {entry.identity.cik}. Source precision {entry.precision} (−6: nearest million). Base unit {entry.unit}.</p><p>Fiscal-end analytical date: {entry.identity.annual_end}; later-filed information is used. A separate filing-acceptance timestamp is not supplied.</p><ul>{entry.source_links.map((url,i)=><li key={url}><a href={url} target="_blank" rel="noreferrer">Retained SEC filing source {i+1}</a></li>)}</ul><p>No verified information cutoff is established. Preparation time and personal notes do not certify information availability or source review.</p><ul>{enduringLimitations(entry.limitations).map((line,i)=><li key={i}>{line}</li>)}</ul></details>
     </section>}
     {selected==='demo' && <div className="notice"><strong>Synthetic demonstration — $100 revenue anchor.</strong> All example rates and declarations are synthetic, not company data or an investment case.</div>}
     {draft && quick ? <>
@@ -246,19 +236,17 @@ export default function App({load = request}: Props) {
           <button onClick={copyTerminal}>Use year-five operating ratios for the terminal year</button><p className="hint">Copies once, assuming sustainable year-five margins and reinvestment. Does not copy growth or WACC; later annual edits do not update terminal inputs.</p>
           <details open={terminalOpen} onToggle={e=>setTerminalOpen(e.currentTarget.open)}><summary>Edit terminal ratios ({missingTerminal.length} missing)</summary><div className="rate-grid">{terminal.map(([key,label])=>rateInput(`terminal.${key}`,`${label} (%)`))}</div></details>
         </div>
-        <details open={detailsOpen} onToggle={e=>setDetailsOpen(e.currentTarget.open)}><summary>Case details ({detailMissing.length} missing)</summary><p>Identity and conventions come from the retained company selection. Your rationale, scope and declarations remain explicit.</p><div className="metadata">
+        <details open={detailsOpen} onToggle={e=>setDetailsOpen(e.currentTarget.open)}><summary>Analysis details</summary>
+          <p>Anonymous investor calculation. Forecasts are user-entered and not independently reviewed. No verified person, professional analyst or investment rationale is asserted.</p>
           {input('case_name','Case name',draft.doc.case_name,value=>edit(n=>{n.doc.case_name=value;}))}
-          {input('analyst.author','Preparer',draft.doc.analyst.author??'',value=>edit(n=>{n.doc.analyst.author=value;}))}
-          {input('analyst.timestamp_utc','Prepared at (ISO timestamp with UTC offset)',draft.doc.analyst.timestamp_utc??'',value=>edit(n=>{n.doc.analyst.timestamp_utc=value;}))}
-        </div><button className="text-button" onClick={()=>edit(n=>{n.doc.analyst.timestamp_utc=new Date().toISOString();})}>Use current UTC time</button>
-          {input('analyst.rationale','Rationale — sources, estimates and consistency',draft.doc.analyst.rationale??'',value=>edit(n=>{n.doc.analyst.rationale=value;}),true)}
-          {input('scope','Scope and information-cutoff disclosure',draft.doc.scope,value=>edit(n=>{n.doc.scope=value;}),true)}
-          <p className="hint">Cutoff is free text, not authenticated or enforced. Fiscal-end analytical timing uses later-filed information, not a contemporaneous backtest.</p>
-          {input('limitations','Limitations — review retained wording (one per line)',draft.doc.limitations.join('\n'),value=>edit(n=>{n.doc.limitations=value.split('\n');}),true)}
+          <p>Prepared at: <time>{draft.doc.preparation.timestamp_utc}</time>. Generated when this draft was created and retained through submissions; not a valuation date, information cutoff or evidence review.</p>
+          {input('preparation.notes','Optional personal notes',draft.doc.preparation.notes??'',value=>edit(n=>{n.doc.preparation.notes=value;}),true)}
+          <p className="hint">Empty notes are absent (null). Notes are your wording, not verified sources or an investment rationale. Limit: 2,048 characters.</p>
+          <p>{Object.values(draft.rates).filter(value=>value.trim()).length} of 37 numerical inputs entered; financial validation still applies. Company templates begin unset, without defaults or historical calibration.</p>
+          <ul>{draft.doc.limitations.map((line,i)=><li key={i}>{line}</li>)}</ul>
           <details><summary>Exact submitted request and source bindings</summary><pre>{(()=>{try{return JSON.stringify(buildRequest(draft),null,2);}catch{return 'Correct invalid percentage entries to inspect the request.';}})()}</pre></details>
         </details>
         <div className="run-controls">{unapplied.length>0 && <p className="missing-note">Unapplied quick-entry drafts: {unapplied.map(key=>annual.find(([k])=>k===key)?.[1]).join(', ')}. Apply or discard them before calculating.</p>}
-          {detailMissing.length>0 && <p className="missing-note">Case details required: {detailMissing.join(', ')}. <button className="text-button" onClick={()=>setDetailsOpen(true)}>Complete case details</button></p>}
           <div className="actions"><button className="primary" disabled={Boolean(busy)} onClick={()=>void submit('run')}>Calculate enterprise value</button><button disabled={Boolean(busy)} onClick={()=>void submit('validate')}>Check inputs</button></div>
           <p role="status" aria-live="polite">{busy ? `${busy==='run'?'Calculating':'Checking inputs'}… Edits cancel this request.` : status}</p>
           {messages.length>0 && <div role="alert" className="errors"><h3>{Object.keys(errors).length ? 'Inputs need attention' : 'Request did not succeed'}</h3><ul>{messages.map((message,i)=>{
@@ -266,7 +254,7 @@ export default function App({load = request}: Props) {
             return <li key={i}>{errors[path.replace(/^case\./,'')] ? <button className="text-button" onClick={()=>goToField(path)}>{pathLabel(path)}: {message.slice(colon+1)}</button> : message}</li>;
           })}</ul><p>{Object.keys(errors).length ? 'Correct the indicated inputs and check again; server error lists are bounded.' : 'Review the service message and retry explicitly when available; changing assumptions is not required to recover from a service failure.'} Inputs are preserved.</p></div>}
         </div>
-      </section><aside aria-label="Valuation review">{result ? <ResultReview result={result} stale={stale}/> : <section className="result-placeholder"><div className="section-number">ENTERPRISE VALUE</div><h2>Your result appears here.</h2><p>Supply six annual assumptions, WACC, terminal growth, five terminal ratios and the required case details, then calculate explicitly.</p><p>EV values the operating business. It is not equity value or value per share.</p></section>}</aside></div>
+      </section><aside aria-label="Valuation review">{result ? <ResultReview result={result} stale={stale}/> : <section className="result-placeholder"><div className="section-number">ENTERPRISE VALUE</div><h2>Your result appears here.</h2><p>Supply six annual assumptions, WACC, terminal growth, five terminal ratios then calculate explicitly. Analysis details and personal notes are optional.</p><p>EV values the operating business. It is not equity value or value per share.</p></section>}</aside></div>
     </> : <section className="empty-state"><h2>Select a retained company to begin.</h2><p>Company forecasts start unset. The separate demonstration uses a synthetic $100 revenue anchor.</p></section>}
     {!draft && messages.length>0 && <div role="alert" className="errors">{messages.join(' ')}</div>}
     <footer>Local only · No automatic saving · Phase 1 expansion paused · Developer-tested workflow, not investor acceptance or a replacement for professional Excel modeling.</footer>

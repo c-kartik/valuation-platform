@@ -4,15 +4,18 @@ The subsequent [390×844 desktop keyboard review](narrow-keyboard-review.md) clo
 the earlier narrow-keyboard qualification after focused confirmation fixes: native
 modal, safe Keep focus, explicit Tab cycle, Escape cancellation and trigger restoration.
 This is not mobile virtual-keyboard or complete accessibility certification.
-[Firebase/public-preview preparation](public-preview-preparation.md) remains local
-and blocked on site identity/access/cost decisions; the deployed API is unchanged.
+The earlier [Firebase preparation](public-preview-preparation.md) is superseded by
+the [hosted preview record](firebase-public-preview.md). This local metadata update
+is not deployed and changes no preview access or withdrawal deadline.
 
 ## Scope and startup
 
-The React/TypeScript/Vite quick workbench edits one `analyst-case-v1` through
+The React/TypeScript/Vite quick workbench constructs one `investor-case-v1` through
 enterprise value only. The [packaged Python API](local-case-api.md) remains the
-financial calculation/validation authority. No formulas, schemas, conventions,
-financial approvals or historical resources changed. Phase 1 expansion remains
+financial calculation/validation authority. The narrow
+[metadata extension](local-case-api.md#anonymous-investor-metadata-local-update)
+leaves formulas, conventions, financial approvals and historical resources unchanged.
+Phase 1 expansion remains
 [paused](phase1-universe-pause-checkpoint.md); Phase 2's
 [qualified software completion](phase2-completion-checkpoint.md) is preserved.
 
@@ -94,20 +97,34 @@ year-five margins/reinvestment, requiring human consistency review. Later annual
 edits never update terminal values. Every terminal ratio remains separately editable;
 the main view lists missing terminal requirements even while the editors are closed.
 
-**Case details** moves name, preparer, preparation timestamp, rationale, scope/cutoff
-and limitations out of the main entry area. Missing required declarations remain
-listed beside Calculate with a direct opening action. Company name/scope/preparer/
-rationale/time start blank. **Use current UTC time** is an explicit convenience
-only; there is no silent author, generic rationale or approval. Retained limitations
-are initially visible when expanded and must be reviewed for the submitted case.
-Identity/version/conventions remain derived from trusted templates. The exact
-request and mechanical bindings expand inside Case details; no schema is redesigned.
+**Analysis details** is collapsed and optional in the normal flow: select company
+→ enter/apply assumptions → calculate. A generated editable case name and UTC
+preparation timestamp are created once when selecting a draft; they stay stable
+through requests/retries. The timestamp records draft preparation, not the fiscal-end
+analytical date, evidence review or verified information availability. Provenance
+is explicitly anonymous investor, without verified identity or professional-analyst
+status. There is no required preparer, rationale, time entry or scope/cutoff attestation.
+Optional personal notes start empty (serialized null for absent); nonempty notes
+retain the user's wording and are bounded to 2,048 characters. Notes/name edits
+invalidate pending replies and mark results stale, just like numerical edits.
+No optional-field missing count blocks calculation. A deliberately cleared case
+name still receives a linked required-name error; the generated name needs no entry.
+
+The template-only “all 37 unset” instruction is filtered from the runtime copy;
+original catalog/templates remain unchanged. The UI separately counts currently
+entered numerical inputs (not domain-valid inputs) and retains every enduring
+financial limitation. Historical period, filing, precision and later-filed timing
+remain readable source information. Forecasts are user-entered, not independently
+reviewed, and inherit no historical approval. Exact requests/source bindings expand
+inside Analysis details. Legacy documented analyst CLI/API cases remain supported
+with their original requirements, rather than receiving fabricated boilerplate.
 
 Percentage text remains exact: `10` → `"0.10"`, `-2.5` → `"-0.025"`; blank → null.
 No financial input passes through Number/parseFloat arithmetic. Percent signs,
 commas, exponents and nonfinite text reject locally; Python owns financial ranges
-and model validation. The existing contract has no structured enforced cutoff:
-disclose it in scope/limitations. Fiscal-end analytical timing uses later-filed
+and model validation. The investor contract establishes no verified information
+cutoff. Legacy analyst cases retain their free-text scope/limitation declarations.
+Fiscal-end analytical timing uses later-filed
 information; it is not a contemporaneous backtest or an authenticated cutoff.
 
 WC uses full forecast revenue: positive consumes cash, negative releases cash.
@@ -132,7 +149,8 @@ equity/value per share, and **terminal contribution**. A newly authorized displa
 exception computes terminal PV / EV with an isolated Decimal.js precision-50 /
 HALF_EVEN constructor, matching CLI summary semantics: undefined at zero EV, signed
 and over-100% ratios retained, with explanatory notes before display rounding.
-The API result contract and all raw returned strings are unchanged. The original
+All raw financial strings are unchanged; the investor metadata/result version is
+explicitly distinguished from the legacy analyst result. The original
 milestone's deferred-ratio decision is superseded by this explicit UI exception;
 no server presentation endpoint or financial formula change was needed.
 
@@ -172,7 +190,39 @@ unchanged. Client timeout is 50 seconds; cancellation/late-reply guards are UI
 behavior, not a replacement for server deadlines. No cloud/static-host routing,
 production CORS or public admission controls are configured.
 
-## Compiled-build investor walkthrough — current
+## Anonymous investor workflow verification (local)
+
+This local update passed **59 frontend and 72 focused Python tests (131 total)**:
+case-input/legacy equity/CLI-summary, API/catalog/public-boundary and preparation
+preservation checks. Tests compare complete Stage B financial components across
+investor and legacy metadata on synthetic and all three retained anchors, rather
+than claiming identical metadata-bearing JSON. They cover null/present/edited/cleared
+notes, wording/whitespace retention, generated details, invalidation/late replies,
+financial/source/domain errors, calculation-free validation, budgets and legacy
+compatibility. TypeScript/Vite production build passed; no full historical suite.
+
+Actual Chrome desktop and 390×844 responsive walkthroughs used compiled static
+assets and a fresh local packaged API. Starting from unset META (desktop), GOOGL
+and AAPL (narrow), the tester explicitly entered synthetic growth 10%, margin 20%,
+tax 25%, expense D&A 5%, investment 10%, WC 2%, WACC 25% and terminal growth 5%,
+applied annual rows and explicitly copied year-five terminal ratios once. These
+are engineering test choices, not company forecasts or economic recommendations.
+Calculation succeeded without opening Analysis details. The empty META attempt
+returned only required financial-field errors, without a result. Notes and a WACC
+edit to 26% (desktop), then notes and terminal WC to 3% (final narrow build), marked
+results stale and recalculated while retaining preparation time and wording.
+Generated names were shortened during review; timestamps remain in details.
+The final narrow result/source disclosure preserved fiscal-end timing, SEC links,
+absence of rationale/cutoff and enduring qualifications, without the obsolete
+“all 37 unset” instruction. The final narrow session showed zero console messages.
+
+This is desktop keyboard/responsive testing, not actual mobile virtual-keyboard
+or exhaustive accessibility certification. No actual-company economic case or
+forecast defaults were saved. The browser trial tab, local servers and temporary
+private bundle were removed. Existing [public preview](firebase-public-preview.md),
+cloud resources and withdrawal window are unchanged; no push/deployment occurred.
+
+## Earlier compiled-build investor walkthrough
 
 The [new developer walkthrough](local-workbench-acceptance.md) records continuous
 META/GOOGL/AAPL entry/edit/recalculation on the actual compiled build, captured
@@ -265,9 +315,10 @@ No full historical suite or new financial research was run.
 ## Next boundary
 
 JSON import/export or equity/share entry require separately bounded work. No equity,
-scenario, sensitivity or reverse-DCF screens are added here. The current cutoff
-remains free text, analyst declarations unauthenticated, and economic completeness
-unproven. Public deployment still requires the separately scoped
+scenario, sensitivity or reverse-DCF screens are added here. No verified cutoff is
+established; anonymous preparation and legacy analyst declarations remain
+unauthenticated, and economic completeness unproven. Public deployment still
+requires the separately scoped
 [API launch checks](local-case-api.md#remaining-launch-boundary), Linux/admission/
 load verification and hosting decisions. Phase 2 qualified completion and Phase 1
 pause are unchanged. No hosting, cloud, DNS or separate website files are changed.
