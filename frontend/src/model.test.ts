@@ -1,7 +1,7 @@
 import {describe,it,expect} from 'vitest';
 import Decimal from 'decimal.js';
 import fixture from '../../examples/valuation/synthetic-base.json';
-import {percentageToFraction, fractionToPercentage, makeDraft, buildRequest, money, display, fieldErrors, InputErrors} from './model';
+import {percentageToFraction, fractionToPercentage, makeDraft, buildRequest, money, display, fieldErrors, InputErrors, entryErrors} from './model';
 import type {CaseDoc} from './model';
 import {Revisions, request, ApiError} from './api';
 
@@ -88,4 +88,7 @@ it('generates stable anonymous details, filters only template instructions and p
  expect(buildRequest(d).preparation.notes).toBe('  My words.\nNot source evidence.  ');
  expect(buildRequest(d)).toEqual(buildRequest(d));
  expect(template.limitations).toHaveLength(2);
+ d.doc.preparation.notes=' '.repeat(2049);expect(entryErrors(d)).not.toHaveProperty('preparation.notes');expect(buildRequest(d).preparation.notes).toBeNull();
+ d.doc.preparation.notes='😀'.repeat(2048);expect(entryErrors(d)).not.toHaveProperty('preparation.notes');
+ d.doc.preparation.notes+='x';expect(entryErrors(d)).toHaveProperty('preparation.notes');
 });

@@ -104,3 +104,7 @@ main {max-width: 1460px; padding-top: 30px;}
 .workbench-grid > *, .assumption-columns > * {min-width: 0;}
 
 .personal-notes { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+.quick-row {display: flex; flex-direction: column; align-items: stretch;}
+.quick-row > button {align-self: flex-start;}
+.quick-status {color: #526860;}

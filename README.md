@@ -19,7 +19,7 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-The local investor metadata update is committed separately from the deployed preview;
+The local investor entry and metadata updates are committed separately from the deployed preview;
 legacy analyst CLI/API requirements remain unchanged. See the [metadata contract](docs/local-case-api.md#anonymous-investor-metadata-local-update).
 
 The [one-day Firebase preview](https://kartikchaturvedi-website--ev-public-review-ztr805i5.web.app/)
@@ -55,9 +55,11 @@ Linux/container tooling was unavailable. The subsequent authenticated staging re
 above supersedes its unexecuted Linux/cloud gates within the documented scope.
 
 The [local React/TypeScript calculator](docs/local-calculator-ui.md) now provides
-retained META/GOOGL/AAPL basis review, eight unset quick-entry rates, explicit
-apply-to-five-years actions, independent annual/terminal editing and EV calculation
-through the Python API. The local flow is select company → enter/apply assumptions
+retained META/GOOGL/AAPL basis review, eight unset quick-entry rates, direct
+uniform five-year entry, confirmed replacement of varying paths, independent
+annual/long-term editing and EV calculation through the Python API. Errors appear
+after editing/leaving a field or submitting; initial guidance is neutral.
+The local flow is select company → enter assumptions
 → calculate, without analyst paperwork. Collapsed Analysis details holds an editable
 generated name, anonymous preparation timestamp and optional personal notes;
 no rationale or verified information cutoff is invented. Detailed cash flows expand on demand;

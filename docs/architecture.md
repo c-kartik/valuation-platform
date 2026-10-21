@@ -1,5 +1,19 @@
 # Architecture
 
+## Local update — direct uniform entry and progressive validation
+
+The [workbench](local-calculator-ui.md#quick-entry-and-review-contract) keeps raw
+percentage strings as the single input state. A uniform main-control edit updates
+only that rate across five years; differing paths use explicit, blocking replacement
+proposals and native confirmation. Long-term copying remains a separate action,
+confirming changed populated targets and preserving independent WACC/g and ratios.
+Touched/submit error projection groups uniform annual issues, retains unrelated
+errors and expands/focuses the relevant editor. Background validation delegates
+numerical domains to the unchanged calculation-free API; revision/abort guards
+isolate obsolete checks and results. No duplicate financial validator, new API
+contract, default assumptions, historical changes or deployment is introduced.
+Approved anonymous preparation/notes and the Phase 1 pause remain intact.
+
 ## Local update — anonymous investor preparation
 
 The local workbench constructs `investor-case-v1` from unchanged catalog templates.

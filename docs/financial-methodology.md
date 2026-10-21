@@ -5,9 +5,9 @@
 The subsequent [local EV-only calculator UI](local-calculator-ui.md) changes
 entry/presentation only. Python formulas and financial validation remain authoritative;
 no company assumptions, cutoff enforcement, calibration or financial approval are
-introduced. Explicit flat-path apply and year-five terminal-copy actions are UI
-conveniences, not changes to the requirement for individually supplied annual/terminal
-operands. The authorized terminal PV / EV metric is display-only, including
+introduced. Direct uniform entry, confirmed replacement of varying annual paths
+and explicit final-year copying to independent long-term ratios are UI conveniences;
+the request still supplies all annual/terminal operands explicitly. The authorized terminal PV / EV metric is display-only, including
 undefined zero-EV and signed/over-100% behavior. Phase 1 remains paused and all scoped Phase 2 qualifications remain.
 
 

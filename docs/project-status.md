@@ -1,6 +1,35 @@
 # Project Status
 
-## Current — local investor calculation without analyst paperwork
+## Current — local direct-entry investor workflow
+
+The [calculator](local-calculator-ui.md) now uses plain-language profit, tax, D&A,
+operating investment, cash-needs, discount-rate and long-term-growth labels.
+Uniform main entries directly update five annual values, with no Apply bookkeeping.
+Differing annual paths require an explicit confirmed replacement. Long-term copy
+confirms changed populated values and stays independent of later annual edits.
+Neutral initial guidance becomes inline touched/left or submitted error review;
+submission groups uniform-year errors, expands/focuses the first field and keeps
+service failures separate. Anonymous metadata and optional notes remain approved
+and unchanged; no financial defaults or economic approvals are added.
+
+**60 frontend + 72 focused Python tests passed (132 total)**, plus production
+build, local links/whitespace and protected-scope checks. An actual Python pipeline
+comparison matched complete financial components for equivalent old/new entry.
+Actual compiled Chrome desktop and 390×844 keyboard walkthroughs exercised unset
+selections, synthetic direct entry, partial/missing/domain error recovery,
+annual replacement cancel/confirm, long-term independence, modal focus and
+recalculation. Representative screenshots were captured. This is developer
+verification, not mobile virtual-keyboard or investment acceptance. All nine
+unset templates, formulas, historical/source approvals and Phase 1 pause remain
+unchanged. No actual-company economic case or output was saved.
+
+The checkpoint is local only, followed by the requested localhost frontend/API
+review servers. No push, remote build or cloud/deployment changes. The hosted
+preview remains on its prior version with the same **October 22, 2026 13:04:19
+Dubai / 09:04:19 UTC** manual backend-withdrawal deadline; this work does not
+extend its window.
+
+## Earlier — local investor calculation without analyst paperwork
 
 The [local workbench](local-calculator-ui.md) now supports company → enter/apply
 assumptions → calculate without required identity, rationale or scope/cutoff entry.

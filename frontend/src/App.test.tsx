@@ -15,170 +15,135 @@ const input=(label:string)=>screen.getByLabelText(label) as HTMLInputElement;
 const set=(label:string,value:string)=>fireEvent.change(input(label),{target:{value}});
 const openAnnual=()=>fireEvent.click(screen.getByText('Advanced annual editing'));
 
-it('focuses safe cancellation and restores the apply trigger without losing annual edits',async()=>{
- render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();
- set('Annual revenue growth (%)','12');
- const trigger=screen.getByRole('button',{name:'Apply Annual revenue growth to five years'});
- trigger.focus();fireEvent.click(trigger);
- const dialog=screen.getByRole('alertdialog',{name:'Replace annual inputs?'});
- expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Keep annual edits'}));
- const user=userEvent.setup();await user.tab();
- expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Replace annual inputs'}));
- await user.tab({shift:true});
- expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Keep annual edits'}));
- fireEvent(dialog,new Event('cancel',{bubbles:true,cancelable:true}));
- expect(screen.queryByRole('alertdialog')).toBeNull();expect(document.activeElement).toBe(trigger);
- expect(input('Revenue growth Synthetic period 1 (%)').value).toBe('10');
- expect(input('Annual revenue growth (%)').value).toBe('12');
-});
-it('restores the selector after cancelling a company change and restores apply after confirmation',async()=>{
- render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();
- const company=screen.getByLabelText('Company');company.focus();
- fireEvent.change(company,{target:{value:'test-anchor'}});
- const dialog=screen.getByRole('alertdialog',{name:'Discard populated edits?'});
- expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Keep editing'}));
- fireEvent.click(within(dialog).getByRole('button',{name:'Keep editing'}));
- expect(document.activeElement).toBe(company);expect(input('Operating margin (%)').value).toBe('20');
- set('Operating margin (%)','21');const trigger=screen.getByRole('button',{name:'Apply Operating margin to five years'});
- trigger.focus();fireEvent.click(trigger);fireEvent.click(screen.getByRole('button',{name:'Replace annual inputs'}));
- expect(document.activeElement).toBe(trigger);expect(input('Operating margin Synthetic period 5 (%)').value).toBe('21');
-});
+async function selectEmpty(){await waitFor(()=>expect((screen.getByLabelText('Company') as HTMLSelectElement).disabled).toBe(false));fireEvent.change(screen.getByLabelText('Company'),{target:{value:'test-anchor'}});}
+const grow='Annual revenue growth (%)', margin='Operating profit margin (%)', tax='Operating tax rate (%)', wacc='Discount rate — WACC (%)';
+const run=()=>fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));
+const copy=()=>fireEvent.click(screen.getByRole('button',{name:'Copy final-year operating assumptions'}));
+function diverge(){openAnnual();set('Annual revenue growth Synthetic period 2 (%)','18');}
 
-it('shows unset company inputs without metadata blockers',async()=>{
- render(<App load={transport(async()=>({status:'valid'}))}/>);await waitFor(()=>expect((screen.getByLabelText('Company') as HTMLSelectElement).disabled).toBe(false));
- fireEvent.change(screen.getByLabelText('Company'),{target:{value:'test-anchor'}});
- for(const label of ['Annual revenue growth (%)','Operating margin (%)','WACC (%)','Terminal growth (%)','Operating tax rate (%)','Expense D&A / revenue (%)','Investment / revenue (%)','WC cash requirement / full revenue (%)'])expect(input(label).value).toBe('');
- expect(screen.getByText(/Missing terminal inputs: Operating margin/i)).toBeTruthy();
- expect(screen.queryByText(/Case details required/)).toBeNull();
- expect(screen.getByText('Analysis details').closest('details')?.open).toBe(false);
- expect(screen.queryByLabelText('Preparer')).toBeNull();expect(input('Optional personal notes').value).toBe('');
- expect(screen.queryByRole('option',{name:/Synthetic/})).toBeNull();
-});
-it('keeps a quick draft unapplied and blocks transport until apply or discard',async()=>{
- let posts=0;render(<App load={transport(async()=>{posts++;return result();})}/>);await selectDemo();set('Annual revenue growth (%)','12.125');
- fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await screen.findByText('Inputs need attention');expect(posts).toBe(0);expect(input('Revenue growth Synthetic period 1 (%)').value).toBe('10');
- fireEvent.click(screen.getByRole('button',{name:'Discard Annual revenue growth draft'}));expect(input('Annual revenue growth (%)').value).toBe('10');
- fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));await waitFor(()=>expect(posts).toBe(1));
-});
-it('applies a single row exactly after confirmation, without linking later draft edits',async()=>{
- render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();set('Annual revenue growth (%)','12.125');fireEvent.click(screen.getByRole('button',{name:'Apply Annual revenue growth to five years'}));
- expect(screen.getByRole('alertdialog',{name:'Replace annual inputs?'})).toBeTruthy();expect(input('Revenue growth Synthetic period 1 (%)').value).toBe('10');
- fireEvent.click(screen.getByRole('button',{name:'Replace annual inputs'}));
- for(let i=1;i<=5;i++)expect(input(`Revenue growth Synthetic period ${i} (%)`).value).toBe('12.125');
- set('Annual revenue growth (%)','13');expect(input('Revenue growth Synthetic period 1 (%)').value).toBe('12.125');expect(input('Operating margin Synthetic period 1 (%)').value).toBe('20');
-});
-it('bulk applies only explicitly supplied six values and preserves metadata/schema',async()=>{
- const sent:unknown[]=[];render(<App load={transport(async(_,body)=>{sent.push(body);return {status:'valid'};})}/>);await selectDemo();
- const entries=[['Annual revenue growth (%)','11'],['Operating margin (%)','21'],['Operating tax rate (%)','22'],['Expense D&A / revenue (%)','6'],['Investment / revenue (%)','12'],['WC cash requirement / full revenue (%)','-1']];
- entries.forEach(([k,v])=>set(k,v));fireEvent.click(screen.getByRole('button',{name:'Apply all six to five years'}));fireEvent.click(screen.getByRole('button',{name:'Replace annual inputs'}));
- fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));await waitFor(()=>expect(sent).toHaveLength(1));
- const doc=sent[0] as InvestorDoc;expect(doc.schema_version).toBe('investor-case-v1');expect(doc).not.toHaveProperty('bridge');expect(doc).not.toHaveProperty('information_cutoff');expect(doc.preparation.notes).toBeNull();expect(doc).not.toHaveProperty('analyst');
- expect(doc.forecast_years[4]).toMatchObject({revenue_growth:'0.11',operating_margin:'0.21',forecast_tax_rate:'0.22',d_and_a_percent_revenue:'0.06',capex_percent_revenue:'0.12',change_in_operating_nwc_percent_revenue:'-0.01'});expect(doc.terminal).toEqual(demo.terminal);
-});
-it('marks annual divergence, preserves collapse/reopen and requires overwrite confirmation',async()=>{
- render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();openAnnual();set('Revenue growth Synthetic period 2 (%)','18');
- expect(screen.getByText('Varies by year — annual inputs used')).toBeTruthy();openAnnual();openAnnual();expect(input('Revenue growth Synthetic period 2 (%)').value).toBe('18');
- fireEvent.click(screen.getByRole('button',{name:'Apply Annual revenue growth to five years'}));fireEvent.click(screen.getByRole('button',{name:'Keep annual edits'}));expect(input('Revenue growth Synthetic period 2 (%)').value).toBe('18');
-});
-it('copies terminal ratios once while keeping growth/WACC and subsequent annual edits independent',async()=>{
- render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();openAnnual();set('Operating margin Synthetic period 5 (%)','37');
- fireEvent.click(screen.getByRole('button',{name:'Use year-five operating ratios for the terminal year'}));expect(input('Terminal operating margin (%)').value).toBe('37');expect(input('Terminal operating tax (%)').value).toBe('25');expect(input('Terminal investment / revenue (%)').value).toBe('10');
- expect(input('WACC (%)').value).toBe('25');expect(input('Terminal growth (%)').value).toBe('5');set('Operating margin Synthetic period 5 (%)','44');expect(input('Terminal operating margin (%)').value).toBe('37');set('Terminal operating margin (%)','32');expect(input('Operating margin Synthetic period 5 (%)').value).toBe('44');
-});
-it('calls calculation-free check and explicit run with unchanged synthetic financial inputs',async()=>{
- const calls:string[]=[];render(<App load={transport(async(path,body)=>{calls.push(path);expect((body as InvestorDoc).forecast_years).toEqual(demo.forecast_years);expect((body as InvestorDoc).preparation.provenance).toBe('ANONYMOUS_INVESTOR');return path.endsWith('validate')?{status:'valid'}:result();})}/>);await selectDemo();
- const user=userEvent.setup();screen.getByRole('button',{name:'Check inputs'}).focus();await user.keyboard('{Enter}');await screen.findByText(/Input checks passed/);expect(calls).toEqual(['/api/v1/cases/validate']);
- fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await screen.findByText('Synthetic result');expect(calls.at(-1)).toBe('/api/v1/cases/run');
-});
-it('maps API field errors and preserves entries on resource/busy/deadline/connection failures',async()=>{
- let code='invalid_case';render(<App load={transport(async()=>{throw new ApiError(code,'Retry or correct',['forecast_years[0].forecast_tax_rate: invalid tax']);})}/>);await selectDemo();
- for(const next of ['invalid_case','request_too_large','busy','deadline_exceeded','connection_error','internal_error']){
-  code=next;fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));await screen.findByText(`${code}: Retry or correct`);
-  expect(input('Operating tax Synthetic period 1 (%)').value).toBe('25');expect(input('Operating tax Synthetic period 1 (%)').getAttribute('aria-invalid')).toBe('true');
+it('starts neutral with unset rates, optional details and no apply controls',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectEmpty();
+ for(const label of [grow,margin,tax,wacc,'Long-term revenue growth (%)','Depreciation & amortization / revenue (%)','Operating investment / revenue (%)','Working-capital cash needs / revenue (%)']){
+  expect(input(label).value).toBe('');expect(input(label).getAttribute('aria-invalid')).toBe('false');
  }
- fireEvent.click(screen.getByRole('button',{name:/Operating tax — Synthetic period 1: invalid tax/}));expect(screen.getByText('Advanced annual editing').closest('details')?.open).toBe(true);
+ expect(screen.queryByRole('alert')).toBeNull();expect(screen.queryByRole('region',{name:'Input issues'})).toBeNull();
+ expect(screen.getByText('Analysis details').closest('details')?.open).toBe(false);expect(input('Optional personal notes').value).toBe('');
+ expect(screen.queryByRole('button',{name:/Apply/})).toBeNull();expect(screen.queryByRole('button',{name:/Use .* for all five years/})).toBeNull();
 });
-it('marks a result stale immediately on quick/annual edits',async()=>{
- render(<App load={transport(async()=>result())}/>);await selectDemo();fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await screen.findByText('Synthetic result');
- set('Annual revenue growth (%)','12');expect(screen.getByText(/STALE RESULT/)).toBeTruthy();fireEvent.click(screen.getByRole('button',{name:'Discard Annual revenue growth draft'}));openAnnual();set('Revenue growth Synthetic period 1 (%)','13');expect(screen.getByText(/STALE RESULT/)).toBeTruthy();
+it('updates one uniform field directly, retaining exact raw text and unrelated inputs',async()=>{
+ const sent:InvestorDoc[]=[];render(<App load={transport(async(_,body)=>{sent.push(body as InvestorDoc);return result();})}/>);await selectDemo();
+ set(grow,'12.125');for(let i=1;i<=5;i++)expect(input(`Annual revenue growth Synthetic period ${i} (%)`).value).toBe('12.125');
+ run();await screen.findByText('Synthetic result');expect(sent[0].forecast_years.every(y=>y.revenue_growth==='0.12125')).toBe(true);
+ expect(sent[0].forecast_years[0].operating_margin).toBe('0.20');expect(sent[0].terminal).toEqual(demo.terminal);expect(sent[0].preparation.notes).toBeNull();
 });
-it('ignores obsolete and out-of-order responses after edits',async()=>{
- const replies:((r:unknown)=>void)[]=[];render(<App load={transport(()=>new Promise(resolve=>{replies.push(resolve);} ))}/>);await selectDemo();
- fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));openAnnual();set('Revenue growth Synthetic period 1 (%)','12');fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));
- const newer=result();newer.case_name='Newer submitted revision';replies[1](newer);await screen.findByText('Newer submitted revision');replies[0](result());await waitFor(()=>expect(screen.queryByText('Synthetic result')).toBeNull());expect(screen.queryByText(/STALE RESULT/)).toBeNull();
+it.each(['-','.','12%',''])('never submits an older valid rate while %s is displayed',async(value)=>{
+ const posts=vi.fn(async()=>result());render(<App load={transport(posts)}/>);await selectDemo();set(grow,value);run();
+ await screen.findByRole('region',{name:'Input issues'});expect(posts).not.toHaveBeenCalled();
+ for(let i=1;i<=5;i++)expect(input(`Annual revenue growth Synthetic period ${i} (%)`).value).toBe(value);
+ set(grow,'11.00');run();await screen.findByText('Synthetic result');expect((posts.mock.calls[0] as unknown[])[1]).toMatchObject({forecast_years:[expect.objectContaining({revenue_growth:'0.1100'}),expect.anything(),expect.anything(),expect.anything(),expect.anything()]});
 });
-it('confirms company changes even for quick-only drafts and ignores old-company replies',async()=>{
- let resolve!:(r:unknown)=>void;render(<App load={transport(()=>new Promise(r=>{resolve=r;}))}/>);await selectDemo();fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));
- fireEvent.change(screen.getByLabelText('Company'),{target:{value:'test-anchor'}});fireEvent.click(screen.getByRole('button',{name:'Keep editing'}));expect(input('Annual revenue growth (%)').value).toBe('10');
- fireEvent.change(screen.getByLabelText('Company'),{target:{value:'test-anchor'}});fireEvent.click(screen.getByRole('button',{name:'Discard and switch'}));resolve(result());await waitFor(()=>expect(screen.queryByText('Synthetic result')).toBeNull());
- set('Annual revenue growth (%)','9');fireEvent.click(screen.getByRole('button',{name:'Load synthetic demonstration'}));expect(screen.getByRole('alertdialog',{name:'Discard populated edits?'})).toBeTruthy();
+it('shows varying years honestly and blocks an unconfirmed replacement',async()=>{
+ const posts=vi.fn(async()=>result());render(<App load={transport(posts)}/>);await selectDemo();diverge();
+ expect(input(grow).value).toBe('');expect(screen.getByText(/Varies by year/)).toBeTruthy();openAnnual();openAnnual();expect(input('Annual revenue growth Synthetic period 2 (%)').value).toBe('18');
+ set(grow,'13');run();await screen.findByRole('region',{name:'Input issues'});expect(posts).not.toHaveBeenCalled();expect(input('Annual revenue growth Synthetic period 2 (%)').value).toBe('18');
 });
-it.each([['0','Undefined'],['-1000000','-400.00%'],['2000000','200.00%']])('shows signed/undefined contribution for EV %s', (ev,ratio)=>{
- render(<ResultReview result={result(ev)} stale={false}/>);expect(screen.getByText('Enterprise value · USD millions')).toBeTruthy();expect(screen.getByText(ratio)).toBeTruthy();expect(screen.getByRole('img',{name:/Revenue trend/})).toBeTruthy();expect(screen.getByText('Five-year forecast · USD millions')).toBeTruthy();
- expect(screen.getAllByText('-1.00').length).toBeGreaterThan(0);
+it('confirms the field and all years, keeps safe focus, and cancels without changing the annual path',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();diverge();set(grow,'13');
+ const trigger=screen.getByRole('button',{name:'Use Annual revenue growth for all five years'});trigger.focus();fireEvent.click(trigger);
+ const dialog=screen.getByRole('alertdialog',{name:'Replace annual inputs?'});
+ expect(dialog.textContent).toContain('Annual revenue growth of 13%');for(let i=1;i<=5;i++)expect(dialog.textContent).toContain(`Synthetic period ${i}`);
+ expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Keep annual edits'}));
+ const user=userEvent.setup();await user.tab();expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Replace annual inputs'}));await user.tab();expect(document.activeElement).toBe(within(dialog).getByRole('button',{name:'Keep annual edits'}));
+ fireEvent(dialog,new Event('cancel',{bubbles:true,cancelable:true}));expect(screen.queryByRole('alertdialog')).toBeNull();expect(document.activeElement).toBe(trigger);
+ expect(input('Annual revenue growth Synthetic period 1 (%)').value).toBe('10');expect(input('Annual revenue growth Synthetic period 2 (%)').value).toBe('18');expect(input(grow).value).toBe('');
+ set(grow,'14');fireEvent.click(trigger);fireEvent.click(screen.getByRole('button',{name:'Replace annual inputs'}));
+ for(let i=1;i<=5;i++)expect(input(`Annual revenue growth Synthetic period ${i} (%)`).value).toBe('14');expect(input('Operating profit margin Synthetic period 2 (%)').value).toBe('20');expect(input('Long-term operating profit margin (%)').value).toBe('30');
 });
-it('rejects malformed quick-entry text without changing annual values',async()=>{
- render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();set('Operating tax rate (%)','25%');fireEvent.click(screen.getByRole('button',{name:'Apply Operating tax rate to five years'}));expect(input('Operating tax Synthetic period 1 (%)').value).toBe('25');expect(input('Operating tax rate (%)').value).toBe('25%');expect(screen.getByText('Inputs need attention')).toBeTruthy();
+it('uses touched/left errors without initial red errors and clears a correction without hiding other issues',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();set(grow,'-');expect(input(grow).getAttribute('aria-invalid')).toBe('false');fireEvent.blur(input(grow));expect(input(grow).getAttribute('aria-invalid')).toBe('true');
+ expect(input(grow).getAttribute('aria-describedby')).toContain('quick.revenue_growth-error');set(tax,'bad');fireEvent.blur(input(tax));
+ set(grow,'11');expect(input(grow).getAttribute('aria-invalid')).toBe('false');expect(input(tax).getAttribute('aria-invalid')).toBe('true');
 });
-it('preserves unrounded annual strings beside display-only rounded tables',()=>{
- const r=result();r.stage_b.stage_a.years[0].revenue='1234567.123456789';const before=JSON.stringify(r);
- render(<ResultReview result={r} stale={false}/>);
- fireEvent.click(screen.getByText('Submitted assumptions, rationale and timing'));fireEvent.click(screen.getByText('Full-precision inputs and calculation trace'));
- const exact=screen.getByRole('region',{name:'Unrounded annual values in USD'});expect(within(exact).getByText('1234567.123456789')).toBeTruthy();expect(JSON.stringify(r)).toBe(before);
+it('reveals all entry blockers concisely on submit and navigates to the first field',async()=>{
+ const posts=vi.fn();render(<App load={transport(posts)}/>);await selectEmpty();run();
+ const summary=await screen.findByRole('region',{name:'Input issues'});expect(summary.textContent).toContain('13 input issue(s)');expect(screen.getByText('All input issues')).toBeTruthy();
+ await waitFor(()=>expect(document.activeElement).toBe(input(grow)));expect(posts).not.toHaveBeenCalled();expect(input('Optional personal notes').getAttribute('aria-invalid')).toBe('false');
+ set(grow,'10');expect(input(grow).getAttribute('aria-invalid')).toBe('false');expect(input(margin).getAttribute('aria-invalid')).toBe('true');
 });
-it('calculates without opening details, generates details once, and preserves notes across failures and edits',async()=>{
- const sent:InvestorDoc[]=[];let fail=false;
- render(<App load={transport(async(_,body)=>{sent.push(structuredClone(body) as InvestorDoc);if(fail)throw new ApiError('busy','Retry later');return result();})}/>);await selectDemo();
- const details=screen.getByText('Analysis details').closest('details')!;expect(details.open).toBe(false);
- fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await screen.findByText('Synthetic result');
- expect(sent[0].preparation.notes).toBeNull();expect(sent[0]).not.toHaveProperty('analyst');expect(sent[0]).not.toHaveProperty('scope');
- const stamp=sent[0].preparation.timestamp_utc;expect(stamp).toMatch(/^\d{4}-\d\d-\d\dT.*Z$/);expect(sent[0].case_name).toBe('Synthetic demonstration · Investor calculation');
- fireEvent.click(screen.getByText('Analysis details'));set('Case name','My temporary test');set('Optional personal notes','  Personal text\nonly  ');
- expect(screen.getByText(/STALE RESULT/)).toBeTruthy();fail=true;
- fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await screen.findByText('busy: Retry later');
- expect(input('Optional personal notes').value).toBe('  Personal text\nonly  ');expect(input('WACC (%)').value).toBe('25');
- fail=false;set('WACC (%)','26');fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await waitFor(()=>expect(sent).toHaveLength(3));
- expect(sent[2].preparation).toEqual({provenance:'ANONYMOUS_INVESTOR',timestamp_utc:stamp,notes:'  Personal text\nonly  '});expect(sent[2].case_name).toBe('My temporary test');
- set('Optional personal notes','Edited words');fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));await waitFor(()=>expect(sent).toHaveLength(4));expect(sent[3].preparation.notes).toBe('Edited words');
- set('Optional personal notes','');fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));await waitFor(()=>expect(sent).toHaveLength(5));expect(sent[4].preparation.notes).toBeNull();
+it('expands a closed long-term editor and focuses its blocking error',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();set('Long-term operating profit margin (%)','');run();
+ await waitFor(()=>expect(document.activeElement).toBe(input('Long-term operating profit margin (%)')));expect(screen.getByText('Edit long-term operating ratios').closest('details')?.open).toBe(true);
 });
-it('confirms before discarding notes-only company edits',async()=>{
- render(<App load={transport(async()=>({status:'valid'}))}/>);await waitFor(()=>expect((screen.getByLabelText('Company') as HTMLSelectElement).disabled).toBe(false));fireEvent.change(screen.getByLabelText('Company'),{target:{value:'test-anchor'}});
- set('Optional personal notes','My note');fireEvent.click(screen.getByRole('button',{name:'Load synthetic demonstration'}));expect(screen.getByRole('alertdialog',{name:'Discard populated edits?'})).toBeTruthy();fireEvent.click(screen.getByRole('button',{name:'Keep editing'}));expect(input('Optional personal notes').value).toBe('My note');
+it('expands annual editing for a varying-year error',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();openAnnual();set('Annual revenue growth Synthetic period 2 (%)','-');openAnnual();run();
+ await waitFor(()=>expect(document.activeElement).toBe(input('Annual revenue growth Synthetic period 2 (%)')));expect(screen.getByText('Advanced annual editing').closest('details')?.open).toBe(true);
 });
-it('links bounded notes errors to optional details',async()=>{
- render(<App load={transport(async()=>{throw new ApiError('invalid_case','Correct notes',['preparation.notes: text exceeds 2048 characters']);})}/>);await selectDemo();fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));await screen.findByText('invalid_case: Correct notes');
- expect(input('Optional personal notes').getAttribute('aria-invalid')).toBe('true');fireEvent.click(screen.getByRole('button',{name:/Optional personal notes: text exceeds/}));expect(screen.getByText('Analysis details').closest('details')?.open).toBe(true);
+it('keeps numerical domain validation in the calculation-free API and translates percentage errors',async()=>{
+ render(<App load={transport(async(path,body)=>{
+  expect(path).toBe('/api/v1/cases/validate');if((body as InvestorDoc).forecast_years[0].forecast_tax_rate==='1.50')throw new ApiError('invalid_case','Invalid',['forecast_years[0].forecast_tax_rate: Forecast tax rate must be between 0 and 1']);return {status:'valid'};
+ })}/>);await selectDemo();set(tax,'150');fireEvent.blur(input(tax));
+ await waitFor(()=>expect(input(tax).getAttribute('aria-invalid')).toBe('true'));expect(document.getElementById('quick.forecast_tax_rate-error')?.textContent).toBe('Operating tax must be between 0% and 100%.');
+ set(tax,'25');fireEvent.blur(input(tax));await waitFor(()=>expect(input(tax).getAttribute('aria-invalid')).toBe('false'));
+});
+it('confirms populated long-term replacements and keeps later annual edits independent',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();const trigger=screen.getByRole('button',{name:'Copy final-year operating assumptions'});trigger.focus();copy();
+ const dialog=screen.getByRole('alertdialog',{name:'Replace long-term assumptions?'});expect(dialog.textContent).toContain('Synthetic period 5');expect(dialog.textContent).toContain('Long-term operating profit margin');
+ fireEvent.click(screen.getByRole('button',{name:'Keep long-term assumptions'}));expect(document.activeElement).toBe(trigger);expect(input('Long-term operating profit margin (%)').value).toBe('30');
+ copy();fireEvent.click(screen.getByRole('button',{name:'Replace long-term assumptions'}));expect(input('Long-term operating profit margin (%)').value).toBe('20');expect(input('Long-term operating tax rate (%)').value).toBe('25');
+ expect(input(wacc).value).toBe('25');expect(input('Long-term revenue growth (%)').value).toBe('5');
+ set(margin,'33');expect(input('Long-term operating profit margin (%)').value).toBe('20');expect(screen.getByText(/Differs from final year:/)).toBeTruthy();
+});
+it('does not copy missing inputs or silently supply terminal assumptions',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectEmpty();copy();expect(screen.queryByRole('alertdialog')).toBeNull();expect(input('Long-term operating profit margin (%)').value).toBe('');
+ for(const [label,value] of [[grow,'10'],[margin,'20'],[tax,'25'],['Depreciation & amortization / revenue (%)','5'],['Operating investment / revenue (%)','10'],['Working-capital cash needs / revenue (%)','2']])set(label,value);
+ expect(input('Long-term operating profit margin (%)').value).toBe('');copy();expect(screen.queryByRole('alertdialog')).toBeNull();expect(input('Long-term operating profit margin (%)').value).toBe('20');expect(input(wacc).value).toBe('');
+});
+it('preserves anonymous metadata, notes and assumptions through service failure and retry',async()=>{
+ let fail=true;const sent:InvestorDoc[]=[];render(<App load={transport(async(_,body)=>{sent.push(structuredClone(body) as InvestorDoc);if(fail)throw new ApiError('busy','Retry later');return result();})}/>);await selectDemo();
+ set('Optional personal notes','  My text\nonly  ');run();await screen.findByText('busy: Retry later');expect(screen.queryByRole('region',{name:'Input issues'})).toBeNull();expect(input('Optional personal notes').value).toBe('  My text\nonly  ');expect(input(margin).value).toBe('20');
+ fail=false;run();await screen.findByText('Synthetic result');expect(sent[0]).toEqual(sent[1]);expect(sent[1].preparation.provenance).toBe('ANONYMOUS_INVESTOR');expect(sent[1]).not.toHaveProperty('analyst');
+ set('Optional personal notes','');run();await waitFor(()=>expect(sent).toHaveLength(3));expect(sent[2].preparation.notes).toBeNull();expect(sent[2].preparation.timestamp_utc).toBe(sent[1].preparation.timestamp_utc);
+});
+it('marks quick and notes edits stale, and ignores obsolete calculation replies',async()=>{
+ const replies:((r:unknown)=>void)[]=[];render(<App load={transport(()=>new Promise(resolve=>replies.push(resolve)))}/>);await selectDemo();run();set(grow,'12');run();
+ const newer=result();newer.case_name='Newer result';replies[1](newer);await screen.findByText('Newer result');replies[0](result());await waitFor(()=>expect(screen.queryByText('Synthetic result')).toBeNull());
+ set('Optional personal notes','Edit');expect(screen.getByText(/STALE RESULT/)).toBeTruthy();
+});
+it('does not apply an obsolete background field check after editing',async()=>{
+ let reject!:(e:unknown)=>void;render(<App load={transport(()=>new Promise((_,r)=>{reject=r;}))}/>);await selectDemo();set(tax,'150');fireEvent.blur(input(tax));set(tax,'25');
+ reject(new ApiError('invalid_case','Old',['forecast_years[0].forecast_tax_rate: Forecast tax rate must be between 0 and 1']));await waitFor(()=>expect(input(tax).getAttribute('aria-invalid')).toBe('false'));
+});
+it('keeps company-switch confirmation and safe focus without discarding notes',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();set('Optional personal notes','Keep me');const company=screen.getByLabelText('Company');company.focus();fireEvent.change(company,{target:{value:'test-anchor'}});
+ fireEvent.click(screen.getByRole('button',{name:'Keep editing'}));expect(document.activeElement).toBe(company);expect(input('Optional personal notes').value).toBe('Keep me');
+});
+it.each([['0','Undefined'],['-1000000','-400.00%'],['2000000','200.00%']])('keeps signed/undefined financial presentation for EV %s',(ev,ratio)=>{
+ render(<ResultReview result={result(ev)} stale={false}/>);expect(screen.getByText(ratio)).toBeTruthy();expect(screen.getByText('Enterprise value · USD millions')).toBeTruthy();
+});
+it('preserves raw result strings and explicit anonymous notes/timing',()=>{
+ const r=result();r.submitted_inputs=makeDraft(demo).doc;r.submitted_inputs.preparation.notes='  Personal words\nonly  ';r.stage_b.stage_a.years[0].revenue='1234567.123456789';const before=JSON.stringify(r);
+ render(<ResultReview result={r} stale={false}/>);fireEvent.click(screen.getByText('Submitted assumptions, rationale and timing'));fireEvent.click(screen.getByText('Full-precision inputs and calculation trace'));
+ expect(screen.getByText(/Personal words/,{selector:'p'}).textContent).toContain('  Personal words\nonly  ');expect(screen.getByText(/No investment rationale supplied/)).toBeTruthy();expect(within(screen.getByRole('region',{name:'Unrounded annual values in USD'})).getByText('1234567.123456789')).toBeTruthy();expect(JSON.stringify(r)).toBe(before);
 });
 
-it('expresses known missing/range diagnostics in the percentage editor units',async()=>{
- const details=['terminal.operating_margin: UNSET; supply a fractional Decimal string','forecast_years[0].forecast_tax_rate: Forecast tax rate must be between 0 and 1'];
- render(<App load={transport(async()=>{throw new ApiError('invalid_case','Case validation failed.',details);})}/>);await selectDemo();
- fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));
- await screen.findByRole('button',{name:'Terminal operating margin: Required. Enter a percentage; 20 means 20%.'});
- const link=screen.getByRole('button',{name:'Operating tax — Synthetic period 1: Operating tax must be between 0% and 100%.'});fireEvent.click(link);
- expect(input('Operating tax Synthetic period 1 (%)').value).toBe('25');expect(screen.queryByText(/fractional Decimal string/)).toBeNull();expect(details[0]).toContain('fractional Decimal');
-});
-it('distinguishes service failure from field correction and preserves the request for retry',async()=>{
- const sent:unknown[]=[];let fail=true;
- render(<App load={transport(async(_,body)=>{sent.push(body);if(fail)throw new ApiError('busy','One calculation is running; retry later.');return result();})}/>);await selectDemo();
- fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await screen.findByText('busy: One calculation is running; retry later.');
- expect(screen.queryByText('Inputs need attention')).toBeNull();expect(screen.getByText(/changing assumptions is not required/)).toBeTruthy();
- fail=false;fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));await screen.findByText('Synthetic result');expect(sent[0]).toEqual(sent[1]);expect((sent[1] as InvestorDoc).forecast_years).toEqual(demo.forecast_years);
+it('keeps blur and Check inputs calculation-free and runs only on explicit Calculate',async()=>{
+ const paths:string[]=[];render(<App load={transport(async(path)=>{paths.push(path);return path.endsWith('validate')?{status:'valid'}:result();})}/>);await selectDemo();
+ set(grow,'11');fireEvent.blur(input(grow));await waitFor(()=>expect(paths).toEqual(['/api/v1/cases/validate']));
+ fireEvent.click(screen.getByRole('button',{name:'Check inputs'}));await screen.findByText(/Input checks passed/);expect(paths).toEqual(['/api/v1/cases/validate','/api/v1/cases/validate']);expect(screen.queryByText('Synthetic result')).toBeNull();
+ run();await screen.findByText('Synthetic result');expect(paths.at(-1)).toBe('/api/v1/cases/run');
 });
 
-it('renders absent and verbatim investor notes without an invented rationale or cutoff',()=>{
- const r=result();r.submitted_inputs=makeDraft(demo).doc;
- const view=render(<ResultReview result={r} stale={false}/>);fireEvent.click(screen.getByText('Submitted assumptions, rationale and timing'));
- expect(screen.getByText('Absent')).toBeTruthy();expect(screen.getByText(/No investment rationale supplied/)).toBeTruthy();expect(screen.getByText(/No verified information cutoff/)).toBeTruthy();
- const updated=structuredClone(r);(updated.submitted_inputs as InvestorDoc).preparation.notes='  Verbatim words\nonly  ';view.rerender(<ResultReview result={updated} stale={false}/>);
- expect(screen.getByText(/Verbatim words/,{selector:'p'}).textContent).toContain('  Verbatim words\nonly  ');
+it('retains a touched annual-cell error when clearing it restores a uniform blank row',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectEmpty();openAnnual();
+ const label='Annual revenue growth Synthetic period 1 (%)';set(label,'1');set(label,'');fireEvent.blur(input(label));
+ expect(input(label).getAttribute('aria-invalid')).toBe('true');expect(input(grow).getAttribute('aria-invalid')).toBe('true');
+ expect(input('Annual revenue growth Synthetic period 2 (%)').getAttribute('aria-invalid')).toBe('false');expect(input(margin).getAttribute('aria-invalid')).toBe('false');
+ set(grow,'10');expect(input(label).getAttribute('aria-invalid')).toBe('false');
 });
-it('keeps generated metadata fixed when an in-flight request is invalidated by a note edit',async()=>{
- const sent:InvestorDoc[]=[];const replies:((r:unknown)=>void)[]=[];
- render(<App load={transport((_,body)=>{sent.push(structuredClone(body) as InvestorDoc);return new Promise(resolve=>replies.push(resolve));})}/>);await selectDemo();
- fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));set('Optional personal notes','New note');
- expect(sent[0].preparation.notes).toBeNull();fireEvent.click(screen.getByRole('button',{name:'Calculate enterprise value'}));
- expect(sent[1].preparation.timestamp_utc).toBe(sent[0].preparation.timestamp_utc);expect(sent[1].preparation.notes).toBe('New note');
- const latest=result();latest.case_name='New note revision';replies[1](latest);await screen.findByText('New note revision');replies[0](result());await waitFor(()=>expect(screen.queryByText('Synthetic result')).toBeNull());
+
+it('keeps other touched annual errors visible when correcting one year creates variation',async()=>{
+ render(<App load={transport(async()=>({status:'valid'}))}/>);await selectDemo();set(grow,'-');fireEvent.blur(input(grow));openAnnual();
+ set('Annual revenue growth Synthetic period 1 (%)','10');fireEvent.blur(input('Annual revenue growth Synthetic period 1 (%)'));
+ expect(input('Annual revenue growth Synthetic period 1 (%)').getAttribute('aria-invalid')).toBe('false');
+ expect(input('Annual revenue growth Synthetic period 2 (%)').getAttribute('aria-invalid')).toBe('true');expect(input('Annual revenue growth Synthetic period 5 (%)').getAttribute('aria-invalid')).toBe('true');
 });

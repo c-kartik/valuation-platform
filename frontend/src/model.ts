@@ -1,16 +1,16 @@
 import Decimal from 'decimal.js';
 
 export const annual = [
-  ['revenue_growth', 'Revenue growth'], ['operating_margin', 'Operating margin'],
-  ['forecast_tax_rate', 'Operating tax'], ['d_and_a_percent_revenue', 'Expense-aligned D&A / revenue'],
-  ['capex_percent_revenue', 'Investment / revenue'],
-  ['change_in_operating_nwc_percent_revenue', 'Working-capital cash requirement / full revenue'],
+  ['revenue_growth', 'Annual revenue growth'], ['operating_margin', 'Operating profit margin'],
+  ['forecast_tax_rate', 'Operating tax rate'], ['d_and_a_percent_revenue', 'Depreciation & amortization / revenue'],
+  ['capex_percent_revenue', 'Operating investment / revenue'],
+  ['change_in_operating_nwc_percent_revenue', 'Working-capital cash needs / revenue'],
 ] as const;
 export const terminal = [
-  ['operating_margin', 'Terminal operating margin'], ['operating_tax_rate', 'Terminal operating tax'],
-  ['d_and_a_percent_revenue', 'Terminal expense-aligned D&A / revenue'],
-  ['investment_percent_revenue', 'Terminal investment / revenue'],
-  ['working_capital_cash_requirement_percent_revenue', 'Terminal WC cash requirement / full revenue'],
+  ['operating_margin', 'Long-term operating profit margin'], ['operating_tax_rate', 'Long-term operating tax rate'],
+  ['d_and_a_percent_revenue', 'Long-term depreciation & amortization / revenue'],
+  ['investment_percent_revenue', 'Long-term operating investment / revenue'],
+  ['working_capital_cash_requirement_percent_revenue', 'Long-term working-capital cash needs / revenue'],
 ] as const;
 export type CaseDoc = {
   schema_version: 'analyst-case-v1'; case_name: string; input_basis: string;
@@ -31,7 +31,7 @@ export type InvestorDoc = Omit<CaseDoc, 'schema_version' | 'analyst' | 'scope'> 
   schema_version: 'investor-case-v1';
   preparation: {provenance: 'ANONYMOUS_INVESTOR'; timestamp_utc: string; notes: string | null};
 };
-export type Draft = { doc: InvestorDoc; rates: Record<string, string> };
+export type Draft = { doc: InvestorDoc; rates: Record<string, string>; replacements: Partial<QuickValues> };
 export type Errors = Record<string, string>;
 export type Year = Record<string, string | number>;
 export type Result = {
@@ -72,9 +72,10 @@ export function makeDraft(template: CaseDoc, timestamp = new Date().toISOString(
   }));
   rates.wacc = fractionToPercentage(doc.wacc); rates.terminal_growth = fractionToPercentage(doc.terminal_growth);
   terminal.forEach(([key]) => { rates[`terminal.${key}`] = fractionToPercentage(doc.terminal[key]); });
-  return {doc, rates};
+  return {doc, rates, replacements: {}};
 }
 export function buildRequest(draft: Draft): InvestorDoc {
+  if (Object.keys(draft.replacements).length) throw new InputErrors(Object.fromEntries(Object.keys(draft.replacements).map(key=>[`quick.${key}`,'Use for all five years or keep the annual values before calculating.'])));
   const doc = structuredClone(draft.doc);
   if (!doc.preparation.notes?.trim()) doc.preparation.notes = null;
   const errors: Errors = {};
@@ -129,24 +130,45 @@ export function annualState(draft: Draft, key: AnnualKey): {value: string; varie
   const values = draft.doc.forecast_years.map((_,i) => draft.rates[annualPath(key,i)]);
   return {value: values[0], varies: values.some(v => !samePercentage(v, values[0])), missing: values.filter(v => !v.trim()).length};
 }
-export function quickValues(draft: Draft): QuickValues {
-  return Object.fromEntries(annual.map(([key]) => {
-    const state = annualState(draft,key);
-    return [key, state.varies ? '' : state.value];
-  })) as QuickValues;
-}
-export function applyQuick(draft: Draft, values: Partial<QuickValues>): Draft {
-  const errors: Errors = {};
-  for (const [key,value] of Object.entries(values)) {
-    try { if (percentageToFraction(value!) === null) errors[`quick.${key}`] = 'Enter a percentage before applying.'; }
-    catch(e) { errors[`quick.${key}`] = (e as Error).message; }
-  }
-  if (Object.keys(errors).length) throw new InputErrors(errors);
+// Uniform rows have one source of truth: the raw annual strings themselves.
+// Only an explicitly varying row has a visible, blocking replacement proposal.
+export function editQuick(draft: Draft, key: AnnualKey, value: string): Draft {
   const next = structuredClone(draft);
-  for (const [key,value] of Object.entries(values)) {
-    next.doc.forecast_years.forEach((_,i) => { next.rates[annualPath(key as AnnualKey,i)] = value!; });
-  }
+  if (annualState(draft,key).varies || key in draft.replacements) next.replacements[key] = value;
+  else next.doc.forecast_years.forEach((_,i) => {next.rates[annualPath(key,i)] = value;});
   return next;
+}
+export function replaceAnnual(draft: Draft, key: AnnualKey): Draft {
+  const value = draft.replacements[key] ?? '';
+  if (percentageToFraction(value) === null) throw new InputErrors({[`quick.${key}`]:'Enter a replacement percentage.'});
+  const next = structuredClone(draft);
+  next.doc.forecast_years.forEach((_,i) => {next.rates[annualPath(key,i)] = value;});
+  delete next.replacements[key];
+  return next;
+}
+export function entryErrors(draft: Draft): Errors {
+  const errors: Errors = {};
+  for (const [path,value] of Object.entries(draft.rates)) {
+    try {if (percentageToFraction(value) === null) errors[path] = 'Required. Enter a percentage; 20 means 20%.';}
+    catch(e) {errors[path] = (e as Error).message;}
+  }
+  for (const [key,value] of Object.entries(draft.replacements)) {
+    try {
+      errors[`quick.${key}`] = percentageToFraction(value!) === null ? 'Enter a replacement percentage or keep the annual values.' : 'Use for all five years or keep the annual values before calculating.';
+    } catch(e) {errors[`quick.${key}`] = (e as Error).message;}
+  }
+  if (!draft.doc.case_name.trim()) errors.case_name = 'Enter a case name or restore the generated name.';
+  if (draft.doc.preparation.notes?.trim() && Array.from(draft.doc.preparation.notes).length > 2048) errors['preparation.notes'] = 'Keep optional notes within 2,048 characters.';
+  return errors;
+}
+export function displayPath(draft: Draft, path: string): string {
+  path=path.replace(/^case\./,'');
+  if (path === 'terminal_growth (relative to wacc)') return 'terminal_growth';
+  const match=/^forecast_years\[\d+\]\.(.+)$/.exec(path);
+  return match && annual.some(([key])=>key===match[1]) && !annualState(draft,match[1] as AnnualKey).varies ? `quick.${match[1]}` : path;
+}
+export function reviewErrors(draft: Draft, raw: Errors): Errors {
+  return Object.fromEntries(Object.entries(raw).map(([path,message])=>[displayPath(draft,path),message]));
 }
 export const terminalSources = [
   ['operating_margin','operating_margin'], ['operating_tax_rate','forecast_tax_rate'],
@@ -164,4 +186,9 @@ export function copyYearFive(draft: Draft): Draft {
   const next = structuredClone(draft);
   terminalSources.forEach(([target,source]) => {next.rates[`terminal.${target}`] = draft.rates[annualPath(source,4)];});
   return next;
+}
+
+export function terminalDifferences(draft: Draft): string[] {
+  return terminalSources.filter(([target,source])=>!samePercentage(draft.rates[`terminal.${target}`],draft.rates[annualPath(source,4)]))
+    .map(([target])=>terminal.find(([key])=>key===target)![1]);
 }

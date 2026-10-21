@@ -54,7 +54,7 @@ static-plus-API harness; Vite preview is not a hosting/routing configuration.
 ## Quick-entry and review contract
 
 The quick workbench supersedes the original four-section presentation. The journey
-is now company → compact assumptions → explicit apply/calculate → result → optional
+is now company → compact assumptions → calculate → result → optional
 annual refinement. It reuses the existing reader, API, revision/cancellation guards,
 exact rate conversion and returned values; it is not a replacement for professional
 Excel modeling or evidence/financial review.
@@ -67,38 +67,67 @@ The separate **Load synthetic demonstration** action explicitly loads the existi
 $100 synthetic fixture; it is absent from the company selector and never supplies
 company forecasts automatically.
 
-The main view has **eight initially unset rates**: growth, margin, WACC, terminal
-growth and four required FCFF cash-flow assumptions (operating tax, expense D&A,
-investment and WC). Four headline inputs alone are insufficient. Six annual quick
-entries are independent draft text; WACC/g edit their existing single-case fields.
-Each annual row has Apply; **Apply all six to five years** requires all six values.
-Applying creates a flat five-year path once, with no hidden continuing link.
+The main view has **eight initially unset rates** with plain-language labels:
+annual revenue growth, operating profit margin, operating tax, depreciation &
+amortization/revenue, operating investment/revenue, working-capital cash needs/
+revenue, discount rate (WACC) and long-term revenue growth. Help text preserves
+EBIT, positive-profit tax, financed-asset investment and full-revenue cash-needs
+meanings. No financial definitions or numerical domains change.
 
-The authoritative numerical inputs remain the existing **30 annual + 2 discount
-+ 5 terminal fields**. Quick typing does not change them. Unapplied drafts are
-marked and block both Calculate and Check inputs until applied or discarded.
-Discard restores the displayed quick value to the current flat path, or blank if
-annual values vary; it never changes annual inputs. Bulk application is atomic.
-Changing populated annual values requires **Replace annual inputs** confirmation;
-keeping annual edits leaves them intact. Any intervening input edit cancels the
-pending replacement. Quick-only populated drafts also require company-switch
-confirmation. No company selection or collapse/reopen action fills or resets rates.
+The authoritative request still contains **30 annual + 2 discount + 5 long-term
+operating ratios**. While an annual row is uniform, typing in its main control
+immediately updates that field in all five years. There is no Apply button or
+second hidden value. Raw percentage text remains unchanged while typing, including
+blank/partial/invalid strings; those states block submission instead of falling
+back to an earlier valid rate. Discount rate and long-term growth edit their own
+fields directly. A blank company supplies no numerical defaults.
 
-**Advanced annual editing** exposes the same individually editable five-year rates.
-A divergent row says **Varies by year — annual inputs used**. A flat path displays
-its actual annual rate, even if the old quick entry differs. Calculate consumes the
-annual path, never a silently linked quick draft. Collapsing preserves every value.
+**Advanced annual editing** exposes the same five-year strings individually.
+Editing one year affects no other year or long-term ratio. Differing annual rates
+show **Varies by year** and a blank uniform-replacement control, rather than a
+misleading single rate. Entering a replacement leaves the existing path intact
+and visibly blocks Calculate. **Use for all five years** requires confirmation
+naming the field, proposed percentage and all affected fiscal labels. Cancel
+clears the proposal, preserves every annual value and restores focus. **Keep
+annual values** also discards the proposal explicitly. Confirm replaces only the
+chosen field; subsequent uniform edits apply directly. A new individual-year edit
+abandons a replacement proposal for that same field. Collapse/reopen changes no
+values. Semantic equality of decimal formats does not falsely report variation.
 
-Five terminal operating/reinvestment ratios remain explicit and independent.
-**Use year-five operating ratios for the terminal year** copies margin, tax, expense
-D&A, investment and WC once. Missing/invalid year-five values reject the copy
-atomically; it does not copy WACC or growth. The disclosed assumption is sustainable
-year-five margins/reinvestment, requiring human consistency review. Later annual
-edits never update terminal values. Every terminal ratio remains separately editable;
-the main view lists missing terminal requirements even while the editors are closed.
+Five long-term operating/reinvestment ratios remain explicit and independent.
+**Copy final-year operating assumptions** copies margin, tax, expense D&A,
+operating investment and cash needs once. Missing/invalid source text rejects the
+copy atomically. Populated target values that would change require confirmation,
+listing affected ratios and the source fiscal year; Cancel preserves them and
+restores focus. Copy never changes WACC or long-term growth. Later annual edits
+never change these ratios; a concise difference indication supports review.
+Sustainable final-year economics remain a user assumption, not calculator approval.
+
+Validation starts with **neutral required-input guidance**. An edited field gains
+inline errors after leaving it; untouched optional fields receive no missing
+counts. Presence/percentage syntax and local entry-state checks are frontend
+checks; numerical domains and WACC/g remain the existing Python validator's job.
+Blur can call the calculation-free validate route using actual current inputs,
+including nulls, without fabricating other operands. Incomplete-case checks can
+return expected HTTP 422 responses visible in browser DevTools; only touched
+fields show those diagnostics in the form. Some server domains require complete
+operand groups before they can be assessed. Failed background checks do not
+become financial-error claims or approval; explicit submission reports service
+failures normally.
+
+Calculate/Check inputs reveal all local blocking errors, combining equivalent
+uniform-year issues into one main control. The concise summary shows three links
+and a disclosure for the rest, opens the first relevant editor and focuses its
+field. Correcting an entry removes its resolved local error without clearing
+unrelated errors; server errors refresh on checks. Existing bounded server
+diagnostics can reveal further financial errors after correction. Known rate
+messages use entered percentage units. Busy/unavailable/deadline failures stay
+separate, preserve all entries and request an explicit retry. Error descriptions,
+labels and one status announcement support keyboard review without a live alert
+on every keystroke. Revision/abort guards also cover background validation.
 
 **Analysis details** is collapsed and optional in the normal flow: select company
-→ enter/apply assumptions → calculate. A generated editable case name and UTC
+→ enter assumptions → calculate. A generated editable case name and UTC
 preparation timestamp are created once when selecting a draft; they stay stable
 through requests/retries. The timestamp records draft preparation, not the fiscal-end
 analytical date, evidence review or verified information availability. Provenance
@@ -130,7 +159,7 @@ information; it is not a contemporaneous backtest or an authenticated cutoff.
 WC uses full forecast revenue: positive consumes cash, negative releases cash.
 Investment is cash PP&E plus non-overlapping new finance-leased operating assets,
 excluding principal. Expense D&A must align with margin expenses; SBC and operating
-leases remain expensed once. Interface copy/apply actions approve no company
+leases remain expensed once. Interface entry/copy actions approve no company
 forecast, sustainability, calibration, coverage or financial convention.
 
 Calculate explicitly calls the unchanged run route; **Check inputs** calls the
@@ -190,7 +219,46 @@ unchanged. Client timeout is 50 seconds; cancellation/late-reply guards are UI
 behavior, not a replacement for server deadlines. No cloud/static-host routing,
 production CORS or public admission controls are configured.
 
-## Anonymous investor workflow verification (local)
+## Direct-entry and validation verification (local)
+
+**60 frontend + 72 focused Python tests passed (132 total)**, plus TypeScript/Vite
+production build. The Python invocation covered case inputs, equity/summary
+compatibility, API/catalog/public boundaries and preparation preservation; no full
+historical suite. Frontend coverage replaces obsolete Apply tests with direct raw
+entry, varying-path proposal/confirm/cancel, partial/invalid-value blocking,
+long-term replacement/independence, touched and submit navigation, correction,
+notes/service recovery, stale replies and background-validation revision checks.
+An actual Python pipeline comparison of old documented-analyst and equivalent
+new direct-entry requests matched **complete Stage B financial components** and
+the independently retained synthetic-fixture EV. Metadata intentionally differs;
+no full-result JSON identity is claimed across metadata versions.
+
+Actual compiled-build Chrome desktop and 390×844 walkthroughs began with unset
+retained META and GOOGL selections. Explicit synthetic test inputs were growth
+10%, margin 20%, operating tax 25%, D&A 5%, investment 10%, cash needs 2%, WACC
+25% and long-term growth 5%, with a deliberate final-year copy action. No Apply or
+Analysis-details entry was needed. These are engineering test choices, not
+company forecasts or approved economic assumptions. Desktop missing-input
+submission focused growth; partial `-` and a deliberate tax 150% were corrected
+without losing other entries. A FY2027 growth edit to 18% produced a varying
+path; a 13% replacement was canceled with focus restored, then 14% confirmed
+across all five years. Margin 21% was explicitly copied after cancel/confirm;
+a later annual margin 22% preserved the independent long-term 21% ratio.
+
+Narrow keyboard entry used ordinary Tab between rates. Long-term margin was
+changed to 21%, then copy cancellation, focus restoration, two-action Tab cycle
+and confirmed restoration to final-year 20% were exercised before recalculation.
+Expected partial-case validation 422s appeared in DevTools; no unrelated
+application exception was observed. Representative neutral-form, confirmation,
+focus and result screenshots were emitted during review. This is desktop
+responsive/keyboard testing, not mobile virtual-keyboard or exhaustive
+accessibility certification. Temporary browser assumptions were discarded and no
+company case/output was saved. Only the requested localhost review frontend and
+compatible private API are left running after the checkpoint; the compiled test
+harness is stopped. Nine template bytes, formulas, source approvals, anonymous
+metadata contract and the [public preview](firebase-public-preview.md) are unchanged.
+
+## Earlier anonymous investor metadata verification (local)
 
 This local update passed **59 frontend and 72 focused Python tests (131 total)**:
 case-input/legacy equity/CLI-summary, API/catalog/public-boundary and preparation
