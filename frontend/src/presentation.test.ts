@@ -24,3 +24,23 @@ it('bounds chart-only coordinates for negative, zero and extreme amounts',()=>{
  }
  expect(chartPoints(['1e9999','0','0','0','0'])).toBeNull();expect(chartPoints(['Infinity','0','0','0','0'])).toBeNull();
 });
+
+import {readableMoney,readableLimitation} from './presentation';
+it('scales USD for readable headlines with display-only HALF_EVEN rounding and isolated context',()=>{
+ const original={precision:Decimal.precision,rounding:Decimal.rounding};
+ try {
+  Decimal.set({precision:2,rounding:Decimal.ROUND_UP});
+  expect(readableMoney('200966000000')).toBe('$200.97bn');
+  expect(readableMoney('100')).toBe('$100.00');
+  expect(readableMoney('0')).toBe('$0.00');
+  expect(readableMoney('-1234567')).toBe('−$1.23m');
+  expect(readableMoney('12345.125')).toBe('$12,345.12');
+  expect(readableMoney('12345.135')).toBe('$12,345.14');
+  expect(Decimal.precision).toBe(2);expect(Decimal.rounding).toBe(Decimal.ROUND_UP);
+ } finally {Decimal.set(original);}
+});
+it('preserves financial unknowns while removing a known internal reference from display only',()=>{
+ const original='No bridge/share intake; historical debt/reinvestment/D&A limitations and unbounded omissions remain unchanged.';
+ expect(readableLimitation(original)).toContain('unbounded omissions');expect(readableLimitation(original)).toContain('Cash/debt/share adjustments are excluded');
+ expect(readableLimitation('A supplied limitation')).toBe('A supplied limitation');expect(original).toContain('intake');
+});

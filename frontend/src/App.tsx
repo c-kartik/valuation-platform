@@ -1,8 +1,9 @@
 import {useEffect, useRef, useState} from 'react';
-import {annual, terminal, makeDraft, buildRequest, fieldErrors, InputErrors, money, annualState, annualPath, editQuick, replaceAnnual, copyYearFive, samePercentage, generatedCaseName, enduringLimitations, entryErrors, reviewErrors, displayPath, terminalDifferences} from './model';
+import {annual, terminal, makeDraft, buildRequest, fieldErrors, InputErrors, annualState, annualPath, editQuick, replaceAnnual, copyYearFive, samePercentage, generatedCaseName, enduringLimitations, entryErrors, reviewErrors, displayPath, terminalDifferences} from './model';
 import type {Catalog, Draft, Errors, Result, AnnualKey} from './model';
 import {ApiError, request, Revisions} from './api';
 import {ResultReview} from './Results';
+import {readableMoney, readableLimitation} from './presentation';
 export {ResultReview} from './Results';
 
 function percentageDiagnostic(detail: string): string {
@@ -72,7 +73,7 @@ export default function App({load = request}: Props) {
   const blurSequence = useRef(0);
   const blurRequest = useRef<AbortController | null>(null);
   const [messages, setMessages] = useState<string[]>([]);
-  const [status, setStatus] = useState('Choose a retained anchor or the separate synthetic demonstration.');
+  const [status, setStatus] = useState('Choose a company or the separate synthetic demonstration.');
   const [busy, setBusy] = useState<string | null>(null);
   const [result, setResult] = useState<Result | null>(null);
   const [stale, setStale] = useState(false);
@@ -89,7 +90,7 @@ export default function App({load = request}: Props) {
     revisions.current.edit(); active.current?.abort(); active.current = null;
     blurSequence.current++; blurRequest.current?.abort();
     setBusy(null); setStale(true); setMessages([]); setPendingReplacement(null); setPendingCopy([]);
-    setStatus('Inputs changed. Check or calculate again when ready.');
+    setStatus('Inputs changed. Calculate again when ready.');
     const affected = new Set(paths);
     if (paths.some(p=>['wacc','terminal_growth'].includes(p))) affected.add('terminal_growth (relative to wacc)');
     setServerErrors(old=>Object.fromEntries(Object.entries(old).filter(([p])=>!affected.has(p))));
@@ -106,7 +107,7 @@ export default function App({load = request}: Props) {
     setDraft(template ? makeDraft(template) : null);
     setTouched({}); setSubmitted(false); setServerErrors({}); edited.current.clear();
     setAnnualOpen(false); setTerminalOpen(false); setDetailsOpen(false);
-    setStatus(kind === 'demo' ? 'Synthetic demonstration loaded explicitly. Anchor revenue is synthetic $100; all rates are examples.' : 'Enter six annual rates, a discount rate and long-term assumptions. Analysis details are optional.');
+    setStatus(kind === 'demo' ? 'Synthetic demonstration loaded explicitly. Anchor revenue is synthetic $100; all rates are examples.' : 'Enter your forecast assumptions. Notes are optional.');
     setPendingSelection(null);
   };
   const choose = (kind: string) => {
@@ -182,7 +183,7 @@ export default function App({load = request}: Props) {
       'aria-invalid': Boolean(fieldError), 'aria-describedby': [hint ? `${path}-help` : '',fieldError ? `${path}-error` : ''].filter(Boolean).join(' ') || undefined};
     return <div className="field" key={path}><label htmlFor={path}>{label}</label>
       {multiline ? <textarea {...props} rows={3} /> : <input {...props} type="text" />}
-      {hint && <small id={`${path}-help`}>{hint}</small>}
+      {hint && <details className="field-help"><summary aria-label={`Help: ${label}`}>?</summary><small id={`${path}-help`}>{hint}</small></details>}
       {fieldError && <span id={`${path}-error`} className="field-error">{fieldError}</span>}
     </div>;
   };
@@ -253,7 +254,7 @@ export default function App({load = request}: Props) {
         const paths=state.varies || replacing ? [`quick.${key}`] : draft!.doc.forecast_years.map((_,i)=>annualPath(key,i));
         edited.current.add(`quick.${key}`); invalidate(paths); setDraft(editQuick(draft!,key,value));
       },false,hint)}
-      <p className="quick-status">{state.varies ? 'Varies by year — annual inputs remain in use.' : state.missing ? 'Required for the five-year forecast.' : 'Same rate for all five years.'}</p>
+      {state.varies && <p className="quick-status">Varies by year</p>}
       {(state.varies || replacing) && <>
         <button onClick={()=>proposeReplacement(key)} aria-label={`Use ${label} for all five years`}>Use for all five years</button>
         {replacing && <button className="text-button" onClick={()=>keepAnnual(key)}>Keep annual values for {label}</button>}
@@ -262,42 +263,44 @@ export default function App({load = request}: Props) {
     </div>;
   };
   return <main>
-    <header className="workbench-header"><div><div className="eyebrow">LOCAL VALUATION WORKBENCH</div><h1>Start with your assumptions.</h1><p>Retained historical observations. Your forecast. Enterprise value.</p></div>
+    <header className="workbench-header"><div><h1>DCF Calculator</h1><span className="eyebrow">Enterprise value</span></div>
       <div className="company-choice"><label htmlFor="company">Company</label><select id="company" value={selected==='demo'?'':selected} onChange={e=>choose(e.target.value)} disabled={!catalog}>
         <option value="">Select a company</option>{catalog?.entries.map(e=><option key={e.kind} value={e.kind}>{e.company} · FY2025</option>)}
       </select><button className="text-button" disabled={!catalog} onClick={()=>choose('demo')}>Load synthetic demonstration</button></div>
     </header>
-    {!catalog && <p role="status">Loading retained company data… Check the local server if it is unavailable.</p>}
+    {!catalog && <p role="status">Loading company data… Check the local server if it is unavailable.</p>}
     {pendingSelection!==null && <Confirmation title="Discard populated edits?" confirmLabel="Discard and switch" cancelLabel="Keep editing" confirm={()=>switchTo(pendingSelection)} cancel={()=>setPendingSelection(null)}>Switching will discard populated annual inputs, replacement proposals, analysis details and results. No copy is saved.</Confirmation>}
-    {entry && <section className="history-strip"><div><strong>{entry.company} · reported FY2025 revenue: {money(entry.revenue)} USD millions</strong><p>{entry.identity.annual_start} → {entry.identity.annual_end}. Fixed retained data, not automatically refreshed. Forecast inputs below are your estimates.</p></div>
-      <details><summary>Filing, sources and historical limitations</summary><p>{entry.identity.form} · {entry.identity.accession} · CIK {entry.identity.cik}. Source precision {entry.precision} (−6: nearest million). Base unit {entry.unit}.</p><p>Fiscal-end analytical date: {entry.identity.annual_end}; later-filed information is used. A separate filing-acceptance timestamp is not supplied.</p><ul>{entry.source_links.map((url,i)=><li key={url}><a href={url} target="_blank" rel="noreferrer">Retained SEC filing source {i+1}</a></li>)}</ul><p>No verified information cutoff is established. Preparation time and personal notes do not certify information availability or source review.</p><ul>{enduringLimitations(entry.limitations).map((line,i)=><li key={i}>{line}</li>)}</ul></details>
+    {entry && <section className="history-strip"><div className="company-summary"><strong>{entry.company} · FY2025</strong><span>Reported revenue <b>{readableMoney(entry.revenue)}</b> USD</span></div><p>Fixed historical data, not live. Forecasts are user-entered and not independently reviewed.</p>
+      <details><summary>Data &amp; methodology</summary><p>Fiscal period: {entry.identity.annual_start} → {entry.identity.annual_end}.</p><p>{entry.identity.form} · {entry.identity.accession} · CIK {entry.identity.cik}. Source precision {entry.precision} (−6: nearest million). Base unit {entry.unit}.</p><p>Fiscal-end analytical date: {entry.identity.annual_end}; later-filed information is used. A separate filing-acceptance timestamp is not supplied.</p><ul>{entry.source_links.map((url,i)=><li key={url}><a href={url} target="_blank" rel="noreferrer">SEC filing source {i+1}</a></li>)}</ul><p>No verified information cutoff is established. Preparation time and personal notes do not certify information availability or source review.</p><ul>{enduringLimitations(entry.limitations).map((line,i)=><li key={i}>{readableLimitation(line)}</li>)}</ul></details>
     </section>}
-    {selected==='demo' && <div className="notice"><strong>Synthetic demonstration — $100 revenue anchor.</strong> All example rates and declarations are synthetic, not company data or an investment case.</div>}
+    {selected==='demo' && <div className="notice"><strong>Synthetic demonstration — USD $100 revenue anchor.</strong> All example rates and declarations are synthetic, not company data or an investment case.</div>}
     {draft ? <>
-      <div className="workbench-grid"><section className="assumptions" aria-labelledby="assumptions-title"><h2 id="assumptions-title">Forecast assumptions</h2><p className="hint">Percentage entry: 10 means 10%. Main operating rates update all five years directly while uniform. Advanced annual inputs remain individually editable.</p>
-        <div className="assumption-columns"><div><h3>Main drivers</h3>
+      <div className="workbench-grid"><section className="assumptions" aria-labelledby="assumptions-title"><div className="section-heading"><h2 id="assumptions-title">Forecast assumptions</h2><span className="completion">{Object.values(draft.rates).filter(value=>!value.trim()).length} of 37 unset</span></div><p className="hint">Enter percentages: 10 = 10%. Quick entries apply to all five years.</p>
+        <div className="assumption-columns"><div><h3>Growth &amp; profitability</h3><div className="rate-grid">
           {quickRow('revenue_growth','Annual revenue growth','Compounds each year from the selected historical revenue anchor.')}
           {quickRow('operating_margin','Operating profit margin','EBIT divided by revenue. Includes SBC, operating-lease service costs and aligned D&A expense once.')}
-          <div className="discount-grid">{rateInput('wacc','Discount rate — WACC (%)','The constant rate used to discount operating cash flows.')}{rateInput('terminal_growth','Long-term revenue growth (%)','Applies after the five-year forecast and must remain below WACC.')}</div>
-        </div><div><h3>Required cash-flow inputs</h3><p className="hint">Four headline rates alone cannot construct FCFF.</p>
+        </div></div><div><h3>Valuation</h3><div className="rate-grid">
+          {rateInput('wacc','Discount rate — WACC (%)','The constant rate used to discount operating cash flows.')}{rateInput('terminal_growth','Long-term revenue growth (%)','Applies after the five-year forecast and must remain below WACC.')}
+        </div></div></div>
+        <h3>Cash-flow assumptions</h3><div className="cash-grid">
           {quickRow('forecast_tax_rate','Operating tax rate','Tax on positive operating profit; no immediate benefit for losses.')}
-          {quickRow('d_and_a_percent_revenue','Depreciation & amortization / revenue','Must align with expenses included in operating margins.')}
-          {quickRow('capex_percent_revenue','Operating investment / revenue','Cash PP&E + non-overlapping new finance-leased operating assets; excludes principal.')}
-          {quickRow('change_in_operating_nwc_percent_revenue','Working-capital cash needs / revenue','Uses full annual revenue, not the change in revenue. Positive consumes cash; negative releases cash.')}
-        </div></div>
+          {quickRow('d_and_a_percent_revenue','D&A / revenue','Expense-aligned depreciation and amortization. Must align with expenses included in operating margins, including finance-asset depreciation once.')}
+          {quickRow('capex_percent_revenue','Investment / revenue','Cash PP&E + non-overlapping new finance-leased operating assets; excludes finance-lease principal. Do not duplicate capital-creditor settlements.')}
+          {quickRow('change_in_operating_nwc_percent_revenue','Working-capital cash needs / revenue','Uses full annual forecast revenue, not the change in revenue. Positive uses cash; negative releases cash. Historical CFO movements are not automatic forecast inputs.')}
+        </div>
         {pendingReplacement && <Confirmation title="Replace annual inputs?" confirmLabel="Replace annual inputs" cancelLabel="Keep annual edits" confirm={()=>performReplacement(pendingReplacement)} cancel={()=>keepAnnual(pendingReplacement)}>
           Use {annual.find(([key])=>key===pendingReplacement)?.[1]} of {draft.replacements[pendingReplacement]}% for {draft.doc.forecast_years.map(y=>y.fiscal_year_label).join(', ')}? Other fields and long-term assumptions stay unchanged.
         </Confirmation>}
-        <details open={annualOpen} onToggle={e=>setAnnualOpen(e.currentTarget.open)}><summary>Advanced annual editing</summary><p>These are the authoritative annual inputs. Editing a year changes no other year or terminal ratio.</p>
+        <details open={annualOpen} onToggle={e=>setAnnualOpen(e.currentTarget.open)}><summary>Edit individual years</summary><p>Edit each year independently. Changes do not update long-term ratios.</p>
           <div className="table-scroll" tabIndex={0} role="region" aria-label="Five-year assumption table"><table><thead><tr><th scope="col">Assumption (%)</th>{draft.doc.forecast_years.map(y=><th scope="col" key={y.period_index}>{y.fiscal_year_label}</th>)}</tr></thead><tbody>{annual.map(([key,label])=><tr key={key}><th scope="row">{label}</th>{draft.doc.forecast_years.map((year,i)=><td key={i}>{rateInput(annualPath(key,i),`${label} ${year.fiscal_year_label} (%)`)}</td>)}</tr>)}</tbody></table></div>
         </details>
-        <div className="terminal-section"><h3>Long-term operating assumptions</h3><p className="hint">Five independent operating ratios are required after the five-year forecast; {missingTerminal.length} remain to be entered.</p>
-          <button onClick={copyTerminal}>Copy final-year operating assumptions</button><p className="hint">Copies margin, tax, D&A, investment and cash needs once, assuming sustainable final-year economics. Does not copy growth or WACC.</p>
+        <div className="terminal-section"><div className="section-heading"><div><h3>Long-term assumptions</h3><span className="hint">{missingTerminal.length ? `${missingTerminal.length} of 5 ratios unset` : '5 ratios entered · independent of annual edits'}</span></div><button onClick={copyTerminal}>Copy final-year assumptions</button></div><p className="hint">Copy only if final-year operating ratios are sustainable.</p>
+          <details><summary>About long-term assumptions</summary><p>Copies margin, tax, D&A, investment and working-capital cash needs once. Growth and WACC are not copied. Check that reinvestment supports sustainable growth; later annual edits stay independent.</p></details>
           {pendingCopy.length>0 && <Confirmation title="Replace long-term assumptions?" confirmLabel="Replace long-term assumptions" cancelLabel="Keep long-term assumptions" confirm={performCopy} cancel={()=>setPendingCopy([])}>
             Copy from {draft.doc.forecast_years[4].fiscal_year_label}. Populated values that would change: {pendingCopy.join('; ')}. Later annual edits will not update them.
           </Confirmation>}
-          {!missingTerminal.length && <p className="hint">{terminalDifferences(draft).length ? `Differs from final year: ${terminalDifferences(draft).join('; ')}.` : 'Operating ratios currently match the final year; they remain independent.'}</p>}
-          <details open={terminalOpen} onToggle={e=>setTerminalOpen(e.currentTarget.open)}><summary>Edit long-term operating ratios</summary><div className="rate-grid">{terminal.map(([key,label])=>rateInput(`terminal.${key}`,`${label} (%)`))}</div></details>
+          {!missingTerminal.length && <p className="hint">{terminalDifferences(draft).length ? `${terminalDifferences(draft).length} ratios differ from the final year.` : 'Operating ratios currently match the final year; they remain independent.'}</p>}
+          <details open={terminalOpen} onToggle={e=>setTerminalOpen(e.currentTarget.open)}><summary>Edit long-term operating ratios</summary>{terminalDifferences(draft).length>0 && <p className="hint">Differs from final year: {terminalDifferences(draft).join('; ')}.</p>}<div className="rate-grid">{terminal.map(([key,label])=>rateInput(`terminal.${key}`,`${label} (%)`))}</div></details>
         </div>
         <details open={detailsOpen} onToggle={e=>setDetailsOpen(e.currentTarget.open)}><summary>Analysis details</summary>
           <p>Anonymous investor calculation. Forecasts are user-entered and not independently reviewed. No verified person, professional analyst or investment rationale is asserted.</p>
@@ -306,22 +309,22 @@ export default function App({load = request}: Props) {
           {input('preparation.notes','Optional personal notes',draft.doc.preparation.notes??'',value=>edit(['preparation.notes'],n=>{n.doc.preparation.notes=value;}),true)}
           <p className="hint">Empty notes are absent (null). Notes are your wording, not verified sources or an investment rationale. Limit: 2,048 characters.</p>
           <p>{Object.values(draft.rates).filter(value=>value.trim()).length} of 37 numerical inputs entered; financial validation still applies. Company templates begin unset, without defaults or historical calibration.</p>
-          <ul>{draft.doc.limitations.map((line,i)=><li key={i}>{line}</li>)}</ul>
-          <details><summary>Exact submitted request and source bindings</summary><pre>{(()=>{try{return JSON.stringify(buildRequest(draft),null,2);}catch{return 'Correct invalid percentage entries to inspect the request.';}})()}</pre></details>
+          <ul>{draft.doc.limitations.map((line,i)=><li key={i}>{readableLimitation(line)}</li>)}</ul>
+          <details><summary>Full-precision request and provenance</summary><pre>{(()=>{try{return JSON.stringify(buildRequest(draft),null,2);}catch{return 'Correct invalid percentage entries to inspect the request.';}})()}</pre></details>
         </details>
         <div className="run-controls">
-          <div className="actions"><button className="primary" disabled={Boolean(busy)} onClick={()=>void submit('run')}>Calculate enterprise value</button><button disabled={Boolean(busy)} onClick={()=>void submit('validate')}>Check inputs</button></div>
+          <div className="actions"><button className="primary" disabled={Boolean(busy)} onClick={()=>void submit('run')}>Calculate enterprise value</button></div>
           <p role="status" aria-live="polite">{busy ? `${busy==='run'?'Calculating':'Checking inputs'}… Edits cancel this request.` : status}</p>
           {submitted && Object.keys(errors).length>0 && <div id="input-issues" tabIndex={-1} className="errors" role="region" aria-label="Input issues"><h3>Review {Object.keys(errors).length} input issue(s)</h3>
             <ul>{Object.entries(errors).slice(0,3).map(([path,message])=><li key={path}><button className="text-button" onClick={()=>goToField(path)}>{pathLabel(path)}: {message}</button></li>)}</ul>
             {Object.keys(errors).length>3 && <details><summary>All input issues</summary><ul>{Object.entries(errors).slice(3).map(([path,message])=><li key={path}><button className="text-button" onClick={()=>goToField(path)}>{pathLabel(path)}: {message}</button></li>)}</ul></details>}
-            <p>Correct these entries and check again. Server diagnostics are bounded; further financial checks may follow correction.</p>
+            <p>Correct these entries and calculate again. Further financial checks may follow correction.</p>
           </div>}
           {messages.length>0 && <div role="alert" className="errors"><h3>Service request did not succeed</h3>{messages.map((message,i)=><p key={i}>{message}</p>)}<p>Retry explicitly when the service is available. Entries are preserved; changing assumptions is not required to recover from a service failure.</p></div>}
         </div>
-      </section><aside aria-label="Valuation review">{result ? <ResultReview result={result} stale={stale}/> : <section className="result-placeholder"><div className="section-number">ENTERPRISE VALUE</div><h2>Your result appears here.</h2><p>Supply six annual assumptions, a discount rate, long-term growth and five long-term operating ratios, then calculate explicitly. Analysis details and personal notes are optional.</p><p>EV values the operating business. It is not equity value or value per share.</p></section>}</aside></div>
-    </> : <section className="empty-state"><h2>Select a retained company to begin.</h2><p>Company forecasts start unset. The separate demonstration uses a synthetic $100 revenue anchor.</p></section>}
+      </section><aside aria-label="Valuation review">{result ? <ResultReview result={result} stale={stale}/> : <section className="result-placeholder"><h2>Enterprise value</h2><p>Enter assumptions, then calculate.</p><small>Operating business value; excludes the cash/debt/share bridge.</small></section>}</aside></div>
+    </> : <section className="empty-state"><h2>Select a company to begin.</h2><p>Company forecasts start unset. The separate demonstration uses a synthetic $100 revenue anchor.</p></section>}
     {!draft && messages.length>0 && <div role="alert" className="errors">{messages.join(' ')}</div>}
-    <footer>Local only · No automatic saving · Phase 1 expansion paused · Developer-tested workflow, not investor acceptance or a replacement for professional Excel modeling.</footer>
+    <footer>No automatic saving <span>· Local environment</span></footer>
   </main>;
 }

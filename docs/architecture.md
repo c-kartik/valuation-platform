@@ -1,5 +1,17 @@
 # Architecture
 
+## Local update — compact investor presentation
+
+The [calculator](local-calculator-ui.md#quick-entry-and-review-contract) groups eight
+quick inputs, uses native labeled help/source disclosures and one explicit
+Calculate action, and places results beside inputs or below the action on narrow
+screens. Display-only USD scale helpers use isolated Decimal arithmetic; exact
+requests/results and source qualifications remain in expandable traces. Known
+internal limitation wording is translated only for display, preserving financial
+unknowns and unchanged original strings in provenance. No model, API, validation,
+financial schema or historical binding changes. Approved anonymous/direct-entry
+behavior and the Phase 1 pause remain intact.
+
 ## Local update — direct uniform entry and progressive validation
 
 The [workbench](local-calculator-ui.md#quick-entry-and-review-contract) keeps raw

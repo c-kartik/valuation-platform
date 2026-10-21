@@ -5,12 +5,12 @@ the earlier narrow-keyboard qualification after focused confirmation fixes: nati
 modal, safe Keep focus, explicit Tab cycle, Escape cancellation and trigger restoration.
 This is not mobile virtual-keyboard or complete accessibility certification.
 The earlier [Firebase preparation](public-preview-preparation.md) is superseded by
-the [hosted preview record](firebase-public-preview.md). This local metadata update
+the [hosted preview record](firebase-public-preview.md). This local redesign
 is not deployed and changes no preview access or withdrawal deadline.
 
 ## Scope and startup
 
-The React/TypeScript/Vite quick workbench constructs one `investor-case-v1` through
+The React/TypeScript/Vite calculator constructs one `investor-case-v1` through
 enterprise value only. The [packaged Python API](local-case-api.md) remains the
 financial calculation/validation authority. The narrow
 [metadata extension](local-case-api.md#anonymous-investor-metadata-local-update)
@@ -53,15 +53,18 @@ static-plus-API harness; Vite preview is not a hosting/routing configuration.
 
 ## Quick-entry and review contract
 
-The quick workbench supersedes the original four-section presentation. The journey
+The compact investor layout supersedes the earlier workbench presentation. The journey
 is now company → compact assumptions → calculate → result → optional
 annual refinement. It reuses the existing reader, API, revision/cancellation guards,
 exact rate conversion and returned values; it is not a replacement for professional
 Excel modeling or evidence/financial review.
 
-The header selects retained META/GOOGL/AAPL FY2025 data and shows reported revenue,
-fiscal period and fixed data vintage separately from forecast assumptions. Filing
-identity, SEC links, precision and limitations expand on demand. These are not
+The compact **DCF Calculator** header selects META/GOOGL/AAPL FY2025 data.
+Company/ticker, year and reported revenue in a readable USD scale remain visible,
+alongside fixed/not-live and unreviewed-forecast notices. **Data & methodology**
+expands the fiscal period, filing identity, SEC links, precision, later-filed timing
+and financial limitations. Internal project language and repository references
+are absent from ordinary product copy; exact provenance remains in the trace. These are not
 current/refreshed data; a separate filing-acceptance timestamp is not in the catalog.
 The separate **Load synthetic demonstration** action explicitly loads the existing
 $100 synthetic fixture; it is absent from the company selector and never supplies
@@ -70,9 +73,10 @@ company forecasts automatically.
 The main view has **eight initially unset rates** with plain-language labels:
 annual revenue growth, operating profit margin, operating tax, depreciation &
 amortization/revenue, operating investment/revenue, working-capital cash needs/
-revenue, discount rate (WACC) and long-term revenue growth. Help text preserves
-EBIT, positive-profit tax, financed-asset investment and full-revenue cash-needs
-meanings. No financial definitions or numerical domains change.
+revenue, discount rate (WACC) and long-term revenue growth. The grouped grid shares **Enter percentages: 10 = 10%** guidance and a count
+of unset numerical operands (not a financial-validity count). Labeled **?** help
+disclosures work with keyboard/touch, preserving EBIT, positive-profit tax,
+financed-asset investment and signed full-revenue cash-needs meanings. No financial definitions or numerical domains change.
 
 The authoritative request still contains **30 annual + 2 discount + 5 long-term
 operating ratios**. While an annual row is uniform, typing in its main control
@@ -82,7 +86,7 @@ blank/partial/invalid strings; those states block submission instead of falling
 back to an earlier valid rate. Discount rate and long-term growth edit their own
 fields directly. A blank company supplies no numerical defaults.
 
-**Advanced annual editing** exposes the same five-year strings individually.
+**Edit individual years** exposes the same five-year strings individually.
 Editing one year affects no other year or long-term ratio. Differing annual rates
 show **Varies by year** and a blank uniform-replacement control, rather than a
 misleading single rate. Entering a replacement leaves the existing path intact
@@ -95,7 +99,7 @@ abandons a replacement proposal for that same field. Collapse/reopen changes no
 values. Semantic equality of decimal formats does not falsely report variation.
 
 Five long-term operating/reinvestment ratios remain explicit and independent.
-**Copy final-year operating assumptions** copies margin, tax, expense D&A,
+**Copy final-year assumptions** copies margin, tax, expense D&A,
 operating investment and cash needs once. Missing/invalid source text rejects the
 copy atomically. Populated target values that would change require confirmation,
 listing affected ratios and the source fiscal year; Cancel preserves them and
@@ -115,7 +119,7 @@ operand groups before they can be assessed. Failed background checks do not
 become financial-error claims or approval; explicit submission reports service
 failures normally.
 
-Calculate/Check inputs reveal all local blocking errors, combining equivalent
+**Calculate enterprise value** is the sole calculation action and reveals all local blocking errors, combining equivalent
 uniform-year issues into one main control. The concise summary shows three links
 and a disclosure for the rest, opens the first relevant editor and focuses its
 field. Correcting an entry removes its resolved local error without clearing
@@ -162,8 +166,9 @@ excluding principal. Expense D&A must align with margin expenses; SBC and operat
 leases remain expensed once. Interface entry/copy actions approve no company
 forecast, sustainability, calibration, coverage or financial convention.
 
-Calculate explicitly calls the unchanged run route; **Check inputs** calls the
-calculation-free validation route. Input errors link to labeled fields/editors;
+Calculate explicitly calls the unchanged run route, which validates before
+calculation. The separate Check inputs control is removed from the investor UI;
+calculation-free API/CLI validation and background blur checking remain unchanged. Input errors link to labeled fields/editors;
 API errors remain bounded and may require another check after correction. Busy,
 deadline and connection errors preserve entries. Every input edit immediately
 marks prior output stale, cancels requests and advances revision tokens, so old
@@ -173,8 +178,10 @@ export or case management.
 
 ## Result presentation and precision
 
-The result panel prominently shows **enterprise value**, explicitly distinct from
-equity/value per share, and **terminal contribution**. A newly authorized display-only
+The desktop result panel sits beside inputs; narrow results follow the calculation
+action. Its short initial placeholder becomes a readable USD enterprise value with
+**Operating business value; excludes the cash/debt/share bridge**, and terminal
+contribution. Detailed annual tables and provenance expand on demand. A newly authorized display-only
 exception computes terminal PV / EV with an isolated Decimal.js precision-50 /
 HALF_EVEN constructor, matching CLI summary semantics: undefined at zero EV, signed
 and over-100% ratios retained, with explanatory notes before display rounding.
@@ -186,13 +193,15 @@ no server presentation endpoint or financial formula change was needed.
 Revenue/FCFF SVG trends use returned strings, normalize in isolated Decimal.js and
 convert only bounded coordinates to ordinary JS numbers. Coordinates never feed
 back into financial inputs or calculations. Nonfinite/excessive magnitudes reject
-chart rendering; tables/trace retain data. The compact table shows five years of
+chart rendering; tables/trace retain data. The expandable compact table shows five years of
 revenue, EBIT and FCFF in **USD millions**. Detailed FCFF components, discount factors,
 PVs and explicit-period PV + terminal PV = EV expand separately. Submitted assumptions,
 rationale, timing and limitations expand alongside a full-precision trace containing
 an exact unrounded annual USD table. Compact cells also retain unrounded USD tooltips.
 
-Money is normally two decimals in USD millions; small nonzero amounts below USD
+Headline revenue/EV scale to USD billions, millions or dollars using isolated
+precision-220 HALF_EVEN Decimal arithmetic, with two display decimals. Raw
+strings remain in full-precision traces. Detailed money is normally two decimals in USD millions; small nonzero amounts below USD
 10,000 use eight places for the synthetic-dollar demonstration. Display rounding
 does not change raw strings; displayed components may not sum, and display digits
 improve neither source precision nor economic validity. Negative flows/values remain
@@ -219,7 +228,42 @@ unchanged. Client timeout is 50 seconds; cancellation/late-reply guards are UI
 behavior, not a replacement for server deadlines. No cloud/static-host routing,
 production CORS or public admission controls are configured.
 
-## Direct-entry and validation verification (local)
+## Compact investor redesign verification (local)
+
+**64 frontend tests and five preparation-preservation tests passed**, plus the
+TypeScript/Vite production build. Frontend checks include the existing real
+Python financial-component comparison, direct/annual entry, replacement and
+terminal-copy independence, required financial inputs, optional metadata,
+error navigation, stale/obsolete replies and service recovery. New checks cover
+focusable help, source/qualification access, ordinary-screen terminology and
+isolated readable-USD scaling/HALF_EVEN rounding. API behavior and Python code did
+not change, so API tests and the historical suite were not rerun.
+
+Actual Chrome desktop and 390×844 responsive walkthroughs started from unset
+META, using deliberately synthetic engineering rates: growth 10%, margin 20%,
+tax 25%, expense D&A 5%, investment 10%, WC 2%, WACC 25%, g 5%, with an explicit
+final-year ratio copy. No optional details or company economics were required.
+Desktop FY2027 growth 18% made the result stale; a proposed 12% uniform
+replacement was canceled with Escape and focus restoration. Tax 150% produced
+focused percentage guidance; correction to 25% recalculated successfully with
+the annual refinement retained. Narrow keyboard selection, all eight entries,
+source disclosure, final-year copy, FY2027 refinement and recalculation were exercised. The separate
+$100 synthetic fixture was also run with annual/terminal margin −10%, retaining
+negative EV/FCFF and the negative-EV contribution explanation. These are test
+choices, not company forecasts, economic conclusions or saved cases.
+
+Comparable before/after screenshots were captured at 1280×800 and 390×844,
+plus narrow help and signed-result views. Labels/help and results stacked without
+observed page-level horizontal overflow; wide tables retain their own scroll
+regions. Expected incomplete/invalid validation 422s appeared in DevTools;
+no application exception was observed. This was a resized desktop browser,
+not mobile virtual-keyboard testing or complete accessibility certification.
+Temporary browser assumptions were discarded. Only the requested loopback
+frontend/API review servers remain running. Nine unset templates, formulas,
+source/approval bindings and the anonymous metadata contract are unchanged.
+No hosted services, public-preview window or Phase 1 pause changed.
+
+## Earlier direct-entry and validation verification (local)
 
 **60 frontend + 72 focused Python tests passed (132 total)**, plus TypeScript/Vite
 production build. The Python invocation covered case inputs, equity/summary

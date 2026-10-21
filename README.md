@@ -55,16 +55,18 @@ Linux/container tooling was unavailable. The subsequent authenticated staging re
 above supersedes its unexecuted Linux/cloud gates within the documented scope.
 
 The [local React/TypeScript calculator](docs/local-calculator-ui.md) now provides
-retained META/GOOGL/AAPL basis review, eight unset quick-entry rates, direct
-uniform five-year entry, confirmed replacement of varying paths, independent
+a compact company/revenue header, eight grouped unset rates with keyboard/touch
+help, expandable Data & methodology, and one Calculate action. META/GOOGL/AAPL
+use fixed historical data with direct uniform five-year entry, confirmed replacement of varying paths, independent
 annual/long-term editing and EV calculation through the Python API. Errors appear
 after editing/leaving a field or submitting; initial guidance is neutral.
 The local flow is select company → enter assumptions
 → calculate, without analyst paperwork. Collapsed Analysis details holds an editable
 generated name, anonymous preparation timestamp and optional personal notes;
 no rationale or verified information cutoff is invented. Detailed cash flows expand on demand;
-terminal contribution and returned-value charts support review. The underlying
-37 company inputs remain unset until explicitly supplied/applied. Run from the repository root:
+terminal contribution and returned-value charts support review. Readable USD
+results sit beside desktop inputs and below the narrow-screen action; exact values and qualifications expand on demand. The underlying
+37 company inputs remain unset until explicitly supplied. Run from the repository root:
 `npm --prefix frontend ci` then `npm --prefix frontend run dev` with Node 22.12+,
 after [starting the packaged API](docs/local-calculator-ui.md#scope-and-startup).
 Open <http://127.0.0.1:5173/>. No company forecast defaults, saving or deployment.

@@ -1,6 +1,6 @@
 import {money,display} from './model';
 import type {Result} from './model';
-import {chartPoints,terminalContribution} from './presentation';
+import {chartPoints,terminalContribution,readableMoney,readableLimitation} from './presentation';
 
 function Trend({label,values,years}: {label:string; values:string[]; years:string[]}) {
   const points=chartPoints(values);
@@ -20,12 +20,12 @@ export function ResultReview({result,stale}: {result:Result;stale:boolean}) {
   return <article aria-label="Enterprise value result" className={stale?'result stale':'result'}>
     {stale && <div className="errors" role="status"><strong>STALE RESULT — inputs changed or a new run is pending. These figures belong to the earlier submitted case.</strong></div>}
     <div className="section-number">RESULT · {result.input_basis==='SYNTHETIC_FIXTURE'?'SYNTHETIC DEMONSTRATION':'MANUAL FORECAST'}</div>
-    <h2>{result.case_name}</h2>
-    <div className="ev"><span>Enterprise value · USD millions</span><strong>{money(b.enterprise_value)}</strong><small>Not equity or value per share. Calculation is not economic approval.</small></div>
+    <h2>Enterprise value</h2>
+    <div className="ev"><strong>{readableMoney(b.enterprise_value)} <span className="currency">USD</span></strong><small>Operating business value; excludes the cash/debt/share bridge.</small></div>
     <div className="terminal-metric"><span>Terminal contribution</span><strong>{contribution.text}</strong><small>{contribution.note}</small></div>
     <div className="charts"><Trend label="Revenue" values={b.stage_a.years.map(y=>String(y.revenue))} years={b.stage_a.years.map(y=>String(y.fiscal_year_label))}/><Trend label="FCFF" values={b.stage_a.years.map(y=>String(y.fcff))} years={b.stage_a.years.map(y=>String(y.fiscal_year_label))}/></div>
-    <div className="table-scroll" tabIndex={0} role="region" aria-label="Compact five-year forecast"><table className="compact-table"><caption>Five-year forecast · USD millions</caption><thead><tr><th scope="col">Year</th><th scope="col">Revenue</th><th scope="col">EBIT</th><th scope="col">FCFF</th></tr></thead><tbody>{b.stage_a.years.map(y=><tr key={String(y.period_index)}><th scope="row">{y.fiscal_year_label}</th><td title={`Unrounded USD: ${y.revenue}`}>{money(y.revenue)}</td><td title={`Unrounded USD: ${y.ebit}`}>{money(y.ebit)}</td><td title={`Unrounded USD: ${y.fcff}`}>{money(y.fcff)}</td></tr>)}</tbody></table></div>
-    <p className="hint">Negative FCFF remains a cash outflow. Display rounding does not change raw values; rounded components may not sum.</p>
+    <details><summary>Five-year forecast</summary><div className="table-scroll" tabIndex={0} role="region" aria-label="Compact five-year forecast"><table className="compact-table"><caption>Five-year forecast · USD millions</caption><thead><tr><th scope="col">Year</th><th scope="col">Revenue</th><th scope="col">EBIT</th><th scope="col">FCFF</th></tr></thead><tbody>{b.stage_a.years.map(y=><tr key={String(y.period_index)}><th scope="row">{y.fiscal_year_label}</th><td title={`Unrounded USD: ${y.revenue}`}>{money(y.revenue)}</td><td title={`Unrounded USD: ${y.ebit}`}>{money(y.ebit)}</td><td title={`Unrounded USD: ${y.fcff}`}>{money(y.fcff)}</td></tr>)}</tbody></table></div>
+    <p className="hint">Negative FCFF remains a cash outflow. Display rounding does not change raw values; rounded components may not sum.</p></details>
     <details><summary>Cash-flow details and EV reconciliation</summary>
       <div className="table-scroll" tabIndex={0} role="region" aria-label="Detailed cash flows, USD millions"><table><caption>Annual components · USD millions (discount factors are unitless)</caption><thead><tr><th scope="col">Component</th>{b.stage_a.years.map(y=><th scope="col" key={String(y.period_index)}>{y.fiscal_year_label}</th>)}</tr></thead><tbody>
         {components.map(([label,key])=><tr key={key}><th scope="row">{label}</th>{b.stage_a.years.map((y,i)=><td key={i}>{money(y[key])}</td>)}</tr>)}
@@ -34,13 +34,13 @@ export function ResultReview({result,stale}: {result:Result;stale:boolean}) {
       </tbody></table></div>
       <dl className="reconciliation">{[['Explicit-period PV',b.pv_explicit_fcff],['+ Discounted terminal value',b.pv_terminal_value],['= Enterprise value',b.enterprise_value],['Terminal FCFF',String(b.terminal.fcff)],['Terminal value at year 5',b.terminal_value]].map(([label,value])=><div key={label}><dt>{label} (USD millions)</dt><dd>{money(value)}</dd></div>)}</dl>
     </details>
-    <details><summary>Submitted assumptions, rationale and timing</summary><p>{b.timing.notice}</p><p>Analytical date: {b.timing.analytical_t0}. No verified information cutoff is established by this calculator.</p>
+    <details><summary>Assumptions, limitations &amp; provenance</summary><p>Case: <span>{result.case_name}</span></p><p>{b.timing.notice}</p><p>Analytical date: {b.timing.analytical_t0}. No verified information cutoff is established by this calculator.</p>
       {'preparation' in result.submitted_inputs ? <>
         <p>Anonymous investor calculation · prepared at {result.submitted_inputs.preparation.timestamp_utc}. Preparation time is not the analytical date, information cutoff or evidence review.</p>
         <p>No investment rationale supplied. Forecast inputs are user-entered and not independently reviewed.</p>
         <p className="personal-notes"><strong>Optional personal notes:</strong> {result.submitted_inputs.preparation.notes ?? 'Absent'}</p>
       </> : <><p><strong>Rationale:</strong> {result.submitted_inputs.analyst.rationale}</p><p><strong>Scope:</strong> {result.submitted_inputs.scope}</p></>}
-      <ul>{result.limitations.map((line,i)=><li key={i}>{line}</li>)}</ul>
+      <ul>{result.limitations.map((line,i)=><li key={i}>{readableLimitation(line)}</li>)}</ul>
       <details><summary>Full-precision inputs and calculation trace</summary>
         <div className="table-scroll" tabIndex={0} role="region" aria-label="Unrounded annual values in USD"><table className="compact-table"><caption>Exact returned annual values · USD (unrounded strings)</caption><thead><tr><th scope="col">Year</th><th scope="col">Revenue</th><th scope="col">EBIT</th><th scope="col">FCFF</th></tr></thead><tbody>{b.stage_a.years.map(y=><tr key={String(y.period_index)}><th scope="row">{y.fiscal_year_label}</th><td>{y.revenue}</td><td>{y.ebit}</td><td>{y.fcff}</td></tr>)}</tbody></table></div>
         <pre>{JSON.stringify(result,null,2)}</pre></details>

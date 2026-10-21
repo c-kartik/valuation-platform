@@ -1,6 +1,30 @@
 # Project Status
 
-## Current — local direct-entry investor workflow
+## Current — compact local investor calculator
+
+The [calculator redesign](local-calculator-ui.md#compact-investor-redesign-verification-local)
+replaces the oversized workbench with a compact company/revenue summary, grouped
+eight-rate grid, keyboard/touch help, independent long-term editor and one
+Calculate action. Source/timing qualifications and full-precision traces remain
+accessible; desktop results sit alongside inputs and narrow results follow the
+action. Readable USD headlines use display-only Decimal scaling. Direct entry,
+progressive errors, anonymous metadata and financial conventions are preserved.
+
+**64 frontend + five preservation checks passed**, plus production build,
+links/whitespace and protected-scope checks. Desktop and 390×844 Chrome review
+covered unset selection, synthetic engineering inputs, keyboard/help, annual
+refinement/cancellation, invalid recovery, recalculation and signed results.
+Before/after screenshots were captured. This is local developer verification,
+not mobile virtual-keyboard testing or investment acceptance. No actual-company
+case/default/output was saved; all nine templates and historical approvals remain
+unchanged. Phase 1 remains [paused](phase1-universe-pause-checkpoint.md).
+
+Local commit only; requested loopback frontend/API remain running for review.
+No push, deployment or cloud changes. The hosted preview is unchanged, including
+its **October 22, 2026 13:04:19 Dubai / 09:04:19 UTC** manual backend-withdrawal
+deadline. Further changes await user review.
+
+## Earlier — local direct-entry investor workflow
 
 The [calculator](local-calculator-ui.md) now uses plain-language profit, tax, D&A,
 operating investment, cash-needs, discount-rate and long-term-growth labels.

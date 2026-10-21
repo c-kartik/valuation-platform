@@ -25,3 +25,20 @@ export function chartPoints(values: string[]): {x:number; y:number}[] | null {
     });
   } catch {return null;}
 }
+
+/** Readable USD scale; exact inputs/results remain untouched in the trace. */
+export function readableMoney(raw: string): string {
+  const value = new DisplayDecimal(raw);
+  const magnitude = value.abs();
+  const [scale,suffix] = magnitude.gte('1000000000') ? ['1000000000','bn'] : magnitude.gte('1000000') ? ['1000000','m'] : ['1',''];
+  const rounded = value.div(scale).toFixed(2);
+  const [whole,fraction] = rounded.split('.');
+  return `${value.isNegative() && !value.isZero() ? '−' : ''}$${whole.replace('-','').replace(/\B(?=(\d{3})+(?!\d))/g,',')}.${fraction}${suffix}`;
+}
+/** Display wording only: original qualifications remain in submitted/full traces. */
+export function readableLimitation(line: string): string {
+  return line
+    .replace('Actual-input review, operating/tax/investment/venture scope and execution remain pending; see docs/phase2-meta-base-input-review.md.', 'Operating, tax, investment and venture assumptions still require review before an investment case can be established.')
+    .replace('No bridge/share intake;', 'Cash/debt/share adjustments are excluded;')
+    .replace('Revenue-only retained historical binding;', 'Historical data establishes revenue only;');
+}
