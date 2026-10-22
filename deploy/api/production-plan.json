@@ -1,0 +1,62 @@
+{
+  "document_type": "review-plan-not-a-provider-manifest",
+  "status": "PROPOSED_NOT_AUTHORIZED_FOR_EXECUTION",
+  "execute": false,
+  "production_authorization": null,
+  "approved_image": null,
+  "candidate_image": "us-central1-docker.pkg.dev/kartikchaturvedi-website/valuation-staging/valuation-api@sha256:b1a0f6d846a0af17afa0c98c36b9e3d808d64539b46c5d6361ff6c0d395331f8",
+  "target": {
+    "project_id": "kartikchaturvedi-website",
+    "project_number": "378340095652",
+    "service": "valuation-api",
+    "region": "us-central1"
+  },
+  "cloud_run": {
+    "billing": "request-based",
+    "cpu": "1",
+    "memory": "1Gi",
+    "service_min_instances": 0,
+    "service_max_instances": 1,
+    "revision_min_instances": 0,
+    "revision_max_instances": 1,
+    "concurrency": 1,
+    "http_timeout_seconds": 50,
+    "execution_environment": "gen2",
+    "cpu_throttling": true,
+    "startup_cpu_boost": false,
+    "port": 8080,
+    "runtime_identity": "valuation-api-runtime@kartikchaturvedi-website.iam.gserviceaccount.com",
+    "runtime_project_roles": [],
+    "initial_access": "authenticated-only",
+    "invoker_iam_check": true,
+    "ingress": "all",
+    "default_run_app_url": true
+  },
+  "application": {
+    "uvicorn_workers": 1,
+    "active_calculation_children_per_process": 1,
+    "child_deadline_seconds": 35,
+    "child_cpu_soft_seconds": 30,
+    "child_cpu_hard_seconds": 31,
+    "body_read_seconds": 10,
+    "max_body_bytes": 262144,
+    "max_result_bytes": 2097152,
+    "request_body_logging": false,
+    "assumption_logging": false,
+    "packaged_resources_read_only": true,
+    "launcher_and_parser_changes": false
+  },
+  "release_policy": "manual-immutable-digest-current-tag-only",
+  "public_invocation_authorization": null,
+  "budget_change_authorization": null,
+  "proposed_cloud_run_cap": {
+    "amount": "10.00",
+    "currency": "USD",
+    "period": "MONTH",
+    "project": "projects/378340095652",
+    "billing_service": "services/152E-C115-5142",
+    "scope": "all-Cloud-Run-workloads-in-project-not-one-named-service",
+    "cost_basis": "gross-estimated-before-savings-and-credits"
+  },
+  "runbook": "../../docs/public-preview-preparation.md#production-backend-and-cost-policy--proposed-october-22"
+}

@@ -19,6 +19,13 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The [proposed production backend and cost plan](docs/public-preview-preparation.md#production-backend-and-cost-policy--proposed-october-22)
+prepares a separate max-one `valuation-api` without deploying it. Direct USD billing
+and spend-cap permissions were verified; the existing account-wide USD10 alerts
+remain unchanged. A separate monthly Cloud Run cap is proposed, with project-wide
+outage/overshoot limits. The non-executable configuration and A–G launch sequence
+require separate billing, production/public-access and live/domain authorizations.
+
 The separate [combined preview](https://kartikchaturvedi-website--combined-site-review-kwvkxedj.web.app/)
 now serves the portfolio root and `/valuation/` from two clean source checkpoints.
 See its [assembly and verification record](docs/combined-site-preview.md): 18 focused

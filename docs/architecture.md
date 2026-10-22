@@ -1,5 +1,12 @@
 # Architecture
 
+The [production proposal](public-preview-preparation.md#production-backend-and-cost-policy--proposed-october-22)
+reuses the existing immutable API image and unprivileged runtime identity in a
+separate service. Its [non-executable review configuration](../deploy/api/production-plan.json)
+preserves financial/runtime limits and distinguishes service/revision scaling,
+current-only production tags and project-wide billing-product caps. No runtime,
+deployment, billing, access or infrastructure change is performed by this checkpoint.
+
 The [combined preview](combined-site-preview.md) has a separate external assembly
 boundary: ten allowlisted portfolio files plus a four-file calculator build with
 base `/valuation/`. Root-relative `/api` requests retain the same Python backend;

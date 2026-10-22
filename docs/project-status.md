@@ -1,6 +1,32 @@
 # Project Status
 
-## Current — isolated combined portfolio/calculator preview
+## Current — proposed production backend and cost controls
+
+The [production plan](public-preview-preparation.md#production-backend-and-cost-policy--proposed-october-22)
+prepares a separate `valuation-api`: request-based 1 vCPU/1GiB, service/revision
+min 0/max 1, concurrency 1, 50s HTTP and unchanged child/parser/cleanup limits.
+The [review JSON](../deploy/api/production-plan.json) is non-executable, with launch,
+public-access, budget authority and approved image unset. No build or deployment.
+
+Read-only inspection confirmed direct USD billing and budget/spend-cap permissions.
+The existing USD10 alert covers **all account projects/services**, at
+**50/90/100/150%**, not a dedicated project cap. Console inventory showed no spend
+cap; its unsaved definition offers enforcement. Public Budget REST inspection
+returned `SERVICE_DISABLED`; no API was enabled. A separate USD10 monthly Cloud Run
+cap is eligible in principle but pauses **all project Cloud Run workloads** and
+counts gross estimated usage before credits. Proposed project alerts: 50/80/100%.
+Neither control was changed or enforcement-tested.
+
+Illustrative 1k/10k monthly calculations consume approximately **USD0.16/1.61 gross
+compute/requests**, potentially USD0 payable if shared free allowances remain.
+Hosting/transfer/storage/logs/builds are separate; no USD10 total-bill guarantee.
+Service max/tag caveats, a best-effort per-action rather than shared EV/equity
+client lock, operator/availability choices and the staged launch authorizations
+remain explicit. Private services, preview access/deadlines, live Hosting,
+Netlify/DNS, portfolio, financial code/approvals and nine unset templates are
+unchanged. Phase 1 remains paused; no repository push.
+
+## Earlier — isolated combined portfolio/calculator preview
 
 The [combined preview](combined-site-preview.md#verification-record) serves the
 portfolio root and approved calculator at `/valuation/` in a separate channel.

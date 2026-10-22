@@ -1,6 +1,291 @@
-# Anonymous EV preview — local preparation and abuse review
+# Backend launch preparation and preview history
 
-> **Current: the shorter-name retry is deployed and verified within its bounded scope.**
+## Production backend and cost policy — proposed October 22
+
+**Preparation only; production and billing changes are NOT authorized.** Inspected
+2026-10-22, starting valuation `a8bc1105473480406b830b7f335933d67953ebe3`, clean
+`main`, three ahead of `origin/main`; portfolio
+`a115327325754cb741b696fa115f38a30e63c866`, clean `main`, two ahead. No push,
+application build, calculation, deployment, API enablement or cloud write occurred.
+The [combined preview](combined-site-preview.md) remains separate from production.
+Phase 1 stays [paused](phase1-universe-pause-checkpoint.md).
+
+**Existing deadlines remain October 23: combined Hosting 13:10:39.991846463 Dubai /
+09:10:39.991846463 UTC; manual backend withdrawal 14:17:28 Dubai / 10:17:28 UTC.**
+Initial clock was October 22, 16:13:28 Dubai / 12:13:28 UTC, before both deadlines.
+Planning, Hosting expiry and a proposed monthly cap do not revoke anonymous access.
+
+### Proposed production configuration
+
+The [non-executable production plan](../deploy/api/production-plan.json) is a review
+document, **not** a Cloud Run/Firebase manifest or deploy script. `execute=false`,
+authorizations and `approved_image=null` deliberately leave execution unresolved.
+No existing deploy command consumes it. Generate an actual command only under a
+subsequent authorized release; never pass this review JSON to a provider API.
+
+| Setting | Recommendation / future supported setting |
+| --- | --- |
+| Separate target | `kartikchaturvedi-website` (`378340095652`), `valuation-api`, us-central1. Read-only GET returned 404 for that service. |
+| Billing / allocation | Request-based; 1 vCPU / **1 GiB**, CPU throttling on, startup boost off, gen2. Keep tested memory. |
+| Service scaling | Min 0 / **max 1**: `--min=0 --max=1`, or v2 service `scaling.minInstanceCount=0`, `maxInstanceCount=1`. |
+| Revision backstop | Min 0 / max 1: `--min-instances=0 --max-instances=1`; independently verify both levels. |
+| Admission / HTTP | Concurrency 1, HTTP timeout 50s, PORT 8080; keep the existing image's one-worker launcher and probe behavior. |
+| Runtime | Reuse `valuation-api-runtime@kartikchaturvedi-website.iam.gserviceaccount.com`; fresh project-policy read found **zero project roles** for it. No keys or extra runtime roles needed for packaged reads/stdout. |
+| Access | Initially authenticated, invoker IAM check enabled, default URL retained; ingress `all` permits later Hosting integration but does not itself grant invocation. Public production invocation needs separate authorization. |
+| Release artifact | Candidate existing immutable digest `sha256:b1a0f6d846a0af17afa0c98c36b9e3d808d64539b46c5d6361ff6c0d395331f8` in `valuation-staging/valuation-api`; no rebuild if approved unchanged. Full URI in the plan. |
+
+The [current preview record](firebase-public-preview.md#october-22-redesigned-equity-preview)
+binds that image to source `0f5200d` and prior hosted tests. Fresh read-only service
+inspection confirmed `valuation-api-preview-00002-kq7`, the candidate digest,
+1 CPU/1GiB, service/revision max 1, no configured minimum (zero), concurrency 1,
+50s, gen2 and request-based allocation. Its existing tag remains
+`fh-c2ae005fc1524503`. Private service revisions remain `valuation-api-staging-00001-2rk`
+and `valuation-api-public-preview-00001-hdj`; no service or IAM change was made.
+
+The unchanged [launcher](../deploy/api/start.py), [image](../deploy/api/Dockerfile)
+and [HTTP budgets](local-case-api.md#http-contract-and-budget-policy) retain one
+child, 35s wall deadline, 30/31s soft/hard child CPU limits, terminate → 0.5s join →
+kill/reap cleanup, 10s body read, 256KiB input, 2MiB result and existing parser/
+numeric ceilings. No request-body/assumption logging. Packaged files are read-only
+under nonroot UID10001; this does **not** make Cloud Run's entire filesystem
+read-only or establish a peak-memory proof. Existing Linux/remote test qualifications
+in the [staging record](cloud-staging-deployment.md#newly-executed-verification)
+remain attributed; none were rerun here.
+
+Service max and revision max are distinct. Tagged zero-percent revisions can
+start outside the service-level limit. Keep only the **current production Hosting
+tag**, attached to the revision also receiving 100% traffic; inventory/remove
+obsolete production tags during separately authorized releases. Retain prior image
+digests/Hosting files for manual rollback, rather than claiming automatic rollback
+works after a historical pin is removed. Never remove tags still used by the
+standalone/combined previews or private services as blanket cleanup. Even properly
+configured maxima may be exceeded briefly. [Maximum-instance semantics](https://docs.cloud.google.com/run/docs/configuring/max-instances),
+[exact CLI flags](https://docs.cloud.google.com/sdk/gcloud/reference/run/deploy).
+Production's max-one is not project-wide: preview/private services have separate
+limits and can run concurrently. The proposed 13-character service name plus the
+current 19-character Firebase tag pattern totals 32, below the previously observed
+46-character combined-name limit; verify the future CLI's actual generated tag.
+
+Cloud Run may queue requests before the application, eventually returning 429
+when no slot becomes available (documented pending window: at least 10s or 3.5×
+average startup time). Application overlap rejects 503 with `Retry-After: 1`;
+there is no application waiting queue. Cold starts and platform queues can affect
+catalog/health as well as runs. Min zero trades availability/latency for idle cost;
+50s is not a completion SLA for cold starts plus maximal body/child work.
+[Autoscaling and queue behavior](https://docs.cloud.google.com/run/docs/about-instance-autoscaling).
+
+### Verified budget state and proposed changes
+
+Read-only console inspection found one **`$10 Monthly Budget Alert`**: **all billing
+account projects/services**, monthly, specified amount USD10, actual-spend alerts
+**50/90/100/150%**. It covers this project today but is not explicitly project-bound.
+Billing-admin/user email notifications are on; project-owner notifications,
+Monitoring email channels and Pub/Sub are off. Savings-program/other-savings
+filters are selected. No personal recipient address was copied. No Cloud Run
+spend cap was displayed; status is Not applicable for the existing alerts budget.
+
+Cloud Billing GET verified an open, linked **direct** account, currency **USD**.
+The console lists the current signed-in account as Billing Account Administrator.
+A read-only `testIamPermissions` verified budget get/list/create/update and
+`billing.budgets.configureSpendCap`. The unsaved Create Budget definition offers
+enabled spend-cap enforcement; it was canceled without selecting/saving a budget.
+This supports eligibility and configuration authority, **not a tested budget
+creation**. Public Budget REST listing returned 403 `SERVICE_DISABLED` for its
+request consumer; console inventory supplies the observed settings. A quota-project
+retry also failed; no API was enabled or permission broadened. Use the existing
+console for the smallest future change; any REST prerequisite is separate scope.
+
+**USD10 is a valid proposed amount**: the documented specified amount is
+nonnegative and must match the account currency. Scope the cap to
+`projects/378340095652` and billing product `services/152E-C115-5142` (Cloud Run),
+calendar `MONTH`, excluding credits/savings. This means a Google billing product,
+**not only the named `valuation-api` service**. [Budget fields/currency/calendar](https://docs.cloud.google.com/billing/docs/reference/budget/rest/v1/billingAccounts.budgets),
+[spend-cap API constraints](https://docs.cloud.google.com/billing/docs/how-to/budget-api-spend-cap).
+
+Recommend the cap for this small anonymous launch **if project-wide Cloud Run
+outages are acceptable**. Google pauses Cloud Run services (5xx), jobs and worker
+pools project-wide, including the existing private and preview workloads. A cap
+does not delete resources. Static Hosting remains independent; builds, image/source
+storage, logging and separately billed transfer can continue charging. Cloud Run's
+own guidance notes VPC connector VM costs are outside its cap; none is proposed.
+[Cloud Run cap behavior](https://docs.cloud.google.com/run/docs/tips/services-cost-optimization).
+If private/staging availability must never be affected, this shared-project cap is
+unsuitable; choose the alerts/manual-withdrawal fallback within the present scope.
+
+Enforcement uses **gross estimated list-price usage before credits**, is delayed
+without a guaranteed delay bound, and can overshoot; in-flight HTTP work can finish
+and charge. It automatically resets/unpauses next month on Google's budget calendar
+(documented Pacific time, not Dubai midnight). Manual lifting suspends enforcement
+for the rest of the period unless the target is increased; recovery can take up to
+an hour. Recheck existing current-month gross usage before enabling: this is not a
+fresh USD10 allowance from creation. The payable invoice can be much lower than
+the cap's usage counter. **This is not a USD10 total-project ceiling.**
+[Spend-cap limitations and recovery](https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps).
+
+Exact future console steps, **only after separate budget authorization**:
+
+1. Edit the existing alerts-only budget; explicitly select only this project,
+   all services, Monthly / Specified USD10, all savings/credits included to track
+   net reported costs. Replace rules with actual **50/80/100%**; retain billing
+   admin/user mail, enable project-owner mail once project-scoped; no Pub/Sub or
+   extra notification infrastructure. Review scope/recipients, then Save and
+   re-read. This intentionally replaces the account-wide scope; do not imply an
+   additional whole-account umbrella remains. [Alert-budget configuration](https://docs.cloud.google.com/billing/docs/how-to/budgets).
+2. Separately Create new → **Spend cap enforcement** → name `valuation-cloud-run-monthly-cap`;
+   select project `kartikchaturvedi-website`, product **Cloud Run**, Monthly,
+   Specified USD10. Review gross-before-savings basis and fixed 50/80/100% notices
+   to billing administrators/project owners, then Finish only with authorization.
+   Re-read project/product/amount/status **Configured**. Keep the alerts budget;
+   do not try to convert or delete it. If eligibility/permissions or saving fails,
+   stop and retain scaling limits + alerts + manual withdrawal; no improvised
+   shutdown automation. [Console cap procedure](https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps).
+
+### Low-traffic estimate, not a bill ceiling
+
+No new workload/timing measurement was performed. Prior synthetic staging HTTPS
+runs were **2.385–4.138s**; a later proxy/cloud review observed **2.312–4.566s**,
+including one corresponding Run log at **2.360s**. A single startup sample was
+**6.842s**. These sparse measurements from the earlier image are a planning basis,
+not billed CPU time, a current-image benchmark or a cold-start distribution.
+See [staging](cloud-staging-deployment.md#newly-executed-verification) and
+[frontend timings](cloud-frontend-acceptance.md#timings-cloud-checks-and-limits).
+
+Assume **one 4s run + four 0.2s validations + one 0.2s catalog call** per completed
+calculation, plus **1s average startup/shutdown allocation** (illustrative 10% cold
+sessions × 10s). Thus six requests and **6 allocated vCPU-seconds / GiB-seconds**
+per calculation. Keep 1GiB charged allocation regardless of lower sampled RSS.
+Assume 10KiB POST bodies and 225KiB total uncompressed responses per calculation
+(200KiB run + 25KiB auxiliary); these are estimates within the existing ceilings.
+Background editing, retries, errors and bots can substantially increase usage.
+
+| Monthly completed calculations | Allocated seconds / requests | CPU / RAM / requests before free tier | Gross Run compute/request cap consumption | Payable compute/requests if allowances unused |
+| --- | --- | --- | --- | --- |
+| 1,000 | 6,000 / 6,000 | USD0.144 / 0.015 / 0.0024 | **USD0.1614** | approximately USD0 |
+| 10,000 | 60,000 / 60,000 | USD1.440 / 0.150 / 0.0240 | **USD1.6140** | approximately USD0 |
+
+Uses us-central1 request-based list prices: CPU USD0.000024/vCPU-s, RAM
+USD0.0000025/GiB-s, requests USD0.40/million. Monthly no-cost allowances are
+180,000 vCPU-s, 360,000 GiB-s and 2 million requests, shared across the billing
+account. Remaining allowances/discounts were **not** independently measured. If
+already consumed, use the before-free amounts. Non-minimum idle instances are
+uncharged in request-based mode; startup/shutdown and active/abusive requests are
+not free merely because minimum is zero. [Run pricing](https://cloud.google.com/run/pricing).
+
+All-cold diagnostic (15 allocated seconds/calculation) gives **USD0.3999 / 3.999**
+gross compute/requests at 1k/10k. At 35s runs plus 2s auxiliary/startup allowance,
+10k gives **USD9.829** before network/other Cloud Run usage. These arithmetic
+diagnostics show why free credits and a max-one setting cannot substitute for
+gross-cap monitoring. No fixed maximum bill or sustainable request count follows.
+
+Website traffic is independent of calculations. For illustration only, assume
+1,000/10,000 uncached full-site visits × **1.5MB** (the combined artifact is 1.384MB),
+plus the API responses above: **1.7304 / 17.304GB** Hosting transfer. At USD0.15/GB,
+gross transfer is **USD0.260 / 2.596**; with the project's unused 10GB allowance,
+approximately **USD0 / 1.096** payable. Browser caching/compression can lower this;
+CDN hits still count. Retained Hosting versions share 10GB storage, then
+USD0.026/GB. No temporary-domain sitemap/canonical changes are proposed.
+[Hosting pricing](https://firebase.google.com/docs/hosting/usage-quotas-pricing).
+
+| Other component | Explicit planning assumption / separate cost |
+| --- | --- |
+| Run transfer | The compute table excludes egress. Do not silently add an internet rate to an exempt CDN leg. Confirm the charged SKU/path in billing after launch; for a chargeable direct North America→Europe leg at USD0.12/GiB, 225KiB/calc adds about USD0.026 / 0.257 before eligible free transfer. That is a named-route diagnostic, not a verified Dubai/Hosting tariff. Any Run-attributed transfer also consumes its cap; Hosting-attributed transfer does not. [Run transfer rules](https://cloud.google.com/run/pricing), [network pricing](https://cloud.google.com/vpc/network-pricing). |
+| Builds | Initial immutable-image reuse: **zero builds**. Later assumption: four manual e2-standard-2 builds/month × two minutes × USD0.006/min = **USD0.048 gross**; approximately zero if the shared 2,500-minute eligible allowance remains. Prior new-image remote build lasted about 33s, not a required rebuild duration. [Build pricing](https://cloud.google.com/build/pricing). |
+| Registry | Illustrative **1GiB total retained layers**, not measured usage: about USD0.10/month gross, USD0.05 after the account's unused first 0.5GiB. Initial image reuse adds no new image bytes. Retain current + one known-good rollback digest and account separately for existing preview/private dependencies. [Registry pricing](https://cloud.google.com/artifact-registry/pricing). |
+| Source bucket | Small source archives and operations remain separately billable. No new archive is needed for image reuse. Actual storage class/bytes, account allowance and retained soft-deleted objects determine cost; the earlier record observed seven-day soft-delete. Do not invent a measured footprint or alter retention here. [Storage pricing](https://cloud.google.com/storage/pricing). |
+| Logs | Assume 1KiB metadata/request: about 0.0057/0.0572GiB at 1k/10k; about USD0.003/0.029 gross at USD0.50/GiB, approximately zero within 50GiB/project/month. Actual platform volume/retention can differ. Keep body/assumption logs disabled, not platform error visibility. [Observability pricing](https://cloud.google.com/products/observability/pricing). |
+
+Taxes, sustained abuse, other workloads, exhausted allowances and extra transfer
+are outside these illustrative payable figures. A whole-project alert and a
+Cloud Run cap track different populations and cost bases; neither caps the entire
+invoice at USD10. Gross Run consumption includes **all** project Run workloads,
+not just the new service or successful calculations.
+
+### Operating policy and exact future changes
+
+Start anonymous, with no accounts or saved cases, **only after launch authorization**.
+At that time add service-only `allUsers / roles/run.invoker` to the new production
+service, retaining IAM checks. Firebase routing requires public invocation and
+the default Run URL; direct requests remain possible. Origin/Fetch-Metadata checks
+and absence of CORS are not authentication or distributed abuse protection.
+No database, gateway, load balancer, Redis, CAPTCHA or auth system is required by
+this minimum proposal. [Hosting/Run integration](https://firebase.google.com/docs/hosting/cloud-run).
+
+Policy: one calculation at a time per browser client; preserve inputs and require
+explicit retry for busy/outage responses, avoiding automatic retry loops. Current
+buttons have per-action busy/abort guards, but **no shared EV/equity client mutex**:
+starting EV during an equity request can briefly overlap before cancellation.
+Do not certify a strict per-client quota from these guards. Server admission
+remains one child/process; Cloud Run may queue instead of exposing app 503s.
+Accept this bounded UX limitation or separately scope a strict shared guard;
+it is not a reason to add distributed infrastructure. There is no per-user/global
+distributed quota, identity, availability SLA or hard-dollar guarantee.
+
+Reuse the existing registry, source bucket, builder and unprivileged runtime
+identity. Future changes are **one separate Run service/revisions**, any explicitly
+approved service-only invoker grant, two reviewed budget edits/creation steps,
+then production-routing Hosting preview/version and separately approved live/domain
+changes. No new build resource/identity/API is presently necessary for image reuse.
+The future deployer needs Run create/update/get/operations, repository image read,
+`actAs` on the runtime identity and, for public transition/withdrawal, service IAM
+get/set. Hosting release authority is needed later. Recheck existing permissions;
+grant only a missing scoped permission under separate authorization, never new
+Owner/Editor/runtime project roles by default. Existing builder grants remain
+as previously [recorded](cloud-staging-deployment.md#created-resources-and-access).
+
+Use existing console signals: requests and 429/5xx rates, latency, active instances,
+memory/restarts, gross Run cap progress and project billed spend. Recommended human
+review: daily during initial launch and promptly after budget/error notices; name
+an available operator before public launch. Do not poll/keep warm or add monitoring
+infrastructure. Sparse prior memory samples do not justify lowering memory.
+
+Rollback is manual: choose the known-good immutable image, deploy it as a new
+production revision with the same limits, verify it, route 100%, and issue a
+matching Hosting pin/release. Preserve a matching static release, but verify its
+tag still exists before any Hosting rollback. Emergency withdrawal removes
+**only production service-level anonymous invoker access**, verifies default and
+every tagged URL deny anonymous requests, and leaves the static portfolio online.
+First check for any other grant/bypass; do not assume removing one binding defeats
+project-level public access. Do not disable project billing or touch private
+services. Existing requests may finish. If appropriate, separately release a
+calculator-unavailable static page while retaining portfolio pages; no such change
+is implemented now. A monthly cap's automatic reset is **not** access withdrawal.
+
+Retain current + one known-good rollback image/Hosting release, with known source
+bindings. Inventory dependencies before any later preview-tag/release/image/source
+cleanup; expired channels do not themselves remove Run access or all stored bytes.
+No cleanup, automated deletion policy or monitoring resource was created today.
+
+### Concrete launch sequence and decisions
+
+| Stage | Required next authority / verification |
+| --- | --- |
+| A | Approve the proposed allocation/scaling/tag policy, anonymous/direct-URL risk, low availability under max-one and project-wide cap outages; choose the human operator and accept or scope the cross-action client limitation. Approve the immutable production image after a source/resource match. |
+| B | Separately authorize the explicit project-alert update and USD10 Cloud Run cap; recheck current-month gross spend, then configure/re-read. Alternatively explicitly accept limits + existing alerts + manual withdrawal. No budget change is authorized by this plan. |
+| C | Authorize private-first deployment of `valuation-api`; preserve all private staging services. Verify effective service/revision settings, digest, identity, health and anonymous denial; run bounded synthetic smoke/CLI comparisons under that future task. |
+| D | Separately authorize production anonymous invocation when needed for Hosting, then a combined-site preview pinned to that exact production revision. Verify routes/pages/PDF, JSON errors, EV/equity equivalence, cold/busy/retry behavior and cost signals; do not reuse expired preview authority. |
+| E | Approve Firebase **live release and domain migration separately** after the preview review. Capture current DNS/Netlify rollback settings read-only. Wait for Firebase's verified domain-specific instructions; DNS provider, registrar and exact records are unresolved. Review production crawler headers/canonicals; do not ship preview noindex unintentionally. |
+| F | After authorized cutover verify HTTPS/certificate, every existing page/link/download, `/valuation/` entry/direct refresh, API routing and bounded synthetic calculations. Retain signed source/image/Hosting bindings. |
+| G | Keep Netlify, saved prior DNS values and a known-good release for rollback. Do not push the portfolio repository while its active Netlify push webhook has an unreviewed live effect. Later cleanup is separately scoped. |
+
+The blockers are **authorization and policy choices**, not a need to rebuild the
+financial engine: production image/configuration, public-invocation/cap availability
+acceptance, operator, future smoke/preview acceptance and live/domain approval.
+Eligibility/permissions support a USD10 cap, but its actual creation/enforcement
+was not tested. Exact DNS instructions and a future live release remain unresolved.
+Strict cross-action client serialization, peak-load/memory certification and
+stronger abuse protection remain explicit qualifications/possible follow-ups,
+not invented mandatory infrastructure. No financial-input sufficiency or
+investment readiness follows.
+
+Validation for this planning checkpoint: JSON/static consistency with the unchanged
+launcher/API ceilings, independent Decimal cost arithmetic, official source review,
+read-only console/API inspection, changed links/anchors, whitespace, staged secret
+patterns, protected-byte scope and all nine unset templates. No financial tests,
+new app/image build, valuation execution or full historical suite were needed.
+
+## Earlier preview preparation record
+
+> **Historical October 21: the shorter-name retry was deployed and verified within its bounded scope.**
 > [Active preview and manual withdrawal record](firebase-public-preview.md).
 > Withdraw backend access by **October 22, 2026, 13:04:19.869 Dubai / 09:04:19.869 UTC**.
 > The failed-name attempt and earlier inspection records below are historical.

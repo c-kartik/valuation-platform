@@ -91,6 +91,10 @@ never log them. Do not delete shared versions, the standalone channel or backend
 
 ## Future migration decisions
 
+The subsequent [production backend/cost proposal](public-preview-preparation.md#production-backend-and-cost-policy--proposed-october-22)
+records read-only billing verification and the staged launch plan. It changes
+neither this preview nor its deadlines; production and billing actions remain pending.
+
 Live-domain migration, DNS/certificates, the active portfolio Netlify push webhook,
 production backend access/abuse/cost policy, longer-term hosting, canonical/sitemap
 policy and production monitoring require separate decisions. The portfolio's
