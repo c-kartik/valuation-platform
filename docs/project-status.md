@@ -1,6 +1,30 @@
 # Project Status
 
-## Current — optional equity workflow acceptance
+## Current — fresh hosted redesigned equity preview
+
+The [October 22 hosted release](firebase-public-preview.md#october-22-redesigned-equity-preview)
+deploys the approved compact investor and optional equity/share flow from clean
+pushed source `0f5200d` through one new remote build, pinned revision
+`valuation-api-preview-00002-kq7`. The old deadline was missed; old backend access
+was revoked and anonymous denial verified at **October 22, 14:07:05 Dubai /
+10:07:05 UTC** before building/reopening. The old channel was deleted and tag retired.
+
+Fresh checks: **82 frontend + 113 focused Python tests**, build/publication checks,
+15 successful actual hosted Chrome submissions matching full CLI JSON and legacy
+financial components, plus nine independent rational equity/share reconciliations.
+Desktop/390×844, annual replacement, independent terminal edits, stale results,
+coverage/errors, signs/fractional shares and clean reload passed. Tests used
+synthetic economics only; actual-company economic selections remain unapproved.
+
+**Manual backend withdrawal: October 23, 2026, 14:17:28.069 Dubai /
+10:17:28.069 UTC.** Hosting expires seven seconds later; it does not revoke backend
+access. No shutdown automation or hard spend cap. Exact resources, source/digest,
+qualifications and [withdrawal commands](firebase-public-preview.md#withdrawal-runbook-for-this-release)
+are recorded. Private services, live Hosting, Netlify/DNS/portfolio, formulas,
+historical/source approvals and all nine unset templates are unchanged. Phase 1
+remains paused. Local review servers were preserved.
+
+## Earlier — optional equity workflow acceptance
 
 The [local investor walkthrough](equity-workflow-acceptance.md) passed synthetic
 EV → manual bridge → issued-share review through all three retained anchors.

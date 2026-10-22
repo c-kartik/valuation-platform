@@ -1,5 +1,10 @@
 # Local optional equity workflow acceptance
 
+The subsequent [October 22 hosted preview review](firebase-public-preview.md#newly-performed-hosted-acceptance)
+deploys this approved work and records fresh browser/CLI checks and a new bounded
+withdrawal deadline. The local-only statements and counts below preserve the
+October 21 checkpoint; they do not describe current Hosting access.
+
 October 21, 2026; starting clean `main` at
 `8652cbf0125d21ed280747ba3a528ce2c0c5b892`, four commits ahead of local
 `origin/main`. **PASS for this local software workflow**, with the limitations

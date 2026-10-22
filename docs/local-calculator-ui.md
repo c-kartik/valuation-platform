@@ -6,7 +6,9 @@ modal, safe Keep focus, explicit Tab cycle, Escape cancellation and trigger rest
 This is not mobile virtual-keyboard or complete accessibility certification.
 The earlier [Firebase preparation](public-preview-preparation.md) is superseded by
 the [hosted preview record](firebase-public-preview.md). This local redesign
-is not deployed and changes no preview access or withdrawal deadline.
+was originally local-only. The [October 22 preview](firebase-public-preview.md#october-22-redesigned-equity-preview)
+now deploys the approved redesign with fresh hosted verification and an explicit
+new withdrawal window; earlier checkpoint statements below retain their historical scope.
 
 ## Scope and startup
 

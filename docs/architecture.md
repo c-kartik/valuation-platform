@@ -1,5 +1,12 @@
 # Architecture
 
+The [October 22 hosted release](firebase-public-preview.md#october-22-redesigned-equity-preview)
+deploys the approved compact frontend and anonymous v1/v2 reader from `0f5200d`
+using one new remote image and a revision-pinned, isolated one-day preview. Existing
+financial/runtime boundaries are unchanged; private services and live Hosting are
+untouched. The earlier local implementation sections below retain their original
+milestone scope; current access/deadlines belong to the deployment record.
+
 ## Local update — optional anonymous Stage C
 
 `investor-case-v2` adds explicit equity scope and the existing bridge object to

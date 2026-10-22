@@ -19,19 +19,21 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-The local investor entry and metadata updates are committed separately from the deployed preview;
-legacy analyst CLI/API requirements remain unchanged. See the [metadata contract](docs/local-case-api.md#anonymous-investor-metadata-local-update).
+The [fresh one-day Firebase preview](https://kartikchaturvedi-website--ev-public-review-fck0fjtl.web.app/)
+now deploys the approved compact investor calculator, anonymous metadata and optional
+manual equity/share flow. Fifteen successful hosted browser runs matched complete
+CLI JSON, with nine independent bridge reconciliations; 82 frontend and 113 focused
+Python checks plus production/publication checks passed. All economics were synthetic.
+Legacy analyst CLI/API requirements remain unchanged.
 
-The [one-day Firebase preview](https://kartikchaturvedi-website--ev-public-review-ztr805i5.web.app/)
-is deployed with isolated backend valuation-api-preview. Six actual hosted browser
-runs matched complete local CLI JSON using synthetic economics only; four affected
-config tests, build and publication checks passed. See the [acceptance and withdrawal
-record](docs/firebase-public-preview.md) for limits and retained resources.
-**Manual backend withdrawal by October 22, 2026, 13:04:19.869 Dubai / 09:04:19.869 UTC**
-is required; Hosting expiry does not disable it. No automated shutdown or hard spend
-cap. Original private staging and the failed-name service remain private; Netlify,
-DNS, live Hosting and portfolio are unchanged. This is developer verification,
-not approved company forecasts or investment/production readiness.
+**Manual backend withdrawal by October 23, 2026, 14:17:28.069 Dubai /
+10:17:28.069 UTC** is required. Hosting expiry does not revoke backend access; no
+automated shutdown or hard spend cap. The prior deadline was missed, with old
+anonymous denial verified October 22 at 14:07:05 Dubai / 10:07:05 UTC before rebuilding.
+See the [release and withdrawal record](docs/firebase-public-preview.md#october-22-redesigned-equity-preview).
+Original private staging, failed-name service, Netlify, DNS, live Hosting and
+portfolio remain unchanged. This is qualified developer verification, not approved
+company forecasts, fully diluted fair value or investment/production readiness.
 
 The [compiled frontend/cloud review](docs/cloud-frontend-acceptance.md) passed through
 a loopback authenticated proxy: 11 browser runs matched full CLI JSON, with 682
@@ -39,13 +41,13 @@ independent arithmetic checks and 84 focused tests. This is synthetic engineerin
 verification, not public hosting or financial approval. A bounded compiled preview
 is available via `python3 scripts/preview_cloud_frontend.py` after starting the
 documented fixed-service gcloud proxy; Google credentials stay outside the browser.
-Next decide Firebase preview access/authentication; no preview deployment is implied.
+That earlier review predates public Hosting; the release above records current access.
 
 The [authenticated staging API](docs/cloud-staging-deployment.md) is now deployed
 in us-central1 from pushed source `ebf6139`, with a digest-pinned image, required IAM
 and min 0 / max 1 instances. Synthetic EV/equity smoke tests matched local CLI;
 anonymous requests returned 403. Frontend/public launch remains separate, and the
-live website is unchanged. The deployment documentation commit remains local.
+live website is unchanged. That private checkpoint remains separate from the fresh preview.
 
 The [compiled-build developer walkthrough](docs/local-workbench-acceptance.md)
 verified all three retained-anchor workflows, CLI equivalence and 254 affected tests,

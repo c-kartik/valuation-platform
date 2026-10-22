@@ -1,4 +1,249 @@
-# One-day Firebase calculator preview — hosted acceptance
+# Firebase calculator preview records
+
+## October 22 redesigned equity preview
+
+**PASS for bounded hosted developer verification; anonymous preview active.**
+[Open the fresh calculator preview](https://kartikchaturvedi-website--ev-public-review-fck0fjtl.web.app/).
+The compact redesigned calculator, anonymous investor metadata and optional manual
+equity/share workflow are now deployed. This supersedes the October 21 preview
+below, preserving that record as history. No actual-company economic acceptance,
+default forecasts, approved bridge/share selections or production readiness follows.
+Phase 1 remains [paused](phase1-universe-pause-checkpoint.md).
+
+**Manual backend withdrawal: October 23, 2026, 14:17:28.069 Asia/Dubai /
+10:17:28.069 UTC.** Hosting expires at **14:17:35.195306922 Dubai /
+10:17:35.195306922 UTC** that day. The earlier backend deadline is the intended
+review end. No scheduler, reminder, automatic backend shutdown or hard spend cap
+was configured. Hosting expiry does not revoke Cloud Run access.
+
+### Old withdrawal and missed deadline
+
+Starting clean `main` was `0f5200d300a6505b0e597403510d79bf7aed0bd1`, five commits
+ahead of local `origin/main`, as expected. Initial clock check was October 22
+**10:03:06 UTC / 14:03:06 Dubai**, after the old 09:04:19.869 UTC deadline.
+An anonymous old-backend health request still returned 200. The deadline was
+missed; this record does not backdate withdrawal or infer an exact cessation time.
+
+Service policy inspection found only service-level `allUsers / roles/run.invoker`
+and an enforced invoker check (`invokerIamDisabled=false`). Revocation began at
+**10:04:58.651 UTC / 14:04:58.651 Dubai**. The expired-but-retained old preview
+channel was deleted through the Hosting REST API; a subsequent read returned 404.
+After propagation and transient network timeouts, anonymous **403** was confirmed
+on the old default, project-number and tagged backend URLs by **10:07:05.987 UTC /
+14:07:05.987 Dubai**, approximately 63 minutes after the old deadline. Requests
+already in flight are not canceled by policy revocation.
+
+Both private services' complete service JSON and IAM were snapshotted. Their known
+default/project-number URLs denied anonymous requests. The later preview-only
+deployment removed obsolete tag `fh-fc91aeb693b71112`; that retired URL now returns
+404 rather than exposing the old image when the new grant is active.
+
+### Traceable new release
+
+| Binding | Verified value |
+| --- | --- |
+| Project / site / channel | `kartikchaturvedi-website` / `378340095652`; same default site; only `ev-public-review` |
+| Clean pushed image/frontend source | `0f5200d300a6505b0e597403510d79bf7aed0bd1` |
+| Remote build | `7a027296-ec96-4c29-94d6-a84e0a21ac22`, us-central1, SUCCESS |
+| Build interval, October 22 | 10:13:32.385318862–10:14:05.022038 UTC / 14:13:32.385318862–14:14:05.022038 Dubai; not cold-start measurements |
+| Immutable image | `us-central1-docker.pkg.dev/kartikchaturvedi-website/valuation-staging/valuation-api@sha256:b1a0f6d846a0af17afa0c98c36b9e3d808d64539b46c5d6361ff6c0d395331f8` |
+| Backend revision | `valuation-api-preview-00002-kq7`; ready 10:15:28.281030 UTC / 14:15:28.281030 Dubai |
+| Hosting version / pinned tag | `c2ae005fc1524503` / `fh-c2ae005fc1524503`, targeting exactly `valuation-api-preview-00002-kq7` |
+| Hosting release | October 22 10:17:48.933 UTC / 14:17:48.933 Dubai |
+| Anonymous service-only grant | Started October 22 10:17:28.069 UTC / 14:17:28.069 Dubai; completed 10:17:29.569 UTC / 14:17:29.569 Dubai |
+| Deadline basis | At most 24 hours from grant-request start, not release completion; no implicit extension |
+| Application artifact | Four files, 316021 bytes; `index-yPxQs3Sw.js`, `index-CJkQVHWF.css`, index and favicon; served bytes match local build |
+
+The five local commits were reviewed and normally pushed to the existing `main`.
+GitHub had zero workflows/hooks, no installed account GitHub Apps (browser check),
+and no Pages deployment. Global/us-central1 Cloud Build trigger lists were empty.
+The OAuth CLI could not inspect App installations, so its failure was not treated
+as an empty inventory. No automatic deployment integration was added.
+
+The new image was required because the old image predates `investor-case-v1/v2`.
+One existing remote builder identity built the [allowlisted context](local-api-image.md#prepare-an-exclusive-allowlisted-build-context):
+89 files, including the 84-entry private manifest, manifest itself and four build
+inputs. Every source file matched the clean source commit. Context digest
+`01d2286da4646d69a0712fad658719feddf7e8e2ce524e6a08e533ee92c410f9` is SHA256 of
+canonical JSON sorted path/hash entries. Uploaded archive: 834996 bytes, SHA256
+`c8fd186623f942f469c233d6e5ae7fc9f5a12ced62e2f40d29be9e02782cc78e`, pinned object
+generation. Source object:
+`gs://kartikchaturvedi-website-valuation-build-uscentral1/public-preview/source-0f5200d300a6-20261022T101259Z.tar.gz`.
+No full corpus clone, credentials, frontend, tests or company case entered the
+image context. Linux/amd64 build-time dependency and bundle verification succeeded.
+The upstream base tag/wheels remain version-locked rather than a bit-reproducibility
+claim. Documentation-only checkpoint changes cause no second build.
+
+Only the preview service was updated. It retains 1 vCPU/1GiB, min 0/max 1 at both
+levels, concurrency 1, gen2, 50s HTTP timeout, request-based CPU, startup boost off,
+the existing runtime identity and one Uvicorn worker. Existing parser/result/child
+deadline/cleanup/logging restrictions are unchanged; no request bodies or assumptions
+are logged. Readiness/configuration, digest and anonymous 403 were verified while
+private. The existing Firebase user ID token was rejected 401 for a private health
+probe; private authenticated calculation was not claimed and no role was broadened
+to obtain it. Functional execution was then verified through the authorized preview.
+
+Firebase CLI 15.34.0 ran from a temporary directory with explicit project/site,
+channel, one-day expiry, `--no-authorized-domains` and `pinTag`. A temporary config
+only made the reviewed public/guard paths absolute; tracked config was unchanged.
+API routing precedes SPA fallback. The 21-character service plus 19-character
+generated tag is 40 ≤ 46; actual release and traffic verify the pin, not an unpinned
+fallback. No new project IAM roles, service-account keys, APIs or infrastructure.
+
+Credential-handling exception: the older installed CLI's account-list JSON
+unexpectedly included token values in tool output. They were not copied into the
+repository, assets or build. The existing CLI session was replaced with the same
+account/scopes and its prior refresh token revoked; task authentication logs were
+removed. Subsequent authenticated API calls kept tokens in memory. No credential
+values are reproduced in this record.
+
+### Newly performed hosted acceptance
+
+Actual Chrome used the fresh Firebase origin. Each retained META/GOOGL/AAPL FY2025
+selection began with 37 unset inputs and no inherited bridge/results. Synthetic
+rates throughout: annual growth 10%, margin 20%, operating tax 25%, expense D&A 5%,
+investment 10%, full-revenue WC cash requirement 2%; WACC 25%, terminal growth 5%.
+All five terminal ratios were explicitly copied once as 20/25/5/10/2. These are
+software test choices, not researched company forecasts or standing defaults.
+The separate $100 demonstration was visibly labeled synthetic and also exercised.
+
+Manual test bridge: assets USD100m, financing USD40m, claims USD10m and 20m issued
+test shares; equity = EV + USD50m. Share dates were 2025-12-31 for META/GOOGL and
+2025-09-27 for AAPL. Selected-population-only coverage, test class equivalence and
+unresolved/omitted awards were explicitly chosen; no actual class rights or dilution
+were authenticated. Qualifications stayed prominent.
+
+| Newly observed path | Result |
+| --- | --- |
+| Direct entry / initial validation | Neutral unset state, focused missing-input guidance, direct rate entry, explicit terminal copy; EV without opening bridge or supplying analyst paperwork. |
+| Annual refinement / replacement | META FY2028 growth edited to 12%; uniform 11% replacement canceled safely, then explicitly re-entered/confirmed. Other annual fields and terminal ratios preserved. |
+| Operating / terminal independence | META annual margin changed to 21%, terminal stayed 20%; terminal margin later changed independently to 22%, annual margin stayed 21%. Both EV/equity staled on operating changes; fresh EV left prior equity stale. |
+| Bridge-only edit | META assets 100m → 110m changed equity by exactly USD10m and left complete Stage B unchanged. Explicit per-share action required. |
+| Anonymous metadata / notes | Generated case name/preparation timestamp; first runs had null notes. META later retained optional engineering-only notes. No authenticated analyst/rationale/cutoff was invented. |
+| Required coverage / correction | Unassessed claims and missing date blocked equity with EV retained. AAPL zero shares returned linked positive-share guidance, focused shares and retained EV/entries. Correction recovered. |
+| Signed / fractional output | AAPL financing USD300000m diagnostic produced equity −USD92.3657870379008bn and −4618.28935189504 USD per 20m issued test shares. A separate 0.0000001m-share diagnostic displayed 0.1 actual shares exactly, preserving the long negative output. These are artificial software stress inputs. |
+| Responsive / keyboard | Desktop and 390×844 emulation: declarations expand, focus visible, date/amount/share units and unbounded award qualifications readable, long signed values contained. Representative screenshots captured in conversation. Not physical mobile/virtual-keyboard certification. |
+| Switching / reload / console | Confirmed company switching discarded old bridge/results. Root reload cleared trial state. During entry, 22 console network errors were expected 422 validation responses; no application/CSP exception observed. Clean reload: zero messages. One non-error missing-autocomplete improvement notice remains. |
+
+A sanitized temporary capture contained **15 successful runs, one canceled run
+and one 422 zero-share rejection**. All 15 successful submitted cases matched the
+real anonymous CLI's **entire JSON**; equivalent legacy analyst cases matched
+complete Stage B/C components with intentionally different preparation metadata.
+Nine Stage C results independently reconciled signed components, role subtotals,
+EV → equity → denominator → per share using exact rational arithmetic. Absolute
+tolerances: USD `1e-30` for equity/components, USD/share `1e-40` for division;
+observed difference was zero. A temporary checker initially compared `0.20` with
+`0.2` as text; its numeric assertion was corrected, with no engine/output change,
+and the complete comparison passed. Canceled/rejected requests are not successes.
+
+Fresh local release checks: **82 frontend tests, 113 focused Python checks**
+(the prior 101-test scope plus image launcher, compiled-preview and publication
+checks), production TypeScript/Vite build and artifact guard. No historical suite.
+Remote timing/race/OOM/saturation tests were not performed; existing automated
+lifecycle coverage keeps that attribution. Sparse request observations are not
+cold-start, performance or load guarantees.
+
+All four served app files match compiled bytes. API catalog/unknown routes return
+JSON with no-store/nosniff, not SPA HTML. Malformed JSON rejects 422. Four private
+source/case-path probes return only SPA index bytes. The version's six files are
+the four app files plus Firebase's reserved `/__/firebase/init.js` and `init.json`;
+no SDK was added and no private corpus/credentials were published. Static source
+and credential-marker checks passed. All nine unset templates and financial/source/
+approval artifacts are unchanged. Temporary captures, cases and outputs were
+removed after recording the review.
+
+Both private services' full configuration/revision/IAM remain identical to their
+initial snapshots: staging `valuation-api-staging-00001-2rk`; failed attempt
+`valuation-api-public-preview-00001-hdj`. All four known private-service URLs
+returned anonymous 403. Live Hosting still has zero releases. No Netlify, DNS,
+custom domains or separate portfolio changes; existing local review servers were
+preserved. Footer/connection wording still refers to a local environment, a minor
+known hosted-copy limitation. Manual declarations cannot prove economic completeness,
+hidden non-overlap or complete claims/award coverage. This is qualified software
+verification, not fully diluted fair value, a researched forecast or investment readiness.
+
+### Withdrawal runbook for this release
+
+**Owner must act by October 23, 2026, 14:17:28.069 Dubai / 10:17:28.069 UTC, or earlier.**
+No recorded deadline enforces shutdown. Use an authenticated Cloud Shell for
+gcloud; no local SDK or keys were installed. The following is the exact-resource
+runbook, not a claim it was executed against the newly active release. This turn
+verified the underlying policy revocation and channel deletion through REST.
+
+```sh
+gcloud run services remove-iam-policy-binding valuation-api-preview \
+  --project=kartikchaturvedi-website --region=us-central1 \
+  --member=allUsers --role=roles/run.invoker
+```
+
+The invoker IAM check is currently enforced. Inspect it at withdrawal; if disabled,
+restore it on **this preview service only** using the documented
+[`--invoker-iam-check`](https://docs.cloud.google.com/sdk/gcloud/reference/run/services/update)
+flag before claiming denial. Do not alter either private service or project IAM.
+
+```sh
+gcloud run services update valuation-api-preview --invoker-iam-check \
+  --project=kartikchaturvedi-website --region=us-central1
+for url in \
+  https://valuation-api-preview-ailnp3irra-uc.a.run.app \
+  https://valuation-api-preview-378340095652.us-central1.run.app \
+  https://fh-c2ae005fc1524503---valuation-api-preview-ailnp3irra-uc.a.run.app
+do
+  curl --silent --show-error --max-time 20 --output /dev/null \
+    --write-out '%{http_code}\n' "$url/health"
+done
+```
+
+Require anonymous 403 after propagation, not merely a successful IAM write. The
+retired old tag should remain 404. If responses remain public, investigate effective
+access and withdraw only this preview; do not reopen or extend the deadline.
+
+Delete **only** `ev-public-review` if still present. This verified REST route avoids
+the CLI deletion command's Firebase Auth-domain removal side effect. In authenticated
+Cloud Shell, keep the token in memory and print only status:
+
+```sh
+python3 - <<'PY'
+import subprocess
+import urllib.request
+import urllib.error
+token = subprocess.check_output(['gcloud', 'auth', 'print-access-token'], text=True).strip()
+url = ('https://firebasehosting.googleapis.com/v1beta1/projects/kartikchaturvedi-website/'
+       'sites/kartikchaturvedi-website/channels/ev-public-review')
+request = urllib.request.Request(url, method='DELETE', headers={'Authorization': 'Bearer ' + token})
+try:
+    with urllib.request.urlopen(request, timeout=30) as response:
+        print('Preview channel deletion HTTP', response.status)
+except urllib.error.HTTPError as error:
+    if error.code != 404:
+        raise SystemExit('Preview deletion failed: HTTP ' + str(error.code)) from None
+    print('Preview channel already absent (404)')
+PY
+```
+
+Then verify the channel is absent/unavailable, the three backend URLs deny access
+and both private services remain private. Never delete the Hosting site or live
+channel. Policy removal does not terminate already in-flight requests.
+
+Retained resources/costs: the new image/source archive/Hosting version/revision and
+tag; the older `28cf0f0…de9a471` image, source archive and old revision; unchanged
+private staging and failed-attempt service/version; shared registry, source bucket,
+identities and logs. No shared resource was deleted. Run/Hosting/network/log usage
+and image/source/version storage can charge, including bucket soft-delete retention.
+Max one instance and budget alerts are not hard spend caps. Cleanup is separate
+reviewed work. No second build for this documentation checkpoint.
+
+Final local checks: 495 changed-document local links/anchors, whitespace,
+credential markers and exact seven-file documentation scope passed. Formulas,
+intake schemas, examples, frozen/source/approval records and nine company templates
+are byte-identical to the deployed source checkpoint (six ×37 and three ×111 unset
+numerical inputs). Only release/status references changed after the image build.
+
+## Earlier October 21 preview — historical record
+
+The record below describes the earlier release and its original approval/checks.
+Its old URL and active status are superseded by the verified October 22 withdrawal
+and fresh release above; prior tests are not claimed as newly rerun.
 
 **PASS within this bounded developer-test scope; preview is anonymous and active.**
 

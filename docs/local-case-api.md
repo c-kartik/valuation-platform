@@ -32,7 +32,10 @@ not reporting accuracy. No rationale or identity is invented for the investor.
 observations bound to the proper role coverage. Unknown required declarations
 still block; the engine cannot establish hidden completeness from a nonempty
 reference. No actual-company assets, claims, classes or awards are selected.
-This checkpoint is local only and changes no deployed runtime or preview deadline.
+This original implementation checkpoint was local only. The subsequent
+[October 22 release](firebase-public-preview.md#october-22-redesigned-equity-preview)
+deploys the approved v1/v2 reader in a new digest-pinned preview image; its own
+verification and withdrawal deadline supersede the prior hosted version.
 
 ## Anonymous investor metadata (local update)
 
@@ -75,9 +78,10 @@ Legacy `analyst-case-v1`/`analyst-case-v2` retain required analyst identity,
 UTC time, rationale, scope and existing result JSON. CLI JSON/summary additionally
 accept this narrow investor version; no existing case is migrated or weakened.
 
-This is local implementation only. The deployed [preview](firebase-public-preview.md)
-remains unchanged and cannot consume the new version without separately authorized
-deployment. Its October 22 withdrawal deadline is not extended. The earlier
+This was local implementation only at that checkpoint. The separately authorized
+[October 22 preview](firebase-public-preview.md#october-22-redesigned-equity-preview)
+now consumes the new version after verified old withdrawal; its fresh window is
+explicit rather than an implicit extension. The earlier
 staging/preparation sections below preserve their original scope and qualifications.
 
 ## Earlier local protection update — before preview deployment
