@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "test": "vitest run"
+    "test": "vitest run",
+    "dev:prototype": "vite --config vite.prototype.config.ts",
+    "build:prototype": "tsc --noEmit && vite build --config vite.prototype.config.ts"
   },
   "dependencies": {
     "decimal.js": "10.6.0",

@@ -19,6 +19,15 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The separate [investor experience prototype](docs/investor-experience-prototype.md)
+is ready for local design review at <http://127.0.0.1:5174/prototype/>:
+`npm --prefix frontend run dev:prototype`. Four tabs cover forward valuation,
+reverse DCF, explicit Bear/Base/Bull copies and WACC × terminal-growth sensitivity.
+All data/results are finite synthetic illustrations; unsupported edits are stale
+or not calculated. No backend requests, actual-company assumptions or persistence.
+The existing calculator at <http://127.0.0.1:5173/> is unchanged. No deployment,
+cloud changes or push; deployment/domain migration remain paused.
+
 The [cost and local-client checkpoint](docs/public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22)
 configured a USD10 monthly Cloud Run cap for this project, status **Configured**;
 the existing account-wide alert remains unchanged. The cap uses gross estimated

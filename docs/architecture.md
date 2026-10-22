@@ -1,5 +1,14 @@
 # Architecture
 
+The [local investor prototype](investor-experience-prototype.md) has a separate
+HTML/React/CSS entry and Vite configuration, with no API proxy or production-module
+imports. Session-only case/bridge state connects four views; finite offline
+synthetic engine fixtures provide illustrations. There is no browser financial
+engine or new public API. Unsupported edits cannot produce fresh-looking results;
+cell application and destructive copying are explicit. The default calculator,
+its bundle/API/contracts and deployment configuration remain unchanged. This is
+a design review, not authorization to integrate or publish those capabilities.
+
 The [cost/client checkpoint](public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22)
 adds a shared synchronous frontend execution gate (`execution.ts`) across EV,
 equity and retries. Identity-owned leases, abort/deadline release and existing

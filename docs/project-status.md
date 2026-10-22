@@ -1,6 +1,33 @@
 # Project Status
 
-## Current — configured Cloud Run cap and local submission/failure controls
+## Current — isolated investor experience design prototype
+
+The [local prototype](investor-experience-prototype.md) makes forward valuation,
+reverse DCF, explicit Bear/Base/Bull creation/comparison and WACC × terminal-growth
+sensitivity tangible in one session-only workspace. It is visually related to the
+read-only portfolio through navy/gold, serif headings and compact mono details.
+The existing calculator stays available separately and byte-unchanged.
+
+Fictional Northstar Instruments only: 48 finite forward illustrations and 12
+reverse records prepared offline with existing engines. No real-company forecasts,
+backend requests, JavaScript valuation engine or saved state. Unsupported edits
+are stale/not calculated. Share references retain selected-population and unresolved
+award/claims limitations; scenario labels impose no ordering or probabilities.
+
+Newly executed: **122 frontend tests** (106 existing + 16 prototype), both builds,
+fixture reconciliation, protected-source/template, local-link and whitespace checks.
+Actual Chrome desktop/390×844 covered all four tabs, reverse failure states,
+confirmed cell/annual replacements, keyboard controls and preservation of work.
+Resized desktop is not mobile virtual-keyboard or full accessibility acceptance.
+No financial full suite or actual-company valuation was run.
+
+Prototype and existing review servers remain local. Design approval precedes any
+replacement/API integration. Production/domain migration remain paused; no cloud,
+portfolio, financial/history/approval/template changes, deployment or push. Phase 1
+stays paused. Existing preview withdrawal remains **October 23, 2026,
+14:17:28 Dubai / 10:17:28 UTC**; this task does not perform or extend it.
+
+## Earlier — configured Cloud Run cap and local submission/failure controls
 
 [Verified cost/client checkpoint](public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22):
 USD10 calendar-month **Cloud Run only**, project `kartikchaturvedi-website`, status
