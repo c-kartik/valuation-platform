@@ -19,6 +19,10 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The separate [combined-site preview procedure](docs/combined-site-preview.md)
+assembles the portfolio root and `/valuation/` from two clean source checkpoints.
+It preserves the calculator-only workflow and authorizes no live-domain migration.
+
 The [fresh one-day Firebase preview](https://kartikchaturvedi-website--ev-public-review-fck0fjtl.web.app/)
 now deploys the approved compact investor calculator, anonymous metadata and optional
 manual equity/share flow. Fifteen successful hosted browser runs matched complete

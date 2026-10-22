@@ -1,0 +1,27 @@
+{
+  "hosting": {
+    "site": "kartikchaturvedi-website",
+    "public": "combined-public",
+    "ignore": ["**/.*", "**/node_modules/**", "**/*.map", "**/*.json"],
+    "headers": [
+      {"source": "**", "headers": [
+        {"key": "Cache-Control", "value": "no-store"},
+        {"key": "X-Content-Type-Options", "value": "nosniff"},
+        {"key": "X-Robots-Tag", "value": "noindex, nofollow"},
+        {"key": "Referrer-Policy", "value": "no-referrer"},
+        {"key": "Content-Security-Policy", "value": "default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-ancestors 'none'; base-uri 'none'; object-src 'none'"}
+      ]},
+      {"source": "/valuation/assets/**", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
+      {"source": "/api{,/**}", "headers": [{"key": "Cache-Control", "value": "no-store"}]}
+    ],
+    "redirects": [{"source": "/valuation", "destination": "/valuation/", "type": 301}],
+    "rewrites": [
+      {"source": "/api{,/**}", "run": {"serviceId": "valuation-api-preview", "region": "us-central1", "pinTag": true}},
+      {"source": "/featured", "destination": "/featured.html"},
+      {"source": "/project-pipeline", "destination": "/project-pipeline.html"},
+      {"source": "/work", "destination": "/work.html"},
+      {"source": "/contact", "destination": "/contact.html"},
+      {"source": "/valuation/**", "destination": "/valuation/index.html"}
+    ]
+  }
+}
