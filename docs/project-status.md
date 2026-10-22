@@ -1,6 +1,23 @@
 # Project Status
 
-## Current — fresh hosted redesigned equity preview
+## Current — isolated combined portfolio/calculator preview
+
+The [combined preview](combined-site-preview.md#verification-record) serves the
+portfolio root and approved calculator at `/valuation/` in a separate channel.
+Fourteen allowlisted files are assembled from two explicit clean source commits;
+no permanent portfolio copy or API/financial changes. Eighteen focused checks,
+TypeScript/Vite build, local/hosted file hashes, desktop/390×844 page/navigation
+review and two complete synthetic browser-to-CLI JSON comparisons passed. A
+Hosting slash-redirect loop was withdrawn and corrected before final acceptance.
+
+Combined expiry: **October 23, 2026, 13:10:39.991846463 Dubai /
+09:10:39.991846463 UTC**. The existing backend withdrawal remains **14:17:28 Dubai /
+10:17:28 UTC** that day. Standalone preview, live Hosting, all Cloud Run
+services/IAM, Netlify and DNS remain unchanged. Both repositories have local-only
+checkpoints; neither was pushed. All nine unset templates and the Phase 1 pause
+are preserved. Production/domain migration remains separately scoped.
+
+## Earlier — fresh hosted redesigned equity preview
 
 The [October 22 hosted release](firebase-public-preview.md#october-22-redesigned-equity-preview)
 deploys the approved compact investor and optional equity/share flow from clean

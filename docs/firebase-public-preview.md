@@ -1,5 +1,10 @@
 # Firebase calculator preview records
 
+The subsequent [combined portfolio preview](combined-site-preview.md) uses a
+separate channel and the same existing pinned backend tag. It preserves the
+calculator-only channel and this record's backend deadline; no Cloud Run change
+or access extension was made.
+
 ## October 22 redesigned equity preview
 
 **PASS for bounded hosted developer verification; anonymous preview active.**

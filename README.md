@@ -19,9 +19,13 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-The separate [combined-site preview procedure](docs/combined-site-preview.md)
-assembles the portfolio root and `/valuation/` from two clean source checkpoints.
-It preserves the calculator-only workflow and authorizes no live-domain migration.
+The separate [combined preview](https://kartikchaturvedi-website--combined-site-review-kwvkxedj.web.app/)
+now serves the portfolio root and `/valuation/` from two clean source checkpoints.
+See its [assembly and verification record](docs/combined-site-preview.md): 18 focused
+checks, desktop/390×844 review and two synthetic full-JSON CLI comparisons passed.
+It expires **October 23, 2026, 13:10:39 Dubai / 09:10:39 UTC**, before the unchanged
+backend deadline below. [Local combined review](http://127.0.0.1:8088/) remains running.
+No repository was pushed; live Netlify/DNS/Hosting and Cloud Run remain unchanged.
 
 The [fresh one-day Firebase preview](https://kartikchaturvedi-website--ev-public-review-fck0fjtl.web.app/)
 now deploys the approved compact investor calculator, anonymous metadata and optional
@@ -35,8 +39,9 @@ Legacy analyst CLI/API requirements remain unchanged.
 automated shutdown or hard spend cap. The prior deadline was missed, with old
 anonymous denial verified October 22 at 14:07:05 Dubai / 10:07:05 UTC before rebuilding.
 See the [release and withdrawal record](docs/firebase-public-preview.md#october-22-redesigned-equity-preview).
-Original private staging, failed-name service, Netlify, DNS, live Hosting and
-portfolio remain unchanged. This is qualified developer verification, not approved
+Original private staging, failed-name service, Netlify, DNS and live Hosting
+remain unchanged. The combined preview adds only a local portfolio navigation link
+and narrow-screen wrapping. This is qualified developer verification, not approved
 company forecasts, fully diluted fair value or investment/production readiness.
 
 The [compiled frontend/cloud review](docs/cloud-frontend-acceptance.md) passed through
