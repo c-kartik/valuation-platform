@@ -43,7 +43,7 @@ remain unchanged.
 | `/`, five original `.html` pages | Original portfolio HTML with one calculator navigation entry per page; existing styles, contact/content and relative links preserved. |
 | `/featured`, `/project-pipeline`, `/work`, `/contact` | Explicit aliases to the corresponding HTML file; original `.html` URLs remain available. |
 | `/style.css`, `/profile.jpg`, `/resume.pdf`, `/robots.txt`, `/sitemap.xml` | Byte-preserved assets except the small navigation wrapping addition to CSS. Production canonical/crawler URLs retained; no calculator sitemap entry. |
-| `/valuation` | 301 to `/valuation/`. |
+| `/valuation` | Anchored-regex 301 to `/valuation/`; a glob also matches the slash URL on Hosting and loops. |
 | `/valuation/`, `/valuation/**` | Compiled calculator; exact assets before calculator-only fallback. Unknown subpaths (including nonexistent asset names) inherit that fallback. |
 | `/api`, `/api/**` | First rewrite to existing public Cloud Run service; JSON API errors do not become HTML. |
 | Unknown portfolio paths | Real 404; no global SPA fallback. |

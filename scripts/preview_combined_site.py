@@ -8,6 +8,7 @@ import argparse
 import json
 import mimetypes
 from pathlib import Path
+import re
 from urllib.parse import urlsplit, unquote
 from http.server import ThreadingHTTPServer
 
@@ -59,9 +60,11 @@ class CombinedHandler(PreviewHandler):
             return self.error(400, 'Static requests do not accept bodies.')
         if '..' in path.split('/') or '\\' in path or '\x00' in path:
             return self.error(404, 'Unknown preview route.')
-        if path == '/valuation':
+        redirect = next((rule for rule in self.hosting['redirects']
+                         if re.fullmatch(rule['regex'], path)), None)
+        if redirect:
             self.send_response(301)
-            self.send_header('Location', '/valuation/' + ('?' + url.query if url.query else ''))
+            self.send_header('Location', redirect['destination'] + ('?' + url.query if url.query else ''))
             self.send_header('Cache-Control', 'no-store')
             self.send_header('Content-Length', '0')
             self.end_headers()

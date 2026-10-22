@@ -14,7 +14,7 @@
       {"source": "/valuation/assets/**", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
       {"source": "/api{,/**}", "headers": [{"key": "Cache-Control", "value": "no-store"}]}
     ],
-    "redirects": [{"source": "/valuation", "destination": "/valuation/", "type": 301}],
+    "redirects": [{"regex": "^/valuation$", "destination": "/valuation/", "type": 301}],
     "rewrites": [
       {"source": "/api{,/**}", "run": {"serviceId": "valuation-api-preview", "region": "us-central1", "pinTag": true}},
       {"source": "/featured", "destination": "/featured.html"},

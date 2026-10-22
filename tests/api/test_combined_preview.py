@@ -147,6 +147,7 @@ class RoutingTests(unittest.TestCase):
     def test_configuration_has_no_global_fallback_and_retains_api_first(self):
         config = CombinedHandler.hosting
         self.assertEqual(config['site'], 'kartikchaturvedi-website')
+        self.assertEqual(config['redirects'], [dict(regex='^/valuation$', destination='/valuation/', type=301)])
         self.assertEqual(config['rewrites'][0]['source'], '/api{,/**}')
         self.assertEqual(config['rewrites'][0]['run'], dict(serviceId='valuation-api-preview', region='us-central1', pinTag=True))
         self.assertEqual(config['rewrites'][-1], dict(source='/valuation/**', destination='/valuation/index.html'))
