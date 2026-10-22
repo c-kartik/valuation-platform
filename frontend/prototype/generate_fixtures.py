@@ -57,6 +57,18 @@ def generate():
    result=run_reverse(read_reverse(json.dumps(request)),ROOT)
    solution=result['solution']
    out['reverse'].append({'profile':name,'inputs':inputs(v,t,w,g),'metric':'price' if metric=='VALUE_PER_SHARE' else 'ev','target':target if metric=='VALUE_PER_SHARE' else '2500','lower':str(Decimal(lower)*100),'upper':str(Decimal(upper)*100),'status':result['status'],'reason':result['reason'],'growth':format(Decimal(solution['constant_annual_growth'])*100,'f') if solution else None,'result':pack(solution['forward_result']) if solution else None})
+ # Follow successful reverse solutions into a separately prepared forward/grid
+ # family. Preserve the exact solved rate; the browser performs no solving.
+ for index,record in enumerate(out['reverse']):
+  if record['status']!='SUCCESS':continue
+  source=record['profile'];v,t,w,g=PROFILES[source]
+  name=f'implied-{index}';values=[record['growth'],*v[1:]]
+  out['profiles'][name]=inputs(values,t,w,g)
+  for wv,gv in sorted(pairs):
+   doc=case(source,wv,gv)
+   for year in doc['forecast_years']:year['revenue_growth']=fraction(record['growth'])
+   result=run_case(read_case(json.dumps(doc)),ROOT)
+   out['variants'].append({'profile':name,'inputs':inputs(values,t,wv,gv),'result':pack(result)})
  return out
 if __name__=='__main__':
  with localcontext() as ctx:

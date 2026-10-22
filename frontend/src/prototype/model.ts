@@ -12,7 +12,7 @@ export type ReverseRecord={profile:string;inputs:Inputs;metric:string;target:str
 export const fixtures=raw as unknown as {profiles:Record<string,Inputs>;variants:Variant[];reverse:ReverseRecord[]};
 export type Label='Base'|'Bear'|'Bull';
 export const labels:Label[]=['Bear','Base','Bull'];
-export type Case={inputs:Inputs;notes:string;shown?:{signature:string;variant:Variant;bridgeSignature:string}};
+export type Case={inputs:Inputs;notes:string;revision?:number;relation?:{source:string;revision:number;description:string};shown?:{signature:string;variant:Variant;bridgeSignature:string}};
 export type Bridge={enabled:boolean;assets:string;financing:string;claims:string;shares:string;date:string;basis:string;awards:string;coverage:boolean};
 export const emptyBridge=():Bridge=>({enabled:false,assets:'',financing:'',claims:'',shares:'',date:'',basis:'',awards:'',coverage:false});
 export const demoBridge=():Bridge=>({enabled:true,assets:'150',financing:'200',claims:'25',shares:'100',date:'2025-12-31',basis:'issued',awards:'omitted',coverage:true});

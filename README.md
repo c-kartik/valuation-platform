@@ -21,8 +21,9 @@ where the operating-company FCFF framework is not appropriate.
 
 The separate [investor experience prototype](docs/investor-experience-prototype.md)
 is ready for local design review at <http://127.0.0.1:5174/prototype/>:
-`npm --prefix frontend run dev:prototype`. Four tabs cover forward valuation,
-reverse DCF, explicit Bear/Base/Bull copies and WACC × terminal-growth sensitivity.
+`npm --prefix frontend run dev:prototype`. A selected-case overview links forward
+valuation → reverse-implied growth → separate exploratory cases → scenario
+comparison → WACC × terminal-growth sensitivity, with per-case analysis state.
 All data/results are finite synthetic illustrations; unsupported edits are stale
 or not calculated. No backend requests, actual-company assumptions or persistence.
 The existing calculator at <http://127.0.0.1:5173/> is unchanged. No deployment,

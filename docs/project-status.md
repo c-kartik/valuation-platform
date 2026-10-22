@@ -1,6 +1,29 @@
 # Project Status
 
-## Current — isolated investor experience design prototype
+## Current — connected investor prototype overview and journey
+
+The [local prototype](investor-experience-prototype.md#connected-journey-checkpoint)
+now links forward value, shared-price reverse interpretation, confirmed implied-growth
+exploratory cases, strict Bear/Base/Bull comparison and confirmed sensitivity
+apply/fork actions. One workspace owns case identities/revisions, shared populations
+and price, and per-case target/grid/cell records. Selective staleness preserves
+operating EV on bridge edits and independent overrides on comparison-price edits.
+Exploratory cases are separate from the strict three-case engine contract.
+
+120 finite synthetic forward illustrations and 12 reverse records support the
+prepared journey; original fixture records remain unchanged. No browser financial
+engine, actual-company inputs or persistence. **133 frontend tests** and both builds
+passed; the isolated fixture bundle has a size warning. Protected-source/template,
+link, whitespace and staged-scope checks accompany this checkpoint. Current browser
+walkthrough/screenshots remain pending because computer-use exposes no browser and
+native Chrome access failed; the earlier browser checks below are not rerun claims.
+Local prototype/calculator/API servers are preserved. No engine, calculator, history,
+approval, template, portfolio or cloud change, deployment or push. Phase 1 remains
+paused; the recorded October 23, 2026 **14:17:28 Dubai / 10:17:28 UTC** withdrawal
+deadline is neither performed nor extended. Design/browser acceptance precedes
+separately scoped engine/API integration or publication.
+
+## Earlier — isolated investor experience design prototype
 
 The [local prototype](investor-experience-prototype.md) makes forward valuation,
 reverse DCF, explicit Bear/Base/Bull creation/comparison and WACC × terminal-growth

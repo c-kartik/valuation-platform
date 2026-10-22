@@ -101,7 +101,7 @@ revenue-100 identity, then uniformly scales monetary amounts **and shares** by
 without adding a new engine anchor or touching company packages. No actual-company
 forecasts or executable actual-company cases are created.
 
-[fixtures.json](../frontend/src/prototype/fixtures.json) contains **48 forward
+[fixtures.json](../frontend/src/prototype/fixtures.json) initially contained **48 forward
 illustrations and 12 reverse records**, not arbitrary calculators. Four profiles:
 steady (10% growth/24% margin), lower (6%/20%), higher (14%/27%) and deliberately
 reinvestment-heavy (10%/15% with 35% investment/revenue). All have independently
@@ -126,7 +126,7 @@ no hidden queue, API fetch, automatic company calibration or persistence.
 
 ## Verification and next decisions
 
-Newly executed: **122 frontend tests** (106 existing + 16 prototype), both default
+At the initial `5466345` milestone: **122 frontend tests** (106 existing + 16 prototype), both default
 and isolated TypeScript/Vite builds, independent fixture component/reconciliation
 assertions, source/template/portfolio preservation, local links, whitespace and
 staged-scope checks. No financial full suite, cloud tests or actual-company run.
@@ -156,3 +156,112 @@ and mobile annual-table usability. The prototype settings approve none of them.
 **Public-preview withdrawal remains October 23, 2026, 14:17:28 Asia/Dubai /
 10:17:28 UTC.** This task neither performs nor extends it. No push, deployment,
 billing/IAM, DNS, Netlify, live Hosting or portfolio changes are authorized here.
+
+
+## Connected journey checkpoint
+
+Starting HEAD `5466345103f16cdf36135012f24a69e4535916d3` was clean `main`,
+six ahead of local `origin/main`. This local-only extension preserves the same
+synthetic identity, analytical date/cutoff, palette, isolated entry and financial
+contracts. No engine, API, calculator, portfolio, historical, template or cloud
+change is included. The withdrawal deadline above is unchanged.
+
+Valuation now opens a compact **selected-case overview**: current EV/qualified
+issued-share reference and eligible price comparison; conditional reverse growth
+and target; Bear/Base/Bull values and first-year driver differences; and that
+case's grid status, WACC/g reference and terminal contribution. Unperformed,
+unsupported and stale analyses are identified in words. Detailed editors, paths
+and annual tables remain in their workflow views. Contextual links carry the
+selected case, and Return to overview restores a relevant action's focus.
+
+### Shared workspace and dependencies
+
+[workspace.ts](../frontend/src/prototype/workspace.ts) owns one session-only
+workspace: cases keyed by stable names, financial revisions, shared bridge/shares,
+one comparison price/date, and per-case reverse form/result, grid settings/result
+and inspected cell. Exploratory cases have separate incrementing identities and
+record source identity/revision and target or rate-pair relationship. Notes do
+not increment financial revisions. A new case starts without its own analyses;
+selecting another case restores its work instead of relabeling the previous one.
+
+| Change | Affected illustrations | Preserved |
+| --- | --- | --- |
+| Annual, terminal or WACC/g inputs | Selected forward result, reverse and grid; comparison excludes stale paths | Sibling cases/analyses, notes, shared populations |
+| Shared bridge/shares | All qualified equity/share references and price-target reverse results | Operating EV, EV-target reverse and EV grid |
+| Shared comparison price/date | Display comparison and reverse using shared price | Business value, grid, independent reverse overrides |
+| Reverse override/bounds | That case's reverse result | Shared comparison price, forward case, sibling analyses |
+| Grid settings | That case's grid requires explicit preview again | Operating inputs, forward/reverse results |
+| Notes/navigation | No financial invalidation | All current illustrations |
+
+These correct the earlier global reverse/grid state and overly broad bridge
+invalidation. A bridge edit can leave the EV grid current while removing its
+per-share presentation. Analysis keys bind source identity/revision and relevant
+inputs; they do not authenticate economic assumptions or financial approvals.
+
+### Guided illustrative journey
+
+1. From the overview, **Start guided illustrative journey** explicitly loads the
+   synthetic USD25/share comparison/date and prepared shared bridge. It preserves
+   entered cases/notes and performs no analyses. Starting from the original Base
+   gives the supported complete example; unsupported edits still need an explicit
+   prepared-illustration replacement or remain not calculated.
+2. Preview valuation, return to overview and **Explain this price**. Missing
+   forward/share/price prerequisites route to their control. This action uses the
+   shared price/date; **Review price expectations** instead restores that case's
+   existing target, including an explicitly independent override.
+3. Explicitly preview reverse. A prepared success shows the forward/implied
+   revenue paths and offers **Create scenario from implied growth**. Confirmation
+   shows the exact solved constant rate/target and preserves the source. The new
+   exploratory case replaces only the five annual revenue-growth rates, with all
+   remaining annual ratios, terminal ratios, WACC and g unchanged. Preview it
+   explicitly. It is not an independently researched forecast.
+4. Compare scenarios: Bear/Base/Bull remain the strict three-case set. Exploratory
+   cases are separate, and a current implied-growth case supplies a labeled
+   reference overlay, never a fourth probabilistic outcome. Bear/Bull still start
+   as exact independent Base copies; no overwrite or economics is automatic.
+5. **Test sensitivity** on a completed case carries that exact identity. Explicitly
+   preview the grid, inspect a cell without mutation, then either confirm applying
+   its WACC/g or confirm a new exploratory case changing only that pair. The source
+   is preserved on a fork. Preview changed/new cases explicitly; return to overview
+   to see the case-associated state. Case selection restores earlier grids/cells.
+
+No tabs launch calculations or multiple analyses. Overrides, copying and application
+are explicit. The strict engine scenario contract is unchanged; exploratory cases
+are a prototype workspace concept, not a new engine scenario label.
+
+### Additional prepared fixtures and verification
+
+The offline script now prepares **120 forward illustrations and 12 reverse
+records**. The original four profiles, 48 forward records and 12 reverse records
+are unchanged. Six successful prepared reverse conditions each gain a family of
+12 forward WACC/g pairs using the exact solved growth rate through the existing
+engine. This supports forward previews and grids after exploratory creation.
+Reverse solving for those new cases is not prepared and honestly remains not
+calculated. Other arbitrary edits/targets remain unsupported. No browser financial
+formula, API call, account, persistence or actual-company case was added.
+
+Current checks: **133 frontend tests** (106 existing + 27 prototype), including
+linked navigation/focus, exact fork differences, per-case preservation and
+selective invalidation, plus both TypeScript/Vite builds. Original fixture records
+and all protected sources/templates are compared against starting HEAD. The
+isolated build warns that its synthetic-fixture bundle exceeds 500 kB; this is a
+local design artifact, not production performance acceptance. The original
+calculator bundle remains unchanged.
+
+The earlier desktop/390×844 browser record above belongs to the initial milestone,
+not this extension. **Current connected-journey browser verification is pending:**
+browser inventory returned no available browser, the previous Chrome connection
+was unavailable, and native Chrome's computer-use pipe failed to start. Component
+tests exercise the entire linked journey but are not screenshots or browser/mobile
+acceptance. No current screenshots are claimed. The existing prototype/calculator/API
+servers are preserved and the prototype responds locally on port 5174.
+
+Future design/API work still requires separate scope: approval of the connected
+experience, actual-company data/input freshness, price-date rules, ownership and
+lifecycle of exploratory versus strict scenarios, supported input/range limits,
+reverse failure presentation and complete narrow-screen/browser acceptance. Future
+adapters must use the existing [scenario](phase2-scenario-workflow.md),
+[sensitivity](phase2-sensitivity-workflow.md) and
+[reverse](phase2-reverse-dcf-workflow.md) contracts with their source/date/coverage
+and explicit execution boundaries. This checkpoint authorizes no integration or
+deployment and does not resolve economic consistency or investment readiness.

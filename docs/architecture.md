@@ -2,8 +2,12 @@
 
 The [local investor prototype](investor-experience-prototype.md) has a separate
 HTML/React/CSS entry and Vite configuration, with no API proxy or production-module
-imports. Session-only case/bridge state connects four views; finite offline
-synthetic engine fixtures provide illustrations. There is no browser financial
+imports. A shared session-only workspace owns named/revisioned cases, bridge/shares,
+comparison price and per-case reverse/grid records. A selected-case overview links
+four views; confirmed growth/rate-pair forks create separate exploratory cases
+without changing the strict three-case engine contract. Selective dependency keys
+preserve operating EV on bridge edits and independent targets on price edits.
+Finite offline synthetic engine fixtures provide illustrations. There is no browser financial
 engine or new public API. Unsupported edits cannot produce fresh-looking results;
 cell application and destructive copying are explicit. The default calculator,
 its bundle/API/contracts and deployment configuration remain unchanged. This is
