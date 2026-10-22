@@ -1,8 +1,9 @@
 import {useEffect, useRef, useState} from 'react';
 import {annual, terminal, makeDraft, buildRequest, fieldErrors, InputErrors, annualState, annualPath, editQuick, replaceAnnual, copyYearFive, samePercentage, generatedCaseName, enduringLimitations, entryErrors, reviewErrors, displayPath, terminalDifferences} from './model';
 import type {Catalog, Draft, Errors, Result, AnnualKey} from './model';
-import {ApiError, request, Revisions} from './api';
+import {ApiError, request, Revisions, failureMessage} from './api';
 import {ResultReview} from './Results';
+import {useExecutionGate} from './execution';
 import {EquityStep} from './EquityStep';
 import {readableMoney, readableLimitation} from './presentation';
 export {ResultReview} from './Results';
@@ -59,6 +60,8 @@ function Confirmation({title, children, confirmLabel, cancelLabel, confirm, canc
 }
 export default function App({load = request}: Props) {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
+  const [catalogFailure, setCatalogFailure] = useState('');
+  const [catalogAttempt, setCatalogAttempt] = useState(0);
   const [selected, setSelected] = useState('');
   const [draft, setDraft] = useState<Draft | null>(null);
   const [pendingReplacement, setPendingReplacement] = useState<AnnualKey | null>(null);
@@ -75,22 +78,22 @@ export default function App({load = request}: Props) {
   const blurRequest = useRef<AbortController | null>(null);
   const [messages, setMessages] = useState<string[]>([]);
   const [status, setStatus] = useState('Choose a company or the separate synthetic demonstration.');
-  const [busy, setBusy] = useState<string | null>(null);
+  const {gate, action: busy} = useExecutionGate();
   const [result, setResult] = useState<Result | null>(null);
   const [stale, setStale] = useState(false);
   const revisions = useRef(new Revisions());
-  const active = useRef<AbortController | null>(null);
   useEffect(() => {
     const abort = new AbortController();
+    setCatalogFailure('');
     load<Catalog>('/api/v1/catalog', undefined, abort.signal).then(data => {
       if (!abort.signal.aborted) setCatalog(data);
-    }).catch(e => { if (!abort.signal.aborted) setMessages([(e as Error).message]); });
-    return () => { abort.abort(); active.current?.abort(); blurRequest.current?.abort(); };
-  }, [load]);
+    }).catch(e => { if (!abort.signal.aborted) setCatalogFailure(failureMessage(e)); });
+    return () => { abort.abort(); gate.cancel(); blurRequest.current?.abort(); };
+  }, [load,catalogAttempt]);
   const invalidate = (paths: string[] = []) => {
-    revisions.current.edit(); active.current?.abort(); active.current = null;
+    revisions.current.edit(); gate.cancel();
     blurSequence.current++; blurRequest.current?.abort();
-    setBusy(null); setStale(true); setMessages([]); setPendingReplacement(null); setPendingCopy([]);
+    setStale(true); setMessages([]); setPendingReplacement(null); setPendingCopy([]);
     setStatus('Inputs changed. Calculate again when ready.');
     const affected = new Set(paths);
     if (paths.some(p=>['wacc','terminal_growth'].includes(p))) affected.add('terminal_growth (relative to wacc)');
@@ -149,17 +152,18 @@ export default function App({load = request}: Props) {
   }
   async function submit(action: 'validate' | 'run') {
     if (!draft) return;
+    const lease = gate.start('ev');
+    if (!lease) return;
     blurSequence.current++; blurRequest.current?.abort(); setSubmitted(true);
     const token = revisions.current.begin();
-    const controller = new AbortController(); active.current?.abort(); active.current = controller;
-    setMessages([]); setBusy(action);
+    setMessages([]);
     if (action === 'run') setStale(true);
     try {
       const local=entryErrors(draft);
       if (Object.keys(local).length) throw new InputErrors(local);
       const body = buildRequest(draft);
-      const data = await load<Result | {status: string}>(`/api/v1/cases/${action}`, body, controller.signal);
-      if (!revisions.current.current(token)) return;
+      const data = await lease.wait(load<Result | {status: string}>(`/api/v1/cases/${action}`, body, lease.signal));
+      if (lease.signal.aborted || !revisions.current.current(token)) return;
       setServerErrors({});
       if (action === 'run') { setResult(data as Result); setStale(false); setStatus('Calculation complete — enterprise value only. Inputs have not been economically approved.'); }
       else setStatus('Input checks passed. No valuation calculated; economic consistency still needs review.');
@@ -171,11 +175,11 @@ export default function App({load = request}: Props) {
         setServerErrors(fields); reveal(fields);
       }
       else {
-        setMessages([e instanceof ApiError ? `${e.code}: ${e.message}` : 'Unexpected local UI error. Entries are preserved.']);
+        setMessages([failureMessage(e)]);
         setStatus('Service request did not succeed. Entries are preserved; retry explicitly.');
       }
     } finally {
-      if (revisions.current.current(token)) {setBusy(null); active.current = null;}
+      lease.finish();
     }
   }
   const input = (path: string, label: string, value: string, change: (value: string) => void, multiline = false, hint = '') => {
@@ -269,7 +273,7 @@ export default function App({load = request}: Props) {
         <option value="">Select a company</option>{catalog?.entries.map(e=><option key={e.kind} value={e.kind}>{e.company} · FY2025</option>)}
       </select><button className="text-button" disabled={!catalog} onClick={()=>choose('demo')}>Load synthetic demonstration</button></div>
     </header>
-    {!catalog && <p role="status">Loading company data… Check the local server if it is unavailable.</p>}
+    {!catalog && (catalogFailure ? <div role="status" aria-live="polite"><p>{catalogFailure}</p><button onClick={()=>setCatalogAttempt(old=>old+1)}>Retry loading companies</button></div> : <p role="status">Loading company data…</p>)}
     {pendingSelection!==null && <Confirmation title="Discard populated edits?" confirmLabel="Discard and switch" cancelLabel="Keep editing" confirm={()=>switchTo(pendingSelection)} cancel={()=>setPendingSelection(null)}>Switching will discard populated annual inputs, replacement proposals, analysis details and results. No copy is saved.</Confirmation>}
     {entry && <section className="history-strip"><div className="company-summary"><strong>{entry.company} · FY2025</strong><span>Reported revenue <b>{readableMoney(entry.revenue)}</b> USD</span></div><p>Fixed historical data, not live. Forecasts are user-entered and not independently reviewed.</p>
       <details><summary>Data &amp; methodology</summary><p>Fiscal period: {entry.identity.annual_start} → {entry.identity.annual_end}.</p><p>{entry.identity.form} · {entry.identity.accession} · CIK {entry.identity.cik}. Source precision {entry.precision} (−6: nearest million). Base unit {entry.unit}.</p><p>Fiscal-end analytical date: {entry.identity.annual_end}; later-filed information is used. A separate filing-acceptance timestamp is not supplied.</p><ul>{entry.source_links.map((url,i)=><li key={url}><a href={url} target="_blank" rel="noreferrer">SEC filing source {i+1}</a></li>)}</ul><p>No verified information cutoff is established. Preparation time and personal notes do not certify information availability or source review.</p><ul>{enduringLimitations(entry.limitations).map((line,i)=><li key={i}>{readableLimitation(line)}</li>)}</ul></details>
@@ -314,16 +318,16 @@ export default function App({load = request}: Props) {
           <details><summary>Full-precision request and provenance</summary><pre>{(()=>{try{return JSON.stringify(buildRequest(draft),null,2);}catch{return 'Correct invalid percentage entries to inspect the request.';}})()}</pre></details>
         </details>
         <div className="run-controls">
-          <div className="actions"><button className="primary" disabled={Boolean(busy)} onClick={()=>void submit('run')}>Calculate enterprise value</button></div>
-          <p role="status" aria-live="polite">{busy ? `${busy==='run'?'Calculating':'Checking inputs'}… Edits cancel this request.` : status}</p>
+          <div className="actions"><button className="primary" disabled={Boolean(busy)} onClick={()=>void submit('run')}>Calculate enterprise value</button>{busy && <button onClick={()=>gate.cancel()}>Cancel calculation</button>}</div>
+          <p role="status" aria-live="polite">{busy ? `Calculating ${busy==='ev'?'enterprise value':'equity and value per share'}… Inputs remain editable.` : status}</p>
           {submitted && Object.keys(errors).length>0 && <div id="input-issues" tabIndex={-1} className="errors" role="region" aria-label="Input issues"><h3>Review {Object.keys(errors).length} input issue(s)</h3>
             <ul>{Object.entries(errors).slice(0,3).map(([path,message])=><li key={path}><button className="text-button" onClick={()=>goToField(path)}>{pathLabel(path)}: {message}</button></li>)}</ul>
             {Object.keys(errors).length>3 && <details><summary>All input issues</summary><ul>{Object.entries(errors).slice(3).map(([path,message])=><li key={path}><button className="text-button" onClick={()=>goToField(path)}>{pathLabel(path)}: {message}</button></li>)}</ul></details>}
             <p>Correct these entries and calculate again. Further financial checks may follow correction.</p>
           </div>}
-          {messages.length>0 && <div role="alert" className="errors"><h3>Service request did not succeed</h3>{messages.map((message,i)=><p key={i}>{message}</p>)}<p>Retry explicitly when the service is available. Entries are preserved; changing assumptions is not required to recover from a service failure.</p></div>}
+          {messages.length>0 && <div role="status" aria-live="polite" className="errors"><h3>Calculation not completed</h3>{messages.map((message,i)=><p key={i}>{message}</p>)}<p>Retry explicitly when the service is available. Entries are preserved; changing assumptions is not required to recover from a service failure.</p><button disabled={Boolean(busy)} onClick={()=>void submit('run')}>Retry enterprise value</button></div>}
         </div>
-      </section><aside aria-label="Valuation review">{result ? <><ResultReview result={result} stale={stale}/><EquityStep draft={draft} evResult={result} operatingStale={stale} load={load}/></> : <section className="result-placeholder"><h2>Enterprise value</h2><p>Enter assumptions, then calculate.</p><small>Operating business value; excludes the cash/debt/share bridge.</small></section>}</aside></div>
+      </section><aside aria-label="Valuation review">{result ? <><ResultReview result={result} stale={stale}/><EquityStep draft={draft} evResult={result} operatingStale={stale} load={load} executionGate={gate}/></> : <section className="result-placeholder"><h2>Enterprise value</h2><p>Enter assumptions, then calculate.</p><small>Operating business value; excludes the cash/debt/share bridge.</small></section>}</aside></div>
     </> : <section className="empty-state"><h2>Select a company to begin.</h2><p>Company forecasts start unset. The separate demonstration uses a synthetic $100 revenue anchor.</p></section>}
     {!draft && messages.length>0 && <div role="alert" className="errors">{messages.join(' ')}</div>}
     <footer>No automatic saving <span>· Local environment</span></footer>

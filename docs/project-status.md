@@ -1,6 +1,31 @@
 # Project Status
 
-## Current — proposed production backend and cost controls
+## Current — configured Cloud Run cap and local submission/failure controls
+
+[Verified cost/client checkpoint](public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22):
+USD10 calendar-month **Cloud Run only**, project `kartikchaturvedi-website`, status
+**Configured**, gross before credits, fixed 50/80/100% operator emails. Approximately
+USD0.01 gross displayed; enforcement/delivery not deliberately tested. Existing
+account-wide USD10 alert at 50/90/100/150% remains unchanged. Project-wide Run outages
+are accepted; overshoot and non-Run costs remain outside a strict dollar ceiling.
+Lifting/increasing requires a separate user instruction. The production configuration
+is approved **as a plan**, without deployment/public-access authority.
+
+Local EV/equity now share a synchronous execution gate, explicit cancel/retry and
+safe unavailable/busy/validation handling. Inputs remain editable; cancellation,
+old-response protection and independent result-staleness rules are preserved.
+**106 frontend tests + 11 focused Python checks**, production build and actual local
+Chrome desktop/390×844 synthetic flow/fault recovery passed. No API/financial
+behavior changed; no historical full suite or actual-company calculation.
+
+Updated loopback frontend/API remain available for review. No app deployment,
+Cloud Run access/configuration, private-service, live Hosting, portfolio, Netlify/DNS
+or financial/history/template change. All nine unset templates preserved; Phase 1
+paused; local checkpoint only, no push. Production/domain migration remain pending.
+Preview backend withdrawal still **October 23, 2026, 14:17:28 Dubai / 10:17:28 UTC**;
+cap reset/Hosting expiry does not perform withdrawal.
+
+## Earlier — proposed production backend and cost controls
 
 The [production plan](public-preview-preparation.md#production-backend-and-cost-policy--proposed-october-22)
 prepares a separate `valuation-api`: request-based 1 vCPU/1GiB, service/revision

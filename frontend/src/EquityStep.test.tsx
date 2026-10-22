@@ -47,7 +47,7 @@ it('rejects an old pending equity reply after bridge or operating edits',async()
 });
 it('recovers from service failure and maps invalid shares to field focus without clearing inputs',async()=>{
  const b=ev();let mode='service';const load=vi.fn(async()=>{if(mode==='service')throw new ApiError('busy','Service busy');if(mode==='domain')throw new ApiError('invalid_case','Invalid',['bridge.shares: Amount outside permitted sign domain']);return reply(b);});
- render(<EquityStep draft={draft()} evResult={b} operatingStale={false} load={load as unknown as typeof request}/>);fill();run();await screen.findByRole('alert');expect((screen.getByLabelText('Shares outstanding (millions of shares)') as HTMLInputElement).value).toBe('0.000004');
+ render(<EquityStep draft={draft()} evResult={b} operatingStale={false} load={load as unknown as typeof request}/>);fill();run();await screen.findByText('Another calculation is in progress. Your inputs are still here. Please retry shortly.');expect((screen.getByLabelText('Shares outstanding (millions of shares)') as HTMLInputElement).value).toBe('0.000004');
  mode='domain';run();await screen.findByRole('region',{name:'Equity input issues'});await waitFor(()=>expect(document.activeElement).toBe(screen.getByLabelText('Shares outstanding (millions of shares)')));expect(screen.queryByText('16.64')).toBeNull();mode='ok';run();await screen.findByText('16.64');
 });
 it('preserves negative equity/per-share display without treating it as fully diluted value',async()=>{

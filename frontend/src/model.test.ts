@@ -71,7 +71,7 @@ it('bounds a stalled local request with a client deadline',async()=>{
   globalThis.fetch=async(_,init)=>new Promise((_,reject)=>init?.signal?.addEventListener('abort',()=>reject(new Error('aborted'))));
   try {
     const pending=request('/api/v1/cases/run',fixture);
-    const check=expect(pending).rejects.toMatchObject({code:'request_cancelled'});
+    const check=expect(pending).rejects.toMatchObject({code:'service_unavailable'});
     await vi.advanceTimersByTimeAsync(50001);await check;
   }finally{vi.useRealTimers();globalThis.fetch=original;}
 });

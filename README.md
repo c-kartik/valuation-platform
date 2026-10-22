@@ -19,12 +19,17 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-The [proposed production backend and cost plan](docs/public-preview-preparation.md#production-backend-and-cost-policy--proposed-october-22)
-prepares a separate max-one `valuation-api` without deploying it. Direct USD billing
-and spend-cap permissions were verified; the existing account-wide USD10 alerts
-remain unchanged. A separate monthly Cloud Run cap is proposed, with project-wide
-outage/overshoot limits. The non-executable configuration and A–G launch sequence
-require separate billing, production/public-access and live/domain authorizations.
+The [cost and local-client checkpoint](docs/public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22)
+configured a USD10 monthly Cloud Run cap for this project, status **Configured**;
+the existing account-wide alert remains unchanged. The cap uses gross estimated
+spend, can overshoot and pause all project Run workloads, and excludes other
+products. Enforcement was not deliberately tested. The production configuration
+is approved as a plan; deployment/public access and domain migration remain pending.
+
+Local EV/equity actions share a submission gate, cancellation and explicit retry.
+Unavailable failures preserve inputs and stale-result labels. **106 frontend tests,
+11 focused Python checks**, build and local desktop/390×844 synthetic browser review
+passed. No app deployment or financial/template changes; Phase 1 stays paused.
 
 The separate [combined preview](https://kartikchaturvedi-website--combined-site-review-kwvkxedj.web.app/)
 now serves the portfolio root and `/valuation/` from two clean source checkpoints.

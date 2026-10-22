@@ -1,5 +1,12 @@
 # Firebase calculator preview records
 
+Subsequent October 22 [cost-control checkpoint](public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22)
+configured a USD10 monthly project-wide Cloud Run cap (Configured; enforcement
+not deliberately tested). It can pause this preview and private workloads, but
+does not withdraw public access or extend the deadline below. Client lock/outage
+changes are local only; this hosted image/frontend were not redeployed. Earlier
+no-cap statements below describe their original release-time state.
+
 The subsequent [combined portfolio preview](combined-site-preview.md) uses a
 separate channel and the same existing pinned backend tag. It preserves the
 calculator-only channel and this record's backend deadline; no Cloud Run change

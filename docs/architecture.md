@@ -1,11 +1,20 @@
 # Architecture
 
-The [production proposal](public-preview-preparation.md#production-backend-and-cost-policy--proposed-october-22)
-reuses the existing immutable API image and unprivileged runtime identity in a
-separate service. Its [non-executable review configuration](../deploy/api/production-plan.json)
-preserves financial/runtime limits and distinguishes service/revision scaling,
-current-only production tags and project-wide billing-product caps. No runtime,
-deployment, billing, access or infrastructure change is performed by this checkpoint.
+The [cost/client checkpoint](public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22)
+adds a shared synchronous frontend execution gate (`execution.ts`) across EV,
+equity and retries. Identity-owned leases, abort/deadline release and existing
+revision guards prevent obsolete cleanup/results affecting a successor. Operating
+edits cancel/stale both paths; bridge edits affect equity only. HTTP rendering
+sanitizes service/gateway failures, preserves field diagnostics and requires an
+explicit retry. It adds no API, financial or distributed admission change.
+
+The approved-as-plan [review configuration](../deploy/api/production-plan.json)
+remains non-executable, with production/public access and image acceptance pending.
+A separate USD10 project-wide Cloud Run monthly cap is saved/Configured, while the
+account-wide alert is unchanged. Gross estimates, overshoot, monthly restoration
+and non-Run costs qualify that control; enforcement was not deliberately tested.
+No application, private-service/access, Hosting, Netlify/DNS or portfolio deployment
+occurred in this checkpoint.
 
 The [combined preview](combined-site-preview.md) has a separate external assembly
 boundary: ten allowlisted portfolio files plus a four-file calculator build with

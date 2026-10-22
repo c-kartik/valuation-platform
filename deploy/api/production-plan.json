@@ -1,6 +1,6 @@
 {
   "document_type": "review-plan-not-a-provider-manifest",
-  "status": "PROPOSED_NOT_AUTHORIZED_FOR_EXECUTION",
+  "status": "APPROVED_PLAN_ONLY_NOT_DEPLOYMENT_AUTHORITY",
   "execute": false,
   "production_authorization": null,
   "approved_image": null,
@@ -48,15 +48,26 @@
   },
   "release_policy": "manual-immutable-digest-current-tag-only",
   "public_invocation_authorization": null,
-  "budget_change_authorization": null,
-  "proposed_cloud_run_cap": {
+  "budget_change_authorization": "user-authorized-USD10-Cloud-Run-cap-only-preserve-existing-alert",
+  "runbook": "../../docs/public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22",
+  "cloud_run_cap": {
     "amount": "10.00",
     "currency": "USD",
     "period": "MONTH",
     "project": "projects/378340095652",
     "billing_service": "services/152E-C115-5142",
     "scope": "all-Cloud-Run-workloads-in-project-not-one-named-service",
-    "cost_basis": "gross-estimated-before-savings-and-credits"
-  },
-  "runbook": "../../docs/public-preview-preparation.md#production-backend-and-cost-policy--proposed-october-22"
+    "cost_basis": "gross-estimated-before-savings-and-credits",
+    "name": "valuation-cloud-run-monthly-cap",
+    "budget_id": "81efe0f3-f083-4bd0-b18e-916e06316e14",
+    "verified_status": "CONFIGURED",
+    "notification_thresholds": [
+      "50%",
+      "80%",
+      "100%"
+    ],
+    "notification_recipients": "existing-billing-admins-and-users-and-project-owners",
+    "observed_estimated_gross_spend": "approximately USD0.01",
+    "enforcement_deliberately_tested": false
+  }
 }

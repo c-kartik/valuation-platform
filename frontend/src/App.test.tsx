@@ -1,5 +1,5 @@
 import {it,expect,vi} from 'vitest';
-import {render,screen,waitFor,fireEvent,within} from '@testing-library/react';
+import {render,screen,waitFor,fireEvent,within,act} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App, {ResultReview} from './App';
 import {request,ApiError} from './api';
@@ -100,7 +100,7 @@ it('does not copy missing inputs or silently supply terminal assumptions',async(
 });
 it('preserves anonymous metadata, notes and assumptions through service failure and retry',async()=>{
  let fail=true;const sent:InvestorDoc[]=[];render(<App load={transport(async(_,body)=>{sent.push(structuredClone(body) as InvestorDoc);if(fail)throw new ApiError('busy','Retry later');return result();})}/>);await selectDemo();
- set('Optional personal notes','  My text\nonly  ');run();await screen.findByText('busy: Retry later');expect(screen.queryByRole('region',{name:'Input issues'})).toBeNull();expect(input('Optional personal notes').value).toBe('  My text\nonly  ');expect(input(margin).value).toBe('20');
+ set('Optional personal notes','  My text\nonly  ');run();await screen.findByText('Another calculation is in progress. Your inputs are still here. Please retry shortly.');expect(screen.queryByRole('region',{name:'Input issues'})).toBeNull();expect(input('Optional personal notes').value).toBe('  My text\nonly  ');expect(input(margin).value).toBe('20');
  fail=false;run();await screen.findByText('Synthetic result');expect(sent[0]).toEqual(sent[1]);expect(sent[1].preparation.provenance).toBe('ANONYMOUS_INVESTOR');expect(sent[1]).not.toHaveProperty('analyst');
  set('Optional personal notes','');run();await waitFor(()=>expect(sent).toHaveLength(3));expect(sent[2].preparation.notes).toBeNull();expect(sent[2].preparation.timestamp_utc).toBe(sent[1].preparation.timestamp_utc);
 });
@@ -181,4 +181,72 @@ it('keeps EV-only requests independent of optional bridge entry and discards bri
  const bridge=screen.getByText('Add cash, debt & shares');expect(bridge.closest('details')?.open).toBe(false);fireEvent.click(bridge);set('Eligible cash & investments (USD millions)','1.25');
  fireEvent.change(screen.getByLabelText('Company'),{target:{value:'test-anchor'}});fireEvent.click(screen.getByRole('button',{name:'Discard and switch'}));
  expect(screen.queryByText('Add cash, debt & shares')).toBeNull();expect(input(grow).value).toBe('');expect(sent).toHaveLength(1);
+});
+
+function fillBridge(){
+ fireEvent.click(screen.getByText('Add cash, debt & shares'));
+ set('Eligible cash & investments (USD millions)','12');set('Debt & financing obligations (USD millions)','20');set('Other claims / adjustments','none');set('Shares outstanding (millions of shares)','4');set('Share observation date','2025-12-31');
+ fireEvent.click(screen.getByText('Coverage, classes & awards'));
+ set('Eligible-asset coverage','selected');set('Financing coverage','selected');set('Share population','issued');set('Included share class(es)','Synthetic common');set('Class treatment','single_common_class');set('Existing awards','none');fireEvent.click(screen.getByLabelText(/I declare these amounts/));
+}
+const equityRun=()=>fireEvent.click(screen.getByRole('button',{name:'Calculate value per share'}));
+it('uses one gate across EV/equity, rapid and keyboard actions, cancellation, and out-of-order cleanup',async()=>{
+ const pending:{resolve:(r:Result)=>void;signal?:AbortSignal}[]=[];
+ const load=vi.fn(async(path:string,_?:unknown,signal?:AbortSignal)=>{
+  if(path.endsWith('catalog'))return catalog;
+  if(path.endsWith('validate'))return {status:'valid'};
+  if(pending.length===0){pending.push({resolve:()=>{},signal});return result();}
+  return new Promise<Result>(resolve=>pending.push({resolve,signal}));
+ }) as typeof request;
+ render(<App load={load}/>);await selectDemo();run();await screen.findByText('Synthetic result');fillBridge();
+ equityRun();equityRun();expect(pending).toHaveLength(2);
+ expect((screen.getByRole('button',{name:'Calculate enterprise value'}) as HTMLButtonElement).disabled).toBe(true);
+ const user=userEvent.setup();screen.getByRole('button',{name:'Calculate enterprise value'}).focus();await user.keyboard('{Enter}{Enter}');expect(pending).toHaveLength(2);
+ fireEvent.click(screen.getByRole('button',{name:'Cancel calculation'}));
+ run();expect(pending).toHaveLength(3);expect(pending[1].signal?.aborted).toBe(true);
+ expect((screen.getByRole('button',{name:'Calculate value per share'}) as HTMLButtonElement).disabled).toBe(true);run();expect(pending).toHaveLength(3);
+ pending[1].resolve(result());await waitFor(()=>expect((screen.getByRole('button',{name:'Calculate enterprise value'}) as HTMLButtonElement).disabled).toBe(true));
+ const newer=result();newer.case_name='New current result';pending[2].resolve(newer);await screen.findByText('New current result');
+ expect((screen.getByLabelText('Shares outstanding (millions of shares)') as HTMLInputElement).value).toBe('4');
+});
+it.each(['network','busy','html'])('keeps prior EV stale, notes/bridge and operating values through %s failure and explicit recovery',async(mode)=>{
+ let fail=false;const load=transport(async(path)=>{
+  if(path.endsWith('validate'))return {status:'valid'};
+  if(fail)throw mode==='busy'?new ApiError('busy','unsafe'):new ApiError('service_unavailable','unsafe HTML traceback');
+  return result();
+ });
+ render(<App load={load}/>);await selectDemo();set('Optional personal notes','Keep this rationale');run();await screen.findByText('Synthetic result');fillBridge();
+ fail=true;run();await screen.findByRole('button',{name:'Retry enterprise value'});
+ expect(screen.getByText(/STALE RESULT/)).toBeTruthy();expect(input('Optional personal notes').value).toBe('Keep this rationale');expect(input(grow).value).toBe('10');expect(input('Shares outstanding (millions of shares)').value).toBe('4');
+ expect(screen.queryByText(/unsafe/)).toBeNull();fail=false;fireEvent.click(screen.getByRole('button',{name:'Retry enterprise value'}));await waitFor(()=>expect(screen.queryByText(/STALE RESULT/)).toBeNull());
+});
+it('company change cancels the shared lease and obsolete completion cannot restore the old result',async()=>{
+ let resolve!:(r:Result)=>void;render(<App load={transport(()=>new Promise<Result>(r=>{resolve=r;}))}/>);await selectDemo();run();
+ fireEvent.change(screen.getByLabelText('Company'),{target:{value:'test-anchor'}});fireEvent.click(screen.getByRole('button',{name:'Discard and switch'}));
+ expect((screen.getByRole('button',{name:'Calculate enterprise value'}) as HTMLButtonElement).disabled).toBe(false);resolve(result());await waitFor(()=>expect(screen.queryByText('Synthetic result')).toBeNull());expect(input(grow).value).toBe('');
+});
+it('releases the UI gate after a non-JSON gateway response, with explicit retry only',async()=>{
+ const fetch=vi.fn(async(path:RequestInfo|URL)=>String(path).endsWith('catalog')?new Response(JSON.stringify(catalog)):new Response('<html>gateway</html>',{status:503}));
+ vi.stubGlobal('fetch',fetch);
+ try{
+  render(<App/>);await selectDemo();run();await screen.findByText(/Calculations are temporarily unavailable/);
+  const retry=screen.getByRole('button',{name:'Retry enterprise value'});expect((retry as HTMLButtonElement).disabled).toBe(false);
+  fetch.mockImplementation(async()=>new Response(JSON.stringify(result())));fireEvent.click(retry);await screen.findByText('Synthetic result');
+ }finally{vi.unstubAllGlobals();}
+});
+
+it('shows a bounded timeout, releases the shared gate and retains inputs',async()=>{
+ let resolve!:(r:Result)=>void;render(<App load={transport(()=>new Promise<Result>(r=>{resolve=r;}))}/>);await selectDemo();
+ vi.useFakeTimers();try{
+  run();await act(async()=>{await vi.advanceTimersByTimeAsync(50000);});
+  expect(screen.getByText(/Calculations are temporarily unavailable/)).toBeTruthy();
+  expect((screen.getByRole('button',{name:'Retry enterprise value'}) as HTMLButtonElement).disabled).toBe(false);
+  expect(input(grow).value).toBe('10');resolve(result());await act(async()=>{});expect(screen.queryByText('Synthetic result')).toBeNull();
+ }finally{vi.useRealTimers();}
+});
+
+it('offers explicit recovery when company data is initially unavailable, without an automatic loop',async()=>{
+ let fail=true;const load=vi.fn(async()=>{if(fail)throw new ApiError('service_unavailable','unsafe');return catalog;}) as typeof request;
+ render(<App load={load}/>);await screen.findByRole('button',{name:'Retry loading companies'});expect(load).toHaveBeenCalledTimes(1);expect(screen.getByText(/Calculations are temporarily unavailable/)).toBeTruthy();
+ fail=false;fireEvent.click(screen.getByRole('button',{name:'Retry loading companies'}));await selectDemo();expect(input(grow).value).toBe('10');
 });

@@ -1,6 +1,108 @@
 # Backend launch preparation and preview history
 
+## Configured Cloud Run cap and local client controls — October 22
+
+Starting checkpoint `aff6fa01d9ceace142d5a6ce43efd75b4b83ba03` was clean `main`,
+four commits ahead of `origin/main`. The user approved the production configuration
+**as a plan only**, project-wide Cloud Run cap outages, and their existing account
+as operator. Production deployment, image acceptance for a new release, anonymous
+production access and domain migration remain pending. The [review JSON](../deploy/api/production-plan.json)
+remains non-executable (`execute=false`); it is not a provider manifest.
+
+### Saved budget read-back
+
+The existing linked direct USD billing account was reused through Console; its
+project list and the existing Billing Account Administrator observation bind the
+operator account without copying personal addresses or the billing-account ID.
+Official [eligible-service and enforcement rules](https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps)
+and [budget field restrictions](https://docs.cloud.google.com/billing/docs/how-to/budget-api-spend-cap)
+were rechecked. No API enablement, IAM grant, new recipient or integration was needed.
+
+| Setting | Saved/reopened observation |
+| --- | --- |
+| Name / budget ID | `valuation-cloud-run-monthly-cap` / `81efe0f3-f083-4bd0-b18e-916e06316e14` |
+| Amount / period | **USD10**, specified amount, calendar **Monthly** |
+| Project | `kartikchaturvedi-website`, number `378340095652` |
+| Product | **Cloud Run** (`run.googleapis.com`; billing identifier `services/152E-C115-5142`), single product; all Cloud Run workloads/regions in this project, not one named service |
+| Enforcement | **Configured**, not Enforced; Console records set October 22, 2026, **16:50:11 Dubai / 12:50:11 UTC** |
+| Basis / progress | Gross estimated before credits/savings; savings controls disabled/off. Reopened Console showed **approximately USD0.01 / USD10**, roughly USD9.99 displayed headroom, rounded/lagged and not a fresh allowance or guaranteed remaining spend. |
+| Notifications | Fixed **50/80/100%** (USD5/8/10); email to existing billing admins/users **and project owners**, checked and provider-locked. Existing operator is a billing administrator. Delivery was not triggered/tested. |
+| Reset | Console shows **November 1, 2026**. Provider monthly calendar, not promised Dubai-midnight reset. |
+
+The separate **`$10 Monthly Budget Alert`**, ID
+`cea151b5-5426-48aa-a7a9-75bf30eda04c`, was reopened without editing: all account
+projects (1), all services (1778), Monthly/USD10, **50/90/100/150%**, selected
+savings/other savings, billing-admin/user emails on, project-owner mail off,
+Monitoring channels/Pub/Sub off, cap Not applicable. The earlier proposed alert
+scope/threshold edit below is **superseded and was not performed**.
+
+Configuration/read-back is PASS; enforcement was **not deliberately tested** and
+no spend was generated to reach the threshold. This cap can pause private staging
+and previews as well as a future production service. It uses estimated gross cost,
+can overshoot, permits in-flight requests to finish, and excludes Hosting, builds,
+storage, logs and other products. It is not a USD10 total-project/invoice ceiling.
+Fixed/persistent costs can continue. Monthly reset can restore paused workloads;
+it does not withdraw anonymous access.
+
+Operator response: review the cap status and scope, preserve user inputs/static
+portfolio availability, and check usage/errors. **Do not lift or increase the cap
+without a separate user instruction.** Manual lifting suspends enforcement for the
+remainder of the period unless the amount changes; restoration can take time.
+No automated shutdown, billing disablement or notification infrastructure was added.
+
+### Local client behavior and verification
+
+`frontend/src/execution.ts` provides one synchronous, identity-owned gate shared
+by EV and equity. Buttons, keyboard actions and explicit retry use the same gate;
+no hidden calculation queue. Editing remains available: operating/company edits
+cancel/discard the active calculation and stale both results; bridge edits cancel
+only equity and stale only equity. Cancel aborts the client request, releases its
+lease and discards its response. A server calculation already admitted may finish;
+this is duplicate-submission prevention, not authentication or a server/distributed
+quota. A cancelled request's cleanup cannot release its successor's lock. Success,
+rejection, cancellation and the 50s client deadline release the gate.
+
+Unavailable/network/non-JSON gateway failures use a bounded, plain message and
+explicit retry with entries preserved. Busy is distinguished from field validation.
+Raw gateway HTML/exception messages are not rendered; generic 5xx does not diagnose
+a spend cap. Previous results stay visibly stale after failed recalculation.
+Polite status regions replace disruptive service-failure alerts. Bridge refresh
+remains explicit after EV refresh. Static portfolio files have no API dependency.
+
+New verification: **106 frontend tests**, TypeScript/production build, **11 focused
+Python checks** (five preservation and six unchanged compiled-preview protections),
+local-link/whitespace/protected-scope/template checks. No API behavior changed;
+API engine/lifecycle or historical full suites were not rerun. All nine unset
+company templates remain byte-identical, with 37 numerical nulls per case (111
+per three-case scenario), and equity/share selections unresolved.
+
+Actual Chrome reviewed the compiled build at desktop **1280×900** and **390×844**
+using the synthetic USD100 fixture, plus assets USD12, financing USD20, claims USD3
+and four issued synthetic shares. EV **USD77.577060352**, equity **USD66.577060352**,
+per issued share **USD16.644265088** (display 16.64). A temporary loopback harness
+added a four-second delay and HTML 503 faults only; rapid clicks produced one
+request, shared disabled states, keyboard recovery, retained notes/bridge values,
+stale labels and explicit EV/equity retry were inspected. Native date entry needed
+a committed keyboard segment change in the browser controller; no product/schema
+change. Narrow layout had no horizontal overflow. Screenshots were captured outside
+the repository. This is resized desktop testing, not mobile virtual-keyboard or
+complete accessibility certification. Race/deadline/old-cleanup checks are automated.
+No hosted calculation/load test or actual-company valuation was run.
+
+Only updated local review frontend/API are left running; the temporary fault
+frontend and prior local review servers are stopped. No application deployment,
+Cloud Run access/configuration, private services, live Hosting, portfolio,
+Netlify/DNS, financial formulas/contracts/history or approvals were changed.
+Phase 1 remains paused. Local commit only; no push.
+
+**Existing manual preview backend withdrawal is still October 23, 2026,
+14:17:28 Dubai / 10:17:28 UTC.** This task neither extends nor performs it.
+
 ## Production backend and cost policy — proposed October 22
+
+Historical planning record: the cap/operator/configuration-plan decisions and local
+client gap below are superseded by the configured/local checkpoint above. Other
+production/public-access/live/domain steps remain pending.
 
 **Preparation only; production and billing changes are NOT authorized.** Inspected
 2026-10-22, starting valuation `a8bc1105473480406b830b7f335933d67953ebe3`, clean
