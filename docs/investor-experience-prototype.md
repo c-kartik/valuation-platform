@@ -240,7 +240,7 @@ Reverse solving for those new cases is not prepared and honestly remains not
 calculated. Other arbitrary edits/targets remain unsupported. No browser financial
 formula, API call, account, persistence or actual-company case was added.
 
-Current checks: **133 frontend tests** (106 existing + 27 prototype), including
+At `beb429f`, checks were **133 frontend tests** (106 existing + 27 prototype), including
 linked navigation/focus, exact fork differences, per-case preservation and
 selective invalidation, plus both TypeScript/Vite builds. Original fixture records
 and all protected sources/templates are compared against starting HEAD. The
@@ -249,7 +249,7 @@ local design artifact, not production performance acceptance. The original
 calculator bundle remains unchanged.
 
 The earlier desktop/390×844 browser record above belongs to the initial milestone,
-not this extension. **Current connected-journey browser verification is pending:**
+not this extension. **At `beb429f`, connected-journey browser verification was pending:**
 browser inventory returned no available browser, the previous Chrome connection
 was unavailable, and native Chrome's computer-use pipe failed to start. Component
 tests exercise the entire linked journey but are not screenshots or browser/mobile
@@ -259,9 +259,67 @@ servers are preserved and the prototype responds locally on port 5174.
 Future design/API work still requires separate scope: approval of the connected
 experience, actual-company data/input freshness, price-date rules, ownership and
 lifecycle of exploratory versus strict scenarios, supported input/range limits,
-reverse failure presentation and complete narrow-screen/browser acceptance. Future
-adapters must use the existing [scenario](phase2-scenario-workflow.md),
+reverse failure presentation, real mobile-keyboard/accessibility review and
+production performance acceptance. Future adapters must use the existing [scenario](phase2-scenario-workflow.md),
 [sensitivity](phase2-sensitivity-workflow.md) and
 [reverse](phase2-reverse-dcf-workflow.md) contracts with their source/date/coverage
 and explicit execution boundaries. This checkpoint authorizes no integration or
 deployment and does not resolve economic consistency or investment readiness.
+
+
+### Browser acceptance follow-up — October 25, 2026
+
+This follow-up started at clean `beb429f13987b2d48a66059365fb4acbcad21c2a`,
+seven ahead of local `origin/main`. Chrome control was available again. The
+connected journey's browser-pending status above is **superseded by this review**;
+the previous connection failures and test record remain historical facts.
+
+Actual Chrome, at **1440×1000** and **390×844**, completed the prepared sequence:
+forward/share preview → shared USD25 target → explicit reverse preview → confirmed
+implied-growth exploratory copy → scenario comparison/reference overlay → exact-case
+grid → inspected rate pair → confirmed exploratory fork → explicit preview → overview.
+Separate Bear/Bull copies were explicitly loaded with the lower/higher prepared
+profiles; Base and exploratory source cases remained intact. No tab automatically
+ran another analysis. These remain finite synthetic illustrations, not runtime
+engine/API integration or new financial acceptance.
+
+Additional browser checks covered confirmed application versus cancellation,
+source-case preservation, per-case reverse/grid/cell restoration, shared-price
+staleness versus independent overrides, EV-target reverse surviving a bridge edit,
+unsupported operating inputs, retained notes, arrow/Home/End tabs, Escape/cancel
+focus restoration and contextual return-to-overview focus. The tested desktop
+page reported no browser console errors. This is resized desktop Chrome testing,
+not real-device/touch/virtual-keyboard or full accessibility certification.
+
+Two reproducible presentation defects were corrected within the isolated prototype:
+
+- Completed scenario cards used a horizontal flex direction at the narrow breakpoint,
+  extending the page to **525 CSS pixels** at a 390-pixel viewport. Cards now stack
+  vertically; observed page widths after correction were **375–390 CSS pixels**, no
+  greater than the requested viewport, across the tested workflow views.
+- A scenario-card selection could retain the previous case's action notice. Changing
+  case now clears that transient notice while preserving inputs and analyses. A
+  focused regression test covers both cases' preserved inputs and the cleared notice.
+
+Newly executed: **134 frontend tests** (106 existing + 28 prototype), both documented
+TypeScript/Vite builds, protected-source/template/fixture checks, local links/anchors,
+secret-pattern scan, whitespace and staged scope. The existing calculator still
+builds to `index-DikgGavX.js` / `index-CJkQVHWF.css`. The isolated illustrative bundle
+still emits a >500 kB size warning; no dependency, engine, API or deployment change
+was introduced to address production performance in this design review.
+
+Screenshots are retained outside the repository at
+`/tmp/investor-journey-review-2026-10-25/`: connected desktop/mobile overviews,
+reverse results, scenario comparisons, sensitivity views and the mobile growth-copy
+confirmation. Captures include actual UI states; none are generated mockups.
+Browser-only test entries stay in the review tabs' memory; no executable case,
+forecast defaults or valuation output was saved in the repository. The original
+open prototype tab and all three existing review-server processes were preserved.
+The updated prototype remains at <http://127.0.0.1:5174/prototype/>.
+
+User design review remains pending before separately scoped engine/API integration
+or publication. Phase 1 remains paused. The recorded **October 23, 2026, 14:17:28
+Dubai / 10:17:28 UTC** withdrawal deadline has passed as of this October 25 review;
+this local task neither extended nor performed withdrawal and did not inspect
+current cloud access. No cloud calls, hosted-service changes, portfolio edits,
+commits to other repositories or push occurred.

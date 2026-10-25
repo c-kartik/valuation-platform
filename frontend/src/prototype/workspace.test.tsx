@@ -59,3 +59,7 @@ it('matches each exact reverse-derived forward reference to the prepared reverse
   expect(variant).toBeTruthy();expect(variant.result).toEqual(r.result);
  }
 });
+
+it('clears a previous-case action notice when inspecting a sibling without changing either case',()=>{
+ render(<Prototype/>);guided();click('Compare scenarios');click('Create Bear from Base');click('Preview valuation');expect(screen.getByText('Illustrative preview loaded for Bear.')).toBeTruthy();click('Inspect Base');expect(screen.queryByText('Illustrative preview loaded for Bear.')).toBeNull();expect(screen.getByLabelText('Revenue growth (%)').getAttribute('value')).toBe('10');click('Inspect Bear');expect(screen.getByLabelText('Revenue growth (%)').getAttribute('value')).toBe('10');
+});

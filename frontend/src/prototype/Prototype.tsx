@@ -134,7 +134,7 @@ export function Prototype(){
  const [confirmation,setConfirmation]=useState<Confirmation|null>(null),[sources,setSources]=useState(false),[notice,setNotice]=useState('');
  const returnPoint=useRef('overview-edit');
  const {cases,selected,bridge,comparison}=s,c=cases[selected],a=s.analyses[selected];
- const setSelected=(selected:string)=>setS(old=>({...old,selected}));
+ const setSelected=(selected:string)=>{setS(old=>({...old,selected}));if(selected!==s.selected)setNotice('');};
  const updateAnalysis=(patch:Partial<Analysis>)=>setS(old=>({...old,analyses:{...old.analyses,[old.selected]:{...old.analyses[old.selected],...patch}}}));
  const change=(inputs:Inputs)=>{setS(old=>editInputs(old,old.selected,inputs));setNotice('Inputs changed. Previous illustrations do not calculate these edits.');};
  const preview=()=>{const variant=variantFor(c.inputs);if(!variant){setNotice('Not calculated: these edited assumptions do not match a prepared illustration. Real recalculation will be connected after design approval. Your entries are preserved.');return;}setS(old=>({...old,cases:{...old.cases,[selected]:{...old.cases[selected],shown:{signature:signature(c.inputs),variant,bridgeSignature:signature(bridge)}}}}));setNotice(`Illustrative preview loaded for ${selected}.${bridge.enabled&&!bridgeMatches(bridge)?' Equity/share entries have no matching fixture; enterprise value only.':''}`);};
