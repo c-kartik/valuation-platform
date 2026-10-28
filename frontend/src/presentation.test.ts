@@ -49,3 +49,17 @@ it('keeps a positive fractional share denominator exact in millions and isolates
  const {shareMillions}=await import('./presentation');const old={precision:Decimal.precision,rounding:Decimal.rounding};
  try{Decimal.set({precision:2,rounding:Decimal.ROUND_UP});expect(shareMillions('0.1')).toBe('0.0000001');expect(shareMillions('20000000')).toBe('20');expect(shareMillions('1234567890.123456789')).toBe('1,234.567890123456789');expect(Decimal.precision).toBe(2);}finally{Decimal.set(old);}
 });
+
+
+it('restricts display-only price comparisons to the selected fiscal date and isolates rounding',async()=>{
+ const {comparisonDifference}=await import('./presentation');const old={precision:Decimal.precision,rounding:Decimal.rounding};
+ try{
+  Decimal.set({precision:2,rounding:Decimal.ROUND_UP});
+  expect(comparisonDifference('7.5','5','2025-09-27','2025-09-27')).toBe('50.0');
+  expect(comparisonDifference('-2','5','2025-09-27','2025-09-27')).toBe('-140.0');
+  expect(comparisonDifference('1.2345','1','2025-12-31','2025-12-31')).toBe('23.4');
+  expect(comparisonDifference('7.5','5','2025-12-31','2025-09-27')).toBeNull();
+  for(const price of ['','0','-1','NaN','Infinity','invalid'])expect(comparisonDifference('7.5',price,'2025-09-27','2025-09-27')).toBeNull();
+  expect(Decimal.precision).toBe(2);expect(Decimal.rounding).toBe(Decimal.ROUND_UP);
+ }finally{Decimal.set(old);}
+});

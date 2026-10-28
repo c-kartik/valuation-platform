@@ -19,14 +19,24 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The [integrated investor workspace](docs/integrated-investor-workspace.md) is ready
+for local review at <http://127.0.0.1:5173/workspace/>: start the compatible
+[local API](docs/local-case-api.md#scope-and-local-operation) and run
+`npm --prefix frontend run dev`. META/GOOGL/AAPL start with retained revenue anchors
+and unset assumptions. Forward EV and optional manual equity/share results now come
+from the existing Python engine; reverse, scenarios and sensitivity explicitly
+remain **Not connected yet**. No financial formulas, historical approvals or
+templates changed. Phase 1 stays paused; no deployment or push.
+
 The separate [investor experience prototype](docs/investor-experience-prototype.md)
-is ready for local design review at <http://127.0.0.1:5174/prototype/>:
+remains the illustrative design reference at <http://127.0.0.1:5174/prototype/>:
 `npm --prefix frontend run dev:prototype`. A selected-case overview links forward
 valuation → reverse-implied growth → separate exploratory cases → scenario
 comparison → WACC × terminal-growth sensitivity, with per-case analysis state.
 All data/results are finite synthetic illustrations; unsupported edits are stale
 or not calculated. No backend requests, actual-company assumptions or persistence.
-The existing calculator at <http://127.0.0.1:5173/> is unchanged. No deployment,
+The reference calculator at <http://127.0.0.1:5173/> retains its behavior through
+narrow shared presentation/request extractions. No deployment,
 cloud changes or push; deployment/domain migration remain paused.
 
 The [cost and local-client checkpoint](docs/public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22)

@@ -1,5 +1,19 @@
 # Architecture
 
+The [integrated local workspace](integrated-investor-workspace.md) adds
+`/workspace/` beside the reference calculator `/` in the default Vite build/server.
+Company-keyed in-memory Base sessions own drafts, independent EV/equity revisions,
+results and dated comparison prices. Both entries reuse exact intake converters,
+transport, `ExecutionGate`, `caseExecution.ts`, diagnostics and result/bridge
+presentation. Only existing investor v1/v2 API routes calculate; prototype CSS is
+shared, fixture outputs are not. Operating edits stale both results, bridge edits
+only equity; notes/navigation/price edits preserve financial results. Catalog
+context is revenue-only, all company assumptions/bridge fields start unset, and
+later-filed timing/source qualifications remain explicit. Reverse/scenario/grid
+actions are disabled pending separate integrations. No Python/API/schema/formula,
+history/approval/template or deployment changes; publication allowlists remain
+unchanged and are not validated for the new multi-entry build.
+
 The [local investor prototype](investor-experience-prototype.md) has a separate
 HTML/React/CSS entry and Vite configuration, with no API proxy or production-module
 imports. A shared session-only workspace owns named/revisioned cases, bridge/shares,
@@ -9,9 +23,11 @@ without changing the strict three-case engine contract. Selective dependency key
 preserve operating EV on bridge edits and independent targets on price edits.
 Finite offline synthetic engine fixtures provide illustrations. There is no browser financial
 engine or new public API. Unsupported edits cannot produce fresh-looking results;
-cell application and destructive copying are explicit. The default calculator,
-its bundle/API/contracts and deployment configuration remain unchanged. This is
-a design review, not authorization to integrate or publish those capabilities.
+cell application and destructive copying are explicit. At that design checkpoint,
+the default calculator, its bundle/API/contracts and deployment configuration
+remained unchanged. The separate forward/equity integration above supersedes its
+integration-pending status only within that bounded scope; publication and the
+other three workflows remain pending.
 
 The [cost/client checkpoint](public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22)
 adds a shared synchronous frontend execution gate (`execution.ts`) across EV,

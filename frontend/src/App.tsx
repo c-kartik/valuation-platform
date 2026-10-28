@@ -5,26 +5,11 @@ import {ApiError, request, Revisions, failureMessage} from './api';
 import {ResultReview} from './Results';
 import {useExecutionGate} from './execution';
 import {EquityStep} from './EquityStep';
+import {executeCase} from './caseExecution';
+import {percentageDiagnostic} from './diagnostics';
 import {readableMoney, readableLimitation} from './presentation';
 export {ResultReview} from './Results';
 
-function percentageDiagnostic(detail: string): string {
-  const colon = detail.indexOf(':');
-  if (colon < 0) return detail;
-  const path = detail.slice(0,colon).replace(/^case\./,'');
-  if (!/^(forecast_years\[\d+\]\.|terminal\.|wacc$|terminal_growth$)/.test(path)) return detail;
-  const message = detail.slice(colon+1).trim();
-  const translated = message === 'UNSET; supply a fractional Decimal string'
-    ? 'Required. Enter a percentage; 20 means 20%.'
-    : /^(Forecast|Terminal operating) tax rate must be between 0 and 1$/.test(message)
-      ? 'Operating tax must be between 0% and 100%.'
-      : message === 'Revenue growth must be at least -1' ? 'Annual revenue growth must be at least −100%.'
-      : message === 'WACC must be greater than zero' ? 'WACC must be greater than 0%.'
-      : message === 'Terminal growth must be greater than -1' ? 'Long-term revenue growth must be greater than −100%.'
-      : message === 'Terminal growth must be less than WACC' ? 'Long-term revenue growth must be below WACC.'
-      : message;
-  return `${detail.slice(0,colon)}: ${translated}`;
-}
 
 type Props = {load?: typeof request};
 function Confirmation({title, children, confirmLabel, cancelLabel, confirm, cancel}: {
@@ -152,18 +137,16 @@ export default function App({load = request}: Props) {
   }
   async function submit(action: 'validate' | 'run') {
     if (!draft) return;
-    const lease = gate.start('ev');
-    if (!lease) return;
+    if (gate.snapshot()) return;
     blurSequence.current++; blurRequest.current?.abort(); setSubmitted(true);
     const token = revisions.current.begin();
     setMessages([]);
     if (action === 'run') setStale(true);
     try {
-      const local=entryErrors(draft);
-      if (Object.keys(local).length) throw new InputErrors(local);
-      const body = buildRequest(draft);
-      const data = await lease.wait(load<Result | {status: string}>(`/api/v1/cases/${action}`, body, lease.signal));
-      if (lease.signal.aborted || !revisions.current.current(token)) return;
+      const data = await executeCase<Result | {status:string}>({gate,action:'ev',operation:action,load,current:()=>revisions.current.current(token),build:()=>{
+        const local=entryErrors(draft);if(Object.keys(local).length)throw new InputErrors(local);return buildRequest(draft);
+      }});
+      if (!data) return;
       setServerErrors({});
       if (action === 'run') { setResult(data as Result); setStale(false); setStatus('Calculation complete — enterprise value only. Inputs have not been economically approved.'); }
       else setStatus('Input checks passed. No valuation calculated; economic consistency still needs review.');
@@ -178,8 +161,6 @@ export default function App({load = request}: Props) {
         setMessages([failureMessage(e)]);
         setStatus('Service request did not succeed. Entries are preserved; retry explicitly.');
       }
-    } finally {
-      lease.finish();
     }
   }
   const input = (path: string, label: string, value: string, change: (value: string) => void, multiline = false, hint = '') => {

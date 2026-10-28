@@ -1,5 +1,12 @@
 # Local investor experience prototype
 
+This document preserves the fixture-only design and browser-review record. Its
+approved design now informs a [separate integrated forward/equity workspace](integrated-investor-workspace.md).
+The prototype and its fixtures remain unchanged. Statements below about unchanged
+calculator/build files describe their original checkpoints; the current default
+build also contains `/workspace/`. Reverse/scenario/sensitivity integration remains
+pending, and the prototype does not become actual-company analysis.
+
 ## Scope and design grounding
 
 This is a **product-design review**, not production integration or new financial

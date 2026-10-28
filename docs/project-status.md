@@ -1,6 +1,33 @@
 # Project Status
 
-## Current — connected investor prototype overview and journey
+## Current — local forward/equity investor workspace integration
+
+The [integrated workspace](integrated-investor-workspace.md) now connects the
+approved design at <http://127.0.0.1:5173/workspace/> to the existing Python API for
+forward EV and optional manual equity/value per share. The reference calculator
+and fixture-only prototype remain separate. Company sessions bind META/GOOGL/AAPL
+retained revenue anchors and unset inputs, preserve exact converters and explicit
+terminal copying, share the execution gate, and distinguish EV/equity staleness.
+Reverse, scenarios and sensitivity explicitly say **Not connected yet**.
+
+October 28, 2026 checks: **146 distinct frontend tests**, **101 focused Python
+API/intake/valuation/preservation tests**, production build, desktop 1440×1000 and
+390×844 Chrome review, eight full API/CLI JSON comparisons and **572 independent
+rational numerical comparisons** passed. Temporary arbitrary software inputs
+through all three retained anchors included negative FCFF/equity; none are approved
+forecasts or actual bridge/share selections. A missing old temporary API manifest
+was resolved with a fresh verified offline bundle and API-only restart; explicit
+unavailable-service recovery preserved inputs. Trial files/sessions were cleared.
+
+No financial/Python/API/schema, historical/approval, nine unset template, portfolio
+or hosted changes; no research, full historical suite, cloud call, deployment or
+push. Phase 1 remains paused. Historical growth/margin context is unavailable
+through the catalog; timing uses later-filed information without a verified cutoff.
+Manual declarations do not establish financial completeness or investment readiness.
+Review this bounded integration before separately scoping scenario integration.
+Prior preview deadlines/access were not inspected, changed or extended.
+
+## Earlier — connected investor prototype overview and journey
 
 The [local prototype](investor-experience-prototype.md#connected-journey-checkpoint)
 now links forward value, shared-price reverse interpretation, confirmed implied-growth

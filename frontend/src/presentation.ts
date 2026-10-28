@@ -48,3 +48,8 @@ export function shareMillions(raw:string):string {
   const [whole,fraction]=new DisplayDecimal(raw).div('1000000').toFixed().split('.');
   return whole.replace(/\B(?=(\d{3})+(?!\d))/g,',')+(fraction===undefined?'':'.'+fraction);
 }
+
+/** Conditional display comparison; dates must equal the selected fiscal-end basis. */
+export function comparisonDifference(value:string,price:string,date:string,analyticalDate:string):string|null {
+ try{const p=new RatioDecimal(price);if(!price.trim()||!p.isFinite()||!p.gt(0)||date!==analyticalDate)return null;return new RatioDecimal(value).div(p).minus(1).times(100).toFixed(1);}catch{return null;}
+}
