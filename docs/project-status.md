@@ -1,6 +1,35 @@
 # Project Status
 
-## Current — local Bear/Base/Bull engine integration
+## Current — local sensitivity, certified reverse and exploratory cases
+
+The [integrated analyses](integrated-investor-analyses.md) complete the local journey:
+selected manual case → forward/equity → scenarios → WACC/g grid → bounded reverse
+DCF → confirmed separate exploratory case. Individual EV suffices without a whole
+scenario set. Targets/bounds/grids start unset; explicit API execution reuses existing
+engines and certification. Shared client/server gates and all resource limits remain.
+Per-case freshness, null invalid cells, unsuccessful solves without solutions and
+confirmed apply/fork actions preserve original cases; forks need forward calculation.
+
+New verification: **179 frontend tests, 165 distinct focused Python checks**, both
+builds, actual desktop/390×844 Chrome flow/failure/focus review; 4 cross-anchor grid
+CLI comparisons, 8 individual cells, 6 reverse CLI/fresh-forward comparisons and
+**780 independent rational comparisons**. Four browser-captured analyses matched
+CLI JSON; six cells/solutions matched individual runs. Sample 11×11 grids used
+4.207–6.464s/180,641–368,562 bytes; demanding reverse inputs reached the unchanged
+128-iteration ceiling in 5.326–6.808s without exposing a solution. Local samples,
+not universal/production bounds. Full details and narrow preservation-pin maintenance
+are in the integration record; no financial equation/certificate was changed.
+
+Verified 87-file read-only API bundle, workspace and reference servers remain local
+for review. Arbitrary synthetic economics on retained revenue are software tests,
+not company forecasts/bridge approvals. Trials cleared; historical/frozen records,
+nine unset templates, portfolio and hosted services unchanged. Phase 1 remains
+paused. No evidence acquisition, cloud calls, push or deployment. Economic/claims/
+awards completeness and investment readiness remain unestablished; further features
+or publication require separate scope. Earlier milestone limitations below retain
+historical context and are superseded only by this bounded local integration.
+
+## Earlier — local Bear/Base/Bull engine integration
 
 The [scenario workspace](integrated-investor-scenarios.md) connects explicit
 independent Base/Bear/Bull cases to the existing strict scenario reader/runner.

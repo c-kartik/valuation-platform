@@ -30,3 +30,7 @@ it.each([{}, {scenarios:[]}, {scenarios:[{label:'Bear',result:{}}]}])('rejects m
  vi.stubGlobal('fetch',vi.fn(async()=>new Response(JSON.stringify(body),{status:200})));
  await expect(request('/api/v1/scenarios/run',{scenarios:[]})).rejects.toMatchObject({code:'service_unavailable'});
 });
+
+it.each(['/api/v1/sensitivity/run','/api/v1/reverse/run'])('rejects malformed analysis results on %s',async path=>{
+ for(const body of [{},{schema_version:'investor-reverse-dcf-results-v1',status:'SUCCESS',solution:null},{schema_version:'investor-sensitivity-results-v1',cells:[]}]){vi.stubGlobal('fetch',vi.fn(async()=>new Response(JSON.stringify(body),{status:200})));await expect(request(path,{})).rejects.toMatchObject({code:'service_unavailable'});}
+});

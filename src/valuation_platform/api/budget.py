@@ -125,6 +125,18 @@ def read_http_scenarios(body):
     return read_scenario_set(text)
 
 
+def read_http_sensitivity(body):
+    from valuation_platform.valuation.sensitivity_inputs import read_sensitivity
+    text, _ = read_http_document(body)
+    return read_sensitivity(text)
+
+
+def read_http_reverse(body):
+    from valuation_platform.valuation.reverse_inputs import read_reverse
+    text, _ = read_http_document(body)
+    return read_reverse(text)
+
+
 def error_body(code, message, errors=()):
     # Bounded public errors; internal exceptions must never be passed here.
     return {'error': {'code': code, 'message': message,

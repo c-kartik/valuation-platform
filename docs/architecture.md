@@ -5,7 +5,7 @@ The [integrated local workspace](integrated-investor-workspace.md) adds
 Company-keyed in-memory Base/Bear/Bull sessions own drafts, independent EV/equity revisions,
 results and dated comparison prices. Both entries reuse exact intake converters,
 transport, `ExecutionGate`, `caseExecution.ts`, diagnostics and result/bridge
-presentation. Only existing investor v1/v2 API routes calculate; prototype CSS is
+presentation. Existing investor v1/v2 case contracts own financial inputs; prototype CSS is
 shared, fixture outputs are not. Operating edits stale both results, bridge edits
 only equity; notes/navigation/price edits preserve financial results. Catalog
 context is revenue-only, all company assumptions/bridge fields start unset, and
@@ -15,7 +15,10 @@ scenario envelopes, calculation-free validation and one atomic bounded worker
 execution through the existing reader/runner. Shared bridge metadata is identical;
 independent case edits and comparison freshness are tracked separately. Scenario
 execution shares both client and server gates with forward/equity; existing limits
-are unchanged. Reverse/grid actions remain disabled. No formula,
+are unchanged. The subsequent [analysis integration](integrated-investor-analyses.md)
+adds selected-case grid/reverse routes, the same bounded worker and client gate,
+per-case freshness and confirmed separate exploratory cases outside strict scenarios.
+The 87-file private bundle adds only the two existing readers/engines. No formula,
 history/approval/template or deployment changes; publication allowlists remain
 unchanged and are not validated for the new multi-entry build.
 
@@ -32,7 +35,8 @@ cell application and destructive copying are explicit. At that design checkpoint
 the default calculator, its bundle/API/contracts and deployment configuration
 remained unchanged. The separate forward/equity integration above supersedes its
 integration-pending status only within that bounded scope; publication and the
-other three workflows remain pending.
+other workflows were pending then; the later scenario/analysis integrations above
+supersede that status locally. Publication remains separately scoped.
 
 The [cost/client checkpoint](public-preview-preparation.md#configured-cloud-run-cap-and-local-client-controls--october-22)
 adds a shared synchronous frontend execution gate (`execution.ts`) across EV,

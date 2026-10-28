@@ -28,9 +28,11 @@ def render_summary(result):
         def percent(value):
             return f"{Decimal(value) * Decimal(100):.2f}%"
 
+        identity = (f"Anonymous investor | Prepared: {doc['preparation']['timestamp_utc']}" if "preparation" in doc
+                    else f"Analyst: {doc['analyst']['author']}")
         lines = ["WACC × TERMINAL-GROWTH SENSITIVITY", f"Request: {result['sensitivity_name']}",
                  f"Company: {company} | Case: {doc['case_name']} | Scenario: {selection['scenario_label'] or 'single case (explicit)'}",
-                 f"Input basis: {doc['input_basis']} | Analyst: {doc['analyst']['author']}",
+                 f"Input basis: {doc['input_basis']} | {identity}",
                  f"Anchor: {anchor['annual_start']} to {anchor['annual_end']} | CIK {anchor['cik']} | {anchor['accession']}",
                  f"Analytical date: {selection['analytical_date']} | Declared information cutoff: {selection['information_cutoff']}",
                  "Timing: " + ref["stage_b"]["timing"]["notice"],
@@ -57,7 +59,8 @@ def render_summary(result):
                   "Held fixed: " + result["held_fixed"], *result["limitations"],
                   "Display only: USD millions / USD per share to 8 decimals, percentages to 2, HALF_EVEN. Rounded cells may appear equal.",
                   "JSON retains exact submitted rate strings, full reference/provenance, cell PV reconciliation, terminal contributions and signed-reference changes.",
-                  "Rationale: " + doc["analyst"]["rationale"], "Scope: " + doc["scope"], *ref["limitations"]]
+                  *(["Optional notes (not evidence/approval): " + (doc["preparation"]["notes"] or "not supplied")] if "preparation" in doc
+                    else ["Rationale: " + doc["analyst"]["rationale"], "Scope: " + doc["scope"]]), *ref["limitations"]]
         if "stage_c" in ref:
             lines.append("Fixed bridge exclusions/omissions (not extra operands):")
             for note in ref["stage_c"]["inputs"]["observations"]:

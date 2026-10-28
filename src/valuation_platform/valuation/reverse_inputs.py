@@ -15,6 +15,8 @@ from .scenario_inputs import LABELS, read_scenario_set
 
 SCHEMA = "analyst-reverse-dcf-request-v1"
 RESULT_SCHEMA = "analyst-reverse-dcf-results-v1"
+INVESTOR_SCHEMA = "investor-reverse-dcf-request-v1"
+INVESTOR_RESULT_SCHEMA = "investor-reverse-dcf-results-v1"
 HELD_FIXED = (
     "Five annual margin/tax/D&A/investment/WC ratios, WACC, terminal growth and all "
     "terminal operating ratios, bridge/shares, dates, conventions and source metadata. "
@@ -127,8 +129,8 @@ def _read_reverse(text):
             return None
 
     doc = obj(doc, ("schema_version", "reverse_dcf_name", "source", "target", "growth_bounds"), "reverse")
-    if doc.get("schema_version") != SCHEMA:
-        errors.append(f"reverse.schema_version: requires {SCHEMA}")
+    if doc.get("schema_version") not in (SCHEMA, INVESTOR_SCHEMA):
+        errors.append(f"reverse.schema_version: requires {SCHEMA} or {INVESTOR_SCHEMA}")
     name = doc.get("reverse_dcf_name")
     if type(name) is not str or not name.strip():
         errors.append("reverse.reverse_dcf_name: required nonempty text")
@@ -158,6 +160,8 @@ def _read_reverse(text):
             errors.extend("reverse.source.scenario_set." + e for e in exc.errors)
     else:
         errors.append("reverse.source.kind: requires single_case or scenario_set")
+    if case and doc.get("schema_version") == INVESTOR_SCHEMA and json.loads(case.submitted_json).get("schema_version") not in ("investor-case-v1", "investor-case-v2"):
+        errors.append("reverse.source.case.schema_version: investor envelope requires investor case metadata")
     if case and analytical and analytical != case.assumptions.anchor_fiscal_end:
         errors.append("reverse.source.analytical_date: must equal selected case.anchor.annual_end")
     if analytical and cutoff and cutoff < analytical:
@@ -287,7 +291,7 @@ def _run_reverse(request, root, policy):
         reference = run_case(request.case, root)
         evaluations += 1
         coefficients, evidence = _certificate(request, reference, policy)
-        result = {"schema_version": RESULT_SCHEMA, "reverse_dcf_name": request.reverse_dcf_name,
+        result = {"schema_version": INVESTOR_RESULT_SCHEMA if json.loads(request.submitted_json)["schema_version"] == INVESTOR_SCHEMA else RESULT_SCHEMA, "reverse_dcf_name": request.reverse_dcf_name,
                   "submitted_inputs": _strict_json(request.submitted_json), "selected_case": original,
                   "selection": {"scenario_label": request.scenario_label, "analytical_date": request.analytical_date.isoformat(), "information_cutoff": request.information_cutoff.isoformat()},
                   "original_growth_path": [y["revenue_growth"] for y in original["forecast_years"]],

@@ -1,5 +1,10 @@
 # Local integrated investor workspace
 
+Subsequent local milestones: [scenarios](integrated-investor-scenarios.md) and
+[sensitivity/reverse/exploratory integration](integrated-investor-analyses.md)
+supersede the disconnected-tool status below. This document retains the original
+forward/equity foundation and its own verification scope.
+
 This preserves the approved forward/equity foundation record. The subsequent
 [scenario integration](integrated-investor-scenarios.md) supersedes scenario-pending
 statements below: complete Bear/Base/Bull now uses the real engine locally.

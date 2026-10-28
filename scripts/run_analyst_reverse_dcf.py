@@ -24,7 +24,7 @@ def render_summary(result):
         def money(value): return f"{Decimal(value)/Decimal('1000000'):,.8f}"
         lines = ["BOUNDED REVERSE DCF — CONSTANT ANNUAL REVENUE GROWTH",
                  f"Case: {doc['case_name']} | Company: {company} | Scenario: {selection['scenario_label'] or 'explicit single case'}",
-                 f"Analyst: {doc['analyst']['author']} | Basis: {doc['input_basis']}",
+                 (f"Analyst: {doc['analyst']['author']} | Basis: {doc['input_basis']}" if "analyst" in doc else f"Anonymous investor | Basis: {doc['input_basis']} | Prepared: {doc['preparation']['timestamp_utc']}"),
                  f"Fiscal period: {doc['anchor']['annual_start']} to {doc['anchor']['annual_end']}",
                  f"Analytical date: {selection['analytical_date']} | Declared cutoff: {selection['information_cutoff']}",
                  "Timing: " + reference["stage_b"]["timing"]["notice"],
@@ -63,7 +63,8 @@ def render_summary(result):
                 lines.append(f"{observation['observation_id']} [{observation['disposition']}]: {observation['rationale']}")
             for coverage in c["inputs"]["coverage"]:
                 lines.append(f"Coverage {coverage['role']}: {coverage['review']['rationale']}; omissions={coverage['omission_references']}")
-        lines += ["Rationale: " + doc["analyst"]["rationale"], "Scope: " + doc["scope"],
+        lines += (["Rationale: " + doc["analyst"]["rationale"], "Scope: " + doc["scope"]] if "analyst" in doc else ["Optional notes (not evidence/approval): " + (doc["preparation"]["notes"] or "None supplied")])
+        lines += [
                   *reference["limitations"], *result["limitations"],
                   "Display only: money/share rounded HALF_EVEN to 8 decimals; JSON retains full precision, exact certificate, submitted inputs and provenance."]
         return "\n".join(lines) + "\n"

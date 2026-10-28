@@ -12,6 +12,8 @@ from .scenario_inputs import LABELS, read_scenario_set
 
 SCHEMA = "analyst-sensitivity-request-v1"
 RESULT_SCHEMA = "analyst-sensitivity-results-v1"
+INVESTOR_SCHEMA = "investor-sensitivity-request-v1"
+INVESTOR_RESULT_SCHEMA = "investor-sensitivity-results-v1"
 HELD_FIXED = (
     "All five annual operating inputs and period identities; terminal operating ratios; "
     "bridge components, shares, source bindings, dates, conventions, rationale and limitations."
@@ -109,8 +111,9 @@ def _read_sensitivity(text: str) -> SensitivityRequest:
         return tuple(rates)
 
     doc = obj(doc, ("schema_version", "sensitivity_name", "source", "wacc_values", "terminal_growth_values"), "sensitivity")
-    if doc.get("schema_version") != SCHEMA:
-        errors.append(f"sensitivity.schema_version: requires {SCHEMA}")
+    investor = doc.get("schema_version") == INVESTOR_SCHEMA
+    if doc.get("schema_version") not in (SCHEMA, INVESTOR_SCHEMA):
+        errors.append(f"sensitivity.schema_version: requires {SCHEMA} or {INVESTOR_SCHEMA}")
     name = doc.get("sensitivity_name")
     if type(name) is not str or not name.strip():
         errors.append("sensitivity.sensitivity_name: required nonempty text")
@@ -144,6 +147,8 @@ def _read_sensitivity(text: str) -> SensitivityRequest:
         errors.append("sensitivity.source.information_cutoff: must not precede analytical_date")
     if case and analytical and analytical != case.assumptions.anchor_fiscal_end:
         errors.append("sensitivity.source.analytical_date: must equal selected case.anchor.annual_end")
+    if investor and case and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2"):
+        errors.append("sensitivity.source.case.schema_version: investor requests require investor-case-v1/v2")
     waccs = axis(doc.get("wacc_values"), "wacc_values")
     growths = axis(doc.get("terminal_growth_values"), "terminal_growth_values")
     if not errors and max(waccs) <= min(growths):
@@ -213,7 +218,7 @@ def run_sensitivity(request: SensitivityRequest, repository_root: Path) -> dict[
         if isinstance(exc, SensitivityInputError):
             raise
         raise SensitivityInputError([f"sensitivity.reference_or_grid: execution failed: {exc}"]) from exc
-    return {"schema_version": RESULT_SCHEMA, "sensitivity_name": request.sensitivity_name,
+    return {"schema_version": INVESTOR_RESULT_SCHEMA if _strict_json(request.submitted_json)["schema_version"] == INVESTOR_SCHEMA else RESULT_SCHEMA, "sensitivity_name": request.sensitivity_name,
             "submitted_inputs": _strict_json(request.submitted_json), "selected_case": original,
             "selection": {"source_kind": _strict_json(request.submitted_json)["source"]["kind"],
                           "scenario_label": request.scenario_label, "analytical_date": request.analytical_date.isoformat(),

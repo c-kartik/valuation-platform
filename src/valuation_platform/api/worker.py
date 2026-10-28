@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import sys
 
-from .budget import BudgetError, encode_bounded, error_body, read_http_case, read_http_document, read_http_scenarios
+from .budget import BudgetError, encode_bounded, error_body, read_http_case, read_http_document, read_http_scenarios, read_http_sensitivity, read_http_reverse
 from .bundle import verify_bundle
 
 
@@ -43,6 +43,12 @@ def calculate(connection, body, root, policy):
         if type(doc) is dict and doc.get('schema_version') in ('analyst-scenario-set-v1', 'investor-scenario-set-v1'):
             from valuation_platform.valuation.scenario_inputs import run_scenario_set
             result = run_scenario_set(read_http_scenarios(body), Path(root))
+        elif type(doc) is dict and doc.get('schema_version') in ('analyst-sensitivity-request-v1', 'investor-sensitivity-request-v1'):
+            from valuation_platform.valuation.sensitivity_inputs import run_sensitivity
+            result = run_sensitivity(read_http_sensitivity(body), Path(root))
+        elif type(doc) is dict and doc.get('schema_version') in ('analyst-reverse-dcf-request-v1', 'investor-reverse-dcf-request-v1'):
+            from valuation_platform.valuation.reverse_inputs import run_reverse
+            result = run_reverse(read_http_reverse(body), Path(root))
         else:
             result = run_case(read_http_case(body), Path(root))
         payload = encode_bounded(result, policy.max_response_bytes)

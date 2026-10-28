@@ -1,6 +1,17 @@
 # Local single-case API
 
-## Current local scenario extension
+## Current local sensitivity/reverse extension
+
+The [analysis adapter](integrated-investor-analyses.md#http-and-execution-boundary)
+adds calculation-free `/api/v1/sensitivity/validate`, `/api/v1/reverse/validate` and
+explicit `/run` counterparts. Investor envelopes reuse existing strict readers,
+certified solver, legacy compatibility and one bounded child/server gate. All
+HTTP ceilings remain unchanged, including 11×11 grids. Unsuccessful reverse solves
+return HTTP 200 with explicit status and null solution, not fabricated success.
+The current verified bundle contains 87 allowlisted files, adding only sensitivity
+and reverse modules to the earlier 85-file scenario bundle. No hosted release.
+
+## Earlier local scenario extension
 
 The [investor scenario adapter](integrated-investor-scenarios.md#api-and-execution-contract)
 adds `/api/v1/scenarios/validate` and `/api/v1/scenarios/run`, reusing strict

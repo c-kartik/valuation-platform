@@ -1,5 +1,10 @@
 # Financial Methodology
 
+The subsequent [local investor analyses](integrated-investor-analyses.md) expose
+the existing sensitivity/certified reverse engines and confirmed exploratory
+copies. This is software integration only: no equation, certification tolerance,
+company forecast, financial approval or economic convention changes.
+
 ## Latest status — software closure, qualified economics
 
 The subsequent [local EV-only calculator UI](local-calculator-ui.md) changes

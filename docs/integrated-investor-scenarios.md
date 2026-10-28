@@ -5,7 +5,8 @@
 The [workspace](http://127.0.0.1:5173/workspace/) now calculates complete
 Bear/Base/Bull sets through the existing scenario engine. Forward EV and optional
 manual equity/share remain independently available for the selected case. Reverse
-and sensitivity remain **Not connected yet**. This follows the approved
+and sensitivity remained **Not connected yet** at this checkpoint; the later
+[analysis integration](integrated-investor-analyses.md) supersedes that status locally. This follows the approved
 [forward/equity foundation](integrated-investor-workspace.md); the reference
 calculator `/` and isolated fixture prototype at port 5174 remain available.
 Startup commands are unchanged: compatible private-bundle API on loopback 8000,

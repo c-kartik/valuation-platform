@@ -32,6 +32,26 @@ function renderableResult(data: Record<string, unknown>, requireEquity: boolean)
     Array.isArray(c.inputs.observations) && c.inputs.observations.every(o => object(o) && ['observation_id','disposition','rationale'].every(key => text(o[key]))) &&
     Array.isArray(c.contributions) && c.contributions.every(line => object(line) && object(line.component) && text(line.component.component_id) && decimal(line.signed_contribution));
 }
+function renderableSensitivity(data:Record<string,unknown>):boolean{
+ if(!['investor-sensitivity-results-v1','analyst-sensitivity-results-v1'].includes(String(data.schema_version))||!object(data.submitted_inputs)||!object(data.selected_case)||!object(data.reference_result)||!object(data.selection)||!text(data.selection.analytical_date)||!text(data.selection.information_cutoff)||!text(data.held_fixed)||!Array.isArray(data.limitations)||!data.limitations.every(text))return false;
+ const equity=data.selected_case.calculation_scope==='EQUITY_PER_SHARE';
+ if(!renderableResult(data.reference_result,equity))return false;
+ const w=data.wacc_values,g=data.terminal_growth_values,rows=data.cells;
+ if(!Array.isArray(w)||!Array.isArray(g)||!w.length||!g.length||w.length>11||g.length>11||!w.every(decimal)||!g.every(decimal)||!Array.isArray(rows)||rows.length!==w.length)return false;
+ return rows.every((row,i)=>Array.isArray(row)&&row.length===g.length&&row.every((cell,j)=>{
+  if(!object(cell)||cell.wacc!==w[i]||cell.terminal_growth!==g[j]||!object(cell.metrics))return false;
+  const m=cell.metrics;if(cell.status==='INVALID')return text(cell.reason)&&cell.changes===null&&Object.values(m).every(v=>v===null);
+  return cell.status==='VALID'&&['enterprise_value','pv_explicit_fcff','pv_terminal_value','terminal_revenue','terminal_fcff','terminal_value'].every(k=>decimal(m[k]))&&(m.terminal_contribution===null||decimal(m.terminal_contribution))&&text(m.terminal_contribution_note)&&(equity?decimal(m.equity_value)&&decimal(m.value_per_share):m.equity_value===null&&m.value_per_share===null);
+ }));
+}
+function renderableReverse(data:Record<string,unknown>):boolean{
+ if(!['analyst-reverse-dcf-results-v1','investor-reverse-dcf-results-v1'].includes(String(data.schema_version))||!object(data.submitted_inputs)||!object(data.selected_case)||!object(data.reference_result)||!object(data.selection)||!text(data.selection.analytical_date)||!text(data.selection.information_cutoff)||!text(data.held_fixed)||!text(data.reason)||!object(data.monotonicity)||!text(data.monotonicity.direction)||!text(data.monotonicity.reason)||!object(data.numerical_policy)||!Number.isInteger(data.iterations)||!Number.isInteger(data.evaluations)||!Array.isArray(data.limitations)||!data.limitations.every(text))return false;
+ const target=data.submitted_inputs.target,bounds=data.submitted_inputs.growth_bounds;if(!object(target)||!decimal(target.amount)||!['USD','USD/share'].includes(String(target.unit))||!text(target.date)||!object(bounds)||!decimal(bounds.lower)||!decimal(bounds.upper))return false;
+ const equity=target.metric==='VALUE_PER_SHARE';if(!renderableResult(data.reference_result,equity))return false;
+ const bracket=data.final_bracket;if(bracket!==null&&(!object(bracket)||!['lower_growth','upper_growth','width'].every(k=>decimal(bracket[k]))))return false;
+ if(data.status!=='SUCCESS')return ['UNREACHABLE_TARGET','FLAT_RESPONSE','UNIQUENESS_NOT_CERTIFIED','ITERATION_LIMIT','NUMERICAL_VERIFICATION_FAILED'].includes(String(data.status))&&data.solution===null;
+ const v=data.solution;return object(v)&&['constant_annual_growth','achieved_metric','signed_residual','absolute_residual','residual_tolerance'].every(k=>decimal(v[k]))&&typeof v.exact_endpoint==='boolean'&&object(v.forward_result)&&renderableResult(v.forward_result,equity);
+}
 export async function request<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
   const controller = new AbortController();
   let timedOut = false;
@@ -60,7 +80,7 @@ export async function request<T>(path: string, body?: unknown, signal?: AbortSig
     }
     if (path.endsWith('/run')) {
       const scenarios=path==='/api/v1/scenarios/run';
-      const valid=scenarios
+      const valid=path==='/api/v1/reverse/run'?renderableReverse(data):path==='/api/v1/sensitivity/run'?renderableSensitivity(data):scenarios
         ? ['investor-scenario-results-v1','analyst-scenario-results-v1'].includes(data.schema_version)&&Array.isArray(data.scenarios)&&data.scenarios.length===3&&object(data.submitted_inputs)&&Array.isArray(data.limitations)&&data.limitations.every(text)&&
           data.scenarios.every((entry:unknown,i:number)=>object(entry)&&entry.label===['Bear','Base','Bull'][i]&&text(entry.analytical_date)&&text(entry.information_cutoff)&&object(entry.result)&&renderableResult(entry.result,object(body)&&Array.isArray(body.scenarios)&&body.scenarios.some(e=>object(e)&&object(e.case)&&e.case.calculation_scope==='EQUITY_PER_SHARE')))
         : renderableResult(data,object(body)&&body.calculation_scope==='EQUITY_PER_SHARE');

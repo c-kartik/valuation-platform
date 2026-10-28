@@ -71,7 +71,9 @@
     "src/valuation_platform/valuation/consumer.py",
     "src/valuation_platform/valuation/discounting.py",
     "src/valuation_platform/valuation/forecast.py",
-    "src/valuation_platform/valuation/scenario_inputs.py"
+    "src/valuation_platform/valuation/reverse_inputs.py",
+    "src/valuation_platform/valuation/scenario_inputs.py",
+    "src/valuation_platform/valuation/sensitivity_inputs.py"
   ],
   "resources": {
     "docs/company-data-preparation/aapl-analyst-input-package.json": "01683e9534a562046f9d543d8f667b53a7eacb9afd5f4acbe0eb6bf3c7d06f28",
