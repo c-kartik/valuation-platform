@@ -100,9 +100,9 @@ def check_tree(doc):
             raise BudgetError(f"{path}: integer exceeds HTTP execution budget")
 
 
-def read_http_case(body):
+def read_http_document(body):
     # Imported only after readiness has verified private resources.
-    from valuation_platform.valuation.case_inputs import _strict_json, read_case
+    from valuation_platform.valuation.case_inputs import _strict_json
     try:
         text = body.decode('utf-8', errors='strict')
     except UnicodeError as exc:
@@ -110,7 +110,19 @@ def read_http_case(body):
     check_depth(text)
     doc = _strict_json(text)
     check_tree(doc)
+    return text, doc
+
+
+def read_http_case(body):
+    from valuation_platform.valuation.case_inputs import read_case
+    text, _ = read_http_document(body)
     return read_case(text)
+
+
+def read_http_scenarios(body):
+    from valuation_platform.valuation.scenario_inputs import read_scenario_set
+    text, _ = read_http_document(body)
+    return read_scenario_set(text)
 
 
 def error_body(code, message, errors=()):

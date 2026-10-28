@@ -1,5 +1,16 @@
 # Local single-case API
 
+## Current local scenario extension
+
+The [investor scenario adapter](integrated-investor-scenarios.md#api-and-execution-contract)
+adds `/api/v1/scenarios/validate` and `/api/v1/scenarios/run`, reusing strict
+complete-set intake and the existing single bounded worker/server gate. Investor
+anonymous metadata has a narrow versioned envelope; legacy scenarios/single cases
+remain compatible. Existing resource ceilings remain unchanged. The private bundle
+now contains 85 allowlisted files, adding only the scenario reader/runner module.
+Earlier counts and no-scenario statements below describe their original milestones;
+no scenario, sensitivity or reverse deployment is authorized by this local extension.
+
 ## Optional anonymous equity/share extension (local)
 
 The same POST routes accept **`investor-case-v2`**, with the v1 anonymous

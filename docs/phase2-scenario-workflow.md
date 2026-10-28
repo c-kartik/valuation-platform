@@ -1,5 +1,12 @@
 # Phase 2 — editable Bear/Base/Bull workflow
 
+Current local UI/API integration: [investor scenarios](integrated-investor-scenarios.md).
+`investor-scenario-set-v1` embeds existing anonymous investor v1/v2 cases under the
+same strict comparability rules and returns `investor-scenario-results-v1`.
+Calculation-free validation and one bounded three-case request now have local API
+routes; the legacy analyst contract described below remains compatible. No actual
+economics, source approval or template changes follow from that software extension.
+
 ## Bounded comparison contract
 
 `analyst-scenario-set-v1` contains `scenario_set_name` and a `scenarios` array

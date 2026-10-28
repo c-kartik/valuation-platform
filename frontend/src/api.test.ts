@@ -25,3 +25,8 @@ it('network failure preserves submitted data and never retries automatically',as
  await expect(request('/api/v1/cases/run',body)).rejects.toMatchObject({message:unavailableMessage});
  expect(JSON.stringify(body)).toBe(before);expect(fetch).toHaveBeenCalledTimes(1);
 });
+
+it.each([{}, {scenarios:[]}, {scenarios:[{label:'Bear',result:{}}]}])('rejects malformed scenario success without rendering a partial set',async(body)=>{
+ vi.stubGlobal('fetch',vi.fn(async()=>new Response(JSON.stringify(body),{status:200})));
+ await expect(request('/api/v1/scenarios/run',{scenarios:[]})).rejects.toMatchObject({code:'service_unavailable'});
+});

@@ -2,15 +2,20 @@
 
 The [integrated local workspace](integrated-investor-workspace.md) adds
 `/workspace/` beside the reference calculator `/` in the default Vite build/server.
-Company-keyed in-memory Base sessions own drafts, independent EV/equity revisions,
+Company-keyed in-memory Base/Bear/Bull sessions own drafts, independent EV/equity revisions,
 results and dated comparison prices. Both entries reuse exact intake converters,
 transport, `ExecutionGate`, `caseExecution.ts`, diagnostics and result/bridge
 presentation. Only existing investor v1/v2 API routes calculate; prototype CSS is
 shared, fixture outputs are not. Operating edits stale both results, bridge edits
 only equity; notes/navigation/price edits preserve financial results. Catalog
 context is revenue-only, all company assumptions/bridge fields start unset, and
-later-filed timing/source qualifications remain explicit. Reverse/scenario/grid
-actions are disabled pending separate integrations. No Python/API/schema/formula,
+later-filed timing/source qualifications remain explicit. The subsequent
+[scenario integration](integrated-investor-scenarios.md) adds complete investor
+scenario envelopes, calculation-free validation and one atomic bounded worker
+execution through the existing reader/runner. Shared bridge metadata is identical;
+independent case edits and comparison freshness are tracked separately. Scenario
+execution shares both client and server gates with forward/equity; existing limits
+are unchanged. Reverse/grid actions remain disabled. No formula,
 history/approval/template or deployment changes; publication allowlists remain
 unchanged and are not validated for the new multi-entry build.
 

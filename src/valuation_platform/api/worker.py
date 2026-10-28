@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import sys
 
-from .budget import BudgetError, encode_bounded, error_body, read_http_case
+from .budget import BudgetError, encode_bounded, error_body, read_http_case, read_http_document, read_http_scenarios
 from .bundle import verify_bundle
 
 
@@ -39,8 +39,12 @@ def calculate(connection, body, root, policy):
         restrict_runtime(root, policy.cpu_seconds)
         verify_bundle(root)
         from valuation_platform.valuation.case_inputs import run_case
-        case = read_http_case(body)
-        result = run_case(case, Path(root))
+        _, doc = read_http_document(body)
+        if type(doc) is dict and doc.get('schema_version') in ('analyst-scenario-set-v1', 'investor-scenario-set-v1'):
+            from valuation_platform.valuation.scenario_inputs import run_scenario_set
+            result = run_scenario_set(read_http_scenarios(body), Path(root))
+        else:
+            result = run_case(read_http_case(body), Path(root))
         payload = encode_bounded(result, policy.max_response_bytes)
         message = b'200 ' + payload
     except BudgetError:

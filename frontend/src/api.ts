@@ -58,7 +58,14 @@ export async function request<T>(path: string, body?: unknown, signal?: AbortSig
       const message = code === 'invalid_case' ? 'Review the indicated inputs.' : code === 'request_too_large' ? 'The submitted input is too large. Reduce optional notes or component references.' : unavailableMessage;
       throw new ApiError(code, message, details);
     }
-    if (path.endsWith('/run') && !renderableResult(data, object(body) && body.calculation_scope === 'EQUITY_PER_SHARE')) throw new ApiError('service_unavailable', unavailableMessage);
+    if (path.endsWith('/run')) {
+      const scenarios=path==='/api/v1/scenarios/run';
+      const valid=scenarios
+        ? ['investor-scenario-results-v1','analyst-scenario-results-v1'].includes(data.schema_version)&&Array.isArray(data.scenarios)&&data.scenarios.length===3&&object(data.submitted_inputs)&&Array.isArray(data.limitations)&&data.limitations.every(text)&&
+          data.scenarios.every((entry:unknown,i:number)=>object(entry)&&entry.label===['Bear','Base','Bull'][i]&&text(entry.analytical_date)&&text(entry.information_cutoff)&&object(entry.result)&&renderableResult(entry.result,object(body)&&Array.isArray(body.scenarios)&&body.scenarios.some(e=>object(e)&&object(e.case)&&e.case.calculation_scope==='EQUITY_PER_SHARE')))
+        : renderableResult(data,object(body)&&body.calculation_scope==='EQUITY_PER_SHARE');
+      if(!valid)throw new ApiError('service_unavailable',unavailableMessage);
+    }
     return data as T;
   } catch (e) {
     if (e instanceof ApiError) throw e;

@@ -1,5 +1,11 @@
 # Local integrated investor workspace
 
+This preserves the approved forward/equity foundation record. The subsequent
+[scenario integration](integrated-investor-scenarios.md) supersedes scenario-pending
+statements below: complete Bear/Base/Bull now uses the real engine locally.
+Reverse/sensitivity integration remains pending. Startup/reference routes and
+historical/economic qualifications remain unchanged.
+
 ## Scope and entry
 
 The approved design now has a separate **local, real-engine** entry at

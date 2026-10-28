@@ -2,65 +2,96 @@ import {useEffect,useRef,useState} from 'react';
 import {request,ApiError,Revisions,failureMessage} from '../api';
 import {useExecutionGate} from '../execution';
 import {executeCase,requireMatchingEquity} from '../caseExecution';
-import {makeDraft,buildRequest,entryErrors,InputErrors,fieldErrors} from '../model';
+import {makeDraft,entryErrors,InputErrors,fieldErrors} from '../model';
 import type {Catalog,CaseDoc,Draft,Errors,Result} from '../model';
-import {emptyEquity,equityErrors,buildEquityRequest,equityDiagnostics} from '../equity';
+import {emptyEquity,equityErrors,equityDiagnostics} from '../equity';
 import type {EquityDraft} from '../equity';
 import {percentageDiagnostic} from '../diagnostics';
+import {labels,requestFor,scenarioRequest,sameSnapshot} from './scenarios';
+import type {Label,ScenarioResult} from './scenarios';
 export type Phase='empty'|'incomplete'|'calculating'|'current'|'stale'|'failed';
 export type Outcome={phase:Phase;result:Result|null;errors:Errors;failure:string};
-export type Session={draft:Draft;bridge:EquityDraft;revision:number;bridgeRevision:number;ev:Outcome;equity:Outcome;comparison:{price:string;date:string}};
+export type CaseState={draft:Draft;revision:number;ev:Outcome;equity:Outcome};
+export type ScenarioOutcome={phase:Phase;result:ScenarioResult|null;errors:Errors;failure:string;equityCurrent:boolean;previousPhase?:Phase};
+export type Session={cases:Partial<Record<Label,CaseState>>&{Base:CaseState};selectedCase:Label;bridge:EquityDraft;bridgeRevision:number;comparison:{price:string;date:string};cutoff:string;scenarioEquity:boolean;scenario:ScenarioOutcome};
 type State={selected:string;cases:Record<string,Session>};
 const emptyOutcome=():Outcome=>({phase:'empty',result:null,errors:{},failure:''});
 const invalidate=(o:Outcome):Outcome=>({...o,phase:o.result?'stale':'incomplete',errors:{},failure:''});
-export function createSession(template:CaseDoc):Session{return {draft:makeDraft(template),bridge:emptyEquity(),revision:1,bridgeRevision:1,ev:emptyOutcome(),equity:emptyOutcome(),comparison:{price:'',date:''}};}
+const invalidateSet=(o:ScenarioOutcome):ScenarioOutcome=>({...o,phase:o.result?'stale':'incomplete',errors:{},failure:'',equityCurrent:false});
+const newCase=(draft:Draft):CaseState=>({draft,revision:1,ev:emptyOutcome(),equity:emptyOutcome()});
+export function createSession(template:CaseDoc):Session{return {cases:{Base:newCase(makeDraft(template))},selectedCase:'Base',bridge:emptyEquity(),bridgeRevision:1,comparison:{price:'',date:''},cutoff:'',scenarioEquity:false,scenario:{phase:'empty',result:null,errors:{},failure:'',equityCurrent:false}};}
 export function useWorkspace(load:typeof request=request){
  const [catalog,setCatalog]=useState<Catalog|null>(null),[catalogFailure,setCatalogFailure]=useState(''),[attempt,setAttempt]=useState(0);
  const [state,setState]=useState<State>({selected:'',cases:{}}),live=useRef(state);live.current=state;
- const {gate,action}=useExecutionGate(),evRevision=useRef(new Revisions()),equityRevision=useRef(new Revisions());
+ const {gate,action}=useExecutionGate(),evRevision=useRef(new Revisions()),equityRevision=useRef(new Revisions()),setRevision=useRef(new Revisions());
  function update(fn:(s:State)=>State){const next=fn(live.current);live.current=next;setState(next);}
- function changeCase(kind:string,fn:(s:Session)=>Session){update(old=>({...old,cases:{...old.cases,[kind]:fn(old.cases[kind])}}));}
+ function change(kind:string,fn:(s:Session)=>Session){update(old=>({...old,cases:{...old.cases,[kind]:fn(old.cases[kind])}}));}
+ function changeCase(kind:string,label:Label,fn:(c:CaseState)=>CaseState){change(kind,s=>({...s,cases:{...s.cases,[label]:fn(s.cases[label]!)}}));}
  useEffect(()=>{const abort=new AbortController();setCatalogFailure('');load<Catalog>('/api/v1/catalog',undefined,abort.signal).then(data=>{if(!abort.signal.aborted)setCatalog(data);}).catch(error=>{if(!abort.signal.aborted)setCatalogFailure(failureMessage(error));});return()=>abort.abort();},[load,attempt]);
- useEffect(()=>()=>{evRevision.current.edit();equityRevision.current.edit();gate.cancel();},[]);
+ useEffect(()=>()=>{evRevision.current.edit();equityRevision.current.edit();setRevision.current.edit();gate.cancel();},[]);
+ function stop(){evRevision.current.edit();equityRevision.current.edit();setRevision.current.edit();gate.cancel();
+  const kind=live.current.selected;if(kind)change(kind,s=>({...s,cases:Object.fromEntries(Object.entries(s.cases).map(([label,c])=>[label,{...c,ev:c.ev.phase==='calculating'?invalidate(c.ev):c.ev,equity:c.equity.phase==='calculating'?invalidate(c.equity):c.equity}])) as Session['cases'],scenario:s.scenario.phase==='calculating'?invalidateSet(s.scenario):s.scenario}));
+ }
  function select(kind:string){
   if(!catalog||kind===live.current.selected)return;
   const template=kind==='demo'?catalog.synthetic_demo:catalog.entries.find(e=>e.kind===kind)?.template;
-  if(kind&&!template)return;
-  evRevision.current.edit();equityRevision.current.edit();gate.cancel();
-  update(old=>{const cases={...old.cases};if(cases[old.selected]){const c=cases[old.selected];cases[old.selected]={...c,ev:c.ev.phase==='calculating'?invalidate(c.ev):c.ev,equity:c.equity.phase==='calculating'?invalidate(c.equity):c.equity};}if(template&&!cases[kind])cases[kind]=createSession(template);return {selected:kind,cases};});
+  if(kind&&!template)return;stop();
+  update(old=>({selected:kind,cases:template&&!old.cases[kind]?{...old.cases,[kind]:createSession(template)}:old.cases}));
  }
+ function selectCase(label:Label){const s=live.current.cases[live.current.selected];if(!s?.cases[label]||s.selectedCase===label)return;stop();change(live.current.selected,s=>({...s,selectedCase:label}));}
+ function createCase(label:'Bear'|'Bull'){
+  stop();const kind=live.current.selected;
+  change(kind,s=>{const draft=structuredClone(s.cases.Base.draft);draft.doc.case_name+=` · ${label}`;draft.doc.preparation.timestamp_utc=new Date().toISOString();return {...s,selectedCase:label,cases:{...s.cases,[label]:newCase(draft)},scenario:invalidateSet(s.scenario)};});
+ }
+ function removeCase(label:'Bear'|'Bull'){stop();change(live.current.selected,s=>{const cases={...s.cases};delete cases[label];return {...s,cases,selectedCase:s.selectedCase===label?'Base':s.selectedCase,scenario:invalidateSet(s.scenario)};});}
  function editDraft(draft:Draft,financial=true){
-  const kind=live.current.selected;if(!kind)return;
-  if(financial){evRevision.current.edit();equityRevision.current.edit();gate.cancel();}
-  changeCase(kind,c=>({...c,draft,revision:c.revision+(financial?1:0),ev:financial?invalidate(c.ev):c.ev,equity:financial?invalidate(c.equity):c.equity}));
+  const kind=live.current.selected,s=live.current.cases[kind];if(!s)return;const label=s.selectedCase;
+  if(financial){evRevision.current.edit();equityRevision.current.edit();setRevision.current.edit();gate.cancel();}
+  change(kind,s=>({...s,cases:{...s.cases,[label]:{...s.cases[label]!,draft,revision:s.cases[label]!.revision+(financial?1:0),ev:financial?invalidate(s.cases[label]!.ev):s.cases[label]!.ev,equity:financial?invalidate(s.cases[label]!.equity):s.cases[label]!.equity}},scenario:financial?invalidateSet(s.scenario):s.scenario}));
  }
  function editBridge<K extends keyof EquityDraft>(key:K,value:EquityDraft[K]){
   const kind=live.current.selected;if(!kind)return;equityRevision.current.edit();gate.cancel('equity');
-  changeCase(kind,c=>({...c,bridge:{...c.bridge,[key]:value},bridgeRevision:c.bridgeRevision+1,equity:invalidate(c.equity)}));
+  if(live.current.cases[kind].scenarioEquity){setRevision.current.edit();gate.cancel('scenarios');}
+  change(kind,s=>({...s,bridge:{...s.bridge,[key]:value},bridgeRevision:s.bridgeRevision+1,cases:Object.fromEntries(Object.entries(s.cases).map(([label,c])=>[label,{...c,equity:invalidate(c.equity)}])) as Session['cases'],scenario:{...s.scenario,phase:s.scenario.phase==='calculating'&&s.scenarioEquity?(s.scenario.result?(s.scenario.previousPhase==='current'?'current':'stale'):'incomplete'):s.scenario.phase,equityCurrent:false,errors:{},failure:''}}));
  }
- function editComparison(key:'price'|'date',value:string){const kind=live.current.selected;if(kind)changeCase(kind,c=>({...c,comparison:{...c.comparison,[key]:value}}));}
+ function editComparison(key:'price'|'date',value:string){const kind=live.current.selected;if(kind)change(kind,c=>({...c,comparison:{...c.comparison,[key]:value}}));}
+ function configureSet(key:'cutoff'|'scenarioEquity',value:string|boolean){setRevision.current.edit();gate.cancel('scenarios');change(live.current.selected,s=>({...s,[key]:value,scenario:invalidateSet(s.scenario)}));}
  async function calculate(scope:'ev'|'equity'){
-  const kind=live.current.selected,c=live.current.cases[kind];if(!c||gate.snapshot())return;
+  const kind=live.current.selected,s=live.current.cases[kind],label=s?.selectedCase,c=s?.cases[label];if(!c||gate.snapshot())return;
   if(scope==='equity'&&(c.ev.phase!=='current'||!c.ev.result))return;
   const revisions=scope==='ev'?evRevision.current:equityRevision.current,token=revisions.begin();
-  const current=()=>revisions.current(token)&&live.current.selected===kind;
-  changeCase(kind,s=>({...s,[scope]:{...s[scope],phase:'calculating',errors:{},failure:''}}));
+  const current=()=>revisions.current(token)&&live.current.selected===kind&&live.current.cases[kind].selectedCase===label;
+  changeCase(kind,label,c=>({...c,[scope]:{...c[scope],phase:'calculating',errors:{},failure:''}}));
   try{
    const response=await executeCase<Result>({gate,action:scope,load,current,build:()=>{
     const local=entryErrors(c.draft);if(Object.keys(local).length)throw new InputErrors(local);
-    if(scope==='equity'){const errors=equityErrors(c.bridge,c.draft.doc.anchor.annual_end);if(Object.keys(errors).length)throw new InputErrors(errors);return buildEquityRequest(c.draft,c.bridge);}
-    return buildRequest(c.draft);
-   },check:value=>{
-    for(const [key,expected] of Object.entries(c.draft.doc.anchor))if(value.submitted_inputs.anchor[key as keyof typeof c.draft.doc.anchor]!==expected)throw new Error('Returned anchor did not match submitted case.');
-    if(scope==='equity')requireMatchingEquity(value,c.ev.result!);
-   }});
+    if(scope==='equity'){const errors=equityErrors(s.bridge,c.draft.doc.anchor.annual_end);if(Object.keys(errors).length)throw new InputErrors(errors);}
+    return requestFor(c.draft,s.cases.Base.draft,s.bridge,scope==='equity');
+   },check:value=>{for(const [key,expected] of Object.entries(c.draft.doc.anchor))if(value.submitted_inputs.anchor[key as keyof typeof c.draft.doc.anchor]!==expected)throw new Error('Returned anchor did not match submitted case.');if(scope==='equity')requireMatchingEquity(value,c.ev.result!);}});
    if(!response||!current())return;
-   changeCase(kind,s=>({...s,[scope]:{phase:'current',result:response,errors:{},failure:''}}));
-  }catch(error){
-   if(!current())return;
-   const errors=error instanceof InputErrors?error.fields:error instanceof ApiError&&error.code==='invalid_case'?(scope==='ev'?fieldErrors(error.details.map(percentageDiagnostic)):equityDiagnostics(error.details,c.bridge)):{};
-   changeCase(kind,s=>({...s,[scope]:{...s[scope],phase:Object.keys(errors).length?'incomplete':'failed',errors,failure:Object.keys(errors).length?'':failureMessage(error)}}));
+   changeCase(kind,label,c=>({...c,[scope]:{phase:'current',result:response,errors:{},failure:''}}));
+  }catch(error){if(!current())return;const errors=error instanceof InputErrors?error.fields:error instanceof ApiError&&error.code==='invalid_case'?(scope==='ev'?fieldErrors(error.details.map(percentageDiagnostic)):equityDiagnostics(error.details,s.bridge)):{};
+   changeCase(kind,label,c=>({...c,[scope]:{...c[scope],phase:Object.keys(errors).length?'incomplete':'failed',errors,failure:Object.keys(errors).length?'':failureMessage(error)}}));}
+ }
+ async function calculateScenarios(validationOnly=false){
+  const kind=live.current.selected,s=live.current.cases[kind];if(!s||gate.snapshot())return;
+  const snapshotPhase=s.scenario.phase;
+  const token=setRevision.current.begin(),current=()=>setRevision.current.current(token)&&live.current.selected===kind;
+  change(kind,s=>({...s,scenario:{...s.scenario,previousPhase:s.scenario.phase,phase:'calculating',errors:{},failure:''}}));
+  try{
+   let submitted:ReturnType<typeof scenarioRequest>;
+   const response=await executeCase<ScenarioResult|{status:string}>({gate,action:'scenarios',operation:validationOnly?'validate':'run',load,current,build:()=>submitted=scenarioRequest(s.cases,s.bridge,s.cutoff,s.scenarioEquity),check:value=>{if(!validationOnly){const r=value as ScenarioResult;if(!sameSnapshot(r.submitted_inputs,submitted)||r.scenarios.some((e,i)=>e.label!==labels[i]||!sameSnapshot(e.result.submitted_inputs,submitted.scenarios[i].case)))throw new Error('Scenario response snapshot mismatch');}}});
+   if(!response||!current())return;
+   if(validationOnly){change(kind,s=>({...s,scenario:{...s.scenario,phase:s.scenario.result?snapshotPhase:'empty',failure:'Input checks passed. No scenario calculation or economic approval.'}}));return;}
+   const result=response as ScenarioResult;
+   change(kind,s=>{const cases={...s.cases};for(const e of result.scenarios){const old=cases[e.label]!;cases[e.label]={...old,ev:{phase:'current',result:e.result,errors:{},failure:''},equity:s.scenarioEquity?{phase:'current',result:e.result,errors:{},failure:''}:old.equity};}return {...s,cases,scenario:{phase:'current',result,errors:{},failure:'',equityCurrent:s.scenarioEquity}};});
+  }catch(error){if(!current())return;let errors:Errors={};
+   if(error instanceof InputErrors)errors=error.fields;
+   else if(error instanceof ApiError&&error.code==='invalid_case')for(const raw of error.details){const match=/^scenarios\[(\d)\](?:\.case)?\.(.+?):\s*(.*)$/.exec(raw);if(match){const key=match[2],message=percentageDiagnostic(`${key}: ${match[3]}`).split(': ').slice(1).join(': ');errors[`${labels[Number(match[1])]}.${key}`]=message;}else errors[raw.split(':')[0]]=raw.split(': ').slice(1).join(': ');}
+   change(kind,s=>({...s,scenario:{...s.scenario,phase:Object.keys(errors).length?'incomplete':'failed',errors,failure:Object.keys(errors).length?'':failureMessage(error)}}));
   }
  }
- return {catalog,catalogFailure,retryCatalog:()=>setAttempt(n=>n+1),state,session:state.cases[state.selected],select,editDraft,editBridge,editComparison,calculate,cancel:()=>gate.cancel(),busy:action};
+ function reviewError(path:string){if(path.startsWith('bridge.')){const s=live.current.cases[live.current.selected];changeCase(live.current.selected,s.selectedCase,c=>({...c,equity:{...c.equity,errors:{[path.slice(7)]:s.scenario.errors[path]}}}));return false;}const label=labels.find(l=>path.startsWith(l+'.'));if(label&&live.current.cases[live.current.selected].cases[label]){selectCase(label);const field=path.slice(label.length+1);changeCase(live.current.selected,label,c=>({...c,ev:{...c.ev,errors:{[field]:live.current.cases[live.current.selected].scenario.errors[path]}}}));return true;}return false;}
+ const company=state.cases[state.selected],selected=company?.cases[company.selectedCase];
+ return {catalog,catalogFailure,retryCatalog:()=>setAttempt(n=>n+1),state,company,session:company&&selected?{...company,...selected}:undefined,select,selectCase,createCase,removeCase,editDraft,editBridge,editComparison,configureSet,calculate,calculateScenarios,reviewError,cancel:()=>gate.cancel(),busy:action};
 }

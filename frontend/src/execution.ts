@@ -1,7 +1,7 @@
 import {useRef, useSyncExternalStore} from 'react';
 import {ApiError, unavailableMessage} from './api';
 
-type Action = 'ev' | 'equity';
+type Action = 'ev' | 'equity' | 'scenarios';
 // One synchronous gate per mounted client, shared by both calculation actions.
 // Identity-checked release prevents a cancelled request's finally from releasing its successor.
 export class ExecutionGate {

@@ -98,10 +98,14 @@ def render_summary(result):
         for entry in entries:
             r = entry["result"]
             d = r["submitted_inputs"]
-            lines += ["", f"{entry['label']}: {r['case_name']}",
-                      f"Analyst: {d['analyst']['author']} | Entered: {d['analyst']['timestamp_utc']}",
-                      "Rationale: " + d["analyst"]["rationale"], "Scope: " + d["scope"],
-                      *["- " + value for value in r["limitations"]]]
+            lines += ["", f"{entry['label']}: {r['case_name']}"]
+            if "preparation" in d:
+                lines += [f"Anonymous investor | Prepared: {d['preparation']['timestamp_utc']}",
+                          "Optional notes (not evidence/approval): " + (d['preparation']['notes'] or "not supplied")]
+            else:
+                lines += [f"Analyst: {d['analyst']['author']} | Entered: {d['analyst']['timestamp_utc']}",
+                          "Rationale: " + d["analyst"]["rationale"], "Scope: " + d["scope"]]
+            lines += ["- " + value for value in r["limitations"]]
         lines += ["", *result["limitations"], "No valuation ordering, expected value or economic approval is implied."]
         return "\n".join(lines) + "\n"
 

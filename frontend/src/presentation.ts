@@ -12,12 +12,12 @@ export function terminalContribution(pv: string, ev: string): {text: string; not
   if (value.lt(0)) notes.push('EV is negative; this is an arithmetic ratio, not a positive value allocation.');
   return {text:ratio.times('100').toFixed(2)+'%', note:notes.join(' ') || 'Discounted terminal value / enterprise value. This measures terminal dependence, not economic approval.'};
 }
-export function chartPoints(values: string[]): {x:number; y:number}[] | null {
+export function chartPoints(values: string[], sharedMagnitude?:string): {x:number; y:number}[] | null {
   try {
     if (values.length !== 5 || values.some(v => v.length > 1024)) return null;
     const amounts = values.map(v => new DisplayDecimal(v));
     if (amounts.some(v => !v.isFinite() || Math.abs(v.e) > 1000)) return null;
-    const max = amounts.reduce((a,b) => a.gte(b.abs()) ? a : b.abs(), new DisplayDecimal('0'));
+    const max = amounts.reduce((a,b) => a.gte(b.abs()) ? a : b.abs(), new DisplayDecimal(sharedMagnitude??'0'));
     return amounts.map((v,i) => {
       // This bounded conversion is for SVG coordinates ONLY; raw amounts stay strings.
       const normalized = max.isZero() ? 0 : v.div(max).toNumber();

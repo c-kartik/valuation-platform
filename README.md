@@ -19,12 +19,15 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-The [integrated investor workspace](docs/integrated-investor-workspace.md) is ready
+The [integrated investor workspace](docs/integrated-investor-scenarios.md) is ready
 for local review at <http://127.0.0.1:5173/workspace/>: start the compatible
 [local API](docs/local-case-api.md#scope-and-local-operation) and run
 `npm --prefix frontend run dev`. META/GOOGL/AAPL start with retained revenue anchors
-and unset assumptions. Forward EV and optional manual equity/share results now come
-from the existing Python engine; reverse, scenarios and sensitivity explicitly
+and unset assumptions. Forward EV, optional manual equity/share and explicitly
+created Bear/Base/Bull comparisons now use the existing Python engines. Scenarios
+require three complete independent cases, a declared shared cutoff and identical
+bridge/share inputs when included; no economics or probabilities are generated.
+Reverse and sensitivity explicitly
 remain **Not connected yet**. No financial formulas, historical approvals or
 templates changed. Phase 1 stays paused; no deployment or push.
 

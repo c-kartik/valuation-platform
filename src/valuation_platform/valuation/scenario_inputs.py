@@ -10,6 +10,8 @@ from .case_inputs import AnalystCase, CaseInputError, _strict_json, read_case, r
 
 SCENARIO_SCHEMA = "analyst-scenario-set-v1"
 RESULT_SCHEMA = "analyst-scenario-results-v1"
+INVESTOR_SCHEMA = "investor-scenario-set-v1"
+INVESTOR_RESULT_SCHEMA = "investor-scenario-results-v1"
 LABELS = ("Bear", "Base", "Bull")
 
 
@@ -68,8 +70,9 @@ def read_scenario_set(text: str) -> ScenarioSet:
             return None
 
     doc = obj(doc, ("schema_version", "scenario_set_name", "scenarios"), "scenario_set")
-    if doc.get("schema_version") != SCENARIO_SCHEMA:
-        errors.append(f"scenario_set.schema_version: requires {SCENARIO_SCHEMA}")
+    investor = doc.get("schema_version") == INVESTOR_SCHEMA
+    if doc.get("schema_version") not in (SCENARIO_SCHEMA, INVESTOR_SCHEMA):
+        errors.append(f"scenario_set.schema_version: requires {SCENARIO_SCHEMA} or {INVESTOR_SCHEMA}")
     name = doc.get("scenario_set_name")
     if type(name) is not str or not name.strip():
         errors.append("scenario_set.scenario_set_name: required nonempty text")
@@ -98,6 +101,8 @@ def read_scenario_set(text: str) -> ScenarioSet:
         case = None
         try:
             case = read_case(json.dumps(entry.get("case")))
+            if investor and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2"):
+                errors.append(f"{path}.case.schema_version: investor scenario sets require investor-case-v1/v2")
         except CaseInputError as exc:
             errors.extend(f"{path}.case.{error.removeprefix('case.')}" for error in exc.errors)
         if case is not None and analytical and analytical != case.assumptions.anchor_fiscal_end:
@@ -154,7 +159,7 @@ def run_scenario_set(scenarios: ScenarioSet, repository_root: Path) -> dict[str,
             raise ScenarioInputError([f"scenarios.{item.label}.case: execution failed: {exc}"]) from exc
         results.append({"label": item.label, "analytical_date": item.analytical_date.isoformat(),
                         "information_cutoff": item.information_cutoff.isoformat(), "result": result})
-    return {"schema_version": RESULT_SCHEMA, "scenario_set_name": scenarios.scenario_set_name,
+    return {"schema_version": INVESTOR_RESULT_SCHEMA if _strict_json(scenarios.submitted_json)["schema_version"] == INVESTOR_SCHEMA else RESULT_SCHEMA, "scenario_set_name": scenarios.scenario_set_name,
             "submitted_inputs": _strict_json(scenarios.submitted_json), "scenarios": results,
             "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
             "limitations": ["Scenario labels imply no valuation ordering or approved economics.",

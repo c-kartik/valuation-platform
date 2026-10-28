@@ -1,6 +1,32 @@
 # Project Status
 
-## Current — local forward/equity investor workspace integration
+## Current — local Bear/Base/Bull engine integration
+
+The [scenario workspace](integrated-investor-scenarios.md) connects explicit
+independent Base/Bear/Bull cases to the existing strict scenario reader/runner.
+One complete request runs inside the existing bounded child/server gate; validation
+is calculation-free. Anonymous metadata/notes use a narrow investor scenario
+envelope; legacy scenario and single-case interfaces remain compatible. Shared
+dated bridge/share declarations are identical, cutoffs explicitly entered/unverified,
+and no Bear/Bull economics or probabilities are generated. Reverse and sensitivity
+remain **Not connected yet**. Reference calculator/prototype remain separate.
+
+Verification: **159 frontend and 122 focused Python tests**, both builds, actual
+1440×1000/390×844 Chrome flow/failure/focus review, six complete API/scenario-CLI
+comparisons, 18 individual-CLI comparisons and **1,233 independent rational
+comparisons**. Arbitrary software inputs on all three retained anchors included
+shared equity, unexpected ordering and negative FCFF/equity; none are investment
+forecasts or actual bridge/share selections. Temporary files and browser trials
+were cleared. Details and narrow pre-existing preservation-pin corrections are
+recorded in the integration document; no financial formula/guard changed.
+
+The verified 85-file local API bundle and existing frontend/prototype servers are
+left for review. No cloud calls, push, deployment, portfolio, history/approval or
+nine unset template changes. Phase 1 stays paused. Review before separately scoping
+sensitivity or reverse integration; financial completeness and investment readiness
+remain unestablished. Existing hosted access/deadlines were not inspected/extended.
+
+## Earlier — local forward/equity investor workspace integration
 
 The [integrated workspace](integrated-investor-workspace.md) now connects the
 approved design at <http://127.0.0.1:5173/workspace/> to the existing Python API for

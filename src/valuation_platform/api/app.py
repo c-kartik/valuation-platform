@@ -9,7 +9,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, Response
 from starlette.requests import ClientDisconnect
 
-from .budget import DEFAULT_POLICY, BudgetError, error_body, read_http_case
+from .budget import DEFAULT_POLICY, BudgetError, error_body, read_http_case, read_http_scenarios
 from .bundle import verify_bundle
 from .process import Calculator, ExecutionError
 from .worker import calculate
@@ -130,14 +130,14 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
             raise ExecutionError(503, 'not_ready', 'Service is not ready.')
         return Response(app.state.catalog, media_type='application/json', headers={'Cache-Control': 'no-store'})
 
-    async def intake(request):
+    async def intake(request, reader=None):
         if request.query_params:
             raise ExecutionError(422, 'invalid_case', 'Query parameters are not accepted.')
         if not app.state.ready:
             raise ExecutionError(503, 'not_ready', 'Service is not ready.')
         body = await body_bytes(request, policy)
         try:
-            case = read_http_case(body)
+            case = (reader or read_http_case)(body)
         except (ValueError, RecursionError) as exc:
             errors = getattr(exc, 'errors', (str(exc),))
             # Only parser/model diagnostics; never internal worker exceptions.
@@ -160,6 +160,31 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
         if app.state.ready and app.state.calculator.job is not None:
             raise ExecutionError(503, 'busy', 'One calculation is already running; retry later.')
         body, case, failure = await intake(request)
+        if failure is not None:
+            return failure
+
+        async def disconnected():
+            while True:
+                if (await request.receive())['type'] == 'http.disconnect':
+                    return
+
+        status, payload = await app.state.calculator.run(body, disconnected)
+        return Response(payload, status_code=status, media_type='application/json', headers={'Cache-Control': 'no-store'})
+
+    @app.post('/api/v1/scenarios/validate')
+    async def validate_scenarios(request: Request):
+        body, scenarios, failure = await intake(request, read_http_scenarios)
+        if failure is not None:
+            return failure
+        return {'status': 'valid', 'calculation_performed': False,
+                'calculation_scope': 'EQUITY_PER_SHARE' if scenarios.scenarios[0].case.bridge else 'ENTERPRISE_VALUE',
+                'semantic_input_review': 'NOT_ASSESSED_BY_CALCULATOR'}
+
+    @app.post('/api/v1/scenarios/run')
+    async def run_scenarios(request: Request):
+        if app.state.ready and app.state.calculator.job is not None:
+            raise ExecutionError(503, 'busy', 'One calculation is already running; retry later.')
+        body, scenarios, failure = await intake(request, read_http_scenarios)
         if failure is not None:
             return failure
 
