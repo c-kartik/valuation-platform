@@ -1,6 +1,29 @@
 # Project Status
 
-## Current — local sensitivity, certified reverse and exploratory cases
+## Current — connected-workflow local acceptance
+
+The [October 29 acceptance review](connected-workflow-acceptance.md) passes the
+exercised local investor journey after two presentation fixes: correct shared-job
+labels in the bridge and no “usable EV” claim when operating EV is also stale.
+Calculations, solver guarantees, resource limits and financial contracts are unchanged.
+
+New checks: **185 frontend and 228 focused Python tests**, both builds; actual
+Chrome desktop/390×844 resizing, three retained company anchors, advanced annual/
+independent terminal entry, qualified equity, scenarios/grid/reverse, confirmation,
+exploratory creation, freshness, keyboard/focus/scroll and real cancellation/
+unavailable retry. Eighteen actual-proxy outputs and 20 browser-captured outputs
+matched CLI JSON; independent rational and reverse residual checks passed as
+specified in the record. Earlier checks remain attributed to earlier checkpoints.
+
+**Local software acceptance is distinct from cloud readiness (not assessed),
+financial completeness and investment readiness.** Unbounded omissions, revenue-only
+historical context, no persistence/reload loss and technical review friction remain.
+All temporary values were software choices, not forecasts or defaults. Browser
+trials/files cleared; verified 87-file API, workspace and prototype remain local.
+No hosted, portfolio, formula, historical/frozen/approval, nine-template or deployment
+changes; no push or research. Phase 1 stays paused. Stop for user review.
+
+## Earlier — local sensitivity, certified reverse and exploratory cases
 
 The [integrated analyses](integrated-investor-analyses.md) complete the local journey:
 selected manual case → forward/equity → scenarios → WACC/g grid → bounded reverse

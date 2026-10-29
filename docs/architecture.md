@@ -1,5 +1,10 @@
 # Architecture
 
+The [connected-workflow acceptance review](connected-workflow-acceptance.md)
+verifies the local journey and corrects only running-tool/stale-EV presentation.
+Execution, financial contracts, certified solver and resource budgets are unchanged;
+local acceptance establishes no cloud readiness.
+
 The [integrated local workspace](integrated-investor-workspace.md) adds
 `/workspace/` beside the reference calculator `/` in the default Vite build/server.
 Company-keyed in-memory Base/Bear/Bull sessions own drafts, independent EV/equity revisions,

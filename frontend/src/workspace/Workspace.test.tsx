@@ -63,3 +63,7 @@ it('requires explicit catalog retry after an unavailable service and never calcu
  render(<Workspace load={load}/>);await screen.findByRole('button',{name:'Retry loading companies'});expect((screen.getByLabelText('Company') as HTMLSelectElement).disabled).toBe(true);expect(screen.queryByText(/private trace/)).toBeNull();expect(load).toHaveBeenCalledTimes(1);
  fail=false;click('Retry loading companies');await company();expect(load).toHaveBeenCalledTimes(2);expect(screen.queryByRole('article')).toBeNull();expect(screen.getByText('Empty · no calculation')).toBeTruthy();
 });
+it('does not call an operating EV usable after both operating and equity results become stale',async()=>{
+ render(<Workspace load={transport()}/>);await current();click('← Return to overview');click('Add cash, claims & shares');bridge();click('Calculate value per share');await screen.findByRole('heading',{name:'Provisional equity reference'});click('← Return to overview');click('Edit this case');set('WACC (%)','26');click('← Return to overview');
+ expect(screen.queryByText(/usable EV remains separate/)).toBeNull();expect(screen.getByText(/enterprise value also needs recalculation/)).toBeTruthy();
+});

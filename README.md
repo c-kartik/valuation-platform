@@ -19,6 +19,10 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The [October 29 connected-workflow review](docs/connected-workflow-acceptance.md)
+passes local software acceptance with two status-label corrections. Cloud/public
+readiness and investment readiness are not established; entries remain session-only.
+
 The [integrated investor workspace](docs/integrated-investor-analyses.md) is ready
 for local review at <http://127.0.0.1:5173/workspace/>: start the compatible
 [local API](docs/local-case-api.md#scope-and-local-operation) and run
