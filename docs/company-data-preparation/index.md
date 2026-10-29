@@ -1542,3 +1542,15 @@ concept candidates, preserving quarter/YTD boundaries and unknowns. This is not
 Phase 1 resumption or a change to historical preparation statuses/approvals. New
 consumer readiness remains NOT_ASSESSED; retained FY2025 valuation anchors stay
 source-validated. See the appended issuer records for exact bindings.
+
+
+### Display-only annual references — October 29, 2026
+
+The [valuation canvas](../investor-valuation-canvas.md) adds a narrow read-only
+catalog projection for META/GOOGL/AAPL: FY2024→FY2025 reported annual revenue growth
+and FY2025 operating margin, with exact source operands, fiscal dates and
+precision. Existing validated/pinned histories remain authoritative; missing or
+incompatible references stay unavailable. This is no new calibration, current-date
+anchor, financial sufficiency, issuer approval or Phase 1 resumption. The three
+issuer records above receive append-only maintenance notes; historical/frozen
+values, approvals and all nine unset templates remain unchanged.

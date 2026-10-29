@@ -390,3 +390,22 @@ is not a reported zero or historical omission approval. The existing approved
 FY2025 consumer/source bindings and historical records remain unchanged. See the
 [consolidated implementation record](../../investor-review-implementation.md)
 for scope, validation and next requirements.
+
+
+## Display-only annual references — October 29, 2026
+
+The separately authorized [valuation canvas](../../investor-valuation-canvas.md) projects
+FY2024/FY2025 accepted reported revenue and FY2025 reported EBIT from this issuer's
+already retained package. Annual growth = FY2025 revenue / FY2024 revenue − 1;
+operating margin = FY2025 EBIT / revenue. Operands retain actual fiscal dates,
+USD, source precision, concept/accession and SEC links. Exact undimensioned annual
+occurrences and reported effective values must agree; incompatible/absent inputs
+produce an unavailable reference, never an estimate or substituted quarter/TTM.
+No day-count adjustment or historical average is introduced.
+
+These are derived historical context, not forecast calibration or new valuation
+operands/approvals. Current interim observations stay separate. No new retrieval,
+normalization, historical value, audit or omission decision changes. Financial
+sufficiency remains unestablished outside the existing named consumer scope.
+Validation uses independent rational ratios, source/period/precision checks,
+negative binding tests and catalog/preservation regression; see the linked record.

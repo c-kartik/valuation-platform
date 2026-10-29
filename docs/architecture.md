@@ -1,6 +1,22 @@
 # Architecture
 
-## Current local investor review
+## Current local valuation canvas
+
+The [canvas record](investor-valuation-canvas.md) describes a result-first company
+page with compact assumption rows and chart, a local-draft native dialog editor,
+shared scenario context and secondary comparison/sensitivity/breakdown/source views.
+Apply commits working state; explicit Calculate retains the existing execution gate,
+revision checks, cancellation and Python financial boundary. Editor fields are
+authoritative; no live valuation previews or persistence are added.
+
+`review.history` adds display-only FY2024→FY2025 revenue growth and FY2025 EBIT
+margin from pinned annual populations after existing anchor validation. Exact
+operand/period/source/precision metadata remains distinct from forecasts and newer
+context. The catalog extension is additive, under the existing size cap. The
+immutable runtime now has 95 manifest entries plus the manifest, with unchanged
+resource pins and safeguards. No valuation/solver module or legacy schema changes.
+
+## Earlier local investor review
 
 The [consolidated review](investor-review-implementation.md) replaces the main
 workspace navigation with Valuation / Scenarios / Sensitivity. The certified
@@ -14,7 +30,8 @@ for three separate, source-bound context snapshots. Catalog projection exposes
 report end, publication/acceptance, check time, observations and unknowns. These
 snapshots are not approved anchors and never replace the retained consumer inputs.
 The offline runtime adds three pinned context resources and four review modules;
-94 manifest entries plus the manifest file. Existing resource pins are unchanged.
+94 manifest entries plus the manifest file at that checkpoint (95 after the
+display-reference module above). Existing resource pins are unchanged.
 
 `POST /api/v1/review/run` accepts the existing strict investor case, retrieves at
 most one bounded market snapshot outside the network-disabled financial child,

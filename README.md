@@ -19,10 +19,11 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-The [consolidated investor review](docs/investor-review-implementation.md) adds a
-clean local `/workspace/`: forward valuation with integrated market-review status,
-inline inherited Bear/Base/Bull inputs, accessible revenue/FCFF charts, explicit
-editable 3×3 sensitivity generation, and optional exact calculation downloads.
+The [investor valuation canvas](docs/investor-valuation-canvas.md) provides a local
+result-first `/workspace/`: compact assumptions beside revenue/FCFF, focused
+Apply/Cancel editing, shared Bear/Base/Bull context, visual EV composition,
+connected scenario comparison, explicit editable sensitivity and optional exact
+calculation exports. Source-bound annual growth/margin references are context only.
 Current SEC context for META/GOOGL/AAPL is separately dated and **preparation
 incomplete**; calculations still use the approved FY2025 revenue anchors. All
 company forecast inputs start unset; entries remain in this tab only.
@@ -37,8 +38,9 @@ Start the [verified local API](docs/local-case-api.md#scope-and-local-operation)
 then `npm --prefix frontend run dev`. For a separate local API port, use
 `VALUATION_LOCAL_API=http://127.0.0.1:8002 npm --prefix frontend run dev -- --port 5175`.
 The current local review is <http://127.0.0.1:5175/workspace/> → local API 8002;
-there is no cloud fallback. See the implementation record for provider setup,
-verification and safe stop instructions. Nothing was pushed or deployed; Phase 1
+there is no cloud fallback. See the canvas record for verification and current
+safe stop instructions; the earlier implementation record retains provider setup.
+Nothing was pushed or deployed for this local checkpoint; Phase 1
 stays paused. Prior [local](docs/connected-workflow-acceptance.md),
 [private staging](docs/connected-workflow-staging-acceptance.md) and
 [performance](docs/connected-workflow-performance.md) reviews remain historical

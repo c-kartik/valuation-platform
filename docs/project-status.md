@@ -1,6 +1,28 @@
 # Project Status
 
-## Current — consolidated investor review, local only
+## Current — investor valuation canvas, local only
+
+The [canvas acceptance record](investor-valuation-canvas.md) documents the result-first
+company page: compact assumptions beside revenue/FCFF, focused draft editing,
+sticky company/scenario/result context, connected comparison and sensitivity, and
+signed or stacked valuation composition. Two source-bound annual references per
+issuer are display-only; FY2025 calculation anchors and nine unset templates stay
+unchanged. Manual assumptions never autofill from history.
+
+New checks: 197 frontend tests; nine reference/catalog/preservation and 29 affected
+API/review/compatibility Python tests; six complete local API/CLI matches; both
+builds. Actual 1440×900 and 390×844 CSS browser review exercised editing, scenarios,
+negative EV, sensitivity, optional equity and local outage/retry. A narrow-sheet
+scroll/focus blocker was fixed. Temporary software inputs were cleared. Prior
+independent arithmetic campaigns are attributed records, not new reruns.
+
+Local review remains <http://127.0.0.1:5175/workspace/> → local API 8002. Genuine
+market comparison remains blocked by provider rights and date/perimeter preparation;
+actual export file delivery remains unverified despite exact generation tests and
+a supported download attempt. No push, deployment, portfolio or hosted changes.
+Financial formulas, certified solver, frozen data/approvals and Phase 1 pause remain.
+
+## Earlier — consolidated investor review, local only
 
 The [implementation record](investor-review-implementation.md) documents the clean
 Valuation / Scenarios / Sensitivity workflow, inherited inline scenarios,

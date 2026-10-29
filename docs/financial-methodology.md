@@ -2,6 +2,14 @@
 
 ## Current local investor-review boundary
 
+The [valuation canvas](investor-valuation-canvas.md) adds display-only annual
+revenue growth (FY2025/FY2024 − 1) and operating margin (FY2025 EBIT/revenue), with
+exact source-bound operands and fiscal periods. Source rounding and differing
+fiscal lengths remain limitations; there is no annualization/day adjustment or
+automatic forecast calibration. Newer context stays separate from the FY2025 DCF
+anchor. Visual PV composition uses existing results; signed/zero/out-of-range
+contributions are preserved. No FCFF, discount, bridge or terminal convention changes.
+
 The [consolidated review](investor-review-implementation.md) changes preparation,
 metadata and presentation; FCFF, discounting, bridge arithmetic and reverse
 certification remain unchanged. New SEC quarter/YTD context is separately reported,

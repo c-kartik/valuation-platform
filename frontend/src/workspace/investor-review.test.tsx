@@ -9,6 +9,7 @@ import {percentage,readableMoney,fixedUnit} from '../presentation';
 import {ForecastChart} from './ForecastChart';
 import {MarketPanel} from './MarketPanel';
 import {InvestorResult} from './InvestorResult';
+import {ValuationBreakdown} from './ValuationBreakdown';
 import fixture from '../../../examples/valuation/synthetic-base.json';
 const demo=fixture as CaseDoc;
 const catalog:Catalog={schema_version:'fixture',entries:[{kind:demo.anchor.kind,company:'Fixture',identity:demo.anchor,revenue:'100',unit:'USD',precision:'INF',source_links:[],limitations:[],template:demo}],synthetic_demo:demo,timing_notice:'fixture',input_definitions:{}};
@@ -23,6 +24,10 @@ it('inherits Base changes, preserves overrides and independent terminal ratios, 
  act(()=>h.result.current.editScenarioRate('Base',['terminal.operating_margin'],'35'));
  expect(h.result.current.company!.cases.Bull!.draft.rates['terminal.operating_margin']).toBe('41');expect(h.result.current.company!.cases.Bear!.draft.rates['terminal.operating_margin']).toBe('35');
  act(()=>h.result.current.resetOverrides('Bear'));expect(h.result.current.company!.cases.Bear!.overrides).toEqual([]);expect(h.result.current.company!.cases.Bear!.draft.rates).toEqual(h.result.current.company!.cases.Base.draft.rates);expect(load).toHaveBeenCalledTimes(1);
+ act(()=>h.result.current.selectCase('Bull'));
+ act(()=>h.result.current.editDraft(structuredClone(h.result.current.session!.draft),true,['forecast_years[0].revenue_growth']));
+ act(()=>h.result.current.selectCase('Base'));act(()=>h.result.current.editScenarioRate('Base',['forecast_years[0].revenue_growth'],'14'));
+ expect(h.result.current.company!.cases.Bull!.draft.rates['forecast_years[0].revenue_growth']).toBe('12');
 });
 it('generates only explicit editable diagnostic axes, centered on user values, without changing the draft',()=>{
  const d=makeDraft(demo);d.rates.wacc='9.125';d.rates.terminal_growth='2.75';const before=structuredClone(d);const a=axes(smallGrid(d));expect(a.wacc_values).toEqual(['0.08125','0.09125','0.10125']);expect(a.terminal_growth_values).toEqual(['0.0225','0.0275','0.0325']);expect(d).toEqual(before);
@@ -36,7 +41,7 @@ function forward():Result{
 }
 it('offers paired bars, keyboard/tap year readouts, metric toggles, comparison and an accessible table without historical FCFF',()=>{
  const a=forward(),b=structuredClone(a);b.stage_b.stage_a.years[0].fcff='-0.0001';render(<ForecastChart cases={[{label:'Bear',result:a},{label:'Base',result:b},{label:'Bull',result:a}]}/>);
- const year=screen.getAllByRole('button',{name:/Select FY/})[1];fireEvent.focus(year);fireEvent.keyDown(year,{key:'ArrowRight'});expect(document.activeElement).toBe(screen.getAllByRole('button',{name:/Select FY/})[2]);fireEvent.click(screen.getAllByRole('button',{name:/Select FY/})[0]);expect(screen.getByRole('status').textContent).toContain('FCFF unavailable');fireEvent.click(screen.getByRole('button',{name:'FCFF only'}));fireEvent.click(screen.getByRole('button',{name:'Compare'}));expect(screen.getByText('Bear / Base / Bull grouped within each year.',{exact:false})).toBeTruthy();expect(screen.getByText('View data table')).toBeTruthy();expect(screen.getAllByText('—').length).toBe(3);expect(document.querySelector('polyline')).toBeNull();
+ const year=screen.getAllByRole('button',{name:/Select .*reported revenue|Select .*forecast revenue/})[1];fireEvent.focus(year);fireEvent.keyDown(year,{key:'ArrowRight'});expect(document.activeElement).toBe(screen.getAllByRole('button',{name:/Select .*reported revenue|Select .*forecast revenue/})[2]);fireEvent.click(screen.getAllByRole('button',{name:/Select .*reported revenue|Select .*forecast revenue/})[0]);expect(screen.getByRole('status').textContent).toContain('FCFF unavailable');fireEvent.click(screen.getByRole('button',{name:'FCFF only'}));fireEvent.click(screen.getByRole('button',{name:'Compare'}));expect(screen.getByRole('heading',{name:'Compare operating paths'})).toBeTruthy();expect(screen.queryByRole('button',{name:'Revenue + FCFF'})).toBeNull();expect(screen.getByText('View data table')).toBeTruthy();expect(screen.getAllByText('—').length).toBe(3);expect(document.querySelector('polyline')).toBeNull();
 });
 it('renders dated market reconciliation and percentage-point labels without solver internals or failure substitutes',()=>{
  const a=forward();a.investor_review={status:'SCOPE_QUALIFIED',reasons:[],model_ev:'1',forecast_cagr:'0.1',market_cap:'8',market_implied_ev:'19',ev_relative_difference:'-0.5',market_implied_growth:null,growth_gap_percentage_points:null,equity_difference:'-0.2',per_share_difference:'-0.2',reverse:{status:'UNREACHABLE_TARGET'},market:{price:'2',session_date:'2025-12-31',timezone:'America/New_York',delay:'Fixture only',fallback:'Prior session',share_class:'Class A',adjustment:'UNADJUSTED',source_url:'https://api.massive.com/fixture'},limitations:[]};
@@ -46,4 +51,11 @@ it('renders dated market reconciliation and percentage-point labels without solv
 it('withholds a stale bridge-based market comparison while preserving the independently current operating EV',()=>{
  const a=forward();render(<InvestorResult result={a} stale={false} marketStale/>);
  expect(screen.getByText('Comparison stale — recalculate the changed case.')).toBeTruthy();expect(screen.queryByText('Stale result — inputs changed; calculate again.')).toBeNull();expect(screen.getAllByText('$1.00')).toHaveLength(2);
+});
+it('uses a composition bar only for positive allocations and preserves zero, negative and over-100% contributions',()=>{
+ const a=forward();a.stage_b.years=Array.from({length:5},()=>({discount_factor:'1',pv_fcff:'8'}));Object.assign(a.stage_b,{enterprise_value:'100',pv_explicit_fcff:'40',pv_terminal_value:'60'});
+ const view=render(<ValuationBreakdown result={a} stale={false}/>);expect(screen.getByRole('img').getAttribute('aria-label')).toContain('terminal PV $60.00');expect(screen.getByText('60.00%')).toBeTruthy();
+ const b=structuredClone(a);Object.assign(b.stage_b,{pv_explicit_fcff:'-20',pv_terminal_value:'120'});view.rerender(<ValuationBreakdown result={b} stale/>);expect(screen.queryByRole('img')).toBeNull();expect(screen.getByText('120.00%')).toBeTruthy();expect(screen.getByText('Previous calculation · stale')).toBeTruthy();
+ Object.assign(b.stage_b,{pv_explicit_fcff:'-120',enterprise_value:'0'});view.rerender(<ValuationBreakdown result={b} stale={false}/>);expect(screen.queryByRole('img')).toBeNull();expect(screen.getByText('Undefined')).toBeTruthy();
+ Object.assign(b.stage_b,{pv_explicit_fcff:'-140',enterprise_value:'-20',pv_terminal_value:'120'});view.rerender(<ValuationBreakdown result={b} stale={false}/>);expect(screen.queryByRole('img')).toBeNull();expect(screen.getByText('-600.00%')).toBeTruthy();
 });

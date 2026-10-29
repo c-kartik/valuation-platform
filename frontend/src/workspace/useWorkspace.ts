@@ -48,10 +48,10 @@ export function useWorkspace(load:typeof request=request){
   change(kind,s=>{const draft=structuredClone(s.cases.Base.draft);draft.doc.case_name+=` · ${label}`;draft.doc.preparation.timestamp_utc=new Date().toISOString();return {...s,selectedCase:label,cases:{...s.cases,[label]:newCase(draft)},scenario:invalidateSet(s.scenario)};});
  }
  function removeCase(label:'Bear'|'Bull'){stop();change(live.current.selected,s=>{const cases={...s.cases};delete cases[label];return {...s,cases,selectedCase:s.selectedCase===label?'Base':s.selectedCase,scenario:invalidateSet(s.scenario)};});}
- function editDraft(draft:Draft,financial=true){
+ function editDraft(draft:Draft,financial=true,explicitPaths:string[]=[]){
   const kind=live.current.selected,s=live.current.cases[kind];if(!s)return;const label=s.selectedCase;
   if(financial){evRevision.current.edit();equityRevision.current.edit();setRevision.current.edit();gridRevision.current.edit();reverseRevision.current.edit();gate.cancel();}
-  const overridden=label==='Base'?[]:[...new Set([...(s.cases[label]!.overrides??[]),...Object.keys(draft.rates).filter(k=>draft.rates[k]!==s.cases[label]!.draft.rates[k])])];
+  const overridden=label==='Base'?[]:[...new Set([...(s.cases[label]!.overrides??[]),...explicitPaths,...Object.keys(draft.rates).filter(k=>draft.rates[k]!==s.cases[label]!.draft.rates[k])])];
   change(kind,s=>({...s,cases:{...s.cases,[label]:{...s.cases[label]!,overrides:overridden,draft,revision:s.cases[label]!.revision+(financial?1:0),ev:financial?invalidate(s.cases[label]!.ev):s.cases[label]!.ev,equity:financial?invalidate(s.cases[label]!.equity):s.cases[label]!.equity,grid:financial?staleGrid(s.cases[label]!.grid):s.cases[label]!.grid,reverse:financial?staleReverse(s.cases[label]!.reverse):s.cases[label]!.reverse}},scenario:financial&&labels.some(l=>l===label)?invalidateSet(s.scenario):s.scenario}));
   if(label==='Base'&&financial)change(kind,s=>{const cases={...s.cases};for(const l of ['Bear','Bull']){const old=cases[l];if(!old)continue;const next=structuredClone(old.draft);for(const k of Object.keys(next.rates))if(!(old.overrides??[]).includes(k))next.rates[k]=draft.rates[k];cases[l]={...old,draft:next,revision:old.revision+1,ev:invalidate(old.ev),equity:invalidate(old.equity),grid:staleGrid(old.grid),reverse:staleReverse(old.reverse)};}return {...s,cases};});
  }

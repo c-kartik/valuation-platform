@@ -55,6 +55,11 @@
     "src/valuation_platform/normalization/output.py",
     "src/valuation_platform/normalization/pretax_scope.py",
     "src/valuation_platform/normalization/tax_evidence.py",
+    "src/valuation_platform/review/__init__.py",
+    "src/valuation_platform/review/comparison.py",
+    "src/valuation_platform/review/history.py",
+    "src/valuation_platform/review/market.py",
+    "src/valuation_platform/review/sources.py",
     "src/valuation_platform/sec/__init__.py",
     "src/valuation_platform/sec/annual_period.py",
     "src/valuation_platform/sec/client.py",
@@ -73,11 +78,7 @@
     "src/valuation_platform/valuation/forecast.py",
     "src/valuation_platform/valuation/reverse_inputs.py",
     "src/valuation_platform/valuation/scenario_inputs.py",
-    "src/valuation_platform/valuation/sensitivity_inputs.py",
-    "src/valuation_platform/review/__init__.py",
-    "src/valuation_platform/review/sources.py",
-    "src/valuation_platform/review/market.py",
-    "src/valuation_platform/review/comparison.py"
+    "src/valuation_platform/valuation/sensitivity_inputs.py"
   ],
   "resources": {
     "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",

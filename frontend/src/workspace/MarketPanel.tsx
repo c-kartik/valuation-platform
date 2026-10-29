@@ -1,7 +1,12 @@
 import type {Result} from '../model';
 import {readableMoney,percentage,fixedUnit} from '../presentation';
-export function MarketPanel({result,stale}:{result:Result;stale:boolean}){
- const r=result.investor_review;
+export function MarketPanel({result,stale,compact=false}:{result:Result|null;stale:boolean;compact?:boolean}){
+ const r=result?.investor_review;
+ if(compact){
+  if(!result||stale||!r||r.status==='UNAVAILABLE')return <details className="cv-market-status"><summary>{stale&&r?.status==='SCOPE_QUALIFIED'?'Market comparison stale':'Market comparison unavailable'}</summary><p>Verified opening-price access and a compatible dated financial/share perimeter are not available for this fiscal-end model. No price, upside or implied growth is substituted. Forward valuation, scenarios and sensitivity remain usable.</p></details>;
+  return <details className="cv-market-status"><summary>Dated market comparison · {r.market?.session_date} opening</summary><MarketPanel result={result} stale={false}/></details>;
+ }
+ if(!result)return null;
  return <section className="p-panel ir-market" aria-label="Your valuation vs the market"><span className="p-eyebrow">DATED OPENING REFERENCE</span><h2>Your valuation vs the market</h2>
  <p>Model origin: {result.stage_b.timing.analytical_t0}. An opening-price reference is not a live quote.</p>
  {stale?<p className="p-notice" role="status">Comparison stale — recalculate the changed case.</p>:<><div className="ir-metrics"><div><span>Your model enterprise value</span><strong>{readableMoney(result.stage_b.enterprise_value)}</strong></div><div><span>Your five-year revenue CAGR</span><strong>{r?percentage(r.forecast_cagr):'Run forward review'}</strong></div></div>
