@@ -1,14 +1,25 @@
 # Project Status
 
-## Current — bounded performance improvement awaiting staging verification
+## Current — bounded performance verified on private staging
 
-The [performance review](connected-workflow-performance.md) identifies repeated
-anchor preparation as the dominant grid/reverse cost. Request-local validated
-snapshot reuse preserves strict candidate checks, A/B/C formulas, exact certification
-and fresh verification. Local full outputs match; distinct timeout messages and an
-explicit 3×3 starting recommendation preserve unset axes and existing limits.
-Private staging deployment/measurement follows local verification; no public scope,
-history/approval/template change or Phase 1 resumption is authorized.
+The [October 29 performance review](connected-workflow-performance.md) removes
+repeated anchor preparation within each grid/reverse request, preserving source/
+approval validation, strict candidates, exact A/B/C formulas and certification/
+fresh verification. Same-input cloud 11×11 improved **26.82→3.61s**, ordinary reverse
+**10.59–10.91→3.06–3.12s**, demanding ITERATION_LIMIT **28.38→4.07s**; complete outputs
+matched CLI. These are bounded warm samples, not worst-case or cold-start guarantees.
+Explicit 3×3 is the recommended starting grid; all axes remain unset, larger grids/
+solver budgets unchanged. Timeout messages are distinct; retry/cancel preserves inputs.
+
+Pushed source `377b5b8`, one successful Google build, private revision
+`valuation-api-staging-00003-4mg`, rollback `00002-q5m`. IAM, identity, resources and
+execution ceilings are unchanged; anonymous requests remain 403. 188 valuation,
+57 API/preview/preparation, 187 frontend tests plus 87 affected timeout checks,
+both builds and additional benchmark/browser exact comparisons passed as qualified
+in the record. Temporary values/tooling/credentials cleared; bounded localhost
+review expires **18:02:53 Dubai / 14:02:53 UTC October 29**. Historical/frozen/
+approval/nine-template/formula, portfolio/public/Firebase/DNS/Netlify/billing/IAM
+scope preserved. Phase 1 stays paused; public migration is not started.
 
 ## Earlier — connected workflow on authenticated staging
 
