@@ -23,8 +23,11 @@ export type CaseDoc = {
 };
 export type Entry = {
   kind: string; company: string; identity: CaseDoc['anchor']; revenue: string; unit: string;
-  precision: string; source_links: string[]; limitations: string[]; template: CaseDoc;
+  financial_context?: FinancialContext|null; precision: string; source_links: string[]; limitations: string[]; template: CaseDoc;
 };
+export type FinancialContext={company:string;form:string;financials_through:string;filed:string;accepted_at:string|null;checked_at:string;filing_url:string;information_cutoff:null;status:string;snapshot_id:string;observations:{field:string;amount:string;unit:string;start:string|null;end:string;concept:string;source_reference:string;limitation:string}[];unknown_fields:string[];limitations:string[]};
+export type MarketReview={status:string;reasons:string[];model_ev:string;forecast_cagr:string|null;market_cap:string|null;market_implied_ev:string|null;ev_relative_difference:string|null;market_implied_growth:string|null;growth_gap_percentage_points:string|null;equity_difference:string|null;per_share_difference:string|null;reverse:{status:string}|null;market:{price:string;session_date:string;timezone:string;delay:string;fallback:string;share_class:string;adjustment:string;source_url:string}|null;limitations:string[]};
+export type ReviewResponse={schema_version:'investor-review-result-v1';result:Result;review:MarketReview};
 export type Catalog = {schema_version: string; entries: Entry[]; synthetic_demo: CaseDoc;
   timing_notice: string; input_definitions: Record<string, string>};
 export type InvestorDoc = Omit<CaseDoc, 'schema_version' | 'analyst' | 'scope'> & {
@@ -36,6 +39,7 @@ export type Draft = { doc: InvestorDoc; rates: Record<string, string>; replaceme
 export type Errors = Record<string, string>;
 export type Year = Record<string, string | number>;
 export type Result = {
+  investor_review?: MarketReview;
   case_name: string; input_basis: string; submitted_inputs: CaseDoc | InvestorDoc | InvestorEquityDoc; limitations: string[];
   stage_c?: {
     stage_b:{enterprise_value:string}; eligible_assets:string;financing_claims:string;other_equity_claims:string;equity_value:string;valuation_shares:string;value_per_share:string;

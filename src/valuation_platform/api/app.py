@@ -3,6 +3,8 @@
 import asyncio
 from contextlib import asynccontextmanager
 import os
+import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import FastAPI, Request
@@ -82,7 +84,7 @@ async def body_bytes(request, policy):
     return bytes(body)
 
 
-def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, worker_args=()):
+def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, worker_args=(), market_provider=None):
     """Trusted server configuration only; none of these arguments are HTTP fields."""
     if root is None:
         value = os.environ.get('VALUATION_APP_ROOT')
@@ -170,6 +172,37 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
 
         status, payload = await app.state.calculator.run(body, disconnected)
         return Response(payload, status_code=status, media_type='application/json', headers={'Cache-Control': 'no-store'})
+
+    @app.post('/api/v1/review/run')
+    async def review_run(request: Request):
+        if app.state.ready and app.state.calculator.job is not None:
+            raise ExecutionError(503,'busy','One calculation is already running; retry later.')
+        body, case, failure = await intake(request)
+        if failure is not None:return failure
+        from valuation_platform.review.market import MassiveProvider, MarketUnavailable
+        from valuation_platform.review.comparison import TICKERS
+        provider = market_provider or MassiveProvider.configured()
+        ticker = TICKERS.get(case.assumptions.company_cik)
+        market = None; unavailable = 'No market reference for synthetic examples.'
+        if ticker:
+            try:
+                async with asyncio.timeout(12):
+                    market = await asyncio.to_thread(provider.opening,ticker,datetime.now(timezone.utc))
+            except MarketUnavailable as exc:
+                unavailable = str(exc)
+            except Exception:
+                unavailable = 'Opening-price source unavailable; forward calculation remains usable.'
+        from .budget import read_http_document
+        _, original = read_http_document(body)
+        internal = json.dumps({'schema_version':'internal-investor-review-v1','case':original,
+            'market':market.to_dict() if market else None,'unavailable':unavailable}).encode()
+        # Trust boundary: no browser-supplied market body is accepted. External
+        # retrieval is complete before the network-disabled financial child starts.
+        async def disconnected():
+            while True:
+                if (await request.receive())['type']=='http.disconnect':return
+        status,payload=await app.state.calculator.run(internal,disconnected)
+        return Response(payload,status_code=status,media_type='application/json',headers={'Cache-Control':'no-store'})
 
     @app.post('/api/v1/scenarios/validate')
     async def validate_scenarios(request: Request):

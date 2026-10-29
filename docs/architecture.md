@@ -1,5 +1,40 @@
 # Architecture
 
+## Current local investor review
+
+The [consolidated review](investor-review-implementation.md) replaces the main
+workspace navigation with Valuation / Scenarios / Sensitivity. The certified
+reverse engine and legacy interfaces remain; reverse growth is integrated into
+forward review only when a trusted, comparable market snapshot exists. Inputs,
+Python financial execution and display remain separate. Browser arithmetic only
+formats exact strings/ratios and positions charts; it never values a company.
+
+`review.prepare` reuses SEC transport/parsers and normalization concept policies
+for three separate, source-bound context snapshots. Catalog projection exposes
+report end, publication/acceptance, check time, observations and unknowns. These
+snapshots are not approved anchors and never replace the retained consumer inputs.
+The offline runtime adds three pinned context resources and four review modules;
+94 manifest entries plus the manifest file. Existing resource pins are unchanged.
+
+`POST /api/v1/review/run` accepts the existing strict investor case, retrieves at
+most one bounded market snapshot outside the network-disabled financial child,
+and passes a server-only internal envelope to the existing Calculator. A failed
+provider does not block forward output. The child reuses one validated anchor for
+forward and certified reverse candidates. Browser-supplied market observations
+are rejected. Existing shared calculation gate, cancellation, stale response and
+CPU/wall/body/output limits remain; provider lookup has a separate 12s outer
+budget (8s per bounded HTTP fetch, at most three). No persistent quote cache.
+
+Explicit investor analysis v2 envelopes permit `information_cutoff: null`, meaning
+unknown; omitted/invalid fields still fail. Fiscal-end origin is automatically
+carried from the selected anchor. Existing analyst/investor v1 contracts and JSON
+behavior remain strict and compatible. No stub-period or rolling DCF is added.
+Market access/display entitlement and a comparable financial/timing perimeter are
+still external/economic dependencies. The review uses loopback 5175 → 8002 with
+an immutable verified local bundle; hosted services are unchanged.
+
+## Prior architecture checkpoints
+
 The [bounded performance review](connected-workflow-performance.md) adds request-local
 source preparation for grid/reverse execution. One validated immutable anchor binds
 each request; candidate declarations remain strict, shared A/B/C execution and exact

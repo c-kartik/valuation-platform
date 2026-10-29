@@ -5,3 +5,7 @@ import {afterEach} from 'vitest';
 HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open',''); };
 HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); };
 afterEach(cleanup);
+
+// Object-URL lifecycle is explicitly asserted by export tests; jsdom has no downloader.
+if(!URL.createObjectURL)URL.createObjectURL=()=> 'blob:offline-test';
+if(!URL.revokeObjectURL)URL.revokeObjectURL=()=>{};

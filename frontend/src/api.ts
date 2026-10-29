@@ -35,7 +35,7 @@ function renderableResult(data: Record<string, unknown>, requireEquity: boolean)
     Array.isArray(c.contributions) && c.contributions.every(line => object(line) && object(line.component) && text(line.component.component_id) && decimal(line.signed_contribution));
 }
 function renderableSensitivity(data:Record<string,unknown>):boolean{
- if(!['investor-sensitivity-results-v1','analyst-sensitivity-results-v1'].includes(String(data.schema_version))||!object(data.submitted_inputs)||!object(data.selected_case)||!object(data.reference_result)||!object(data.selection)||!text(data.selection.analytical_date)||!text(data.selection.information_cutoff)||!text(data.held_fixed)||!Array.isArray(data.limitations)||!data.limitations.every(text))return false;
+ if(!['investor-sensitivity-results-v1','investor-sensitivity-results-v2','analyst-sensitivity-results-v1'].includes(String(data.schema_version))||!object(data.submitted_inputs)||!object(data.selected_case)||!object(data.reference_result)||!object(data.selection)||!text(data.selection.analytical_date)||!(data.selection.information_cutoff===null||text(data.selection.information_cutoff))||!text(data.held_fixed)||!Array.isArray(data.limitations)||!data.limitations.every(text))return false;
  const equity=data.selected_case.calculation_scope==='EQUITY_PER_SHARE';
  if(!renderableResult(data.reference_result,equity))return false;
  const w=data.wacc_values,g=data.terminal_growth_values,rows=data.cells;
@@ -47,7 +47,7 @@ function renderableSensitivity(data:Record<string,unknown>):boolean{
  }));
 }
 function renderableReverse(data:Record<string,unknown>):boolean{
- if(!['analyst-reverse-dcf-results-v1','investor-reverse-dcf-results-v1'].includes(String(data.schema_version))||!object(data.submitted_inputs)||!object(data.selected_case)||!object(data.reference_result)||!object(data.selection)||!text(data.selection.analytical_date)||!text(data.selection.information_cutoff)||!text(data.held_fixed)||!text(data.reason)||!object(data.monotonicity)||!text(data.monotonicity.direction)||!text(data.monotonicity.reason)||!object(data.numerical_policy)||!Number.isInteger(data.iterations)||!Number.isInteger(data.evaluations)||!Array.isArray(data.limitations)||!data.limitations.every(text))return false;
+ if(!['analyst-reverse-dcf-results-v1','investor-reverse-dcf-results-v1','investor-reverse-dcf-results-v2'].includes(String(data.schema_version))||!object(data.submitted_inputs)||!object(data.selected_case)||!object(data.reference_result)||!object(data.selection)||!text(data.selection.analytical_date)||!(data.selection.information_cutoff===null||text(data.selection.information_cutoff))||!text(data.held_fixed)||!text(data.reason)||!object(data.monotonicity)||!text(data.monotonicity.direction)||!text(data.monotonicity.reason)||!object(data.numerical_policy)||!Number.isInteger(data.iterations)||!Number.isInteger(data.evaluations)||!Array.isArray(data.limitations)||!data.limitations.every(text))return false;
  const target=data.submitted_inputs.target,bounds=data.submitted_inputs.growth_bounds;if(!object(target)||!decimal(target.amount)||!['USD','USD/share'].includes(String(target.unit))||!text(target.date)||!object(bounds)||!decimal(bounds.lower)||!decimal(bounds.upper))return false;
  const equity=target.metric==='VALUE_PER_SHARE';if(!renderableResult(data.reference_result,equity))return false;
  const bracket=data.final_bracket;if(bracket!==null&&(!object(bracket)||!['lower_growth','upper_growth','width'].every(k=>decimal(bracket[k]))))return false;
@@ -80,11 +80,15 @@ export async function request<T>(path: string, body?: unknown, signal?: AbortSig
       const message = code === 'invalid_case' ? 'Review the indicated inputs.' : code === 'request_too_large' ? 'The submitted input is too large. Reduce optional notes or component references.' : unavailableMessage;
       throw new ApiError(code, message, details);
     }
+    if(path==='/api/v1/review/run'){
+      if(data.schema_version!=='investor-review-result-v1'||!object(data.result)||!renderableResult(data.result,object(body)&&body.calculation_scope==='EQUITY_PER_SHARE')||!object(data.review)||!['UNAVAILABLE','SCOPE_QUALIFIED'].includes(String(data.review.status))||!decimal(data.review.model_ev)||!Array.isArray(data.review.limitations)||!data.review.limitations.every(text)||!Array.isArray(data.review.reasons)||!data.review.reasons.every(text)||!['forecast_cagr','market_cap','market_implied_ev','ev_relative_difference','market_implied_growth','growth_gap_percentage_points','equity_difference','per_share_difference'].every(k=>data.review[k]===null||decimal(data.review[k]))||!(data.review.market===null||(object(data.review.market)&&decimal(data.review.market.price)&&['session_date','timezone','delay','fallback','share_class','adjustment','source_url'].every(k=>text(data.review.market[k])))))throw new ApiError('service_unavailable',unavailableMessage);
+      return data as T;
+    }
     if (path.endsWith('/run')) {
       const scenarios=path==='/api/v1/scenarios/run';
       const valid=path==='/api/v1/reverse/run'?renderableReverse(data):path==='/api/v1/sensitivity/run'?renderableSensitivity(data):scenarios
-        ? ['investor-scenario-results-v1','analyst-scenario-results-v1'].includes(data.schema_version)&&Array.isArray(data.scenarios)&&data.scenarios.length===3&&object(data.submitted_inputs)&&Array.isArray(data.limitations)&&data.limitations.every(text)&&
-          data.scenarios.every((entry:unknown,i:number)=>object(entry)&&entry.label===['Bear','Base','Bull'][i]&&text(entry.analytical_date)&&text(entry.information_cutoff)&&object(entry.result)&&renderableResult(entry.result,object(body)&&Array.isArray(body.scenarios)&&body.scenarios.some(e=>object(e)&&object(e.case)&&e.case.calculation_scope==='EQUITY_PER_SHARE')))
+        ? ['investor-scenario-results-v1','investor-scenario-results-v2','analyst-scenario-results-v1'].includes(data.schema_version)&&Array.isArray(data.scenarios)&&data.scenarios.length===3&&object(data.submitted_inputs)&&Array.isArray(data.limitations)&&data.limitations.every(text)&&
+          data.scenarios.every((entry:unknown,i:number)=>object(entry)&&entry.label===['Bear','Base','Bull'][i]&&text(entry.analytical_date)&&(entry.information_cutoff===null||text(entry.information_cutoff))&&object(entry.result)&&renderableResult(entry.result,object(body)&&Array.isArray(body.scenarios)&&body.scenarios.some(e=>object(e)&&object(e.case)&&e.case.calculation_scope==='EQUITY_PER_SHARE')))
         : renderableResult(data,object(body)&&body.calculation_scope==='EQUITY_PER_SHARE');
       if(!valid)throw new ApiError('service_unavailable',unavailableMessage);
     }

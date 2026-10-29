@@ -13,6 +13,7 @@ from .scenario_inputs import LABELS, read_scenario_set
 SCHEMA = "analyst-sensitivity-request-v1"
 RESULT_SCHEMA = "analyst-sensitivity-results-v1"
 INVESTOR_SCHEMA = "investor-sensitivity-request-v1"
+REVIEW_SCHEMA = "investor-sensitivity-request-v2"
 INVESTOR_RESULT_SCHEMA = "investor-sensitivity-results-v1"
 HELD_FIXED = (
     "All five annual operating inputs and period identities; terminal operating ratios; "
@@ -38,7 +39,7 @@ class SensitivityRequest:
     case: AnalystCase
     scenario_label: str | None
     analytical_date: date
-    information_cutoff: date
+    information_cutoff: date | None
     wacc_values: tuple[Decimal, ...]
     terminal_growth_values: tuple[Decimal, ...]
 
@@ -111,8 +112,8 @@ def _read_sensitivity(text: str) -> SensitivityRequest:
         return tuple(rates)
 
     doc = obj(doc, ("schema_version", "sensitivity_name", "source", "wacc_values", "terminal_growth_values"), "sensitivity")
-    investor = doc.get("schema_version") == INVESTOR_SCHEMA
-    if doc.get("schema_version") not in (SCHEMA, INVESTOR_SCHEMA):
+    investor = doc.get("schema_version") in (INVESTOR_SCHEMA, REVIEW_SCHEMA)
+    if doc.get("schema_version") not in (SCHEMA, INVESTOR_SCHEMA, REVIEW_SCHEMA):
         errors.append(f"sensitivity.schema_version: requires {SCHEMA} or {INVESTOR_SCHEMA}")
     name = doc.get("sensitivity_name")
     if type(name) is not str or not name.strip():
@@ -125,7 +126,7 @@ def _read_sensitivity(text: str) -> SensitivityRequest:
     case = analytical = cutoff = label = None
     if kind == "single_case":
         analytical = day(source.get("analytical_date"), "sensitivity.source.analytical_date")
-        cutoff = day(source.get("information_cutoff"), "sensitivity.source.information_cutoff")
+        cutoff = None if doc.get("schema_version") == REVIEW_SCHEMA and source.get("information_cutoff") is None else day(source.get("information_cutoff"), "sensitivity.source.information_cutoff")
         try:
             case = read_case(json.dumps(source.get("case")))
         except CaseInputError as exc:
@@ -219,11 +220,11 @@ def run_sensitivity(request: SensitivityRequest, repository_root: Path) -> dict[
         if isinstance(exc, SensitivityInputError):
             raise
         raise SensitivityInputError([f"sensitivity.reference_or_grid: execution failed: {exc}"]) from exc
-    return {"schema_version": INVESTOR_RESULT_SCHEMA if _strict_json(request.submitted_json)["schema_version"] == INVESTOR_SCHEMA else RESULT_SCHEMA, "sensitivity_name": request.sensitivity_name,
+    return {"schema_version": INVESTOR_RESULT_SCHEMA[:-1]+"2" if _strict_json(request.submitted_json)["schema_version"] == REVIEW_SCHEMA else INVESTOR_RESULT_SCHEMA if _strict_json(request.submitted_json)["schema_version"] in (INVESTOR_SCHEMA, REVIEW_SCHEMA) else RESULT_SCHEMA, "sensitivity_name": request.sensitivity_name,
             "submitted_inputs": _strict_json(request.submitted_json), "selected_case": original,
             "selection": {"source_kind": _strict_json(request.submitted_json)["source"]["kind"],
                           "scenario_label": request.scenario_label, "analytical_date": request.analytical_date.isoformat(),
-                          "information_cutoff": request.information_cutoff.isoformat()},
+                          "information_cutoff": request.information_cutoff.isoformat() if request.information_cutoff else None},
             "reference_result": reference, "reference_metrics": reference_metrics,
             "wacc_values": [str(x) for x in request.wacc_values],
             "terminal_growth_values": [str(x) for x in request.terminal_growth_values],

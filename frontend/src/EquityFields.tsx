@@ -41,7 +41,7 @@ export function EquityFields({values,errors,edit,anchorDate,advanced,setAdvanced
  </>;
 }
 
-export function EquityReview({result,stale}:{result:Result;stale:boolean}){
+export function EquityReview({result,stale,compact=false}:{result:Result;stale:boolean;compact?:boolean}){
  const c=result.stage_c;if(!c)return null;const provisional=c.inputs.observations.filter(o=>o.disposition==='OMISSION');
  return <div aria-label="Equity reconciliation">
    {stale&&<p className="errors" role="status"><b>STALE EQUITY RESULT — recalculate after edits.</b></p>}
@@ -53,6 +53,6 @@ export function EquityReview({result,stale}:{result:Result;stale:boolean}){
     <div><dt>= Value {c.inputs.shares.class_id.startsWith('issued:')?'per issued share':'per basic-equivalent share'} (USD/share)</dt><dd>{display(c.value_per_share,'1',2)}</dd></div>
    </dl>
    <p className="hint">{c.inputs.shares.class_id} · {c.inputs.shares.observation_date}. {c.inputs.shares.rationale}</p>
-   <details><summary>Equity provenance &amp; exact values</summary><ul>{c.contributions.map(line=><li key={line.component.component_id}>{line.component.component_id}: {line.signed_contribution} USD (unrounded)</li>)}</ul><pre>{JSON.stringify(result,null,2)}</pre></details>
+   {!compact&&<details><summary>Equity provenance &amp; exact values</summary><ul>{c.contributions.map(line=><li key={line.component.component_id}>{line.component.component_id}: {line.signed_contribution} USD (unrounded)</li>)}</ul><pre>{JSON.stringify(result,null,2)}</pre></details>}
   </div>;
 }

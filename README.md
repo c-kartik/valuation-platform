@@ -19,32 +19,30 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
-The [performance review](docs/connected-workflow-performance.md) removes repeated
-source preparation within sensitivity/reverse requests, preserves exact financial/
-certification behavior and recommends an explicitly entered 3×3 starting grid.
-Larger grids remain available; no company axes or assumptions become defaults.
+The [consolidated investor review](docs/investor-review-implementation.md) adds a
+clean local `/workspace/`: forward valuation with integrated market-review status,
+inline inherited Bear/Base/Bull inputs, accessible revenue/FCFF charts, explicit
+editable 3×3 sensitivity generation, and optional exact calculation downloads.
+Current SEC context for META/GOOGL/AAPL is separately dated and **preparation
+incomplete**; calculations still use the approved FY2025 revenue anchors. All
+company forecast inputs start unset; entries remain in this tab only.
 
-The [October 29 connected-workflow review](docs/connected-workflow-acceptance.md)
-passes local software acceptance with two status-label corrections. Cloud/public
-readiness and investment readiness are not established; entries remain session-only.
+Genuine current-market comparison is **not yet available**. The tested Massive
+adapter requires licensed local-display access and documented delay; current-date
+timing, shares/classes, split compatibility and economic bridge preparation remain
+unresolved. Fiscal-end discounting is unchanged. No mock price is shown as current.
+The underlying certified reverse solver and legacy CLI/reference interfaces remain.
 
-The [private staging acceptance](docs/connected-workflow-staging-acceptance.md) now
-verifies the built connected workspace through an authenticated localhost proxy at
-<http://127.0.0.1:4173/workspace/>. Staging remains private; public publication and
-financial readiness remain separate. Local review servers are preserved.
-
-The [integrated investor workspace](docs/integrated-investor-analyses.md) is ready
-for local review at <http://127.0.0.1:5173/workspace/>: start the compatible
-[local API](docs/local-case-api.md#scope-and-local-operation) and run
-`npm --prefix frontend run dev`. META/GOOGL/AAPL start with retained revenue anchors
-and unset assumptions. Forward EV, optional manual equity/share and explicitly
-created Bear/Base/Bull comparisons now use the existing Python engines. Scenarios
-require three complete independent cases, a declared shared cutoff and identical
-bridge/share inputs when included; no economics or probabilities are generated.
-Selected-case WACC/g sensitivity and certified bounded reverse DCF now run through
-the same bounded API, with explicit targets/axes and confirmed separate exploratory
-cases that require fresh forward calculation. No financial formulas, historical approvals or
-templates changed. Phase 1 stays paused; no deployment or push.
+Start the [verified local API](docs/local-case-api.md#scope-and-local-operation),
+then `npm --prefix frontend run dev`. For a separate local API port, use
+`VALUATION_LOCAL_API=http://127.0.0.1:8002 npm --prefix frontend run dev -- --port 5175`.
+The current local review is <http://127.0.0.1:5175/workspace/> → local API 8002;
+there is no cloud fallback. See the implementation record for provider setup,
+verification and safe stop instructions. Nothing was pushed or deployed; Phase 1
+stays paused. Prior [local](docs/connected-workflow-acceptance.md),
+[private staging](docs/connected-workflow-staging-acceptance.md) and
+[performance](docs/connected-workflow-performance.md) reviews remain historical
+records of their stated revisions and scopes.
 
 The separate [investor experience prototype](docs/investor-experience-prototype.md)
 remains the illustrative design reference at <http://127.0.0.1:5174/prototype/>:

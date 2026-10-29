@@ -1532,3 +1532,13 @@ Original null retrieval metadata remains separately preserved. This is packaging
 not fresh coverage classification or analyst treatment approval; all 40 issuer
 records and the frozen register mapping remain unchanged. Comparative years,
 complete D&A/NWC and future consumer readiness are not approved.
+
+
+## Separate three-company current context — October 29, 2026
+
+[Investor review preparation](../investor-review-implementation.md) adds separately
+dated reported-context snapshots for META/GOOGL/AAPL only. It reuses SEC parsers and
+concept candidates, preserving quarter/YTD boundaries and unknowns. This is not
+Phase 1 resumption or a change to historical preparation statuses/approvals. New
+consumer readiness remains NOT_ASSESSED; retained FY2025 valuation anchors stay
+source-validated. See the appended issuer records for exact bindings.

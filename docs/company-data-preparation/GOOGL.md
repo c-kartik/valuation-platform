@@ -1051,3 +1051,22 @@ compileall, local links and diff check. Existing models/bundles/scenarios/sideca
 and frozen-v1 preserved; no SEC/full-suite/corpus. Packaging resolves only the
 receipt prerequisite. Next bounded Phase 1 milestone: independent analyst
 input-treatment memo, proposed pending review; no valuation readiness.
+
+
+## Separate current-context check — October 29, 2026
+
+The user separately authorized a bounded current-data path for META/GOOGL/AAPL,
+without resuming Phase 1. The [new reported-context snapshot](../../data/investor-context/2026-10-29/googl.json)
+retains latest checked SEC submissions/companyfacts references, raw-response
+SHA256s, retrieval/check times, filing/acceptance dates and selected observations
+using existing concept policies. Quarter/YTD rows stay separate; no TTM or
+quarterly annualization, precision inference or historical value change.
+
+This is **NEWER_FILING_AVAILABLE_PREPARATION_INCOMPLETE**, not an approved new
+valuation anchor. Financial-input sufficiency for a current-date/market consumer
+is NOT_ASSESSED. Cash eligibility, financing alternatives/leases, other claims,
+class shares/awards and economic timing remain unresolved; absent preparation
+is not a reported zero or historical omission approval. The existing approved
+FY2025 consumer/source bindings and historical records remain unchanged. See the
+[consolidated implementation record](../investor-review-implementation.md)
+for scope, validation and next requirements.

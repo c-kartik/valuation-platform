@@ -30,10 +30,11 @@ export function chartPoints(values: string[], sharedMagnitude?:string): {x:numbe
 export function readableMoney(raw: string): string {
   const value = new DisplayDecimal(raw);
   const magnitude = value.abs();
-  const [scale,suffix] = magnitude.gte('1000000000') ? ['1000000000','bn'] : magnitude.gte('1000000') ? ['1000000','m'] : ['1',''];
-  const rounded = value.div(scale).toFixed(2);
+  const [scale,suffix] = magnitude.gte('1000000000000') ? ['1000000000000','tn'] : magnitude.gte('1000000000') ? ['1000000000','bn'] : magnitude.gte('1000000') ? ['1000000','m'] : ['1',''];
+  const scaled = value.div(scale);
+  const rounded = !scaled.isZero() && scaled.abs().lt("0.005") ? scaled.toSignificantDigits(3).toFixed() : scaled.toFixed(2);
   const [whole,fraction] = rounded.split('.');
-  return `${value.isNegative() && !value.isZero() ? '−' : ''}$${whole.replace('-','').replace(/\B(?=(\d{3})+(?!\d))/g,',')}.${fraction}${suffix}`;
+  return `${value.isNegative() && !value.isZero() ? '−' : ''}$${whole.replace('-','').replace(/\B(?=(\d{3})+(?!\d))/g,',')}${fraction === undefined ? '' : '.'+fraction}${suffix}`;
 }
 /** Display wording only: original qualifications remain in submitted/full traces. */
 export function readableLimitation(line: string): string {
@@ -53,3 +54,21 @@ export function shareMillions(raw:string):string {
 export function comparisonDifference(value:string,price:string,date:string,analyticalDate:string):string|null {
  try{const p=new RatioDecimal(price);if(!price.trim()||!p.isFinite()||!p.gt(0)||date!==analyticalDate)return null;return new RatioDecimal(value).div(p).minus(1).times(100).toFixed(1);}catch{return null;}
 }
+
+/** Ordinary fractional percentages; preserve small nonzero observations. */
+export function percentage(raw:string|null|undefined,points=false):string{
+ if(raw===null||raw===undefined)return 'Undefined';
+ const x=new DisplayDecimal(raw).times(points?'1':'100');
+ const text=!x.isZero()&&x.abs().lt('0.005')?x.toSignificantDigits(3).toFixed():x.toFixed(2);
+ return text+(points?' pp':'%');
+}
+export function exactDifference(value:string,base:string):string|null{const d=new RatioDecimal(base);return d.isZero()?null:new RatioDecimal(value).div(d).minus(1).toFixed();}
+
+/** Fixed-unit tables/charts retain tiny nonzero values and bound long labels. */
+export function fixedUnit(raw:string|null|undefined,scale='1',places=2):string{
+ if(raw===null||raw===undefined)return 'Undefined';const x=new DisplayDecimal(raw).div(scale);
+ if(x.abs().gte('1000000000'))return x.toExponential(places);
+ if(!x.isZero()&&x.abs().lt(new DisplayDecimal(10).pow(-places).div(2)))return x.toSignificantDigits(3).toFixed();
+ return displayFixed(x.toFixed(places));
+}
+function displayFixed(text:string){const [a,b]=text.split('.');return a.replace(/\B(?=(\d{3})+(?!\d))/g,',')+(b===undefined?'':'.'+b);}

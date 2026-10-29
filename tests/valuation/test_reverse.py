@@ -304,18 +304,20 @@ class ReverseTests(unittest.TestCase):
             self.assertFalse(out.exists())
 
     def test_existing_case_scenario_sensitivity_interfaces_and_json_bytes_unchanged(self):
-        for path in ('scenario_inputs.py','forecast.py','discounting.py','bridge.py','assumptions.py','consumer.py'):
+        for path in ('forecast.py','discounting.py','bridge.py','assumptions.py','consumer.py'):
             name='src/valuation_platform/valuation/'+path
             baseline='2d568271c446b7b85de6ea19c2a73be2f49cdef5' if path == 'scenario_inputs.py' else 'a571965'
             self.assertEqual((ROOT/name).read_bytes(),subprocess.check_output(['git','show',baseline+':'+name],cwd=ROOT))
-        # Envelope and request-local source binding are the only wrapper changes.
+        # Nullable v2 cutoff metadata and trusted request-local executor are the only wrapper changes.
         # Exact certificate, metrics, bisection and every other AST node stay pinned.
-        for module,names in [('sensitivity_inputs.py',('_metrics','run_sensitivity')),('reverse_inputs.py',('_certificate','_proof_residual','_run_reverse'))]:
+        for module,names in [('scenario_inputs.py',('run_scenario_set',)),('sensitivity_inputs.py',('_metrics','run_sensitivity')),('reverse_inputs.py',('_certificate','_proof_residual','_run_reverse'))]:
             path='src/valuation_platform/valuation/'+module
             old=ast.parse(subprocess.check_output(['git','show','2d568271c446b7b85de6ea19c2a73be2f49cdef5:'+path],cwd=ROOT))
             current=ast.parse((ROOT/path).read_text())
             def normalized(tree,name):
                 node=next(x for x in tree.body if isinstance(x,ast.FunctionDef) and x.name==name)
+                if name=='_run_reverse':
+                    node.args.kwonlyargs=[];node.args.kw_defaults=[]
                 # Normalize only the reviewed preparation line and call target.
                 node.body=[x for x in node.body if not (isinstance(x,ast.Expr) and isinstance(x.value,ast.Constant) and isinstance(x.value.value,str))]
                 for block in ast.walk(node):
@@ -327,7 +329,7 @@ class ReverseTests(unittest.TestCase):
                 for item in ast.walk(node):
                     if isinstance(item,ast.Dict):
                         for i,key in enumerate(item.keys):
-                            if isinstance(key,ast.Constant) and key.value=='schema_version':item.values[i]=ast.Constant(value='ENVELOPE_VERSION_ONLY')
+                            if isinstance(key,ast.Constant) and key.value in ('schema_version','information_cutoff'):item.values[i]=ast.Constant(value='ENVELOPE_VERSION_ONLY')
                 return ast.dump(node,include_attributes=False)
             for name in names:self.assertEqual(normalized(old,name),normalized(current,name))
         for script,example in (('run_analyst_case.py','synthetic-equity.json'),('run_analyst_scenarios.py','synthetic-scenarios-equity.json'),('run_analyst_sensitivity.py','synthetic-sensitivity-equity.json')):

@@ -1,5 +1,36 @@
 # Financial Methodology
 
+## Current local investor-review boundary
+
+The [consolidated review](investor-review-implementation.md) changes preparation,
+metadata and presentation; FCFF, discounting, bridge arithmetic and reverse
+certification remain unchanged. New SEC quarter/YTD context is separately reported,
+not annualized, averaged into forecasts or approved as a new anchor. Precision
+and judgment-dependent eligibility/claims remain unknown where unprepared.
+
+A current opening price cannot turn the retained fiscal-end DCF into a current-date
+valuation. Unknown information cutoffs remain null in explicit investor analysis
+v2 metadata. A stub/rolling-period convention, comparable dated shares/classes,
+verified split treatment and an aligned financial perimeter must be supported
+before genuine market comparison. No convention is silently selected here.
+
+Conditional market EV = dated opening price × selected dated economic shares −
+selected eligible assets + financing + other equity claims. Gross cash is not
+excess cash; EPS weighted-average shares are not current shares; GOOGL/META class
+equivalence must be explicit. Declarations do not authenticate approval or prove
+complete claims coverage. Price/EV and equity/per-share comparisons stay separate.
+The certified solver changes only five constant annual revenue growth operands,
+holding all other inputs fixed, within diagnostic −50% to +50% bounds. It never
+widens them or substitutes a root on failure. Five-year CAGR describes endpoints,
+not intervening cash-flow timing; the growth gap is not a complete attribution.
+
+Bear/Bull begin as inherited session copies of the user's Base, with no invented
+economics or probabilities. Overrides remain independent, including terminal
+ratios. Generated sensitivity axes are explicit editable diagnostics around the
+user's WACC/g, not company defaults, confidence intervals or fair-value bounds.
+No financial acceptance, current-market comparability or investment readiness is
+certified. Phase 1 expansion stays paused.
+
 The subsequent [local investor analyses](integrated-investor-analyses.md) expose
 the existing sensitivity/certified reverse engines and confirmed exploratory
 copies. This is software integration only: no equation, certification tolerance,

@@ -47,13 +47,17 @@ class CatalogTests(unittest.TestCase):
                     self.assertEqual(entry['identity'], original['anchor'])
                     self.assertEqual(entry['precision'], '-6')
                     self.assertEqual(entry['unit'], 'USD')
+                    context=entry['financial_context']
+                    self.assertFalse(context['valuation_anchor_approved'])
+                    self.assertIsNone(context['information_cutoff'])
+                    self.assertTrue(all(len(x['sha256'])==64 for x in context['sources']))
                     self.assertTrue(all(url.startswith('https://www.sec.gov/Archives/') for url in entry['source_links']))
                     values = [y[k] for y in original['forecast_years'] for k in c.ANNUAL_RATES]
                     values += [original['wacc'], original['terminal_growth'], *original['terminal'].values()]
                     self.assertEqual(values, [None] * 37)
                     self.assertIsNone(original['analyst']['author'])
                 self.assertEqual(d['synthetic_demo'], json.loads((ROOT/'examples/valuation/synthetic-base.json').read_text()))
-                for private in ('source_details_json', 'approval_details_json', 'runtime-manifest', '/Users/', 'review_revision', 'source_revision', 'current_history', 'sha256'):
+                for private in ('source_details_json', 'approval_details_json', 'runtime-manifest', '/Users/', 'review_revision', 'source_revision', 'current_history'):
                     self.assertNotIn(private, response.text)
                 self.assertNotIn('access-control-allow-origin', response.headers)
                 self.assertEqual(client.get('/api/v1/catalog?path=AGENTS.md').status_code, 422)

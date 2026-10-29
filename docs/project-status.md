@@ -1,6 +1,39 @@
 # Project Status
 
-## Current — bounded performance verified on private staging
+## Current — consolidated investor review, local only
+
+The [implementation record](investor-review-implementation.md) documents the clean
+Valuation / Scenarios / Sensitivity workflow, inherited inline scenarios,
+accessible paired revenue/FCFF charts, exact optional exports, central units and
+explicit editable 3×3 grid generation. The existing engines, certified solver,
+legacy interfaces and request-local anchor reuse remain authoritative.
+
+Six bounded SEC requests checked the three issuers' latest annual/interim context
+on October 29. New source-bound observations are separately **preparation
+incomplete**; approved FY2025 calculation anchors and all nine unset templates
+remain unchanged. The Massive opening-reference adapter is fixture-tested but
+**genuine market comparison is unavailable**: no configured key/display entitlement,
+and no approved current-date timing/comparable bridge/share/split basis. No live
+price was fetched or invented. Current context does not establish financial
+sufficiency or resume Phase 1.
+
+New verification: 195 frontend tests, 188 valuation tests, 46 affected API/
+preparation tests, 11 review tests and seven preservation/catalog checks; both
+builds. Actual desktop and verified 390×844 CSS browser review covers forward/
+unavailable/retry, scenario inheritance/reset/negative FCFF, chart keyboard/tap/
+table and sensitivity generation/edit/inspect/confirmation. Twelve complete local
+API outputs matched CLI, plus six corner checks and 1,161 independent rational
+comparisons. These use software-test assumptions, not approved company forecasts.
+Export bytes/link lifecycle are tested; actual Chrome file delivery is unconfirmed
+because download observation timed out and browser downloads inspection was blocked.
+
+Local checkpoint only; no push/deployment/cloud changes. Updated review runs at
+<http://127.0.0.1:5175/workspace/> against verified **local** API 8002. Temporary
+trial inputs are cleared. Provider entitlement, economic date/perimeter preparation
+and investment readiness remain separate follow-ups. Portfolio, hosted services,
+IAM/billing, frozen records/approvals and Phase 1 pause are preserved.
+
+## Earlier — bounded performance verified on private staging
 
 The [October 29 performance review](connected-workflow-performance.md) removes
 repeated anchor preparation within each grid/reverse request, preserving source/

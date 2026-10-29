@@ -25,7 +25,11 @@ def build_catalog(root: Path) -> bytes:
             parsed = urlsplit(url)
             if parsed.scheme == 'https' and parsed.hostname == 'www.sec.gov':
                 links.append(url)
+        from valuation_platform.review.sources import FinancialContext
+        context_path = root / ('data/investor-context/2026-10-29/' + ANCHORS[kind]['ticker'].lower() + '.json')
+        context = FinancialContext.read(context_path).to_dict() if context_path.exists() else None
         entries.append({
+            'financial_context': context,
             'kind': kind, 'company': ANCHORS[kind]['ticker'],
             'identity': dict(template['anchor']),
             'revenue': str(anchor.revenue), 'unit': anchor.unit,

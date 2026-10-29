@@ -53,3 +53,8 @@ it('handles an HTTP 504 timeout without rendering gateway HTML',async()=>{
  vi.stubGlobal('fetch',vi.fn(async()=>new Response('<html>private traceback</html>',{status:504})));
  await expect(request('/api/v1/reverse/run',{})).rejects.toMatchObject({code:'deadline_exceeded',message:timeoutMessage});
 });
+
+it('rejects malformed market-review metrics rather than rendering an invented comparison',async()=>{
+ vi.stubGlobal('fetch',vi.fn(async()=>new Response(JSON.stringify({schema_version:'investor-review-result-v1',result:{},review:{status:'SCOPE_QUALIFIED',reasons:[],market_cap:'fabricated'}}),{status:200})));
+ await expect(request('/api/v1/review/run',{})).rejects.toMatchObject({code:'service_unavailable'});
+});

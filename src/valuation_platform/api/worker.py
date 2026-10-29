@@ -40,13 +40,19 @@ def calculate(connection, body, root, policy):
         verify_bundle(root)
         from valuation_platform.valuation.case_inputs import run_case
         _, doc = read_http_document(body)
-        if type(doc) is dict and doc.get('schema_version') in ('analyst-scenario-set-v1', 'investor-scenario-set-v1'):
+        if type(doc) is dict and doc.get('schema_version') == 'internal-investor-review-v1':
+            from valuation_platform.review.comparison import run_review
+            from valuation_platform.review.sources import MarketOpening
+            from valuation_platform.valuation.case_inputs import read_case
+            import json
+            result = run_review(read_case(json.dumps(doc['case'])),Path(root),MarketOpening.from_dict(doc['market']) if doc['market'] else None,doc['unavailable'])
+        elif type(doc) is dict and doc.get('schema_version') in ('analyst-scenario-set-v1', 'investor-scenario-set-v1', 'investor-scenario-set-v2'):
             from valuation_platform.valuation.scenario_inputs import run_scenario_set
             result = run_scenario_set(read_http_scenarios(body), Path(root))
-        elif type(doc) is dict and doc.get('schema_version') in ('analyst-sensitivity-request-v1', 'investor-sensitivity-request-v1'):
+        elif type(doc) is dict and doc.get('schema_version') in ('analyst-sensitivity-request-v1', 'investor-sensitivity-request-v1', 'investor-sensitivity-request-v2'):
             from valuation_platform.valuation.sensitivity_inputs import run_sensitivity
             result = run_sensitivity(read_http_sensitivity(body), Path(root))
-        elif type(doc) is dict and doc.get('schema_version') in ('analyst-reverse-dcf-request-v1', 'investor-reverse-dcf-request-v1'):
+        elif type(doc) is dict and doc.get('schema_version') in ('analyst-reverse-dcf-request-v1', 'investor-reverse-dcf-request-v1', 'investor-reverse-dcf-request-v2'):
             from valuation_platform.valuation.reverse_inputs import run_reverse
             result = run_reverse(read_http_reverse(body), Path(root))
         else:

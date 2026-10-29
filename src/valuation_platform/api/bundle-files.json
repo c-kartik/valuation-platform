@@ -73,9 +73,16 @@
     "src/valuation_platform/valuation/forecast.py",
     "src/valuation_platform/valuation/reverse_inputs.py",
     "src/valuation_platform/valuation/scenario_inputs.py",
-    "src/valuation_platform/valuation/sensitivity_inputs.py"
+    "src/valuation_platform/valuation/sensitivity_inputs.py",
+    "src/valuation_platform/review/__init__.py",
+    "src/valuation_platform/review/sources.py",
+    "src/valuation_platform/review/market.py",
+    "src/valuation_platform/review/comparison.py"
   ],
   "resources": {
+    "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",
+    "data/investor-context/2026-10-29/googl.json": "e7ed172c43d3f4e40cefa80ac7b10ae85ee34c2a6992f8bf63f67dbc10b86e68",
+    "data/investor-context/2026-10-29/meta.json": "519c10f1f25a51d9671cb7c481cc40fa0962accd7726f58998e2a0fe22e38cd4",
     "docs/company-data-preparation/aapl-analyst-input-package.json": "01683e9534a562046f9d543d8f667b53a7eacb9afd5f4acbe0eb6bf3c7d06f28",
     "docs/company-data-preparation/googl-analyst-input-package.json": "331a4470be5ebc41c9ac2de736f70b2693c50590439eb4439ece5e2d0a7e1999",
     "docs/company-data-preparation/meta-analyst-input-package.json": "533f1ab4f4831eeddd489653f6be72af6d18498c2c1c72f375584501e48c24bb",

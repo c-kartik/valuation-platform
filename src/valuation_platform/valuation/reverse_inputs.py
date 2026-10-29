@@ -16,6 +16,7 @@ from .scenario_inputs import LABELS, read_scenario_set
 SCHEMA = "analyst-reverse-dcf-request-v1"
 RESULT_SCHEMA = "analyst-reverse-dcf-results-v1"
 INVESTOR_SCHEMA = "investor-reverse-dcf-request-v1"
+REVIEW_SCHEMA = "investor-reverse-dcf-request-v2"
 INVESTOR_RESULT_SCHEMA = "investor-reverse-dcf-results-v1"
 HELD_FIXED = (
     "Five annual margin/tax/D&A/investment/WC ratios, WACC, terminal growth and all "
@@ -73,7 +74,7 @@ class ReverseRequest:
     case: AnalystCase
     scenario_label: str | None
     analytical_date: date
-    information_cutoff: date
+    information_cutoff: date | None
     target_metric: str
     target_amount: Decimal
     lower_growth: Decimal
@@ -129,7 +130,7 @@ def _read_reverse(text):
             return None
 
     doc = obj(doc, ("schema_version", "reverse_dcf_name", "source", "target", "growth_bounds"), "reverse")
-    if doc.get("schema_version") not in (SCHEMA, INVESTOR_SCHEMA):
+    if doc.get("schema_version") not in (SCHEMA, INVESTOR_SCHEMA, REVIEW_SCHEMA):
         errors.append(f"reverse.schema_version: requires {SCHEMA} or {INVESTOR_SCHEMA}")
     name = doc.get("reverse_dcf_name")
     if type(name) is not str or not name.strip():
@@ -142,7 +143,7 @@ def _read_reverse(text):
     case = analytical = cutoff = label = None
     if kind == "single_case":
         analytical = day(source.get("analytical_date"), "reverse.source.analytical_date")
-        cutoff = day(source.get("information_cutoff"), "reverse.source.information_cutoff")
+        cutoff = None if doc.get("schema_version") == REVIEW_SCHEMA and source.get("information_cutoff") is None else day(source.get("information_cutoff"), "reverse.source.information_cutoff")
         try:
             case = read_case(json.dumps(source.get("case")))
         except CaseInputError as exc:
@@ -160,7 +161,7 @@ def _read_reverse(text):
             errors.extend("reverse.source.scenario_set." + e for e in exc.errors)
     else:
         errors.append("reverse.source.kind: requires single_case or scenario_set")
-    if case and doc.get("schema_version") == INVESTOR_SCHEMA and json.loads(case.submitted_json).get("schema_version") not in ("investor-case-v1", "investor-case-v2"):
+    if case and doc.get("schema_version") in (INVESTOR_SCHEMA, REVIEW_SCHEMA) and json.loads(case.submitted_json).get("schema_version") not in ("investor-case-v1", "investor-case-v2"):
         errors.append("reverse.source.case.schema_version: investor envelope requires investor case metadata")
     if case and analytical and analytical != case.assumptions.anchor_fiscal_end:
         errors.append("reverse.source.analytical_date: must equal selected case.anchor.annual_end")
@@ -284,17 +285,17 @@ def run_reverse(request: ReverseRequest, repository_root: Path, *, policy: Solve
         return _run_reverse(request, repository_root, policy)
 
 
-def _run_reverse(request, root, policy):
+def _run_reverse(request, root, policy, *, execute=None):
     evaluations = 0
     original = json.loads(request.case.submitted_json)
     try:
-        execute = _prepare_case_runner(request.case, root)
+        execute = execute or _prepare_case_runner(request.case, root)
         reference = execute(request.case)
         evaluations += 1
         coefficients, evidence = _certificate(request, reference, policy)
-        result = {"schema_version": INVESTOR_RESULT_SCHEMA if json.loads(request.submitted_json)["schema_version"] == INVESTOR_SCHEMA else RESULT_SCHEMA, "reverse_dcf_name": request.reverse_dcf_name,
+        result = {"schema_version": INVESTOR_RESULT_SCHEMA[:-1]+"2" if json.loads(request.submitted_json)["schema_version"] == REVIEW_SCHEMA else INVESTOR_RESULT_SCHEMA if json.loads(request.submitted_json)["schema_version"] in (INVESTOR_SCHEMA, REVIEW_SCHEMA) else RESULT_SCHEMA, "reverse_dcf_name": request.reverse_dcf_name,
                   "submitted_inputs": _strict_json(request.submitted_json), "selected_case": original,
-                  "selection": {"scenario_label": request.scenario_label, "analytical_date": request.analytical_date.isoformat(), "information_cutoff": request.information_cutoff.isoformat()},
+                  "selection": {"scenario_label": request.scenario_label, "analytical_date": request.analytical_date.isoformat(), "information_cutoff": request.information_cutoff.isoformat() if request.information_cutoff else None},
                   "original_growth_path": [y["revenue_growth"] for y in original["forecast_years"]],
                   "reference_result": reference, "held_fixed": HELD_FIXED,
                   "numerical_policy": {"version": "bounded-bisection-v1", **asdict(policy), "solver_precision": 80,
