@@ -1,8 +1,13 @@
 # Authenticated Cloud Run staging — first remote checkpoint
 
+The [October 29 connected-workflow deployment](connected-workflow-staging-acceptance.md)
+updates this private service to revision `valuation-api-staging-00002-q5m` under
+unchanged private IAM/resources. The original revision below remains the rollback
+reference; its original measurements are historical, not the current image binding.
+
 The [shorter-name public preview](firebase-public-preview.md) subsequently reused
-its reviewed newer image on valuation-api-preview. This original private staging
-service remains configuration/IAM/revision-identical and rejects anonymous health
+its reviewed newer image on valuation-api-preview. At that earlier checkpoint this
+private staging service remained configuration/IAM/revision-identical and rejected anonymous health
 with 403; its original measurements below were not rerun or superseded by new claims.
 
 The subsequent [public-preview attempt](public-preview-preparation.md#deployment-attempt-and-withdrawal--2026-10-21)

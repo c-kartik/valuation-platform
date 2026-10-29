@@ -4,8 +4,9 @@
 > 8000), allowing a separate authenticated staging proxy without disturbing the
 > local API. `--port` defaults to 4173. Only calculator/workspace HTML, compiled
 > JS/CSS and the favicon are served; prototype/private/source files are excluded.
-> This preparation does not establish a new hosted acceptance PASS. The original
-> measurements below remain attributed to their original deployment.
+> The [subsequent private staging acceptance](connected-workflow-staging-acceptance.md)
+> records the new hosted checks separately. The original measurements below remain
+> attributed to their original deployment.
 
 # Compiled frontend → authenticated Cloud Run review
 

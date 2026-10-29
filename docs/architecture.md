@@ -1,5 +1,14 @@
 # Architecture
 
+The [connected private staging acceptance](connected-workflow-staging-acceptance.md)
+now verifies the current allowlisted case/scenario/sensitivity/reverse image on the
+existing IAM-protected staging service. Built localhost `/workspace/` uses the
+bounded preview harness and official authenticated loopback proxy; a numeric proxy
+port avoids the preserved local API. Nine explicit API routes and only compiled
+calculator/workspace assets are exposed locally; Google credentials stay server-side.
+Resource limits, financial engines and solver certification are unchanged. This is
+separate from public Hosting publication/authentication and investment readiness.
+
 The [connected-workflow acceptance review](connected-workflow-acceptance.md)
 verifies the local journey and corrects only running-tool/stale-EV presentation.
 Execution, financial contracts, certified solver and resource budgets are unchanged;

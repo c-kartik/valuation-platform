@@ -23,6 +23,11 @@ The [October 29 connected-workflow review](docs/connected-workflow-acceptance.md
 passes local software acceptance with two status-label corrections. Cloud/public
 readiness and investment readiness are not established; entries remain session-only.
 
+The [private staging acceptance](docs/connected-workflow-staging-acceptance.md) now
+verifies the built connected workspace through an authenticated localhost proxy at
+<http://127.0.0.1:4173/workspace/>. Staging remains private; public publication and
+financial readiness remain separate. Local review servers are preserved.
+
 The [integrated investor workspace](docs/integrated-investor-analyses.md) is ready
 for local review at <http://127.0.0.1:5173/workspace/>: start the compatible
 [local API](docs/local-case-api.md#scope-and-local-operation) and run
@@ -92,7 +97,8 @@ is available via `python3 scripts/preview_cloud_frontend.py` after starting the
 documented fixed-service gcloud proxy; Google credentials stay outside the browser.
 For the connected build use `/workspace/`; `--proxy-port 8001` keeps the existing
 local API on 8000 untouched while a staging proxy listens on 8001. Both ports
-remain bound to loopback. Hosted acceptance for this newer workspace is pending.
+remain bound to loopback. The newer [private staging record](docs/connected-workflow-staging-acceptance.md)
+reports its own checks and remaining public gates.
 That earlier review predates public Hosting; the release above records current access.
 
 The [authenticated staging API](docs/cloud-staging-deployment.md) is now deployed

@@ -1,6 +1,26 @@
 # Project Status
 
-## Current — connected-workflow local acceptance
+## Current — connected workflow on authenticated staging
+
+The [October 29 private staging review](connected-workflow-staging-acceptance.md)
+passes the exercised built-browser/API/CLI journey across the three retained
+anchors. One image from pushed `7b92ac5`, revision `valuation-api-staging-00002-q5m`,
+uses unchanged identity/IAM/resources/limits; anonymous health remains 403.
+Twenty-one complete hosted outputs and 17 browser captures matched CLI JSON;
+independent arithmetic/fork checks passed. Newly run: 185 frontend/65 focused Python
+tests and the production build. Earlier local checks remain attributed below.
+
+The 11×11 equity grid took 28.383s and demanding reverse 32.727s, near the unchanged
+35s ceiling; these samples do not establish production sizing or worst-case bounds.
+Forced cleanup was tested locally, not injected into Cloud Run. Public artifact/
+Hosting/authentication/abuse and operational acceptance remain separately scoped.
+The built review is loopback 4173 → authenticated proxy 8001 → private staging;
+existing local workspace/prototype/API are preserved. Temporary cases/results and
+CLI credentials/tooling are removed; the expiring review session is documented.
+No actual-company assumptions/defaults, historical/frozen/approval/template/formula,
+portfolio/Firebase/live-site/DNS/Netlify changes. Phase 1 remains paused.
+
+## Earlier — connected-workflow local acceptance
 
 The [October 29 acceptance review](connected-workflow-acceptance.md) passes the
 exercised local investor journey after two presentation fixes: correct shared-job
