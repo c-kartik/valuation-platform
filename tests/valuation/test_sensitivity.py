@@ -15,7 +15,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 
 from valuation_platform.valuation import case_inputs as c, sensitivity_inputs as s
 from tests.valuation.test_case_inputs import ROOT, EXAMPLES
@@ -114,7 +114,7 @@ class SensitivityTests(unittest.TestCase):
         doc=document(scenario='Bear');doc['source'].pop('scenario_label')
         with self.assertRaisesRegex(s.SensitivityInputError,'source.scenario_label'):parse(doc)
         doc=document(scenario='Bear');doc['source']['scenario_set']['scenarios'][2]['case']['wacc']=None
-        with patch.object(s,'run_case') as engine,self.assertRaisesRegex(s.SensitivityInputError,r'scenario_set.scenarios\[2\].case.wacc'):parse(doc)
+        with patch.object(s,'_prepare_case_runner') as engine,self.assertRaisesRegex(s.SensitivityInputError,r'scenario_set.scenarios\[2\].case.wacc'):parse(doc)
         engine.assert_not_called()
         doc=document(scenario='Bear');before=execute(doc)
         doc['source']['scenario_set']['scenarios'][1]['case']['operating_margin']='0.9'
@@ -127,7 +127,7 @@ class SensitivityTests(unittest.TestCase):
         self.assertEqual([[x['status'] for x in row] for row in result['cells']],
                          [['VALID','INVALID','INVALID'],['VALID','VALID','INVALID'],['VALID','VALID','VALID']])
         doc.update(wacc_values=['0.01','0.02'],terminal_growth_values=['0.02','0.03'])
-        with patch.object(s,'run_case') as engine,self.assertRaisesRegex(s.SensitivityInputError,'all cells invalid'):parse(doc)
+        with patch.object(s,'_prepare_case_runner') as engine,self.assertRaisesRegex(s.SensitivityInputError,'all cells invalid'):parse(doc)
         engine.assert_not_called()
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'input.json';path.write_text(json.dumps(doc));out=Path(tmp)/'out.json'
@@ -139,7 +139,7 @@ class SensitivityTests(unittest.TestCase):
         for key in ('wacc_values','terminal_growth_values'):
             for bad in ([],['0.1']*12,['0.1','0.10'],['0.2','0.1'],[0.1],[1],[True],[None],['NaN'],['Infinity'],['1e999999999999999999999'],['9%'],['.09'],{},None):
                 doc=document();doc[key]=bad
-                with self.subTest(key=key,bad=bad),patch.object(s,'run_case') as engine,self.assertRaisesRegex(s.SensitivityInputError,'sensitivity.'+key):parse(doc)
+                with self.subTest(key=key,bad=bad),patch.object(s,'_prepare_case_runner') as engine,self.assertRaisesRegex(s.SensitivityInputError,'sensitivity.'+key):parse(doc)
                 engine.assert_not_called()
         for key,bad in (('wacc_values',['0']),('wacc_values',['-0.1']),('terminal_growth_values',['-1'])):
             doc=document();doc[key]=bad
@@ -206,7 +206,7 @@ class SensitivityTests(unittest.TestCase):
     def test_immutable_models_context_and_serialization(self):
         raw=json.dumps(document(True));request=s.read_sensitivity(raw);result=s.run_sensitivity(request,ROOT);before=deepcopy(result)
         with self.assertRaises(FrozenInstanceError):request.sensitivity_name='changed'
-        with patch.object(s,'run_case') as engine,self.assertRaises(s.SensitivityInputError):s.run_sensitivity(replace(request,wacc_values=(D('.9'),)),ROOT)
+        with patch.object(s,'_prepare_case_runner') as engine,self.assertRaises(s.SensitivityInputError):s.run_sensitivity(replace(request,wacc_values=(D('.9'),)),ROOT)
         engine.assert_not_called()
         with localcontext() as ctx:
             ctx.prec=3;ctx.rounding=ROUND_DOWN;ctx.traps[Inexact]=True;ctx.clear_flags();ctx.flags[Rounded]=True;snapshot=ctx.copy()
@@ -232,7 +232,7 @@ class SensitivityTests(unittest.TestCase):
         doc=document(scenario='Bull');self.assertIn('Scenario: Bull',cli.render_summary(execute(doc)))
 
     def test_validation_only_no_calculation_history_or_result_writes(self):
-        with patch.object(s,'run_case') as run,patch.object(c,'load_revenue_anchor') as loader, \
+        with patch.object(s,'_prepare_case_runner') as run,patch.object(c,'load_revenue_anchor') as loader, \
              patch.object(c,'forecast_five_years') as a,patch.object(c,'discount_to_enterprise_value') as b, \
              patch.object(c,'bridge_to_per_share') as bridge,patch.object(Path,'write_text',side_effect=AssertionError('no writes')):
             parse(document(scenario='Base'))
@@ -260,7 +260,7 @@ class SensitivityTests(unittest.TestCase):
             with redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):cli.main([str(path),'--output',str(Path(tmp)/'no')])
             out=Path(tmp)/'failed.json'
             reference=c.run_case(parse(document()).case,ROOT)
-            with patch.object(s,'run_case',side_effect=[reference,ValueError('stale anchor')]),redirect_stderr(io.StringIO()):
+            with patch.object(s,'_prepare_case_runner',return_value=Mock(side_effect=[reference,ValueError('stale anchor')])),redirect_stderr(io.StringIO()):
                 self.assertEqual(cli.main([str(path),'--run','--output',str(out)]),2)
             self.assertFalse(out.exists());self.assertEqual(path.read_bytes(),before)
 

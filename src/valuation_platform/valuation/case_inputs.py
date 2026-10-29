@@ -348,9 +348,23 @@ def load_case(path: Path) -> AnalystCase:
 
 def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
     """Explicit A/B or A/B/C run; no files written or approvals inferred."""
+    return _prepare_case_runner(case, repository_root)(case)
+
+
+def _validated_case_document(case):
     if type(case) is not AnalystCase or read_case(case.submitted_json) != case:
         raise CaseInputError(["Validated AnalystCase required; submitted declarations disagree"])
-    doc = _strict_json(case.submitted_json)
+    return _strict_json(case.submitted_json)
+
+
+def _prepare_case_runner(case: AnalystCase, repository_root: Path):
+    """One request-local, source-validated immutable anchor; no shared cache.
+
+    Only candidates with the identical declared anchor can use this closure.
+    Every candidate is still reparsed/validated and executes the same A/B/C
+    formulas. A later request always reloads and revalidates source/approvals.
+    """
+    declaration = _validated_case_document(case)["anchor"]
     if case.anchor_kind == "meta-fy2025":
         anchor = load_meta_revenue_anchor(repository_root)
     elif case.anchor_kind in ANCHORS:
@@ -364,6 +378,18 @@ def run_case(case: AnalystCase, repository_root: Path) -> dict[str, object]:
             "synthetic:declaration", '{"basis":"SYNTHETIC_FIXTURE; not a SEC observation"}',
             '{"basis":"synthetic fixture; no actual-case approval"}',
         )
+
+    def execute(candidate):
+        doc = _validated_case_document(candidate)
+        if doc["anchor"] != declaration:
+            raise CaseInputError(["Prepared execution requires the identical historical anchor declaration"])
+        return _run_case(candidate, anchor, doc)
+
+    return execute
+
+
+def _run_case(case, anchor, doc):
+    """Shared financial execution; anchor supplied only by the validated closure."""
     stage_a = forecast_five_years(anchor, case.assumptions, convention_version=doc["conventions"]["forecast"])
     stage_b = discount_to_enterprise_value(stage_a, case.terminal,
                                           convention_version=doc["conventions"]["discounting"])

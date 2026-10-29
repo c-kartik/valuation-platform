@@ -1,5 +1,5 @@
 import {useRef, useSyncExternalStore} from 'react';
-import {ApiError, unavailableMessage} from './api';
+import {ApiError, timeoutMessage} from './api';
 
 type Action = 'ev' | 'equity' | 'scenarios' | 'sensitivity' | 'reverse';
 // One synchronous gate per mounted client, shared by all calculation actions.
@@ -24,7 +24,7 @@ export class ExecutionGate {
       clearTimeout(timer);
       if (this.active === owner) {this.active = null; this.notify();}
     };
-    const timer = setTimeout(() => owner.controller.abort(new ApiError('service_unavailable', unavailableMessage)), 50000);
+    const timer = setTimeout(() => owner.controller.abort(new ApiError('deadline_exceeded', timeoutMessage)), 50000);
     signal.addEventListener('abort', finish, {once: true});
     this.notify();
     return {

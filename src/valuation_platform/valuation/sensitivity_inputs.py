@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 import re
 
-from .case_inputs import AnalystCase, CaseInputError, _strict_json, read_case, run_case
+from .case_inputs import AnalystCase, CaseInputError, _strict_json, read_case, _prepare_case_runner
 from .scenario_inputs import LABELS, read_scenario_set
 
 SCHEMA = "analyst-sensitivity-request-v1"
@@ -179,12 +179,13 @@ def _metrics(result):
 
 
 def run_sensitivity(request: SensitivityRequest, repository_root: Path) -> dict[str, object]:
-    """Revalidate, execute reference and each valid cell via existing run_case only."""
+    """Revalidate once-bound source snapshot; execute the shared A/B/C for every cell."""
     if type(request) is not SensitivityRequest or read_sensitivity(request.submitted_json) != request:
         raise SensitivityInputError(["sensitivity: validated immutable SensitivityRequest required"])
     original = json.loads(request.case.submitted_json)
     try:
-        reference = run_case(request.case, repository_root)
+        execute = _prepare_case_runner(request.case, repository_root)
+        reference = execute(request.case)
         with localcontext(Context(prec=50, rounding=ROUND_HALF_EVEN)):
             reference_metrics = _metrics(reference)
             change_keys = ("enterprise_value",) if request.case.bridge is None else ("enterprise_value", "equity_value", "value_per_share")
@@ -200,7 +201,7 @@ def run_sensitivity(request: SensitivityRequest, repository_root: Path) -> dict[
                         doc = json.loads(request.case.submitted_json)
                         doc.update(wacc=str(wacc), terminal_growth=str(growth))
                         try:
-                            result = run_case(read_case(json.dumps(doc)), repository_root)
+                            result = execute(read_case(json.dumps(doc)))
                         except (ValueError, OSError) as exc:
                             raise SensitivityInputError([f"sensitivity.cells[{i}][{j}]: execution failed: {exc}"]) from exc
                         metrics = _metrics(result)

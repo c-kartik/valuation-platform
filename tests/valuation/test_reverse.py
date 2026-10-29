@@ -169,14 +169,15 @@ class ReverseTests(unittest.TestCase):
         out=execute(doc,policy=r.SolverPolicy(max_iterations=1))
         self.assertEqual(out['status'],'ITERATION_LIMIT');self.assertIsNone(out['solution'])
         self.assertEqual(out['iterations'],1)
-        real=r.run_case;calls=[]
-        def changed(case,root):
-            result=real(case,root);calls.append(result)
+        real=c._prepare_case_runner;calls=[]
+        def changed(case):
+            result=prepared(case);calls.append(result)
             # Synthetic exact-midpoint path has seven evaluations, the seventh
             # is an independent fresh verification and must not reuse the first.
             if len(calls)==7:result['stage_b']['enterprise_value']='999'
             return result
-        with patch.object(r,'run_case',side_effect=changed):out=execute()
+        prepared=real(parse(document()).case,ROOT)
+        with patch.object(r,'_prepare_case_runner',return_value=changed):out=r.run_reverse(parse(document()),ROOT)
         self.assertEqual(len(calls),7);self.assertEqual(out['status'],'NUMERICAL_VERIFICATION_FAILED');self.assertIsNone(out['solution'])
 
     def test_both_bracket_and_scale_aware_residual_required(self):
@@ -225,7 +226,7 @@ class ReverseTests(unittest.TestCase):
                (lambda d:d['source'].update(case_file='x'),'case_file')]
         for edit,pattern in edits:
             doc=document();edit(doc)
-            with self.subTest(pattern=pattern),patch.object(r,'run_case') as run,self.assertRaisesRegex(r.ReverseInputError,pattern):parse(doc)
+            with self.subTest(pattern=pattern),patch.object(r,'_prepare_case_runner') as run,self.assertRaisesRegex(r.ReverseInputError,pattern):parse(doc)
             run.assert_not_called()
         doc=document();doc['target'].update(metric='VALUE_PER_SHARE',unit='USD/share')
         with self.assertRaisesRegex(r.ReverseInputError,'requires a complete equity'):parse(doc)
@@ -254,7 +255,7 @@ class ReverseTests(unittest.TestCase):
     def test_input_context_immutability_and_deterministic_output(self):
         raw=json.dumps(document(True));request=r.read_reverse(raw);result=r.run_reverse(request,ROOT);before=deepcopy(result)
         with self.assertRaises(FrozenInstanceError):request.target_amount=D(0)
-        with patch.object(r,'run_case') as run,self.assertRaises(r.ReverseInputError):r.run_reverse(replace(request,lower_growth=D('-0.9')),ROOT)
+        with patch.object(r,'_prepare_case_runner') as run,self.assertRaises(r.ReverseInputError):r.run_reverse(replace(request,lower_growth=D('-0.9')),ROOT)
         run.assert_not_called()
         with localcontext() as ctx:
             ctx.prec=3;ctx.rounding=ROUND_DOWN;ctx.traps[Inexact]=True;ctx.clear_flags();ctx.flags[Rounded]=True;snapshot=ctx.copy()
@@ -267,7 +268,7 @@ class ReverseTests(unittest.TestCase):
         self.assertEqual(result,before);self.assertEqual(request.submitted_json,raw)
 
     def test_validation_calculation_free_and_no_writes(self):
-        with patch.object(r,'run_case') as run,patch.object(r,'_certificate') as certify,patch.object(c,'load_revenue_anchor') as load,patch.object(Path,'write_text',side_effect=AssertionError('no writes')):
+        with patch.object(r,'_prepare_case_runner') as run,patch.object(r,'_certificate') as certify,patch.object(c,'load_revenue_anchor') as load,patch.object(Path,'write_text',side_effect=AssertionError('no writes')):
             parse(document(label='Base'))
             with redirect_stdout(io.StringIO()):self.assertEqual(cli.main([str(EXAMPLES/'synthetic-reverse-ev.json')]),0)
             for mock in (run,certify,load):mock.assert_not_called()
@@ -303,18 +304,26 @@ class ReverseTests(unittest.TestCase):
             self.assertFalse(out.exists())
 
     def test_existing_case_scenario_sensitivity_interfaces_and_json_bytes_unchanged(self):
-        for path in ('case_inputs.py','scenario_inputs.py','forecast.py','discounting.py','bridge.py','assumptions.py','consumer.py'):
+        for path in ('scenario_inputs.py','forecast.py','discounting.py','bridge.py','assumptions.py','consumer.py'):
             name='src/valuation_platform/valuation/'+path
-            baseline='2d568271c446b7b85de6ea19c2a73be2f49cdef5' if path in ('case_inputs.py','scenario_inputs.py') else 'a571965'
+            baseline='2d568271c446b7b85de6ea19c2a73be2f49cdef5' if path == 'scenario_inputs.py' else 'a571965'
             self.assertEqual((ROOT/name).read_bytes(),subprocess.check_output(['git','show',baseline+':'+name],cwd=ROOT))
-        # Only schema-version selection changes inside the two calculation wrappers.
-        # Exact certificate, forward calls, metrics, bisection and every other AST node stay pinned.
+        # Envelope and request-local source binding are the only wrapper changes.
+        # Exact certificate, metrics, bisection and every other AST node stay pinned.
         for module,names in [('sensitivity_inputs.py',('_metrics','run_sensitivity')),('reverse_inputs.py',('_certificate','_proof_residual','_run_reverse'))]:
             path='src/valuation_platform/valuation/'+module
             old=ast.parse(subprocess.check_output(['git','show','2d568271c446b7b85de6ea19c2a73be2f49cdef5:'+path],cwd=ROOT))
             current=ast.parse((ROOT/path).read_text())
             def normalized(tree,name):
                 node=next(x for x in tree.body if isinstance(x,ast.FunctionDef) and x.name==name)
+                # Normalize only the reviewed preparation line and call target.
+                node.body=[x for x in node.body if not (isinstance(x,ast.Expr) and isinstance(x.value,ast.Constant) and isinstance(x.value.value,str))]
+                for block in ast.walk(node):
+                    if isinstance(block,(ast.Try,ast.With)):
+                        block.body=[x for x in block.body if not (isinstance(x,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='execute' for t in x.targets))]
+                for call in ast.walk(node):
+                    if isinstance(call,ast.Call) and isinstance(call.func,ast.Name) and call.func.id=='execute':
+                        call.func.id='run_case';call.args.append(ast.Name(id='repository_root' if name=='run_sensitivity' else 'root',ctx=ast.Load()))
                 for item in ast.walk(node):
                     if isinstance(item,ast.Dict):
                         for i,key in enumerate(item.keys):

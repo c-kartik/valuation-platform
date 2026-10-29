@@ -1,7 +1,7 @@
 import {it,expect,vi,afterEach} from 'vitest';
-import {request,failureMessage,unavailableMessage,ApiError} from './api';
+import {request,failureMessage,unavailableMessage,timeoutMessage,ApiError} from './api';
 afterEach(()=>vi.unstubAllGlobals());
-it.each([500,502,503,504])('handles non-JSON gateway %s without exposing HTML',async(status)=>{
+it.each([500,502,503])('handles non-JSON gateway %s without exposing HTML',async(status)=>{
  vi.stubGlobal('fetch',vi.fn(async()=>new Response('<html>private traceback</html>',{status})));
  await expect(request('/api/v1/cases/run',{})).rejects.toMatchObject({code:'service_unavailable',message:unavailableMessage});
 });
@@ -33,4 +33,23 @@ it.each([{}, {scenarios:[]}, {scenarios:[{label:'Bear',result:{}}]}])('rejects m
 
 it.each(['/api/v1/sensitivity/run','/api/v1/reverse/run'])('rejects malformed analysis results on %s',async path=>{
  for(const body of [{},{schema_version:'investor-reverse-dcf-results-v1',status:'SUCCESS',solution:null},{schema_version:'investor-sensitivity-results-v1',cells:[]}]){vi.stubGlobal('fetch',vi.fn(async()=>new Response(JSON.stringify(body),{status:200})));await expect(request(path,{})).rejects.toMatchObject({code:'service_unavailable'});}
+});
+
+it('distinguishes deadline from busy and unavailable without promising worker cancellation',()=>{
+ expect(failureMessage(new ApiError('deadline_exceeded','untrusted server text'))).toBe(timeoutMessage);
+ expect(timeoutMessage).toMatch(/inputs are still here/);expect(timeoutMessage).toMatch(/server work may continue/);
+ expect(timeoutMessage).not.toBe(unavailableMessage);
+});
+it('classifies the transport waiting deadline separately and retains the submitted body',async()=>{
+ vi.useFakeTimers();try{
+  const body={untouched:'test'};
+  vi.stubGlobal('fetch',vi.fn((_url,options)=>new Promise((_resolve,reject)=>options.signal.addEventListener('abort',()=>reject(Error('aborted'))))));
+  const pending=expect(request('/api/v1/cases/run',body)).rejects.toMatchObject({code:'deadline_exceeded'});
+  await vi.advanceTimersByTimeAsync(50000);await pending;expect(body).toEqual({untouched:'test'});
+ }finally{vi.useRealTimers();}
+});
+
+it('handles an HTTP 504 timeout without rendering gateway HTML',async()=>{
+ vi.stubGlobal('fetch',vi.fn(async()=>new Response('<html>private traceback</html>',{status:504})));
+ await expect(request('/api/v1/reverse/run',{})).rejects.toMatchObject({code:'deadline_exceeded',message:timeoutMessage});
 });

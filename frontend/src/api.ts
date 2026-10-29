@@ -2,11 +2,13 @@ export class ApiError extends Error {
   constructor(public code: string, message: string, public details: string[] = []) { super(message); }
 }
 export const unavailableMessage = 'Calculations are temporarily unavailable. Your inputs are still here. Please try again later.';
+export const timeoutMessage = 'The calculation exceeded the waiting limit. Your inputs are still here. Please retry explicitly; server work may continue until its own deadline.';
 export function failureMessage(error: unknown): string {
   if (error instanceof ApiError) {
     if (error.code === 'busy') return 'Another calculation is in progress. Your inputs are still here. Please retry shortly.';
+    if (error.code === 'deadline_exceeded') return timeoutMessage;
     if (error.code === 'request_cancelled') return error.message;
-    if (['service_unavailable', 'connection_error', 'http_error', 'not_ready', 'shutting_down', 'calculation_failed', 'worker_failed', 'internal_error', 'deadline_exceeded'].includes(error.code)) return unavailableMessage;
+    if (['service_unavailable', 'connection_error', 'http_error', 'not_ready', 'shutting_down', 'calculation_failed', 'worker_failed', 'internal_error'].includes(error.code)) return unavailableMessage;
     return `${error.code}: ${error.message}`;
   }
   return unavailableMessage;
@@ -68,7 +70,7 @@ export async function request<T>(path: string, body?: unknown, signal?: AbortSig
     // Gateway HTML and untrusted server messages never enter the review UI.
     if (response.status === 429) throw new ApiError('busy', 'Another calculation is in progress. Please retry shortly.');
     let data;
-    try {data = await response.json();} catch {throw new ApiError('service_unavailable', unavailableMessage);}
+    try {data = await response.json();} catch {throw new ApiError(response.status === 504 ? 'deadline_exceeded' : 'service_unavailable', response.status === 504 ? timeoutMessage : unavailableMessage);}
     if (!data || typeof data !== 'object' || Array.isArray(data)) throw new ApiError('service_unavailable', unavailableMessage);
     if (!response.ok) {
       const error = data.error;
@@ -90,6 +92,7 @@ export async function request<T>(path: string, body?: unknown, signal?: AbortSig
   } catch (e) {
     if (e instanceof ApiError) throw e;
     if (controller.signal.aborted && !timedOut) throw new ApiError('request_cancelled', 'Calculation cancelled. Your inputs are still here. Retry when ready.');
+    if (timedOut) throw new ApiError('deadline_exceeded', timeoutMessage);
     throw new ApiError('service_unavailable', unavailableMessage);
   } finally {
     clearTimeout(timer); signal?.removeEventListener('abort', abort);

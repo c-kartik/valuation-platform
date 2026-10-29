@@ -239,7 +239,7 @@ it('shows a bounded timeout, releases the shared gate and retains inputs',async(
  let resolve!:(r:Result)=>void;render(<App load={transport(()=>new Promise<Result>(r=>{resolve=r;}))}/>);await selectDemo();
  vi.useFakeTimers();try{
   run();await act(async()=>{await vi.advanceTimersByTimeAsync(50000);});
-  expect(screen.getByText(/Calculations are temporarily unavailable/)).toBeTruthy();
+  expect(screen.getByText(/calculation exceeded the waiting limit/)).toBeTruthy();
   expect((screen.getByRole('button',{name:'Retry enterprise value'}) as HTMLButtonElement).disabled).toBe(false);
   expect(input(grow).value).toBe('10');resolve(result());await act(async()=>{});expect(screen.queryByText('Synthetic result')).toBeNull();
  }finally{vi.useRealTimers();}

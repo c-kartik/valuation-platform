@@ -18,7 +18,7 @@ it('cancellation discards abort-ignoring transports and old cleanup cannot relea
 it('releases a stalled calculation at the client deadline, even if transport ignores abort',async()=>{
  vi.useFakeTimers();try{
   const gate=new ExecutionGate(),lease=gate.start('ev')!;
-  const rejected=expect(lease.wait(new Promise(()=>{}))).rejects.toMatchObject({code:'service_unavailable'});
+  const rejected=expect(lease.wait(new Promise(()=>{}))).rejects.toMatchObject({code:'deadline_exceeded'});
   await vi.advanceTimersByTimeAsync(50000);await rejected;expect(gate.snapshot()).toBeNull();
   const next=gate.start('equity')!;lease.finish();expect(gate.snapshot()).toBe('equity');next.finish();
  }finally{vi.useRealTimers();}

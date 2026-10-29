@@ -1,5 +1,13 @@
 # Architecture
 
+The [bounded performance review](connected-workflow-performance.md) adds request-local
+source preparation for grid/reverse execution. One validated immutable anchor binds
+each request; candidate declarations remain strict, shared A/B/C execution and exact
+reverse certification/fresh verification remain unchanged. No cross-request cache,
+persistence, schema or resource-limit change. Later requests revalidate sources.
+Client timeouts are distinct from unavailable/busy failures; 3×3 is the recommended
+explicit starting grid, with unset axes and advanced larger grids still supported.
+
 The [connected private staging acceptance](connected-workflow-staging-acceptance.md)
 now verifies the current allowlisted case/scenario/sensitivity/reverse image on the
 existing IAM-protected staging service. Built localhost `/workspace/` uses the

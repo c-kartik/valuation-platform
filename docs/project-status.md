@@ -1,6 +1,16 @@
 # Project Status
 
-## Current — connected workflow on authenticated staging
+## Current — bounded performance improvement awaiting staging verification
+
+The [performance review](connected-workflow-performance.md) identifies repeated
+anchor preparation as the dominant grid/reverse cost. Request-local validated
+snapshot reuse preserves strict candidate checks, A/B/C formulas, exact certification
+and fresh verification. Local full outputs match; distinct timeout messages and an
+explicit 3×3 starting recommendation preserve unset axes and existing limits.
+Private staging deployment/measurement follows local verification; no public scope,
+history/approval/template change or Phase 1 resumption is authorized.
+
+## Earlier — connected workflow on authenticated staging
 
 The [October 29 private staging review](connected-workflow-staging-acceptance.md)
 passes the exercised built-browser/API/CLI journey across the three retained

@@ -9,7 +9,7 @@ from math import comb
 from pathlib import Path
 import re
 
-from .case_inputs import AnalystCase, CaseInputError, _strict_json, read_case, run_case
+from .case_inputs import AnalystCase, CaseInputError, _strict_json, read_case, _prepare_case_runner
 from .forecast import _operating_year
 from .scenario_inputs import LABELS, read_scenario_set
 
@@ -288,7 +288,8 @@ def _run_reverse(request, root, policy):
     evaluations = 0
     original = json.loads(request.case.submitted_json)
     try:
-        reference = run_case(request.case, root)
+        execute = _prepare_case_runner(request.case, root)
+        reference = execute(request.case)
         evaluations += 1
         coefficients, evidence = _certificate(request, reference, policy)
         result = {"schema_version": INVESTOR_RESULT_SCHEMA if json.loads(request.submitted_json)["schema_version"] == INVESTOR_SCHEMA else RESULT_SCHEMA, "reverse_dcf_name": request.reverse_dcf_name,
@@ -320,7 +321,7 @@ def _run_reverse(request, root, policy):
             doc = json.loads(request.case.submitted_json)
             for y in doc["forecast_years"]:
                 y["revenue_growth"] = str(growth)
-            forward = run_case(read_case(json.dumps(doc)), root)
+            forward = execute(read_case(json.dumps(doc)))
             evaluations += 1
             value = Decimal(forward["stage_b"]["enterprise_value"] if request.target_metric == "ENTERPRISE_VALUE" else forward["stage_c"]["value_per_share"])
             return value, forward

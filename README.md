@@ -19,6 +19,11 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The [performance review](docs/connected-workflow-performance.md) removes repeated
+source preparation within sensitivity/reverse requests, preserves exact financial/
+certification behavior and recommends an explicitly entered 3×3 starting grid.
+Larger grids remain available; no company axes or assumptions become defaults.
+
 The [October 29 connected-workflow review](docs/connected-workflow-acceptance.md)
 passes local software acceptance with two status-label corrections. Cloud/public
 readiness and investment readiness are not established; entries remain session-only.
