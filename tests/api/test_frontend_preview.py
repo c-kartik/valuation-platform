@@ -1,5 +1,7 @@
 """Loopback harness checks; these do not authenticate or invoke Cloud Run."""
 
+import argparse
+
 from http.client import HTTPConnection, BadStatusLine
 from http.server import ThreadingHTTPServer
 from pathlib import Path
@@ -22,6 +24,12 @@ class FrontendPreviewTests(unittest.TestCase):
         cls.temp = tempfile.TemporaryDirectory()
         cls.root = Path(cls.temp.name) / 'dist'
         cls.root.mkdir()
+        (cls.root / 'workspace').mkdir()
+        (cls.root / 'workspace/index.html').write_bytes(b'<html>workspace</html>')
+        (cls.root / 'prototype-preview').mkdir()
+        (cls.root / 'prototype-preview/index.html').write_bytes(b'not published')
+        (cls.root / 'assets').mkdir()
+        (cls.root / 'assets/shared-test.js').write_bytes(b'compiled javascript')
         (cls.root / 'index.html').write_bytes(b'<html>compiled</html>')
         (cls.root / 'app.js').write_bytes(b'compiled javascript')
         private = Path(cls.temp.name) / 'private.json'
@@ -55,9 +63,11 @@ class FrontendPreviewTests(unittest.TestCase):
         self.assertEqual((status, body), (200, b'<html>compiled</html>'))
         self.assertEqual(headers['Cache-Control'], 'no-store')
         self.assertIn("connect-src 'self'", headers['Content-Security-Policy'])
-        self.assertEqual(self.request('/app.js')[0], 200)
+        self.assertEqual(self.request('/assets/shared-test.js')[0], 200)
+        self.assertEqual(self.request('/workspace/')[2], b'<html>workspace</html>')
+        self.assertEqual(self.request('/workspace/index.html')[0], 200)
         for path in ('/../private.json', '/%2e%2e/private.json', '/private.json',
-                     '/escape.json', '/src/', '/app.js?url=http://example.com'):
+                     '/escape.json', '/src/', '/prototype-preview/index.html', '/app.js', '/app.js?url=http://example.com'):
             with self.subTest(path=path):
                 self.assertEqual(self.request(path)[0], 404)
         self.assertEqual(self.request('http://example.com/api/v1/catalog')[0], 403)
@@ -99,6 +109,25 @@ class FrontendPreviewTests(unittest.TestCase):
             remote.request.assert_called_once_with('POST', '/api/v1/cases/run', body=b'{"x":"1"}',
                                                    headers={'Content-Type': 'application/json'})
             remote.close.assert_called_once()
+
+    def test_workspace_routes_use_only_configured_loopback_proxy(self):
+        remote = MagicMock()
+        remote.getresponse.return_value.status = 200
+        remote.getresponse.return_value.read.return_value = b'{}'
+        remote.getresponse.return_value.getheader.return_value = 'application/json'
+        self.server.upstream_port = 8001
+        try:
+            for tool in ('scenarios', 'sensitivity', 'reverse'):
+                for action in ('validate', 'run'):
+                    with patch.dict(GLOBALS, HTTPConnection=MagicMock(return_value=remote)):
+                        self.assertEqual(self.request(f'/api/v1/{tool}/{action}', 'POST', b'{}',
+                            {'Content-Type': 'application/json'})[0], 200)
+                        GLOBALS['HTTPConnection'].assert_called_once_with('127.0.0.1', 8001, timeout=48)
+            for invalid in ('0', '65536', 'http://example.com', '-1', '1.5'):
+                with self.assertRaises(argparse.ArgumentTypeError):
+                    module['local_port'](invalid)
+        finally:
+            del self.server.upstream_port
 
     def test_bounded_upstream_failure_and_large_response(self):
         for exception, expected in ((socket.timeout(), 504), (ConnectionRefusedError(), 502),

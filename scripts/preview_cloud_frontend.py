@@ -1,8 +1,11 @@
 """Loopback compiled-frontend preview; Google credentials stay in gcloud's proxy.
 
-Start the exact authenticated Cloud Run proxy on 127.0.0.1:8000 first.
+Start the authenticated Cloud Run proxy on the selected loopback port first.
 This is an engineering preview, not a public hosting/authentication boundary.
 """
+
+import argparse
+import re
 
 from http.client import HTTPConnection, HTTPException
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -20,6 +23,9 @@ ROUTES = {
     ('GET', '/api/v1/catalog'),
     ('POST', '/api/v1/cases/validate'),
     ('POST', '/api/v1/cases/run'),
+    *{('POST', f'/api/v1/{tool}/{action}')
+      for tool in ('scenarios', 'sensitivity', 'reverse')
+      for action in ('validate', 'run')},
 }
 
 
@@ -98,8 +104,10 @@ class PreviewHandler(BaseHTTPRequestHandler):
             return self.error(405, 'Static preview supports GET only.')
         # Exact build-file map: no fallback into source, directories or symlinks.
         static = {'/' + f.relative_to(ROOT).as_posix(): f for f in ROOT.rglob('*')
-                  if f.is_file() and not f.is_symlink() and ROOT.resolve() in f.resolve().parents}
-        file = static.get('/index.html' if path.path == '/' else path.path)
+                  if f.is_file() and not f.is_symlink() and ROOT.resolve() in f.resolve().parents
+                  and public_file(f.relative_to(ROOT).as_posix())}
+        aliases = {'/': '/index.html', '/workspace/': '/workspace/index.html'}
+        file = static.get(aliases.get(path.path, path.path))
         if file is None:
             return self.error(404, 'Unknown static preview file.')
         types = {'.html': 'text/html; charset=utf-8', '.js': 'text/javascript',
@@ -107,7 +115,7 @@ class PreviewHandler(BaseHTTPRequestHandler):
         self.reply(200, file.read_bytes(), types.get(file.suffix, 'application/octet-stream'))
 
     def forward(self, path, body):
-        upstream = HTTPConnection('127.0.0.1', 8000, timeout=UPSTREAM_TIMEOUT)
+        upstream = HTTPConnection('127.0.0.1', getattr(self.server, 'upstream_port', 8000), timeout=UPSTREAM_TIMEOUT)
         try:
             # Only the content type is forwarded; never browser cookies/auth/target headers.
             headers = {'Content-Type': self.headers.get('Content-Type', 'application/json')}
@@ -120,7 +128,7 @@ class PreviewHandler(BaseHTTPRequestHandler):
         except (socket.timeout, TimeoutError):
             self.error(504, 'Authenticated local proxy timed out; inputs remain in the browser.')
         except (OSError, ValueError, HTTPException):
-            self.error(502, 'Cannot reach the authenticated local proxy on port 8000.')
+            self.error(502, 'Cannot reach the authenticated loopback proxy; inputs remain in the browser.')
         finally:
             upstream.close()
 
@@ -128,11 +136,28 @@ class PreviewHandler(BaseHTTPRequestHandler):
     do_POST = handle_request
 
 
+def public_file(name):
+    return name in ('index.html', 'workspace/index.html', 'favicon.svg') or bool(
+        re.fullmatch(r'assets/[A-Za-z0-9_-]+\.(?:js|css)', name))
+
+
+def local_port(value):
+    if not value.isascii() or not value.isdecimal() or not 1 <= int(value) <= 65535:
+        raise argparse.ArgumentTypeError('Use a port from 1 to 65535.')
+    return int(value)
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--port', type=local_port, default=4173)
+    parser.add_argument('--proxy-port', type=local_port, default=8000)
+    args = parser.parse_args()
     if not (ROOT / 'index.html').is_file():
         raise SystemExit('Build first: npm --prefix frontend run build')
-    server = ThreadingHTTPServer(('127.0.0.1', 4173), PreviewHandler)
-    print('Compiled preview: http://127.0.0.1:4173/ (fixed local proxy: 127.0.0.1:8000)', flush=True)
+    server = ThreadingHTTPServer(('127.0.0.1', args.port), PreviewHandler)
+    server.upstream_port = args.proxy_port
+    print(f'Compiled preview: http://127.0.0.1:{args.port}/workspace/ '
+          f'(authenticated proxy: 127.0.0.1:{args.proxy_port})', flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

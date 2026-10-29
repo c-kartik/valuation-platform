@@ -90,6 +90,9 @@ independent arithmetic checks and 84 focused tests. This is synthetic engineerin
 verification, not public hosting or financial approval. A bounded compiled preview
 is available via `python3 scripts/preview_cloud_frontend.py` after starting the
 documented fixed-service gcloud proxy; Google credentials stay outside the browser.
+For the connected build use `/workspace/`; `--proxy-port 8001` keeps the existing
+local API on 8000 untouched while a staging proxy listens on 8001. Both ports
+remain bound to loopback. Hosted acceptance for this newer workspace is pending.
 That earlier review predates public Hosting; the release above records current access.
 
 The [authenticated staging API](docs/cloud-staging-deployment.md) is now deployed

@@ -1,3 +1,12 @@
+> October 29 preparation: the loopback harness now supports the connected
+> `/workspace/` build and explicitly forwards case/scenario/sensitivity/reverse
+> validate/run routes. `--proxy-port` selects a **loopback port only** (default
+> 8000), allowing a separate authenticated staging proxy without disturbing the
+> local API. `--port` defaults to 4173. Only calculator/workspace HTML, compiled
+> JS/CSS and the favicon are served; prototype/private/source files are excluded.
+> This preparation does not establish a new hosted acceptance PASS. The original
+> measurements below remain attributed to their original deployment.
+
 # Compiled frontend → authenticated Cloud Run review
 
 Subsequent [local narrow-keyboard review](narrow-keyboard-review.md) closes the specific
