@@ -1,20 +1,27 @@
-import {annual,terminal} from '../model';
-import type {Entry} from '../model';
+import {useEffect,useState} from 'react';
+import {annual,terminal,copyYearFive,reviewErrors,InputErrors,displayPath} from '../model';
+import type {Draft,Entry,Errors} from '../model';
 import type {CaseState} from './useWorkspace';
-import type {EditorSection} from './canvasModel';
-import {annualSummary,inherited,pathsFor,rateText,shortLabels} from './canvasModel';
 import {percentage} from '../presentation';
-export function AssumptionSummary({label,caseState:c,entry,edit,bridgeEntered}:{label:string;caseState:CaseState;entry?:Entry;edit:(section:EditorSection)=>void;bridgeEntered:boolean}){
- function row(name:string,value:string,section:EditorSection,paths:string[],reference?:string){
-  const follows=paths.length>0&&inherited(label,c,paths),missing=value==='Not entered'||value.includes('/5 entered')&&!value.startsWith('5/5');
-  return <button className="cv-assumption" onClick={()=>edit(section)} aria-label={`Edit ${name}`} key={name}><span><b>{name}</b>{reference&&<small>{reference}</small>}{follows&&<small className="cv-inherited">From Base</small>}</span><span className={missing?'cv-missing':''}>{value}<i aria-hidden="true">›</i></span></button>;
- }
- function history(metric:string){const r=entry?.historical_references?.find(r=>r.metric===metric);return r?.value?`${r.label}: ${percentage(r.value)}`:'Historical reference unavailable';}
- const cash=annual.slice(2),longPaths=['terminal_growth',...terminal.map(([key])=>`terminal.${key}`)],longCount=longPaths.filter(p=>c.draft.rates[p].trim()).length;
- return <section className="cv-assumptions" aria-label="Assumption summary"><div className="cv-section-title"><h2>Assumptions</h2><span>{Object.values(c.draft.rates).filter(v=>v.trim()).length}/37 entered</span></div>
- <h3>Business forecast</h3>{row('Revenue growth',annualSummary(c.draft,'revenue_growth'),'Growth',pathsFor('revenue_growth'),history('revenue_growth'))}{row('Operating margin',annualSummary(c.draft,'operating_margin'),'Operating margin',pathsFor('operating_margin'),history('operating_margin'))}<div className="cv-fixed-row"><span>Forecast period</span><b>Five years · fixed</b></div>
- <h3>Cash flow <small>Tax rate · others / revenue</small></h3>{cash.map(([key])=>row(shortLabels[key],annualSummary(c.draft,key),'Cash-flow assumptions',pathsFor(key)))}
- <h3>Valuation</h3>{row('Discount rate / WACC',rateText(c.draft.rates.wacc),'Discount rate',['wacc'])}{row('Long-term growth',rateText(c.draft.rates.terminal_growth),'Long-term assumptions',['terminal_growth'])}{row('Long-term operating ratios',longCount===6?'5/5 entered':`${Math.max(0,longCount-(c.draft.rates.terminal_growth.trim()?1:0))}/5 entered`,'Long-term assumptions',longPaths.slice(1))}
- {row('Cash, debt and shares',bridgeEntered?'Review entries':'Optional','Cash, debt and shares',[])}
- </section>;
+import {AnnualRate,RateInput,inputId,InlineDisclosure} from './InlineRates';
+import {inherited,pathsFor,shortLabels} from './canvasModel';
+export function focusInline(prefix:string,draft:Draft,path:string){
+ const target=displayPath(draft,path),id=inputId(prefix,target);let attempts=0;
+ const reveal=()=>{for(const details of document.querySelectorAll<HTMLDetailsElement>('details[data-inline-prefix]')){if(prefix.startsWith(details.dataset.inlinePrefix!)&&details.dataset.inputPath!.split(',').some(p=>target.startsWith(p))&&(!details.dataset.inputDriver||target.endsWith('.'+details.dataset.inputDriver)))details.open=true;}
+ const input=document.getElementById(id);if(input){let node=input.parentElement;while(node){if(node instanceof HTMLDetailsElement)node.open=true;node=node.parentElement;}input.focus();}else if(++attempts<8)requestAnimationFrame(reveal);};requestAnimationFrame(reveal);
+}
+export function AssumptionSummary({label,caseState:c,entry,change,editBridge,errors:raw={}}:{label:string;caseState:CaseState;entry?:Entry;change:(d:Draft,financial?:boolean,paths?:string[])=>void;editBridge:()=>void;errors?:Errors}){
+ const prefix='dcf',draft=c.draft,[localErrors,setLocalErrors]=useState<Errors>({}),errors=reviewErrors(draft,{...raw,...localErrors});
+ useEffect(()=>{const path=Object.keys(raw).find(p=>!p.startsWith('bridge.'));if(path)focusInline(prefix,draft,path);},[raw]);
+ function commit(d:Draft,paths:string[]=[]){setLocalErrors({});change(d,true,paths);}
+ function rate(path:string,value:string){const d=structuredClone(draft);d.rates[path]=value;commit(d,[path]);}
+ function history(metric:string){const r=entry?.historical_references?.find(r=>r.metric===metric);return r?.value?`${r.label}: ${percentage(r.value)} · context only`:undefined;}
+ function copy(){try{commit(copyYearFive(draft),terminal.map(([k])=>`terminal.${k}`));}catch(e){if(e instanceof InputErrors){setLocalErrors(e.fields);focusInline(prefix,draft,Object.keys(e.fields)[0]);}}}
+ return <section className="cv-assumptions cv-direct-assumptions" aria-label="Forward assumptions"><div className="cv-section-title"><h2>Assumptions</h2><span>{Object.values(draft.rates).filter(v=>v.trim()).length}/37 entered</span></div><p className="cv-input-convention">Percentages · 10 means 10%. Five forecast years.</p>
+ {annual.map(([key])=><AnnualRate key={key} prefix={prefix} draft={draft} driver={key} label={shortLabels[key]} change={(d,paths)=>commit(d,paths)} errors={errors} inherited={inherited(label,c,pathsFor(key))} reference={history(key)} showDetails={false}/>)}
+ <h3>Valuation</h3><RateInput prefix={prefix} path="wacc" label="WACC" value={draft.rates.wacc} edit={v=>rate('wacc',v)} error={errors.wacc}/><RateInput prefix={prefix} path="terminal_growth" label="Terminal growth" value={draft.rates.terminal_growth} edit={v=>rate('terminal_growth',v)} error={errors.terminal_growth}/>
+ <InlineDisclosure className="cv-all-annual" title="Annual paths & input meanings" prefix={prefix} paths={['forecast_years']}>{annual.map(([key])=><AnnualRate key={key} prefix={prefix} draft={draft} driver={key} label={shortLabels[key]} change={(d,paths)=>commit(d,paths)} errors={errors} annualOnly/>)}</InlineDisclosure>
+ <InlineDisclosure className="cv-terminal-inputs" title="Five independent terminal operating ratios" prefix={prefix} paths={['terminal.']}><p>After year five. Annual edits never change these values.</p>{terminal.map(([key,name])=><RateInput key={key} prefix={prefix} path={`terminal.${key}`} label={name} value={draft.rates[`terminal.${key}`]} edit={v=>rate(`terminal.${key}`,v)} error={errors[`terminal.${key}`]}/>)}<button onClick={copy}>Copy year-five ratios once</button><small>Copies only five operating ratios; WACC and growth stay unchanged.</small></InlineDisclosure>
+ <InlineDisclosure className="cv-case-notes" title="Case name & personal notes" prefix={prefix} paths={['case_name','preparation.']}><label htmlFor="dcf-case_name">Case name</label><input id="dcf-case_name" value={draft.doc.case_name} onChange={e=>{const d=structuredClone(draft);d.doc.case_name=e.target.value;change(d,false);}}/>{errors.case_name&&<small className="cv-error">{errors.case_name}</small>}<label htmlFor="dcf-preparation.notes">Optional personal notes</label><textarea id="dcf-preparation.notes" value={draft.doc.preparation.notes??''} onChange={e=>{const d=structuredClone(draft);d.doc.preparation.notes=e.target.value;change(d,false);}}/>{errors['preparation.notes']&&<small className="cv-error">{errors['preparation.notes']}</small>}<small>Notes do not establish evidence review or an information cutoff.</small></InlineDisclosure>
+ <button className="cv-bridge-button" onClick={editBridge}>Cash, debt and shares · optional</button></section>;
 }

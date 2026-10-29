@@ -1,11 +1,11 @@
-import {annual,annualPath,annualState,percentageToFraction,samePercentage} from '../model';
+import {annual,terminal,annualPath,annualState,percentageToFraction,samePercentage,displayPath} from '../model';
 import type {AnnualKey,Draft} from '../model';
 import {percentage} from '../presentation';
 import type {CaseState} from './useWorkspace';
 
 export const editorSections=['Growth','Operating margin','Cash-flow assumptions','Discount rate','Long-term assumptions','Cash, debt and shares'] as const;
 export type EditorSection=typeof editorSections[number];
-export const shortLabels:Record<AnnualKey,string>={revenue_growth:'Revenue growth',operating_margin:'Operating margin',forecast_tax_rate:'Operating tax',d_and_a_percent_revenue:'Depreciation & amortization',capex_percent_revenue:'Operating investment',change_in_operating_nwc_percent_revenue:'Working-capital cash needs'};
+export const shortLabels:Record<AnnualKey,string>={revenue_growth:'Revenue growth',operating_margin:'Operating margin',forecast_tax_rate:'Operating tax rate',d_and_a_percent_revenue:'D&A / revenue',capex_percent_revenue:'Operating investment / revenue',change_in_operating_nwc_percent_revenue:'Working-capital cash needs / revenue'};
 export const help:Record<AnnualKey,string>={
  revenue_growth:'Annual growth compounds from the reported revenue anchor. Historical growth is context, not a forecast.',
  operating_margin:'EBIT / revenue. Includes SBC, operating-lease service costs and expense-aligned depreciation once.',
@@ -38,4 +38,11 @@ export function scenarioDescription(label:string,c:CaseState,base:CaseState):str
  const differences=annual.filter(([key])=>pathsFor(key).some(p=>!samePercentage(c.draft.rates[p],base.draft.rates[p]))).map(([key])=>shortLabels[key]);
  if(['wacc','terminal_growth',...Object.keys(c.draft.rates).filter(p=>p.startsWith('terminal.'))].some(p=>!samePercentage(c.draft.rates[p],base.draft.rates[p])))differences.push('Valuation / long term');
  return differences.length?`${differences.join(', ')} differ from Base`:(c.overrides??[]).length?'Matches Base; some inputs fixed':'Matches Base · inherits changes';
+}
+
+export function inputName(draft:Draft,path:string):string{
+ const p=displayPath(draft,path),key=p.startsWith('quick.')?p.slice(6):/^forecast_years\[(\d+)\]\.(.+)$/.exec(p)?.[2];
+ if(key&&key in shortLabels){const index=/^forecast_years\[(\d+)\]/.exec(p)?.[1];return (index===undefined?'':(draft.doc.forecast_years[Number(index)]?.fiscal_year_label??'Annual')+' ')+shortLabels[key as AnnualKey];}
+ if(p.startsWith('terminal.'))return terminal.find(([key])=>p==='terminal.'+key)?.[1]??'Terminal input';
+ return p==='wacc'?'WACC':p==='terminal_growth'?'Terminal growth':p==='case_name'?'Case name':p==='preparation.notes'?'Personal notes':p.startsWith('bridge.')?'Cash, debt and shares':'Case input';
 }

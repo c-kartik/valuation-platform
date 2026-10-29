@@ -1,6 +1,25 @@
 # Project Status
 
-## Current — investor valuation canvas, local only
+## Current — direct-entry investor workspace, local only
+
+The [direct-entry review](investor-inline-workspace.md) exposes eight ordinary DCF
+inputs directly beside the chart, with expandable annual paths and independent
+terminal ratios. DCF/composition, scenario comparison, sensitivity and sources
+are same-page anchor sections. Scenario columns are editable; two aligned line
+charts synchronize revenue/FCFF year selection. Rounded axes preserve signed/tiny
+values; compact sensitivity controls precede the full-width matrix and inspection.
+
+Preload methodology remains deferred. No company defaults, separately researched
+GOOG forecasts, scenario rules or financial conventions are installed. FY2025
+source bindings, nine unset templates, formulas/solver and Phase 1 pause remain.
+The linked record distinguishes current verification from prior arithmetic checks
+and records remaining provider/date/perimeter and browser-download limitations.
+Verification: 202 frontend tests, 18 affected checks after the final sticky-offset
+fix, both builds, actual desktop/narrow browser review and preservation/link checks.
+Local review remains <http://127.0.0.1:5175/workspace/> → local Python API 8002.
+No push, deployment, portfolio, cloud or infrastructure changes.
+
+## Earlier — investor valuation canvas, local only
 
 The [canvas acceptance record](investor-valuation-canvas.md) documents the result-first
 company page: compact assumptions beside revenue/FCFF, focused draft editing,

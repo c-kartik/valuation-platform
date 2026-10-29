@@ -2,6 +2,15 @@
 
 ## Current local investor-review boundary
 
+The [direct-entry workspace](investor-inline-workspace.md) changes interaction and
+display only. Typing makes prior outputs stale; calculation remains explicit.
+Varying annual paths require an intentional constant replacement; terminal ratios
+remain independent. Rounded axes and aligned scenario lines visualize returned
+values, without smoothing, intermediate forecasts or historical FCFF invention.
+Calculation-free sensitivity previews retain the existing diagnostic offsets.
+**Preload methodology remains deferred:** no calibration, company defaults, new
+scenario economics, WACC/terminal convention or financial approval is introduced.
+
 The [valuation canvas](investor-valuation-canvas.md) adds display-only annual
 revenue growth (FY2025/FY2024 − 1) and operating margin (FY2025 EBIT/revenue), with
 exact source-bound operands and fiscal periods. Source rounding and differing

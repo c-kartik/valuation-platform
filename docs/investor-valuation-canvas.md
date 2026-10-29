@@ -1,5 +1,9 @@
 # Investor valuation canvas — local acceptance
 
+Subsequent interaction checkpoint: [direct-entry workspace](investor-inline-workspace.md).
+Ordinary focused editing and exclusive exploration below describe this earlier
+revision; the source/financial qualifications remain in effect.
+
 October 29, 2026. Starting checkpoint: `5f2fd028350ace7fa45275a7403d87eeaf6ee6ee`,
 clean `main`, one commit ahead of local `origin/main`. Local implementation and
 checkpoint only; no push, deployment or cloud changes. Phase 1 expansion remains

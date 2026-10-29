@@ -1,6 +1,24 @@
 # Architecture
 
-## Current local valuation canvas
+## Current direct-entry investor workspace
+
+The [direct-entry record](investor-inline-workspace.md) replaces ordinary sheet
+editing with visible raw-string percentage controls. DCF and scenario-table edits
+share the existing draft/revision updater, with an optional target case label.
+Inheritance and explicit overrides remain state behavior; Python continues to
+receive complete explicit annual/terminal operands. Apply/Cancel remains only in
+the optional detailed bridge sheet. No per-keystroke calculation or persistence.
+
+Four stable same-page sections stay mounted; disclosures mount detailed inputs
+on demand while values remain in case state. Composition is part of DCF. The
+scenario line charts share year selection and fiscal positions, with independent
+metric scales. `chartAxis.ts` isolates rounded domains/ticks, scale annotations and
+bounded plotting coordinates from financial execution. Sensitivity shows a pure
+axis preview before execution and preserves stored custom settings. No Python,
+API contract, source, execution-budget or runtime-bundle changes. Preload methodology
+remains deferred, including company defaults and separately researched GOOG estimates.
+
+## Earlier local valuation canvas
 
 The [canvas record](investor-valuation-canvas.md) describes a result-first company
 page with compact assumption rows and chart, a local-draft native dialog editor,
