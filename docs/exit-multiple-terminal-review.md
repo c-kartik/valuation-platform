@@ -1,5 +1,9 @@
 # Exit-multiple terminal valuation — local acceptance
 
+Subsequent status: the separately authorized [GOOGL proposed preload](googl-preload-methodology.md)
+now supplies explicitly labeled estimates and Full Model. This record preserves
+its earlier scope; it does not grant financial approval or change Phase 1’s pause.
+
 October 30, 2026 (Dubai). Started on clean `main` at
 `021796d220d7ee5d894e702d9d4ab5d3d2026156`, three commits ahead of local
 `origin/main`. Extends the [direct-entry workspace](investor-inline-workspace.md)

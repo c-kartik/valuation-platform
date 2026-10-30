@@ -10,9 +10,9 @@ import subprocess
 
 MODEL = 'src/valuation_platform/analyst/historical_inputs.py'
 REVIEWED = {
-    # Existing anchor-integration field-path metadata only; numerical validation
-    # rules/formulas were preserved. Scenario work does not edit this source.
-    'src/valuation_platform/valuation/assumptions.py': '1d2e918fe9efe912381193ff61738067275d86bf',
+    # The approved exit-method milestone split OperatingAssumptions from Gordon.
+    # Pin its reviewed starting bytes exactly; preload changes no engine source.
+    'src/valuation_platform/valuation/assumptions.py': 'cb67dd8a7ad97e68bb05798e64be260f0bbb4bf8',
     MODEL: '61086107005f78592ed0dca05291d095b4ccff89',
     'src/valuation_platform/analyst/retained_components.py': '9b477defc6d2dba6e382ad8f27d26e8e6a575730',
     'src/valuation_platform/analyst/refreshed_capex.py': '61086107005f78592ed0dca05291d095b4ccff89',

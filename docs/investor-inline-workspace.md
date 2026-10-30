@@ -1,5 +1,9 @@
 # Direct-entry investor workspace — local review
 
+Subsequent status: the separately authorized [GOOGL proposed preload](googl-preload-methodology.md)
+now supplies explicitly labeled estimates and Full Model. This record preserves
+its earlier scope; it does not grant financial approval or change Phase 1’s pause.
+
 October 29–30, 2026 (Dubai). Started on clean `main` at
 `3019e2bae5ef3d9c801c708a4fdd170021bf9778`, two commits ahead of local
 `origin/main`. This supersedes the ordinary focused-editor/exclusive-exploration

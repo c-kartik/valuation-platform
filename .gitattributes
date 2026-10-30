@@ -1,0 +1,3 @@
+# Immutable acquired HTML evidence: retain original bytes and whitespace.
+# Reviewed extractions/metadata remain ordinary text with whitespace checks.
+data/preload/googl-v1/sources/*.html -text -diff

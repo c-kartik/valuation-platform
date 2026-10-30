@@ -1089,3 +1089,34 @@ normalization, historical value, audit or omission decision changes. Financial
 sufficiency remains unestablished outside the existing named consumer scope.
 Validation uses independent rational ratios, source/period/precision checks,
 negative binding tests and catalog/preservation regression; see the linked record.
+
+## Separate proposed forecast overlay — October 30, 2026
+
+The user separately authorized reproducible GOOGL preload preparation and local
+workspace integration. Conflict: the prior October29 research had hand-selected
+paths and judgmental WACC components, while the workspace had no reusable forecast
+policy. Chosen treatment is a distinct [versioned overlay](../googl-preload-methodology.md)
+with new immutable primary snapshots and reviewed extraction records under
+[data/preload/googl-v1](../../data/preload/googl-v1/observations.json). It never edits
+this issuer's historical package, accepted G1–G8 selections, source bodies, audits,
+frozen values or unresolved historical fields. GOOG/GOOGL remain one consolidated
+issuer with listing class distinctions and unresolved per-share preparation.
+
+Official Q3 release/call/10-Q, FY2025Q4 release, dated Treasury and author ERP
+observations inform explicit forecast rules/configuration. Annual/quarter selection
+requires exact period, issuer, consolidation/dimension, units and definition;
+restatements require explicit supersession. Missing/incompatible values remain gaps.
+Source-reported PP&E depreciation is not promoted to complete expense D&A. The
+forecast commissioning estimate, financed additions, WC convention, operating taxes,
+WACC judgments and terminal economics are **new unapproved analyst estimates**.
+Historical averages and prior dollar paths were considered but not installed as
+anonymous defaults. The [worked record](../googl-preload-worked-model.md) documents
+sources, original conflicts, equations, alternatives, annual values, validation
+and residual acquisition/DA/terminal limitations. Scoped EV availability is not
+complete historical calibration or financial-input sufficiency certification.
+
+The default exit multiple and bridge/claims/class/award inputs remain unresolved;
+unknowns and potentially unbounded omissions are not zeros or valuation-use approval.
+Refresh detects sources/rules/configuration/forecast/gap changes; newer evidence
+never promotes the FY2025 anchor. See [acceptance](../googl-preload-acceptance.md)
+for current verification. Phase1 expansion stays paused; no other issuer preload.

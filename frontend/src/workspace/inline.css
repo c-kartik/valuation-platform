@@ -16,3 +16,15 @@
 .cv-terminal-method{margin:14px 0}.cv-terminal-method label{display:block;font-size:13px;margin-bottom:6px}.cv-terminal-method select,#scenario-terminal-method{width:100%;min-height:44px;border:1px solid #cbd2dc;background:#fff;color:#17273b;padding:8px;border-radius:6px;font:inherit}.cv-terminal-comparison{margin-top:24px;border-top:1px solid #cbd2dc;padding-top:16px}.cv-terminal-comparison small{display:block;margin:8px 0}.cv-terminal-comparison table{width:100%;font-size:13px}.cv-terminal-comparison td,.cv-terminal-comparison th{padding:8px;text-align:left}
 
 .cv-terminal-comparison table{min-width:0;table-layout:fixed}.cv-terminal-comparison th,.cv-terminal-comparison td{white-space:normal;overflow-wrap:anywhere}.cv-terminal-comparison th:first-child{width:38%}
+
+/* Proposed input provenance stays secondary to direct editing. */
+.cv-preload{border:1px solid var(--cv-line,#d7d5cf);padding:1rem;margin:1rem 0;background:#f8f7f3}
+.cv-preload p,.cv-estimate-basis p{margin:.5rem 0;font-size:.85rem;line-height:1.5}
+.cv-estimate-basis{margin:.1rem 0 .7rem;color:#526171;font-size:.8rem}
+.cv-estimate-basis>summary{cursor:pointer}.cv-estimate-basis>div{padding:.7rem 0;border-bottom:1px solid #deddd7}
+.cv-estimate-basis small,.cv-estimate-basis dd,.cv-preload small,.ir-sources small{overflow-wrap:anywhere}
+.cv-full-model{margin:1.5rem 0;padding:1rem;border:1px solid #d7d5cf}
+.cv-full-model>summary{font-size:1.15rem;cursor:pointer}.cv-full-model td{min-width:140px}
+.cv-full-model .cv-inline-field{display:block}.cv-full-model .cv-inline-field label{font-size:.7rem}
+.cv-row-explanation{padding:1rem;background:#f7f5ee;margin:1rem 0}
+.cv-preload .cv-table-scroll,.cv-full-model .cv-table-scroll{max-width:100%;overflow-x:auto}

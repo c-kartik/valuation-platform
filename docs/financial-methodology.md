@@ -1,6 +1,29 @@
 # Financial Methodology
 
-## Current local terminal alternatives
+## Current GOOGL proposed starting estimates
+
+The separately authorized [policy v1](googl-preload-methodology.md) supplies an
+assumption-led GOOGL input overlay while retaining all engine conventions. Latest
+reported quarter momentum informs a named growth extension/fade; a reported margin
+informs an independently configured fade. Operating taxes, expense D&A commissioning,
+cash/financed investment, WC, WACC judgments and mature ratios remain explicit
+modeling estimates, not newly approved or complete historical calibration.
+
+The [worked record](googl-preload-worked-model.md) separates reported observations,
+derived ratios and configurable forecast judgments, with dates/source hashes and
+terminal reinvestment diagnostics. Expense D&A remains historically incomplete;
+forecast compatibility is declared and reviewed, not proved from aggregate ratios.
+Cash PP&E excludes principal already; estimated financed additions are separate.
+SBC/service leases remain expensed once. Base WC is incremental-sales cash converted
+to full revenue; diagnostic scenarios instead inherit those ratios unchanged.
+
+Gordon remains usable with configured independent mature economics. Exit multiple
+and optional equity/claims/class/award selections remain unavailable. Terminal D&A
+transition and acquisition cash/perimeter remain unresolved economic weaknesses;
+the returned EV is a conditional starting model, not complete fair value. No current
+price comparison or stub timing. Historical/frozen inputs and Phase 1 pause remain.
+
+## Existing local terminal alternatives
 
 The [exit-multiple convention and acceptance](exit-multiple-terminal-review.md)
 adds final explicit year-five **EBIT × selected EV/EBIT multiple** as terminal EV,

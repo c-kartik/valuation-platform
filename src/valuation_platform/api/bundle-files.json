@@ -79,7 +79,11 @@
     "src/valuation_platform/valuation/reverse_inputs.py",
     "src/valuation_platform/valuation/scenario_inputs.py",
     "src/valuation_platform/valuation/sensitivity_inputs.py",
-    "src/valuation_platform/valuation/terminal_methods.py"
+    "src/valuation_platform/valuation/terminal_methods.py",
+    "src/valuation_platform/preload/__init__.py",
+    "src/valuation_platform/preload/rules.py",
+    "src/valuation_platform/preload/profile.py",
+    "src/valuation_platform/preload/generate.py"
   ],
   "resources": {
     "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",
@@ -96,6 +100,15 @@
     "src/valuation_platform/normalization/capex_scope_registry.json": "34684ae93ed81bfb454ad43cf9ff3510c8dbc9714a09b11a27e547a36bdd5606",
     "src/valuation_platform/normalization/capex_scope_v2_registry.json": "f10baae15ed90097b1c06cd08e2f211c49c4cc87425f2b29cfbd3728bf88dc2d",
     "src/valuation_platform/normalization/capex_scope_v3_registry.json": "2bcabd2aa9f27db21b15d881bbe045ac634f1aab9cf277ed6b64070ecdc7d029",
-    "src/valuation_platform/normalization/d_and_a_scope_registry.json": "d35c126744dbb079b59fadf87ddea73946e878619b87cb37b4ba580b7876e0cd"
+    "src/valuation_platform/normalization/d_and_a_scope_registry.json": "d35c126744dbb079b59fadf87ddea73946e878619b87cb37b4ba580b7876e0cd",
+    "data/preload/googl-v1/observations.json": "d2bb11c0f5cf4fd515eb5ef2a679b59e30458e70b822dcd290430e0a1e4bddf1",
+    "data/preload/googl-v1/policy.json": "cd6be7420a942bad8eb34bd5667b2fb4caa66acb7c5b77774e919ad08cf1a8ab",
+    "data/preload/googl-v1/sources/damodaran-2026-10-08.html": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+    "data/preload/googl-v1/sources/manifest.json": "84c4b1a46e1e11a166c0c8d03689b31000371eabaf7066eaa179dfbc20772aed",
+    "data/preload/googl-v1/sources/q3-2026-10q.html": "f523567d4c813275cae031ae3cda0f6409dcff51286642e5d75df55951daa9be",
+    "data/preload/googl-v1/sources/q3-2026-call.html": "1b7f638d987b884eceba3e0ffa6c19bc9ae0fd1637faffd91560c90e1847b90f",
+    "data/preload/googl-v1/sources/q3-2026-release.html": "c5f86ba70e27aa8834fa4b110c9781ac413949adb050502008a180fec27b7b89",
+    "data/preload/googl-v1/sources/q4-2025-release.html": "8de6e5a9cfa7dd74ba0a3f2553bd5195dd910aefa5b61d77b712047db47ca97d",
+    "data/preload/googl-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6"
   }
 }

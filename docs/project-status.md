@@ -1,6 +1,26 @@
 # Project Status
 
-## Current — exit-multiple terminal option, local only
+## Current — reproducible GOOGL proposed preload, local only
+
+A separate [versioned preparation policy](googl-preload-methodology.md) now generates
+editable GOOGL starting estimates from pinned public sources plus explicit judgments.
+The [worked model](googl-preload-worked-model.md) records all annual/terminal inputs,
+source dates, exact reproduction/refresh/export commands, conditional EV and differences
+from the October29 research. GOOG/GOOGL share consolidated preparation; no class/share
+selection follows. META/AAPL and nine existing templates remain unset/unchanged.
+
+Fresh loading does not calculate. Per-field source/rule disclosures, equal-value
+override identity, individual reset, reviewed refresh/adoption, diagnostic scenarios,
+method-aware axes and Full Model reuse the existing direct-edit workflow and Python
+engine. Source/definition gaps remain typed; exit and equity selection are unresolved.
+Financial formulas, historical approvals, reverse certification and Phase 1 pause
+remain unchanged. No push, deployment, scheduling, account or data purchase.
+
+See [implementation/acceptance](googl-preload-acceptance.md) for verification, screenshots,
+limitations and identified local processes. Local review remains
+<http://127.0.0.1:5175/workspace/> → Python API8002.
+
+## Earlier — exit-multiple terminal option, local only
 
 The [terminal-method acceptance record](exit-multiple-terminal-review.md) extends
 the editable workspace through engine/API/CLI, optional qualified equity bridge,

@@ -1,0 +1,155 @@
+{
+  "version": "googl-preload-v1.0.0",
+  "mapping": "alphabet-consolidated-v1",
+  "rules": "decimal-fade-commissioning-v1",
+  "review_date": "2026-10-30",
+  "source_max_age_days": 45,
+  "configuration": {
+    "growth_endpoint": "0.07",
+    "margin_endpoint": "0.29",
+    "tax_start": "0.18",
+    "tax_endpoint": "0.21",
+    "expense_da_start_usd": "33000000000",
+    "commissioning_allowance": "0.12",
+    "cash_ppe_start_usd": "200000000000",
+    "cash_ppe_growth": [
+      "0.25",
+      "-0.04",
+      "-0.08",
+      "-0.10"
+    ],
+    "new_financed_fraction_cash_ppe": "0.025",
+    "incremental_wc": "0.20",
+    "beta": "1.10",
+    "credit_spread": "0.0075",
+    "equity_weight": "0.96",
+    "debt_weight": "0.04",
+    "debt_tax_shield": "0.20",
+    "terminal_growth": "0.03",
+    "terminal_margin": "0.29",
+    "terminal_tax": "0.21",
+    "terminal_da": "0.16",
+    "terminal_investment": "0.23",
+    "exit_ev_ebit_multiple": null,
+    "bear_growth_offset": "-0.02",
+    "bull_growth_offset": "0.02",
+    "bear_margin_offset": "-0.02",
+    "bull_margin_offset": "0.02",
+    "bear_wacc_offset": "0.01",
+    "bull_wacc_offset": "-0.01",
+    "sensitivity_wacc_offset": "0.01",
+    "sensitivity_growth_offset": "0.005",
+    "sensitivity_multiple_offset": "2"
+  },
+  "configuration_provenance": {
+    "owner": "AI-assisted analyst policy selection under the user's preload implementation authority; no financial approval",
+    "selected_at": "2026-10-30",
+    "operating": "Growth moderates with scale; margin fades under compute/depreciation pressure. Tax 18 to21% is a normalized operating convention, not reported ETR. Expense D&A33bn and commissioning12% are simplified expense estimates, not a complete vintage schedule.",
+    "investment": "200bn cash PP&E considered against management195\u2013205bn outlook.25% FY2027 increase responds to significant increase commentary; subsequent -4/-8/-10% moderation is judgment.2.5% financed additions are a separate forecast estimate, not liability movements. Software included within cash PP&E estimate; no extra capital-creditor or finance-principal adjustment.",
+    "wc": "20% incremental revenue cash requirement is policy, not calibration from mixed CFO movements. Tax, capital creditors, collateral, acquisitions and financing excluded.",
+    "wacc": "Retains explicitly configured prior beta1.10,75bp spread,96/4 target weights,20% shield; no measured market weights or beta regression. Applies sourced Treasury-based ERP consistently and no intermediate WACC rounding.",
+    "terminal": "Independent nominal3% growth,29% margin,21% tax,16% D&A and23% investment; WC20% of incremental revenue. Mature renewal economics are assumptions, not an observed return-on-capital estimate.",
+    "scenario": "Diagnostic offsets only, not researched probabilities, fair-value bounds or guaranteed ordering. Unchanged ratios inherit Base."
+  },
+  "selection": {
+    "fy2025_revenue": {
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "cik": 1652044,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "q42025_revenue": {
+      "start": "2025-10-01",
+      "end": "2025-12-31",
+      "cik": 1652044,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_revenue": {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1652044,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "q32026_revenue": {
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "cik": 1652044,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "q32025_revenue": {
+      "start": "2025-07-01",
+      "end": "2025-09-30",
+      "cik": 1652044,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "q32026_ebit": {
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "cik": 1652044,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_ppe_depreciation": {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1652044,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_cash_ppe": {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1652044,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_acquisitions_intangibles": {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1652044,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "treasury_10y": {
+      "start": null,
+      "end": "2026-10-28",
+      "cik": null,
+      "dimensions": [],
+      "scope": "macro",
+      "definition": "treasury-par-yield",
+      "unit": "fraction"
+    },
+    "implied_erp": {
+      "start": null,
+      "end": "2026-10-01",
+      "cik": null,
+      "dimensions": [],
+      "scope": "macro",
+      "definition": "implied-erp-over-treasury",
+      "unit": "fraction"
+    }
+  }
+}

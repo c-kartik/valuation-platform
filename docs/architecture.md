@@ -1,6 +1,33 @@
 # Architecture
 
-## Current terminal-method extension
+## Current proposed-input preparation layer
+
+The [preload specification](googl-preload-methodology.md) separates immutable public
+source snapshots, reviewed extraction/selection, generic Decimal estimation rules,
+Alphabet mapping/configuration, profile integrity/diffs and engine adaptation.
+`preload/` supplies exact operands to the unchanged existing `valuation/` engine;
+no JS DCF, normalization change or forecast approval. Offline generation is default;
+explicit acquisition writes new outside snapshots, never runtime network retrieval.
+
+`GET /api/v1/preloads/googl` serves bounded (192KiB) pinned preparation generated
+once after existing bundle verification, without valuation execution. The legacy
+catalog (64KiB), workers, execution budgets and original resource pins remain.
+New source/config resources and preparation modules are explicitly allowlisted and
+pinned; raw source integrity is checked. The endpoint is fixed, not a file server.
+
+Workspace sessions retain generated baselines, explicit per-field overrides and
+candidate refreshes. Adoption is explicit; stale/cancel guards remain. Result
+provenance is captured with the submitted revision, so an updated active profile
+cannot relabel an old result/export. Full Model distinguishes editable draft rows
+from read-only submitted rows and uses returned operands for explanations.
+Diagnostic scenarios inherit unchanged ratios; generated axes preserve method units
+and never clamp policy offsets. Other companies and all blank templates stay unset.
+
+See [worked model/commands](googl-preload-worked-model.md) and
+[acceptance](googl-preload-acceptance.md). Phase 1 remains paused; equity selection,
+new-anchor promotion and unattended new-filing mapping are outside this overlay.
+
+## Earlier terminal-method extension
 
 The [exit-multiple record](exit-multiple-terminal-review.md) describes narrowly
 versioned v3 case/scenario and exit-grid intake. `OperatingAssumptions` separates

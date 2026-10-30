@@ -19,6 +19,28 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The local workspace now offers a [proposed GOOGL starting model](docs/googl-preload-worked-model.md)
+from pinned public sources and [versioned estimation rules](docs/googl-preload-methodology.md).
+It loads without calculating; direct edits are overrides, individual resets restore
+estimates, and pinned refreshes require explicit adoption while preserving overrides.
+Full Model separates current draft inputs from the submitted calculation, with
+returned-operand explanations and exact exports. META/AAPL remain unset; all nine
+blank templates and the financial engine are unchanged. This is assumption-led
+preparation, not approved forecasts, investment readiness or qualified per-share value.
+
+Offline reproduction (new outside paths):
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python scripts/prepare_preload.py generate /tmp/googl-profile-v1.json
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python scripts/prepare_preload.py export /tmp/googl-profile-v1.json /tmp/googl-run-v1 --run
+```
+
+See the worked report for explicit acquisition/candidate/diff commands, source
+restrictions, remaining gaps and prior-research comparison; see the
+[acceptance record](docs/googl-preload-acceptance.md) for local review and checks.
+No push/deployment or Phase 1 resumption.
+
+
 The local [terminal-method extension](docs/exit-multiple-terminal-review.md) adds
 explicit **year-five EV/EBIT** beside unchanged perpetual growth, method comparison,
 shared-method scenarios and WACC × multiple sensitivity. Multiples/ranges start
@@ -37,11 +59,13 @@ a local result-first `/workspace/`: type ordinary assumptions beside revenue/FCF
 then explicitly Calculate. Annual paths and independent terminal ratios expand
 inline; the detailed bridge stays optional. Same-page DCF, scenario comparison,
 sensitivity and source sections preserve working state. Aligned scenario revenue/
-FCFF line charts and rounded axes explain returned values. **Preload methodology
-remains deferred**; historical references never fill forecasts.
+FCFF line charts and rounded axes explain returned values. At that earlier checkpoint preload methodology was deferred; the separate GOOGL
+policy above now supplies explicitly classified estimates. Historical references
+remain distinct from forecasts.
 Current SEC context for META/GOOGL/AAPL is separately dated and **preparation
-incomplete**; calculations still use the approved FY2025 revenue anchors. All
-company forecast inputs start unset; entries remain in this tab only.
+incomplete**; calculations still use the approved FY2025 revenue anchors. Blank
+company templates remain unset; the workspace loads a separate GOOGL proposed
+profile. Entries remain in this tab only.
 
 Genuine current-market comparison is **not yet available**. The tested Massive
 adapter requires licensed local-display access and documented delay; current-date

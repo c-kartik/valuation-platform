@@ -1564,3 +1564,15 @@ incompatible references stay unavailable. This is no new calibration, current-da
 anchor, financial sufficiency, issuer approval or Phase 1 resumption. The three
 issuer records above receive append-only maintenance notes; historical/frozen
 values, approvals and all nine unset templates remain unchanged.
+
+## Separate GOOGL proposed-preload overlay — October 30, 2026
+
+The [GOOGL record](GOOGL.md#separate-proposed-forecast-overlay--october-30-2026)
+adds a separately authorized forecast-preparation overlay, without changing any
+accepted history/audit or universe status. Generic Decimal rules and typed profile
+contracts are distinct from Alphabet accounting selection and explicit configured
+judgments; ticker resolution is not a generic accounting-readiness flag. See
+[policy](../googl-preload-methodology.md), [worked model](../googl-preload-worked-model.md)
+and [acceptance](../googl-preload-acceptance.md). No transfer of historical omissions,
+complete D&A/NWC certification, financial approval or automatic other-company
+coverage. Two preparation statuses and all Phase1 pause/resumption records remain.
