@@ -8,12 +8,14 @@ from pathlib import Path
 import re
 
 from .case_inputs import AnalystCase, CaseInputError, _strict_json, read_case, _prepare_case_runner
+from .terminal_methods import ExitMultipleMethod
 from .scenario_inputs import LABELS, read_scenario_set
 
 SCHEMA = "analyst-sensitivity-request-v1"
 RESULT_SCHEMA = "analyst-sensitivity-results-v1"
 INVESTOR_SCHEMA = "investor-sensitivity-request-v1"
 REVIEW_SCHEMA = "investor-sensitivity-request-v2"
+METHOD_SCHEMA = "investor-sensitivity-request-v3"
 INVESTOR_RESULT_SCHEMA = "investor-sensitivity-results-v1"
 HELD_FIXED = (
     "All five annual operating inputs and period identities; terminal operating ratios; "
@@ -42,6 +44,7 @@ class SensitivityRequest:
     information_cutoff: date | None
     wacc_values: tuple[Decimal, ...]
     terminal_growth_values: tuple[Decimal, ...]
+    exit_multiple: bool = False
 
 
 def read_sensitivity(text: str) -> SensitivityRequest:
@@ -103,6 +106,8 @@ def _read_sensitivity(text: str) -> SensitivityRequest:
                 continue
             if key == "wacc_values" and rate <= 0:
                 errors.append(f"{field}: WACC must be greater than zero")
+            if key == "exit_ev_ebit_multiple_values" and rate <= 0:
+                errors.append(f"{field}: EV/EBIT multiple must be strictly positive")
             if key == "terminal_growth_values" and rate <= -1:
                 errors.append(f"{field}: growth must be greater than -1")
             if previous is not None and rate <= previous:
@@ -111,9 +116,11 @@ def _read_sensitivity(text: str) -> SensitivityRequest:
             previous = rate
         return tuple(rates)
 
-    doc = obj(doc, ("schema_version", "sensitivity_name", "source", "wacc_values", "terminal_growth_values"), "sensitivity")
-    investor = doc.get("schema_version") in (INVESTOR_SCHEMA, REVIEW_SCHEMA)
-    if doc.get("schema_version") not in (SCHEMA, INVESTOR_SCHEMA, REVIEW_SCHEMA):
+    exit_multiple = type(doc) is dict and doc.get("schema_version") == METHOD_SCHEMA
+    axis_key = "exit_ev_ebit_multiple_values" if exit_multiple else "terminal_growth_values"
+    doc = obj(doc, ("schema_version", "sensitivity_name", "source", "wacc_values", axis_key), "sensitivity")
+    investor = doc.get("schema_version") in (INVESTOR_SCHEMA, REVIEW_SCHEMA, METHOD_SCHEMA)
+    if doc.get("schema_version") not in (SCHEMA, INVESTOR_SCHEMA, REVIEW_SCHEMA, METHOD_SCHEMA):
         errors.append(f"sensitivity.schema_version: requires {SCHEMA} or {INVESTOR_SCHEMA}")
     name = doc.get("sensitivity_name")
     if type(name) is not str or not name.strip():
@@ -126,7 +133,7 @@ def _read_sensitivity(text: str) -> SensitivityRequest:
     case = analytical = cutoff = label = None
     if kind == "single_case":
         analytical = day(source.get("analytical_date"), "sensitivity.source.analytical_date")
-        cutoff = None if doc.get("schema_version") == REVIEW_SCHEMA and source.get("information_cutoff") is None else day(source.get("information_cutoff"), "sensitivity.source.information_cutoff")
+        cutoff = None if doc.get("schema_version") in (REVIEW_SCHEMA, METHOD_SCHEMA) and source.get("information_cutoff") is None else day(source.get("information_cutoff"), "sensitivity.source.information_cutoff")
         try:
             case = read_case(json.dumps(source.get("case")))
         except CaseInputError as exc:
@@ -148,15 +155,17 @@ def _read_sensitivity(text: str) -> SensitivityRequest:
         errors.append("sensitivity.source.information_cutoff: must not precede analytical_date")
     if case and analytical and analytical != case.assumptions.anchor_fiscal_end:
         errors.append("sensitivity.source.analytical_date: must equal selected case.anchor.annual_end")
-    if investor and case and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2"):
+    if investor and case and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2", "investor-case-v3"):
         errors.append("sensitivity.source.case.schema_version: investor requests require investor-case-v1/v2")
     waccs = axis(doc.get("wacc_values"), "wacc_values")
-    growths = axis(doc.get("terminal_growth_values"), "terminal_growth_values")
-    if not errors and max(waccs) <= min(growths):
+    growths = axis(doc.get(axis_key), axis_key)
+    if case and (type(case.terminal) is ExitMultipleMethod) != exit_multiple:
+        errors.append("sensitivity.source.case: exit method requires v3 WACC × multiple request; Gordon uses the existing WACC × growth request")
+    if not errors and not exit_multiple and max(waccs) <= min(growths):
         errors.append("sensitivity: all cells invalid (terminal growth >= WACC); no valuation table can be produced")
     if errors:
         raise SensitivityInputError(errors)
-    return SensitivityRequest(text, name, case, label, analytical, cutoff, waccs, growths)
+    return SensitivityRequest(text, name, case, label, analytical, cutoff, waccs, growths, exit_multiple)
 
 
 def load_sensitivity(path: Path) -> SensitivityRequest:
@@ -168,7 +177,8 @@ def _metrics(result):
     b = result["stage_b"]
     ev = Decimal(b["enterprise_value"])
     metrics = {key: b[key] for key in ("enterprise_value", "pv_explicit_fcff", "pv_terminal_value")}
-    metrics.update(terminal_revenue=b["terminal"]["revenue"], terminal_fcff=b["terminal"]["fcff"],
+    metrics.update(**({"year_five_ebit": b["terminal_basis"]["year_five_ebit"]} if b.get("terminal_method") == "exit_multiple" else
+                   {"terminal_revenue": b["terminal"]["revenue"], "terminal_fcff": b["terminal"]["fcff"]}),
                    terminal_value=b["terminal_value"],
                    terminal_contribution=None if ev.is_zero() else str(Decimal(b["pv_terminal_value"]) / ev),
                    terminal_contribution_note="undefined: EV is zero" if ev.is_zero() else
@@ -194,13 +204,19 @@ def run_sensitivity(request: SensitivityRequest, repository_root: Path) -> dict[
             for i, wacc in enumerate(request.wacc_values):
                 row = []
                 for j, growth in enumerate(request.terminal_growth_values):
-                    cell = {"wacc": str(wacc), "terminal_growth": str(growth)}
-                    if growth >= wacc:
+                    cell = {"wacc": str(wacc), ("exit_ev_ebit_multiple" if request.exit_multiple else "terminal_growth"): str(growth)}
+                    if not request.exit_multiple and growth >= wacc:
                         cell.update(status="INVALID", reason="terminal growth >= WACC", metrics={key: None for key in reference_metrics}, changes=None)
                     else:
                         # json.loads provides a fresh complete case: no nested mutation.
                         doc = json.loads(request.case.submitted_json)
-                        doc.update(wacc=str(wacc), terminal_growth=str(growth))
+                        doc["wacc"] = str(wacc)
+                        if request.exit_multiple:
+                            doc["terminal_valuation"]["exit_ev_ebit_multiple"] = str(growth)
+                        elif "terminal_valuation" in doc:
+                            doc["terminal_valuation"]["terminal_growth"] = str(growth)
+                        else:
+                            doc["terminal_growth"] = str(growth)
                         try:
                             result = execute(read_case(json.dumps(doc)))
                         except (ValueError, OSError) as exc:
@@ -220,18 +236,18 @@ def run_sensitivity(request: SensitivityRequest, repository_root: Path) -> dict[
         if isinstance(exc, SensitivityInputError):
             raise
         raise SensitivityInputError([f"sensitivity.reference_or_grid: execution failed: {exc}"]) from exc
-    return {"schema_version": INVESTOR_RESULT_SCHEMA[:-1]+"2" if _strict_json(request.submitted_json)["schema_version"] == REVIEW_SCHEMA else INVESTOR_RESULT_SCHEMA if _strict_json(request.submitted_json)["schema_version"] in (INVESTOR_SCHEMA, REVIEW_SCHEMA) else RESULT_SCHEMA, "sensitivity_name": request.sensitivity_name,
+    return {"schema_version": "investor-sensitivity-results-v3" if request.exit_multiple else INVESTOR_RESULT_SCHEMA[:-1]+"2" if _strict_json(request.submitted_json)["schema_version"] in (REVIEW_SCHEMA, METHOD_SCHEMA) else INVESTOR_RESULT_SCHEMA if _strict_json(request.submitted_json)["schema_version"] in (INVESTOR_SCHEMA, REVIEW_SCHEMA, METHOD_SCHEMA) else RESULT_SCHEMA, "sensitivity_name": request.sensitivity_name,
             "submitted_inputs": _strict_json(request.submitted_json), "selected_case": original,
             "selection": {"source_kind": _strict_json(request.submitted_json)["source"]["kind"],
                           "scenario_label": request.scenario_label, "analytical_date": request.analytical_date.isoformat(),
                           "information_cutoff": request.information_cutoff.isoformat() if request.information_cutoff else None},
             "reference_result": reference, "reference_metrics": reference_metrics,
             "wacc_values": [str(x) for x in request.wacc_values],
-            "terminal_growth_values": [str(x) for x in request.terminal_growth_values],
-            "cells": rows, "held_fixed": HELD_FIXED,
-            "cell_reproduction": "Start from selected_case; replace only wacc and terminal_growth with the cell's strings; read_case then run_case. Rows are WACC, columns terminal growth.",
+            ("exit_ev_ebit_multiple_values" if request.exit_multiple else "terminal_growth_values"): [str(x) for x in request.terminal_growth_values],
+            "cells": rows, "held_fixed": "Five annual operating paths and year-five EBIT; bridge/shares and declarations. Only WACC and multiple vary." if request.exit_multiple else HELD_FIXED,
+            "cell_reproduction": "Replace only wacc and terminal_valuation.exit_ev_ebit_multiple in selected_case; run_case. Rows WACC; columns multiple." if request.exit_multiple else "Start from selected_case; replace only wacc and terminal_growth with the cell's strings; read_case then run_case. Rows are WACC, columns terminal growth.",
             "numeric_policy": "Derived contributions/deltas: isolated Decimal precision 50, HALF_EVEN; changes are fractional; amounts base USD, shares actual, value/share USD/share.",
-            "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR", "limitations": list(LIMITATIONS)}
+            "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR", "limitations": (["Only WACC and EV/EBIT multiple change. Operating cash flows and year-five EBIT are fixed; annual PVs and terminal PV/value respond.", *LIMITATIONS[1:]] if request.exit_multiple else list(LIMITATIONS))}
 
 
 def serialize_sensitivity(result: dict[str, object]) -> str:

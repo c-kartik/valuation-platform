@@ -13,6 +13,16 @@ economic convention or financial acceptance. Historical source/approval records
 below remain intact. Older assessment estimates/status snapshots do not override
 current accepted package views. No company review or acquisition resumes automatically.
 
+## Shared consumer guidance — local terminal alternatives
+
+The separately authorized [terminal-method extension](../exit-multiple-terminal-review.md)
+changes valuation consumption only. Source-bound FY2025 revenue, historical
+classifications, proxy scopes, unknowns and all approval/audit bindings remain
+unchanged. Exit EV/EBIT requires manually supported final-year EBIT and a selected
+multiple; neither this engine option nor synthetic verification certifies any
+issuer’s financial-input sufficiency. No company record values or readiness
+statuses change, and Phase 1 reviews do not resume.
+
 ## Latest accepted milestone — CVX/MRK/PG approved scoped histories, CVX EBIT remains OPEN
 
 The user explicitly approves all29 recommendations in the retained batch,

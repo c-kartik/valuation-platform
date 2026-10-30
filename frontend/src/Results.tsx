@@ -32,7 +32,7 @@ export function ResultReview({result,stale}: {result:Result;stale:boolean}) {
         <tr><th scope="row">Discount factor (unitless)</th>{b.years.map((y,i)=><td key={i}>{display(y.discount_factor,'1',6)}</td>)}</tr>
         <tr><th scope="row">Discounted FCFF</th>{b.years.map((y,i)=><td key={i}>{money(y.pv_fcff)}</td>)}</tr>
       </tbody></table></div>
-      <dl className="reconciliation">{[['Explicit-period PV',b.pv_explicit_fcff],['+ Discounted terminal value',b.pv_terminal_value],['= Enterprise value',b.enterprise_value],['Terminal FCFF',String(b.terminal.fcff)],['Terminal value at year 5',b.terminal_value]].map(([label,value])=><div key={label}><dt>{label} (USD millions)</dt><dd>{money(value)}</dd></div>)}</dl>
+      <dl className="reconciliation">{[['Explicit-period PV',b.pv_explicit_fcff],['+ Discounted terminal value',b.pv_terminal_value],['= Enterprise value',b.enterprise_value],['Terminal FCFF',String(b.terminal!.fcff)],['Terminal value at year 5',b.terminal_value]].map(([label,value])=><div key={label}><dt>{label} (USD millions)</dt><dd>{money(value)}</dd></div>)}</dl>
     </details>
     <details><summary>Assumptions, limitations &amp; provenance</summary><p>Case: <span>{result.case_name}</span></p><p>{b.timing.notice}</p><p>Analytical date: {b.timing.analytical_t0}. No verified information cutoff is established by this calculator.</p>
       {'preparation' in result.submitted_inputs ? <>

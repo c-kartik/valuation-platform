@@ -36,7 +36,7 @@ export function inherited(label:string,c:CaseState,paths:string[]){return label!
 export function scenarioDescription(label:string,c:CaseState,base:CaseState):string{
  if(label==='Base')return 'Your central working case';
  const differences=annual.filter(([key])=>pathsFor(key).some(p=>!samePercentage(c.draft.rates[p],base.draft.rates[p]))).map(([key])=>shortLabels[key]);
- if(['wacc','terminal_growth',...Object.keys(c.draft.rates).filter(p=>p.startsWith('terminal.'))].some(p=>!samePercentage(c.draft.rates[p],base.draft.rates[p])))differences.push('Valuation / long term');
+ if(['wacc','terminal_growth','exit_ev_ebit_multiple',...Object.keys(c.draft.rates).filter(p=>p.startsWith('terminal.'))].some(p=>!samePercentage(c.draft.rates[p],base.draft.rates[p])))differences.push('Valuation / long term');
  return differences.length?`${differences.join(', ')} differ from Base`:(c.overrides??[]).length?'Matches Base; some inputs fixed':'Matches Base · inherits changes';
 }
 
@@ -44,5 +44,5 @@ export function inputName(draft:Draft,path:string):string{
  const p=displayPath(draft,path),key=p.startsWith('quick.')?p.slice(6):/^forecast_years\[(\d+)\]\.(.+)$/.exec(p)?.[2];
  if(key&&key in shortLabels){const index=/^forecast_years\[(\d+)\]/.exec(p)?.[1];return (index===undefined?'':(draft.doc.forecast_years[Number(index)]?.fiscal_year_label??'Annual')+' ')+shortLabels[key as AnnualKey];}
  if(p.startsWith('terminal.'))return terminal.find(([key])=>p==='terminal.'+key)?.[1]??'Terminal input';
- return p==='wacc'?'WACC':p==='terminal_growth'?'Terminal growth':p==='case_name'?'Case name':p==='preparation.notes'?'Personal notes':p.startsWith('bridge.')?'Cash, debt and shares':'Case input';
+ return p==='exit_ev_ebit_multiple'?'Year-five EV/EBIT':p==='wacc'?'WACC':p==='terminal_growth'?'Terminal growth':p==='case_name'?'Case name':p==='preparation.notes'?'Personal notes':p.startsWith('bridge.')?'Cash, debt and shares':'Case input';
 }

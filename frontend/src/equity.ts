@@ -51,7 +51,7 @@ export function equityErrors(e:EquityDraft,anchorDate:string):Errors {
  if(!e.nonOverlap)errors.nonOverlap='Declare date, eligibility and non-overlap before calculating equity.';
  return errors;
 }
-export function buildEquityRequest(draft:Draft,e:EquityDraft):EquityDoc {
+export function buildEquityRequest(draft:Draft,e:EquityDraft):EquityDoc|(import('./model').MethodDoc&{bridge:Record<string,unknown>}) {
  const errors=equityErrors(e,draft.doc.anchor.annual_end);if(Object.keys(errors).length)throw new InputErrors(errors);
  const doc=buildRequest(draft), cik=doc.anchor.cik, date=doc.anchor.annual_end;
  const components:Record<string,unknown>[]=[], observations:Record<string,unknown>[]=[], coverage:Record<string,unknown>[]=[];
@@ -73,7 +73,9 @@ export function buildEquityRequest(draft:Draft,e:EquityDraft):EquityDoc {
   coverage.push({role,population_ids:populations,omission_references:omissions,review:{author:'Anonymous investor (unverified declaration)',timestamp_utc:doc.preparation.timestamp_utc,rationale:`User-selected declaration: ${declaration}. Not an authenticated review or financial approval.`},decision_references:[`manual:coverage:${key}`]});
  }
  const classId=`${e.shareBasis}: ${e.classes.trim()}`;
- return {...doc,limitations:[...doc.limitations,'The optional equity bridge is a separate manual, unverified extension. EV-only template bridge exclusions describe historical/source scope; they do not select or approve these manual assets, claims or shares.'],schema_version:'investor-case-v2',calculation_scope:'EQUITY_PER_SHARE',bridge:{components,observations,coverage,shares:{company_cik:cik,shares:millionsToUnits(e.shares),observation_date:e.date,class_id:classId,equivalence_convention:e.equivalence,award_policy:'sbc_expensed_no_duplicate_service_charge_v1',award_policy_references:[`manual:awards:${e.awards}: ${awards[e.awards as keyof typeof awards]}`],source_references:['unverified:user-entry:shares'],decision_references:[`manual:shares:${e.shareBasis}`],precision:'INF',rationale:`User-selected ${e.shareBasis==='issued'?'issued':'basic-equivalent'} population: ${e.classes.trim()}. ${awards[e.awards as keyof typeof awards]}. SBC service cost remains in margins once; no automatic dilution or proceeds.`,unit:'shares',scale:1},input_basis:doc.input_basis,valuation_class_id:classId,unresolved_requirements:[],convention_version:'manual-equity-bridge-v1'}};
+ const result={limitations:[...doc.limitations,'The optional equity bridge is a separate manual, unverified extension. EV-only template bridge exclusions describe historical/source scope; they do not select or approve these manual assets, claims or shares.'],schema_version:draft.terminalMethod?'investor-case-v3':'investor-case-v2',calculation_scope:'EQUITY_PER_SHARE' as const,bridge:{components,observations,coverage,shares:{company_cik:cik,shares:millionsToUnits(e.shares),observation_date:e.date,class_id:classId,equivalence_convention:e.equivalence,award_policy:'sbc_expensed_no_duplicate_service_charge_v1',award_policy_references:[`manual:awards:${e.awards}: ${awards[e.awards as keyof typeof awards]}`],source_references:['unverified:user-entry:shares'],decision_references:[`manual:shares:${e.shareBasis}`],precision:'INF',rationale:`User-selected ${e.shareBasis==='issued'?'issued':'basic-equivalent'} population: ${e.classes.trim()}. ${awards[e.awards as keyof typeof awards]}. SBC service cost remains in margins once; no automatic dilution or proceeds.`,unit:'shares',scale:1},input_basis:doc.input_basis,valuation_class_id:classId,unresolved_requirements:[],convention_version:'manual-equity-bridge-v1'}};
+ if(doc.schema_version==='investor-case-v3')return {...doc,...result,schema_version:'investor-case-v3'};
+ return {...doc,...result,schema_version:'investor-case-v2'};
 }
 
 /** Translate existing server rejections; financial domains stay in Python. */

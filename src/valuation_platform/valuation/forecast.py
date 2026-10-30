@@ -12,7 +12,7 @@ import json
 import re
 
 from valuation_platform.analyst.nwc import Period
-from .assumptions import ValuationAssumptions, valuation_assumptions_to_dict
+from .assumptions import OperatingAssumptions, ValuationAssumptions, valuation_assumptions_to_dict
 
 
 CONVENTION_VERSION = "meta-base-fcff-v1"
@@ -93,7 +93,7 @@ class ForecastYearResult:
 @dataclass(frozen=True)
 class ForecastResult:
     anchor: RevenueAnchor
-    assumptions: ValuationAssumptions
+    assumptions: ValuationAssumptions | OperatingAssumptions
     convention_version: str
     years: tuple[ForecastYearResult, ...]
 
@@ -119,7 +119,7 @@ def _operating_year(
 
 def forecast_five_years(
     anchor: RevenueAnchor,
-    assumptions: ValuationAssumptions,
+    assumptions: ValuationAssumptions | OperatingAssumptions,
     *,
     convention_version: str = CONVENTION_VERSION,
 ) -> ForecastResult:
@@ -131,7 +131,7 @@ def forecast_five_years(
     EBIT/D&A/investment consistency require separate semantic review before use.
     WACC and terminal growth remain structurally validated but unused here.
     """
-    if type(anchor) is not RevenueAnchor or type(assumptions) is not ValuationAssumptions:
+    if type(anchor) is not RevenueAnchor or type(assumptions) not in (ValuationAssumptions, OperatingAssumptions):
         raise ForecastValidationError("RevenueAnchor and ValuationAssumptions required")
     if assumptions.schema_version != "1":
         raise ForecastValidationError("Unsupported assumption schema")

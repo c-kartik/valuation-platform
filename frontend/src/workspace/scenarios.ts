@@ -1,13 +1,13 @@
 /** Complete investor scenario envelope; no financial calculations or implicit inheritance. */
 import {buildRequest,entryErrors,InputErrors} from '../model';
-import type {Draft,Errors,InvestorDoc,InvestorEquityDoc,Result} from '../model';
+import type {Draft,Errors,EditableDoc,Result} from '../model';
 import {buildEquityRequest,equityErrors} from '../equity';
 import type {EquityDraft} from '../equity';
 export const labels=['Bear','Base','Bull'] as const;
 export type Label=typeof labels[number];
-export type ScenarioDoc={schema_version:'investor-scenario-set-v1'|'investor-scenario-set-v2';scenario_set_name:string;scenarios:{label:Label;analytical_date:string;information_cutoff:string|null;case:InvestorDoc|InvestorEquityDoc}[]};
+export type ScenarioDoc={schema_version:'investor-scenario-set-v1'|'investor-scenario-set-v2'|'investor-scenario-set-v3';scenario_set_name:string;scenarios:{label:Label;analytical_date:string;information_cutoff:string|null;case:EditableDoc}[]};
 export type ScenarioResult={schema_version:string;scenario_set_name:string;submitted_inputs:ScenarioDoc;scenarios:{label:Label;analytical_date:string;information_cutoff:string|null;result:Result}[];limitations:string[]};
-export function requestFor(draft:Draft,base:Draft,bridge:EquityDraft,equity:boolean):InvestorDoc|InvestorEquityDoc{
+export function requestFor(draft:Draft,base:Draft,bridge:EquityDraft,equity:boolean):EditableDoc{
  const doc=buildRequest(draft);
  if(!equity)return doc;
  // Complete shared bridge, including review metadata, built once from Base context.
@@ -22,10 +22,16 @@ export function scenarioRequest(cases:Partial<Record<Label,{draft:Draft}>>,bridg
  if(equity)for(const [key,value]of Object.entries(equityErrors(bridge,cases.Base!.draft.doc.anchor.annual_end)))errors[`bridge.${key}`]=value;
  if(Object.keys(errors).length)throw new InputErrors(errors);
  const base=cases.Base!.draft;
- return {schema_version:unknownCutoff?'investor-scenario-set-v2':'investor-scenario-set-v1',scenario_set_name:`${base.doc.case_name} · Bear/Base/Bull`,scenarios:labels.map(label=>({label,analytical_date:base.doc.anchor.annual_end,information_cutoff:cutoff||null,case:requestFor(cases[label]!.draft,base,bridge,equity)}))};
+ return {schema_version:base.terminalMethod?'investor-scenario-set-v3':unknownCutoff?'investor-scenario-set-v2':'investor-scenario-set-v1',scenario_set_name:`${base.doc.case_name} · Bear/Base/Bull`,scenarios:labels.map(label=>({label,analytical_date:base.doc.anchor.annual_end,information_cutoff:cutoff||null,case:requestFor(cases[label]!.draft,base,bridge,equity)}))};
 }
 
 export function sameSnapshot(a:unknown,b:unknown):boolean{
  const canonical=(v:unknown):string=>JSON.stringify(v&&typeof v==='object'?Array.isArray(v)?v.map(x=>JSON.parse(canonical(x))):Object.fromEntries(Object.entries(v).sort(([a],[b])=>a.localeCompare(b)).map(([k,x])=>[k,JSON.parse(canonical(x))])):v);
  return canonical(a)===canonical(b);
+}
+
+/** Gordon v3 adds method metadata; the certified legacy solver retains its result bytes. */
+export function sameFinancialStageB(a:Result['stage_b'],b:Result['stage_b']):boolean{
+ const legacy=(x:Result['stage_b'])=>{if(x.terminal_method==='exit_multiple')return x;const {terminal_method:_method,...rest}=x;return rest;};
+ return sameSnapshot(legacy(a),legacy(b));
 }

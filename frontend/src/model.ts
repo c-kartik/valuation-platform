@@ -36,20 +36,39 @@ export type InvestorDoc = Omit<CaseDoc, 'schema_version' | 'analyst' | 'scope'> 
   preparation: {provenance: 'ANONYMOUS_INVESTOR'; timestamp_utc: string; notes: string | null};
 };
 export type InvestorEquityDoc = Omit<InvestorDoc,'schema_version'> & {schema_version:'investor-case-v2';calculation_scope:'EQUITY_PER_SHARE';bridge:Record<string,unknown>};
-export type Draft = { doc: InvestorDoc; rates: Record<string, string>; replacements: Partial<QuickValues> };
+export type TerminalMethod='perpetual_growth'|'exit_multiple';
+export type TerminalValuation={method:'perpetual_growth';terminal_growth:string|null;terminal:CaseDoc['terminal']}|{method:'exit_multiple';exit_ev_ebit_multiple:string|null};
+export type MethodDoc=Omit<InvestorDoc,'schema_version'|'terminal_growth'|'terminal'> & {
+ schema_version:'investor-case-v3';calculation_scope:'ENTERPRISE_VALUE'|'EQUITY_PER_SHARE';bridge?:Record<string,unknown>;
+ terminal_valuation:TerminalValuation;comparison_terminal_valuation:TerminalValuation|null;
+ // Absent on the wire. Optional declarations ease method-aware legacy consumers.
+ terminal_growth?:string|null;terminal?:CaseDoc['terminal'];
+};
+export type EditableDoc=InvestorDoc|InvestorEquityDoc|MethodDoc;
+export const methodOf=(draft:Draft):TerminalMethod=>draft.terminalMethod??'perpetual_growth';
+export const multipleString=(value:string):string|null=>{
+ if(!value.trim())return null;
+ if(!/^-?(?:\d+)(?:\.\d+)?$/.test(value.trim())||value.length>128)throw Error('Enter an exact multiple, e.g. 15.5; no × sign, percent or exponent.');
+ return new DisplayDecimal(value.trim()).toFixed();
+};
+export const requiredPaths=(draft:Draft)=>Object.keys(draft.rates).filter(p=>p!=='exit_ev_ebit_multiple'&&!(methodOf(draft)==='exit_multiple'&&(p==='terminal_growth'||p.startsWith('terminal.')))).concat(methodOf(draft)==='exit_multiple'?['exit_ev_ebit_multiple']:[]);
+export const multipleDisplay=(value:string)=>new DisplayDecimal(value).toDecimalPlaces(2).toFixed()+'×';
+export type Draft = { terminalMethod?:TerminalMethod; doc: InvestorDoc; rates: Record<string, string>; replacements: Partial<QuickValues> };
 export type Errors = Record<string, string>;
 export type Year = Record<string, string | number>;
 export type Result = {
   investor_review?: MarketReview;
-  case_name: string; input_basis: string; submitted_inputs: CaseDoc | InvestorDoc | InvestorEquityDoc; limitations: string[];
+  case_name: string; input_basis: string; submitted_inputs: CaseDoc | EditableDoc;
+  terminal_comparison?:{selected_method:TerminalMethod;submitted_inputs:MethodDoc;results:Partial<Record<TerminalMethod,{status:string;stage_b?:Result["stage_b"];reason?:string}>>;ev_difference_exit_minus_perpetual:string|null;implied_year_five_ev_ebit?:{value:string|null;reason:string|null}}; limitations: string[];
   stage_c?: {
     stage_b:{enterprise_value:string}; eligible_assets:string;financing_claims:string;other_equity_claims:string;equity_value:string;valuation_shares:string;value_per_share:string;
     inputs:{observations:{observation_id:string;disposition:string;rationale:string}[];shares:{class_id:string;observation_date:string;rationale:string}};
     contributions:{component:{component_id:string};signed_contribution:string}[];
   };
   stage_b: {
+    terminal_method?:TerminalMethod;terminal_basis?:{metric:string;definition:string;period_index:number;fiscal_year_label:string;year_five_ebit:string;wacc:string;exit_ev_ebit_multiple:string};
     timing: {analytical_t0: string; notice: string; information_cutoff: string};
-    stage_a: {anchor: Record<string, unknown>; years: Year[]}; years: Year[]; terminal: Year;
+    stage_a: {anchor: Record<string, unknown>; years: Year[]}; years: Year[]; terminal?: Year;
     terminal_value: string; pv_terminal_value: string; pv_explicit_fcff: string; enterprise_value: string;
   };
 };
@@ -85,7 +104,7 @@ export function makeDraft(template: CaseDoc, timestamp = new Date().toISOString(
   terminal.forEach(([key]) => { rates[`terminal.${key}`] = fractionToPercentage(doc.terminal[key]); });
   return {doc, rates, replacements: {}};
 }
-export function buildRequest(draft: Draft): InvestorDoc {
+export function buildRequest(draft: Draft): InvestorDoc|MethodDoc {
   if (Object.keys(draft.replacements).length) throw new InputErrors(Object.fromEntries(Object.keys(draft.replacements).map(key=>[`quick.${key}`,'Use for all five years or keep the annual values before calculating.'])));
   const doc = structuredClone(draft.doc);
   if (!doc.preparation.notes?.trim()) doc.preparation.notes = null;
@@ -95,8 +114,21 @@ export function buildRequest(draft: Draft): InvestorDoc {
     catch (e) { errors[path] = (e as Error).message; return null; }
   };
   doc.forecast_years.forEach((year, i) => annual.forEach(([key]) => { year[key] = convert(`forecast_years[${i}].${key}`); }));
-  doc.wacc = convert('wacc'); doc.terminal_growth = convert('terminal_growth');
-  terminal.forEach(([key]) => { doc.terminal[key] = convert(`terminal.${key}`); });
+  doc.wacc = convert('wacc');
+  const selected=methodOf(draft);
+  const optionalConvert=(path:string)=>{try{return percentageToFraction(draft.rates[path]??'');}catch{return null;}};
+  doc.terminal_growth = selected==='perpetual_growth'?convert('terminal_growth'):optionalConvert('terminal_growth');
+  terminal.forEach(([key]) => { doc.terminal[key] = selected==='perpetual_growth'?convert(`terminal.${key}`):optionalConvert(`terminal.${key}`); });
+  if(draft.terminalMethod){
+   let multiple:string|null=null;try{multiple=multipleString(draft.rates.exit_ev_ebit_multiple??'');}catch(e){if(selected==='exit_multiple')errors.exit_ev_ebit_multiple=(e as Error).message;}
+   if(Object.keys(errors).length)throw new InputErrors(errors);
+   const {terminal_growth,terminal:ratios,...common}=doc;
+   const gordon:TerminalValuation={method:'perpetual_growth',terminal_growth,terminal:ratios};
+   const exit:TerminalValuation={method:'exit_multiple',exit_ev_ebit_multiple:multiple};
+   return {...common,schema_version:'investor-case-v3',calculation_scope:'ENTERPRISE_VALUE',
+    conventions:{...doc.conventions,discounting:selected==='exit_multiple'?'fiscal-end-year-five-ev-ebit-v1':'fiscal-end-annual-gordon-v1'},
+    terminal_valuation:selected==='exit_multiple'?exit:gordon,comparison_terminal_valuation:selected==='exit_multiple'?gordon:exit};
+  }
   if (Object.keys(errors).length) throw new InputErrors(errors);
   return doc; // Explicit investor EV-only object: no invented analyst rationale or cutoff.
 }
@@ -159,7 +191,9 @@ export function replaceAnnual(draft: Draft, key: AnnualKey): Draft {
 }
 export function entryErrors(draft: Draft): Errors {
   const errors: Errors = {};
-  for (const [path,value] of Object.entries(draft.rates)) {
+  for (const path of requiredPaths(draft)) {
+    const value=draft.rates[path]??'';
+    if(path==='exit_ev_ebit_multiple'){try{const m=multipleString(value);if(m===null||new DisplayDecimal(m).lte(0))errors[path]='Enter a strictly positive year-five EV/EBIT multiple.';}catch(e){errors[path]=(e as Error).message;}continue;}
     try {if (percentageToFraction(value) === null) errors[path] = 'Required. Enter a percentage; 20 means 20%.';}
     catch(e) {errors[path] = (e as Error).message;}
   }
@@ -173,7 +207,7 @@ export function entryErrors(draft: Draft): Errors {
   return errors;
 }
 export function displayPath(draft: Draft, path: string): string {
-  path=path.replace(/^case\./,'');
+  path=path.replace(/^case\./,'').replace(/^terminal_valuation\./,'');
   if (path === 'terminal_growth (relative to wacc)') return 'terminal_growth';
   const match=/^forecast_years\[\d+\]\.(.+)$/.exec(path);
   return match && annual.some(([key])=>key===match[1]) && !annualState(draft,match[1] as AnnualKey).varies ? `quick.${match[1]}` : path;

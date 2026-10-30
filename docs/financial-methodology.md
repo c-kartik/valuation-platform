@@ -1,6 +1,24 @@
 # Financial Methodology
 
-## Current local investor-review boundary
+## Current local terminal alternatives
+
+The [exit-multiple convention and acceptance](exit-multiple-terminal-review.md)
+adds final explicit year-five **EBIT × selected EV/EBIT multiple** as terminal EV,
+discounted by `(1 + WACC)^5`, then added to the same five annual FCFF PVs.
+Positive finite multiple and positive year-five EBIT are required. No normalized
+earnings, year-six earnings, SBC or operating-lease add-back is introduced.
+The alternative consumes neither terminal growth nor five terminal operating
+ratios; Gordon retains its existing independent inputs and `g < WACC` constraint.
+Both preserve fiscal-end timing and isolated precision-50 HALF_EVEN arithmetic.
+
+Exit multiples assume a future valuation level; peer-based multiples introduce
+market pricing assumptions. No automatic multiple, researched range or company
+preload is selected. Python Gordon terminal EV / year-five EBIT is a cross-check
+only where both operands are positive. Exit grids vary only WACC/multiple, holding
+operations fixed. Reverse growth remains explicitly Gordon-only. Mathematical
+acceptance does not establish actual financial sufficiency or investment readiness.
+
+## Earlier local investor-review boundary
 
 The [direct-entry workspace](investor-inline-workspace.md) changes interaction and
 display only. Typing makes prior outputs stale; calculation remains explicit.

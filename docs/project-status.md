@@ -1,6 +1,24 @@
 # Project Status
 
-## Current — direct-entry investor workspace, local only
+## Current — exit-multiple terminal option, local only
+
+The [terminal-method acceptance record](exit-multiple-terminal-review.md) extends
+the editable workspace through engine/API/CLI, optional qualified equity bridge,
+shared-method scenarios and WACC × EV/EBIT grids. Year-five EBIT × an explicit
+positive multiple is an alternative to unchanged perpetual growth. One Calculate
+compares individually valid methods; incomplete comparison inputs do not block the
+selected method. Opposite drafts, per-method axes, inheritance and stale/cancel
+guards remain explicit. No exit reverse solver or automatic multiple/range exists.
+
+Legacy output compatibility, exact Decimal arithmetic, source pins and all nine
+unset templates are preserved. Actual company choices and investment readiness
+remain unapproved. Phase 1 stays paused; preload methodology remains deferred.
+Local review: <http://127.0.0.1:5175/workspace/> → local Python API 8002.
+No push, deployment, portfolio, cloud or evidence changes. See the linked record
+for current tests (199 valuation, 211 frontend and focused API/review checks),
+both builds, browser checks and the download-delivery limitation.
+
+## Earlier — direct-entry investor workspace, local only
 
 The [direct-entry review](investor-inline-workspace.md) exposes eight ordinary DCF
 inputs directly beside the chart, with expandable annual paths and independent

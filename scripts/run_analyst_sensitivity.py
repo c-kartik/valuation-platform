@@ -18,6 +18,10 @@ def render_summary(result):
     """Display supplied results only, with isolated Decimal unit conversion/rounding."""
     ref = result["reference_result"]
     doc = result["selected_case"]
+    exit_method = "exit_ev_ebit_multiple_values" in result
+    columns = result["exit_ev_ebit_multiple_values"] if exit_method else result["terminal_growth_values"]
+    if "terminal_valuation" in doc and not exit_method:
+        doc = {**doc, **{k:v for k,v in doc["terminal_valuation"].items() if k != "method"}}
     selection = result["selection"]
     anchor = ref["stage_b"]["stage_a"]["anchor"]
     company = ANCHORS.get(doc["anchor"]["kind"], {}).get("ticker", "Synthetic fixture")
@@ -30,13 +34,13 @@ def render_summary(result):
 
         identity = (f"Anonymous investor | Prepared: {doc['preparation']['timestamp_utc']}" if "preparation" in doc
                     else f"Analyst: {doc['analyst']['author']}")
-        lines = ["WACC × TERMINAL-GROWTH SENSITIVITY", f"Request: {result['sensitivity_name']}",
+        lines = ["WACC × EV/EBIT MULTIPLE SENSITIVITY" if exit_method else "WACC × TERMINAL-GROWTH SENSITIVITY", f"Request: {result['sensitivity_name']}",
                  f"Company: {company} | Case: {doc['case_name']} | Scenario: {selection['scenario_label'] or 'single case (explicit)'}",
                  f"Input basis: {doc['input_basis']} | {identity}",
                  f"Anchor: {anchor['annual_start']} to {anchor['annual_end']} | CIK {anchor['cik']} | {anchor['accession']}",
                  f"Analytical date: {selection['analytical_date']} | Declared information cutoff: {selection['information_cutoff']}",
                  "Timing: " + ref["stage_b"]["timing"]["notice"],
-                 f"Reference WACC: {percent(doc['wacc'])} | Terminal growth: {percent(doc['terminal_growth'])}",
+                 (f"Reference WACC: {percent(doc['wacc'])} | EV/EBIT: {doc['terminal_valuation']['exit_ev_ebit_multiple']}×" if exit_method else f"Reference WACC: {percent(doc['wacc'])} | Terminal growth: {percent(doc['terminal_growth'])}"),
                  f"Reference enterprise value: {money(ref['stage_b']['enterprise_value'])} USD millions",
                  "EV is enterprise value, not equity or value/share."]
         if "stage_c" in ref:
@@ -50,12 +54,12 @@ def render_summary(result):
         if "stage_c" in ref:
             matrices.append(("Scope-qualified value/share matrix — USD/share", "value_per_share", lambda x: f"{Decimal(x):,.8f}"))
         for title, key, display in matrices:
-            lines += ["", title, "WACC rows / g columns | " + " | ".join(percent(g) for g in result["terminal_growth_values"])]
+            lines += ["", title, ("WACC rows / EV/EBIT columns | " if exit_method else "WACC rows / g columns | ") + " | ".join(g+"×" if exit_method else percent(g) for g in columns)]
             # Exact strings accompany percentage labels: very close axes may round alike.
-            lines.append("Exact g fractions | " + " | ".join(result["terminal_growth_values"]))
+            lines.append(("Exact multiples | " if exit_method else "Exact g fractions | ") + " | ".join(columns))
             for wacc, row in zip(result["wacc_values"], result["cells"]):
                 lines.append(percent(wacc) + f" [{wacc}] | " + " | ".join("INVALID*" if cell["status"] == "INVALID" else display(cell["metrics"][key]) for cell in row))
-        lines += ["", "* INVALID: terminal growth >= WACC; no result, repair or interpolation.",
+        lines += ["", ("Exit grid: strictly positive multiples; no Gordon pair restriction." if exit_method else "* INVALID: terminal growth >= WACC; no result, repair or interpolation."),
                   "Held fixed: " + result["held_fixed"], *result["limitations"],
                   "Display only: USD millions / USD per share to 8 decimals, percentages to 2, HALF_EVEN. Rounded cells may appear equal.",
                   "JSON retains exact submitted rate strings, full reference/provenance, cell PV reconciliation, terminal contributions and signed-reference changes.",

@@ -11,6 +11,7 @@ import re
 
 from .case_inputs import AnalystCase, CaseInputError, _strict_json, read_case, _prepare_case_runner
 from .forecast import _operating_year
+from .terminal_methods import ExitMultipleMethod
 from .scenario_inputs import LABELS, read_scenario_set
 
 SCHEMA = "analyst-reverse-dcf-request-v1"
@@ -163,6 +164,8 @@ def _read_reverse(text):
         errors.append("reverse.source.kind: requires single_case or scenario_set")
     if case and doc.get("schema_version") in (INVESTOR_SCHEMA, REVIEW_SCHEMA) and json.loads(case.submitted_json).get("schema_version") not in ("investor-case-v1", "investor-case-v2"):
         errors.append("reverse.source.case.schema_version: investor envelope requires investor case metadata")
+    if case and type(case.terminal) is ExitMultipleMethod:
+        errors.append("reverse.source.case.terminal_valuation: UNSUPPORTED_TERMINAL_METHOD: certified reverse DCF supports perpetual growth only; submit a separate explicit Gordon case")
     if case and analytical and analytical != case.assumptions.anchor_fiscal_end:
         errors.append("reverse.source.analytical_date: must equal selected case.anchor.annual_end")
     if analytical and cutoff and cutoff < analytical:

@@ -69,7 +69,7 @@ class ForecastYearAssumptions:
 
 
 @dataclass(frozen=True)
-class ValuationAssumptions:
+class OperatingAssumptions:
     """One company-bound set of five explicit forecast-year assumptions."""
 
     schema_version: str
@@ -78,7 +78,6 @@ class ValuationAssumptions:
     anchor_fiscal_end: date
     forecast_years: tuple[ForecastYearAssumptions, ...]
     wacc: Decimal
-    terminal_growth: Decimal
 
     def __post_init__(self) -> None:
         _require_nonempty_string(self.schema_version, "Schema version")
@@ -110,6 +109,15 @@ class ValuationAssumptions:
         if self.wacc <= Decimal("0"):
             raise AssumptionValidationError("WACC must be greater than zero", "wacc")
 
+
+@dataclass(frozen=True)
+class ValuationAssumptions(OperatingAssumptions):
+    """Legacy Gordon assumptions; terminal growth is never an exit operand."""
+
+    terminal_growth: Decimal
+
+    def __post_init__(self) -> None:
+        super().__post_init__()
         _require_rate(self.terminal_growth, "Terminal growth")
         if self.terminal_growth <= Decimal("-1"):
             raise AssumptionValidationError("Terminal growth must be greater than -1", "terminal_growth")
@@ -123,7 +131,7 @@ def valuation_assumptions_to_dict(
     assumptions: ValuationAssumptions,
 ) -> dict[str, object]:
     """Serialize assumptions with stable fields and exact Decimal strings."""
-    if not isinstance(assumptions, ValuationAssumptions):
+    if type(assumptions) not in (ValuationAssumptions, OperatingAssumptions):
         raise AssumptionValidationError(
             "Serializer requires ValuationAssumptions"
         )
@@ -148,7 +156,8 @@ def valuation_assumptions_to_dict(
             for item in assumptions.forecast_years
         ],
         "wacc": str(assumptions.wacc),
-        "terminal_growth": str(assumptions.terminal_growth),
+        **({"terminal_growth": str(assumptions.terminal_growth)}
+           if type(assumptions) is ValuationAssumptions else {}),
     }
 
 

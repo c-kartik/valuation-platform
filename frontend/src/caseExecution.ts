@@ -4,10 +4,10 @@ import type {ReverseDoc} from './workspace/reverse';
 import type {SensitivityDoc} from './workspace/sensitivity';
 import type {ScenarioDoc} from './workspace/scenarios';
 import type {ExecutionGate} from './execution';
-import type {InvestorDoc,InvestorEquityDoc,Result} from './model';
+import type {EditableDoc,Result} from './model';
 export async function executeCase<T>({gate,action,operation='run',build,load=request,current,check,route}:{
  route?:'review';gate:ExecutionGate;action:'ev'|'equity'|'scenarios'|'sensitivity'|'reverse';operation?:'validate'|'run';
- build:()=>InvestorDoc|InvestorEquityDoc|ScenarioDoc|SensitivityDoc|ReverseDoc;load?:typeof request;current:()=>boolean;check?:(value:T)=>void;
+ build:()=>EditableDoc|ScenarioDoc|SensitivityDoc|ReverseDoc;load?:typeof request;current:()=>boolean;check?:(value:T)=>void;
 }):Promise<T|undefined>{
  const lease=gate.start(action);if(!lease)return undefined;
  try{

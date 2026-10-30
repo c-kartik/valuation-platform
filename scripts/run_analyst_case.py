@@ -16,6 +16,9 @@ from valuation_platform.valuation.consumer import ANCHORS
 def render_summary(result):
     """Display existing components; only scale/percentage arithmetic belongs here."""
     doc = result["submitted_inputs"]
+    method = doc.get("terminal_valuation", {}).get("method", "perpetual_growth")
+    if "terminal_valuation" in doc and method == "perpetual_growth":
+        doc = {**doc, **{k:v for k,v in doc["terminal_valuation"].items() if k != "method"}}
     b = result["stage_b"]
     a = b["stage_a"]
     anchor = a["anchor"]
@@ -78,25 +81,43 @@ def render_summary(result):
             lines.append(row(label, [money(y[key]) for y in years]))
         lines.append(row("Discount factor (unitless)", [f"{Decimal(y['discount_factor']):.6f}" for y in b["years"]]))
         lines.append(row("Discounted FCFF", [money(y["pv_fcff"]) for y in b["years"]]))
-        lines += [
-            "Operating tax reduces EBIT to NOPAT; D&A is added back; investment and positive WC cash are subtracted once.",
-            "", f"WACC: {percent(doc['wacc'])} | Terminal growth: {percent(doc['terminal_growth'])}",
-            "Explicit terminal assumptions (%) — independent of Year 5:",
-        ]
-        for label, key in (
-            ("Operating margin", "operating_margin"), ("Operating tax rate", "operating_tax_rate"),
-            ("D&A / revenue", "d_and_a_percent_revenue"), ("Investment / revenue", "investment_percent_revenue"),
-            ("WC cash / full revenue", "working_capital_cash_requirement_percent_revenue"),
-        ):
-            lines.append(f"  {label}: {percent(doc['terminal'][key])}")
+        if method == "exit_multiple":
+            basis = b["terminal_basis"]
+            lines += ["", f"WACC: {percent(doc['wacc'])} | Terminal method: Exit multiple",
+                      f"Year-five EV/EBIT ({basis['fiscal_year_label']}): {basis['exit_ev_ebit_multiple']}×",
+                      f"Year-five EBIT (USD millions): {money(basis['year_five_ebit'])}",
+                      basis["definition"],
+                      "Exit multiples assume a future valuation level. Peer-based multiples introduce market pricing assumptions."]
+        else:
+            lines += [
+                "Operating tax reduces EBIT to NOPAT; D&A is added back; investment and positive WC cash are subtracted once.",
+                "", f"WACC: {percent(doc['wacc'])} | Terminal growth: {percent(doc['terminal_growth'])}",
+                "Explicit terminal assumptions (%) — independent of Year 5:",
+            ]
+            for label, key in (
+                ("Operating margin", "operating_margin"), ("Operating tax rate", "operating_tax_rate"),
+                ("D&A / revenue", "d_and_a_percent_revenue"), ("Investment / revenue", "investment_percent_revenue"),
+                ("WC cash / full revenue", "working_capital_cash_requirement_percent_revenue"),
+            ):
+                lines.append(f"  {label}: {percent(doc['terminal'][key])}")
         lines += [
             "", "Enterprise-value reconciliation (USD millions)",
-            f"Terminal FCFF: {money(b['terminal']['fcff'])}",
+            *([f"Terminal FCFF: {money(b['terminal']['fcff'])}"] if method == "perpetual_growth" else []),
             f"Terminal value at end of Year 5: {money(b['terminal_value'])}",
             f"Explicit-period PV: {money(b['pv_explicit_fcff'])}",
             f"+ Discounted terminal value: {money(b['pv_terminal_value'])}",
             f"= Enterprise value (EV): {money(b['enterprise_value'])}",
         ]
+        comparison = result.get("terminal_comparison")
+        if comparison:
+            lines.append("Terminal method comparison (same annual operations/WACC):")
+            for method_name, item in comparison["results"].items():
+                lines.append(f"  {method_name}: " + (f"EV {money(item['stage_b']['enterprise_value'])} USD millions" if item["status"] == "CURRENT" else "awaiting inputs: " + item["reason"]))
+            cross = comparison.get("implied_year_five_ev_ebit")
+            if cross:
+                lines.append("Perpetual implied year-five EV/EBIT: " + (cross["value"]+"×" if cross["value"] else cross["reason"]))
+            if comparison["ev_difference_exit_minus_perpetual"] is not None:
+                lines.append("Method EV difference (exit minus perpetual): " + money(comparison["ev_difference_exit_minus_perpetual"]) + " USD millions; not market upside/downside")
         ev = Decimal(b["enterprise_value"])
         if ev.is_zero():
             lines.append("Discounted terminal value / EV contribution: undefined (EV is zero).")

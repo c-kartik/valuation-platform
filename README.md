@@ -19,6 +19,19 @@ where the operating-company FCFF framework is not appropriate.
 
 ## Current Status
 
+The local [terminal-method extension](docs/exit-multiple-terminal-review.md) adds
+explicit **year-five EV/EBIT** beside unchanged perpetual growth, method comparison,
+shared-method scenarios and WACC × multiple sensitivity. Multiples/ranges start
+unset; Gordon drafts are preserved. Exit uses 32 numerical operands, Gordon 37.
+The existing qualified equity bridge supports either method; certified reverse
+DCF remains Gordon-only. No company default or automatic multiple is selected.
+
+Validate the synthetic v3 example without calculating:
+`PYTHONPATH=src .venv/bin/python scripts/run_analyst_case.py examples/valuation/synthetic-exit.json`.
+Add `--run --format summary` for explicit calculation, or `--run` for exact JSON.
+`--output PATH` saves exclusively to a new permitted file; validation does not
+calculate/write, existing files and source/history paths remain protected.
+
 The [direct-entry investor workspace](docs/investor-inline-workspace.md) provides
 a local result-first `/workspace/`: type ordinary assumptions beside revenue/FCFF,
 then explicitly Calculate. Annual paths and independent terminal ratios expand

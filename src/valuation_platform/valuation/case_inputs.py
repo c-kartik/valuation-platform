@@ -2,14 +2,15 @@
 
 from dataclasses import dataclass, fields
 from datetime import date, datetime
-from decimal import Decimal
+from decimal import Context, Decimal, ROUND_HALF_EVEN, localcontext
 import json
 from pathlib import Path
 import re
 
 from valuation_platform.analyst.historical_inputs import ManualIdentity
 from valuation_platform.analyst.nwc import Period
-from .assumptions import ForecastYearAssumptions, ValuationAssumptions
+from .assumptions import ForecastYearAssumptions, OperatingAssumptions, ValuationAssumptions
+from .terminal_methods import ExitMultipleMethod, PerpetualGrowthMethod, value_terminal, implied_multiple, EXIT_CONVENTION
 from .consumer import ANCHORS, IDENTITY, load_meta_revenue_anchor, load_revenue_anchor
 from .discounting import (
     DISCOUNTING_CONVENTION_VERSION, TerminalAssumptions,
@@ -26,6 +27,9 @@ from .bridge import (
 )
 
 
+METHOD_CASE_SCHEMA = "analyst-case-v3"
+METHOD_INVESTOR_SCHEMA = "investor-case-v3"
+METHOD_SCHEMAS = (METHOD_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA)
 CASE_SCHEMA = "analyst-case-v1"
 RESULT_SCHEMA = "analyst-case-enterprise-value-v1"
 EQUITY_CASE_SCHEMA = "analyst-case-v2"
@@ -99,8 +103,8 @@ class AnalystCase:
     submitted_json: str
     analyst: ManualIdentity | None
     anchor_kind: str
-    assumptions: ValuationAssumptions
-    terminal: TerminalAssumptions
+    assumptions: ValuationAssumptions | OperatingAssumptions
+    terminal: TerminalAssumptions | ExitMultipleMethod
     bridge: BridgeInputs | None = None
 
 
@@ -195,6 +199,44 @@ def _read_bridge(raw, anchor, basis, errors):
         return None
 
 
+def _read_terminal_method(raw, wacc, convention):
+    with localcontext(Context(prec=50, rounding=ROUND_HALF_EVEN)):
+        return _decode_terminal_method(raw, wacc, convention)
+
+
+def _decode_terminal_method(raw, wacc, convention):
+    """Strict method-specific operands. No dummy growth or unused terminal ratios."""
+    def number(v, path):
+        if type(v) is not str or not re.fullmatch(r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?", v):
+            raise CaseInputError([path + ": UNSET/invalid; supply an exact finite Decimal string"])
+        result = Decimal(v)
+        if not result.is_finite():
+            raise CaseInputError([path + ": finite Decimal required"])
+        return result
+    try:
+        if type(raw) is not dict:
+            raise CaseInputError(["terminal_valuation: required method-specific object"])
+        method = raw.get("method")
+        if method == "exit_multiple":
+            if raw.keys() != {"method", "exit_ev_ebit_multiple"}:
+                raise CaseInputError(["exit_ev_ebit_multiple: exit method requires only method and exit_ev_ebit_multiple"])
+            return ExitMultipleMethod(number(raw["exit_ev_ebit_multiple"], "exit_ev_ebit_multiple"))
+        if method != "perpetual_growth" or raw.keys() != {"method", "terminal_growth", "terminal"}:
+            raise CaseInputError(["terminal_valuation: choose perpetual_growth or exit_multiple with exact method-specific fields"])
+        growth = number(raw["terminal_growth"], "terminal_growth")
+        if growth <= -1 or (wacc is not None and growth >= wacc):
+            raise CaseInputError(["terminal_growth: must be greater than -1 and less than WACC"])
+        ratios = raw["terminal"]
+        if type(ratios) is not dict or ratios.keys() != set(TERMINAL_RATES):
+            raise CaseInputError(["terminal: five explicit terminal operating ratios required"])
+        terminal = TerminalAssumptions(**{k:number(ratios[k], "terminal."+k) for k in TERMINAL_RATES}, convention_version=convention)
+        return PerpetualGrowthMethod(growth, terminal)
+    except CaseInputError:
+        raise
+    except (ValueError, TypeError, ArithmeticError) as exc:
+        raise CaseInputError([str(getattr(exc, "field", None) or "terminal_valuation")+": "+str(exc)]) from exc
+
+
 def read_case(text: str) -> AnalystCase:
     """Validate declarations/models only; no anchor reads or valuation calls."""
     doc = _strict_json(text)
@@ -231,15 +273,20 @@ def read_case(text: str) -> AnalystCase:
             errors.append(f"{path}: invalid Decimal string")
             return None
 
-    investor = type(doc) is dict and doc.get("schema_version") in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA)
+    method_case = type(doc) is dict and doc.get("schema_version") in METHOD_SCHEMAS
+    investor = type(doc) is dict and doc.get("schema_version") in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA)
     equity = type(doc) is dict and doc.get("schema_version") in (EQUITY_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA)
-    extra = ("calculation_scope", "bridge") if equity else ()
+    equity = equity or (method_case and doc.get("calculation_scope") == EQUITY_SCOPE)
+    extra = ("calculation_scope", "bridge") if equity else (("calculation_scope",) if method_case else ())
+    terminal_keys = ("terminal_valuation", "comparison_terminal_valuation") if method_case else ("terminal_growth", "terminal")
     metadata = ("preparation",) if investor else ("analyst", "scope")
     doc = obj(doc, ("schema_version", "case_name", "input_basis", *metadata,
                     "limitations", "conventions", "anchor", "forecast_years", "wacc",
-                    "terminal_growth", "terminal", *extra), "case")
-    if doc.get("schema_version") not in (CASE_SCHEMA, EQUITY_CASE_SCHEMA, INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA):
+                    *terminal_keys, *extra), "case")
+    if doc.get("schema_version") not in (CASE_SCHEMA, EQUITY_CASE_SCHEMA, INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, *METHOD_SCHEMAS):
         errors.append(f"case.schema_version: supported versions are {CASE_SCHEMA}, {EQUITY_CASE_SCHEMA}, {INVESTOR_CASE_SCHEMA}, {INVESTOR_EQUITY_CASE_SCHEMA}")
+    if method_case and doc.get("calculation_scope") not in ("ENTERPRISE_VALUE", EQUITY_SCOPE):
+        errors.append("case.calculation_scope: choose ENTERPRISE_VALUE or EQUITY_PER_SHARE")
     if equity and doc.get("calculation_scope") != EQUITY_SCOPE:
         errors.append(f"case.calculation_scope: {doc.get('schema_version')} requires {EQUITY_SCOPE}")
     text_field(doc.get("case_name"), "case.case_name")
@@ -277,8 +324,10 @@ def read_case(text: str) -> AnalystCase:
     conventions = obj(doc.get("conventions"), ("forecast", "discounting"), "conventions")
     if conventions.get("forecast") not in SUPPORTED_CONVENTIONS:
         errors.append(f"conventions.forecast: choose {' or '.join(SUPPORTED_CONVENTIONS)}")
-    if conventions.get("discounting") != DISCOUNTING_CONVENTION_VERSION:
-        errors.append(f"conventions.discounting: supported convention is {DISCOUNTING_CONVENTION_VERSION}")
+    exit_case = method_case and type(doc.get("terminal_valuation")) is dict and doc["terminal_valuation"].get("method") == "exit_multiple"
+    expected_discounting = EXIT_CONVENTION if exit_case else DISCOUNTING_CONVENTION_VERSION
+    if conventions.get("discounting") != expected_discounting:
+        errors.append(f"conventions.discounting: supported convention is {expected_discounting}")
     anchor = obj(doc.get("anchor"), ("kind", *IDENTITY), "anchor")
     kind = anchor.get("kind")
     selections = {key: spec["identity"] for key, spec in ANCHORS.items()}
@@ -318,23 +367,48 @@ def read_case(text: str) -> AnalystCase:
                     location = path + "." + exc.field if getattr(exc, "field", None) else path
                     errors.append(f"{location}: {exc}")
     wacc = rate(doc.get("wacc"), "wacc")
-    growth = rate(doc.get("terminal_growth"), "terminal_growth")
-    raw_terminal = obj(doc.get("terminal"), TERMINAL_RATES, "terminal")
-    terminal_rates = {key: rate(raw_terminal.get(key), "terminal." + key) for key in TERMINAL_RATES}
+    growth = None
     terminal = None
-    if all(v is not None for v in terminal_rates.values()):
+    if method_case:
         try:
-            terminal = TerminalAssumptions(**terminal_rates, convention_version=conventions.get("forecast"))
-        except (ValueError, TypeError) as exc:
-            location = "terminal." + exc.field if getattr(exc, "field", None) else "terminal"
-            errors.append(f"{location}: {exc}")
+            method = _read_terminal_method(doc.get("terminal_valuation"), wacc, conventions.get("forecast"))
+            if type(method) is ExitMultipleMethod:
+                terminal = method
+            else:
+                growth, terminal = method.terminal_growth, method.terminal
+        except CaseInputError as exc:
+            errors.extend(exc.errors)
+        # Opposite-method omissions/errors are comparison status, never a selected-case blocker.
+        comparison = doc.get("comparison_terminal_valuation")
+        if comparison is not None and type(comparison) is not dict:
+            errors.append("comparison_terminal_valuation: required object or null")
+        elif type(comparison) is dict:
+            allowed = {"method", "exit_ev_ebit_multiple"} if comparison.get("method") == "exit_multiple" else {"method", "terminal_growth", "terminal"}
+            if comparison.keys() - allowed:
+                errors.append("comparison_terminal_valuation: unknown fields")
+            if type(comparison.get("terminal")) is dict and comparison["terminal"].keys() - set(TERMINAL_RATES):
+                errors.append("comparison_terminal_valuation.terminal: unknown fields")
+    else:
+        growth = rate(doc.get("terminal_growth"), "terminal_growth")
+        raw_terminal = obj(doc.get("terminal"), TERMINAL_RATES, "terminal")
+        terminal_rates = {key: rate(raw_terminal.get(key), "terminal." + key) for key in TERMINAL_RATES}
+        terminal = None
+        if all(v is not None for v in terminal_rates.values()):
+            try:
+                terminal = TerminalAssumptions(**terminal_rates, convention_version=conventions.get("forecast"))
+            except (ValueError, TypeError) as exc:
+                location = "terminal." + exc.field if getattr(exc, "field", None) else "terminal"
+                errors.append(f"{location}: {exc}")
+    if exit_case and len(annuals) == 5 and (annuals[-1].operating_margin <= 0 or any(y.revenue_growth == -1 for y in annuals)):
+        errors.append("forecast_years[4].operating_margin: exit multiple unsupported: year-five EBIT must be strictly positive")
     bridge = _read_bridge(doc.get("bridge"), anchor, doc.get("input_basis"), errors) if equity else None
     if errors:
         raise CaseInputError(errors)
     try:
-        assumptions = ValuationAssumptions(
+        assumption_type = OperatingAssumptions if exit_case else ValuationAssumptions
+        assumptions = assumption_type(
             "1", anchor["cik"], anchor["accession"], date.fromisoformat(anchor["annual_end"]),
-            tuple(annuals), wacc, growth,
+            tuple(annuals), wacc, *((growth,) if not exit_case else ()),
         )
     except (ValueError, TypeError) as exc:
         location = getattr(exc, "field", None) or "assumptions (wacc/terminal_growth/year labels)"
@@ -391,16 +465,17 @@ def _prepare_case_runner(case: AnalystCase, repository_root: Path):
 def _run_case(case, anchor, doc):
     """Shared financial execution; anchor supplied only by the validated closure."""
     stage_a = forecast_five_years(anchor, case.assumptions, convention_version=doc["conventions"]["forecast"])
-    stage_b = discount_to_enterprise_value(stage_a, case.terminal,
+    method_case = doc["schema_version"] in METHOD_SCHEMAS
+    stage_b = value_terminal(stage_a, case.terminal) if type(case.terminal) is ExitMultipleMethod else discount_to_enterprise_value(stage_a, case.terminal,
                                           convention_version=doc["conventions"]["discounting"])
     result = {
-        "schema_version": INVESTOR_RESULT_SCHEMA if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA) else RESULT_SCHEMA,
+        "schema_version": INVESTOR_RESULT_SCHEMA if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA) else RESULT_SCHEMA,
         "case_name": doc["case_name"], "input_basis": doc["input_basis"],
         "submitted_inputs": doc,
         "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
         "limitations": [*doc["limitations"],
                         ("Anonymous investor preparation; no verified identity or supplied investment rationale. Optional personal notes are not evidence or approval. Preparation timestamp is not a valuation date, information cutoff or evidence review. Forecast inputs are user-entered and not independently reviewed."
-                         if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA) else
+                         if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA) else
                          "Analyst identity, rationale and scope are submitted declarations, not authenticated approval."),
                         ("No economic consistency, evidence completeness or actual META execution approval is inferred."
                          if case.anchor_kind in ("meta-fy2025", "synthetic-fixture-v1") else
@@ -414,4 +489,32 @@ def _run_case(case, anchor, doc):
         result["calculation_scope"] = EQUITY_SCOPE
         result["stage_c"] = stage_c
         result["limitations"][-1:] = stage_c["limitations"]
+    if method_case:
+        result["schema_version"] = "investor-case-result-v3" if "preparation" in doc else "analyst-case-result-v3"
+        selected = doc["terminal_valuation"]["method"]
+        result["stage_b"]["terminal_method"] = selected
+        comparison = {"selected_method": selected, "submitted_inputs": doc,
+                      "results": {selected: {"status": "CURRENT", "stage_b": result["stage_b"]}},
+                      "ev_difference_exit_minus_perpetual": None}
+        if selected == "perpetual_growth":
+            comparison["implied_year_five_ev_ebit"] = implied_multiple(stage_b)
+        opposite = "perpetual_growth" if selected == "exit_multiple" else "exit_multiple"
+        try:
+            raw = doc["comparison_terminal_valuation"]
+            if type(raw) is not dict or raw.get("method") != opposite:
+                raise CaseInputError(["Opposite method inputs not supplied"])
+            method = _read_terminal_method(raw, case.assumptions.wacc, stage_a.convention_version)
+            other = value_terminal(stage_a, method)
+            other_dict = enterprise_value_to_dict(other)
+            other_dict["terminal_method"] = opposite
+            comparison["results"][opposite] = {"status": "CURRENT", "stage_b": other_dict}
+            if opposite == "perpetual_growth":
+                comparison["implied_year_five_ev_ebit"] = implied_multiple(other)
+            with localcontext(Context(prec=50, rounding=ROUND_HALF_EVEN)):
+                comparison["ev_difference_exit_minus_perpetual"] = str(
+                    Decimal(comparison["results"]["exit_multiple"]["stage_b"]["enterprise_value"]) -
+                    Decimal(comparison["results"]["perpetual_growth"]["stage_b"]["enterprise_value"]))
+        except (ValueError, ArithmeticError) as exc:
+            comparison["results"][opposite] = {"status": "AWAITING_INPUTS", "reason": str(exc)}
+        result["terminal_comparison"] = comparison
     return result

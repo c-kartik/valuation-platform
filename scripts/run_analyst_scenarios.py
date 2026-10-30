@@ -45,13 +45,26 @@ def render_summary(result):
             label = doc["forecast_years"][i]["fiscal_year_label"]
             for title, key in (("Revenue", "revenue"), ("FCFF", "fcff")):
                 lines.append(row(f"{label} {title}", [money(x["result"]["stage_b"]["stage_a"]["years"][i][key]) for x in entries]))
-        for title, key in (("WACC", "wacc"), ("Terminal growth", "terminal_growth")):
-            lines.append(row(title, [percent(x["result"]["submitted_inputs"][key]) for x in entries]))
-        for title, key in (("Operating margin", "operating_margin"), ("Operating tax", "operating_tax_rate"),
-                           ("D&A/revenue", "d_and_a_percent_revenue"), ("Investment/revenue", "investment_percent_revenue"),
-                           ("WC cash/full revenue", "working_capital_cash_requirement_percent_revenue")):
-            lines.append(row("Terminal " + title, [percent(x["result"]["submitted_inputs"]["terminal"][key]) for x in entries]))
-        lines.append(row("Terminal FCFF", [money(x["result"]["stage_b"]["terminal"]["fcff"]) for x in entries]))
+        method = doc.get("terminal_valuation", {}).get("method", "perpetual_growth")
+        if method == "exit_multiple":
+            lines.append("Terminal method: Exit multiple · year-five EV/EBIT")
+            lines.append(row("WACC", [percent(x["result"]["submitted_inputs"]["wacc"]) for x in entries]))
+            lines.append(row("Year-five EV/EBIT", [x["result"]["stage_b"]["terminal_basis"]["exit_ev_ebit_multiple"] + "×" for x in entries]))
+        else:
+            # Presentation-local projection; no operands are synthesized.
+            if "terminal_valuation" in doc:
+                from copy import deepcopy
+                entries = deepcopy(entries)
+                for x in entries:
+                    d = x["result"]["submitted_inputs"]
+                    d.update({k:v for k,v in d["terminal_valuation"].items() if k != "method"})
+            for title, key in (("WACC", "wacc"), ("Terminal growth", "terminal_growth")):
+                lines.append(row(title, [percent(x["result"]["submitted_inputs"][key]) for x in entries]))
+            for title, key in (("Operating margin", "operating_margin"), ("Operating tax", "operating_tax_rate"),
+                               ("D&A/revenue", "d_and_a_percent_revenue"), ("Investment/revenue", "investment_percent_revenue"),
+                               ("WC cash/full revenue", "working_capital_cash_requirement_percent_revenue")):
+                lines.append(row("Terminal " + title, [percent(x["result"]["submitted_inputs"]["terminal"][key]) for x in entries]))
+            lines.append(row("Terminal FCFF", [money(x["result"]["stage_b"]["terminal"]["fcff"]) for x in entries]))
         for title, key in (("Explicit-period PV", "pv_explicit_fcff"), ("Terminal value at Year 5", "terminal_value"),
                            ("Discounted terminal value", "pv_terminal_value"), ("Enterprise value (EV)", "enterprise_value")):
             lines.append(row(title, [money(x["result"]["stage_b"][key]) for x in entries]))

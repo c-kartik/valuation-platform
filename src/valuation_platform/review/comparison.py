@@ -2,6 +2,7 @@
 from decimal import Decimal as D, Context, ROUND_HALF_EVEN, localcontext
 import json
 from .sources import MarketOpening
+from valuation_platform.valuation.terminal_methods import ExitMultipleMethod
 from valuation_platform.valuation.case_inputs import _prepare_case_runner
 from valuation_platform.valuation.reverse_inputs import read_reverse,_run_reverse,DEFAULT_POLICY
 
@@ -26,6 +27,8 @@ def run_review(case,root,market=None,unavailable='Opening-price reference unavai
             'equity_difference':None,'per_share_difference':None,'search_bounds':bounds or SEARCH_BOUNDS,
             'limitations':['CAGR summarizes starting-to-final revenue; it does not preserve cash-flow timing or fully explain a value difference.',
                 'EV is operating enterprise value, not market capitalization or shareholder upside.']}
+        if type(case.terminal) is ExitMultipleMethod:
+            review["reasons"].append("UNSUPPORTED_TERMINAL_METHOD: market-implied growth supports a separate explicit perpetual-growth analysis only.")
         if market is None:review['reasons'].append(unavailable)
         else:
             if TICKERS.get(case.assumptions.company_cik)!=market.ticker:review['reasons'].append('Price company does not match the model.')
@@ -47,6 +50,11 @@ def run_review(case,root,market=None,unavailable='Opening-price reference unavai
         review['limitations'].extend(['Opening-reference market cap is derived from the submitted dated shares, not a current provider market-cap feed.',
             'Same selected financial perimeter; declarations/omissions are not authenticated approval and may be unbounded.'])
         original=json.loads(case.submitted_json)
+        if original.get('schema_version') == 'investor-case-v3':
+            method=original.pop('terminal_valuation');original.pop('comparison_terminal_valuation')
+            original.update(terminal_growth=method['terminal_growth'],terminal=method['terminal'])
+            original['schema_version']='investor-case-v2' if case.bridge else 'investor-case-v1'
+            if not case.bridge:original.pop('calculation_scope')
         document={'schema_version':'investor-reverse-dcf-request-v2','reverse_dcf_name':'Displayed opening-reference market-implied growth',
             'source':{'kind':'single_case','case':original,'analytical_date':case.assumptions.anchor_fiscal_end.isoformat(),'information_cutoff':None},
             'target':{'metric':'ENTERPRISE_VALUE','amount':str(target),'unit':'USD','date':market.session_date.isoformat()},'growth_bounds':bounds or SEARCH_BOUNDS}

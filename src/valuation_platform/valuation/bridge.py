@@ -18,6 +18,7 @@ from .discounting import (
     DiscountedYearResult, EnterpriseValueResult, discount_to_enterprise_value,
     enterprise_value_to_dict,
 )
+from .terminal_methods import ExitEnterpriseValueResult, value_terminal, EXIT_CONVENTION
 from .forecast import ForecastValidationError, ForecastYearResult
 
 
@@ -265,7 +266,11 @@ def _validate_declarations(inputs: BridgeInputs) -> None:
         raise BridgeValidationError("Every omission decision must bind one coverage declaration")
 
 
-def _validate_stage_b(stage_b: EnterpriseValueResult) -> None:
+def _validate_stage_b(stage_b: EnterpriseValueResult | ExitEnterpriseValueResult) -> None:
+    if type(stage_b) is ExitEnterpriseValueResult:
+        if stage_b.convention_version != EXIT_CONVENTION or stage_b != value_terminal(stage_b.stage_a, stage_b.terminal_assumptions):
+            raise BridgeValidationError("Exit Stage B annuals/operands/totals disagree with recomputation")
+        return
     if (type(stage_b) is not EnterpriseValueResult or type(stage_b.years) is not tuple
             or len(stage_b.years) != 5 or type(stage_b.terminal) is not ForecastYearResult):
         raise BridgeValidationError("Complete immutable Stage B result required")
@@ -293,7 +298,7 @@ class ComponentContribution:
 
 @dataclass(frozen=True)
 class BridgeResult:
-    stage_b: EnterpriseValueResult
+    stage_b: EnterpriseValueResult | ExitEnterpriseValueResult
     inputs: BridgeInputs
     contributions: tuple[ComponentContribution, ...]
     eligible_assets: Decimal
@@ -304,7 +309,7 @@ class BridgeResult:
     value_per_share: Decimal
 
 
-def bridge_to_per_share(stage_b: EnterpriseValueResult, inputs: BridgeInputs) -> BridgeResult:
+def bridge_to_per_share(stage_b: EnterpriseValueResult | ExitEnterpriseValueResult, inputs: BridgeInputs) -> BridgeResult:
     """Pure arithmetic on supplied declarations; never loads actual candidates."""
     if type(inputs) is not BridgeInputs:
         raise BridgeValidationError("Explicit BridgeInputs required; no automatic selections")

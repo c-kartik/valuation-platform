@@ -280,18 +280,12 @@ class ScenarioTests(unittest.TestCase):
             with redirect_stdout(after):self.assertEqual(single_cli.main([str(EXAMPLES/name),"--run"]),0)
             self.assertEqual(before.getvalue(),after.getvalue())
 
-    def test_original_engine_and_single_case_sources_unchanged(self):
-        # Anonymous investor intake was approved before this scenario integration.
-        # The reader now has a request-local source-binding refactor, covered by
-        # test_request_execution AST/compatibility checks. Pin other engine/CLI bytes;
-        # preserve the original numerical-engine pins and unchanged CLI bytes.
-        for name in ("assumptions.py", "consumer.py", "forecast.py", "discounting.py", "bridge.py"):
-            path="src/valuation_platform/valuation/"+name
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(
-                ["git","show","9da4a348858fb6e5ec1cc72e1c04746afc4b92ec"+":"+path],cwd=ROOT))
-        path="scripts/run_analyst_case.py"
+    def test_historical_consumer_source_unchanged(self):
+        # Terminal-method extension is authorized. Historical consumption stays pinned;
+        # isolated starting-checkout JSON compatibility lives in test_terminal_methods.
+        path="src/valuation_platform/valuation/consumer.py"
         self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(
-            ["git","show","d3c08117e32bf22d8a83f7b70b6ac47f5ab4e88f:"+path],cwd=ROOT))
+            ["git","show","9da4a348858fb6e5ec1cc72e1c04746afc4b92ec:"+path],cwd=ROOT))
 
     def test_three_retained_adapters_temporary_synthetic_integration_only(self):
         # Real retained revenue, deliberately synthetic forward assumptions/bridge.

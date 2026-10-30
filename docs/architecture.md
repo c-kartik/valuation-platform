@@ -1,6 +1,23 @@
 # Architecture
 
-## Current direct-entry investor workspace
+## Current terminal-method extension
+
+The [exit-multiple record](exit-multiple-terminal-review.md) describes narrowly
+versioned v3 case/scenario and exit-grid intake. `OperatingAssumptions` separates
+annual operands/WACC from legacy Gordon growth. `terminal_methods.py` owns typed
+method operands, exit terminal arithmetic and exact cross-checks; forecast and
+annual discounting stay shared. Stage C recomputes either result type before the
+existing bridge. No terminal-year placeholders or duplicate financial engine.
+
+The direct-edit workspace stores method and raw multiple beside existing rates,
+retains Gordon drafts, shares the method across scenarios and preserves separate
+axis settings. Python returns partial comparison status and exact method results;
+frontend revisions/gates reject obsolete responses. UI performs display arithmetic
+only. v1/v2 outputs remain compatible, certified reverse is Gordon-only, the local
+allowlist adds one module and HTTP budgets/source pins are unchanged. Publication
+and company default/multiple selection are outside this checkpoint.
+
+## Earlier direct-entry investor workspace
 
 The [direct-entry record](investor-inline-workspace.md) replaces ordinary sheet
 editing with visible raw-string percentage controls. DCF and scenario-table edits

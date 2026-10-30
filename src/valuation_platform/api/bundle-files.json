@@ -78,7 +78,8 @@
     "src/valuation_platform/valuation/forecast.py",
     "src/valuation_platform/valuation/reverse_inputs.py",
     "src/valuation_platform/valuation/scenario_inputs.py",
-    "src/valuation_platform/valuation/sensitivity_inputs.py"
+    "src/valuation_platform/valuation/sensitivity_inputs.py",
+    "src/valuation_platform/valuation/terminal_methods.py"
   ],
   "resources": {
     "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",

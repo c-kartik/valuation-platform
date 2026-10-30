@@ -11,3 +11,8 @@
 /* Keep the synchronized readout visible while either scenario metric is explored. */
 .valuation-canvas{--cv-context-height:64px}.cv-shared-readout{position:sticky;top:calc(var(--cv-context-height) + 8px);z-index:5}.cv-analysis-section{scroll-margin-top:calc(var(--cv-context-height) + 16px)}
 @media(max-width:680px){.valuation-canvas{--cv-context-height:168px}}
+
+/* Method choice stays beside ordinary direct inputs. */
+.cv-terminal-method{margin:14px 0}.cv-terminal-method label{display:block;font-size:13px;margin-bottom:6px}.cv-terminal-method select,#scenario-terminal-method{width:100%;min-height:44px;border:1px solid #cbd2dc;background:#fff;color:#17273b;padding:8px;border-radius:6px;font:inherit}.cv-terminal-comparison{margin-top:24px;border-top:1px solid #cbd2dc;padding-top:16px}.cv-terminal-comparison small{display:block;margin:8px 0}.cv-terminal-comparison table{width:100%;font-size:13px}.cv-terminal-comparison td,.cv-terminal-comparison th{padding:8px;text-align:left}
+
+.cv-terminal-comparison table{min-width:0;table-layout:fixed}.cv-terminal-comparison th,.cv-terminal-comparison td{white-space:normal;overflow-wrap:anywhere}.cv-terminal-comparison th:first-child{width:38%}

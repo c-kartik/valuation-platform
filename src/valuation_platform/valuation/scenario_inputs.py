@@ -12,6 +12,7 @@ SCENARIO_SCHEMA = "analyst-scenario-set-v1"
 RESULT_SCHEMA = "analyst-scenario-results-v1"
 INVESTOR_SCHEMA = "investor-scenario-set-v1"
 REVIEW_SCHEMA = "investor-scenario-set-v2"
+METHOD_SCHEMA = "investor-scenario-set-v3"
 INVESTOR_RESULT_SCHEMA = "investor-scenario-results-v1"
 LABELS = ("Bear", "Base", "Bull")
 
@@ -71,8 +72,8 @@ def read_scenario_set(text: str) -> ScenarioSet:
             return None
 
     doc = obj(doc, ("schema_version", "scenario_set_name", "scenarios"), "scenario_set")
-    investor = doc.get("schema_version") in (INVESTOR_SCHEMA, REVIEW_SCHEMA)
-    if doc.get("schema_version") not in (SCENARIO_SCHEMA, INVESTOR_SCHEMA, REVIEW_SCHEMA):
+    investor = doc.get("schema_version") in (INVESTOR_SCHEMA, REVIEW_SCHEMA, METHOD_SCHEMA)
+    if doc.get("schema_version") not in (SCENARIO_SCHEMA, INVESTOR_SCHEMA, REVIEW_SCHEMA, METHOD_SCHEMA):
         errors.append(f"scenario_set.schema_version: requires {SCENARIO_SCHEMA} or {INVESTOR_SCHEMA}")
     name = doc.get("scenario_set_name")
     if type(name) is not str or not name.strip():
@@ -96,19 +97,21 @@ def read_scenario_set(text: str) -> ScenarioSet:
         else:
             labels.append(label)
         analytical = day(entry.get("analytical_date"), path + ".analytical_date")
-        cutoff = None if doc.get("schema_version") == REVIEW_SCHEMA and entry.get("information_cutoff") is None else day(entry.get("information_cutoff"), path + ".information_cutoff")
+        cutoff = None if doc.get("schema_version") in (REVIEW_SCHEMA, METHOD_SCHEMA) and entry.get("information_cutoff") is None else day(entry.get("information_cutoff"), path + ".information_cutoff")
         if analytical and cutoff and cutoff < analytical:
             errors.append(f"{path}.information_cutoff: must not precede analytical_date")
         case = None
         try:
             case = read_case(json.dumps(entry.get("case")))
-            if investor and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2"):
+            if json.loads(case.submitted_json)["schema_version"].endswith("v3") and doc.get("schema_version") != METHOD_SCHEMA:
+                errors.append(f"{path}.case.schema_version: method cases require investor-scenario-set-v3")
+            if investor and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2", "investor-case-v3"):
                 errors.append(f"{path}.case.schema_version: investor scenario sets require investor-case-v1/v2")
         except CaseInputError as exc:
             errors.extend(f"{path}.case.{error.removeprefix('case.')}" for error in exc.errors)
         if case is not None and analytical and analytical != case.assumptions.anchor_fiscal_end:
             errors.append(f"{path}.analytical_date: must equal case.anchor.annual_end")
-        if case is not None and analytical and (cutoff or doc.get("schema_version") == REVIEW_SCHEMA) and label in LABELS:
+        if case is not None and analytical and (cutoff or doc.get("schema_version") in (REVIEW_SCHEMA, METHOD_SCHEMA)) and label in LABELS:
             parsed.append((path, ScenarioCase(label, analytical, cutoff, case)))
     for missing in LABELS:
         if missing not in labels:
@@ -160,7 +163,7 @@ def run_scenario_set(scenarios: ScenarioSet, repository_root: Path) -> dict[str,
             raise ScenarioInputError([f"scenarios.{item.label}.case: execution failed: {exc}"]) from exc
         results.append({"label": item.label, "analytical_date": item.analytical_date.isoformat(),
                         "information_cutoff": item.information_cutoff.isoformat() if item.information_cutoff else None, "result": result})
-    return {"schema_version": INVESTOR_RESULT_SCHEMA[:-1]+"2" if _strict_json(scenarios.submitted_json)["schema_version"] == REVIEW_SCHEMA else INVESTOR_RESULT_SCHEMA if _strict_json(scenarios.submitted_json)["schema_version"] in (INVESTOR_SCHEMA, REVIEW_SCHEMA) else RESULT_SCHEMA, "scenario_set_name": scenarios.scenario_set_name,
+    return {"schema_version": "investor-scenario-results-v3" if _strict_json(scenarios.submitted_json)["schema_version"] == METHOD_SCHEMA else INVESTOR_RESULT_SCHEMA[:-1]+"2" if _strict_json(scenarios.submitted_json)["schema_version"] in (REVIEW_SCHEMA, METHOD_SCHEMA) else INVESTOR_RESULT_SCHEMA if _strict_json(scenarios.submitted_json)["schema_version"] in (INVESTOR_SCHEMA, REVIEW_SCHEMA, METHOD_SCHEMA) else RESULT_SCHEMA, "scenario_set_name": scenarios.scenario_set_name,
             "submitted_inputs": _strict_json(scenarios.submitted_json), "scenarios": results,
             "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
             "limitations": ["Scenario labels imply no valuation ordering or approved economics.",

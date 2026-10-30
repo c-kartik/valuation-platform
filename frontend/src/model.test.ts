@@ -16,7 +16,7 @@ describe('exact input and presentation boundary', () => {
     expect(buildRequest(draft)).not.toHaveProperty('analyst');
     expect(buildRequest(draft)).not.toHaveProperty('scope');
     draft.rates['forecast_years[4].operating_margin']='99';
-    expect(buildRequest(draft).terminal.operating_margin).toBe('0.30');
+    expect(buildRequest(draft).terminal!.operating_margin).toBe('0.30');
     expect(JSON.stringify(fixture)).toBe(before);
     expect(buildRequest(draft)).not.toHaveProperty('bridge');
     expect(buildRequest(draft)).not.toHaveProperty('calculation_scope');
@@ -31,7 +31,7 @@ describe('exact input and presentation boundary', () => {
     expect(Object.values(draft.rates)).toHaveLength(37);
     expect(Object.values(draft.rates).every(v=>v==='')).toBe(true);
     expect(draft.doc.preparation.notes).toBeNull();expect(draft.doc.preparation.provenance).toBe('ANONYMOUS_INVESTOR');
-    expect(buildRequest(draft).terminal.operating_margin).toBeNull();
+    expect(buildRequest(draft).terminal!.operating_margin).toBeNull();
   });
   it('retains field paths on conversion errors and maps API paths', () => {
     const draft=makeDraft(fixture as CaseDoc);draft.rates.wacc='10%';

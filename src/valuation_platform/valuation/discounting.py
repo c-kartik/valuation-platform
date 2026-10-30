@@ -13,7 +13,7 @@ from decimal import Context, Decimal, DecimalException, ROUND_HALF_EVEN, localco
 import json
 
 from .assumptions import (
-    AssumptionValidationError, ForecastYearAssumptions, ValuationAssumptions, _require_rate,
+    AssumptionValidationError, ForecastYearAssumptions, OperatingAssumptions, ValuationAssumptions, _require_rate,
 )
 from .forecast import (
     CONVENTION_VERSION, SUPPORTED_CONVENTIONS, ForecastResult, ForecastValidationError, ForecastYearResult,
@@ -90,7 +90,7 @@ class EnterpriseValueResult:
 def _validate_stage_a(stage_a: ForecastResult) -> None:
     """Narrow handoff check: frozen dataclasses have public unchecked constructors."""
     if (type(stage_a) is not ForecastResult or type(stage_a.anchor) is not RevenueAnchor
-            or type(stage_a.assumptions) is not ValuationAssumptions
+            or type(stage_a.assumptions) not in (ValuationAssumptions, OperatingAssumptions)
             or type(stage_a.years) is not tuple or len(stage_a.years) != 5):
         raise DiscountingValidationError("Complete immutable Stage A result required")
     # Revalidate nested models too: a frozen shell alone does not validate data.
@@ -115,6 +115,16 @@ def _validate_stage_a(stage_a: ForecastResult) -> None:
         raise DiscountingValidationError("Stage A components/order/labels disagree with supplied assumptions")
 
 
+def _discount_years(stage_a):
+    """Shared annual discounting; caller owns the isolated precision-50 context."""
+    base = Decimal(1) + stage_a.assumptions.wacc
+    return tuple(DiscountedYearResult(
+        y.period_index, y.fiscal_year_label, y.fcff,
+        Decimal(1) / base ** y.period_index,
+        y.fcff * (Decimal(1) / base ** y.period_index),
+    ) for y in stage_a.years)
+
+
 def discount_to_enterprise_value(
     stage_a: ForecastResult,
     terminal: TerminalAssumptions,
@@ -137,13 +147,7 @@ def discount_to_enterprise_value(
             wacc = stage_a.assumptions.wacc
             growth = stage_a.assumptions.terminal_growth
             base = Decimal(1) + wacc
-            discounted = []
-            for year in stage_a.years:
-                factor = Decimal(1) / base ** year.period_index
-                discounted.append(DiscountedYearResult(
-                    year.period_index, year.fiscal_year_label, year.fcff, factor, year.fcff * factor,
-                ))
-            years = tuple(discounted)
+            years = _discount_years(stage_a)
             terminal_year = _operating_year(
                 6, "Terminal year", stage_a.years[-1].revenue * (Decimal(1) + growth),
                 operating_margin=terminal.operating_margin,
@@ -171,6 +175,9 @@ def discount_to_enterprise_value(
 
 def enterprise_value_to_dict(result: EnterpriseValueResult) -> dict[str, object]:
     """Retain the complete Stage A serialization, including all source dates."""
+    from .terminal_methods import ExitEnterpriseValueResult, exit_to_dict
+    if type(result) is ExitEnterpriseValueResult:
+        return exit_to_dict(result)
     if type(result) is not EnterpriseValueResult:
         raise DiscountingValidationError("EnterpriseValueResult required")
     terminal = result.terminal
