@@ -1,5 +1,11 @@
 # GOOGL proposed starting estimates — policy v1
 
+Subsequent UI status: the [result-first workspace](investor-result-first-workspace.md)
+now calculates complete starting profiles automatically through the local API and
+uses one on-demand editor. Earlier no-auto/inline-layout statements below are
+historical; financial rules, preload estimates and calculation-free preparation
+remain unchanged.
+
 Specification established before estimator implementation, October 30, 2026.
 This is a separate forecast-preparation overlay, not a change to frozen history,
 approvals or the [paused Phase 1](phase1-universe-pause-checkpoint.md).

@@ -1,5 +1,29 @@
 # Architecture
 
+## Current result-first local workspace
+
+The [interaction/acceptance record](investor-result-first-workspace.md) supersedes
+ordinary inline entry and calculation-on-button-only behavior. Complete profiles
+populate inputs and initiate Base through the existing API; profile acquisition,
+generation and GET stay calculation-free. A tab-memory store shares the execution
+gate and revision tokens across StrictMode/remounts. A 24-entry exact-request cache
+binds checked responses to profile content/version, issuer/anchor, method, scope,
+inputs and submitted provenance. No storage service, new transport or JS DCF.
+
+Whole-model editor state remains local until Update; cancellation discards only
+that session. Scenario/grid execution is visibility- and revision-driven, with
+explicit retries after failure. Hidden dependencies remain stale. Default grids
+subdivide the existing diagnostic spans into five points, without clamping.
+
+Catalog history adds at most three consecutive compatible reported revenue years
+ending at the existing anchor, using the original accepted-view/fact/occurrence
+checks. The fixed 64KiB catalog ceiling, all 24 resource pins and financial engine
+remain unchanged. Compact projection keeps one retained HTML filing link per
+observation; complete evidence stays in the unchanged packages. FCFF is explicitly
+unavailable. Shared chart rendering uses one contained scrolling stage for aligned
+scenario axes, isolated Decimal display arithmetic and an independently marked
+fiscal anchor. Full Model is read-only; exact exports retain submitted revisions.
+
 ## Current proposed-input preparation layer
 
 The [preload specification](googl-preload-methodology.md) separates immutable public
@@ -18,8 +42,8 @@ pinned; raw source integrity is checked. The endpoint is fixed, not a file serve
 Workspace sessions retain generated baselines, explicit per-field overrides and
 candidate refreshes. Adoption is explicit; stale/cancel guards remain. Result
 provenance is captured with the submitted revision, so an updated active profile
-cannot relabel an old result/export. Full Model distinguishes editable draft rows
-from read-only submitted rows and uses returned operands for explanations.
+cannot relabel an old result/export. Working inputs are edited in the whole-model dialog; Full Model displays active
+and submitted rows read-only and uses returned operands for explanations.
 Diagnostic scenarios inherit unchanged ratios; generated axes preserve method units
 and never clamp policy offsets. Other companies and all blank templates stay unset.
 

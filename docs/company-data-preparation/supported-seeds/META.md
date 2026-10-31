@@ -409,3 +409,14 @@ normalization, historical value, audit or omission decision changes. Financial
 sufficiency remains unestablished outside the existing named consumer scope.
 Validation uses independent rational ratios, source/period/precision checks,
 negative binding tests and catalog/preservation regression; see the linked record.
+
+
+### Additive historical display window — October 31, 2026
+
+The [result-first local workspace](../../investor-result-first-workspace.md) exposes
+up to three consecutive compatible reported revenue years ending at the existing
+FY2025 anchor. Selection reuses accepted-view identity, fact/precision and exact
+undimensioned occurrence checks; no later context or forecast fills a gap.
+Historical FCFF is unavailable. This changes the read-only public projection only:
+no package, audit, historical value, approval, sufficiency status or anchor changes.
+Phase 1 review expansion remains paused.

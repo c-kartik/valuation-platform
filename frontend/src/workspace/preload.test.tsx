@@ -1,3 +1,4 @@
+import {StrictMode} from 'react';
 import {it,expect,vi} from 'vitest';
 import {renderHook,act,waitFor,render,screen,fireEvent,within} from '@testing-library/react';
 import {useWorkspace} from './useWorkspace';
@@ -18,10 +19,11 @@ function profile(value='0.1'):PreloadProfile{
  const rates=Object.fromEntries(Object.entries(fields).map(([p,f])=>[p,f.value]));
  return {schema_version:'preload-profile-v1',economic_hash:'a'.repeat(64),generated_at:'2026-10-30T00:00:00Z',economic:{issuer:{ticker:'GOOGL',issuer:'Software fixture',listing_class:'A'},anchor:template.anchor,anchor_revenue:'402836000000',dates:{model_origin:'2025-12-31',information_review:'2026-10-30',timing:'Synthetic source labels; not actual company forecasts'},fields,scenarios:{Base:rates,Bear:{...rates},Bull:{...rates}},policy:{version:'synthetic-v1'},configuration:{bear_growth_offset:'-0.02',bull_growth_offset:'0.02',bear_margin_offset:'-0.02',bull_margin_offset:'0.02',bear_wacc_offset:'0.01',bull_wacc_offset:'-0.01'},configuration_provenance:{owner:'Synthetic fixture'},sources:[],observations:[],diagnostics:['Software-only fixture'],optional_bridge:{status:'UNSUPPORTED_PREPARATION',reason:'No financial selections'}}};
 }
-function transport(get:()=>Promise<PreloadProfile>=async()=>profile()) {return vi.fn(async(path:string)=>path==='/api/v1/catalog'?catalog:path==='/api/v1/preloads/googl'?get():Promise.reject(Error('Unexpected financial execution'))) as unknown as typeof request;}
-async function start(load=transport()) {const h=renderHook(()=>useWorkspace(load));await waitFor(()=>expect(h.result.current.catalog).not.toBeNull());act(()=>h.result.current.select('googl-fy2025'));await waitFor(()=>expect(h.result.current.company?.preload?.profile).toBeDefined());return {...h,load};}
-it('populates only a fresh GOOGL session, with no calculation, and keeps other issuers unset',async()=>{
- const h=await start();expect(h.result.current.session?.draft.rates.wacc).toBe('10');expect(h.result.current.session?.ev.result).toBeNull();expect(h.load).toHaveBeenCalledTimes(2);
+function response(body:any):Result{return {case_name:body.case_name,input_basis:body.input_basis,submitted_inputs:structuredClone(body),limitations:['Synthetic UI result only'],stage_b:{terminal_method:body.terminal_valuation.method,timing:{analytical_t0:'2025-12-31',notice:'Synthetic later information',information_cutoff:'UNKNOWN'},stage_a:{anchor:{revenue:'402836000000'},years:body.forecast_years.map((y:any)=>({...y,revenue:'500000000000',ebit:'50000000000',tax:'5000000000',nopat:'45000000000',d_and_a:'10000000000',investment:'50000000000',working_capital_cash_requirement:'1000000000',fcff:'4000000000'}))},years:body.forecast_years.map(()=>({discount_factor:'0.9',pv_fcff:'3600000000'})),enterprise_value:'100000000000',pv_explicit_fcff:'18000000000',pv_terminal_value:'82000000000',terminal_value:'90000000000',terminal:{fcff:'9000000000'}}} as Result;}
+function transport(get:()=>Promise<PreloadProfile>=async()=>profile()) {return vi.fn(async(path:string,body?:unknown)=>path==='/api/v1/catalog'?catalog:path==='/api/v1/preloads/googl'?get():response(body)) as unknown as typeof request;}
+async function start(load=transport()) {const h=renderHook(()=>useWorkspace(load));await waitFor(()=>expect(h.result.current.catalog).not.toBeNull());act(()=>h.result.current.select('googl-fy2025'));await waitFor(()=>expect(h.result.current.company?.preload?.profile).toBeDefined());await waitFor(()=>expect(h.result.current.session?.ev.phase).not.toBe('calculating'));return {...h,load};}
+it('automatically calculates one fresh GOOGL Base and keeps other issuers unset',async()=>{
+ const h=await start();expect(h.result.current.session?.draft.rates.wacc).toBe('10');expect(h.result.current.session?.ev.result).not.toBeNull();expect(h.load).toHaveBeenCalledTimes(3);
  act(()=>h.result.current.select('meta-fy2025'));expect(h.result.current.session?.draft.rates.wacc).toBe('');act(()=>h.result.current.select('googl-fy2025'));expect(h.result.current.session?.draft.rates.wacc).toBe('10');
 });
 it('tracks equal-value override identity and resets one annual field without flattening other overrides',async()=>{
@@ -32,7 +34,7 @@ it('reviews old/new/active values before explicit adoption and preserves overrid
  let candidate=profile();const h=await start(transport(async()=>candidate));const draft=structuredClone(h.result.current.session!.draft);draft.rates.wacc='15';act(()=>h.result.current.editDraft(draft,true,['wacc']));candidate=profile('0.2');candidate.economic_hash='b'.repeat(64);
  await act(()=>h.result.current.refreshPreload());expect(h.result.current.session!.draft.rates.terminal_growth).toBe('10');expect(h.result.current.company!.preload!.candidate!.economic_hash).toBe('b'.repeat(64));
  const rows=estimateRefreshRows(profile(),candidate,h.result.current.session!.draft,['wacc']);expect(rows.find(r=>r.path==='wacc')).toMatchObject({previous:'0.1',candidate:'0.2',active:'15',overridden:true});
- act(()=>h.result.current.adoptPreload());expect(h.result.current.session!.draft.rates.wacc).toBe('15');expect(h.result.current.session!.draft.rates.terminal_growth).toBe('20');expect(h.result.current.session!.ev.phase).toBe('incomplete');expect(h.result.current.session!.ev.result).toBeNull();
+ act(()=>h.result.current.adoptPreload());expect(h.result.current.session!.draft.rates.wacc).toBe('15');expect(h.result.current.session!.draft.rates.terminal_growth).toBe('20');await waitFor(()=>expect(h.result.current.session!.ev.phase).toBe('current'));expect(h.result.current.session!.ev.result!.submitted_inputs.wacc).toBe('0.15');
 });
 it('keeps diagnostic scenario inheritance separate from explicit overrides and shared method drafts',async()=>{
  const h=await start();let d=structuredClone(h.result.current.session!.draft);d.rates['forecast_years[0].revenue_growth']='15';act(()=>h.result.current.editDraft(d,true,['forecast_years[0].revenue_growth']));expect(h.result.current.company!.cases.Bear.draft.rates['forecast_years[0].revenue_growth']).toBe('13');
@@ -50,8 +52,8 @@ it('keeps stale field values visible in provenance while blocking their automati
  const p=profile();p.economic.fields.wacc.status='STALE';expect(generatedRates(p,'Base').wacc).toBe('');expect(p.economic.fields.wacc.value).toBe('0.1');
  const d=makeDraft(template);d.rates.wacc='12';expect(applyEstimates(d,p,'Base',['wacc']).rates.wacc).toBe('12');expect(inheritedRate(p,'Bear','wacc','10')).toBe('11');
 });
-it('exposes per-driver provenance and no automatic calculations in the actual workspace component',async()=>{
- const load=transport();render(<Workspace load={load}/>);await waitFor(()=>expect((screen.getByLabelText('Company') as HTMLSelectElement).disabled).toBe(false));fireEvent.change(screen.getByLabelText('Company'),{target:{value:'googl-fy2025'}});await screen.findByText('Editable GOOGL starting estimate');expect((screen.getByLabelText('WACC',{exact:true}) as HTMLInputElement).value).toBe('10');expect(load).toHaveBeenCalledTimes(2);expect(screen.getAllByText(/Starting estimate & source/).length).toBeGreaterThan(5);expect(screen.getByText('Full Model · history, annual inputs & calculations')).toBeTruthy();
+it('shows a result-first summary, with provenance in the on-demand whole-model editor',async()=>{
+ const load=transport();render(<Workspace load={load}/>);await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});expect(screen.queryByLabelText('WACC',{exact:true})).toBeNull();expect(load).toHaveBeenCalledTimes(3);fireEvent.click(screen.getByRole('button',{name:'Edit assumptions'}));expect((screen.getByLabelText('WACC',{exact:true})as HTMLInputElement).value).toBe('10');expect(screen.getAllByText(/Starting estimate & source/).length).toBeGreaterThan(5);
 });
 it('uses returned operands and submitted rates for stale Full Model explanations and exports',async()=>{
  const create=vi.spyOn(URL,'createObjectURL').mockImplementation(()=> 'blob:full-model-test');
@@ -62,7 +64,7 @@ it('uses returned operands and submitted rates for stale Full Model explanations
 });
 it('generates exact centered diagnostic axes in method units without clamping',async()=>{
  const {profileGrid}=await import('./preload');const p=profile();Object.assign(p.economic.configuration,{sensitivity_wacc_offset:'0.01',sensitivity_growth_offset:'0.005',sensitivity_multiple_offset:'2'});const d=makeDraft(template);d.rates.wacc='0.5';d.rates.terminal_growth='3';d.terminalMethod='perpetual_growth';
- expect(profileGrid(d,p)).toEqual({waccStart:'-0.5',waccEnd:'1.5',waccStep:'1',growthStart:'2.5',growthEnd:'3.5',growthStep:'0.5'});d.terminalMethod='exit_multiple';d.rates.exit_ev_ebit_multiple='15.1234567890123456789';expect(profileGrid(d,p).growthStart).toBe('13.1234567890123456789');expect(profileGrid(d,p).growthStep).toBe('2');
+ expect(profileGrid(d,p)).toEqual({waccStart:'-0.5',waccEnd:'1.5',waccStep:'0.5',growthStart:'2.5',growthEnd:'3.5',growthStep:'0.25'});d.terminalMethod='exit_multiple';d.rates.exit_ev_ebit_multiple='15.1234567890123456789';expect(profileGrid(d,p).growthStart).toBe('13.1234567890123456789');expect(profileGrid(d,p).growthStep).toBe('1');
 });
 it('candidate adoption preserves a Base override and transforms only nonoverridden scenario followers',async()=>{
  let p=profile();const h=await start(transport(async()=>p));const draft=structuredClone(h.result.current.session!.draft);draft.rates.wacc='15';act(()=>h.result.current.editDraft(draft,true,['wacc']));p=profile('0.2');p.economic_hash='b'.repeat(64);await act(()=>h.result.current.refreshPreload());act(()=>h.result.current.adoptPreload());expect(h.result.current.company!.cases.Base.draft.rates.wacc).toBe('15');expect(h.result.current.company!.cases.Bear.draft.rates.wacc).toBe('16');expect(h.result.current.company!.cases.Bull.draft.rates.wacc).toBe('14');
@@ -71,3 +73,40 @@ it('candidate adoption preserves a Base override and transforms only nonoverridd
 it('preserves personal notes while updating machine provenance on adoption',()=>{const p=profile(),d=makeDraft(template);d.doc.preparation.notes='My personal rationale';const adopted=applyEstimates(d,p,'Base',[]);expect(adopted.doc.preparation.notes).toContain('My personal rationale');expect(adopted.doc.preparation.notes).toContain(p.economic_hash);const again=applyEstimates(adopted,p,'Base',[]);expect(again.doc.preparation.notes).toBe(adopted.doc.preparation.notes);});
 
 it('preserves a deliberately forked input snapshot during refreshed estimate adoption',()=>{const p=profile(),d=makeDraft(template);d.rates=generatedRates(p,'Base');d.rates.wacc='12.34567890123456789';d.rates['forecast_years[2].revenue_growth']='16';const next=applyEstimates(d,profile('0.2'),'Exploratory 1',Object.keys(d.rates).filter(k=>d.rates[k].trim()));expect(next.rates).toEqual(d.rates);});
+
+it('deduplicates initial Base across StrictMode and remounts, including an in-flight calculation',async()=>{
+ let resolve!:(r:Result)=>void,submitted:any;const get=transport();const load=vi.fn((path:string,body?:unknown,signal?:AbortSignal)=>path==='/api/v1/review/run'?new Promise(r=>{submitted=body;resolve=r;}):get(path,body,signal)) as unknown as typeof request;
+ const first=renderHook(()=>useWorkspace(load),{wrapper:StrictMode});await waitFor(()=>expect(resolve).toBeDefined());expect((load as any).mock.calls.filter((c:any)=>c[0]==='/api/v1/review/run')).toHaveLength(1);first.unmount();const second=renderHook(()=>useWorkspace(load),{wrapper:StrictMode});await act(async()=>resolve(response(submitted)));await waitFor(()=>expect(second.result.current.session!.ev.phase).toBe('current'));expect((load as any).mock.calls.filter((c:any)=>c[0]==='/api/v1/review/run')).toHaveLength(1);expect(second.result.current.session!.resultProfile!.economic_hash).toBe(profile().economic_hash);
+});
+it('does not retry a failed automatic run on presentation changes; retry is explicit',async()=>{
+ let fail=true;const get=transport(),calls:any[]=[];const load=vi.fn(async(path:string,body?:unknown,signal?:AbortSignal)=>{if(path==='/api/v1/review/run'){calls.push(body);if(fail)throw Error('offline');return response(body);}return get(path,body,signal);})as unknown as typeof request;const h=await start(load);expect(h.result.current.session!.ev.phase).toBe('failed');h.rerender();act(()=>h.result.current.inspectCell(0,0));expect(calls).toHaveLength(1);fail=false;await act(()=>h.result.current.calculate('ev'));expect(calls).toHaveLength(2);expect(calls[0]).toEqual(calls[1]);expect(h.result.current.session!.ev.phase).toBe('current');
+});
+it('rejects a late initial calculation across company changes and reuses only exact matching profile/method inputs',async()=>{
+ let resolve!:(r:Result)=>void,submitted:any;const get=transport();let defer=true;const calls:any[]=[];const load=vi.fn(async(path:string,body?:unknown,signal?:AbortSignal)=>{if(path==='/api/v1/review/run'){calls.push(body);if(defer)return new Promise(r=>{submitted=body;resolve=r;});return response(body);}return get(path,body,signal);})as unknown as typeof request;
+ const h=renderHook(()=>useWorkspace(load));await waitFor(()=>expect(resolve).toBeDefined());act(()=>h.result.current.select('meta-fy2025'));await act(async()=>resolve(response(submitted)));expect(h.result.current.session!.ev.result).toBeNull();defer=false;act(()=>h.result.current.select('googl-fy2025'));await waitFor(()=>expect(h.result.current.session!.ev.phase).toBe('current'));expect(calls).toHaveLength(2);act(()=>h.result.current.setTerminalMethod('exit_multiple'));expect(h.result.current.session!.ev.phase).toBe('stale');expect(calls).toHaveLength(2);act(()=>h.result.current.setTerminalMethod('perpetual_growth'));await waitFor(()=>expect(h.result.current.session!.ev.phase).toBe('current'));expect(calls).toHaveLength(2);
+});
+
+it('automatically runs one scenario request and one 5×5 grid on visibility, refreshing only the visible dependency after Update',async()=>{
+ const observed=new Map<string,(visible:boolean)=>void>();
+ vi.stubGlobal('IntersectionObserver',class {constructor(private callback:(entries:any[])=>void){} observe(el:HTMLElement){observed.set(el.id,visible=>this.callback([{isIntersecting:visible}]));} disconnect(){}});
+ const get=transport(),financial:any[]=[];
+ const load=vi.fn(async(path:string,body:any,signal?:AbortSignal)=>{
+  if(path==='/api/v1/scenarios/run'){financial.push([path,body]);return {submitted_inputs:structuredClone(body),scenarios:body.scenarios.map((e:any)=>({...e,result:response(e.case)})),limitations:[]};}
+  if(path==='/api/v1/sensitivity/run'){financial.push([path,body]);return {submitted_inputs:structuredClone(body),selected_case:body.source.case,reference_result:response(body.source.case),wacc_values:body.wacc_values,terminal_growth_values:body.terminal_growth_values,cells:body.wacc_values.map((w:string)=>body.terminal_growth_values.map((g:string)=>({wacc:w,terminal_growth:g,status:'VALID',reason:null,metrics:{enterprise_value:'100000000000',pv_terminal_value:'82000000000'},changes:null}))),limitations:[]};}
+  return get(path,body,signal);
+ })as unknown as typeof request;
+ // Same policy spans, with subdivision only; fixture values are not actual estimates.
+ const p=profile();Object.assign(p.economic.configuration,{sensitivity_wacc_offset:'0.01',sensitivity_growth_offset:'0.005',sensitivity_multiple_offset:'2'});
+ const wrapped=((path:string,body?:unknown,signal?:AbortSignal)=>path==='/api/v1/preloads/googl'?Promise.resolve(p):load(path,body,signal))as typeof request;
+ try{
+ render(<Workspace load={wrapped}/>);await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});expect(financial).toHaveLength(0);
+ act(()=>observed.get('scenario-comparison')!(true));await screen.findByRole('region',{name:'Scenario results'});expect(financial.filter(c=>c[0].includes('scenarios'))).toHaveLength(1);
+ act(()=>{observed.get('scenario-comparison')!(false);observed.get('sensitivity')!(true);});await screen.findByRole('region',{name:'Sensitivity matrix'});expect(financial.filter(c=>c[0].includes('sensitivity'))).toHaveLength(1);const grid=financial.at(-1)[1];expect(grid.wacc_values).toEqual(['0.09','0.095','0.1','0.105','0.11']);expect(grid.terminal_growth_values).toEqual(['0.095','0.0975','0.1','0.1025','0.105']);
+ fireEvent.click(screen.getByRole('button',{name:'Inspect WACC 9.00%, terminal growth 9.50%'}));expect(financial).toHaveLength(2);expect(screen.getByRole('button',{name:'Apply WACC/g to Base'})).toBeTruthy();expect(document.querySelectorAll('.cv-inspected-cell')).toHaveLength(1);expect(document.querySelectorAll('.p-reference-cell')).toHaveLength(1);
+ fireEvent.click(screen.getByRole('button',{name:'Edit assumptions'}));fireEvent.change(screen.getByLabelText('WACC',{exact:true}),{target:{value:'11'}});expect(financial).toHaveLength(2);fireEvent.click(screen.getByRole('button',{name:'Update valuation'}));await waitFor(()=>expect(screen.queryByRole('dialog')).toBeNull());await waitFor(()=>expect(financial.filter(c=>c[0].includes('sensitivity'))).toHaveLength(2));expect(financial.filter(c=>c[0].includes('scenarios'))).toHaveLength(1);expect(financial.at(-1)[1].wacc_values).toEqual(['0.1','0.105','0.11','0.115','0.12']);
+ }finally{vi.unstubAllGlobals();}
+});
+
+it('never caches a response that failed its submitted-snapshot check',async()=>{
+ let broken=true;const get=transport();const load=vi.fn(async(path:string,body?:unknown,signal?:AbortSignal)=>{if(path==='/api/v1/review/run'){const r=response(body);if(broken)r.submitted_inputs.wacc='0.99';return r;}return get(path,body,signal);})as unknown as typeof request;const h=await start(load);expect(h.result.current.session!.ev.phase).toBe('failed');broken=false;await act(()=>h.result.current.calculate('ev'));expect(h.result.current.session!.ev.phase).toBe('current');expect((load as any).mock.calls.filter((c:any)=>c[0]==='/api/v1/review/run')).toHaveLength(2);
+});

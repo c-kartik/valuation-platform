@@ -48,5 +48,5 @@ export function profileGrid(draft:Draft,profile:PreloadProfile):import('./sensit
  const w=new D(draft.rates.wacc),t=new D(exit?draft.rates.exit_ev_ebit_multiple:draft.rates.terminal_growth);
  const ws=new D(String(config.sensitivity_wacc_offset)).times(100),ts=new D(String(config[exit?'sensitivity_multiple_offset':'sensitivity_growth_offset'])).times(exit?1:100);
  if(!w.isFinite()||!t.isFinite()||!ws.gt(0)||!ts.gt(0))throw Error('Available active operands and configured offsets required.');
- return {waccStart:w.minus(ws).toFixed(),waccEnd:w.plus(ws).toFixed(),waccStep:ws.toFixed(),growthStart:t.minus(ts).toFixed(),growthEnd:t.plus(ts).toFixed(),growthStep:ts.toFixed()};
+ return {waccStart:w.minus(ws).toFixed(),waccEnd:w.plus(ws).toFixed(),waccStep:ws.div(2).toFixed(),growthStart:t.minus(ts).toFixed(),growthEnd:t.plus(ts).toFixed(),growthStep:ts.div(2).toFixed()};
 }

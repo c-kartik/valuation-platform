@@ -13,6 +13,14 @@ economic convention or financial acceptance. Historical source/approval records
 below remain intact. Older assessment estimates/status snapshots do not override
 current accepted package views. No company review or acquisition resumes automatically.
 
+## Shared display guidance — three retained annual revenue observations
+
+The [result-first workspace](../investor-result-first-workspace.md) adds a bounded,
+read-only three-year revenue projection for META/GOOGL/AAPL, ending at each existing
+anchor and stopping at incompatible/missing periods. Their records note this
+projection; source packages, approvals and sufficiency statuses are unchanged.
+No historical FCFF methodology or Phase 1 review is added.
+
 ## Shared consumer guidance — local terminal alternatives
 
 The separately authorized [terminal-method extension](../exit-multiple-terminal-review.md)

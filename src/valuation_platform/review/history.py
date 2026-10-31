@@ -10,7 +10,7 @@ from urllib.parse import urlsplit
 from valuation_platform.valuation.consumer import ANCHORS
 
 
-def historical_references(root, kind):
+def _annual_operands(root, kind):
     spec = ANCHORS[kind]
     package = json.loads((root / spec['package']).read_text())
     prefix = spec['ticker'].lower()
@@ -41,6 +41,43 @@ def historical_references(root, kind):
                 'period_start': str(start), 'period_end': str(end), 'accession': identity['accession'],
                 'concept': fact['concept'], 'sources': urls, 'classification': 'REPORTED'}
 
+    return rows, operand
+
+
+def historical_window(root, kind):
+    """At most three consecutive compatible reported years ending at the anchor.
+
+    Display projection only. FCFF is deliberately unavailable: accepted revenue
+    does not establish a compatible historical adjusted cash-flow population.
+    """
+    rows, operand = _annual_operands(root, kind)
+    end = ANCHORS[kind]["identity"]["annual_end"]
+    ordered = sorted(range(len(rows)), key=lambda i: rows[i]["identity"]["annual_end"], reverse=True)
+    observations = []
+    for i in ordered:
+        identity = rows[i]["identity"]
+        if identity["annual_end"] > end:
+            continue
+        try:
+            revenue = operand(i, "revenue")
+            if revenue["period_end"] != end or Decimal(revenue["amount"]) <= 0:
+                break
+        except (ValueError, KeyError, IndexError, TypeError, ArithmeticError):
+            break
+        # Keep the catalog's existing byte ceiling. Repeated classification/gap
+        # prose is represented by the window contract, not repeated per amount.
+        projection = {k: v for k, v in revenue.items() if k not in ("field", "classification")}
+        projection["sources"] = [next((u for u in revenue["sources"] if urlsplit(u).path.endswith((".htm", ".html"))), revenue["sources"][0])]
+        observations.append({"fiscal_year_label": "FY" + revenue["period_end"][:4],
+                             "revenue": projection, "fcff": None})
+        end = str(date.fromisoformat(revenue["period_start"]) - timedelta(days=1))
+        if len(observations) == 3:
+            break
+    return list(reversed(observations))
+
+
+def historical_references(root, kind):
+    _, operand = _annual_operands(root, kind)
     references = []
     for metric in ('revenue_growth', 'operating_margin'):
         try:

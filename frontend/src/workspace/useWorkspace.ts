@@ -1,8 +1,8 @@
-import {useEffect,useRef,useState} from 'react';
+import {useEffect,useRef,useState,useSyncExternalStore} from 'react';
 import {checkProfile,applyEstimates,inheritedRate,generatedRates} from './preload';
 import type {PreloadProfile,PreloadState} from './preload';
 import {request,ApiError,Revisions,failureMessage} from '../api';
-import {useExecutionGate} from '../execution';
+import {ExecutionGate,useExecutionGate} from '../execution';
 import {executeCase,requireMatchingEquity} from '../caseExecution';
 import {makeDraft,entryErrors,InputErrors,fieldErrors,methodOf} from '../model';
 import type {Catalog,CaseDoc,Draft,Errors,Result,ReviewResponse} from '../model';
@@ -26,15 +26,40 @@ const invalidate=(o:Outcome):Outcome=>({...o,phase:o.result?'stale':'incomplete'
 const invalidateSet=(o:ScenarioOutcome):ScenarioOutcome=>({...o,phase:o.result?'stale':'incomplete',errors:{},failure:'',equityCurrent:false});
 const newCase=(draft:Draft):CaseState=>({draft,revision:1,ev:emptyOutcome(),equity:emptyOutcome(),grid:newGrid(),reverse:newReverse()});
 export function createSession(template:CaseDoc):Session{return {cases:Object.fromEntries(labels.map(label=>{const d=makeDraft(template);d.terminalMethod='perpetual_growth';d.rates.exit_ev_ebit_multiple='';d.doc.case_name+=` · ${label}`;return [label,{...newCase(d),overrides:[]}];})) as unknown as Session['cases'],selectedCase:'Base',bridge:emptyEquity(),bridgeRevision:1,comparison:{price:'',date:''},cutoff:'',scenarioEquity:false,scenario:{phase:'empty',result:null,errors:{},failure:'',equityCurrent:false}};}
+// Tab-memory only, bounded by the fixed catalog and a small exact-request cache.
+// The same store/gate survives StrictMode and component remounts. No browser storage.
+// Exact submitted JSON (including provenance), profile hash, route, method and scope
+// bind reuse. A cached response is never rebound to different submitted metadata.
+const memories=new WeakMap<typeof request,ReturnType<typeof newMemory>>();
+function newMemory(){
+ const listeners=new Set<()=>void>();
+ return {current:{selected:'',cases:{}} as State,gate:new ExecutionGate(),
+  ev:new Revisions(),equity:new Revisions(),set:new Revisions(),grid:new Revisions(),reverse:new Revisions(),
+  subscribers:0,retire:undefined as ReturnType<typeof setTimeout>|undefined,
+  responses:new Map<string,unknown>(),
+  subscribe:(fn:()=>void)=>{listeners.add(fn);return()=>{listeners.delete(fn);};},
+  notify:()=>listeners.forEach(fn=>fn())};
+}
 export function useWorkspace(load:typeof request=request){
  const [catalog,setCatalog]=useState<Catalog|null>(null),[catalogFailure,setCatalogFailure]=useState(''),[attempt,setAttempt]=useState(0);
- const [state,setState]=useState<State>({selected:'',cases:{}}),live=useRef(state);live.current=state;
- const {gate,action}=useExecutionGate(),evRevision=useRef(new Revisions()),equityRevision=useRef(new Revisions()),setRevision=useRef(new Revisions()),gridRevision=useRef(new Revisions()),reverseRevision=useRef(new Revisions()),forkId=useRef(0);
- function update(fn:(s:State)=>State){const next=fn(live.current);live.current=next;setState(next);}
+ const memory=memories.get(load)??newMemory();memories.set(load,memory);
+ const live=memory,state=useSyncExternalStore(memory.subscribe,()=>memory.current);
+ const {gate,action}=useExecutionGate(memory.gate),evRevision=useRef(memory.ev),equityRevision=useRef(memory.equity),setRevision=useRef(memory.set),gridRevision=useRef(memory.grid),reverseRevision=useRef(memory.reverse),forkId=useRef(0);
+ function update(fn:(s:State)=>State){live.current=fn(live.current);memory.notify();}
+ function cacheKey(profile:PreloadProfile,path:string,body:unknown){return JSON.stringify([profile.economic_hash,profile.economic.policy.version,path,body]);}
+ function remember(profile:PreloadProfile|undefined,path:string,body:unknown,value:unknown){if(!profile)return;memory.responses.set(cacheKey(profile,path,body),structuredClone(value));if(memory.responses.size>24)memory.responses.delete(memory.responses.keys().next().value!);}
+ function boundLoad(profile?:PreloadProfile):typeof request{if(!profile)return load;return async <T,>(path:string,body?:unknown,signal?:AbortSignal)=>{
+  const key=cacheKey(profile,path,body);return memory.responses.has(key)?structuredClone(memory.responses.get(key)) as T:load<T>(path,body,signal);
+ };}
  function change(kind:string,fn:(s:Session)=>Session){update(old=>({...old,cases:{...old.cases,[kind]:fn(old.cases[kind])}}));}
  function changeCase(kind:string,label:string,fn:(c:CaseState)=>CaseState){change(kind,s=>({...s,cases:{...s.cases,[label]:fn(s.cases[label]!)}}));}
  useEffect(()=>{const abort=new AbortController();setCatalogFailure('');load<Catalog>('/api/v1/catalog',undefined,abort.signal).then(data=>{if(!abort.signal.aborted)setCatalog(data);}).catch(error=>{if(!abort.signal.aborted)setCatalogFailure(failureMessage(error));});return()=>abort.abort();},[load,attempt]);
- useEffect(()=>()=>{evRevision.current.edit();equityRevision.current.edit();setRevision.current.edit();gridRevision.current.edit();reverseRevision.current.edit();gate.cancel();},[]);
+ useEffect(()=>{
+  memory.subscribers++;clearTimeout(memory.retire);
+  return()=>{memory.subscribers--;memory.retire=setTimeout(()=>{if(!memory.subscribers)stop();},100);};
+ },[memory]);
+ // Fresh opening selects the supported proposed profile; incomplete issuers remain selectable.
+ useEffect(()=>{if(catalog&&!live.current.selected&&catalog.entries.some(e=>e.kind==='googl-fy2025'))select('googl-fy2025');},[catalog]);
  function stop(){evRevision.current.edit();equityRevision.current.edit();setRevision.current.edit();gridRevision.current.edit();reverseRevision.current.edit();gate.cancel();
   const kind=live.current.selected;if(kind)change(kind,s=>({...s,cases:Object.fromEntries(Object.entries(s.cases).filter((entry):entry is [string,CaseState]=>Boolean(entry[1])).map(([label,c])=>[label,{...c,ev:c.ev.phase==='calculating'?invalidate(c.ev):c.ev,equity:c.equity.phase==='calculating'?invalidate(c.equity):c.equity,grid:c.grid.phase==='calculating'?staleGrid(c.grid):c.grid,reverse:c.reverse.phase==='calculating'?staleReverse(c.reverse):c.reverse}])) as Session['cases'],scenario:s.scenario.phase==='calculating'?invalidateSet(s.scenario):s.scenario}));
  }
@@ -92,16 +117,24 @@ export function useWorkspace(load:typeof request=request){
   changeCase(kind,label,c=>({...c,[scope]:{...c[scope],phase:'calculating',errors:{},failure:''}}));
   try{
    let submitted:ReturnType<typeof requestFor>;
-   const response=await executeCase<Result|ReviewResponse>({gate,action:scope,route:'review',load,current,build:()=>{
+   const response=await executeCase<Result|ReviewResponse>({gate,action:scope,route:'review',load:boundLoad(s.preload?.profile),current,build:()=>{
     const local=entryErrors(c.draft);if(Object.keys(local).length)throw new InputErrors(local);
     if(scope==='equity'){const errors=equityErrors(s.bridge,c.draft.doc.anchor.annual_end);if(Object.keys(errors).length)throw new InputErrors(errors);}
     return submitted=requestFor(c.draft,s.cases.Base.draft,s.bridge,scope==='equity');
    },check:response=>{const value='review' in response?response.result:response;if(!sameSnapshot(value.submitted_inputs,submitted))throw new Error('Returned input snapshot did not match submitted case.');for(const [key,expected] of Object.entries(c.draft.doc.anchor))if(value.submitted_inputs.anchor[key as keyof typeof c.draft.doc.anchor]!==expected)throw new Error('Returned anchor did not match submitted case.');if(scope==='equity')requireMatchingEquity(value,c.ev.result!);}});
    if(!response||!current())return;
+   remember(s.preload?.profile,'/api/v1/review/run',submitted!,response);
    const result='review' in response?{...response.result,investor_review:response.review}:response;
    changeCase(kind,label,c=>({...c,resultProfile:s.preload?.profile,resultOverrides:c.overrides??[],[scope]:{phase:'current',result,inputRevision:c.revision,errors:{},failure:''}}));
   }catch(error){if(!current())return;const errors=error instanceof InputErrors?error.fields:error instanceof ApiError&&error.code==='invalid_case'?(scope==='ev'?fieldErrors(error.details.map(percentageDiagnostic)):equityDiagnostics(error.details,s.bridge)):{};
    changeCase(kind,label,c=>({...c,[scope]:{...c[scope],phase:Object.keys(errors).length?'incomplete':'failed',errors,failure:Object.keys(errors).length?'':failureMessage(error)}}));}
+ }
+ async function updateValuation(draft:Draft,paths:string[],resets:string[]=[]){
+  const errors=entryErrors(draft);if(Object.keys(errors).length)throw new InputErrors(errors);
+  editDraft(draft,true,paths);
+  if(resets.length){const kind=live.current.selected,label=live.current.cases[kind].selectedCase;changeCase(kind,label,c=>({...c,overrides:(c.overrides??[]).filter(p=>!resets.includes(p))}));}
+  await calculate('ev');
+  const s=live.current.cases[live.current.selected];return s?.cases[s.selectedCase]?.ev.phase==='current';
  }
  async function calculateScenarios(validationOnly=false){
   const kind=live.current.selected,s=live.current.cases[kind];if(!s||gate.snapshot())return;
@@ -110,9 +143,10 @@ export function useWorkspace(load:typeof request=request){
   change(kind,s=>({...s,scenario:{...s.scenario,previousPhase:s.scenario.phase,phase:'calculating',errors:{},failure:''}}));
   try{
    let submitted:ReturnType<typeof scenarioRequest>;
-   const response=await executeCase<ScenarioResult|{status:string}>({gate,action:'scenarios',operation:validationOnly?'validate':'run',load,current,build:()=>submitted=scenarioRequest(s.cases,s.bridge,s.cutoff,s.scenarioEquity,true),check:value=>{if(!validationOnly){const r=value as ScenarioResult;if(!sameSnapshot(r.submitted_inputs,submitted)||r.scenarios.some((e,i)=>e.label!==labels[i]||!sameSnapshot(e.result.submitted_inputs,submitted.scenarios[i].case)))throw new Error('Scenario response snapshot mismatch');}}});
+   const response=await executeCase<ScenarioResult|{status:string}>({gate,action:'scenarios',operation:validationOnly?'validate':'run',load:validationOnly?load:boundLoad(s.preload?.profile),current,build:()=>submitted=scenarioRequest(s.cases,s.bridge,s.cutoff,s.scenarioEquity,true),check:value=>{if(!validationOnly){const r=value as ScenarioResult;if(!sameSnapshot(r.submitted_inputs,submitted)||r.scenarios.some((e,i)=>e.label!==labels[i]||!sameSnapshot(e.result.submitted_inputs,submitted.scenarios[i].case)))throw new Error('Scenario response snapshot mismatch');}}});
    if(!response||!current())return;
    if(validationOnly){change(kind,s=>({...s,scenario:{...s.scenario,phase:s.scenario.result?snapshotPhase:'empty',failure:'Input checks passed. No scenario calculation or economic approval.'}}));return;}
+   remember(s.preload?.profile,'/api/v1/scenarios/run',submitted!,response);
    const result=response as ScenarioResult;
    change(kind,s=>{const cases={...s.cases};for(const e of result.scenarios){const old=cases[e.label]!,previous=s.scenarioEquity?old.equity:old.ev;const preserved=previous.phase==='current'&&previous.result?.investor_review&&sameSnapshot(previous.result.stage_b,e.result.stage_b)&&(!s.scenarioEquity||sameSnapshot(previous.result.stage_c,e.result.stage_c))?previous.result.investor_review:undefined;const forward=preserved?{...e.result,investor_review:preserved}:e.result;cases[e.label]={...old,resultProfile:s.preload?.profile,resultOverrides:old.overrides??[],ev:{phase:'current',result:forward,inputRevision:old.revision,errors:{},failure:''},equity:s.scenarioEquity?{phase:'current',result:forward,inputRevision:old.revision,errors:{},failure:''}:old.equity};}return {...s,cases,scenario:{phase:'current',result,errors:{},failure:'',equityCurrent:s.scenarioEquity}};});
   }catch(error){if(!current())return;let errors:Errors={};
@@ -123,7 +157,11 @@ export function useWorkspace(load:typeof request=request){
  }
  function editGrid(key:keyof GridSettings|'cutoff'|'equity',value:string|boolean){
   gridRevision.current.edit();gate.cancel('sensitivity');const kind=live.current.selected,label=live.current.cases[kind].selectedCase;
-  changeCase(kind,label,c=>({...c,grid:{...staleGrid(c.grid),...(key==='cutoff'||key==='equity'?{[key]:value}:{settings:{...c.grid.settings,[key]:value}})}}));
+  changeCase(kind,label,c=>({...c,grid:{...staleGrid(c.grid),...(key==='cutoff'||key==='equity'?{[key]:value}:{generated:false,settings:{...c.grid.settings,[key]:value}})}}));
+ }
+ function configureGrid(settings:GridSettings){
+  gridRevision.current.edit();gate.cancel('sensitivity');const kind=live.current.selected,label=live.current.cases[kind].selectedCase;
+  changeCase(kind,label,c=>({...c,grid:{...staleGrid(c.grid),settings,generated:true}}));
  }
  function inspectCell(row:number,column:number){const kind=live.current.selected,label=live.current.cases[kind].selectedCase;changeCase(kind,label,c=>({...c,grid:{...c.grid,inspected:[row,column]}}));}
  function applyCell(){
@@ -137,9 +175,10 @@ export function useWorkspace(load:typeof request=request){
   changeCase(kind,label,c=>({...c,grid:{...c.grid,previousPhase:c.grid.phase,phase:'calculating',errors:{},failure:'',inspected:null}}));
   try{
    let submitted:ReturnType<typeof sensitivityRequest>;
-   const response=await executeCase<SensitivityResult|{status:string}>({gate,action:'sensitivity',operation:validationOnly?'validate':'run',load,current,build:()=>submitted=sensitivityRequest(c.draft,s.cases.Base.draft,s.bridge,c.grid,true),check:value=>{if(!validationOnly){const r=value as SensitivityResult;if(!sameSnapshot(r.submitted_inputs,submitted)||!sameSnapshot(r.selected_case,submitted.source.case)||!sameSnapshot(r.reference_result.submitted_inputs,submitted.source.case)||!sameFinancialStageB(r.reference_result.stage_b,c.ev.result!.stage_b))throw new Error('Sensitivity response snapshot mismatch');}}});
+   const response=await executeCase<SensitivityResult|{status:string}>({gate,action:'sensitivity',operation:validationOnly?'validate':'run',load:validationOnly?load:boundLoad(s.preload?.profile),current,build:()=>submitted=sensitivityRequest(c.draft,s.cases.Base.draft,s.bridge,c.grid,true),check:value=>{if(!validationOnly){const r=value as SensitivityResult;if(!sameSnapshot(r.submitted_inputs,submitted)||!sameSnapshot(r.selected_case,submitted.source.case)||!sameSnapshot(r.reference_result.submitted_inputs,submitted.source.case)||!sameFinancialStageB(r.reference_result.stage_b,c.ev.result!.stage_b))throw new Error('Sensitivity response snapshot mismatch');}}});
    if(!response||!current())return;
    if(validationOnly){changeCase(kind,label,latest=>({...latest,grid:{...latest.grid,phase:c.grid.phase,failure:'Input checks passed. No sensitivity calculation or economic approval.'}}));return;}
+   remember(s.preload?.profile,'/api/v1/sensitivity/run',submitted!,response);
    changeCase(kind,label,latest=>({...latest,grid:{...latest.grid,phase:'current',result:response as SensitivityResult,errors:{},failure:'',equityCurrent:c.grid.equity,inspected:null}}));
   }catch(error){if(!current())return;let errors:Errors={};
    if(error instanceof InputErrors)errors=error.fields;
@@ -206,5 +245,9 @@ export function useWorkspace(load:typeof request=request){
  }
 
  const company=state.cases[state.selected],selected=company?.cases[company.selectedCase];
- return {refreshPreload,adoptPreload,resetEstimate,catalog,catalogFailure,retryCatalog:()=>setAttempt(n=>n+1),state,company,session:company&&selected?{...company,...selected}:undefined,select,selectCase,setTerminalMethod,createCase,removeCase,editScenarioRate,resetOverrides,editDraft,editBridge,editComparison,configureSet,calculate,calculateScenarios,editGrid,inspectCell,applyCell,calculateSensitivity,editReverse,calculateReverse,createExploratory,reviewError,cancel:()=>gate.cancel(),busy:action};
+ useEffect(()=>{
+  if(!action&&company?.preload?.profile&&selected&&['empty','incomplete','stale'].includes(selected.ev.phase)&&!Object.keys(selected.ev.errors).length&&!Object.keys(entryErrors(selected.draft)).length)void calculate('ev');
+ },[state.selected,company?.selectedCase,selected?.revision,selected?.ev.phase,company?.preload?.profile,action]);
+
+ return {updateValuation,refreshPreload,adoptPreload,resetEstimate,catalog,catalogFailure,retryCatalog:()=>setAttempt(n=>n+1),state,company,session:company&&selected?{...company,...selected}:undefined,select,selectCase,setTerminalMethod,createCase,removeCase,editScenarioRate,resetOverrides,editDraft,editBridge,editComparison,configureSet,calculate,calculateScenarios,configureGrid,editGrid,inspectCell,applyCell,calculateSensitivity,editReverse,calculateReverse,createExploratory,reviewError,cancel:()=>gate.cancel(),busy:action};
 }

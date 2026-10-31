@@ -28,9 +28,10 @@ def build_catalog(root: Path) -> bytes:
         from valuation_platform.review.sources import FinancialContext
         context_path = root / ('data/investor-context/2026-10-29/' + ANCHORS[kind]['ticker'].lower() + '.json')
         context = FinancialContext.read(context_path).to_dict() if context_path.exists() else None
-        from valuation_platform.review.history import historical_references
+        from valuation_platform.review.history import historical_references, historical_window
         entries.append({
             'historical_references': historical_references(root, kind),
+            'historical_window': historical_window(root, kind),
             'financial_context': context,
             'kind': kind, 'company': ANCHORS[kind]['ticker'],
             'identity': dict(template['anchor']),

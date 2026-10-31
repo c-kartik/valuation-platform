@@ -1,5 +1,11 @@
 # GOOGL proposed preload — implementation and acceptance
 
+Subsequent UI status: the [result-first workspace](investor-result-first-workspace.md)
+now calculates complete starting profiles automatically through the local API and
+uses one on-demand editor. Earlier no-auto/inline-layout statements below are
+historical; financial rules, preload estimates and calculation-free preparation
+remain unchanged.
+
 October30,2026, local only. Started clean `main` at
 `cb67dd8a7ad97e68bb05798e64be260f0bbb4bf8`, four commits ahead of local
 `origin/main`. Scope: [versioned proposed-input policy](googl-preload-methodology.md),

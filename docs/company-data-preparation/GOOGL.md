@@ -1120,3 +1120,14 @@ unknowns and potentially unbounded omissions are not zeros or valuation-use appr
 Refresh detects sources/rules/configuration/forecast/gap changes; newer evidence
 never promotes the FY2025 anchor. See [acceptance](../googl-preload-acceptance.md)
 for current verification. Phase1 expansion stays paused; no other issuer preload.
+
+
+### Additive historical display window — October 31, 2026
+
+The [result-first local workspace](../investor-result-first-workspace.md) exposes
+up to three consecutive compatible reported revenue years ending at the existing
+FY2025 anchor. Selection reuses accepted-view identity, fact/precision and exact
+undimensioned occurrence checks; no later context or forecast fills a gap.
+Historical FCFF is unavailable. This changes the read-only public projection only:
+no package, audit, historical value, approval, sufficiency status or anchor changes.
+Phase 1 review expansion remains paused.

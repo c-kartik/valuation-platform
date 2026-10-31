@@ -21,8 +21,11 @@ where the operating-company FCFF framework is not appropriate.
 
 The local workspace now offers a [proposed GOOGL starting model](docs/googl-preload-worked-model.md)
 from pinned public sources and [versioned estimation rules](docs/googl-preload-methodology.md).
-It loads without calculating; direct edits are overrides, individual resets restore
-estimates, and pinned refreshes require explicit adoption while preserving overrides.
+The [result-first workspace](docs/investor-result-first-workspace.md) automatically
+calculates the complete proposed Base through the local Python API. One on-demand
+editor submits multiple changes with **Update valuation**; Cancel discards unapplied
+edits. Individual resets and reviewed profile adoption preserve override identity.
+Preparation and profile GET endpoints remain calculation-free.
 Full Model separates current draft inputs from the submitted calculation, with
 returned-operand explanations and exact exports. META/AAPL remain unset; all nine
 blank templates and the financial engine are unchanged. This is assumption-led

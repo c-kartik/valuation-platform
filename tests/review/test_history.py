@@ -5,7 +5,8 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from valuation_platform.review.history import historical_references
+from unittest.mock import patch
+from valuation_platform.review.history import historical_references, historical_window
 from valuation_platform.valuation.consumer import ANCHORS, load_revenue_anchor
 from valuation_platform.api.catalog import build_catalog
 
@@ -51,3 +52,35 @@ class HistoricalReferenceTests(unittest.TestCase):
         for entry in json.loads(raw)['entries']:
             self.assertEqual(entry['historical_references'][0]['operands'][0]['amount'], entry['revenue'])
             self.assertIsNone(entry['template']['wacc'])
+
+
+class HistoricalWindowTests(unittest.TestCase):
+    def test_three_source_bound_periods_end_at_selected_anchor_without_fcff_invention(self):
+        for kind in ANCHORS:
+            window = historical_window(ROOT, kind)
+            self.assertEqual([h['fiscal_year_label'] for h in window], ['FY2023', 'FY2024', 'FY2025'])
+            self.assertEqual(window[-1]['revenue']['period_end'], ANCHORS[kind]['identity']['annual_end'])
+            for h in window:
+                self.assertIsNone(h['fcff'])
+                self.assertEqual(h['revenue']['unit'], 'USD')
+                self.assertEqual(h['revenue']['precision'], '-6')
+                self.assertTrue(h['revenue']['concept'])
+                self.assertIn(h['revenue']['accession'].replace('-', ''), h['revenue']['sources'][0])
+        self.assertEqual([h['revenue']['amount'] for h in historical_window(ROOT, 'googl-fy2025')],
+                         ['307394000000', '350018000000', '402836000000'])
+        # Selection follows eligible period identities, not a globally fixed year list.
+        with patch.dict(ANCHORS['googl-fy2025']['identity'], annual_end='2024-12-31'):
+            self.assertEqual([h['fiscal_year_label'] for h in historical_window(ROOT, 'googl-fy2025')],
+                             ['FY2022', 'FY2023', 'FY2024'])
+
+    def test_incompatible_or_missing_prior_year_stops_window_without_substitution(self):
+        name = ANCHORS['googl-fy2025']['package']
+        d = json.loads((ROOT / name).read_text())
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder); path = root / name; path.parent.mkdir(parents=True)
+            d['googl_current_history']['periods'][3]['inputs']['revenue']['origin'] = 'manual_input'
+            path.write_text(json.dumps(d))
+            self.assertEqual([h['fiscal_year_label'] for h in historical_window(root, 'googl-fy2025')], ['FY2025'])
+            d['googl_current_history']['periods'][4]['inputs']['revenue']['unit'] = 'shares'
+            path.write_text(json.dumps(d))
+            self.assertEqual(historical_window(root, 'googl-fy2025'), [])

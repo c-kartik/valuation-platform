@@ -12,7 +12,7 @@ export const settingLabels:Record<keyof GridSettings,string>={waccStart:'WACC st
 export type SensitivityDoc={schema_version:'investor-sensitivity-request-v1'|'investor-sensitivity-request-v2'|'investor-sensitivity-request-v3';sensitivity_name:string;source:{kind:'single_case';case:EditableDoc;analytical_date:string;information_cutoff:string|null};wacc_values:string[];terminal_growth_values?:string[];exit_ev_ebit_multiple_values?:string[]};
 export type Cell={wacc:string;terminal_growth?:string;exit_ev_ebit_multiple?:string;status:'VALID'|'INVALID';reason:string|null;metrics:Record<string,string|null>;changes:unknown};
 export type SensitivityResult={schema_version:string;submitted_inputs:SensitivityDoc;selected_case:EditableDoc;selection:{analytical_date:string;information_cutoff:string|null;source_kind:string;scenario_label:string|null};reference_result:Result;reference_metrics:Record<string,string|null>;wacc_values:string[];terminal_growth_values?:string[];exit_ev_ebit_multiple_values?:string[];cells:Cell[][];held_fixed:string;limitations:string[]};
-export type GridState={settings:GridSettings;cutoff:string;equity:boolean;phase:'empty'|'incomplete'|'calculating'|'current'|'stale'|'failed';result:SensitivityResult|null;errors:Errors;failure:string;equityCurrent:boolean;inspected:[number,number]|null;previousPhase?:GridState['phase']};
+export type GridState={generated?:boolean;settings:GridSettings;cutoff:string;equity:boolean;phase:'empty'|'incomplete'|'calculating'|'current'|'stale'|'failed';result:SensitivityResult|null;errors:Errors;failure:string;equityCurrent:boolean;inspected:[number,number]|null;previousPhase?:GridState['phase']};
 export const newGrid=():GridState=>({settings:blankSettings(),cutoff:'',equity:false,phase:'empty',result:null,errors:{},failure:'',equityCurrent:false,inspected:null});
 export const staleGrid=(g:GridState):GridState=>({...g,phase:g.result?'stale':'incomplete',errors:{},failure:'',equityCurrent:false,inspected:null});
 export function ratePercent(raw:string):string{return new D(raw).times('100').toFixed();}
@@ -50,3 +50,10 @@ export function smallGrid(draft:Draft):GridSettings{
 }
 
 export const columnValues=(r:SensitivityResult)=>r.exit_ev_ebit_multiple_values??r.terminal_growth_values!;
+
+/** Five diagnostic display points, preserving full spans without silent clamps. */
+export function reviewGrid(draft:Draft):GridSettings{
+ const exit=methodOf(draft)==='exit_multiple',w=new D(draft.rates.wacc),t=new D(exit?draft.rates.exit_ev_ebit_multiple:draft.rates.terminal_growth),span=new D(exit?'2':'0.5');
+ if(!w.isFinite()||!t.isFinite())throw new InputErrors({waccStart:'Enter complete active operands first.'});
+ return {waccStart:w.minus(1).toFixed(),waccEnd:w.plus(1).toFixed(),waccStep:'0.5',growthStart:t.minus(span).toFixed(),growthEnd:t.plus(span).toFixed(),growthStep:span.div(2).toFixed()};
+}

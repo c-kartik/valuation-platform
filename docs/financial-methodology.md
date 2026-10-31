@@ -1,5 +1,21 @@
 # Financial Methodology
 
+## Current result-first display boundary
+
+The [local workspace redesign](investor-result-first-workspace.md) changes interaction
+and visualization only. Automatic initial calculation now intentionally submits a
+complete proposed profile to the existing engine. Preparation and GET endpoints
+remain calculation-free; no estimate becomes financially approved by execution.
+
+The historical display window contains up to three consecutive source-bound annual
+revenue observations ending at the model anchor. Historical FCFF remains unavailable.
+Fixed-anchor endpoint CAGR uses actual positive endpoints and positive fiscal-year
+intervals. Earlier observations show signed USD/percentage changes relative to the
+fixed anchor; zero/negative endpoint comparisons use dollars. These are display
+comparisons, not regressions, new forecasts or historical FCFF derivations.
+Five-point diagnostic grids retain the existing spans and invalid-cell reasons;
+there are no confidence intervals, silent clamps or new economic conventions.
+
 ## Current GOOGL proposed starting estimates
 
 The separately authorized [policy v1](googl-preload-methodology.md) supplies an

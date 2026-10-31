@@ -1,6 +1,20 @@
 # Project Status
 
-## Current — reproducible GOOGL proposed preload, local only
+## Current — result-first local investor workspace
+
+The [implementation/acceptance record](investor-result-first-workspace.md) documents
+automatic initial GOOGL Base, one whole-model editor, read-only populated paths,
+combined Revenue/FCFF bars, aligned grouped scenario charts and first-visible
+5×5 sensitivity. Fixed FY2025 guides remain fixed when inspecting FY2023/2024.
+Source-bound reported history is displayed separately; historical FCFF stays unknown.
+
+This explicitly supersedes the earlier UI rule against calculations on complete
+profile load. Preparation/GET remain calculation-free. Financial formulas, preload
+policies/values, source/approval bindings, nine blank templates and Phase 1 pause
+remain unchanged. Other issuers have no new preload; exit multiples and actual
+bridge/share selections remain unresolved. Local review only; no push/deployment.
+
+## Earlier — reproducible GOOGL proposed preload, local only
 
 A separate [versioned preparation policy](googl-preload-methodology.md) now generates
 editable GOOGL starting estimates from pinned public sources plus explicit judgments.
@@ -9,7 +23,7 @@ source dates, exact reproduction/refresh/export commands, conditional EV and dif
 from the October29 research. GOOG/GOOGL share consolidated preparation; no class/share
 selection follows. META/AAPL and nine existing templates remain unset/unchanged.
 
-Fresh loading does not calculate. Per-field source/rule disclosures, equal-value
+At that earlier checkpoint, fresh loading did not calculate (superseded above). Per-field source/rule disclosures, equal-value
 override identity, individual reset, reviewed refresh/adoption, diagnostic scenarios,
 method-aware axes and Full Model reuse the existing direct-edit workflow and Python
 engine. Source/definition gaps remain typed; exit and equity selection are unresolved.

@@ -12,3 +12,5 @@ if(!URL.revokeObjectURL)URL.revokeObjectURL=()=>{};
 
 // jsdom has no layout/scroll implementation; modal scroll restoration is tested by calls.
 window.scrollTo=vi.fn();
+
+HTMLElement.prototype.scrollIntoView=vi.fn();

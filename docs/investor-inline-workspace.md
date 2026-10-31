@@ -1,5 +1,11 @@
 # Direct-entry investor workspace — local review
 
+Subsequent UI status: the [result-first workspace](investor-result-first-workspace.md)
+now calculates complete starting profiles automatically through the local API and
+uses one on-demand editor. Earlier no-auto/inline-layout statements below are
+historical; financial rules, preload estimates and calculation-free preparation
+remain unchanged.
+
 Subsequent status: the separately authorized [GOOGL proposed preload](googl-preload-methodology.md)
 now supplies explicitly labeled estimates and Full Model. This record preserves
 its earlier scope; it does not grant financial approval or change Phase 1’s pause.
