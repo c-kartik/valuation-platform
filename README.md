@@ -21,7 +21,10 @@ where the operating-company FCFF framework is not appropriate.
 
 The local workspace now offers a [proposed GOOGL starting model](docs/googl-preload-worked-model.md)
 from pinned public sources and [versioned estimation rules](docs/googl-preload-methodology.md).
-The [result-first workspace](docs/investor-result-first-workspace.md) automatically
+The [compact workspace](docs/investor-compact-workspace.md) has a narrow assumption
+summary, solid navy/gold bars and DCF / Scenarios / Sensitivity / Full Model / Sources
+views. Its shared editor shows populated annual paths; sensitivity pairs open a
+review draft and change the model only on **Update valuation**. It automatically
 calculates the complete proposed Base through the local Python API. One on-demand
 editor submits multiple changes with **Update valuation**; Cancel discards unapplied
 edits. Individual resets and reviewed profile adoption preserve override identity.
@@ -57,7 +60,7 @@ Add `--run --format summary` for explicit calculation, or `--run` for exact JSON
 `--output PATH` saves exclusively to a new permitted file; validation does not
 calculate/write, existing files and source/history paths remain protected.
 
-The [direct-entry investor workspace](docs/investor-inline-workspace.md) provides
+The earlier [direct-entry investor workspace](docs/investor-inline-workspace.md) provided
 a local result-first `/workspace/`: type ordinary assumptions beside revenue/FCFF,
 then explicitly Calculate. Annual paths and independent terminal ratios expand
 inline; the detailed bridge stays optional. Same-page DCF, scenario comparison,

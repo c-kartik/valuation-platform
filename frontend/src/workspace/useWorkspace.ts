@@ -131,6 +131,8 @@ export function useWorkspace(load:typeof request=request){
  }
  async function updateValuation(draft:Draft,paths:string[],resets:string[]=[]){
   const errors=entryErrors(draft);if(Object.keys(errors).length)throw new InputErrors(errors);
+  const active=live.current.cases[live.current.selected];
+  if(methodOf(draft)!==methodOf(active.cases[active.selectedCase].draft))setTerminalMethod(methodOf(draft));
   editDraft(draft,true,paths);
   if(resets.length){const kind=live.current.selected,label=live.current.cases[kind].selectedCase;changeCase(kind,label,c=>({...c,overrides:(c.overrides??[]).filter(p=>!resets.includes(p))}));}
   await calculate('ev');

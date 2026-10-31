@@ -2,7 +2,8 @@
 
 ## Current result-first display boundary
 
-The [local workspace redesign](investor-result-first-workspace.md) changes interaction
+The [compact workspace](investor-compact-workspace.md) and its
+[result-first foundation](investor-result-first-workspace.md) change interaction
 and visualization only. Automatic initial calculation now intentionally submits a
 complete proposed profile to the existing engine. Preparation and GET endpoints
 remain calculation-free; no estimate becomes financially approved by execution.
@@ -15,6 +16,9 @@ fixed anchor; zero/negative endpoint comparisons use dollars. These are display
 comparisons, not regressions, new forecasts or historical FCFF derivations.
 Five-point diagnostic grids retain the existing spans and invalid-cell reasons;
 there are no confidence intervals, silent clamps or new economic conventions.
+Reviewing a sensitivity pair only fills a draft; explicit Update is required to
+change inputs and recalculate. Solid colours and compact summaries add no economic
+assumption or approval.
 
 ## Current GOOGL proposed starting estimates
 

@@ -1,6 +1,24 @@
 # Project Status
 
-## Current — result-first local investor workspace
+## Current — compact local investor workspace
+
+The [compact implementation/acceptance](investor-compact-workspace.md) adds the
+approved summary sidebar, five analysis views, annual-table editor and solid
+navy/gold/slate/teal palette. Initial Base and first-open scenarios/5×5 grids reuse
+the existing engine, execution gate, cache and stale-response protections.
+Sensitivity **Review this pair** seeds an unapplied editor draft; Update validates
+and calculates. Full Model explicitly identifies the selected case and revision.
+Mobile charts/table inputs pan inside the page; comparison labels stay visible.
+
+Verification includes 234 frontend tests, focused checks after final presentation
+adjustments, 37 Python API/preload/preservation checks, both builds and actual
+1440×900 / 390×844 local API/browser review, including outage/retry. See the record
+for exact commands, screenshots and limitations. Financial formulas, policies,
+history/source approvals, nine unset templates and Phase 1 pause are unchanged.
+No push, deployment or financial approval; actual bridge/share and exit choices
+remain unresolved. Local review: <http://127.0.0.1:5175/workspace/>.
+
+## Earlier — result-first local investor workspace
 
 The [implementation/acceptance record](investor-result-first-workspace.md) documents
 automatic initial GOOGL Base, one whole-model editor, read-only populated paths,

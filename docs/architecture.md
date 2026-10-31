@@ -1,6 +1,23 @@
 # Architecture
 
-## Current result-first local workspace
+## Current compact investor workspace
+
+The [compact record](investor-compact-workspace.md) supersedes the result-first
+page composition with a summary sidebar and DCF, Scenarios, Sensitivity, Full
+Model and Sources views. Views retain the same company/case state; opening
+Scenarios/Sensitivity replaces viewport visibility as the automatic dependency
+trigger. Existing gate, revision-bound attempts, exact-request cache and explicit
+retry are reused. No financial transport or calculation contract changes.
+
+The shared dialog edits populated annual tables and independent terminal inputs.
+Terminal method changes remain local until Update, then use the existing shared
+method transition. Sensitivity review seeds only two rates in a local editor;
+Cancel leaves the active pair intact. Full Model identifies the selected case and
+submitted revision. Solid theme tokens drive chart bars, legends and readouts.
+Contained horizontal chart scrolling keeps metric headings/endpoint labels fixed;
+keyboard focus panning cannot accidentally replace selection via a mouse-enter event.
+
+## Existing result-first execution foundation
 
 The [interaction/acceptance record](investor-result-first-workspace.md) supersedes
 ordinary inline entry and calculation-on-button-only behavior. Complete profiles
@@ -11,7 +28,7 @@ binds checked responses to profile content/version, issuer/anchor, method, scope
 inputs and submitted provenance. No storage service, new transport or JS DCF.
 
 Whole-model editor state remains local until Update; cancellation discards only
-that session. Scenario/grid execution is visibility- and revision-driven, with
+that session. Scenario/grid execution is view-opening- and revision-driven, with
 explicit retries after failure. Hidden dependencies remain stale. Default grids
 subdivide the existing diagnostic spans into five points, without clamping.
 

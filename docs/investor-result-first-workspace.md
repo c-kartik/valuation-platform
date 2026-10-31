@@ -1,5 +1,10 @@
 # Result-first investor workspace — local implementation and acceptance
 
+Historical record: the [compact workspace](investor-compact-workspace.md) now
+supersedes this page composition, visibility-triggered navigation and confirmed
+cell-application interaction. The execution/history foundation below is retained;
+its reported checks are not relabelled as later verification.
+
 October 31, 2026 (Dubai). Started on clean `main` at
 `cdfc3cc14906d9a07b2cb273c8bf04d051ac0456`, five commits ahead of local
 `origin/main`. This supersedes the ordinary inline-entry interaction in the
