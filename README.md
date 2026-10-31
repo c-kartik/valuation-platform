@@ -26,7 +26,10 @@ summary, solid navy/gold bars and DCF / Scenarios / Sensitivity / Full Model / S
 views. Its shared editor shows populated annual paths; sensitivity pairs open a
 review draft and change the model only on **Update valuation**. It automatically
 calculates the complete proposed Base through the local Python API. One on-demand
-editor submits multiple changes with **Update valuation**; Cancel discards unapplied
+editor [displays percentages at two decimals](docs/assumptions-editor-cleanup.md)
+without rounding untouched operands; edited percentages commit at two decimals.
+Native method segments and compact fields retain resets and source disclosures.
+The editor submits multiple changes with **Update valuation**; Cancel discards unapplied
 edits. Individual resets and reviewed profile adoption preserve override identity.
 Preparation and profile GET endpoints remain calculation-free.
 Full Model separates current draft inputs from the submitted calculation, with

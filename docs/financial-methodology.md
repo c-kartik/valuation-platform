@@ -18,7 +18,10 @@ Five-point diagnostic grids retain the existing spans and invalid-cell reasons;
 there are no confidence intervals, silent clamps or new economic conventions.
 Reviewing a sensitivity pair only fills a draft; explicit Update is required to
 change inputs and recalculate. Solid colours and compact summaries add no economic
-assumption or approval.
+assumption or approval. The [editor display layer](assumptions-editor-cleanup.md)
+shows two-decimal percentages while preserving untouched exact operands. Only
+explicitly edited percentages commit at two decimals (HALF_EVEN); source profiles,
+engine arithmetic/results and nonpercentage operands retain their precision.
 
 ## Current GOOGL proposed starting estimates
 

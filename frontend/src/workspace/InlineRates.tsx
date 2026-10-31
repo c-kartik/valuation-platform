@@ -1,12 +1,15 @@
-import {useState} from 'react';
+import {useEffect,useState} from 'react';
+import {editorPercent} from './editorPercent';
 import {annualPath,annualState,editQuick,replaceAnnual,percentageToFraction,multipleString} from '../model';
 import type {AnnualKey,Draft,Errors} from '../model';
 import {help,pathsFor} from './canvasModel';
 
 export const inputId=(prefix:string,path:string)=>`${prefix}-${path}`;
-export function RateInput({prefix,path,label,value,edit,error,unit='%',intent}:{prefix:string;path:string;label:string;value:string;edit:(v:string)=>void;error?:string;unit?:'%'|'×';intent?:()=>void}){
- const [syntax,setSyntax]=useState('');const issue=error||syntax,id=inputId(prefix,path);
- return <div className="cv-inline-field"><label htmlFor={id}>{label}</label><div className="cv-inline-number"><input id={id} value={value} inputMode="decimal" onInput={intent} onChange={e=>{setSyntax('');edit(e.target.value);}} onBlur={()=>{try{if(unit==='×')multipleString(value);else percentageToFraction(value);setSyntax('');}catch(e){setSyntax((e as Error).message);}}} aria-invalid={Boolean(issue)} aria-describedby={issue?id+'-error':undefined}/><span aria-hidden="true">{unit}</span></div>{issue&&<small id={id+'-error'} className="cv-error">{issue}</small>}</div>;
+export function RateInput({prefix,path,label,value,edit,error,unit='%',intent,twoDecimals=false}:{prefix:string;path:string;label:string;value:string;edit:(v:string)=>void;error?:string;unit?:'%'|'×';intent?:()=>void;twoDecimals?:boolean}){
+ const [syntax,setSyntax]=useState(''),[typing,setTyping]=useState(false);
+ useEffect(()=>{if(twoDecimals)setSyntax('');},[value,twoDecimals]);
+ const issue=error||syntax,id=inputId(prefix,path);
+ return <div className="cv-inline-field"><label htmlFor={id}>{label}</label><div className="cv-inline-number"><input id={id} value={twoDecimals&&unit==='%'&&!typing?editorPercent(value):value} inputMode="decimal" onInput={intent} onChange={e=>{setTyping(true);setSyntax('');edit(e.target.value);}} onBlur={()=>{try{if(unit==='×')multipleString(value);else percentageToFraction(value);if(twoDecimals&&unit==='%'&&typing)edit(editorPercent(value));setSyntax('');}catch(e){setSyntax((e as Error).message);}finally{setTyping(false);}}} aria-invalid={Boolean(issue)} aria-describedby={issue?id+'-error':undefined}/><span aria-hidden="true">{unit}</span></div>{issue&&<small id={id+'-error'} className="cv-error">{issue}</small>}</div>;
 }
 export function AnnualRate({prefix,draft,driver,label,change,errors={},inherited=false,reference,showDetails=true,annualOnly=false}:{prefix:string;draft:Draft;driver:AnnualKey;label:string;change:(d:Draft,paths:string[])=>void;errors?:Errors;inherited?:boolean;reference?:string;showDetails?:boolean;annualOnly?:boolean}){
  const state=annualState(draft,driver),proposal=driver in draft.replacements;

@@ -1,5 +1,9 @@
 # Compact investor workspace — local implementation and acceptance
 
+Subsequent [editor cleanup](assumptions-editor-cleanup.md) refines percentage display,
+row density and the method selector. The checks below remain this earlier
+checkpoint's historical record.
+
 October 31, 2026 (Dubai). Started on clean `main` at
 `3b714377e617a33117e0889d5bf3924c60cbb2c1`, six commits ahead of local
 `origin/main`. This supersedes the composition and navigation in the

@@ -1,0 +1,28 @@
+/* Assumptions dialog only: compact controls, full precision behind display. */
+.cw-workspace .cv-model-editor .cw-editor-table{table-layout:fixed;min-width:760px;font-size:12px}
+.cw-workspace .cv-model-editor .cw-editor-table th:first-child{width:190px}
+.cw-workspace .cv-model-editor .cw-editor-table th,.cw-workspace .cv-model-editor .cw-editor-table td{padding:7px 8px;vertical-align:middle}
+.cw-workspace .cv-model-editor .cw-editor-table thead th:not(:first-child){text-align:center}
+.cw-workspace .cv-model-editor .cw-editor-table td{text-align:center}
+.cw-workspace .cv-model-editor .cw-editor-table td>div{display:inline-flex;flex-direction:column;align-items:flex-end;max-width:100%;gap:2px}
+.cw-workspace .cv-model-editor .cv-inline-number{width:96px;max-width:100%;height:34px;box-sizing:border-box;border:1px solid var(--cw-line);border-radius:5px;background:white;display:flex;align-items:center}
+.cw-workspace .cv-model-editor .cv-inline-number:focus-within{outline:2px solid var(--cw-gold);outline-offset:2px}
+.cw-workspace .cv-model-editor .cv-inline-number input{width:100%;min-width:0;min-height:0;height:32px;padding:5px 2px 5px 7px;border:0;box-shadow:none;outline:none;background:transparent;font-size:13px;text-align:right;border-radius:5px}
+.cw-workspace .cv-model-editor .cv-inline-number span{font-size:12px;padding:0 6px 0 4px;color:var(--cw-muted)}
+.cw-workspace .cv-model-editor .cv-field-reset{font-size:11px!important;padding:0 2px!important;margin:0!important;min-height:24px;white-space:normal}
+.cw-workspace .cv-model-editor .cv-inline-field{min-width:0;max-width:100%;margin:0}
+.cw-workspace .cv-model-editor .cv-inline-field label{font-size:12px;min-height:0;line-height:1.4;margin-bottom:5px;overflow-wrap:break-word}
+.cw-workspace .cv-model-editor .cv-error{font-size:12px;line-height:1.4;display:block;text-align:left;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.cw-workspace .cv-model-editor .cv-editor-terminal{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 22px;align-items:start}
+.cw-workspace .cv-model-editor fieldset{padding:16px 0}
+.cw-workspace .cv-model-editor fieldset.cw-method-segments{border:0;margin:10px 0;padding:0;min-width:0}
+.cw-workspace .cv-model-editor .cw-method-segments legend{font:12px/1.4 system-ui,sans-serif;padding:0 0 7px;color:var(--cw-muted)}
+.cw-method-segments>div{display:inline-flex;gap:3px;border:1px solid var(--cw-line);border-radius:7px;padding:3px;max-width:100%}
+.cw-method-segments label{position:relative;cursor:pointer;margin:0!important;min-width:0}
+.cw-method-segments input{position:absolute;opacity:0;width:1px;height:1px;margin:0!important}
+.cw-method-segments span{display:flex;align-items:center;justify-content:center;min-height:36px;padding:6px 14px;border-radius:4px;font-size:13px;color:var(--cw-muted)}
+.cw-method-segments input:checked+span{background:var(--cw-ink);color:white}
+.cw-method-segments input:focus-visible+span{outline:2px solid var(--cw-gold);outline-offset:2px}
+@media(max-width:760px){.cw-workspace .cv-model-editor .cv-editor-terminal{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.cw-workspace .cv-model-editor .cv-inline-number{height:40px;width:100px}.cw-workspace .cv-model-editor .cv-inline-number input{height:38px;font-size:16px}.cw-workspace .cv-model-editor .cv-field-reset{min-height:32px}.cw-method-segments span{min-height:44px;padding:8px 11px}.cw-workspace .cv-model-editor .cw-editor-table th,.cw-workspace .cv-model-editor .cw-editor-table td{padding:8px}.cw-workspace .cv-model-editor .cw-editor-table{min-width:800px}}
+@media(pointer:coarse){.cw-workspace .cv-model-editor .cv-inline-number{height:44px}.cw-workspace .cv-model-editor .cv-inline-number input{height:42px}.cw-workspace .cv-model-editor .cv-field-reset{min-height:32px}.cw-method-segments span{min-height:44px}}
+.cw-workspace .cv-model-editor .cw-editor-table tbody th{white-space:normal;overflow-wrap:break-word;line-height:1.4}

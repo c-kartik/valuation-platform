@@ -10,6 +10,11 @@ trigger. Existing gate, revision-bound attempts, exact-request cache and explici
 retry are reused. No financial transport or calculation contract changes.
 
 The shared dialog edits populated annual tables and independent terminal inputs.
+The [editor refinement](assumptions-editor-cleanup.md) separates two-decimal display
+from untouched exact strings; only edited percentage paths are rounded on commit.
+A native segmented radio group keeps method drafts local and commits the shared
+method only after a checked successful response. Failure/stale responses cannot
+commit a pending switch. Financial contracts and shared scenario semantics remain.
 Terminal method changes remain local until Update, then use the existing shared
 method transition. Sensitivity review seeds only two rates in a local editor;
 Cancel leaves the active pair intact. Full Model identifies the selected case and

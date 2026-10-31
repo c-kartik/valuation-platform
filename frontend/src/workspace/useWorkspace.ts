@@ -109,8 +109,8 @@ export function useWorkspace(load:typeof request=request){
  }
  function editComparison(key:'price'|'date',value:string){const kind=live.current.selected;if(kind)change(kind,c=>({...c,comparison:{...c.comparison,[key]:value}}));}
  function configureSet(key:'cutoff'|'scenarioEquity',value:string|boolean){setRevision.current.edit();gate.cancel('scenarios');change(live.current.selected,s=>({...s,[key]:value,scenario:invalidateSet(s.scenario)}));}
- async function calculate(scope:'ev'|'equity'){
-  const kind=live.current.selected,s=live.current.cases[kind],label=s?.selectedCase,c=s?.cases[label];if(!c||gate.snapshot())return;
+ async function calculate(scope:'ev'|'equity',transition?:{draft:Draft;paths:string[];resets:string[]}){
+  const kind=live.current.selected,s=live.current.cases[kind],label=s?.selectedCase,active=s?.cases[label],c=transition&&active?{...active,draft:transition.draft}:active;if(!c||gate.snapshot())return;
   if(scope==='equity'&&(c.ev.phase!=='current'||!c.ev.result))return;
   const revisions=scope==='ev'?evRevision.current:equityRevision.current,token=revisions.begin();
   const current=()=>revisions.current(token)&&live.current.selected===kind&&live.current.cases[kind].selectedCase===label;
@@ -124,19 +124,23 @@ export function useWorkspace(load:typeof request=request){
    },check:response=>{const value='review' in response?response.result:response;if(!sameSnapshot(value.submitted_inputs,submitted))throw new Error('Returned input snapshot did not match submitted case.');for(const [key,expected] of Object.entries(c.draft.doc.anchor))if(value.submitted_inputs.anchor[key as keyof typeof c.draft.doc.anchor]!==expected)throw new Error('Returned anchor did not match submitted case.');if(scope==='equity')requireMatchingEquity(value,c.ev.result!);}});
    if(!response||!current())return;
    remember(s.preload?.profile,'/api/v1/review/run',submitted!,response);
+   // A dialog method switch is committed only after a checked, current success.
+   if(transition){setTerminalMethod(methodOf(transition.draft));applyEditorDraft(transition.draft,transition.paths,transition.resets);}
    const result='review' in response?{...response.result,investor_review:response.review}:response;
    changeCase(kind,label,c=>({...c,resultProfile:s.preload?.profile,resultOverrides:c.overrides??[],[scope]:{phase:'current',result,inputRevision:c.revision,errors:{},failure:''}}));
   }catch(error){if(!current())return;const errors=error instanceof InputErrors?error.fields:error instanceof ApiError&&error.code==='invalid_case'?(scope==='ev'?fieldErrors(error.details.map(percentageDiagnostic)):equityDiagnostics(error.details,s.bridge)):{};
    changeCase(kind,label,c=>({...c,[scope]:{...c[scope],phase:Object.keys(errors).length?'incomplete':'failed',errors,failure:Object.keys(errors).length?'':failureMessage(error)}}));}
  }
- async function updateValuation(draft:Draft,paths:string[],resets:string[]=[]){
-  const errors=entryErrors(draft);if(Object.keys(errors).length)throw new InputErrors(errors);
-  const active=live.current.cases[live.current.selected];
-  if(methodOf(draft)!==methodOf(active.cases[active.selectedCase].draft))setTerminalMethod(methodOf(draft));
+ function applyEditorDraft(draft:Draft,paths:string[],resets:string[]){
   editDraft(draft,true,paths);
   if(resets.length){const kind=live.current.selected,label=live.current.cases[kind].selectedCase;changeCase(kind,label,c=>({...c,overrides:(c.overrides??[]).filter(p=>!resets.includes(p))}));}
-  await calculate('ev');
-  const s=live.current.cases[live.current.selected];return s?.cases[s.selectedCase]?.ev.phase==='current';
+ }
+ async function updateValuation(draft:Draft,paths:string[],resets:string[]=[]){
+  const errors=entryErrors(draft);if(Object.keys(errors).length)throw new InputErrors(errors);
+  const kind=live.current.selected,active=live.current.cases[kind],label=active.selectedCase;
+  if(methodOf(draft)!==methodOf(active.cases[label].draft)){stop();await calculate('ev',{draft,paths,resets});}
+  else{applyEditorDraft(draft,paths,resets);await calculate('ev');}
+  const s=live.current.cases[kind];return live.current.selected===kind&&s?.selectedCase===label&&s?.cases[label]?.ev.phase==='current'&&methodOf(s.cases[label].draft)===methodOf(draft);
  }
  async function calculateScenarios(validationOnly=false){
   const kind=live.current.selected,s=live.current.cases[kind];if(!s||gate.snapshot())return;

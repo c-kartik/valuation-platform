@@ -2,6 +2,13 @@
 
 ## Current — compact local investor workspace
 
+The [assumptions-editor cleanup](assumptions-editor-cleanup.md) adds precision-safe
+two-decimal percentage displays, snug fields, wrapped labels and native segmented
+method controls. Unchanged operands retain full precision; Reset restores the
+original estimate. Method switches commit only after a successful Update.
+Verification: 248 frontend regressions, final focused checks, both builds and
+actual desktop/mobile API/browser review; details and screenshots are in the record.
+
 The [compact implementation/acceptance](investor-compact-workspace.md) adds the
 approved summary sidebar, five analysis views, annual-table editor and solid
 navy/gold/slate/teal palette. Initial Base and first-open scenarios/5×5 grids reuse
