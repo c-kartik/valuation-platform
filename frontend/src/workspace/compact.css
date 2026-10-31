@@ -6,3 +6,19 @@
 @media(max-width:760px){.cw-workspace{padding:7px}.cw-workspace .cv-page{padding:14px;border-radius:12px}.cw-workspace .cv-company{gap:10px;padding-bottom:14px;align-items:start}.cw-workspace .cv-company h1{font-size:19px}.cw-workspace .cv-company-tools{min-width:0;width:100%}.cw-layout{grid-template-columns:minmax(0,1fr);gap:18px}.cw-main{grid-row:1}.cw-sidebar{grid-row:2}.cw-sidebar>section{margin-bottom:16px}.cw-nav{gap:16px;margin-bottom:12px}.cw-nav a{font-size:11px;padding:7px 0}.cw-analysis-context>span{font-size:9px}.cw-workspace .cv-analysis-section>h2{font-size:18px}.cw-workspace .cv-chart-legend small{font-size:9px}.cw-workspace .cv-operating-readout table{min-width:280px}.cw-workspace .cv-model-editor{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh}.cw-workspace .cv-model-editor .cv-editor-body{padding:14px}.cw-workspace .cv-editor-terminal{grid-template-columns:repeat(2,minmax(0,1fr))}.cw-editor-table{min-width:750px}.cw-workspace .cv-ev{font-size:28px}.cw-summary-row,.cw-summary-row strong{font-size:12px}}
 /* Keep context readable while only the year bars pan on narrow screens. */
 .cw-workspace .cv-operating-scroll{container-type:inline-size}.cw-workspace .cv-operating-stage .cv-chart-heading,.cw-workspace .cv-operating-stage .cv-guide-labels{position:sticky;left:0;width:100cqw;box-sizing:border-box}
+/* Company selection has its own bar; valuation and case control stay together. */
+.cw-company-bar{max-width:1390px;margin:0 auto 12px;padding:10px 18px;display:flex;justify-content:flex-end;background:white;border:1px solid var(--cw-line);border-radius:10px}
+.cw-company-bar .cv-company-tools{width:310px;min-width:0;margin:0}
+.cw-company-bar select{min-height:36px;border:1px solid var(--cw-line);border-radius:4px;padding:6px 10px;background:white;color:var(--cw-ink);width:100%;font-size:12px}
+.cw-workspace .cv-company{align-items:flex-start}
+.cw-workspace .cv-company>div:first-child{flex:1;min-width:0}
+.cw-header-value{width:320px;max-width:100%;flex-shrink:0}
+.cw-header-value .cv-ev{font-size:32px}
+.cw-header-value small{display:block}
+.cw-value-cases{border-top:1px solid var(--cw-line);padding-top:10px;margin-top:10px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.cw-value-cases .cv-segments{display:flex;flex:1}
+.cw-value-cases .cv-segments button{flex:1;font-size:12px;min-height:34px;padding:6px 12px}
+.cw-cancel-calculation{border:0;background:none;color:var(--cw-muted);font-size:11px;padding:4px 0}
+.cw-sidebar-actions .cw-edit-all{margin-top:0}
+@media(max-width:760px){.cw-company-bar{padding:9px 12px;margin-bottom:10px}.cw-company-bar .cv-company-tools{width:100%}.cw-workspace .cv-company{display:flex;flex-direction:column;gap:14px}.cw-header-value{width:100%}.cw-value-cases .cv-segments button{min-height:40px}}
+@media(pointer:coarse){.cw-value-cases .cv-segments button,.cw-company-bar select{min-height:44px}}

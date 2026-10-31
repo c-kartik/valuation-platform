@@ -147,3 +147,24 @@ Actual platform screenshots, visually inspected:
 - [Sensitivity and separate inspection](assets/compact-workspace-sensitivity.jpg)
 - [Mobile page, panned to forecast years](assets/compact-workspace-mobile.jpg)
 - [Full-width mobile editor](assets/compact-workspace-mobile-editor.jpg)
+
+## Company bar and valuation card follow-up — October 31, 2026
+
+Company selection now occupies its own bar above the valuation workspace. The
+selected case's EV card moves from the sidebar to the company's upper-right
+header space, with the sole Bear/Base/Bull selector inside the card beneath its
+value and calculation status. Model assumptions, settings and editor/source
+buttons remain in the sidebar. On mobile, company context and the EV card stack
+above analysis navigation. Method, loading, stale, missing-input and editing
+statuses retain their existing meaning; cancellation remains available inside
+the card while calculations run. The chart loading message names the actual case.
+
+Verification: 36 existing workspace/preload tests passed with one worker and a
+15-second test timeout; the initial concurrent run had one 5-second timeout in
+the scenario/grid integration test (35 passed), rather than an assertion failure.
+TypeScript checking and the production frontend build passed. Real Chrome and
+the local API confirmed Base $1.42tn, Bear $1.02tn, Bull $2.01tn and return to Base,
+with matching selected labels and operating charts. There is one EV card and one
+case selector. At an observed 390×844 CSS viewport the header fits without page
+horizontal overflow; the temporary viewport override was reset. Browser zoom was
+preserved. No financial parameters, calculations or company source records changed.
