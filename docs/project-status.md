@@ -2,6 +2,12 @@
 
 ## Current — compact local investor workspace
 
+The [simplified equity editor](equity-editor-cleanup.md) puts cash, debt, other
+claims and shares first, with required dated/class/coverage/award declarations
+collapsed under Advanced adjustments & sources. Users can save an incomplete
+draft or calculate directly in the panel. The EV-to-equity-to-per-share breakdown
+uses returned Stage C values only and clearly identifies previous results.
+
 The [six-row sidebar](six-row-sidebar.md) groups cash-flow drivers behind one
 conversion summary and an on-demand profit-to-cash editor. The model badge and
 optional equity/share settings move to the header and valuation card. Conversion

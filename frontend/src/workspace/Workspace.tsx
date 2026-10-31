@@ -19,7 +19,7 @@ import {ForecastChart} from './ForecastChart';
 import {Sources} from './Sources';
 import {MarketPanel} from './MarketPanel';
 import {ExportData} from './ExportData';
-import {AssumptionEditor} from './AssumptionEditor';
+import {EquityEditor} from './EquityEditor';
 import {ModelEditor} from './ModelEditor';
 import {TerminalComparison} from './TerminalComparison';
 import {ValuationBreakdown} from './ValuationBreakdown';
@@ -60,7 +60,7 @@ export function Workspace({load=request}:{load?:typeof request}){
  function openEditor(path?:string){setSeed(undefined);setSeedPaths([]);setFocusPath(path);setEditor('model');}
  function editCase(label:Label){w.selectCase(label);openEditor();}
  function reviewPair(){if(!c||!current||c.grid.phase!=='current'||!c.grid.inspected)return;const cell=c.grid.result?.cells[c.grid.inspected[0]]?.[c.grid.inspected[1]];if(cell?.status!=='VALID')return;const d=structuredClone(c.draft),path=methodOf(d)==='exit_multiple'?'exit_ev_ebit_multiple':'terminal_growth';d.rates.wacc=ratePercent(cell.wacc);d.rates[path]=cell.exit_ev_ebit_multiple??ratePercent(cell.terminal_growth!);setSeed(d);setSeedPaths(['wacc',path]);setFocusPath('wacc');setEditor('model');}
- function applyBridge(_draft:Draft,bridge:EquityDraft){if(c)for(const key of Object.keys(bridge)as (keyof EquityDraft)[])if(bridge[key]!==c.bridge[key])w.editBridge(key,bridge[key]);}
+ function applyBridge(bridge:EquityDraft){if(c)for(const key of Object.keys(bridge)as (keyof EquityDraft)[])if(bridge[key]!==c.bridge[key])w.editBridge(key,bridge[key]);}
  const method=c?methodOf(c.draft):'perpetual_growth',missing=c?Object.entries(entryErrors(c.draft)):[],loading=c?.preload?.status==='loading'||c?.ev.phase==='calculating';
  const status=editor==='model'?'Editing draft · previous submitted result retained':loading?'Preparing the starting calculation…':c?.ev.phase==='failed'?'Calculation failed · entries preserved':current?'Current calculation · inputs remain unreviewed':result?'Previous calculation · stale':missing.length?'Required inputs remain unset':'Ready to calculate';
  const evValue=current&&result?readableMoney(result.stage_b.enterprise_value):result&&(result.stage_b.terminal_method??'perpetual_growth')===method?readableMoney(result.stage_b.enterprise_value):loading?'Calculating…':'Inputs required';
@@ -85,7 +85,7 @@ export function Workspace({load=request}:{load?:typeof request}){
 <Sources entry={entry} result={result} preload={c.preload}/></section>
  </div></div>
  {editor==='model'&&<ModelEditor key={state.selected+c.selectedCase} company={ticker} label={c.selectedCase} session={c} initial={seed} initialPaths={seedPaths} focusPath={focusPath} submit={w.updateValuation} close={()=>setEditor(null)}/>}
- {editor==='bridge'&&<AssumptionEditor key={state.selected+c.selectedCase} company={ticker} label={c.selectedCase} initial={c.draft} bridge={c.bridge} section="Cash, debt and shares" entry={entry} result={result} stale={!current} errors={issues} bridgeOnly apply={applyBridge} close={()=>setEditor(null)}/>}
+ {editor==='bridge'&&<EquityEditor key={state.selected+c.selectedCase} company={ticker} label={c.selectedCase} initial={c.bridge} anchorDate={c.draft.doc.anchor.annual_end} ev={c.ev.result} outcome={c.equity} operatingCurrent={Boolean(current)} busy={w.busy} save={applyBridge} calculate={async bridge=>{applyBridge(bridge);await w.calculate('equity');}} cancel={w.cancel} close={()=>setEditor(null)}/>}
  </>:catalog&&<section className="cv-start"><h2>Select a company</h2><p>GOOGL offers proposed editable starting estimates. Other companies remain unset.</p><details><summary>Separate software example</summary><button onClick={()=>select('demo')}>Load synthetic example</button></details></section>}
  <footer className="cv-footer">Unsaved work remains in this tab, including navigation/remounts; a full page reload clears it. Manual estimates are not independently reviewed. Cancellation may not immediately stop server work.</footer></main>{confirmation&&<Confirm value={confirmation} close={()=>setConfirmation(null)}/>}</div>;
 }

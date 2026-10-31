@@ -13,6 +13,13 @@ economic convention or financial acceptance. Historical source/approval records
 below remain intact. Older assessment estimates/status snapshots do not override
 current accepted package views. No company review or acquisition resumes automatically.
 
+## Shared display guidance — simplified optional equity editor
+
+The [equity editor cleanup](../equity-editor-cleanup.md) reorganizes manual Stage C
+entries and returned results. No issuer balances/shares, source preparation,
+classification, scope, approval or financial sufficiency status changes. Collapsed
+details remain required for calculation; no company-preparation gap is resolved.
+
 ## Shared display guidance — cash-flow conversion summary
 
 The [six-row sidebar](../six-row-sidebar.md) adds a read-only ratio and explanation

@@ -2,6 +2,15 @@
 
 ## Current result-first display boundary
 
+The [simplified equity editor](equity-editor-cleanup.md) changes presentation only.
+Enterprise value plus eligible non-operating assets less financing and other
+claims produces equity value; dividing by the declared dated share population
+produces its per-share reference. No reported balances, share-class equivalence,
+award treatment or absence of claims are inferred. All existing Stage C
+validation and unbounded-omission qualifications remain. Untouched or incomplete
+manual drafts do not produce a per-share value; displayed subtotals come from the
+server, never a live browser preview.
+
 The [six-row sidebar](six-row-sidebar.md) displays cash flow conversion as returned
 annual FCFF / returned EBIT, using the final explicit forecast year. It requires
 positive EBIT; negative FCFF and ratios above 100% are retained. Zero/negative EBIT

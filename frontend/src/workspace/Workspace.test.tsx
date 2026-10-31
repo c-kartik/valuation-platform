@@ -35,7 +35,7 @@ function fill(){for(const [key]of annual)for(let i=0;i<5;i++)set(`Synthetic peri
 async function update(){click('Update valuation');await waitFor(()=>expect(screen.queryByRole('dialog')).toBeNull());}
 async function current(){await company();open();fill();await update();}
 function selectCase(label:string){fireEvent.click(within(screen.getByRole('group',{name:'Selected scenario'})).getByRole('button',{name:label}));}
-function bridge(){set('Eligible cash & investments (USD millions)','100');set('Debt & financing obligations (USD millions)','40');set('Other claims / adjustments','amount');set('Other claims (USD millions)','10');set('Shares outstanding (millions of shares)','20');set('Share observation date','2025-12-31');for(const label of ['Eligible-asset coverage','Financing coverage','Other-claims coverage'])set(label,'selected');set('Share population','issued');set('Included share class(es)','Test common');set('Class treatment','single_common_class');set('Existing awards','omitted');fireEvent.click(screen.getByLabelText(/I declare these amounts are dated/));}
+function bridge(){expand('Advanced adjustments & sources');set('Cash & investments (USD millions)','100');set('Debt (USD millions)','40');set('Other claims / adjustments','amount');set('Other claims (USD millions)','10');set('Shares outstanding (millions of shares)','20');set('Share observation date','2025-12-31');for(const label of ['Eligible-asset coverage','Financing coverage','Other-claims coverage'])set(label,'selected');set('Share population','issued');set('Included share class(es)','Test common');set('Class treatment','single_common_class');set('Existing awards','omitted');fireEvent.click(screen.getByLabelText(/I declare these amounts are dated/));}
 it('shows read-only inputs and one whole-model editor with multiple edits and one execution',async()=>{
  const load=transport();render(<Workspace load={load}/>);await company();expect(document.getElementById('model-editor-wacc')).toBeNull();open();fill();set('Synthetic period 2 Revenue growth','18.1234567890123456789');expect(load).toHaveBeenCalledTimes(1);expect(screen.getAllByRole('textbox').length).toBeGreaterThan(36);await update();expect(load).toHaveBeenCalledTimes(2);expect(screen.getByRole('region',{name:'Valuation summary'}).textContent).toContain('$100.00m');expect(screen.getByRole('complementary',{name:'Active model summary'}).textContent).toContain('10.00% → 10.00%');expect(document.querySelector('.cw-editor-table')).toBeNull();open();expect((labeled('Synthetic period 2 Revenue growth')as HTMLInputElement).value).toBe('18.12');click('Cancel');
 });
@@ -59,7 +59,7 @@ it('retains company inputs and rejects a late response after switching',async()=
  await act(async()=>resolve(reply(body)));await waitFor(()=>expect(screen.queryByRole('dialog')).toBeNull());await company('test-b');expect(screen.queryByRole('region',{name:'Interactive revenue and FCFF chart'})).toBeNull();await company('test-a');open();expect((labeled('WACC')as HTMLInputElement).value).toBe('25.00');click('Cancel');
 });
 it('keeps detailed optional bridge editing, focus restoration and qualified Stage C execution',async()=>{
- const sent:EditableDoc[]=[];render(<Workspace load={transport(async b=>{sent.push(b);return reply(b);})}/>);await current();navigate('Sources');expand('Optional equity / market comparison');const trigger=screen.getByRole('button',{name:'Cash, debt and shares · optional'});trigger.focus();fireEvent.click(trigger);set('Shares outstanding (millions of shares)','20');click('Cancel');expect(document.activeElement).toBe(trigger);fireEvent.click(trigger);expect((labeled('Shares outstanding (millions of shares)')as HTMLInputElement).value).toBe('');bridge();click('Apply edits');click('Calculate value per share');await screen.findByText(/150.00m equity.*7.50 USD\/share/);expect(sent).toHaveLength(2);expect((sent[1]as InvestorEquityDoc).bridge).toMatchObject({shares:{shares:'20000000'}});
+ const sent:EditableDoc[]=[];render(<Workspace load={transport(async b=>{sent.push(b);return reply(b);})}/>);await current();navigate('Sources');expand('Optional equity / market comparison');const trigger=screen.getByRole('button',{name:'Cash, debt and shares · optional'});trigger.focus();fireEvent.click(trigger);set('Shares outstanding (millions of shares)','20');click('Cancel');expect(document.activeElement).toBe(trigger);fireEvent.click(trigger);expect((labeled('Shares outstanding (millions of shares)')as HTMLInputElement).value).toBe('');bridge();click('Save inputs');click('Calculate value per share');await screen.findByText(/150.00m equity.*7.50 USD\/share/);expect(sent).toHaveLength(2);expect((sent[1]as InvestorEquityDoc).bridge).toMatchObject({shares:{shares:'20000000'}});
 });
 it('keeps draft on outage, does not retry automatically, and one Update explicitly retries',async()=>{
  let fail=true;const sent:EditableDoc[]=[];render(<Workspace load={transport(async b=>{sent.push(structuredClone(b));if(fail)throw new ApiError('service_unavailable','private');return reply(b);})}/>);await company();open();fill();click('Update valuation');await screen.findByText(/Calculation did not complete/);expect(screen.getByRole('dialog')).toBeTruthy();expect((labeled('WACC')as HTMLInputElement).value).toBe('25.00');expect(sent).toHaveLength(1);fail=false;await update();expect(sent[1]).toEqual(sent[0]);expect(screen.queryByText('private')).toBeNull();
@@ -129,4 +129,47 @@ it('expands to the full draft when a cash-flow update needs an input outside tha
  click('Update valuation');await waitFor(()=>expect(document.activeElement).toBe(labeled('Synthetic period 1 Revenue growth')));
  expect(screen.getByRole('heading',{name:'Edit assumptions'})).toBeTruthy();
  expect(screen.getByRole('dialog')).toBeTruthy();click('Cancel');
+});
+
+
+it('opens only four primary equity entries and requires advanced declarations before direct calculation',async()=>{
+ const sent:EditableDoc[]=[];render(<Workspace load={transport(async b=>{sent.push(structuredClone(b));return reply(b);})}/>);await current();
+ click('Equity & per-share settings Not set ›');
+ const advanced=screen.getByText('Advanced adjustments & sources').closest('details')!;
+ expect(advanced.open).toBe(false);expect(screen.getByText('8 details required')).toBeTruthy();
+ expect(document.querySelector('.cw-equity-inputs')!.querySelectorAll('input,select')).toHaveLength(4);
+ expect(screen.getByRole('region',{name:'Enterprise value to value per share'}).textContent).toContain('= Equity value—');
+ set('Cash & investments (USD millions)','100');set('Debt (USD millions)','40');set('Other claims / adjustments','amount');set('Other claims (USD millions)','10');set('Shares outstanding (millions of shares)','20');
+ click('Calculate value per share');expect(sent).toHaveLength(1);
+ await waitFor(()=>expect(document.activeElement).toBe(labeled('Share observation date')));expect(advanced.open).toBe(true);
+ expect((labeled('Share population')as HTMLSelectElement).value).toBe('');expect((labeled('Existing awards')as HTMLSelectElement).value).toBe('');
+ bridge();click('Calculate value per share');await within(screen.getByRole('dialog')).findByText('7.50');
+ await waitFor(()=>expect(document.activeElement).toBe(screen.getByRole('region',{name:'Enterprise value to value per share'})));expect(advanced.open).toBe(false);
+ expect(sent).toHaveLength(2);expect(sent[1].forecast_years).toEqual(sent[0].forecast_years);
+ expect((sent[1]as InvestorEquityDoc).bridge).toMatchObject({shares:{shares:'20000000',observation_date:'2025-12-31'}});
+ const breakdown=screen.getByRole('region',{name:'Enterprise value to value per share'});
+ expect(breakdown.textContent).toContain('$150.00m');expect(breakdown.textContent).toContain('Provisional result');
+ set('Cash & investments (USD millions)','110');expect(breakdown.textContent).toContain('Previous calculation');expect(breakdown.textContent).toContain('$150.00m');expect(sent).toHaveLength(2);
+ click('Cancel');click('Equity & per-share settings Declared ›');expect((labeled('Cash & investments (USD millions)')as HTMLInputElement).value).toBe('100');click('Cancel');
+});
+
+it('saves incomplete equity drafts without assuming zero or calculating, and expands server reference errors on retry',async()=>{
+ let mode='domain';const sent:EditableDoc[]=[];
+ render(<Workspace load={transport(async b=>{sent.push(structuredClone(b));if('calculation_scope'in b&&b.calculation_scope==='EQUITY_PER_SHARE'&&mode==='domain')throw new ApiError('invalid_case','Invalid',['bridge.components[0]: Selected populations overlap']);return reply(b);})}/>);await current();
+ click('Equity & per-share settings Not set ›');set('Cash & investments (USD millions)','0');click('Save inputs');
+ expect(screen.queryByRole('dialog')).toBeNull();expect(sent).toHaveLength(1);
+ click('Equity & per-share settings Not set ›');expect((labeled('Cash & investments (USD millions)')as HTMLInputElement).value).toBe('0');expect((labeled('Debt (USD millions)')as HTMLInputElement).value).toBe('');
+ bridge();expand('Component details & overlap references');set('Assets overlap references','financing');click('Calculate value per share');
+ await waitFor(()=>expect(document.activeElement).toBe(labeled('Assets overlap references')));
+ expect((labeled('Assets overlap references')as HTMLInputElement).value).toBe('financing');expect(screen.getByRole('dialog')).toBeTruthy();
+ mode='ok';set('Assets overlap references','');click('Calculate value per share');await within(screen.getByRole('dialog')).findByText('7.50');expect(sent).toHaveLength(3);click('Cancel');
+});
+
+it('cancels a pending equity calculation and rejects its late response',async()=>{
+ let resolve!:(r:Result)=>void,body!:EditableDoc;
+ const sent:EditableDoc[]=[];render(<Workspace load={transport(async b=>{sent.push(b);if('calculation_scope'in b&&b.calculation_scope==='EQUITY_PER_SHARE'){body=b;return new Promise(r=>{resolve=r;});}return reply(b);})}/>);await current();
+ click('Equity & per-share settings Not set ›');bridge();click('Calculate value per share');await waitFor(()=>expect(resolve).toBeDefined());
+ expect((labeled('Cash & investments (USD millions)').closest('fieldset')as HTMLFieldSetElement).disabled).toBe(true);
+ click('Cancel calculation');await act(async()=>resolve(reply(body)));expect(screen.queryByRole('dialog')).toBeNull();
+ click('Equity & per-share settings Declared ›');expect(screen.queryByText('7.50')).toBeNull();expect((labeled('Cash & investments (USD millions)')as HTMLInputElement).value).toBe('100');click('Cancel');
 });

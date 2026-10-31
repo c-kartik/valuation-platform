@@ -1,27 +1,34 @@
 import {display} from './model';
 import type {Result,Errors} from './model';
-import {awards,coverageOptions} from './equity';
+import {awards,coverageOptions,equityErrors} from './equity';
 import type {EquityDraft} from './equity';
 import {readableMoney,shareMillions} from './presentation';
 export const equityFieldLabels:Record<string,string>={assets:'Eligible assets',financing:'Financing',claims:'Other claims',shares:'Valuation shares',date:'Share date',claimsTreatment:'Other-claims assessment',assetsCoverage:'Eligible-asset coverage',financingCoverage:'Financing coverage',claimsCoverage:'Other-claims coverage',shareBasis:'Share population',classes:'Included classes',equivalence:'Class treatment',awards:'Existing awards',nonOverlap:'Date, eligibility & non-overlap',issues:'Bridge declarations',components:'Component references',overlapAssets:'Assets overlap references',alternativeAssets:'Assets alternative references',overlapFinancing:'Financing overlap references',alternativeFinancing:'Financing alternative references',overlapClaims:'Claims overlap references',alternativeClaims:'Claims alternative references'};
 export const equityAdvancedFields=['assetsCoverage','financingCoverage','claimsCoverage','shareBasis','classes','equivalence','awards','nonOverlap'];
 
-export function EquityFields({values,errors,edit,anchorDate,advanced,setAdvanced,componentsOpen,setComponentsOpen}:{values:EquityDraft;errors:Errors;edit:<K extends keyof EquityDraft>(key:K,value:EquityDraft[K])=>void;anchorDate:string;advanced:boolean;setAdvanced:(value:boolean)=>void;componentsOpen:boolean;setComponentsOpen:(value:boolean)=>void}){
+export function EquityFields({values,errors,edit,anchorDate,advanced,setAdvanced,componentsOpen,setComponentsOpen,simple=false}:{values:EquityDraft;errors:Errors;edit:<K extends keyof EquityDraft>(key:K,value:EquityDraft[K])=>void;anchorDate:string;advanced:boolean;setAdvanced:(value:boolean)=>void;componentsOpen:boolean;setComponentsOpen:(value:boolean)=>void;simple?:boolean}){
  function field(key:'assets'|'financing'|'claims'|'shares'|'date'|'classes',label:string){
   return <div className="field"><label htmlFor={`equity.${key}`}>{label}</label><input id={`equity.${key}`} type={key==='date'?'date':'text'} value={values[key]} onChange={e=>edit(key,e.target.value)} aria-invalid={Boolean(errors[key])} aria-describedby={errors[key]?`equity.${key}-error`:undefined}/>{errors[key]&&<span className="field-error" id={`equity.${key}-error`}>{errors[key]}</span>}</div>;
  }
  function choice<K extends 'claimsTreatment'|'assetsCoverage'|'financingCoverage'|'claimsCoverage'|'shareBasis'|'equivalence'|'awards'>(key:K,label:string,options:Record<string,string>){
   return <div className="field"><label htmlFor={`equity.${key}`}>{label}</label><select id={`equity.${key}`} value={values[key]} onChange={e=>edit(key,e.target.value as EquityDraft[K])} aria-invalid={Boolean(errors[key])} aria-describedby={errors[key]?`equity.${key}-error`:undefined}><option value="">Choose…</option>{Object.entries(options).map(([value,text])=><option key={value} value={value}>{text}</option>)}</select>{errors[key]&&<span className="field-error" id={`equity.${key}-error`}>{errors[key]}</span>}</div>;
  }
+ const required=Object.keys(equityErrors(values,anchorDate)).filter(key=>['date',...equityAdvancedFields].includes(key)).length;
+ const references=<details open={componentsOpen} onToggle={e=>setComponentsOpen(e.currentTarget.open)}><summary id="equity.components" tabIndex={0}>Component details &amp; overlap references</summary>
+    <p className="hint">{simple?'Manual entries; no filing balances are preloaded. Optional comma-separated component references identify overlapping populations or alternative measurements. Selected overlapping amounts are rejected.':<>Three manual aggregate components: assets (+), financing (−), claims (− when entered). No reported balances are supplied. Optional comma-separated component references declare overlap or alternative measurements; selected overlapping operands reject. Detailed multi-component cases remain available through the existing CLI/API.</>}</p>
+    {(['Assets','Financing','Claims'] as const).map((name,i)=><div key={name}><b>{['assets','financing','claims'][i]}</b>{(['overlap','alternative'] as const).map(kind=>{const key=`${kind}${name}` as keyof EquityDraft;return <div className="field" key={key}><label htmlFor={`equity.${key}`}>{name} {kind} references</label><input id={`equity.${key}`} value={String(values[key])} onChange={e=>edit(key,e.target.value)} aria-invalid={Boolean(errors[key])} aria-describedby={errors[key]?`equity.${key}-error`:undefined}/>{errors[key]&&<span className="field-error" id={`equity.${key}-error`}>{errors[key]}</span>}</div>;})}</div>)}
+   </details>;
  return <>
-   <p className="hint">Amounts: <b>USD millions</b>. Shares: <b>millions of shares</b>. Blank is not zero. All amounts must represent {anchorDate}.</p>
+   {!simple&&<><p className="hint">Amounts: <b>USD millions</b>. Shares: <b>millions of shares</b>. Blank is not zero. All amounts must represent {anchorDate}.</p>
    <div className="rate-grid">{field('assets','Eligible cash & investments (USD millions)')}{field('financing','Debt & financing obligations (USD millions)')}</div>
    <p className="hint">Exclude operating cash reserves and assets already in operating value. Include relevant finance leases once. Positive adjustments belong in eligible assets; financing and other claims are deduction magnitudes.</p>
    {choice('claimsTreatment','Other claims / adjustments',{amount:'Enter an amount',none:'None identified within my stated scope',unassessed:'Not assessed'})}
    {values.claimsTreatment==='amount'&&field('claims','Other claims (USD millions)')}
    <div className="rate-grid">{field('shares','Shares outstanding (millions of shares)')}{field('date','Share observation date')}</div>
-   <p className="hint">Use a dated share population. Diluted weighted-average EPS shares are not automatically suitable. Coverage, class and award declarations are required below.</p>
-   <details open={advanced} onToggle={e=>setAdvanced(e.currentTarget.open)}><summary>Coverage, classes &amp; awards</summary>
+   <p className="hint">Use a dated share population. Diluted weighted-average EPS shares are not automatically suitable. Coverage, class and award declarations are required below.</p></>}
+   {simple&&<div className="cw-equity-inputs">{field('assets','Cash & investments (USD millions)')}{field('financing','Debt (USD millions)')}<div className="cw-equity-claims">{choice('claimsTreatment','Other claims / adjustments',{amount:'Enter an amount',none:'None identified within my stated scope',unassessed:'Not assessed'})}{values.claimsTreatment==='amount'&&field('claims','Other claims (USD millions)')}</div>{field('shares','Shares outstanding (millions of shares)')}</div>}
+   <details open={advanced} onToggle={e=>setAdvanced(e.currentTarget.open)}><summary>{simple?<>Advanced adjustments &amp; sources <span className="cw-equity-required">{required?`${required} ${required===1?'detail':'details'} required`:'Declared · unverified'}</span></>:<>Coverage, classes &amp; awards</>}</summary>
+    {simple&&<><p className="hint">All amounts must represent {anchorDate}. Exclude operating cash and assets already in enterprise value; include financing obligations and finance leases once. Blank is not zero.</p>{field('date','Share observation date')}<p className="hint">Use a dated share population, not automatically the diluted weighted-average EPS share count.</p></>}
     <p className="hint">Each choice is your declaration, not an authenticated review. “Selected population” does not establish complete claims coverage. Disclosed omissions may be unbounded.</p>
     {choice('assetsCoverage','Eligible-asset coverage',coverageOptions)}{choice('financingCoverage','Financing coverage',coverageOptions)}
     {values.claimsTreatment==='amount'&&choice('claimsCoverage','Other-claims coverage',coverageOptions)}
@@ -33,11 +40,9 @@ export function EquityFields({values,errors,edit,anchorDate,advanced,setAdvanced
     <p className="hint">SBC remains expensed in operating margins. Adjust only non-overlapping pre-anchor rights; no automatic RSU addition, proceeds or second employee-service charge.</p>
     <label className="check-row"><input id="equity.nonOverlap" type="checkbox" checked={values.nonOverlap} onChange={e=>edit('nonOverlap',e.target.checked)} aria-invalid={Boolean(errors.nonOverlap)} aria-describedby={errors.nonOverlap?'equity.nonOverlap-error':undefined}/>I declare these amounts are dated {anchorDate}, assets exclude operating reserves/value, and selected populations do not duplicate each other or forecast settlements; finance leases count once.</label>
     {errors.nonOverlap&&<p className="field-error" id="equity.nonOverlap-error">{errors.nonOverlap}</p>}
+   {simple&&references}
    </details>
-   <details open={componentsOpen} onToggle={e=>setComponentsOpen(e.currentTarget.open)}><summary id="equity.components">Component details &amp; overlap references</summary>
-    <p className="hint">Three manual aggregate components: assets (+), financing (−), claims (− when entered). No reported balances are supplied. Optional comma-separated component references declare overlap or alternative measurements; selected overlapping operands reject. Detailed multi-component cases remain available through the existing CLI/API.</p>
-    {(['Assets','Financing','Claims'] as const).map((name,i)=><div key={name}><b>{['assets','financing','claims'][i]}</b>{(['overlap','alternative'] as const).map(kind=>{const key=`${kind}${name}` as keyof EquityDraft;return <div className="field" key={key}><label htmlFor={`equity.${key}`}>{name} {kind} references</label><input id={`equity.${key}`} value={String(values[key])} onChange={e=>edit(key,e.target.value)} aria-invalid={Boolean(errors[key])} aria-describedby={errors[key]?`equity.${key}-error`:undefined}/>{errors[key]&&<span className="field-error" id={`equity.${key}-error`}>{errors[key]}</span>}</div>;})}</div>)}
-   </details>
+   {!simple&&references}
  </>;
 }
 

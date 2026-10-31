@@ -2,6 +2,14 @@
 
 ## Current compact investor workspace
 
+The [equity editor](equity-editor-cleanup.md) reuses shared EquityFields in a
+simple display mode. Local drafts remain isolated until Save inputs or Calculate;
+Calculate validates the existing equity contract, applies bridge changes through
+editBridge and runs the existing revision-gated Stage C request. Required hidden
+fields and reference errors expand their containing disclosures and receive focus.
+The breakdown displays returned results only; no client equity arithmetic is added.
+The legacy EquityFields presentation remains available to other consumers.
+
 The [six-row sidebar](six-row-sidebar.md) adds a focused cash-flow view to the same
 whole-model draft editor. Returned annual operands feed a read-only year selector
 and profit-to-cash bridge. The final submitted-year FCFF/EBIT display uses isolated
