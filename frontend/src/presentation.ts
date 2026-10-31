@@ -3,6 +3,15 @@ import Decimal from 'decimal.js';
 const DisplayDecimal = Decimal.clone({precision:220, rounding:Decimal.ROUND_HALF_EVEN});
 // Match the CLI summary's precision-50 HALF_EVEN division and percentage display.
 const RatioDecimal = DisplayDecimal.clone({precision:50});
+/** Submitted FCFF / EBIT summary only; never a forecast driver or engine operand. */
+export function cashFlowConversion(fcff:string,ebit:string):{text:string;note:string}{
+ try{
+  const cash=new RatioDecimal(fcff),profit=new RatioDecimal(ebit);
+  if(!cash.isFinite()||!profit.isFinite())throw Error('Nonfinite observation');
+  if(!profit.gt(0))return {text:'Unavailable',note:'Conversion is shown only for positive operating profit. Review the signed cash-flow breakdown instead.'};
+  return {text:percentage(cash.div(profit).toFixed()),note:'FCFF / operating profit (EBIT), using the submitted calculation. Negative values and values above 100% are preserved.'};
+ }catch{return {text:'Unavailable',note:'A finite submitted FCFF and positive operating profit are required.'};}
+}
 export function terminalContribution(pv: string, ev: string): {text: string; note: string} {
   const value = new RatioDecimal(ev);
   if (value.isZero()) return {text:'Undefined', note:'EV is zero, so terminal PV / EV is undefined.'};

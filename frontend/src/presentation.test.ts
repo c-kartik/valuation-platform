@@ -63,3 +63,20 @@ it('restricts display-only price comparisons to the selected fiscal date and iso
   expect(Decimal.precision).toBe(2);expect(Decimal.rounding).toBe(Decimal.ROUND_UP);
  }finally{Decimal.set(old);}
 });
+
+it('summarizes submitted FCFF / EBIT without clamping or changing Decimal context',async()=>{
+ const {cashFlowConversion}=await import('./presentation');const precision=Decimal.precision,rounding=Decimal.rounding;
+ Decimal.set({precision:2,rounding:Decimal.ROUND_UP});try{
+  expect(cashFlowConversion('13','30').text).toBe('43.33%');
+  expect(cashFlowConversion('-13','30').text).toBe('-43.33%');
+  expect(cashFlowConversion('31','30').text).toBe('103.33%');
+  expect(cashFlowConversion('0','30').text).toBe('0.00%');
+  expect(cashFlowConversion('1','0').text).toBe('Unavailable');
+  expect(cashFlowConversion('-1','-2').text).toBe('Unavailable');
+  expect(cashFlowConversion('Infinity','2').text).toBe('Unavailable');
+  expect(cashFlowConversion('invalid','2').text).toBe('Unavailable');
+  expect(cashFlowConversion('0.012345','1').text).toBe('1.23%');
+  expect(cashFlowConversion('0.012355','1').text).toBe('1.24%');
+  expect(Decimal.precision).toBe(2);expect(Decimal.rounding).toBe(Decimal.ROUND_UP);
+ }finally{Decimal.set({precision,rounding});}
+});

@@ -90,9 +90,43 @@ it('keeps a ten-year horizon local until valid Update and shares complete Base e
  click('Update valuation');expect(sent).toHaveLength(1);expect(screen.getByRole('dialog')).toBeTruthy();
  for(let i=2031;i<=2035;i++)for(const [key]of annual)set(`FY${i} ${shortLabels[key]}`,({revenue_growth:'4',operating_margin:'20',forecast_tax_rate:'25',d_and_a_percent_revenue:'5',capex_percent_revenue:'10',change_in_operating_nwc_percent_revenue:'2'}as Record<string,string>)[key]);
  await update();expect(sent[1].schema_version).toBe('investor-case-v4');expect(sent[1].forecast_years).toHaveLength(10);
+ fireEvent.click(screen.getByRole('button',{name:/Cash flow conversion 40.00% FY2035/}));expect(within(screen.getByRole('table',{name:'Cash-flow assumptions · percentages · Base'})).getAllByRole('textbox')).toHaveLength(40);expect((labeled('Calculation year')as HTMLSelectElement).value).toBe('FY2035');click('Cancel');
  expect(document.querySelectorAll('[data-five-year-boundary]')).toHaveLength(1);
  selectCase('Bear');open();expect((labeled('FY2035 Revenue growth')as HTMLInputElement).value).toBe('4.00');click('Cancel');
  selectCase('Base');open();fireEvent.click(screen.getByRole('radio',{name:'5 years'}));await update();expect(sent.at(-1)!.forecast_years).toHaveLength(5);
  open();fireEvent.click(screen.getByRole('radio',{name:'10 years'}));expect((labeled('FY2035 Revenue growth')as HTMLInputElement).value).toBe('4.00');click('Cancel');
  open();expect((screen.getByRole('radio',{name:'5 years'})as HTMLInputElement).checked).toBe(true);click('Cancel');
+});
+
+it('offers six sidebar rows and edits cash-flow drivers through a submitted, year-labelled conversion summary',async()=>{
+ const sent:EditableDoc[]=[];render(<Workspace load={transport(async b=>{sent.push(structuredClone(b));return reply(b);})}/>);await current();
+ const sidebar=screen.getByRole('complementary',{name:'Active model summary'});
+ expect(sidebar.querySelectorAll('button.cw-summary-row')).toHaveLength(6);
+ expect(sidebar.textContent).not.toContain('Tax & D&A');expect(sidebar.textContent).not.toContain('Investment & WC');expect(sidebar.textContent).not.toContain('Cash, claims & shares');
+ expect(screen.getByText('FCFF model')).toBeTruthy();
+ const trigger=within(sidebar).getByRole('button',{name:/Cash flow conversion 40.00%/});trigger.focus();fireEvent.click(trigger);
+ expect(screen.getByRole('heading',{name:'From operating profit to cash flow'})).toBeTruthy();
+ const bridge=screen.getByRole('region',{name:'Submitted profit-to-cash calculation'});
+ expect(bridge.textContent).toContain('$22.00m');expect(bridge.textContent).toContain('$8.80m');
+ expect((labeled('Calculation year')as HTMLSelectElement).value).toBe('Synthetic period 5');
+ expect(screen.queryByLabelText('Synthetic period 1 Revenue growth',{exact:true})).toBeNull();
+ expect(within(screen.getByRole('table',{name:'Cash-flow assumptions · percentages · Base'})).getAllByRole('textbox')).toHaveLength(20);
+ set('Calculation year','Synthetic period 1');set('Synthetic period 2 D&A / revenue','7.125');
+ expect(bridge.textContent).toContain('$8.80m');expect(sent).toHaveLength(1);click('Cancel');expect(document.activeElement).toBe(trigger);
+ fireEvent.click(trigger);expect((labeled('Synthetic period 2 D&A / revenue')as HTMLInputElement).value).toBe('5.00');
+ set('Synthetic period 2 D&A / revenue','7.125');await update();
+ expect(sent).toHaveLength(2);expect(sent[1].forecast_years[1].d_and_a_percent_revenue).toBe('0.0712');
+ const expected=structuredClone(sent[0].forecast_years);expected[1].d_and_a_percent_revenue='0.0712';expect(sent[1].forecast_years).toEqual(expected);
+ expect(sent[1].wacc).toBe(sent[0].wacc);
+ const settings=within(screen.getByRole('region',{name:'Valuation summary'})).getByRole('button',{name:/Equity & per-share settings/});settings.focus();fireEvent.click(settings);
+ expect(screen.getByLabelText('Shares outstanding (millions of shares)')).toBeTruthy();click('Cancel');expect(document.activeElement).toBe(settings);
+});
+
+it('expands to the full draft when a cash-flow update needs an input outside that panel',async()=>{
+ render(<Workspace load={transport()}/>);await company();
+ fireEvent.click(screen.getByRole('button',{name:/Cash flow conversion Not calculated/}));
+ expect(screen.queryByLabelText('Synthetic period 1 Revenue growth',{exact:true})).toBeNull();
+ click('Update valuation');await waitFor(()=>expect(document.activeElement).toBe(labeled('Synthetic period 1 Revenue growth')));
+ expect(screen.getByRole('heading',{name:'Edit assumptions'})).toBeTruthy();
+ expect(screen.getByRole('dialog')).toBeTruthy();click('Cancel');
 });

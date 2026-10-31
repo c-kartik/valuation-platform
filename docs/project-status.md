@@ -2,6 +2,12 @@
 
 ## Current — compact local investor workspace
 
+The [six-row sidebar](six-row-sidebar.md) groups cash-flow drivers behind one
+conversion summary and an on-demand profit-to-cash editor. The model badge and
+optional equity/share settings move to the header and valuation card. Conversion
+uses the submitted final-year FCFF / EBIT; this is not a new forecast input or
+change in the financial model.
+
 The [chart/history update](chart-history-and-current-year-estimate.md) fits all
 years to the plot width, expands reported revenue to FY2021–FY2025 and displays
 FY2026E prominently while retaining the reported FY2025 valuation anchor, as

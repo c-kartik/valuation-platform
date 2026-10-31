@@ -2,13 +2,20 @@
 
 ## Current result-first display boundary
 
+The [six-row sidebar](six-row-sidebar.md) displays cash flow conversion as returned
+annual FCFF / returned EBIT, using the final explicit forecast year. It requires
+positive EBIT; negative FCFF and ratios above 100% are retained. Zero/negative EBIT
+shows no percentage. The profit-to-cash bridge displays existing signed operands
+and results only; no additional cash flow or forecast assumption is computed.
+The percentage is a summary and editor entry point, not a conversion-model input.
+
 The [compact workspace](investor-compact-workspace.md) and its
 [result-first foundation](investor-result-first-workspace.md) change interaction
 and visualization only. Automatic initial calculation now intentionally submits a
 complete proposed profile to the existing engine. Preparation and GET endpoints
 remain calculation-free; no estimate becomes financially approved by execution.
 
-The historical display window contains up to three consecutive source-bound annual
+The historical display window contains up to five consecutive source-bound annual
 revenue observations ending at the model anchor. Historical FCFF remains unavailable.
 Fixed-anchor endpoint CAGR uses actual positive endpoints and positive fiscal-year
 intervals. Earlier observations show signed USD/percentage changes relative to the

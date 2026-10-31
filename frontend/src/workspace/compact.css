@@ -24,3 +24,5 @@
 @media(pointer:coarse){.cw-value-cases .cv-segments button,.cw-company-bar select{min-height:44px}}
 
 .cw-current-estimate{margin-top:18px;padding-top:12px;border-top:1px solid var(--cw-line);max-width:520px}.cw-workspace .cw-current-estimate h2{font:500 14px/1.4 Georgia,serif;margin:0 0 8px}.cw-current-estimate dl{display:flex;flex-wrap:wrap;gap:12px 30px;margin:0 0 8px}.cw-current-estimate dt{font-size:10px;color:var(--cw-muted)}.cw-current-estimate dd{margin:3px 0 0;font-size:16px;font-variant-numeric:tabular-nums;color:var(--cw-ink)}.cw-current-estimate small{font-size:10px}
+
+.cw-workspace .cv-company h1 .cw-model-badge{display:inline-block;font:500 10px/1.5 system-ui,sans-serif;padding:2px 7px;border-radius:4px;background:#f3efe4;color:#765b20;vertical-align:middle;white-space:nowrap}.cw-equity-settings{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:left;background:transparent;border:0;border-top:1px solid var(--cw-line);margin-top:10px;padding:10px 0 0;font:11px/1.5 system-ui,sans-serif;color:var(--cw-ink)}.cw-equity-settings span{color:var(--cw-muted);white-space:nowrap}

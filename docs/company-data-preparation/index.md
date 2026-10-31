@@ -13,6 +13,13 @@ economic convention or financial acceptance. Historical source/approval records
 below remain intact. Older assessment estimates/status snapshots do not override
 current accepted package views. No company review or acquisition resumes automatically.
 
+## Shared display guidance — cash-flow conversion summary
+
+The [six-row sidebar](../six-row-sidebar.md) adds a read-only ratio and explanation
+of already returned forecast operands. It changes no issuer inputs, historical
+facts, mappings, source bindings, approvals or sufficiency statuses; no issuer
+record treatment is superseded. This UI work does not resume Phase 1.
+
 ## Shared display guidance — five retained annual revenue observations
 
 The [result-first workspace](../investor-result-first-workspace.md) adds a bounded,

@@ -2,6 +2,13 @@
 
 ## Current compact investor workspace
 
+The [six-row sidebar](six-row-sidebar.md) adds a focused cash-flow view to the same
+whole-model draft editor. Returned annual operands feed a read-only year selector
+and profit-to-cash bridge. The final submitted-year FCFF/EBIT display uses isolated
+Decimal arithmetic with positive-EBIT and finite-operand guards. It is never
+converted into a submitted input. Expanding to all assumptions retains the draft;
+validation errors outside the focused view reveal and focus the full form.
+
 The [compact record](investor-compact-workspace.md) supersedes the result-first
 page composition with a summary sidebar and DCF, Scenarios, Sensitivity, Full
 Model and Sources views. Views retain the same company/case state; opening
