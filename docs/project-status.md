@@ -2,6 +2,12 @@
 
 ## Current — compact local investor workspace
 
+The company heading now scales to 68px on desktop (44px on phone), paired with a
+56px enterprise value (48px on phone), so identity and value lead the page.
+Supporting ticker/model/date context retains its compact size. CSS-only change;
+no calculations or values change. Production build and actual desktop/390px phone
+layout review pass; no horizontal overflow.
+
 The [DCF chart refinement](dcf-chart-layout.md) adds a taller plot, tighter adjacent
 bars, a below-chart legend and floating CAGR labels above the endpoint lines.
 Hovering a historical year uses that year as the CAGR denominator and FY2025 as
