@@ -102,3 +102,18 @@ checks passed. No temporary case/output, credential or build artifact is include
 
 Open <http://127.0.0.1:5175/workspace/> → **Edit all assumptions**.
 All captures show the unchanged proposed starting model, not diagnostic edits.
+
+## Constant-rate disclosure spacing follow-up
+
+The replacement percentage and “Replace these five annual values” button now sit
+on the same row, with the label above and draft/terminal-scope note below. All six
+meanings/source sections use a tighter heading-to-caption gap (about 12px in the
+observed desktop layout). Source disclosures and replacement behavior are retained.
+The button can wrap its text on narrow screens without moving below the field.
+
+Verification: the existing 14 workspace interaction tests passed, including
+explicit row replacement and independent terminal values; TypeScript checking and
+the frontend production build passed using the installed Node 22 runtime. Actual
+Chrome desktop and a temporary phone-width viewport confirmed side-by-side
+controls and readable wrapped captions. The viewport override was reset and the
+review draft was cancelled. No financial inputs, formulas or source records changed.
