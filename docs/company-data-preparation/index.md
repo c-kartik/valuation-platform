@@ -1584,3 +1584,11 @@ judgments; ticker resolution is not a generic accounting-readiness flag. See
 and [acceptance](../googl-preload-acceptance.md). No transfer of historical omissions,
 complete D&A/NWC certification, financial approval or automatic other-company
 coverage. Two preparation statuses and all Phase1 pause/resumption records remain.
+
+### Ten-year manual consumer boundary
+
+The [local horizon extension](../ten-year-horizon.md) adds explicit manual years
+6–10. It changes no historical preparation, frozen values, issuer classification
+or financial-input sufficiency status. GOOGL's separate five-year proposed
+profile supplies no extra-year estimates; refresh preserves manual additional
+years. No expanded preparation coverage or valuation-use approval is inferred.

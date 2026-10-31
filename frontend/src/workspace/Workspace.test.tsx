@@ -82,3 +82,17 @@ it('opens a summary row at its annual operand, restores focus and identifies the
 it('keeps a terminal-method change local until Update, then commits its shared scope without overwriting annual paths',async()=>{
  const sent:EditableDoc[]=[];render(<Workspace load={transport(async b=>{sent.push(structuredClone(b));return reply(b);})}/>);await current();open();fireEvent.click(within(screen.getByRole('dialog')).getByRole('radio',{name:'Exit multiple'}));expect((labeled('Year-five EV/EBIT')as HTMLInputElement).value).toBe('');click('Update valuation');await waitFor(()=>expect(document.activeElement).toBe(labeled('Year-five EV/EBIT')));expect(sent).toHaveLength(1);set('Year-five EV/EBIT','15');click('Cancel');open();expect((within(screen.getByRole('dialog')).getByRole('radio',{name:'Perpetual growth'})as HTMLInputElement).checked).toBe(true);fireEvent.click(within(screen.getByRole('dialog')).getByRole('radio',{name:'Exit multiple'}));set('Year-five EV/EBIT','15');await update();expect((sent[1]as MethodDoc).terminal_valuation).toMatchObject({method:'exit_multiple',exit_ev_ebit_multiple:'15'});expect(sent[1].forecast_years).toEqual(sent[0].forecast_years);selectCase('Bear');open();expect((within(screen.getByRole('dialog')).getByRole('radio',{name:'Exit multiple'})as HTMLInputElement).checked).toBe(true);click('Cancel');
 });
+
+it('keeps a ten-year horizon local until valid Update and shares complete Base extensions across cases',async()=>{
+ const sent:EditableDoc[]=[];render(<Workspace load={transport(async b=>{sent.push(structuredClone(b));return reply(b);})}/>);await current();open();
+ fireEvent.click(screen.getByRole('radio',{name:'10 years'}));
+ expect((labeled('FY2031 Revenue growth')as HTMLInputElement).value).toBe('');
+ click('Update valuation');expect(sent).toHaveLength(1);expect(screen.getByRole('dialog')).toBeTruthy();
+ for(let i=2031;i<=2035;i++)for(const [key]of annual)set(`FY${i} ${shortLabels[key]}`,({revenue_growth:'4',operating_margin:'20',forecast_tax_rate:'25',d_and_a_percent_revenue:'5',capex_percent_revenue:'10',change_in_operating_nwc_percent_revenue:'2'}as Record<string,string>)[key]);
+ await update();expect(sent[1].schema_version).toBe('investor-case-v4');expect(sent[1].forecast_years).toHaveLength(10);
+ expect(document.querySelectorAll('[data-five-year-boundary]')).toHaveLength(1);
+ selectCase('Bear');open();expect((labeled('FY2035 Revenue growth')as HTMLInputElement).value).toBe('4.00');click('Cancel');
+ selectCase('Base');open();fireEvent.click(screen.getByRole('radio',{name:'5 years'}));await update();expect(sent.at(-1)!.forecast_years).toHaveLength(5);
+ open();fireEvent.click(screen.getByRole('radio',{name:'10 years'}));expect((labeled('FY2035 Revenue growth')as HTMLInputElement).value).toBe('4.00');click('Cancel');
+ open();expect((screen.getByRole('radio',{name:'5 years'})as HTMLInputElement).checked).toBe(true);click('Cancel');
+});

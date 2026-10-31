@@ -11,7 +11,7 @@ export const newReverse=():ReverseState=>({metric:'ENTERPRISE_VALUE',amount:'',l
 export const staleReverse=(r:ReverseState):ReverseState=>({...r,phase:r.result?'stale':'incomplete',errors:{},failure:''});
 export function reverseRequest(draft:Draft,base:Draft,bridge:EquityDraft,r:ReverseState):ReverseDoc{
  if(draft.terminalMethod==='exit_multiple')throw new InputErrors({terminal_method:'Reverse DCF does not support exit multiples. Use a separate explicit perpetual-growth analysis.'});
- const errors=entryErrors(draft);for(const k of ['cutoff','targetDate'] as const)if(!r[k])errors[k]='Enter an explicit date; it is not a live quote or authenticated information availability.';
+ const errors=entryErrors(draft);if(draft.doc.forecast_years.length!==5)errors.horizon='Certified reverse DCF currently supports the five-year horizon only.';for(const k of ['cutoff','targetDate'] as const)if(!r[k])errors[k]='Enter an explicit date; it is not a live quote or authenticated information availability.';
  if(r.metric==='VALUE_PER_SHARE')for(const[k,v]of Object.entries(equityErrors(bridge,draft.doc.anchor.annual_end)))errors['bridge.'+k]=v;
  let amount:string|null=null,lower:string|null=null,upper:string|null=null;
  try{amount=r.metric==='ENTERPRISE_VALUE'?millionsToUnits(r.amount):r.amount.trim();if(!amount||! /^-?(?:0|[1-9]\d*)(?:\.\d+)?$/.test(amount))errors.amount='Enter a decimal target in the labeled units; no commas, exponent or currency sign.';}catch{errors.amount='Enter a decimal target in USD millions.';}

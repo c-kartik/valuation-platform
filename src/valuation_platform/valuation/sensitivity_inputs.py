@@ -18,7 +18,7 @@ REVIEW_SCHEMA = "investor-sensitivity-request-v2"
 METHOD_SCHEMA = "investor-sensitivity-request-v3"
 INVESTOR_RESULT_SCHEMA = "investor-sensitivity-results-v1"
 HELD_FIXED = (
-    "All five annual operating inputs and period identities; terminal operating ratios; "
+    "All explicit annual operating inputs and period identities; terminal operating ratios; "
     "bridge components, shares, source bindings, dates, conventions, rationale and limitations."
 )
 LIMITATIONS = (
@@ -155,7 +155,7 @@ def _read_sensitivity(text: str) -> SensitivityRequest:
         errors.append("sensitivity.source.information_cutoff: must not precede analytical_date")
     if case and analytical and analytical != case.assumptions.anchor_fiscal_end:
         errors.append("sensitivity.source.analytical_date: must equal selected case.anchor.annual_end")
-    if investor and case and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2", "investor-case-v3"):
+    if investor and case and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2", "investor-case-v3", "investor-case-v4"):
         errors.append("sensitivity.source.case.schema_version: investor requests require investor-case-v1/v2")
     waccs = axis(doc.get("wacc_values"), "wacc_values")
     growths = axis(doc.get(axis_key), axis_key)
@@ -177,7 +177,7 @@ def _metrics(result):
     b = result["stage_b"]
     ev = Decimal(b["enterprise_value"])
     metrics = {key: b[key] for key in ("enterprise_value", "pv_explicit_fcff", "pv_terminal_value")}
-    metrics.update(**({"year_five_ebit": b["terminal_basis"]["year_five_ebit"]} if b.get("terminal_method") == "exit_multiple" else
+    metrics.update(**({("year_five_ebit" if len(b["years"]) == 5 else "final_year_ebit"): b["terminal_basis"].get("year_five_ebit", b["terminal_basis"].get("final_year_ebit"))} if b.get("terminal_method") == "exit_multiple" else
                    {"terminal_revenue": b["terminal"]["revenue"], "terminal_fcff": b["terminal"]["fcff"]}),
                    terminal_value=b["terminal_value"],
                    terminal_contribution=None if ev.is_zero() else str(Decimal(b["pv_terminal_value"]) / ev),
@@ -244,10 +244,10 @@ def run_sensitivity(request: SensitivityRequest, repository_root: Path) -> dict[
             "reference_result": reference, "reference_metrics": reference_metrics,
             "wacc_values": [str(x) for x in request.wacc_values],
             ("exit_ev_ebit_multiple_values" if request.exit_multiple else "terminal_growth_values"): [str(x) for x in request.terminal_growth_values],
-            "cells": rows, "held_fixed": "Five annual operating paths and year-five EBIT; bridge/shares and declarations. Only WACC and multiple vary." if request.exit_multiple else HELD_FIXED,
+            "cells": rows, "held_fixed": "All explicit annual operating paths and final-year EBIT; bridge/shares and declarations. Only WACC and multiple vary." if request.exit_multiple else HELD_FIXED,
             "cell_reproduction": "Replace only wacc and terminal_valuation.exit_ev_ebit_multiple in selected_case; run_case. Rows WACC; columns multiple." if request.exit_multiple else "Start from selected_case; replace only wacc and terminal_growth with the cell's strings; read_case then run_case. Rows are WACC, columns terminal growth.",
             "numeric_policy": "Derived contributions/deltas: isolated Decimal precision 50, HALF_EVEN; changes are fractional; amounts base USD, shares actual, value/share USD/share.",
-            "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR", "limitations": (["Only WACC and EV/EBIT multiple change. Operating cash flows and year-five EBIT are fixed; annual PVs and terminal PV/value respond.", *LIMITATIONS[1:]] if request.exit_multiple else list(LIMITATIONS))}
+            "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR", "limitations": (["Only WACC and EV/EBIT multiple change. Operating cash flows and final-year EBIT are fixed; annual PVs and terminal PV/value respond.", *LIMITATIONS[1:]] if request.exit_multiple else list(LIMITATIONS))}
 
 
 def serialize_sensitivity(result: dict[str, object]) -> str:

@@ -368,3 +368,13 @@ multi-instance load, Firebase routing and billed transfer hops. Future cloud tim
 must leave room for body intake, the 35-second
 calculation deadline and cleanup within the proposed 50-second HTTP window.
 No cloud resources/accounts, login, deployment, DNS change or push occurred.
+
+## Explicit ten-year case version
+
+`investor-case-v4` / `analyst-case-v4` extend the v3 method-aware case with
+`forecast_horizon: 10` and ten complete ordered annual rows. Legacy versions
+remain five-year. Scenario and sensitivity envelopes can contain v4 cases;
+matched horizons are mandatory. Terminal discounting uses year ten and Gordon
+uses year-eleven FCFF. Certified reverse DCF remains five-year only. See the
+[contract and verification record](ten-year-horizon.md) for convention/output
+field names and the unresolved additional-year preload policy.

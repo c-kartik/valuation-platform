@@ -117,13 +117,13 @@ def _operating_year(
                               tax, nopat, da, investment, wc, fcff)
 
 
-def forecast_five_years(
+def forecast_periods(
     anchor: RevenueAnchor,
     assumptions: ValuationAssumptions | OperatingAssumptions,
     *,
     convention_version: str = CONVENTION_VERSION,
 ) -> ForecastResult:
-    """Calculate five periods; never infer rates or certify their economic scope.
+    """Calculate the explicit horizon; never infer rates or certify economic scope.
 
     Under this approved convention investment includes cash PP&E plus new,
     non-overlapping finance-leased operating assets, excluding finance principal.
@@ -133,7 +133,7 @@ def forecast_five_years(
     """
     if type(anchor) is not RevenueAnchor or type(assumptions) not in (ValuationAssumptions, OperatingAssumptions):
         raise ForecastValidationError("RevenueAnchor and ValuationAssumptions required")
-    if assumptions.schema_version != "1":
+    if assumptions.schema_version != ("2" if len(assumptions.forecast_years) == 10 else "1"):
         raise ForecastValidationError("Unsupported assumption schema")
     if convention_version not in SUPPORTED_CONVENTIONS:
         raise ForecastValidationError("Unsupported declared forecast convention")
@@ -160,6 +160,13 @@ def forecast_five_years(
     except DecimalException as exc:
         raise ForecastValidationError("Forecast Decimal arithmetic failed") from exc
     return ForecastResult(anchor, assumptions, convention_version, tuple(years))
+
+
+def forecast_five_years(anchor, assumptions, *, convention_version=CONVENTION_VERSION):
+    """Compatibility entry point: the legacy consumer remains strictly five-year."""
+    if type(assumptions) not in (ValuationAssumptions, OperatingAssumptions) or len(assumptions.forecast_years) != 5:
+        raise ForecastValidationError("Legacy five-year entry point requires five periods")
+    return forecast_periods(anchor, assumptions, convention_version=convention_version)
 
 
 def forecast_to_dict(result: ForecastResult) -> dict[str, object]:

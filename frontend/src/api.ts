@@ -21,11 +21,13 @@ function renderableResult(data: Record<string, unknown>, requireEquity: boolean)
   const b = data.stage_b, submitted = data.submitted_inputs;
   if (!text(data.case_name) || !text(data.input_basis) || !Array.isArray(data.limitations) || !data.limitations.every(text) || !object(submitted)) return false;
   if (object(submitted.preparation) ? !text(submitted.preparation.timestamp_utc) || !(submitted.preparation.notes === null || text(submitted.preparation.notes)) : !object(submitted.analyst) || !text(submitted.analyst.rationale) || !text(submitted.scope)) return false;
-  if (!object(b) || !object(b.stage_a) || (b.terminal_method==='exit_multiple'?(!object(b.terminal_basis)||!decimal(b.terminal_basis.year_five_ebit)||!decimal(b.terminal_basis.exit_ev_ebit_multiple)||b.terminal!==undefined):(!object(b.terminal)||!decimal(b.terminal.fcff))) || !object(b.timing) || !text(b.timing.notice) || !text(b.timing.analytical_t0)) return false;
+  if (!object(b) || !object(b.stage_a) || (b.terminal_method==='exit_multiple'?(!object(b.terminal_basis)||!decimal(b.terminal_basis.year_five_ebit??b.terminal_basis.final_year_ebit)||!decimal(b.terminal_basis.exit_ev_ebit_multiple)||b.terminal!==undefined):(!object(b.terminal)||!decimal(b.terminal.fcff))) || !object(b.timing) || !text(b.timing.notice) || !text(b.timing.analytical_t0)) return false;
   if (!['enterprise_value','pv_explicit_fcff','pv_terminal_value','terminal_value'].every(key => decimal(b[key]))) return false;
-  if (!Array.isArray(b.stage_a.years) || b.stage_a.years.length !== 5 || !b.stage_a.years.every(y => object(y) && text(y.fiscal_year_label) && ['revenue','ebit','tax','nopat','d_and_a','investment','working_capital_cash_requirement','fcff'].every(key => decimal(y[key])))) return false;
-  if (!Array.isArray(b.years) || b.years.length !== 5 || !b.years.every(y => object(y) && decimal(y.discount_factor) && decimal(y.pv_fcff))) return false;
-  if(submitted.schema_version==='investor-case-v3'||submitted.schema_version==='analyst-case-v3'){
+  const horizon=submitted.schema_version==='investor-case-v4'||submitted.schema_version==='analyst-case-v4'?10:5;
+  if(horizon===10&&submitted.forecast_horizon!==10)return false;
+  if (!Array.isArray(b.stage_a.years) || b.stage_a.years.length !== horizon || !b.stage_a.years.every(y => object(y) && text(y.fiscal_year_label) && ['revenue','ebit','tax','nopat','d_and_a','investment','working_capital_cash_requirement','fcff'].every(key => decimal(y[key])))) return false;
+  if (!Array.isArray(b.years) || b.years.length !== horizon || !b.years.every(y => object(y) && decimal(y.discount_factor) && decimal(y.pv_fcff))) return false;
+  if(submitted.schema_version==='investor-case-v3'||submitted.schema_version==='analyst-case-v3'||submitted.schema_version==='investor-case-v4'||submitted.schema_version==='analyst-case-v4'){
     const method=object(submitted.terminal_valuation)?submitted.terminal_valuation.method:null,comparison=data.terminal_comparison;
     if(!['perpetual_growth','exit_multiple'].includes(String(method))||b.terminal_method!==method||!object(comparison)||comparison.selected_method!==method||!object(comparison.submitted_inputs)||!object(comparison.results))return false;
     for(const name of ['perpetual_growth','exit_multiple']){
@@ -34,7 +36,7 @@ function renderableResult(data: Record<string, unknown>, requireEquity: boolean)
       else if(entry.status!=='AWAITING_INPUTS'||name===method||!text(entry.reason))return false;
     }
     if(!(comparison.ev_difference_exit_minus_perpetual===null||decimal(comparison.ev_difference_exit_minus_perpetual)))return false;
-    const implied=comparison.implied_year_five_ev_ebit;
+    const implied=comparison.implied_year_five_ev_ebit??comparison.implied_final_year_ev_ebit;
     if(implied!==undefined&&(!object(implied)||!(implied.value===null||decimal(implied.value))||!(implied.reason===null||text(implied.reason))))return false;
   }
   const c = data.stage_c;
@@ -55,7 +57,7 @@ function renderableSensitivity(data:Record<string,unknown>):boolean{
  return rows.every((row,i)=>Array.isArray(row)&&row.length===g.length&&row.every((cell,j)=>{
   if(!object(cell)||cell.wacc!==w[i]||(exit?cell.exit_ev_ebit_multiple:cell.terminal_growth)!==g[j]||!object(cell.metrics))return false;
   const m=cell.metrics;if(cell.status==='INVALID')return text(cell.reason)&&cell.changes===null&&Object.values(m).every(v=>v===null);
-  return cell.status==='VALID'&&['enterprise_value','pv_explicit_fcff','pv_terminal_value','terminal_value',...(exit?['year_five_ebit']:['terminal_revenue','terminal_fcff'])].every(k=>decimal(m[k]))&&(m.terminal_contribution===null||decimal(m.terminal_contribution))&&text(m.terminal_contribution_note)&&(equity?decimal(m.equity_value)&&decimal(m.value_per_share):m.equity_value===null&&m.value_per_share===null);
+  return cell.status==='VALID'&&['enterprise_value','pv_explicit_fcff','pv_terminal_value','terminal_value',...(exit?[object(data.selected_case)&&data.selected_case.schema_version==='investor-case-v4'?'final_year_ebit':'year_five_ebit']:['terminal_revenue','terminal_fcff'])].every(k=>decimal(m[k]))&&(m.terminal_contribution===null||decimal(m.terminal_contribution))&&text(m.terminal_contribution_note)&&(equity?decimal(m.equity_value)&&decimal(m.value_per_share):m.equity_value===null&&m.value_per_share===null);
  }));
 }
 function renderableReverse(data:Record<string,unknown>):boolean{

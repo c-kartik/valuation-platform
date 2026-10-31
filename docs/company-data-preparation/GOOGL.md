@@ -1131,3 +1131,12 @@ undimensioned occurrence checks; no later context or forecast fills a gap.
 Historical FCFF is unavailable. This changes the read-only public projection only:
 no package, audit, historical value, approval, sufficiency status or anchor changes.
 Phase 1 review expansion remains paused.
+
+### Ten-year consumer extension — October 31, 2026
+
+The [extended local horizon](../ten-year-horizon.md) preserves the five-year
+starting-estimate profile and its existing financial weaknesses. Additional
+annual inputs are manual and unreviewed; profile refresh preserves them without
+manufacturing generated values or extra-year scenario offsets. No SEC fact,
+frozen preparation value, scope treatment, acceptance or financial sufficiency
+status changes. The additional-year preload policy remains unresolved.

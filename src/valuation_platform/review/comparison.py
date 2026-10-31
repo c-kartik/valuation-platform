@@ -13,7 +13,7 @@ TICKERS={1326801:'META',1652044:'GOOGL',320193:'AAPL'}
 def revenue_cagr(forward):
     with localcontext(Context(prec=50,rounding=ROUND_HALF_EVEN)):
         a=forward['stage_b']['stage_a'];start=D(a['anchor']['revenue']);end=D(a['years'][-1]['revenue'])
-        return str((end/start)**(D(1)/D(5))-1) if start>0 and end>=0 else None
+        return str((end/start)**(D(1)/D(len(a['years'])))-1) if start>0 and end>=0 else None
 
 
 def run_review(case,root,market=None,unavailable='Opening-price reference unavailable.',bounds=None):
@@ -27,6 +27,8 @@ def run_review(case,root,market=None,unavailable='Opening-price reference unavai
             'equity_difference':None,'per_share_difference':None,'search_bounds':bounds or SEARCH_BOUNDS,
             'limitations':['CAGR summarizes starting-to-final revenue; it does not preserve cash-flow timing or fully explain a value difference.',
                 'EV is operating enterprise value, not market capitalization or shareholder upside.']}
+        if len(case.assumptions.forecast_years) != 5:
+            review["reasons"].append("UNSUPPORTED_REVERSE_HORIZON: certified market-implied growth remains five-year only.")
         if type(case.terminal) is ExitMultipleMethod:
             review["reasons"].append("UNSUPPORTED_TERMINAL_METHOD: market-implied growth supports a separate explicit perpetual-growth analysis only.")
         if market is None:review['reasons'].append(unavailable)

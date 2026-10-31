@@ -55,7 +55,7 @@ def render_summary(result):
             f"Anchor reference: {anchor['source_reference']}",
             f"Fiscal-end analytical date: {b['timing']['analytical_t0']}",
             "Periods: " + "; ".join(f"{y['period_index']}={y['fiscal_year_label']}" for y in years),
-            "", "Five-year input assumptions (%)", headers,
+            "", ("Five-year input assumptions (%)" if len(years)==5 else "Ten-year input assumptions (%)"), headers,
         ]
         annual_labels = (
             ("Revenue growth", "revenue_growth"),
@@ -84,15 +84,15 @@ def render_summary(result):
         if method == "exit_multiple":
             basis = b["terminal_basis"]
             lines += ["", f"WACC: {percent(doc['wacc'])} | Terminal method: Exit multiple",
-                      f"Year-five EV/EBIT ({basis['fiscal_year_label']}): {basis['exit_ev_ebit_multiple']}×",
-                      f"Year-five EBIT (USD millions): {money(basis['year_five_ebit'])}",
+                      f"Year-{'five' if len(years)==5 else 'ten'} EV/EBIT ({basis['fiscal_year_label']}): {basis['exit_ev_ebit_multiple']}×",
+                      f"Year-{'five' if len(years)==5 else 'ten'} EBIT (USD millions): {money(basis.get('year_five_ebit', basis.get('final_year_ebit')))}",
                       basis["definition"],
                       "Exit multiples assume a future valuation level. Peer-based multiples introduce market pricing assumptions."]
         else:
             lines += [
                 "Operating tax reduces EBIT to NOPAT; D&A is added back; investment and positive WC cash are subtracted once.",
                 "", f"WACC: {percent(doc['wacc'])} | Terminal growth: {percent(doc['terminal_growth'])}",
-                "Explicit terminal assumptions (%) — independent of Year 5:",
+                f"Explicit terminal assumptions (%) — independent of Year {len(years)}:",
             ]
             for label, key in (
                 ("Operating margin", "operating_margin"), ("Operating tax rate", "operating_tax_rate"),
@@ -103,7 +103,7 @@ def render_summary(result):
         lines += [
             "", "Enterprise-value reconciliation (USD millions)",
             *([f"Terminal FCFF: {money(b['terminal']['fcff'])}"] if method == "perpetual_growth" else []),
-            f"Terminal value at end of Year 5: {money(b['terminal_value'])}",
+            f"Terminal value at end of Year {len(years)}: {money(b['terminal_value'])}",
             f"Explicit-period PV: {money(b['pv_explicit_fcff'])}",
             f"+ Discounted terminal value: {money(b['pv_terminal_value'])}",
             f"= Enterprise value (EV): {money(b['enterprise_value'])}",
@@ -113,9 +113,9 @@ def render_summary(result):
             lines.append("Terminal method comparison (same annual operations/WACC):")
             for method_name, item in comparison["results"].items():
                 lines.append(f"  {method_name}: " + (f"EV {money(item['stage_b']['enterprise_value'])} USD millions" if item["status"] == "CURRENT" else "awaiting inputs: " + item["reason"]))
-            cross = comparison.get("implied_year_five_ev_ebit")
+            cross = comparison.get("implied_year_five_ev_ebit", comparison.get("implied_final_year_ev_ebit"))
             if cross:
-                lines.append("Perpetual implied year-five EV/EBIT: " + (cross["value"]+"×" if cross["value"] else cross["reason"]))
+                lines.append(f"Perpetual implied year-{'five' if len(years)==5 else 'ten'} EV/EBIT: " + (cross["value"]+"×" if cross["value"] else cross["reason"]))
             if comparison["ev_difference_exit_minus_perpetual"] is not None:
                 lines.append("Method EV difference (exit minus perpetual): " + money(comparison["ev_difference_exit_minus_perpetual"]) + " USD millions; not market upside/downside")
         ev = Decimal(b["enterprise_value"])

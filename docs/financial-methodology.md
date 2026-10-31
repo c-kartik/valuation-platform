@@ -1316,3 +1316,12 @@ an automatic substitution of Reported ETR or an estimate manufactured from
 methodology-blocked historical reconciliation rows. Historical operating tax
 and NOPAT may supplement analysis when strict direct linkage resolves, but are
 not required to run the forecast or DCF.
+
+## Explicit forecast horizon
+
+The scoped [five-/ten-year extension](ten-year-horizon.md) discounts all supplied
+annual FCFF periods. With N years, perpetual growth uses independent year N+1
+FCFF, exit multiples use year-N EBIT, and terminal value discounts from year N.
+The extra years have no automatic forecast defaults; a separate versioned
+preload policy remains to be agreed. Existing five-year financial equations and
+certified reverse guarantees are retained.

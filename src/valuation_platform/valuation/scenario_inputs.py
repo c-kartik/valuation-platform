@@ -103,9 +103,9 @@ def read_scenario_set(text: str) -> ScenarioSet:
         case = None
         try:
             case = read_case(json.dumps(entry.get("case")))
-            if json.loads(case.submitted_json)["schema_version"].endswith("v3") and doc.get("schema_version") != METHOD_SCHEMA:
+            if json.loads(case.submitted_json)["schema_version"].endswith(("v3", "v4")) and doc.get("schema_version") != METHOD_SCHEMA:
                 errors.append(f"{path}.case.schema_version: method cases require investor-scenario-set-v3")
-            if investor and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2", "investor-case-v3"):
+            if investor and json.loads(case.submitted_json)["schema_version"] not in ("investor-case-v1", "investor-case-v2", "investor-case-v3", "investor-case-v4"):
                 errors.append(f"{path}.case.schema_version: investor scenario sets require investor-case-v1/v2")
         except CaseInputError as exc:
             errors.extend(f"{path}.case.{error.removeprefix('case.')}" for error in exc.errors)

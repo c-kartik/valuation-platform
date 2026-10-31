@@ -191,6 +191,8 @@ def _read_reverse(text):
             errors.append(f"reverse.growth_bounds.{field}: annual growth must be >= -1")
     if lo is not None and hi is not None and lo >= hi:
         errors.append("reverse.growth_bounds: lower must be strictly below upper")
+    if case and len(case.assumptions.forecast_years) != 5:
+        errors.append("reverse.source.case.forecast_years: certified reverse DCF supports five years only")
     if errors:
         raise ReverseInputError(errors)
     return ReverseRequest(text, name, case, label, analytical, cutoff, metric, amount, lo, hi)

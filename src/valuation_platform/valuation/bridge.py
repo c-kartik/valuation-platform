@@ -268,11 +268,11 @@ def _validate_declarations(inputs: BridgeInputs) -> None:
 
 def _validate_stage_b(stage_b: EnterpriseValueResult | ExitEnterpriseValueResult) -> None:
     if type(stage_b) is ExitEnterpriseValueResult:
-        if stage_b.convention_version != EXIT_CONVENTION or stage_b != value_terminal(stage_b.stage_a, stage_b.terminal_assumptions):
+        if stage_b.convention_version not in (EXIT_CONVENTION, "fiscal-end-terminal-ev-ebit-v2") or stage_b != value_terminal(stage_b.stage_a, stage_b.terminal_assumptions):
             raise BridgeValidationError("Exit Stage B annuals/operands/totals disagree with recomputation")
         return
     if (type(stage_b) is not EnterpriseValueResult or type(stage_b.years) is not tuple
-            or len(stage_b.years) != 5 or type(stage_b.terminal) is not ForecastYearResult):
+            or len(stage_b.years) != len(stage_b.stage_a.assumptions.forecast_years) or type(stage_b.terminal) is not ForecastYearResult):
         raise BridgeValidationError("Complete immutable Stage B result required")
     for year in (*stage_b.years, stage_b.terminal):
         cls = ForecastYearResult if year is stage_b.terminal else DiscountedYearResult

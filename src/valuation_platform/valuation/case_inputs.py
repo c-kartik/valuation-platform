@@ -10,7 +10,7 @@ import re
 from valuation_platform.analyst.historical_inputs import ManualIdentity
 from valuation_platform.analyst.nwc import Period
 from .assumptions import ForecastYearAssumptions, OperatingAssumptions, ValuationAssumptions
-from .terminal_methods import ExitMultipleMethod, PerpetualGrowthMethod, value_terminal, implied_multiple, EXIT_CONVENTION
+from .terminal_methods import ExitMultipleMethod, PerpetualGrowthMethod, value_terminal, implied_multiple, EXIT_CONVENTION, EXTENDED_EXIT_CONVENTION
 from .consumer import ANCHORS, IDENTITY, load_meta_revenue_anchor, load_revenue_anchor
 from .discounting import (
     DISCOUNTING_CONVENTION_VERSION, TerminalAssumptions,
@@ -18,7 +18,7 @@ from .discounting import (
 )
 from .forecast import (
     CONVENTION_VERSION, SHARED_CONVENTION_VERSION, SUPPORTED_CONVENTIONS,
-    RevenueAnchor, forecast_five_years,
+    RevenueAnchor, forecast_five_years, forecast_periods,
 )
 from .bridge import (
     BridgeComponent, BridgeObservation, PopulationCoverage, ValuationShares,
@@ -29,7 +29,8 @@ from .bridge import (
 
 METHOD_CASE_SCHEMA = "analyst-case-v3"
 METHOD_INVESTOR_SCHEMA = "investor-case-v3"
-METHOD_SCHEMAS = (METHOD_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA)
+HORIZON_SCHEMAS = ("analyst-case-v4", "investor-case-v4")
+METHOD_SCHEMAS = (METHOD_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA, *HORIZON_SCHEMAS)
 CASE_SCHEMA = "analyst-case-v1"
 RESULT_SCHEMA = "analyst-case-enterprise-value-v1"
 EQUITY_CASE_SCHEMA = "analyst-case-v2"
@@ -274,10 +275,16 @@ def read_case(text: str) -> AnalystCase:
             return None
 
     method_case = type(doc) is dict and doc.get("schema_version") in METHOD_SCHEMAS
-    investor = type(doc) is dict and doc.get("schema_version") in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA)
+    investor = type(doc) is dict and doc.get("schema_version") in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA, "investor-case-v4")
     equity = type(doc) is dict and doc.get("schema_version") in (EQUITY_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA)
     equity = equity or (method_case and doc.get("calculation_scope") == EQUITY_SCOPE)
+    extended = method_case and doc.get("schema_version") in HORIZON_SCHEMAS
+    horizon = 10 if extended else 5
     extra = ("calculation_scope", "bridge") if equity else (("calculation_scope",) if method_case else ())
+    if extended:
+        extra += ("forecast_horizon",)
+        if type(doc.get("forecast_horizon")) is not int or doc.get("forecast_horizon") != 10:
+            errors.append("forecast_horizon: v4 requires the explicit integer 10")
     terminal_keys = ("terminal_valuation", "comparison_terminal_valuation") if method_case else ("terminal_growth", "terminal")
     metadata = ("preparation",) if investor else ("analyst", "scope")
     doc = obj(doc, ("schema_version", "case_name", "input_basis", *metadata,
@@ -325,7 +332,7 @@ def read_case(text: str) -> AnalystCase:
     if conventions.get("forecast") not in SUPPORTED_CONVENTIONS:
         errors.append(f"conventions.forecast: choose {' or '.join(SUPPORTED_CONVENTIONS)}")
     exit_case = method_case and type(doc.get("terminal_valuation")) is dict and doc["terminal_valuation"].get("method") == "exit_multiple"
-    expected_discounting = EXIT_CONVENTION if exit_case else DISCOUNTING_CONVENTION_VERSION
+    expected_discounting = (EXTENDED_EXIT_CONVENTION if extended else EXIT_CONVENTION) if exit_case else DISCOUNTING_CONVENTION_VERSION
     if conventions.get("discounting") != expected_discounting:
         errors.append(f"conventions.discounting: supported convention is {expected_discounting}")
     anchor = obj(doc.get("anchor"), ("kind", *IDENTITY), "anchor")
@@ -350,8 +357,8 @@ def read_case(text: str) -> AnalystCase:
                 errors.append(f"bridge.convention_version: {kind} requires {SHARED_BRIDGE_CONVENTION}; actual selections remain unapproved")
     years = doc.get("forecast_years")
     annuals = []
-    if type(years) is not list or len(years) != 5:
-        errors.append("forecast_years: required array of five individually supplied years, ordered 1–5")
+    if type(years) is not list or len(years) != horizon:
+        errors.append(f"forecast_years: required array of {horizon} individually supplied years, ordered 1–{horizon}")
     else:
         for i, raw in enumerate(years):
             path = f"forecast_years[{i}]"
@@ -399,15 +406,15 @@ def read_case(text: str) -> AnalystCase:
             except (ValueError, TypeError) as exc:
                 location = "terminal." + exc.field if getattr(exc, "field", None) else "terminal"
                 errors.append(f"{location}: {exc}")
-    if exit_case and len(annuals) == 5 and (annuals[-1].operating_margin <= 0 or any(y.revenue_growth == -1 for y in annuals)):
-        errors.append("forecast_years[4].operating_margin: exit multiple unsupported: year-five EBIT must be strictly positive")
+    if exit_case and len(annuals) == horizon and (annuals[-1].operating_margin <= 0 or any(y.revenue_growth == -1 for y in annuals)):
+        errors.append(f"forecast_years[{horizon-1}].operating_margin: exit multiple unsupported: year-{horizon} EBIT must be strictly positive")
     bridge = _read_bridge(doc.get("bridge"), anchor, doc.get("input_basis"), errors) if equity else None
     if errors:
         raise CaseInputError(errors)
     try:
         assumption_type = OperatingAssumptions if exit_case else ValuationAssumptions
         assumptions = assumption_type(
-            "1", anchor["cik"], anchor["accession"], date.fromisoformat(anchor["annual_end"]),
+            "2" if extended else "1", anchor["cik"], anchor["accession"], date.fromisoformat(anchor["annual_end"]),
             tuple(annuals), wacc, *((growth,) if not exit_case else ()),
         )
     except (ValueError, TypeError) as exc:
@@ -464,18 +471,18 @@ def _prepare_case_runner(case: AnalystCase, repository_root: Path):
 
 def _run_case(case, anchor, doc):
     """Shared financial execution; anchor supplied only by the validated closure."""
-    stage_a = forecast_five_years(anchor, case.assumptions, convention_version=doc["conventions"]["forecast"])
+    stage_a = (forecast_five_years if len(case.assumptions.forecast_years) == 5 else forecast_periods)(anchor, case.assumptions, convention_version=doc["conventions"]["forecast"])
     method_case = doc["schema_version"] in METHOD_SCHEMAS
     stage_b = value_terminal(stage_a, case.terminal) if type(case.terminal) is ExitMultipleMethod else discount_to_enterprise_value(stage_a, case.terminal,
                                           convention_version=doc["conventions"]["discounting"])
     result = {
-        "schema_version": INVESTOR_RESULT_SCHEMA if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA) else RESULT_SCHEMA,
+        "schema_version": INVESTOR_RESULT_SCHEMA if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA, "investor-case-v4") else RESULT_SCHEMA,
         "case_name": doc["case_name"], "input_basis": doc["input_basis"],
         "submitted_inputs": doc,
         "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
         "limitations": [*doc["limitations"],
                         ("Anonymous investor preparation; no verified identity or supplied investment rationale. Optional personal notes are not evidence or approval. Preparation timestamp is not a valuation date, information cutoff or evidence review. Forecast inputs are user-entered and not independently reviewed."
-                         if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA) else
+                         if doc["schema_version"] in (INVESTOR_CASE_SCHEMA, INVESTOR_EQUITY_CASE_SCHEMA, METHOD_INVESTOR_SCHEMA, "investor-case-v4") else
                          "Analyst identity, rationale and scope are submitted declarations, not authenticated approval."),
                         ("No economic consistency, evidence completeness or actual META execution approval is inferred."
                          if case.anchor_kind in ("meta-fy2025", "synthetic-fixture-v1") else
@@ -490,14 +497,15 @@ def _run_case(case, anchor, doc):
         result["stage_c"] = stage_c
         result["limitations"][-1:] = stage_c["limitations"]
     if method_case:
-        result["schema_version"] = "investor-case-result-v3" if "preparation" in doc else "analyst-case-result-v3"
+        version = "v4" if doc["schema_version"] in HORIZON_SCHEMAS else "v3"
+        result["schema_version"] = ("investor-case-result-" if "preparation" in doc else "analyst-case-result-") + version
         selected = doc["terminal_valuation"]["method"]
         result["stage_b"]["terminal_method"] = selected
         comparison = {"selected_method": selected, "submitted_inputs": doc,
                       "results": {selected: {"status": "CURRENT", "stage_b": result["stage_b"]}},
                       "ev_difference_exit_minus_perpetual": None}
         if selected == "perpetual_growth":
-            comparison["implied_year_five_ev_ebit"] = implied_multiple(stage_b)
+            comparison["implied_year_five_ev_ebit" if len(stage_a.years) == 5 else "implied_final_year_ev_ebit"] = implied_multiple(stage_b)
         opposite = "perpetual_growth" if selected == "exit_multiple" else "exit_multiple"
         try:
             raw = doc["comparison_terminal_valuation"]
@@ -509,7 +517,7 @@ def _run_case(case, anchor, doc):
             other_dict["terminal_method"] = opposite
             comparison["results"][opposite] = {"status": "CURRENT", "stage_b": other_dict}
             if opposite == "perpetual_growth":
-                comparison["implied_year_five_ev_ebit"] = implied_multiple(other)
+                comparison["implied_year_five_ev_ebit" if len(stage_a.years) == 5 else "implied_final_year_ev_ebit"] = implied_multiple(other)
             with localcontext(Context(prec=50, rounding=ROUND_HALF_EVEN)):
                 comparison["ev_difference_exit_minus_perpetual"] = str(
                     Decimal(comparison["results"]["exit_multiple"]["stage_b"]["enterprise_value"]) -

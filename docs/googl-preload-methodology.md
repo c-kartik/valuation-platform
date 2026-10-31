@@ -108,3 +108,12 @@ derived values are read-only. No JS DCF is introduced.
 See [worked model and usage](googl-preload-worked-model.md) and
 [implementation/acceptance](googl-preload-acceptance.md) for actual sources,
 commands, results, checks and remaining dependencies.
+
+## Ten-year consumer boundary
+
+The [extended horizon](ten-year-horizon.md) can consume these same five proposed
+annual years plus explicit manual years 6–10. This policy supplies no estimates
+for the additional years, and its diagnostic scenario offsets do not extend
+automatically beyond year five. Profile adoption preserves manually supplied
+additional years. Independent terminal ratios remain proposed and require
+review for their use after a longer horizon. No source/history approval changes.

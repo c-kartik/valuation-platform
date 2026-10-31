@@ -17,7 +17,7 @@ from .assumptions import (
 )
 from .forecast import (
     CONVENTION_VERSION, SUPPORTED_CONVENTIONS, ForecastResult, ForecastValidationError, ForecastYearResult,
-    RevenueAnchor, _operating_year, forecast_five_years, forecast_to_dict,
+    RevenueAnchor, _operating_year, forecast_periods, forecast_to_dict,
 )
 
 
@@ -91,7 +91,7 @@ def _validate_stage_a(stage_a: ForecastResult) -> None:
     """Narrow handoff check: frozen dataclasses have public unchecked constructors."""
     if (type(stage_a) is not ForecastResult or type(stage_a.anchor) is not RevenueAnchor
             or type(stage_a.assumptions) not in (ValuationAssumptions, OperatingAssumptions)
-            or type(stage_a.years) is not tuple or len(stage_a.years) != 5):
+            or type(stage_a.years) is not tuple or len(stage_a.years) != len(stage_a.assumptions.forecast_years)):
         raise DiscountingValidationError("Complete immutable Stage A result required")
     # Revalidate nested models too: a frozen shell alone does not validate data.
     stage_a.anchor.period.__post_init__()
@@ -109,7 +109,7 @@ def _validate_stage_a(stage_a: ForecastResult) -> None:
                 value = getattr(year, field.name)
                 if not isinstance(value, Decimal) or not value.is_finite():
                     raise DiscountingValidationError("Finite Decimal Stage A components required")
-    expected = forecast_five_years(stage_a.anchor, stage_a.assumptions,
+    expected = forecast_periods(stage_a.anchor, stage_a.assumptions,
                                   convention_version=stage_a.convention_version)
     if stage_a != expected:
         raise DiscountingValidationError("Stage A components/order/labels disagree with supplied assumptions")
@@ -131,7 +131,7 @@ def discount_to_enterprise_value(
     *,
     convention_version: str = DISCOUNTING_CONVENTION_VERSION,
 ) -> EnterpriseValueResult:
-    """Discount years 1–5 and explicit terminal FCFF; preserve negative results.
+    """Discount all explicit years and terminal FCFF; preserve negative results.
 
     Only integer end-year exponents are supported. Structural checks/recomputation
     do not authenticate historical evidence or approve actual forecast inputs.
@@ -149,7 +149,7 @@ def discount_to_enterprise_value(
             base = Decimal(1) + wacc
             years = _discount_years(stage_a)
             terminal_year = _operating_year(
-                6, "Terminal year", stage_a.years[-1].revenue * (Decimal(1) + growth),
+                len(stage_a.years) + 1, "Terminal year", stage_a.years[-1].revenue * (Decimal(1) + growth),
                 operating_margin=terminal.operating_margin,
                 operating_tax_rate=terminal.operating_tax_rate,
                 d_and_a_ratio=terminal.d_and_a_percent_revenue,
@@ -157,7 +157,7 @@ def discount_to_enterprise_value(
                 working_capital_cash_ratio=terminal.working_capital_cash_requirement_percent_revenue,
             )
             terminal_value = terminal_year.fcff / (wacc - growth)
-            pv_terminal = terminal_value / base ** 5
+            pv_terminal = terminal_value / base ** len(stage_a.years)
             pv_explicit = sum((year.pv_fcff for year in years), Decimal(0))
             ev = pv_explicit + pv_terminal
             if not all(value.is_finite() for value in (
@@ -187,8 +187,8 @@ def enterprise_value_to_dict(result: EnterpriseValueResult) -> dict[str, object]
         "numeric_policy": {"precision": 50, "rounding": "ROUND_HALF_EVEN",
                            "unit": "USD", "intermediate_quantization": False},
         "timing": {"analytical_t0": result.analytical_date.isoformat(),
-                   "basis": "anchor_fiscal_end_analytical", "annual_discount_exponents": [1, 2, 3, 4, 5],
-                   "terminal_value_discount_exponent": 5,
+                   "basis": "anchor_fiscal_end_analytical", "annual_discount_exponents": list(range(1, len(result.years) + 1)),
+                   "terminal_value_discount_exponent": len(result.years),
                    "information_cutoff": "NOT_ESTABLISHED_BY_CALCULATOR", "notice": TIMING_NOTICE},
         "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
         "stage_a": forecast_to_dict(result.stage_a),

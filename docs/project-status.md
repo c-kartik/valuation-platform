@@ -2,6 +2,12 @@
 
 ## Current — compact local investor workspace
 
+The [five-/ten-year horizon extension](ten-year-horizon.md) adds an explicit
+manual ten-year option, shared case horizon and dotted chart marker after year
+five. Extra-year preloads remain unresolved and empty; old five-year behavior
+and the certified five-year reverse solver remain bounded. See the record for
+verification and runtime details.
+
 The [assumptions-editor cleanup](assumptions-editor-cleanup.md) adds precision-safe
 two-decimal percentage displays, snug fields, wrapped labels and native segmented
 method controls. Unchanged operands retain full precision; Reset restores the

@@ -31,7 +31,7 @@ export function annualSummary(draft:Draft,key:AnnualKey):string{
  if(state.missing)return `${5-state.missing}/5 entered`;
  return state.varies?'Varies by year':rateText(state.value);
 }
-export function pathsFor(key:AnnualKey){return Array.from({length:5},(_,i)=>annualPath(key,i));}
+export function pathsFor(key:AnnualKey,count=5){return Array.from({length:count},(_,i)=>annualPath(key,i));}
 export function inherited(label:string,c:CaseState,paths:string[]){return label!=='Base'&&paths.every(p=>!(c.overrides??[]).includes(p));}
 export function scenarioDescription(label:string,c:CaseState,base:CaseState):string{
  if(label==='Base')return 'Your central working case';
@@ -44,5 +44,5 @@ export function inputName(draft:Draft,path:string):string{
  const p=displayPath(draft,path),key=p.startsWith('quick.')?p.slice(6):/^forecast_years\[(\d+)\]\.(.+)$/.exec(p)?.[2];
  if(key&&key in shortLabels){const index=/^forecast_years\[(\d+)\]/.exec(p)?.[1];return (index===undefined?'':(draft.doc.forecast_years[Number(index)]?.fiscal_year_label??'Annual')+' ')+shortLabels[key as AnnualKey];}
  if(p.startsWith('terminal.'))return terminal.find(([key])=>p==='terminal.'+key)?.[1]??'Terminal input';
- return p==='exit_ev_ebit_multiple'?'Year-five EV/EBIT':p==='wacc'?'WACC':p==='terminal_growth'?'Terminal growth':p==='case_name'?'Case name':p==='preparation.notes'?'Personal notes':p.startsWith('bridge.')?'Cash, debt and shares':'Case input';
+ return p==='exit_ev_ebit_multiple'?`Year-${draft.doc.forecast_years.length} EV/EBIT`:p==='wacc'?'WACC':p==='terminal_growth'?'Terminal growth':p==='case_name'?'Case name':p==='preparation.notes'?'Personal notes':p.startsWith('bridge.')?'Cash, debt and shares':'Case input';
 }

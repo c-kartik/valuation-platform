@@ -74,7 +74,7 @@ export function buildEquityRequest(draft:Draft,e:EquityDraft):EquityDoc|(import(
  }
  const classId=`${e.shareBasis}: ${e.classes.trim()}`;
  const result={limitations:[...doc.limitations,'The optional equity bridge is a separate manual, unverified extension. EV-only template bridge exclusions describe historical/source scope; they do not select or approve these manual assets, claims or shares.'],schema_version:draft.terminalMethod?'investor-case-v3':'investor-case-v2',calculation_scope:'EQUITY_PER_SHARE' as const,bridge:{components,observations,coverage,shares:{company_cik:cik,shares:millionsToUnits(e.shares),observation_date:e.date,class_id:classId,equivalence_convention:e.equivalence,award_policy:'sbc_expensed_no_duplicate_service_charge_v1',award_policy_references:[`manual:awards:${e.awards}: ${awards[e.awards as keyof typeof awards]}`],source_references:['unverified:user-entry:shares'],decision_references:[`manual:shares:${e.shareBasis}`],precision:'INF',rationale:`User-selected ${e.shareBasis==='issued'?'issued':'basic-equivalent'} population: ${e.classes.trim()}. ${awards[e.awards as keyof typeof awards]}. SBC service cost remains in margins once; no automatic dilution or proceeds.`,unit:'shares',scale:1},input_basis:doc.input_basis,valuation_class_id:classId,unresolved_requirements:[],convention_version:'manual-equity-bridge-v1'}};
- if(doc.schema_version==='investor-case-v3')return {...doc,...result,schema_version:'investor-case-v3'};
+ if('terminal_valuation' in doc)return {...doc,...result,schema_version:doc.schema_version};
  return {...doc,...result,schema_version:'investor-case-v2'};
 }
 

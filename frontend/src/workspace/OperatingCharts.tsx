@@ -26,13 +26,14 @@ export function endpointGuide(anchorLabel:string,anchor:string|null,label:string
 }
 const palette=['var(--cw-bear, #657c91)','var(--cw-gold, #aa8534)','var(--cw-bull, #39766b)'];
 export function OperatingCharts({cases,entry,scenario=false,stale=false}:{cases:{label:string;result:Result}[];entry?:Entry;scenario?:boolean;stale?:boolean}){
- const id=useId().replace(/:/g,''),host=useRef<HTMLDivElement>(null),[width,setWidth]=useState(960),[selected,setSelected]=useState<string|null>(null);
+ const id=useId().replace(/:/g,''),host=useRef<HTMLDivElement>(null),[availableWidth,setWidth]=useState(960),[selected,setSelected]=useState<string|null>(null);
  useEffect(()=>{if(!host.current||typeof ResizeObserver==='undefined')return;const observer=new ResizeObserver(([e])=>setWidth(Math.max(820,Math.round(e.contentRect.width))));observer.observe(host.current);return()=>observer.disconnect();},[]);
  const ordered=scenario?['Bear','Base','Bull'].flatMap(label=>cases.filter(c=>c.label===label)):cases.slice(0,1);
  if(!ordered.length)return null;
  const rows=ordered.map(c=>({...c,points:chartRows(c.result,entry)})),base=rows.find(c=>c.label==='Base')??rows[0],points=base.points;
  const anchorLabel='FY'+base.result.submitted_inputs.anchor.annual_end.slice(0,4),anchor=points.findIndex(p=>p.label===anchorLabel),firstForecast=points.findIndex(p=>!p.historical),at=Math.max(0,selected?points.findIndex(p=>p.label===selected):points.length-1),point=points[at];
  const metrics=['revenue','fcff'] as const,axes=(scenario?metrics.map(metric=>financialAxis(rows.flatMap(r=>r.points.flatMap(p=>p[metric]===null?[]:[p[metric]!])))):[financialAxis(points.flatMap(p=>[p.revenue,...p.fcff===null?[]:[p.fcff]]))]);
+ const width=Math.max(availableWidth,points.length*95);
  const left=Math.max(68,...axes.flatMap(a=>a.ticks.map(v=>a.label(v).length*7+12))),step=(width-left-14)/points.length,x=(i:number)=>left+(i+.5)*step;
  const money=(v:string|null)=>v===null?'Unavailable':fixedUnit(v,'1000000000',2)+' USD bn';
  function choose(i:number,metric:string,focus=false){const n=Math.max(0,Math.min(points.length-1,i));setSelected(points[n].label);if(focus)document.getElementById(`${id}-${metric}-${n}`)?.focus();}
@@ -49,6 +50,7 @@ export function OperatingCharts({cases,entry,scenario=false,stale=false}:{cases:
    {a.ticks.map(v=><g key={v}><line x1={left} x2={width-14} y1={y(v)} y2={y(v)} stroke="#dce3e8"/><text x={left-10} y={y(v)+4} textAnchor="end">{a.label(v)}</text></g>)}
    <line x1={left} x2={width-14} y1={zero} y2={zero} stroke="#627184" strokeWidth="1.5"/>
    <line data-period-boundary x1={left+firstForecast*step} x2={left+firstForecast*step} y1={top} y2={bottom} stroke="#9da7b1" strokeDasharray="3 4"/>
+   {points.length-firstForecast===10&&<line data-five-year-boundary aria-label="End of first five forecast years" x1={left+(firstForecast+5)*step} x2={left+(firstForecast+5)*step} y1={top} y2={bottom} stroke="#9da7b1" strokeDasharray="2 5"/>}
    <line data-fixed-anchor={anchorLabel} x1={x(anchor)} x2={x(anchor)} y1={top} y2={bottom} stroke="#b18d38" strokeDasharray="2 6"/>
    {points.map((p,i)=><g key={p.label}>{p.historical?bar(p[metric==='fcff'?'fcff':'revenue'],x(i),step*.28,'var(--cw-history, #9ba8b2)','Reported',metric==='fcff'?'fcff':'revenue',i):scenario?rows.map((r,k)=>bar(r.points[i][metric as 'revenue'|'fcff'],x(i)+(k-1)*step*.145,step*.12,palette[k],r.label,metric,i)):<>{bar(p.revenue,x(i)-step*.11,step*.19,'var(--cw-revenue, #23435a)',base.label,'revenue',i)}{bar(p.fcff,x(i)+step*.11,step*.19,'var(--cw-gold, #aa8534)',base.label,'fcff',i)}</>}</g>)}
    {guideMetrics.map(m=>{const start=points[anchor]?.[m],end=point[m];if(start===null||start===undefined||end===null||at===anchor)return null;const offset=(i:number)=>metric==='combined'&&!points[i].historical?(m==='revenue'?-step*.11:step*.11):0;return <g key={m} pointerEvents="none"><line data-base-trend={m} data-start-year={anchorLabel} data-end-year={point.label} x1={x(anchor)+offset(anchor)} x2={x(at)+offset(at)} y1={y(start)} y2={y(end)} stroke={m==='revenue'?'#385d7b':'#397d75'} strokeWidth="1.8" strokeDasharray="5 4"/><circle cx={x(anchor)+offset(anchor)} cy={y(start)} r="4" fill="white" stroke="#aa8637"/><circle cx={x(at)+offset(at)} cy={y(end)} r="3.5" fill="white" stroke="#385d7b"/></g>;})}

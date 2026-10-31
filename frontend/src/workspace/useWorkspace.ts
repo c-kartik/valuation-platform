@@ -4,7 +4,7 @@ import type {PreloadProfile,PreloadState} from './preload';
 import {request,ApiError,Revisions,failureMessage} from '../api';
 import {ExecutionGate,useExecutionGate} from '../execution';
 import {executeCase,requireMatchingEquity} from '../caseExecution';
-import {makeDraft,entryErrors,InputErrors,fieldErrors,methodOf} from '../model';
+import {makeDraft,entryErrors,InputErrors,fieldErrors,methodOf,resizeHorizon} from '../model';
 import type {Catalog,CaseDoc,Draft,Errors,Result,ReviewResponse} from '../model';
 import {emptyEquity,equityErrors,equityDiagnostics} from '../equity';
 import type {EquityDraft} from '../equity';
@@ -83,6 +83,9 @@ export function useWorkspace(load:typeof request=request){
      ev:invalidate(c.ev),equity:invalidate(c.equity),reverse:staleReverse(c.reverse)}];
   })) as Session['cases'],scenario:invalidateSet(s.scenario)}));
  }
+ function setForecastHorizon(horizon:5|10){
+  stop();change(live.current.selected,s=>({...s,cases:Object.fromEntries(Object.entries(s.cases).map(([label,c])=>[label,{...c,draft:resizeHorizon(c.draft,horizon),revision:c.revision+1,ev:invalidate(c.ev),equity:invalidate(c.equity),grid:staleGrid(c.grid),reverse:staleReverse(c.reverse)}])) as Session['cases'],scenario:invalidateSet(s.scenario)}));
+ }
  function editDraft(draft:Draft,financial=true,explicitPaths:string[]=[],labelOverride?:Label){
   const kind=live.current.selected,s=live.current.cases[kind];if(!s)return;const label=labelOverride??s.selectedCase;
   if(financial){evRevision.current.edit();equityRevision.current.edit();setRevision.current.edit();gridRevision.current.edit();reverseRevision.current.edit();gate.cancel();}
@@ -125,7 +128,7 @@ export function useWorkspace(load:typeof request=request){
    if(!response||!current())return;
    remember(s.preload?.profile,'/api/v1/review/run',submitted!,response);
    // A dialog method switch is committed only after a checked, current success.
-   if(transition){setTerminalMethod(methodOf(transition.draft));applyEditorDraft(transition.draft,transition.paths,transition.resets);}
+   if(transition){if(transition.draft.doc.forecast_years.length!==live.current.cases[kind].cases[label].draft.doc.forecast_years.length)setForecastHorizon(transition.draft.doc.forecast_years.length as 5|10);setTerminalMethod(methodOf(transition.draft));applyEditorDraft(transition.draft,transition.paths,transition.resets);}
    const result='review' in response?{...response.result,investor_review:response.review}:response;
    changeCase(kind,label,c=>({...c,resultProfile:s.preload?.profile,resultOverrides:c.overrides??[],[scope]:{phase:'current',result,inputRevision:c.revision,errors:{},failure:''}}));
   }catch(error){if(!current())return;const errors=error instanceof InputErrors?error.fields:error instanceof ApiError&&error.code==='invalid_case'?(scope==='ev'?fieldErrors(error.details.map(percentageDiagnostic)):equityDiagnostics(error.details,s.bridge)):{};
@@ -138,9 +141,9 @@ export function useWorkspace(load:typeof request=request){
  async function updateValuation(draft:Draft,paths:string[],resets:string[]=[]){
   const errors=entryErrors(draft);if(Object.keys(errors).length)throw new InputErrors(errors);
   const kind=live.current.selected,active=live.current.cases[kind],label=active.selectedCase;
-  if(methodOf(draft)!==methodOf(active.cases[label].draft)){stop();await calculate('ev',{draft,paths,resets});}
+  if(methodOf(draft)!==methodOf(active.cases[label].draft)||draft.doc.forecast_years.length!==active.cases[label].draft.doc.forecast_years.length){stop();await calculate('ev',{draft,paths,resets});}
   else{applyEditorDraft(draft,paths,resets);await calculate('ev');}
-  const s=live.current.cases[kind];return live.current.selected===kind&&s?.selectedCase===label&&s?.cases[label]?.ev.phase==='current'&&methodOf(s.cases[label].draft)===methodOf(draft);
+  const s=live.current.cases[kind];return live.current.selected===kind&&s?.selectedCase===label&&s?.cases[label]?.ev.phase==='current'&&methodOf(s.cases[label].draft)===methodOf(draft)&&s.cases[label].draft.doc.forecast_years.length===draft.doc.forecast_years.length;
  }
  async function calculateScenarios(validationOnly=false){
   const kind=live.current.selected,s=live.current.cases[kind];if(!s||gate.snapshot())return;

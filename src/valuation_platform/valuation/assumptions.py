@@ -31,10 +31,10 @@ class ForecastYearAssumptions:
     def __post_init__(self) -> None:
         if (
             type(self.period_index) is not int
-            or self.period_index not in range(1, 6)
+            or self.period_index not in range(1, 11)
         ):
             raise AssumptionValidationError(
-                "Forecast period index must be an integer from 1 through 5"
+                "Forecast period index must be an integer from 1 through 10"
             )
         _require_nonempty_string(self.fiscal_year_label, "Fiscal-year label")
 
@@ -70,7 +70,7 @@ class ForecastYearAssumptions:
 
 @dataclass(frozen=True)
 class OperatingAssumptions:
-    """One company-bound set of five explicit forecast-year assumptions."""
+    """Company-bound explicit forecast: schema 1 has five years; schema 2 has ten."""
 
     schema_version: str
     company_cik: int
@@ -97,9 +97,10 @@ class OperatingAssumptions:
             raise AssumptionValidationError(
                 "Forecast years must be a tuple of forecast-year assumptions"
             )
-        if tuple(item.period_index for item in self.forecast_years) != (1, 2, 3, 4, 5):
+        horizon = 10 if self.schema_version == "2" and len(self.forecast_years) == 10 else 5
+        if tuple(item.period_index for item in self.forecast_years) != tuple(range(1, horizon + 1)):
             raise AssumptionValidationError(
-                "Forecast years must use ordered period indices 1 through 5"
+                "Forecast years must use ordered indices for schema 1 (five years) or schema 2 (ten years)"
             )
         labels = tuple(item.fiscal_year_label for item in self.forecast_years)
         if len(set(labels)) != len(labels):

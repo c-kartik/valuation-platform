@@ -125,7 +125,7 @@ class ForecastYearAssumptionTests(unittest.TestCase):
             )
 
     def test_period_index_and_label_validation(self) -> None:
-        for index in (0, 6, True):
+        for index in (0, 11, True):
             with self.assertRaises(AssumptionValidationError):
                 forecast_year(index)  # type: ignore[arg-type]
         self.assertEqual(forecast_year(1).period_index, 1)

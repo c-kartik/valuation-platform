@@ -16,7 +16,7 @@ export function generatedRates(profile:PreloadProfile,label:string){
  return Object.fromEntries(Object.entries(values).map(([path,value])=>[path,profile.economic.fields[path]?.status==='STALE'?'':path==='exit_ev_ebit_multiple'?value??'':fractionToPercentage(value)]));
 }
 export function generatedDraft(draft:Draft,profile:PreloadProfile,label:string):Draft{
- const next=structuredClone(draft);next.rates=generatedRates(profile,label);next.replacements={};
+ const next=structuredClone(draft);next.rates={...draft.rates,...generatedRates(profile,label)};next.replacements={};
  next.doc.case_name=`${profile.economic.issuer.ticker} starting estimate · ${label}`;
  next.doc.preparation.notes=`Starting-estimate provenance: proposed ${profile.economic.policy.version}; profile ${profile.economic_hash}; information reviewed ${profile.economic.dates.information_review}; fiscal-end ${profile.economic.dates.model_origin} using later information. Explicit configuration is AI-assisted analyst judgment, not user-supplied approved forecasts.`;
  next.doc.limitations=next.doc.limitations.filter(s=>!s.startsWith('Fiscal-end analytical')&&!s.startsWith('Revenue-only retained'));
@@ -24,7 +24,8 @@ export function generatedDraft(draft:Draft,profile:PreloadProfile,label:string):
  return next;
 }
 export function inheritedRate(profile:PreloadProfile|undefined,label:string,path:string,baseValue:string){
- if(!profile||!baseValue.trim()||label==='Base')return baseValue;
+ if(!profile||!baseValue?.trim()||label==='Base')return baseValue??'';
+ if(/^forecast_years\[[5-9]\]/.test(path))return baseValue; // No approved extended-year diagnostic offsets.
  const key=path.startsWith('forecast_years')&&path.endsWith('.revenue_growth')?'growth':path.startsWith('forecast_years')&&path.endsWith('.operating_margin')?'margin':path==='wacc'?'wacc':null;
  const offset=key?profile.economic.configuration[`${label.toLowerCase()}_${key}_offset`]:null;
  if(typeof offset!=='string')return baseValue;
