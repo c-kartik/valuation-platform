@@ -1,5 +1,15 @@
 # GOOGL — company data preparation
 
+## Five-year display projection — October 31, 2026
+
+The [chart/history update](../chart-history-and-current-year-estimate.md) expands
+the read-only reported revenue window from three to five consecutive compatible
+annuals, FY2021–FY2025, reusing the same accepted facts, identities, source URLs
+and occurrence checks. Missing/incompatible periods stop the projection. No
+facts, approvals, frozen schemas, forecast operands or sufficiency statuses
+change. Historical FCFF remains null pending a separately defined and reconciled
+cash-flow derivation; this projection is not financial acceptance.
+
 ## Current FY2021–FY2025 completion under explicit G1–G8 approval
 
 The [authoritative package](GOOGL-analyst-input-package.md) /

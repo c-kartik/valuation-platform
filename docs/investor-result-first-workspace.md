@@ -1,5 +1,10 @@
 # Result-first investor workspace — local implementation and acceptance
 
+Subsequent [chart/history extension](chart-history-and-current-year-estimate.md):
+five reported years, responsive plots without horizontal panning, an 80KiB catalog
+ceiling and a submitted FY2026E summary. Earlier three-year/64KiB statements below
+record this milestone's original boundary. Historical FCFF remains unresolved.
+
 Historical record: the [compact workspace](investor-compact-workspace.md) now
 supersedes this page composition, visibility-triggered navigation and confirmed
 cell-application interaction. The execution/history foundation below is retained;

@@ -6,7 +6,8 @@ from urllib.parse import urlsplit
 
 from .budget import encode_bounded
 
-CATALOG_MAX_BYTES = 64 * 1024
+# Five source-bound annual observations per issuer; still a bounded fixed catalog.
+CATALOG_MAX_BYTES = 80 * 1024
 TEMPLATE_NAMES = ('meta-fy2025', 'googl-fy2025', 'aapl-fy2025')
 
 

@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 from valuation_platform.review.history import historical_references, historical_window
 from valuation_platform.valuation.consumer import ANCHORS, load_revenue_anchor
-from valuation_platform.api.catalog import build_catalog
+from valuation_platform.api.catalog import CATALOG_MAX_BYTES, build_catalog
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -48,17 +48,17 @@ class HistoricalReferenceTests(unittest.TestCase):
                 d = deepcopy(original); edit(d); path.write_text(json.dumps(d))
                 refs = historical_references(root, kind)
                 self.assertIsNone(refs[0]['value']); self.assertTrue(refs[1]['value'])
-        raw = build_catalog(ROOT); self.assertLess(len(raw), 64 * 1024)
+        raw = build_catalog(ROOT); self.assertLess(len(raw), CATALOG_MAX_BYTES)
         for entry in json.loads(raw)['entries']:
             self.assertEqual(entry['historical_references'][0]['operands'][0]['amount'], entry['revenue'])
             self.assertIsNone(entry['template']['wacc'])
 
 
 class HistoricalWindowTests(unittest.TestCase):
-    def test_three_source_bound_periods_end_at_selected_anchor_without_fcff_invention(self):
+    def test_five_source_bound_periods_end_at_selected_anchor_without_fcff_invention(self):
         for kind in ANCHORS:
             window = historical_window(ROOT, kind)
-            self.assertEqual([h['fiscal_year_label'] for h in window], ['FY2023', 'FY2024', 'FY2025'])
+            self.assertEqual([h['fiscal_year_label'] for h in window], ['FY2021', 'FY2022', 'FY2023', 'FY2024', 'FY2025'])
             self.assertEqual(window[-1]['revenue']['period_end'], ANCHORS[kind]['identity']['annual_end'])
             for h in window:
                 self.assertIsNone(h['fcff'])
@@ -67,11 +67,11 @@ class HistoricalWindowTests(unittest.TestCase):
                 self.assertTrue(h['revenue']['concept'])
                 self.assertIn(h['revenue']['accession'].replace('-', ''), h['revenue']['sources'][0])
         self.assertEqual([h['revenue']['amount'] for h in historical_window(ROOT, 'googl-fy2025')],
-                         ['307394000000', '350018000000', '402836000000'])
+                         ['257637000000', '282836000000', '307394000000', '350018000000', '402836000000'])
         # Selection follows eligible period identities, not a globally fixed year list.
         with patch.dict(ANCHORS['googl-fy2025']['identity'], annual_end='2024-12-31'):
             self.assertEqual([h['fiscal_year_label'] for h in historical_window(ROOT, 'googl-fy2025')],
-                             ['FY2022', 'FY2023', 'FY2024'])
+                             ['FY2021', 'FY2022', 'FY2023', 'FY2024'])
 
     def test_incompatible_or_missing_prior_year_stops_window_without_substitution(self):
         name = ANCHORS['googl-fy2025']['package']

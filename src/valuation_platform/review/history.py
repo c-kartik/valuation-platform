@@ -45,7 +45,7 @@ def _annual_operands(root, kind):
 
 
 def historical_window(root, kind):
-    """At most three consecutive compatible reported years ending at the anchor.
+    """At most five consecutive compatible reported years ending at the anchor.
 
     Display projection only. FCFF is deliberately unavailable: accepted revenue
     does not establish a compatible historical adjusted cash-flow population.
@@ -71,7 +71,7 @@ def historical_window(root, kind):
         observations.append({"fiscal_year_label": "FY" + revenue["period_end"][:4],
                              "revenue": projection, "fcff": None})
         end = str(date.fromisoformat(revenue["period_start"]) - timedelta(days=1))
-        if len(observations) == 3:
+        if len(observations) == 5:
             break
     return list(reversed(observations))
 

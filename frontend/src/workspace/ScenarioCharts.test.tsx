@@ -1,5 +1,5 @@
-import {it,expect} from 'vitest';
-import {render,screen,fireEvent,within} from '@testing-library/react';
+import {it,expect,vi} from 'vitest';
+import {render,screen,fireEvent,within,act} from '@testing-library/react';
 import Decimal from 'decimal.js';
 import {ScenarioCharts} from './ScenarioCharts';
 import {ForecastChart} from './ForecastChart';
@@ -31,4 +31,22 @@ it('does not attach historical observations from a different source identity',()
 
 it('uses solid navy/gold DCF bars and consistent slate/gold/teal scenario legends and readouts',()=>{
  const dcf=render(<ForecastChart entry={history()} cases={[{label:'Base',result:result()}]}/>);expect(document.querySelector('pattern')).toBeNull();expect([...document.querySelectorAll('[data-metric="fcff"]')].every(n=>n.getAttribute('fill')==='var(--cw-gold, #aa8534)')).toBe(true);expect(document.querySelector('[data-scenario-bar="Base"][data-metric="revenue"]')?.getAttribute('fill')).toBe('var(--cw-revenue, #23435a)');expect(document.querySelector('[data-scenario-bar="Reported"]')?.getAttribute('fill')).toBe('var(--cw-history, #9ba8b2)');dcf.unmount();render(<ScenarioCharts entry={history()} cases={['Bear','Base','Bull'].map(label=>({label,result:result()}))}/>);for(const [label,color]of [['Bear','var(--cw-bear, #657c91)'],['Base','var(--cw-gold, #aa8534)'],['Bull','var(--cw-bull, #39766b)']]){expect([...document.querySelectorAll(`[data-scenario-bar="${label}"]`)].every(n=>n.getAttribute('fill')===color)).toBe(true);expect(document.querySelector(`.cv-operating-readout th i[style*="${color}"]`)).toBeTruthy();expect(document.querySelector(`.cv-chart-legend i[style*="${color}"]`)).toBeTruthy();}expect(document.querySelector('[fill^="url("]')).toBeNull();
+});
+
+it('fits fifteen years to a narrow container and preserves geometry when another section hides the plot',()=>{
+ let resize!:(entries:{contentRect:{width:number}}[])=>void;
+ vi.stubGlobal('ResizeObserver',class{constructor(callback:typeof resize){resize=callback;}observe(){}disconnect(){}});
+ try{
+  const entry=history(),first=entry.historical_window![0];
+  entry.historical_window!.unshift(...['2021','2022'].map(year=>({...first,fiscal_year_label:'FY'+year,revenue:{...first.revenue,period_start:year+'-01-01',period_end:year+'-12-31'}})));
+  const r=result();r.stage_b.stage_a.years=Array.from({length:10},(_,i)=>({...r.stage_b.stage_a.years[i%5],fiscal_year_label:'FY'+(2026+i)}));
+  render(<ForecastChart entry={entry} cases={[{label:'Base',result:r}]}/>);
+  act(()=>resize([{contentRect:{width:330}}]));
+  const svg=document.querySelector('svg')!;expect(svg.getAttribute('viewBox')).toBe('0 0 330 382');
+  expect(within(screen.getByRole('group',{name:'combined by fiscal year; arrow keys select a year'})).getAllByRole('button')).toHaveLength(15);
+  expect([...svg.querySelectorAll('[data-bar-year]')].every(n=>Number(n.getAttribute('width'))>0)).toBe(true);
+  expect(svg.querySelector('[data-five-year-boundary]')).not.toBeNull();
+  fireEvent.click(screen.getByRole('button',{name:'combined: select FY2035'}));expect(screen.getByText('FY2035 · forecast · USD billions')).toBeTruthy();
+  act(()=>resize([{contentRect:{width:0}}]));expect(svg.getAttribute('viewBox')).toBe('0 0 330 382');
+ }finally{vi.unstubAllGlobals();}
 });

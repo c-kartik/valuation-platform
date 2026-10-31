@@ -19,8 +19,10 @@ Terminal method changes remain local until Update, then use the existing shared
 method transition. Sensitivity review seeds only two rates in a local editor;
 Cancel leaves the active pair intact. Full Model identifies the selected case and
 submitted revision. Solid theme tokens drive chart bars, legends and readouts.
-Contained horizontal chart scrolling keeps metric headings/endpoint labels fixed;
-keyboard focus panning cannot accidentally replace selection via a mouse-enter event.
+The [chart/history update](chart-history-and-current-year-estimate.md) fits all
+years to the measured plot width without horizontal chart panning. Narrow-screen
+labels shorten/rotate; exact hover, tap and keyboard selection stays available.
+A submitted FY2026E summary is distinct from the reported FY2025 anchor.
 
 ## Existing result-first execution foundation
 
@@ -37,12 +39,12 @@ that session. Scenario/grid execution is view-opening- and revision-driven, with
 explicit retries after failure. Hidden dependencies remain stale. Default grids
 subdivide the existing diagnostic spans into five points, without clamping.
 
-Catalog history adds at most three consecutive compatible reported revenue years
+Catalog history adds at most five consecutive compatible reported revenue years
 ending at the existing anchor, using the original accepted-view/fact/occurrence
-checks. The fixed 64KiB catalog ceiling, all 24 resource pins and financial engine
-remain unchanged. Compact projection keeps one retained HTML filing link per
+checks. The catalog ceiling is now 80KiB for the additional source-bound years;
+resource pins and the financial engine remain unchanged. Compact projection keeps one retained HTML filing link per
 observation; complete evidence stays in the unchanged packages. FCFF is explicitly
-unavailable. Shared chart rendering uses one contained scrolling stage for aligned
+unavailable pending a compatible derivation. Shared chart rendering uses one fitted stage for aligned
 scenario axes, isolated Decimal display arithmetic and an independently marked
 fiscal anchor. Full Model is read-only; exact exports retain submitted revisions.
 
@@ -57,7 +59,7 @@ explicit acquisition writes new outside snapshots, never runtime network retriev
 
 `GET /api/v1/preloads/googl` serves bounded (192KiB) pinned preparation generated
 once after existing bundle verification, without valuation execution. The legacy
-catalog (64KiB), workers, execution budgets and original resource pins remain.
+catalog (now 80KiB), workers, calculation execution budgets and original resource pins remain.
 New source/config resources and preparation modules are explicitly allowlisted and
 pinned; raw source integrity is checked. The endpoint is fixed, not a file server.
 
@@ -417,7 +419,7 @@ financial-schema changes, persistence or production configuration is introduced.
 Input revisions and abort signals isolate obsolete replies and mark results stale.
 
 `api.catalog` projects only intended metadata and unchanged templates from verified
-bindings at startup, with a 64-KiB encoded ceiling; it exposes no package/audit body
+bindings at startup, originally with a 64-KiB encoded ceiling (now 80KiB for five-year history); it exposes no package/audit body
 or arbitrary file access. The private bundle adds that module and four pinned
 example resources (84 entries total); original resource pins and execution budgets
 remain unchanged. Current result JSON is unchanged. The separately authorized

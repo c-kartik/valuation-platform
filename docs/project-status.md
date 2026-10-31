@@ -2,6 +2,12 @@
 
 ## Current — compact local investor workspace
 
+The [chart/history update](chart-history-and-current-year-estimate.md) fits all
+years to the plot width, expands reported revenue to FY2021–FY2025 and displays
+FY2026E prominently while retaining the reported FY2025 valuation anchor, as
+selected by the user. Historical FCFF remains an explicit reconciliation gap;
+no CFO/Capex substitution or estimate is silently supplied.
+
 The [five-/ten-year horizon extension](ten-year-horizon.md) adds an explicit
 manual ten-year option, shared case horizon and dotted chart marker after year
 five. Extra-year preloads remain unresolved and empty; old five-year behavior
@@ -21,7 +27,7 @@ navy/gold/slate/teal palette. Initial Base and first-open scenarios/5×5 grids r
 the existing engine, execution gate, cache and stale-response protections.
 Sensitivity **Review this pair** seeds an unapplied editor draft; Update validates
 and calculates. Full Model explicitly identifies the selected case and revision.
-Mobile charts/table inputs pan inside the page; comparison labels stay visible.
+Earlier mobile charts panned; the linked chart/history update now fits plots to the viewport. Wide input tables still pan inside the page.
 
 Verification includes 234 frontend tests, focused checks after final presentation
 adjustments, 37 Python API/preload/preservation checks, both builds and actual

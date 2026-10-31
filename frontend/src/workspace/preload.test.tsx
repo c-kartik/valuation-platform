@@ -11,7 +11,7 @@ import {Workspace} from './Workspace';
 import {FullModel} from './FullModel';
 import fixture from '../../../examples/valuation/synthetic-base.json';
 // Finite software-only fixtures. No company estimates or financial outputs are authenticated here.
-const template={...structuredClone(fixture),anchor:{...fixture.anchor,kind:'googl-fy2025',cik:1652044},forecast_years:fixture.forecast_years.map(y=>({...y,...Object.fromEntries(annual.map(([k])=>[k,null]))})),terminal:Object.fromEntries(terminal.map(([k])=>[k,null])),wacc:null,terminal_growth:null} as unknown as CaseDoc;
+const template={...structuredClone(fixture),anchor:{...fixture.anchor,kind:'googl-fy2025',cik:1652044},forecast_years:fixture.forecast_years.map((y,i)=>({...y,fiscal_year_label:`FY${2026+i}`,...Object.fromEntries(annual.map(([k])=>[k,null]))})),terminal:Object.fromEntries(terminal.map(([k])=>[k,null])),wacc:null,terminal_growth:null} as unknown as CaseDoc;
 const meta={...structuredClone(template),anchor:{...template.anchor,kind:'meta-fy2025',cik:1326801}};
 const catalog={schema_version:'local-ev-catalog-v1',entries:[template,meta].map(t=>({kind:t.anchor.kind,company:t===template?'GOOGL':'META',identity:t.anchor,revenue:'402836000000',unit:'USD',precision:'-6',source_links:[],limitations:[],template:t})),synthetic_demo:fixture as CaseDoc,timing_notice:'Synthetic metadata',input_definitions:{}} as Catalog;
 function profile(value='0.1'):PreloadProfile{
@@ -53,7 +53,7 @@ it('keeps stale field values visible in provenance while blocking their automati
  const d=makeDraft(template);d.rates.wacc='12';expect(applyEstimates(d,p,'Base',['wacc']).rates.wacc).toBe('12');expect(inheritedRate(p,'Bear','wacc','10')).toBe('11');
 });
 it('shows a result-first summary, with provenance in the on-demand whole-model editor',async()=>{
- const load=transport();render(<Workspace load={load}/>);await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});expect(screen.queryByLabelText('WACC',{exact:true})).toBeNull();expect(load).toHaveBeenCalledTimes(3);fireEvent.click(screen.getByRole('button',{name:'Edit all assumptions'}));expect((screen.getByLabelText('WACC',{exact:true})as HTMLInputElement).value).toBe('10.00');expect(screen.getAllByText(/Starting estimate & source/).length).toBeGreaterThan(5);
+ const load=transport();render(<Workspace load={load}/>);await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});expect(screen.getByRole('region',{name:'Current-year model estimate'}).textContent).toContain('FY2026E');expect(screen.getByRole('region',{name:'Current-year model estimate'}).textContent).toContain('500.00 USD bn');expect(screen.getByRole('region',{name:'Current-year model estimate'}).textContent).toContain('reported anchor FY2025');expect(screen.queryByLabelText('WACC',{exact:true})).toBeNull();expect(load).toHaveBeenCalledTimes(3);fireEvent.click(screen.getByRole('button',{name:'Edit all assumptions'}));expect((screen.getByLabelText('WACC',{exact:true})as HTMLInputElement).value).toBe('10.00');expect(screen.getAllByText(/Starting estimate & source/).length).toBeGreaterThan(5);
 });
 it('uses returned operands and submitted rates for stale Full Model explanations and exports',async()=>{
  const create=vi.spyOn(URL,'createObjectURL').mockImplementation(()=> 'blob:full-model-test');
