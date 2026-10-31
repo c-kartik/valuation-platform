@@ -26,10 +26,12 @@ remain calculation-free; no estimate becomes financially approved by execution.
 
 The historical display window contains up to five consecutive source-bound annual
 revenue observations ending at the model anchor. Historical FCFF remains unavailable.
-Fixed-anchor endpoint CAGR uses actual positive endpoints and positive fiscal-year
-intervals. Earlier observations show signed USD/percentage changes relative to the
-fixed anchor; zero/negative endpoint comparisons use dollars. These are display
-comparisons, not regressions, new forecasts or historical FCFF derivations.
+The [chronological endpoint CAGR display](dcf-chart-layout.md) uses actual positive
+endpoints and positive fiscal-year intervals. When a historical year is selected,
+that earlier year becomes the CAGR denominator and the reported anchor is the
+ending year; forecasts use anchor to selected year. Zero/negative endpoints have
+no CAGR. This supersedes the earlier historical signed-change-only caption;
+it changes no valuation timing, origin, forecasts or historical FCFF derivation.
 Five-point diagnostic grids retain the existing spans and invalid-cell reasons;
 there are no confidence intervals, silent clamps or new economic conventions.
 Reviewing a sensitivity pair only fills a draft; explicit Update is required to

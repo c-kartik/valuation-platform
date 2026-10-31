@@ -13,6 +13,13 @@ economic convention or financial acceptance. Historical source/approval records
 below remain intact. Older assessment estimates/status snapshots do not override
 current accepted package views. No company review or acquisition resumes automatically.
 
+## Shared display guidance — chronological chart CAGR
+
+The [DCF chart refinement](../dcf-chart-layout.md) reorganizes existing chart values
+and makes historical CAGR run from the selected earlier year to the retained
+reported anchor. It changes no source selection, derived financial inputs, issuer
+records, approvals or sufficiency statuses. No historical FCFF gap is resolved.
+
 ## Shared display guidance — simplified optional equity editor
 
 The [equity editor cleanup](../equity-editor-cleanup.md) reorganizes manual Stage C

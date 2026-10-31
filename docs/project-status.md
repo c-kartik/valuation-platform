@@ -2,6 +2,11 @@
 
 ## Current — compact local investor workspace
 
+The [DCF chart refinement](dcf-chart-layout.md) adds a taller plot, tighter adjacent
+bars, a below-chart legend and floating CAGR labels above the endpoint lines.
+Hovering a historical year uses that year as the CAGR denominator and FY2025 as
+the end. The reported valuation origin, submitted forecasts and EV are unchanged.
+
 The [simplified equity editor](equity-editor-cleanup.md) puts cash, debt, other
 claims and shares first, with required dated/class/coverage/award declarations
 collapsed under Advanced adjustments & sources. Users can save an incomplete

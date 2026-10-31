@@ -2,6 +2,13 @@
 
 ## Current compact investor workspace
 
+The [DCF chart layout refinement](dcf-chart-layout.md) moves the DCF legend below
+its taller combined SVG and replaces the heading/caption block with SVG guide
+labels. Positive endpoints use chronological CAGR: historical selected year to
+reported anchor, or anchor to selected forecast year. Scenario guide descriptions
+share this endpoint arithmetic; scenario plot layout is retained. All values and
+valuation origins remain unchanged.
+
 The [equity editor](equity-editor-cleanup.md) reuses shared EquityFields in a
 simple display mode. Local drafts remain isolated until Save inputs or Calculate;
 Calculate validates the existing equity contract, applies bridge changes through
