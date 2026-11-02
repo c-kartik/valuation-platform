@@ -1,5 +1,27 @@
 # GOOGL — company data preparation
 
+## Current adjustment schedules — FY2021–FY2025
+
+[Source ledger and schedules](../historical-fcff-adjustment-schedules.md) verify
+all5 current/deferred tax provisions separately from net cash taxes and CFO
+deferred adjustments. FY2025 Note14 supplies exact FY2024 net cash taxes27,353m
+versus original27,400m rounded to100m; both points/receipts/precisions remain.
+This is an explicit more-precise comparative overlay, not a source-package edit.
+
+All5 accrued-liability note parents partition exactly. The FY2023 Note7 comparative
+identifies FY2022 tax payable1,632m inside unchanged37,866m. FY2021 tax808m sits
+outside the selected parent and is not removed twice. Regulatory amounts remain
+separate review items; mixed Other is not automatically operating-only. FY2025
+unsettled investment payables950m and accrued PP&E8,877m have distinct roles.
+No book change or capital disclosure is substituted for a source cash movement.
+
+Finance additions577/564m for2022/23 use explicit FY2024 Note4 comparatives;
+2024/25 additions313/1,606m use own annuals. These enable4 named cash-plus-finance
+subtotals, not complete reinvestment; FY2021 remains unselected. Early noncash
+impairment-inclusive captions, later depreciation, separate lease amortization
+and SBC expense/add-back distinctions remain intact. No new cash-tax allocation,
+DA completeness, verified operating FCFF, source approval or live valuation claim.
+
 ## Operating-profit FCFF test — FY2021–FY2025
 
 [New test and exact evidence](../historical-fcff-operating-test.md) use EBIT,

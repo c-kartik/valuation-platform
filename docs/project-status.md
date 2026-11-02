@@ -1,5 +1,35 @@
 # Project Status
 
+## Historical FCFF — company adjustment schedules completed within filing scope
+
+The user authorizes the source-supported tax, working-capital, noncash-cost/SBC
+and investment schedules for GOOGL/AAPL/META FY2021–25. The [new record](historical-fcff-adjustment-schedules.md)
+contains15 exact current/deferred provision controls,14 liability-note parent/
+child controls and9 named cash-plus-finance-addition subtotals. All15 original
+CFO source controls remain intact. More granular comparative disclosures resolve
+specific Apple/Alphabet balance details; GOOGL FY2024 cash-tax precision improves
+from original27,400m to explicitly reported27,353m with both sources retained.
+
+The Meta FY2025 total25,474m/current6,719m/deferred18,755m/cash7,578m split resolves
+why the earlier simple operating test is not a certified cash series. Apple
+later deferred provision is identified separately from mixed CFO Other. Apple
+FY2024/25 and Meta FY2025 specific tax-event exclusions are isolated accounting
+illustrations, not changes to actual cash taxes or approved forecast rates.
+
+Some cash-movement/Other allocations remain unsupported; Apple FY2021 lacks a
+selected detailed liability partition, and Apple's combined ROU additions cannot
+be split into operating/finance additions from the selected disclosures. GOOGL
+FY2021 finance additions remain unselected. The named9 investment subtotals are
+not complete generic reinvestment. No source-null becomes zero or a guessed
+allocation. No new fully reconciled operating FCFF series, chart/forecast/EV or
+approval activation is implied. Wider universe work remains paused.
+
+Validation:54 review/history tests pass, including9 new adjustment-schedule tests.
+The new source ledger/report/3 CSVs replay exactly; prior filing-only and operating
+method artifacts replay. Original source/accepted packages, previous numerical
+artifacts and live history code stay unchanged. No network retrieval or runtime
+catalog mutation is used by the schedule builder.
+
 ## Historical FCFF — operating-profit approach tested for all three companies
 
 The [EBIT-based method test](historical-fcff-operating-test.md) now covers all15

@@ -1,5 +1,25 @@
 # Architecture
 
+## Historical FCFF adjustment schedules — November 2
+
+`review/fcff_adjustments.py` supplies exact tax-provision, disclosed note-parent
+and named investment controls. `scripts/reconcile_historical_fcff_adjustments.py`
+reuses the retained SEC loader, primary/instance verifier, original CFO controls
+and caption-specific primary-cell verifier. It prepares separate tax, liability,
+noncash-cost/SBC and investment schedules for GOOGL/AAPL/META FY2021–25.
+The [report and source ledger](historical-fcff-adjustment-schedules.md) include
+15 tax controls, 14 liability-note partitions and 9 cash-plus-finance-addition
+subtotals. New comparative evidence never rewrites frozen/accepted source data.
+
+Explicit overlays: GOOGL FY2024 cash taxes from FY2025 Note14, GOOGL/AAPL FY2022
+liability detail from FY2023, and AAPL FY2024 distribution detail from FY2025.
+Source accession, target period and precision stay separate. Meta's Q3 2025
+discrete tax charge retains Q3 dates within the annual review. Accounting-only
+normalization illustrations do not change cash taxes or approved forecast rates.
+The outputs separate book classifications from cash movements, support-only
+capital/lease observations from investment totals and unknown allocations from
+reported zero. No live chart, forecast, approval or EV writes are introduced.
+
 ## EBIT-based historical FCFF test — November 2
 
 `review/operating_fcff.py` implements exact rational EBIT/NOPAT arithmetic for

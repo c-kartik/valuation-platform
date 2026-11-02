@@ -1,0 +1,16 @@
+ticker,fiscal_year,cash_ppe_usd,finance_additions_usd,cash_plus_finance_usd,finance_source,finance_source_fiscal_end,finance_principal_deducted,complete_operating_investment_verified
+GOOGL,FY2021,24640000000,,,,,False,False
+GOOGL,FY2022,31485000000,577000000,32062000000,https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm,2024-12-31,False,False
+GOOGL,FY2023,32251000000,564000000,32815000000,https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm,2024-12-31,False,False
+GOOGL,FY2024,52535000000,313000000,52848000000,https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm,2024-12-31,False,False
+GOOGL,FY2025,91447000000,1606000000,93053000000,https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm,2025-12-31,False,False
+AAPL,FY2021,11085000000,,,,,False,False
+AAPL,FY2022,10708000000,,,,,False,False
+AAPL,FY2023,10959000000,,,,,False,False
+AAPL,FY2024,9447000000,,,,,False,False
+AAPL,FY2025,12715000000,,,,,False,False
+META,FY2021,18567000000,160000000,18727000000,https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm,2021-12-31,False,False
+META,FY2022,31431000000,223000000,31654000000,https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm,2022-12-31,False,False
+META,FY2023,27266000000,588000000,27854000000,https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm,2023-12-31,False,False
+META,FY2024,37256000000,181000000,37437000000,https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm,2024-12-31,False,False
+META,FY2025,69691000000,613000000,70304000000,https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm,2025-12-31,False,False

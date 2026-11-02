@@ -1,5 +1,45 @@
 # Financial Methodology
 
+## Company-specific historical adjustment schedules — November 2
+
+The user authorizes building the source-supported adjustment schedules after
+reviewing professional practice. The [new schedules](historical-fcff-adjustment-schedules.md)
+resolve current/deferred tax provision for all15 years and retain net cash tax
+payments separately. Each provision equals its disclosed current plus deferred
+components exactly. A current-expense/cash difference is an unallocated timing/
+scope reconciliation difference, not an inferred cash WC adjustment. Reported
+CFO deferred tax and provision-note deferred tax remain separate when different.
+
+Meta FY2025 provision25,474m comprises current6,719m and deferred18,755m versus
+cash7,578m; CFO deferred18,738m is not the note's18,755m. Apple's later deferred
+provision components remain recoverable from tax notes despite no separate CFO
+row. Apple FY2025 current22,058m/deferred−1,339m/cash43,369m remain distinct.
+GOOGL FY2024 cash taxes27,353m from the later FY2025 disclosure are a named
+more-precise overlay to original rounded27,400m, not a silent source replacement.
+
+Apple's exact10,246m FY2024 State Aid charge and−486m FY2025 benefit and Meta's
+15,930m Q3 2025 discrete tax charge support separate accounting illustrations
+only. Removing an identified item is not a cash refund, complete recurring tax
+normalization or approved future rate. Meta's separately identified14,030m
+noncash valuation-allowance charge is not the closing15,895m allowance balance.
+
+Fourteen closing liability parents now partition exactly into disclosed rows;
+Apple FY2021 remains unsegregated. Taxes/capital creditors/investment settlement,
+named operating balances, legal review and mixed Other have explicit roles.
+Later comparative detail is source-supported, but book changes are not cash
+allocations. Apple FY2025 tax-payable book change−13,585m is not simply deducted
+from its broader Other-liability cash movement−11,076m. Meta accrued taxes are
+not relabelled entirely income tax. No parent/child or cash/tax double counting.
+
+Keep SBC expensed, noncash impairment and D&A scopes separate, and no extra lease
+amortization without non-overlap evidence. Nine disclosed cash-PP&E-plus-finance-
+addition subtotals follow the existing finance-as-asset-financing direction;
+principal and capital payables are not another deduction. Apple combined ROU
+additions are not allocated by stock mix; GOOGL FY2021 separate finance additions
+remain unselected. Complete operating cash tax/WC/investment/FCFF stays null where
+unsupported. Original approvals, forecast contracts and live valuation remain
+unchanged; earlier estimated pilot remains withdrawn.
+
 ## Operating-profit historical FCFF feasibility test — November 2
 
 The user requests a test of the standard professional EBIT/NOPAT approach for

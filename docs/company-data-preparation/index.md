@@ -1,5 +1,26 @@
 # Company data preparation register
 
+## Company adjustment schedules — current three-company milestone
+
+[Source-supported schedules](../historical-fcff-adjustment-schedules.md) now
+separate15 current/deferred tax reconciliations,14 disclosed closing-liability
+partitions and9 named cash-plus-financed-investment subtotals. Scope remains
+GOOGL/AAPL/META FY2021–25; wider universe work stays paused. The user authorizes
+this reconciliation work, not a change to frozen sources or live chart/valuation.
+
+Explicit comparative overlays retain source/target identity and original points:
+GOOGL FY2024 tax cash precision; GOOGL/AAPL FY2022 liability tax detail; AAPL
+FY2024 distribution detail. No generic issuer precedence or normalization policy
+is changed. Tax-event accounting illustrations are separated from historical
+cash and forecast assumptions. Meta's Q3 event dates remain Q3 dates.
+
+Cash versus provision, CFO versus note deferred tax, parent versus child,
+book versus cash, combined ROU versus finance additions and actual SBC add-back
+versus expense remain distinct. Source-supported classification is not complete
+operating FCFF certification. Unknown cash-tax/WC/investment allocations remain
+null, original acceptance/sufficiency statuses stay unchanged, and the withdrawn
+estimate pilot remains inactive. Per-issuer records below explain new findings.
+
 ## Operating-profit FCFF feasibility test — current three-company scope
 
 The [15-period operating test](../historical-fcff-operating-test.md) reuses the

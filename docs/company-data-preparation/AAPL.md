@@ -1,5 +1,27 @@
 # AAPL — company data preparation
 
+## Current adjustment schedules — FY2021–FY2025
+
+[Source ledger and schedules](../historical-fcff-adjustment-schedules.md) verify
+all5 tax-provision component sums and actual net cash taxes. FY2023–25 deferred
+provisions−3,024/−3,031/−1,339m come from exact federal/state/foreign tax-note
+components, not a guessed split of CFO Other. FY2025 current22,058m versus
+cash43,369m is a21,311m reconciliation difference, not a new WC deduction.
+
+The FY2023 Note5 comparative supplies FY2022 current taxes6,552m within the
+unchanged60,845m parent. FY2025 Note6 supplies FY2024 distribution7,679m,
+taxes26,601m and remaining Other44,024m within unchanged78,304m. Source accession
+and target dates stay distinct; original reviewed totals/acceptance are untouched.
+FY2021 still lacks a selected detailed current-liability partition. FY2025
+current-tax book change−13,585m does not apportion Other cash movement−11,076m.
+
+Exact FY2024 State Aid10,246m and FY2025−486m support accounting-only tax-event
+illustrations, not a changed cash-flow history or approved future tax rate. All5
+combined ROU additions remain unsplit; no finance stock-mix allocation or extra
+principal/creditor deduction. D&A remains its named source population, SBC is
+expensed once, and unknown complete operating cash-tax/WC/investment allocations
+remain explicit. No live chart, forecast, EV, source package or audit mutation.
+
 ## Operating-profit FCFF test — FY2021–FY2025
 
 [New test and exact evidence](../historical-fcff-operating-test.md) use EBIT,

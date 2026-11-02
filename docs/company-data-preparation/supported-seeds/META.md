@@ -1,5 +1,29 @@
 # META — supplemental supported-seed preparation note
 
+## Current adjustment schedules — FY2021–FY2025
+
+[Source ledger and schedules](../../historical-fcff-adjustment-schedules.md)
+verify all5 current/deferred provision controls, all5 accrued-liability note
+partitions and all5 named cash-plus-finance-addition investment subtotals. Tax
+note totals and CFO adjustments retain actual differences:2022−9m,2024−1m,
+2025−17m; no precision plug or inserted WC deduction. FY2025 provision25,474m =
+current6,719m + deferred18,755m, versus net cash taxes7,578m. The earlier6.63B
+simple operating test is not promoted to historical cash FCFF.
+
+The15,930m discrete OBBBA charge retains its actual Q3 July–September2025 dates
+and−7 precision within the annual review. Separately tagged noncash valuation-
+allowance charge14,030m is distinct from closing allowance15,895m. Removing the
+reported charge supports an isolated accounting illustration only; actual cash
+taxes, remaining legislation effects and approved future rates are unchanged.
+
+Accrued tax balances1,256/2,339/3,655/3,438/1,922m are broader taxes, not certified
+income taxes alone. Compensation, legal, accrued PP&E and mixed Other retain
+separate source roles. Cash/financed investment subtotals18,727/31,654/27,854/
+37,437/70,304m exclude a second principal or capital-creditor deduction; broader
+investment scope remains unresolved. SBC stays expensed and noncash facilities/
+data-center adjustments are counted once. Original parser PARTIALs, selected
+PP&E18,567m FY2021, source/acceptance/audit bytes and live forecast/EV persist.
+
 ## Operating-profit FCFF test — FY2021–FY2025
 
 [New test and exact evidence](../../historical-fcff-operating-test.md) use EBIT,
