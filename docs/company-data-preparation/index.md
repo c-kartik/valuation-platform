@@ -1,5 +1,10 @@
 # Company data preparation register
 
+Client recovery update (November 2): legacy preload-capability metadata is refreshed
+once per selected company, with an explicit reload and candidate-review path. This
+changes loading only; no issuer source mapping, prepared value, policy or approval
+changes. See [open-tab recovery](../registered-preloads.md#open-tab-recovery).
+
 ## Registered forward preloads — three companies only
 
 The [shared pipeline](../registered-preloads.md) now serves distinct GOOGL/META/AAPL

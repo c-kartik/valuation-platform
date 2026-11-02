@@ -125,3 +125,14 @@ tab verified both new profiles, fiscal anchors, calculated charts and Apple revi
 identity. [Meta preview](assets/meta-registered-preload.jpg) and
 [Apple preview](assets/apple-registered-preload.jpg). The local runtime uses the
 131-entry pinned private bundle; no cloud deployment or repository push.
+
+## Open-tab recovery
+
+An old in-memory catalog can omit a company's newly registered `preload_route`.
+The client rechecks that legacy metadata once per company; a server that still
+omits it cannot cause a retry loop. Explicit null still means manual preparation.
+**Reload starting assumptions** refreshes capabilities without rebuilding drafts.
+Untouched sessions populate and calculate; edited sessions expose a candidate for
+explicit adoption while preserving overrides. Errors remain visible. An old client
+loaded before a development hook change may require one full page restart; tab
+unsaved-work semantics remain unchanged. No forecast policy or economic hash changes.

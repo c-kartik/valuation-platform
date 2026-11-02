@@ -1,5 +1,27 @@
 # Project Status
 
+## Current fix — recover missing starting forecasts
+
+November 2, 2026: an already-open Meta tab retained the pre-registration catalog,
+so it never requested the available Meta profile and displayed 37 unset inputs.
+Legacy entries without preload capability metadata now trigger one bounded catalog
+recheck per company. Only server-advertised routes are used; explicit null remains
+manual. Empty forecasts also offer **Reload starting assumptions**. Catalog failures
+and an initial candidate requiring adoption are visible beside the chart. Refreshing
+metadata never recreates company sessions; manual overrides remain fixed.
+
+The affected development tab also retained an incompatible live-update hook state;
+it was restarted with the current client, then Meta was selected and calculated.
+[Browser proof](assets/meta-forecast-loading-recovered.jpg) shows its Revenue/FCFF
+forecast and conditional Base EV $944.60bn. This is a client loading/recovery fix;
+source observations, issuer policies, historical gaps and engine economics do not
+change. The preceding milestone's browser check used a fresh tab and did not cover
+this legacy-catalog path; three new regression tests cover discovery, bounded
+manual recovery and preservation/review of edits. All **277 frontend tests**
+and the production TypeScript/Vite build pass. The API and financial packages
+are unchanged; no source retrieval, financial recalibration or deployment.
+
+
 Validation for the registered-preload milestone: **432 affected tests passed**
 (31 preload, 60 historical/review, 67 API, 274 frontend), plus the production UI
 build and offline observation/verification replay. Independent financial checks

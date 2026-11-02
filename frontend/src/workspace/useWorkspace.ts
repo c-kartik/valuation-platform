@@ -230,6 +230,16 @@ export function useWorkspace(load:typeof request=request){
   const route=entry?.preload_route===undefined?(kind==='googl-fy2025'?'/api/v1/preloads/googl':null):entry.preload_route;
   return entry&&typeof route==='string'&&/^\/api\/v1\/preloads\/[a-z0-9-]+$/.test(route)?{entry,route}:null;
  }
+ // An already-open tab can predate a newly registered company's preload.
+ // Recheck legacy capability metadata once per selected company, without
+ // rebuilding sessions, guessing routes, or retrying an old server forever.
+ const discoveredCompanies=useRef(new Set<string>());
+ useEffect(()=>{
+  const entry=catalog?.entries.find(e=>e.kind===state.selected);
+  if(entry&&entry.preload_route===undefined&&!preloadEntry(state.selected)&&!discoveredCompanies.current.has(state.selected)){
+   discoveredCompanies.current.add(state.selected);setAttempt(n=>n+1);
+  }
+ },[state.selected,catalog]);
  useEffect(()=>{const kind=state.selected;if(preloadEntry(kind)&&!live.current.cases[kind]?.preload?.profile)void refreshPreload(true);return()=>{preloadSequence.current++;preloadFetch.current?.abort();};},[state.selected,catalog,load]);
  async function refreshPreload(initial=false){
   const kind=live.current.selected,s=live.current.cases[kind],target=preloadEntry(kind);if(!target||!s)return;

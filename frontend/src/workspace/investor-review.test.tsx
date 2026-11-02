@@ -12,7 +12,7 @@ import {InvestorResult} from './InvestorResult';
 import {ValuationBreakdown} from './ValuationBreakdown';
 import fixture from '../../../examples/valuation/synthetic-base.json';
 const demo=fixture as CaseDoc;
-const catalog:Catalog={schema_version:'fixture',entries:[{kind:demo.anchor.kind,company:'Fixture',identity:demo.anchor,revenue:'100',unit:'USD',precision:'INF',source_links:[],limitations:[],template:demo}],synthetic_demo:demo,timing_notice:'fixture',input_definitions:{}};
+const catalog:Catalog={schema_version:'fixture',entries:[{kind:demo.anchor.kind,company:'Fixture',identity:demo.anchor,revenue:'100',unit:'USD',precision:'INF',preload_route:null,source_links:[],limitations:[],template:demo}],synthetic_demo:demo,timing_notice:'fixture',input_definitions:{}};
 it('inherits Base changes, preserves overrides and independent terminal ratios, resets explicitly and stales results',async()=>{
  const load=vi.fn(async()=>structuredClone(catalog)) as unknown as typeof request;
  const h=renderHook(()=>useWorkspace(load));await waitFor(()=>expect(h.result.current.catalog).not.toBeNull());act(()=>h.result.current.select(demo.anchor.kind));

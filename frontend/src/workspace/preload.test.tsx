@@ -169,3 +169,55 @@ it('rejects a wrong-company or wrong-revenue profile and does not fetch an unadv
  expect(vi.mocked(load).mock.calls).toHaveLength(1);
  expect(h.result.current.company?.preload?.profile).toBeUndefined();
 });
+
+it('recovers a newly registered company from an old open-tab catalog without clearing another company’s edits',async()=>{
+ const latest=structuredClone(catalog);latest.entries[1].preload_route='/api/v1/preloads/meta';
+ const p=profile('0.11');p.economic.anchor=meta.anchor;p.economic.issuer.ticker='META';
+ let catalogs=0;
+ const load=vi.fn(async(path:string,body?:unknown)=>{
+  if(path==='/api/v1/catalog')return ++catalogs===1?catalog:latest;
+  if(path==='/api/v1/preloads/googl')return profile();
+  if(path==='/api/v1/preloads/meta')return p;
+  return response(body);
+ })as unknown as typeof request;
+ const h=await start(load),draft=structuredClone(h.result.current.session!.draft);draft.rates.wacc='13.25';act(()=>h.result.current.editDraft(draft,true,['wacc']));
+ act(()=>h.result.current.select('meta-fy2025'));
+ await waitFor(()=>expect(h.result.current.session?.ev.phase).toBe('current'));
+ expect(h.result.current.session!.draft.rates.wacc).toBe('11');expect(catalogs).toBe(2);
+ act(()=>h.result.current.select('googl-fy2025'));expect(h.result.current.session!.draft.rates.wacc).toBe('13.25');
+ expect(h.result.current.session!.overrides).toContain('wacc');
+});
+it('bounds old-catalog discovery and offers an explicit reload when the server later advertises preloads',async()=>{
+ let available=false,catalogs=0;const latest=structuredClone(catalog);latest.entries[1].preload_route='/api/v1/preloads/meta';
+ const p=profile('0.11');p.economic.anchor=meta.anchor;p.economic.issuer.ticker='META';
+ const load=vi.fn(async(path:string,body?:unknown)=>{
+  if(path==='/api/v1/catalog'){catalogs++;return available?latest:structuredClone(catalog);}
+  if(path==='/api/v1/preloads/googl')return profile();
+  if(path==='/api/v1/preloads/meta')return p;
+  return response(body);
+ })as unknown as typeof request;
+ render(<Workspace load={load}/>);await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});
+ fireEvent.change(screen.getByLabelText('Company'),{target:{value:'meta-fy2025'}});
+ await waitFor(()=>expect(catalogs).toBe(2));expect(screen.queryByRole('region',{name:'Interactive revenue and FCFF chart'})).toBeNull();
+ available=true;fireEvent.click(screen.getByRole('button',{name:'Reload starting assumptions'}));
+ await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});expect(catalogs).toBe(3);
+ expect(screen.getByRole('region',{name:'Valuation summary'}).textContent).toContain('$100.00bn');
+});
+it('shows a recovered first profile for review when the user has already edited the company',async()=>{
+ let available=false;const latest=structuredClone(catalog);latest.entries[1].preload_route='/api/v1/preloads/meta';
+ const p=profile('0.11');p.economic.anchor=meta.anchor;p.economic.issuer.ticker='META';
+ const load=vi.fn(async(path:string,body?:unknown)=>{
+  if(path==='/api/v1/catalog')return structuredClone(available?latest:catalog);
+  if(path==='/api/v1/preloads/googl')return profile();
+  if(path==='/api/v1/preloads/meta')return p;
+  return response(body);
+ })as unknown as typeof request;
+ const h=await start(load);act(()=>h.result.current.select('meta-fy2025'));
+ const draft=structuredClone(h.result.current.session!.draft);draft.rates.wacc='13.25';act(()=>h.result.current.editDraft(draft,true,['wacc']));
+ render(<Workspace load={load}/>);await screen.findByRole('button',{name:'Reload starting assumptions'});
+ available=true;fireEvent.click(screen.getByRole('button',{name:'Reload starting assumptions'}));
+ const adopt=await screen.findByRole('button',{name:'Adopt estimates; preserve overrides'});
+ expect(screen.getByRole('complementary',{name:'Active model summary'}).textContent).toContain('13.25%');
+ fireEvent.click(adopt);await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});
+ expect(screen.getByRole('complementary',{name:'Active model summary'}).textContent).toContain('13.25%');
+});
