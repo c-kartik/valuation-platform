@@ -144,10 +144,15 @@ class ProfileTests(unittest.TestCase):
   p=self.configured(commissioning_allowance='0');self.assertEqual(Decimal(p['economic']['fields']['forecast_years[4].d_and_a_percent_revenue']['operands']['expense_da_usd']),Decimal('33000000000'))
  def test_engine_templates_and_original_runtime_pins_are_byte_preserved(self):
   baseline='cb67dd8a7ad97e68bb05798e64be260f0bbb4bf8'
+  # The approved ten-year extension changed valuation code after the original
+  # preload milestone. Keep original template/resource pins; preserve engine
+  # bytes against that explicit reviewed extension, not the five-year engine.
+  engine_baseline='634d98b11a63735f942a0f52e9eb4c138451462f'
   paths=subprocess.check_output(['git','ls-tree','-r','--name-only',baseline,'src/valuation_platform/valuation','examples/valuation'],cwd=ROOT).decode().splitlines()
   templates=[p for p in paths if p.endswith('-unset.json')];self.assertEqual(len(templates),9)
   for path in paths:
-   self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',baseline+':'+path],cwd=ROOT),path)
+   reference=engine_baseline if path.startswith('src/valuation_platform/valuation/') else baseline
+   self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',reference+':'+path],cwd=ROOT),path)
   original=json.loads(subprocess.check_output(['git','show',baseline+':src/valuation_platform/api/bundle-files.json'],cwd=ROOT))
   current=read_json(ROOT/'src/valuation_platform/api/bundle-files.json')
   for key,value in original['resources'].items():self.assertEqual(current['resources'][key],value)

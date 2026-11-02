@@ -1,5 +1,20 @@
 # GOOGL proposed preload — implementation and acceptance
 
+## Reproduction audit — November 2, 2026
+
+All 24 preload tests pass. Repeated generation from retained sources and policy
+produces economic hash `1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe`
+independently of the generation timestamp; existing-engine execution reproduces
+EV 1,421,564,121,025.2409787628263166077237849572626227555 USD.
+The engine-preservation test had retained the earlier five-year baseline. It now
+pins the explicitly approved ten-year engine commit 634d98b, preserving the
+original template and resource baselines. No engine or financial input changed.
+
+Reproducibility is conditional on saved reviewed observations and explicit
+forecast configuration. Acquisition does not automatically extract facts or
+select forecasts. The generator and API/UI wiring remain Alphabet-specific;
+META/AAPL profiles require separate implementation and company-specific policies.
+
 Subsequent UI status: the [result-first workspace](investor-result-first-workspace.md)
 now calculates complete starting profiles automatically through the local API and
 uses one on-demand editor. Earlier no-auto/inline-layout statements below are

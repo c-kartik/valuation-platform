@@ -1,5 +1,30 @@
 # Project Status
 
+## Preload reproducibility audit — before META/AAPL extension
+
+The user asks to prepare META/AAPL starting inputs and establish how Alphabet's
+existing preload is reproduced. The GOOGL generator reproduces economic hash
+`1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe`
+with identical economics across generation timestamps. Existing-engine execution
+reproduces EV 1,421,564,121,025.2409787628263166077237849572626227555 USD.
+This is reproducibility of an assumption-led profile, not forecasting accuracy.
+
+The reusable Decimal rules, snapshot hashing, reviewed-observation bindings,
+versioned policies, refresh diffs, field provenance and engine adapter exist.
+Source acquisition is explicit and extraction remains reviewed preparation;
+there is no automatic arbitrary-ticker-to-profile pipeline. Generator identity,
+anchor/template, selections, some diagnostics, API route and UI preload fetching
+remain Alphabet-specific. META/AAPL profiles are not yet implemented. Extending
+those issuer mappings and fiscal-period handling, then selecting each company's
+own evidence and forecast policy, is the next scoped step. Historical CFO
+adoption does not make forward assumptions reported facts.
+
+All 24 preload tests pass. The preservation test now compares valuation code
+with the approved ten-year commit 634d98b11a63735f942a0f52e9eb4c138451462f,
+while retaining the original preload milestone's nine unset templates and
+resource pins. No valuation code, preload economics, source snapshots, historical
+inputs, API defaults or UI behavior changed in this audit. Wider reviews stay paused.
+
 ## Current milestone — CFO history adopted for Alphabet, Apple and Meta
 
 The latest user decision adopts CFO-based historical display and retains the
