@@ -94,3 +94,32 @@ it('keeps extreme CAGR annotations compact while retaining the exact comparison 
  expect(label.querySelector('title')!.textContent!.length).toBeGreaterThan(24);
  expect(Number(label.querySelector('rect')!.getAttribute('width'))).toBeLessThan(180);
 });
+
+function cfoHistory():Entry{
+ const entry=history();entry.company='GOOGL';
+ entry.historical_window!.forEach((h,i)=>{h.fcff=String((i+1)*100000000);h.fcff_basis='REPORTED_CFO_CASH_PPE';h.fcff_calculation={status:'CALCULATED',inputs:{cfo:'500000000',cash_ppe:'100000000',interest_expense:'10000000',tax_provision:'25000000',pretax_income:'100000000'},sources:['https://www.sec.gov/Archives/example.htm'],reported_etr:'0.25'};});
+ return entry;
+}
+it('displays derived CFO history bars and readouts without drawing FCFF CAGR across accounting bases',()=>{
+ const entry=cfoHistory();render(<ForecastChart entry={entry} cases={[{label:'Base',result:result()}]}/>);
+ expect(document.querySelectorAll('[data-scenario-bar="Reported"][data-metric="fcff"]')).toHaveLength(3);
+ expect(document.querySelector('[data-fcff-basis-notice]')?.textContent).toContain('calculated from reported CFO');
+ expect(document.querySelector('[data-base-trend="fcff"]')).toBeNull();
+ expect(document.querySelector('[data-base-trend="revenue"]')).not.toBeNull();
+ fireEvent.click(screen.getByRole('button',{name:'combined: select FY2023'}));
+ expect(document.querySelector('[data-base-trend="fcff"]')?.getAttribute('data-start-year')).toBe('FY2023');
+ expect(document.querySelector('[data-cagr-metric="fcff"]')).not.toBeNull();
+ expect(screen.getByLabelText('Selected year values').textContent).toContain('0.10B');
+ expect(screen.getAllByRole('link',{name:'SEC FCFF input source'})).toHaveLength(3);
+ const bars=[...document.querySelectorAll('[data-bar-year]')];expect(new Set(bars.map(n=>n.getAttribute('width'))).size).toBe(1);
+ expect(bars.every(n=>n.getAttribute('rx')==='1.5')).toBe(true);
+});
+it('keeps unavailable Apple years missing and shows common CFO history once in scenario plots',()=>{
+ const entry=cfoHistory();entry.company='AAPL';entry.historical_window![2].fcff=null;entry.historical_window![2].fcff_calculation!.status='MISSING_INTEREST_DISCLOSURE';
+ render(<ScenarioCharts entry={entry} cases={['Bear','Base','Bull'].map(label=>({label,result:result()}))}/>);
+ expect(document.querySelectorAll('[data-scenario-bar="Reported"][data-metric="fcff"]')).toHaveLength(2);
+ expect(document.querySelector('[data-scenario-bar="Reported"][data-metric="fcff"][data-bar-year="FY2025"]')).toBeNull();
+ expect(screen.getByText(/Interest expense is not separately disclosed/)).toBeTruthy();
+ fireEvent.click(screen.getAllByRole('button',{name:'fcff: select FY2025, fixed anchor'})[0]);
+ expect(screen.getAllByText('Unavailable').length).toBeGreaterThan(0);
+});

@@ -1,5 +1,27 @@
 # Financial Methodology
 
+## Current adoption — historical CFO basis for the three-company pilot
+
+The user now approves CFO-based historical FCFF for GOOGL/AAPL/META FY2021–25,
+while retaining the existing EBIT-based forecast. See [method, results and remaining
+blockers](historical-cfo-fcff-adoption.md). This supersedes the earlier requirement
+that historical display satisfy every operating-only adjustment.
+
+Historical FCFF = reported CFO + reported total expensed interest ×
+(1 − reported income-tax provision / pretax income) − cash PP&E. All 13 available
+results use filing-supported operands; AAPL FY2024/25 remains null because total
+interest is undisclosed. No EBIT fallback, zero or estimated interest is inserted.
+CFA teaches this relationship and an EBIT alternative, but does not certify this
+particular reported-ETR/cash-PP&E implementation. The rate is a disclosed policy,
+not an observed actual interest tax shield. Nonpositive pretax requires review.
+
+CFO contains noncash/SBC and WC adjustments: no second D&A add-back, SBC reversal
+or WC deduction. Separate operating cash-tax/D&A/WC/finance-addition allocations
+are no longer prerequisites for this historical measure; underlying disclosure
+gaps remain qualified. The existing forecast keeps SBC expensed and can include
+financed investment. Basis differences are disclosed, cross-basis FCFF CAGR is
+withheld, and history never auto-calibrates forecast assumptions or changes EV.
+
 ## Company-specific historical adjustment schedules — November 2
 
 The user authorizes building the source-supported adjustment schedules after

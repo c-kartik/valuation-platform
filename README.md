@@ -1,5 +1,10 @@
 # Automated Equity Valuation Platform
 
+Three-company historical FCFF now uses the [adopted CFO method](docs/historical-cfo-fcff-adoption.md):
+13 of 15 FY2021–25 observations available, with Apple FY2024–25 missing interest.
+Charts disclose the difference from the EBIT-based forecast; no missing inputs
+are estimated and no forecast assumptions or EV are changed.
+
 A full-stack equity valuation platform combining SEC financial data extraction, financial statement normalization, and automated valuation analysis.
 
 ## Planned Capabilities

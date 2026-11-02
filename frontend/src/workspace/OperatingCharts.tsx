@@ -7,14 +7,16 @@ import {submittedMargins,marginCaption} from './chartInspection';
 import type {ChartInspection} from './chartInspection';
 import {financialAxis} from './chartAxis';
 const D=Decimal.clone({precision:220,rounding:Decimal.ROUND_HALF_EVEN});
-type Point={label:string;revenue:string;fcff:string|null;historical:boolean};
+type Point={label:string;revenue:string;fcff:string|null;historical:boolean;fcffBasis?:string};
 export function chartRows(result:Result,entry?:Entry):Point[]{
  const anchor=result.submitted_inputs.anchor,year='FY'+anchor.annual_end.slice(0,4);
  const compatible=entry&&Object.entries(anchor).every(([key,value])=>entry.identity[key as keyof typeof anchor]===value);
  const history=compatible?entry.historical_window?.filter(h=>h.revenue.unit==='USD'&&h.revenue.period_end<=anchor.annual_end):undefined;
- const observed=history?.length&&history.at(-1)!.revenue.amount===String(result.stage_b.stage_a.anchor.revenue)?history.map(h=>({label:h.fiscal_year_label,revenue:h.revenue.amount,fcff:h.fcff,historical:true})):[{label:year,revenue:String(result.stage_b.stage_a.anchor.revenue),fcff:null,historical:true}];
- return [...observed,...result.stage_b.stage_a.years.map(y=>({label:String(y.fiscal_year_label),revenue:String(y.revenue),fcff:String(y.fcff),historical:false}))];
+ const observed=history?.length&&history.at(-1)!.revenue.amount===String(result.stage_b.stage_a.anchor.revenue)?history.map(h=>({label:h.fiscal_year_label,revenue:h.revenue.amount,fcff:h.fcff,historical:true,fcffBasis:h.fcff_basis})):[{label:year,revenue:String(result.stage_b.stage_a.anchor.revenue),fcff:null,historical:true}];
+ return [...observed,...result.stage_b.stage_a.years.map(y=>({label:String(y.fiscal_year_label),revenue:String(y.revenue),fcff:String(y.fcff),historical:false,fcffBasis:'FORECAST_OPERATING_INCOME'}))];
 }
+/** Never join the adopted reported-CFO series to the operating-income forecast. */
+export function comparableFcff(a:Point|undefined,b:Point){return !!a&&(a.fcff===null||b.fcff===null||a.fcffBasis===b.fcffBasis);}
 /** A historical selection starts its comparison; forecast selections start at the anchor. */
 export function endpointCagr(anchorLabel:string,anchor:string|null,label:string,value:string|null){
  if(anchor===null||value===null)return null;
@@ -43,6 +45,8 @@ export function OperatingCharts({cases,entry,scenario=false,stale=false,inspecti
  if(!ordered.length)return null;
  const rows=ordered.map(c=>({...c,points:chartRows(c.result,entry)})),base=rows.find(c=>c.label==='Base')??rows[0],points=base.points;
  const anchorLabel='FY'+base.result.submitted_inputs.anchor.annual_end.slice(0,4),anchor=points.findIndex(p=>p.label===anchorLabel),firstForecast=points.findIndex(p=>!p.historical),at=Math.max(0,selected?points.findIndex(p=>p.label===selected):points.length-1),point=points[at];
+ const adoptedHistory=points.some(p=>p.historical&&p.fcffBasis==='REPORTED_CFO_CASH_PPE');
+ const fcffComparable=comparableFcff(points[anchor],point);
  const metrics=['revenue','fcff'] as const,axes=(scenario?metrics.map(metric=>financialAxis(rows.flatMap(r=>r.points.flatMap(p=>p[metric]===null?[]:[p[metric]!])))):[financialAxis(points.flatMap(p=>[p.revenue,...p.fcff===null?[]:[p.fcff]]))]);
  const focus=scenario?null:inspection,margins=submittedMargins(base.result),marginValues=margins.flatMap(p=>p.value===null?[]:[p.value]);
  const marginAxis=financialAxis(marginValues,'0.01'),hasMargin=marginValues.length>0;
@@ -58,7 +62,7 @@ export function OperatingCharts({cases,entry,scenario=false,stale=false,inspecti
   const guideMetrics=metric==='combined'?metrics:[metric];
   const bar=(value:string|null,cx:number,bw:number,fill:string,label:string,m:string,i:number)=>value===null?null:<rect key={label+m+i} data-bar-year={points[i].label} data-scenario-bar={points[i].historical?'Reported':label} data-metric={m} data-value={value} x={cx-bw/2} y={Math.min(zero,y(value))} width={bw} height={Math.abs(zero-y(value))} fill={fill} opacity={!focus?1:points[i].historical?.25:focus==='period'?1:focus==='revenue'&&m==='revenue'||focus==='cash'&&m==='fcff'||focus==='terminal'&&i===points.length-1&&(exit||m==='fcff')?1:.22} rx="1.5" ry="1.5"><title>{label} {points[i].label} {m}: {value} USD</title></rect>;
   return <section className={"cv-bar-metric "+(metric==='combined'?'cv-combined-metric':'')} key={metric} aria-label={metric==='combined'?'Combined Revenue and FCFF plot':`${metric==='revenue'?'Revenue':'FCFF'} scenario grouped bar chart`}>{metric!=='combined'&&<div className="cv-chart-heading"><h3>{metric==='revenue'?'Revenue':'FCFF'}</h3><span>Independent USD billions axis</span></div>}{a.scaleNote&&<p>{a.scaleNote}</p>}
-  {metric!=='combined'&&<div className="cv-guide-labels">{guideMetrics.map(m=><p key={m} data-guide-label={m}>{m==='revenue'?'Revenue: ':'FCFF: '}{endpointGuide(anchorLabel,points[anchor]?.[m]??null,point.label,point[m])}</p>)}</div>}
+  {metric!=='combined'&&<div className="cv-guide-labels">{guideMetrics.map(m=><p key={m} data-guide-label={m}>{m==='revenue'?'Revenue: ':'FCFF: '}{m==='fcff'&&!fcffComparable?'Historical and forecast bases differ · no CAGR':endpointGuide(anchorLabel,points[anchor]?.[m]??null,point.label,point[m])}</p>)}</div>}
   {metric==='combined'&&<>
    <div className="cw-chart-inspection cw-chart-inspection-overlay" style={{left:width<500?8:left,right:width<500?8:right,top:0}} aria-hidden={!focus}><span>{focus?descriptions[focus]:''}{focus&&stale?' · Previous result':''}</span>{showMargin&&<strong>{point.label} · {marginByYear.get(point.label)!=null?marginCaption(marginByYear.get(point.label)!):'Unavailable'}</strong>}</div>
   </>}
@@ -72,12 +76,12 @@ export function OperatingCharts({cases,entry,scenario=false,stale=false,inspecti
    <line data-period-boundary x1={left+firstForecast*step} x2={left+firstForecast*step} y1={top} y2={bottom} stroke="#9da7b1" strokeDasharray="3 4"/>
    {points.length-firstForecast===10&&<line data-five-year-boundary aria-label="End of first five forecast years" x1={left+(firstForecast+5)*step} x2={left+(firstForecast+5)*step} y1={top} y2={bottom} stroke="#9da7b1" strokeDasharray="2 5"/>}
    <line data-fixed-anchor={anchorLabel} x1={x(anchor)} x2={x(anchor)} y1={top} y2={bottom} stroke="#b18d38" strokeDasharray="2 6"/>
-   {points.map((p,i)=><g key={p.label}>{p.historical?bar(p[metric==='fcff'?'fcff':'revenue'],x(i),step*(scenario?.12:.27),'var(--cw-history, #9ba8b2)','Reported',metric==='fcff'?'fcff':'revenue',i):scenario?rows.map((r,k)=>bar(r.points[i][metric as 'revenue'|'fcff'],x(i)+(k-1)*step*.145,step*.12,palette[k],r.label,metric,i)):<>{bar(p.revenue,x(i)-step*.145,step*.27,'var(--cw-revenue, #23435a)',base.label,'revenue',i)}{bar(p.fcff,x(i)+step*.145,step*.27,'var(--cw-gold, #aa8534)',base.label,'fcff',i)}</>}</g>)}
+   {points.map((p,i)=><g key={p.label}>{p.historical?metric==='combined'?<>{bar(p.revenue,x(i)-step*.145,step*.27,'var(--cw-history, #9ba8b2)','Reported','revenue',i)}{bar(p.fcff,x(i)+step*.145,step*.27,'var(--cw-gold, #aa8534)','Reported','fcff',i)}</>:bar(p[metric==='fcff'?'fcff':'revenue'],x(i),step*.12,'var(--cw-history, #9ba8b2)','Reported',metric==='fcff'?'fcff':'revenue',i):scenario?rows.map((r,k)=>bar(r.points[i][metric as 'revenue'|'fcff'],x(i)+(k-1)*step*.145,step*.12,palette[k],r.label,metric,i)):<>{bar(p.revenue,x(i)-step*.145,step*.27,'var(--cw-revenue, #23435a)',base.label,'revenue',i)}{bar(p.fcff,x(i)+step*.145,step*.27,'var(--cw-gold, #aa8534)',base.label,'fcff',i)}</>}</g>)}
    {guideMetrics.map(m=>{
-    const anchorValue=points[anchor]?.[m],selectedValue=point[m];if(anchorValue===null||anchorValue===undefined||selectedValue===null||at===anchor)return null;
+    const anchorValue=points[anchor]?.[m],selectedValue=point[m];if(m==='fcff'&&!fcffComparable)return null;if(anchorValue===null||anchorValue===undefined||selectedValue===null||at===anchor)return null;
     const from=at<anchor?at:anchor,to=at<anchor?anchor:at,start=points[from][m]!,end=points[to][m]!;
-    const offset=(i:number)=>metric==='combined'&&!points[i].historical?(m==='revenue'?-step*.145:step*.145):0;
-    const x1=x(from)+offset(from),x2=x(to)+offset(to),y1=y(start),y2=y(end),color=m==='revenue'?'#385d7b':'#397d75';
+    const offset=()=>metric==='combined'?(m==='revenue'?-step*.145:step*.145):0;
+    const x1=x(from)+offset(),x2=x(to)+offset(),y1=y(start),y2=y(end),color=m==='revenue'?'#385d7b':'#397d75';
     const cagr=endpointCagr(anchorLabel,anchorValue,point.label,selectedValue);
     const caption=cagr?`${cagr.percent.length>9?new D(cagr.percent).toExponential(3):cagr.percent}% CAGR`:null;
     const labelWidth=caption?caption.length*6.4+16:0,labelX=Math.max(left+labelWidth/2+2,Math.min(plotRight-2-labelWidth/2,(x1+x2)/2));
@@ -102,7 +106,7 @@ export function OperatingCharts({cases,entry,scenario=false,stale=false,inspecti
    </g>)}
   </svg></section>;
  }
- const context=<small>USD billions · CAGR compares the selected year with {anchorLabel}</small>;
+ const context=<small>USD billions · CAGR compares the selected year with {anchorLabel}{adoptedHistory?' · FCFF comparisons stay within one basis':''}</small>;
  const legend=<div className="cv-chart-legend">{rows.map((r,k)=><span key={r.label}><i style={{background:palette[k]}}/>{r.label}</span>)}<span><i style={{background:'var(--cw-history, #9ba8b2)'}}/>Reported</span>{context}</div>;
  return <section className="cv-operating-charts" data-chart-inspection={focus??undefined} aria-label={scenario?'Scenario revenue and FCFF paths':'Interactive revenue and FCFF chart'}>
   {stale&&<p className="cv-stale">Previous operating calculation · stale; values retain their submitted inputs.</p>}
@@ -116,7 +120,7 @@ export function OperatingCharts({cases,entry,scenario=false,stale=false,inspecti
    </div>
    {context}
   </div>}
-  <p className="cv-pan-note">Hover, tap or focus a year column for exact values. Arrow keys move between years.</p><p className="cv-history-gap">Historical FCFF unavailable — filing components are not yet reconciled to this model. Missing values are not zero.</p>
-  <details><summary>Exact chart observations & sources</summary><div className="cv-table-scroll"><table><caption>Unrounded returned/retained amounts · USD</caption><thead><tr><th>Basis / year</th><th>Revenue</th><th>FCFF</th></tr></thead><tbody>{rows.flatMap((r,k)=>r.points.filter(p=>!p.historical||k===0).map(p=><tr key={r.label+p.label}><th>{p.historical?'Reported':r.label} {p.label}</th><td>{p.revenue}</td><td>{p.fcff??'Unavailable'}</td></tr>))}</tbody></table></div>{entry?.historical_window?.map(h=><p key={h.fiscal_year_label}>{h.fiscal_year_label}: {h.revenue.period_start} → {h.revenue.period_end}; precision {h.revenue.precision}; {h.revenue.concept}; {h.revenue.accession}. {h.revenue.sources.map(s=><a href={s} key={s} target="_blank" rel="noreferrer">SEC source </a>)}</p>)}</details>
+  <p className="cv-pan-note">Hover, tap or focus a year column for exact values. Arrow keys move between years.</p>{adoptedHistory?<p className="cv-history-gap" data-fcff-basis-notice>Historical FCFF is calculated from reported CFO plus after-tax interest less cash PP&E. Forecast FCFF uses operating income and submitted assumptions. Their stock-compensation, tax and investment treatments can differ; no FCFF CAGR joins the two bases.{points.some(p=>p.historical&&p.fcff===null)?` FCFF unavailable for ${points.filter(p=>p.historical&&p.fcff===null).map(p=>p.label).join(', ')}. Interest expense is not separately disclosed. Missing is not zero.`:''}</p>:<p className="cv-history-gap">Historical FCFF unavailable — filing components are not yet reconciled to this model. Missing values are not zero.</p>}
+  <details><summary>Exact chart observations & sources</summary><div className="cv-table-scroll"><table><caption>Unrounded returned/retained amounts · USD</caption><thead><tr><th>Basis / year</th><th>Revenue</th><th>FCFF</th></tr></thead><tbody>{rows.flatMap((r,k)=>r.points.filter(p=>!p.historical||k===0).map(p=><tr key={r.label+p.label}><th>{p.historical?'Reported':r.label} {p.label}</th><td>{p.revenue}</td><td>{p.fcff??'Unavailable'}</td></tr>))}</tbody></table></div>{adoptedHistory&&<p>{entry?.historical_fcff_policy?.notice} Calculated digits are limited by source rounding; historical FCFF is derived, rather than a separately reported filing figure.</p>}{entry?.historical_window?.filter(h=>points.some(p=>p.historical&&p.label===h.fiscal_year_label)).map(h=><p key={h.fiscal_year_label}>{h.fiscal_year_label}: {h.revenue.period_start} → {h.revenue.period_end}; precision {h.revenue.precision}; {h.revenue.concept}; {h.revenue.accession}. {h.revenue.sources.map(s=><a href={s} key={s} target="_blank" rel="noreferrer">SEC revenue source </a>)}{adoptedHistory&&h.fcff_calculation&&<span> FCFF: {h.fcff_calculation.status==='CALCULATED'?'Derived from reported inputs':'Unavailable — missing interest disclosure'}. CFO {h.fcff_calculation.inputs.cfo}; cash PP&E {h.fcff_calculation.inputs.cash_ppe}; interest {h.fcff_calculation.inputs.interest_expense??'Undisclosed'}; tax provision {h.fcff_calculation.inputs.tax_provision}; pretax income {h.fcff_calculation.inputs.pretax_income}. Reported ETR = tax provision / pretax income. All input amounts USD. {h.fcff_calculation.sources.map(s=><a href={s} key={s} target="_blank" rel="noreferrer">SEC FCFF input source </a>)}</span>}</p>)}</details>
  </section>;
 }

@@ -148,9 +148,13 @@ Catalog responses are startup-built public projections, capped at 80 KiB after t
 [five-year chart/history extension](chart-history-and-current-year-estimate.md), with
 three original unset EV templates and the explicit synthetic fixture. No package/
 audit bodies or arbitrary file access are served; query operands reject.
-The current bundle has 84 entries (71 Python, 12 pinned resources and allowlist),
-adding only catalog code and four unchanged example resources to the original
-79-entry API milestone described below.
+The current bundle has 112 entries (86 Python, 25 pinned resources and the allowlist).
+The [historical CFO adoption](historical-cfo-fcff-adoption.md) adds two reviewed
+Python modules and the unchanged, hash-pinned filing-only FCFF ledger. Public
+catalog data includes 13 derived FCFF observations, 2 missing-interest gaps and
+compact operand/source metadata; the evidence ledger itself is not served.
+The original catalog checkpoint had 84 entries and the original API milestone
+had 79; those counts describe their earlier revisions.
 It supports `analyst-case-v1` EV and explicit `analyst-case-v2` equity/share without
 changing schemas, formulas, conventions, historical approvals or company templates.
 [Phase 2 remains complete within its scope](phase2-completion-checkpoint.md);

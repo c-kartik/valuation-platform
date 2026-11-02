@@ -1,5 +1,26 @@
 # Architecture
 
+## Current adoption — CFO-based historical display
+
+`review/cfo_history.py` enriches the unchanged accepted revenue window with the
+pinned filing-only CFO series, per-year operand/source details and explicit
+missing-interest status. It checks ledger/package digests, target CIK/form/period,
+official SEC links and independently recomputes the arithmetic. The private
+bundle allowlist includes both CFO modules and pins the unchanged source ledger.
+The catalog remains bounded by the existing 80 KiB ceiling (81,005 bytes).
+
+DCF and scenario charts now display 13 derived historical FCFF observations,
+with two Apple gaps. Point-level basis tags prevent FCFF CAGR from crossing the
+CFO-history/EBIT-forecast boundary. Historical comparison within one basis and
+revenue comparisons still work. A basis notice and expandable operands/source
+links explain the change. Source-only `review/history.py`, forecasting, EV and
+approval behavior remain unchanged. See [adoption report](historical-cfo-fcff-adoption.md).
+
+`scripts/adopt_historical_cfo_fcff.py --check` replays retained primary/instance
+source evidence before reproducing the adoption report and CSV. No monetary
+estimate or retrieval runs in the API. Earlier review/source artifacts remain
+unchanged and wider company reviews remain paused.
+
 ## Historical FCFF adjustment schedules — November 2
 
 `review/fcff_adjustments.py` supplies exact tax-provision, disclosed note-parent

@@ -1,5 +1,21 @@
 # META — supplemental supported-seed preparation note
 
+## Current adoption — historical CFO display
+
+The user adopts the [reviewed CFO method](../../historical-cfo-fcff-adoption.md) while keeping the EBIT-based
+forecast. META: 39.14 / 19.19 / 44.21 / 54.70 / 46.93B for FY2021–25. These are derived results under a reported-ETR/
+cash-PP&E definition, not separately reported FCFF facts. See the linked ledger
+for original primary/instance sources, exact operands and preserved source dates.
+
+Separate D&A/WC/cash-tax/finance-addition reconstruction no longer gates this
+stated historical measure. Previous disclosure gaps are not asserted resolved;
+missing inputs stay null and estimates remain withdrawn. The API/chart now
+includes operand/source details and basis notices. Historical CFO retains SBC
+adjustments and subtracts cash PP&E; the forecast keeps SBC expensed and can
+include financed additions. FCFF CAGR does not cross that boundary, and no
+historical figure auto-fills forecasts or changes EV. Original frozen/accepted
+sources and financial-input sufficiency statuses remain unchanged.
+
 ## Current adjustment schedules — FY2021–FY2025
 
 [Source ledger and schedules](../../historical-fcff-adjustment-schedules.md)

@@ -1,5 +1,27 @@
 # Project Status
 
+## Current milestone — CFO history adopted for Alphabet, Apple and Meta
+
+The latest user decision adopts CFO-based historical display and retains the
+EBIT-based forecast. [Results and blocker assessment](historical-cfo-fcff-adoption.md):
+13/15 calculated years, covering GOOGL/META FY2021–25 and AAPL FY2021–23.
+These reproduce existing filing-only calculations; their catalog/chart use is
+newly enabled. Apple FY2024/25 still lacks required interest disclosure and stays
+unavailable. No estimate or zero fill is used.
+
+Historical D&A/WC/operating cash-tax/finance-addition reconstruction no longer
+gates this chosen reported-CFO/cash-PP&E measure. Those source allocations remain
+unresolved. The charts disclose historical/forecast SBC, tax and investment
+differences and withhold cross-basis FCFF CAGR. Forecast assumptions, EV, original
+approvals and frozen source values remain unchanged. Wider reviews stay paused.
+
+Validation: 60 financial review/history, 206 valuation, 66 API and 272 frontend
+tests pass across full runs and targeted reruns; timing-sensitive UI tests use a
+15-second command-line limit with one worker. The production build and offline
+source/adoption replay pass. The local API returns 5/5/3 available years and the
+browser confirms GOOGL FY2025 FCFF 73.88B with its existing EV 1.42tn. No push or
+deployment. Apple/Meta still require forward inputs before a forecast chart appears.
+
 ## Historical FCFF — company adjustment schedules completed within filing scope
 
 The user authorizes the source-supported tax, working-capital, noncash-cost/SBC

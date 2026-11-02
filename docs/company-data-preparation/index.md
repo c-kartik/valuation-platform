@@ -1,5 +1,20 @@
 # Company data preparation register
 
+## Current decision — historical CFO display for GOOGL, AAPL and META
+
+The user approves [CFO-based historical FCFF](../historical-cfo-fcff-adoption.md)
+for the three-company pilot. This supersedes the earlier chart prerequisite of
+fully reconciled operating-only FCFF. All five GOOGL/META years and three AAPL
+years have derived observations; AAPL FY2024/25 stays null without total interest.
+
+The named scope is reported CFO plus after-tax expensed interest less cash PP&E,
+using reported provision/pretax as a disclosed tax allocation. CFO already contains
+D&A, SBC and WC movements. Historical/forecast basis differences are disclosed;
+FCFF CAGR does not cross them and historical figures never fill forecast inputs.
+This is not operating-only FCFF certification or whole-history financial-input
+sufficiency. Original sources, frozen normalization, approvals and prior unresolved
+allocations remain unchanged. Wider reviews and the estimated pilot remain paused.
+
 ## Company adjustment schedules — current three-company milestone
 
 [Source-supported schedules](../historical-fcff-adjustment-schedules.md) now
