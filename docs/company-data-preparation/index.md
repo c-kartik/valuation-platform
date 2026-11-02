@@ -13,6 +13,13 @@ economic convention or financial acceptance. Historical source/approval records
 below remain intact. Older assessment estimates/status snapshots do not override
 current accepted package views. No company review or acquisition resumes automatically.
 
+## Shared display guidance — sidebar chart inspection
+
+The [sidebar inspection layer](../sidebar-chart-inspection.md) highlights returned
+forecast paths and displays matched submitted annual margins. No issuer facts,
+preparation, mappings, sources, approvals or sufficiency statuses change. No
+historical margin or FCFF gap is filled, and Phase 1 remains paused.
+
 ## Shared display guidance — chronological chart CAGR
 
 The [DCF chart refinement](../dcf-chart-layout.md) reorganizes existing chart values

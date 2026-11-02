@@ -2,6 +2,13 @@
 
 ## Current result-first display boundary
 
+The [sidebar margin overlay](sidebar-chart-inspection.md) displays the exact
+submitted operating-margin assumption for each returned forecast year. It adds no
+new financial input or historical estimate. Missing observations remain gaps;
+signed/above-100% values remain visible on an independent percentage axis. WACC
+inspection highlights discounted value without changing undiscounted cash flows;
+terminal inspection distinguishes perpetual growth from exit EV/EBIT.
+
 The [simplified equity editor](equity-editor-cleanup.md) changes presentation only.
 Enterprise value plus eligible non-operating assets less financing and other
 claims produces equity value; dividing by the declared dated share population

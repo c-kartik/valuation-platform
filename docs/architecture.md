@@ -2,6 +2,13 @@
 
 ## Current compact investor workspace
 
+The [sidebar inspection layer](sidebar-chart-inspection.md) holds transient
+company/case/view-scoped display state, separate from drafts and requests.
+`CompactSidebar` shares pointer/focus previews with `OperatingCharts`; modal
+editing suppresses previews. The DCF SVG permanently reserves percentage-axis
+space, and fixed caption/legend slots avoid hover layout changes. Margin points
+match submitted assumptions by fiscal label, with an independent Decimal domain.
+
 The [DCF chart layout refinement](dcf-chart-layout.md) moves the DCF legend below
 its taller combined SVG and replaces the heading/caption block with SVG guide
 labels. Positive endpoints use chronological CAGR: historical selected year to

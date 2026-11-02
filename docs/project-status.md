@@ -2,6 +2,12 @@
 
 ## Current — compact local investor workspace
 
+The approved [sidebar chart inspection](sidebar-chart-inspection.md) emphasizes
+relevant DCF bars on hover or keyboard focus. Operating margin overlays submitted
+annual percentages on a reserved right axis; plot geometry stays fixed. Existing
+click-to-edit behavior remains. All 270 frontend tests, TypeScript, both builds and
+actual desktop/390px phone checks pass. Financial inputs/formulas are unchanged.
+
 The company heading now scales to 68px on desktop (44px on phone), paired with a
 56px enterprise value (48px on phone), so identity and value lead the page.
 Supporting ticker/model/date context retains its compact size. CSS-only change;

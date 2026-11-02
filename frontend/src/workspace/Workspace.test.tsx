@@ -173,3 +173,22 @@ it('cancels a pending equity calculation and rejects its late response',async()=
  click('Cancel calculation');await act(async()=>resolve(reply(body)));expect(screen.queryByRole('dialog')).toBeNull();
  click('Equity & per-share settings Declared ›');expect(screen.queryByText('7.50')).toBeNull();expect((labeled('Cash & investments (USD millions)')as HTMLInputElement).value).toBe('100');click('Cancel');
 });
+
+it('previews sidebar effects without requests, opens the existing editor on click, and clears previews across cases and views',async()=>{
+ const load=transport();render(<Workspace load={load}/>);await current();
+ const sidebar=screen.getByRole('complementary',{name:'Active model summary'}),chart=screen.getByRole('region',{name:'Interactive revenue and FCFF chart'});
+ const geometry=()=>JSON.stringify([...chart.querySelectorAll('[data-bar-year]')].map(n=>['x','y','width','height'].map(a=>n.getAttribute(a))));const base=geometry();
+ for(const name of ['Revenue growth','Operating margin','Cash flow conversion','Forecast period','Discount rate','Terminal value']){
+  const row=within(sidebar).getByRole('button',{name:new RegExp('^'+name)});fireEvent.mouseEnter(row);
+  expect(chart.getAttribute('data-chart-inspection')).not.toBeNull();expect(geometry()).toBe(base);
+  if(name==='Operating margin')expect(chart.querySelectorAll('[data-margin-year]')).toHaveLength(5);
+  fireEvent.mouseLeave(row);expect(chart.getAttribute('data-chart-inspection')).toBeNull();
+ }
+ expect(load).toHaveBeenCalledTimes(2);
+ const margin=within(sidebar).getByRole('button',{name:/^Operating margin/});act(()=>margin.focus());expect(chart.querySelector('[data-margin-axis]')).toBeTruthy();
+ fireEvent.click(margin);await waitFor(()=>expect(document.activeElement).toBe(labeled('Synthetic period 1 Operating margin')));
+ expect(chart.querySelector('[data-margin-axis]')).toBeNull();click('Cancel');
+ act(()=>margin.focus());expect(chart.querySelector('[data-margin-axis]')).toBeTruthy();
+ navigate('Full Model');expect(chart.getAttribute('data-chart-inspection')).toBeNull();navigate('DCF');expect(chart.getAttribute('data-chart-inspection')).toBeNull();
+ fireEvent.mouseEnter(margin);selectCase('Bear');expect(document.querySelector('#dcf [data-chart-inspection="margin"]')).toBeNull();expect(load).toHaveBeenCalledTimes(2);
+});
