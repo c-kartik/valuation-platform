@@ -1,5 +1,24 @@
 # Company data preparation register
 
+## Operating-profit FCFF feasibility test — current three-company scope
+
+The [15-period operating test](../historical-fcff-operating-test.md) reuses the
+same retained GOOGL/AAPL/META FY2021–25 sources and accepted selections. The user
+requests testing, not live activation. Reported EBIT/ETR plus disclosed noncash
+costs, cash PP&E and signed movement rows produces15 method-test results without
+interest estimates. All15 full CFO controls/bridges and13 earlier CFO comparisons
+reconcile exactly. Existing per-issuer notes below record the distinct D&A,
+tax/movement and investment limitations.
+
+Exact primary-cell verification reuses the existing table/occurrence verifier,
+including Meta's dimension-specific restructuring captions and tagged zeros;
+no generic normalization policy, frozen output or accepted source changes.
+Mixed rows are not promoted to pure operating WC, reported ETR is not cash tax,
+and cash PP&E is not complete financed investment. All15 verified_operating_fcff
+fields stay null pending input alignment; financial-sufficiency statuses,
+approvals, graph, forecast and EV are unchanged. Earlier CFO calculations remain
+a separate convention; withdrawn estimates are not reactivated.
+
 ## Current three-company FCFF work — filing-only calculations
 
 The latest user instruction requires reported figures and withdraws estimates.

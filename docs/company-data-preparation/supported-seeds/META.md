@@ -1,5 +1,23 @@
 # META — supplemental supported-seed preparation note
 
+## Operating-profit FCFF test — FY2021–FY2025
+
+[New test and exact evidence](../../historical-fcff-operating-test.md) use EBIT,
+reported-ETR allocation, disclosed D&A plus separate noncash facilities/data-center
+charges/reversals, cash PP&E and signed asset/liability movement rows. FY2022
+statement2218/1341m charges retain exact dimensions/table/row/column and decimals−6,
+not the rounded2220/1340m note observations sharing QName/context. Actual tagged
+zero charges remain source zeros. The shared original parser PARTIALs are not
+rewritten or promoted. SBC stays expensed; no second finance amortization add-back.
+
+All5 full CFO controls and EBIT bridges pass; earlier CFO FCFF independently
+reproduces. FY2025's reported provision/deferred-tax/valuation-allowance effects
+are not normalized into cash operating tax. The6.63B test result versus46.93B
+CFO result reflects different stated treatments, not a uniquely verified cash
+FCFF number. Mixed liabilities, complete D&A and financed investment remain
+alignment issues; all5 verified_operating_fcff values remain null. Source,
+acceptance/audit, forecast, live graph and EV remain unchanged.
+
 ## Current historical FCFF — five filing-only calculations
 
 The user's source-only requirement withdraws the estimated pilot below.

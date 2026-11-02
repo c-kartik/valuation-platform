@@ -1,5 +1,34 @@
 # Financial Methodology
 
+## Operating-profit historical FCFF feasibility test — November 2
+
+The user requests a test of the standard professional EBIT/NOPAT approach for
+GOOGL/AAPL/META FY2021–25. The [operating-method report](historical-fcff-operating-test.md)
+calculates all15 periods using reported operands, including Apple's two years
+whose interest expense is undisclosed. This corrects the earlier overly broad
+inference: missing interest blocks the CFO-plus-interest method, not every FCFF
+construction.
+
+Test definition: EBIT × (1 − reported provision/pretax) + disclosed D&A/identified
+noncash operating charges − cash PP&E + signed disclosed asset/liability cash
+movements, excluding explicitly named income-tax rows. SBC stays expensed; no
+SBC or second finance-amortization add-back. Alphabet's early combined impairment
+captions and Meta's separate noncash restructuring reversals retain their names.
+These are stated test populations, not complete expense D&A or verified operating
+WC. Mixed Other/accruals can contain tax/noncurrent items; source-supported
+arithmetic does not establish economic classification. The trade-only alternative
+is a sensitivity to mixed-row inclusion, not an FCFF confidence interval or bound.
+
+Reported consolidated ETR is an allocation convention, not unlevered cash tax;
+Apple's Ireland charge/timing and Meta FY2025 deferred-tax effects are not silently
+normalized. Cash PP&E excludes any unquantified financed/acquisition/creditor
+adjustment. Therefore all15 arithmetic results exist, but verified_operating_fcff
+remains null and neither live publication nor forecast calibration is activated.
+All15 exact bridges to CFO less cash PP&E reconcile without residual; all13 prior
+CFO FCFF results independently reproduce. The existing forecast's financed-
+investment contract and historical approvals are unchanged. The earlier estimated
+pilot remains withdrawn; the earlier CFO measure remains a separate definition.
+
 ## Current historical calculation — reported operands, explicit convention
 
 The user now requires filing-only historical calculations, superseding permission

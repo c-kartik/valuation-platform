@@ -1,5 +1,22 @@
 # AAPL — company data preparation
 
+## Operating-profit FCFF test — FY2021–FY2025
+
+[New test and exact evidence](../historical-fcff-operating-test.md) use EBIT,
+reported provision/pretax, disclosed CFO D&A, cash PP&E and reported signed
+asset/liability movements. All5 periods calculate without interest, correcting
+any implication that FY2024/25 missing interest blocks every FCFF route. The
+cash-statement D&A population is disclosed but is not recertified as complete
+income-recognized D&A; other/inventory/lease timing remains explicit.
+
+The reported-ETR allocation retains the FY2024 Ireland charge. FY2025 Note7
+explains the10.2B net prior-year charge and15.8B payable via escrow; no normalized
+tax or unsupported tax-to-Other allocation is invented. Mixed Other movements
+are not pure WC: excluding them changes FY2025 by20,273m. Neither broad nor
+trade-only variant is certified FCFF or a bound on it. Both are explicit method
+tests; all5 verified_operating_fcff values remain null. Source/acceptance/audit
+bytes and previous CFO convention gaps are preserved; no chart/EV change.
+
 ## Current historical FCFF — three calculations and two disclosure gaps
 
 The user's source-only requirement withdraws the estimated pilot below.

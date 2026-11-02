@@ -1,5 +1,23 @@
 # Architecture
 
+## EBIT-based historical FCFF test — November 2
+
+`review/operating_fcff.py` implements exact rational EBIT/NOPAT arithmetic for
+an explicit review test. `scripts/test_operating_fcff_from_filings.py` reuses the
+retained filing loader, annual primary/instance verifier, existing caption-specific
+`primary_fact` verifier and statement-table parser. It rereads actual Meta statement
+cells, preserving dimension-specific2218/1341m FY2022 charges instead of rounded
+2220/1340m note observations sharing QName/context. Explicit tagged-zero cells
+remain actual zero evidence; no missing-to-zero fallback or generic parser change.
+
+The [report/JSON/CSV](historical-fcff-operating-test.md) stores15 calculations,
+classified complete CFO row populations, broad/named-trade movement alternatives,
+zero-residual bridges and13 independently reproduced earlier CFO comparisons.
+Tax allocation and mixed D&A/WC/investment limitations remain explicit;
+verified_operating_fcff is null. This offline test writes no API catalog, approval,
+source package, forecast, graph or EV. Source/normalization and valuation layers
+remain separate; no estimate builder is consumed.
+
 ## Source-only historical FCFF calculation — November 2
 
 `review/filing_fcff.py` calculates a named historical CFO/expensed-interest/

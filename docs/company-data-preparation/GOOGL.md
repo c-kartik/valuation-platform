@@ -1,5 +1,22 @@
 # GOOGL — company data preparation
 
+## Operating-profit FCFF test — FY2021–FY2025
+
+[New test and exact evidence](../historical-fcff-operating-test.md) use EBIT,
+reported-ETR allocation, cash PP&E and signed disclosed movement rows, excluding
+explicit IncomeTaxes movements. For FY2021/22 the test includes both reported
+PP&E depreciation/impairment and intangible amortization/impairment captions:
+12,441m/15,928m combined noncash costs, not pure D&A. FY2023–25 use the disclosed
+depreciation population; missing intangible detail/Other allocation is not zero.
+No separate finance amortization or SBC add-back. This is a stated test perimeter,
+not a replacement of the existing narrower accepted D&A proxy.
+
+All5 full CFO controls and zero-residual bridges pass; prior CFO FCFF results
+independently reproduce. Mixed accrued/Other movements, tax allocation and cash
+versus financed investment prevent complete operating-FCFF certification. All5
+verified_operating_fcff values remain null. Original source/approved packages,
+financial-sufficiency boundaries, forecast and live chart/EV are unchanged.
+
 ## Current historical FCFF — five filing-only calculations
 
 The user's source-only requirement supersedes the estimated pilot below.

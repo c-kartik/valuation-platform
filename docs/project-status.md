@@ -1,5 +1,29 @@
 # Project Status
 
+## Historical FCFF — operating-profit approach tested for all three companies
+
+The [EBIT-based method test](historical-fcff-operating-test.md) now covers all15
+GOOGL/AAPL/META FY2021–25 periods. It needs no interest estimate and therefore
+calculates Apple's FY2024/25 test figures as well. Source operands, actual primary
+statement coordinates, exact annual/namespace/dimension/unit/precision bindings,
+reported-ETR allocation, classified cash movements and investment scope are stored.
+
+Result: the interest-input dependency is resolved for this route, but the test
+also exposes materially different cash-flow definitions. All15 full CFO row sums
+and EBIT-to-CFO bridges reconcile exactly; all13 prior CFO FCFF calculations
+independently reproduce. Broad versus named-trade-only movements change Apple
+FY2025 by20.273B. Meta FY2025 reported-tax/noncash effects and SBC treatment make
+its operating test differ materially from CFO-based FCFF. D&A/impairment coverage,
+mixed tax/WC and cash-versus-financed investment remain explicit input-alignment
+issues. These are test figures, not15 certified historical FCFF observations;
+verified_operating_fcff stays null. No graph/forecast/EV or approval mutation.
+
+Validation:45 review/history tests pass, including9 new operating-method checks;
+source-only and new operating-method JSON/CSV/report replays are byte-exact.
+Original analyst packages, prior CFO calculation artifact and live history code
+remain unchanged. Wider universe work stays paused. The earlier estimated pilot
+is still withdrawn, while the earlier CFO definition is retained for comparison.
+
 ## Historical FCFF — filing-only calculations, no estimated inputs
 
 The user's latest instruction withdraws estimates and requires verifiable filing
