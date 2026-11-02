@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## Three-company historical FCFF review — November 2
+
+The user scopes historical FCFF work to GOOGL/AAPL/META and allows clearly labelled
+estimates for review. The [new reconciliation](../historical-fcff-pilot-review.md)
+reuses their fifteen accepted annual CFO/cash-PP&E populations and preserves
+independent CFO proofs, original source/audit hashes, nulls and scope limitations.
+New calculated cash FCF is not FCFF; review FCFF estimates remain separately
+classified, with no publication/valuation authority. Alphabet FY2022/23 additions
+use verified later FY2024 source comparatives in this review only. Apple lease
+stock allocation, Alphabet FY2021 backcast and tax/mixed-row omissions remain
+explicit estimates. Affected issuer records link the new evidence and limitations;
+their historical acceptance/sufficiency statuses and frozen/current JSON are not
+rewritten. Phase 1 universe expansion remains paused.
+
 ## Current — universe expansion paused; authoritative resumption checkpoint
 
 [Pause checkpoint and Phase 2 handoff](../phase1-universe-pause-checkpoint.md) is the authoritative current

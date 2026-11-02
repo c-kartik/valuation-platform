@@ -1,5 +1,21 @@
 # AAPL — company data preparation
 
+## Historical FCFF review estimates — November 2
+
+The [three-company review](../historical-fcff-pilot-review.md) rechecks all five
+FY2021–25 accepted CFO/cash-PP&E populations and exact independent CFO sums.
+CFO less PP&E is distinct from the new user-authorized **review estimates** of
+FCFF. The combined operating/finance additions do not establish a finance-only
+flow. The proposed closing net ROU stock-mix allocation is explicitly estimated,
+with original rounded note precision retained; stock mix may not match new flow.
+Reported ETR proxies adjustment tax effects; mixed Other, tax/timing, interest
+scope and investment omissions remain unquantified. Alternatives include a
+separately supported flow allocation or leaving the finance component unresolved;
+no liability delta or whole combined flow becomes a reported finance purchase.
+Source cash-interest selections end in FY2023; later gaps are not zeros. Actual
+FCFF, original facts/approvals/nulls, financial sufficiency and live chart/valuation
+inputs remain unchanged. See the review for exact sources, arithmetic and tests.
+
 ## Five-year display projection — October 31, 2026
 
 The [chart/history update](../chart-history-and-current-year-estimate.md) expands

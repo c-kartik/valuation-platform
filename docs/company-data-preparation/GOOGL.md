@@ -1,5 +1,21 @@
 # GOOGL — company data preparation
 
+## Historical FCFF review estimates — November 2
+
+The [three-company review](../historical-fcff-pilot-review.md) rechecks FY2021–25
+reported CFO and cash PP&E using the existing accepted source/annual identities.
+The prior chart gap is a derivation gap; CFO less PP&E is separately calculated,
+not relabelled FCFF. User-authorized review estimates reverse the actual CFO SBC
+add-back, avoid a second securities-gain reversal, and expose the reported-ETR
+and mixed-row/timing assumptions. Exact later FY2024 instance comparatives add
+577m/564m finance additions for FY2022/23 in the review only, with separate source
+accession/period dates/hash; FY2021 uses an explicit investment-mix backcast.
+The original limited D&A, unknown interest/tax allocation, investment boundary,
+SBC expense/add-back difference and other source gaps remain. No original fact,
+approval, effective history, source zero or sufficiency status changes; estimates
+are not yet chart/valuation inputs. Machine evidence and validation are linked
+from the review record.
+
 ## Five-year display projection — October 31, 2026
 
 The [chart/history update](../chart-history-and-current-year-estimate.md) expands

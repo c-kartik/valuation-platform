@@ -1,5 +1,17 @@
 # Architecture
 
+## Historical FCFF pilot review — November 2
+
+`review/historical_fcff.py` reads existing pinned META/GOOGL/AAPL histories,
+validates selected annual flow operands and independently rechecks fifteen CFO
+sums. It prepares separately named cash FCF plus versioned **review estimates**,
+with source/audit/package hashes and explicit tax/lease/mixed-row assumptions.
+The offline script writes the [review record](historical-fcff-pilot-review.md)
+and machine companion only. Alphabet FY2022/23 supplemental comparatives retain
+their FY2024 receipt accession/contexts; original accepted histories are untouched.
+No catalog/API/runtime/front-end integration or valuation/approval activation is
+added. This is the requested three-company scope, not resumption of universe work.
+
 ## Current compact investor workspace
 
 The [DCF selected-year readout](dcf-chart-layout.md#current-refinement--one-bottom-left-readout-november-2)

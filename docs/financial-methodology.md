@@ -1,5 +1,24 @@
 # Financial Methodology
 
+## Historical FCFF estimates for review — November 2
+
+The user authorizes clearly labelled estimates **for review** for Alphabet,
+Apple and Meta FY2021–FY2025. The [concrete schedule and assumptions](historical-fcff-pilot-review.md)
+separates CFO less cash PP&E from an unapproved CFO-based FCFF proxy. It reverses
+the CFO SBC add-back, adjusts net nonoperating/financing income once using a
+reported-ETR proxy and identified securities-gain CFO reversals, then subtracts
+named/estimated financed investment. Mixed-row, cash/accrual and tax allocation
+uncertainty remains explicit and unquantified. It is not a fully reconciled
+historical operating-tax calculation or an approved historical valuation input.
+
+Apple combined lease additions use an explicit closing ROU stock-mix allocation
+estimate; Alphabet FY2021 uses a later-period investment-mix backcast. Alphabet
+FY2022/23 use separately identified FY2024 source comparatives, not fabricated
+original-year observations. No second D&A add-back, WC deduction, SBC expense or
+overlapping interest add-back is made. Original source nulls and actual FCFF stay
+null; numerical estimates live in a separate review field. The forecast contract,
+valuation origin, preloads and live chart values are unchanged pending review.
+
 ## Current result-first display boundary
 
 The [compact chart readout](dcf-chart-layout.md#earlier-refinement--compact-overlay-november-2)

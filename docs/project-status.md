@@ -1,5 +1,19 @@
 # Project Status
 
+## Historical FCFF pilot — estimates ready for review, not chart activation
+
+The user narrows the next historical FCFF work to GOOGL/AAPL/META and explicitly
+allows labelled estimates for review. The [fifteen-period review](historical-fcff-pilot-review.md)
+reuses accepted FY2021–FY2025 packages, verifies all fifteen selected CFO sums
+exactly and separates cash FCF from proposed model-consistent FCFF estimates.
+Every estimate exposes its inputs, tax proxy, net nonoperating adjustment and
+finance-additions source/allocation/backcast. Wider universe expansion remains
+paused. Original packages, frozen schemas, approvals, unresolved requirements,
+financial sufficiency, API/runtime/chart and forecast/EV outputs are unchanged.
+Next: review the specific assumptions before a separately scoped chart consumer.
+Validation: all 27 review/history tests pass (12 new financial/provenance checks),
+and the generated report/JSON replay exactly. No UI or runtime change is included.
+
 ## Current — compact local investor workspace
 
 The [single DCF footer readout](dcf-chart-layout.md#current-refinement--one-bottom-left-readout-november-2)

@@ -1,5 +1,21 @@
 # META — supplemental supported-seed preparation note
 
+## Historical FCFF review estimates — November 2
+
+The [three-company review](../../historical-fcff-pilot-review.md) rechecks all five
+accepted CFO/cash-PP&E populations, including separate caption-specific FY2022–24
+CFO proofs without changing original parser PARTIALs. FY2021 PP&E stays18,567m,
+not later18,690m. User-authorized FCFF estimates for review reverse the CFO SBC
+add-back, retain reported cash-tax timing and use reported ETR only as an estimated
+tax effect on net nonoperating/financing cash. Known fair-value CFO reversals are
+not charged twice. Named finance additions are retained with an explicit proposed
+non-overlap/investment assumption; cash-interest/lease-interest candidates are
+not automatically summed. Mixed noncash/tax/WC and investment omissions may be
+material; source gaps, limited D&A and accepted historical perimeters persist.
+No original facts, audit/effective JSON, sufficiency, forecast or live chart/EV
+values change. Machine provenance, alternative limits and verification are in
+the review; the estimates have no publication or valuation authority yet.
+
 ## Current — user-approved effective five-year historical view
 
 [META authoritative schedule](../META-analyst-input-package.md) /
