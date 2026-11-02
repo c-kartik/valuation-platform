@@ -1,5 +1,21 @@
 # GOOGL — company data preparation
 
+## Current historical FCFF — five filing-only calculations
+
+The user's source-only requirement supersedes the estimated pilot below.
+[FY2021–25 calculations](../historical-fcff-filing-calculations.md) use exact
+reported CFO, cash PP&E, tax provision, pretax and total expensed interest
+346/357/308/268/736m, verified against each selected annual's primary inline
+and extracted-instance disclosure. Early InterestExpense versus later
+InterestExpenseNonoperating are exact caption/source selections for this
+consumer, not generic policy changes. Capitalized interest and separately
+reported finance interest are not added to the inclusive expensed-interest total.
+Reported ETR is the explicit interest-tax allocation convention, not an observed
+unlevered cash-tax bill. Cash-CFO FCFF retains SBC adjustments and differs from
+the platform's forecast basis; no calibration/readiness or live chart/EV change.
+The old backcast/lease/nonoperating estimates are withdrawn. All original source
+facts, D&A/scope/null limitations, accepted JSON and approval records persist.
+
 ## Historical FCFF review estimates — November 2
 
 The [three-company review](../historical-fcff-pilot-review.md) rechecks FY2021–25

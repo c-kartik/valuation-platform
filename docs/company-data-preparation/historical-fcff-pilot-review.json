@@ -4331,7 +4331,7 @@
   ],
   "estimate_authority": "User: Allow clearly labeled estimates for review. This authorizes review preparation, not activation of these specific estimates.",
   "formula_proposal": "CFO - cash PP&E - CFO SBC add-back + financing cash adjustment + nonoperating cash adjustment + operating tax adjustment - non-overlapping financed operating investment + investment perimeter adjustment",
-  "methodology_status": "PROPOSED_NOT_ACTIVATED",
+  "methodology_status": "WITHDRAWN_ARCHIVED_REVIEW",
   "proposed_methodology": "historical-cfo-to-operating-fcff-v1-proposal",
   "restrictions": [
     "No second D&A add-back or working-capital deduction from CFO.",
@@ -4339,5 +4339,7 @@
     "No forecast, EV, equity bridge or historical chart values are changed."
   ],
   "schema_version": "historical-fcff-review-v1",
-  "scope": "FY2021-FY2025 GOOGL/AAPL/META only; existing reported anchors unchanged"
+  "scope": "FY2021-FY2025 GOOGL/AAPL/META only; existing reported anchors unchanged",
+  "superseded_by": "docs/historical-fcff-filing-calculations.md",
+  "withdrawal_reason": "User requires filing-only calculations, superseding prior permission for review estimates. Retained estimates are an audit snapshot, not current-use inputs."
 }

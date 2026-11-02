@@ -46,7 +46,8 @@ class HistoricalFCFFReviewTests(unittest.TestCase):
 
     def test_no_adjustment_activated_and_no_intermediate_published_as_fcff(self):
         self.assertFalse(self.review["chart_publication_enabled"])
-        self.assertEqual(self.review["methodology_status"], "PROPOSED_NOT_ACTIVATED")
+        self.assertEqual(self.review["methodology_status"], "WITHDRAWN_ARCHIVED_REVIEW")
+        self.assertEqual(self.review["superseded_by"], "docs/historical-fcff-filing-calculations.md")
         for company in self.review["companies"]:
             for period in company["periods"]:
                 self.assertIsNone(period["fcff"])

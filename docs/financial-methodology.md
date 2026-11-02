@@ -1,6 +1,32 @@
 # Financial Methodology
 
+## Current historical calculation — reported operands, explicit convention
+
+The user now requires filing-only historical calculations, superseding permission
+for estimated review figures. The [source-only record](historical-fcff-filing-calculations.md)
+uses `CFO + reported interest expense × (1 − tax provision / pretax income) − cash PP&E`.
+All five numerical operands are reported amounts confirmed in primary inline
+and extracted XBRL; no monetary estimate, zero fill, lease allocation, interest
+backcast or net-nonoperating cash proxy is used. The calculated tax ratio is an
+explicit allocation convention, not a reported marginal rate or actual interest
+tax benefit. Arithmetic is exact on reported rounded points, not improved precision.
+
+This conventional cash-CFO measure retains reported noncash adjustments such as
+SBC, excludes capitalized interest from the expensed-interest add-back, and does
+not add finance-lease interest on top of an inclusive total. It is separate from
+the existing operating-only/SBC-expensed/finance-asset-investment forecast contract.
+Source-only does not establish identical perimeters or assumption-free economic
+FCFF; no silent historical calibration or engine change follows.
+
+GOOGL/META each have5 calculated periods. AAPL FY2021–23 has3; FY2024/25 required
+interest amounts are not separately disclosed in the reviewed annual reports or
+annual extracted facts, so FCFF remains null. Net Other, debt coupons/stocks,
+prior interest and tax penalties are not substituted. The original source/null/
+approval records persist; earlier estimated FCFF figures are withdrawn from use.
+
 ## Historical FCFF estimates for review — November 2
+
+**Superseded and withdrawn for current use by the filing-only requirement above.**
 
 The user authorizes clearly labelled estimates **for review** for Alphabet,
 Apple and Meta FY2021–FY2025. The [concrete schedule and assumptions](historical-fcff-pilot-review.md)

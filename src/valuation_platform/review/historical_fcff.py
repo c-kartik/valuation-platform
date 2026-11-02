@@ -367,7 +367,9 @@ def _estimates(company):
 
 def build_review(root):
     return {"schema_version": SCHEMA, "proposed_methodology": PROPOSAL,
-            "methodology_status": "PROPOSED_NOT_ACTIVATED", "chart_publication_enabled": False,
+            "methodology_status": "WITHDRAWN_ARCHIVED_REVIEW", "chart_publication_enabled": False,
+            "superseded_by": "docs/historical-fcff-filing-calculations.md",
+            "withdrawal_reason": "User requires filing-only calculations, superseding prior permission for review estimates. Retained estimates are an audit snapshot, not current-use inputs.",
             "estimate_authority": "User: Allow clearly labeled estimates for review. This authorizes review preparation, not activation of these specific estimates.",
             "scope": "FY2021-FY2025 GOOGL/AAPL/META only; existing reported anchors unchanged",
             "formula_proposal": "CFO - cash PP&E - CFO SBC add-back + financing cash adjustment + nonoperating cash adjustment + operating tax adjustment - non-overlapping financed operating investment + investment perimeter adjustment",

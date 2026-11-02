@@ -1,6 +1,29 @@
 # Project Status
 
-## Historical FCFF pilot — estimates ready for review, not chart activation
+## Historical FCFF — filing-only calculations, no estimated inputs
+
+The user's latest instruction withdraws estimates and requires verifiable filing
+operands. The [new calculation record](historical-fcff-filing-calculations.md)
+contains 13 calculated annuals under the explicit reported-CFO/expensed-interest/
+reported-ETR/cash-PP&E convention: GOOGL and META FY2021–25; AAPL FY2021–23.
+AAPL FY2024/25 interest expense and cash interest are not separately disclosed
+in the reviewed primary annual reports or extracted annual XBRL. Those 2 periods
+stay null; their CFO less PP&E is separately available, never relabelled FCFF.
+META FY2021/22 total interest23m/185m is verified in explicit FY2023 comparatives;
+complete interest is not inferred from narrower finance-lease/Notes populations.
+All monetary operands have primary/instance confirmation and source receipts.
+
+Reported ETR for the interest adjustment is a stated calculation convention,
+not a claim of an observed actual tax shield or assumption-free economic FCFF.
+This source-only cash-CFO basis differs from the existing SBC-expensed,
+finance-investment/operating-only forecast. No automatic chart, forecast or EV
+change is included. Original packages/approvals/frozen schemas remain unchanged.
+The old estimates are explicitly withdrawn and retained only as an audit snapshot.
+Validation: all36 review/history tests pass, including9 new source-only checks;
+both generated calculation JSON/CSV/report and archived-review artifacts replay
+exactly. Original accepted/source packages are unchanged. No live API/UI update.
+
+## Superseded — historical FCFF review estimates, not current-use inputs
 
 The user narrows the next historical FCFF work to GOOGL/AAPL/META and explicitly
 allows labelled estimates for review. The [fifteen-period review](historical-fcff-pilot-review.md)
@@ -10,7 +33,8 @@ Every estimate exposes its inputs, tax proxy, net nonoperating adjustment and
 finance-additions source/allocation/backcast. Wider universe expansion remains
 paused. Original packages, frozen schemas, approvals, unresolved requirements,
 financial sufficiency, API/runtime/chart and forecast/EV outputs are unchanged.
-Next: review the specific assumptions before a separately scoped chart consumer.
+This checkpoint is superseded by the source-only requirement above; it is not
+an instruction to approve or activate the archived estimates.
 Validation: all 27 review/history tests pass (12 new financial/provenance checks),
 and the generated report/JSON replay exactly. No UI or runtime change is included.
 

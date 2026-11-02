@@ -1,6 +1,19 @@
 # Architecture
 
-## Historical FCFF pilot review — November 2
+## Source-only historical FCFF calculation — November 2
+
+`review/filing_fcff.py` calculates a named historical CFO/expensed-interest/
+reported-ETR/cash-PP&E measure using exact rational arithmetic on reported strings.
+`scripts/calculate_historical_fcff_from_filings.py` reuses the established
+`Filing.fact` primary/instance verifier and retained receipt/identity validation;
+it imports no estimate builder. All fifteen periods are checked; thirteen have
+the required disclosures and two Apple annuals remain explicit missing-input gaps.
+[Current report/JSON/CSV](historical-fcff-filing-calculations.md) preserve each
+operand, source accession, target dates, contexts, raw scale/precision and hashes.
+No API/runtime/UI integration is made; this basis differs from the operating-only
+forecast. The preceding estimated pilot remains a withdrawn audit snapshot.
+
+## Superseded historical FCFF pilot review — November 2
 
 `review/historical_fcff.py` reads existing pinned META/GOOGL/AAPL histories,
 validates selected annual flow operands and independently rechecks fifteen CFO

@@ -1,6 +1,22 @@
 # Company data preparation register
 
+## Current three-company FCFF work — filing-only calculations
+
+The latest user instruction requires reported figures and withdraws estimates.
+[Source-only calculations and evidence](../historical-fcff-filing-calculations.md)
+cover13/15 annuals under a stated reported-CFO/expensed-interest/reported-ETR/cash-
+PP&E convention. GOOGL/META FY2021–25 and AAPL FY2021–23 are calculated; AAPL
+FY2024/25 interest-disclosure gaps remain null, not zero. META early total interest
+comes from explicit later FY2023 comparatives, retaining source accession/dates.
+Primary/instance verification, receipt checks and rational arithmetic are recorded.
+Original accepted packages/frozen values/approvals remain untouched. This named
+cash-CFO measure is not the existing operating-only forecast consumer or blanket
+financial-sufficiency certification; chart and EV are unchanged. The earlier
+estimated pilot is withdrawn and retained as audit history. Universe work stays paused.
+
 ## Three-company historical FCFF review — November 2
+
+**Superseded — estimate permission was replaced by the filing-only instruction above.**
 
 The user scopes historical FCFF work to GOOGL/AAPL/META and allows clearly labelled
 estimates for review. The [new reconciliation](../historical-fcff-pilot-review.md)

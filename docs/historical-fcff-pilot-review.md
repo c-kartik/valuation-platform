@@ -1,5 +1,10 @@
 # Historical FCFF pilot — Alphabet, Apple and Meta
 
+**WITHDRAWN — retained audit snapshot only.** The user subsequently required
+filing-only calculations. The estimates below are not current inputs and
+must not be loaded into the graph or valuation. The current source-only
+work is [historical FCFF filing calculations](historical-fcff-filing-calculations.md).
+
 November 2, 2026. Scope: the existing FY2021–FY2025 accepted histories only.
 The wider universe review stays paused. This review reuses extraction and
 normalization; no historical package, fact, approval or forecast changes.

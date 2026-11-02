@@ -1,5 +1,21 @@
 # AAPL — company data preparation
 
+## Current historical FCFF — three calculations and two disclosure gaps
+
+The user's source-only requirement withdraws the estimated pilot below.
+[Current source/operand record](../historical-fcff-filing-calculations.md) verifies
+FY2021–23 total expensed interest2,645/2,931/3,933m in each original annual's
+primary inline and instance, with reported CFO/PP&E/tax/pretax. These support
+the named CFO/interest/reported-ETR/cash-PP&E calculation. FY2024/25 have no
+separate total-interest or cash-interest disclosures in the reviewed primary
+reports or annual monetary instance facts. No tag/caption absence becomes zero;
+net Other269m/−321m, debt coupons/stocks, prior-year interest, tax penalties or
+estimated lease allocations are not substitutes. Their separately derived cash
+FCF108,807m/98,767m is not FCFF. Original limitations and nulls stay unresolved.
+The tax allocation is a stated convention and the cash-CFO basis differs from
+the operating-only forecast; no automatic chart/valuation integration. All
+source/accepted JSON/approval/frozen records remain unchanged.
+
 ## Historical FCFF review estimates — November 2
 
 The [three-company review](../historical-fcff-pilot-review.md) rechecks all five

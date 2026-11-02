@@ -1,5 +1,21 @@
 # META — supplemental supported-seed preparation note
 
+## Current historical FCFF — five filing-only calculations
+
+The user's source-only requirement withdraws the estimated pilot below.
+[New source/operand record](../../historical-fcff-filing-calculations.md) verifies
+all five CFO/PP&E/tax/pretax populations against the selected original annuals,
+with total interest23/185/446/715/1,165m. Original FY2021/22 reports do not supply
+the complete interest parent used here; FY2023 Note14 explicitly reports23m/185m
+comparatives. Exact source accession2023 and target2021/22 dates are separate;
+no original source metadata is replaced. Finance-interest15m/16m and Notes-only
+160m are supporting components, not substitutes or extra additions to the total.
+Original FY2021 cash PP&E18,567m remains, not later18,690m. The reported-ETR
+interest-tax adjustment is an explicit calculation convention, not an observed
+actual tax shield. This conventional cash-CFO series retains SBC adjustments
+and differs from the forecast basis. No forecast/EV/chart changes or broad
+sufficiency claim; original parser PARTIALs, proxies, nulls and approvals persist.
+
 ## Historical FCFF review estimates — November 2
 
 The [three-company review](../../historical-fcff-pilot-review.md) rechecks all five
