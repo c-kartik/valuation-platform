@@ -54,17 +54,13 @@ export function OperatingCharts({cases,entry,scenario=false,stale=false,inspecti
  const money=(v:string|null)=>v===null?'Unavailable':fixedUnit(v,'1000000000',2)+'B';
  function choose(i:number,metric:string,focus=false){const n=Math.max(0,Math.min(points.length-1,i));setSelected(points[n].label);if(focus)document.getElementById(`${id}-${metric}-${n}`)?.focus();}
  function plot(metric:'combined'|'revenue'|'fcff',index:number){
-  const a=axes[index],height=metric==='combined'?(width<500?450:520):302,bottom=height-(step<30?52:42),top=metric==='combined'?(width<500?116:84):34,y=(v:string)=>bottom-a.position(v)*(bottom-top),zero=y('0'),marginY=(value:string)=>bottom-marginAxis.position(value)*(bottom-top);
+  const a=axes[index],height=metric==='combined'?(width<500?450:520):302,bottom=height-(step<30?52:42),top=metric==='combined'?(width<500?70:52):34,y=(v:string)=>bottom-a.position(v)*(bottom-top),zero=y('0'),marginY=(value:string)=>bottom-marginAxis.position(value)*(bottom-top);
   const guideMetrics=metric==='combined'?metrics:[metric];
   const bar=(value:string|null,cx:number,bw:number,fill:string,label:string,m:string,i:number)=>value===null?null:<rect key={label+m+i} data-bar-year={points[i].label} data-scenario-bar={points[i].historical?'Reported':label} data-metric={m} data-value={value} x={cx-bw/2} y={Math.min(zero,y(value))} width={bw} height={Math.abs(zero-y(value))} fill={fill} opacity={!focus?1:points[i].historical?.25:focus==='period'?1:focus==='revenue'&&m==='revenue'||focus==='cash'&&m==='fcff'||focus==='terminal'&&i===points.length-1&&(exit||m==='fcff')?1:.22} rx="1.5" ry="1.5"><title>{label} {points[i].label} {m}: {value} USD</title></rect>;
   return <section className={"cv-bar-metric "+(metric==='combined'?'cv-combined-metric':'')} key={metric} aria-label={metric==='combined'?'Combined Revenue and FCFF plot':`${metric==='revenue'?'Revenue':'FCFF'} scenario grouped bar chart`}>{metric!=='combined'&&<div className="cv-chart-heading"><h3>{metric==='revenue'?'Revenue':'FCFF'}</h3><span>Independent USD billions axis</span></div>}{a.scaleNote&&<p>{a.scaleNote}</p>}
   {metric!=='combined'&&<div className="cv-guide-labels">{guideMetrics.map(m=><p key={m} data-guide-label={m}>{m==='revenue'?'Revenue: ':'FCFF: '}{endpointGuide(anchorLabel,points[anchor]?.[m]??null,point.label,point[m])}</p>)}</div>}
   {metric==='combined'&&<>
-   <div className="cw-chart-readout-overlay" style={{left:width<500?8:left,right:width<500?8:right}} aria-live="polite" aria-label="Selected year values">
-    <b>{point.label} · {point.historical?'Reported':'Forecast'}</b>
-    <div className="cw-overlay-values">{metrics.map(m=><span key={m} title={point[m]===null?'Unavailable':point[m]+' USD'}><i className="cw-swatch" style={{background:m==='revenue'?'var(--cw-revenue, #23435a)':'var(--cw-gold, #aa8534)'}}/>{m==='revenue'?'Revenue':'FCFF'} <strong>{money(point[m])}</strong></span>)}</div>
-   </div>
-   <div className="cw-chart-inspection cw-chart-inspection-overlay" style={{left:width<500?8:left,right:width<500?8:right,top:width<500?62:34}} aria-hidden={!focus}><span>{focus?descriptions[focus]:''}{focus&&stale?' · Previous result':''}</span>{showMargin&&<strong>{point.label} · {marginByYear.get(point.label)!=null?marginCaption(marginByYear.get(point.label)!):'Unavailable'}</strong>}</div>
+   <div className="cw-chart-inspection cw-chart-inspection-overlay" style={{left:width<500?8:left,right:width<500?8:right,top:0}} aria-hidden={!focus}><span>{focus?descriptions[focus]:''}{focus&&stale?' · Previous result':''}</span>{showMargin&&<strong>{point.label} · {marginByYear.get(point.label)!=null?marginCaption(marginByYear.get(point.label)!):'Unavailable'}</strong>}</div>
   </>}
   <svg data-chart-height={height} data-plot-right={plotRight} viewBox={`0 0 ${width} ${height}`} role="group" aria-label={`${metric} by fiscal year; arrow keys select a year`}>
    <title>{metric==='combined'?'Revenue and FCFF · shared USD billions axis':`${metric==='revenue'?'Revenue':'FCFF'} · USD billions`}</title>
@@ -106,13 +102,20 @@ export function OperatingCharts({cases,entry,scenario=false,stale=false,inspecti
    </g>)}
   </svg></section>;
  }
- const legend=<div className="cv-chart-legend">{scenario?rows.map((r,k)=><span key={r.label}><i style={{background:palette[k]}}/>{r.label}</span>):<><span><i style={{background:'var(--cw-revenue, #23435a)'}}/>Revenue</span><span><i style={{background:'var(--cw-gold, #aa8534)'}}/>FCFF</span></>}<span><i style={{background:'var(--cw-history, #9ba8b2)'}}/>Reported</span>{!scenario&&<span className="cw-margin-legend" aria-hidden={!showMargin} style={{visibility:showMargin?'visible':'hidden'}}><i/>Operating margin · right axis</span>}<small>USD billions · CAGR compares the selected year with {anchorLabel}</small></div>;
+ const context=<small>USD billions · CAGR compares the selected year with {anchorLabel}</small>;
+ const legend=<div className="cv-chart-legend">{rows.map((r,k)=><span key={r.label}><i style={{background:palette[k]}}/>{r.label}</span>)}<span><i style={{background:'var(--cw-history, #9ba8b2)'}}/>Reported</span>{context}</div>;
  return <section className="cv-operating-charts" data-chart-inspection={focus??undefined} aria-label={scenario?'Scenario revenue and FCFF paths':'Interactive revenue and FCFF chart'}>
   {stale&&<p className="cv-stale">Previous operating calculation · stale; values retain their submitted inputs.</p>}
   {scenario&&legend}
   {scenario&&<div className={"cv-operating-readout "+(scenario?"cv-scenario-readout":"")} aria-live="polite"><b>{point.label} · {point.historical?'Reported':'Forecast'}</b><div className="cv-table-scroll"><table><thead><tr><th>Basis</th><th>{!scenario&&<i className="cw-swatch" style={{background:'var(--cw-revenue, #23435a)'}}/>}Revenue</th><th>{!scenario&&<i className="cw-swatch" style={{background:'var(--cw-gold, #aa8534)'}}/>}FCFF</th></tr></thead><tbody>{(point.historical?[base]:rows).map(r=><tr key={r.label}><th>{(scenario||point.historical)&&<i className="cw-swatch" style={{background:point.historical?'var(--cw-history, #9ba8b2)':scenario?palette[rows.indexOf(r)]:'var(--cw-revenue, #23435a)'}}/>}{point.historical?'Reported':r.label}</th>{metrics.map(m=><td key={m} title={r.points[at][m]===null?'Unavailable':r.points[at][m]+' USD'}><strong>{money(r.points[at][m])}</strong>{scenario&&!point.historical&&r.label!=='Base'&&<small>vs Base: {money(new D(r.points[at][m]!).minus(base.points[at][m]!).toFixed())}</small>}</td>)}</tr>)}</tbody></table></div></div>}
   <div ref={host} className="cv-operating-scroll" role="region" aria-label="Financial charts, all years visible"><div className="cv-operating-stage">{scenario?<>{plot('revenue',0)}{plot('fcff',1)}</>:plot('combined',0)}</div></div>
-  {!scenario&&legend}
+  {!scenario&&<div className="cw-chart-readout-footer">
+   <div className="cw-chart-readout" aria-live="polite" aria-label="Selected year values">
+    <b>{point.label} · {point.historical?'Reported':'Forecast'}</b>
+    <div className="cw-overlay-values">{metrics.map(m=><span key={m} title={point[m]===null?'Unavailable':point[m]+' USD'}><i className="cw-swatch" style={{background:m==='revenue'?'var(--cw-revenue, #23435a)':'var(--cw-gold, #aa8534)'}}/>{m==='revenue'?'Revenue':'FCFF'} <strong>{money(point[m])}</strong></span>)}</div>
+   </div>
+   {context}
+  </div>}
   <p className="cv-pan-note">Hover, tap or focus a year column for exact values. Arrow keys move between years.</p><p className="cv-history-gap">Historical FCFF unavailable — filing components are not yet reconciled to this model. Missing values are not zero.</p>
   <details><summary>Exact chart observations & sources</summary><div className="cv-table-scroll"><table><caption>Unrounded returned/retained amounts · USD</caption><thead><tr><th>Basis / year</th><th>Revenue</th><th>FCFF</th></tr></thead><tbody>{rows.flatMap((r,k)=>r.points.filter(p=>!p.historical||k===0).map(p=><tr key={r.label+p.label}><th>{p.historical?'Reported':r.label} {p.label}</th><td>{p.revenue}</td><td>{p.fcff??'Unavailable'}</td></tr>))}</tbody></table></div>{entry?.historical_window?.map(h=><p key={h.fiscal_year_label}>{h.fiscal_year_label}: {h.revenue.period_start} → {h.revenue.period_end}; precision {h.revenue.precision}; {h.revenue.concept}; {h.revenue.accession}. {h.revenue.sources.map(s=><a href={s} key={s} target="_blank" rel="noreferrer">SEC source </a>)}</p>)}</details>
  </section>;

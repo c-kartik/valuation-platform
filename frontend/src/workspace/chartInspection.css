@@ -2,7 +2,6 @@
 .cw-chart-inspection{height:40px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px;color:var(--cw-muted);overflow-wrap:anywhere}
 .cw-chart-inspection>span{min-width:0}.cw-chart-inspection strong{font-weight:500;color:var(--cw-ink);flex-shrink:0;font-variant-numeric:tabular-nums}
 .cw-margin-overlay .cw-margin-point-label{fill:var(--cw-ink);font-weight:500;paint-order:stroke;stroke:white;stroke-width:4px;stroke-linejoin:round}
-.cw-workspace .cw-margin-legend i{height:2px;width:16px;background:var(--cw-bull)}
 .cw-workspace .cw-summary-row[data-active=true]{background:white;border-radius:6px;box-shadow:0 1px 5px #17384b18;position:relative}
 .cw-workspace .cw-summary-row[data-active=true]::before{content:'';position:absolute;left:-6px;top:12px;bottom:12px;width:3px;border-radius:2px;background:var(--cw-bull)}
 .cw-workspace .cw-summary-row[data-chart-inspection=revenue][data-active=true]::before{background:var(--cw-revenue)}
@@ -12,13 +11,16 @@
 .cw-reconciliation[data-chart-inspection=terminal]>span:nth-child(2),.cw-reconciliation[data-chart-inspection=terminal]>span:nth-child(3){background:#aa853414}
 @media(max-width:760px){.cw-chart-inspection{height:56px;align-items:center;font-size:10px}.cw-chart-inspection strong{max-width:44%;white-space:normal;text-align:right}}
 
-/* Selected-year data floats inside the DCF canvas, without an external panel. */
+/* Selected-year values replace the duplicate DCF legend beneath the graph. */
 .cv-combined-metric{position:relative}
-.cw-chart-readout-overlay{position:absolute;top:4px;z-index:1;display:flex;align-items:center;gap:10px 18px;flex-wrap:wrap;pointer-events:none;font-size:11px;line-height:20px;color:var(--cw-muted,#596b7a);background:#ffffffed;border-radius:5px}
-.cw-chart-readout-overlay>b{font-weight:600;white-space:nowrap}
+.cw-chart-readout-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;margin:14px 0 10px;padding-left:6px;font-size:11px;color:var(--cw-muted,#596b7a)}
+.cw-chart-readout{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap;min-width:0;line-height:20px}
+.cw-chart-readout>b{font-weight:600;white-space:nowrap}
 .cw-overlay-values{display:flex;gap:14px;flex-wrap:wrap;min-width:0}
 .cw-overlay-values>span{display:inline-flex;align-items:center;gap:5px;min-width:0;overflow-wrap:anywhere}
 .cw-overlay-values .cw-swatch{margin:0;flex-shrink:0}
 .cw-overlay-values strong{color:var(--cw-ink,#17384b);font-weight:600}
+.cw-chart-readout-footer>small{font-size:10px;line-height:1.5;margin-left:auto;max-width:100%}
 .cw-chart-inspection-overlay{position:absolute;z-index:1;height:32px;pointer-events:none}
-@container(max-width:499px){.cw-chart-readout-overlay{font-size:10px;gap:2px;line-height:20px}.cw-chart-readout-overlay>b{width:100%}.cw-overlay-values{gap:5px 12px}.cw-chart-inspection-overlay{height:36px;font-size:10px}}
+@container(max-width:499px){.cw-chart-inspection-overlay{height:36px;font-size:10px}}
+@media(max-width:760px){.cw-chart-readout{font-size:10px;gap:2px}.cw-chart-readout>b{width:100%}.cw-overlay-values{gap:5px 12px}.cw-chart-readout-footer>small{font-size:9px;width:100%;margin-left:0}}

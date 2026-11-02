@@ -18,7 +18,7 @@ it('renders two grouped bar plots in stable Bear/Base/Bull order with common his
 it('uses adjacent metric bars, one zero-based signed axis, three observed years and a distinct fixed anchor',()=>{
  const r=result(),copy=structuredClone(r);render(<ForecastChart cases={[{label:'Base',result:r}]} entry={history()}/>);expect(document.querySelectorAll('svg')).toHaveLength(1);expect(document.querySelectorAll('[data-metric="revenue"]')).toHaveLength(8);expect(document.querySelectorAll('[data-metric="fcff"]')).toHaveLength(5);expect(document.querySelector('[data-fixed-anchor]')?.getAttribute('data-fixed-anchor')).toBe('FY2025');const first=document.querySelector('[data-metric="fcff"]')!;expect(Number(first.getAttribute('height'))).toBeGreaterThan(0);expect(screen.getByText('-2')).toBeTruthy();expect(r).toEqual(copy);
  const bars=[...document.querySelectorAll('[data-bar-year]')];expect(new Set(bars.map(n=>n.getAttribute('width'))).size).toBe(1);expect(bars.every(n=>n.getAttribute('rx')==='1.5'&&n.getAttribute('ry')==='1.5')).toBe(true);
- const chart=screen.getByRole('region',{name:'Combined Revenue and FCFF plot'}),readout=within(chart).getByLabelText('Selected year values');expect(document.querySelector('.cv-operating-readout')).toBeNull();expect(readout.textContent).toContain('FY2030 · Forecast');expect(readout.textContent).toContain('6.00B');expect(readout.textContent).not.toContain('USD');
+ const chart=screen.getByRole('region',{name:'Combined Revenue and FCFF plot'}),readout=screen.getByLabelText('Selected year values');expect(chart.contains(readout)).toBe(false);expect(document.querySelector('.cv-chart-legend')).toBeNull();expect(document.querySelector('.cv-operating-readout')).toBeNull();expect(readout.textContent).toContain('FY2030 · Forecast');expect(readout.textContent).toContain('6.00B');expect(readout.textContent).not.toContain('USD');
  fireEvent.mouseMove(screen.getByRole('button',{name:'combined: select FY2026'}));expect(readout.textContent).toContain('-2.00B');fireEvent.click(screen.getByRole('button',{name:'combined: select FY2023'}));expect(readout.textContent).toContain('FY2023 · Reported');expect(readout.textContent).toContain('Unavailable');expect(readout.textContent).not.toContain('history');
 });
 it('computes endpoint comparisons with exact independent expectations and isolated Decimal context',()=>{
@@ -55,12 +55,12 @@ it('fits fifteen years to a narrow container and preserves geometry when another
 });
 
 
-it('places DCF CAGR labels above the middle of the chronological endpoint guide and the legend below the plot',()=>{
+it('places DCF CAGR labels above the middle of the chronological endpoint guide and the selected-year readout below the plot',()=>{
  const r=result(),copy=structuredClone(r);render(<ForecastChart cases={[{label:'Base',result:r}]} entry={history()}/>);
  const chart=screen.getByRole('region',{name:'Combined Revenue and FCFF plot'}),svg=chart.querySelector('svg')!;
  expect(svg.getAttribute('data-chart-height')).toBe('520');
  expect(chart.querySelector('.cv-chart-heading')).toBeNull();expect(chart.querySelector('.cv-guide-labels')).toBeNull();
- const container=document.querySelector('.cv-operating-scroll')!;expect(container.nextElementSibling?.className).toBe('cv-chart-legend');
+ const container=document.querySelector('.cv-operating-scroll')!;expect(container.nextElementSibling?.className).toBe('cw-chart-readout-footer');
  fireEvent.mouseMove(screen.getByRole('button',{name:'combined: select FY2023'}));
  let line=chart.querySelector('[data-base-trend="revenue"]')!,label=chart.querySelector('[data-cagr-metric="revenue"]')!;
  expect(line.getAttribute('data-start-year')).toBe('FY2023');expect(line.getAttribute('data-end-year')).toBe('FY2025');

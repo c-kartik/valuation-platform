@@ -4,7 +4,23 @@ User-scoped refinement, 2026-10-31. Supersedes the historical signed-change-only
 caption and the DCF above-chart legend/caption composition from the earlier
 chart/history update. It retains the reported model anchor and exact returned data.
 
-## Current refinement — compact overlay, November 2
+## Current refinement — one bottom-left readout, November 2
+
+At the user's follow-up direction, the DCF selected-year line now replaces the
+bottom-left Revenue/FCFF/Reported legend. It appears only once, below the graph:
+`FY2027 · Forecast`, the Revenue swatch/value and FCFF swatch/value. Hover, tap and
+keyboard year selection still update it. The unit/CAGR context remains at the
+right (wrapping below on phone). Scenario case legends remain intact.
+
+The former top-left readout is removed and its empty header space reclaimed;
+sidebar inspection retains a fixed internal caption slot and reserved right axis.
+No financial operands, calculations, source disclosures or unknowns change.
+Verification: 16 affected chart/inspection checks, TypeScript and production build
+pass. Actual desktop/390px phone review confirms one readout, no duplicate DCF
+legend, updated reported/forecast values and no horizontal overflow. Screenshots:
+this chat's `outputs/chart-footer-readout/`. Viewport override reset after review.
+
+## Earlier refinement — compact overlay, November 2
 
 The selected-year DCF readout now floats at the top left inside the chart canvas.
 The external year/Basis/value panel and external inspection-caption spacer are

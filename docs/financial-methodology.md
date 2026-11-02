@@ -2,7 +2,7 @@
 
 ## Current result-first display boundary
 
-The [compact chart readout](dcf-chart-layout.md#current-refinement--compact-overlay-november-2)
+The [compact chart readout](dcf-chart-layout.md#earlier-refinement--compact-overlay-november-2)
 uses B to mean USD billions while retaining full USD operands in titles and source
 tables. Equal bar widths and subtle corner radii change presentation only; signed
 heights, unknown historical FCFF and all valuation calculations remain unchanged.
