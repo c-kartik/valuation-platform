@@ -1,5 +1,19 @@
 # Company data preparation register
 
+## Registered forward preloads — three companies only
+
+The [shared pipeline](../registered-preloads.md) now serves distinct GOOGL/META/AAPL
+five-year policies under scoped user authorization. Peer snapshots, manifests,
+reviewed mappings, observations and policies are separate from frozen historical
+packages. Inline selections replay actual CIK/fiscal dates/scope/units/value/precision;
+guidance ranges and modeled transformations remain distinct. Proposed-profile
+availability does not change approval or financial-input sufficiency statuses.
+
+The wider50-company register is not activated for forecasting. Future registration
+requires eligible methodology, an approved consumer anchor, reviewed sources,
+a company-specific policy and independent tests. GOOGL remains economically
+unchanged; peer records state new choices and unresolved limitations.
+
 ## Current decision — historical CFO display for GOOGL, AAPL and META
 
 The user approves [CFO-based historical FCFF](../historical-cfo-fcff-adoption.md)

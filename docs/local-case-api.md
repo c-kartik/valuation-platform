@@ -148,7 +148,12 @@ Catalog responses are startup-built public projections, capped at 80 KiB after t
 [five-year chart/history extension](chart-history-and-current-year-estimate.md), with
 three original unset EV templates and the explicit synthetic fixture. No package/
 audit bodies or arbitrary file access are served; query operands reject.
-The current bundle has 112 entries (86 Python, 25 pinned resources and the allowlist).
+The current bundle has 131 entries (88 Python, 42 pinned resources and the allowlist).
+The [registered preload extension](registered-preloads.md) adds issuer-bound proposed
+five-year profiles for Alphabet, Meta and Apple, cached at startup and bounded at
+192 KiB each. Catalog `preload_route` metadata selects the matching profile; no
+request-triggered acquisition is permitted. The 81,150-byte catalog stays below
+the existing 80 KiB limit. The earlier historical CFO bundle had 112 entries.
 The [historical CFO adoption](historical-cfo-fcff-adoption.md) adds two reviewed
 Python modules and the unchanged, hash-pinned filing-only FCFF ledger. Public
 catalog data includes 13 derived FCFF observations, 2 missing-interest gaps and

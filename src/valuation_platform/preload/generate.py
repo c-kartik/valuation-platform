@@ -1,11 +1,13 @@
-"""Alphabet mapping and a small auditable input generator; engine remains unchanged."""
+"""Registered issuer policies and shared auditable input generation; engine unchanged."""
 from copy import deepcopy
 from datetime import datetime, timezone, date
 from pathlib import Path
 from .rules import number, fade, growth, wacc, incremental_cash_ratio, cagr, isolated, diagnostic_axes
 from .profile import read_json, read_sources, select_observation, digest, validate_profile
+from .issuers import registration, resolve_listing
+from .extract import verify_observations
+from valuation_platform.valuation.consumer import load_revenue_anchor
 
-RELATIVE = Path('data/preload/googl-v1')
 ANNUAL = ('revenue_growth','operating_margin','forecast_tax_rate','d_and_a_percent_revenue',
           'capex_percent_revenue','change_in_operating_nwc_percent_revenue')
 LIMITS = {
@@ -18,16 +20,14 @@ LIMITS = {
 }
 
 
-def resolve_listing(ticker):
-    if ticker.upper() not in ('GOOG','GOOGL'):raise ValueError('UNSUPPORTED_PREPARATION: only Alphabet preload implemented')
-    return {'issuer':'Alphabet Inc.','cik':1652044,'ticker':ticker.upper(),
-            'listing_class':'A' if ticker.upper()=='GOOGL' else 'C','class_equivalence':'NOT_SELECTED'}
-
 
 @isolated
 def generate(root, *, dataset=None, policy_path=None, ticker='GOOGL', generated_at=None):
-    root=Path(root);directory=Path(dataset) if dataset else root/RELATIVE
+    root=Path(root);spec=registration(ticker);directory=Path(dataset) if dataset else root/'data/preload'/spec['dataset']
     policy=read_json(policy_path or directory/'policy.json');config=policy['configuration']
+    if not spec.get('legacy_policy'):
+        if policy.get('issuer')!={'cik':spec['cik'],'anchor_kind':spec['kind']}:raise ValueError('Policy issuer/anchor mismatch')
+        if any(key not in policy.get('limitations',{}) for key in ANNUAL):raise ValueError('Registered policy needs company-specific annual limitations')
     sources=read_sources(directory/'sources');observations=read_json(directory/'observations.json')
     source_ids={s['id'] for s in sources}
     if len({o['id'] for o in observations})!=len(observations):raise ValueError('Duplicate observation identity')
@@ -37,12 +37,18 @@ def generate(root, *, dataset=None, policy_path=None, ticker='GOOGL', generated_
         if o['source_sha256']!=source['sha256']:raise ValueError('Extraction/body hash mismatch')
         if not o.get('locator') or not o.get('precision') or not o.get('mapping_version'):
             raise ValueError('Missing extraction metadata')
+    verify_observations(directory,sources,observations)
+    if policy.get('issuer') and policy['issuer']!={'cik':spec['cik'],'anchor_kind':spec['kind']}:raise ValueError('Policy issuer/anchor mismatch')
     cutoff=policy['review_date'];date.fromisoformat(cutoff)
-    template=read_json(root/'examples/valuation/googl-fy2025-unset.json')
+    template=read_json(root/f"examples/valuation/{spec['kind']}-unset.json")
+    approved=load_revenue_anchor(spec['kind'],root)
+    anchor_value=str(approved.revenue)
+    origin=template['anchor'];first_year=int(origin['annual_end'][:4])+1
     fields={};selected={};support=[];diagnostics=[]
     def fact(key,definition='consolidated-reported',unit='USD'):
         row=select_observation(observations,key,definition=definition,unit=unit,cutoff=cutoff)
         expected=policy['selection'].get(key)
+        if row.get('scope')=='consolidated' and (row.get('cik')!=spec['cik'] or row.get('dimensions')!=[]):raise TypeError('INCOMPATIBLE_DEFINITION: selected issuer/dimensions '+key)
         if not expected or any(row.get(k)!=v for k,v in expected.items()):raise TypeError('INCOMPATIBLE_DEFINITION: period/issuer/dimensions/scope '+key)
         selected[key]=row
         return number(row['value'])
@@ -53,37 +59,67 @@ def generate(root, *, dataset=None, policy_path=None, ticker='GOOGL', generated_
     def put(path,value,rule,operands,keys=(),configured=False,limitation=None):
         rows=[selected[k] for k in keys]
         context_ids=['q3-2026-call','q3-2026-10q'] if path.endswith('.capex_percent_revenue') else ['q3-2026-10q'] if path.endswith(('.d_and_a_percent_revenue','.forecast_tax_rate')) else ['q3-2026-release'] if path.endswith('.change_in_operating_nwc_percent_revenue') else []
+        if 'context_sources' in policy:context_ids=policy['context_sources'].get(path.split('.')[-1],[])
         fields[path]={'context_sources':context_ids,'context_role':'Definition/scope background only; not automatic historical calibration','configuration_selected_at':policy['configuration_provenance']['selected_at'],'value':None if value is None else format(number(str(value)) if isinstance(value,str) else value,'f'),'unit':'multiple' if path=='exit_ev_ebit_multiple' else 'fraction',
           'status':'CONFIGURED_CONVENTION' if configured else 'AVAILABLE_ESTIMATE',
           'classification':['FORECAST_ESTIMATE','MODELING_CONVENTION'] if configured else ['FORECAST_ESTIMATE','DERIVED_FROM_REPORTED_OBSERVATIONS','CONFIGURED_TRANSFORMATION'],
           'basis':'EXPLICIT_VERSIONED_CONFIGURATION' if configured else 'REPORTED_OBSERVATIONS_AND_FORECAST_RULE',
           'configuration_reference':policy['version']+'/configuration',
           'sources':sorted({r['source'] for r in rows}),'periods':[{'start':r.get('start'),'end':r['end'],'published_at':r['published_at'],'available_at':r.get('available_at',r['published_at'])} for r in rows],
-          'rule':rule,'operands':operands,'limitation':limitation or LIMITS.get(path.split('.')[-1], 'Explicit long-run estimate; not independently approved or complete financial calibration.')}
+          'rule':rule,'operands':operands,'limitation':limitation or policy.get('limitations',{}).get(path.split('.')[-1],LIMITS.get(path.split('.')[-1], 'Explicit long-run estimate; not independently approved or complete financial calibration.'))}
     def gap(paths,exc):
         status='INCOMPATIBLE_DEFINITION' if isinstance(exc,TypeError) else 'MISSING_EVIDENCE'
         for path in paths:
             put(path,None,'unavailable-v1',{'reason':str(exc)},configured=True,limitation=str(exc))
             fields[path]['status']=status
     # All required values can independently remain missing; unaffected fields survive.
-    revenue=[];growths=[]
+    revenue=[];growths=[];revenue_operands={}
     try:
-        anchor=fact('fy2025_revenue')
-        if str(anchor)!= '402836000000':raise ValueError('Retained GOOGL anchor mismatch; no automatic promotion')
-        projected=fact('ytd2026_revenue')+fact('q42025_revenue')*fact('q32026_revenue')/fact('q32025_revenue')
+        anchor_key=f'fy{first_year-1}_revenue';ytd_key=f'ytd{first_year}_revenue';quarter_key=f'q3{first_year}_revenue';prior_quarter_key=f'q3{first_year-1}_revenue';prior_q4_key=f'q4{first_year-1}_revenue'
+        anchor=fact(anchor_key)
+        if str(anchor)!=anchor_value:raise ValueError('Retained issuer anchor mismatch; no automatic promotion')
+        if (selected[anchor_key]['start'],selected[anchor_key]['end'])!=(origin['annual_start'],origin['annual_end']):raise ValueError('Retained anchor fiscal period mismatch')
+        revenue_model=policy.get('revenue_model',{'method':'quarter-extension'})
+        if revenue_model['method']=='guidance-midpoint':
+            low=fact(revenue_model['low_key'],'consolidated-guidance');high=fact(revenue_model['high_key'],'consolidated-guidance')
+            if high<low:raise ValueError('Reversed revenue guidance')
+            projected=fact(ytd_key)+(low+high)/2
+            revenue_operands={'reported_ytd_revenue_usd':str(selected[ytd_key]['value']),'next_quarter_guidance_low_usd':str(low),'next_quarter_guidance_high_usd':str(high),'next_quarter_midpoint_usd':str((low+high)/2)}
+            revenue_keys=(anchor_key,ytd_key,revenue_model['low_key'],revenue_model['high_key']);revenue_rule='ytd-plus-guidance-midpoint-fade-v1'
+        elif revenue_model['method']=='quarter-extension':
+            prior_ytd_key=revenue_model.get('prior_ytd_key')
+            prior_q4=anchor-fact(prior_ytd_key) if prior_ytd_key else fact(prior_q4_key)
+            if prior_ytd_key and (selected[prior_ytd_key]['start']!=origin['annual_start'] or selected[prior_ytd_key]['end']>=origin['annual_end']):raise ValueError('Prior YTD does not belong to retained fiscal year')
+            if prior_q4<0:raise ValueError('Nonnegative prior fiscal Q4 revenue required')
+            projected=fact(ytd_key)+prior_q4*fact(quarter_key)/fact(prior_quarter_key)
+            if prior_ytd_key:revenue_operands={'prior_annual_revenue_usd':str(anchor),'prior_ytd_revenue_usd':selected[prior_ytd_key]['value'],'derived_prior_fiscal_q4_revenue_usd':str(prior_q4),'reported_ytd_revenue_usd':selected[ytd_key]['value'],'current_fiscal_q3_revenue_usd':selected[quarter_key]['value'],'prior_fiscal_q3_revenue_usd':selected[prior_quarter_key]['value']}
+            revenue_keys=(anchor_key,ytd_key,prior_ytd_key or prior_q4_key,quarter_key,prior_quarter_key);revenue_rule='quarter-extension-growth-fade-v1'
+        else:raise ValueError('Unsupported revenue estimation method')
         growths=fade(str(projected/anchor-1),str(param('growth_endpoint')))
         previous=anchor
         for i,g in enumerate(growths):
             value=previous*(1+number(g));revenue.append(value)
-            put(f'forecast_years[{i}].revenue_growth',g,'quarter-extension-growth-fade-v1',
-                {'fy2026_revenue_estimate':str(projected),'start':growths[0],'endpoint':config['growth_endpoint'],'index':i,'denominator':'4'},
-                ('fy2025_revenue','ytd2026_revenue','q42025_revenue','q32026_revenue','q32025_revenue'))
+            put(f'forecast_years[{i}].revenue_growth',g,revenue_rule,
+                {f'fy{first_year}_revenue_estimate':str(projected),'start':growths[0],'endpoint':config['growth_endpoint'],'index':i,'denominator':'4',**revenue_operands},
+                revenue_keys)
             previous=value
     except (LookupError,TypeError,ZeroDivisionError) as exc:gap([f'forecast_years[{i}].revenue_growth' for i in range(5)],exc)
+    if revenue:
+        from datetime import timedelta
+        if selected[ytd_key]['start']!=str(date.fromisoformat(origin['annual_end'])+timedelta(days=1)):raise ValueError('Forecast YTD must start after the approved fiscal anchor')
     try:
-        start=fact('q32026_ebit')/fact('q32026_revenue')
+        margin_model=policy.get('margin_model',{'method':'reported-quarter'})
+        if margin_model['method']=='full-year-expense-guidance':
+            if not revenue:raise LookupError('Margin requires available forecast revenue')
+            low=fact(margin_model['low_key'],'consolidated-guidance');high=fact(margin_model['high_key'],'consolidated-guidance')
+            if high<low:raise ValueError('Reversed expense guidance')
+            start=(revenue[0]-(low+high)/2)/revenue[0]
+            margin_keys=tuple(dict.fromkeys((*revenue_keys,margin_model['low_key'],margin_model['high_key'])));margin_rule='full-year-expense-guidance-margin-fade-v1'
+        elif margin_model['method']=='reported-quarter':
+            margin_keys=(f'q3{first_year}_ebit',f'q3{first_year}_revenue');start=fact(margin_keys[0])/fact(margin_keys[1]);margin_rule='reported-margin-fade-v1'
+        else:raise ValueError('Unsupported margin estimation method')
         margins=fade(str(start),str(param('margin_endpoint')))
-        for i,m in enumerate(margins):put(f'forecast_years[{i}].operating_margin',m,'reported-margin-fade-v1',{'start':str(start),'endpoint':config['margin_endpoint'],'index':i,'denominator':'4'},('q32026_ebit','q32026_revenue'))
+        for i,m in enumerate(margins):put(f'forecast_years[{i}].operating_margin',m,margin_rule,{'start':str(start),'endpoint':config['margin_endpoint'],'index':i,'denominator':'4'},margin_keys)
     except (LookupError,TypeError,ZeroDivisionError) as exc:gap([f'forecast_years[{i}].operating_margin' for i in range(5)],exc)
     try:
         taxes=fade(str(param('tax_start')),str(param('tax_endpoint')))
@@ -91,7 +127,21 @@ def generate(root, *, dataset=None, policy_path=None, ticker='GOOGL', generated_
     except LookupError as exc:gap([f'forecast_years[{i}].forecast_tax_rate' for i in range(5)],exc)
     investments=[]
     try:
-        cash=param('cash_ppe_start_usd');financed_fraction=param('new_financed_fraction_cash_ppe')
+        investment_model=policy.get('investment_model',{'method':'configured'});investment_keys=();investment_operands={}
+        if investment_model['method']=='guidance-less-annualized-principal':
+            low=fact(investment_model['low_key'],'consolidated-guidance');high=fact(investment_model['high_key'],'consolidated-guidance')
+            if high<low:raise ValueError('Reversed capital spending guidance')
+            factor=number(investment_model['annualization_numerator'])/number(investment_model['annualization_denominator'])
+            cash=(low+high)/2-fact(investment_model['principal_key'])*factor
+            investment_operands={'initial_cash_rule':'guidance midpoint minus annualized finance principal','guidance_low_usd':str(low),'guidance_high_usd':str(high),'reported_ytd_finance_principal_usd':selected[investment_model['principal_key']]['value'],'annualization_numerator':investment_model['annualization_numerator'],'annualization_denominator':investment_model['annualization_denominator']}
+            investment_keys=(investment_model['low_key'],investment_model['high_key'],investment_model['principal_key'])
+        elif investment_model['method']=='annualize-ytd':
+            cash=fact(investment_model['key'])*number(investment_model['annualization_numerator'])/number(investment_model['annualization_denominator']);investment_keys=(investment_model['key'],)
+            investment_operands={'initial_cash_rule':'annualize reported YTD cash PP&E','reported_ytd_cash_ppe_usd':selected[investment_model['key']]['value'],'annualization_numerator':investment_model['annualization_numerator'],'annualization_denominator':investment_model['annualization_denominator']}
+        elif investment_model['method']=='configured':cash=param('cash_ppe_start_usd')
+        else:raise ValueError('Unsupported investment estimation method')
+        if cash<0:raise ValueError('Nonnegative estimated cash PP&E required')
+        financed_fraction=param('new_financed_fraction_cash_ppe')
         changes=config.get('cash_ppe_growth')
         if changes is None:raise LookupError('MISSING_EVIDENCE: cash_ppe_growth configuration')
         if not isinstance(changes,list) or len(changes)!=4:raise ValueError('Four cash PP&E growth configurations required')
@@ -100,16 +150,22 @@ def generate(root, *, dataset=None, policy_path=None, ticker='GOOGL', generated_
             financed=cash*financed_fraction;investment=cash+financed;investments.append(investment)
             if not revenue:raise LookupError('Investment ratio requires available forecast revenue')
             put(f'forecast_years[{i}].capex_percent_revenue',investment/revenue[i], 'cash-ppe-plus-new-financed-v1',
-                {'cash_ppe_usd':str(cash),'new_financed_assets_usd':str(financed),'revenue_usd':str(revenue[i]),'cash_growth':None if not i else changes[i-1],'principal':'EXCLUDED; cash PP&E definition already excludes financing principal'},configured=True)
+                {'cash_ppe_usd':str(cash),'new_financed_assets_usd':str(financed),'revenue_usd':str(revenue[i]),'cash_growth':None if not i else changes[i-1],'principal':'EXCLUDED; cash PP&E definition already excludes financing principal',**investment_operands},investment_keys,configured=True)
     except LookupError as exc:gap([f'forecast_years[{i}].capex_percent_revenue' for i in range(5)],exc)
     try:
-        da=param('expense_da_start_usd');commissioning=param('commissioning_allowance')
+        da_model=policy.get('da_model',{'method':'configured'});da_keys=();da_operands={}
+        if da_model['method']=='annualize-ytd':
+            da=fact(da_model['key'])*number(da_model['annualization_numerator'])/number(da_model['annualization_denominator']);da_keys=(da_model['key'],)
+            da_operands={'initial_da_rule':'annualize reported YTD cash-flow D&A as a forecast expense estimate','reported_ytd_da_usd':selected[da_model['key']]['value'],'annualization_numerator':da_model['annualization_numerator'],'annualization_denominator':da_model['annualization_denominator']}
+        elif da_model['method']=='configured':da=param('expense_da_start_usd')
+        else:raise ValueError('Unsupported D&A estimation method')
+        commissioning=param('commissioning_allowance')
         if not revenue or len(investments)!=5:raise LookupError('D&A ratios need forecast revenue and scoped investment')
         for i in range(5):
             previous_da=da
             if i:da+=investments[i-1]*commissioning
             put(f'forecast_years[{i}].d_and_a_percent_revenue',da/revenue[i], 'expense-commissioning-allowance-v1',
-                {'expense_da_usd':str(da),'previous_expense_da_usd':str(previous_da),'previous_investment_usd':None if not i else str(investments[i-1]),'commissioning_allowance':str(commissioning),'revenue_usd':str(revenue[i])},configured=True)
+                {'expense_da_usd':str(da),'previous_expense_da_usd':str(previous_da),'previous_investment_usd':None if not i else str(investments[i-1]),'commissioning_allowance':str(commissioning),'revenue_usd':str(revenue[i]),**da_operands},da_keys,configured=True)
     except LookupError as exc:gap([f'forecast_years[{i}].d_and_a_percent_revenue' for i in range(5)],exc)
     try:
         coefficient=param('incremental_wc')
@@ -144,7 +200,7 @@ def generate(root, *, dataset=None, policy_path=None, ticker='GOOGL', generated_
                 if value is not None and offset is not None:rates[path]=str(number(value)+number(offset))
         scenarios[label]=rates
     if revenue:
-        diagnostics.append('Five-year forecast revenue CAGR = '+cagr('402836000000',str(revenue[-1]),5)+'; not any individual annual rate')
+        diagnostics.append('Five-year forecast revenue CAGR = '+cagr(anchor_value,str(revenue[-1]),5)+'; not any individual annual rate')
     try:
         net=param('terminal_investment')-param('terminal_da')+number(fields['terminal.working_capital_cash_requirement_percent_revenue']['value'])
         nopat=param('terminal_margin')*(1-param('terminal_tax'))
@@ -152,17 +208,17 @@ def generate(root, *, dataset=None, policy_path=None, ticker='GOOGL', generated_
         diagnostics.append('Implied incremental return diagnostic g*NOPAT/net reinvestment = '+str(param('terminal_growth')*nopat/net)+'; NOT observed ROIC')
         if net<=0 and param('terminal_growth')>0:diagnostics.append('INCONSISTENCY: positive growth without positive net reinvestment')
     except (LookupError,ValueError,ZeroDivisionError):diagnostics.append('Terminal consistency diagnostic unavailable')
-    diagnostics+=['Reported FY2025 YTD plus Q4 revenue differs from the annual anchor by1m; no residual correction or precision improvement.',
+    diagnostics+=policy.get('diagnostics',['Reported FY2025 YTD plus Q4 revenue differs from the annual anchor by1m; no residual correction or precision improvement.',
                   'Acquisition cash/perimeter not reconciled: operating PV conditional; exclusions are not zero claims or assets.',
                   'Expense D&A and commissioning are estimates; source PP&E/CFO proxies remain incomplete.',
                   'Terminal expense D&A16% is independent of the commissioning path; transition/retirement economics are not modeled. Review the discontinuity, not a proven vintage reconciliation.',
-                  'Terminal dependence must be reviewed after explicit engine execution; no financial approval.']
-    economic={'issuer':resolve_listing(ticker),'anchor':template['anchor'],'anchor_revenue':'402836000000',
-      'dates':{'anchor_period':'2025-01-01/2025-12-31','model_origin':'2025-12-31','information_review':cutoff,'timing':'Fiscal-end analytical origin using later-filed information; not a contemporaneous backtest or current-date fair value'},
+                  'Terminal dependence must be reviewed after explicit engine execution; no financial approval.'])
+    economic={'issuer':resolve_listing(ticker),'anchor':template['anchor'],'anchor_revenue':anchor_value,
+      'dates':{'anchor_period':origin['annual_start']+'/'+origin['annual_end'],'model_origin':origin['annual_end'],'information_review':cutoff,'timing':'Fiscal-end analytical origin using later-filed information; not a contemporaneous backtest or current-date fair value'},
       'policy':{k:v for k,v in policy.items() if k not in ('configuration','configuration_provenance')},
       'configuration':config,'configuration_provenance':policy['configuration_provenance'],
       'sources':sources,'observations':observations,'fields':fields,'scenarios':scenarios,
-      'scenario_policy':'diagnostic-offset-v1; unchanged RATIOS inherit Base, including WC; 20% incremental WC rule describes Base only, not stressed revenue. No probabilities or guaranteed ordering',
+      'scenario_policy':'diagnostic-offset-v1; unchanged RATIOS inherit Base, including WC; '+(format(number(config['incremental_wc'])*100,'f').rstrip('0').rstrip('.') if config.get('incremental_wc') is not None else 'unavailable')+'% incremental WC rule describes Base only, not stressed revenue. No probabilities or guaranteed ordering',
       'optional_bridge':{'status':'UNSUPPORTED_PREPARATION','assets':None,'claims':None,'shares':None,'reason':'Eligibility/claims/settlement/class/award selections unapproved; omissions potentially unbounded'},
       'diagnostics':diagnostics,'case_template':template}
     return validate_profile({'schema_version':'preload-profile-v1','generated_at':generated_at or datetime.now(timezone.utc).isoformat(),

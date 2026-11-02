@@ -85,7 +85,9 @@
     "src/valuation_platform/preload/__init__.py",
     "src/valuation_platform/preload/rules.py",
     "src/valuation_platform/preload/profile.py",
-    "src/valuation_platform/preload/generate.py"
+    "src/valuation_platform/preload/generate.py",
+    "src/valuation_platform/preload/issuers.py",
+    "src/valuation_platform/preload/extract.py"
   ],
   "resources": {
     "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",
@@ -112,6 +114,23 @@
     "data/preload/googl-v1/sources/q3-2026-release.html": "c5f86ba70e27aa8834fa4b110c9781ac413949adb050502008a180fec27b7b89",
     "data/preload/googl-v1/sources/q4-2025-release.html": "8de6e5a9cfa7dd74ba0a3f2553bd5195dd910aefa5b61d77b712047db47ca97d",
     "data/preload/googl-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
-    "docs/company-data-preparation/historical-fcff-filing-calculations.json": "d157e0bd6a0ab9461b399855e39ec89dc5b4afc4436893227fe0497772a82e3e"
+    "docs/company-data-preparation/historical-fcff-filing-calculations.json": "d157e0bd6a0ab9461b399855e39ec89dc5b4afc4436893227fe0497772a82e3e",
+    "data/preload/meta-v1/mapping.json": "ba70dcaa4354519d98a01c7740b774323d05a0bb89c1abac2dbb3a93bc9112ea",
+    "data/preload/meta-v1/observations.json": "5a5fd1a02ceb1ef4e49d657bd45f589b4271fd8bfce77fedf60970f540b63921",
+    "data/preload/meta-v1/policy.json": "db7693ea471a5f48526b34a3b5c25070f0b598b8c9aa322bb4c5bb79ac0071c1",
+    "data/preload/meta-v1/sources/damodaran-2026-10-08.html": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+    "data/preload/meta-v1/sources/fy2025-10k.html": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "data/preload/meta-v1/sources/manifest.json": "e9877aec9966d3756cc51da7495c59eb74f1bd95fabcb677cc89ae00790d65e4",
+    "data/preload/meta-v1/sources/q3-2026-10q.html": "4ca982ff1218f1f71dadb5fd23b2a917721f1b962b6c6d89febfe0d24e318024",
+    "data/preload/meta-v1/sources/q3-2026-release.html": "544c130ddd8ebe49823c19d9e7206365c72252e20ca09d8fd018f3f2e55270fd",
+    "data/preload/meta-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+    "data/preload/aapl-v1/mapping.json": "4719fa04de09b13ebbdccb992c976a2c3fee9ee37cc36caa6716b75f7059bf0f",
+    "data/preload/aapl-v1/observations.json": "4cc8946a9e8fc3fb07925519a0873c3c516500de768d2e9ef0c1ae12fd2d0192",
+    "data/preload/aapl-v1/policy.json": "73ff24e6aa4283cdb6807ab22e18a96f67bcd9162c796a80f238b3675f87a766",
+    "data/preload/aapl-v1/sources/damodaran-2026-10-08.html": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+    "data/preload/aapl-v1/sources/fy2025-10k.html": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+    "data/preload/aapl-v1/sources/manifest.json": "4ba007cc8fabe4fb9a8281268a9d7f2d0caf1cb5a348f5a95a0ed0845c233e92",
+    "data/preload/aapl-v1/sources/q3-2026-10q.html": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+    "data/preload/aapl-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6"
   }
 }

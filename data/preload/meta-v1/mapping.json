@@ -1,0 +1,235 @@
+{
+  "version": "meta-reviewed-inline-guidance-v1",
+  "observations": [
+    {
+      "id": "fy2025_revenue-original",
+      "key": "fy2025_revenue",
+      "source": "fy2025-10k",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "cik": 1326801,
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      }
+    },
+    {
+      "id": "ytd2026_revenue-original",
+      "key": "ytd2026_revenue",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "cik": 1326801,
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      }
+    },
+    {
+      "id": "ytd2026_da-original",
+      "key": "ytd2026_da",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:DepreciationDepletionAndAmortization",
+        "cik": 1326801,
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      }
+    },
+    {
+      "id": "ytd2026_cash_ppe-original",
+      "key": "ytd2026_cash_ppe",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+        "cik": 1326801,
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      }
+    },
+    {
+      "id": "ytd2026_finance_principal-original",
+      "key": "ytd2026_finance_principal",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:FinanceLeasePrincipalPayments",
+        "cik": 1326801,
+        "start": "2026-01-01",
+        "end": "2026-09-30"
+      }
+    },
+    {
+      "id": "q42026_revenue_guidance_low-original",
+      "key": "q42026_revenue_guidance_low",
+      "source": "q3-2026-release",
+      "unit": "USD",
+      "definition": "consolidated-guidance",
+      "start": "2026-10-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "MANAGEMENT_GUIDANCE",
+      "extraction": {
+        "kind": "prose-range-v1",
+        "pattern": "We expect fourth quarter 2026 total revenue to be in the range of \\$(73)-(76) billion",
+        "group": 1,
+        "scale": 9,
+        "precision": "-9"
+      }
+    },
+    {
+      "id": "q42026_revenue_guidance_high-original",
+      "key": "q42026_revenue_guidance_high",
+      "source": "q3-2026-release",
+      "unit": "USD",
+      "definition": "consolidated-guidance",
+      "start": "2026-10-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "MANAGEMENT_GUIDANCE",
+      "extraction": {
+        "kind": "prose-range-v1",
+        "pattern": "We expect fourth quarter 2026 total revenue to be in the range of \\$(73)-(76) billion",
+        "group": 2,
+        "scale": 9,
+        "precision": "-9"
+      }
+    },
+    {
+      "id": "fy2026_expense_guidance_low-original",
+      "key": "fy2026_expense_guidance_low",
+      "source": "q3-2026-release",
+      "unit": "USD",
+      "definition": "consolidated-guidance",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "MANAGEMENT_GUIDANCE",
+      "extraction": {
+        "kind": "prose-range-v1",
+        "pattern": "We now expect full year 2026 total expenses to be in the range of \\$(175)-(179) billion",
+        "group": 1,
+        "scale": 9,
+        "precision": "-9"
+      }
+    },
+    {
+      "id": "fy2026_expense_guidance_high-original",
+      "key": "fy2026_expense_guidance_high",
+      "source": "q3-2026-release",
+      "unit": "USD",
+      "definition": "consolidated-guidance",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "MANAGEMENT_GUIDANCE",
+      "extraction": {
+        "kind": "prose-range-v1",
+        "pattern": "We now expect full year 2026 total expenses to be in the range of \\$(175)-(179) billion",
+        "group": 2,
+        "scale": 9,
+        "precision": "-9"
+      }
+    },
+    {
+      "id": "fy2026_capex_guidance_low-original",
+      "key": "fy2026_capex_guidance_low",
+      "source": "q3-2026-release",
+      "unit": "USD",
+      "definition": "consolidated-guidance",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "MANAGEMENT_GUIDANCE",
+      "extraction": {
+        "kind": "prose-range-v1",
+        "pattern": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of \\$(135)-(145) billion",
+        "group": 1,
+        "scale": 9,
+        "precision": "-9"
+      }
+    },
+    {
+      "id": "fy2026_capex_guidance_high-original",
+      "key": "fy2026_capex_guidance_high",
+      "source": "q3-2026-release",
+      "unit": "USD",
+      "definition": "consolidated-guidance",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "MANAGEMENT_GUIDANCE",
+      "extraction": {
+        "kind": "prose-range-v1",
+        "pattern": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of \\$(135)-(145) billion",
+        "group": 2,
+        "scale": 9,
+        "precision": "-9"
+      }
+    },
+    {
+      "reviewed_reference": "data/preload/googl-v1/observations.json",
+      "reviewed_id": "treasury_10y-original",
+      "source": "treasury-2026-10"
+    },
+    {
+      "reviewed_reference": "data/preload/googl-v1/observations.json",
+      "reviewed_id": "implied_erp-original",
+      "source": "damodaran-2026-10-08"
+    }
+  ]
+}

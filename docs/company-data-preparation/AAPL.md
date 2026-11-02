@@ -1,5 +1,19 @@
 # AAPL — company data preparation
 
+## Registered forward profile — November 2
+
+The user authorizes the [shared preload pipeline](../registered-preloads.md) for AAPL.
+Uses fiscal YTD2025-09-28→2026-06-27 and prior fiscal Q4 derived as416.161B−313.695B. June-quarter momentum extends that quarter. D&A/cash PP&E annualize YTD by4/3. The1% financed-assets overlay is a forward assumption, not a historical split.
+
+Versioned sources/mappings/observations/policies are separate from historical
+packages and acceptance. Margin/growth/tax paths, investment growth, commissioning,
+WC, financing assumptions and independent terminal ratios are editable forecasts.
+They do not establish normalized historical cash tax, complete expense D&A,
+lease/acquisition/claims coverage or standing investment conclusions. All37 Gordon
+inputs run in the unchanged engine. Exit/equity inputs and years6–10 remain unset;
+historical FCFF/gaps and approved origins stay intact. Source/rule classifications,
+policy rationale, validation and remaining limits are in the linked report.
+
 ## Current adoption — historical CFO display
 
 The user adopts the [reviewed CFO method](../historical-cfo-fcff-adoption.md) while keeping the EBIT-based

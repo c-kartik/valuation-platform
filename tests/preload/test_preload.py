@@ -64,7 +64,7 @@ class ProfileTests(unittest.TestCase):
   self.assertIsNone(e['fields']['exit_ev_ebit_multiple']['value'])
   self.assertEqual(e['optional_bridge']['status'],'UNSUPPORTED_PREPARATION')
   self.assertEqual(resolve_listing('GOOG')['cik'],resolve_listing('GOOGL')['cik']);self.assertNotEqual(resolve_listing('GOOG')['listing_class'],resolve_listing('GOOGL')['listing_class'])
-  with self.assertRaises(ValueError):resolve_listing('META')
+  with self.assertRaises(ValueError):resolve_listing('MSFT')
  def test_scope_and_configured_inputs_not_historical_complete(self):
   f=self.profile['economic']['fields'];i=f['forecast_years[0].capex_percent_revenue']['operands']
   self.assertEqual(i['cash_ppe_usd'],'200000000000');self.assertEqual(Decimal(i['new_financed_assets_usd']),Decimal('5000000000'))

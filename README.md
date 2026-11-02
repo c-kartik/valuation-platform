@@ -1,5 +1,10 @@
 # Automated Equity Valuation Platform
 
+[Registered starting profiles](docs/registered-preloads.md) now cover Alphabet, Meta
+and Apple through one reproducible pipeline. Company selection loads its own
+source-backed estimates and editable forecast policy. Alphabet inputs are unchanged.
+Top50 expansion remains a later, separate step.
+
 Three-company historical FCFF now uses the [adopted CFO method](docs/historical-cfo-fcff-adoption.md):
 13 of 15 FY2021–25 observations available, with Apple FY2024–25 missing interest.
 Charts disclose the difference from the EBIT-based forecast; no missing inputs

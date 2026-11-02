@@ -1,0 +1,73 @@
+{
+  "schema_version": "preload-source-manifest-v1",
+  "sources": [
+    {
+      "id": "q3-2026-10q",
+      "title": "Apple Q3 FY2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+      "file": "q3-2026-10q.html",
+      "retrieved_at": "2026-11-02T15:10:20.802949+00:00",
+      "published_at": "2026-07-31",
+      "observation_date": "2026-06-27",
+      "accession": "0000320193-26-000020",
+      "http_status": 200,
+      "content_type": "text/html",
+      "extraction_version": "raw-body-v1",
+      "rights": "Public primary evidence retained for local reproducibility; not a redistribution license.",
+      "sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+      "bytes": 1018319
+    },
+    {
+      "id": "fy2025-10k",
+      "title": "AAPL FY2025 retained approved annual filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "file": "fy2025-10k.html",
+      "retrieved_at": "2026-10-11T17:12:47.260610+00:00",
+      "published_at": "2025-10-31",
+      "observation_date": "2025-09-27",
+      "accession": "0000320193-25-000079",
+      "http_status": 200,
+      "content_type": "text/html",
+      "extraction_version": "retained-primary-reuse-v1",
+      "rights": "Existing retained SEC primary evidence reused without altering historical packages.",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "bytes": 1520319
+    },
+    {
+      "title": "US Treasury October 2026 daily par yield curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+      "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+      "file": "treasury-2026-10.html",
+      "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+      "published_at": null,
+      "observation_date": "2026-10-28",
+      "accession": null,
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "extraction_version": "raw-body-v1",
+      "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+      "id": "treasury-2026-10",
+      "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+      "bytes": 246533
+    },
+    {
+      "title": "Aswath Damodaran October 8 2026 market update",
+      "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+      "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+      "file": "damodaran-2026-10-08.html",
+      "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+      "published_at": "2026-10-08",
+      "observation_date": "2026-10-01",
+      "accession": null,
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "extraction_version": "raw-body-v1",
+      "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+      "id": "damodaran-2026-10-08",
+      "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+      "bytes": 169880
+    }
+  ]
+}

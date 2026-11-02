@@ -1,0 +1,237 @@
+{
+  "version": "meta-preload-v1.0.0",
+  "mapping": "meta-reviewed-inline-guidance-v1",
+  "rules": "registered-decimal-fade-commissioning-v1",
+  "issuer": {
+    "cik": 1326801,
+    "anchor_kind": "meta-fy2025"
+  },
+  "review_date": "2026-11-02",
+  "source_max_age_days": 45,
+  "configuration": {
+    "growth_endpoint": "0.08",
+    "margin_endpoint": "0.35",
+    "tax_start": "0.16",
+    "tax_endpoint": "0.20",
+    "expense_da_start_usd": null,
+    "commissioning_allowance": "0.10",
+    "cash_ppe_start_usd": null,
+    "cash_ppe_growth": [
+      "0.20",
+      "0.10",
+      "0",
+      "-0.05"
+    ],
+    "new_financed_fraction_cash_ppe": "0.03",
+    "incremental_wc": "0.10",
+    "beta": "1.20",
+    "credit_spread": "0.009",
+    "equity_weight": "0.95",
+    "debt_weight": "0.05",
+    "debt_tax_shield": "0.20",
+    "terminal_growth": "0.03",
+    "terminal_margin": "0.35",
+    "terminal_tax": "0.20",
+    "terminal_da": "0.14",
+    "terminal_investment": "0.20",
+    "exit_ev_ebit_multiple": null,
+    "bear_growth_offset": "-0.02",
+    "bull_growth_offset": "0.02",
+    "bear_margin_offset": "-0.02",
+    "bull_margin_offset": "0.02",
+    "bear_wacc_offset": "0.01",
+    "bull_wacc_offset": "-0.01",
+    "sensitivity_wacc_offset": "0.01",
+    "sensitivity_growth_offset": "0.005",
+    "sensitivity_multiple_offset": "2"
+  },
+  "configuration_provenance": {
+    "owner": "AI-assisted initial forecast policy under user authorization; editable estimates, not financial approval",
+    "selected_at": "2026-11-02",
+    "operating": "FY2026 revenue is reported nine months plus the midpoint of explicit Q4 guidance. FY2026 margin is revenue less the midpoint of full-year expense guidance, including the disclosed litigation charge. Subsequent growth fades to 8%, margin to 35%; both endpoints are analyst policy, not management targets. Operating tax 16% to20% is policy, not the unusually low reported consolidated ETR.",
+    "investment": "Full-year spending-guidance midpoint140bn includes finance principal. Subtract 4/3 of disclosed nine-month principal2.769bn to estimate cash PP&E136.308bn, then add a separately configured3% new financed-assets estimate. Future cash PP&E growth20%,10%,0%,-5% and commissioning10% are modeling assumptions. Cash principal is not deducted a second time. Acquisitions/ventures remain outside this scoped plan.",
+    "wc": "0.10 of incremental revenue converted to full-revenue cash needs; analyst convention, not calibration from mixed historical CFO. Taxes, capital creditors, acquisitions, financing and collateral excluded.",
+    "wacc": "Shared dated Treasury/ERP observations; company-specific configured beta, spread, target financing weights and tax shield. No observed issuer beta regression or current market weights are claimed.",
+    "terminal": "Independent nominal-USD growth, operating margin, tax, D&A, investment and incremental cash assumptions. No year-five copy or target-EV solving.",
+    "scenario": "Diagnostic offsets only, not researched probabilities, fair-value bounds or guaranteed ordering. Unchanged ratios inherit Base."
+  },
+  "revenue_model": {
+    "method": "guidance-midpoint",
+    "low_key": "q42026_revenue_guidance_low",
+    "high_key": "q42026_revenue_guidance_high"
+  },
+  "margin_model": {
+    "method": "full-year-expense-guidance",
+    "low_key": "fy2026_expense_guidance_low",
+    "high_key": "fy2026_expense_guidance_high"
+  },
+  "investment_model": {
+    "method": "guidance-less-annualized-principal",
+    "low_key": "fy2026_capex_guidance_low",
+    "high_key": "fy2026_capex_guidance_high",
+    "principal_key": "ytd2026_finance_principal",
+    "annualization_numerator": "4",
+    "annualization_denominator": "3"
+  },
+  "da_model": {
+    "method": "annualize-ytd",
+    "key": "ytd2026_da",
+    "annualization_numerator": "4",
+    "annualization_denominator": "3"
+  },
+  "context_sources": {
+    "revenue_growth": [
+      "q3-2026-10q"
+    ],
+    "operating_margin": [
+      "q3-2026-10q"
+    ],
+    "forecast_tax_rate": [
+      "q3-2026-10q"
+    ],
+    "d_and_a_percent_revenue": [
+      "q3-2026-10q"
+    ],
+    "capex_percent_revenue": [
+      "q3-2026-10q"
+    ],
+    "change_in_operating_nwc_percent_revenue": [
+      "q3-2026-10q"
+    ]
+  },
+  "limitations": {
+    "revenue_growth": "FY2026 revenue is reported nine months plus the midpoint of explicit Q4 guidance. FY2026 margin is revenue less the midpoint of full-year expense guidance, including the disclosed litigation charge. Subsequent growth fades to 8%, margin to 35%; both endpoints are analyst policy, not management targets. Operating tax 16% to20% is policy, not the unusually low reported consolidated ETR.",
+    "operating_margin": "FY2026 revenue is reported nine months plus the midpoint of explicit Q4 guidance. FY2026 margin is revenue less the midpoint of full-year expense guidance, including the disclosed litigation charge. Subsequent growth fades to 8%, margin to 35%; both endpoints are analyst policy, not management targets. Operating tax 16% to20% is policy, not the unusually low reported consolidated ETR.",
+    "forecast_tax_rate": "Explicit operating tax convention, not historical effective or actual unlevered cash taxes. No immediate tax benefit on operating losses.",
+    "d_and_a_percent_revenue": "Annualized cash-flow D&A is a forecast starting estimate; expense alignment and commissioning are not fully reconciled vintage economics.",
+    "capex_percent_revenue": "Full-year spending-guidance midpoint140bn includes finance principal. Subtract 4/3 of disclosed nine-month principal2.769bn to estimate cash PP&E136.308bn, then add a separately configured3% new financed-assets estimate. Future cash PP&E growth20%,10%,0%,-5% and commissioning10% are modeling assumptions. Cash principal is not deducted a second time. Acquisitions/ventures remain outside this scoped plan.",
+    "change_in_operating_nwc_percent_revenue": "Company-specific incremental-sales cash coefficient; not book NWC, historical CFO calibration or a second CFO deduction."
+  },
+  "diagnostics": [
+    "FY2026 margin includes the legal charge embedded in management expense guidance; no automatic non-GAAP adjustment or future legal-cash allocation.",
+    "Revenue guidance is a range; its midpoint and all subsequent-year fades are estimates, not promises.",
+    "Cash PP&E is estimated from inclusive guidance less annualized finance principal; newly financed additions are separately estimated at3% of cash PP&E, not a disclosed split.",
+    "Expense D&A starts from 4/3 of reported nine-month cash-flow D&A; commissioning10% is simplified and does not prove expense/vintage completeness.",
+    "Terminal D&A14% and investment20% are independent of the annual schedule; asset retirement/transition economics are not reconciled.",
+    "Acquisition/venture perimeter, litigation cash timing and equity bridge remain qualified; no current-date valuation, per-share defaults or ten-year extrapolation."
+  ],
+  "selection": {
+    "fy2025_revenue": {
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_revenue": {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_da": {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_cash_ppe": {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_finance_principal": {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "q42026_revenue_guidance_low": {
+      "start": "2026-10-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-guidance",
+      "unit": "USD"
+    },
+    "q42026_revenue_guidance_high": {
+      "start": "2026-10-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-guidance",
+      "unit": "USD"
+    },
+    "fy2026_expense_guidance_low": {
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-guidance",
+      "unit": "USD"
+    },
+    "fy2026_expense_guidance_high": {
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-guidance",
+      "unit": "USD"
+    },
+    "fy2026_capex_guidance_low": {
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-guidance",
+      "unit": "USD"
+    },
+    "fy2026_capex_guidance_high": {
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "cik": 1326801,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-guidance",
+      "unit": "USD"
+    },
+    "treasury_10y": {
+      "start": null,
+      "end": "2026-10-28",
+      "cik": null,
+      "dimensions": [],
+      "scope": "macro",
+      "definition": "treasury-par-yield",
+      "unit": "fraction"
+    },
+    "implied_erp": {
+      "start": null,
+      "end": "2026-10-01",
+      "cik": null,
+      "dimensions": [],
+      "scope": "macro",
+      "definition": "implied-erp-over-treasury",
+      "unit": "fraction"
+    }
+  }
+}

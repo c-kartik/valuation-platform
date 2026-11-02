@@ -5,11 +5,12 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 from valuation_platform.preload.generate import generate,engine_request
 from valuation_platform.preload.profile import read_json,exclusive_json,refresh_diff,validate_profile
+from valuation_platform.preload.issuers import ISSUERS, ALIASES
 
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__);commands=parser.add_subparsers(dest='command',required=True)
-    gen=commands.add_parser('generate');gen.add_argument('output',type=Path);gen.add_argument('--dataset',type=Path);gen.add_argument('--policy',type=Path);gen.add_argument('--ticker',choices=['GOOG','GOOGL'],default='GOOGL')
+    gen=commands.add_parser('generate');gen.add_argument('output',type=Path);gen.add_argument('--dataset',type=Path);gen.add_argument('--policy',type=Path);gen.add_argument('--ticker',choices=[*ISSUERS,*ALIASES],default='GOOGL')
     diff=commands.add_parser('diff');diff.add_argument('previous',type=Path);diff.add_argument('candidate',type=Path);diff.add_argument('output',type=Path);diff.add_argument('--previous-result',type=Path);diff.add_argument('--candidate-result',type=Path)
     export=commands.add_parser('export');export.add_argument('profile',type=Path);export.add_argument('destination',type=Path);export.add_argument('--scenario',choices=['Base','Bear','Bull'],default='Base');export.add_argument('--method',choices=['perpetual_growth','exit_multiple'],default='perpetual_growth');export.add_argument('--run',action='store_true')
     acq=commands.add_parser('acquire');acq.add_argument('url');acq.add_argument('destination',type=Path);acq.add_argument('--published-at');acq.add_argument('--observation-date')

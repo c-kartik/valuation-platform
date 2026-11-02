@@ -1,5 +1,10 @@
 # GOOGL proposed starting estimates — policy v1
 
+November2: [registered issuer preloads](registered-preloads.md) now reuse this
+machinery for META/AAPL with their own sources, fiscal dates and policies. All
+Alphabet v1 economics remain unchanged. Earlier GOOGL-only loading statements
+describe the original milestone and are superseded for issuer selection.
+
 Subsequent UI status: the [result-first workspace](investor-result-first-workspace.md)
 now calculates complete starting profiles automatically through the local API and
 uses one on-demand editor. Earlier no-auto/inline-layout statements below are

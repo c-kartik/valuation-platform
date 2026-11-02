@@ -31,10 +31,12 @@ def build_catalog(root: Path) -> bytes:
         context = FinancialContext.read(context_path).to_dict() if context_path.exists() else None
         from valuation_platform.review.history import historical_references
         from valuation_platform.review.cfo_history import adopted_window, policy
+        from valuation_platform.preload.issuers import routes
         entries.append({
             'historical_references': historical_references(root, kind),
             'historical_window': adopted_window(root, kind),
             'historical_fcff_policy': policy(),
+            'preload_route': routes().get(kind),
             'financial_context': context,
             'kind': kind, 'company': ANCHORS[kind]['ticker'],
             'identity': dict(template['anchor']),

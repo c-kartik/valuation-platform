@@ -1,0 +1,468 @@
+{
+  "companies": [
+    {
+      "anchor": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K",
+        "kind": "googl-fy2025"
+      },
+      "anchor_revenue": "402836000000",
+      "annual_forecast": [
+        {
+          "d_and_a": "33000000000.000000000000000000000000000000000000000",
+          "ebit": "158757926970.75329237518941342386947240738000699717",
+          "fcff": "-61083023312.352729971141702859427208499944446868188",
+          "fiscal_year_label": "FY2026",
+          "investment": "205000000000.00000000000000000000000000000000000000",
+          "nopat": "130181500116.01769974765531900757296737405160573768",
+          "period_index": 1,
+          "revenue": "499158617141.85214859398510933500087936998026302934",
+          "tax": "28576426854.735592627534094416296505033328401259491",
+          "working_capital_cash_requirement": "19264523428.370429718797021867000175873996052605868"
+        },
+        {
+          "d_and_a": "57600000000.000000000000000000000000000000000000000",
+          "ebit": "185817300878.84112757460405409302554347441858183860",
+          "fcff": "-67323663890.666559416391215207085007081134614404256",
+          "fiscal_year_label": "FY2027",
+          "investment": "256250000000.00000000000000000000000000000000000000",
+          "nopat": "150976556964.05841615436579395058325407296509774386",
+          "period_index": 2,
+          "revenue": "597409721415.47702644777015512334218514047882376992",
+          "tax": "34840743914.782711420238260142442289401453484094738",
+          "working_capital_cash_requirement": "19650220854.724975570757009157668261154099712148116"
+        },
+        {
+          "d_and_a": "88350000000.000000000000000000000000000000000000002",
+          "ebit": "209699405683.27518927598672210779717917348595040497",
+          "fcff": "-7308584649.395326117716574316638776903879242231248",
+          "fiscal_year_label": "FY2028",
+          "investment": "246000000000.00000000000000000000000000000000000000",
+          "nopat": "168808021575.03652736716931129677672923465619007600",
+          "period_index": 3,
+          "revenue": "689742752537.63629387219958319041971583315598530616",
+          "tax": "40891384108.238661908817410811020449938829760328969",
+          "working_capital_cash_requirement": "18466606224.431853484885885613415506138535432307248"
+        },
+        {
+          "d_and_a": "117870000000.00000000000000000000000000000000000000",
+          "ebit": "227863904014.66894516380033743233233559818685154404",
+          "fcff": "57782902165.478685438166751117473144403736995237925",
+          "fiscal_year_label": "FY2029",
+          "investment": "226320000000.00000000000000000000000000000000000000",
+          "nopat": "181721463451.69848376813076910228503763955401410637",
+          "period_index": 4,
+          "revenue": "767185558968.73528552201967311447918201224107964838",
+          "tax": "46142440562.970461395669568330047297958632837437668",
+          "working_capital_cash_requirement": "15488561286.219798329964017984811893235817018868445"
+        },
+        {
+          "d_and_a": "145028400000.00000000000000000000000000000000000000",
+          "ebit": "238057678947.99855909748270456742289017839840701489",
+          "fcff": "118665368543.35656768970306118466137469276336642668",
+          "fiscal_year_label": "FY2030",
+          "investment": "203688000000.00000000000000000000000000000000000000",
+          "nopat": "188065566368.91886168701133660826408324093474154176",
+          "period_index": 5,
+          "revenue": "820888548096.54675550856105023249272475309795522377",
+          "tax": "49992112579.079697410471367959158806937463665473127",
+          "working_capital_cash_requirement": "10740597825.562293997308275423602708548171375115078"
+        }
+      ],
+      "annual_inputs": {
+        "exit_ev_ebit_multiple": null,
+        "forecast_years[0].capex_percent_revenue": "0.41069109689784757436456273558835028373659300279204",
+        "forecast_years[0].change_in_operating_nwc_percent_revenue": "0.038593991502496267837343420338079341561644703538798",
+        "forecast_years[0].d_and_a_percent_revenue": "0.066111249744531560751368635484953948113695458986035",
+        "forecast_years[0].forecast_tax_rate": "0.18",
+        "forecast_years[0].operating_margin": "0.31805105936022950845371814668788261206957366923505",
+        "forecast_years[0].revenue_growth": "0.2391112441337222805161035988218552447397458594300",
+        "forecast_years[1].capex_percent_revenue": "0.42893510234961061026443162626802497976562463236421",
+        "forecast_years[1].change_in_operating_nwc_percent_revenue": "0.032892368755176235251673857127522384131307923654666",
+        "forecast_years[1].d_and_a_percent_revenue": "0.096416241542780765468219557748441907646829185655331",
+        "forecast_years[1].forecast_tax_rate": "0.1875",
+        "forecast_years[1].operating_margin": "0.31103829452017213134028861001591195905218025192629",
+        "forecast_years[1].revenue_growth": "0.1968334331002917103870776991163914335548093945725",
+        "forecast_years[2].capex_percent_revenue": "0.35665470799793121218607705464164797755091412081136",
+        "forecast_years[2].change_in_operating_nwc_percent_revenue": "0.026773179067835453986297315922504962517675510307509",
+        "forecast_years[2].d_and_a_percent_revenue": "0.12809123354315944144975572267312845047407830314506",
+        "forecast_years[2].forecast_tax_rate": "0.195",
+        "forecast_years[2].operating_margin": "0.30402552968011475422685907334394130603478683461752",
+        "forecast_years[2].revenue_growth": "0.1545556220668611402580517994109276223698729297150",
+        "forecast_years[3].capex_percent_revenue": "0.29500033903691232197828225501560793604245511317675",
+        "forecast_years[3].change_in_operating_nwc_percent_revenue": "0.020188807134273750870574062821947023311816789216859",
+        "forecast_years[3].d_and_a_percent_revenue": "0.15363949258696030130602743636748721907619381490873",
+        "forecast_years[3].forecast_tax_rate": "0.2025",
+        "forecast_years[3].operating_margin": "0.29701276484005737711342953667197065301739341730876",
+        "forecast_years[3].revenue_growth": "0.1122778110334305701290258997054638111849364648575",
+        "forecast_years[4].capex_percent_revenue": "0.24813112629272999044902245748976368452169121669072",
+        "forecast_years[4].change_in_operating_nwc_percent_revenue": "0.013084112149532710280373831775700934579439252336449",
+        "forecast_years[4].d_and_a_percent_revenue": "0.17667246100129885976020682894332726299185834438312",
+        "forecast_years[4].forecast_tax_rate": "0.21",
+        "forecast_years[4].operating_margin": "0.29000000000000000000000000000000000000000000000000",
+        "forecast_years[4].revenue_growth": "0.0700000000000000000000000000000000000000000000000",
+        "terminal.d_and_a_percent_revenue": "0.16",
+        "terminal.investment_percent_revenue": "0.23",
+        "terminal.operating_margin": "0.29",
+        "terminal.operating_tax_rate": "0.21",
+        "terminal.working_capital_cash_requirement_percent_revenue": "0.0058252427184466019417475728155339805825242718446602",
+        "terminal_growth": "0.03",
+        "wacc": "0.08940800"
+      },
+      "classification": "PROPOSED_FORECAST_ESTIMATES_NOT_REPORTED_FACTS",
+      "economic_hash": "1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe",
+      "enterprise_value": "1421564121025.2409787628263166077237849572626227555",
+      "information_review": "2026-10-30",
+      "policy_version": "googl-preload-v1.0.0",
+      "pv_explicit_fcff": "-91236781.206547678523384024491705823311997178668",
+      "pv_terminal_value": "1421655357806.4475264413497006322154907805746199342",
+      "sources": [
+        {
+          "bytes": 370589,
+          "id": "q3-2026-release",
+          "sha256": "c5f86ba70e27aa8834fa4b110c9781ac413949adb050502008a180fec27b7b89",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm"
+        },
+        {
+          "bytes": 128439,
+          "id": "q3-2026-call",
+          "sha256": "1b7f638d987b884eceba3e0ffa6c19bc9ae0fd1637faffd91560c90e1847b90f",
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q3-Earnings-Call-2026-Ujou16CTw9/default.aspx"
+        },
+        {
+          "bytes": 2530714,
+          "id": "q3-2026-10q",
+          "sha256": "f523567d4c813275cae031ae3cda0f6409dcff51286642e5d75df55951daa9be",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm"
+        },
+        {
+          "bytes": 414623,
+          "id": "q4-2025-release",
+          "sha256": "8de6e5a9cfa7dd74ba0a3f2553bd5195dd910aefa5b61d77b712047db47ca97d",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm"
+        },
+        {
+          "bytes": 246533,
+          "id": "treasury-2026-10",
+          "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+          "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+        },
+        {
+          "bytes": 169880,
+          "id": "damodaran-2026-10-08",
+          "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+          "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+        }
+      ],
+      "ticker": "GOOGL",
+      "wacc": "0.08940800"
+    },
+    {
+      "anchor": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K",
+        "kind": "meta-fy2025"
+      },
+      "anchor_revenue": "200966000000",
+      "annual_forecast": [
+        {
+          "d_and_a": "26012000000.000000000000000000000000000000000000000",
+          "ebit": "79212000000.000000000000000000000000000000000000011",
+          "fcff": "-53371759999.999999999999999999999999999999999999992",
+          "fiscal_year_label": "FY2026",
+          "investment": "140397240000.00000000000000000000000000000000000000",
+          "nopat": "66538080000.000000000000000000000000000000000000009",
+          "period_index": 1,
+          "revenue": "256212000000.00000000000000000000000000000000000001",
+          "tax": "12673920000.000000000000000000000000000000000000002",
+          "working_capital_cash_requirement": "5524600000.0000000000000000000000000000000000000008"
+        },
+        {
+          "d_and_a": "40051724000.000000000000000000000000000000000000001",
+          "ebit": "100335032503.21447409014460157439566891912064727368",
+          "fcff": "-50941804635.181921320024282714489018042853019913802",
+          "fiscal_year_label": "FY2027",
+          "investment": "168476688000.00000000000000000000000000000000000000",
+          "nopat": "83278076977.668013494820019306748405202870137237154",
+          "period_index": 2,
+          "revenue": "314161176128.49934814844302021237423245723157150962",
+          "tax": "17056955525.546460595324582267647263716250510036526",
+          "working_capital_cash_requirement": "5794917612.8499348148443020212374232457231571509617"
+        },
+        {
+          "d_and_a": "56899392800.000000000000000000000000000000000000001",
+          "ebit": "121915830026.86485103359222157005547841129656587719",
+          "fcff": "-34028808355.863170855172470699986418286201734275243",
+          "fiscal_year_label": "FY2028",
+          "investment": "185324356800.00000000000000000000000000000000000000",
+          "nopat": "99970980622.029177847545621687445492297263184019296",
+          "period_index": 3,
+          "revenue": "369909425907.42283517562394408669333829188075445507",
+          "tax": "21944849404.835673186046599882609986114033381857894",
+          "working_capital_cash_requirement": "5574824977.8923487027180923874319105834649182945433"
+        },
+        {
+          "d_and_a": "75431828480.000000000000000000000000000000000000001",
+          "ebit": "141871845386.38840033409820661862512518430371440408",
+          "fcff": "261986807.0486074663529566957036748036388457132946",
+          "fiscal_year_label": "FY2029",
+          "investment": "185324356800.00000000000000000000000000000000000000",
+          "nopat": "114916194762.97460427061954736108635139928600866730",
+          "period_index": 4,
+          "revenue": "417526222266.68280321828985074052010424835238399513",
+          "tax": "26955650623.413796063478659257538773785017705736775",
+          "working_capital_cash_requirement": "4761679635.9259968042665906653826765956471629540054"
+        },
+        {
+          "d_and_a": "93964264159.999999999999999999999999999999999999999",
+          "ebit": "157824912016.80609961651356357991659940587720115016",
+          "fcff": "40825845035.311417267464532058009118690714941848169",
+          "fiscal_year_label": "FY2030",
+          "investment": "176058138960.00000000000000000000000000000000000000",
+          "nopat": "126259929613.44487969321085086393327952470176092013",
+          "period_index": 5,
+          "revenue": "450928320048.01742747575303879976171258822057471474",
+          "tax": "31564982403.361219923302712715983319881175440230032",
+          "working_capital_cash_requirement": "3340209778.1334624257463188059241608339868190719610"
+        }
+      ],
+      "annual_inputs": {
+        "exit_ev_ebit_multiple": null,
+        "forecast_years[0].capex_percent_revenue": "0.54797292866844644278956489157416514448971945107955",
+        "forecast_years[0].change_in_operating_nwc_percent_revenue": "0.021562612211762134482381777590432922735859366462151",
+        "forecast_years[0].d_and_a_percent_revenue": "0.10152529936146628573212808143256365822053611852684",
+        "forecast_years[0].forecast_tax_rate": "0.16",
+        "forecast_years[0].operating_margin": "0.30916584703292585827361716078872183972647651163883",
+        "forecast_years[0].revenue_growth": "0.2749022222664530318561348685847357264412885761771",
+        "forecast_years[1].capex_percent_revenue": "0.53627469210609604935989823221245923689508884085211",
+        "forecast_years[1].change_in_operating_nwc_percent_revenue": "0.018445683468156092314327638093396870430308730848032",
+        "forecast_years[1].d_and_a_percent_revenue": "0.12748782167666032042636676633067078525055475455031",
+        "forecast_years[1].forecast_tax_rate": "0.17",
+        "forecast_years[1].operating_margin": "0.31937438527469439370521287059154137979485738372912",
+        "forecast_years[1].revenue_growth": "0.22617666669983977389210115143855179483096643213282",
+        "forecast_years[2].capex_percent_revenue": "0.50099928204149383614368735177467007363148390606332",
+        "forecast_years[2].change_in_operating_nwc_percent_revenue": "0.015070783785021901921516860836713749923719815656363",
+        "forecast_years[2].d_and_a_percent_revenue": "0.15381979699603599909279978609384133370407966373676",
+        "forecast_years[2].forecast_tax_rate": "0.18",
+        "forecast_years[2].operating_margin": "0.32958292351646292913680858039436091986323825581942",
+        "forecast_years[2].revenue_growth": "0.17745111113322651592806743429236786322064428808855",
+        "forecast_years[3].capex_percent_revenue": "0.44386279691345810868570668949532117252489886134169",
+        "forecast_years[3].change_in_operating_nwc_percent_revenue": "0.011404504392743533131900982324368509226908350220024",
+        "forecast_years[3].d_and_a_percent_revenue": "0.18066369118205969922484266369027907749042655486542",
+        "forecast_years[3].forecast_tax_rate": "0.19",
+        "forecast_years[3].operating_margin": "0.33979146175823146456840429019718045993161912790971",
+        "forecast_years[3].revenue_growth": "0.12872555556661325796403371714618393161032214404428",
+        "forecast_years[4].capex_percent_revenue": "0.39043486765535666967724199538940288323949436877278",
+        "forecast_years[4].change_in_operating_nwc_percent_revenue": "0.0074074074074074074074074074074074074074074074074074",
+        "forecast_years[4].d_and_a_percent_revenue": "0.20837960266056065749390123392575110624344114907369",
+        "forecast_years[4].forecast_tax_rate": "0.20",
+        "forecast_years[4].operating_margin": "0.35000000000000000000000000000000000000000000000000",
+        "forecast_years[4].revenue_growth": "0.0800000000000000000000000000000000000000000000000",
+        "terminal.d_and_a_percent_revenue": "0.14",
+        "terminal.investment_percent_revenue": "0.20",
+        "terminal.operating_margin": "0.35",
+        "terminal.operating_tax_rate": "0.20",
+        "terminal.working_capital_cash_requirement_percent_revenue": "0.0029126213592233009708737864077669902912621359223301",
+        "terminal_growth": "0.03",
+        "wacc": "0.09253500"
+      },
+      "classification": "PROPOSED_FORECAST_ESTIMATES_NOT_REPORTED_FACTS",
+      "economic_hash": "0c89bd0947842e24b190b00f25381138ee50f93d6100c6b024e1138727ec547f",
+      "enterprise_value": "944596454073.30023136668600180868576955784395449372",
+      "information_review": "2026-11-02",
+      "policy_version": "meta-preload-v1.0.0",
+      "pv_explicit_fcff": "-91211788991.368622539658178769459818827749923131582",
+      "pv_terminal_value": "1035808243064.6688539063441805781455883855938776253",
+      "sources": [
+        {
+          "bytes": 1826159,
+          "id": "q3-2026-10q",
+          "sha256": "4ca982ff1218f1f71dadb5fd23b2a917721f1b962b6c6d89febfe0d24e318024",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm"
+        },
+        {
+          "bytes": 278266,
+          "id": "q3-2026-release",
+          "sha256": "544c130ddd8ebe49823c19d9e7206365c72252e20ca09d8fd018f3f2e55270fd",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx"
+        },
+        {
+          "bytes": 2371860,
+          "id": "fy2025-10k",
+          "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+        },
+        {
+          "bytes": 246533,
+          "id": "treasury-2026-10",
+          "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+          "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+        },
+        {
+          "bytes": 169880,
+          "id": "damodaran-2026-10-08",
+          "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+          "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+        }
+      ],
+      "ticker": "META",
+      "wacc": "0.09253500"
+    },
+    {
+      "anchor": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K",
+        "kind": "aapl-fy2025"
+      },
+      "anchor_revenue": "416161000000",
+      "annual_forecast": [
+        {
+          "d_and_a": "13297333333.333333333333333333333333333333333333333",
+          "ebit": "157758757243.95786673581133181240214978682606739109",
+          "fcff": "130132434951.77145636659412643329923097214818842444",
+          "fiscal_year_label": "FY2026",
+          "investment": "9155986666.6666666666666666666666666666666666666665",
+          "nopat": "129362180940.04545072336529208616976282519737526069",
+          "period_index": 1,
+          "revenue": "483582853098.81322046875664639074397039431707005830",
+          "tax": "28396576303.912416012446039726232386961628692130396",
+          "working_capital_cash_requirement": "3371092654.9406610234378323195371985197158535029150"
+        },
+        {
+          "d_and_a": "14212932000.000000000000000000000000000000000000000",
+          "ebit": "177360043712.82750945997409019368273691562976801519",
+          "fcff": "145449612849.94679027194515562335923775876784083598",
+          "fiscal_year_label": "FY2027",
+          "investment": "10071585333.333333333333333333333333333333333333333",
+          "nopat": "144548435625.95442020987888350785143058623826093238",
+          "period_index": 2,
+          "revenue": "548386241952.29915256076453741392116027705880531962",
+          "tax": "32811608086.873089250095206685831306329391507082810",
+          "working_capital_cash_requirement": "3240169442.6742966046003945511588594941370867630665"
+        },
+        {
+          "d_and_a": "15220090533.333333333333333333333333333333333333333",
+          "ebit": "194458363119.76960462250748558574537669565432744478",
+          "fcff": "158947481186.10933286380794674332769746044062177660",
+          "fiscal_year_label": "FY2028",
+          "investment": "10877312160.000000000000000000000000000000000000000",
+          "nopat": "157511274127.01337974423106332445375512348000523027",
+          "period_index": 3,
+          "revenue": "606517668237.04675683589353570310898020451314105965",
+          "tax": "36947088992.756224878276422261291621572174322214508",
+          "working_capital_cash_requirement": "2906571314.2373802137564499144593909963727167870002"
+        },
+        {
+          "d_and_a": "16307821749.333333333333333333333333333333333333333",
+          "ebit": "207791096693.63333852574929126833366603340076037853",
+          "fcff": "169684216091.46697483200953640525510150749943972268",
+          "fiscal_year_label": "FY2029",
+          "investment": "11529950889.600000000000000000000000000000000000000",
+          "nopat": "167271832838.37483751322817947100860115688761210472",
+          "period_index": 4,
+          "revenue": "653827420369.87067712693306368484563985894325536715",
+          "tax": "40519263855.258501012521111797325064876513148273813",
+          "working_capital_cash_requirement": "2365487606.6411960145519763990868329827215057153743"
+        },
+        {
+          "d_and_a": "17460816838.293333333333333333333333333333333333333",
+          "ebit": "216253419287.33472645973311081376269538334548171269",
+          "fcff": "176722535283.15643780830248932513137554036236056506",
+          "fiscal_year_label": "FY2030",
+          "investment": "12106448434.080000000000000000000000000000000000000",
+          "nopat": "173002735429.86778116778648865101015630667638537015",
+          "period_index": 5,
+          "revenue": "686518791388.36421098327971686908792185189041813551",
+          "tax": "43250683857.466945291946622162752539076669096342538",
+          "working_capital_cash_requirement": "1634568550.9246766928173326592121140996473581384179"
+        }
+      ],
+      "annual_inputs": {
+        "exit_ev_ebit_multiple": null,
+        "forecast_years[0].capex_percent_revenue": "0.018933646236616607468524995991535977295858717795219",
+        "forecast_years[0].change_in_operating_nwc_percent_revenue": "0.0069710756560920215004563633948410956942823937978490",
+        "forecast_years[0].d_and_a_percent_revenue": "0.027497528599543238927623279635413522019341660985631",
+        "forecast_years[0].forecast_tax_rate": "0.18",
+        "forecast_years[0].operating_margin": "0.32622901377299688348245702221775409671257665627827",
+        "forecast_years[0].revenue_growth": "0.1620090616343511777142900136984099192243316169903",
+        "forecast_years[1].capex_percent_revenue": "0.018365860707004025190348195297639652396619506892376",
+        "forecast_years[1].change_in_operating_nwc_percent_revenue": "0.0059085534880288619879698255686000066017823638393351",
+        "forecast_years[1].d_and_a_percent_revenue": "0.025917739929799876632136889282316773302765385363517",
+        "forecast_years[1].forecast_tax_rate": "0.185",
+        "forecast_years[1].operating_margin": "0.32342176032974766261184276666331557253443249220870",
+        "forecast_years[1].revenue_growth": "0.13400679622576338328571751027380743941824871274272",
+        "forecast_years[2].capex_percent_revenue": "0.017934040061218454012988745964565604961155627855814",
+        "forecast_years[2].change_in_operating_nwc_percent_revenue": "0.0047922285968780681370856277005838556297231578296031",
+        "forecast_years[2].d_and_a_percent_revenue": "0.025094224505566800403540625808593431613123605153725",
+        "forecast_years[2].forecast_tax_rate": "0.19",
+        "forecast_years[2].operating_margin": "0.32061450688649844174122851110887704835628832813914",
+        "forecast_years[2].revenue_growth": "0.10600453081717558885714500684920495961216580849515",
+        "forecast_years[3].capex_percent_revenue": "0.017634547787973618281158869370733768776772839331360",
+        "forecast_years[3].change_in_operating_nwc_percent_revenue": "0.0036179082322718093513093972875138985203953452928107",
+        "forecast_years[3].d_and_a_percent_revenue": "0.024942089060914554429994075604776435601286566490010",
+        "forecast_years[3].forecast_tax_rate": "0.195",
+        "forecast_years[3].operating_margin": "0.31780725344324922087061425555443852417814416406957",
+        "forecast_years[3].revenue_growth": "0.078002265408587794428572503424602479806082904247575",
+        "forecast_years[4].capex_percent_revenue": "0.017634547787973618281158869370733768776772839331360",
+        "forecast_years[4].change_in_operating_nwc_percent_revenue": "0.0023809523809523809523809523809523809523809523809524",
+        "forecast_years[4].d_and_a_percent_revenue": "0.025433851275916110722009488135095059503775095641091",
+        "forecast_years[4].forecast_tax_rate": "0.20",
+        "forecast_years[4].operating_margin": "0.31500000000000000000000000000000000000000000000000",
+        "forecast_years[4].revenue_growth": "0.0500000000000000000000000000000000000000000000000",
+        "terminal.d_and_a_percent_revenue": "0.025",
+        "terminal.investment_percent_revenue": "0.035",
+        "terminal.operating_margin": "0.315",
+        "terminal.operating_tax_rate": "0.20",
+        "terminal.working_capital_cash_requirement_percent_revenue": "0.0012195121951219512195121951219512195121951219512195",
+        "terminal_growth": "0.025",
+        "wacc": "0.08272750"
+      },
+      "classification": "PROPOSED_FORECAST_ESTIMATES_NOT_REPORTED_FACTS",
+      "economic_hash": "3d49d43cb82d7ca8228234e45dbd884f531c20c99a170427de7c6f5e09627d7b",
+      "enterprise_value": "2584235110965.6244937163319612325719931531954903306",
+      "information_review": "2026-11-02",
+      "policy_version": "aapl-preload-v1.0.0",
+      "pv_explicit_fcff": "611726093836.21953382610779949953439387401001471751",
+      "pv_terminal_value": "1972509017129.4049598902241617330375992791854756131",
+      "sources": [
+        {
+          "bytes": 1018319,
+          "id": "q3-2026-10q",
+          "sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm"
+        },
+        {
+          "bytes": 1520319,
+          "id": "fy2025-10k",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "bytes": 246533,
+          "id": "treasury-2026-10",
+          "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+          "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+        },
+        {
+          "bytes": 169880,
+          "id": "damodaran-2026-10-08",
+          "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+          "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+        }
+      ],
+      "ticker": "AAPL",
+      "wacc": "0.08272750"
+    }
+  ],
+  "schema_version": "registered-preload-verification-v1",
+  "scope": "Registered five-year profiles only; no universe expansion, historical approval, equity bridge or ten-year defaults."
+}

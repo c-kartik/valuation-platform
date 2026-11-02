@@ -1,0 +1,205 @@
+{
+  "version": "aapl-preload-v1.0.0",
+  "mapping": "aapl-reviewed-inline-guidance-v1",
+  "rules": "registered-decimal-fade-commissioning-v1",
+  "issuer": {
+    "cik": 320193,
+    "anchor_kind": "aapl-fy2025"
+  },
+  "review_date": "2026-11-02",
+  "source_max_age_days": 45,
+  "configuration": {
+    "growth_endpoint": "0.05",
+    "margin_endpoint": "0.315",
+    "tax_start": "0.18",
+    "tax_endpoint": "0.20",
+    "expense_da_start_usd": null,
+    "commissioning_allowance": "0.10",
+    "cash_ppe_start_usd": null,
+    "cash_ppe_growth": [
+      "0.10",
+      "0.08",
+      "0.06",
+      "0.05"
+    ],
+    "new_financed_fraction_cash_ppe": "0.01",
+    "incremental_wc": "0.05",
+    "beta": "1.05",
+    "credit_spread": "0.006",
+    "equity_weight": "0.85",
+    "debt_weight": "0.15",
+    "debt_tax_shield": "0.20",
+    "terminal_growth": "0.025",
+    "terminal_margin": "0.315",
+    "terminal_tax": "0.20",
+    "terminal_da": "0.025",
+    "terminal_investment": "0.035",
+    "exit_ev_ebit_multiple": null,
+    "bear_growth_offset": "-0.02",
+    "bull_growth_offset": "0.02",
+    "bear_margin_offset": "-0.02",
+    "bull_margin_offset": "0.02",
+    "bear_wacc_offset": "0.01",
+    "bull_wacc_offset": "-0.01",
+    "sensitivity_wacc_offset": "0.01",
+    "sensitivity_growth_offset": "0.005",
+    "sensitivity_multiple_offset": "2"
+  },
+  "configuration_provenance": {
+    "owner": "AI-assisted initial forecast policy under user authorization; editable estimates, not financial approval",
+    "selected_at": "2026-11-02",
+    "operating": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+    "investment": "Annualize reported nine-month cash PP&E6.799bn by4/3; do not copy an infrastructure spending plan from another issuer. Later cash PP&E grows10%,8%,6%,5%. A separately configured1% new-financed-assets estimate and10% commissioning allowance are forecast assumptions, not inferred from the undisclosed operating/finance lease split.",
+    "wc": "0.05 of incremental revenue converted to full-revenue cash needs; analyst convention, not calibration from mixed historical CFO. Taxes, capital creditors, acquisitions, financing and collateral excluded.",
+    "wacc": "Shared dated Treasury/ERP observations; company-specific configured beta, spread, target financing weights and tax shield. No observed issuer beta regression or current market weights are claimed.",
+    "terminal": "Independent nominal-USD growth, operating margin, tax, D&A, investment and incremental cash assumptions. No year-five copy or target-EV solving.",
+    "scenario": "Diagnostic offsets only, not researched probabilities, fair-value bounds or guaranteed ordering. Unchanged ratios inherit Base."
+  },
+  "revenue_model": {
+    "method": "quarter-extension",
+    "prior_ytd_key": "ytd2025_revenue"
+  },
+  "margin_model": {
+    "method": "reported-quarter"
+  },
+  "investment_model": {
+    "method": "annualize-ytd",
+    "key": "ytd2026_cash_ppe",
+    "annualization_numerator": "4",
+    "annualization_denominator": "3"
+  },
+  "da_model": {
+    "method": "annualize-ytd",
+    "key": "ytd2026_da",
+    "annualization_numerator": "4",
+    "annualization_denominator": "3"
+  },
+  "context_sources": {
+    "revenue_growth": [
+      "q3-2026-10q"
+    ],
+    "operating_margin": [
+      "q3-2026-10q"
+    ],
+    "forecast_tax_rate": [
+      "q3-2026-10q"
+    ],
+    "d_and_a_percent_revenue": [
+      "q3-2026-10q"
+    ],
+    "capex_percent_revenue": [
+      "q3-2026-10q"
+    ],
+    "change_in_operating_nwc_percent_revenue": [
+      "q3-2026-10q"
+    ]
+  },
+  "limitations": {
+    "revenue_growth": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+    "operating_margin": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+    "forecast_tax_rate": "Explicit operating tax convention, not historical effective or actual unlevered cash taxes. No immediate tax benefit on operating losses.",
+    "d_and_a_percent_revenue": "Annualized cash-flow D&A is a forecast starting estimate; expense alignment and commissioning are not fully reconciled vintage economics.",
+    "capex_percent_revenue": "Annualize reported nine-month cash PP&E6.799bn by4/3; do not copy an infrastructure spending plan from another issuer. Later cash PP&E grows10%,8%,6%,5%. A separately configured1% new-financed-assets estimate and10% commissioning allowance are forecast assumptions, not inferred from the undisclosed operating/finance lease split.",
+    "change_in_operating_nwc_percent_revenue": "Company-specific incremental-sales cash coefficient; not book NWC, historical CFO calibration or a second CFO deduction."
+  },
+  "diagnostics": [
+    "FY2026 remains estimated using the retained July filing; this policy does not assert that an unavailable September-year-end result has been reported.",
+    "Prior fiscal Q4 revenue is annual less nine-month revenue; no calendar-Q4 substitution. Quarter momentum and4/3 annualizations do not normalize seasonality or acquisitions.",
+    "Latest-quarter reported operating margin includes tariff-refund effects; the31.5% endpoint is an independent assumption, not a claim of normalized reported earnings.",
+    "Expense D&A starts from4/3 of cash-flow D&A; expense alignment, acquisitions and future intangible amortization remain uncertain.",
+    "The1% financed-additions overlay is an explicit forecast estimate; missing historical lease splits and historical interest gaps are not solved.",
+    "Terminal D&A2.5% and investment3.5% are independent mature assumptions; no implied historical ROIC, equity bridge or years6\u201310 defaults."
+  ],
+  "selection": {
+    "fy2025_revenue": {
+      "start": "2024-09-29",
+      "end": "2025-09-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_revenue": {
+      "start": "2025-09-28",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_da": {
+      "start": "2025-09-28",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2026_cash_ppe": {
+      "start": "2025-09-28",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "ytd2025_revenue": {
+      "start": "2024-09-29",
+      "end": "2025-06-28",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "q32026_revenue": {
+      "start": "2026-03-29",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "q32025_revenue": {
+      "start": "2025-03-30",
+      "end": "2025-06-28",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "q32026_ebit": {
+      "start": "2026-03-29",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "definition": "consolidated-reported",
+      "unit": "USD"
+    },
+    "treasury_10y": {
+      "start": null,
+      "end": "2026-10-28",
+      "cik": null,
+      "dimensions": [],
+      "scope": "macro",
+      "definition": "treasury-par-yield",
+      "unit": "fraction"
+    },
+    "implied_erp": {
+      "start": null,
+      "end": "2026-10-01",
+      "cik": null,
+      "dimensions": [],
+      "scope": "macro",
+      "definition": "implied-erp-over-treasury",
+      "unit": "fraction"
+    }
+  }
+}

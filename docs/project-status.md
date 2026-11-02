@@ -1,5 +1,35 @@
 # Project Status
 
+Validation for the registered-preload milestone: **432 affected tests passed**
+(31 preload, 60 historical/review, 67 API, 274 frontend), plus the production UI
+build and offline observation/verification replay. Independent financial checks
+cover both peers' five annual forecasts and terminal/EV arithmetic; all nine
+registered-company/scenario API results match CLI execution. The 131-entry private
+bundle is running locally on API port 8002 behind the existing workspace preview.
+A fresh browser tab verified Meta and Apple automatic loading, their respective
+fiscal anchors, calculated charts and Apple profile-review identity. Existing user
+tabs were not reloaded. [Meta preview](assets/meta-registered-preload.jpg) and
+[Apple preview](assets/apple-registered-preload.jpg). No cloud deployment or push.
+
+## Current milestone — registered company preloads
+
+The user authorizes generalizing Alphabet's preload and adding META/AAPL, with
+Top50 extension later. [Shared pipeline, policies and results](registered-preloads.md)
+now provide37 editable five-year perpetual-growth fields for all three. Registry
+metadata drives datasets, templates, API routes and UI loading; client validation
+uses each company's exact anchor/revenue. Alphabet's original economics are unchanged.
+
+New peer primary snapshots and reviewed mappings replay inline facts and guidance.
+Meta uses YTD plus Q4 guidance and full-year expense guidance, including the legal
+charge. Inclusive spending guidance is adjusted by estimated annual finance
+principal before separately estimated financed assets. Apple uses September fiscal
+periods, annual-minus-YTD prior fiscal Q4 and quarter momentum. D&A, spending, WC,
+tax, WACC and terminal policies are explicitly labelled company-specific estimates.
+
+Original FY2025 anchors, historical FCFF/gaps, engine/approval/source packages,
+optional equity bridge and manual years6–10 remain unchanged. No other issuer,
+wider history review, cloud deployment or push is included.
+
 ## Preload reproducibility audit — before META/AAPL extension
 
 The user asks to prepare META/AAPL starting inputs and establish how Alphabet's

@@ -6,7 +6,7 @@ import hashlib
 import os
 from .profile import exclusive_json
 
-ALLOWED={'www.sec.gov','data.sec.gov','abc.xyz','home.treasury.gov','aswathdamodaran.blogspot.com','pages.stern.nyu.edu'}
+ALLOWED={'www.sec.gov','data.sec.gov','abc.xyz','investor.atmeta.com','www.apple.com','investor.apple.com','home.treasury.gov','aswathdamodaran.blogspot.com','pages.stern.nyu.edu'}
 
 
 def acquire(url,destination,*,published_at=None,observation_date=None):

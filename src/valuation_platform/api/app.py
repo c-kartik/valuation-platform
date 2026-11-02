@@ -102,8 +102,10 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
             assert callable(read_case)
             app.state.catalog = build_catalog(root)
             from valuation_platform.preload.generate import generate
+            from valuation_platform.preload.issuers import ISSUERS
             from .budget import encode_bounded
-            app.state.preload = encode_bounded(generate(root), 192 * 1024)
+            app.state.preloads = {ticker.lower(): encode_bounded(generate(root, ticker=ticker), 192 * 1024)
+                                  for ticker in ISSUERS}
         except Exception:
             raise RuntimeError('Private runtime bundle failed readiness checks') from None
         app.state.calculator = Calculator(root, policy, worker_target, worker_args)
@@ -135,14 +137,16 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
             raise ExecutionError(503, 'not_ready', 'Service is not ready.')
         return Response(app.state.catalog, media_type='application/json', headers={'Cache-Control': 'no-store'})
 
-    @app.get('/api/v1/preloads/googl')
-    async def preload(request: Request):
+    @app.get('/api/v1/preloads/{ticker}')
+    async def preload(ticker: str, request: Request):
         if request.query_params:
             raise ExecutionError(422, 'invalid_case', 'Query parameters are not accepted.')
         if not app.state.ready:
             raise ExecutionError(503, 'not_ready', 'Service is not ready.')
+        if ticker not in app.state.preloads:
+            raise ExecutionError(404, 'unsupported_preparation', 'No reviewed starting profile is available for this company.')
         # Pinned offline preparation at startup, no engine execution or network.
-        return Response(app.state.preload, media_type='application/json')
+        return Response(app.state.preloads[ticker], media_type='application/json')
 
     async def intake(request, reader=None):
         if request.query_params:

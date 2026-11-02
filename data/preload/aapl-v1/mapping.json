@@ -1,0 +1,175 @@
+{
+  "version": "aapl-reviewed-inline-guidance-v1",
+  "observations": [
+    {
+      "id": "fy2025_revenue-original",
+      "key": "fy2025_revenue",
+      "source": "fy2025-10k",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2024-09-29",
+      "end": "2025-09-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "cik": 320193,
+        "start": "2024-09-29",
+        "end": "2025-09-27"
+      }
+    },
+    {
+      "id": "ytd2026_revenue-original",
+      "key": "ytd2026_revenue",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2025-09-28",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "cik": 320193,
+        "start": "2025-09-28",
+        "end": "2026-06-27"
+      }
+    },
+    {
+      "id": "ytd2026_da-original",
+      "key": "ytd2026_da",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2025-09-28",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:DepreciationDepletionAndAmortization",
+        "cik": 320193,
+        "start": "2025-09-28",
+        "end": "2026-06-27"
+      }
+    },
+    {
+      "id": "ytd2026_cash_ppe-original",
+      "key": "ytd2026_cash_ppe",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2025-09-28",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+        "cik": 320193,
+        "start": "2025-09-28",
+        "end": "2026-06-27"
+      }
+    },
+    {
+      "id": "ytd2025_revenue-original",
+      "key": "ytd2025_revenue",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2024-09-29",
+      "end": "2025-06-28",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "cik": 320193,
+        "start": "2024-09-29",
+        "end": "2025-06-28"
+      }
+    },
+    {
+      "id": "q32026_revenue-original",
+      "key": "q32026_revenue",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2026-03-29",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "cik": 320193,
+        "start": "2026-03-29",
+        "end": "2026-06-27"
+      }
+    },
+    {
+      "id": "q32025_revenue-original",
+      "key": "q32025_revenue",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2025-03-30",
+      "end": "2025-06-28",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "cik": 320193,
+        "start": "2025-03-30",
+        "end": "2025-06-28"
+      }
+    },
+    {
+      "id": "q32026_ebit-original",
+      "key": "q32026_ebit",
+      "source": "q3-2026-10q",
+      "unit": "USD",
+      "definition": "consolidated-reported",
+      "start": "2026-03-29",
+      "end": "2026-06-27",
+      "cik": 320193,
+      "dimensions": [],
+      "scope": "consolidated",
+      "classification": "REPORTED_FACT",
+      "extraction": {
+        "kind": "inline-xbrl-v1",
+        "concept": "us-gaap:OperatingIncomeLoss",
+        "cik": 320193,
+        "start": "2026-03-29",
+        "end": "2026-06-27"
+      }
+    },
+    {
+      "reviewed_reference": "data/preload/googl-v1/observations.json",
+      "reviewed_id": "treasury_10y-original",
+      "source": "treasury-2026-10"
+    },
+    {
+      "reviewed_reference": "data/preload/googl-v1/observations.json",
+      "reviewed_id": "implied_erp-original",
+      "source": "damodaran-2026-10-08"
+    }
+  ]
+}

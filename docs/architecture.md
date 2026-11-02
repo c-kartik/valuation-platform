@@ -1,5 +1,22 @@
 # Architecture
 
+## Registered issuer preload engine — November 2
+
+`preload/issuers.py` separates listing, dataset and retained-anchor identity from
+shared generation/rules. Legacy Alphabet economics stay identical. New entries
+require issuer-bound policies and company-specific limitations. `preload/extract.py`
+replays reviewed primary inline-XBRL/guidance mappings offline; the observation
+preparation and registered-verification scripts support deterministic `--check`.
+Source acquisition, reviewed extraction, forecast estimation and DCF remain separate.
+
+Startup prepares three bounded cached profiles. Catalog `preload_route` metadata
+drives API/client loading and exact company anchor/revenue validation, replacing
+Alphabet-specific wiring. Refresh/adoption preserves overrides, notes, scenario
+inheritance and late-response protection. The pinned bundle includes new source
+snapshots and modules; raw source bodies are not public API routes. See
+[registered preloads](registered-preloads.md) for policies and extension prerequisites.
+No automatic Top50 onboarding or valuation-engine change.
+
 ## Current adoption — CFO-based historical display
 
 `review/cfo_history.py` enriches the unchanged accepted revenue window with the

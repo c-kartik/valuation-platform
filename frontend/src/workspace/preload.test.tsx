@@ -138,3 +138,34 @@ it('a dialog method Update cancels obsolete scenario work and executes its own c
  const get=transport();let finish!:(r:any)=>void,submitted:any;const load=vi.fn((path:string,body:any,signal?:AbortSignal)=>path==='/api/v1/scenarios/run'?new Promise(yes=>{submitted=body;finish=yes;}):get(path,body,signal))as unknown as typeof request;
  const h=await start(load);let obsolete!:Promise<void>;act(()=>{obsolete=h.result.current.calculateScenarios();});await waitFor(()=>expect(finish).toBeDefined());const d=structuredClone(h.result.current.session!.draft);d.terminalMethod='exit_multiple';d.rates.exit_ev_ebit_multiple='15';await act(async()=>expect(await h.result.current.updateValuation(d,['exit_ev_ebit_multiple'])).toBe(true));expect(h.result.current.session!.ev.result!.stage_b.terminal_method).toBe('exit_multiple');await act(async()=>{finish({submitted_inputs:submitted,scenarios:submitted.scenarios.map((e:any)=>({...e,result:response(e.case)})),limitations:[]});await obsolete;});expect(h.result.current.session!.draft.terminalMethod).toBe('exit_multiple');expect(h.result.current.session!.ev.phase).toBe('current');expect(h.result.current.company!.scenario.phase).not.toBe('current');
 });
+
+it('loads issuer-advertised Meta and Apple profiles with different revenues and preserves each company’s overrides',async()=>{
+ const peerCatalog=structuredClone(catalog),apple=structuredClone(peerCatalog.entries[1]);
+ apple.kind='aapl-fy2025';apple.company='AAPL';apple.identity={...apple.identity,kind:apple.kind,cik:320193,annual_start:'2024-09-29',annual_end:'2025-09-27'};apple.template.anchor=apple.identity;apple.revenue='416161000000';apple.preload_route='/api/v1/preloads/aapl';peerCatalog.entries.push(apple);
+ peerCatalog.entries[1].revenue='200966000000';peerCatalog.entries[1].preload_route='/api/v1/preloads/meta';
+ const profiles=Object.fromEntries(peerCatalog.entries.map((entry,i)=>{const p=profile(['0.10','0.11','0.12'][i]);p.economic.anchor=entry.identity;p.economic.anchor_revenue=entry.revenue;p.economic.issuer.ticker=entry.company;p.economic.dates.model_origin=entry.identity.annual_end;return [entry.kind,p];}));
+ const load=vi.fn(async(path:string,body?:unknown)=>{
+  if(path==='/api/v1/catalog')return peerCatalog;
+  const entry=peerCatalog.entries.find(e=>(e.preload_route??'/api/v1/preloads/googl')===path);
+  return entry?profiles[entry.kind]:response(body);
+ }) as unknown as typeof request;
+ const h=await start(load);
+ act(()=>h.result.current.select('meta-fy2025'));await waitFor(()=>expect(h.result.current.company?.preload?.profile?.economic.issuer.ticker).toBe('META'));
+ expect(h.result.current.session!.draft.rates.wacc).toBe('11');
+ const draft=structuredClone(h.result.current.session!.draft);draft.rates.wacc='13.25';act(()=>h.result.current.editDraft(draft,true,['wacc']));
+ act(()=>h.result.current.select('aapl-fy2025'));await waitFor(()=>expect(h.result.current.company?.preload?.profile?.economic.issuer.ticker).toBe('AAPL'));
+ expect(h.result.current.session!.draft.doc.anchor.annual_end).toBe('2025-09-27');expect(h.result.current.session!.draft.rates.wacc).toBe('12');
+ act(()=>h.result.current.select('meta-fy2025'));expect(h.result.current.session!.draft.rates.wacc).toBe('13.25');
+ expect(h.result.current.company!.preload!.profile!.economic.anchor_revenue).toBe('200966000000');
+ expect(vi.mocked(load).mock.calls.filter(c=>c[0]==='/api/v1/preloads/meta')).toHaveLength(1);
+});
+it('rejects a wrong-company or wrong-revenue profile and does not fetch an unadvertised company',async()=>{
+ const {checkProfile}=await import('./preload');
+ expect(()=>checkProfile(profile(),meta.anchor,'200966000000')).toThrow(/does not match/);
+ expect(()=>checkProfile(profile(),template.anchor,'1')).toThrow(/does not match/);
+ const unknown=structuredClone(catalog);unknown.entries[0].preload_route=null;
+ const load=vi.fn(async(path:string)=>{if(path==='/api/v1/catalog')return unknown;throw Error('No preload fetch authorized by catalog');}) as unknown as typeof request;
+ const h=renderHook(()=>useWorkspace(load));await waitFor(()=>expect(h.result.current.catalog).not.toBeNull());
+ expect(vi.mocked(load).mock.calls).toHaveLength(1);
+ expect(h.result.current.company?.preload?.profile).toBeUndefined();
+});

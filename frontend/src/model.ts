@@ -23,6 +23,7 @@ export type CaseDoc = {
 };
 export type Entry = {
   kind: string; company: string; identity: CaseDoc['anchor']; revenue: string; unit: string;
+  preload_route?:string|null;
   historical_window?: HistoricalYear[]; historical_fcff_policy?:{methodology:string;basis:string;classification:string;notice:string;forecast_calibration:boolean;cross_basis_cagr:boolean;missing_input_policy:string}; historical_references?: HistoricalReference[]; financial_context?: FinancialContext|null; precision: string; source_links: string[]; limitations: string[]; template: CaseDoc;
 };
 export type HistoricalYear={fiscal_year_label:string;revenue:Omit<HistoricalReference['operands'][number],'field'|'classification'>;fcff:string|null;fcff_basis?:string;fcff_calculation?:{status:string;inputs:Record<string,string|null>;sources:string[];reported_etr:string|null}};

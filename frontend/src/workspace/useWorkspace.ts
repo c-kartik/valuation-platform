@@ -223,14 +223,21 @@ export function useWorkspace(load:typeof request=request){
  function reviewError(path:string){if(path.startsWith('bridge.')){const s=live.current.cases[live.current.selected];changeCase(live.current.selected,s.selectedCase,c=>({...c,equity:{...c.equity,errors:{[path.slice(7)]:s.scenario.errors[path]}}}));return false;}const label=labels.find(l=>path.startsWith(l+'.'));if(label&&live.current.cases[live.current.selected].cases[label]){selectCase(label);const field=path.slice(label.length+1);changeCase(live.current.selected,label,c=>({...c,ev:{...c.ev,errors:{[field]:live.current.cases[live.current.selected].scenario.errors[path]}}}));return true;}return false;}
 
  const preloadFetch=useRef<AbortController|null>(null),preloadSequence=useRef(0);
- useEffect(()=>{const kind=state.selected;if(kind==='googl-fy2025'&&!live.current.cases[kind]?.preload?.profile)void refreshPreload(true);return()=>{preloadSequence.current++;preloadFetch.current?.abort();};},[state.selected,load]);
+ function preloadEntry(kind:string){
+  const entry=catalog?.entries.find(e=>e.kind===kind);
+  // Backward compatibility with earlier fixed catalogs. New companies are
+  // advertised by the server registry, never inferred from a ticker string.
+  const route=entry?.preload_route===undefined?(kind==='googl-fy2025'?'/api/v1/preloads/googl':null):entry.preload_route;
+  return entry&&typeof route==='string'&&/^\/api\/v1\/preloads\/[a-z0-9-]+$/.test(route)?{entry,route}:null;
+ }
+ useEffect(()=>{const kind=state.selected;if(preloadEntry(kind)&&!live.current.cases[kind]?.preload?.profile)void refreshPreload(true);return()=>{preloadSequence.current++;preloadFetch.current?.abort();};},[state.selected,catalog,load]);
  async function refreshPreload(initial=false){
-  const kind=live.current.selected,s=live.current.cases[kind];if(kind!=='googl-fy2025'||!s)return;
+  const kind=live.current.selected,s=live.current.cases[kind],target=preloadEntry(kind);if(!target||!s)return;
   const sequence=++preloadSequence.current;preloadFetch.current?.abort();const abort=new AbortController();preloadFetch.current=abort;
   change(kind,s=>({...s,preload:{...s.preload,status:'loading',failure:''}}));
-  try{const raw=await load<PreloadProfile>('/api/v1/preloads/googl',undefined,abort.signal);
+  try{const raw=await load<PreloadProfile>(target.route,undefined,abort.signal);
    if(abort.signal.aborted||sequence!==preloadSequence.current||live.current.selected!==kind)return;
-   const profile=checkProfile(raw,s.cases.Base.draft.doc.anchor);
+   const profile=checkProfile(raw,s.cases.Base.draft.doc.anchor,target.entry.revenue);
    change(kind,latest=>{const fresh=initial&&!latest.preload?.profile&&Object.values(latest.cases).every(c=>c.revision===1);
     return fresh?{...latest,cutoff:profile.economic.dates.information_review,preload:{profile,status:'ready',failure:''},cases:Object.fromEntries(Object.entries(latest.cases).map(([label,c])=>[label,{...c,draft:applyEstimates(c.draft,profile,label,c.overrides??[]),overrides:[]}])) as unknown as Session['cases']}:
       {...latest,preload:{...latest.preload,candidate:profile,status:'ready',failure:''}};

@@ -1,5 +1,23 @@
 # Financial Methodology
 
+## Registered META/AAPL forecast policies
+
+The user authorizes Meta and Apple forward profiles alongside unchanged Alphabet.
+[Definitions and generated schedules](registered-preloads.md) distinguish primary
+facts, management ranges, midpoint/annualization estimates and configured judgments.
+Apple's September fiscal dates are preserved. Meta's inclusive spending midpoint
+is reduced by estimated annual finance principal once, then separately estimated
+new financed assets are added. Apple's financed-assets overlay is explicitly a
+forecast estimate; it does not solve the undisclosed historical lease split.
+
+Tax/margin/growth fades, commissioning, cash investment changes, incremental WC,
+target-weight WACC and independent terminal ratios are issuer-specific policies.
+SBC stays expensed; operating leases remain service costs. Cash-flow D&A is only
+the basis of a proposed expense estimate, not complete historical certification.
+Legal charges and tariff refunds are not silently normalized. Historical CFO FCFF,
+its two Apple gaps, approved origins and source approvals are unchanged. No exit,
+equity/share or years6–10 defaults are added.
+
 ## Current adoption — historical CFO basis for the three-company pilot
 
 The user now approves CFO-based historical FCFF for GOOGL/AAPL/META FY2021–25,

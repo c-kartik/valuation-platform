@@ -1,5 +1,19 @@
 # META — supplemental supported-seed preparation note
 
+## Registered forward profile — November 2
+
+The user authorizes the [shared preload pipeline](../../registered-preloads.md) for META.
+Revenue uses181.712B YTD plus Q4 guidance midpoint74.5B. Expense midpoint177B includes the legal charge. Spending140B less principal2.769B×4/3 estimates cash PP&E136.308B; financed additions are separately estimated at3%.
+
+Versioned sources/mappings/observations/policies are separate from historical
+packages and acceptance. Margin/growth/tax paths, investment growth, commissioning,
+WC, financing assumptions and independent terminal ratios are editable forecasts.
+They do not establish normalized historical cash tax, complete expense D&A,
+lease/acquisition/claims coverage or standing investment conclusions. All37 Gordon
+inputs run in the unchanged engine. Exit/equity inputs and years6–10 remain unset;
+historical FCFF/gaps and approved origins stay intact. Source/rule classifications,
+policy rationale, validation and remaining limits are in the linked report.
+
 ## Current adoption — historical CFO display
 
 The user adopts the [reviewed CFO method](../../historical-cfo-fcff-adoption.md) while keeping the EBIT-based
