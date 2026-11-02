@@ -2,6 +2,12 @@
 
 ## Current compact investor workspace
 
+The [compact DCF readout](dcf-chart-layout.md#current-refinement--compact-overlay-november-2)
+is an absolute overlay inside the combined chart, replacing the external table.
+It and the sidebar inspection caption share a fixed internal chart header, so year
+selection and percentage-axis inspection add no layout height. Exact USD operands
+remain in titles/source tables; the visible values use B for billions.
+
 The [sidebar inspection layer](sidebar-chart-inspection.md) holds transient
 company/case/view-scoped display state, separate from drafts and requests.
 `CompactSidebar` shares pointer/focus previews with `OperatingCharts`; modal

@@ -2,6 +2,11 @@
 
 ## Current result-first display boundary
 
+The [compact chart readout](dcf-chart-layout.md#current-refinement--compact-overlay-november-2)
+uses B to mean USD billions while retaining full USD operands in titles and source
+tables. Equal bar widths and subtle corner radii change presentation only; signed
+heights, unknown historical FCFF and all valuation calculations remain unchanged.
+
 The [sidebar margin overlay](sidebar-chart-inspection.md) displays the exact
 submitted operating-margin assumption for each returned forecast year. It adds no
 new financial input or historical estimate. Missing observations remain gaps;

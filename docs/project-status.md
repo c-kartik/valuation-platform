@@ -2,6 +2,12 @@
 
 ## Current — compact local investor workspace
 
+The [compact chart overlay](dcf-chart-layout.md#current-refinement--compact-overlay-november-2)
+replaces the external DCF year/value panel, uses Reported/Forecast labels and B
+values, and makes reported bars as thin as forecasts with subtly rounded corners.
+Sidebar inspection stays fixed. All 270 frontend tests, TypeScript, both builds
+and actual desktop/phone review pass; this is presentation only.
+
 The approved [sidebar chart inspection](sidebar-chart-inspection.md) emphasizes
 relevant DCF bars on hover or keyboard focus. Operating margin overlays submitted
 annual percentages on a reserved right axis; plot geometry stays fixed. Existing

@@ -15,6 +15,10 @@ current accepted package views. No company review or acquisition resumes automat
 
 ## Shared display guidance — sidebar chart inspection
 
+The [compact overlay refinement](../dcf-chart-layout.md#current-refinement--compact-overlay-november-2)
+changes chart labels, value formatting and bar styling only. It does not fill any
+historical gap or change issuer preparation/source/approval/sufficiency records.
+
 The [sidebar inspection layer](../sidebar-chart-inspection.md) highlights returned
 forecast paths and displays matched submitted annual margins. No issuer facts,
 preparation, mappings, sources, approvals or sufficiency statuses change. No

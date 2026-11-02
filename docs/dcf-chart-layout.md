@@ -4,7 +4,39 @@ User-scoped refinement, 2026-10-31. Supersedes the historical signed-change-only
 caption and the DCF above-chart legend/caption composition from the earlier
 chart/history update. It retains the reported model anchor and exact returned data.
 
-## Display and interaction
+## Current refinement — compact overlay, November 2
+
+The selected-year DCF readout now floats at the top left inside the chart canvas.
+The external year/Basis/value panel and external inspection-caption spacer are
+removed. The overlay shows `FY2027 · Forecast` or `FY2025 · Reported`, followed by
+Revenue and FCFF values using a `B` suffix. Current-year header figures and scenario
+chart readouts use the same suffix. USD context remains in the legend, accessible
+chart title and exact-value titles; unknown historical FCFF remains Unavailable.
+
+Reported bars, including the retained anchor, now use the same width as each
+forecast bar: 27% of a year step for the DCF, 12% for grouped scenarios. Every
+monetary bar has a subtle 1.5px horizontal/vertical corner radius. Heights retain
+the original signed values and zero-inclusive domains. Region labels are
+`Reported` and `Forecast`, with no lowercase history caption or unit suffix.
+
+The 520/450px DCF canvas retains a fixed internal header area for the overlay and
+sidebar inspection text. The right percentage-axis gutter remains permanently
+reserved; showing the margin line changes neither bar coordinates nor plot size.
+On phone widths the overlay wraps to two lines without horizontal page overflow.
+Existing year hover/tap/keyboard selection, CAGR guides, source disclosures and
+five-/ten-year markers remain. Scenario comparison keeps its three-case table.
+
+Verification: all 270 frontend tests across 24 files, TypeScript, production and
+prototype builds pass (existing prototype chunk advisory only). Updated checks
+cover equal widths/rounded corners, in-chart DCF readout placement, capitalized
+labels, signed B values and missing observations. Actual localhost desktop and
+390px phone review confirms compact values, no overflow and stable margin-hover
+geometry. Scenario Revenue/FCFF comparison still renders. Screenshots are in this
+chat's `outputs/compact-chart-overlay/`; viewport overrides reset after review.
+No calculations, source/preparation records, profiles, approvals, API contracts
+or valuation origin changed. Phase 1 remains paused; no push or deployment.
+
+## Earlier display and interaction
 
 - Exact year Revenue/FCFF readout remains above the chart. The legend moves below
   the combined DCF plot, including USD billions and reference-year context.
