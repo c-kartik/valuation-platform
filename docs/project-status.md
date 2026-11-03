@@ -8,9 +8,13 @@ and startup commands are in [Codex Cloud setup](codex-cloud.md);
 42-company audit is retained as a52-member byte-preserving snapshot with per-file
 hashes. This does not refresh facts or clear financial blockers. [Fresh-checkout validation](codex-cloud-validation.json):545 tests pass, as do
 installation, financial replays, frontend build and actual workspace/API startup.
-Codex Cloud account setup is blocked by GitHub connection loading errors; no
-cloud environment or private preview URL is published. Local macOS preparation
-is not Linux/cloud deployment certification.
+GitHub connection now works, and an owner-private `valuation-platform` environment
+draft exists. Cloud installation, Python tests, financial replays, research hashes,
+build and workspace/API checks pass. Publication waits on a UI-test runner fix:
+the multi-screen integration test timed out in full cloud runs, despite passing
+an isolated diagnostic. Its queries are now scoped and its own timeout is bounded
+at 60 seconds; all assertions and other test limits remain. Cloud revalidation is
+pending; no authenticated remote preview URL exists yet.
 
 ## Current milestone — Meta and Alphabet manual resolutions
 

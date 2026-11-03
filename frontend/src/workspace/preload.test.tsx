@@ -86,8 +86,9 @@ it('rejects a late initial calculation across company changes and reuses only ex
  const h=renderHook(()=>useWorkspace(load));await waitFor(()=>expect(resolve).toBeDefined());act(()=>h.result.current.select('meta-fy2025'));await act(async()=>resolve(response(submitted)));expect(h.result.current.session!.ev.result).toBeNull();defer=false;act(()=>h.result.current.select('googl-fy2025'));await waitFor(()=>expect(h.result.current.session!.ev.phase).toBe('current'));expect(calls).toHaveLength(2);act(()=>h.result.current.setTerminalMethod('exit_multiple'));expect(h.result.current.session!.ev.phase).toBe('stale');expect(calls).toHaveLength(2);act(()=>h.result.current.setTerminalMethod('perpetual_growth'));await waitFor(()=>expect(h.result.current.session!.ev.phase).toBe('current'));expect(calls).toHaveLength(2);
 });
 
-it('automatically runs one scenario request and one 5×5 grid on opening, refreshing only the open dependency after Update',async()=>{
- const navigate=(name:string)=>fireEvent.click(within(screen.getByRole('navigation',{name:'Explore this valuation'})).getByRole('link',{name}));
+// This multi-screen integration test reached 57.253s in the cloud. Its own
+// bounded budget leaves other tests' limits unchanged.
+it('automatically runs one scenario request and one 5×5 grid on opening, refreshing only the open dependency after Update',{timeout:60_000},async()=>{
  const get=transport(),financial:any[]=[];
  const load=vi.fn(async(path:string,body:any,signal?:AbortSignal)=>{
   if(path==='/api/v1/scenarios/run'){financial.push([path,body]);return {submitted_inputs:structuredClone(body),scenarios:body.scenarios.map((e:any)=>({...e,result:response(e.case)})),limitations:[]};}
@@ -99,13 +100,18 @@ it('automatically runs one scenario request and one 5×5 grid on opening, refres
  const wrapped=((path:string,body?:unknown,signal?:AbortSignal)=>path==='/api/v1/preloads/googl'?Promise.resolve(p):load(path,body,signal))as typeof request;
  try{
  render(<Workspace load={wrapped}/>);await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});expect(financial).toHaveLength(0);
+ // Scope repeated queries to the relevant controls rather than traversing the
+ // entire chart/editor DOM. Keep every interaction and financial assertion.
+ const navigation=within(screen.getByRole('navigation',{name:'Explore this valuation'}));
+ const summary=within(screen.getByRole('complementary',{name:'Active model summary'}));
+ const navigate=(name:string)=>fireEvent.click(navigation.getByRole('link',{name}));
  navigate('Scenarios');await screen.findByRole('region',{name:'Scenario results'});expect(financial.filter(c=>c[0].includes('scenarios'))).toHaveLength(1);
- navigate('Sensitivity');await screen.findByRole('region',{name:'Sensitivity matrix'});expect(financial.filter(c=>c[0].includes('sensitivity'))).toHaveLength(1);const grid=financial.at(-1)[1];expect(grid.wacc_values).toEqual(['0.09','0.095','0.1','0.105','0.11']);expect(grid.terminal_growth_values).toEqual(['0.095','0.0975','0.1','0.1025','0.105']);
- fireEvent.click(screen.getByRole('button',{name:'Inspect WACC 9.00%, terminal growth 9.50%'}));expect(financial).toHaveLength(2);expect(screen.getByRole('button',{name:'Review this pair'})).toBeTruthy();expect(document.querySelectorAll('.cv-inspected-cell')).toHaveLength(1);expect(document.querySelectorAll('.p-reference-cell')).toHaveLength(1);
+ navigate('Sensitivity');const matrix=within(await screen.findByRole('region',{name:'Sensitivity matrix'}));expect(financial.filter(c=>c[0].includes('sensitivity'))).toHaveLength(1);const grid=financial.at(-1)[1];expect(grid.wacc_values).toEqual(['0.09','0.095','0.1','0.105','0.11']);expect(grid.terminal_growth_values).toEqual(['0.095','0.0975','0.1','0.1025','0.105']);
+ fireEvent.click(matrix.getByRole('button',{name:'Inspect WACC 9.00%, terminal growth 9.50%'}));expect(financial).toHaveLength(2);const inspection=within(screen.getByRole('complementary',{name:'Sensitivity cell inspection'}));expect(inspection.getByRole('button',{name:'Review this pair'})).toBeTruthy();expect(document.querySelectorAll('.cv-inspected-cell')).toHaveLength(1);expect(document.querySelectorAll('.p-reference-cell')).toHaveLength(1);
 
- fireEvent.click(screen.getByRole('button',{name:'Review this pair'}));expect((screen.getByLabelText('WACC',{exact:true})as HTMLInputElement).value).toBe('9.00');expect((screen.getByLabelText('Terminal growth',{exact:true})as HTMLInputElement).value).toBe('9.50');expect(financial).toHaveLength(2);expect(screen.getByRole('complementary',{name:'Active model summary'}).textContent).toContain('10.00%');fireEvent.click(within(screen.getByRole('dialog')).getByRole('button',{name:'Cancel'}));expect(financial).toHaveLength(2);
+ fireEvent.click(inspection.getByRole('button',{name:'Review this pair'}));const review=within(screen.getByRole('dialog'));expect((review.getByLabelText('WACC',{exact:true})as HTMLInputElement).value).toBe('9.00');expect((review.getByLabelText('Terminal growth',{exact:true})as HTMLInputElement).value).toBe('9.50');expect(financial).toHaveLength(2);expect(screen.getByRole('complementary',{name:'Active model summary'}).textContent).toContain('10.00%');fireEvent.click(review.getByRole('button',{name:'Cancel'}));expect(financial).toHaveLength(2);
  navigate('DCF');navigate('Scenarios');navigate('Sensitivity');expect(financial).toHaveLength(2);
- fireEvent.click(screen.getByRole('button',{name:'Edit all assumptions'}));fireEvent.change(screen.getByLabelText('WACC',{exact:true}),{target:{value:'11'}});expect(financial).toHaveLength(2);fireEvent.click(screen.getByRole('button',{name:'Update valuation'}));await waitFor(()=>expect(screen.queryByRole('dialog')).toBeNull());await waitFor(()=>expect(financial.filter(c=>c[0].includes('sensitivity'))).toHaveLength(2));expect(financial.filter(c=>c[0].includes('scenarios'))).toHaveLength(1);expect(financial.at(-1)[1].wacc_values).toEqual(['0.1','0.105','0.11','0.115','0.12']);
+ fireEvent.click(summary.getByRole('button',{name:'Edit all assumptions'}));const editor=within(screen.getByRole('dialog'));fireEvent.change(editor.getByLabelText('WACC',{exact:true}),{target:{value:'11'}});expect(financial).toHaveLength(2);fireEvent.click(editor.getByRole('button',{name:'Update valuation'}));await waitFor(()=>expect(screen.queryByRole('dialog')).toBeNull());await waitFor(()=>expect(financial.filter(c=>c[0].includes('sensitivity'))).toHaveLength(2));expect(financial.filter(c=>c[0].includes('scenarios'))).toHaveLength(1);expect(financial.at(-1)[1].wacc_values).toEqual(['0.1','0.105','0.11','0.115','0.12']);
  }finally{vi.unstubAllGlobals();}
 });
 

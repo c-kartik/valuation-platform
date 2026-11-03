@@ -2,9 +2,9 @@
   "schema_version": "codex-cloud-preparation-validation-v1",
   "date": "2026-11-03",
   "preparation_status": "READY_AND_VERIFIED_FROM_FRESH_LOCAL_CHECKOUT",
-  "cloud_environment_status": "NOT_CREATED_GITHUB_CONNECTIONS_COULD_NOT_LOAD",
+  "cloud_environment_status": "DRAFT_PENDING_UI_TEST_REVALIDATION",
   "private_preview_url": null,
-  "platform": "macOS arm64; actual Linux/cloud environment remains unverified",
+  "platform": "Local macOS arm64 preparation verified; Codex Cloud installation and financial checks verified; final UI revalidation pending",
   "python_tests": {
     "valuation": 206,
     "preload": 31,
@@ -40,7 +40,7 @@
     "meta_alphabet": "PASS",
     "registered_preloads": "PASS"
   },
-  "runner_adjustment": "Existing multi-screen frontend integration test exceeded5s on fresh checkout. Runner uses2workers/15s; all assertions retained,278passed.",
+  "runner_adjustment": "Runner retains2workers/15s default; one multi-screen UI integration test scopes accessibility queries and uses its own60s budget after cloud15s/30s timeouts. All assertions retained; cloud revalidation pending.",
   "inputs_sha256": {
     "scripts/cloud/setup.sh": "e5820aa0f75dfdb46cf65c9b6decd9361ce5c73d6b3aeb26088f2149a914e615",
     "scripts/cloud/verify.sh": "307139d2bf6bb4a3e0f54bd51300fd5e277818e845c1361d8c069a5707283a28",
@@ -53,5 +53,50 @@
   "financial_changes": 0,
   "source_binding_changes": 0,
   "live_sec_requests": 0,
-  "account_blocker": "Codex Cloud and Code Review could not load GitHub connections after sign-in and bounded retries. No repository selectable; no environment publication or cloud runtime certification claimed."
+  "account_blocker": null,
+  "cloud_validation": {
+    "setup_chat_url": "https://chatgpt.com/local/01a1a20c-8970-70b2-a3db-e114f2b9e0b7?hostId=local",
+    "environment_name": "valuation-platform",
+    "repository": "c-kartik/valuation-platform",
+    "privacy_observed": "Only me",
+    "checked_commit": "d5d4183e8f8e3b883cf7f3ba6e0b6aef2e0d172e",
+    "python": "3.12.14",
+    "node": "24.19.0",
+    "setup": "PASS",
+    "python_tests": 267,
+    "financial_replays": "PASS",
+    "research_members_verified": 52,
+    "production_build": "PASS",
+    "workspace_http": "200",
+    "proxied_catalog_http": "200",
+    "initial_required_frontend": {
+      "passed": 277,
+      "failed": 1,
+      "reason": "Multi-screen scenario/sensitivity integration test exceeded 15 seconds"
+    },
+    "single_worker_diagnostic": {
+      "passed": 277,
+      "failed": 1,
+      "test_timeout_ms": 30000,
+      "test_reported_duration_seconds": 57.253,
+      "total_seconds": 216.14,
+      "reason": "timeout, not an assertion mismatch"
+    },
+    "selected_test_diagnostic": {
+      "passed": 1,
+      "excluded_by_name_filter": 26,
+      "timeout_ms": 60000,
+      "total_seconds": 19.44
+    },
+    "resource_observations": {
+      "cpu_quota_cores": 4,
+      "memory_used_gib": 1.5,
+      "memory_limit_gib": 32,
+      "oom_events": 0,
+      "sampled_cpu_steal_percent": "7\u201321",
+      "causality": "Samples after failing test do not establish its cause"
+    },
+    "revalidation": "PENDING_SCOPED_QUERIES_AND_PER_TEST_60_SECOND_BUDGET",
+    "published": false
+  }
 }

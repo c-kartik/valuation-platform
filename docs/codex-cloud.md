@@ -26,9 +26,13 @@ credentials, OpenAI API key or live SEC retrieval. Python can be selected with
 Verification runs valuation/preload tests, company-resolution/source checks, cloud
 checks, original Apple and Meta/Alphabet ledger replays, registered preload replay,
 frontend tests and production build. The cloud runner uses two frontend workers
-and a 15-second integration-test budget: a pre-existing multi-screen scenario/
-sensitivity test exceeded Vitest's 5-second default on a fresh checkout. All
-assertions remain enabled; no financial test or schema check is relaxed.
+and a 15-second default test budget. One multi-screen scenario/sensitivity
+integration test has its own 60-second budget: the original test exceeded
+15 seconds in the cloud, and a single-worker diagnostic exceeded 30 seconds
+(57.253 seconds reported). Repeated accessibility queries are now scoped to
+their relevant controls; every interaction and assertion remains enabled.
+The longer budget belongs only to that UI integration test; financial tests
+and schema checks are unchanged.
 It makes no new financial approvals or live
 filing requests. Existing historical gaps and basis labels remain unchanged.
 
@@ -105,8 +109,11 @@ build pass. Real workspace/proxied-catalog HTTP checks pass and the supervised
 processes stop cleanly. Original52-file research bytes/hashes match. The15-second
 cloud UI-test budget is recorded; all original assertions remain active.
 
-Cloud account provisioning is **not complete**: the signed-in setup form reports
-GitHub connections could not load, with no repository available to select. The
-same error appears in Code Review. An authenticated cloud environment and remote
-preview URL have not been created. A successful account-side GitHub connection
-and actual cloud/Linux setup verification are the remaining steps.
+GitHub authorization now works. The `valuation-platform` environment draft selects
+only `c-kartik/valuation-platform`; its configuration visibly states **Only me**.
+Cloud installation, 267 Python tests, financial replays, research hashes, build,
+workspace and proxied-catalog checks passed at `d5d4183`. The initial required run
+failed solely on the scenario/sensitivity UI integration timeout (277 frontend
+tests passed); a selected diagnostic passed, while a full single-worker/30-second
+run still timed out. The scoped-query/per-test-budget fix requires fresh cloud
+verification before publication. No remote authenticated preview URL exists yet.
