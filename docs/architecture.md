@@ -1,5 +1,15 @@
 # Architecture
 
+## Portable cloud development — November3
+
+`scripts/cloud/` installs the existing pinned dependencies, verifies/restores a
+byte-preserving52-file research snapshot, smoke-tests an isolated API bundle and
+supervises the unchanged API/Vite services on loopback. Temporary private bundles
+stay outside the checkout; `.cloud/` research copies are ignored. Runtime
+configuration is repository-relative, with no Mac credential or filesystem
+dependency. This changes development setup, not financial definitions or public
+hosting. See [cloud setup](codex-cloud.md) and [handoff](cloud-work-handoff.md).
+
 ## META/GOOGL approved treatments — November 3
 
 `scripts/resolve_meta_alphabet_cashflows.py` verifies the two scoped source maps,

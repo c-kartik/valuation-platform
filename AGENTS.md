@@ -15,6 +15,17 @@ banks, insurers, REITs, and other structures that need dedicated treatment as
 `SPECIALIZED_METHODOLOGY_REQUIRED` rather than forcing them through the
 operating-company FCFF model.
 
+## Cloud/mobile development
+
+The user authorizes Codex Cloud setup and GitHub synchronization. Start with
+`docs/codex-cloud.md` and `docs/cloud-work-handoff.md`. Use the portable setup,
+verification and supervised loopback startup under `scripts/cloud/`. The original
+42-company audit is a hash-verified snapshot restored into ignored `.cloud/`;
+current company-resolution decisions supersede only their named historical scope.
+Cloud setup does not approve new financial values, broader-universe work or a
+public production deployment. Keep the environment owner-private. Never commit
+personal credentials or infer missing inputs from the old audit.
+
 ## Current Phase
 
 Phase 1 universe analyst-review expansion is **paused** at the user's direction.

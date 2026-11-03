@@ -30,3 +30,6 @@ firebase-debug.log
 
 # VS Code local settings
 .vscode/
+
+# Recreated cloud research copies and local task state
+.cloud/

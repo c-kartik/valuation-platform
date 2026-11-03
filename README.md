@@ -1,5 +1,9 @@
 # Automated Equity Valuation Platform
 
+[Codex Cloud/mobile setup](docs/codex-cloud.md) provides portable installation,
+verification, supervised app startup and the original42-company research snapshot.
+Read the [cloud handoff](docs/cloud-work-handoff.md) before continuing financial review.
+
 [Manual company cash-flow resolutions](docs/company-resolutions/README.md) now
 record each approved treatment, source, before/after amount and remaining gap.
 The first [Apple record](docs/company-resolutions/AAPL/README.md) reproduces its

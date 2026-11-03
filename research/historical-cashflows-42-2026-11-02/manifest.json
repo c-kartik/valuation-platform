@@ -1,0 +1,273 @@
+{
+  "schema_version": "portable-research-snapshot-v1",
+  "snapshot_date": "2026-11-02",
+  "packaged_date": "2026-11-03",
+  "archive_file": "original-audit.zip",
+  "archive_sha256": "037072b88a7f4504a18df5467f0b6d3e1cdba564ddee8501208a149d82d25d2c",
+  "uncompressed_bytes": 138733053,
+  "files": [
+    {
+      "path": "historical-cashflows-42/historical-cashflows.xlsx",
+      "bytes": 471158,
+      "sha256": "8c52a8386d1dad6e01f5c37f8d2f6a835fde450bacb15346dc5d9d2565fb83a5"
+    },
+    {
+      "path": "historical-cashflows-42/report.html",
+      "bytes": 4735459,
+      "sha256": "13df3d7d4784cd724cc2f1619287eec542e0a22caf016558baae7ff9a4beafb2"
+    },
+    {
+      "path": "historical-cashflows-42/financial-results.csv",
+      "bytes": 111950,
+      "sha256": "2a0e469d5f1819daa74d3e4dfa4c72539423a31f81ca7d9fccc72c3e02800776"
+    },
+    {
+      "path": "historical-cashflows-42/company-summary.csv",
+      "bytes": 7202,
+      "sha256": "5e3d1378d9f1fca152bdb7ccfe8490e24a69d9080ce27f0f4e35a92f45e719c2"
+    },
+    {
+      "path": "historical-cashflows-42/flags.csv",
+      "bytes": 324821,
+      "sha256": "b8e8efb055b96a39b4fdaa5bea49af2076f06826e918a8bbbb43f543a8a92fa7"
+    },
+    {
+      "path": "historical-cashflows-42/financing-schedule.csv",
+      "bytes": 565306,
+      "sha256": "92d765e963179539063e5ac7295d11968d26ddc69c47b6413171b6ff67ae88b8"
+    },
+    {
+      "path": "historical-cashflows-42/source-index.csv",
+      "bytes": 876234,
+      "sha256": "77ee312196c479863cd184114508c38289a92c1769ccd1700b282e627a205038"
+    },
+    {
+      "path": "historical-cashflows-42/roadblock-summary.csv",
+      "bytes": 18586,
+      "sha256": "7c968e5f44114b6294bc8a54afdc6f91ddc8c3c23e6071204ff7e1e4c0be2188"
+    },
+    {
+      "path": "historical-cashflows-42/review-worklist.csv",
+      "bytes": 111039,
+      "sha256": "1e574258390224cdd2a7f142d6cb8a2c355531891c0134e361815a9ac2118dab"
+    },
+    {
+      "path": "historical-cashflows-42/interest-diagnostics.csv",
+      "bytes": 65387,
+      "sha256": "7b58ebf521a9111a414ce17ddfa73f31e21cb8174558bf2c41ed569eab20da41"
+    },
+    {
+      "path": "historical-cashflows-42/calculations.json",
+      "bytes": 18496016,
+      "sha256": "276b0ce803ba5ccf9565566ea14f16a13e622ada45ab64a447156654e57b9a84"
+    },
+    {
+      "path": "historical-cashflows-42/review-data.json",
+      "bytes": 6192801,
+      "sha256": "070258240c563e509d485086db3204ccc0201b94fef76b7b4a6e2ff4be04607e"
+    },
+    {
+      "path": "historical-cashflows-42/source-manifest.json",
+      "bytes": 141276,
+      "sha256": "c8433472b2dfd956bee1166ccbcdcc80b5e9f5821f59d11a5bb8bea0680793e1"
+    },
+    {
+      "path": "historical-cashflows-42/source-validation.json",
+      "bytes": 139857,
+      "sha256": "3bcb918728ac62bdeb667e130179ee46ec603dfad17bc3fbf086909e8af45574"
+    },
+    {
+      "path": "historical-cashflows-42/cash-statement-controls.json",
+      "bytes": 2776802,
+      "sha256": "67f1a0b710d2c5a77d13408a46998f9b31080364dbeadf68e42571cc6beb113c"
+    },
+    {
+      "path": "historical-cashflows-42/comparative-checks-bound.json",
+      "bytes": 119824,
+      "sha256": "58c3631ced1817d20c4377d6e78a9c35fa2de1b4985f2e0d159cf2b703c1c919"
+    },
+    {
+      "path": "historical-cashflows-42/later-vintage-comparison.csv",
+      "bytes": 5705,
+      "sha256": "55309feba91c37679696cd77890872ed407bf83c70aadf93e501049cdc48fa73"
+    },
+    {
+      "path": "historical-cashflows-42/later-vintage-calculations.json",
+      "bytes": 797354,
+      "sha256": "cf55db393dab9d5587df919509b17aa93916d6f8229300702ab1613f1d3edf04"
+    },
+    {
+      "path": "historical-cashflows-42/later-vintage-validation.json",
+      "bytes": 7612,
+      "sha256": "e504f33d45acf5a0e3aac24a82beaa5db53fccb9b4fc98f14a361946f6a8d134"
+    },
+    {
+      "path": "historical-cashflows-42/financing-comparative-comparison.csv",
+      "bytes": 5417,
+      "sha256": "be05f403ede9d8946f1d20fa1e898af8408b541369b1875e91c72e830a8ef825"
+    },
+    {
+      "path": "historical-cashflows-42/financing-comparative-calculations.json",
+      "bytes": 1649602,
+      "sha256": "e9fc4b1ca60306743309b880f17ccc4d0d1877665ec4c9902ebd28372f57ce1d"
+    },
+    {
+      "path": "historical-cashflows-42/financing-comparative-validation.json",
+      "bytes": 14625,
+      "sha256": "f69f7d68bbda6ca7208cc255eba043ba515b0dc418730f8f77b055014736e240"
+    },
+    {
+      "path": "historical-cashflows-42/financing-component-reconciliations.json",
+      "bytes": 49152,
+      "sha256": "d3fa2c6e9001dae0cee975d5ce77095a2ab55f0874b75455dc31ce7d9fe80276"
+    },
+    {
+      "path": "historical-cashflows-42/funding-candidates.csv",
+      "bytes": 558,
+      "sha256": "c3b9a7f727eb0056ab3013ee8473ba323f47b0895be80cc9082365cf3511ae05"
+    },
+    {
+      "path": "historical-cashflows-42/interpretation-evidence.json",
+      "bytes": 6605,
+      "sha256": "97e2a0c08678e5953b2fb028360d45dc898c7d895b64132dd4c46b0f696ae73c"
+    },
+    {
+      "path": "historical-cashflows-42/missing-history-inventory.json",
+      "bytes": 16450,
+      "sha256": "23c4d5326422ed954b695cfab2eeb8baf801a16f2ca1a132ee6b99bdbe0dbc80"
+    },
+    {
+      "path": "historical-cashflows-42/validation.json",
+      "bytes": 4639,
+      "sha256": "949fb0901dfdcd9ef103bedae3debc383f323b1aff3be12dd44c49f6240877c4"
+    },
+    {
+      "path": "historical-cashflows-42/workbook-validation.json",
+      "bytes": 289,
+      "sha256": "6be5e8f03621dbaf6a3f6abda71ce1b1c45541093c6fb65fb743031b81daa083"
+    },
+    {
+      "path": "historical-cashflows-42/report-validation.json",
+      "bytes": 626,
+      "sha256": "0c0bdfb3781e22106daf666ac028f1c7060c57fa2d55067dd4907f8e7b8cd799"
+    },
+    {
+      "path": "historical-cashflows-42/evidence-final.json",
+      "bytes": 87335270,
+      "sha256": "92dc8d2095ca6cfbd6f9572a5507989ae8ad594846b6c31af29d1a29a7492461"
+    },
+    {
+      "path": "historical-cashflows-42/interest-comparatives.json",
+      "bytes": 4260272,
+      "sha256": "1966da22ed52d0e5d43e08ca86da8b4f79067e9410dbaab54456a97edf92a3ab"
+    },
+    {
+      "path": "historical-cashflows-42/supplemental-operands.json",
+      "bytes": 17738,
+      "sha256": "22fb2e3b75fabafae9bb1ee74cbf2d289759200dcb9f7f9c0b3617ba66160661"
+    },
+    {
+      "path": "historical-cashflows-42/primary-only-pep-interest.json",
+      "bytes": 21945,
+      "sha256": "034f371a79884977984173819b9bc1d30ccabbbcdc0633860b4ca622e19c321a"
+    },
+    {
+      "path": "historical-cashflows-42/later-vintage-evidence.json",
+      "bytes": 3092480,
+      "sha256": "c2b0a08055f0d99fe05269af5abe5a4af3acde3b4401215e01c40793ddda13ea"
+    },
+    {
+      "path": "historical-cashflows-42/financing-comparative-evidence.json",
+      "bytes": 6108946,
+      "sha256": "cf6b69112fcebabb730bbf38fc271b43f9e1478a7409ca5f787f246f105c95ae"
+    },
+    {
+      "path": "historical-cashflows-42/calculate_cashflows.py",
+      "bytes": 47252,
+      "sha256": "815c537174f10b74f74387252b162891266f872ecbac8ba25e892dc22b41815c"
+    },
+    {
+      "path": "historical-cashflows-42/extract_evidence.py",
+      "bytes": 7142,
+      "sha256": "eafc972bfe4ecf1eee2e78ee4930a21809aac832dcf26ec2ebab8ba886d161af"
+    },
+    {
+      "path": "historical-cashflows-42/inline_reader.py",
+      "bytes": 3448,
+      "sha256": "8f02e5da899e5fadbd6d2f0e33c871150bf477deab1d201a533bbfd8b55843ac"
+    },
+    {
+      "path": "historical-cashflows-42/filing_text.py",
+      "bytes": 1804,
+      "sha256": "3a6ade815212becc4aa9ed0cae9836370e504063a9c9d74abdf41013e228f030"
+    },
+    {
+      "path": "historical-cashflows-42/check_statement_cash.py",
+      "bytes": 3386,
+      "sha256": "890389a0ba35f952c9ad097d77fdaad37ef3a0d76854bb172a21c34585386371"
+    },
+    {
+      "path": "historical-cashflows-42/check_full_vintages.py",
+      "bytes": 4515,
+      "sha256": "c4873772e63d5e0835f894f2a3d15ed05381f7caca98a29f7f67dc2a4199aa2e"
+    },
+    {
+      "path": "historical-cashflows-42/verify_sources.py",
+      "bytes": 15124,
+      "sha256": "19d5ea183d6c0e1d9c04322e9a692703896b294842a97da5495a224df5d3bf37"
+    },
+    {
+      "path": "historical-cashflows-42/scan_financing_comparatives.py",
+      "bytes": 6728,
+      "sha256": "a6750054afdd21dee3ce5657047ad79be006c9ad66cb35545498523eaa666fd1"
+    },
+    {
+      "path": "historical-cashflows-42/build_financing_bridges.py",
+      "bytes": 4624,
+      "sha256": "5ca8b375b0a63cea7f9bb6bcac22ffbcdf0702e2cb1611ce52c0d06939b01d8e"
+    },
+    {
+      "path": "historical-cashflows-42/package_results.py",
+      "bytes": 15472,
+      "sha256": "c53cf056f7fb73a92aa2defd30f6a141710128f8f1ba825597863ebd33b0da32"
+    },
+    {
+      "path": "historical-cashflows-42/build_support_files.py",
+      "bytes": 6455,
+      "sha256": "8aa8343a8d34c8abcc3e41e512cc1a0a686679a0263eced2101d0a2735817884"
+    },
+    {
+      "path": "historical-cashflows-42/build_report.py",
+      "bytes": 23897,
+      "sha256": "fca1010831216d2e7c7883c72ea5a9424d7ab1e518ea026087fe39e08969434d"
+    },
+    {
+      "path": "historical-cashflows-42/build_workbook.mjs",
+      "bytes": 17270,
+      "sha256": "d2848e86d3168f2a3f0bad0262953199ffaf4f580c96f4d594dfbdf0aa927dc9"
+    },
+    {
+      "path": "historical-cashflows-42/validate_report.mjs",
+      "bytes": 3931,
+      "sha256": "97245bd7fb7b5e1af9c54ef53d47fe16b7a38f3c7d86e2091a41867e85412fad"
+    },
+    {
+      "path": "historical-cashflows-42/validate_deliverables.py",
+      "bytes": 11216,
+      "sha256": "bf3ce75e98efce264c5ad44ae75531cf844b92a64d94595b782543368e6bbd82"
+    },
+    {
+      "path": "historical-cashflows-42/run-order.json",
+      "bytes": 1503,
+      "sha256": "23fb81b1463ee9609670afc8d48d17824bdcdc493b8732a9ebbdb9718bc177c2"
+    },
+    {
+      "path": "historical-cashflows-42/delivery-manifest.json",
+      "bytes": 10283,
+      "sha256": "8c829248a8aea43ff283adf9b04e2b1a26b5d377eaf7e1700c41a67cc3372869"
+    }
+  ],
+  "authority": "Original historical audit snapshot; company-resolution decisions dated2026-11-03 supersede only their named scopes. This is not financial approval or a new calculation.",
+  "source": "Previously delivered historical-cashflows-42.zip; copied without modification.",
+  "execution_policy": "Archived scripts are historical reference, not setup commands. Read current repository instructions and company-resolution records before research."
+}

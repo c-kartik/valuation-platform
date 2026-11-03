@@ -1,5 +1,15 @@
 # Project Status
 
+## Current milestone — Codex Cloud preparation
+
+The user selects laptop-independent phone development. Portable setup, verification
+and startup commands are in [Codex Cloud setup](codex-cloud.md);
+[handoff](cloud-work-handoff.md) carries the financial review context. The original
+42-company audit is retained as a52-member byte-preserving snapshot with per-file
+hashes. This does not refresh facts or clear financial blockers. Cloud account
+publication and any provider-authenticated preview require their own observed
+completion; local preparation is not cloud deployment certification.
+
 ## Current milestone — Meta and Alphabet manual resolutions
 
 November3,2026: user approves five Meta and two Alphabet treatments.
