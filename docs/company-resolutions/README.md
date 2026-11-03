@@ -6,6 +6,14 @@ filing updates can reproduce each decision. It complements the existing
 [company-preparation register](../company-data-preparation/index.md); it does not
 replace original filings, accepted histories or approval records.
 
+**Overall status: OPEN for Apple, Meta and Alphabet.** Approved treatments have
+been implemented within their recorded scopes; unresolved financial, methodology
+and platform-integration roadblocks remain. The current
+[open-roadblock register](OPEN-ROADBLOCKS.md) lists each known item, its effect,
+preferred proposed treatment and closure evidence. No company or development
+scope is complete while a roadblock remains. Passing checks must be named
+individually rather than represented as overall completion.
+
 | Company | Review scope | Current outcome | Record |
 | --- | --- | --- | --- |
 | Apple (AAPL) | FY2021–FY2025; Other financing, FY2021 stock-proceeds presentation, alternative FCFF route and tax separation | One presentation conflict resolved; five FCFE values reconciled but provisional; operating FCFF input alignment remains unresolved; no platform number changed | [Apple decisions and results](AAPL/README.md) |

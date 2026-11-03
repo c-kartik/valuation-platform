@@ -1,5 +1,15 @@
 # Project Status
 
+## Current cash-flow review — OPEN roadblocks
+
+Apple, Meta and Alphabet remain OPEN. The user requires no completion claim while
+any roadblock remains in the development scope. The
+[open-roadblock register](company-resolutions/OPEN-ROADBLOCKS.md) separates missing
+historical inputs, alternative-route and valuation-basis alignment, forward-policy
+review, and FCFE/per-share/report integration. Preferred treatments in that register
+are proposals for review, not new financial approvals or adopted numerical changes.
+Earlier implemented treatments and successful checks retain their specific scopes.
+
 ## Current milestone — private Codex Cloud environment published
 
 The user selects laptop-independent phone development. Portable setup, verification

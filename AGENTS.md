@@ -71,6 +71,19 @@ historical acceptance does not itself approve a valuation formula or consumer.
 
 ## Engineering Principles
 
+### Completion language and open roadblocks
+
+Standing user instruction, November 3, 2026: do not call a company review,
+development scope or the project complete while any roadblock in that scope
+remains. An approved treatment, reconciled statement, passing test or published
+component does not establish overall completion. Report the specific successful
+check or implemented treatment and keep the parent status OPEN with its remaining
+roadblocks. Do not hide unresolved inputs, classifications, methodology choices,
+integration work or validation behind a completion label. Track cash-flow issues
+and proposed closure criteria in `docs/company-resolutions/OPEN-ROADBLOCKS.md`.
+Recommendations are not new numerical-method approvals; preserve prior decisions
+and label proposed treatments until the user approves them.
+
 WP0 extends Phase 1 toward analyst-reviewable historical inputs under
 `docs/dcf-input-contract.md`, separately from the completed facts/gaps closure.
 It does not authorize Phase 2 or modify frozen-v1. Subsequent field-treatment or
