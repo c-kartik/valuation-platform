@@ -12,9 +12,11 @@ GitHub connection now works, and an owner-private `valuation-platform` environme
 draft exists. Cloud installation, Python tests, financial replays, research hashes,
 build and workspace/API checks pass. Publication waits on a UI-test runner fix:
 the multi-screen integration test timed out in full cloud runs, despite passing
-an isolated diagnostic. Its queries are now scoped and its own timeout is bounded
-at 60 seconds; all assertions and other test limits remain. Cloud revalidation is
-pending; no authenticated remote preview URL exists yet.
+an isolated diagnostic. Its queries are now scoped, large-form inputs use the
+existing direct label-binding pattern, and this test plus the repeated Cancel
+editing test have individual 60-second budgets. All assertions and other test
+limits remain. Cloud revalidation is pending; no authenticated remote preview
+URL exists yet.
 
 ## Current milestone — Meta and Alphabet manual resolutions
 

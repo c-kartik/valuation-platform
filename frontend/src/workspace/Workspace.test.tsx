@@ -42,7 +42,8 @@ it('shows read-only inputs and one whole-model editor with multiple edits and on
 it('preserves intermediate strings, validates locally, focuses a required year and submits exact percentages',async()=>{
  const sent:EditableDoc[]=[];render(<Workspace load={transport(async b=>{sent.push(b);return reply(b);})}/>);await company();open();fill();for(const v of ['','-','.','-.']){set('Synthetic period 1 Revenue growth',v);expect((labeled('Synthetic period 1 Revenue growth')as HTMLInputElement).value).toBe(v);}click('Update valuation');await waitFor(()=>expect(document.activeElement).toBe(labeled('Synthetic period 1 Revenue growth')));expect(sent).toHaveLength(0);set('Synthetic period 1 Revenue growth','12.1250000000000000001');await update();expect(sent[0].forecast_years[0].revenue_growth).toBe('0.1213');expect(sent[0].anchor).toEqual(entries[0].anchor);
 });
-it('Cancel discards only this editing session; last result and applied overrides remain',async()=>{
+// Repeated full-form editing in jsdom needs its own bounded cloud budget.
+it('Cancel discards only this editing session; last result and applied overrides remain',{timeout:60_000},async()=>{
  const load=transport();render(<Workspace load={load}/>);await current();open();set('WACC','26');expect(screen.getByRole('region',{name:'Valuation summary'}).textContent).toContain('Editing draft');expect(screen.getByRole('region',{name:'Valuation summary'}).textContent).toContain('$100.00m');click('Cancel');expect(load).toHaveBeenCalledTimes(2);open();expect((labeled('WACC')as HTMLInputElement).value).toBe('25.00');set('WACC','26');await update();open();set('WACC','27');click('Cancel');open();expect((labeled('WACC')as HTMLInputElement).value).toBe('26.00');click('Cancel');
 });
 it('replaces one annual row only on explicit action and keeps terminal values independent',async()=>{

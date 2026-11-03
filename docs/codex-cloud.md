@@ -26,13 +26,16 @@ credentials, OpenAI API key or live SEC retrieval. Python can be selected with
 Verification runs valuation/preload tests, company-resolution/source checks, cloud
 checks, original Apple and Meta/Alphabet ledger replays, registered preload replay,
 frontend tests and production build. The cloud runner uses two frontend workers
-and a 15-second default test budget. One multi-screen scenario/sensitivity
-integration test has its own 60-second budget: the original test exceeded
+and a 15-second default test budget. Two multi-screen integration tests have
+their own 60-second budget: the original scenario/sensitivity test exceeded
 15 seconds in the cloud, and a single-worker diagnostic exceeded 30 seconds
 (57.253 seconds reported). Repeated accessibility queries are now scoped to
 their relevant controls; every interaction and assertion remains enabled.
-The longer budget belongs only to that UI integration test; financial tests
-and schema checks are unchanged.
+The existing direct for/id label-binding lookup from `Workspace.test.tsx` is
+also used for its large editor, avoiding jsdom's repeated whole-document
+`label.control` traversal. A later cloud run also timed out on repeated Cancel
+editing sessions, so that test has the same bounded 60-second allowance.
+Financial tests and schema checks are unchanged.
 It makes no new financial approvals or live
 filing requests. Existing historical gaps and basis labels remain unchanged.
 
@@ -116,4 +119,8 @@ workspace and proxied-catalog checks passed at `d5d4183`. The initial required r
 failed solely on the scenario/sensitivity UI integration timeout (277 frontend
 tests passed); a selected diagnostic passed, while a full single-worker/30-second
 run still timed out. The scoped-query/per-test-budget fix requires fresh cloud
-verification before publication. No remote authenticated preview URL exists yet.
+verification before publication. At `c7ed102`, the required run again passed all
+financial checks but timed out on scenario/sensitivity and Cancel editing-session
+tests (276 frontend tests passed). The subsequent direct label-binding change
+and second bounded timeout still require cloud revalidation. No remote
+authenticated preview URL exists yet.
