@@ -1,0 +1,54 @@
+{
+  "schema_version": "company-cashflow-manual-decisions-v1",
+  "ticker": "META",
+  "fiscal_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "review_date": "2026-11-03",
+  "authorization_quote": "for Meta, I approve all 5 of the preferred treatments; For Alphabet, i approve the preferred treatments for both issues",
+  "authorization_source": "Explicit user approval and instruction to implement and log treatments in this Valuation Platform conversation.",
+  "estimates_permitted": false,
+  "automatic_fcfe_publication": false,
+  "approved_meta_historical_investment_overlay": true,
+  "decisions": [
+    {
+      "id": "META-FCFE-001",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "Unclassified Other financing and separately reported finance-lease principal.",
+      "treatment": "Reconcile every financing row, include disclosed borrowing/lease principal once, research Other using primary commentary; keep residual unclassified and FCFE provisional.",
+      "status": "RECONCILED_RESIDUAL_OTHER_UNRESOLVED"
+    },
+    {
+      "id": "META-INV-001",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "Original gross and later net cash PP&E presentations differ.",
+      "treatment": "Use cash PP&E net of identified asset-sale receipts: subtract245M in2022 and221M in2023; replay later comparisons, preserve2021net18,567M. Do not infer receipts inside mixed investing lines.",
+      "status": "APPLIED_NET_IDENTIFIED_RECEIPTS"
+    },
+    {
+      "id": "META-FCFE-002",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "Later FY2021 Other+1M hides original overdraft+14M and Other\u221213M.",
+      "treatment": "Preserve identified overdraft borrowing14M once; reconcile14\u221213=1 without reclassifying the residual.",
+      "status": "RESOLVED_PRESENTATION_NO_NUMERIC_CHANGE"
+    },
+    {
+      "id": "META-INT-001",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "FY2021/22 gross expense was absent in original source vintage.",
+      "treatment": "Use exact23M/185M from FY2023 comparative Note14; retain target annual dates and later source identity, no coupon or cash-interest proxy.",
+      "status": "EXACT_LATER_INTEREST_PRESERVED"
+    },
+    {
+      "id": "META-TAX-001",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "FY2025 tax charge15,930M contains noncash valuation allowance14,030M; provision and cash taxes differ.",
+      "treatment": "Preserve reported historical tax/CFO; do not add accounting charges to cash or choose a recurring forecast rate. Keep EBIT-route diagnostic separate.",
+      "status": "REPORTED_TAX_PRESERVED"
+    }
+  ]
+}

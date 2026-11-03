@@ -87,7 +87,8 @@
     "src/valuation_platform/preload/profile.py",
     "src/valuation_platform/preload/generate.py",
     "src/valuation_platform/preload/issuers.py",
-    "src/valuation_platform/preload/extract.py"
+    "src/valuation_platform/preload/extract.py",
+    "src/valuation_platform/review/resolved_history.py"
   ],
   "resources": {
     "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",
@@ -131,6 +132,7 @@
     "data/preload/aapl-v1/sources/fy2025-10k.html": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
     "data/preload/aapl-v1/sources/manifest.json": "4ba007cc8fabe4fb9a8281268a9d7f2d0caf1cb5a348f5a95a0ed0845c233e92",
     "data/preload/aapl-v1/sources/q3-2026-10q.html": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
-    "data/preload/aapl-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6"
+    "data/preload/aapl-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+    "docs/company-resolutions/META/adopted-history.json": "f12fa6a2a988405f2c7129a73c1a9a850f370139409222c66561c0c986d536a6"
   }
 }

@@ -24,10 +24,11 @@ class AdoptedCFOHistoryTests(unittest.TestCase):
         entries = json.loads(raw)["entries"]
         expected = {"GOOGL": ["67.30", "60.31", "69.76", "72.99", "73.88"],
                     "AAPL": ["95.25", "113.90", "102.94", None, None],
-                    "META": ["39.14", "19.19", "44.21", "54.70", "46.93"]}
+                    "META": ["39.14", "19.44", "44.44", "54.70", "46.93"]}
         from decimal import Decimal, Context, localcontext
         for entry in entries:
-            self.assertEqual(entry["historical_fcff_policy"], policy())
+            from valuation_platform.review.resolved_history import policy as resolved_policy
+            self.assertEqual(entry["historical_fcff_policy"], resolved_policy(entry["kind"]))
             for period, wanted in zip(entry["historical_window"], expected[entry["company"]], strict=True):
                 if wanted is None:
                     self.assertIsNone(period["fcff"])
@@ -36,7 +37,7 @@ class AdoptedCFOHistoryTests(unittest.TestCase):
                     with localcontext(Context(prec=60)):
                         self.assertEqual(f'{Decimal(period["fcff"])/1000000000:.2f}', wanted)
                     self.assertEqual(period["fcff_calculation"]["status"], "CALCULATED")
-                self.assertEqual(period["fcff_basis"], "REPORTED_CFO_CASH_PPE")
+                self.assertEqual(period["fcff_basis"], "REPORTED_CFO_NET_IDENTIFIED_PPE" if entry["company"]=="META" else "REPORTED_CFO_CASH_PPE")
                 self.assertTrue(period["fcff_calculation"]["sources"])
         self.assertNotIn("/Users/", raw.decode())
 

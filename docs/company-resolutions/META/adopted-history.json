@@ -1,0 +1,80 @@
+{
+  "decision_id": "META-INV-001",
+  "periods": [
+    {
+      "fcff_usd": "39135150452.584383723881228322476947804754250909399",
+      "identified_receipts_usd": "0",
+      "identity": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "net_cash_ppe_usd": "18567000000",
+      "original_cash_ppe_usd": "18567000000",
+      "source_urls": []
+    },
+    {
+      "fcff_usd": "19437929525.660154759013151046184808633193379367778",
+      "identified_receipts_usd": "245000000",
+      "identity": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "net_cash_ppe_usd": "31186000000",
+      "original_cash_ppe_usd": "31431000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+      ]
+    },
+    {
+      "fcff_usd": "44435666947.794551741587248039133001602428944927047",
+      "identified_receipts_usd": "221000000",
+      "identity": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "net_cash_ppe_usd": "27045000000",
+      "original_cash_ppe_usd": "27266000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+      ]
+    },
+    {
+      "fcff_usd": "54702986513.451169636160366811485501606215416837666",
+      "identified_receipts_usd": "0",
+      "identity": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "net_cash_ppe_usd": "37256000000",
+      "original_cash_ppe_usd": "37256000000",
+      "source_urls": []
+    },
+    {
+      "fcff_usd": "46928643089.885025368896336638272122143089885025369",
+      "identified_receipts_usd": "0",
+      "identity": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "net_cash_ppe_usd": "69691000000",
+      "original_cash_ppe_usd": "69691000000",
+      "source_urls": []
+    }
+  ],
+  "schema_version": "approved-meta-net-investment-v1"
+}

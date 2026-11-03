@@ -1,5 +1,22 @@
 # Architecture
 
+## META/GOOGL approved treatments — November 3
+
+`scripts/resolve_meta_alphabet_cashflows.py` verifies the two scoped source maps,
+full financing populations, comparative investment/overdraft bridges, NCI
+narratives and lease-parent containment. Separate company ledgers retain decisions,
+source bindings, exact results and unresolved ownership/financing scope.
+
+`review/resolved_history.py` wraps the unchanged original `cfo_history` ledger.
+Only its pinned `META/adopted-history.json` overlay is allowed into the catalog;
+it verifies identities, original investment, receipt sources and recalculates FCFF.
+FY2022/23 investment falls245m/221m; all five Meta periods receive the explicit
+`REPORTED_CFO_NET_IDENTIFIED_PPE` basis. The private bundle includes the new wrapper
+and pins the compact overlay. Chart source detail labels net investment/receipts;
+forecast inputs and EV are untouched. Alphabet FCFE scope stays in review ledgers.
+The Apple replay and original ledgers remain byte-for-byte reproducible. The older
+Apple-specific description below continues to apply to that script only.
+
 ## Manual company-resolution replay — November 3
 
 `scripts/resolve_apple_cashflows.py` reuses the retained SEC primary/instance

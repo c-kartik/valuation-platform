@@ -1,5 +1,15 @@
 # META — supplemental supported-seed preparation note
 
+## Approved historical display revision — November 3
+
+[Company-resolution record](../../company-resolutions/META/README.md) documents
+five user-approved treatments. The pinned overlay nets identified PP&E receipts,
+raising FY2022/23 historical FCFF245m/221m. The current sequence is
+39.14/19.44/44.44/54.70/46.93B; the earlier sequence below is the preserved original
+adoption. Other financing remains unallocated, FCFE provisional, and reported
+tax/interest and all forward policies/EV unchanged. No preparation or financial
+sufficiency upgrade follows. See the exact source, replay and validation files.
+
 ## Registered forward profile — November 2
 
 The user authorizes the [shared preload pipeline](../../registered-preloads.md) for META.

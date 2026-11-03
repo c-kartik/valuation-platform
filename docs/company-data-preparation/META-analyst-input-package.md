@@ -1,5 +1,17 @@
 # META — consolidated five-year analyst-input review
 
+## Approved cash-flow resolution overlay — November 3
+
+[Meta resolution](../company-resolutions/META/README.md) records five approved
+treatments, exact source bindings and results. An additive historical display
+overlay nets identified PP&E receipts245m/221m in FY2022/23; FCFF is now
+39.14/19.44/44.44/54.70/46.93B. Original `/periods`, `/current_history`, acceptance
+and source facts are unchanged. Gross/net comparative investment and FY2021
+14−13=1m overdraft presentations reconcile. Other financing is not classified as
+zero/debt; five derived FCFEs remain provisional. Exact later-source interest and
+reported tax are preserved; no forecast/EV changes. Capitalized-interest,
+SBC/tax/investment alignment and financial-sufficiency limits remain explicit.
+
 ## Five-year display projection — October 31, 2026
 
 The [chart/history update](../chart-history-and-current-year-estimate.md) expands

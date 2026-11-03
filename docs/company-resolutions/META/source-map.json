@@ -1,0 +1,709 @@
+{
+  "schema_version": "company-resolution-source-map-v1",
+  "ticker": "META",
+  "periods": [
+    {
+      "identity": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "financing_rows": [
+        {
+          "table": 38,
+          "row": 30,
+          "column": 1,
+          "caption": "Taxes paid related to net share settlement of equity awards",
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMjktMS0xLTEtMA_c874d0c2-3147-4ffb-97bc-e10e9be4ad6b",
+          "raw_value_usd": "5515000000",
+          "signed_cash_usd": "-5515000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 38,
+          "row": 31,
+          "column": 1,
+          "caption": "Repurchases of Class A common stock",
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzAtMS0xLTEtMA_613d8225-73ba-4887-8448-802ffe43f1e1",
+          "raw_value_usd": "44537000000",
+          "signed_cash_usd": "-44537000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 38,
+          "row": 32,
+          "column": 1,
+          "caption": "Principal payments on finance leases",
+          "concept": "FinanceLeasePrincipalPayments",
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzEtMS0xLTEtMA_169aa789-dbde-4591-a5da-256732369b50",
+          "raw_value_usd": "677000000",
+          "signed_cash_usd": "-677000000",
+          "cash_sign": -1,
+          "classification": "LEASE_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 38,
+          "row": 33,
+          "column": 1,
+          "caption": "Net change in overdraft in cash pooling entities",
+          "concept": "ProceedsFromRepaymentsOfBankOverdrafts",
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzItMS0xLTEtMA_069b1280-c4f0-44f7-ac6e-02b773c91f15",
+          "raw_value_usd": "14000000",
+          "signed_cash_usd": "14000000",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 38,
+          "row": 34,
+          "column": 1,
+          "caption": "Other financing activities",
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzMtMS0xLTEtMA_99c4d152-423b-4e59-8bd7-f58d34562700",
+          "raw_value_usd": "-13000000",
+          "signed_cash_usd": "-13000000",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 38,
+          "row": 35,
+          "column": 1,
+          "caption": "Net cash used in financing activities",
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzQtMS0xLTEtMA_4b366f0e-0377-45c1-b417-417f6bd393dd",
+          "raw_value_usd": "-50728000000",
+          "signed_cash_usd": "-50728000000",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "included_in_net_borrowing": false
+        }
+      ],
+      "investment_receipts": []
+    },
+    {
+      "identity": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "financing_rows": [
+        {
+          "table": 36,
+          "row": 34,
+          "column": 1,
+          "caption": "Taxes paid related to net share settlement of equity awards",
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjktMS0xLTEtMTc4ODE5_65917193-80c6-4db4-8bb9-d564e75297d4",
+          "raw_value_usd": "3595000000",
+          "signed_cash_usd": "-3595000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 36,
+          "row": 35,
+          "column": 1,
+          "caption": "Repurchases of Class A common stock",
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzAtMS0xLTEtMTc4ODE5_eaab7a0c-e8eb-4461-ba04-0203d29fc725",
+          "raw_value_usd": "27956000000",
+          "signed_cash_usd": "-27956000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 36,
+          "row": 36,
+          "column": 1,
+          "caption": "Proceeds from issuance of long-term debt, net",
+          "concept": "ProceedsFromIssuanceOfLongTermDebt",
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzItMS0xLTEtMTgxNDIx_297a106c-5519-4a93-ae8b-218aa71a6d51",
+          "raw_value_usd": "9921000000",
+          "signed_cash_usd": "9921000000",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 36,
+          "row": 37,
+          "column": 1,
+          "caption": "Principal payments on finance leases",
+          "concept": "FinanceLeasePrincipalPayments",
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzEtMS0xLTEtMTc4ODE5_ecfe34ae-69f0-4177-8e4d-5175fceda557",
+          "raw_value_usd": "850000000",
+          "signed_cash_usd": "-850000000",
+          "cash_sign": -1,
+          "classification": "LEASE_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 36,
+          "row": 39,
+          "column": 1,
+          "caption": "Other financing activities",
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzMtMS0xLTEtMTc4ODE5_f4b20e16-1a7d-4dd0-bf7a-f79481f18f2c",
+          "raw_value_usd": "344000000",
+          "signed_cash_usd": "344000000",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 36,
+          "row": 40,
+          "column": 1,
+          "caption": "Net cash used in financing activities",
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzQtMS0xLTEtMTc4ODE5_fd2d3888-229b-4165-96a6-d022b2d2018a",
+          "raw_value_usd": "-22136000000",
+          "signed_cash_usd": "-22136000000",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "included_in_net_borrowing": false
+        }
+      ],
+      "investment_receipts": [
+        {
+          "table": 36,
+          "row": 25,
+          "column": 1,
+          "caption": "Proceeds relating to property and equipment",
+          "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjItMS0xLTEtMTgxNjU4_394f791d-d151-439f-ba19-d9602dfa9cf0",
+          "raw_value_usd": "245000000",
+          "signed_cash_usd": "245000000",
+          "cash_sign": 1
+        }
+      ]
+    },
+    {
+      "identity": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "financing_rows": [
+        {
+          "table": 30,
+          "row": 32,
+          "column": 1,
+          "caption": "Taxes paid related to net share settlement of equity awards",
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "context_id": "c-1",
+          "primary_xml_id": "f-301",
+          "raw_value_usd": "7012000000",
+          "signed_cash_usd": "-7012000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 30,
+          "row": 33,
+          "column": 1,
+          "caption": "Repurchases of Class A common stock",
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "context_id": "c-1",
+          "primary_xml_id": "f-304",
+          "raw_value_usd": "19774000000",
+          "signed_cash_usd": "-19774000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 30,
+          "row": 34,
+          "column": 1,
+          "caption": "Proceeds from issuance of long-term debt, net",
+          "concept": "ProceedsFromIssuanceOfLongTermDebt",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "context_id": "c-1",
+          "primary_xml_id": "f-307",
+          "raw_value_usd": "8455000000",
+          "signed_cash_usd": "8455000000",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 30,
+          "row": 35,
+          "column": 1,
+          "caption": "Principal payments on finance leases",
+          "concept": "FinanceLeasePrincipalPayments",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "context_id": "c-1",
+          "primary_xml_id": "f-310",
+          "raw_value_usd": "1058000000",
+          "signed_cash_usd": "-1058000000",
+          "cash_sign": -1,
+          "classification": "LEASE_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 30,
+          "row": 36,
+          "column": 1,
+          "caption": "Other financing activities",
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "context_id": "c-1",
+          "primary_xml_id": "f-313",
+          "raw_value_usd": "-111000000",
+          "signed_cash_usd": "-111000000",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 30,
+          "row": 37,
+          "column": 1,
+          "caption": "Net cash used in financing activities",
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "context_id": "c-1",
+          "primary_xml_id": "f-316",
+          "raw_value_usd": "-19500000000",
+          "signed_cash_usd": "-19500000000",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "included_in_net_borrowing": false
+        }
+      ],
+      "investment_receipts": [
+        {
+          "table": 30,
+          "row": 24,
+          "column": 1,
+          "caption": "Proceeds relating to property and equipment",
+          "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "context_id": "c-1",
+          "primary_xml_id": "f-283",
+          "raw_value_usd": "221000000",
+          "signed_cash_usd": "221000000",
+          "cash_sign": 1
+        }
+      ]
+    },
+    {
+      "identity": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "financing_rows": [
+        {
+          "table": 28,
+          "row": 32,
+          "column": 1,
+          "caption": "Taxes paid related to net share settlement of equity awards",
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "context_id": "c-1",
+          "primary_xml_id": "f-313",
+          "raw_value_usd": "13770000000",
+          "signed_cash_usd": "-13770000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 28,
+          "row": 33,
+          "column": 1,
+          "caption": "Repurchases of Class A common stock",
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "context_id": "c-1",
+          "primary_xml_id": "f-316",
+          "raw_value_usd": "30125000000",
+          "signed_cash_usd": "-30125000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 28,
+          "row": 34,
+          "column": 1,
+          "caption": "Payments for dividends and dividend equivalents",
+          "concept": "PaymentsOfDividends",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "context_id": "c-1",
+          "primary_xml_id": "f-319",
+          "raw_value_usd": "5072000000",
+          "signed_cash_usd": "-5072000000",
+          "cash_sign": -1,
+          "classification": "DIVIDENDS_NOT_NET_BORROWING",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 28,
+          "row": 35,
+          "column": 1,
+          "caption": "Proceeds from issuance of long-term debt, net",
+          "concept": "ProceedsFromIssuanceOfLongTermDebt",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "context_id": "c-1",
+          "primary_xml_id": "f-322",
+          "raw_value_usd": "10432000000",
+          "signed_cash_usd": "10432000000",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 28,
+          "row": 36,
+          "column": 1,
+          "caption": "Principal payments on finance leases",
+          "concept": "FinanceLeasePrincipalPayments",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "context_id": "c-1",
+          "primary_xml_id": "f-325",
+          "raw_value_usd": "1969000000",
+          "signed_cash_usd": "-1969000000",
+          "cash_sign": -1,
+          "classification": "LEASE_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 28,
+          "row": 37,
+          "column": 1,
+          "caption": "Other financing activities",
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "context_id": "c-1",
+          "primary_xml_id": "f-328",
+          "raw_value_usd": "-277000000",
+          "signed_cash_usd": "-277000000",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 28,
+          "row": 38,
+          "column": 1,
+          "caption": "Net cash used in financing activities",
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "context_id": "c-1",
+          "primary_xml_id": "f-331",
+          "raw_value_usd": "-40781000000",
+          "signed_cash_usd": "-40781000000",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "included_in_net_borrowing": false
+        }
+      ],
+      "investment_receipts": []
+    },
+    {
+      "identity": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "financing_rows": [
+        {
+          "table": 29,
+          "row": 35,
+          "column": 1,
+          "caption": "Taxes paid related to net share settlement of equity awards",
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "context_id": "c-1",
+          "primary_xml_id": "f-331",
+          "raw_value_usd": "18400000000",
+          "signed_cash_usd": "-18400000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 29,
+          "row": 36,
+          "column": 1,
+          "caption": "Repurchases of Class A common stock",
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "context_id": "c-1",
+          "primary_xml_id": "f-334",
+          "raw_value_usd": "26248000000",
+          "signed_cash_usd": "-26248000000",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 29,
+          "row": 37,
+          "column": 1,
+          "caption": "Payments for dividends and dividend equivalents",
+          "concept": "PaymentsOfDividends",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "context_id": "c-1",
+          "primary_xml_id": "f-337",
+          "raw_value_usd": "5324000000",
+          "signed_cash_usd": "-5324000000",
+          "cash_sign": -1,
+          "classification": "DIVIDENDS_NOT_NET_BORROWING",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 29,
+          "row": 38,
+          "column": 1,
+          "caption": "Proceeds from issuance of long-term debt, net",
+          "concept": "ProceedsFromIssuanceOfLongTermDebt",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "context_id": "c-1",
+          "primary_xml_id": "f-340",
+          "raw_value_usd": "29906000000",
+          "signed_cash_usd": "29906000000",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 29,
+          "row": 39,
+          "column": 1,
+          "caption": "Principal payments on finance leases",
+          "concept": "FinanceLeasePrincipalPayments",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "context_id": "c-1",
+          "primary_xml_id": "f-343",
+          "raw_value_usd": "2524000000",
+          "signed_cash_usd": "-2524000000",
+          "cash_sign": -1,
+          "classification": "LEASE_PRINCIPAL",
+          "included_in_net_borrowing": true
+        },
+        {
+          "table": 29,
+          "row": 40,
+          "column": 1,
+          "caption": "Other financing activities",
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "context_id": "c-1",
+          "primary_xml_id": "f-346",
+          "raw_value_usd": "2220000000",
+          "signed_cash_usd": "2220000000",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "included_in_net_borrowing": false
+        },
+        {
+          "table": 29,
+          "row": 41,
+          "column": 1,
+          "caption": "Net cash used in financing activities",
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "context_id": "c-1",
+          "primary_xml_id": "f-349",
+          "raw_value_usd": "-20370000000",
+          "signed_cash_usd": "-20370000000",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "included_in_net_borrowing": false
+        }
+      ],
+      "investment_receipts": []
+    }
+  ],
+  "investment_comparatives": [
+    {
+      "target_identity": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "source_identity": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "cash_ppe": {
+        "table": 30,
+        "row": 23,
+        "column": 7,
+        "caption": "Purchases of property and equipment",
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "namespace": "http://fasb.org/us-gaap/2023",
+        "context_id": "c-12",
+        "primary_xml_id": "f-282",
+        "raw_value_usd": "18690000000",
+        "signed_cash_usd": "-18690000000",
+        "cash_sign": -1
+      },
+      "receipts": [
+        {
+          "table": 30,
+          "row": 24,
+          "column": 7,
+          "caption": "Proceeds relating to property and equipment",
+          "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "context_id": "c-12",
+          "primary_xml_id": "f-285",
+          "raw_value_usd": "123000000",
+          "signed_cash_usd": "123000000",
+          "cash_sign": 1
+        }
+      ]
+    },
+    {
+      "target_identity": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "source_identity": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "cash_ppe": {
+        "table": 28,
+        "row": 23,
+        "column": 7,
+        "caption": "Purchases of property and equipment",
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "context_id": "c-12",
+        "primary_xml_id": "f-297",
+        "raw_value_usd": "31186000000",
+        "signed_cash_usd": "-31186000000",
+        "cash_sign": -1
+      },
+      "receipts": []
+    },
+    {
+      "target_identity": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "source_identity": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "cash_ppe": {
+        "table": 29,
+        "row": 24,
+        "column": 7,
+        "caption": "Purchases of property and equipment",
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "context_id": "c-12",
+        "primary_xml_id": "f-306",
+        "raw_value_usd": "27045000000",
+        "signed_cash_usd": "-27045000000",
+        "cash_sign": -1
+      },
+      "receipts": []
+    }
+  ],
+  "overdraft_comparative": {
+    "source_identity": {
+      "accession": "0001326801-24-000012",
+      "annual_end": "2023-12-31",
+      "annual_start": "2023-01-01",
+      "cik": 1326801,
+      "form": "10-K"
+    },
+    "target_identity": {
+      "accession": "0001326801-22-000018",
+      "annual_end": "2021-12-31",
+      "annual_start": "2021-01-01",
+      "cik": 1326801,
+      "form": "10-K"
+    },
+    "other": {
+      "table": 30,
+      "row": 36,
+      "column": 7,
+      "caption": "Other financing activities",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "namespace": "http://fasb.org/us-gaap/2023",
+      "context_id": "c-12",
+      "primary_xml_id": "f-315",
+      "raw_value_usd": "1000000",
+      "signed_cash_usd": "1000000",
+      "cash_sign": 1
+    }
+  }
+}

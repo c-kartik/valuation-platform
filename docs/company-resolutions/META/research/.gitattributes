@@ -1,0 +1,2 @@
+# Retained extraction text preserves source layout; hashes/excerpts verify it.
+*.txt -whitespace

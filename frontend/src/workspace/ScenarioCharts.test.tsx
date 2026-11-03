@@ -123,3 +123,12 @@ it('keeps unavailable Apple years missing and shows common CFO history once in s
  fireEvent.click(screen.getAllByRole('button',{name:'fcff: select FY2025, fixed anchor'})[0]);
  expect(screen.getAllByText('Unavailable').length).toBeGreaterThan(0);
 });
+it('shows the approved Meta net-receipts basis and source operands without joining it to forecast FCFF',()=>{
+ const entry=cfoHistory();entry.company='META';entry.historical_fcff_policy={methodology:'CFO',basis:'REPORTED_CFO_NET_IDENTIFIED_PPE',classification:'DERIVED_FROM_REPORTED_INPUTS',notice:'Meta cash PP&E is net of identified disposal receipts.',forecast_calibration:false,cross_basis_cagr:false,missing_input_policy:'Unavailable'};
+ entry.historical_window!.forEach(h=>{h.fcff_basis='REPORTED_CFO_NET_IDENTIFIED_PPE';h.fcff_calculation!.inputs.identified_ppe_receipts='245000000';h.fcff_calculation!.inputs.cash_ppe_before_receipts='345000000';});
+ render(<ForecastChart entry={entry} cases={[{label:'Base',result:result()}]}/>);
+ expect(document.querySelector('[data-fcff-basis-notice]')).not.toBeNull();
+ expect(document.querySelector('[data-base-trend="fcff"]')).toBeNull();
+ expect(screen.getByText(/Meta cash PP&E is net of identified disposal receipts/)).toBeTruthy();
+ expect(document.querySelector('details')!.textContent).toContain('cash PP&E net of identified receipts 100000000 (before receipts 345000000; identified receipts 245000000)');
+});

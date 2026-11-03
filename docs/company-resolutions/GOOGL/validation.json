@@ -1,0 +1,63 @@
+{
+  "review_date": "2026-11-03",
+  "base_commit": "2d20a581bdcac46b730e7531cee2201231235c72",
+  "scope": "Explicit user-approved Meta five treatments and Alphabet two treatments; FY2021\u201325 only",
+  "checks": [
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests/review -p 'test_meta_alphabet_resolution.py' -v",
+      "passed": 11
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests/review -p 'test_cfo_history.py' -v",
+      "passed": 6
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests/review -p 'test_*fcff*.py' -v",
+      "passed": 39
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests/review -p 'test_apple_resolution.py' -v",
+      "passed": 8
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests/api -p 'test_catalog.py' -v",
+      "passed": 2
+    },
+    {
+      "command": "Bundled Node: vitest run src/workspace/ScenarioCharts.test.tsx",
+      "passed": 13
+    }
+  ],
+  "total_distinct_tests_passed": 79,
+  "python_tests": 66,
+  "frontend_tests": 13,
+  "typecheck": "PASS",
+  "frontend_production_build": "PASS",
+  "source_replay": "PASS \u2014 resolve_meta_alphabet_cashflows.py --check",
+  "apple_original_replay": "PASS \u2014 unchanged original outputs",
+  "private_bundle": "PASS \u2014 isolated interpreter imports only packaged source; catalog81564 bytes within81920-byte limit",
+  "source_controls": {
+    "full_financing_statements": 10,
+    "meta_investment_comparatives": 3,
+    "meta_overdraft_bridge": 1,
+    "alphabet_nci_narratives": 5,
+    "alphabet_lease_cash_containment_checks": 4,
+    "meta_primary_research_hashes": 15,
+    "meta_exact_research_excerpts": 18
+  },
+  "publication": {
+    "meta_historical_fcff_change_usd": {
+      "FY2022": 245000000,
+      "FY2023": 221000000
+    },
+    "other_fcff_numeric_changes": 0,
+    "new_certified_parent_common_fcfe": 0,
+    "forecast_or_ev_changes": 0
+  },
+  "preservation": "Original accepted packages, source facts, prior historical ledger, Apple record and wider-universe scope remain unchanged.",
+  "remaining_limits": [
+    "Meta residual Other financing unclassified; FCFE remains provisional.",
+    "Alphabet parent-common cash attribution and NCI fair value unresolved.",
+    "Reported expense/capitalized interest, SBC, tax and investment scope differ from the EBIT forecast; no cross-basis FCFF CAGR or automatic forecast calibration."
+  ]
+}

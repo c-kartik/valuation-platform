@@ -1,0 +1,180 @@
+{
+  "purpose": "META FY2021\u201325 other-financing primary disclosure investigation",
+  "sources": [
+    {
+      "id": "meta-2021-10k",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+      "local_file": "meta-2021-10k.html.gz",
+      "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "retrieved_at_utc": "2026-10-14T17:23:03.184556+00:00",
+      "retained_source_path": "docs/evidence/preparation-statement-acquisition.json",
+      "retained_source_locator": "/artifacts/131",
+      "storage_encoding": "gzip",
+      "source_type": "SEC 10-K",
+      "text_file": "meta-2021-10k.txt",
+      "text_sha256": "5f551335c7a19d1a03bb3136da78b1c06d8a88ffe836087c794cd93b7e728030"
+    },
+    {
+      "id": "meta-2023-10k",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+      "local_file": "meta-2023-10k.html.gz",
+      "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+      "retained_source_path": "docs/evidence/preparation-statement-acquisition.json",
+      "retained_source_locator": "/artifacts/133",
+      "storage_encoding": "gzip",
+      "source_type": "SEC 10-K",
+      "text_file": "meta-2023-10k.txt",
+      "text_sha256": "9b9beff56f91bb70b1d057fc64d5c9dddcbdaa9fcd68433aeb5ac46e95da326e"
+    },
+    {
+      "id": "meta-2022-10k",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+      "local_file": "meta-2022-10k.html.gz",
+      "sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "retrieved_at_utc": "2026-10-14T17:23:03.826846+00:00",
+      "retained_source_path": "docs/evidence/preparation-statement-acquisition.json",
+      "retained_source_locator": "/artifacts/132",
+      "storage_encoding": "gzip",
+      "source_type": "SEC 10-K",
+      "text_file": "meta-2022-10k.txt",
+      "text_sha256": "d1ad44f4cf1333ed7c9a79ce0fc14e5708b359f919cc50fdf96e314fe88182f1"
+    },
+    {
+      "id": "meta-2024-10k",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+      "local_file": "meta-2024-10k.html.gz",
+      "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "retrieved_at_utc": "2026-10-14T17:23:04.915024+00:00",
+      "retained_source_path": "docs/evidence/preparation-statement-acquisition.json",
+      "retained_source_locator": "/artifacts/134",
+      "storage_encoding": "gzip",
+      "source_type": "SEC 10-K",
+      "text_file": "meta-2024-10k.txt",
+      "text_sha256": "bd8327fcebf1c2e924106e2bdf0966871b2a2da5ebcb511cfb7c1a8b79bf588b"
+    },
+    {
+      "id": "meta-2025-10k",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+      "local_file": "meta-2025-10k.html.gz",
+      "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+      "retained_source_path": "docs/evidence/independent-validation-document-acquisition.json",
+      "retained_source_locator": "/artifacts/0",
+      "storage_encoding": "gzip",
+      "source_type": "SEC 10-K",
+      "text_file": "meta-2025-10k.txt",
+      "text_sha256": "67fd5b463c0a3999262f6e6c1494628097ebe439b947b0f5a87145e4ca1d56d3"
+    },
+    {
+      "id": "q4-2022-call",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q4/META-Q4-2022-Earnings-Call-Transcript.pdf",
+      "local_file": "q4-2022-call.pdf",
+      "sha256": "e15433c3be6ad528bba4a2134dc77ed93a0123d534c5cc18cef637fc60dbadb7",
+      "retrieved_at_utc": "2026-11-03T10:18:49.611153+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q4-2022-call.txt",
+      "pages": 19,
+      "text_sha256": "bf8c2042314d5f91951636e77d53120f470af71e3ffdf0f655f4c28a0a919fad"
+    },
+    {
+      "id": "q4-2023-followup",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q4/META-Q4-2023-Follow-Up-Call-Transcript.pdf",
+      "local_file": "q4-2023-followup.pdf",
+      "sha256": "82467d1ee522f4eb0c518fdb8dc40a485dd96fa69e4013a1ad14ee10f9acb487",
+      "retrieved_at_utc": "2026-11-03T10:18:50.521266+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q4-2023-followup.txt",
+      "pages": 14,
+      "text_sha256": "807489ef84f3f2174f35cf9a7ce55f4e3a9e57def9ebebbf9ce5ffbdbcde2b03"
+    },
+    {
+      "id": "q4-2024-followup",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q4/META-Q4-2024-Follow-Up-Call-Transcript.pdf",
+      "local_file": "q4-2024-followup.pdf",
+      "sha256": "b46691881347aa767e7a051afa63ef04602a263c74f4c143aebc1a13182121d5",
+      "retrieved_at_utc": "2026-11-03T10:18:51.284809+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q4-2024-followup.txt",
+      "pages": 10,
+      "text_sha256": "68e9f25cbb660318531c2ece65ff5398316034d21285139825bd2484596eaffd"
+    },
+    {
+      "id": "q3-2025-followup",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q3/META-Q3-2025-Follow-Up-Call-Transcript.pdf",
+      "local_file": "q3-2025-followup.pdf",
+      "sha256": "dc74619d2195aa64d3e13faf236b2613ec2adc579f055271ee66f3b89a9fbc44",
+      "retrieved_at_utc": "2026-11-03T10:18:52.024989+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q3-2025-followup.txt",
+      "pages": 10,
+      "text_sha256": "4ec3b77456afe2865181ca1a31411bd468f4280a8764613236a73fa72e71e084"
+    },
+    {
+      "id": "q4-2025-followup",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q4/META-Q4-2025-Follow-Up-Call-Transcript.pdf",
+      "local_file": "q4-2025-followup.pdf",
+      "sha256": "6f9e51d04e7deace041e7237921569a6e5e30f4256c3f8531063ce15c6906833",
+      "retrieved_at_utc": "2026-11-03T10:18:52.853913+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q4-2025-followup.txt",
+      "pages": 11,
+      "text_sha256": "0e68e916f32dec20db1891e00268605705dea56ae8b3b10ab9df73f9cf512159"
+    },
+    {
+      "id": "q4-2022-followup",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q4/META-Q4-2022-Follow-Up-Call-Transcript.pdf",
+      "local_file": "q4-2022-followup.pdf",
+      "sha256": "5d8e576236cd6303bd44a91c6a772957d8d6d3729796b6712f802e88bff7b9e6",
+      "retrieved_at_utc": "2026-11-03T10:18:53.924897+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q4-2022-followup.txt",
+      "pages": 14,
+      "text_sha256": "b1270eae11db06a5079cdf38736fbe0fce8240850778fc95ce3b472fcb4cfc7c"
+    },
+    {
+      "id": "q4-2023-call",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q4/META-Q4-2023-Earnings-Call-Transcript.pdf",
+      "local_file": "q4-2023-call.pdf",
+      "sha256": "eac1bf3ddcadbea065f58c4221e8e1e0c18b33a2166fe16724e2a1b9033ddab2",
+      "retrieved_at_utc": "2026-11-03T10:18:55.063336+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q4-2023-call.txt",
+      "pages": 19,
+      "text_sha256": "3065f687c05bec382c15528c57c9a8b4aaff8eabc873c7fc9aaccf50fcead70e"
+    },
+    {
+      "id": "q4-2024-call",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q4/META-Q4-2024-Earnings-Call-Transcript.pdf",
+      "local_file": "q4-2024-call.pdf",
+      "sha256": "7e494ca04b92336e4635616976928ad553420caeb45f69e90e18b2f6e5b11178",
+      "retrieved_at_utc": "2026-11-03T10:18:55.470783+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q4-2024-call.txt",
+      "pages": 19,
+      "text_sha256": "e0d356f0f20991aebef4685463ca516ec90f57bf10c6fe9010bdce865e366131"
+    },
+    {
+      "id": "q3-2025-call",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q3/META-Q3-2025-Earnings-Call-Transcript.pdf",
+      "local_file": "q3-2025-call.pdf",
+      "sha256": "3a00bd026249683ccbd45565bd6c3ea7a05986efb5fa3bf5604600ba520a72a8",
+      "retrieved_at_utc": "2026-11-03T10:18:55.858349+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q3-2025-call.txt",
+      "pages": 19,
+      "text_sha256": "4dafd900d56acf2db9408a1fa33d8257b1db82aec13038ff4d231a981dde0999"
+    },
+    {
+      "id": "q4-2025-call",
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q4/META-Q4-2025-Earnings-Call-Transcript.pdf",
+      "local_file": "q4-2025-call.pdf",
+      "sha256": "2def106046fcde215f214ac0689aff6fa6c432d7016bf9315b4a831b2041a14b",
+      "retrieved_at_utc": "2026-11-03T10:18:56.287392+00:00",
+      "source_type": "Meta IR earnings-call transcript",
+      "text_file": "q4-2025-call.txt",
+      "pages": 21,
+      "text_sha256": "95efa2815c92819f4579da97e08221a9af12f8d570e029a19c71abf7b2c74dd2"
+    }
+  ]
+}

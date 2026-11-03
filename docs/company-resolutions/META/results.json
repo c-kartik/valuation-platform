@@ -1,0 +1,4062 @@
+{
+  "controls": {
+    "investment_comparatives": [
+      {
+        "base": {
+          "caption": "Purchases of property and equipment",
+          "cash_sign": -1,
+          "column": 7,
+          "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-12",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-282",
+          "raw_value_usd": "18690000000",
+          "row": 23,
+          "signed_cash_usd": "-18690000000",
+          "source": {
+            "as_of": null,
+            "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "instance_source": "instance",
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "c-12",
+                "dimensions": [],
+                "end": "2021-12-31",
+                "ordinal": 623,
+                "precision": "-6",
+                "primary_display": "18,690",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#f-282",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "18690000000",
+                "start": "2021-01-01",
+                "unit_id": "usd",
+                "xml_id": "f-282"
+              }
+            ],
+            "origin": "reported",
+            "precision": "-6",
+            "primary_source": "primary",
+            "primary_table": {
+              "caption": "Purchases of property and equipment",
+              "column": 7,
+              "row": 23,
+              "table": 30
+            },
+            "scope": "Purchases of property and equipment",
+            "source_identity": {
+              "accession": "0001326801-24-000012",
+              "annual_end": "2023-12-31",
+              "annual_start": "2023-01-01",
+              "cik": 1326801,
+              "form": "10-K"
+            },
+            "sources": [
+              {
+                "byte_length": 2465771,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+                "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+                "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+              },
+              {
+                "byte_length": 1933977,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+                "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+                "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+              }
+            ],
+            "target_annual_end": "2021-12-31",
+            "target_annual_start": "2021-01-01",
+            "unit": "USD",
+            "value": "18690000000"
+          },
+          "table": 30
+        },
+        "net_cash_investment": {
+          "amount_usd": "18567000000",
+          "display_billions": "18.57",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "18567000000"
+          }
+        },
+        "original_comparative_difference_usd": "0",
+        "receipts": [
+          {
+            "caption": "Proceeds relating to property and equipment",
+            "cash_sign": 1,
+            "column": 7,
+            "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+            "context_id": "c-12",
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "primary_xml_id": "f-285",
+            "raw_value_usd": "123000000",
+            "row": 24,
+            "signed_cash_usd": "123000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-12",
+                  "dimensions": [],
+                  "end": "2021-12-31",
+                  "ordinal": 626,
+                  "precision": "-6",
+                  "primary_display": "123",
+                  "primary_format": null,
+                  "primary_locator": "inline#f-285",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "123000000",
+                  "start": "2021-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-285"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Proceeds relating to property and equipment",
+                "column": 7,
+                "row": 24,
+                "table": 30
+              },
+              "scope": "Proceeds relating to property and equipment",
+              "source_identity": {
+                "accession": "0001326801-24-000012",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2465771,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+                  "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+                },
+                {
+                  "byte_length": 1933977,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+                  "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2021-12-31",
+              "target_annual_start": "2021-01-01",
+              "unit": "USD",
+              "value": "123000000"
+            },
+            "table": 30
+          }
+        ],
+        "source_identity": {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        "target_identity": {
+          "accession": "0001326801-22-000018",
+          "annual_end": "2021-12-31",
+          "annual_start": "2021-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      },
+      {
+        "base": {
+          "caption": "Purchases of property and equipment",
+          "cash_sign": -1,
+          "column": 7,
+          "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-12",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "primary_xml_id": "f-297",
+          "raw_value_usd": "31186000000",
+          "row": 23,
+          "signed_cash_usd": "-31186000000",
+          "source": {
+            "as_of": null,
+            "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "instance_source": "instance",
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "c-12",
+                "dimensions": [],
+                "end": "2022-12-31",
+                "ordinal": 623,
+                "precision": "-6",
+                "primary_display": "31,186",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#f-297",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "31186000000",
+                "start": "2022-01-01",
+                "unit_id": "usd",
+                "xml_id": "f-297"
+              }
+            ],
+            "origin": "reported",
+            "precision": "-6",
+            "primary_source": "primary",
+            "primary_table": {
+              "caption": "Purchases of property and equipment",
+              "column": 7,
+              "row": 23,
+              "table": 28
+            },
+            "scope": "Purchases of property and equipment",
+            "source_identity": {
+              "accession": "0001326801-25-000017",
+              "annual_end": "2024-12-31",
+              "annual_start": "2024-01-01",
+              "cik": 1326801,
+              "form": "10-K"
+            },
+            "sources": [
+              {
+                "byte_length": 2369879,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-14T17:23:04.915024+00:00",
+                "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+                "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+              },
+              {
+                "byte_length": 1823441,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-13T09:25:22.507350+00:00",
+                "sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb",
+                "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/11",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml"
+              }
+            ],
+            "target_annual_end": "2022-12-31",
+            "target_annual_start": "2022-01-01",
+            "unit": "USD",
+            "value": "31186000000"
+          },
+          "table": 28
+        },
+        "net_cash_investment": {
+          "amount_usd": "31186000000",
+          "display_billions": "31.19",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "31186000000"
+          }
+        },
+        "original_comparative_difference_usd": "0",
+        "receipts": [],
+        "source_identity": {
+          "accession": "0001326801-25-000017",
+          "annual_end": "2024-12-31",
+          "annual_start": "2024-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        "target_identity": {
+          "accession": "0001326801-23-000013",
+          "annual_end": "2022-12-31",
+          "annual_start": "2022-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      },
+      {
+        "base": {
+          "caption": "Purchases of property and equipment",
+          "cash_sign": -1,
+          "column": 7,
+          "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-12",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "primary_xml_id": "f-306",
+          "raw_value_usd": "27045000000",
+          "row": 24,
+          "signed_cash_usd": "-27045000000",
+          "source": {
+            "as_of": null,
+            "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "instance_source": "instance",
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "c-12",
+                "dimensions": [],
+                "end": "2023-12-31",
+                "ordinal": 620,
+                "precision": "-6",
+                "primary_display": "27,045",
+                "primary_format": "ixt:num-dot-decimal",
+                "primary_locator": "inline#f-306",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "27045000000",
+                "start": "2023-01-01",
+                "unit_id": "usd",
+                "xml_id": "f-306"
+              }
+            ],
+            "origin": "reported",
+            "precision": "-6",
+            "primary_source": "primary",
+            "primary_table": {
+              "caption": "Purchases of property and equipment",
+              "column": 7,
+              "row": 24,
+              "table": 29
+            },
+            "scope": "Purchases of property and equipment",
+            "source_identity": {
+              "accession": "0001628280-26-003942",
+              "annual_end": "2025-12-31",
+              "annual_start": "2025-01-01",
+              "cik": 1326801,
+              "form": "10-K"
+            },
+            "sources": [
+              {
+                "byte_length": 2371860,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+                "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+                "source_reference": "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+              },
+              {
+                "byte_length": 1876078,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-13T09:25:23.628495+00:00",
+                "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+                "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/13",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml"
+              }
+            ],
+            "target_annual_end": "2023-12-31",
+            "target_annual_start": "2023-01-01",
+            "unit": "USD",
+            "value": "27045000000"
+          },
+          "table": 29
+        },
+        "net_cash_investment": {
+          "amount_usd": "27045000000",
+          "display_billions": "27.04",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "27045000000"
+          }
+        },
+        "original_comparative_difference_usd": "0",
+        "receipts": [],
+        "source_identity": {
+          "accession": "0001628280-26-003942",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        },
+        "target_identity": {
+          "accession": "0001326801-24-000012",
+          "annual_end": "2023-12-31",
+          "annual_start": "2023-01-01",
+          "cik": 1326801,
+          "form": "10-K"
+        }
+      }
+    ],
+    "overdraft_bridge": {
+      "difference_usd": "0",
+      "fcfe_change_usd": "0",
+      "later": {
+        "caption": "Other financing activities",
+        "cash_sign": 1,
+        "column": 7,
+        "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+        "context_id": "c-12",
+        "namespace": "http://fasb.org/us-gaap/2023",
+        "primary_xml_id": "f-315",
+        "raw_value_usd": "1000000",
+        "row": 36,
+        "signed_cash_usd": "1000000",
+        "source": {
+          "as_of": null,
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "evidence_depth": "exact_primary_inline_and_instance_verified",
+          "instance_source": "instance",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "occurrence_count": 1,
+          "occurrences": [
+            {
+              "context_id": "c-12",
+              "dimensions": [],
+              "end": "2021-12-31",
+              "ordinal": 656,
+              "precision": "-6",
+              "primary_display": "1",
+              "primary_format": null,
+              "primary_locator": "inline#f-315",
+              "primary_scale": 6,
+              "primary_sign": "+",
+              "raw_value": "1000000",
+              "start": "2021-01-01",
+              "unit_id": "usd",
+              "xml_id": "f-315"
+            }
+          ],
+          "origin": "reported",
+          "precision": "-6",
+          "primary_source": "primary",
+          "primary_table": {
+            "caption": "Other financing activities",
+            "column": 7,
+            "row": 36,
+            "table": 30
+          },
+          "scope": "Other financing activities",
+          "source_identity": {
+            "accession": "0001326801-24-000012",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 1326801,
+            "form": "10-K"
+          },
+          "sources": [
+            {
+              "byte_length": 2465771,
+              "http_status": 200,
+              "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+              "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+              "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+              "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+            },
+            {
+              "byte_length": 1933977,
+              "http_status": 200,
+              "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+              "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+              "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+              "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+            }
+          ],
+          "target_annual_end": "2021-12-31",
+          "target_annual_start": "2021-01-01",
+          "unit": "USD",
+          "value": "1000000"
+        },
+        "table": 30
+      },
+      "original": [
+        {
+          "caption": "Net change in overdraft in cash pooling entities",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromRepaymentsOfBankOverdrafts",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzItMS0xLTEtMA_069b1280-c4f0-44f7-ac6e-02b773c91f15",
+          "raw_value_usd": "14000000",
+          "row": 33,
+          "signed_cash_usd": "14000000",
+          "source": {
+            "as_of": null,
+            "concept": "ProceedsFromRepaymentsOfBankOverdrafts",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "instance_source": "instance",
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+                "dimensions": [],
+                "end": "2021-12-31",
+                "ordinal": 559,
+                "precision": "-6",
+                "primary_display": "14",
+                "primary_format": null,
+                "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzItMS0xLTEtMA_069b1280-c4f0-44f7-ac6e-02b773c91f15",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "14000000",
+                "start": "2021-01-01",
+                "unit_id": "usd",
+                "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzItMS0xLTEtMA_069b1280-c4f0-44f7-ac6e-02b773c91f15"
+              }
+            ],
+            "origin": "reported",
+            "precision": "-6",
+            "primary_source": "primary",
+            "primary_table": {
+              "caption": "Net change in overdraft in cash pooling entities",
+              "column": 1,
+              "row": 33,
+              "table": 38
+            },
+            "scope": "Net change in overdraft in cash pooling entities",
+            "source_identity": {
+              "accession": "0001326801-22-000018",
+              "annual_end": "2021-12-31",
+              "annual_start": "2021-01-01",
+              "cik": 1326801,
+              "form": "10-K"
+            },
+            "sources": [
+              {
+                "byte_length": 2583251,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-14T17:23:03.184556+00:00",
+                "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+                "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+              },
+              {
+                "byte_length": 1872251,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-13T09:25:19.505415+00:00",
+                "sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3",
+                "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/5",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml"
+              }
+            ],
+            "target_annual_end": "2021-12-31",
+            "target_annual_start": "2021-01-01",
+            "unit": "USD",
+            "value": "14000000"
+          },
+          "table": 38
+        },
+        {
+          "caption": "Other financing activities",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "column": 1,
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzMtMS0xLTEtMA_99c4d152-423b-4e59-8bd7-f58d34562700",
+          "raw_value_usd": "-13000000",
+          "row": 34,
+          "signed_cash_usd": "-13000000",
+          "source": {
+            "as_of": null,
+            "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "instance_source": "instance",
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+                "dimensions": [],
+                "end": "2021-12-31",
+                "ordinal": 562,
+                "precision": "-6",
+                "primary_display": "13",
+                "primary_format": null,
+                "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzMtMS0xLTEtMA_99c4d152-423b-4e59-8bd7-f58d34562700",
+                "primary_scale": 6,
+                "primary_sign": "-",
+                "raw_value": "-13000000",
+                "start": "2021-01-01",
+                "unit_id": "usd",
+                "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzMtMS0xLTEtMA_99c4d152-423b-4e59-8bd7-f58d34562700"
+              }
+            ],
+            "origin": "reported",
+            "precision": "-6",
+            "primary_source": "primary",
+            "primary_table": {
+              "caption": "Other financing activities",
+              "column": 1,
+              "row": 34,
+              "table": 38
+            },
+            "scope": "Other financing activities",
+            "source_identity": {
+              "accession": "0001326801-22-000018",
+              "annual_end": "2021-12-31",
+              "annual_start": "2021-01-01",
+              "cik": 1326801,
+              "form": "10-K"
+            },
+            "sources": [
+              {
+                "byte_length": 2583251,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-14T17:23:03.184556+00:00",
+                "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+                "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+              },
+              {
+                "byte_length": 1872251,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-13T09:25:19.505415+00:00",
+                "sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3",
+                "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/5",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml"
+              }
+            ],
+            "target_annual_end": "2021-12-31",
+            "target_annual_start": "2021-01-01",
+            "unit": "USD",
+            "value": "-13000000"
+          },
+          "table": 38
+        }
+      ]
+    },
+    "remaining_other_is_not_assumed_zero": true,
+    "research_manifest_sha256": "6b183695307223379e92d4b4cd63937d1eeb227cf029a06e2c00e4f304f31be0"
+  },
+  "decisions": {
+    "approved_meta_historical_investment_overlay": true,
+    "authorization_quote": "for Meta, I approve all 5 of the preferred treatments; For Alphabet, i approve the preferred treatments for both issues",
+    "authorization_source": "Explicit user approval and instruction to implement and log treatments in this Valuation Platform conversation.",
+    "automatic_fcfe_publication": false,
+    "decisions": [
+      {
+        "authorization": "USER_APPROVED_TREATMENT",
+        "id": "META-FCFE-001",
+        "original_issue": "Unclassified Other financing and separately reported finance-lease principal.",
+        "status": "RECONCILED_RESIDUAL_OTHER_UNRESOLVED",
+        "treatment": "Reconcile every financing row, include disclosed borrowing/lease principal once, research Other using primary commentary; keep residual unclassified and FCFE provisional."
+      },
+      {
+        "authorization": "USER_APPROVED_TREATMENT",
+        "id": "META-INV-001",
+        "original_issue": "Original gross and later net cash PP&E presentations differ.",
+        "status": "APPLIED_NET_IDENTIFIED_RECEIPTS",
+        "treatment": "Use cash PP&E net of identified asset-sale receipts: subtract245M in2022 and221M in2023; replay later comparisons, preserve2021net18,567M. Do not infer receipts inside mixed investing lines."
+      },
+      {
+        "authorization": "USER_APPROVED_TREATMENT",
+        "id": "META-FCFE-002",
+        "original_issue": "Later FY2021 Other+1M hides original overdraft+14M and Other\u221213M.",
+        "status": "RESOLVED_PRESENTATION_NO_NUMERIC_CHANGE",
+        "treatment": "Preserve identified overdraft borrowing14M once; reconcile14\u221213=1 without reclassifying the residual."
+      },
+      {
+        "authorization": "USER_APPROVED_TREATMENT",
+        "id": "META-INT-001",
+        "original_issue": "FY2021/22 gross expense was absent in original source vintage.",
+        "status": "EXACT_LATER_INTEREST_PRESERVED",
+        "treatment": "Use exact23M/185M from FY2023 comparative Note14; retain target annual dates and later source identity, no coupon or cash-interest proxy."
+      },
+      {
+        "authorization": "USER_APPROVED_TREATMENT",
+        "id": "META-TAX-001",
+        "original_issue": "FY2025 tax charge15,930M contains noncash valuation allowance14,030M; provision and cash taxes differ.",
+        "status": "REPORTED_TAX_PRESERVED",
+        "treatment": "Preserve reported historical tax/CFO; do not add accounting charges to cash or choose a recurring forecast rate. Keep EBIT-route diagnostic separate."
+      }
+    ],
+    "estimates_permitted": false,
+    "fiscal_years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "review_date": "2026-11-03",
+    "schema_version": "company-cashflow-manual-decisions-v1",
+    "ticker": "META"
+  },
+  "inputs_sha256": {
+    "docs/company-data-preparation/meta-analyst-input-package.json": "533f1ab4f4831eeddd489653f6be72af6d18498c2c1c72f375584501e48c24bb",
+    "docs/company-resolutions/META/decisions.json": "f3cbf3e39450a2dcbfc4efc409aebe28182ec7e76d3733b3aaea5031569aeb8b",
+    "docs/company-resolutions/META/source-map.json": "51233f0bbb64fbcbe3bd1528e8222ec45a5b862d4374735fcb2df8bf1b7ca9f0",
+    "scripts/resolve_apple_cashflows.py": "a0336ce917bab55e448694b215b141bb8e1a725008c3947c64f2fe98bf3ac79e",
+    "scripts/resolve_meta_alphabet_cashflows.py": "b32a58d2246865fd9cd7a1df6203f54eb10b7c4ab15ea34f0b680475ce7542a3"
+  },
+  "limitations": [
+    "Historical CFO basis differs from SBC-expensed EBIT forecast and finance-asset investment scope.",
+    "Reported provision/pretax is an explicit historical tax allocation, not a recurring forecast rate.",
+    "Other financing unresolved; full FCFE not certified."
+  ],
+  "periods": [
+    {
+      "fcfe": {
+        "amount_usd": "38453000000",
+        "display_billions": "38.45",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "38453000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "publishable_as_parent_common": false,
+        "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "19150452.584383723881228322476947804754250909398528",
+        "amount_usd": "39135150452.584383723881228322476947804754250909399",
+        "cash_fcf_usd": "39116000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "39.14",
+        "exact_fraction_usd": {
+          "denominator": "11821",
+          "numerator": "462616613500000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.16737162676592504864224684882835631503256915658574",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "financing": {
+        "nci_contributions_excluded_from_debt": {
+          "amount_usd": "0",
+          "display_billions": "0.00",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "0"
+          }
+        },
+        "net_borrowing": {
+          "amount_usd": "-663000000",
+          "display_billions": "-0.66",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "-663000000"
+          }
+        },
+        "source_rows": [
+          {
+            "caption": "Taxes paid related to net share settlement of equity awards",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+            "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMjktMS0xLTEtMA_c874d0c2-3147-4ffb-97bc-e10e9be4ad6b",
+            "raw_value_usd": "5515000000",
+            "row": 30,
+            "signed_cash_usd": "-5515000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+                  "dimensions": [],
+                  "end": "2021-12-31",
+                  "ordinal": 550,
+                  "precision": "-6",
+                  "primary_display": "5,515",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMjktMS0xLTEtMA_c874d0c2-3147-4ffb-97bc-e10e9be4ad6b",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "5515000000",
+                  "start": "2021-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMjktMS0xLTEtMA_c874d0c2-3147-4ffb-97bc-e10e9be4ad6b"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Taxes paid related to net share settlement of equity awards",
+                "column": 1,
+                "row": 30,
+                "table": 38
+              },
+              "scope": "Taxes paid related to net share settlement of equity awards",
+              "source_identity": {
+                "accession": "0001326801-22-000018",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2583251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.184556+00:00",
+                  "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+                },
+                {
+                  "byte_length": 1872251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:19.505415+00:00",
+                  "sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2021-12-31",
+              "target_annual_start": "2021-01-01",
+              "unit": "USD",
+              "value": "5515000000"
+            },
+            "table": 38
+          },
+          {
+            "caption": "Repurchases of Class A common stock",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsForRepurchaseOfCommonStock",
+            "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzAtMS0xLTEtMA_613d8225-73ba-4887-8448-802ffe43f1e1",
+            "raw_value_usd": "44537000000",
+            "row": 31,
+            "signed_cash_usd": "-44537000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsForRepurchaseOfCommonStock",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+                  "dimensions": [],
+                  "end": "2021-12-31",
+                  "ordinal": 553,
+                  "precision": "-6",
+                  "primary_display": "44,537",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzAtMS0xLTEtMA_613d8225-73ba-4887-8448-802ffe43f1e1",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "44537000000",
+                  "start": "2021-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzAtMS0xLTEtMA_613d8225-73ba-4887-8448-802ffe43f1e1"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Repurchases of Class A common stock",
+                "column": 1,
+                "row": 31,
+                "table": 38
+              },
+              "scope": "Repurchases of Class A common stock",
+              "source_identity": {
+                "accession": "0001326801-22-000018",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2583251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.184556+00:00",
+                  "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+                },
+                {
+                  "byte_length": 1872251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:19.505415+00:00",
+                  "sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2021-12-31",
+              "target_annual_start": "2021-01-01",
+              "unit": "USD",
+              "value": "44537000000"
+            },
+            "table": 38
+          },
+          {
+            "caption": "Principal payments on finance leases",
+            "cash_sign": -1,
+            "classification": "LEASE_PRINCIPAL",
+            "column": 1,
+            "concept": "FinanceLeasePrincipalPayments",
+            "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzEtMS0xLTEtMA_169aa789-dbde-4591-a5da-256732369b50",
+            "raw_value_usd": "677000000",
+            "row": 32,
+            "signed_cash_usd": "-677000000",
+            "source": {
+              "as_of": null,
+              "concept": "FinanceLeasePrincipalPayments",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "occurrence_count": 2,
+              "occurrences": [
+                {
+                  "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+                  "dimensions": [],
+                  "end": "2021-12-31",
+                  "ordinal": 556,
+                  "precision": "-6",
+                  "primary_display": "677",
+                  "primary_format": null,
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzEtMS0xLTEtMA_169aa789-dbde-4591-a5da-256732369b50",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "677000000",
+                  "start": "2021-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzEtMS0xLTEtMA_169aa789-dbde-4591-a5da-256732369b50"
+                },
+                {
+                  "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+                  "dimensions": [],
+                  "end": "2021-12-31",
+                  "ordinal": 958,
+                  "precision": "-6",
+                  "primary_display": "677",
+                  "primary_format": null,
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzEtMS0xLTEtMA_169aa789-dbde-4591-a5da-256732369b50",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "677000000",
+                  "start": "2021-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N18xMjcvZnJhZzowYjg3N2FlYmQwZDA0NmU0OGQ4NDA5MjQyNmVjNGI3Ny90YWJsZTozZjAxNDc3ODRkMzc0YTUwYWYxNmY2MjM3YjJhYWFhYi90YWJsZXJhbmdlOjNmMDE0Nzc4NGQzNzRhNTBhZjE2ZjYyMzdiMmFhYWFiXzUtMS0xLTEtMA_62c7c174-b334-48fd-ad16-23855285a043"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Principal payments on finance leases",
+                "column": 1,
+                "row": 32,
+                "table": 38
+              },
+              "scope": "Principal payments on finance leases",
+              "source_identity": {
+                "accession": "0001326801-22-000018",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2583251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.184556+00:00",
+                  "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+                },
+                {
+                  "byte_length": 1872251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:19.505415+00:00",
+                  "sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2021-12-31",
+              "target_annual_start": "2021-01-01",
+              "unit": "USD",
+              "value": "677000000"
+            },
+            "table": 38
+          },
+          {
+            "caption": "Net change in overdraft in cash pooling entities",
+            "cash_sign": 1,
+            "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+            "column": 1,
+            "concept": "ProceedsFromRepaymentsOfBankOverdrafts",
+            "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzItMS0xLTEtMA_069b1280-c4f0-44f7-ac6e-02b773c91f15",
+            "raw_value_usd": "14000000",
+            "row": 33,
+            "signed_cash_usd": "14000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromRepaymentsOfBankOverdrafts",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+                  "dimensions": [],
+                  "end": "2021-12-31",
+                  "ordinal": 559,
+                  "precision": "-6",
+                  "primary_display": "14",
+                  "primary_format": null,
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzItMS0xLTEtMA_069b1280-c4f0-44f7-ac6e-02b773c91f15",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "14000000",
+                  "start": "2021-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzItMS0xLTEtMA_069b1280-c4f0-44f7-ac6e-02b773c91f15"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Net change in overdraft in cash pooling entities",
+                "column": 1,
+                "row": 33,
+                "table": 38
+              },
+              "scope": "Net change in overdraft in cash pooling entities",
+              "source_identity": {
+                "accession": "0001326801-22-000018",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2583251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.184556+00:00",
+                  "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+                },
+                {
+                  "byte_length": 1872251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:19.505415+00:00",
+                  "sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2021-12-31",
+              "target_annual_start": "2021-01-01",
+              "unit": "USD",
+              "value": "14000000"
+            },
+            "table": 38
+          },
+          {
+            "caption": "Other financing activities",
+            "cash_sign": 1,
+            "classification": "OTHER_FINANCING_EXCLUDED",
+            "column": 1,
+            "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+            "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzMtMS0xLTEtMA_99c4d152-423b-4e59-8bd7-f58d34562700",
+            "raw_value_usd": "-13000000",
+            "row": 34,
+            "signed_cash_usd": "-13000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+                  "dimensions": [],
+                  "end": "2021-12-31",
+                  "ordinal": 562,
+                  "precision": "-6",
+                  "primary_display": "13",
+                  "primary_format": null,
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzMtMS0xLTEtMA_99c4d152-423b-4e59-8bd7-f58d34562700",
+                  "primary_scale": 6,
+                  "primary_sign": "-",
+                  "raw_value": "-13000000",
+                  "start": "2021-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzMtMS0xLTEtMA_99c4d152-423b-4e59-8bd7-f58d34562700"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Other financing activities",
+                "column": 1,
+                "row": 34,
+                "table": 38
+              },
+              "scope": "Other financing activities",
+              "source_identity": {
+                "accession": "0001326801-22-000018",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2583251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.184556+00:00",
+                  "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+                },
+                {
+                  "byte_length": 1872251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:19.505415+00:00",
+                  "sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2021-12-31",
+              "target_annual_start": "2021-01-01",
+              "unit": "USD",
+              "value": "-13000000"
+            },
+            "table": 38
+          },
+          {
+            "caption": "Net cash used in financing activities",
+            "cash_sign": 1,
+            "classification": "FINANCING_TOTAL",
+            "column": 1,
+            "concept": "NetCashProvidedByUsedInFinancingActivities",
+            "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2021-01-31",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzQtMS0xLTEtMA_4b366f0e-0377-45c1-b417-417f6bd393dd",
+            "raw_value_usd": "-50728000000",
+            "row": 35,
+            "signed_cash_usd": "-50728000000",
+            "source": {
+              "as_of": null,
+              "concept": "NetCashProvidedByUsedInFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+                  "dimensions": [],
+                  "end": "2021-12-31",
+                  "ordinal": 565,
+                  "precision": "-6",
+                  "primary_display": "50,728",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzQtMS0xLTEtMA_4b366f0e-0377-45c1-b417-417f6bd393dd",
+                  "primary_scale": 6,
+                  "primary_sign": "-",
+                  "raw_value": "-50728000000",
+                  "start": "2021-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzQtMS0xLTEtMA_4b366f0e-0377-45c1-b417-417f6bd393dd"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Net cash used in financing activities",
+                "column": 1,
+                "row": 35,
+                "table": 38
+              },
+              "scope": "Net cash used in financing activities",
+              "source_identity": {
+                "accession": "0001326801-22-000018",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2583251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.184556+00:00",
+                  "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+                },
+                {
+                  "byte_length": 1872251,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:19.505415+00:00",
+                  "sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2021-12-31",
+              "target_annual_start": "2021-01-01",
+              "unit": "USD",
+              "value": "-50728000000"
+            },
+            "table": 38
+          }
+        ],
+        "statement_difference_usd": "0",
+        "total": {
+          "amount_usd": "-50728000000",
+          "display_billions": "-50.73",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "-50728000000"
+          }
+        },
+        "unallocated_other_usd": [
+          "-13000000"
+        ]
+      },
+      "fiscal_year": 2021,
+      "forecast_inputs_changed": false,
+      "identified_receipts": {
+        "amount_usd": "0",
+        "display_billions": "0.00",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "0"
+        }
+      },
+      "identity": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "18567000000",
+        "cfo": "57683000000",
+        "interest_expense": "23000000",
+        "pretax_income": "47284000000",
+        "tax_provision": "7914000000"
+      },
+      "investment_receipt_sources": [],
+      "net_cash_investment": {
+        "amount_usd": "18567000000",
+        "display_billions": "18.57",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "18567000000"
+        }
+      },
+      "parent_common_fcfe_usd": null,
+      "platform_before_usd": "39135150452.584383723881228322476947804754250909399",
+      "platform_change_usd": "0",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+      ]
+    },
+    {
+      "fcfe": {
+        "amount_usd": "28360000000",
+        "display_billions": "28.36",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "28360000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "publishable_as_parent_common": false,
+        "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "148929525.66015475901315104618480863319337936777820",
+        "amount_usd": "19437929525.660154759013151046184808633193379367778",
+        "cash_fcf_usd": "19289000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "19.44",
+        "exact_fraction_usd": {
+          "denominator": "28819",
+          "numerator": "560181691000000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.19497553697213643776675110170373711787362503903675",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "financing": {
+        "nci_contributions_excluded_from_debt": {
+          "amount_usd": "0",
+          "display_billions": "0.00",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "0"
+          }
+        },
+        "net_borrowing": {
+          "amount_usd": "9071000000",
+          "display_billions": "9.07",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "9071000000"
+          }
+        },
+        "source_rows": [
+          {
+            "caption": "Taxes paid related to net share settlement of equity awards",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+            "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjktMS0xLTEtMTc4ODE5_65917193-80c6-4db4-8bb9-d564e75297d4",
+            "raw_value_usd": "3595000000",
+            "row": 34,
+            "signed_cash_usd": "-3595000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2022",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+                  "dimensions": [],
+                  "end": "2022-12-31",
+                  "ordinal": 621,
+                  "precision": "-6",
+                  "primary_display": "3,595",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjktMS0xLTEtMTc4ODE5_65917193-80c6-4db4-8bb9-d564e75297d4",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "3595000000",
+                  "start": "2022-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjktMS0xLTEtMTc4ODE5_65917193-80c6-4db4-8bb9-d564e75297d4"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Taxes paid related to net share settlement of equity awards",
+                "column": 1,
+                "row": 34,
+                "table": 36
+              },
+              "scope": "Taxes paid related to net share settlement of equity awards",
+              "source_identity": {
+                "accession": "0001326801-23-000013",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2881105,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.826846+00:00",
+                  "sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+                },
+                {
+                  "byte_length": 2301327,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:20.486422+00:00",
+                  "sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2022-12-31",
+              "target_annual_start": "2022-01-01",
+              "unit": "USD",
+              "value": "3595000000"
+            },
+            "table": 36
+          },
+          {
+            "caption": "Repurchases of Class A common stock",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsForRepurchaseOfCommonStock",
+            "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzAtMS0xLTEtMTc4ODE5_eaab7a0c-e8eb-4461-ba04-0203d29fc725",
+            "raw_value_usd": "27956000000",
+            "row": 35,
+            "signed_cash_usd": "-27956000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsForRepurchaseOfCommonStock",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2022",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+                  "dimensions": [],
+                  "end": "2022-12-31",
+                  "ordinal": 624,
+                  "precision": "-6",
+                  "primary_display": "27,956",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzAtMS0xLTEtMTc4ODE5_eaab7a0c-e8eb-4461-ba04-0203d29fc725",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "27956000000",
+                  "start": "2022-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzAtMS0xLTEtMTc4ODE5_eaab7a0c-e8eb-4461-ba04-0203d29fc725"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Repurchases of Class A common stock",
+                "column": 1,
+                "row": 35,
+                "table": 36
+              },
+              "scope": "Repurchases of Class A common stock",
+              "source_identity": {
+                "accession": "0001326801-23-000013",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2881105,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.826846+00:00",
+                  "sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+                },
+                {
+                  "byte_length": 2301327,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:20.486422+00:00",
+                  "sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2022-12-31",
+              "target_annual_start": "2022-01-01",
+              "unit": "USD",
+              "value": "27956000000"
+            },
+            "table": 36
+          },
+          {
+            "caption": "Proceeds from issuance of long-term debt, net",
+            "cash_sign": 1,
+            "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+            "column": 1,
+            "concept": "ProceedsFromIssuanceOfLongTermDebt",
+            "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzItMS0xLTEtMTgxNDIx_297a106c-5519-4a93-ae8b-218aa71a6d51",
+            "raw_value_usd": "9921000000",
+            "row": 36,
+            "signed_cash_usd": "9921000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2022",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+                  "dimensions": [],
+                  "end": "2022-12-31",
+                  "ordinal": 627,
+                  "precision": "-6",
+                  "primary_display": "9,921",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzItMS0xLTEtMTgxNDIx_297a106c-5519-4a93-ae8b-218aa71a6d51",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "9921000000",
+                  "start": "2022-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzItMS0xLTEtMTgxNDIx_297a106c-5519-4a93-ae8b-218aa71a6d51"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Proceeds from issuance of long-term debt, net",
+                "column": 1,
+                "row": 36,
+                "table": 36
+              },
+              "scope": "Proceeds from issuance of long-term debt, net",
+              "source_identity": {
+                "accession": "0001326801-23-000013",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2881105,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.826846+00:00",
+                  "sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+                },
+                {
+                  "byte_length": 2301327,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:20.486422+00:00",
+                  "sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2022-12-31",
+              "target_annual_start": "2022-01-01",
+              "unit": "USD",
+              "value": "9921000000"
+            },
+            "table": 36
+          },
+          {
+            "caption": "Principal payments on finance leases",
+            "cash_sign": -1,
+            "classification": "LEASE_PRINCIPAL",
+            "column": 1,
+            "concept": "FinanceLeasePrincipalPayments",
+            "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzEtMS0xLTEtMTc4ODE5_ecfe34ae-69f0-4177-8e4d-5175fceda557",
+            "raw_value_usd": "850000000",
+            "row": 37,
+            "signed_cash_usd": "-850000000",
+            "source": {
+              "as_of": null,
+              "concept": "FinanceLeasePrincipalPayments",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2022",
+              "occurrence_count": 2,
+              "occurrences": [
+                {
+                  "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+                  "dimensions": [],
+                  "end": "2022-12-31",
+                  "ordinal": 630,
+                  "precision": "-6",
+                  "primary_display": "850",
+                  "primary_format": null,
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzEtMS0xLTEtMTc4ODE5_ecfe34ae-69f0-4177-8e4d-5175fceda557",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "850000000",
+                  "start": "2022-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzEtMS0xLTEtMTc4ODE5_ecfe34ae-69f0-4177-8e4d-5175fceda557"
+                },
+                {
+                  "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+                  "dimensions": [],
+                  "end": "2022-12-31",
+                  "ordinal": 1162,
+                  "precision": "-6",
+                  "primary_display": "850",
+                  "primary_format": null,
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzEtMS0xLTEtMTc4ODE5_ecfe34ae-69f0-4177-8e4d-5175fceda557",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "850000000",
+                  "start": "2022-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV8xMjQvZnJhZzo5NDZmNDljNDhjNGQ0NmU5YTJhMWJkOWNkMWM2YmUwMS90YWJsZTpjOWQ5YmNkMzdmMmE0NmYzYWUxYTU2MzhhMmI4ZWQ0Mi90YWJsZXJhbmdlOmM5ZDliY2QzN2YyYTQ2ZjNhZTFhNTYzOGEyYjhlZDQyXzUtMS0xLTEtMTc4ODE5_ad80bd46-21c3-4f12-8c53-2800f6aef92f"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Principal payments on finance leases",
+                "column": 1,
+                "row": 37,
+                "table": 36
+              },
+              "scope": "Principal payments on finance leases",
+              "source_identity": {
+                "accession": "0001326801-23-000013",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2881105,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.826846+00:00",
+                  "sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+                },
+                {
+                  "byte_length": 2301327,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:20.486422+00:00",
+                  "sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2022-12-31",
+              "target_annual_start": "2022-01-01",
+              "unit": "USD",
+              "value": "850000000"
+            },
+            "table": 36
+          },
+          {
+            "caption": "Other financing activities",
+            "cash_sign": 1,
+            "classification": "OTHER_FINANCING_EXCLUDED",
+            "column": 1,
+            "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+            "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzMtMS0xLTEtMTc4ODE5_f4b20e16-1a7d-4dd0-bf7a-f79481f18f2c",
+            "raw_value_usd": "344000000",
+            "row": 39,
+            "signed_cash_usd": "344000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2022",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+                  "dimensions": [],
+                  "end": "2022-12-31",
+                  "ordinal": 633,
+                  "precision": "-6",
+                  "primary_display": "344",
+                  "primary_format": null,
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzMtMS0xLTEtMTc4ODE5_f4b20e16-1a7d-4dd0-bf7a-f79481f18f2c",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "344000000",
+                  "start": "2022-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzMtMS0xLTEtMTc4ODE5_f4b20e16-1a7d-4dd0-bf7a-f79481f18f2c"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Other financing activities",
+                "column": 1,
+                "row": 39,
+                "table": 36
+              },
+              "scope": "Other financing activities",
+              "source_identity": {
+                "accession": "0001326801-23-000013",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2881105,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.826846+00:00",
+                  "sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+                },
+                {
+                  "byte_length": 2301327,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:20.486422+00:00",
+                  "sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2022-12-31",
+              "target_annual_start": "2022-01-01",
+              "unit": "USD",
+              "value": "344000000"
+            },
+            "table": 36
+          },
+          {
+            "caption": "Net cash used in financing activities",
+            "cash_sign": 1,
+            "classification": "FINANCING_TOTAL",
+            "column": 1,
+            "concept": "NetCashProvidedByUsedInFinancingActivities",
+            "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzQtMS0xLTEtMTc4ODE5_fd2d3888-229b-4165-96a6-d022b2d2018a",
+            "raw_value_usd": "-22136000000",
+            "row": 40,
+            "signed_cash_usd": "-22136000000",
+            "source": {
+              "as_of": null,
+              "concept": "NetCashProvidedByUsedInFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2022",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+                  "dimensions": [],
+                  "end": "2022-12-31",
+                  "ordinal": 636,
+                  "precision": "-6",
+                  "primary_display": "22,136",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzQtMS0xLTEtMTc4ODE5_fd2d3888-229b-4165-96a6-d022b2d2018a",
+                  "primary_scale": 6,
+                  "primary_sign": "-",
+                  "raw_value": "-22136000000",
+                  "start": "2022-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzQtMS0xLTEtMTc4ODE5_fd2d3888-229b-4165-96a6-d022b2d2018a"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Net cash used in financing activities",
+                "column": 1,
+                "row": 40,
+                "table": 36
+              },
+              "scope": "Net cash used in financing activities",
+              "source_identity": {
+                "accession": "0001326801-23-000013",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2881105,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:03.826846+00:00",
+                  "sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+                },
+                {
+                  "byte_length": 2301327,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:20.486422+00:00",
+                  "sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2022-12-31",
+              "target_annual_start": "2022-01-01",
+              "unit": "USD",
+              "value": "-22136000000"
+            },
+            "table": 36
+          }
+        ],
+        "statement_difference_usd": "0",
+        "total": {
+          "amount_usd": "-22136000000",
+          "display_billions": "-22.14",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "-22136000000"
+          }
+        },
+        "unallocated_other_usd": [
+          "344000000"
+        ]
+      },
+      "fiscal_year": 2022,
+      "forecast_inputs_changed": false,
+      "identified_receipts": {
+        "amount_usd": "245000000",
+        "display_billions": "0.24",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "245000000"
+        }
+      },
+      "identity": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "31186000000",
+        "cfo": "50475000000",
+        "interest_expense": "185000000",
+        "pretax_income": "28819000000",
+        "tax_provision": "5619000000"
+      },
+      "investment_receipt_sources": [
+        {
+          "caption": "Proceeds relating to property and equipment",
+          "cash_sign": 1,
+          "column": 1,
+          "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjItMS0xLTEtMTgxNjU4_394f791d-d151-439f-ba19-d9602dfa9cf0",
+          "raw_value_usd": "245000000",
+          "row": 25,
+          "signed_cash_usd": "245000000",
+          "source": {
+            "as_of": null,
+            "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "instance_source": "instance",
+            "namespace": "http://fasb.org/us-gaap/2022",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+                "dimensions": [],
+                "end": "2022-12-31",
+                "ordinal": 597,
+                "precision": "-6",
+                "primary_display": "245",
+                "primary_format": null,
+                "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjItMS0xLTEtMTgxNjU4_394f791d-d151-439f-ba19-d9602dfa9cf0",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "245000000",
+                "start": "2022-01-01",
+                "unit_id": "usd",
+                "xml_id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjItMS0xLTEtMTgxNjU4_394f791d-d151-439f-ba19-d9602dfa9cf0"
+              }
+            ],
+            "origin": "reported",
+            "precision": "-6",
+            "primary_source": "primary",
+            "primary_table": {
+              "caption": "Proceeds relating to property and equipment",
+              "column": 1,
+              "row": 25,
+              "table": 36
+            },
+            "scope": "Proceeds relating to property and equipment",
+            "source_identity": {
+              "accession": "0001326801-23-000013",
+              "annual_end": "2022-12-31",
+              "annual_start": "2022-01-01",
+              "cik": 1326801,
+              "form": "10-K"
+            },
+            "sources": [
+              {
+                "byte_length": 2881105,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-14T17:23:03.826846+00:00",
+                "sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+                "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+              },
+              {
+                "byte_length": 2301327,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-13T09:25:20.486422+00:00",
+                "sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd",
+                "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/7",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231_htm.xml"
+              }
+            ],
+            "target_annual_end": "2022-12-31",
+            "target_annual_start": "2022-01-01",
+            "unit": "USD",
+            "value": "245000000"
+          },
+          "table": 36
+        }
+      ],
+      "net_cash_investment": {
+        "amount_usd": "31186000000",
+        "display_billions": "31.19",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "31186000000"
+        }
+      },
+      "parent_common_fcfe_usd": null,
+      "platform_before_usd": "19192929525.660154759013151046184808633193379367778",
+      "platform_change_usd": "245000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+      ]
+    },
+    {
+      "fcfe": {
+        "amount_usd": "51465000000",
+        "display_billions": "51.46",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "51465000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "publishable_as_parent_common": false,
+        "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "367666947.79455174158724803913300160242894492704731",
+        "amount_usd": "44435666947.794551741587248039133001602428944927047",
+        "cash_fcf_usd": "44068000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "44.44",
+        "exact_fraction_usd": {
+          "denominator": "11857",
+          "numerator": "526873703000000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.17563464620055663321244834275111748334317280931096",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "financing": {
+        "nci_contributions_excluded_from_debt": {
+          "amount_usd": "0",
+          "display_billions": "0.00",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "0"
+          }
+        },
+        "net_borrowing": {
+          "amount_usd": "7397000000",
+          "display_billions": "7.40",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "7397000000"
+          }
+        },
+        "source_rows": [
+          {
+            "caption": "Taxes paid related to net share settlement of equity awards",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "primary_xml_id": "f-301",
+            "raw_value_usd": "7012000000",
+            "row": 32,
+            "signed_cash_usd": "-7012000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2023-12-31",
+                  "ordinal": 642,
+                  "precision": "-6",
+                  "primary_display": "7,012",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-301",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "7012000000",
+                  "start": "2023-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-301"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Taxes paid related to net share settlement of equity awards",
+                "column": 1,
+                "row": 32,
+                "table": 30
+              },
+              "scope": "Taxes paid related to net share settlement of equity awards",
+              "source_identity": {
+                "accession": "0001326801-24-000012",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2465771,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+                  "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+                },
+                {
+                  "byte_length": 1933977,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+                  "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2023-12-31",
+              "target_annual_start": "2023-01-01",
+              "unit": "USD",
+              "value": "7012000000"
+            },
+            "table": 30
+          },
+          {
+            "caption": "Repurchases of Class A common stock",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsForRepurchaseOfCommonStock",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "primary_xml_id": "f-304",
+            "raw_value_usd": "19774000000",
+            "row": 33,
+            "signed_cash_usd": "-19774000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsForRepurchaseOfCommonStock",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2023-12-31",
+                  "ordinal": 645,
+                  "precision": "-6",
+                  "primary_display": "19,774",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-304",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "19774000000",
+                  "start": "2023-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-304"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Repurchases of Class A common stock",
+                "column": 1,
+                "row": 33,
+                "table": 30
+              },
+              "scope": "Repurchases of Class A common stock",
+              "source_identity": {
+                "accession": "0001326801-24-000012",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2465771,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+                  "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+                },
+                {
+                  "byte_length": 1933977,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+                  "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2023-12-31",
+              "target_annual_start": "2023-01-01",
+              "unit": "USD",
+              "value": "19774000000"
+            },
+            "table": 30
+          },
+          {
+            "caption": "Proceeds from issuance of long-term debt, net",
+            "cash_sign": 1,
+            "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+            "column": 1,
+            "concept": "ProceedsFromIssuanceOfLongTermDebt",
+            "context_id": "c-1",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "primary_xml_id": "f-307",
+            "raw_value_usd": "8455000000",
+            "row": 34,
+            "signed_cash_usd": "8455000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2023-12-31",
+                  "ordinal": 648,
+                  "precision": "-6",
+                  "primary_display": "8,455",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-307",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "8455000000",
+                  "start": "2023-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-307"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Proceeds from issuance of long-term debt, net",
+                "column": 1,
+                "row": 34,
+                "table": 30
+              },
+              "scope": "Proceeds from issuance of long-term debt, net",
+              "source_identity": {
+                "accession": "0001326801-24-000012",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2465771,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+                  "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+                },
+                {
+                  "byte_length": 1933977,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+                  "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2023-12-31",
+              "target_annual_start": "2023-01-01",
+              "unit": "USD",
+              "value": "8455000000"
+            },
+            "table": 30
+          },
+          {
+            "caption": "Principal payments on finance leases",
+            "cash_sign": -1,
+            "classification": "LEASE_PRINCIPAL",
+            "column": 1,
+            "concept": "FinanceLeasePrincipalPayments",
+            "context_id": "c-1",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "primary_xml_id": "f-310",
+            "raw_value_usd": "1058000000",
+            "row": 35,
+            "signed_cash_usd": "-1058000000",
+            "source": {
+              "as_of": null,
+              "concept": "FinanceLeasePrincipalPayments",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "occurrence_count": 2,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2023-12-31",
+                  "ordinal": 651,
+                  "precision": "-6",
+                  "primary_display": "1,058",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-310",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "1058000000",
+                  "start": "2023-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-310"
+                },
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2023-12-31",
+                  "ordinal": 1205,
+                  "precision": "-6",
+                  "primary_display": "1,058",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-310",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "1058000000",
+                  "start": "2023-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-872"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Principal payments on finance leases",
+                "column": 1,
+                "row": 35,
+                "table": 30
+              },
+              "scope": "Principal payments on finance leases",
+              "source_identity": {
+                "accession": "0001326801-24-000012",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2465771,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+                  "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+                },
+                {
+                  "byte_length": 1933977,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+                  "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2023-12-31",
+              "target_annual_start": "2023-01-01",
+              "unit": "USD",
+              "value": "1058000000"
+            },
+            "table": 30
+          },
+          {
+            "caption": "Other financing activities",
+            "cash_sign": 1,
+            "classification": "OTHER_FINANCING_EXCLUDED",
+            "column": 1,
+            "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "primary_xml_id": "f-313",
+            "raw_value_usd": "-111000000",
+            "row": 36,
+            "signed_cash_usd": "-111000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2023-12-31",
+                  "ordinal": 654,
+                  "precision": "-6",
+                  "primary_display": "111",
+                  "primary_format": null,
+                  "primary_locator": "inline#f-313",
+                  "primary_scale": 6,
+                  "primary_sign": "-",
+                  "raw_value": "-111000000",
+                  "start": "2023-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-313"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Other financing activities",
+                "column": 1,
+                "row": 36,
+                "table": 30
+              },
+              "scope": "Other financing activities",
+              "source_identity": {
+                "accession": "0001326801-24-000012",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2465771,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+                  "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+                },
+                {
+                  "byte_length": 1933977,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+                  "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2023-12-31",
+              "target_annual_start": "2023-01-01",
+              "unit": "USD",
+              "value": "-111000000"
+            },
+            "table": 30
+          },
+          {
+            "caption": "Net cash used in financing activities",
+            "cash_sign": 1,
+            "classification": "FINANCING_TOTAL",
+            "column": 1,
+            "concept": "NetCashProvidedByUsedInFinancingActivities",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "primary_xml_id": "f-316",
+            "raw_value_usd": "-19500000000",
+            "row": 37,
+            "signed_cash_usd": "-19500000000",
+            "source": {
+              "as_of": null,
+              "concept": "NetCashProvidedByUsedInFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2023-12-31",
+                  "ordinal": 657,
+                  "precision": "-6",
+                  "primary_display": "19,500",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-316",
+                  "primary_scale": 6,
+                  "primary_sign": "-",
+                  "raw_value": "-19500000000",
+                  "start": "2023-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-316"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Net cash used in financing activities",
+                "column": 1,
+                "row": 37,
+                "table": 30
+              },
+              "scope": "Net cash used in financing activities",
+              "source_identity": {
+                "accession": "0001326801-24-000012",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2465771,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+                  "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+                },
+                {
+                  "byte_length": 1933977,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+                  "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2023-12-31",
+              "target_annual_start": "2023-01-01",
+              "unit": "USD",
+              "value": "-19500000000"
+            },
+            "table": 30
+          }
+        ],
+        "statement_difference_usd": "0",
+        "total": {
+          "amount_usd": "-19500000000",
+          "display_billions": "-19.50",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "-19500000000"
+          }
+        },
+        "unallocated_other_usd": [
+          "-111000000"
+        ]
+      },
+      "fiscal_year": 2023,
+      "forecast_inputs_changed": false,
+      "identified_receipts": {
+        "amount_usd": "221000000",
+        "display_billions": "0.22",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "221000000"
+        }
+      },
+      "identity": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "27045000000",
+        "cfo": "71113000000",
+        "interest_expense": "446000000",
+        "pretax_income": "47428000000",
+        "tax_provision": "8330000000"
+      },
+      "investment_receipt_sources": [
+        {
+          "caption": "Proceeds relating to property and equipment",
+          "cash_sign": 1,
+          "column": 1,
+          "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-283",
+          "raw_value_usd": "221000000",
+          "row": 24,
+          "signed_cash_usd": "221000000",
+          "source": {
+            "as_of": null,
+            "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+            "evidence_depth": "exact_primary_inline_and_instance_verified",
+            "instance_source": "instance",
+            "namespace": "http://fasb.org/us-gaap/2023",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "context_id": "c-1",
+                "dimensions": [],
+                "end": "2023-12-31",
+                "ordinal": 624,
+                "precision": "-6",
+                "primary_display": "221",
+                "primary_format": null,
+                "primary_locator": "inline#f-283",
+                "primary_scale": 6,
+                "primary_sign": "+",
+                "raw_value": "221000000",
+                "start": "2023-01-01",
+                "unit_id": "usd",
+                "xml_id": "f-283"
+              }
+            ],
+            "origin": "reported",
+            "precision": "-6",
+            "primary_source": "primary",
+            "primary_table": {
+              "caption": "Proceeds relating to property and equipment",
+              "column": 1,
+              "row": 24,
+              "table": 30
+            },
+            "scope": "Proceeds relating to property and equipment",
+            "source_identity": {
+              "accession": "0001326801-24-000012",
+              "annual_end": "2023-12-31",
+              "annual_start": "2023-01-01",
+              "cik": 1326801,
+              "form": "10-K"
+            },
+            "sources": [
+              {
+                "byte_length": 2465771,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-14T17:23:04.505986+00:00",
+                "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+                "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+              },
+              {
+                "byte_length": 1933977,
+                "http_status": 200,
+                "retrieved_at_utc": "2026-10-13T09:25:21.498712+00:00",
+                "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+                "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/9",
+                "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml"
+              }
+            ],
+            "target_annual_end": "2023-12-31",
+            "target_annual_start": "2023-01-01",
+            "unit": "USD",
+            "value": "221000000"
+          },
+          "table": 30
+        }
+      ],
+      "net_cash_investment": {
+        "amount_usd": "27045000000",
+        "display_billions": "27.04",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "27045000000"
+        }
+      },
+      "parent_common_fcfe_usd": null,
+      "platform_before_usd": "44214666947.794551741587248039133001602428944927047",
+      "platform_change_usd": "221000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+      ]
+    },
+    {
+      "fcfe": {
+        "amount_usd": "62535000000",
+        "display_billions": "62.54",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "62535000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "publishable_as_parent_common": false,
+        "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "630986513.45116963616036681148550160621541683766611",
+        "amount_usd": "54702986513.451169636160366811485501606215416837666",
+        "cash_fcf_usd": "54072000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "54.70",
+        "exact_fraction_usd": {
+          "denominator": "70663",
+          "numerator": "3865477136000000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.11750137978857393544004641750279495634207435291454",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "financing": {
+        "nci_contributions_excluded_from_debt": {
+          "amount_usd": "0",
+          "display_billions": "0.00",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "0"
+          }
+        },
+        "net_borrowing": {
+          "amount_usd": "8463000000",
+          "display_billions": "8.46",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "8463000000"
+          }
+        },
+        "source_rows": [
+          {
+            "caption": "Taxes paid related to net share settlement of equity awards",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "primary_xml_id": "f-313",
+            "raw_value_usd": "13770000000",
+            "row": 32,
+            "signed_cash_usd": "-13770000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2024-12-31",
+                  "ordinal": 639,
+                  "precision": "-6",
+                  "primary_display": "13,770",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-313",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "13770000000",
+                  "start": "2024-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-313"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Taxes paid related to net share settlement of equity awards",
+                "column": 1,
+                "row": 32,
+                "table": 28
+              },
+              "scope": "Taxes paid related to net share settlement of equity awards",
+              "source_identity": {
+                "accession": "0001326801-25-000017",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2369879,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.915024+00:00",
+                  "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+                },
+                {
+                  "byte_length": 1823441,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:22.507350+00:00",
+                  "sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/11",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2024-12-31",
+              "target_annual_start": "2024-01-01",
+              "unit": "USD",
+              "value": "13770000000"
+            },
+            "table": 28
+          },
+          {
+            "caption": "Repurchases of Class A common stock",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsForRepurchaseOfCommonStock",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "primary_xml_id": "f-316",
+            "raw_value_usd": "30125000000",
+            "row": 33,
+            "signed_cash_usd": "-30125000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsForRepurchaseOfCommonStock",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2024-12-31",
+                  "ordinal": 642,
+                  "precision": "-6",
+                  "primary_display": "30,125",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-316",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "30125000000",
+                  "start": "2024-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-316"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Repurchases of Class A common stock",
+                "column": 1,
+                "row": 33,
+                "table": 28
+              },
+              "scope": "Repurchases of Class A common stock",
+              "source_identity": {
+                "accession": "0001326801-25-000017",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2369879,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.915024+00:00",
+                  "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+                },
+                {
+                  "byte_length": 1823441,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:22.507350+00:00",
+                  "sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/11",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2024-12-31",
+              "target_annual_start": "2024-01-01",
+              "unit": "USD",
+              "value": "30125000000"
+            },
+            "table": 28
+          },
+          {
+            "caption": "Payments for dividends and dividend equivalents",
+            "cash_sign": -1,
+            "classification": "DIVIDENDS_NOT_NET_BORROWING",
+            "column": 1,
+            "concept": "PaymentsOfDividends",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "primary_xml_id": "f-319",
+            "raw_value_usd": "5072000000",
+            "row": 34,
+            "signed_cash_usd": "-5072000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsOfDividends",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "occurrence_count": 2,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2024-12-31",
+                  "ordinal": 645,
+                  "precision": "-6",
+                  "primary_display": "5,072",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-319",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "5072000000",
+                  "start": "2024-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-319"
+                },
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2024-12-31",
+                  "ordinal": 838,
+                  "precision": "-6",
+                  "primary_display": "5,072",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-319",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "5072000000",
+                  "start": "2024-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-515"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Payments for dividends and dividend equivalents",
+                "column": 1,
+                "row": 34,
+                "table": 28
+              },
+              "scope": "Payments for dividends and dividend equivalents",
+              "source_identity": {
+                "accession": "0001326801-25-000017",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2369879,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.915024+00:00",
+                  "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+                },
+                {
+                  "byte_length": 1823441,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:22.507350+00:00",
+                  "sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/11",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2024-12-31",
+              "target_annual_start": "2024-01-01",
+              "unit": "USD",
+              "value": "5072000000"
+            },
+            "table": 28
+          },
+          {
+            "caption": "Proceeds from issuance of long-term debt, net",
+            "cash_sign": 1,
+            "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+            "column": 1,
+            "concept": "ProceedsFromIssuanceOfLongTermDebt",
+            "context_id": "c-1",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "primary_xml_id": "f-322",
+            "raw_value_usd": "10432000000",
+            "row": 35,
+            "signed_cash_usd": "10432000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2024-12-31",
+                  "ordinal": 648,
+                  "precision": "-6",
+                  "primary_display": "10,432",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-322",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "10432000000",
+                  "start": "2024-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-322"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Proceeds from issuance of long-term debt, net",
+                "column": 1,
+                "row": 35,
+                "table": 28
+              },
+              "scope": "Proceeds from issuance of long-term debt, net",
+              "source_identity": {
+                "accession": "0001326801-25-000017",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2369879,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.915024+00:00",
+                  "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+                },
+                {
+                  "byte_length": 1823441,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:22.507350+00:00",
+                  "sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/11",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2024-12-31",
+              "target_annual_start": "2024-01-01",
+              "unit": "USD",
+              "value": "10432000000"
+            },
+            "table": 28
+          },
+          {
+            "caption": "Principal payments on finance leases",
+            "cash_sign": -1,
+            "classification": "LEASE_PRINCIPAL",
+            "column": 1,
+            "concept": "FinanceLeasePrincipalPayments",
+            "context_id": "c-1",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "primary_xml_id": "f-325",
+            "raw_value_usd": "1969000000",
+            "row": 36,
+            "signed_cash_usd": "-1969000000",
+            "source": {
+              "as_of": null,
+              "concept": "FinanceLeasePrincipalPayments",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "occurrence_count": 2,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2024-12-31",
+                  "ordinal": 651,
+                  "precision": "-6",
+                  "primary_display": "1,969",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-325",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "1969000000",
+                  "start": "2024-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-325"
+                },
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2024-12-31",
+                  "ordinal": 1151,
+                  "precision": "-6",
+                  "primary_display": "1,969",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-325",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "1969000000",
+                  "start": "2024-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-830"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Principal payments on finance leases",
+                "column": 1,
+                "row": 36,
+                "table": 28
+              },
+              "scope": "Principal payments on finance leases",
+              "source_identity": {
+                "accession": "0001326801-25-000017",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2369879,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.915024+00:00",
+                  "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+                },
+                {
+                  "byte_length": 1823441,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:22.507350+00:00",
+                  "sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/11",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2024-12-31",
+              "target_annual_start": "2024-01-01",
+              "unit": "USD",
+              "value": "1969000000"
+            },
+            "table": 28
+          },
+          {
+            "caption": "Other financing activities",
+            "cash_sign": 1,
+            "classification": "OTHER_FINANCING_EXCLUDED",
+            "column": 1,
+            "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "primary_xml_id": "f-328",
+            "raw_value_usd": "-277000000",
+            "row": 37,
+            "signed_cash_usd": "-277000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2024-12-31",
+                  "ordinal": 654,
+                  "precision": "-6",
+                  "primary_display": "277",
+                  "primary_format": null,
+                  "primary_locator": "inline#f-328",
+                  "primary_scale": 6,
+                  "primary_sign": "-",
+                  "raw_value": "-277000000",
+                  "start": "2024-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-328"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Other financing activities",
+                "column": 1,
+                "row": 37,
+                "table": 28
+              },
+              "scope": "Other financing activities",
+              "source_identity": {
+                "accession": "0001326801-25-000017",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2369879,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.915024+00:00",
+                  "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+                },
+                {
+                  "byte_length": 1823441,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:22.507350+00:00",
+                  "sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/11",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2024-12-31",
+              "target_annual_start": "2024-01-01",
+              "unit": "USD",
+              "value": "-277000000"
+            },
+            "table": 28
+          },
+          {
+            "caption": "Net cash used in financing activities",
+            "cash_sign": 1,
+            "classification": "FINANCING_TOTAL",
+            "column": 1,
+            "concept": "NetCashProvidedByUsedInFinancingActivities",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2024",
+            "primary_xml_id": "f-331",
+            "raw_value_usd": "-40781000000",
+            "row": 38,
+            "signed_cash_usd": "-40781000000",
+            "source": {
+              "as_of": null,
+              "concept": "NetCashProvidedByUsedInFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2024",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2024-12-31",
+                  "ordinal": 657,
+                  "precision": "-6",
+                  "primary_display": "40,781",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-331",
+                  "primary_scale": 6,
+                  "primary_sign": "-",
+                  "raw_value": "-40781000000",
+                  "start": "2024-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-331"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Net cash used in financing activities",
+                "column": 1,
+                "row": 38,
+                "table": 28
+              },
+              "scope": "Net cash used in financing activities",
+              "source_identity": {
+                "accession": "0001326801-25-000017",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2369879,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T17:23:04.915024+00:00",
+                  "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+                  "source_reference": "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+                },
+                {
+                  "byte_length": 1823441,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:22.507350+00:00",
+                  "sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/11",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2024-12-31",
+              "target_annual_start": "2024-01-01",
+              "unit": "USD",
+              "value": "-40781000000"
+            },
+            "table": 28
+          }
+        ],
+        "statement_difference_usd": "0",
+        "total": {
+          "amount_usd": "-40781000000",
+          "display_billions": "-40.78",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "-40781000000"
+          }
+        },
+        "unallocated_other_usd": [
+          "-277000000"
+        ]
+      },
+      "fiscal_year": 2024,
+      "forecast_inputs_changed": false,
+      "identified_receipts": {
+        "amount_usd": "0",
+        "display_billions": "0.00",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "0"
+        }
+      },
+      "identity": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "37256000000",
+        "cfo": "91328000000",
+        "interest_expense": "715000000",
+        "pretax_income": "70663000000",
+        "tax_provision": "8303000000"
+      },
+      "investment_receipt_sources": [],
+      "net_cash_investment": {
+        "amount_usd": "37256000000",
+        "display_billions": "37.26",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "37256000000"
+        }
+      },
+      "parent_common_fcfe_usd": null,
+      "platform_before_usd": "54702986513.451169636160366811485501606215416837666",
+      "platform_change_usd": "0",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+      ]
+    },
+    {
+      "fcfe": {
+        "amount_usd": "73491000000",
+        "display_billions": "73.49",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "73491000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "publishable_as_parent_common": false,
+        "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "819643089.88502536889633663827212214308988502536890",
+        "amount_usd": "46928643089.885025368896336638272122143089885025369",
+        "cash_fcf_usd": "46109000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "46.93",
+        "exact_fraction_usd": {
+          "denominator": "21483",
+          "numerator": "1008168039500000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.29644369966950612111902434483079644369966950612112",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "financing": {
+        "nci_contributions_excluded_from_debt": {
+          "amount_usd": "0",
+          "display_billions": "0.00",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "0"
+          }
+        },
+        "net_borrowing": {
+          "amount_usd": "27382000000",
+          "display_billions": "27.38",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "27382000000"
+          }
+        },
+        "source_rows": [
+          {
+            "caption": "Taxes paid related to net share settlement of equity awards",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "primary_xml_id": "f-331",
+            "raw_value_usd": "18400000000",
+            "row": 35,
+            "signed_cash_usd": "-18400000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2025-12-31",
+                  "ordinal": 645,
+                  "precision": "-6",
+                  "primary_display": "18,400",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-331",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "18400000000",
+                  "start": "2025-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-331"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Taxes paid related to net share settlement of equity awards",
+                "column": 1,
+                "row": 35,
+                "table": 29
+              },
+              "scope": "Taxes paid related to net share settlement of equity awards",
+              "source_identity": {
+                "accession": "0001628280-26-003942",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2371860,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+                  "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+                  "source_reference": "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+                },
+                {
+                  "byte_length": 1876078,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:23.628495+00:00",
+                  "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/13",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2025-12-31",
+              "target_annual_start": "2025-01-01",
+              "unit": "USD",
+              "value": "18400000000"
+            },
+            "table": 29
+          },
+          {
+            "caption": "Repurchases of Class A common stock",
+            "cash_sign": -1,
+            "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+            "column": 1,
+            "concept": "PaymentsForRepurchaseOfCommonStock",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "primary_xml_id": "f-334",
+            "raw_value_usd": "26248000000",
+            "row": 36,
+            "signed_cash_usd": "-26248000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsForRepurchaseOfCommonStock",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2025-12-31",
+                  "ordinal": 648,
+                  "precision": "-6",
+                  "primary_display": "26,248",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-334",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "26248000000",
+                  "start": "2025-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-334"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Repurchases of Class A common stock",
+                "column": 1,
+                "row": 36,
+                "table": 29
+              },
+              "scope": "Repurchases of Class A common stock",
+              "source_identity": {
+                "accession": "0001628280-26-003942",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2371860,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+                  "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+                  "source_reference": "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+                },
+                {
+                  "byte_length": 1876078,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:23.628495+00:00",
+                  "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/13",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2025-12-31",
+              "target_annual_start": "2025-01-01",
+              "unit": "USD",
+              "value": "26248000000"
+            },
+            "table": 29
+          },
+          {
+            "caption": "Payments for dividends and dividend equivalents",
+            "cash_sign": -1,
+            "classification": "DIVIDENDS_NOT_NET_BORROWING",
+            "column": 1,
+            "concept": "PaymentsOfDividends",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "primary_xml_id": "f-337",
+            "raw_value_usd": "5324000000",
+            "row": 37,
+            "signed_cash_usd": "-5324000000",
+            "source": {
+              "as_of": null,
+              "concept": "PaymentsOfDividends",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "occurrence_count": 2,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2025-12-31",
+                  "ordinal": 651,
+                  "precision": "-6",
+                  "primary_display": "5,324",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-337",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "5324000000",
+                  "start": "2025-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-337"
+                },
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2025-12-31",
+                  "ordinal": 791,
+                  "precision": "-6",
+                  "primary_display": "5,324",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-337",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "5324000000",
+                  "start": "2025-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-480"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Payments for dividends and dividend equivalents",
+                "column": 1,
+                "row": 37,
+                "table": 29
+              },
+              "scope": "Payments for dividends and dividend equivalents",
+              "source_identity": {
+                "accession": "0001628280-26-003942",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2371860,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+                  "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+                  "source_reference": "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+                },
+                {
+                  "byte_length": 1876078,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:23.628495+00:00",
+                  "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/13",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2025-12-31",
+              "target_annual_start": "2025-01-01",
+              "unit": "USD",
+              "value": "5324000000"
+            },
+            "table": 29
+          },
+          {
+            "caption": "Proceeds from issuance of long-term debt, net",
+            "cash_sign": 1,
+            "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+            "column": 1,
+            "concept": "ProceedsFromIssuanceOfLongTermDebt",
+            "context_id": "c-1",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "primary_xml_id": "f-340",
+            "raw_value_usd": "29906000000",
+            "row": 38,
+            "signed_cash_usd": "29906000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2025-12-31",
+                  "ordinal": 654,
+                  "precision": "-6",
+                  "primary_display": "29,906",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-340",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "29906000000",
+                  "start": "2025-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-340"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Proceeds from issuance of long-term debt, net",
+                "column": 1,
+                "row": 38,
+                "table": 29
+              },
+              "scope": "Proceeds from issuance of long-term debt, net",
+              "source_identity": {
+                "accession": "0001628280-26-003942",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2371860,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+                  "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+                  "source_reference": "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+                },
+                {
+                  "byte_length": 1876078,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:23.628495+00:00",
+                  "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/13",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2025-12-31",
+              "target_annual_start": "2025-01-01",
+              "unit": "USD",
+              "value": "29906000000"
+            },
+            "table": 29
+          },
+          {
+            "caption": "Principal payments on finance leases",
+            "cash_sign": -1,
+            "classification": "LEASE_PRINCIPAL",
+            "column": 1,
+            "concept": "FinanceLeasePrincipalPayments",
+            "context_id": "c-1",
+            "included_in_net_borrowing": true,
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "primary_xml_id": "f-343",
+            "raw_value_usd": "2524000000",
+            "row": 39,
+            "signed_cash_usd": "-2524000000",
+            "source": {
+              "as_of": null,
+              "concept": "FinanceLeasePrincipalPayments",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "occurrence_count": 2,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2025-12-31",
+                  "ordinal": 657,
+                  "precision": "-6",
+                  "primary_display": "2,524",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-343",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "2524000000",
+                  "start": "2025-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-343"
+                },
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2025-12-31",
+                  "ordinal": 1116,
+                  "precision": "-6",
+                  "primary_display": "2,524",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-343",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "2524000000",
+                  "start": "2025-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-807"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Principal payments on finance leases",
+                "column": 1,
+                "row": 39,
+                "table": 29
+              },
+              "scope": "Principal payments on finance leases",
+              "source_identity": {
+                "accession": "0001628280-26-003942",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2371860,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+                  "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+                  "source_reference": "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+                },
+                {
+                  "byte_length": 1876078,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:23.628495+00:00",
+                  "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/13",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2025-12-31",
+              "target_annual_start": "2025-01-01",
+              "unit": "USD",
+              "value": "2524000000"
+            },
+            "table": 29
+          },
+          {
+            "caption": "Other financing activities",
+            "cash_sign": 1,
+            "classification": "OTHER_FINANCING_EXCLUDED",
+            "column": 1,
+            "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "primary_xml_id": "f-346",
+            "raw_value_usd": "2220000000",
+            "row": 40,
+            "signed_cash_usd": "2220000000",
+            "source": {
+              "as_of": null,
+              "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2025-12-31",
+                  "ordinal": 660,
+                  "precision": "-6",
+                  "primary_display": "2,220",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-346",
+                  "primary_scale": 6,
+                  "primary_sign": "+",
+                  "raw_value": "2220000000",
+                  "start": "2025-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-346"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Other financing activities",
+                "column": 1,
+                "row": 40,
+                "table": 29
+              },
+              "scope": "Other financing activities",
+              "source_identity": {
+                "accession": "0001628280-26-003942",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2371860,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+                  "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+                  "source_reference": "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+                },
+                {
+                  "byte_length": 1876078,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:23.628495+00:00",
+                  "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/13",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2025-12-31",
+              "target_annual_start": "2025-01-01",
+              "unit": "USD",
+              "value": "2220000000"
+            },
+            "table": 29
+          },
+          {
+            "caption": "Net cash used in financing activities",
+            "cash_sign": 1,
+            "classification": "FINANCING_TOTAL",
+            "column": 1,
+            "concept": "NetCashProvidedByUsedInFinancingActivities",
+            "context_id": "c-1",
+            "included_in_net_borrowing": false,
+            "namespace": "http://fasb.org/us-gaap/2025",
+            "primary_xml_id": "f-349",
+            "raw_value_usd": "-20370000000",
+            "row": 41,
+            "signed_cash_usd": "-20370000000",
+            "source": {
+              "as_of": null,
+              "concept": "NetCashProvidedByUsedInFinancingActivities",
+              "evidence_depth": "exact_primary_inline_and_instance_verified",
+              "instance_source": "instance",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "occurrence_count": 1,
+              "occurrences": [
+                {
+                  "context_id": "c-1",
+                  "dimensions": [],
+                  "end": "2025-12-31",
+                  "ordinal": 663,
+                  "precision": "-6",
+                  "primary_display": "20,370",
+                  "primary_format": "ixt:num-dot-decimal",
+                  "primary_locator": "inline#f-349",
+                  "primary_scale": 6,
+                  "primary_sign": "-",
+                  "raw_value": "-20370000000",
+                  "start": "2025-01-01",
+                  "unit_id": "usd",
+                  "xml_id": "f-349"
+                }
+              ],
+              "origin": "reported",
+              "precision": "-6",
+              "primary_source": "primary",
+              "primary_table": {
+                "caption": "Net cash used in financing activities",
+                "column": 1,
+                "row": 41,
+                "table": 29
+              },
+              "scope": "Net cash used in financing activities",
+              "source_identity": {
+                "accession": "0001628280-26-003942",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1326801,
+                "form": "10-K"
+              },
+              "sources": [
+                {
+                  "byte_length": 2371860,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+                  "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+                  "source_reference": "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+                },
+                {
+                  "byte_length": 1876078,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-13T09:25:23.628495+00:00",
+                  "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+                  "source_reference": "docs/evidence/income-binding-repair.json#/artifacts/13",
+                  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml"
+                }
+              ],
+              "target_annual_end": "2025-12-31",
+              "target_annual_start": "2025-01-01",
+              "unit": "USD",
+              "value": "-20370000000"
+            },
+            "table": 29
+          }
+        ],
+        "statement_difference_usd": "0",
+        "total": {
+          "amount_usd": "-20370000000",
+          "display_billions": "-20.37",
+          "exact_fraction_usd": {
+            "denominator": "1",
+            "numerator": "-20370000000"
+          }
+        },
+        "unallocated_other_usd": [
+          "2220000000"
+        ]
+      },
+      "fiscal_year": 2025,
+      "forecast_inputs_changed": false,
+      "identified_receipts": {
+        "amount_usd": "0",
+        "display_billions": "0.00",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "0"
+        }
+      },
+      "identity": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "69691000000",
+        "cfo": "115800000000",
+        "interest_expense": "1165000000",
+        "pretax_income": "85932000000",
+        "tax_provision": "25474000000"
+      },
+      "investment_receipt_sources": [],
+      "net_cash_investment": {
+        "amount_usd": "69691000000",
+        "display_billions": "69.69",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "69691000000"
+        }
+      },
+      "parent_common_fcfe_usd": null,
+      "platform_before_usd": "46928643089.885025368896336638272122143089885025369",
+      "platform_change_usd": "0",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+      ]
+    }
+  ],
+  "review_date": "2026-11-03",
+  "schema_version": "company-cashflow-resolution-v1",
+  "ticker": "META",
+  "validation": {
+    "estimated_operands": 0,
+    "financing_statements": 5,
+    "forecast_changes": 0,
+    "source_mismatches": 0
+  }
+}

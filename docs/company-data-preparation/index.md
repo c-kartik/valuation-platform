@@ -1,5 +1,16 @@
 # Company data preparation register
 
+## Meta/Alphabet manual treatment execution — November 3
+
+[Meta](../company-resolutions/META/README.md) and
+[Alphabet](../company-resolutions/GOOGL/README.md) extend the manual register under
+explicit company-specific user approval. Meta's display-only net-identified-PP&E
+basis increases historical FCFF245m/221m in FY2022/23; preserved original source
+facts and earlier approvals are not edited. Meta financing remains qualified;
+Alphabet FCFE remains consolidated before NCI attribution and lease cash is
+counted once. No forward inputs, EV, preparation/sufficiency status or wider
+universe scope changes. The Apple-only register note below is an earlier milestone.
+
 ## Manual company resolution records — November 3
 
 [Company cash-flow resolutions](../company-resolutions/README.md) track user-reviewed

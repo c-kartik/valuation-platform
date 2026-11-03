@@ -1,0 +1,118 @@
+{
+  "schema_version": "meta-other-financing-primary-research-v1",
+  "review_date": "2026-11-03",
+  "scope": "Meta FY2021\u2013FY2025 Other financing activities, retained SEC annual filings plus official earnings calls and follow-up Q&A",
+  "bottom_line": "Public primary disclosures contain contextual commentary and an exact FY2021 overdraft presentation reconciliation. The reviewed disclosures do not provide a dollar-linked decomposition of residual Other financing for FY2021\u2013FY2025. This is a bounded search result, not a claim that no explanation exists anywhere or that the residual is debt.",
+  "as_filed_other_financing_usd": {
+    "2021": -13000000,
+    "2022": 344000000,
+    "2023": -111000000,
+    "2024": -277000000,
+    "2025": 2220000000
+  },
+  "findings": [
+    {
+      "id": "META-OTHER-001",
+      "classification": "EXACT_REPORTED_FACT_AND_RECONCILIATION",
+      "source_ids": [
+        "meta-2021-10k",
+        "meta-2022-10k",
+        "meta-2023-10k"
+      ],
+      "fiscal_year": 2021,
+      "fact": "Original statement separately reports a net change in overdraft in cash pooling entities of +14M and Other financing activities of -13M. Later comparative statements report Other+1M. Notes explain that a third-party bank provides overdraft credit inside a notional cash pool.",
+      "equation_usd": {
+        "known_overdraft_borrowing": 14000000,
+        "original_other": -13000000,
+        "later_other": 1000000
+      },
+      "preferred_treatment": "Preserve the source-supported +14M as borrowing once; preserve -13M residual as unresolved; do not add later Other+1M again.",
+      "numerical_effect_relative_to_existing_as_filed_fcfe_usd": 0,
+      "remaining_gap": "No decomposition of the original -13M residual."
+    },
+    {
+      "id": "META-OTHER-002",
+      "classification": "CONTAINMENT_CONTROL",
+      "source_ids": [
+        "meta-2025-10k"
+      ],
+      "fiscal_year": 2025,
+      "fact": "Finance-lease financing cash flows of 2,524M are separately disclosed in the lease note and the statement. Long-term debt proceeds net29,906M are also a separate statement line.",
+      "preferred_treatment": "Include these identified financing components once. Do not use either amount to explain residual Other2,220M without additional source linkage.",
+      "remaining_gap": "Residual Other2,220M remains unclassified; do not infer that finance-lease principal is missing."
+    },
+    {
+      "id": "META-OTHER-003",
+      "classification": "EXCLUDED_EXPLANATION_INVESTING_NOT_FINANCING",
+      "source_ids": [
+        "meta-2025-10k",
+        "q3-2025-call"
+      ],
+      "fiscal_year": 2025,
+      "fact": "Annual statement separately places the Venture distribution2,554M in investing. Q3 CFO commentary states future20% share of joint-venture construction costs will be recorded as other investing cash flows.",
+      "preferred_treatment": "Keep these source classifications outside debt proceeds; do not attribute the Venture receipt to Other financing just because its size is similar.",
+      "numerical_effect_relative_to_existing_as_filed_fcfe_usd": 0,
+      "remaining_gap": "Does not explain Other financing2,220M."
+    },
+    {
+      "id": "META-OTHER-004",
+      "classification": "NARRATIVE_CONTEXT_NOT_AMOUNT_BINDING",
+      "source_ids": [
+        "q4-2025-call",
+        "q3-2025-call"
+      ],
+      "fiscal_year": 2025,
+      "fact": "Management discusses flexible ownership structures, third-party capital, and potential future prudent external financing.",
+      "preferred_treatment": "Use as financing-policy context only; narrative does not identify any exact historical Other component.",
+      "new_financing_operand_usd": null
+    },
+    {
+      "id": "META-OTHER-005",
+      "classification": "BOUNDED_NEGATIVE_SEARCH",
+      "source_ids": [
+        "meta-2021-10k",
+        "meta-2022-10k",
+        "meta-2023-10k",
+        "meta-2024-10k",
+        "meta-2025-10k",
+        "q4-2022-call",
+        "q4-2022-followup",
+        "q4-2023-call",
+        "q4-2023-followup",
+        "q4-2024-call",
+        "q4-2024-followup",
+        "q3-2025-call",
+        "q3-2025-followup",
+        "q4-2025-call",
+        "q4-2025-followup"
+      ],
+      "fact": "Reviewed annual financing MD&A, full statement, debt/lease/cash-policy/acquisition/equity notes, and keyword/financial-section review of the listed official transcripts. No residual Other component was bound to a disclosed cash amount.",
+      "search_terms": [
+        "other financing",
+        "overdraft",
+        "cash pool",
+        "financing",
+        "borrow",
+        "contingent consideration",
+        "holdback",
+        "deferred payment",
+        "derivative",
+        "hedge",
+        "insurance",
+        "Blue Owl",
+        "construction",
+        "sale and leaseback"
+      ],
+      "unclassified_residual_equals_reported_other_except_known_fy2021_reclassification": true,
+      "preferred_treatment": "Maintain amount and unresolved classification visibly. Do not treat the whole line as borrowing, as zero, or as a closed/reconciled item.",
+      "next_source_step": "A specific issuer IR clarification or additional source disclosure linking cash amounts to the statement line is needed to classify the residual; no external message has been sent."
+    }
+  ],
+  "scope_limits": [
+    "No assertion that every public earnings call from2021\u20132025 was reviewed. Selected annual/full-year calls plus the2025Q3 transaction discussion and follow-up calls were reviewed.",
+    "Only exact source-bound facts can become calculation operands. Generic management commentary is insufficient.",
+    "Q42021 call was not retained or reviewed; annual2021financial statements and notes were reviewed.",
+    "No residual monetary value was reverse-engineered from balance-sheet differences.",
+    "Research identifies classification scope; it does not independently approve changes to tax, investment, stock-compensation or ownership conventions."
+  ]
+}

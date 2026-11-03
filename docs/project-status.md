@@ -1,5 +1,22 @@
 # Project Status
 
+## Current milestone — Meta and Alphabet manual resolutions
+
+November3,2026: user approves five Meta and two Alphabet treatments.
+[Meta record](company-resolutions/META/README.md) and
+[Alphabet record](company-resolutions/GOOGL/README.md) contain approvals, original
+issues, source maps, exact results, replays and limits. Ten full financing
+statements reconcile. Meta's historical display FCFF increases245m(FY2022) and
+221m(FY2023) using identified PP&E receipts; remaining years and Alphabet FCFF are
+unchanged. Meta residual Other remains unresolved; Alphabet FCFE is consolidated
+before NCI allocation, not parent-common FCFE. No forecast input or EV changes.
+
+Fifteen retained Meta primary documents and18 bound excerpts establish the14−13=1m
+FY2021 overdraft presentation bridge; reviewed calls/notes do not decompose the
+residual. Original Apple replay, source packages and prior ledgers are preserved.
+The two Apple missing chart years remain missing. Validation details live in each
+new company folder; the wider-universe pause is unchanged.
+
 ## Current milestone — Apple manual cash-flow resolution
 
 November 3, 2026: the user approves Apple's preferred treatments and requests

@@ -1,5 +1,16 @@
 # GOOGL — company data preparation
 
+## Approved cash-flow scope treatments — November 3
+
+[Alphabet resolution](../company-resolutions/GOOGL/README.md) documents both
+user-approved treatments and exact source/decision replay. Five consolidated
+FCFEs are stored before NCI attribution; parent-common FCFE and NCI fair value
+remain null. NCI contributions are excluded from debt. Lease financing cash is
+verified within debt repayments once; prepayments and noncash assets do not create
+a second deduction. Historical FCFF, sources, accepted inputs, forecasts and EV
+are unchanged. Ownership and operating-investment alignment remain unresolved;
+this does not upgrade the existing sufficiency status.
+
 ## Registered forward profile — November 2
 
 The user authorizes the [shared preload pipeline](../registered-preloads.md) for GOOGL.

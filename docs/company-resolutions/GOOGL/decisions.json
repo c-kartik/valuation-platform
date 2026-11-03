@@ -1,0 +1,33 @@
+{
+  "schema_version": "company-cashflow-manual-decisions-v1",
+  "ticker": "GOOGL",
+  "fiscal_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "review_date": "2026-11-03",
+  "authorization_quote": "for Meta, I approve all 5 of the preferred treatments; For Alphabet, i approve the preferred treatments for both issues",
+  "authorization_source": "Explicit user approval and instruction to implement and log treatments in this Valuation Platform conversation.",
+  "estimates_permitted": false,
+  "automatic_fcfe_publication": false,
+  "approved_meta_historical_investment_overlay": false,
+  "decisions": [
+    {
+      "id": "GOOGL-NCI-001",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "Consolidated cash flows include outside ownership; immaterial attributable earnings do not prove zero attributable cash.",
+      "treatment": "Preserve consolidated FCFF. Label FCFE consolidated before NCI attribution; leave parent-common FCFE and NCI fair-value bridge null. Exclude NCI contributions from debt; do not plug book NCI or subtract contributions as attribution.",
+      "status": "CONSOLIDATED_SCOPE_APPLIED_PARENT_COMMON_UNRESOLVED"
+    },
+    {
+      "id": "GOOGL-LEASE-001",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "Finance-lease financing cash is contained within debt repayments, includes prepayments, and differs from noncash ROU additions.",
+      "treatment": "Include reported debt/lease parent once. Verify financing lease cash1988M in2025 including rounded1.1Bprepayments; do not separately deduct it, infer exact principal from rounded footnote, or add1606Mnoncash assets to cash-only capex.",
+      "status": "CONTAINMENT_APPLIED_NO_NUMERIC_CHANGE"
+    }
+  ]
+}

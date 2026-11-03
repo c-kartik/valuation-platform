@@ -4,6 +4,9 @@
 record each approved treatment, source, before/after amount and remaining gap.
 The first [Apple record](docs/company-resolutions/AAPL/README.md) reproduces its
 financing and operating-method review without silently changing chart values.
+[Meta](docs/company-resolutions/META/README.md) and [Alphabet](docs/company-resolutions/GOOGL/README.md)
+now have approved treatment records too. Meta historical FCFF nets identified
+PP&E receipts (+245m/+221m in FY2022/23); FCFE financing/ownership gaps stay explicit.
 
 [Registered starting profiles](docs/registered-preloads.md) now cover Alphabet, Meta
 and Apple through one reproducible pipeline. Company selection loads its own

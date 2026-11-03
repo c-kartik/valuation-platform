@@ -1,0 +1,182 @@
+[
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "text_file": "meta-2021-10k.txt",
+    "line_start": 1302,
+    "line_end": 1305,
+    "search_phrase": "Net change in overdraft",
+    "excerpt": "Principal payments on finance leases ( 677 ) ( 604 ) ( 552 ) \nNet change in overdraft in cash pooling entities 14 24 ( 223 ) \nOther financing activities ( 13 ) 124 15 \nNet cash used in financing activities ( 50,728 ) ( 10,292 ) ( 7,299 ) "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "text_file": "meta-2021-10k.txt",
+    "line_start": 1303,
+    "line_end": 1306,
+    "search_phrase": "Other financing activities",
+    "excerpt": "Net change in overdraft in cash pooling entities 14 24 ( 223 ) \nOther financing activities ( 13 ) 124 15 \nNet cash used in financing activities ( 50,728 ) ( 10,292 ) ( 7,299 ) \nEffect of exchange rate changes on cash, cash equivalents, and restricted cash ( 474 ) 279 4 "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "text_file": "meta-2021-10k.txt",
+    "line_start": 1393,
+    "line_end": 1396,
+    "search_phrase": "We also maintain a multi-currency",
+    "excerpt": "We hold investments in marketable securities, consisting of U.S. government securities, U.S. government agency securities, and investment grade corporate debt securities. We classify our marketable securities as available-for-sale (AFS) investments in our current assets because they represent investments of cash available for current operations. Our AFS investments are carried at estimated fair value with any unrealized gains and losses, net of taxes, included in accumulated other comprehensive income (loss) in stockholders' equity. AFS debt securities with an amortized cost basis in excess of estimated fair value are assessed to determine what amount of that difference, if any, is caused by expected credit losses. Allowance for credit losses on AFS debt securities are recognized as a charge in interest and other income, net on our consolidated statements of income, and any remaining unrealized losses, net of taxes, are included in accumulated other comprehensive income (loss) in stockholders' equity. The amounts of credit losses recorded for the years ended December 31, 2021 and 2020 were not material. There was no impairment charge for any unrealized losses in 2019. We determine realized gains or losses on sale of marketable securities on a specific identification method and include such gains or losses in interest and other income, net on the consolidated statements of income. \nWe also maintain a multi-currency notional cash pool for our participating entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. We classify the overdraft balances within accrued expenses and other current liabilities on the consolidated balance sheets. \nWe classify certain restricted cash balances within prepaid expenses and other current assets and other assets on the consolidated balance sheets based upon the term of the remaining restrictions. \nEquity Investments "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "text_file": "meta-2021-10k.txt",
+    "line_start": 1736,
+    "line_end": 1739,
+    "search_phrase": "In 2018, we established",
+    "excerpt": "Guarantee \nIn 2018, we established a multi-currency notional cash pool for certain of our entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. As part of the notional cash pool agreement, the bank extends overdraft credit to our participating entities as needed, provided that the overall notionally pooled balance of all accounts in the pool at the end of each day is at least zero. In the unlikely event of a default by our collective entities participating in the pool, any overdraft balances incurred would be guaranteed by Meta Platforms, Inc. \nOther Contractual Commitments \nWe have $ 23.08 billion of non-cancelable contractual commitments as of December 31, 2021, which are primarily related to our investments in servers, network infrastructure, and Reality Labs. These commitments are primarily due within five years . "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "text_file": "meta-2023-10k.txt",
+    "line_start": 1361,
+    "line_end": 1364,
+    "search_phrase": "Other financing activities",
+    "excerpt": "Principal payments on finance leases ( 1,058 ) ( 850 ) ( 677 ) \nOther financing activities ( 111 ) 344 1 \nNet cash used in financing activities ( 19,500 ) ( 22,136 ) ( 50,728 ) \nEffect of exchange rate changes on cash, cash equivalents, and restricted cash 113 ( 638 ) ( 474 ) "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "text_file": "meta-2023-10k.txt",
+    "line_start": 1080,
+    "line_end": 1083,
+    "search_phrase": "Cash used in financing activities during 2023",
+    "excerpt": "Cash Used in Financing Activities \nCash used in financing activities during 2023 mostly consisted of $19.77 billion for repurchases of our Class A common stock and $7.01 billion of taxes paid related to net share settlement of RSUs, partially offset by $8.46 billion proceeds from the issuance of the Notes in May 2023. The decrease in cash used in financing activities during 2023 compared to 2022 was mainly due to a decrease in cash paid for repurchases of our Class A common stock, partially offset by an increase in taxes paid related to net share settlement of employee RSU awards and a decrease in net proceeds from our debt offerings. \nFree Cash Flow \nIn addition to other financial measures presented in accordance with U.S. GAAP, we monitor free cash flow (FCF) as a non-GAAP measure to manage our business, make planning decisions, evaluate our performance, and allocate resources. We define FCF as net cash provided by operating activities reduced by net purchases of property and equipment and principal payments on finance leases. "
+  },
+  {
+    "source_id": "meta-2022-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+    "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+    "text_file": "meta-2022-10k.txt",
+    "line_start": 1321,
+    "line_end": 1324,
+    "search_phrase": "Other financing activities",
+    "excerpt": "Principal payments on finance leases ( 850 ) ( 677 ) ( 604 ) \nOther financing activities 344 1 148 \nNet cash used in financing activities ( 22,136 ) ( 50,728 ) ( 10,292 ) \nEffect of exchange rate changes on cash, cash equivalents, and restricted cash ( 638 ) ( 474 ) 279 "
+  },
+  {
+    "source_id": "meta-2022-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+    "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+    "text_file": "meta-2022-10k.txt",
+    "line_start": 1036,
+    "line_end": 1039,
+    "search_phrase": "Cash used in financing activities during 2022",
+    "excerpt": "Cash Used in Financing Activities \nCash used in financing activities during 2022 mostly consisted of $27.96 billion for repurchases of our Class A common stock and $3.60 billion of taxes paid related to net share settlement of RSUs, partially offset by $9.92 billion proceeds from the issuance of the Notes. The decrease in cash used in financing activities during 2022 compared to 2021 was mostly due to a decrease in repurchases of our Class A common stock and proceeds from the issuance of the Notes. \n75 \nT able of Contents "
+  },
+  {
+    "source_id": "meta-2024-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+    "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+    "text_file": "meta-2024-10k.txt",
+    "line_start": 1333,
+    "line_end": 1336,
+    "search_phrase": "Other financing activities",
+    "excerpt": "Principal payments on finance leases ( 1,969 ) ( 1,058 ) ( 850 ) \nOther financing activities ( 277 ) ( 111 ) 344 \nNet cash used in financing activities ( 40,781 ) ( 19,500 ) ( 22,136 ) \nEffect of exchange rate changes on cash, cash equivalents, and restricted cash ( 786 ) 113 ( 638 ) "
+  },
+  {
+    "source_id": "meta-2024-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+    "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+    "text_file": "meta-2024-10k.txt",
+    "line_start": 1050,
+    "line_end": 1053,
+    "search_phrase": "Cash used in financing activities during 2024",
+    "excerpt": "Cash Used in Financing Activities \nCash used in financing activities during 2024 mostly consisted of $30.13 billion for repurchases of our Class A common stock, $5.07 billion of payments of dividends and dividend equivalents, and $13.77 billion of taxes paid related to net share settlement of RSUs, partially offset by $10.43 billion of net proceeds from the issuance of additional Notes in August 2024. The increase in cash used in financing activities during 2024 compared to 2023, was mostly due to increases in our capital returns of $10.35 billion for repurchases of our Class A common stock and $5.07 billion for quarterly dividend payments that began in March 2024, as well as a $6.76 billion increase in taxes paid related to net share settlement of RSUs. \nFree Cash Flow \nIn addition to other financial measures presented in accordance with U.S. GAAP, we monitor free cash flow (FCF) as a non-GAAP measure to manage our business, make planning decisions, evaluate our performance, and allocate resources. We define FCF as net cash provided by operating activities reduced by purchases of property and equipment and principal payments on finance leases. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "text_file": "meta-2025-10k.txt",
+    "line_start": 1342,
+    "line_end": 1345,
+    "search_phrase": "Other financing activities",
+    "excerpt": "Principal payments on finance leases ( 2,524 ) ( 1,969 ) ( 1,058 ) \nOther financing activities 2,220 ( 277 ) ( 111 ) \nNet cash used in financing activities ( 20,370 ) ( 40,781 ) ( 19,500 ) \nEffect of exchange rate changes on cash, cash equivalents, and restricted cash equivalents 235 ( 786 ) 113 "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "text_file": "meta-2025-10k.txt",
+    "line_start": 1715,
+    "line_end": 1718,
+    "search_phrase": "Financing cash flows for finance leases",
+    "excerpt": "Operating cash flows for finance leases $ 31 $ 23 $ 20 \nFinancing cash flows for finance leases $ 2,524 $ 1,969 $ 1,058 \nLease liabilities arising from obtaining right-of-use assets: \nOperating leases $ 7,017 $ 3,784 $ 4,370 "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "text_file": "meta-2025-10k.txt",
+    "line_start": 1331,
+    "line_end": 1334,
+    "search_phrase": "Proceeds from Venture distribution",
+    "excerpt": "Payments for held-for-sale assets ( 2,432 ) \u2014 \u2014 \nProceeds from Venture distribution 2,554 \u2014 \u2014 \nPurchases of non-marketable equity investments ( 18,330 ) ( 11 ) ( 1 ) \nAcquisitions of businesses and intangible assets ( 4,231 ) ( 270 ) ( 629 ) "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "text_file": "meta-2025-10k.txt",
+    "line_start": 1041,
+    "line_end": 1044,
+    "search_phrase": "Cash used in financing activities during 2025",
+    "excerpt": "Cash Used in Financing Activities \nCash used in financing activities during 2025 mostly consisted of $26.25 billion for repurchases of our Class A common stock, $18.40 billion of taxes paid related to net share settlement of RSUs, and $5.32 billion of payments of dividends and dividend equivalents, partially offset by $29.91 billion net proceeds from the issuance of the Notes in November 2025. The decrease in cash used in financing activities during 2025 compared to 2024, was mostly due to an increase in net proceeds from the Notes. \nFree Cash Flow \nIn addition to other financial measures presented in accordance with U.S. GAAP, we monitor free cash flow (FCF) as a non-GAAP measure to manage our business, make planning decisions, evaluate our performance, and allocate resources. We define FCF as net cash provided by operating activities reduced by purchases of property and equipment and principal payments on finance leases. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "text_file": "meta-2025-10k.txt",
+    "line_start": 1646,
+    "line_end": 1649,
+    "search_phrase": "we contributed $ 4.30",
+    "excerpt": "In October 2025, we entered into an arrangement to co-develop a data center campus in Louisiana (the Venture). This Venture provides strategic optionality and flexibility, enabling us to effectively meet future infrastructure capacity needs as AI markets and technologies develop. \nAt Venture formation, we contributed $ 4.30 billion of held-for-sale assets, net of liabilities, and we received a one-time distribution of $ 2.55 billion. We hold a 20 % membership interest in the Venture, which is accounted for under the equity method included within non-marketable equity investments on the consolidated balance sheets. We provide construction management, administrative and property management services to the Venture. The parties have committed to fund their respective pro rata share of approximately $ 27 billion in total estimated development costs. \nWe also entered into lease agreements with the Venture for the use of properties on the data center campus, which will commence in 2029. The aggregate initial lease commitment is approximately $ 12.31 billion, with each property having an initial four-year lease term and options to renew for a total lease period of up to 20 years. In addition, we have provided residual value guarantees (RVG) with an aggregate threshold of approximately $ 28 billion that decreases over time. If we decide to terminate or not renew a lease, and if certain other conditions are met, our maximum RVG payment would equal any shortfall between the fair value at that time and the RVG threshold for that property. As of December 31, 2025, RVG payments are not probable and therefore, no liability has been recorded. \n106 "
+  },
+  {
+    "source_id": "q3-2025-call",
+    "source_url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q3/META-Q3-2025-Earnings-Call-Transcript.pdf",
+    "source_sha256": "3a00bd026249683ccbd45565bd6c3ea7a05986efb5fa3bf5604600ba520a72a8",
+    "text_file": "q3-2025-call.txt",
+    "line_start": 907,
+    "line_end": 910,
+    "search_phrase": "the construction cost of the data center will not",
+    "excerpt": "of the data center build cost prior to the joint venture being established. Going \nforward, the construction cost of the data center will not be recorded in CapEx. \nAs the data center is constructed, we will contribute 20% of the remaining \nconstruction costs required, which is in line with our ownership stake, and "
+  },
+  {
+    "source_id": "q3-2025-call",
+    "source_url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q3/META-Q3-2025-Earnings-Call-Transcript.pdf",
+    "source_sha256": "3a00bd026249683ccbd45565bd6c3ea7a05986efb5fa3bf5604600ba520a72a8",
+    "text_file": "q3-2025-call.txt",
+    "line_start": 910,
+    "line_end": 913,
+    "search_phrase": "those will be recorded as other investing",
+    "excerpt": "construction costs required, which is in line with our ownership stake, and \nthose will be recorded as other investing cash flows. \n \nOperator: Your last question comes from the line of Ken Gawrelski with Wells Fargo. "
+  },
+  {
+    "source_id": "q4-2025-call",
+    "source_url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q4/META-Q4-2025-Earnings-Call-Transcript.pdf",
+    "source_sha256": "2def106046fcde215f214ac0689aff6fa6c432d7016bf9315b4a831b2041a14b",
+    "text_file": "q4-2025-call.txt",
+    "line_start": 393,
+    "line_end": 396,
+    "search_phrase": "operating cash flow with prudent amounts",
+    "excerpt": "Nonetheless, we will continue to look for opportunities to periodically supplement our strong \noperating cash flow with prudent amounts of cost-efficient external financing, which may lead us \nto eventually maintain a positive net debt balance.  \n "
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "source_bodies_hash_verified": 15,
+  "excerpts_bound_to_local_text": 18,
+  "cashflow_controls": [
+    {
+      "id": "2021-overdraft-presentation",
+      "equation": "14M -13M =1M",
+      "passed": true
+    }
+  ],
+  "new_unknown_other_operands_added": 0
+}

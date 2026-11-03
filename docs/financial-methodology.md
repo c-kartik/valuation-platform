@@ -1,5 +1,26 @@
 # Financial Methodology
 
+## Approved Meta and Alphabet treatments — November 3
+
+[Meta](company-resolutions/META/README.md) now uses cash PP&E **net of identified
+fixed-asset receipts** in its adopted CFO historical display. FY2022/23 FCFF rises
+245m/221m; other years are unchanged. Comparatives reconcile gross and net
+presentations without counting receipts twice. This does not infer the contents
+of mixed investing captions. Exact expense23m/185m from FY2023 supplies the earlier
+Meta interest operands; historical reported tax remains unchanged. Other financing
+is still unclassified, so derived FCFE is provisional. Capitalized interest and
+operating/forecast investment alignment remain explicit limitations.
+
+[Alphabet](company-resolutions/GOOGL/README.md) preserves consolidated FCFF and
+labels derived FCFE consolidated before NCI attribution. Parent-common cash and
+NCI fair value remain missing. NCI funding is not debt or an attribution shortcut.
+Lease financing cash remains inside debt repayments once; prepayments and noncash
+ROU additions are not extra principal/cash capex. No book-value plug or normalized
+tax rate is adopted. Neither company receives a forecast/EV change.
+
+These are separately authorized, bounded November3 treatments; they supersede
+only the Meta display investment basis, preserving earlier approvals and facts.
+
 ## Manually approved Apple resolution — November 3
 
 The [resolution register](company-resolutions/README.md) separates treatment

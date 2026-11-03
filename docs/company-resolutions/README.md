@@ -9,6 +9,8 @@ replace original filings, accepted histories or approval records.
 | Company | Review scope | Current outcome | Record |
 | --- | --- | --- | --- |
 | Apple (AAPL) | FY2021–FY2025; Other financing, FY2021 stock-proceeds presentation, alternative FCFF route and tax separation | One presentation conflict resolved; five FCFE values reconciled but provisional; operating FCFF input alignment remains unresolved; no platform number changed | [Apple decisions and results](AAPL/README.md) |
+| Meta (META) | FY2021–FY2025; five approved financing/investment/interest/tax treatments | Net investment changes chart FCFF+245m/+221m in2022/23; FCFE provisional; Other unresolved | [Meta decisions and results](META/README.md) |
+| Alphabet (GOOGL) | FY2021–FY2025; NCI scope and lease containment | Consolidated FCFE labeled before NCI; parent-common cash missing; FCFF unchanged; leases counted once | [Alphabet decisions and results](GOOGL/README.md) |
 
 ## How each company is recorded
 
@@ -47,9 +49,13 @@ Current offline replay:
 
 ```sh
 PYTHONPATH=src .venv/bin/python scripts/resolve_apple_cashflows.py --check
+PYTHONPATH=src .venv/bin/python scripts/resolve_meta_alphabet_cashflows.py --check
 ```
 
 The script reads retained repository evidence, not files in a chat's output
 directory, and makes no network request. `--check` never writes. After reviewing
 an intentional source/decision change, `--write` regenerates the separate JSON/CSV
-resolution record; it does not publish history or edit forecast assumptions.
+resolution record. Meta also emits a separately pinned approved investment
+overlay consumed by the historical display wrapper; neither replay edits forecast
+assumptions or automatically publishes FCFE. Apple and Alphabet records do not
+change chart amounts. See each company for its explicitly approved scope.
