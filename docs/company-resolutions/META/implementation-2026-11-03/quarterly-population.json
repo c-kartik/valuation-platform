@@ -1,0 +1,107 @@
+[
+  {
+    "form": "10-Q",
+    "reportDate": "2025-09-30",
+    "accessionNumber": "0001628280-25-047240",
+    "primaryDocument": "meta-20250930.htm",
+    "filingDate": "2025-10-30"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2025-06-30",
+    "accessionNumber": "0001628280-25-036791",
+    "primaryDocument": "meta-20250630.htm",
+    "filingDate": "2025-07-31"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2025-03-31",
+    "accessionNumber": "0001326801-25-000054",
+    "primaryDocument": "meta-20250331.htm",
+    "filingDate": "2025-05-01"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2024-09-30",
+    "accessionNumber": "0001326801-24-000081",
+    "primaryDocument": "meta-20240930.htm",
+    "filingDate": "2024-10-31"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2024-06-30",
+    "accessionNumber": "0001326801-24-000069",
+    "primaryDocument": "meta-20240630.htm",
+    "filingDate": "2024-08-01"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2024-03-31",
+    "accessionNumber": "0001326801-24-000049",
+    "primaryDocument": "meta-20240331.htm",
+    "filingDate": "2024-04-25"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2023-09-30",
+    "accessionNumber": "0001326801-23-000103",
+    "primaryDocument": "meta-20230930.htm",
+    "filingDate": "2023-10-26"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2023-06-30",
+    "accessionNumber": "0001326801-23-000093",
+    "primaryDocument": "meta-20230630.htm",
+    "filingDate": "2023-07-27"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2023-03-31",
+    "accessionNumber": "0001326801-23-000067",
+    "primaryDocument": "meta-20230331.htm",
+    "filingDate": "2023-04-27"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2022-09-30",
+    "accessionNumber": "0001326801-22-000108",
+    "primaryDocument": "meta-20220930.htm",
+    "filingDate": "2022-10-27"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2022-06-30",
+    "accessionNumber": "0001326801-22-000082",
+    "primaryDocument": "meta-20220630.htm",
+    "filingDate": "2022-07-28"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2022-03-31",
+    "accessionNumber": "0001326801-22-000057",
+    "primaryDocument": "meta-20220331.htm",
+    "filingDate": "2022-04-28"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2021-09-30",
+    "accessionNumber": "0001326801-21-000065",
+    "primaryDocument": "fb-20210930.htm",
+    "filingDate": "2021-10-26"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2021-06-30",
+    "accessionNumber": "0001326801-21-000049",
+    "primaryDocument": "fb-20210630.htm",
+    "filingDate": "2021-07-29"
+  },
+  {
+    "form": "10-Q",
+    "reportDate": "2021-03-31",
+    "accessionNumber": "0001326801-21-000033",
+    "primaryDocument": "fb-20210331.htm",
+    "filingDate": "2021-04-29"
+  }
+]

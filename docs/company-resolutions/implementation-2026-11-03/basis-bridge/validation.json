@@ -1,0 +1,25 @@
+{
+  "schema_version": "s1-partial-basis-bridge-validation-v1",
+  "annual_periods": 15,
+  "exact_cfo_and_sbc_cash_statement_points": 30,
+  "supporting_total_sbc_expense_points": 15,
+  "original_primary_and_instance_bodies_verified": 30,
+  "tests_passed": 8,
+  "deterministic_replay_verified": true,
+  "fully_valuation_aligned_series_produced": false,
+  "historical_values_changed": false,
+  "tax_policy_parameter_changes": 0,
+  "separate_actual_valuation_parity_execution_claimed": true,
+  "outputs_sha256": {
+    "schedules.json": "f712845fb09dc7bdacc52b1aefca74f85d47e04d40f7b044ca1c7927966a84cc",
+    "schedules.csv": "fd06235ac4f73790fd27b70447177feb0a8c8636611192ddfc58a90fcad6e03c",
+    "baseline-tax-policy.json": "b10ec730125e985849acff04d39eaa665861dfd8bb82ec6d521028c1c2eedb02",
+    "decision-log.json": "9e4b56837b9c7bb2b7f8e91cb950276e85ec34f351c110314dc4327d29ef3d2c",
+    "valuation-parity.json": "22555d6679d4dc7b7f27a96750fc49c04effae622a4559aec7d8176af51a7635"
+  },
+  "parent_status": "OPEN",
+  "valuation_parity_scenario_pairs": 6,
+  "independent_run_case_calls": 12,
+  "all_enterprise_value_differences_zero": true,
+  "valuation_parity_tests_passed": 4
+}

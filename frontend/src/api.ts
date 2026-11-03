@@ -68,6 +68,13 @@ function renderableReverse(data:Record<string,unknown>):boolean{
  if(data.status!=='SUCCESS')return ['UNREACHABLE_TARGET','FLAT_RESPONSE','UNIQUENESS_NOT_CERTIFIED','ITERATION_LIMIT','NUMERICAL_VERIFICATION_FAILED'].includes(String(data.status))&&data.solution===null;
  const v=data.solution;return object(v)&&['constant_annual_growth','achieved_metric','signed_residual','absolute_residual','residual_tolerance'].every(k=>decimal(v[k]))&&typeof v.exact_endpoint==='boolean'&&object(v.forward_result)&&renderableResult(v.forward_result,equity);
 }
+function renderableFcfe(data:Record<string,unknown>):boolean{
+ if(data.schema_version!=='fcfe-forecast-result-v1'||!object(data.submitted_inputs)||data.submitted_inputs.schema_version!=='fcfe-forecast-request-v1'||!['DECLARED_PARENT_COMMON','CONSOLIDATED_BEFORE_NCI_ATTRIBUTION'].includes(String(data.scope))||data.scope!==data.submitted_inputs.scope||data.semantic_input_review!=='USER_ASSUMPTIONS_NOT_INDEPENDENTLY_CERTIFIED'||data.value_per_share!==null||data.debt_subtracted_after_fcfe_discounting!==false||!Array.isArray(data.limitations)||!data.limitations.every(text))return false;
+ const base=data.submitted_inputs.base_case;if(!object(base)||!Array.isArray(base.forecast_years)||![5,10].includes(base.forecast_years.length))return false;
+ if(!['cost_of_equity','pv_explicit_fcfe_usd','terminal_equity_value_usd','pv_terminal_equity_usd','equity_value_usd'].every(k=>decimal(data[k])))return false;
+ const numeric=['fcfe_usd','fcff_usd','opening_debt_usd','closing_debt_usd','net_borrowing_usd','interest_tax_shield_usd','net_income_usd','equity_tax_usd','interest_expense_usd','cash_debt_issued_usd','new_finance_asset_funding_usd','principal_repaid_usd'];
+ return Array.isArray(data.years)&&data.years.length===base.forecast_years.length&&data.years.every((y,i)=>object(y)&&y.period_index===i+1&&text(y.fiscal_year_label)&&[...numeric,'discount_factor','pv_fcfe_usd'].every(k=>decimal(y[k])))&&object(data.terminal)&&numeric.every(k=>decimal(object(data.terminal)?data.terminal[k]:null));
+}
 export async function request<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
   const controller = new AbortController();
   let timedOut = false;
@@ -100,7 +107,7 @@ export async function request<T>(path: string, body?: unknown, signal?: AbortSig
     }
     if (path.endsWith('/run')) {
       const scenarios=path==='/api/v1/scenarios/run';
-      const valid=path==='/api/v1/reverse/run'?renderableReverse(data):path==='/api/v1/sensitivity/run'?renderableSensitivity(data):scenarios
+      const valid=path==='/api/v1/fcfe/run'?renderableFcfe(data):path==='/api/v1/reverse/run'?renderableReverse(data):path==='/api/v1/sensitivity/run'?renderableSensitivity(data):scenarios
         ? ['investor-scenario-results-v1','investor-scenario-results-v2','analyst-scenario-results-v1','investor-scenario-results-v3'].includes(data.schema_version)&&Array.isArray(data.scenarios)&&data.scenarios.length===3&&object(data.submitted_inputs)&&Array.isArray(data.limitations)&&data.limitations.every(text)&&
           data.scenarios.every((entry:unknown,i:number)=>object(entry)&&entry.label===['Bear','Base','Bull'][i]&&text(entry.analytical_date)&&(entry.information_cutoff===null||text(entry.information_cutoff))&&object(entry.result)&&renderableResult(entry.result,object(body)&&Array.isArray(body.scenarios)&&body.scenarios.some(e=>object(e)&&object(e.case)&&e.case.calculation_scope==='EQUITY_PER_SHARE')))
         : renderableResult(data,object(body)&&body.calculation_scope==='EQUITY_PER_SHARE');

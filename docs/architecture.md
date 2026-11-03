@@ -1,5 +1,9 @@
 # Architecture
 
+## Versioned cash-flow review and manual FCFE route — November3
+
+`scripts/prepare_pilot_cashflows.py` replays immutable issuer results and adopted Meta history into a separately hashed private-bundle resource. `review/pilot_cashflows.py` serves an ownership/status-validated projection at `/api/v1/cashflows/{ticker}`; it does not infer inputs or rebuild per request. The Cash flows view consumes this endpoint lazily and retains all five years. `valuation/fcfe.py` derives explicit manual financing/equity cash from the same authoritative operating case, independently discounts with cost of equity, and exposes bounded `/api/v1/fcfe/validate` and `/run` through the existing isolated worker. UI edits invalidate/abort prior FCFE replies. No second debt subtraction or certified per-share result is produced. Original CFO history and FCFF/WACC remain separate; no cross-basis FCFF CAGR is added.
+
 ## Portable cloud development — November3
 
 `scripts/cloud/` installs the existing pinned dependencies, verifies/restores a

@@ -1,0 +1,932 @@
+{
+  "api": "http://127.0.0.1:5183",
+  "bundle": "/private/var/folders/xr/lsv4vk2979nbt46kx6sjxryh0000gn/T/valuation-cloud-dev-d9176l66/runtime",
+  "integration_verdict": "PASS",
+  "frontend_verdict": "PASS_CURRENT_AAPL_A7_METADATA_AND_PRIOR_IDENTICAL_UI_CHECKS",
+  "requested_full_financial_coverage_verdict": "FAIL",
+  "checked_metric_cells": 30,
+  "checked_bundle_hashes": {
+    "src/valuation_platform/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/valuation_platform/analyst/__init__.py": "055243f1b9ddc2a19d171b4100dc78ce04a497d9c3c2d6ee3ff52cfe53a7571d",
+    "src/valuation_platform/analyst/aapl_cash_flow_inputs.py": "60238bf0cda279ca53a4c0c5fb41a4881c669c3415389ff1485a186fc5ea1347",
+    "src/valuation_platform/analyst/analyst_overrides.py": "2d7f57857716fb0490887de193b082b6065da6fe7b13cfcecd2f50ce3a31a240",
+    "src/valuation_platform/analyst/approved_income_integration.py": "177a4ca1a2defacfe4418717893e1acfeb4bd71d3435c48278242451a0ebf59e",
+    "src/valuation_platform/analyst/capex_evidence_repair.py": "c702f4d47e609ac7283f44623204c9036d55c472a576305f435949d14a247322",
+    "src/valuation_platform/analyst/cash_flow_inputs.py": "ca48cfef4a392a67b3d484a9962ea9bf8b9892d18aeee4a8d5fb2832baee9d20",
+    "src/valuation_platform/analyst/da_scope_dispositions.py": "fc6fc3a3c0d1ac39a522ed2d2ab45ad4f8134a7848b78ed89aca50f996f07fae",
+    "src/valuation_platform/analyst/googl_cash_flow_inputs.py": "461f90e0ed931a0b57f1afbc479b696d85e284778c2e79928677325ac356eaae",
+    "src/valuation_platform/analyst/historical_inputs.py": "df0ea56200cd9f2018336ea9d89dd6df104076f50ded85d3cdc6b9f6b67254b1",
+    "src/valuation_platform/analyst/lly_capex_refresh_review.py": "9ac399942f39dbbcba959bfaabf4fb77c5abcd091aef4da39a5308df01f7419f",
+    "src/valuation_platform/analyst/nvda_income_inputs.py": "a6daa5ccf4c6d748522923ed667a0b61cb6f41493d2d516bc6454641deee67d3",
+    "src/valuation_platform/analyst/nwc.py": "7222fd2de2e7eca941ef19475ce66414d63ac7dedd2916679c0ae9e5ce703485",
+    "src/valuation_platform/analyst/pilot_cash_investments.py": "e629fdd8c44b555958cfee0cc117d9290f6cde6b67b54f54698387579e0d3887",
+    "src/valuation_platform/analyst/pilot_debt_leases.py": "d9ae31a305fb511dfc8838132ca646cfbb09923ce877d3b44a92caab5152ad48",
+    "src/valuation_platform/analyst/pilot_direct_income.py": "2db38cf78150f729bb7d758bbd4f295ccc2e87bca4008cffcc2fe8788395597f",
+    "src/valuation_platform/analyst/pilot_historical_inputs.py": "991bc5b18f32810dcb781a77d34c9087e75d50d8f8e3681e3509e7908e1a7d5b",
+    "src/valuation_platform/analyst/prepared_assembly.py": "6599dddd3c3ef959edf153b527a0319fa83fdefa47f458dd39dacff2fa1ff860",
+    "src/valuation_platform/analyst/refreshed_capex.py": "3fee113f3f71139420433664a4c63f471f2f5e4b503c165598aad870eeada292",
+    "src/valuation_platform/analyst/repaired_income_preparation.py": "2f2a096f96fa9e7cb459032539657ad4c9cad6095814ea2d136737890a91063f",
+    "src/valuation_platform/analyst/retained_bridge_components.py": "8d281ea41db9c4582f9c40fc7bbd36090ec091032e4d941c1e33e6d9633db342",
+    "src/valuation_platform/analyst/retained_capex.py": "6d67d736d81dd48b94d589f006d6388ca375603fc4485861a5290c3e475f1735",
+    "src/valuation_platform/analyst/retained_cfo_preparation.py": "2aadd06c305fe5020952f415557ebfbb989602f89b6a9c0e0f09e20931e921c4",
+    "src/valuation_platform/analyst/retained_claims_shares.py": "979d13db4233a09c8d49622b04107bcb457d6e817d9c8c408023a90a256a20c9",
+    "src/valuation_platform/analyst/retained_components.py": "0cbdd00d30052c80222844275bfffd7dfe87643378e3f0d40428aaa9f9c14da2",
+    "src/valuation_platform/analyst/retained_d_and_a.py": "ea26dbddab25508b82c9a3397d54de744b91fb04562174971aa019367f4c0e3e",
+    "src/valuation_platform/analyst/retained_income_batch.py": "aa039293ff64d47c72e26a1701dfe5983a2eca0b3be225a48ce270ab21e2da25",
+    "src/valuation_platform/analyst/retained_income_preparation.py": "ed4d1fe0fed58347a4419c752e799ad646a672acf21f435623ca4dcb3fdfed27",
+    "src/valuation_platform/analyst/retained_income_sweep.py": "d67510f053b38196b5533aa173c29703459d9fe871d9f465764d0c0f67e26c67",
+    "src/valuation_platform/analyst/retained_reported_tax.py": "82c0050796669ec6ae513f48d1348d0384c76ed993501a8366a853705ef80927",
+    "src/valuation_platform/analyst/retained_tax_sbc.py": "e6a98b52577fa31f896bddfead513a14be7da074a07cf4370432f2a48f117521",
+    "src/valuation_platform/analyst/retained_working_capital.py": "f5cff24a7eb236e335771248ea85793df6be18f051bdef4a66d858aa6af2c4dc",
+    "src/valuation_platform/api/__init__.py": "f200b2bbdaa605c0ffb37e531d990c0d80170a4cfea052dcec592ccb14f2ce43",
+    "src/valuation_platform/api/app.py": "47ff561d7ca6c7833286a05378fddad28f79da5e297bbc26a390cfb614589d5d",
+    "src/valuation_platform/api/budget.py": "3c270013bb8018ad7cf090abaa121c6635c291803bf627f5b17b3a4f05ac1c72",
+    "src/valuation_platform/api/bundle.py": "4c509b6c8cee07ec5e14b244edc27fc3f4a7d8c89f945007b5cb398357be5887",
+    "src/valuation_platform/api/catalog.py": "f9f54b821ffcc823fe565119bbea4b5f964f2b3aebfcd09c83827e2cbe12dec6",
+    "src/valuation_platform/api/process.py": "9e4c1f952858f3a781dffe99a6783a4300c1900c06356585bcb850c12fb51bf3",
+    "src/valuation_platform/api/worker.py": "0864e7c355b8adcc05eaa5eb61bf50be103c6a0d3a308cbb0bf024b717df2318",
+    "src/valuation_platform/normalization/__init__.py": "0a80c0bb9018c54276937a2b8d2ebcc5636e2e87282ceb25d7be353cac188e83",
+    "src/valuation_platform/normalization/balance_sheet.py": "69ed41ea7368da0e1b61ba5b77c7e1bf774080937356992f6d69970f0b6bf211",
+    "src/valuation_platform/normalization/balance_sheet_derivation.py": "0040b6b85aa5ddb8b4ff86e673e42a0be09eacf6bd387332309a7da25e9ee1da",
+    "src/valuation_platform/normalization/capex_scope.py": "5d7a31c869292d7c568e0989229475770ab1b8395bed64d6fb14a38772a91085",
+    "src/valuation_platform/normalization/concepts.py": "80ad34e6ff72b842d4609630b76f5428fd491deae8802450b9b948275ea09aac",
+    "src/valuation_platform/normalization/d_and_a_scope.py": "7c90138132727032777cda3609e70546c6164a221b4199a88457b775923134ce",
+    "src/valuation_platform/normalization/derived.py": "c733eb5d3beec2c3f6b99e97e575c49b93e686042cab4cc08c6a5ec67c633f99",
+    "src/valuation_platform/normalization/diluted_shares.py": "9ca431073389373f2fe528fcd0151b702e9a27a538a609e6e07b1b7258dd86ac",
+    "src/valuation_platform/normalization/historical.py": "ebcc1f13dd2fa22bbcce1f4f2fa90ffa9576ca37fe39b24957ef980a8b78dd16",
+    "src/valuation_platform/normalization/models.py": "1e8b1f7e8ac152564cb86f138dfcb61efddf04c4aa0a6afdee65e4f8de4fb8cd",
+    "src/valuation_platform/normalization/operating_income_derivation.py": "572438171eb754fa679d2dbb1830738114d2a7cbf361236f46662fa1b9f79016",
+    "src/valuation_platform/normalization/operating_nwc.py": "d0b660fe603ab5379a1688e772fb78cfc007d38b5d630540f512106fae3f9373",
+    "src/valuation_platform/normalization/operating_tax.py": "033e71f1b5d9dc912b06a1730b42eb8dc1f922ce27abe617430b53e2c0c680f0",
+    "src/valuation_platform/normalization/output.py": "b8275b99fd8455e0a385a703516352e884879f5a7231558222e9e0c2685fa748",
+    "src/valuation_platform/normalization/pretax_scope.py": "3cda6643c960bf124c774a8596f0bc18430d3858acfe31db86787335b187c859",
+    "src/valuation_platform/normalization/tax_evidence.py": "dffc6294ccb5711ba0a94911eab5d6eeda00d73bcadf9a2fd0123274603b6dd6",
+    "src/valuation_platform/review/__init__.py": "fbf970ec840910fef4e00bda66d3012dd4adb1e665d8cef54a66dce1bd68d18d",
+    "src/valuation_platform/review/cfo_history.py": "7acbd7daf004dcbfefa552b5ba40278eb13fa16d47f65a708b1f2a34e4d5def1",
+    "src/valuation_platform/review/comparison.py": "69e0dbcd6cb4adad8cca1aa1e845a95ff9f4867fd5f745630aa0e089a0ed5a88",
+    "src/valuation_platform/review/filing_fcff.py": "6bbee8b97956a0637afee1cd6e51bfd7d2460f6620d04d3460ce3db0fa7b9806",
+    "src/valuation_platform/review/history.py": "7614181c235cad4176a3c45ab4a6637076a5e5acb181c0939590bf0a3e894e70",
+    "src/valuation_platform/review/market.py": "7e144958e7981a1d7011795de3f226139f5717442a2499f5575e5c9d779ef2d9",
+    "src/valuation_platform/review/sources.py": "3d6f97e27d2cfca4c7bfd4cf52b15832214c34d09110acac2caac47550151523",
+    "src/valuation_platform/sec/__init__.py": "2bf9dc6e090d4113dea8fe24cf604c3b3e8262024703de59827e9c07c32658d9",
+    "src/valuation_platform/sec/annual_period.py": "4f4b2661b20bc415d9997cde57a1a75d055e7a1010e81793e6ca57ac440fff70",
+    "src/valuation_platform/sec/client.py": "4e6c23aec38637d5e5de0ae69a7221564471ecdf8d93594ee5bd1d42e7359102",
+    "src/valuation_platform/sec/company_facts.py": "7621de9c87fa827becddce6473015c1de64a82475f950563d250afe88a6aca27",
+    "src/valuation_platform/sec/fact_selection.py": "f46538e7214247968d171dba0116dbc7e682dab57fa6766128fa5664d7236dd1",
+    "src/valuation_platform/sec/filing_selection.py": "8fdf99b2ce9fb42411d22dd4f8c81844a705d8def5833674227cdbc90ccd1a93",
+    "src/valuation_platform/sec/filing_xbrl.py": "7810f61b2efe09a7c99f1045d75389e7bf8547b5c4cc899fd81e4f3fb9d33859",
+    "src/valuation_platform/sec/submissions.py": "804c839e83bb1df39680d5a95e353d4705bac594b5f989e92aeabdfbfb5e3551",
+    "src/valuation_platform/sec/tickers.py": "f99884c4ba7a542fafe6c35bf98d10d5179d63031d9cfa7d32e3259124ee14f9",
+    "src/valuation_platform/valuation/__init__.py": "4b3570a75b77a9267146c698ec38a4463a8a429a8c4df8905330480bc1feef69",
+    "src/valuation_platform/valuation/assumptions.py": "ca63b4359a75f8aabe0ade997d5a6872e947910b485577087a1977f302ab2b29",
+    "src/valuation_platform/valuation/bridge.py": "db107d33686000c3e5f7c5f3ceebe7b3389b71865ce73ec411fc7c689f6a24d1",
+    "src/valuation_platform/valuation/case_inputs.py": "48b827d2e2f70199bcda7e438cb206ab4445066c67bae08487beec62b871cd45",
+    "src/valuation_platform/valuation/consumer.py": "ed9ecfcd977f97ecc04f77851d702513c0f89c1060bde18925ba460acf183ce9",
+    "src/valuation_platform/valuation/discounting.py": "6bb9106ee8f586110b1c374e051271a4dbb182d372bf6c013dc8fb33229f202f",
+    "src/valuation_platform/valuation/forecast.py": "3ac86167a59dccf76df2d6c721c777c7168c4860509096ae15fd08f581c2e6c9",
+    "src/valuation_platform/valuation/reverse_inputs.py": "1987f97133b32284a975c7446e8e19b8240cc49252003185e771d382868ea120",
+    "src/valuation_platform/valuation/scenario_inputs.py": "f8c86dc5acf32f330382c4336b57a0868d326ac2a5c56973d3715f51dc3f538c",
+    "src/valuation_platform/valuation/sensitivity_inputs.py": "2278132a929bc58086d46805819fc5f01a2a3222284e2825905796efaa1c6d36",
+    "src/valuation_platform/valuation/terminal_methods.py": "784a9e235ebbaba76ad18efbb9e4184f77fa787ef8638e1a5be757499bc639c5",
+    "src/valuation_platform/preload/__init__.py": "644a2c1fece2d7db2565a6dffac8c11075d7734787e7fc4bf36328224d5c6b56",
+    "src/valuation_platform/preload/rules.py": "6f9c382ab561225bcdfa9fd611b48cae45f715dc4e5c3ba102f212003e623a3d",
+    "src/valuation_platform/preload/profile.py": "38a7e33402970657a791c5a68aedd5ae5f8fb3270ce2999e04714016f0ff6192",
+    "src/valuation_platform/preload/generate.py": "d3fad1e926ec95dae10de978c9b385e5be54ba35c14c19730af5c9661e5ad143",
+    "src/valuation_platform/preload/issuers.py": "5b7da5c6e1f0a46ff7afef1bb5b05dca350778e31c370ad4c199b15d0bfac0b2",
+    "src/valuation_platform/preload/extract.py": "2ec7aa03077efe04c5078bbfa390a72ac9227bfc0eb6acb9351b37ffc8a0987e",
+    "src/valuation_platform/review/resolved_history.py": "d7fc0bdc349210e86637d542b4ba1c74a998f27264a2a3460af41d4f3bd443b6",
+    "src/valuation_platform/review/pilot_cashflows.py": "d6aa01c0d16a07a54c6f969ed48df98019eeb48801135d2bbd13a058bea023a2",
+    "src/valuation_platform/valuation/fcfe.py": "89a80a1883070cb0cabc6f9a9bc12f36a841f7a57d553a02c1157bc9d1d6105c",
+    "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",
+    "data/investor-context/2026-10-29/googl.json": "e7ed172c43d3f4e40cefa80ac7b10ae85ee34c2a6992f8bf63f67dbc10b86e68",
+    "data/investor-context/2026-10-29/meta.json": "519c10f1f25a51d9671cb7c481cc40fa0962accd7726f58998e2a0fe22e38cd4",
+    "docs/company-data-preparation/aapl-analyst-input-package.json": "01683e9534a562046f9d543d8f667b53a7eacb9afd5f4acbe0eb6bf3c7d06f28",
+    "docs/company-data-preparation/googl-analyst-input-package.json": "331a4470be5ebc41c9ac2de736f70b2693c50590439eb4439ece5e2d0a7e1999",
+    "docs/company-data-preparation/meta-analyst-input-package.json": "533f1ab4f4831eeddd489653f6be72af6d18498c2c1c72f375584501e48c24bb",
+    "docs/company-data-preparation/trillion-review-batch.json": "109d6085e95cd80ad601e23bf5db148584f2800e23902f86187c1ffa796d6bb9",
+    "examples/valuation/aapl-fy2025-unset.json": "2c082182a139a5df5a84e642c6a43e034626c8fb208129b273267ae6cbbd6dac",
+    "examples/valuation/googl-fy2025-unset.json": "212d51dd0bf9195c1a27b9312619d9d470871a2d29f02fe5459e19ef3853ecfc",
+    "examples/valuation/meta-fy2025-unset.json": "9ff2d831f7a8e8939dd6c8f51254b8c8d9ad0cf3883c2bf0d7e0f2895499ac47",
+    "examples/valuation/synthetic-base.json": "2c7d5bc9e2983e5feb6ff31e13ac20aad4ab145efc38b33b13d4b221a5308e37",
+    "src/valuation_platform/normalization/capex_scope_registry.json": "34684ae93ed81bfb454ad43cf9ff3510c8dbc9714a09b11a27e547a36bdd5606",
+    "src/valuation_platform/normalization/capex_scope_v2_registry.json": "f10baae15ed90097b1c06cd08e2f211c49c4cc87425f2b29cfbd3728bf88dc2d",
+    "src/valuation_platform/normalization/capex_scope_v3_registry.json": "2bcabd2aa9f27db21b15d881bbe045ac634f1aab9cf277ed6b64070ecdc7d029",
+    "src/valuation_platform/normalization/d_and_a_scope_registry.json": "d35c126744dbb079b59fadf87ddea73946e878619b87cb37b4ba580b7876e0cd",
+    "data/preload/googl-v1/observations.json": "d2bb11c0f5cf4fd515eb5ef2a679b59e30458e70b822dcd290430e0a1e4bddf1",
+    "data/preload/googl-v1/policy.json": "cd6be7420a942bad8eb34bd5667b2fb4caa66acb7c5b77774e919ad08cf1a8ab",
+    "data/preload/googl-v1/sources/damodaran-2026-10-08.html": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+    "data/preload/googl-v1/sources/manifest.json": "84c4b1a46e1e11a166c0c8d03689b31000371eabaf7066eaa179dfbc20772aed",
+    "data/preload/googl-v1/sources/q3-2026-10q.html": "f523567d4c813275cae031ae3cda0f6409dcff51286642e5d75df55951daa9be",
+    "data/preload/googl-v1/sources/q3-2026-call.html": "1b7f638d987b884eceba3e0ffa6c19bc9ae0fd1637faffd91560c90e1847b90f",
+    "data/preload/googl-v1/sources/q3-2026-release.html": "c5f86ba70e27aa8834fa4b110c9781ac413949adb050502008a180fec27b7b89",
+    "data/preload/googl-v1/sources/q4-2025-release.html": "8de6e5a9cfa7dd74ba0a3f2553bd5195dd910aefa5b61d77b712047db47ca97d",
+    "data/preload/googl-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+    "docs/company-data-preparation/historical-fcff-filing-calculations.json": "d157e0bd6a0ab9461b399855e39ec89dc5b4afc4436893227fe0497772a82e3e",
+    "data/preload/meta-v1/mapping.json": "ba70dcaa4354519d98a01c7740b774323d05a0bb89c1abac2dbb3a93bc9112ea",
+    "data/preload/meta-v1/observations.json": "5a5fd1a02ceb1ef4e49d657bd45f589b4271fd8bfce77fedf60970f540b63921",
+    "data/preload/meta-v1/policy.json": "db7693ea471a5f48526b34a3b5c25070f0b598b8c9aa322bb4c5bb79ac0071c1",
+    "data/preload/meta-v1/sources/damodaran-2026-10-08.html": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+    "data/preload/meta-v1/sources/fy2025-10k.html": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "data/preload/meta-v1/sources/manifest.json": "e9877aec9966d3756cc51da7495c59eb74f1bd95fabcb677cc89ae00790d65e4",
+    "data/preload/meta-v1/sources/q3-2026-10q.html": "4ca982ff1218f1f71dadb5fd23b2a917721f1b962b6c6d89febfe0d24e318024",
+    "data/preload/meta-v1/sources/q3-2026-release.html": "544c130ddd8ebe49823c19d9e7206365c72252e20ca09d8fd018f3f2e55270fd",
+    "data/preload/meta-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+    "data/preload/aapl-v1/mapping.json": "4719fa04de09b13ebbdccb992c976a2c3fee9ee37cc36caa6716b75f7059bf0f",
+    "data/preload/aapl-v1/observations.json": "4cc8946a9e8fc3fb07925519a0873c3c516500de768d2e9ef0c1ae12fd2d0192",
+    "data/preload/aapl-v1/policy.json": "73ff24e6aa4283cdb6807ab22e18a96f67bcd9162c796a80f238b3675f87a766",
+    "data/preload/aapl-v1/sources/damodaran-2026-10-08.html": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+    "data/preload/aapl-v1/sources/fy2025-10k.html": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+    "data/preload/aapl-v1/sources/manifest.json": "4ba007cc8fabe4fb9a8281268a9d7f2d0caf1cb5a348f5a95a0ed0845c233e92",
+    "data/preload/aapl-v1/sources/q3-2026-10q.html": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+    "data/preload/aapl-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+    "docs/company-resolutions/META/adopted-history.json": "f12fa6a2a988405f2c7129a73c1a9a850f370139409222c66561c0c986d536a6",
+    "docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json": "9b2a9d775745e9d4bd08efe60d49619c24f632b16a28fce5fcba014fe1f55d86"
+  },
+  "periods": [
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2021,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "fcfe": {
+          "amount_usd": "105618000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "A2",
+            "A3"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": "95246155200.673949472103436592892397007517833105936",
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "11085000000",
+            "cfo": "104038000000",
+            "interest_expense": "2645000000",
+            "pretax_income": "109207000000",
+            "tax_provision": "14527000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2021,
+        "identified_net_borrowing_usd": "12665000000",
+        "reported_cash_fcf_usd": "92953000000",
+        "revenue_usd": "365817000000"
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2022,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "fcfe": {
+          "amount_usd": "111320000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "A2",
+            "A3"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": "113899047228.02952066698571824387295030351880305282",
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "10708000000",
+            "cfo": "122151000000",
+            "interest_expense": "2931000000",
+            "pretax_income": "119103000000",
+            "tax_provision": "19300000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2022,
+        "identified_net_borrowing_usd": "-123000000",
+        "reported_cash_fcf_usd": "111443000000",
+        "revenue_usd": "394328000000"
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2023,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "fcfe": {
+          "amount_usd": "89683000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "A2",
+            "A3"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": "102938094877.61131040303861574171766195399873391011",
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "10959000000",
+            "cfo": "110543000000",
+            "interest_expense": "3933000000",
+            "pretax_income": "113736000000",
+            "tax_provision": "16741000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2023,
+        "identified_net_borrowing_usd": "-9901000000",
+        "reported_cash_fcf_usd": "99584000000",
+        "revenue_usd": "383285000000"
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2024,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "fcfe": {
+          "amount_usd": "102809000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "A2",
+            "A3"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": null,
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": false,
+          "open_items": [
+            "A1"
+          ],
+          "operands": {
+            "cash_ppe": "9447000000",
+            "cfo": "118254000000",
+            "interest_expense": null,
+            "pretax_income": "123485000000",
+            "tax_provision": "29749000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+          ],
+          "status": "UNAVAILABLE_MISSING_INTEREST",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2024,
+        "identified_net_borrowing_usd": "-5998000000",
+        "reported_cash_fcf_usd": "108807000000",
+        "revenue_usd": "391035000000"
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2025,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "fcfe": {
+          "amount_usd": "90284000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "A2",
+            "A3"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": null,
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": false,
+          "open_items": [
+            "A1"
+          ],
+          "operands": {
+            "cash_ppe": "12715000000",
+            "cfo": "111482000000",
+            "interest_expense": null,
+            "pretax_income": "132729000000",
+            "tax_provision": "20719000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+          ],
+          "status": "UNAVAILABLE_MISSING_INTEREST",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2025,
+        "identified_net_borrowing_usd": "-8483000000",
+        "reported_cash_fcf_usd": "98767000000",
+        "revenue_usd": "416161000000"
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2021,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "fcfe": {
+          "amount_usd": "38453000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "M1"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": "39135150452.584383723881228322476947804754250909399",
+          "basis": "REPORTED_CFO_NET_IDENTIFIED_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "18567000000",
+            "cfo": "57683000000",
+            "interest_expense": "23000000",
+            "pretax_income": "47284000000",
+            "tax_provision": "7914000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2021,
+        "identified_net_borrowing_usd": "-663000000",
+        "reported_cash_fcf_usd": "39116000000",
+        "revenue_usd": "117929000000"
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2022,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "fcfe": {
+          "amount_usd": "28360000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "M1"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": "19437929525.660154759013151046184808633193379367778",
+          "basis": "REPORTED_CFO_NET_IDENTIFIED_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "31186000000",
+            "cash_ppe_before_receipts": "31431000000",
+            "cfo": "50475000000",
+            "identified_ppe_receipts": "245000000",
+            "interest_expense": "185000000",
+            "pretax_income": "28819000000",
+            "tax_provision": "5619000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2022,
+        "identified_net_borrowing_usd": "9071000000",
+        "reported_cash_fcf_usd": "19289000000",
+        "revenue_usd": "116609000000"
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2023,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "fcfe": {
+          "amount_usd": "51465000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "M1"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": "44435666947.794551741587248039133001602428944927047",
+          "basis": "REPORTED_CFO_NET_IDENTIFIED_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "27045000000",
+            "cash_ppe_before_receipts": "27266000000",
+            "cfo": "71113000000",
+            "identified_ppe_receipts": "221000000",
+            "interest_expense": "446000000",
+            "pretax_income": "47428000000",
+            "tax_provision": "8330000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2023,
+        "identified_net_borrowing_usd": "7397000000",
+        "reported_cash_fcf_usd": "44068000000",
+        "revenue_usd": "134902000000"
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2024,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "fcfe": {
+          "amount_usd": "62535000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "M1"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": "54702986513.451169636160366811485501606215416837666",
+          "basis": "REPORTED_CFO_NET_IDENTIFIED_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "37256000000",
+            "cfo": "91328000000",
+            "interest_expense": "715000000",
+            "pretax_income": "70663000000",
+            "tax_provision": "8303000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2024,
+        "identified_net_borrowing_usd": "8463000000",
+        "reported_cash_fcf_usd": "54072000000",
+        "revenue_usd": "164501000000"
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2025,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "fcfe": {
+          "amount_usd": "73491000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "M1"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_FINANCING_SCOPE",
+          "scope": "IDENTIFIED_FINANCING_ONLY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+          ],
+          "status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED"
+        },
+        "fcff": {
+          "amount_usd": "46928643089.885025368896336638272122143089885025369",
+          "basis": "REPORTED_CFO_NET_IDENTIFIED_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "69691000000",
+            "cfo": "115800000000",
+            "interest_expense": "1165000000",
+            "pretax_income": "85932000000",
+            "tax_provision": "25474000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2025,
+        "identified_net_borrowing_usd": "27382000000",
+        "reported_cash_fcf_usd": "46109000000",
+        "revenue_usd": "200966000000"
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2021,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "fcfe": {
+          "amount_usd": "65776000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "G1",
+            "G2"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+          "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+          ],
+          "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+        },
+        "fcff": {
+          "amount_usd": "67301940022.483302841272290431370820199704631119536",
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "24640000000",
+            "cfo": "91652000000",
+            "interest_expense": "346000000",
+            "pretax_income": "90734000000",
+            "tax_provision": "14701000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2021,
+        "identified_net_borrowing_usd": "-1236000000",
+        "reported_cash_fcf_usd": "67012000000",
+        "revenue_usd": "257637000000"
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2022,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "fcfe": {
+          "amount_usd": "58814000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "G1",
+            "G2"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+          "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+          ],
+          "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+        },
+        "fcff": {
+          "amount_usd": "60310162685.060565275908479138627187079407806191117",
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "31485000000",
+            "cfo": "91495000000",
+            "interest_expense": "357000000",
+            "pretax_income": "71328000000",
+            "tax_provision": "11356000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2022,
+        "identified_net_borrowing_usd": "-1196000000",
+        "reported_cash_fcf_usd": "60010000000",
+        "revenue_usd": "282836000000"
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2023,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "fcfe": {
+          "amount_usd": "68735000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "G1",
+            "G2"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+          "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+          ],
+          "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+        },
+        "fcff": {
+          "amount_usd": "69760161636.548175974427476463245330564532123149434",
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "32251000000",
+            "cfo": "101746000000",
+            "interest_expense": "308000000",
+            "pretax_income": "85717000000",
+            "tax_provision": "11922000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2023,
+        "identified_net_borrowing_usd": "-760000000",
+        "reported_cash_fcf_usd": "69495000000",
+        "revenue_usd": "307394000000"
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2024,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "fcfe": {
+          "amount_usd": "73652000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "G1",
+            "G2"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+          "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          ],
+          "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+        },
+        "fcff": {
+          "amount_usd": "72987942110.754079205441722655760964820765346575971",
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "52535000000",
+            "cfo": "125299000000",
+            "interest_expense": "268000000",
+            "pretax_income": "119815000000",
+            "tax_provision": "19697000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2024,
+        "identified_net_borrowing_usd": "888000000",
+        "reported_cash_fcf_usd": "72764000000",
+        "revenue_usd": "350018000000"
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2025,
+      "api_publication_verdict": "PASS",
+      "requested_financial_coverage_verdict": "FAIL",
+      "record": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "fcfe": {
+          "amount_usd": "105403000000",
+          "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+          "cleared": false,
+          "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+          "open_items": [
+            "G1",
+            "G2"
+          ],
+          "parent_common_amount_usd": null,
+          "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+          "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          ],
+          "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+        },
+        "fcff": {
+          "amount_usd": "73878476042.965257577474720763602936546912973946331",
+          "basis": "REPORTED_CFO_CASH_PPE",
+          "cleared": true,
+          "open_items": [],
+          "operands": {
+            "cash_ppe": "91447000000",
+            "cfo": "164713000000",
+            "interest_expense": "736000000",
+            "pretax_income": "158826000000",
+            "tax_provision": "26656000000"
+          },
+          "scope": "CONSOLIDATED",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          ],
+          "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+          "valuation_basis_aligned": false
+        },
+        "fiscal_year": 2025,
+        "identified_net_borrowing_usd": "32137000000",
+        "reported_cash_fcf_usd": "73266000000",
+        "revenue_usd": "402836000000"
+      }
+    }
+  ],
+  "frontend_evidence": [
+    "aapl-a7-final-ui.png",
+    "aapl-a7-final-ui.txt",
+    "aapl-live-ui.png",
+    "aapl-live-ui.txt",
+    "meta-live-ui.png",
+    "meta-live-ui.txt",
+    "googl-live-ui.png",
+    "googl-live-ui.txt",
+    "fcfe-live-ui.png",
+    "fcfe-live-ui.txt"
+  ],
+  "broader_issue_display_verdict": "PASS_A7_RETAINED"
+}

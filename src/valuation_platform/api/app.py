@@ -11,7 +11,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, Response
 from starlette.requests import ClientDisconnect
 
-from .budget import DEFAULT_POLICY, BudgetError, error_body, read_http_case, read_http_scenarios, read_http_sensitivity, read_http_reverse
+from .budget import DEFAULT_POLICY, BudgetError, error_body, read_http_case, read_http_scenarios, read_http_sensitivity, read_http_reverse, read_http_fcfe
 from .bundle import verify_bundle
 from .process import Calculator, ExecutionError
 from .worker import calculate
@@ -106,6 +106,9 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
             from .budget import encode_bounded
             app.state.preloads = {ticker.lower(): encode_bounded(generate(root, ticker=ticker), 192 * 1024)
                                   for ticker in ISSUERS}
+            from valuation_platform.review.pilot_cashflows import read_cashflows, TICKERS
+            app.state.cashflows = {ticker: encode_bounded(read_cashflows(root, ticker), 96 * 1024)
+                                   for ticker in TICKERS}
         except Exception:
             raise RuntimeError('Private runtime bundle failed readiness checks') from None
         app.state.calculator = Calculator(root, policy, worker_target, worker_args)
@@ -148,6 +151,16 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
         # Pinned offline preparation at startup, no engine execution or network.
         return Response(app.state.preloads[ticker], media_type='application/json')
 
+    @app.get('/api/v1/cashflows/{ticker}')
+    async def historical_cashflows(ticker: str, request: Request):
+        if request.query_params:
+            raise ExecutionError(422, 'invalid_case', 'Query parameters are not accepted.')
+        if not app.state.ready:
+            raise ExecutionError(503, 'not_ready', 'Service is not ready.')
+        if ticker.upper() not in app.state.cashflows:
+            raise ExecutionError(404, 'unsupported_preparation', 'No reviewed cash-flow record exists for this issuer.')
+        return Response(app.state.cashflows[ticker.upper()], media_type='application/json')
+
     async def intake(request, reader=None):
         if request.query_params:
             raise ExecutionError(422, 'invalid_case', 'Query parameters are not accepted.')
@@ -186,6 +199,26 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
                 if (await request.receive())['type'] == 'http.disconnect':
                     return
 
+        status, payload = await app.state.calculator.run(body, disconnected)
+        return Response(payload, status_code=status, media_type='application/json', headers={'Cache-Control': 'no-store'})
+
+    @app.post('/api/v1/fcfe/validate')
+    async def fcfe_validate(request: Request):
+        _, _, failure = await intake(request, read_http_fcfe)
+        return failure if failure is not None else {'status': 'valid', 'calculation_performed': False,
+            'semantic_input_review': 'NOT_ASSESSED_BY_CALCULATOR'}
+
+    @app.post('/api/v1/fcfe/run')
+    async def fcfe_run(request: Request):
+        if app.state.ready and app.state.calculator.job is not None:
+            raise ExecutionError(503, 'busy', 'One calculation is already running; retry later.')
+        body, _, failure = await intake(request, read_http_fcfe)
+        if failure is not None:
+            return failure
+        async def disconnected():
+            while True:
+                if (await request.receive())['type'] == 'http.disconnect':
+                    return
         status, payload = await app.state.calculator.run(body, disconnected)
         return Response(payload, status_code=status, media_type='application/json', headers={'Cache-Control': 'no-store'})
 

@@ -1,0 +1,2146 @@
+{
+  "source_operand_verdict": "PASS",
+  "apple_unique_monetary_duration_bindings": 119,
+  "apple_bindings": [
+    {
+      "label": "AAPL extended evidence /periods/0/financing_source_rows/0/source",
+      "concept": "ProceedsFromIssuanceOfCommonStock",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "1105000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/financing_source_rows/1/source",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "6556000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/financing_source_rows/2/source",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "14467000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/financing_source_rows/3/source",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "85971000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/financing_source_rows/4/source",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "20393000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/financing_source_rows/5/source",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "8750000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/financing_source_rows/6/source",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "1022000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/financing_source_rows/7/source",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "-129000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/financing_source_rows/8/source",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "-93353000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "2645000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/expense_da_source/source",
+      "concept": "DepreciationDepletionAndAmortization",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "11284000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/mixed_cash_rows/0/source",
+      "concept": "IncreaseDecreaseInOtherOperatingAssets",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "8042000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/mixed_cash_rows/1/source",
+      "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "5799000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/sbc_remains_expensed/source",
+      "concept": "ShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "7906000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/statement_terms/0/source",
+      "concept": "NetIncomeLoss",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "94680000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/statement_terms/3/source",
+      "concept": "DeferredIncomeTaxExpenseBenefit",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "-4774000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/statement_terms/4/source",
+      "concept": "OtherNoncashIncomeExpense",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "147000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/statement_terms/5/source",
+      "concept": "IncreaseDecreaseInAccountsReceivable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "10125000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/statement_terms/6/source",
+      "concept": "IncreaseDecreaseInInventories",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "2642000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/statement_terms/7/source",
+      "concept": "IncreaseDecreaseInOtherReceivables",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "3903000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/statement_terms/9/source",
+      "concept": "IncreaseDecreaseInAccountsPayable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "12326000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/operating_bridge/statement_terms/10/source",
+      "concept": "IncreaseDecreaseInContractWithCustomerLiability",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "1676000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/0/tax_review/reported_pretax",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2020-09-27",
+        "annual_end": "2021-09-25"
+      },
+      "value_usd": "109207000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/financing_source_rows/0/source",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "6223000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/financing_source_rows/1/source",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "14841000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/financing_source_rows/2/source",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "89402000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/financing_source_rows/3/source",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "5465000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/financing_source_rows/4/source",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "9543000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/financing_source_rows/5/source",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "3955000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/financing_source_rows/6/source",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "-160000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/financing_source_rows/7/source",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "-110749000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "2931000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/expense_da_source/source",
+      "concept": "DepreciationDepletionAndAmortization",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "11104000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/mixed_cash_rows/0/source",
+      "concept": "IncreaseDecreaseInOtherOperatingAssets",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "6499000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/mixed_cash_rows/1/source",
+      "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "5632000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/sbc_remains_expensed/source",
+      "concept": "ShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "9038000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/statement_terms/0/source",
+      "concept": "NetIncomeLoss",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "99803000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/statement_terms/3/source",
+      "concept": "DeferredIncomeTaxExpenseBenefit",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "895000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/statement_terms/4/source",
+      "concept": "OtherNoncashIncomeExpense",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "-111000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/statement_terms/5/source",
+      "concept": "IncreaseDecreaseInAccountsReceivable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "1823000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/statement_terms/6/source",
+      "concept": "IncreaseDecreaseInInventories",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "-1484000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/statement_terms/7/source",
+      "concept": "IncreaseDecreaseInOtherReceivables",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "7520000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/statement_terms/9/source",
+      "concept": "IncreaseDecreaseInAccountsPayable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "9448000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/operating_bridge/statement_terms/10/source",
+      "concept": "IncreaseDecreaseInContractWithCustomerLiability",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "478000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/1/tax_review/reported_pretax",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2021-09-26",
+        "annual_end": "2022-09-24"
+      },
+      "value_usd": "119103000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/financing_source_rows/0/source",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "5431000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/financing_source_rows/1/source",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "15025000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/financing_source_rows/2/source",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "77550000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/financing_source_rows/3/source",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "5228000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/financing_source_rows/4/source",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "11151000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/financing_source_rows/5/source",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "-3978000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/financing_source_rows/6/source",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "-581000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/financing_source_rows/7/source",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "-108488000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "3933000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/expense_da_source/source",
+      "concept": "DepreciationDepletionAndAmortization",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "11519000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/mixed_cash_rows/0/source",
+      "concept": "IncreaseDecreaseInOtherOperatingAssets",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "5684000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/mixed_cash_rows/1/source",
+      "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "3031000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/sbc_remains_expensed/source",
+      "concept": "ShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "10833000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/statement_terms/0/source",
+      "concept": "NetIncomeLoss",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "96995000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/statement_terms/3/source",
+      "concept": "OtherNoncashIncomeExpense",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "2227000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/statement_terms/4/source",
+      "concept": "IncreaseDecreaseInAccountsReceivable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "1688000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/statement_terms/5/source",
+      "concept": "IncreaseDecreaseInInventories",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "1618000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/statement_terms/6/source",
+      "concept": "IncreaseDecreaseInOtherReceivables",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "-1271000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/operating_bridge/statement_terms/8/source",
+      "concept": "IncreaseDecreaseInAccountsPayable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "-1889000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/2/tax_review/reported_pretax",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2022-09-25",
+        "annual_end": "2023-09-30"
+      },
+      "value_usd": "113736000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/financing_source_rows/0/source",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "5441000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/financing_source_rows/1/source",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "15234000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/financing_source_rows/2/source",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "94949000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/financing_source_rows/3/source",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "0",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/financing_source_rows/4/source",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "9958000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/financing_source_rows/5/source",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "3960000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/financing_source_rows/6/source",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "-361000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/financing_source_rows/7/source",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "-121983000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/new_comparative_support/cash_statement_repeat_checks/NetCashProvidedByUsedInOperatingActivities/later",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "118254000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/new_comparative_support/cash_statement_repeat_checks/NetCashProvidedByUsedInOperatingActivities/original",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "118254000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/new_comparative_support/cash_statement_repeat_checks/PaymentsToAcquirePropertyPlantAndEquipment/later",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "9447000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/new_comparative_support/cash_statement_repeat_checks/PaymentsToAcquirePropertyPlantAndEquipment/original",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "9447000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/new_comparative_support/cash_statement_repeat_checks/ProceedsFromIssuanceOfLongTermDebt/later",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "0",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/new_comparative_support/cash_statement_repeat_checks/ProceedsFromPaymentsForOtherFinancingActivities/later",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "-361000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/new_comparative_support/cash_statement_repeat_checks/ProceedsFromRepaymentsOfCommercialPaper/later",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "3960000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/new_comparative_support/cash_statement_repeat_checks/RepaymentsOfLongTermDebt/later",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "9958000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/expense_da_source/source",
+      "concept": "DepreciationDepletionAndAmortization",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "11445000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/mixed_cash_rows/0/source",
+      "concept": "IncreaseDecreaseInOtherOperatingAssets",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "11731000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/mixed_cash_rows/1/source",
+      "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "15552000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/sbc_remains_expensed/source",
+      "concept": "ShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "11688000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/statement_terms/0/source",
+      "concept": "NetIncomeLoss",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "93736000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/statement_terms/3/source",
+      "concept": "OtherNoncashIncomeExpense",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "2266000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/statement_terms/4/source",
+      "concept": "IncreaseDecreaseInAccountsReceivable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "3788000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/statement_terms/5/source",
+      "concept": "IncreaseDecreaseInInventories",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "1046000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/statement_terms/6/source",
+      "concept": "IncreaseDecreaseInOtherReceivables",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "1356000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/operating_bridge/statement_terms/8/source",
+      "concept": "IncreaseDecreaseInAccountsPayable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "6020000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/3/tax_review/reported_pretax",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2023-10-01",
+        "annual_end": "2024-09-28"
+      },
+      "value_usd": "123485000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/financing_source_rows/0/source",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "5960000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/financing_source_rows/1/source",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "15421000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/financing_source_rows/2/source",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "90711000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/financing_source_rows/3/source",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "4481000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/financing_source_rows/4/source",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "10932000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/financing_source_rows/5/source",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "-2032000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/financing_source_rows/6/source",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "-111000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/financing_source_rows/7/source",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "-120686000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/new_comparative_support/cash_statement_repeat_checks/NetCashProvidedByUsedInOperatingActivities/later",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "111482000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/new_comparative_support/cash_statement_repeat_checks/NetCashProvidedByUsedInOperatingActivities/original",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "111482000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/new_comparative_support/cash_statement_repeat_checks/PaymentsToAcquirePropertyPlantAndEquipment/later",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "12715000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/new_comparative_support/cash_statement_repeat_checks/PaymentsToAcquirePropertyPlantAndEquipment/original",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "12715000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/new_comparative_support/cash_statement_repeat_checks/ProceedsFromIssuanceOfLongTermDebt/later",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "4481000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/new_comparative_support/cash_statement_repeat_checks/ProceedsFromPaymentsForOtherFinancingActivities/later",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "-111000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/new_comparative_support/cash_statement_repeat_checks/ProceedsFromRepaymentsOfCommercialPaper/later",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "-2032000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/new_comparative_support/cash_statement_repeat_checks/RepaymentsOfLongTermDebt/later",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "10932000000",
+      "source_refs": [
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/0",
+        "docs/company-resolutions/AAPL/implementation-2026-11-03/new-source-receipts.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/expense_da_source/source",
+      "concept": "DepreciationDepletionAndAmortization",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "11698000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/mixed_cash_rows/0/source",
+      "concept": "IncreaseDecreaseInOtherOperatingAssets",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "9197000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/mixed_cash_rows/1/source",
+      "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "-11076000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/sbc_remains_expensed/source",
+      "concept": "ShareBasedCompensation",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "12863000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/statement_terms/0/source",
+      "concept": "NetIncomeLoss",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "112010000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/statement_terms/3/source",
+      "concept": "OtherNoncashIncomeExpense",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "89000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/statement_terms/4/source",
+      "concept": "IncreaseDecreaseInAccountsReceivable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "6682000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/statement_terms/5/source",
+      "concept": "IncreaseDecreaseInInventories",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "-1400000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/statement_terms/6/source",
+      "concept": "IncreaseDecreaseInOtherReceivables",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "347000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/operating_bridge/statement_terms/8/source",
+      "concept": "IncreaseDecreaseInAccountsPayable",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "902000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL extended evidence /periods/4/tax_review/reported_pretax",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "cik": 320193,
+        "annual_start": "2024-09-29",
+        "annual_end": "2025-09-27"
+      },
+      "value_usd": "132729000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    }
+  ],
+  "meta_primary_operand_checks": 67,
+  "meta_checks": [
+    {
+      "path": "/comparative_presentations/0/later_source",
+      "source_id": "meta-2023-03-31-10q",
+      "amount_usd": "4000000",
+      "start": "2022-01-01",
+      "end": "2022-03-31"
+    },
+    {
+      "path": "/comparative_presentations/1/later_source",
+      "source_id": "meta-2023-06-30-10q",
+      "amount_usd": "-105000000",
+      "start": "2022-01-01",
+      "end": "2022-06-30"
+    },
+    {
+      "path": "/comparative_presentations/2/later_source",
+      "source_id": "meta-2023-09-30-10q",
+      "amount_usd": "-351000000",
+      "start": "2022-01-01",
+      "end": "2022-09-30"
+    },
+    {
+      "path": "/periods/0/cash_interest_excluding_capitalized",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "0",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "path": "/periods/0/cash_tax",
+      "source_id": "meta-2021-10k",
+      "amount_usd": "8525000000",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "path": "/periods/0/current_tax_expense_note",
+      "source_id": "meta-2021-10k",
+      "amount_usd": "7305000000",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "path": "/periods/0/deferred_tax_expense_note",
+      "source_id": "meta-2021-10k",
+      "amount_usd": "609000000",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "path": "/periods/0/finance_lease_interest_cash_separately_reported",
+      "source_id": "meta-2021-10k",
+      "amount_usd": "15000000",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "path": "/periods/0/finance_lease_interest_expense_separately_reported",
+      "source_id": "meta-2021-10k",
+      "amount_usd": "15000000",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "path": "/periods/0/interest_expensed",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "23000000",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "path": "/periods/1/cash_interest_excluding_capitalized",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "0",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "path": "/periods/1/cash_tax",
+      "source_id": "meta-2022-10k",
+      "amount_usd": "6407000000",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "path": "/periods/1/current_tax_expense_note",
+      "source_id": "meta-2022-10k",
+      "amount_usd": "8896000000",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "path": "/periods/1/deferred_tax_expense_note",
+      "source_id": "meta-2022-10k",
+      "amount_usd": "-3277000000",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "path": "/periods/1/finance_lease_interest_cash_separately_reported",
+      "source_id": "meta-2022-10k",
+      "amount_usd": "16000000",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "path": "/periods/1/finance_lease_interest_expense_separately_reported",
+      "source_id": "meta-2022-10k",
+      "amount_usd": "16000000",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "path": "/periods/1/interest_expensed",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "185000000",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "path": "/periods/2/cash_interest_excluding_capitalized",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "448000000",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "path": "/periods/2/cash_tax",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "6607000000",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "path": "/periods/2/current_tax_expense_note",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "8199000000",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "path": "/periods/2/deferred_tax_expense_note",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "131000000",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "path": "/periods/2/finance_lease_interest_cash_separately_reported",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "20000000",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "path": "/periods/2/finance_lease_interest_expense_separately_reported",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "20000000",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "path": "/periods/2/interest_capitalized_incurred",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "283000000",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "path": "/periods/2/interest_expensed",
+      "source_id": "meta-2023-10k",
+      "amount_usd": "446000000",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "path": "/periods/3/cash_interest_excluding_capitalized",
+      "source_id": "meta-2024-10k",
+      "amount_usd": "486000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "path": "/periods/3/cash_tax",
+      "source_id": "meta-2024-10k",
+      "amount_usd": "10554000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "path": "/periods/3/current_tax_expense_note",
+      "source_id": "meta-2024-10k",
+      "amount_usd": "13040000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "path": "/periods/3/deferred_tax_expense_note",
+      "source_id": "meta-2024-10k",
+      "amount_usd": "-4737000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "path": "/periods/3/finance_lease_interest_cash_separately_reported",
+      "source_id": "meta-2024-10k",
+      "amount_usd": "23000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "path": "/periods/3/finance_lease_interest_expense_separately_reported",
+      "source_id": "meta-2024-10k",
+      "amount_usd": "23000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "path": "/periods/3/interest_capitalized_incurred",
+      "source_id": "meta-2024-10k",
+      "amount_usd": "384000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "path": "/periods/3/interest_expensed",
+      "source_id": "meta-2024-10k",
+      "amount_usd": "715000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "path": "/periods/4/cash_interest_excluding_capitalized",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "696000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "path": "/periods/4/cash_tax",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "7578000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "path": "/periods/4/current_tax_expense_note",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "6719000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "path": "/periods/4/deferred_tax_expense_note",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "18755000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "path": "/periods/4/finance_lease_interest_cash_separately_reported",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "31000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "path": "/periods/4/finance_lease_interest_expense_separately_reported",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "31000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "path": "/periods/4/interest_capitalized_incurred",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "535000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "path": "/periods/4/interest_expensed",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "1165000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "path": "/quarterly_financing/0/other",
+      "source_id": "meta-2021-03-31-10q",
+      "amount_usd": "32000000",
+      "start": "2021-01-01",
+      "end": "2021-03-31"
+    },
+    {
+      "path": "/quarterly_financing/0/overdraft",
+      "source_id": "meta-2021-03-31-10q",
+      "amount_usd": "-50000000",
+      "start": "2021-01-01",
+      "end": "2021-03-31"
+    },
+    {
+      "path": "/quarterly_financing/1/other",
+      "source_id": "meta-2021-06-30-10q",
+      "amount_usd": "-13000000",
+      "start": "2021-01-01",
+      "end": "2021-06-30"
+    },
+    {
+      "path": "/quarterly_financing/1/overdraft",
+      "source_id": "meta-2021-06-30-10q",
+      "amount_usd": "3000000",
+      "start": "2021-01-01",
+      "end": "2021-06-30"
+    },
+    {
+      "path": "/quarterly_financing/2/other",
+      "source_id": "meta-2021-09-30-10q",
+      "amount_usd": "-13000000",
+      "start": "2021-01-01",
+      "end": "2021-09-30"
+    },
+    {
+      "path": "/quarterly_financing/2/overdraft",
+      "source_id": "meta-2021-09-30-10q",
+      "amount_usd": "15000000",
+      "start": "2021-01-01",
+      "end": "2021-09-30"
+    },
+    {
+      "path": "/quarterly_financing/3/other",
+      "source_id": "meta-2022-03-31-10q",
+      "amount_usd": "-16000000",
+      "start": "2022-01-01",
+      "end": "2022-03-31"
+    },
+    {
+      "path": "/quarterly_financing/3/overdraft",
+      "source_id": "meta-2022-03-31-10q",
+      "amount_usd": "20000000",
+      "start": "2022-01-01",
+      "end": "2022-03-31"
+    },
+    {
+      "path": "/quarterly_financing/4/other",
+      "source_id": "meta-2022-06-30-10q",
+      "amount_usd": "-46000000",
+      "start": "2022-01-01",
+      "end": "2022-06-30"
+    },
+    {
+      "path": "/quarterly_financing/4/overdraft",
+      "source_id": "meta-2022-06-30-10q",
+      "amount_usd": "-59000000",
+      "start": "2022-01-01",
+      "end": "2022-06-30"
+    },
+    {
+      "path": "/quarterly_financing/5/other",
+      "source_id": "meta-2022-09-30-10q",
+      "amount_usd": "-101000000",
+      "start": "2022-01-01",
+      "end": "2022-09-30"
+    },
+    {
+      "path": "/quarterly_financing/5/overdraft",
+      "source_id": "meta-2022-09-30-10q",
+      "amount_usd": "-250000000",
+      "start": "2022-01-01",
+      "end": "2022-09-30"
+    },
+    {
+      "path": "/quarterly_financing/6/other",
+      "source_id": "meta-2023-03-31-10q",
+      "amount_usd": "122000000",
+      "start": "2023-01-01",
+      "end": "2023-03-31"
+    },
+    {
+      "path": "/quarterly_financing/7/other",
+      "source_id": "meta-2023-06-30-10q",
+      "amount_usd": "-231000000",
+      "start": "2023-01-01",
+      "end": "2023-06-30"
+    },
+    {
+      "path": "/quarterly_financing/8/other",
+      "source_id": "meta-2023-09-30-10q",
+      "amount_usd": "-182000000",
+      "start": "2023-01-01",
+      "end": "2023-09-30"
+    },
+    {
+      "path": "/quarterly_financing/9/other",
+      "source_id": "meta-2024-03-31-10q",
+      "amount_usd": "-9000000",
+      "start": "2024-01-01",
+      "end": "2024-03-31"
+    },
+    {
+      "path": "/quarterly_financing/10/other",
+      "source_id": "meta-2024-06-30-10q",
+      "amount_usd": "-115000000",
+      "start": "2024-01-01",
+      "end": "2024-06-30"
+    },
+    {
+      "path": "/quarterly_financing/11/other",
+      "source_id": "meta-2024-09-30-10q",
+      "amount_usd": "-350000000",
+      "start": "2024-01-01",
+      "end": "2024-09-30"
+    },
+    {
+      "path": "/quarterly_financing/12/other",
+      "source_id": "meta-2025-03-31-10q",
+      "amount_usd": "222000000",
+      "start": "2025-01-01",
+      "end": "2025-03-31"
+    },
+    {
+      "path": "/quarterly_financing/13/other",
+      "source_id": "meta-2025-06-30-10q",
+      "amount_usd": "323000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "path": "/quarterly_financing/14/other",
+      "source_id": "meta-2025-09-30-10q",
+      "amount_usd": "613000000",
+      "start": "2025-01-01",
+      "end": "2025-09-30"
+    },
+    {
+      "path": "/tax_review/2026_ytd_discrete_benefit",
+      "source_id": "q3-2026-10q",
+      "amount_usd": "-8030000000",
+      "start": "2026-01-01",
+      "end": "2026-03-31"
+    },
+    {
+      "path": "/tax_review/2026_ytd_pretax",
+      "source_id": "q3-2026-10q",
+      "amount_usd": "53509000000",
+      "start": "2026-01-01",
+      "end": "2026-09-30"
+    },
+    {
+      "path": "/tax_review/2026_ytd_reported_tax",
+      "source_id": "q3-2026-10q",
+      "amount_usd": "1028000000",
+      "start": "2026-01-01",
+      "end": "2026-09-30"
+    },
+    {
+      "path": "/tax_review/noncash_valuation_allowance_charge",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "14030000000",
+      "start": null,
+      "end": null
+    },
+    {
+      "path": "/tax_review/obbba_charge",
+      "source_id": "meta-2025-10k",
+      "amount_usd": "15930000000",
+      "start": "2025-07-01",
+      "end": "2025-09-30"
+    }
+  ],
+  "coverage_change": "NONE: neither later comparatives nor quarterly presentations resolve the 17 required historical cells",
+  "financial_scope_verdict": "FAIL_OPEN"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "kpmg-cash-flow-classification",
+  "url": "https://kpmg.com/kpmg-us/content/dam/kpmg/frv/pdf/2023/handbook-statement-cash-flows-3.pdf",
+  "retrieved_at_utc": "2026-11-03T17:03:30.673254+00:00",
+  "file": "kpmg-statement-cashflows-2023.pdf",
+  "sha256": "1540a67eee6aabd18135c03c9cb1c134d639ebf6b83955abd33e6b3701e2d257",
+  "http_status": 200,
+  "source_role": "Professional interpretation of ASC230; not issuer monetary evidence",
+  "relevant_section": "8.5.20; printedpage108: capitalized interest cash is investing; incurred amount may differ from paid."
+}

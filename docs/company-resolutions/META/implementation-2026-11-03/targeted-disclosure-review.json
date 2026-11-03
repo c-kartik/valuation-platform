@@ -1,0 +1,681 @@
+[
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "line": 1303,
+    "excerpt": "Net change in overdraft in cash pooling entities 14 24 ( 223 ) "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "line": 1304,
+    "excerpt": "Other financing activities ( 13 ) 124 15 "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "line": 1328,
+    "excerpt": "Other current assets through financing arrangement in accrued expenses and other current liabilities $ 508 $ \u2014 $ \u2014 "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "line": 1387,
+    "excerpt": "We record a valuation allowance to reduce our deferred tax assets to the net amount that we believe is more likely than not to be realized. We consider all available evidence, both positive and negative, including historical levels of income, expectations and risks associated with estimates of future taxable income and ongoing tax planning strategies in assessing the need for a valuation allowance. "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "line": 1394,
+    "excerpt": "We also maintain a multi-currency notional cash pool for our participating entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. We classify the overdraft balances within accrued expenses and other current liabilities on the consolidated balance sheets. "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "line": 1737,
+    "excerpt": "In 2018, we established a multi-currency notional cash pool for certain of our entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. As part of the notional cash pool agreement, the bank extends overdraft credit to our participating entities as needed, provided that the overall notionally pooled balance of all accounts in the pool at the end of each day is at least zero. In the unlikely event of a default by our collective entities participating in the pool, any overdraft balances incurred would be guaranteed by Meta Platforms, Inc. "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "line": 1841,
+    "excerpt": "Less: valuation allowance ( 1,586 ) ( 1,218 ) "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "line": 1842,
+    "excerpt": "Deferred tax assets, net of valuation allowance 8,493 7,945 "
+  },
+  {
+    "source_id": "meta-2021-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+    "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+    "line": 1848,
+    "excerpt": "The valuation allowance was approximately $ 1.59 billion and $ 1.22 billion as of December 31, 2021 and 2020, respectively, primarily relating to U.S. state tax credit carryforwards and U.S. foreign tax credits for which we do not believe a tax benefit is more likely than not to be realized. "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "line": 1076,
+    "excerpt": "Cash provided by operating activities during 2023 mostly consisted of $39.10 billion net income adjusted for certain non-cash items, such as $14.03 billion of share-based compensation expense and $11.18 billion of depreciation and amortization expense, as well as $3.29 billion of favorable changes in working capital. The increase in cash flows from operating activities during 2023 compared to 2022 was mostly du e to an increase in cash collection from our customers driven by the increase in revenue, and a decrease in payments to our vendors. "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "line": 1362,
+    "excerpt": "Other financing activities ( 111 ) 344 1 "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "line": 1388,
+    "excerpt": "Other current assets through financing arrangement in accrued expenses and other current liabilities $ 15 $ 16 $ 508 "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "line": 1434,
+    "excerpt": "We record a valuation allowance to reduce our deferred tax assets to the net amount that we believe is more likely than not to be realized. We consider all available evidence, both positive and negative, including historical levels of income, expectations and risks associated with estimates of future taxable income and ongoing tax planning strategies in assessing the need for a valuation allowance. "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "line": 1737,
+    "excerpt": "Depreciation expense on property and equipment was $ 11.02 billion, $ 8.50 billion, and $ 7.56 billion for the years ended December 31, 2023, 2022, and 2021, respectively. Within property and equipment, our servers and network assets depreciation expenses were $ 7.32 billion, $ 5.29 billion, and $ 4.94 billion for the years ended December 31, 2023, 2022, and 2021, respectively. During the year ended December 31, 2023, we capitalized $ 283 million of interest expense related to certain eligible construction in progress assets. "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "line": 1847,
+    "excerpt": "Each series of the Notes in the table above rank equally with each other. Interest on the Notes is payable semi-annually in arrears. We may redeem the Notes at any time, in whole or in part, at specified redemption prices. We are not subject to any financial covenants under the Notes. Interest expense, net of capitalized interest, recognized on the debt was $ 420 million and $ 160 million for the years ended December 31, 2023 and 2022, respectively. "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "line": 2018,
+    "excerpt": "Less: valuation allowance ( 2,879 ) ( 2,493 ) "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "line": 2019,
+    "excerpt": "Deferred tax assets, net of valuation allowance 15,892 13,797 "
+  },
+  {
+    "source_id": "meta-2023-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+    "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+    "line": 2025,
+    "excerpt": "The valuation allowance was approximately $ 2.88 billion and $ 2.49 billion as of December 31, 2023 and 2022, respectively, primarily related to U.S. state tax credit carryforwards, U.S. foreign tax credits, unrealized losses in marketable securities, and certain foreign tax attributes for which we do not believe a tax benefit is more likely than not to be realized. "
+  },
+  {
+    "source_id": "meta-2022-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+    "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+    "line": 1322,
+    "excerpt": "Other financing activities 344 1 148 "
+  },
+  {
+    "source_id": "meta-2022-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+    "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+    "line": 1347,
+    "excerpt": "Other current assets through financing arrangement in accrued expenses and other current liabilities $ 16 $ 508 $ \u2014 "
+  },
+  {
+    "source_id": "meta-2022-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+    "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+    "line": 1401,
+    "excerpt": "We record a valuation allowance to reduce our deferred tax assets to the net amount that we believe is more likely than not to be realized. We consider all available evidence, both positive and negative, including historical levels of income, expectations and risks associated with estimates of future taxable income and ongoing tax planning strategies in assessing the need for a valuation allowance. "
+  },
+  {
+    "source_id": "meta-2022-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+    "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+    "line": 1832,
+    "excerpt": "In 2018, we established a multi-currency notional cash pool for certain of our entities with a third-party bank provider, which was terminated on December 2, 2022. As a result, the parental guarantee by Meta Platforms, Inc. was no longer required. "
+  },
+  {
+    "source_id": "meta-2022-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+    "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+    "line": 1955,
+    "excerpt": "Less: valuation allowance ( 2,493 ) ( 1,586 ) "
+  },
+  {
+    "source_id": "meta-2022-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+    "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+    "line": 1956,
+    "excerpt": "Deferred tax assets, net of valuation allowance 13,797 8,493 "
+  },
+  {
+    "source_id": "meta-2022-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+    "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+    "line": 1962,
+    "excerpt": "The valuation allowance was approximately $ 2.49 billion and $ 1.59 billion as of December 31, 2022 and 2021, respectively, primarily related to U.S. state tax credit carryforwards, U.S. foreign tax credits, unrealized losses in securities and investments, and certain foreign tax attributes for which we do not believe a tax benefit is more likely than not to be realized. "
+  },
+  {
+    "source_id": "meta-2024-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+    "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+    "line": 1334,
+    "excerpt": "Other financing activities ( 277 ) ( 111 ) 344 "
+  },
+  {
+    "source_id": "meta-2024-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+    "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+    "line": 1411,
+    "excerpt": "We record a valuation allowance to reduce our deferred tax assets to the net amount that we believe is more likely than not to be realized. We consider all available evidence, both positive and negative, including historical levels of income, expectations and risks associated with estimates of future taxable income and ongoing tax planning strategies in assessing the need for a valuation allowance. "
+  },
+  {
+    "source_id": "meta-2024-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+    "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+    "line": 1686,
+    "excerpt": "Construction in progress includes costs mostly related to construction of data centers, network infrastructure and servers. Depreciation expense on property and equipment was $ 15.29 billion, $ 11.02 billion, and $ 8.50 billion for the years ended December 31, 2024, 2023, and 2022, respectively. Within property and equipment, our servers and network assets depreciation expenses were $ 11.34 billion, $ 7.32 billion, and $ 5.29 billion for the years ended December 31, 2024, 2023, and 2022, respectively. During the year ended December 31, 2024 and 2023, we capitalized $ 384 million and $ 283 million of interest expense related to certain eligible construction in progress assets, respectively. "
+  },
+  {
+    "source_id": "meta-2024-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+    "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+    "line": 1794,
+    "excerpt": "Each series of the Notes in the table above rank equally with each other. Interest on the Notes is payable semi-annually in arrears. We may redeem the Notes at any time, in whole or in part, at specified redemption prices. We are not subject to any financial covenants under the Notes. Interest expense, net of capitalized interest, recognized on the Notes was $ 683 million, $ 420 million, and $ 160 million for the years ended December 31, 2024, 2023, and 2022, respectively. "
+  },
+  {
+    "source_id": "meta-2024-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+    "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+    "line": 1967,
+    "excerpt": "Less: valuation allowance ( 3,506 ) ( 2,879 ) "
+  },
+  {
+    "source_id": "meta-2024-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+    "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+    "line": 1968,
+    "excerpt": "Deferred tax assets, net of valuation allowance 23,537 15,892 "
+  },
+  {
+    "source_id": "meta-2024-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+    "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+    "line": 1974,
+    "excerpt": "The valuation allowance was approximately $ 3.51 billion and $ 2.88 billion as of December 31, 2024 and 2023, respectively, mostly related to U.S. state tax credit carryforwards, U.S. foreign tax credits, and unrealized losses in marketable securities. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 451,
+    "excerpt": "Our ability to support these investments is dependent on generating sufficient profits from other areas of our business. From time to time we may also seek to raise additional capital through debt, equity, or other financing arrangements to support our business operations, strategic initiatives, or other corporate purposes. Such financings may not be available on favorable terms or at all. The incurrence of additional debt also results in increased fixed obligations and interest expense, while the issuance of additional equity securities results in dilution to our stockholders. If we are unable to obtain adequate financing when needed, our ability to finance our business operations and initiatives could be adversely affected. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 790,
+    "excerpt": "\u2022 Effective tax rate was 30% for the year ended December 31, 2025. This includes the effects of the implementation of the One Big Beautiful Bill Act during the third quarter of 2025. Absent the valuation allowance charge as of the enactment date, our 2025 effective tax rate would have decreased by 17 percentage points to 13%. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 865,
+    "excerpt": "As a result of certain U.S. income tax provisions of the One Big Beautiful Bill Act enacted in July 2025, we expect to incur Corporate Alternative Minimum Tax (CAMT) beginning in 2025. In assessing the realizability of our deferred tax assets and determining the need for a valuation allowance, our accounting policy incorporates the expected impact of future years' CAMT. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1017,
+    "excerpt": "On July 4, 2025, the One Big Beautiful Bill Act (OBBBA) was enacted, introducing several significant U.S. income tax provisions that reduced our U.S. federal cash tax payments for the remainder of 2025 and future years. The provisions include the immediate expensing of domestic research and development costs and certain capital expenditures beginning in 2025, as well as an enhanced deduction for foreign-derived intangible income effective in 2026. The benefits from these provisions are limited by the 15% Corporate Alternative Minimum Tax (CAMT). As a result, we recorded a $15.93 billion charge in the third quarter of 2025, of which $14.03 billion was a valuation allowance against our U.S. federal deferred tax assets as of the enactment date of OBBBA, and the remaining was mostly related to the reduction of the benefit of the foreign-derived intangible income deduction. In determining the valuation allowance, our accounting policy incorporates the expected impact of future years\u2019 CAMT in assessing the realizability of our deferred tax assets . "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1019,
+    "excerpt": "Effective Tax Rate Items. Our effective tax rate in the future will depend upon the proportion between the following items and income before provision for income taxes: the effects of changes in tax law, changes in valuation allowance due to the effects of CAMT, U.S. tax benefits from foreign-derived intangible income, tax effects from share-based compensation, research tax credit, tax effects from capital losses not expected to be utilized, settlement of tax contingency items, and tax effects of changes in our business. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1061,
+    "excerpt": "We currently anticipate that our available funds and cash flow from operations and financing activities will be sufficient to meet our operational cash needs and fund our cash commitments for investing and financing activities, including investments in infrastructure and AI initiatives, as well as any return of capital to stockholders over the next 12 months and thereafter for the foreseeable future. We have increased investments in infrastructure and AI initiatives and expect to continue to do so. From time to time we may also seek to raise additional capital through debt, equity, or other financing arrangements. We continuously evaluate our liquidity and capital resources, including our access to external capital, to ensure we can finance our future capital requirements. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1343,
+    "excerpt": "Other financing activities 2,220 ( 277 ) ( 111 ) "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1413,
+    "excerpt": "We record a valuation allowance to reduce our deferred tax assets to the net amount that we believe is more likely than not to be realized. We consider all available evidence, both positive and negative, including historical levels of income, expectations and risks associated with estimates of future taxable income and ongoing tax planning strategies in assessing the need for a valuation allowance. In determining the valuation allowance, our accounting policy incorporates the expected impact of future years\u2019 Corporate Alternative Minimum Tax in assessing the realizability of our deferred tax assets. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1462,
+    "excerpt": "Servers and network assets include equipment mostly in our data centers, which are used to support our core business and AI efforts. Land and assets held within construction in progress (CIP) are not depreciated. CIP assets are related to the construction or development of property and equipment that have not yet been placed in service for their intended use. We also capitalize interest on our debt related to certain eligible CIP assets and depreciate the capitalized interest over the useful life of the related assets. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1667,
+    "excerpt": "Construction in progress (CIP) includes costs mostly related to construction of data centers, network infrastructure and servers. Interest expense capitalized for the eligible CIP assets was $ 535 million and $ 384 million during the years ended December 31, 2025 and 2024, respectively. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1789,
+    "excerpt": "Each series of the Notes rank equally with each other and interest is payable semi-annually in arrears. We may redeem the Notes at any time, in whole or in part, at specified redemption prices. We are not subject to any financial covenants under the Notes. Interest expense, net of capitalized interest, recognized on the Notes was $ 1.09 billion, $ 683 million, and $ 420 million for the years ended December 31, 2025, 2024, and 2023, respectively. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1942,
+    "excerpt": "As a result of the implementation of the One Big Beautiful Bill Act (OBBBA) enacted in July 2025, we expect to incur Corporate Alternative Minimum Tax (CAMT) beginning in 2025. We recorded a $ 15.93 billion charge in the third quarter of 2025, of which $ 14.03 billion was a valuation allowance against our U.S. federal deferred tax assets as of the enactment date of OBBBA, and the remaining was mostly related to the reduction of the benefit of the foreign-derived intangible income deduction. In determining the valuation allowance, our accounting policy incorporates the expected impact of future years\u2019 CAMT in assessing the realizability of our deferred tax assets. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1954,
+    "excerpt": "Valuation allowances (2) "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 1967,
+    "excerpt": "(4) Includes the tax effects of enactment of new tax laws (excluding implementation of OBBBA reflected in valuation allowances), effect of cross-border tax laws, and nontaxable or nondeductible items. "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 2004,
+    "excerpt": "Less: valuation allowance ( 15,895 ) ( 3,506 ) "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 2005,
+    "excerpt": "Deferred tax assets, net of valuation allowance 12,195 23,537 "
+  },
+  {
+    "source_id": "meta-2025-10k",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+    "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+    "line": 2013,
+    "excerpt": "The valuation allowance was approximately $ 15.90 billion as of December 31, 2025, mostly related to U.S. federal deferred tax assets, including certain tax credits and attributes that are not expected to be realized due to the anticipated impact of future years' CAMT, and state tax credit carryforwards. The valuation allowance was approximately $ 3.51 billion as of December 31, 2024, mostly related to U.S. state tax credit carryforwards, U.S. foreign tax credits, and unrealized losses in marketable securities. "
+  },
+  {
+    "source_id": "meta-2021-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000033/fb-20210331.htm",
+    "source_sha256": "ce43286517100de694bb14d2ce698d7d8dbd72dbb354f72e4158d00a12775e51",
+    "line": 272,
+    "excerpt": "Net change in overdraft in cash pooling entities ( 50 ) ( 80 ) "
+  },
+  {
+    "source_id": "meta-2021-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000033/fb-20210331.htm",
+    "source_sha256": "ce43286517100de694bb14d2ce698d7d8dbd72dbb354f72e4158d00a12775e51",
+    "line": 273,
+    "excerpt": "Other financing activities 32 98 "
+  },
+  {
+    "source_id": "meta-2021-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000033/fb-20210331.htm",
+    "source_sha256": "ce43286517100de694bb14d2ce698d7d8dbd72dbb354f72e4158d00a12775e51",
+    "line": 528,
+    "excerpt": "In 2018, we established a multi-currency notional cash pool for certain of our entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. As part of the notional cash pool agreement, the bank extends overdraft credit to our participating entities as needed, provided that the overall notionally pooled balance of all accounts in the pool at the end of each day is at least zero. In the unlikely event of a default by our collective entities participating in the pool, any overdraft balances incurred would be guaranteed by Facebook, Inc. "
+  },
+  {
+    "source_id": "meta-2021-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000049/fb-20210630.htm",
+    "source_sha256": "8c3052a855d144112c617e1286e4d05b1e3bcd1567c2af5094f8f3f4f528bbe0",
+    "line": 285,
+    "excerpt": "Net change in overdraft in cash pooling entities 3 ( 17 ) "
+  },
+  {
+    "source_id": "meta-2021-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000049/fb-20210630.htm",
+    "source_sha256": "8c3052a855d144112c617e1286e4d05b1e3bcd1567c2af5094f8f3f4f528bbe0",
+    "line": 286,
+    "excerpt": "Other financing activities ( 13 ) 114 "
+  },
+  {
+    "source_id": "meta-2021-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000049/fb-20210630.htm",
+    "source_sha256": "8c3052a855d144112c617e1286e4d05b1e3bcd1567c2af5094f8f3f4f528bbe0",
+    "line": 311,
+    "excerpt": "Other current assets through financing arrangements in accrued expenses and other current liabilities $ 381 $ \u2014 "
+  },
+  {
+    "source_id": "meta-2021-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000049/fb-20210630.htm",
+    "source_sha256": "8c3052a855d144112c617e1286e4d05b1e3bcd1567c2af5094f8f3f4f528bbe0",
+    "line": 550,
+    "excerpt": "In 2018, we established a multi-currency notional cash pool for certain of our entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. As part of the notional cash pool agreement, the bank extends overdraft credit to our participating entities as needed, provided that the overall notionally pooled balance of all accounts in the pool at the end of each day is at least zero. In the unlikely event of a default by our collective entities participating in the pool, any overdraft balances incurred would be guaranteed by Facebook, Inc. "
+  },
+  {
+    "source_id": "meta-2021-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/fb-20210930.htm",
+    "source_sha256": "717c0875e32448e7bcb11b65fa782cadc5ed276c68e3720c329eb01200830f4d",
+    "line": 286,
+    "excerpt": "Net change in overdraft in cash pooling entities 15 ( 24 ) "
+  },
+  {
+    "source_id": "meta-2021-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/fb-20210930.htm",
+    "source_sha256": "717c0875e32448e7bcb11b65fa782cadc5ed276c68e3720c329eb01200830f4d",
+    "line": 287,
+    "excerpt": "Other financing activities ( 13 ) 124 "
+  },
+  {
+    "source_id": "meta-2021-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/fb-20210930.htm",
+    "source_sha256": "717c0875e32448e7bcb11b65fa782cadc5ed276c68e3720c329eb01200830f4d",
+    "line": 312,
+    "excerpt": "Other current assets through financing arrangement in accrued expenses and other current liabilities $ 491 $ \u2014 "
+  },
+  {
+    "source_id": "meta-2021-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/fb-20210930.htm",
+    "source_sha256": "717c0875e32448e7bcb11b65fa782cadc5ed276c68e3720c329eb01200830f4d",
+    "line": 551,
+    "excerpt": "In 2018, we established a multi-currency notional cash pool for certain of our entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. As part of the notional cash pool agreement, the bank extends overdraft credit to our participating entities as needed, provided that the overall notionally pooled balance of all accounts in the pool at the end of each day is at least zero. In the unlikely event of a default by our collective entities participating in the pool, any overdraft balances incurred would be guaranteed by Facebook, Inc. "
+  },
+  {
+    "source_id": "meta-2021-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/fb-20210930.htm",
+    "source_sha256": "717c0875e32448e7bcb11b65fa782cadc5ed276c68e3720c329eb01200830f4d",
+    "line": 839,
+    "excerpt": "In the third quarter of 2020, as part of finalizing our U.S. income tax return, we elected to capitalize and amortize certain research and development expenses for U.S. income tax purposes. As a result, we recorded a one-time income tax benefit of $913 million. "
+  },
+  {
+    "source_id": "meta-2022-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/meta-20220331.htm",
+    "source_sha256": "925f4640b4baf2f341bcb84c828aeb407299b601af4f6b00a99edaa09453805b",
+    "line": 276,
+    "excerpt": "Net change in overdraft in cash pooling entities 20 ( 50 ) "
+  },
+  {
+    "source_id": "meta-2022-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/meta-20220331.htm",
+    "source_sha256": "925f4640b4baf2f341bcb84c828aeb407299b601af4f6b00a99edaa09453805b",
+    "line": 277,
+    "excerpt": "Other financing activities ( 16 ) 32 "
+  },
+  {
+    "source_id": "meta-2022-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/meta-20220331.htm",
+    "source_sha256": "925f4640b4baf2f341bcb84c828aeb407299b601af4f6b00a99edaa09453805b",
+    "line": 303,
+    "excerpt": "Other current assets through financing arrangement in accrued expenses and other current liabilities $ 659 $ \u2014 "
+  },
+  {
+    "source_id": "meta-2022-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/meta-20220331.htm",
+    "source_sha256": "925f4640b4baf2f341bcb84c828aeb407299b601af4f6b00a99edaa09453805b",
+    "line": 557,
+    "excerpt": "In 2018, we established a multi-currency notional cash pool for certain of our entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. As part of the notional cash pool agreement, the bank extends overdraft credit to our participating entities as needed, provided that the overall notionally pooled balance of all accounts in the pool at the end of each day is at least zero. In the unlikely event of a default by our collective entities participating in the pool, any overdraft balances incurred would be guaranteed by Meta Platforms, Inc. "
+  },
+  {
+    "source_id": "meta-2022-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/meta-20220630.htm",
+    "source_sha256": "355957a0ac3a98648d6d42a08e3d8245f45835d085c95ed9174e2d13207cc323",
+    "line": 287,
+    "excerpt": "Net change in overdraft in cash pooling entities ( 59 ) 3 "
+  },
+  {
+    "source_id": "meta-2022-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/meta-20220630.htm",
+    "source_sha256": "355957a0ac3a98648d6d42a08e3d8245f45835d085c95ed9174e2d13207cc323",
+    "line": 288,
+    "excerpt": "Other financing activities ( 46 ) ( 13 ) "
+  },
+  {
+    "source_id": "meta-2022-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/meta-20220630.htm",
+    "source_sha256": "355957a0ac3a98648d6d42a08e3d8245f45835d085c95ed9174e2d13207cc323",
+    "line": 313,
+    "excerpt": "Other current assets through financing arrangement in accrued expenses and other current liabilities $ 214 $ 381 "
+  },
+  {
+    "source_id": "meta-2022-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/meta-20220630.htm",
+    "source_sha256": "355957a0ac3a98648d6d42a08e3d8245f45835d085c95ed9174e2d13207cc323",
+    "line": 591,
+    "excerpt": "In 2018, we established a multi-currency notional cash pool for certain of our entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. As part of the notional cash pool agreement, the bank extends overdraft credit to our participating entities as needed, provided that the overall notionally pooled balance of all accounts in the pool at the end of each day is at least zero. In the unlikely event of a default by our collective entities participating in the pool, any overdraft balances incurred would be guaranteed by Meta Platforms, Inc. "
+  },
+  {
+    "source_id": "meta-2022-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/meta-20220930.htm",
+    "source_sha256": "35d413417adfa3434c7ee615fb5b9cf49740dbfc5a12700e725c71415f85c7dc",
+    "line": 290,
+    "excerpt": "Net change in overdraft in cash pooling entities ( 250 ) 15 "
+  },
+  {
+    "source_id": "meta-2022-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/meta-20220930.htm",
+    "source_sha256": "35d413417adfa3434c7ee615fb5b9cf49740dbfc5a12700e725c71415f85c7dc",
+    "line": 291,
+    "excerpt": "Other financing activities ( 101 ) ( 13 ) "
+  },
+  {
+    "source_id": "meta-2022-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/meta-20220930.htm",
+    "source_sha256": "35d413417adfa3434c7ee615fb5b9cf49740dbfc5a12700e725c71415f85c7dc",
+    "line": 316,
+    "excerpt": "Other current assets through financing arrangement in accrued expenses and other current liabilities $ 18 $ 491 "
+  },
+  {
+    "source_id": "meta-2022-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/meta-20220930.htm",
+    "source_sha256": "35d413417adfa3434c7ee615fb5b9cf49740dbfc5a12700e725c71415f85c7dc",
+    "line": 618,
+    "excerpt": "In 2018, we established a multi-currency notional cash pool for certain of our entities with a third-party bank provider. Actual cash balances are not physically converted and are not commingled between participating legal entities. As part of the notional cash pool agreement, the bank extends overdraft credit to our participating entities as needed, provided that the overall notionally pooled balance of all accounts in the pool at the end of each day is at least zero. In the unlikely event of a default by our collective entities participating in the pool, any overdraft balances incurred would be guaranteed by Meta Platforms, Inc. "
+  },
+  {
+    "source_id": "meta-2023-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/meta-20230331.htm",
+    "source_sha256": "bae7fedad25f905497ff443606eb6c92a44796ca7935cb0b090b171e450051c7",
+    "line": 269,
+    "excerpt": "Other financing activities 122 4 "
+  },
+  {
+    "source_id": "meta-2023-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/meta-20230331.htm",
+    "source_sha256": "bae7fedad25f905497ff443606eb6c92a44796ca7935cb0b090b171e450051c7",
+    "line": 296,
+    "excerpt": "Other current assets through financing arrangement in accrued expenses and other current liabilities $ 11 $ 659 "
+  },
+  {
+    "source_id": "meta-2023-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/meta-20230331.htm",
+    "source_sha256": "bae7fedad25f905497ff443606eb6c92a44796ca7935cb0b090b171e450051c7",
+    "line": 521,
+    "excerpt": "Depreciation expense on property and equipment was $ 2.48 billion and $ 2.12 billion for the three months ended March 31, 2023 and 2022, respectively. The majority of the property and equipment depreciation expense was from servers and network assets depreciation of $ 1.51 billion and $ 1.36 billion for the three months ended March 31, 2023 and 2022, respectively. During the three months ended March 31, 2023, we capitalized $ 53 million of interest expense related to certain eligible construction in progress assets. "
+  },
+  {
+    "source_id": "meta-2023-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/meta-20230331.htm",
+    "source_sha256": "bae7fedad25f905497ff443606eb6c92a44796ca7935cb0b090b171e450051c7",
+    "line": 614,
+    "excerpt": "Each series of the Notes in the table above rank equally with each other. Interest on the Notes is payable semi-annually in arrears. We may redeem the Notes at any time, in whole or in part, at specified redemption prices. We are not subject to any financial covenants under the Notes. For the three months ended March 31, 2023, interest expense, net of capitalized interest, recognized on the debt was $ 49 million. "
+  },
+  {
+    "source_id": "meta-2023-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/meta-20230630.htm",
+    "source_sha256": "6338bc36ab0f7734a60e751244d50fd14a167a5667cecf284eb260e1e613fd04",
+    "line": 284,
+    "excerpt": "Other financing activities ( 231 ) ( 105 ) "
+  },
+  {
+    "source_id": "meta-2023-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/meta-20230630.htm",
+    "source_sha256": "6338bc36ab0f7734a60e751244d50fd14a167a5667cecf284eb260e1e613fd04",
+    "line": 311,
+    "excerpt": "Other current assets through financing arrangement in accrued expenses and other current liabilities $ 14 $ 214 "
+  },
+  {
+    "source_id": "meta-2023-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/meta-20230630.htm",
+    "source_sha256": "6338bc36ab0f7734a60e751244d50fd14a167a5667cecf284eb260e1e613fd04",
+    "line": 541,
+    "excerpt": "Depreciation expense on property and equipment was $ 2.58 billion and $ 1.93 billion for the three months ended June 30, 2023 and 2022, respectively, and $ 5.06 billion and $ 4.04 billion for the six months ended June 30, 2023 and 2022, respectively. The majority of the property and equipment depreciation expense was from servers and network assets depreciation of $ 1.71 billion and $ 1.20 billion for the three months ended June 30, 2023 and 2022, respectively, and $ 3.22 billion and $ 2.56 billion for the six months ended June 30, 2023 and 2022, respectively. During the three and six months ended June 30, 2023, we capitalized $ 63 million and $ 116 million of interest expense, respectively, related to certain eligible construction in progress assets. "
+  },
+  {
+    "source_id": "meta-2023-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/meta-20230630.htm",
+    "source_sha256": "6338bc36ab0f7734a60e751244d50fd14a167a5667cecf284eb260e1e613fd04",
+    "line": 642,
+    "excerpt": "Each series of the Notes in the table above rank equally with each other. Interest on the Notes is payable semi-annually in arrears. We may redeem the Notes at any time, in whole or in part, at specified redemption prices. We are not subject to any financial covenants under the Notes. For the three and six months ended June 30, 2023, interest expense, net of capitalized interest, recognized on the debt was $ 110 million and $ 159 million, respectively. "
+  },
+  {
+    "source_id": "meta-2023-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/meta-20230930.htm",
+    "source_sha256": "15497701293153d28ee046feefdd7efe0a22948a15a26dea58b8962621b290a9",
+    "line": 284,
+    "excerpt": "Other financing activities ( 182 ) ( 351 ) "
+  },
+  {
+    "source_id": "meta-2023-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/meta-20230930.htm",
+    "source_sha256": "15497701293153d28ee046feefdd7efe0a22948a15a26dea58b8962621b290a9",
+    "line": 538,
+    "excerpt": "Depreciation expense on property and equipment was $ 2.83 billion and $ 2.13 billion for the three months ended September 30, 2023 and 2022, respectively, and $ 7.88 billion and $ 6.17 billion for the nine months ended September 30, 2023 and 2022, respectively. Within property and equipment, our servers and network assets depreciation expenses were $ 1.94 billion and $ 1.36 billion for the three months ended September 30, 2023 and 2022, respectively, and $ 5.16 billion and $ 3.92 billion for the nine months ended September 30, 2023 and 2022, respectively. During the three and nine months ended September 30, 2023, we capitalized $ 82 million and $ 198 million of interest expense, respectively, related to certain eligible construction in progress assets. "
+  },
+  {
+    "source_id": "meta-2023-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/meta-20230930.htm",
+    "source_sha256": "15497701293153d28ee046feefdd7efe0a22948a15a26dea58b8962621b290a9",
+    "line": 642,
+    "excerpt": "Each series of the Notes in the table above rank equally with each other. Interest on the Notes is payable semi-annually in arrears. We may redeem the Notes at any time, in whole or in part, at specified redemption prices. We are not subject to any financial covenants under the Notes. Interest expense, net of capitalized interest, recognized on the debt was $ 132 million and $ 291 million for the three and nine months ended September 30, 2023, respectively, and was immaterial for the three and nine months ended September 30, 2022. "
+  },
+  {
+    "source_id": "meta-2024-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/meta-20240331.htm",
+    "source_sha256": "6835a9bc35eeb7f1c4d9ddd72ae062995c3d3f1faa56a4b8b5b6ed72fd7da696",
+    "line": 268,
+    "excerpt": "Other financing activities ( 9 ) 122 "
+  },
+  {
+    "source_id": "meta-2024-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/meta-20240630.htm",
+    "source_sha256": "49c3e65c7431f9d321e2f001352ded3171a6a4d6dbe1b9852c0563f2b6bea5e6",
+    "line": 284,
+    "excerpt": "Other financing activities ( 115 ) ( 231 ) "
+  },
+  {
+    "source_id": "meta-2024-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/meta-20240930.htm",
+    "source_sha256": "3f4b9754592001d82c3b12e172d0102534e656127d44a317b6d855097e628283",
+    "line": 286,
+    "excerpt": "Other financing activities ( 350 ) ( 182 ) "
+  },
+  {
+    "source_id": "meta-2024-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/meta-20240930.htm",
+    "source_sha256": "3f4b9754592001d82c3b12e172d0102534e656127d44a317b6d855097e628283",
+    "line": 576,
+    "excerpt": "Each series of the Notes in the table above rank equally with each other. Interest on the Notes is payable semi-annually in arrears. We may redeem the Notes at any time, in whole or in part, at specified redemption prices. We are not subject to any financial covenants under the Notes. Interest expense, net of capitalized interest, recognized on the Notes was $ 200 million and $ 440 million for the three and nine months ended September 30, 2024, respectively, and $ 132 million and $ 291 million for the three and nine months ended September 30, 2023, respectively. "
+  },
+  {
+    "source_id": "meta-2025-03-31-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/meta-20250331.htm",
+    "source_sha256": "511170137dbcd1008c23f0fac81205c64f02b8da0f1ec659c83a3df7d89b70e6",
+    "line": 268,
+    "excerpt": "Other financing activities 222 ( 9 ) "
+  },
+  {
+    "source_id": "meta-2025-06-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/meta-20250630.htm",
+    "source_sha256": "d5e9840cdb907733df7158d9a9fefbea42540fdfdc7a5cc13c5083ea02e9a680",
+    "line": 285,
+    "excerpt": "Other financing activities 323 ( 115 ) "
+  },
+  {
+    "source_id": "meta-2025-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+    "source_sha256": "5466844a8babef54bbcdefbe73f022f48f10302c09aeb8de680f0b59993df8fe",
+    "line": 286,
+    "excerpt": "Other financing activities 613 ( 350 ) "
+  },
+  {
+    "source_id": "meta-2025-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+    "source_sha256": "5466844a8babef54bbcdefbe73f022f48f10302c09aeb8de680f0b59993df8fe",
+    "line": 619,
+    "excerpt": "On July 4, 2025, the One Big Beautiful Bill Act (OBBBA) was enacted, introducing several significant U.S. income tax provisions that will reduce our U.S. federal cash tax payments for the remainder of 2025 and future years. The provisions include the immediate expensing of domestic research and development costs and certain capital expenditures beginning in 2025, as well as an enhanced deduction for foreign-derived intangible income effective in 2026. The benefits from these provisions are limited by the 15% Corporate Alternative Minimum Tax (CAMT). As a result, we recorded a $ 15.93 billion discrete charge related to the implementation as of the enactment date of OBBBA, including recognition of a valuation allowance against our U.S. federal deferred tax assets. In determining the valuation allowance, our accounting policy incorporates the expected impact of future years\u2019 CAMT in assessing the realizability of our deferred tax assets. "
+  },
+  {
+    "source_id": "meta-2025-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+    "source_sha256": "5466844a8babef54bbcdefbe73f022f48f10302c09aeb8de680f0b59993df8fe",
+    "line": 693,
+    "excerpt": "\u2022 Effective tax rate was 87% for the three months ended September 30, 2025. This includes a one-time income tax charge of $15.93 billion accrued in the third quarter of 2025 related to the implementation as of the enactment date of the One Big Beautiful Bill Act. "
+  },
+  {
+    "source_id": "meta-2025-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+    "source_sha256": "5466844a8babef54bbcdefbe73f022f48f10302c09aeb8de680f0b59993df8fe",
+    "line": 900,
+    "excerpt": "On July 4, 2025, the One Big Beautiful Bill Act (OBBBA) was enacted, introducing several significant U.S. income tax provisions that will reduce our U.S. federal cash tax payments for the remainder of 2025 and future years. The provisions include the immediate expensing of domestic research and development costs and certain capital expenditures beginning in 2025, as well as an enhanced deduction for foreign-derived intangible income effective in 2026. The benefits from these provisions are limited by the 15% Corporate Alternative Minimum Tax (CAMT). As a result, we recorded a $15.93 billion one-time charge related to the implementation as of the enactment date of OBBBA, including recognition of a valuation allowance against our U.S. federal deferred tax assets. In determining the valuation allowance, our accounting policy incorporates the expected impact of future years\u2019 CAMT in assessing the realizability of our deferred tax assets . "
+  },
+  {
+    "source_id": "meta-2025-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+    "source_sha256": "5466844a8babef54bbcdefbe73f022f48f10302c09aeb8de680f0b59993df8fe",
+    "line": 905,
+    "excerpt": "Effective Tax Rate Items . Our effective tax rate in the future will depend upon the proportion between the following items and income before provision for income taxes: the effects of changes in tax law, changes in valuation allowance due to the effects of CAMT, U.S. tax benefits from foreign-derived intangible income, tax effects from share-based compensation, research tax credit, tax effects from capital losses not expected to be utilized, settlement of tax contingency items, and tax effects of changes in our business. "
+  },
+  {
+    "source_id": "meta-2025-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+    "source_sha256": "5466844a8babef54bbcdefbe73f022f48f10302c09aeb8de680f0b59993df8fe",
+    "line": 927,
+    "excerpt": "We currently anticipate that our available funds and cash flow from operations and financing activities will be sufficient to meet our operational cash needs and fund our investments in infrastructure and AI initiatives, share repurchases and dividend payments for at least the next 12 months. We have increased investments related to our AI initiatives and expect to continue to do so. From time to time we may also seek to raise additional capital through debt, equity, or other financing arrangements. We continuously evaluate our liquidity and capital resources, including our access to external capital, to ensure we can finance our future capital requirements. "
+  },
+  {
+    "source_id": "meta-2025-09-30-10q",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+    "source_sha256": "5466844a8babef54bbcdefbe73f022f48f10302c09aeb8de680f0b59993df8fe",
+    "line": 1224,
+    "excerpt": "Our ability to support these investments is dependent on generating sufficient profits from other areas of our business. From time to time we may also seek to raise additional capital through debt, equity, or other financing arrangements to support our business operations, strategic initiatives, or other corporate purposes. Such financings may not be available on favorable terms or at all. The incurrence of additional debt also results in increased fixed obligations and interest expense, while the issuance of additional equity securities results in dilution to our stockholders. If we are unable to obtain adequate financing when needed, our ability to finance our business operations and initiatives could be adversely affected. "
+  }
+]

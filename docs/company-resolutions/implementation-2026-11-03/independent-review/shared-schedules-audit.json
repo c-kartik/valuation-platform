@@ -1,0 +1,2628 @@
+{
+  "source_operand_verdict": "PASS",
+  "sbc_diagnostic_periods": 15,
+  "sbc_exact_source_bindings": 45,
+  "share_claim_unique_source_points": 171,
+  "share_claim_checks": [
+    {
+      "ticker": "AAPL",
+      "concept": "EntityCommonStockSharesOutstanding",
+      "value": "14776353000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-10-17",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "35934000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "18763000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "77723000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CommercialPaper",
+      "value": "7979000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "LongTermDebtCurrent",
+      "value": "12350000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "LongTermDebtNoncurrent",
+      "value": "78328000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CommonStockSharesIssued",
+      "value": "14773260000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "14773260000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "value": "35934000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "28267000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#CashMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "5272000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#MoneyMarketFundsMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#MoneyMarketFundsMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#MoneyMarketFundsMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#MutualFundMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "854000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#MutualFundMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#MutualFundMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "5272000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "854000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "1190000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#USTreasurySecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "3712000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#USTreasurySecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "10946000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#USTreasurySecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "251000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#USGovernmentAgenciesDebtSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "2456000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#USGovernmentAgenciesDebtSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "2413000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#USGovernmentAgenciesDebtSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#ForeignGovernmentDebtSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "855000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#ForeignGovernmentDebtSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "5418000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#ForeignGovernmentDebtSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "904000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#BankTimeDepositsMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#BankTimeDepositsMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "13000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#BankTimeDepositsMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "50000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommercialPaperMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "50000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommercialPaperMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommercialPaperMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#CorporateDebtSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "10623000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#CorporateDebtSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "35937000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#CorporateDebtSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#USStatesAndPoliticalSubdivisionsMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "119000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#USStatesAndPoliticalSubdivisionsMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "86000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#USStatesAndPoliticalSubdivisionsMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#AssetBackedSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "94000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#AssetBackedSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "22910000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FinancialInstrumentAxis",
+            "member": "http://fasb.org/us-gaap/2025#AssetBackedSecuritiesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "2395000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "17909000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "77723000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashCashEquivalentsAndMarketableSecurities",
+      "value": "132420000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "35934000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "18763000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "value": "77723000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "UnrecognizedTaxBenefits",
+      "value": "23200000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "UnrecognizedTaxBenefits",
+      "value": "23242000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "value": "1579000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "OperatingLeaseLiabilityNoncurrent",
+      "value": "10911000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "value": "538000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "FinanceLeaseLiabilityNoncurrent",
+      "value": "692000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "OperatingLeaseLiability",
+      "value": "12490000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "FinanceLeaseLiability",
+      "value": "1230000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CommercialPaper",
+      "value": "8000000000.0",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#ShortTermDebtTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommercialPaperMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "86781000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#DebtInstrumentAxis",
+            "member": "http://www.apple.com/20250927#A20132023DebtIssuancesMember"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#LongtermDebtTypeAxis",
+            "member": "http://www.apple.com/20250927#FixedRateNotesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "4500000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#DebtInstrumentAxis",
+            "member": "http://www.apple.com/20250927#A2025DebtIssuanceMember"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#LongtermDebtTypeAxis",
+            "member": "http://www.apple.com/20250927#FixedRateNotesMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "91281000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "LongTermDebtCurrent",
+      "value": "12350000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "LongTermDebtNoncurrent",
+      "value": "78328000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "91281000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "LongTermDebtFairValue",
+      "value": "80400000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "14773260000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementEquityComponentsAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonStockMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber",
+      "value": "151574000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValue",
+      "value": "189.75",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD_per_share"
+    },
+    {
+      "ticker": "AAPL",
+      "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+      "value": "21800000000",
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "EntityCommonStockSharesOutstanding",
+      "value": "2187177748",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassAMember"
+          }
+        ],
+        "end": "2026-01-23",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "EntityCommonStockSharesOutstanding",
+      "value": "342377716",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassBMember"
+          }
+        ],
+        "end": "2026-01-23",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "35873000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "45719000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "NonmarketableEquitySecuritiesCarryingValue",
+      "value": "27524000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "value": "2213000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "OperatingLeaseLiabilityNoncurrent",
+      "value": "22940000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "LongTermDebtNoncurrent",
+      "value": "58744000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "2187000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassAMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "CommonStockSharesIssued",
+      "value": "2187000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassAMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "CommonStockSharesIssued",
+      "value": "343000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassBMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "343000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassBMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "2530000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementEquityComponentsAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonStockMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "value": "39100000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "35873000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "RestrictedCashAndCashEquivalentsAtCarryingValue",
+      "value": "837000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "RestrictedCashAndCashEquivalentsNoncurrent",
+      "value": "2390000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "value": "39100000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "45719000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "28242000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel1Member"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "17477000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "0",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel3Member"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "EquityMethodInvestments",
+      "value": "7448000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "NonmarketableEquitySecuritiesCarryingValue",
+      "value": "27524000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "EquityMethodInvestments",
+      "value": "13800000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/srt/2025#ScheduleOfEquityMethodInvestmentEquityMethodInvesteeNameAxis",
+            "member": "http://www.facebook.com/20251231#ScaleAIMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "EquityMethodInvestments",
+      "value": "5820000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/srt/2025#ScheduleOfEquityMethodInvestmentEquityMethodInvesteeNameAxis",
+            "member": "http://www.facebook.com/20251231#JioPlatformsLimitedMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "EquityMethodInvestments",
+      "value": "1830000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/srt/2025#ScheduleOfEquityMethodInvestmentEquityMethodInvesteeNameAxis",
+            "member": "http://www.facebook.com/20251231#DataCenterCampusInLouisianaMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "OperatingLeaseLiability",
+      "value": "25153000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "FinanceLeaseLiability",
+      "value": "1184000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "value": "2213000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "value": "308000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "OperatingLeaseLiabilityNoncurrent",
+      "value": "22940000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "FinanceLeaseLiabilityNoncurrent",
+      "value": "876000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "OperatingLeaseLiability",
+      "value": "25153000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "FinanceLeaseLiability",
+      "value": "1184000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "LegalRelatedAccruedLiabilitiesCurrent",
+      "value": "6867000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "10000000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#LongtermDebtTypeAxis",
+            "member": "http://www.facebook.com/20251231#August2022DebtMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "8500000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#LongtermDebtTypeAxis",
+            "member": "http://www.facebook.com/20251231#May2023DebtMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "10500000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#LongtermDebtTypeAxis",
+            "member": "http://www.facebook.com/20251231#August2024DebtMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "30000000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#LongtermDebtTypeAxis",
+            "member": "http://www.facebook.com/20251231#November2025DebtMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "59000000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "LongTermDebtFairValue",
+      "value": "57220000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByMeasurementBasisAxis",
+            "member": "http://fasb.org/us-gaap/2025#EstimateOfFairValueFairValueDisclosureMember"
+          },
+          {
+            "axis": "http://fasb.org/us-gaap/2025#LongtermDebtTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#SeniorNotesMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "59000000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "2187000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassAMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "CommonStockSharesIssued",
+      "value": "2187000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassAMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "CommonStockSharesIssued",
+      "value": "343000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassBMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "343000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassBMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber",
+      "value": "115552000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "META",
+      "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValue",
+      "value": "500.68",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD_per_share"
+    },
+    {
+      "ticker": "META",
+      "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+      "value": "54810000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "UnrecognizedTaxBenefits",
+      "value": "16450000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "META",
+      "concept": "UnrecognizedTaxBenefits",
+      "value": "16450000000",
+      "scope": {
+        "cik": 1326801,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "EntityCommonStockSharesOutstanding",
+      "value": "5822000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassAMember"
+          }
+        ],
+        "end": "2026-01-28",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "EntityCommonStockSharesOutstanding",
+      "value": "837000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassBMember"
+          }
+        ],
+        "end": "2026-01-28",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "EntityCommonStockSharesOutstanding",
+      "value": "5438000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://www.google.com/20251231#CapitalClassCMember"
+          }
+        ],
+        "end": "2026-01-28",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "30708000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "96135000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CashCashEquivalentsAndShortTermInvestments",
+      "value": "126843000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "OtherLongTermInvestments",
+      "value": "68687000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "LongTermDebtNoncurrent",
+      "value": "46547000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "OperatingLeaseLiabilityNoncurrent",
+      "value": "12744000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "PreferredStockSharesOutstanding",
+      "value": "0",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "ConvertiblePreferredStockNonredeemableOrRedeemableIssuerOptionValue",
+      "value": "0",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "12088000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CommonStockSharesIssued",
+      "value": "12088000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CommonStockSharesIssued",
+      "value": "5822000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassAMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "5822000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassAMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "837000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassBMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CommonStockSharesIssued",
+      "value": "837000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://fasb.org/us-gaap/2025#CommonClassBMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CommonStockSharesIssued",
+      "value": "5429000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://www.google.com/20251231#CapitalClassCMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CommonStockSharesOutstanding",
+      "value": "5429000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+            "member": "http://www.google.com/20251231#CapitalClassCMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "value": "30708000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "EquityMethodInvestmentsAndOther",
+      "value": "4593000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "OtherLongTermInvestments",
+      "value": "68687000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "value": "3209000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "OperatingLeaseLiabilityNoncurrent",
+      "value": "12744000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "OperatingLeaseLiability",
+      "value": "15954000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "value": "441000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "FinanceLeaseLiabilityNoncurrent",
+      "value": "2059000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "FinanceLeaseLiability",
+      "value": "2500000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "OperatingLeaseLiability",
+      "value": "15954000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "FinanceLeaseLiability",
+      "value": "2500000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "NoncontrollingInterestInVariableInterestEntity",
+      "value": "3400000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "RedeemableNoncontrollingInterestInVariableInterestEntity",
+      "value": "841000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "CommercialPaper",
+      "value": "0",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "2000000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#DebtInstrumentAxis",
+            "member": "http://www.google.com/20251231#A2016NotesMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "9000000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#DebtInstrumentAxis",
+            "member": "http://www.google.com/20251231#A2020NotesMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "22500000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#DebtInstrumentAxis",
+            "member": "http://www.google.com/20251231#A2025USDNotesMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "15585000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#DebtInstrumentAxis",
+            "member": "http://www.google.com/20251231#A2025EuroNotesMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "49085000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "LongTermDebtCurrent",
+      "value": "1996000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "LongTermDebtNoncurrent",
+      "value": "46547000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "500000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#DebtInstrumentAxis",
+            "member": "http://www.google.com/20251231#A2025USDNotesFloatingRateDueIn2028Member"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "LongTermDebtFairValue",
+      "value": "45600000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber",
+      "value": "282000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "shares"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValue",
+      "value": "159.75",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD_per_share"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+      "value": "42900000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "UnrecognizedTaxBenefits",
+      "value": "11512000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "UnrecognizedTaxBenefits",
+      "value": "11500000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    },
+    {
+      "ticker": "GOOGL",
+      "concept": "UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued",
+      "value": "1200000000",
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "unit": "USD"
+    }
+  ],
+  "scope_verdict": "OPEN",
+  "reason": "S1 is a named SBC-only diagnostic; S3 has no approved eligible cash, complete claims, share denominator, class or awards value. Neither supplies missing historical cash or clears issuer valuation."
+}

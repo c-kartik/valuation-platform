@@ -1,0 +1,35 @@
+{
+  "schema_version": "three-company-s1-partial-bridge-decision-v1",
+  "issue_id": "S1",
+  "date": "2026-11-03",
+  "approval": "User approved preferred treatments in OPEN-ROADBLOCKS.md. This workpaper implements an explicit partial reconciliation without claiming missing source components have been resolved.",
+  "original_issue": "Historical cash measures start with reported CFO, which adds back noncash stock compensation. Forward EBIT keeps compensation expensed and has different tax, working-capital, noncash and investment scopes. Joining them as one comparable valuation series would be misleading.",
+  "applied_treatment": "For each of15annualperiods, preserve reported CFO and separately reverse exactly the SBC add-back in that same cash-flow statement, verified against the retained primary and extracted instance. Store the result as a diagnostic component of a future bridge, not as a replacement FCFF, FCFE, actual cash payment or fully valuation-aligned CFO.",
+  "source_selection": "Exact approved annual cash-flow table from each issuer source-map; duration, CIK, consolidated dimensions, USD units, caption, context, primary XML ID, extracted-instance value and original source SHA256 are retained. The observed add-back is used, not the separately reported total SBC expense or a guessed cash/dilution figure.",
+  "before_after": {
+    "original_history_replaced": false,
+    "historical_numeric_change_usd": "0",
+    "forecast_inputs_changed": false,
+    "new_partial_diagnostic": "reported CFO minus reported SBC add-back once",
+    "tax_adjustment_to_diagnostic_usd": "0",
+    "extra_dilution_or_compensation_charge_usd": "0"
+  },
+  "alphabet_specific_scope": "Total reported SBC expense differs from the cash-statement add-back. FY2025 total expense is rounded27.1B while the CFO add-back is24.953B. Their2.147B arithmetic difference is not an independently classified cash payment, liability or extra adjustment. Awards expected to settle in Alphabet stock and other awards can differ in economic/accounting treatment; do not subtract the total expense again or force a balancing plug.",
+  "remaining_roadblocks": [
+    "Reported cash taxes, SBC tax benefits and tax accruals differ from forward normalized operating taxes; a full unlevered tax bridge is not established.",
+    "Nonoperating income/cash and other noncash expense populations need issuer-specific reconciliation.",
+    "Operating working-capital versus tax/noncurrent/acquisition/financing movements remains incomplete.",
+    "Cash purchases, new financed assets, lease prepayments/principal, capitalized-interest cash and creditor timing have different investment/financing scope.",
+    "Unknown financing and parent/minority attribution remain independent FCFE limitations.",
+    "Outstanding awards and shareholder dilution are separate from retaining a future compensation expense. Do not duplicate either charge."
+  ],
+  "forecasts_and_reporting": "No cross-basis CAGR or automatic calibration to this diagnostic is permitted. Fully valuation-aligned CFO/FCFF/FCFE remain null. All15partial bridges retain an OPEN status and explicit limitations.",
+  "tax_policy_check": "Read-only comparisons confirm unchanged reviewed/current numerical preloads: Apple 18/18.5/19/19.5/20 percent, terminal 20 percent; Meta 16/17/18/19/20 percent, terminal 20 percent. Independent committed/current-policy generation and run_case execution verify all six Base/Bear/Bull pairs (12 engine calls): full input and output documents are identical and every EV difference is zero. See valuation-parity.json. These remain explicit analyst conventions; no FCFE or equity-model certification follows.",
+  "reproduce": [
+    ".venv/bin/python docs/company-resolutions/implementation-2026-11-03/basis-bridge/build_basis_bridge.py",
+    ".venv/bin/python docs/company-resolutions/implementation-2026-11-03/basis-bridge/test_basis_bridge.py",
+    ".venv/bin/python docs/company-resolutions/implementation-2026-11-03/basis-bridge/check_valuation_parity.py",
+    ".venv/bin/python docs/company-resolutions/implementation-2026-11-03/basis-bridge/test_valuation_parity.py"
+  ],
+  "parent_status": "OPEN_PARTIAL_RECONCILIATION_APPLIED"
+}

@@ -1,0 +1,15 @@
+test_annual_cash_flow_identity_and_unknowns (test_review.MetaReview.test_annual_cash_flow_identity_and_unknowns) ... ok
+test_cash_interest_population_is_not_all_interest (test_review.MetaReview.test_cash_interest_population_is_not_all_interest) ... ok
+test_exact_source_bodies (test_review.MetaReview.test_exact_source_bodies) ... ok
+test_forward_policy_reaffirmed_not_filing_fact (test_review.MetaReview.test_forward_policy_reaffirmed_not_filing_fact) ... ok
+test_full_quarter_population (test_review.MetaReview.test_full_quarter_population) ... ok
+test_interest_capitalization_not_cash_substitute (test_review.MetaReview.test_interest_capitalization_not_cash_substitute) ... ok
+test_open_parent_status (test_review.MetaReview.test_open_parent_status) ... ok
+test_quarterly_cash_pool_reclassifications (test_review.MetaReview.test_quarterly_cash_pool_reclassifications) ... ok
+test_tax_current_deferred_separate_from_cash (test_review.MetaReview.test_tax_current_deferred_separate_from_cash) ... ok
+test_tax_event_and_partial_reversal (test_review.MetaReview.test_tax_event_and_partial_reversal) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.067s
+
+OK

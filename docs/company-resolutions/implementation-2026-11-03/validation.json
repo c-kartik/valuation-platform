@@ -1,0 +1,124 @@
+{
+  "schema_version": "pilot-implementation-validation-v1",
+  "date": "2026-11-03",
+  "overall_scope": "OPEN",
+  "financial_clearance": "FAIL",
+  "independent_review": "independent-review/integrated-verdict.json",
+  "checks": {
+    "valuation": {
+      "verdict": "PASS",
+      "tests": 211,
+      "seconds": "13.050",
+      "log": "validation-logs/valuation.txt",
+      "sha256": "c8956c1114ebed1c455f6564cd804ec5ea4f7b543df523adbbd31722bc1db343"
+    },
+    "api-final": {
+      "verdict": "PASS",
+      "tests": 70,
+      "seconds": "98.650",
+      "log": "validation-logs/api-final.txt",
+      "sha256": "05e1ef13549a0e898618fd9bfc53f4c98e3af7bf5e7cab8372104443e604674a"
+    },
+    "review": {
+      "verdict": "PASS",
+      "tests": 87,
+      "seconds": "82.097",
+      "log": "validation-logs/review.txt",
+      "sha256": "584dbd77dee43e98712e4aace80c6682914472d0d4bd0ef13fb111e5c4d6b4a1"
+    },
+    "preload": {
+      "verdict": "PASS",
+      "tests": 31,
+      "seconds": "5.294",
+      "log": "validation-logs/preload.txt",
+      "sha256": "991bdb3e5bc0a5041ae568714cd9d43a639cbaa651481ab43b3e62579f5820ac"
+    },
+    "cloud": {
+      "verdict": "PASS",
+      "tests": 5,
+      "seconds": "1.842",
+      "log": "validation-logs/cloud.txt",
+      "sha256": "55d2af0046cab17af83ad1ad007b832d9969dba2d1ac26ef9d51854d1af0dfad"
+    },
+    "fcfe-final": {
+      "verdict": "PASS",
+      "tests": 6,
+      "seconds": "0.040",
+      "log": "validation-logs/fcfe-final.txt",
+      "sha256": "b6d9c050119943b69840c9eb71b68e27db1e2ecfe4ed0b8426cf15ea60a7659a"
+    },
+    "meta-workpaper": {
+      "verdict": "PASS",
+      "tests": 10,
+      "seconds": "0.067",
+      "log": "validation-logs/meta-workpaper.txt",
+      "sha256": "ae9988091c440d57e308761f329b24e55d5d93c57a9c6a91afc45a416d947fef"
+    },
+    "googl-workpaper": {
+      "verdict": "PASS",
+      "tests": 8,
+      "seconds": "0.687",
+      "log": "validation-logs/googl-workpaper.txt",
+      "sha256": "5226eb03e2139a0e974996f667d19e9b641768b3f30625627ba27dd62106284b"
+    },
+    "basis-workpaper": {
+      "verdict": "PASS",
+      "tests": 12,
+      "seconds": "6.333",
+      "log": "validation-logs/basis-workpaper.txt",
+      "sha256": "119bcea2409525368e3aca5c284d9654a8622fee0368aa7c6728baf946c8448b"
+    },
+    "share-workpaper": {
+      "verdict": "PASS",
+      "tests": 9,
+      "seconds": "1.181",
+      "log": "validation-logs/share-workpaper.txt",
+      "sha256": "e009bee4d4ec8294e38e60123943dbe9ebc0f0f1847e951d1fd26a2f4d9e8da1"
+    },
+    "frontend": {
+      "verdict": "PASS",
+      "tests": 282,
+      "log": "validation-logs/frontend.txt"
+    },
+    "frontend-metadata": {
+      "verdict": "PASS",
+      "tests": 4,
+      "log": "validation-logs/frontend-metadata.txt"
+    },
+    "frontend-build": {
+      "verdict": "PASS",
+      "log": "validation-logs/build.txt",
+      "tsc": "PASS",
+      "vite": "PASS"
+    },
+    "api-final-metadata": {
+      "verdict": "PASS",
+      "tests": 3,
+      "log": "validation-logs/api-metadata-final.txt",
+      "scope": "Final A7 open-issue metadata added; numbers unchanged."
+    }
+  },
+  "superseded_checks": [
+    {
+      "run": "initial API suite",
+      "reason": "Projection pin was updated during a reused temporary test bundle; integrity guard correctly failed. Frozen final code/resources pass all70 API tests on rerun."
+    },
+    {
+      "run": "repository-wide unittest discovery",
+      "status": "STOPPED_NOT_A_PASS",
+      "reason": "Stopped during costly unaffected legacy analyst fixture setup; used complete affected valuation/API/review/preload/cloud suites and all new workpaper suites instead. No repository-wide passing claim."
+    }
+  ],
+  "financial_blockers": {
+    "requested_cells": 30,
+    "pass_stated_consolidated_fcff": 13,
+    "fail_missing_fcff": 2,
+    "fail_provisional_fcfe": 10,
+    "fail_parent_common_fcfe_with_valid_consolidated_comparator": 5,
+    "total_failed_requested_cells": 17
+  },
+  "production_deployment": false,
+  "original_historical_values_changed": false,
+  "final_independent_code_resource_hashes_match": true,
+  "final_independent_financial_verdict": "FAIL"
+}

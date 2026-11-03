@@ -1,0 +1,690 @@
+{
+  "authorization": "User approved preferred treatments in OPEN-ROADBLOCKS.md; implementation does not supply missing issuer disclosures or approve an invented ownership estimate.",
+  "company_status": "OPEN",
+  "inputs": {
+    "previous_results": {
+      "path": "docs/company-resolutions/GOOGL/results.json",
+      "sha256": "0bd3eb8a0cc67a37657da681000eb5d17e31c2e2d1c648878d04e43fe046080f"
+    },
+    "read_only_evidence_ledger": {
+      "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+      "sha256": "8b7dd48e6408fb84af1493acfba3136d4a7671fc8bb1147c339015da80990542"
+    }
+  },
+  "open_roadblocks": {
+    "G1": "No exact full parent-common annual cash attribution.",
+    "G2": "No supported complete dated NCI fair-value/ownership bridge.",
+    "G3": "Cash containment proven; full economic-investment timing bridge not complete."
+  },
+  "periods": [
+    {
+      "annual_end": "2021-12-31",
+      "cash_inputs_usd": {
+        "cash_ppe": "24640000000",
+        "cfo": "91652000000",
+        "interest_expense": "346000000",
+        "pretax_income": "90734000000",
+        "tax_provision": "14701000000"
+      },
+      "consolidated_fcfe_before_nci_allocation": {
+        "amount_usd": "65776000000",
+        "availability": "AVAILABLE_CONSOLIDATED_ONLY",
+        "display_billions": "65.78",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "65776000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "ownership_scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "publishable_as_parent_common": false,
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "289940022.48330284127229043137082019970463111953623",
+        "amount_usd": "67301940022.483302841272290431370820199704631119536",
+        "availability": "AVAILABLE_UNDER_STATED_CASH_CONVENTION",
+        "cash_fcf_usd": "67012000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "67.30",
+        "exact_fraction_usd": {
+          "denominator": "45367",
+          "numerator": "3053287113000000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "ownership_scope": "CONSOLIDATED",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.16202305640663918707430511164502832455308924989530",
+        "source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/0/fcff",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "fiscal_year": 2021,
+      "identified_net_borrowing_usd": "-1236000000",
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": null,
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": null,
+        "prepayments": {
+          "amount_usd_rounded": null,
+          "included_in_financing_cash": null,
+          "source": null,
+          "source_precision": null,
+          "status": "NOT_SEPARATELY_BOUND_NOT_ZERO"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "net_cash_investment_usd": "24640000000",
+      "numerical_change_from_prior_consolidated_result_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "4300000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "1100000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "310000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+          "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+          "sha256": "8deeae27cc3391670fd8fc3fec78f8b73d8ecec049f9baa23d509de60f7ec782",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+        },
+        "source_excerpt": "Total noncontrolling interests (NCI), including redeemable noncontrolling interests (RNCI), in our consolidated subsidiaries was $ 3.9 billion and $ 4.3 billion as of December 31, 2020 and 2021, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of other income (expense), net. See Note 7"
+      },
+      "parent_common_fcfe": {
+        "amount_usd": null,
+        "availability": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "blocker": "G1",
+        "reason": "Consolidated statements and reviewed official subsidiary announcements do not provide complete annual cash-flow and ownership populations attributable to parent common shareholders."
+      },
+      "source": {
+        "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "sha256": "8deeae27cc3391670fd8fc3fec78f8b73d8ecec049f9baa23d509de60f7ec782",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+      },
+      "ticker": "GOOGL"
+    },
+    {
+      "annual_end": "2022-12-31",
+      "cash_inputs_usd": {
+        "cash_ppe": "31485000000",
+        "cfo": "91495000000",
+        "interest_expense": "357000000",
+        "pretax_income": "71328000000",
+        "tax_provision": "11356000000"
+      },
+      "consolidated_fcfe_before_nci_allocation": {
+        "amount_usd": "58814000000",
+        "availability": "AVAILABLE_CONSOLIDATED_ONLY",
+        "display_billions": "58.81",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "58814000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "ownership_scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "publishable_as_parent_common": false,
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "300162685.06056527590847913862718707940780619111709",
+        "amount_usd": "60310162685.060565275908479138627187079407806191117",
+        "availability": "AVAILABLE_UNDER_STATED_CASH_CONVENTION",
+        "cash_fcf_usd": "60010000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "60.31",
+        "exact_fraction_usd": {
+          "denominator": "743",
+          "numerator": "44810450875000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "ownership_scope": "CONSOLIDATED",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.15920816509645580978017048003589053387169134140870",
+        "source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/1/fcff",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "fiscal_year": 2022,
+      "identified_net_borrowing_usd": "-1196000000",
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": {
+          "amount_usd": "586000000",
+          "caption": "Financing cash flows used for finance leases",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:FinanceLeasePrincipalPayments",
+          "context_id": "c-16",
+          "inline_id": "f-977",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2022
+        },
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": {
+          "amount_usd": "577000000",
+          "caption": "Assets obtained in exchange for finance lease liabilities",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "context_id": "c-16",
+          "inline_id": "f-983",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2022
+        },
+        "prepayments": {
+          "amount_usd_rounded": null,
+          "included_in_financing_cash": null,
+          "source": null,
+          "source_precision": null,
+          "status": "NOT_SEPARATELY_BOUND_NOT_ZERO"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "net_cash_investment_usd": "31485000000",
+      "numerical_change_from_prior_consolidated_result_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "3800000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "1100000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "35000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+          "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+          "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        },
+        "source_excerpt": "Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 4.3 billion and $ 3.8 billion as of December 31, 2021 and 2022, respectively, of which $ 1.1 billion is redeemable noncontrolling interest (RNCI) for both periods. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for an y period presented and is included within the \"other\" component of OI&E. See Note 7"
+      },
+      "parent_common_fcfe": {
+        "amount_usd": null,
+        "availability": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "blocker": "G1",
+        "reason": "Consolidated statements and reviewed official subsidiary announcements do not provide complete annual cash-flow and ownership populations attributable to parent common shareholders."
+      },
+      "source": {
+        "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+      },
+      "ticker": "GOOGL"
+    },
+    {
+      "annual_end": "2023-12-31",
+      "cash_inputs_usd": {
+        "cash_ppe": "32251000000",
+        "cfo": "101746000000",
+        "interest_expense": "308000000",
+        "pretax_income": "85717000000",
+        "tax_provision": "11922000000"
+      },
+      "consolidated_fcfe_before_nci_allocation": {
+        "amount_usd": "68735000000",
+        "availability": "AVAILABLE_CONSOLIDATED_ONLY",
+        "display_billions": "68.74",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "68735000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "ownership_scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "publishable_as_parent_common": false,
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "265161636.54817597442747646324533056453212314943360",
+        "amount_usd": "69760161636.548175974427476463245330564532123149434",
+        "availability": "AVAILABLE_UNDER_STATED_CASH_CONVENTION",
+        "cash_fcf_usd": "69495000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "69.76",
+        "exact_fraction_usd": {
+          "denominator": "85717",
+          "numerator": "5979631775000000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "ownership_scope": "CONSOLIDATED",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.13908559562280527783286862582684881645414561872207",
+        "source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/2/fcff",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "fiscal_year": 2023,
+      "identified_net_borrowing_usd": "-760000000",
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": {
+          "amount_usd": "705000000",
+          "caption": "Financing cash flows used for finance leases",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:FinanceLeasePrincipalPayments",
+          "context_id": "c-17",
+          "inline_id": "f-978",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2023
+        },
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": {
+          "amount_usd": "564000000",
+          "caption": "Assets obtained in exchange for finance lease liabilities",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "context_id": "c-17",
+          "inline_id": "f-984",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2023
+        },
+        "prepayments": {
+          "amount_usd_rounded": null,
+          "included_in_financing_cash": null,
+          "source": null,
+          "source_precision": null,
+          "status": "NOT_SEPARATELY_BOUND_NOT_ZERO"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "net_cash_investment_usd": "32251000000",
+      "numerical_change_from_prior_consolidated_result_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "3400000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "1100000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "8000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+          "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+          "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+        },
+        "source_excerpt": "Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.8 billion and $ 3.4 billion as of December 31, 2022 and 2023, respectively, of which $ 1.1 billion is redeemable noncontrolling interest (RNCI) for both periods. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for an y period presented and is included within the \"other\" component of OI&E. See Note 7"
+      },
+      "parent_common_fcfe": {
+        "amount_usd": null,
+        "availability": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "blocker": "G1",
+        "reason": "Consolidated statements and reviewed official subsidiary announcements do not provide complete annual cash-flow and ownership populations attributable to parent common shareholders."
+      },
+      "source": {
+        "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+      },
+      "ticker": "GOOGL"
+    },
+    {
+      "annual_end": "2024-12-31",
+      "cash_inputs_usd": {
+        "cash_ppe": "52535000000",
+        "cfo": "125299000000",
+        "interest_expense": "268000000",
+        "pretax_income": "119815000000",
+        "tax_provision": "19697000000"
+      },
+      "consolidated_fcfe_before_nci_allocation": {
+        "amount_usd": "73652000000",
+        "availability": "AVAILABLE_CONSOLIDATED_ONLY",
+        "display_billions": "73.65",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "73652000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "ownership_scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "publishable_as_parent_common": false,
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "223942110.75407920544172265576096482076534657597129",
+        "amount_usd": "72987942110.754079205441722655760964820765346575971",
+        "availability": "AVAILABLE_UNDER_STATED_CASH_CONVENTION",
+        "cash_fcf_usd": "72764000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "72.99",
+        "exact_fraction_usd": {
+          "denominator": "23963",
+          "numerator": "1749010056800000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "ownership_scope": "CONSOLIDATED",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.16439510912657012894879606059341484789049785085340",
+        "source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/3/fcff",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "fiscal_year": 2024,
+      "identified_net_borrowing_usd": "888000000",
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": {
+          "amount_usd": "405000000",
+          "caption": "Financing cash flows used for finance leases",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:FinanceLeasePrincipalPayments",
+          "context_id": "c-1",
+          "inline_id": "f-979",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2024
+        },
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": {
+          "amount_usd": "313000000",
+          "caption": "Assets obtained in exchange for finance lease liabilities",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "context_id": "c-1",
+          "inline_id": "f-985",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2024
+        },
+        "prepayments": {
+          "amount_usd_rounded": null,
+          "included_in_financing_cash": null,
+          "source": null,
+          "source_precision": null,
+          "status": "NOT_SEPARATELY_BOUND_NOT_ZERO"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "net_cash_investment_usd": "52535000000",
+      "numerical_change_from_prior_consolidated_result_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "4200000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "1100000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "1154000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+          "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+          "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+        },
+        "source_excerpt": "As of December 31, 2023 and 2024, total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.4 billion and $ 4.2 billion, respectively, of which $ 1.1 billion was redeemable noncontrolling interests (RNCI) for both periods. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. See Note 7"
+      },
+      "parent_common_fcfe": {
+        "amount_usd": null,
+        "availability": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "blocker": "G1",
+        "reason": "Consolidated statements and reviewed official subsidiary announcements do not provide complete annual cash-flow and ownership populations attributable to parent common shareholders."
+      },
+      "source": {
+        "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+      },
+      "ticker": "GOOGL"
+    },
+    {
+      "annual_end": "2025-12-31",
+      "cash_inputs_usd": {
+        "cash_ppe": "91447000000",
+        "cfo": "164713000000",
+        "interest_expense": "736000000",
+        "pretax_income": "158826000000",
+        "tax_provision": "26656000000"
+      },
+      "consolidated_fcfe_before_nci_allocation": {
+        "amount_usd": "105403000000",
+        "availability": "AVAILABLE_CONSOLIDATED_ONLY",
+        "display_billions": "105.40",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "105403000000"
+        },
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "omitted_other_assumed_zero": false,
+        "ownership_scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "publishable_as_parent_common": false,
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "after_tax_interest_addback_usd": "612476042.96525757747472076360293654691297394633121",
+        "amount_usd": "73878476042.965257577474720763602936546912973946331",
+        "availability": "AVAILABLE_UNDER_STATED_CASH_CONVENTION",
+        "cash_fcf_usd": "73266000000",
+        "classification": "DERIVED_CALCULATION_UNDER_STATED_CONVENTION",
+        "display_billions": "73.88",
+        "exact_fraction_usd": {
+          "denominator": "79413",
+          "numerator": "5866911418000000"
+        },
+        "forecast_calibration_approved": false,
+        "formula": "reported CFO + reported interest expense * (1 - reported tax provision / reported pretax income) - cash PP&E",
+        "methodology": "reported-cfo-expensed-interest-reported-etr-cash-ppe-v1",
+        "ownership_scope": "CONSOLIDATED",
+        "precision_notice": "Exact arithmetic on reported rounded points; extra calculated digits do not improve filing precision.",
+        "reported_etr": "0.16783146336242176973543374510470577865085061639782",
+        "source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/4/fcff",
+        "tax_notice": "Reported ETR is the named allocation convention, not a separately disclosed unlevered cash-tax rate or actual interest tax shield."
+      },
+      "fiscal_year": 2025,
+      "identified_net_borrowing_usd": "32137000000",
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": {
+          "amount_usd": "1988000000",
+          "caption": "Financing cash flows used for finance leases",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:FinanceLeasePrincipalPayments",
+          "context_id": "c-1",
+          "inline_id": "f-1000",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          "target_fiscal_year": 2025
+        },
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": {
+          "amount_usd": "1606000000",
+          "caption": "Assets obtained in exchange for finance lease liabilities",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "context_id": "c-1",
+          "inline_id": "f-1006",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          "target_fiscal_year": 2025
+        },
+        "prepayments": {
+          "amount_usd_rounded": "1100000000",
+          "included_in_financing_cash": true,
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          "source_precision": "$1.1 billion",
+          "status": "ROUNDED_DISCLOSED_AMOUNT"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "net_cash_investment_usd": "91447000000",
+      "numerical_change_from_prior_consolidated_result_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "3400000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "841000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "400000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "source_excerpt": "Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 4.2 billion and $ 3.4 billion as of December 31, 2024 and 2025, respectively, of which $ 1.1 billion and $ 841 million were redeemable noncontrolling interests (RNCI) as of December 31, 2024 and 2025, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. See Note 7"
+      },
+      "parent_common_fcfe": {
+        "amount_usd": null,
+        "availability": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "blocker": "G1",
+        "reason": "Consolidated statements and reviewed official subsidiary announcements do not provide complete annual cash-flow and ownership populations attributable to parent common shareholders."
+      },
+      "source": {
+        "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+      },
+      "ticker": "GOOGL"
+    }
+  ],
+  "research_attempts": [
+    {
+      "decision": "Does not establish G1 parent-common cash attribution or close G2 full NCI valuation bridge.",
+      "disclosed": "$2.5B round and investor list.",
+      "file": "docs/company-resolutions/GOOGL/implementation-2026-11-03/research/waymo-round-2021.html",
+      "initial_python_retrieval_failed": "Local Python certificate trust configuration; recovered using system HTTPS trust, no TLS verification bypass.",
+      "not_disclosed": "Exact Alphabet stake, security rights/cap table, complete annual cash flows by shareholder, and fair value of all Alphabet NCI.",
+      "retrieved_at_utc": "2026-11-03T16:57:09.546125+00:00",
+      "scope_notice": "Round size or cash contributions are not ownership percentages or annual FCFE allocation.",
+      "sha256": "8770522a95165d77f5aa9c5d3cf39e8437758240821a47bfe522a70d76610132",
+      "source_classification": "OFFICIAL_SUBSIDIARY_CAPITAL_ANNOUNCEMENT",
+      "transport": "system curl with default CA validation",
+      "url": "https://waymo.com/blog/2021/06/transforming-mobility-with-confidence-of-world-class-investors/"
+    },
+    {
+      "decision": "Does not establish G1 parent-common cash attribution or close G2 full NCI valuation bridge.",
+      "disclosed": "$5.6B round led by Alphabet and participating investors.",
+      "file": "docs/company-resolutions/GOOGL/implementation-2026-11-03/research/waymo-round-2024.html",
+      "initial_python_retrieval_failed": "Local Python certificate trust configuration; recovered using system HTTPS trust, no TLS verification bypass.",
+      "not_disclosed": "Exact Alphabet stake, security rights/cap table, complete annual cash flows by shareholder, and fair value of all Alphabet NCI.",
+      "retrieved_at_utc": "2026-11-03T16:57:09.546766+00:00",
+      "scope_notice": "Round size or cash contributions are not ownership percentages or annual FCFE allocation.",
+      "sha256": "966de498e9cd7b65ff8a06ee7d5b2222fbfa74d2803e378a9c53420ebf1a051a",
+      "source_classification": "OFFICIAL_SUBSIDIARY_CAPITAL_ANNOUNCEMENT",
+      "transport": "system curl with default CA validation",
+      "url": "https://waymo.com/blog/2024/10/investing-to-bring-the-waymo-driver-to-more-riders/"
+    },
+    {
+      "decision": "Does not establish G1 parent-common cash attribution or close G2 full NCI valuation bridge.",
+      "disclosed": "$16B round and $126B post-money company valuation; Alphabet described as majority investor.",
+      "file": "docs/company-resolutions/GOOGL/implementation-2026-11-03/research/waymo-round-2026.html",
+      "initial_python_retrieval_failed": "Local Python certificate trust configuration; recovered using system HTTPS trust, no TLS verification bypass.",
+      "not_disclosed": "Exact Alphabet stake, security rights/cap table, complete annual cash flows by shareholder, and fair value of all Alphabet NCI.",
+      "retrieved_at_utc": "2026-11-03T16:57:09.546978+00:00",
+      "scope_notice": "2026 announcement is later than FY2021\u201325 historical scope; do not backdate the valuation.",
+      "sha256": "9d2b582a59be981fa103bdfea8545fa40d52e34eb96f68bd95fcb753437911fe",
+      "source_classification": "OFFICIAL_SUBSIDIARY_CAPITAL_ANNOUNCEMENT",
+      "transport": "system curl with default CA validation",
+      "url": "https://waymo.com/blog/2026/02/waymo-raises-usd16-billion-investment-round/"
+    }
+  ],
+  "review_date": "2026-11-03",
+  "schema_version": "googl-approved-ownership-lease-schedules-v1",
+  "validation": {
+    "additional_lease_deductions": 0,
+    "exact_consolidated_fcfe_checks": 5,
+    "exact_consolidated_fcff_checks": 5,
+    "fair_values_invented": 0,
+    "lease_or_asset_inline_point_checks": 8,
+    "official_research_body_hash_checks": 3,
+    "parent_common_fcfe_values_invented": 0,
+    "source_body_hash_checks": 5
+  }
+}

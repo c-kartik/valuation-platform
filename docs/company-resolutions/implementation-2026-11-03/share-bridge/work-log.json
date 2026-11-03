@@ -1,0 +1,19 @@
+{
+  "schema_version": "company-resolution-work-log-v1",
+  "scope": "S3 AAPL/META/GOOGL existing FY2025 anchors",
+  "status": "OPEN",
+  "authorization": "Root task relays user authorization to implement preferred treatments; source preparation only, no assumed cash eligibility, class equivalence, NCI fair value or awards valuation.",
+  "events": [
+    {
+      "at_utc": "2026-11-03T17:12:58.815534+00:00",
+      "event": "SOURCE_PREPARATION_VALIDATED",
+      "source_points": 171,
+      "companies": 3,
+      "class_count_sum_controls": 2,
+      "additional_primary_prose_count": "Alphabet January28,2026 cover counts, retained separately",
+      "tests": "9 tests passed in1.553s; deterministic offline check passed; whitespace check passed",
+      "publication": "No valuation operands approved; no runtime, source-bank or historical changes",
+      "remaining": "Cash eligibility/coverage, financing valuation/perimeter, other claims/NCI fair value, class and dated-share selection, pre-anchor award treatment"
+    }
+  ]
+}

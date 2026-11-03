@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import sys
 
-from .budget import BudgetError, encode_bounded, error_body, read_http_case, read_http_document, read_http_scenarios, read_http_sensitivity, read_http_reverse
+from .budget import BudgetError, encode_bounded, error_body, read_http_case, read_http_document, read_http_scenarios, read_http_sensitivity, read_http_reverse, read_http_fcfe
 from .bundle import verify_bundle
 
 
@@ -35,12 +35,17 @@ def restrict_runtime(root, cpu_seconds):
 
 
 def calculate(connection, body, root, policy):
+    fcfe_request = False
     try:
         restrict_runtime(root, policy.cpu_seconds)
         verify_bundle(root)
         from valuation_platform.valuation.case_inputs import run_case
         _, doc = read_http_document(body)
-        if type(doc) is dict and doc.get('schema_version') == 'internal-investor-review-v1':
+        fcfe_request = type(doc) is dict and doc.get('schema_version') == 'fcfe-forecast-request-v1'
+        if fcfe_request:
+            from valuation_platform.valuation.fcfe import run_fcfe
+            result = run_fcfe(read_http_fcfe(body), Path(root))
+        elif type(doc) is dict and doc.get('schema_version') == 'internal-investor-review-v1':
             from valuation_platform.review.comparison import run_review
             from valuation_platform.review.sources import MarketOpening
             from valuation_platform.valuation.case_inputs import read_case
@@ -61,10 +66,14 @@ def calculate(connection, body, root, policy):
         message = b'200 ' + payload
     except BudgetError:
         message = b'422 ' + encode_bounded(error_body('response_budget', 'Result exceeds HTTP execution budget.'), 8192)
-    except Exception:
+    except Exception as exc:
         # Includes retained integrity/arithmetic failures. No source path, traceback,
         # submitted body or exception text crosses this boundary.
         message = b'500 ' + encode_bounded(error_body('calculation_failed', 'Calculation failed; no result returned.'), 8192)
+        if fcfe_request:
+            from valuation_platform.valuation.case_inputs import CaseInputError
+            if isinstance(exc, CaseInputError):
+                message = b'422 ' + encode_bounded(error_body('invalid_case', 'FCFE input validation failed.', exc.errors), 8192)
     try:
         connection.send_bytes(message)
     except (BrokenPipeError, EOFError, OSError):

@@ -1,5 +1,9 @@
 # Company cash-flow resolutions
 
+## Latest approved execution — November3
+
+All18preferred treatments are approved. See the [execution log](implementation-2026-11-03/implementation-log.json), [current platform projection](implementation-2026-11-03/platform-cashflows.json), and [independent review](implementation-2026-11-03/independent-review/findings.md). The platform exposes qualified five-year FCFF/FCFE history plus a separate manual financing/FCFE forecast. New research does not overwrite prior ledgers or fabricate missing data. Full financial clearance remainsOPEN; earlier per-milestone integration statements retain their original date/scope.
+
 This is the durable record of manually reviewed FCFF/FCFE issues, treatments,
 evidence and number changes. The user requested it on November 3, 2026 so future
 filing updates can reproduce each decision. It complements the existing

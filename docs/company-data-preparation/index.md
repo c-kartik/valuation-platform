@@ -1,5 +1,9 @@
 # Company data preparation register
 
+## Approved three-company implementation — November3
+
+The [execution log](../company-resolutions/implementation-2026-11-03/implementation-log.json) links18 approved treatments, new source schedules, partial basis/share bridges and versioned runtime review data. Five annual periods reach API/UI for each issuer with status/ownership labels. Source/arithmetic/software checks are separate from financial clearance: all three company reviews stayOPEN. Existing preparation-accounting scopes and paused42/50company expansion are unchanged.
+
 ## Cloud research portability — November3
 
 [Cloud setup](../codex-cloud.md) and the [portable original42-company audit](../../research/historical-cashflows-42-2026-11-02/README.md)

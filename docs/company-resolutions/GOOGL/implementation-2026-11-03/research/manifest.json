@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://waymo.com/blog/2021/06/transforming-mobility-with-confidence-of-world-class-investors/",
+    "file": "docs/company-resolutions/GOOGL/implementation-2026-11-03/research/waymo-round-2021.html",
+    "sha256": "8770522a95165d77f5aa9c5d3cf39e8437758240821a47bfe522a70d76610132",
+    "retrieved_at_utc": "2026-11-03T16:57:09.546125+00:00",
+    "transport": "system curl with default CA validation",
+    "initial_python_retrieval_failed": "Local Python certificate trust configuration; recovered using system HTTPS trust, no TLS verification bypass.",
+    "source_classification": "OFFICIAL_SUBSIDIARY_CAPITAL_ANNOUNCEMENT",
+    "disclosed": "$2.5B round and investor list.",
+    "not_disclosed": "Exact Alphabet stake, security rights/cap table, complete annual cash flows by shareholder, and fair value of all Alphabet NCI.",
+    "scope_notice": "Round size or cash contributions are not ownership percentages or annual FCFE allocation.",
+    "decision": "Does not establish G1 parent-common cash attribution or close G2 full NCI valuation bridge."
+  },
+  {
+    "url": "https://waymo.com/blog/2024/10/investing-to-bring-the-waymo-driver-to-more-riders/",
+    "file": "docs/company-resolutions/GOOGL/implementation-2026-11-03/research/waymo-round-2024.html",
+    "sha256": "966de498e9cd7b65ff8a06ee7d5b2222fbfa74d2803e378a9c53420ebf1a051a",
+    "retrieved_at_utc": "2026-11-03T16:57:09.546766+00:00",
+    "transport": "system curl with default CA validation",
+    "initial_python_retrieval_failed": "Local Python certificate trust configuration; recovered using system HTTPS trust, no TLS verification bypass.",
+    "source_classification": "OFFICIAL_SUBSIDIARY_CAPITAL_ANNOUNCEMENT",
+    "disclosed": "$5.6B round led by Alphabet and participating investors.",
+    "not_disclosed": "Exact Alphabet stake, security rights/cap table, complete annual cash flows by shareholder, and fair value of all Alphabet NCI.",
+    "scope_notice": "Round size or cash contributions are not ownership percentages or annual FCFE allocation.",
+    "decision": "Does not establish G1 parent-common cash attribution or close G2 full NCI valuation bridge."
+  },
+  {
+    "url": "https://waymo.com/blog/2026/02/waymo-raises-usd16-billion-investment-round/",
+    "file": "docs/company-resolutions/GOOGL/implementation-2026-11-03/research/waymo-round-2026.html",
+    "sha256": "9d2b582a59be981fa103bdfea8545fa40d52e34eb96f68bd95fcb753437911fe",
+    "retrieved_at_utc": "2026-11-03T16:57:09.546978+00:00",
+    "transport": "system curl with default CA validation",
+    "initial_python_retrieval_failed": "Local Python certificate trust configuration; recovered using system HTTPS trust, no TLS verification bypass.",
+    "source_classification": "OFFICIAL_SUBSIDIARY_CAPITAL_ANNOUNCEMENT",
+    "disclosed": "$16B round and $126B post-money company valuation; Alphabet described as majority investor.",
+    "not_disclosed": "Exact Alphabet stake, security rights/cap table, complete annual cash flows by shareholder, and fair value of all Alphabet NCI.",
+    "scope_notice": "2026 announcement is later than FY2021\u201325 historical scope; do not backdate the valuation.",
+    "decision": "Does not establish G1 parent-common cash attribution or close G2 full NCI valuation bridge."
+  }
+]

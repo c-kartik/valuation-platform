@@ -1,0 +1,13 @@
+test_absent_2021_separate_lease_cash_not_zero (test_schedules.AlphabetScheduleChecks.test_absent_2021_separate_lease_cash_not_zero) ... ok
+test_book_nci_never_substituted_for_fair_value (test_schedules.AlphabetScheduleChecks.test_book_nci_never_substituted_for_fair_value) ... ok
+test_exact_consolidated_fcfe (test_schedules.AlphabetScheduleChecks.test_exact_consolidated_fcfe) ... ok
+test_missing_owner_cash_never_becomes_zero (test_schedules.AlphabetScheduleChecks.test_missing_owner_cash_never_becomes_zero) ... ok
+test_no_false_closure_or_numeric_change (test_schedules.AlphabetScheduleChecks.test_no_false_closure_or_numeric_change) ... ok
+test_no_second_lease_deduction_or_noncash_capex (test_schedules.AlphabetScheduleChecks.test_no_second_lease_deduction_or_noncash_capex) ... ok
+test_prepaid_cash_not_non_cash_assets (test_schedules.AlphabetScheduleChecks.test_prepaid_cash_not_non_cash_assets) ... ok
+test_rnci_contained_not_added (test_schedules.AlphabetScheduleChecks.test_rnci_contained_not_added) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.687s
+
+OK

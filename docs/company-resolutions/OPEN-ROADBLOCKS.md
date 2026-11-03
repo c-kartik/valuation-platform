@@ -6,12 +6,8 @@ the existing company decisions, results, limitations and platform handoff. It is
 not a fresh search of every filing and does not assert that undiscovered issues
 cannot exist. It preserves the original FY2021–FY2025 scope.
 
-The user asks for preferred treatments and requires no completion claim while
-any roadblock remains. Treatments below are **proposed recommendations** unless
-already approved in the linked issuer decision. This inventory does not change
-financial facts, tax rates, valuation assumptions, prior approvals or runtime
-numbers. Implemented presentation/receipt/containment treatments are preserved;
-they do not close the remaining items below.
+The user approved all18 preferred treatments on November3 and required independent
+source-to-platform review before any completion claim. The [execution log](implementation-2026-11-03/implementation-log.json) records actions, evidence, numerical effects and remaining gaps. Rows below preserve the original issue and closure evidence. Approval does not supply undisclosed amounts or approve fabricated allocation. Available stated-convention numbers remain visible; qualified calculations do not become cleared parent-shareholder cash.
 
 ## What the classifications mean
 
@@ -25,7 +21,7 @@ they do not close the remaining items below.
 - **Development:** missing consumer, integration or validation. Evidence research
   alone cannot close it.
 
-Every item is OPEN. Closure requires the named evidence/policy, source-bound
+The full scope remains OPEN. A7 tax-allocation convention and A8/M3 unchanged numerical forward-tax policies are implemented within their stated scopes; executed before/after valuations agree. S2 engine/API/manual UI and S4 current projection/API/UI checks pass, while issuer semantics and the full financial gate remain open. S1/S3 have source-bound partial schedules and explicit unresolved operands. Item-level outcomes are in the execution log. Full closure requires the named evidence/policy, source-bound
 before/after calculations when amounts change, manual approval where required,
 implementation and relevant passing checks. An unknown amount remains unknown;
 an approved convention cannot be represented as a separately reported filing fact.
@@ -35,7 +31,7 @@ an approved convention cannot be represented as a separately reported filing fac
 Controlling evidence: [Apple record](AAPL/README.md), [decisions](AAPL/decisions.json),
 [source map](AAPL/source-map.json) and [results](AAPL/results.json).
 
-| ID / class | Open roadblock and effect | Preferred proposed treatment | Required closure evidence |
+| ID / class | Open roadblock and effect | Approved preferred treatment | Required closure evidence |
 | --- | --- | --- | --- |
 | A1 — Historical input | Separate gross expensed interest is missing for FY2024–25; the adopted CFO-plus-after-tax-interest FCFF has two gaps. | First seek an exact expense disclosure or complete, compatible source-component bridge. If unavailable, finish the already-approved EBIT-route investigation across all five Apple years, rather than splice two unaligned EBIT numbers into the CFO series. The EBIT formula avoids interest as an input, but A4–A7 must be satisfied. Do not substitute coupons, cash interest, net interest or zero. | Exact interest bindings, or an approved/reconciled five-year alternative with tax, noncash, investment and cash-movement scope justified. Until then the two adopted-series gaps stay open. |
 | A2 — Historical input | Other financing is −129/−160/−581/−361/−111 million in FY2021–25. Its debt content is unclassified, leaving all five FCFEs provisional. | Decompose the original residual using debt, equity, lease and other financing notes plus later comparative disclosures; count identified borrowing and principal once. Preserve the resolved FY2021 equity-presentation bridge. Do not infer zero debt from a small net residual. | Each material component classified to an exact cash population, with the full financing statement still tying. If disclosure is inadequate, retain an explicit missing component; issuer clarification is a possible next evidence request, not an authorized outgoing message. |
@@ -51,7 +47,7 @@ Controlling evidence: [Apple record](AAPL/README.md), [decisions](AAPL/decisions
 Controlling evidence: [Meta record](META/README.md), [decisions](META/decisions.json),
 [results](META/results.json) and [retained commentary review](META/research/other-financing-findings.json).
 
-| ID / class | Open roadblock and effect | Preferred proposed treatment | Required closure evidence |
+| ID / class | Open roadblock and effect | Approved preferred treatment | Required closure evidence |
 | --- | --- | --- | --- |
 | M1 — Historical input | Residual Other financing is −13/+344/−111/−277/+2,220 million in FY2021–25. All five FCFEs remain provisional. | Decompose the residual through debt/lease, venture/NCI and equity notes and comparative cash-flow captions. Preserve the identified overdraft and lease principal already counted once. Reviewed calls provide context but do not bind a dollar allocation; do not reclassify the separately identified investing distribution as borrowing. | Exact financing-component classification and full cash tie-out for each period, or explicit missing disclosure. No small-net-residual materiality waiver is adopted. |
 | M2 — Alternative method / comparison | The reported notes-interest line is net of capitalized interest; capitalized amounts of $384m/$535m are disclosed for FY2024/25. Investment, interest and tax scope need alignment before claiming a broader unlevered series. | Build an expensed-versus-capitalized interest schedule, locate the associated cash in CFO/investing, and reconcile financing-cost and tax treatment to the investment perimeter. Preserve the existing explicitly expense-based historical calculation during review. | Matched investment/interest/tax bridge with no financing cost counted twice. Adding $384m/$535m mechanically to FCFF is not an approved solution. |
@@ -59,7 +55,7 @@ Controlling evidence: [Meta record](META/README.md), [decisions](META/decisions.
 
 The identified PP&E-receipt corrections, FY2021 overdraft presentation and later
 FY2021/22 interest sourcing are implemented treatments; they are not reopened by
-this register. They do not close M1–M3 or the shared items.
+this register. They do not close the remaining M1/M2 or shared gaps. The latest M3 recurring-tax review and executed valuation parity are documented separately in the current implementation log.
 
 ## Alphabet
 
@@ -67,7 +63,7 @@ Controlling evidence: [Alphabet record](GOOGL/README.md),
 [decisions](GOOGL/decisions.json), [source map](GOOGL/source-map.json) and
 [results](GOOGL/results.json).
 
-| ID / class | Open roadblock and effect | Preferred proposed treatment | Required closure evidence |
+| ID / class | Open roadblock and effect | Approved preferred treatment | Required closure evidence |
 | --- | --- | --- | --- |
 | G1 — Historical input / ownership | Five consolidated FCFE figures exist, but parent-common FCFE cannot be established from the consolidated cash statement alone. Immaterial minority earnings do not establish immaterial minority cash. | Retain the exact consolidated series with its ownership label. Seek subsidiary cash-flow and ownership evidence for parent attribution; allocate the relevant underlying cash flows consistently rather than subtract minority capital contributions. | Source-supported parent/minority attribution for each affected year. If unavailable, parent-common historical FCFE stays missing; consolidated FCFE must not be relabeled as parent-common. |
 | G2 — Valuation | The minority-interest (NCI) fair-value adjustment needed to get parent-common value from consolidated value is unresolved. | Prefer a subsidiary/ownership valuation or sum-of-parts assessment and a separately reviewed NCI fair-value bridge. A valuation assumption can be labeled and reviewed as such; it cannot be called a historical filing fact. | Supported or explicitly approved valuation basis, valuation date, ownership/perimeter and bridge. Book NCI or current-year contributions are not automatic fair value. This bridge does not fill the missing annual cash allocations in G1. |
@@ -75,7 +71,7 @@ Controlling evidence: [Alphabet record](GOOGL/README.md),
 
 ## Shared methodology and development roadblocks
 
-| ID / class | Open roadblock and effect | Preferred proposed treatment | Required closure evidence |
+| ID / class | Open roadblock and effect | Approved preferred treatment | Required closure evidence |
 | --- | --- | --- | --- |
 | S1 — Comparison / valuation | History starts from reported CFO, including SBC and other noncash adjustments; forecasts use EBIT with SBC expensed and a different tax/investment population. The series cannot be treated as one continuous valuation basis. | Retain reported history and build an explicit bridge to a separately labeled valuation-consistent series. Prefer keeping SBC expensed for valuation, as the forecast already does. Reconcile other noncash, tax, working-capital and investment changes; do not force history/forecast equality. Handle outstanding awards separately from future compensation. | Reviewed adjustment ledger and tests for each issuer, without counting SBC/dilution or lease costs twice. No cross-basis FCFF CAGR or automatic forecast calibration before closure. Available historical values need not be removed merely because their basis differs. |
 | S2 — Forecast / development | FCFE review calculations are not a working forecast/DCF alternative. Debt issuance, repayments, lease financing, interest/tax and equity discounting need consistent forward treatment. | Build an explicit financing schedule alongside operating cash generation, derive FCFE, discount with cost of equity and use an equity-consistent terminal value. Preserve FCFF/WACC as a separate selectable route. Source and date risk-free rate, beta/risk premium, debt costs and market-value weights; some are market inputs/assumptions, not filing facts. | Reviewed model contract and assumptions, implemented calculation/API/UI, borrowing/lease/terminal tests, and a controlled same-assumption FCFF-to-FCFE valuation reconciliation. No second debt subtraction in the FCFE route. |

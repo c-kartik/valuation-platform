@@ -1,0 +1,177 @@
+Browser tab: 414401666, Title: "Investor workspace · Local FCFF DCF", URL: "http://127.0.0.1:5183/workspace/".
+0 AXWebArea Investor workspace · Local FCFF DCF, URL: 127.0.0.1:5183/workspace/
+	1 container root
+		2 link Description: Skip to calculator, Value: 127.0.0.1:5183/workspace/#valuation-main
+		3 container Company selection
+			4 container
+				5 text Company
+				6 pop up button (collapsed, settable) Company, Value: AAPL · Apple, ID: canvas-company, Secondary Actions: Expand
+					7 menu
+						8 Select a company
+						9 META · Meta Platforms
+						10 GOOGL · Alphabet
+						11 (selected) AAPL · Apple
+		12 container valuation-main
+			13 container
+				14 heading Apple AAPL FCFF model, Value: 1
+					15 text Apple
+					16 text AAPL
+					17 text FCFF model
+				18 text FCFF valuation ·  2025-09-27  fiscal-end anchor · later-filed information Proposed starting estimates  · reviewed  2026-11-02 .
+				108 container Current-year model estimate
+					109 heading FY2026E · Current-year estimate, Value: 2
+						110 text FY2026 E · Current-year estimate
+					111 definition list
+						112 container Revenue
+							113 text Revenue
+						114 container 483582853098.81322046875664639074397039431707005830 USD
+							115 text 483.58 B
+						116 container FCFF
+							117 text FCFF
+						118 container 130132434951.77145636659412643329923097214818842444 USD
+							119 text 130.13 B
+					120 text Base  ·  Submitted model estimate  · reported anchor FY 2025
+				19 container Valuation summary
+					20 text Enterprise value ·  Base
+					21 text $2.58tn
+					22 container
+						23 text Operating business value ·  Perpetual growth
+					24 text Current calculation · inputs remain unreviewed
+					25 container Selected scenario
+						26 checkbox Bear, Value: 0
+						27 checkbox Base, Value: 1
+						28 checkbox Bull, Value: 0
+					30 button Equity & per-share settings Not set ›
+						31 text Equity & per-share settings
+						32 text Not set
+						33 text  ›
+			78 container Active model summary
+				79 container
+					80 heading BUSINESS ASSUMPTIONS, Value: 2
+						81 text BUSINESS ASSUMPTIONS
+					82 button Revenue growth 16.20% → 5.00%
+						83 text Revenue growth
+						84 text 16.20% → 5.00%
+					85 button Operating margin 32.62% → 31.50%
+						86 text Operating margin
+						87 text 32.62% → 31.50%
+					88 button Cash flow conversion 81.72% FY2030, Help: FCFF / operating profit (EBIT), using the submitted calculation. Negative values and values above 100% are preserved.
+						89 text Cash flow conversion
+						90 container
+							91 text 81.72% FY2030
+					92 button Forecast period 5 years FY2026–FY2030
+						93 text Forecast period
+						94 container
+							95 text 5  years FY2026 – FY2030
+				96 container
+					97 heading VALUATION SETTINGS, Value: 2
+						98 text VALUATION SETTINGS
+					99 button Discount rate 8.27%
+						100 text Discount rate
+						101 text 8.27%
+					102 button Terminal value Growth 2.50%
+						103 text Terminal value
+						104 text Growth 2.50%
+				105 container Model actions
+					106 button Edit all assumptions
+					107 button Sources & methodology
+			64 container Explore this valuation
+				65 link Description: DCF, Value: 127.0.0.1:5183/workspace/#dcf
+				66 link Description: Scenarios, Value: 127.0.0.1:5183/workspace/#scenario-comparison
+				67 link Description: Sensitivity, Value: 127.0.0.1:5183/workspace/#sensitivity
+				68 link Description: Full Model, Value: 127.0.0.1:5183/workspace/#full-model
+				69 link Description: Cash flows, Value: 127.0.0.1:5183/workspace/#cash-flow-history
+				70 link Description: Sources, Value: 127.0.0.1:5183/workspace/#sources-methodology
+			121 container cash-flow-history
+				122 container Five-year FCFF and FCFE review
+					123 heading Historical cash flows · AAPL, Value: 2
+						124 text Historical cash flows ·  AAPL
+					125 text FY2021–FY2025 · USD billions. Company review remains open.
+					126 text FCFE review amounts below are not cleared cash flows attributable to the parent’s common shareholders. Missing values are not zero.
+					127 table Five annual FCFF and FCFE records · status and ownership shown with each amount
+						128 text Five annual FCFF and FCFE records · status and ownership shown with each amount
+						129 row
+							130 cell
+								131 text Year
+							132 cell
+								133 text FCFF · stated cash convention
+							134 cell
+								135 text FCFE · review calculation
+							136 cell
+								137 text Parent-common FCFE
+						138 row
+							139 cell
+								140 text FY 2021
+								141 text 2021-09-25
+							142 cell
+								143 text 95.25B
+								144 text Available under stated cash convention
+							145 cell
+								146 text 105.62B
+								147 text Provisional · financing classification open
+							148 cell
+								149 text Unavailable
+								150 text Financing scope unresolved
+						151 row
+							152 cell
+								153 text FY 2022
+								154 text 2022-09-24
+							155 cell
+								156 text 113.90B
+								157 text Available under stated cash convention
+							158 cell
+								159 text 111.32B
+								160 text Provisional · financing classification open
+							161 cell
+								162 text Unavailable
+								163 text Financing scope unresolved
+						164 row
+							165 cell
+								166 text FY 2023
+								167 text 2023-09-30
+							168 cell
+								169 text 102.94B
+								170 text Available under stated cash convention
+							171 cell
+								172 text 89.68B
+								173 text Provisional · financing classification open
+							174 cell
+								175 text Unavailable
+								176 text Financing scope unresolved
+						177 row
+							178 cell
+								179 text FY 2024
+								180 text 2024-09-28
+							181 cell
+								182 text Unavailable
+								183 text Missing interest disclosure
+							184 cell
+								185 text 102.81B
+								186 text Provisional · financing classification open
+							187 cell
+								188 text Unavailable
+								189 text Financing scope unresolved
+						190 row
+							191 cell
+								192 text FY 2025
+								193 text 2025-09-27
+							194 cell
+								195 text Unavailable
+								196 text Missing interest disclosure
+							197 cell
+								198 text 90.28B
+								199 text Provisional · financing classification open
+							200 cell
+								201 text Unavailable
+								202 text Financing scope unresolved
+					203 text Historical cash measures are derived from rounded filing inputs. Provisional FCFE excludes unclassified funding and is not cleared parent-common cash. Consolidated FCFE is before minority-interest attribution. Missing is not zero. Historical CFO and EBIT-forecast bases differ; no cross-basis FCFF CAGR.
+					204 container
+						205 text Broader review remains open:  A1, A2, A3, A4, A5, A6, A7, S1, S2, S3, S4 . Annual amount checks do not clear valuation, ownership or per-share inputs.
+					206 button (collapsed) Calculation inputs, filing sources and open items, Secondary Actions: Expand
+						207 text Calculation inputs, filing sources and open items
+					208 link Description: Download calculation data, Value: blob:http://127.0.0.1:5183/4e8e60d0-f71c-4e13-a651-02ec1f953c5b
+				209 button (collapsed) FCFE forecast · explicit financing and cost of equity, Secondary Actions: Expand
+					210 text FCFE forecast · explicit financing and cost of equity
+			76 text Unsaved work remains in this tab, including navigation/remounts; a full page reload clears it. Manual estimates are not independently reviewed. Cancellation may not immediately stop server work.
+
+The focused UI element is 69 link Description: Cash flows, URL: 127.0.0.1:5183/workspace/#cash-flow-history

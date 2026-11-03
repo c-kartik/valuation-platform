@@ -1,0 +1,81 @@
+{
+  "approval": "approval.json",
+  "status": "OPEN",
+  "financial_clearance": "FAIL_PENDING_SOURCE_AND_OWNERSHIP_GAPS",
+  "entries": [
+    {
+      "items": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "action": "Retained new FY2026 primary/instance and SEC snapshots; reconciled later comparative, financing, expense/amortization, investment presentation and tax schedules. A7 explicit tax allocation implemented; A8 unchanged reviewed policy passes executed six-scenario parity alongside Meta.",
+      "record": "../AAPL/implementation-2026-11-03/README.md",
+      "numeric_change": "0",
+      "remaining": "A1\u2013A6 source/measurement gaps; A7 allocation does not establish operating cash tax or the whole EBIT bridge."
+    },
+    {
+      "items": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "action": "Reviewed15quarterlies and annual/current disclosures; recovered cash-pool comparative bridges; separated incurred/cash and total/notes-only interest, cash/lease interest populations; reviewed recurring taxes. M3 unchanged numerical policy passes parity.",
+      "record": "../META/implementation-2026-11-03/decision-log.json",
+      "numeric_change": "0 relative to already adopted PP&E correction",
+      "remaining": "M1 full annual Other allocation; M2 capitalized-interest cash and related investment/tax alignment."
+    },
+    {
+      "items": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "action": "Built source-bound ownership/VIE, Waymo financing and lease timing schedules. Consolidated FCFE retained, parent common withheld.",
+      "record": "../GOOGL/implementation-2026-11-03/README.md",
+      "numeric_change": "0",
+      "remaining": "Annual parent attribution, dated NCI fair value and complete lease/investment timing bridge."
+    },
+    {
+      "items": [
+        "S1"
+      ],
+      "action": "15 exact reported-CFO less reported-SBC-addback partial bridges, with current/committed tax-policy and12 actual valuation execution controls. No residual plugs or full valuation-alignment claim.",
+      "record": "basis-bridge/decision-log.json",
+      "numeric_change": "0 to published history and forecasts",
+      "remaining": "Other noncash, taxes, investment, working capital and ownership alignment."
+    },
+    {
+      "items": [
+        "S2"
+      ],
+      "action": "Implemented explicit FCFE financing bridge, cost-of-equity discounting, stable-capital-structure terminal, bounded validate/run API, advanced manual UI, CAPM/WACC helpers; independent nonzero-leverage/growing-debt/lease reconciliation passes.",
+      "record": "independent-review/fcfe-engine-audit.json",
+      "numeric_change": "new user-supplied manual route; no issuer auto-preload",
+      "remaining": "Issuer-specific dated financing/market assumptions and economic/ownership review; engine correctness is not those reviews."
+    },
+    {
+      "items": [
+        "S3"
+      ],
+      "action": "171 source-bound FY2025 share/cash/debt/lease/claims/awards observations with class-count controls; all unapproved eligible/valuation values null.",
+      "record": "share-bridge/README.md",
+      "numeric_change": "0",
+      "remaining": "Eligible assets, claims completeness, class economic treatment, award valuation and NCI fair value."
+    },
+    {
+      "items": [
+        "S4"
+      ],
+      "action": "Pinned versioned30metric-record projection; read-only endpoint; Cash flows UI and JSON export with explicit basis/status/scope; current report and separate independent live runtime/source verification. Original42-company snapshot preserved.",
+      "record": "independent-review/runtime-audit.json",
+      "numeric_change": "No historical cash-flow value changes; review FCFE now visible with qualifications.",
+      "remaining": "Financial gate still fails; no deployment or verified parent-FCFE publication."
+    }
+  ]
+}

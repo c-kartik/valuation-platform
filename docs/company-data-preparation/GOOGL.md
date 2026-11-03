@@ -1262,3 +1262,7 @@ annual inputs are manual and unreviewed; profile refresh preserves them without
 manufacturing generated values or extra-year scenario offsets. No SEC fact,
 frozen preparation value, scope treatment, acceptance or financial sufficiency
 status changes. The additional-year preload policy remains unresolved.
+
+## Three-company cash-flow implementation — November3
+
+New [company evidence/treatments](../company-resolutions/GOOGL/implementation-2026-11-03/README.md) and the [shared execution log](../company-resolutions/implementation-2026-11-03/implementation-log.json) cover approved research, recurring-tax review, partial SBC bridge and source-bound share schedules. Runtime review data retain all five FY2021–25 periods, metric basis, scope and status; provisional funding and missing parent allocation remain explicit. No original accepted history, source bank or earlier approval is overwritten. Financial sufficiency stays OPEN for the full FCFF/parent-common FCFE contract.

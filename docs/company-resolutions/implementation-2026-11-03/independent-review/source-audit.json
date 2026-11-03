@@ -1,0 +1,3888 @@
+{
+  "schema_version": "independent-cashflows-audit-v1",
+  "overall_verdict": "FAIL",
+  "runtime_verdict": "PENDING",
+  "independent_implementation": true,
+  "production_calculator_imported": false,
+  "cells": [
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2021,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "95246155200.6739494721034365928923970075178331059364326462589394452736546192",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "11085000000",
+        "cfo": "104038000000",
+        "interest_expense": "2645000000",
+        "pretax_income": "109207000000",
+        "tax_provision": "14527000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2021,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "105618000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-129000000"
+        }
+      ],
+      "net_borrowing_usd": "12665000000"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2022,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "113899047228.029520666985718243872950303518803052819828215913956827283947508",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "10708000000",
+        "cfo": "122151000000",
+        "interest_expense": "2931000000",
+        "pretax_income": "119103000000",
+        "tax_provision": "19300000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2022,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "111320000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-160000000"
+        }
+      ],
+      "net_borrowing_usd": "-123000000"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2023,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "102938094877.611310403038615741717661953998733910107617640852500527537455159",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "10959000000",
+        "cfo": "110543000000",
+        "interest_expense": "3933000000",
+        "pretax_income": "113736000000",
+        "tax_provision": "16741000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2023,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "89683000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-581000000"
+        }
+      ],
+      "net_borrowing_usd": "-9901000000"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2024,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": null,
+      "arithmetic_and_source_verdict": "UNAVAILABLE",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "A1: missing separate gross expensed interest; EBIT alternative is not established"
+      ],
+      "inputs_usd": {
+        "cash_ppe": "9447000000",
+        "cfo": "118254000000",
+        "interest_expense": null,
+        "pretax_income": "123485000000",
+        "tax_provision": "29749000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2024,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "102809000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-361000000"
+        }
+      ],
+      "net_borrowing_usd": "-5998000000"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2025,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": null,
+      "arithmetic_and_source_verdict": "UNAVAILABLE",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "A1: missing separate gross expensed interest; EBIT alternative is not established"
+      ],
+      "inputs_usd": {
+        "cash_ppe": "12715000000",
+        "cfo": "111482000000",
+        "interest_expense": null,
+        "pretax_income": "132729000000",
+        "tax_provision": "20719000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2025,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "90284000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-111000000"
+        }
+      ],
+      "net_borrowing_usd": "-8483000000"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2021,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "39135150452.5843837238812283224769478047542509093985280433127484984349885796",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "18567000000",
+        "cfo": "57683000000",
+        "interest_expense": "23000000",
+        "pretax_income": "47284000000",
+        "tax_provision": "7914000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2021,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "38453000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "-13000000"
+        }
+      ],
+      "net_borrowing_usd": "-663000000"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2022,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "19437929525.6601547590131510461848086331933793677782018807037024185433221139",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "31431000000",
+        "cfo": "50475000000",
+        "interest_expense": "185000000",
+        "pretax_income": "28819000000",
+        "tax_provision": "5619000000"
+      },
+      "receipts_usd": "245000000"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2022,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "28360000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "344000000"
+        }
+      ],
+      "net_borrowing_usd": "9071000000"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2023,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "44435666947.7945517415872480391330016024289449270473138230581091338449860842",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "27266000000",
+        "cfo": "71113000000",
+        "interest_expense": "446000000",
+        "pretax_income": "47428000000",
+        "tax_provision": "8330000000"
+      },
+      "receipts_usd": "221000000"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2023,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "51465000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "-111000000"
+        }
+      ],
+      "net_borrowing_usd": "7397000000"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2024,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "54702986513.4511696361603668114855016062154168376661053167853048978956455288",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "37256000000",
+        "cfo": "91328000000",
+        "interest_expense": "715000000",
+        "pretax_income": "70663000000",
+        "tax_provision": "8303000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2024,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "62535000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "-277000000"
+        }
+      ],
+      "net_borrowing_usd": "8463000000"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2025,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "46928643089.8850253688963366382721221430898850253688963366382721221430898850",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "69691000000",
+        "cfo": "115800000000",
+        "interest_expense": "1165000000",
+        "pretax_income": "85932000000",
+        "tax_provision": "25474000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2025,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "73491000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "2220000000"
+        }
+      ],
+      "net_borrowing_usd": "27382000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2021,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "67301940022.4833028412722904313708201997046311195362267727643441267881940618",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "24640000000",
+        "cfo": "91652000000",
+        "interest_expense": "346000000",
+        "pretax_income": "90734000000",
+        "tax_provision": "14701000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2021,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "65776000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "-1236000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2022,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "60310162685.0605652759084791386271870794078061911170928667563930013458950202",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "31485000000",
+        "cfo": "91495000000",
+        "interest_expense": "357000000",
+        "pretax_income": "71328000000",
+        "tax_provision": "11356000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2022,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "58814000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "-1196000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2023,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "69760161636.5481759744274764632453305645321231494336012692931390505967311035",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "32251000000",
+        "cfo": "101746000000",
+        "interest_expense": "308000000",
+        "pretax_income": "85717000000",
+        "tax_provision": "11922000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2023,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "68735000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "-760000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2024,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "72987942110.7540792054417226557609648207653465759712890706505863205775570671",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "52535000000",
+        "cfo": "125299000000",
+        "interest_expense": "268000000",
+        "pretax_income": "119815000000",
+        "tax_provision": "19697000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2024,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "73652000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "888000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2025,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "73878476042.9652575774747207636029365469129739463312052182891969828617480765",
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "CANDIDATE_AVAILABLE_PENDING_RUNTIME",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "91447000000",
+        "cfo": "164713000000",
+        "interest_expense": "736000000",
+        "pretax_income": "158826000000",
+        "tax_provision": "26656000000"
+      },
+      "receipts_usd": "0"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2025,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "105403000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "coverage_verdict": "FAIL",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "32137000000"
+    }
+  ],
+  "source_binding_count": 188,
+  "checked_receipts": {
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+      "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+      "byte_length": 2051301
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+      "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+      "byte_length": 1906904
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+      "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+      "byte_length": 2049968
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+      "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+      "byte_length": 1904013
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+      "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+      "byte_length": 1559035
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+      "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+      "byte_length": 1432664
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+      "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+      "byte_length": 1503891
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+      "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+      "byte_length": 1355849
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+      "byte_length": 1520319
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+      "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+      "byte_length": 1416841
+    },
+    "docs/evidence/preparation-statement-acquisition.json#/artifacts/131": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+      "sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "byte_length": 2583251
+    },
+    "docs/evidence/income-binding-repair.json#/artifacts/5": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml",
+      "sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3",
+      "byte_length": 1872251
+    },
+    "docs/evidence/preparation-statement-acquisition.json#/artifacts/133": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+      "sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "byte_length": 2465771
+    },
+    "docs/evidence/income-binding-repair.json#/artifacts/9": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml",
+      "sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86",
+      "byte_length": 1933977
+    },
+    "docs/evidence/preparation-statement-acquisition.json#/artifacts/132": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+      "sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "byte_length": 2881105
+    },
+    "docs/evidence/income-binding-repair.json#/artifacts/7": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231_htm.xml",
+      "sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd",
+      "byte_length": 2301327
+    },
+    "docs/evidence/preparation-statement-acquisition.json#/artifacts/134": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+      "sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "byte_length": 2369879
+    },
+    "docs/evidence/income-binding-repair.json#/artifacts/11": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml",
+      "sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb",
+      "byte_length": 1823441
+    },
+    "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+      "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "byte_length": 2371860
+    },
+    "docs/evidence/income-binding-repair.json#/artifacts/13": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml",
+      "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+      "byte_length": 1876078
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm",
+      "sha256": "8deeae27cc3391670fd8fc3fec78f8b73d8ecec049f9baa23d509de60f7ec782",
+      "byte_length": 3015484
+    },
+    "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231_htm.xml",
+      "sha256": "fd710b11b15169f6ab3a10d457c95f71f9f2434176b27ccb04cde25d13109918",
+      "byte_length": 2962034
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm",
+      "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+      "byte_length": 3038524
+    },
+    "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231_htm.xml",
+      "sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff",
+      "byte_length": 3036309
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm",
+      "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+      "byte_length": 2410514
+    },
+    "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231_htm.xml",
+      "sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876",
+      "byte_length": 2406199
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+      "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+      "byte_length": 2528455
+    },
+    "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231_htm.xml",
+      "sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3",
+      "byte_length": 2703015
+    },
+    "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "byte_length": 2616610
+    },
+    "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+      "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+      "byte_length": 2880903
+    }
+  },
+  "bindings": [
+    {
+      "label": "AAPL 2021 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "11085000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "104038000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "2645000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "109207000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "14527000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 financing: Proceeds from issuance of common stock",
+      "concept": "ProceedsFromIssuanceOfCommonStock",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "1105000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 financing: Payments for taxes related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "6556000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 financing: Payments for dividends and dividend equivalents",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "14467000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 financing: Repurchases of common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "85971000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 financing: Proceeds from issuance of term debt, net",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "20393000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 financing: Repayments of term debt",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "8750000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 financing: Proceeds from/(Repayments of) commercial paper, net",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "1022000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 financing: Other",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-129000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2021 financing: Cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-93353000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "AAPL 2022 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "10708000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "122151000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "2931000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "119103000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "19300000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 financing: Payments for taxes related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "6223000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 financing: Payments for dividends and dividend equivalents",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "14841000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 financing: Repurchases of common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "89402000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 financing: Proceeds from issuance of term debt, net",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "5465000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 financing: Repayments of term debt",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "9543000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 financing: Proceeds from/(Repayments of) commercial paper, net",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "3955000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 financing: Other",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-160000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2022 financing: Cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-110749000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4"
+      ]
+    },
+    {
+      "label": "AAPL 2023 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "10959000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "110543000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "3933000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "113736000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "16741000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 financing: Payments for taxes related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "5431000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 financing: Payments for dividends and dividend equivalents",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "15025000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 financing: Repurchases of common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "77550000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 financing: Proceeds from issuance of term debt, net",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "5228000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 financing: Repayments of term debt",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "11151000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 financing: Proceeds from/(Repayments of) commercial paper, net",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-3978000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 financing: Other",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-581000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2023 financing: Cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-108488000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6"
+      ]
+    },
+    {
+      "label": "AAPL 2024 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "9447000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "118254000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "123485000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "29749000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 financing: Payments for taxes related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "5441000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 financing: Payments for dividends and dividend equivalents",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "15234000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 financing: Repurchases of common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "94949000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 financing: Proceeds from issuance of term debt, net",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "0",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 financing: Repayments of term debt",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "9958000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 financing: Proceeds from/(Repayments of) commercial paper, net",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "3960000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 financing: Other",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-361000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2024 financing: Cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-121983000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8"
+      ]
+    },
+    {
+      "label": "AAPL 2025 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "12715000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "111482000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "132729000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "20719000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 financing: Payments for taxes related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "5960000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 financing: Payments for dividends and dividend equivalents",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "15421000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 financing: Repurchases of common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "90711000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 financing: Proceeds from issuance of term debt, net",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "4481000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 financing: Repayments of term debt",
+      "concept": "RepaymentsOfLongTermDebt",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "10932000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 financing: Proceeds from/(Repayments of) commercial paper, net",
+      "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-2032000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 financing: Other",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-111000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "AAPL 2025 financing: Cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "value_usd": "-120686000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10"
+      ]
+    },
+    {
+      "label": "META 2021 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "18567000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2021 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "57683000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2021 interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "23000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2021 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "47284000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2021 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "7914000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2021 financing: Taxes paid related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "5515000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2021 financing: Repurchases of Class A common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "44537000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2021 financing: Principal payments on finance leases",
+      "concept": "FinanceLeasePrincipalPayments",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "677000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2021 financing: Net change in overdraft in cash pooling entities",
+      "concept": "ProceedsFromRepaymentsOfBankOverdrafts",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "14000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2021 financing: Other financing activities",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "-13000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2021 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001326801-22-000018",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "-50728000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/131",
+        "docs/evidence/income-binding-repair.json#/artifacts/5"
+      ]
+    },
+    {
+      "label": "META 2022 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "31431000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "50475000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "185000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2022 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "28819000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "5619000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 financing: Taxes paid related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "3595000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 financing: Repurchases of Class A common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "27956000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 financing: Proceeds from issuance of long-term debt, net",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "9921000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 financing: Principal payments on finance leases",
+      "concept": "FinanceLeasePrincipalPayments",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "850000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 financing: Other financing activities",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "344000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "-22136000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2022 investment receipt",
+      "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001326801-23-000013",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "245000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/132",
+        "docs/evidence/income-binding-repair.json#/artifacts/7"
+      ]
+    },
+    {
+      "label": "META 2023 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "27266000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "71113000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "446000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "47428000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "8330000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 financing: Taxes paid related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "7012000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 financing: Repurchases of Class A common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "19774000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 financing: Proceeds from issuance of long-term debt, net",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "8455000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 financing: Principal payments on finance leases",
+      "concept": "FinanceLeasePrincipalPayments",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "1058000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 financing: Other financing activities",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "-111000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "-19500000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2023 investment receipt",
+      "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001326801-24-000012",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "221000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/133",
+        "docs/evidence/income-binding-repair.json#/artifacts/9"
+      ]
+    },
+    {
+      "label": "META 2024 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "37256000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "91328000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 interest_expense",
+      "concept": "InterestExpenseNonoperating",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "715000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "70663000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "8303000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 financing: Taxes paid related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "13770000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 financing: Repurchases of Class A common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "30125000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 financing: Payments for dividends and dividend equivalents",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "5072000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 financing: Proceeds from issuance of long-term debt, net",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "10432000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 financing: Principal payments on finance leases",
+      "concept": "FinanceLeasePrincipalPayments",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "1969000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 financing: Other financing activities",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "-277000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2024 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001326801-25-000017",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "-40781000000",
+      "source_refs": [
+        "docs/evidence/preparation-statement-acquisition.json#/artifacts/134",
+        "docs/evidence/income-binding-repair.json#/artifacts/11"
+      ]
+    },
+    {
+      "label": "META 2025 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "69691000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "115800000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 interest_expense",
+      "concept": "InterestExpenseNonoperating",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "1165000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "85932000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "25474000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 financing: Taxes paid related to net share settlement of equity awards",
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "18400000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 financing: Repurchases of Class A common stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "26248000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 financing: Payments for dividends and dividend equivalents",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "5324000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 financing: Proceeds from issuance of long-term debt, net",
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "29906000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 financing: Principal payments on finance leases",
+      "concept": "FinanceLeasePrincipalPayments",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "2524000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 financing: Other financing activities",
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "2220000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "META 2025 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001628280-26-003942",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1326801,
+        "form": "10-K"
+      },
+      "value_usd": "-20370000000",
+      "source_refs": [
+        "docs/evidence/independent-validation-document-acquisition.json#/artifacts/0",
+        "docs/evidence/income-binding-repair.json#/artifacts/13"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "24640000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "91652000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "346000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "90734000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "14701000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 financing: Net payments related to stock-based award activities",
+      "concept": "NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "10162000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 financing: Repurchases of common and capital stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "50274000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 financing: Proceeds from issuance of debt, net of costs",
+      "concept": "ProceedsFromDebtNetOfIssuanceCosts",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "20199000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 financing: Repayments of debt",
+      "concept": "RepaymentsOfDebtAndCapitalLeaseObligations",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "21435000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 financing: Proceeds from sale of interest in consolidated entities, net",
+      "concept": "ProceedsFromMinorityShareholders",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "310000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2021 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "-61362000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "31485000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "91495000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "357000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "71328000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "11356000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 financing: Net payments related to stock-based award activities",
+      "concept": "NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "9300000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 financing: Repurchases of stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "59296000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 financing: Proceeds from issuance of debt, net of costs",
+      "concept": "ProceedsFromDebtNetOfIssuanceCosts",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "52872000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 financing: Repayments of debt",
+      "concept": "RepaymentsOfDebtAndCapitalLeaseObligations",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "54068000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 financing: Proceeds from sale of interest in consolidated entities, net",
+      "concept": "ProceedsFromMinorityShareholders",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "35000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "-69757000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/1"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "32251000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "101746000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 interest_expense",
+      "concept": "InterestExpense",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "308000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "85717000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "11922000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 financing: Net payments related to stock-based award activities",
+      "concept": "NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "9837000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 financing: Repurchases of stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "61504000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 financing: Proceeds from issuance of debt, net of costs",
+      "concept": "ProceedsFromDebtNetOfIssuanceCosts",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "10790000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 financing: Repayments of debt",
+      "concept": "RepaymentsOfDebtAndCapitalLeaseObligations",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "11550000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 financing: Proceeds from sale of interest in consolidated entities, net",
+      "concept": "ProceedsFromMinorityShareholders",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "8000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "-72093000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/2"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "52535000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "125299000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 interest_expense",
+      "concept": "InterestExpenseNonoperating",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "268000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "119815000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "19697000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 financing: Net payments related to stock-based award activities",
+      "concept": "NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "12190000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 financing: Repurchases of stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "62222000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 financing: Dividend payments",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "7363000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 financing: Proceeds from issuance of debt, net of costs",
+      "concept": "ProceedsFromDebtNetOfIssuanceCosts",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "13589000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 financing: Repayments of debt",
+      "concept": "RepaymentsOfDebtAndCapitalLeaseObligations",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "12701000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 financing: Proceeds from sale of interest in consolidated entities, net",
+      "concept": "ProceedsFromMinorityShareholders",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "1154000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "-79733000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 cash_ppe",
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "91447000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 cfo",
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "164713000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 interest_expense",
+      "concept": "InterestExpenseNonoperating",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "736000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 pretax_income",
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "158826000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 tax_provision",
+      "concept": "IncomeTaxExpenseBenefit",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "26656000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 financing: Net payments related to stock-based award activities",
+      "concept": "NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "14167000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 financing: Repurchases of stock",
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "45709000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 financing: Dividend payments",
+      "concept": "PaymentsOfDividends",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "10049000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 financing: Proceeds from issuance of debt, net of costs",
+      "concept": "ProceedsFromDebtNetOfIssuanceCosts",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "64564000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 financing: Repayments of debt",
+      "concept": "RepaymentsOfDebtAndCapitalLeaseObligations",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "32427000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 financing: Proceeds from sale of interest in consolidated entities, net",
+      "concept": "ProceedsFromMinorityShareholders",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "400000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 financing: Net cash used in financing activities",
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "-37388000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 schedule financing_cash",
+      "concept": "FinanceLeasePrincipalPayments",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "586000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2022 schedule noncash_assets_obtained",
+      "concept": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+      "period": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "577000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 schedule financing_cash",
+      "concept": "FinanceLeasePrincipalPayments",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "705000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2023 schedule noncash_assets_obtained",
+      "concept": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+      "period": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "564000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 schedule financing_cash",
+      "concept": "FinanceLeasePrincipalPayments",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "405000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2024 schedule noncash_assets_obtained",
+      "concept": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+      "period": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "313000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+        "docs/evidence/googl-fy2024-instance-provenance-refresh.json#/artifacts/0"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 schedule financing_cash",
+      "concept": "FinanceLeasePrincipalPayments",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "1988000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    },
+    {
+      "label": "GOOGL 2025 schedule noncash_assets_obtained",
+      "concept": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+      "period": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "value_usd": "1606000000",
+      "source_refs": [
+        "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+        "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3"
+      ]
+    }
+  ],
+  "new_schedule_numeric_checks": [
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2022,
+      "operand": "financing_cash",
+      "independently_verified_usd": "586000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2022,
+      "operand": "noncash_assets_obtained",
+      "independently_verified_usd": "577000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2023,
+      "operand": "financing_cash",
+      "independently_verified_usd": "705000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2023,
+      "operand": "noncash_assets_obtained",
+      "independently_verified_usd": "564000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2024,
+      "operand": "financing_cash",
+      "independently_verified_usd": "405000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2024,
+      "operand": "noncash_assets_obtained",
+      "independently_verified_usd": "313000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2025,
+      "operand": "financing_cash",
+      "independently_verified_usd": "1988000000"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2025,
+      "operand": "noncash_assets_obtained",
+      "independently_verified_usd": "1606000000"
+    }
+  ],
+  "narrative_checks": [
+    {
+      "category": "nci_narrative",
+      "source_identity": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "excerpt": ".5 billion, respectively. Total noncontrolling interests (NCI), including redeemable noncontrolling interests (RNCI), in our consolidated subsidiaries was $ 3.9 billion and $ 4.3 billion as of December 31, 2020 and 2021, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\""
+    },
+    {
+      "category": "nci_narrative",
+      "source_identity": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "excerpt": "noncontrolling interests (NCI) in our consolidated subsidiaries were $ 4.3 billion and $ 3.8 billion as of December 31, 2021 and 2022, respectively, of which $ 1.1 billion is redeemable noncontrolling interest (RNCI) for both periods. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for an y period presented and is included within the \"other"
+    },
+    {
+      "category": "nci_narrative",
+      "source_identity": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "excerpt": "noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.8 billion and $ 3.4 billion as of December 31, 2022 and 2023, respectively, of which $ 1.1 billion is redeemable noncontrolling interest (RNCI) for both periods. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for an y period presented and is included within the \"other"
+    },
+    {
+      "category": "nci_narrative",
+      "source_identity": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "excerpt": "ember 31, 2023 and 2024, total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.4 billion and $ 4.2 billion, respectively, of which $ 1.1 billion was redeemable noncontrolling interests (RNCI) for both periods. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\""
+    },
+    {
+      "category": "nci_narrative",
+      "source_identity": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "excerpt": "subsidiaries were $ 4.2 billion and $ 3.4 billion as of December 31, 2024 and 2025, respectively, of which $ 1.1 billion and $ 841 million were redeemable noncontrolling interests (RNCI) as of December 31, 2024 and 2025, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\""
+    },
+    {
+      "category": "lease_narrative",
+      "source_identity": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "excerpt": " used for financing leases are included within financing activities as repayments of debt. The year ended December 31, 2025 includes $ 1.1 billion of prepayments for finance leases not yet commenced. 69. Table of Contents Alphabet Inc. Future lease payments as of December 31, 2025 were as follows (in millions): Operating Leases Finance Leases 2026 $ 3,275 $ 491 2027 3,082 345 2028 2,510 335 2029 2,061 314 2030 1,669 241 Thereafter 5,654 1,143 Total undiscou"
+    },
+    {
+      "category": "lease_narrative",
+      "source_identity": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "excerpt": " debt and proceeds from the sale of interests in consolidated entities. Cash used in financing activities consists primarily of repurchases of stock, repayments of debt, net payments related to stock-based award activities, and dividend payments. Net cash used in financing activities decreased from 2024 to 2025 due to an increase in proceeds from issuance of debt and a decrease in repurchases of stock, partially offset by repayments of debt. Liquidity and Material"
+    },
+    {
+      "category": "lease_narrative",
+      "source_identity": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "excerpt": ",173 $ 3,425 $ 3,370 Operating cash flows used for finance leases $ 35 $ 31 $ 65 Financing cash flows used for finance leases (1) $ 705 $ 405 $ 1,988 Assets obtained in exchange for lease liabilities: Operating leases $ 2,877 $ 2,510 $ 4,070 Finance leases $ 564 $ 313 $ 1,606 (1) Financing cash flows used for financing leases are included within financing activities as repayments of debt. The year ended December 31, 2025 includes $ 1.1 billion of prepayments for finance le"
+    }
+  ],
+  "coverage": {
+    "candidate_available_fcff": 13,
+    "unavailable_fcff": 2,
+    "provisional_fcfe": 10,
+    "consolidated_fcfe_without_parent_common": 5,
+    "parent_common_fcfe_pass": 0
+  }
+}

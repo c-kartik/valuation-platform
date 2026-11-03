@@ -1,0 +1,39 @@
+{
+  "parity_verdict": "PASS",
+  "api": "http://127.0.0.1:5182",
+  "independent_live_api_executions": 12,
+  "scenario_pairs": [
+    {
+      "policy": "data/preload/aapl-v1/policy.json",
+      "scenario": "Base",
+      "ev_difference_usd": "0"
+    },
+    {
+      "policy": "data/preload/aapl-v1/policy.json",
+      "scenario": "Bear",
+      "ev_difference_usd": "0"
+    },
+    {
+      "policy": "data/preload/aapl-v1/policy.json",
+      "scenario": "Bull",
+      "ev_difference_usd": "0"
+    },
+    {
+      "policy": "data/preload/meta-v1/policy.json",
+      "scenario": "Base",
+      "ev_difference_usd": "0"
+    },
+    {
+      "policy": "data/preload/meta-v1/policy.json",
+      "scenario": "Bear",
+      "ev_difference_usd": "0"
+    },
+    {
+      "policy": "data/preload/meta-v1/policy.json",
+      "scenario": "Bull",
+      "ev_difference_usd": "0"
+    }
+  ],
+  "policy_validity_verdict": "NOT_ESTABLISHED_BY_PARITY",
+  "meaning": "The retained tax policies and their numerical valuations did not change; parity does not establish unique recurring tax economics."
+}

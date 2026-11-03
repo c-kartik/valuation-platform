@@ -1,0 +1,8 @@
+test_actual_fcfe_worker_and_failure_diagnostics (tests.api.test_cashflows_fcfe.CashFlowApiTests.test_actual_fcfe_worker_and_failure_diagnostics) ... ok
+test_all_thirty_records_reach_runtime_without_clearing_gaps (tests.api.test_cashflows_fcfe.CashFlowApiTests.test_all_thirty_records_reach_runtime_without_clearing_gaps) ... ok
+test_reader_rejects_ownership_and_clearance_tampering (tests.api.test_cashflows_fcfe.CashFlowApiTests.test_reader_rejects_ownership_and_clearance_tampering) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.442s
+
+OK

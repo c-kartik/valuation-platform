@@ -1,13 +1,17 @@
 # Project Status
 
+## Approved implementation and independent review — November3
+
+The [execution log](company-resolutions/implementation-2026-11-03/implementation-log.json) records the user-approved18treatments. New issuer evidence,15 partial SBC bridges,171 share/claims source observations, unchanged-tax valuation parity, current30-record historical API/UI and an explicit manual FCFE engine/API/UI are implemented with scoped checks. **Overall status remains OPEN: full financial availability review has not passed.** Apple still lacks two adopted FCFF inputs;10Apple/Meta FCFE calculations retain unresolved financing and5Alphabet FCFE calculations remain consolidated without annual parent attribution. Source/arithmetic/runtime correctness does not clear those17strict parent-common metric cells. Prior cloud test counts below describe their earlier code snapshot, not this change.
+
 ## Current cash-flow review — OPEN roadblocks
 
 Apple, Meta and Alphabet remain OPEN. The user requires no completion claim while
 any roadblock remains in the development scope. The
 [open-roadblock register](company-resolutions/OPEN-ROADBLOCKS.md) separates missing
 historical inputs, alternative-route and valuation-basis alignment, forward-policy
-review, and FCFE/per-share/report integration. Preferred treatments in that register
-are proposals for review, not new financial approvals or adopted numerical changes.
+review, and FCFE/per-share/report integration. The latest approval and implemented actions are recorded in the execution log above;
+remaining disclosure and valuation gaps are not cleared by that approval.
 Earlier implemented treatments and successful checks retain their specific scopes.
 
 ## Current milestone — private Codex Cloud environment published
@@ -1844,7 +1848,7 @@ Calendar/split, acquisition, tax and missing-allocation limitations remain.
 **42 broadly assessed;18 packages =13 completed scoped histories +2 approved
 partial CAT/JNJ +3 pending V/INTC/WMT;24 assessment-only.** Prior13 complete
 packages, CAT SBC exception, JNJ OPEN scope gate, XOM empty history and frozen
-artifacts remain unchanged. All30 primary/instance pairs retained; Visa policy
+artifacts remain unchanged. All 30 primary/instance pairs retained; Visa policy
 artifacts replay; no essential new acquisition target identified, zero requests.
 Legacy original report metadata gaps remain null. Field availability is not
 complete disclosure or financial sufficiency. Focused checks/replay/preservation
@@ -1853,7 +1857,7 @@ consolidated approval; no next-company review, Phase1 closure or Phase2 work.
 
 ## Current — MU/AMD complete within approved scope; JNJ historical selections active, scope OPEN
 
-The user's explicit instruction activates all18 MU/AMD recommendations and ten
+The user's explicit instruction activates all 18 MU/AMD recommendations and ten
 JNJ original-as-filed selections through existing revision-bound audits/effective
 views. [Authoritative schedules and dispositions](priority-review-batch-results.md)
 / [machine current counts](company-data-preparation/priority-review-batch.json)
@@ -1910,7 +1914,7 @@ No homogeneous continuing-only series or unsupported allocation is invented.
 partial CAT +3 pending MU/AMD/JNJ;27 assessment-only.** Prior completed package
 bytes, CAT dual-perimeter/SBC exception, XOM empty history, source evidence,
 frozen financial policies/outputs and pilot artifacts remain unchanged.
-All30 required primary/instance receipts are retained; no essential acquisition
+All 30 required primary/instance receipts are retained; no essential acquisition
 target identified, no SEC request. Missing scope/allocations and unbounded
 omission proposals remain explicit. Focused results and replay/link checks are
 recorded in the decision sheet. Stop for consolidated approval; no other company,
@@ -2032,7 +2036,7 @@ not a frozen equation or source completeness finding. Named financing retains
 separate facility financing, CP/working borrowing and the2021-end318 comparative
 explicitly bound to its FY2022 source. META's three shared CFO parser PARTIALs
 remain beside separate exact primary-row/dimension arithmetic, not overwritten
-proofs or altered tolerances. All30 selected bodies and actual receipts retained;
+proofs or altered tolerances. All 30 selected bodies and actual receipts retained;
 no acquisition target/request, accepted assumption or company-completion claim.
 
 42 broad assessments;9 company packages =3 completed scoped MSFT/AAPL/Alphabet
@@ -2050,7 +2054,7 @@ their candidate instructions/counts do not supersede this current state.
 company packages cover15 exact frozen annuals/210 family slots: COST FY2022–26
 32 source-supported/38 pending; CAT FY2021–25 0/70 (financial perimeter gate,
 not missing facts); KO FY2021–25 35/35. All15 displayed CFOs independently replay
-exactly against the existing source-bound ledger. All30 primary/instance bodies
+exactly against the existing source-bound ledger. All 30 primary/instance bodies
 and actual receipts retained; no acquisition list or new SEC request.
 
 COST proposes limited D&A+finance-amortization proxies2,028/2,246/2,334/2,528/

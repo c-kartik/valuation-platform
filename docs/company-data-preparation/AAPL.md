@@ -1198,3 +1198,13 @@ undimensioned occurrence checks; no later context or forecast fills a gap.
 Historical FCFF is unavailable. This changes the read-only public projection only:
 no package, audit, historical value, approval, sufficiency status or anchor changes.
 Phase 1 review expansion remains paused.
+
+## Three-company cash-flow implementation — November3
+
+New [company evidence/treatments](../company-resolutions/AAPL/implementation-2026-11-03/README.md)
+and the [shared execution log](../company-resolutions/implementation-2026-11-03/implementation-log.json)
+cover approved source research, recurring-tax review, partial SBC basis bridge and share-source schedules.
+Versioned runtime review records retain all five FY2021–25 periods with basis/ownership/status;
+provisional financing and missing parent attribution remain explicit. No original accepted historical
+value, source bank or earlier approval is overwritten. Financial sufficiency remains OPEN for the
+full FCFF/parent-common FCFE contract; preparation accounting and valuation readiness are separate.

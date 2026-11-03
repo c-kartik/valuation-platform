@@ -1,0 +1,46 @@
+[
+  {
+    "id": "submissions",
+    "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+    "final_url": "https://data.sec.gov/submissions/CIK0000320193.json",
+    "status": 200,
+    "retrieved_at_utc": "2026-11-03T16:57:25.014948+00:00",
+    "sha256": "8ffac07be41cb9e633ec3d53586604f0074ae39d42df56746b9edaee8e5a3c26",
+    "byte_length": 163919,
+    "file": "new-sources/submissions.json",
+    "used_for_numeric_adoption": false
+  },
+  {
+    "id": "companyfacts",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+    "final_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+    "status": 200,
+    "retrieved_at_utc": "2026-11-03T16:57:25.554587+00:00",
+    "sha256": "75a78f918313f3336823517d6c34908d23dd07f07e90e625c61e705e3bb6d27b",
+    "byte_length": 3858323,
+    "file": "new-sources/companyfacts.json",
+    "used_for_numeric_adoption": false
+  },
+  {
+    "id": "aapl-20260926.htm",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+    "status": 200,
+    "retrieved_at_utc": "2026-11-03T16:57:40.880072+00:00",
+    "sha256": "671be78e626940c4fd9627e14701489e46dcbca19ec7c5f106b7ab215edd3ec1",
+    "byte_length": 1650115,
+    "file": "new-sources/aapl-20260926.htm",
+    "used_for_numeric_adoption": false
+  },
+  {
+    "id": "aapl-20260926_htm.xml",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+    "status": 200,
+    "retrieved_at_utc": "2026-11-03T16:57:41.440293+00:00",
+    "sha256": "3d931657ceef0a307119d576e020723181dc166b5321b7abd6125ad09ca790ea",
+    "byte_length": 1629539,
+    "file": "new-sources/aapl-20260926_htm.xml",
+    "used_for_numeric_adoption": false
+  }
+]

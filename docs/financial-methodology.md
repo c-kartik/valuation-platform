@@ -1551,3 +1551,47 @@ FCFF, exit multiples use year-N EBIT, and terminal value discounts from year N.
 The extra years have no automatic forecast defaults; a separate versioned
 preload policy remains to be agreed. Existing five-year financial equations and
 certified reverse guarantees are retained.
+
+## Explicit FCFE forecast and ownership — November 3
+
+The approved manual alternative keeps operating inputs and funding separate:
+
+```text
+Unlevered tax = max(EBIT, 0) × operating tax assumption
+Equity tax = max(EBIT − interest expense, 0) × operating tax assumption
+Realized interest tax shield = unlevered tax − equity tax
+Net borrowing = cash debt issued + matched new finance-asset funding − cash principal repaid
+FCFE = FCFF − interest expense + realized interest tax shield + net borrowing
+     = net income + D&A − operating investment − working-capital cash needs + net borrowing
+```
+
+New financed assets cannot exceed matching operating investment. Debt rolls
+forward explicitly; cash principal includes any finance-lease principal once.
+Repayments cannot exceed opening debt plus new financing. No tax benefit on a
+loss is invented. These are forecast conventions and user assumptions, not a
+claim that the corresponding historic financing scope has been established.
+
+FCFE discounts at cost of equity, never WACC. The initial perpetual-growth route
+uses independent terminal operating inputs and explicitly supplied terminal
+financing. Its declared stable capital structure requires terminal net borrowing
+to equal final debt times terminal growth, and positive sustainable terminal
+FCFE. Terminal FCFE divided by cost of equity less growth gives terminal equity
+value. Debt is not subtracted again. Exit equity multiples and automatically
+certified per-share values are not implemented by this route.
+
+CAPM cost of equity = dated risk-free rate + beta × equity risk premium.
+WACC = market equity weight × cost of equity + market debt weight × pre-tax cost
+of debt × (1 − tax assumption). Code helpers preserve decimal precision; they do
+not turn assumed beta, market weights, tax shields or debt costs into filing
+facts. Issuer-specific source/date and economic review remain required.
+
+The UI defaults to consolidated scope before minority allocation. A user may
+explicitly declare parent-common scope as an assumption; this is not independent
+certification or a cure for missing annual attribution. Eligible non-operating
+assets, claims, class rights, outstanding awards and dated shares still require
+separate reviewed treatment for a share-value output.
+
+Historical reported-CFO calculations retain their own tax, SBC and cash-investment
+basis. A partial reported-CFO-minus-reported-SBC-add-back schedule does not by
+itself establish valuation-aligned FCFF or FCFE. No missing historical value is
+replaced with forecast assumptions. The full three-company review stays OPEN.

@@ -1,0 +1,11 @@
+test_all_equity_matches_fcff_and_no_second_debt_subtraction (tests.valuation.test_fcfe.FcfeTests.test_all_equity_matches_fcff_and_no_second_debt_subtraction) ... ok
+test_consistent_leverage_and_positive_debt_growth_match_fcff (tests.valuation.test_fcfe.FcfeTests.test_consistent_leverage_and_positive_debt_growth_match_fcff) ... ok
+test_context_isolation_and_explicit_terminal_constraints (tests.valuation.test_fcfe.FcfeTests.test_context_isolation_and_explicit_terminal_constraints) ... ok
+test_loss_tax_shield_is_capped_and_finance_assets_count_once (tests.valuation.test_fcfe.FcfeTests.test_loss_tax_shield_is_capped_and_finance_assets_count_once) ... ok
+test_strict_inputs_require_complete_explicit_financing (tests.valuation.test_fcfe.FcfeTests.test_strict_inputs_require_complete_explicit_financing) ... ok
+test_ten_year_fcfe_and_declared_ownership_scope (tests.valuation.test_fcfe.FcfeTests.test_ten_year_fcfe_and_declared_ownership_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.040s
+
+OK

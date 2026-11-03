@@ -205,3 +205,7 @@ All new financial judgments are in the ONE consolidated sheet; source unknowns r
 ## Validation
 
 See [batch validation and preservation](../trillion-review-batch-results.md#validation-and-preservation). Replay is deterministic and source-bound; review revisions cover numerical facts, alternatives, evidence, scopes and judgments. No acceptance audit is created before user authorization.
+
+## Three-company cash-flow implementation — November3
+
+New [company evidence/treatments](../company-resolutions/META/implementation-2026-11-03/README.md) and the [shared execution log](../company-resolutions/implementation-2026-11-03/implementation-log.json) cover approved research, recurring-tax review, partial SBC bridge and source-bound share schedules. Runtime review data retain all five FY2021–25 periods, metric basis, scope and status; provisional funding and missing parent allocation remain explicit. No original accepted history, source bank or earlier approval is overwritten. Financial sufficiency stays OPEN for the full FCFF/parent-common FCFE contract.

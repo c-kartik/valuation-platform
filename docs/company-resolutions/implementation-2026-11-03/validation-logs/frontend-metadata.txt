@@ -1,0 +1,13 @@
+
+> valuation-local-ui@0.1.0 test
+> vitest run --maxWorkers=2 --testTimeout=15000 src/workspace/CashFlows.test.tsx
+
+
+ RUN  v5.0.5 /Users/kc/Projects/valuation-platform/frontend
+
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  21:16:21
+   Duration  603ms (environment 53%, tests 22%, setup 15%, transform 7%, import 2%, worker 1%)
+

@@ -15,6 +15,8 @@ import {reviewGrid,ratePercent} from './sensitivity';
 import {profileGrid} from './preload';
 import {PreloadReview} from './PreloadReview';
 import {FullModel} from './FullModel';
+import {HistoricalCashFlows} from './HistoricalCashFlows';
+import {FcfeForecast} from './FcfeForecast';
 import {ForecastChart} from './ForecastChart';
 import {Sources} from './Sources';
 import {MarketPanel} from './MarketPanel';
@@ -35,7 +37,7 @@ const companyNames:Record<string,string>={META:'Meta Platforms',GOOGL:'Alphabet'
 export function Workspace({load=request}:{load?:typeof request}){
  const w=useWorkspace(load),{catalog,state,session:c}=w;
  const [confirmation,setConfirmation]=useState<Confirmation|null>(null),[editor,setEditor]=useState<'model'|'bridge'|null>(null);
- const [view,setView]=useState<'dcf'|'scenarios'|'sensitivity'|'model'|'sources'>('dcf'),[focusPath,setFocusPath]=useState<string>(),[seed,setSeed]=useState<Draft>(),[seedPaths,setSeedPaths]=useState<string[]>([]);
+ const [view,setView]=useState<'dcf'|'scenarios'|'sensitivity'|'model'|'cashflows'|'sources'>('dcf'),[focusPath,setFocusPath]=useState<string>(),[seed,setSeed]=useState<Draft>(),[seedPaths,setSeedPaths]=useState<string[]>([]);
  const [inspection,setInspection]=useState<{company:string;label:string;value:ChartInspection}|null>(null);
  const activeInspection=view==='dcf'&&!editor&&inspection?.company===state.selected&&inspection.label===c?.selectedCase?inspection.value:null;
  useEffect(()=>setInspection(null),[state.selected,c?.selectedCase,view]);
@@ -75,7 +77,7 @@ export function Workspace({load=request}:{load?:typeof request}){
  {!catalog&&<p role="status">{w.catalogFailure?<>{w.catalogFailure} <button onClick={w.retryCatalog}>Retry loading companies</button></>:'Loading companies…'}</p>}
  {c?<>
  <div className="cw-layout"><CompactSidebar key={state.selected+c.selectedCase} inspection={activeInspection} inspect={value=>setInspection(value?{company:state.selected,label:c.selectedCase,value}:null)} draft={c.draft} result={result} stale={!current} edit={openEditor} sources={()=>setView('sources')}/><div className="cw-main">
- <nav className="cw-nav" aria-label="Explore this valuation">{([['dcf','DCF','dcf'],['scenarios','Scenarios','scenario-comparison'],['sensitivity','Sensitivity','sensitivity'],['model','Full Model','full-model'],['sources','Sources','sources-methodology']]as const).map(([key,label,id])=><a key={key} href={'#'+id} aria-current={view===key?'page':undefined} onClick={e=>{e.preventDefault();setView(key);}}>{label}</a>)}</nav>
+ <nav className="cw-nav" aria-label="Explore this valuation">{([['dcf','DCF','dcf'],['scenarios','Scenarios','scenario-comparison'],['sensitivity','Sensitivity','sensitivity'],['model','Full Model','full-model'],['cashflows','Cash flows','cash-flow-history'],['sources','Sources','sources-methodology']]as const).map(([key,label,id])=><a key={key} href={'#'+id} aria-current={view===key?'page':undefined} onClick={e=>{e.preventDefault();setView(key);}}>{label}</a>)}</nav>
  <section hidden={view!=='dcf'} id="dcf" className="cv-analysis-section cv-dcf-section" aria-labelledby="dcf-heading"><h2 id="dcf-heading" className="cw-sr-only">DCF · {c.selectedCase}</h2>
  {(Object.keys(issues).length>0||missing.length>0)&&!loading&&<details className="cv-issues" open={method==='exit_multiple'&&!c.draft.rates.exit_ev_ebit_multiple||undefined}><summary>{missing.length||Object.keys(issues).length} inputs require review</summary>{Object.entries({...Object.fromEntries(missing),...issues}).map(([p,m])=><p key={p}><button onClick={()=>p.startsWith('bridge.')?setEditor('bridge'):openEditor(p)}>{p}: {m}</button></p>)}<button onClick={()=>openEditor()}>Enter required assumptions</button></details>}
  {c.ev.failure&&<p className="cv-issues" role="status">{c.ev.failure} <button disabled={Boolean(w.busy)} onClick={()=>void w.calculate('ev')}>Retry enterprise value</button></p>}{c.preload?.failure&&<p role="status">{c.preload.failure} <button onClick={()=>void w.refreshPreload(true)}>Retry starting profile</button></p>}
@@ -84,6 +86,7 @@ export function Workspace({load=request}:{load?:typeof request}){
  {!c.preload?.profile&&c.preload?.candidate&&<PreloadReview label={c.selectedCase} state={c.preload} draft={c.draft} overrides={c.overrides??[]} refresh={()=>void w.refreshPreload(true)} adopt={w.adoptPreload}/>}
  <div className="cv-chart-footer"><span>{c.draft.doc.anchor.annual_end} fiscal-end analytical model · later-filed information</span>{result&&<ExportData value={{workspace_case:c.selectedCase,input_revision:equityCurrent?c.equity.inputRevision:c.ev.inputRevision,status:current?'current':'stale',calculation:result,preload_profile:c.resultProfile??null,user_overrides:c.resultOverrides??[]}} name={result.case_name}/>}</div>
  {result&&<div className="cw-reconciliation" data-chart-inspection={activeInspection??undefined}><span>Explicit PV <b>{readableMoney(result.stage_b.pv_explicit_fcff)}</b></span><span>Terminal PV <b>{readableMoney(result.stage_b.pv_terminal_value)}</b></span><span>Terminal / EV <b>{terminalContribution(result.stage_b.pv_terminal_value,result.stage_b.enterprise_value).text}</b></span>{!current&&<small>Previous submitted result · out of date</small>}</div>}</section>
+ <section id="cash-flow-history" hidden={view!=='cashflows'} className="cv-analysis-section"><HistoricalCashFlows key={ticker} ticker={ticker} active={view==='cashflows'} load={load}/>{result&&<FcfeForecast key={ticker+c.selectedCase+c.revision+JSON.stringify(result.submitted_inputs)} result={result} stale={!current} busy={Boolean(w.busy)} load={load}/>}</section>
  <section id="full-model" hidden={view!=='model'} className="cv-analysis-section" aria-label={`Full Model · ${c.selectedCase}`}><h2>Full Model · {c.selectedCase}</h2>
  <FullModel draft={c.draft} result={result} stale={!current} revision={equityCurrent?c.equity.inputRevision:c.ev.inputRevision} entry={entry} change={w.editDraft} preload={c.resultProfile?{profile:c.resultProfile,status:'ready',failure:''}:undefined} overrides={c.resultOverrides??[]} label={c.selectedCase} expanded={view==='model'}/></section>
  <section hidden={view!=='scenarios'} id="scenario-comparison" className="cv-analysis-section" aria-labelledby="scenario-heading"><h2 id="scenario-heading">Scenario comparison</h2><ScenariosPanel company={w.company!} entry={entry} busy={w.busy} reset={w.resetOverrides} calculate={compare} cancel={w.cancel} confirm={setConfirmation} eligibleEquity={eligibleEquity} setMethod={w.setTerminalMethod} editCase={editCase}/></section>

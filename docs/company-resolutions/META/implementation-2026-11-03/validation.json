@@ -1,0 +1,19 @@
+{
+  "schema_version": "meta-m1-m3-replay-validation-v1",
+  "issuer_source_bodies_verified": 21,
+  "method_source_bodies_verified": 1,
+  "annual_periods": 5,
+  "quarterly_periods": 15,
+  "exact_numeric_source_points": 82,
+  "exact_interim_financing_presentations": 3,
+  "tests_passed": 10,
+  "deterministic_replay": true,
+  "output_sha256": {
+    "review-results.json": "b4a1a8304a919ae31be16f941d8811d129f56e0724b758e4ea8b5454e1b14226",
+    "numeric-source-points.json": "a5c408ff47889e07a6de27390f69136cfd6b2565565a578868b9bcf478c8d2d8",
+    "all-primary-source-manifest.json": "622c93a76310bb8082fa0182f59d982cdcb9d839160e1f4c4ab975063348dc5d"
+  },
+  "unsupported_cash_capitalized_interest_added": false,
+  "unclassified_other_assumed_zero": false,
+  "parent_status": "OPEN"
+}

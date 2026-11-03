@@ -1,0 +1,79 @@
+{
+  "schema_version": "meta-approved-roadblock-implementation-log-v1",
+  "date": "2026-11-03",
+  "authority": "User approved all preferred treatments in OPEN-ROADBLOCKS.md and requested implementation and explicit logging. This workpaper implements the named evidence/policy review, without treating approval as evidence of missing amounts.",
+  "parent_review_status": "OPEN",
+  "decisions": [
+    {
+      "id": "M1",
+      "original_error_or_limit": "Residual annual Other financing was not economically decomposed; five annual FCFE figures are provisional. Earlier commentary review covered five annuals and ten selected calls, not the complete quarterly filing population.",
+      "treatment_applied": "Retained and reviewed all fifteen FY2021\u2013FY2025 quarterly filings; bound original and later financing captions to dates, contexts, source bytes and signs; preserved identified overdraft and lease principal once. Examined cash-pool policy, debt/lease/equity/acquisition/venture notes and noncash financing captions.",
+      "new_evidence": [
+        "FY2022 cash-pool overdraft cash was +20M through March, -59M through June and -250M through September.",
+        "Later FY2023 comparative Other equals original overdraft plus original Other exactly for all three FY2022 interim periods: +4M, -105M and -351M.",
+        "FY2022 Note11 explicitly says the notional cash pool was terminated December2,2022 and the parent guarantee ceased.",
+        "The original FY2021 separate +14M overdraft is already included once. Later Other+1M reconciles to +14M overdraft minus13M residual.",
+        "Annual noncash Other-current-assets financing disclosures are508M/16M/15M for FY2021/22/23. These are noncash balance-sheet transactions, not reported cash borrowing or principal payments."
+      ],
+      "attempted_cash_pool_rollforward": {
+        "beginning_2022_cash_pool_balance_usd": null,
+        "ending_2022_cash_pool_balance_usd": null,
+        "fy2022_cash_pool_fx_noncash_adjustments_usd": null,
+        "full_year_2022_cash_pool_cash_change_usd": null,
+        "finding": "No separately bound beginning/end bank-overdraft balance and complete noncash/FX bridge was recovered in the reviewed annual/quarterly primary bodies. Other-current-liability totals include multiple populations. Termination does not itself report a cash repayment, and duration cash flows cannot establish stock balances without every noncash/FX movement.",
+        "rejected_inference": "Do not accumulate historical cash-flow changes into an assumed beginning balance, assume zero ending balance solely from termination, or insert the nine-month -250M into annual borrowing without the unknown fourth-quarter population."
+      },
+      "before_after": "Annual adopted FCFF and provisional FCFE remain unchanged. No newly evidenced full-year debt amount can be inserted.",
+      "remaining_blocker": "Residual Other -13/+344/-111/-277/+2220M remains unclassified at the full-year scope. A complete source-component allocation or issuer clarification is still required. No materiality waiver or assumed-zero debt was used.",
+      "status": "OPEN_ANNUAL_CLASSIFICATION_AFTER_EXTENDED_REVIEW"
+    },
+    {
+      "id": "M2",
+      "original_error_or_limit": "Expensed, capitalized, accrued, and paid interest are different populations. Treating disclosed capitalized interest as an automatic FCFF cash add-back would mix accounting and cash amounts and could duplicate investment adjustments.",
+      "treatment_applied": "Built a five-year schedule preserving total consolidated expensed interest23/185/446/715/1165M; disclosed incurred capitalized interest is283/384/535M for FY2023/24/25, with FY2021/22 unbound rather than zero. Separately bound cash interest net of capitalized interest0/0/448/486/696M from the disclosed comparative table. The explicit early cash-interest zeros are reported values, not absence fills.",
+      "classification_policy": "Retain the current reported-CFO plus after-tax EXPENSED-interest historical convention. Capitalized-interest cash, if separately recovered, belongs in investing cash under USGAAP ASC230 and must be reconciled to the cash investment perimeter. Incurred capitalized cost is not necessarily paid capitalized interest. Interest capitalized into assets can also produce later amortization and tax effects; the historical reported ETR is not an observed interest shield.",
+      "source_reference": "KPMG Statement of Cash Flows handbook section8.5.20, printedpage108, interpreting ASC230-10-45-13(c),45-17(d),50-12. This is classification guidance, not issuer amount evidence.",
+      "rejected_inferences": [
+        "Do not add283/384/535M mechanically to FCFF.",
+        "Do not add notes-only interest again to the consolidated expensed-interest line. Notes-only values are a subset, can be rounded and do not completely decompose consolidated expense.",
+        "Do not infer actual capitalized-interest cash from expensed minus paid interest; accruals and noncash financing-cost amortization can differ.",
+        "Do not erase current historical FCFF merely because an alternative broader unlevered comparison remains unresolved. Keep its exact convention label."
+      ],
+      "before_after": "All five existing cash-basis FCFF amounts and provisional FCFEs unchanged. A broader unlevered replacement is null, not zero.",
+      "remaining_blocker": "No exact cash-capitalized-interest, matched investment cash location, amortization and tax bridge sufficient for a broader unlevered replacement was recovered. Approved treatment is applied as a controlled schedule and prohibition on unsupported replacement; it does not create the missing cash amounts.",
+      "status": "OPEN_BROADER_UNLEVERED_ALIGNMENT_CURRENT_CONVENTION_PRESERVED",
+      "additional_population_control": "The supplemental InterestPaidNet row reports0 forFY2021/22 while the lease note separately reports15/16M operating finance-lease cash. Lease-note cash15/16/20/23/31M remains separately bound; parent/child containment with the other cash-interest row is not proven for every year, so no automatic sum or substitution is made."
+    },
+    {
+      "id": "M3",
+      "original_error_or_limit": "Historical FY2025 provision includes15,930M OBBBA charge, including14,030M noncash valuation allowance. A provision normalization is not a cash-tax observation and cannot be added to CFO. The later8,030M partial reversal likewise is not a recurring forecast tax benefit.",
+      "treatment_applied": "Separately reconciled current and deferred provision for each historical year to total tax. For FY2025,6,719M current plus18,755M deferred equals25,474M provision, compared with7,578M cash taxes. Isolated14,030M valuation-allowance charge from the remaining1,900M event component, which the issuer says was mostly reduced FDII deduction benefit. Retained the existing operating forecast policy16/17/18/19/20percent and terminal20percent as explicit analyst conventions under the approved policy review; no number is falsely labeled as a reported unlevered tax rate.",
+      "latest_context": "RetainedQ32026 filing guidesQ42026 consolidated ETR15\u201317percent.16percent midpoint supports the starting assumption contextually. YTDreported ETR1,028/53,509 is distorted by a separately disclosed-8,030M first-quarter benefit; before only that named benefit,9,058/53,509=16.9279934percent. This is consolidated context, not a source-derived operating-tax rate.",
+      "forward_policy": {
+        "classification": "EXPLICIT_ANALYST_OPERATING_TAX_CONVENTION",
+        "annual": {
+          "2026": "0.16",
+          "2027": "0.17",
+          "2028": "0.18",
+          "2029": "0.19",
+          "2030": "0.20"
+        },
+        "terminal": "0.20",
+        "future_positive_ebit_only": true,
+        "automatic_immediate_loss_benefit": false,
+        "valuation_allowance_added_to_historical_cash": false,
+        "full15_930M_removed_as_recurring_tax": false,
+        "automatic_reversal_extrapolation": false
+      },
+      "before_after": "Historical tax/CFO and numerical forecast tax path unchanged. Tax-policy review alone changes EV by0 because all numeric tax inputs are identical. This is not a claim that every other shared forecast/valuation roadblock is resolved.",
+      "remaining_limit": "Long-run20percent and the fade are analyst assumptions; guidance is a range of consolidated rates, not a guarantee. Taxes remain subject to CAMT, jurisdiction mix, credits, SBC and litigation/deductibility uncertainty. Individual source-defined tax differences remain visible, including FY2022 current/deferred comparative presentation changes and FY2024/25 note-versus-CFO deferred-tax populations.",
+      "status": "POLICY_REVIEW_APPLIED_EXISTING_NUMERIC_ASSUMPTION_REAFFIRMED_FOR_ROOT_INTEGRATION"
+    }
+  ],
+  "reproduction": [
+    ".venv/bin/python docs/company-resolutions/META/implementation-2026-11-03/build_review.py",
+    ".venv/bin/python docs/company-resolutions/META/implementation-2026-11-03/test_review.py",
+    "PYTHONPATH=src .venv/bin/python scripts/resolve_meta_alphabet_cashflows.py --check"
+  ],
+  "integration_contract": "The root integrator must carry exact method, ownership, investment/tax scope and unresolved statuses into the platform. This agent does not modify shared runtime, source bank, old resolutions or preload files. No commits or outgoing IR messages were made."
+}

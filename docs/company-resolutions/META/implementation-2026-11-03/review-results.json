@@ -1,0 +1,2540 @@
+{
+  "comparative_presentations": [
+    {
+      "annual_debt_change_justified_usd": null,
+      "difference_usd": "0",
+      "later_other_usd": "4000000",
+      "later_source": {
+        "amount_usd": "4000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2022-03-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ic6a45c80027b4444b94d5b86876b190f_D20220101-20220331",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjQ4NTNiMjVlOWRhNjRlZDg4M2NlMTIyYWY3OTM3Y2IwL3NlYzo0ODUzYjI1ZTlkYTY0ZWQ4ODNjZTEyMmFmNzkzN2NiMF8zNC9mcmFnOjc0N2JkMWNkOTlmMTRhMmI4YjNiMzFmMDM3ODMwN2MwL3RhYmxlOjc1Yjg3MmNhNjI1NjQwZjM5ZGM3YWE0YTIyOTRhNjBmL3RhYmxlcmFuZ2U6NzViODcyY2E2MjU2NDBmMzlkYzdhYTRhMjI5NGE2MGZfMzYtMy0xLTEtMjQxODQw_f85b8bef-e5ab-4f42-a5a6-aa035b5011c8",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-03-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "4",
+            "ordinal": 211
+          }
+        ],
+        "source_id": "meta-2023-03-31-10q",
+        "source_sha256": "bae7fedad25f905497ff443606eb6c92a44796ca7935cb0b090b171e450051c7",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/meta-20230331.htm",
+        "start": "2022-01-01"
+      },
+      "old_other_usd": "-16000000",
+      "old_overdraft_usd": "20000000",
+      "period_end": "2022-03-31"
+    },
+    {
+      "annual_debt_change_justified_usd": null,
+      "difference_usd": "0",
+      "later_other_usd": "-105000000",
+      "later_source": {
+        "amount_usd": "-105000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2022-06-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-12",
+              "decimals": "-6",
+              "id": "f-332",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-06-30",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "105",
+            "ordinal": 303
+          }
+        ],
+        "source_id": "meta-2023-06-30-10q",
+        "source_sha256": "6338bc36ab0f7734a60e751244d50fd14a167a5667cecf284eb260e1e613fd04",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/meta-20230630.htm",
+        "start": "2022-01-01"
+      },
+      "old_other_usd": "-46000000",
+      "old_overdraft_usd": "-59000000",
+      "period_end": "2022-06-30"
+    },
+    {
+      "annual_debt_change_justified_usd": null,
+      "difference_usd": "0",
+      "later_other_usd": "-351000000",
+      "later_source": {
+        "amount_usd": "-351000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2022-09-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-12",
+              "decimals": "-6",
+              "id": "f-332",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-09-30",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "351",
+            "ordinal": 303
+          }
+        ],
+        "source_id": "meta-2023-09-30-10q",
+        "source_sha256": "15497701293153d28ee046feefdd7efe0a22948a15a26dea58b8962621b290a9",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/meta-20230930.htm",
+        "start": "2022-01-01"
+      },
+      "old_other_usd": "-101000000",
+      "old_overdraft_usd": "-250000000",
+      "period_end": "2022-09-30"
+    }
+  ],
+  "date": "2026-11-03",
+  "historical_values_changed": false,
+  "open_issues": [
+    "M1: annual debt content in Other not completely disclosed; full-year cash-pool cash/FX/noncash roll-forward absent.",
+    "M2: incurred capitalized interest is disclosed in2023\u201325 but actual capitalized-interest cash and related tax/asset amortization not separately bound; broader unlevered replacement remains unavailable."
+  ],
+  "parent_status": "OPEN",
+  "periods": [
+    {
+      "broader_unlevered_fcff_usd": null,
+      "capitalized_interest_investment_cash_adjustment_usd": null,
+      "cash_interest_capitalized_usd": null,
+      "cash_interest_excluding_capitalized": {
+        "amount_usd": "0",
+        "concepts": [
+          "us-gaap:InterestPaidNet"
+        ],
+        "end": "2021-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-12",
+              "decimals": "-6",
+              "format": "ixt:fixed-zero",
+              "id": "f-345",
+              "name": "us-gaap:InterestPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-12-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "\u2014",
+            "ordinal": 309
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2021-01-01"
+      },
+      "cash_interest_population_note": "The supplemental InterestPaidNet row is not proven to cover all financing cash; it reports0 in2021/22 while the lease note separately reports15/16M operating finance-lease cash. Keep populations separate, do not add without parent/child containment.",
+      "cash_tax": {
+        "amount_usd": "8525000000",
+        "concepts": [
+          "us-gaap:IncomeTaxesPaidNet"
+        ],
+        "end": "2021-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOjY1NGZmODM4ZjIwODQwZGVhZTdjMmE0NTZjMTc3NmZhL3RhYmxlcmFuZ2U6NjU0ZmY4MzhmMjA4NDBkZWFlN2MyYTQ1NmMxNzc2ZmFfMy0xLTEtMS0w_6f02bde6-2b6f-4a48-9b3c-70e54b846594",
+              "name": "us-gaap:IncomeTaxesPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-12-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "8,525",
+            "ordinal": 325
+          }
+        ],
+        "source_id": "meta-2021-10k",
+        "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+        "start": "2021-01-01"
+      },
+      "cashflow_basis": "reported CFO; cash PP&E net of identified receipts; after-tax expensed interest convention",
+      "current_tax_expense_note": {
+        "amount_usd": "7305000000",
+        "concepts": [
+          "us-gaap:CurrentIncomeTaxExpenseBenefit"
+        ],
+        "end": "2021-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N18xNDgvZnJhZzo2YzVhMmY0NmI3ZDI0M2NhYTc1ZDEzZTE3MTkxODEzMy90YWJsZTowMmNjNjZhODQ2NWU0OGNkYWMxY2U2ODkzYmI1NWQxNi90YWJsZXJhbmdlOjAyY2M2NmE4NDY1ZTQ4Y2RhYzFjZTY4OTNiYjU1ZDE2XzYtMS0xLTEtMA_eca96449-2b5a-4165-8118-6f90cd54f452",
+              "name": "us-gaap:CurrentIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-12-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "7,305",
+            "ordinal": 810
+          }
+        ],
+        "source_id": "meta-2021-10k",
+        "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+        "start": "2021-01-01"
+      },
+      "deferred_tax_expense_note": {
+        "amount_usd": "609000000",
+        "concepts": [
+          "meta:TotalDeferredIncomeTaxExpenseBenefit",
+          "fb:TotalDeferredIncomeTaxExpenseBenefit",
+          "us-gaap:DeferredIncomeTaxExpenseBenefit"
+        ],
+        "end": "2021-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfNy0xLTEtMS0w_2ff5eed8-3047-4318-aa5c-612961b35cdc",
+              "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-12-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "609",
+            "ordinal": 226
+          },
+          {
+            "attrs": {
+              "contextref": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N18xNDgvZnJhZzo2YzVhMmY0NmI3ZDI0M2NhYTc1ZDEzZTE3MTkxODEzMy90YWJsZTowMmNjNjZhODQ2NWU0OGNkYWMxY2U2ODkzYmI1NWQxNi90YWJsZXJhbmdlOjAyY2M2NmE4NDY1ZTQ4Y2RhYzFjZTY4OTNiYjU1ZDE2XzExLTEtMS0xLTA_8c3c76ad-6e08-4512-8086-bdc89aa2b4de",
+              "name": "fb:TotalDeferredIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-12-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "609",
+            "ordinal": 822
+          }
+        ],
+        "source_id": "meta-2021-10k",
+        "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+        "start": "2021-01-01"
+      },
+      "finance_lease_interest_cash_separately_reported": {
+        "amount_usd": "15000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestPaymentOnLiability"
+        ],
+        "end": "2021-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N18xMjcvZnJhZzowYjg3N2FlYmQwZDA0NmU0OGQ4NDA5MjQyNmVjNGI3Ny90YWJsZTozZjAxNDc3ODRkMzc0YTUwYWYxNmY2MjM3YjJhYWFhYi90YWJsZXJhbmdlOjNmMDE0Nzc4NGQzNzRhNTBhZjE2ZjYyMzdiMmFhYWFiXzQtMS0xLTEtMA_1f110ec2-d1fe-4c26-a51f-76ce26a2a692",
+              "name": "us-gaap:FinanceLeaseInterestPaymentOnLiability",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-12-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "15",
+            "ordinal": 632
+          }
+        ],
+        "source_id": "meta-2021-10k",
+        "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+        "start": "2021-01-01"
+      },
+      "finance_lease_interest_expense_separately_reported": {
+        "amount_usd": "15000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestExpense"
+        ],
+        "end": "2021-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N18xMjcvZnJhZzowYjg3N2FlYmQwZDA0NmU0OGQ4NDA5MjQyNmVjNGI3Ny90YWJsZTo3YzY3NDZkZjEzODc0NTkyYjAyMTYzMTFkNGMzOTFhZS90YWJsZXJhbmdlOjdjNjc0NmRmMTM4NzQ1OTJiMDIxNjMxMWQ0YzM5MWFlXzQtMS0xLTEtMA_0ff34919-21d2-4695-bd05-5be9022728dc",
+              "name": "us-gaap:FinanceLeaseInterestExpense",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-12-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "15",
+            "ordinal": 587
+          }
+        ],
+        "source_id": "meta-2021-10k",
+        "source_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+        "start": "2021-01-01"
+      },
+      "financing_statement_tie_difference_usd": "0",
+      "fiscal_year": 2021,
+      "historical_change_usd": "0",
+      "historical_fcff_exact_fraction_usd": {
+        "denominator": "11821",
+        "numerator": "462616613500000"
+      },
+      "historical_fcff_usd": "39135150452.584383723881228322476947804754250909399",
+      "interest_capitalized_incurred": null,
+      "interest_expensed": {
+        "amount_usd": "23000000",
+        "concepts": [
+          "us-gaap:InterestExpense",
+          "us-gaap:InterestExpenseNonoperating"
+        ],
+        "end": "2021-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-12",
+              "decimals": "-6",
+              "id": "f-1113",
+              "name": "us-gaap:InterestExpense",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-12-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "23",
+            "ordinal": 987
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2021-01-01"
+      },
+      "m1_status": "OPEN_CLASSIFICATION",
+      "m2_status": "OPEN_CASH_TAX_INVESTMENT_ALIGNMENT",
+      "net_borrowing_identified_usd": "-663000000",
+      "parent_common_fcfe_usd": null,
+      "provisional_fcfe_usd": "38453000000",
+      "reported_tax_rate": {
+        "decimal": "0.1673716267659250486422468488283563150326",
+        "fraction": {
+          "denominator": "23642",
+          "numerator": "3957"
+        }
+      },
+      "unresolved_other_financing_usd": "-13000000"
+    },
+    {
+      "broader_unlevered_fcff_usd": null,
+      "capitalized_interest_investment_cash_adjustment_usd": null,
+      "cash_interest_capitalized_usd": null,
+      "cash_interest_excluding_capitalized": {
+        "amount_usd": "0",
+        "concepts": [
+          "us-gaap:InterestPaidNet"
+        ],
+        "end": "2022-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-11",
+              "decimals": "-6",
+              "format": "ixt:fixed-zero",
+              "id": "f-344",
+              "name": "us-gaap:InterestPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-12-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "\u2014",
+            "ordinal": 308
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2022-01-01"
+      },
+      "cash_interest_population_note": "The supplemental InterestPaidNet row is not proven to cover all financing cash; it reports0 in2021/22 while the lease note separately reports15/16M operating finance-lease cash. Keep populations separate, do not add without parent/child containment.",
+      "cash_tax": {
+        "amount_usd": "6407000000",
+        "concepts": [
+          "us-gaap:IncomeTaxesPaidNet"
+        ],
+        "end": "2022-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOmRlNTZiZTYzZTQ0ODQ2MTk4MDI1ZTNlMTVhNGE0NzVmL3RhYmxlcmFuZ2U6ZGU1NmJlNjNlNDQ4NDYxOTgwMjVlM2UxNWE0YTQ3NWZfMy0xLTEtMS0xNzg4MTk_098a7d20-12c5-4bac-9df2-b1b94972f36f",
+              "name": "us-gaap:IncomeTaxesPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-12-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "6,407",
+            "ordinal": 329
+          }
+        ],
+        "source_id": "meta-2022-10k",
+        "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+        "start": "2022-01-01"
+      },
+      "cashflow_basis": "reported CFO; cash PP&E net of identified receipts; after-tax expensed interest convention",
+      "current_tax_expense_note": {
+        "amount_usd": "8896000000",
+        "concepts": [
+          "us-gaap:CurrentIncomeTaxExpenseBenefit"
+        ],
+        "end": "2022-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV8xNDUvZnJhZzoxNzNlMjM3MzIzM2U0Mjg1OTNmNWJiMjgxMzFkMDIxNy90YWJsZTpiOTY4NmVjMzBhYjY0NjA4YmVkYzEyYTIzYzVmMDI5Ni90YWJsZXJhbmdlOmI5Njg2ZWMzMGFiNjQ2MDhiZWRjMTJhMjNjNWYwMjk2XzYtMS0xLTEtMTc4ODE5_21c6a38d-7f08-46bd-af5a-79917a6cb8dd",
+              "name": "us-gaap:CurrentIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-12-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "8,896",
+            "ordinal": 980
+          }
+        ],
+        "source_id": "meta-2022-10k",
+        "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+        "start": "2022-01-01"
+      },
+      "deferred_tax_expense_note": {
+        "amount_usd": "-3277000000",
+        "concepts": [
+          "meta:TotalDeferredIncomeTaxExpenseBenefit",
+          "fb:TotalDeferredIncomeTaxExpenseBenefit",
+          "us-gaap:DeferredIncomeTaxExpenseBenefit"
+        ],
+        "end": "2022-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV8xNDUvZnJhZzoxNzNlMjM3MzIzM2U0Mjg1OTNmNWJiMjgxMzFkMDIxNy90YWJsZTpiOTY4NmVjMzBhYjY0NjA4YmVkYzEyYTIzYzVmMDI5Ni90YWJsZXJhbmdlOmI5Njg2ZWMzMGFiNjQ2MDhiZWRjMTJhMjNjNWYwMjk2XzEyLTEtMS0xLTE3ODgxOQ_936fe706-9f08-4faf-8dd4-03376c7e458c",
+              "name": "meta:TotalDeferredIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-12-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "3,277",
+            "ordinal": 992
+          }
+        ],
+        "source_id": "meta-2022-10k",
+        "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+        "start": "2022-01-01"
+      },
+      "finance_lease_interest_cash_separately_reported": {
+        "amount_usd": "16000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestPaymentOnLiability"
+        ],
+        "end": "2022-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV8xMjQvZnJhZzo5NDZmNDljNDhjNGQ0NmU5YTJhMWJkOWNkMWM2YmUwMS90YWJsZTpjOWQ5YmNkMzdmMmE0NmYzYWUxYTU2MzhhMmI4ZWQ0Mi90YWJsZXJhbmdlOmM5ZDliY2QzN2YyYTQ2ZjNhZTFhNTYzOGEyYjhlZDQyXzQtMS0xLTEtMTc4ODE5_6b24055f-5088-46c8-913e-55e23e6a7025",
+              "name": "us-gaap:FinanceLeaseInterestPaymentOnLiability",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-12-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "16",
+            "ordinal": 764
+          }
+        ],
+        "source_id": "meta-2022-10k",
+        "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+        "start": "2022-01-01"
+      },
+      "finance_lease_interest_expense_separately_reported": {
+        "amount_usd": "16000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestExpense"
+        ],
+        "end": "2022-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV8xMjQvZnJhZzo5NDZmNDljNDhjNGQ0NmU5YTJhMWJkOWNkMWM2YmUwMS90YWJsZTo3NThiYmMxODk4Yzg0ZGYxOWU3M2MzZWE4YzMxZTZhOC90YWJsZXJhbmdlOjc1OGJiYzE4OThjODRkZjE5ZTczYzNlYThjMzFlNmE4XzQtMS0xLTEtMTc4ODE5_9fbae8fb-896c-4f09-a3f2-db7cef9d24fa",
+              "name": "us-gaap:FinanceLeaseInterestExpense",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-12-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "16",
+            "ordinal": 718
+          }
+        ],
+        "source_id": "meta-2022-10k",
+        "source_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+        "start": "2022-01-01"
+      },
+      "financing_statement_tie_difference_usd": "0",
+      "fiscal_year": 2022,
+      "historical_change_usd": "0",
+      "historical_fcff_exact_fraction_usd": {
+        "denominator": "28819",
+        "numerator": "560181691000000"
+      },
+      "historical_fcff_usd": "19437929525.660154759013151046184808633193379367778",
+      "interest_capitalized_incurred": null,
+      "interest_expensed": {
+        "amount_usd": "185000000",
+        "concepts": [
+          "us-gaap:InterestExpense",
+          "us-gaap:InterestExpenseNonoperating"
+        ],
+        "end": "2022-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-11",
+              "decimals": "-6",
+              "id": "f-1112",
+              "name": "us-gaap:InterestExpense",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-12-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "185",
+            "ordinal": 986
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2022-01-01"
+      },
+      "m1_status": "OPEN_CLASSIFICATION",
+      "m2_status": "OPEN_CASH_TAX_INVESTMENT_ALIGNMENT",
+      "net_borrowing_identified_usd": "9071000000",
+      "parent_common_fcfe_usd": null,
+      "provisional_fcfe_usd": "28360000000",
+      "reported_tax_rate": {
+        "decimal": "0.1949755369721364377667511017037371178736",
+        "fraction": {
+          "denominator": "28819",
+          "numerator": "5619"
+        }
+      },
+      "unresolved_other_financing_usd": "344000000"
+    },
+    {
+      "broader_unlevered_fcff_usd": null,
+      "capitalized_interest_investment_cash_adjustment_usd": null,
+      "cash_interest_capitalized_usd": null,
+      "cash_interest_excluding_capitalized": {
+        "amount_usd": "448000000",
+        "concepts": [
+          "us-gaap:InterestPaidNet"
+        ],
+        "end": "2023-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-343",
+              "name": "us-gaap:InterestPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-12-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "448",
+            "ordinal": 307
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2023-01-01"
+      },
+      "cash_interest_population_note": "The supplemental InterestPaidNet row is not proven to cover all financing cash; it reports0 in2021/22 while the lease note separately reports15/16M operating finance-lease cash. Keep populations separate, do not add without parent/child containment.",
+      "cash_tax": {
+        "amount_usd": "6607000000",
+        "concepts": [
+          "us-gaap:IncomeTaxesPaidNet"
+        ],
+        "end": "2023-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-340",
+              "name": "us-gaap:IncomeTaxesPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-12-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "6,607",
+            "ordinal": 304
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2023-01-01"
+      },
+      "cashflow_basis": "reported CFO; cash PP&E net of identified receipts; after-tax expensed interest convention",
+      "current_tax_expense_note": {
+        "amount_usd": "8199000000",
+        "concepts": [
+          "us-gaap:CurrentIncomeTaxExpenseBenefit"
+        ],
+        "end": "2023-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-1144",
+              "name": "us-gaap:CurrentIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-12-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "8,199",
+            "ordinal": 1015
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2023-01-01"
+      },
+      "deferred_tax_expense_note": {
+        "amount_usd": "131000000",
+        "concepts": [
+          "meta:TotalDeferredIncomeTaxExpenseBenefit",
+          "fb:TotalDeferredIncomeTaxExpenseBenefit",
+          "us-gaap:DeferredIncomeTaxExpenseBenefit"
+        ],
+        "end": "2023-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-244",
+              "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-12-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "131",
+            "ordinal": 208
+          },
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-1156",
+              "name": "meta:TotalDeferredIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-12-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "131",
+            "ordinal": 1027
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2023-01-01"
+      },
+      "finance_lease_interest_cash_separately_reported": {
+        "amount_usd": "20000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestPaymentOnLiability"
+        ],
+        "end": "2023-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-869",
+              "name": "us-gaap:FinanceLeaseInterestPaymentOnLiability",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-12-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "20",
+            "ordinal": 765
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2023-01-01"
+      },
+      "finance_lease_interest_expense_separately_reported": {
+        "amount_usd": "20000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestExpense"
+        ],
+        "end": "2023-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-810",
+              "name": "us-gaap:FinanceLeaseInterestExpense",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-12-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "20",
+            "ordinal": 718
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2023-01-01"
+      },
+      "financing_statement_tie_difference_usd": "0",
+      "fiscal_year": 2023,
+      "historical_change_usd": "0",
+      "historical_fcff_exact_fraction_usd": {
+        "denominator": "11857",
+        "numerator": "526873703000000"
+      },
+      "historical_fcff_usd": "44435666947.794551741587248039133001602428944927047",
+      "interest_capitalized_incurred": {
+        "amount_usd": "283000000",
+        "concepts": [
+          "us-gaap:InterestCostsCapitalized"
+        ],
+        "end": "2023-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-240",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-801",
+              "name": "us-gaap:InterestCostsCapitalized",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [
+                "us-gaap:ConstructionInProgressMember"
+              ],
+              "end": "2023-12-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "283",
+            "ordinal": 712
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2023-01-01"
+      },
+      "interest_expensed": {
+        "amount_usd": "446000000",
+        "concepts": [
+          "us-gaap:InterestExpense",
+          "us-gaap:InterestExpenseNonoperating"
+        ],
+        "end": "2023-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-1111",
+              "name": "us-gaap:InterestExpense",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-12-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "446",
+            "ordinal": 985
+          }
+        ],
+        "source_id": "meta-2023-10k",
+        "source_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "start": "2023-01-01"
+      },
+      "m1_status": "OPEN_CLASSIFICATION",
+      "m2_status": "OPEN_CASH_TAX_INVESTMENT_ALIGNMENT",
+      "net_borrowing_identified_usd": "7397000000",
+      "parent_common_fcfe_usd": null,
+      "provisional_fcfe_usd": "51465000000",
+      "reported_tax_rate": {
+        "decimal": "0.1756346462005566332124483427511174833432",
+        "fraction": {
+          "denominator": "23714",
+          "numerator": "4165"
+        }
+      },
+      "unresolved_other_financing_usd": "-111000000"
+    },
+    {
+      "broader_unlevered_fcff_usd": null,
+      "capitalized_interest_investment_cash_adjustment_usd": null,
+      "cash_interest_capitalized_usd": null,
+      "cash_interest_excluding_capitalized": {
+        "amount_usd": "486000000",
+        "concepts": [
+          "us-gaap:InterestPaidNet"
+        ],
+        "end": "2024-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-361",
+              "name": "us-gaap:InterestPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-12-31",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "486",
+            "ordinal": 307
+          }
+        ],
+        "source_id": "meta-2024-10k",
+        "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+        "start": "2024-01-01"
+      },
+      "cash_interest_population_note": "The supplemental InterestPaidNet row is not proven to cover all financing cash; it reports0 in2021/22 while the lease note separately reports15/16M operating finance-lease cash. Keep populations separate, do not add without parent/child containment.",
+      "cash_tax": {
+        "amount_usd": "10554000000",
+        "concepts": [
+          "us-gaap:IncomeTaxesPaidNet"
+        ],
+        "end": "2024-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-358",
+              "name": "us-gaap:IncomeTaxesPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-12-31",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "10,554",
+            "ordinal": 304
+          }
+        ],
+        "source_id": "meta-2024-10k",
+        "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+        "start": "2024-01-01"
+      },
+      "cashflow_basis": "reported CFO; cash PP&E net of identified receipts; after-tax expensed interest convention",
+      "current_tax_expense_note": {
+        "amount_usd": "13040000000",
+        "concepts": [
+          "us-gaap:CurrentIncomeTaxExpenseBenefit"
+        ],
+        "end": "2024-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-1094",
+              "name": "us-gaap:CurrentIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-12-31",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "13,040",
+            "ordinal": 948
+          }
+        ],
+        "source_id": "meta-2024-10k",
+        "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+        "start": "2024-01-01"
+      },
+      "deferred_tax_expense_note": {
+        "amount_usd": "-4737000000",
+        "concepts": [
+          "meta:TotalDeferredIncomeTaxExpenseBenefit",
+          "fb:TotalDeferredIncomeTaxExpenseBenefit",
+          "us-gaap:DeferredIncomeTaxExpenseBenefit"
+        ],
+        "end": "2024-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-1106",
+              "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-12-31",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "4,737",
+            "ordinal": 960
+          }
+        ],
+        "source_id": "meta-2024-10k",
+        "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+        "start": "2024-01-01"
+      },
+      "finance_lease_interest_cash_separately_reported": {
+        "amount_usd": "23000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestPaymentOnLiability"
+        ],
+        "end": "2024-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-827",
+              "name": "us-gaap:FinanceLeaseInterestPaymentOnLiability",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-12-31",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "23",
+            "ordinal": 707
+          }
+        ],
+        "source_id": "meta-2024-10k",
+        "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+        "start": "2024-01-01"
+      },
+      "finance_lease_interest_expense_separately_reported": {
+        "amount_usd": "23000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestExpense"
+        ],
+        "end": "2024-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-766",
+              "name": "us-gaap:FinanceLeaseInterestExpense",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-12-31",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "23",
+            "ordinal": 660
+          }
+        ],
+        "source_id": "meta-2024-10k",
+        "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+        "start": "2024-01-01"
+      },
+      "financing_statement_tie_difference_usd": "0",
+      "fiscal_year": 2024,
+      "historical_change_usd": "0",
+      "historical_fcff_exact_fraction_usd": {
+        "denominator": "70663",
+        "numerator": "3865477136000000"
+      },
+      "historical_fcff_usd": "54702986513.451169636160366811485501606215416837666",
+      "interest_capitalized_incurred": {
+        "amount_usd": "384000000",
+        "concepts": [
+          "us-gaap:InterestCostsCapitalized"
+        ],
+        "end": "2024-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-216",
+              "decimals": "-6",
+              "id": "f-755",
+              "name": "us-gaap:InterestCostsCapitalized",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [
+                "us-gaap:ConstructionInProgressMember"
+              ],
+              "end": "2024-12-31",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "384",
+            "ordinal": 652
+          }
+        ],
+        "source_id": "meta-2024-10k",
+        "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+        "start": "2024-01-01"
+      },
+      "interest_expensed": {
+        "amount_usd": "715000000",
+        "concepts": [
+          "us-gaap:InterestExpense",
+          "us-gaap:InterestExpenseNonoperating"
+        ],
+        "end": "2024-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-1061",
+              "name": "us-gaap:InterestExpenseNonoperating",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-12-31",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "715",
+            "ordinal": 918
+          }
+        ],
+        "source_id": "meta-2024-10k",
+        "source_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+        "start": "2024-01-01"
+      },
+      "m1_status": "OPEN_CLASSIFICATION",
+      "m2_status": "OPEN_CASH_TAX_INVESTMENT_ALIGNMENT",
+      "net_borrowing_identified_usd": "8463000000",
+      "parent_common_fcfe_usd": null,
+      "provisional_fcfe_usd": "62535000000",
+      "reported_tax_rate": {
+        "decimal": "0.1175013797885739354400464175027949563421",
+        "fraction": {
+          "denominator": "70663",
+          "numerator": "8303"
+        }
+      },
+      "unresolved_other_financing_usd": "-277000000"
+    },
+    {
+      "broader_unlevered_fcff_usd": null,
+      "capitalized_interest_investment_cash_adjustment_usd": null,
+      "cash_interest_capitalized_usd": null,
+      "cash_interest_excluding_capitalized": {
+        "amount_usd": "696000000",
+        "concepts": [
+          "us-gaap:InterestPaidNet"
+        ],
+        "end": "2025-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-379",
+              "name": "us-gaap:InterestPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-12-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "696",
+            "ordinal": 325
+          }
+        ],
+        "source_id": "meta-2025-10k",
+        "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "start": "2025-01-01"
+      },
+      "cash_interest_population_note": "The supplemental InterestPaidNet row is not proven to cover all financing cash; it reports0 in2021/22 while the lease note separately reports15/16M operating finance-lease cash. Keep populations separate, do not add without parent/child containment.",
+      "cash_tax": {
+        "amount_usd": "7578000000",
+        "concepts": [
+          "us-gaap:IncomeTaxesPaidNet"
+        ],
+        "end": "2025-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-376",
+              "name": "us-gaap:IncomeTaxesPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-12-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "7,578",
+            "ordinal": 322
+          },
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-1189",
+              "name": "us-gaap:IncomeTaxesPaidNet",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-12-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "7,578",
+            "ordinal": 1039
+          }
+        ],
+        "source_id": "meta-2025-10k",
+        "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "start": "2025-01-01"
+      },
+      "cashflow_basis": "reported CFO; cash PP&E net of identified receipts; after-tax expensed interest convention",
+      "current_tax_expense_note": {
+        "amount_usd": "6719000000",
+        "concepts": [
+          "us-gaap:CurrentIncomeTaxExpenseBenefit"
+        ],
+        "end": "2025-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-1125",
+              "name": "us-gaap:CurrentIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-12-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "6,719",
+            "ordinal": 977
+          }
+        ],
+        "source_id": "meta-2025-10k",
+        "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "start": "2025-01-01"
+      },
+      "deferred_tax_expense_note": {
+        "amount_usd": "18755000000",
+        "concepts": [
+          "meta:TotalDeferredIncomeTaxExpenseBenefit",
+          "fb:TotalDeferredIncomeTaxExpenseBenefit",
+          "us-gaap:DeferredIncomeTaxExpenseBenefit"
+        ],
+        "end": "2025-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-1137",
+              "name": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-12-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "18,755",
+            "ordinal": 989
+          }
+        ],
+        "source_id": "meta-2025-10k",
+        "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "start": "2025-01-01"
+      },
+      "finance_lease_interest_cash_separately_reported": {
+        "amount_usd": "31000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestPaymentOnLiability"
+        ],
+        "end": "2025-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-804",
+              "name": "us-gaap:FinanceLeaseInterestPaymentOnLiability",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-12-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "31",
+            "ordinal": 683
+          }
+        ],
+        "source_id": "meta-2025-10k",
+        "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "start": "2025-01-01"
+      },
+      "finance_lease_interest_expense_separately_reported": {
+        "amount_usd": "31000000",
+        "concepts": [
+          "us-gaap:FinanceLeaseInterestExpense"
+        ],
+        "end": "2025-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-744",
+              "name": "us-gaap:FinanceLeaseInterestExpense",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-12-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "31",
+            "ordinal": 637
+          }
+        ],
+        "source_id": "meta-2025-10k",
+        "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "start": "2025-01-01"
+      },
+      "financing_statement_tie_difference_usd": "0",
+      "fiscal_year": 2025,
+      "historical_change_usd": "0",
+      "historical_fcff_exact_fraction_usd": {
+        "denominator": "21483",
+        "numerator": "1008168039500000"
+      },
+      "historical_fcff_usd": "46928643089.885025368896336638272122143089885025369",
+      "interest_capitalized_incurred": {
+        "amount_usd": "535000000",
+        "concepts": [
+          "us-gaap:InterestCostsCapitalized"
+        ],
+        "end": "2025-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-172",
+              "decimals": "-6",
+              "id": "f-726",
+              "name": "us-gaap:InterestCostsCapitalized",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [
+                "us-gaap:ConstructionInProgressMember"
+              ],
+              "end": "2025-12-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "535",
+            "ordinal": 623
+          }
+        ],
+        "source_id": "meta-2025-10k",
+        "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "start": "2025-01-01"
+      },
+      "interest_expensed": {
+        "amount_usd": "1165000000",
+        "concepts": [
+          "us-gaap:InterestExpense",
+          "us-gaap:InterestExpenseNonoperating"
+        ],
+        "end": "2025-12-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "format": "ixt:num-dot-decimal",
+              "id": "f-1092",
+              "name": "us-gaap:InterestExpenseNonoperating",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-12-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "1,165",
+            "ordinal": 947
+          }
+        ],
+        "source_id": "meta-2025-10k",
+        "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "start": "2025-01-01"
+      },
+      "m1_status": "OPEN_CLASSIFICATION",
+      "m2_status": "OPEN_CASH_TAX_INVESTMENT_ALIGNMENT",
+      "net_borrowing_identified_usd": "27382000000",
+      "parent_common_fcfe_usd": null,
+      "provisional_fcfe_usd": "73491000000",
+      "reported_tax_rate": {
+        "decimal": "0.2964436996695061211190243448307964436997",
+        "fraction": {
+          "denominator": "42966",
+          "numerator": "12737"
+        }
+      },
+      "unresolved_other_financing_usd": "2220000000"
+    }
+  ],
+  "quarterly_financing": [
+    {
+      "date": "2021-03-31",
+      "other": {
+        "amount_usd": "32000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2021-03-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "i75015cc6664e483680bda97e5b31299b_D20210101-20210331",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjc5Y2Y2N2Y0NDhjNTRhZGJiMTcwNzJiZTBjNGZlYTdhL3NlYzo3OWNmNjdmNDQ4YzU0YWRiYjE3MDcyYmUwYzRmZWE3YV8zNy9mcmFnOjVkZDExMzllYzRiZDRmOGU5ZGQwZDkzNzVlNjkyZWYzL3RhYmxlOjgwNTEyYWNiMWJmNzRiYjI5M2QzZjJiODIxYjQyY2Y0L3RhYmxlcmFuZ2U6ODA1MTJhY2IxYmY3NGJiMjkzZDNmMmI4MjFiNDJjZjRfMzMtMS0xLTEtMA_0c0db7aa-2647-4fb8-b053-8a34e269e4f1",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-03-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "32",
+            "ordinal": 222
+          }
+        ],
+        "source_id": "meta-2021-03-31-10q",
+        "source_sha256": "ce43286517100de694bb14d2ce698d7d8dbd72dbb354f72e4158d00a12775e51",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000033/fb-20210331.htm",
+        "start": "2021-01-01"
+      },
+      "other_plus_overdraft_usd": "-18000000",
+      "overdraft": {
+        "amount_usd": "-50000000",
+        "concepts": [
+          "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts"
+        ],
+        "end": "2021-03-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "i75015cc6664e483680bda97e5b31299b_D20210101-20210331",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjc5Y2Y2N2Y0NDhjNTRhZGJiMTcwNzJiZTBjNGZlYTdhL3NlYzo3OWNmNjdmNDQ4YzU0YWRiYjE3MDcyYmUwYzRmZWE3YV8zNy9mcmFnOjVkZDExMzllYzRiZDRmOGU5ZGQwZDkzNzVlNjkyZWYzL3RhYmxlOjgwNTEyYWNiMWJmNzRiYjI5M2QzZjJiODIxYjQyY2Y0L3RhYmxlcmFuZ2U6ODA1MTJhY2IxYmY3NGJiMjkzZDNmMmI4MjFiNDJjZjRfMzItMS0xLTEtMA_b3d54825-d3b7-46f1-8b30-ee9c5f2b7e8a",
+              "name": "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-03-31",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "50",
+            "ordinal": 220
+          }
+        ],
+        "source_id": "meta-2021-03-31-10q",
+        "source_sha256": "ce43286517100de694bb14d2ce698d7d8dbd72dbb354f72e4158d00a12775e51",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000033/fb-20210331.htm",
+        "start": "2021-01-01"
+      },
+      "overdraft_absent_does_not_establish_zero": false
+    },
+    {
+      "date": "2021-06-30",
+      "other": {
+        "amount_usd": "-13000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2021-06-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "i2c96b03ce7fd41fd90576bb069f0b6fe_D20210101-20210630",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjlmMThkYWRhNGIyNTQzYmZiYTllMWJiM2U1YjhkZTBlL3NlYzo5ZjE4ZGFkYTRiMjU0M2JmYmE5ZTFiYjNlNWI4ZGUwZV8zNC9mcmFnOmUxNTcyY2FiYjU5OTQ1YjRiZWZhOGU0MGExMmFhYzJhL3RhYmxlOjYxY2I3ZjE2OTUxZTQ1ZjliYWZkYzU4Yjg0ODg0NTJkL3RhYmxlcmFuZ2U6NjFjYjdmMTY5NTFlNDVmOWJhZmRjNThiODQ4ODQ1MmRfMzMtMS0xLTEtMA_7f84c758-5a33-4af9-9bec-4bbc8df94f3d",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-06-30",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "13",
+            "ordinal": 324
+          }
+        ],
+        "source_id": "meta-2021-06-30-10q",
+        "source_sha256": "8c3052a855d144112c617e1286e4d05b1e3bcd1567c2af5094f8f3f4f528bbe0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000049/fb-20210630.htm",
+        "start": "2021-01-01"
+      },
+      "other_plus_overdraft_usd": "-10000000",
+      "overdraft": {
+        "amount_usd": "3000000",
+        "concepts": [
+          "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts"
+        ],
+        "end": "2021-06-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "i2c96b03ce7fd41fd90576bb069f0b6fe_D20210101-20210630",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjlmMThkYWRhNGIyNTQzYmZiYTllMWJiM2U1YjhkZTBlL3NlYzo5ZjE4ZGFkYTRiMjU0M2JmYmE5ZTFiYjNlNWI4ZGUwZV8zNC9mcmFnOmUxNTcyY2FiYjU5OTQ1YjRiZWZhOGU0MGExMmFhYzJhL3RhYmxlOjYxY2I3ZjE2OTUxZTQ1ZjliYWZkYzU4Yjg0ODg0NTJkL3RhYmxlcmFuZ2U6NjFjYjdmMTY5NTFlNDVmOWJhZmRjNThiODQ4ODQ1MmRfMzItMS0xLTEtMA_d8cfe6f4-7de8-4396-b006-f3e13e19cb1a",
+              "name": "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-06-30",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "3",
+            "ordinal": 322
+          }
+        ],
+        "source_id": "meta-2021-06-30-10q",
+        "source_sha256": "8c3052a855d144112c617e1286e4d05b1e3bcd1567c2af5094f8f3f4f528bbe0",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000049/fb-20210630.htm",
+        "start": "2021-01-01"
+      },
+      "overdraft_absent_does_not_establish_zero": false
+    },
+    {
+      "date": "2021-09-30",
+      "other": {
+        "amount_usd": "-13000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2021-09-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ica15184299b44591a910753cfa9238a2_D20210101-20210930",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjBmZWU4YzY0ZDM2ODRkN2RiODU0YjFkNWZiNmEzZGI2L3NlYzowZmVlOGM2NGQzNjg0ZDdkYjg1NGIxZDVmYjZhM2RiNl8zNC9mcmFnOjAxZTNlZjc1Njg0YjRmNjliYzNlMTJkYzQzY2E4YWNkL3RhYmxlOjU4NjExYWNjNGI4ZTRmMjE5YzkxODUxM2RjNWY0OGI3L3RhYmxlcmFuZ2U6NTg2MTFhY2M0YjhlNGYyMTljOTE4NTEzZGM1ZjQ4YjdfMzMtMS0xLTEtMA_5a8c7b77-f58d-48a0-b36b-08cea4473e02",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-09-30",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "13",
+            "ordinal": 327
+          }
+        ],
+        "source_id": "meta-2021-09-30-10q",
+        "source_sha256": "717c0875e32448e7bcb11b65fa782cadc5ed276c68e3720c329eb01200830f4d",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/fb-20210930.htm",
+        "start": "2021-01-01"
+      },
+      "other_plus_overdraft_usd": "2000000",
+      "overdraft": {
+        "amount_usd": "15000000",
+        "concepts": [
+          "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts"
+        ],
+        "end": "2021-09-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ica15184299b44591a910753cfa9238a2_D20210101-20210930",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjBmZWU4YzY0ZDM2ODRkN2RiODU0YjFkNWZiNmEzZGI2L3NlYzowZmVlOGM2NGQzNjg0ZDdkYjg1NGIxZDVmYjZhM2RiNl8zNC9mcmFnOjAxZTNlZjc1Njg0YjRmNjliYzNlMTJkYzQzY2E4YWNkL3RhYmxlOjU4NjExYWNjNGI4ZTRmMjE5YzkxODUxM2RjNWY0OGI3L3RhYmxlcmFuZ2U6NTg2MTFhY2M0YjhlNGYyMTljOTE4NTEzZGM1ZjQ4YjdfMzItMS0xLTEtMA_db0519a0-4dd6-4e81-896d-1f6a230dcfa2",
+              "name": "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2021-09-30",
+              "instant": null,
+              "start": "2021-01-01"
+            },
+            "display": "15",
+            "ordinal": 325
+          }
+        ],
+        "source_id": "meta-2021-09-30-10q",
+        "source_sha256": "717c0875e32448e7bcb11b65fa782cadc5ed276c68e3720c329eb01200830f4d",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/fb-20210930.htm",
+        "start": "2021-01-01"
+      },
+      "overdraft_absent_does_not_establish_zero": false
+    },
+    {
+      "date": "2022-03-31",
+      "other": {
+        "amount_usd": "-16000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2022-03-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ieecb77d53c28492e8730fe6ba04ccc57_D20220101-20220331",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOmVhNzBlMzI4Y2FhOTRjZWZiNzZhOWRiNmVkNjMzOGZjL3NlYzplYTcwZTMyOGNhYTk0Y2VmYjc2YTlkYjZlZDYzMzhmY18zNC9mcmFnOjM1ZDEwYTE2YTcxYjRiZjk4ZjMyMjllYmQxM2QwNGUyL3RhYmxlOjNiZTE3YTkwNjRiYzQ0MTc5YWQwNDQyYTc3NzUzYzk3L3RhYmxlcmFuZ2U6M2JlMTdhOTA2NGJjNDQxNzlhZDA0NDJhNzc3NTNjOTdfMzMtMS0xLTEtODcxODg_fbc2db18-dca9-4ee3-b540-a34b2793823a",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-03-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "16",
+            "ordinal": 224
+          }
+        ],
+        "source_id": "meta-2022-03-31-10q",
+        "source_sha256": "925f4640b4baf2f341bcb84c828aeb407299b601af4f6b00a99edaa09453805b",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/meta-20220331.htm",
+        "start": "2022-01-01"
+      },
+      "other_plus_overdraft_usd": "4000000",
+      "overdraft": {
+        "amount_usd": "20000000",
+        "concepts": [
+          "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts"
+        ],
+        "end": "2022-03-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "ieecb77d53c28492e8730fe6ba04ccc57_D20220101-20220331",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOmVhNzBlMzI4Y2FhOTRjZWZiNzZhOWRiNmVkNjMzOGZjL3NlYzplYTcwZTMyOGNhYTk0Y2VmYjc2YTlkYjZlZDYzMzhmY18zNC9mcmFnOjM1ZDEwYTE2YTcxYjRiZjk4ZjMyMjllYmQxM2QwNGUyL3RhYmxlOjNiZTE3YTkwNjRiYzQ0MTc5YWQwNDQyYTc3NzUzYzk3L3RhYmxlcmFuZ2U6M2JlMTdhOTA2NGJjNDQxNzlhZDA0NDJhNzc3NTNjOTdfMzItMS0xLTEtODcxODg_f34b95c3-bd64-4ab8-8336-cb0681684f3b",
+              "name": "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-03-31",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "20",
+            "ordinal": 222
+          }
+        ],
+        "source_id": "meta-2022-03-31-10q",
+        "source_sha256": "925f4640b4baf2f341bcb84c828aeb407299b601af4f6b00a99edaa09453805b",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/meta-20220331.htm",
+        "start": "2022-01-01"
+      },
+      "overdraft_absent_does_not_establish_zero": false
+    },
+    {
+      "date": "2022-06-30",
+      "other": {
+        "amount_usd": "-46000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2022-06-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "i29bc165ba5764a109fcc7bf21ef893dd_D20220101-20220630",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOmFlYjk3Y2MwNzA5ZTRmODA4Y2Y3YzZkOWFlNWRmMDMyL3NlYzphZWI5N2NjMDcwOWU0ZjgwOGNmN2M2ZDlhZTVkZjAzMl8zNC9mcmFnOjY0NTViZDgyYmJmYjQ0ZjhhYjI2MjRmYTcwMzYyYzYyL3RhYmxlOjU3M2YwZjE2YmI0MTRkMzlhYTM1ZjFlMjkzNjU0Y2YzL3RhYmxlcmFuZ2U6NTczZjBmMTZiYjQxNGQzOWFhMzVmMWUyOTM2NTRjZjNfMzQtMS0xLTEtMTMwMDIy_cff81f3d-c3e7-49a8-9090-72b518fd112b",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-06-30",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "46",
+            "ordinal": 324
+          }
+        ],
+        "source_id": "meta-2022-06-30-10q",
+        "source_sha256": "355957a0ac3a98648d6d42a08e3d8245f45835d085c95ed9174e2d13207cc323",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/meta-20220630.htm",
+        "start": "2022-01-01"
+      },
+      "other_plus_overdraft_usd": "-105000000",
+      "overdraft": {
+        "amount_usd": "-59000000",
+        "concepts": [
+          "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts"
+        ],
+        "end": "2022-06-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "i29bc165ba5764a109fcc7bf21ef893dd_D20220101-20220630",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOmFlYjk3Y2MwNzA5ZTRmODA4Y2Y3YzZkOWFlNWRmMDMyL3NlYzphZWI5N2NjMDcwOWU0ZjgwOGNmN2M2ZDlhZTVkZjAzMl8zNC9mcmFnOjY0NTViZDgyYmJmYjQ0ZjhhYjI2MjRmYTcwMzYyYzYyL3RhYmxlOjU3M2YwZjE2YmI0MTRkMzlhYTM1ZjFlMjkzNjU0Y2YzL3RhYmxlcmFuZ2U6NTczZjBmMTZiYjQxNGQzOWFhMzVmMWUyOTM2NTRjZjNfMzMtMS0xLTEtMTMwMDIy_573115b2-03d5-434c-87b2-1d7242226dda",
+              "name": "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-06-30",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "59",
+            "ordinal": 322
+          }
+        ],
+        "source_id": "meta-2022-06-30-10q",
+        "source_sha256": "355957a0ac3a98648d6d42a08e3d8245f45835d085c95ed9174e2d13207cc323",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/meta-20220630.htm",
+        "start": "2022-01-01"
+      },
+      "overdraft_absent_does_not_establish_zero": false
+    },
+    {
+      "date": "2022-09-30",
+      "other": {
+        "amount_usd": "-101000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2022-09-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjdhNzlhNWJiMWQ1NTQ2ZjVhMmFkZGY1MDE0YjBkNmQxL3NlYzo3YTc5YTViYjFkNTU0NmY1YTJhZGRmNTAxNGIwZDZkMV8zNC9mcmFnOmIzNmJmNDYxOWY3NTRlMjRhOGFiNzQ2NTkzZGVkOTU3L3RhYmxlOjI0ZWRkZjg5MDg4MzQ5NDBiNDA5Y2M5NjVkYmM1M2M4L3RhYmxlcmFuZ2U6MjRlZGRmODkwODgzNDk0MGI0MDljYzk2NWRiYzUzYzhfMzQtMS0xLTEtMTU0ODk3_5081829e-46d4-46e4-89d8-0234de76da92",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-09-30",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "101",
+            "ordinal": 330
+          }
+        ],
+        "source_id": "meta-2022-09-30-10q",
+        "source_sha256": "35d413417adfa3434c7ee615fb5b9cf49740dbfc5a12700e725c71415f85c7dc",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/meta-20220930.htm",
+        "start": "2022-01-01"
+      },
+      "other_plus_overdraft_usd": "-351000000",
+      "overdraft": {
+        "amount_usd": "-250000000",
+        "concepts": [
+          "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts"
+        ],
+        "end": "2022-09-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjdhNzlhNWJiMWQ1NTQ2ZjVhMmFkZGY1MDE0YjBkNmQxL3NlYzo3YTc5YTViYjFkNTU0NmY1YTJhZGRmNTAxNGIwZDZkMV8zNC9mcmFnOmIzNmJmNDYxOWY3NTRlMjRhOGFiNzQ2NTkzZGVkOTU3L3RhYmxlOjI0ZWRkZjg5MDg4MzQ5NDBiNDA5Y2M5NjVkYmM1M2M4L3RhYmxlcmFuZ2U6MjRlZGRmODkwODgzNDk0MGI0MDljYzk2NWRiYzUzYzhfMzMtMS0xLTEtMTU0ODk3_56ad59b5-e0cb-473e-baaa-bc67e24d07fa",
+              "name": "us-gaap:ProceedsFromRepaymentsOfBankOverdrafts",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2022-09-30",
+              "instant": null,
+              "start": "2022-01-01"
+            },
+            "display": "250",
+            "ordinal": 328
+          }
+        ],
+        "source_id": "meta-2022-09-30-10q",
+        "source_sha256": "35d413417adfa3434c7ee615fb5b9cf49740dbfc5a12700e725c71415f85c7dc",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/meta-20220930.htm",
+        "start": "2022-01-01"
+      },
+      "overdraft_absent_does_not_establish_zero": false
+    },
+    {
+      "date": "2023-03-31",
+      "other": {
+        "amount_usd": "122000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2023-03-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331",
+              "decimals": "-6",
+              "id": "id3VybDovL2RvY3MudjEvZG9jOjQ4NTNiMjVlOWRhNjRlZDg4M2NlMTIyYWY3OTM3Y2IwL3NlYzo0ODUzYjI1ZTlkYTY0ZWQ4ODNjZTEyMmFmNzkzN2NiMF8zNC9mcmFnOjc0N2JkMWNkOTlmMTRhMmI4YjNiMzFmMDM3ODMwN2MwL3RhYmxlOjc1Yjg3MmNhNjI1NjQwZjM5ZGM3YWE0YTIyOTRhNjBmL3RhYmxlcmFuZ2U6NzViODcyY2E2MjU2NDBmMzlkYzdhYTRhMjI5NGE2MGZfMzYtMS0xLTEtMjQxODQw_be306c4f-089b-47df-95aa-c16b34884aa7",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-03-31",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "122",
+            "ordinal": 210
+          }
+        ],
+        "source_id": "meta-2023-03-31-10q",
+        "source_sha256": "bae7fedad25f905497ff443606eb6c92a44796ca7935cb0b090b171e450051c7",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/meta-20230331.htm",
+        "start": "2023-01-01"
+      },
+      "other_plus_overdraft_usd": "122000000",
+      "overdraft": null,
+      "overdraft_absent_does_not_establish_zero": true
+    },
+    {
+      "date": "2023-06-30",
+      "other": {
+        "amount_usd": "-231000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2023-06-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-331",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-06-30",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "231",
+            "ordinal": 302
+          }
+        ],
+        "source_id": "meta-2023-06-30-10q",
+        "source_sha256": "6338bc36ab0f7734a60e751244d50fd14a167a5667cecf284eb260e1e613fd04",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/meta-20230630.htm",
+        "start": "2023-01-01"
+      },
+      "other_plus_overdraft_usd": "-231000000",
+      "overdraft": null,
+      "overdraft_absent_does_not_establish_zero": true
+    },
+    {
+      "date": "2023-09-30",
+      "other": {
+        "amount_usd": "-182000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2023-09-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-331",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2023-09-30",
+              "instant": null,
+              "start": "2023-01-01"
+            },
+            "display": "182",
+            "ordinal": 302
+          }
+        ],
+        "source_id": "meta-2023-09-30-10q",
+        "source_sha256": "15497701293153d28ee046feefdd7efe0a22948a15a26dea58b8962621b290a9",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/meta-20230930.htm",
+        "start": "2023-01-01"
+      },
+      "other_plus_overdraft_usd": "-182000000",
+      "overdraft": null,
+      "overdraft_absent_does_not_establish_zero": true
+    },
+    {
+      "date": "2024-03-31",
+      "other": {
+        "amount_usd": "-9000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2024-03-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-237",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-03-31",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "9",
+            "ordinal": 208
+          }
+        ],
+        "source_id": "meta-2024-03-31-10q",
+        "source_sha256": "6835a9bc35eeb7f1c4d9ddd72ae062995c3d3f1faa56a4b8b5b6ed72fd7da696",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/meta-20240331.htm",
+        "start": "2024-01-01"
+      },
+      "other_plus_overdraft_usd": "-9000000",
+      "overdraft": null,
+      "overdraft_absent_does_not_establish_zero": true
+    },
+    {
+      "date": "2024-06-30",
+      "other": {
+        "amount_usd": "-115000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2024-06-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-333",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-06-30",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "115",
+            "ordinal": 304
+          }
+        ],
+        "source_id": "meta-2024-06-30-10q",
+        "source_sha256": "49c3e65c7431f9d321e2f001352ded3171a6a4d6dbe1b9852c0563f2b6bea5e6",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/meta-20240630.htm",
+        "start": "2024-01-01"
+      },
+      "other_plus_overdraft_usd": "-115000000",
+      "overdraft": null,
+      "overdraft_absent_does_not_establish_zero": true
+    },
+    {
+      "date": "2024-09-30",
+      "other": {
+        "amount_usd": "-350000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2024-09-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-337",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "sign": "-",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2024-09-30",
+              "instant": null,
+              "start": "2024-01-01"
+            },
+            "display": "350",
+            "ordinal": 308
+          }
+        ],
+        "source_id": "meta-2024-09-30-10q",
+        "source_sha256": "3f4b9754592001d82c3b12e172d0102534e656127d44a317b6d855097e628283",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/meta-20240930.htm",
+        "start": "2024-01-01"
+      },
+      "other_plus_overdraft_usd": "-350000000",
+      "overdraft": null,
+      "overdraft_absent_does_not_establish_zero": true
+    },
+    {
+      "date": "2025-03-31",
+      "other": {
+        "amount_usd": "222000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2025-03-31",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-239",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-03-31",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "222",
+            "ordinal": 210
+          }
+        ],
+        "source_id": "meta-2025-03-31-10q",
+        "source_sha256": "511170137dbcd1008c23f0fac81205c64f02b8da0f1ec659c83a3df7d89b70e6",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/meta-20250331.htm",
+        "start": "2025-01-01"
+      },
+      "other_plus_overdraft_usd": "222000000",
+      "overdraft": null,
+      "overdraft_absent_does_not_establish_zero": true
+    },
+    {
+      "date": "2025-06-30",
+      "other": {
+        "amount_usd": "323000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2025-06-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-345",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-06-30",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "323",
+            "ordinal": 316
+          }
+        ],
+        "source_id": "meta-2025-06-30-10q",
+        "source_sha256": "d5e9840cdb907733df7158d9a9fefbea42540fdfdc7a5cc13c5083ea02e9a680",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/meta-20250630.htm",
+        "start": "2025-01-01"
+      },
+      "other_plus_overdraft_usd": "323000000",
+      "overdraft": null,
+      "overdraft_absent_does_not_establish_zero": true
+    },
+    {
+      "date": "2025-09-30",
+      "other": {
+        "amount_usd": "613000000",
+        "concepts": [
+          "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "end": "2025-09-30",
+        "occurrences": [
+          {
+            "attrs": {
+              "contextref": "c-1",
+              "decimals": "-6",
+              "id": "f-356",
+              "name": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+              "scale": "6",
+              "unitref": "usd"
+            },
+            "context": {
+              "dimensions": [],
+              "end": "2025-09-30",
+              "instant": null,
+              "start": "2025-01-01"
+            },
+            "display": "613",
+            "ordinal": 327
+          }
+        ],
+        "source_id": "meta-2025-09-30-10q",
+        "source_sha256": "5466844a8babef54bbcdefbe73f022f48f10302c09aeb8de680f0b59993df8fe",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+        "start": "2025-01-01"
+      },
+      "other_plus_overdraft_usd": "613000000",
+      "overdraft": null,
+      "overdraft_absent_does_not_establish_zero": true
+    }
+  ],
+  "runtime_modified_by_this_script": false,
+  "schema_version": "meta-m1-m3-implementation-review-v1",
+  "selected_policies": [
+    "Preserve reported cash basis; no invented interest-cash, debt residual or zero components.",
+    "Retain tax path16/17/18/19/20% andterminal20% as explicit analyst operating convention; no historical cash adjustment."
+  ],
+  "source_bank_modified": false,
+  "tax_review": {
+    "2025_etr_excluding_entire_obbba_charge_diagnostic_not_selected": {
+      "decimal": "0.1110645626774659032723548852581110645627",
+      "fraction": {
+        "denominator": "21483",
+        "numerator": "2386"
+      }
+    },
+    "2025_etr_excluding_only_non_cash_va": {
+      "decimal": "0.1331750686589396266815621654331331750687",
+      "fraction": {
+        "denominator": "21483",
+        "numerator": "2861"
+      }
+    },
+    "2026_ytd_discrete_benefit": {
+      "amount_usd": "-8030000000",
+      "concepts": [
+        "meta:IncomeTaxExpenseBenefitDiscreteChargeRelatedToNewLegislation"
+      ],
+      "end": "2026-03-31",
+      "occurrences": [
+        {
+          "attrs": {
+            "contextref": "c-267",
+            "decimals": "-7",
+            "id": "f-927",
+            "name": "meta:IncomeTaxExpenseBenefitDiscreteChargeRelatedToNewLegislation",
+            "scale": "9",
+            "sign": "-",
+            "unitref": "usd"
+          },
+          "context": {
+            "dimensions": [],
+            "end": "2026-03-31",
+            "instant": null,
+            "start": "2026-01-01"
+          },
+          "display": "8.03",
+          "ordinal": 853
+        },
+        {
+          "attrs": {
+            "contextref": "c-267",
+            "decimals": "-7",
+            "id": "f-928",
+            "name": "meta:IncomeTaxExpenseBenefitDiscreteChargeRelatedToNewLegislation",
+            "scale": "9",
+            "sign": "-",
+            "unitref": "usd"
+          },
+          "context": {
+            "dimensions": [],
+            "end": "2026-03-31",
+            "instant": null,
+            "start": "2026-01-01"
+          },
+          "display": "8.03",
+          "ordinal": 854
+        }
+      ],
+      "source_id": "q3-2026-10q",
+      "source_sha256": "4ca982ff1218f1f71dadb5fd23b2a917721f1b962b6c6d89febfe0d24e318024",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+      "start": "2026-01-01"
+    },
+    "2026_ytd_etr_before_named_discrete_benefit_context_not_operating_tax": {
+      "decimal": "0.1692799342166738305705582238501934254051",
+      "fraction": {
+        "denominator": "53509",
+        "numerator": "9058"
+      }
+    },
+    "2026_ytd_pretax": {
+      "amount_usd": "53509000000",
+      "concepts": [
+        "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+      ],
+      "end": "2026-09-30",
+      "occurrences": [
+        {
+          "attrs": {
+            "contextref": "c-1",
+            "decimals": "-6",
+            "format": "ixt:num-dot-decimal",
+            "id": "f-131",
+            "name": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "scale": "6",
+            "unitref": "usd"
+          },
+          "context": {
+            "dimensions": [],
+            "end": "2026-09-30",
+            "instant": null,
+            "start": "2026-01-01"
+          },
+          "display": "53,509",
+          "ordinal": 102
+        }
+      ],
+      "source_id": "q3-2026-10q",
+      "source_sha256": "4ca982ff1218f1f71dadb5fd23b2a917721f1b962b6c6d89febfe0d24e318024",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+      "start": "2026-01-01"
+    },
+    "2026_ytd_reported_etr": {
+      "decimal": "0.01921172139266291651871647760189874600534",
+      "fraction": {
+        "denominator": "53509",
+        "numerator": "1028"
+      }
+    },
+    "2026_ytd_reported_tax": {
+      "amount_usd": "1028000000",
+      "concepts": [
+        "us-gaap:IncomeTaxExpenseBenefit"
+      ],
+      "end": "2026-09-30",
+      "occurrences": [
+        {
+          "attrs": {
+            "contextref": "c-1",
+            "decimals": "-6",
+            "format": "ixt:num-dot-decimal",
+            "id": "f-135",
+            "name": "us-gaap:IncomeTaxExpenseBenefit",
+            "scale": "6",
+            "unitref": "usd"
+          },
+          "context": {
+            "dimensions": [],
+            "end": "2026-09-30",
+            "instant": null,
+            "start": "2026-01-01"
+          },
+          "display": "1,028",
+          "ordinal": 106
+        }
+      ],
+      "source_id": "q3-2026-10q",
+      "source_sha256": "4ca982ff1218f1f71dadb5fd23b2a917721f1b962b6c6d89febfe0d24e318024",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+      "start": "2026-01-01"
+    },
+    "noncash_valuation_allowance_charge": {
+      "amount_usd": "14030000000",
+      "concepts": [
+        "meta:DeferredTaxAssetsValuationAllowanceDiscreteChargeRelatedToNewLegislation"
+      ],
+      "end": null,
+      "occurrences": [
+        {
+          "attrs": {
+            "contextref": "c-5",
+            "decimals": "-7",
+            "id": "f-1144",
+            "name": "meta:DeferredTaxAssetsValuationAllowanceDiscreteChargeRelatedToNewLegislation",
+            "scale": "9",
+            "unitref": "usd"
+          },
+          "context": {
+            "dimensions": [],
+            "end": null,
+            "instant": "2025-12-31",
+            "start": null
+          },
+          "display": "14.03",
+          "ordinal": 996
+        }
+      ],
+      "source_id": "meta-2025-10k",
+      "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+      "start": null
+    },
+    "obbba_charge": {
+      "amount_usd": "15930000000",
+      "concepts": [
+        "meta:IncomeTaxExpenseBenefitDiscreteChargeRelatedToNewLegislation"
+      ],
+      "end": "2025-09-30",
+      "occurrences": [
+        {
+          "attrs": {
+            "contextref": "c-242",
+            "decimals": "-7",
+            "format": "ixt:num-dot-decimal",
+            "id": "f-1143",
+            "name": "meta:IncomeTaxExpenseBenefitDiscreteChargeRelatedToNewLegislation",
+            "scale": "9",
+            "unitref": "usd"
+          },
+          "context": {
+            "dimensions": [],
+            "end": "2025-09-30",
+            "instant": null,
+            "start": "2025-07-01"
+          },
+          "display": "15.93",
+          "ordinal": 995
+        }
+      ],
+      "source_id": "meta-2025-10k",
+      "source_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+      "start": "2025-07-01"
+    },
+    "other_obbba_charge_derived_usd": "1900000000",
+    "reported2025_etr": {
+      "decimal": "0.2964436996695061211190243448307964436997",
+      "fraction": {
+        "denominator": "42966",
+        "numerator": "12737"
+      }
+    },
+    "reported2025_pretax_usd": "85932000000",
+    "reported2025_provision_usd": "25474000000",
+    "selected_forward_policy": {
+      "classification": "EXPLICIT_MODELLING_CONVENTION_REAFFIRMED_UNDER_APPROVED_TAX_REVIEW",
+      "ev_change_from_this_policy_review_usd": "0",
+      "guide_context": "Latest retained Q3 2026 filing guides Q4 2026 consolidated ETR15\u201317%;16% midpoint is contextual support, not reported unlevered annual tax. Long-run20% and fade remain explicit analyst assumptions.",
+      "historical_cfo_change_usd": "0",
+      "no_automatic_charge_addback": true,
+      "no_automatic_reversal_copy": true,
+      "numeric_preload_change": false,
+      "operating_tax_annual": {
+        "2026": "0.16",
+        "2027": "0.17",
+        "2028": "0.18",
+        "2029": "0.19",
+        "2030": "0.20"
+      },
+      "terminal_tax": "0.20"
+    },
+    "source_policy_sha256": "db7693ea471a5f48526b34a3b5c25070f0b598b8c9aa322bb4c5bb79ac0071c1"
+  }
+}

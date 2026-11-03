@@ -1,0 +1,10 @@
+test_original_research_inventory_and_archive_bytes (test_workspace.CloudWorkspaceTests.test_original_research_inventory_and_archive_bytes) ... ok
+test_path_traversal_or_archive_tampering_cannot_write_any_research (test_workspace.CloudWorkspaceTests.test_path_traversal_or_archive_tampering_cannot_write_any_research) ... ok
+test_restore_is_idempotent_and_rejects_overwriting_changed_research (test_workspace.CloudWorkspaceTests.test_restore_is_idempotent_and_rejects_overwriting_changed_research) ... ok
+test_service_exit_and_busy_ports_fail_without_taking_over_processes (test_workspace.CloudWorkspaceTests.test_service_exit_and_busy_ports_fail_without_taking_over_processes) ... ok
+test_smoke_runs_isolated_catalog_and_synthetic_case (test_workspace.CloudWorkspaceTests.test_smoke_runs_isolated_catalog_and_synthetic_case) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.842s
+
+OK

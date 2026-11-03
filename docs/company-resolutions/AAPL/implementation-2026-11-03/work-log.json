@@ -1,0 +1,71 @@
+{
+  "schema_version": "company-resolution-work-log-v1",
+  "ticker": "AAPL",
+  "parent_status": "OPEN",
+  "authorization": "Root task relays explicit user approval of all preferred treatments in OPEN-ROADBLOCKS.md; no fabricated missing values, stock-delta principal or materiality waiver authorized.",
+  "events": [
+    {
+      "at_utc": "2026-11-03T16:57:25.014948+00:00",
+      "event": "OFFICIAL_SOURCE_RETAINED",
+      "source": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "sha256": "8ffac07be41cb9e633ec3d53586604f0074ae39d42df56746b9edaee8e5a3c26",
+      "status": 200,
+      "scope": "Investigation only; no automatic adoption"
+    },
+    {
+      "at_utc": "2026-11-03T16:57:25.554587+00:00",
+      "event": "OFFICIAL_SOURCE_RETAINED",
+      "source": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "sha256": "75a78f918313f3336823517d6c34908d23dd07f07e90e625c61e705e3bb6d27b",
+      "status": 200,
+      "scope": "Investigation only; no automatic adoption"
+    },
+    {
+      "at_utc": "2026-11-03T16:57:40.880072+00:00",
+      "event": "OFFICIAL_SOURCE_RETAINED",
+      "source": "aapl-20260926.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+      "sha256": "671be78e626940c4fd9627e14701489e46dcbca19ec7c5f106b7ab215edd3ec1",
+      "status": 200,
+      "scope": "Investigation only; no automatic adoption"
+    },
+    {
+      "at_utc": "2026-11-03T16:57:41.440293+00:00",
+      "event": "OFFICIAL_SOURCE_RETAINED",
+      "source": "aapl-20260926_htm.xml",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+      "sha256": "3d931657ceef0a307119d576e020723181dc166b5321b7abd6125ad09ca790ea",
+      "status": 200,
+      "scope": "Investigation only; no automatic adoption"
+    },
+    {
+      "at_utc": "2026-11-03T17:03:02.568217+00:00",
+      "event": "APPROVED_TREATMENTS_EXECUTED",
+      "issues": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "result": "Five-year source-bound financing/operating/tax schedules and metric availability implemented; parent OPEN. No new verified FCFF/FCFE values or historical/preload overwrite.",
+      "implementation": "scripts/implement_apple_roadblocks.py",
+      "new_evidence": "FY2026 annual provides2024/25 amortization comparatives and2025 intangible presentation bridge; no gross interest/finance-principal values recovered.",
+      "conventions": "A7 reported-ETR allocation explicitly labeled; A8 existing18-to20 terminal20 retained, root scenario parity test pending."
+    },
+    {
+      "at_utc": "2026-11-03T17:03:41.825321+00:00",
+      "event": "VALIDATION_PASSED",
+      "tests": "8 new Apple source/convention/availability regression tests passed in13.581s",
+      "checks": "Deterministic offline replay passed; original bank read-only; git diff whitespace check passed",
+      "company_status": "OPEN",
+      "verified_new_fcff_periods": 0,
+      "verified_new_fcfe_periods": 0
+    }
+  ]
+}

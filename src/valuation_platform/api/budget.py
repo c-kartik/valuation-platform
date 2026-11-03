@@ -137,6 +137,12 @@ def read_http_reverse(body):
     return read_reverse(text)
 
 
+def read_http_fcfe(body):
+    from valuation_platform.valuation.fcfe import read_fcfe
+    text, _ = read_http_document(body)
+    return read_fcfe(text)
+
+
 def error_body(code, message, errors=()):
     # Bounded public errors; internal exceptions must never be passed here.
     return {'error': {'code': code, 'message': message,

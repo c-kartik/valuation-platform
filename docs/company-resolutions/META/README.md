@@ -106,3 +106,16 @@ mapping and before/after review; preserve this version and original approvals.
 [Earlier preparation record](../../company-data-preparation/META-analyst-input-package.md)
 and [supplemental record](../../company-data-preparation/supported-seeds/META.md)
 retain their original preparation and financial-sufficiency scopes.
+
+## Approved treatment implementation and independent review — November3
+
+The latest user approval covers the preferred treatments in the roadblock register.
+New evidence and executed treatment logs are in [this implementation](implementation-2026-11-03/README.md).
+The [shared implementation log](../implementation-2026-11-03/implementation-log.json),
+[basis bridge](../implementation-2026-11-03/basis-bridge/decision-log.json),
+[share-source schedules](../implementation-2026-11-03/share-bridge/README.md) and
+[independent review](../implementation-2026-11-03/independent-review/findings.md)
+retain the distinction between applied treatment, numerical verification and financial clearance.
+The platform now exposes five-year FCFF/FCFE review records and a separate explicit manual FCFE forecast;
+prior statements above about review-only integration describe the earlier milestone.
+**Company status remains OPEN.** No missing/provisional/ownership item is cleared by software publication.

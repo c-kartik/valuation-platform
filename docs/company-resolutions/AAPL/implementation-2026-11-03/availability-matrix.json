@@ -1,0 +1,253 @@
+{
+  "metric_contract": "Distinct reported-cash convention, provisional identified-funding FCFE and unavailable valuation-aligned/verified scopes. Never fallback across them.",
+  "parent_status": "OPEN",
+  "periods": [
+    {
+      "fiscal_year": 2021,
+      "identity": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "metrics": {
+        "fcfe_identified_funding": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "ownership": "Consolidated wholly owned subsidiaries under filing basis; no minority attribution assumption needed",
+          "status": "PROVISIONAL_UNCLASSIFIED_FINANCING",
+          "unknown_is_zero": false,
+          "value_usd": "105618000000"
+        },
+        "fcfe_verified": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "status": "UNAVAILABLE_UNCLASSIFIED_FINANCING",
+          "value_usd": null
+        },
+        "fcff_reported_cfo_basis": {
+          "basis": "reported CFO + gross expensed interest * (1 - provision/pretax) - cash PP&E",
+          "comparability": "SBC add-back remains in reported CFO; not forecast-comparable operating FCFF",
+          "status": "AVAILABLE_EXPLICIT_REPORTED_ETR_CONVENTION",
+          "value_usd": "95246155200.673949472103436592892397007517833105936"
+        },
+        "fcff_valuation_aligned": {
+          "blocking_ids": [
+            "A4",
+            "A5",
+            "A6"
+          ],
+          "status": "UNAVAILABLE_INPUT_ALIGNMENT",
+          "value_usd": null
+        },
+        "reported_cfo_cash_ppe_fcf": {
+          "status": "AVAILABLE_REPORTED_CASH_PERIMETER",
+          "value_usd": "92953000000"
+        }
+      }
+    },
+    {
+      "fiscal_year": 2022,
+      "identity": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "metrics": {
+        "fcfe_identified_funding": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "ownership": "Consolidated wholly owned subsidiaries under filing basis; no minority attribution assumption needed",
+          "status": "PROVISIONAL_UNCLASSIFIED_FINANCING",
+          "unknown_is_zero": false,
+          "value_usd": "111320000000"
+        },
+        "fcfe_verified": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "status": "UNAVAILABLE_UNCLASSIFIED_FINANCING",
+          "value_usd": null
+        },
+        "fcff_reported_cfo_basis": {
+          "basis": "reported CFO + gross expensed interest * (1 - provision/pretax) - cash PP&E",
+          "comparability": "SBC add-back remains in reported CFO; not forecast-comparable operating FCFF",
+          "status": "AVAILABLE_EXPLICIT_REPORTED_ETR_CONVENTION",
+          "value_usd": "113899047228.02952066698571824387295030351880305282"
+        },
+        "fcff_valuation_aligned": {
+          "blocking_ids": [
+            "A4",
+            "A5",
+            "A6"
+          ],
+          "status": "UNAVAILABLE_INPUT_ALIGNMENT",
+          "value_usd": null
+        },
+        "reported_cfo_cash_ppe_fcf": {
+          "status": "AVAILABLE_REPORTED_CASH_PERIMETER",
+          "value_usd": "111443000000"
+        }
+      }
+    },
+    {
+      "fiscal_year": 2023,
+      "identity": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "metrics": {
+        "fcfe_identified_funding": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "ownership": "Consolidated wholly owned subsidiaries under filing basis; no minority attribution assumption needed",
+          "status": "PROVISIONAL_UNCLASSIFIED_FINANCING",
+          "unknown_is_zero": false,
+          "value_usd": "89683000000"
+        },
+        "fcfe_verified": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "status": "UNAVAILABLE_UNCLASSIFIED_FINANCING",
+          "value_usd": null
+        },
+        "fcff_reported_cfo_basis": {
+          "basis": "reported CFO + gross expensed interest * (1 - provision/pretax) - cash PP&E",
+          "comparability": "SBC add-back remains in reported CFO; not forecast-comparable operating FCFF",
+          "status": "AVAILABLE_EXPLICIT_REPORTED_ETR_CONVENTION",
+          "value_usd": "102938094877.61131040303861574171766195399873391011"
+        },
+        "fcff_valuation_aligned": {
+          "blocking_ids": [
+            "A4",
+            "A5",
+            "A6"
+          ],
+          "status": "UNAVAILABLE_INPUT_ALIGNMENT",
+          "value_usd": null
+        },
+        "reported_cfo_cash_ppe_fcf": {
+          "status": "AVAILABLE_REPORTED_CASH_PERIMETER",
+          "value_usd": "99584000000"
+        }
+      }
+    },
+    {
+      "fiscal_year": 2024,
+      "identity": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "metrics": {
+        "fcfe_identified_funding": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "ownership": "Consolidated wholly owned subsidiaries under filing basis; no minority attribution assumption needed",
+          "status": "PROVISIONAL_UNCLASSIFIED_FINANCING",
+          "unknown_is_zero": false,
+          "value_usd": "102809000000"
+        },
+        "fcfe_verified": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "status": "UNAVAILABLE_UNCLASSIFIED_FINANCING",
+          "value_usd": null
+        },
+        "fcff_reported_cfo_basis": {
+          "basis": "reported CFO + gross expensed interest * (1 - provision/pretax) - cash PP&E",
+          "comparability": "SBC add-back remains in reported CFO; not forecast-comparable operating FCFF",
+          "status": "UNAVAILABLE_REQUIRED_INTEREST",
+          "value_usd": null
+        },
+        "fcff_valuation_aligned": {
+          "blocking_ids": [
+            "A4",
+            "A5",
+            "A6"
+          ],
+          "status": "UNAVAILABLE_INPUT_ALIGNMENT",
+          "value_usd": null
+        },
+        "reported_cfo_cash_ppe_fcf": {
+          "status": "AVAILABLE_REPORTED_CASH_PERIMETER",
+          "value_usd": "108807000000"
+        }
+      }
+    },
+    {
+      "fiscal_year": 2025,
+      "identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "metrics": {
+        "fcfe_identified_funding": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "ownership": "Consolidated wholly owned subsidiaries under filing basis; no minority attribution assumption needed",
+          "status": "PROVISIONAL_UNCLASSIFIED_FINANCING",
+          "unknown_is_zero": false,
+          "value_usd": "90284000000"
+        },
+        "fcfe_verified": {
+          "blocking_ids": [
+            "A2",
+            "A3"
+          ],
+          "status": "UNAVAILABLE_UNCLASSIFIED_FINANCING",
+          "value_usd": null
+        },
+        "fcff_reported_cfo_basis": {
+          "basis": "reported CFO + gross expensed interest * (1 - provision/pretax) - cash PP&E",
+          "comparability": "SBC add-back remains in reported CFO; not forecast-comparable operating FCFF",
+          "status": "UNAVAILABLE_REQUIRED_INTEREST",
+          "value_usd": null
+        },
+        "fcff_valuation_aligned": {
+          "blocking_ids": [
+            "A4",
+            "A5",
+            "A6"
+          ],
+          "status": "UNAVAILABLE_INPUT_ALIGNMENT",
+          "value_usd": null
+        },
+        "reported_cfo_cash_ppe_fcf": {
+          "status": "AVAILABLE_REPORTED_CASH_PERIMETER",
+          "value_usd": "98767000000"
+        }
+      }
+    }
+  ],
+  "schema_version": "company-cashflow-availability-v1",
+  "ticker": "AAPL"
+}

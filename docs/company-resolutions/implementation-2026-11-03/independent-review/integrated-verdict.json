@@ -1,0 +1,749 @@
+{
+  "reviewed_at_utc": "2026-11-03T17:22:30.752467+00:00",
+  "overall_verdict": "FAIL",
+  "scope_status": "OPEN",
+  "scope": "AAPL/META/GOOGL FY2021-FY2025 FCFF and requested parent-common FCFE, actual platform integration plus explicit FCFE forecast software",
+  "financial_coverage": {
+    "requested_cells": 30,
+    "pass_stated_consolidated_fcff": 13,
+    "fail_missing_fcff": 2,
+    "fail_provisional_fcfe": 10,
+    "fail_parent_common_fcfe_with_valid_consolidated_comparator": 5,
+    "total_failed_requested_cells": 17
+  },
+  "contained_check_verdicts": {
+    "source_arithmetic": "PASS",
+    "new_issuer_evidence_operands": "PASS",
+    "S1_S3_source_schedules": "PASS_SOURCE_PREPARATION_ONLY",
+    "pinned_bundle": "PASS",
+    "all_30_api_publications": "PASS",
+    "all_30_frontend_publications": "PASS",
+    "fcfe_forecast_engine_and_live_proxy": "PASS_SOFTWARE_CONTRACT_ONLY",
+    "tax_policy_unchanged_12_live_executions": "PASS_PARITY_ONLY",
+    "broader_open_issue_api_and_frontend_labels": "PASS"
+  },
+  "api": "http://127.0.0.1:5183",
+  "backend_health": "http://127.0.0.1:8123/health",
+  "pinned_bundle": "/private/var/folders/xr/lsv4vk2979nbt46kx6sjxryh0000gn/T/valuation-cloud-dev-d9176l66/runtime",
+  "reviewed_sha256": {
+    "src/valuation_platform/valuation/fcfe.py": "89a80a1883070cb0cabc6f9a9bc12f36a841f7a57d553a02c1157bc9d1d6105c",
+    "src/valuation_platform/api/app.py": "47ff561d7ca6c7833286a05378fddad28f79da5e297bbc26a390cfb614589d5d",
+    "src/valuation_platform/api/worker.py": "0864e7c355b8adcc05eaa5eb61bf50be103c6a0d3a308cbb0bf024b717df2318",
+    "src/valuation_platform/review/pilot_cashflows.py": "d6aa01c0d16a07a54c6f969ed48df98019eeb48801135d2bbd13a058bea023a2",
+    "src/valuation_platform/api/bundle-files.json": "65bb8c17646fab748e70fcdf03585e67b3fb2cab2cddfa3318bd91b60decbfde",
+    "frontend/src/workspace/Workspace.tsx": "d558091b7be73b8514c13d0f1c11474c8394061a14514ca70ce8ba9e939107f4",
+    "frontend/src/workspace/HistoricalCashFlows.tsx": "a0d394e0fb5812b1d5f9caa5eb7bd7305cbe17f913272a0edccf45f4be7e8c63",
+    "frontend/src/workspace/FcfeForecast.tsx": "dfecfe801ea88f5ccb189aaf872b74ab7cf1df53c3b250767528704e6772c336",
+    "docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json": "9b2a9d775745e9d4bd08efe60d49619c24f632b16a28fce5fcba014fe1f55d86"
+  },
+  "unresolved_methodology_valuation_scope": [
+    "A4-A6: aligned Apple EBIT replacement inputs unavailable",
+    "A7/A8/M3: conventions and retained forecast policies are not reported recurring cash-tax facts",
+    "M2/G3: capitalized interest and lease cash/noncash economic investment alignment unresolved",
+    "G2: no supported parent NCI fair value",
+    "S1: full valuation basis bridge unresolved; SBC-only diagnostic is partial",
+    "S2: engine software exists; issuer financing semantics, actual dated discount-rate inputs and terminal economics still require review",
+    "S3: source schedules exist; eligible cash, complete claims, dated share/class/award policy not adopted"
+  ],
+  "cells": [
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2021,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "95246155200.6739494721034365928923970075178331059364326462589394452736546192",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "11085000000",
+        "cfo": "104038000000",
+        "interest_expense": "2645000000",
+        "pretax_income": "109207000000",
+        "tax_provision": "14527000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2021,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "105618000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-129000000"
+        }
+      ],
+      "net_borrowing_usd": "12665000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2022,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "113899047228.029520666985718243872950303518803052819828215913956827283947508",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "10708000000",
+        "cfo": "122151000000",
+        "interest_expense": "2931000000",
+        "pretax_income": "119103000000",
+        "tax_provision": "19300000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2022,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "111320000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-160000000"
+        }
+      ],
+      "net_borrowing_usd": "-123000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2023,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "102938094877.611310403038615741717661953998733910107617640852500527537455159",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "10959000000",
+        "cfo": "110543000000",
+        "interest_expense": "3933000000",
+        "pretax_income": "113736000000",
+        "tax_provision": "16741000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2023,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "89683000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-581000000"
+        }
+      ],
+      "net_borrowing_usd": "-9901000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2024,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": null,
+      "arithmetic_and_source_verdict": "UNAVAILABLE",
+      "hard_blockers": [
+        "A1: missing separate gross expensed interest; EBIT alternative is not established"
+      ],
+      "inputs_usd": {
+        "cash_ppe": "9447000000",
+        "cfo": "118254000000",
+        "interest_expense": null,
+        "pretax_income": "123485000000",
+        "tax_provision": "29749000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2024,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "102809000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-361000000"
+        }
+      ],
+      "net_borrowing_usd": "-5998000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2025,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": null,
+      "arithmetic_and_source_verdict": "UNAVAILABLE",
+      "hard_blockers": [
+        "A1: missing separate gross expensed interest; EBIT alternative is not established"
+      ],
+      "inputs_usd": {
+        "cash_ppe": "12715000000",
+        "cfo": "111482000000",
+        "interest_expense": null,
+        "pretax_income": "132729000000",
+        "tax_provision": "20719000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_year": 2025,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "90284000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "A2: unclassified Other financing",
+        "A3: unestablished lease principal containment"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other",
+          "signed_cash_usd": "-111000000"
+        }
+      ],
+      "net_borrowing_usd": "-8483000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2021,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "39135150452.5843837238812283224769478047542509093985280433127484984349885796",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "18567000000",
+        "cfo": "57683000000",
+        "interest_expense": "23000000",
+        "pretax_income": "47284000000",
+        "tax_provision": "7914000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2021,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "38453000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "-13000000"
+        }
+      ],
+      "net_borrowing_usd": "-663000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2022,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "19437929525.6601547590131510461848086331933793677782018807037024185433221139",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "31431000000",
+        "cfo": "50475000000",
+        "interest_expense": "185000000",
+        "pretax_income": "28819000000",
+        "tax_provision": "5619000000"
+      },
+      "receipts_usd": "245000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2022,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "28360000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "344000000"
+        }
+      ],
+      "net_borrowing_usd": "9071000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2023,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "44435666947.7945517415872480391330016024289449270473138230581091338449860842",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "27266000000",
+        "cfo": "71113000000",
+        "interest_expense": "446000000",
+        "pretax_income": "47428000000",
+        "tax_provision": "8330000000"
+      },
+      "receipts_usd": "221000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2023,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "51465000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "-111000000"
+        }
+      ],
+      "net_borrowing_usd": "7397000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2024,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "54702986513.4511696361603668114855016062154168376661053167853048978956455288",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "37256000000",
+        "cfo": "91328000000",
+        "interest_expense": "715000000",
+        "pretax_income": "70663000000",
+        "tax_provision": "8303000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2024,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "62535000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "-277000000"
+        }
+      ],
+      "net_borrowing_usd": "8463000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2025,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "46928643089.8850253688963366382721221430898850253688963366382721221430898850",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "69691000000",
+        "cfo": "115800000000",
+        "interest_expense": "1165000000",
+        "pretax_income": "85932000000",
+        "tax_provision": "25474000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "META",
+      "fiscal_year": 2025,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "73491000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "M1: unclassified Other financing"
+      ],
+      "published_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "unallocated_other": [
+        {
+          "caption": "Other financing activities",
+          "signed_cash_usd": "2220000000"
+        }
+      ],
+      "net_borrowing_usd": "27382000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2021,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "67301940022.4833028412722904313708201997046311195362267727643441267881940618",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "24640000000",
+        "cfo": "91652000000",
+        "interest_expense": "346000000",
+        "pretax_income": "90734000000",
+        "tax_provision": "14701000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2021,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "65776000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "-1236000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL",
+      "available_consolidated_metric_verdict": "PASS_CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2022,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "60310162685.0605652759084791386271870794078061911170928667563930013458950202",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "31485000000",
+        "cfo": "91495000000",
+        "interest_expense": "357000000",
+        "pretax_income": "71328000000",
+        "tax_provision": "11356000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2022,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "58814000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "-1196000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL",
+      "available_consolidated_metric_verdict": "PASS_CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2023,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "69760161636.5481759744274764632453305645321231494336012692931390505967311035",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "32251000000",
+        "cfo": "101746000000",
+        "interest_expense": "308000000",
+        "pretax_income": "85717000000",
+        "tax_provision": "11922000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2023,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "68735000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "-760000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL",
+      "available_consolidated_metric_verdict": "PASS_CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2024,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "72987942110.7540792054417226557609648207653465759712890706505863205775570671",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "52535000000",
+        "cfo": "125299000000",
+        "interest_expense": "268000000",
+        "pretax_income": "119815000000",
+        "tax_provision": "19697000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2024,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "73652000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "888000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL",
+      "available_consolidated_metric_verdict": "PASS_CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2025,
+      "metric": "FCFF",
+      "requested_ownership": "CONSOLIDATED",
+      "independently_recomputed_usd": "73878476042.9652575774747207636029365469129739463312052182891969828617480765",
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [],
+      "inputs_usd": {
+        "cash_ppe": "91447000000",
+        "cfo": "164713000000",
+        "interest_expense": "736000000",
+        "pretax_income": "158826000000",
+        "tax_provision": "26656000000"
+      },
+      "receipts_usd": "0",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "PASS_STATED_CONSOLIDATED_HISTORICAL_CONVENTION"
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year": 2025,
+      "metric": "FCFE",
+      "requested_ownership": "PARENT_COMMON",
+      "independently_recomputed_partial_or_consolidated_usd": "105403000000",
+      "parent_common_fcfe_usd": null,
+      "arithmetic_and_source_verdict": "PASS",
+      "hard_blockers": [
+        "G1: no parent-common/minority cash attribution"
+      ],
+      "published_status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+      "unallocated_other": [],
+      "net_borrowing_usd": "32137000000",
+      "api_publication_verdict": "PASS",
+      "frontend_publication_verdict": "PASS",
+      "requested_coverage_verdict": "FAIL",
+      "available_consolidated_metric_verdict": "PASS_CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+    }
+  ],
+  "registered_broader_roadblocks": {
+    "count": 18,
+    "ids": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "M1",
+      "M2",
+      "M3",
+      "G1",
+      "G2",
+      "G3",
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "status": "OPEN_TRACKED_SCOPE",
+    "distinction": "18 issue IDs are not 18 missing annual metric cells; the required historical metric matrix has 17 failures."
+  },
+  "rectifiable_code_findings": [],
+  "external_disclosure_dependencies": [
+    "AAPL exact gross expensed interest FY2024\u201325 or sufficient evidence for the approved full-history EBIT alternative",
+    "AAPL Other financing and actual lease-principal cash/containment FY2021\u201325",
+    "META complete annual debt/non-debt decomposition of Other financing FY2021\u201325",
+    "GOOGL source-supported parent/minority annual cash attribution FY2021\u201325",
+    "Cash/noncash, capitalized-interest, investment and tax scope evidence needed for broader comparable historical basis"
+  ],
+  "remaining_review_decisions": [
+    "Issuer recurring tax and terminal economic assumptions",
+    "Dated real-market discount-rate assumptions and financing schedule semantics",
+    "Eligible cash and complete claim perimeter; NCI fair value",
+    "Dated shares, class rights/economic treatment and outstanding awards"
+  ],
+  "final_metadata_bundle_recheck": "PASS_FINAL_A7_CURRENT_PINS_30_API_UI",
+  "evidence_artifacts": [
+    "acceptance.md",
+    "source-audit.json",
+    "extended-evidence-audit.json",
+    "shared-schedules-audit.json",
+    "runtime-audit.json",
+    "fcfe-engine-audit.json",
+    "fcfe-live-proxy-audit.json",
+    "tax-parity-audit.json",
+    "aapl-live-ui.png",
+    "aapl-live-ui.txt",
+    "meta-live-ui.png",
+    "meta-live-ui.txt",
+    "googl-live-ui.png",
+    "googl-live-ui.txt",
+    "fcfe-live-ui.png",
+    "fcfe-live-ui.txt",
+    "aapl-a7-final-ui.png",
+    "aapl-a7-final-ui.txt"
+  ],
+  "final_metadata_only_changes": [
+    "src/valuation_platform/api/bundle-files.json",
+    "docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json"
+  ],
+  "a7_status": "Tax-allocation convention implemented; tax/working-capital bridge remains OPEN and A7 is visible in AAPL unresolved_scope_items."
+}

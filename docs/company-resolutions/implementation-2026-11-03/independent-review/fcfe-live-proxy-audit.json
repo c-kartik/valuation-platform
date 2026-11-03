@@ -1,0 +1,614 @@
+{
+  "fcfe/validate": {
+    "status": "valid",
+    "calculation_performed": false,
+    "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR"
+  },
+  "fcfe/run": {
+    "cost_of_equity": "0.12",
+    "debt_subtracted_after_fcfe_discounting": false,
+    "equity_value_usd": "131.33333333333333333333333333333333333333333333333",
+    "limitations": [
+      "Forward financing is supplied explicitly; no historical gap or NCI attribution is auto-filled.",
+      "WACC in the linked operating case is used only for its separate FCFF reference; FCFE discounting uses cost of equity.",
+      "Terminal financing declares stable capital structure; economic sustainability and ownership require separate review.",
+      "Consolidated FCFE is before minority allocation. No common-share value is certified by this calculator."
+    ],
+    "pv_explicit_fcfe_usd": "44.941840766307081580126584161361337537930624144700",
+    "pv_terminal_equity_usd": "86.391492567026251753206749171971995795402709188630",
+    "schema_version": "fcfe-forecast-result-v1",
+    "scope": "DECLARED_PARENT_COMMON",
+    "semantic_input_review": "USER_ASSUMPTIONS_NOT_INDEPENDENTLY_CERTIFIED",
+    "submitted_inputs": {
+      "base_case": {
+        "analyst": {
+          "author": "Synthetic example author",
+          "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval.",
+          "timestamp_utc": "2000-01-01T00:00:00+00:00"
+        },
+        "anchor": {
+          "accession": "0000000123-26-000001",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 123,
+          "form": "10-K",
+          "kind": "synthetic-fixture-v1"
+        },
+        "case_name": "Synthetic editable Base example",
+        "conventions": {
+          "discounting": "fiscal-end-annual-gordon-v1",
+          "forecast": "meta-base-fcff-v1"
+        },
+        "forecast_years": [
+          {
+            "capex_percent_revenue": "0.09",
+            "change_in_operating_nwc_percent_revenue": "0.03",
+            "d_and_a_percent_revenue": "0.04",
+            "fiscal_year_label": "Synthetic period 1",
+            "forecast_tax_rate": "0.20",
+            "operating_margin": "0.25",
+            "period_index": 1,
+            "revenue_growth": "0.03"
+          },
+          {
+            "capex_percent_revenue": "0.09",
+            "change_in_operating_nwc_percent_revenue": "0.03",
+            "d_and_a_percent_revenue": "0.04",
+            "fiscal_year_label": "Synthetic period 2",
+            "forecast_tax_rate": "0.20",
+            "operating_margin": "0.25",
+            "period_index": 2,
+            "revenue_growth": "0.03"
+          },
+          {
+            "capex_percent_revenue": "0.09",
+            "change_in_operating_nwc_percent_revenue": "0.03",
+            "d_and_a_percent_revenue": "0.04",
+            "fiscal_year_label": "Synthetic period 3",
+            "forecast_tax_rate": "0.20",
+            "operating_margin": "0.25",
+            "period_index": 3,
+            "revenue_growth": "0.03"
+          },
+          {
+            "capex_percent_revenue": "0.09",
+            "change_in_operating_nwc_percent_revenue": "0.03",
+            "d_and_a_percent_revenue": "0.04",
+            "fiscal_year_label": "Synthetic period 4",
+            "forecast_tax_rate": "0.20",
+            "operating_margin": "0.25",
+            "period_index": 4,
+            "revenue_growth": "0.03"
+          },
+          {
+            "capex_percent_revenue": "0.09",
+            "change_in_operating_nwc_percent_revenue": "0.03",
+            "d_and_a_percent_revenue": "0.04",
+            "fiscal_year_label": "Synthetic period 5",
+            "forecast_tax_rate": "0.20",
+            "operating_margin": "0.25",
+            "period_index": 5,
+            "revenue_growth": "0.03"
+          }
+        ],
+        "input_basis": "SYNTHETIC_FIXTURE",
+        "limitations": [
+          "SYNTHETIC example only; anchor revenue 100 and every rate are synthetic, not SEC or META data.",
+          "No economic completeness or sustainable terminal economics certified; no equity/share bridge."
+        ],
+        "schema_version": "analyst-case-v1",
+        "scope": "Synthetic consolidated operating case; margins include synthetic SBC/service leases and aligned depreciation; cash investment includes non-overlapping financed assets.",
+        "terminal": {
+          "d_and_a_percent_revenue": "0.04",
+          "investment_percent_revenue": "0.09",
+          "operating_margin": "0.25",
+          "operating_tax_rate": "0.20",
+          "working_capital_cash_requirement_percent_revenue": "0.03"
+        },
+        "terminal_growth": "0.03",
+        "wacc": "0.10661157024793388429752066115702479338842975206612"
+      },
+      "cost_of_equity": "0.12",
+      "financing_years": [
+        {
+          "cash_debt_issued_usd": "3.4",
+          "interest_expense_usd": "1.8",
+          "new_finance_asset_funding_usd": "0.5",
+          "period_index": 1,
+          "principal_repaid_usd": "3"
+        },
+        {
+          "cash_debt_issued_usd": "3.427",
+          "interest_expense_usd": "1.854",
+          "new_finance_asset_funding_usd": "0.5",
+          "period_index": 2,
+          "principal_repaid_usd": "3"
+        },
+        {
+          "cash_debt_issued_usd": "3.45481",
+          "interest_expense_usd": "1.90962",
+          "new_finance_asset_funding_usd": "0.5",
+          "period_index": 3,
+          "principal_repaid_usd": "3"
+        },
+        {
+          "cash_debt_issued_usd": "3.4834543",
+          "interest_expense_usd": "1.9669086",
+          "new_finance_asset_funding_usd": "0.5",
+          "period_index": 4,
+          "principal_repaid_usd": "3"
+        },
+        {
+          "cash_debt_issued_usd": "3.512957929",
+          "interest_expense_usd": "2.025915858",
+          "new_finance_asset_funding_usd": "0.5",
+          "period_index": 5,
+          "principal_repaid_usd": "3"
+        }
+      ],
+      "opening_debt_usd": "30",
+      "schema_version": "fcfe-forecast-request-v1",
+      "scope": "DECLARED_PARENT_COMMON",
+      "terminal_financing": {
+        "cash_debt_issued_usd": "3.54334666687",
+        "interest_expense_usd": "2.08669333374",
+        "new_finance_asset_funding_usd": "0.5",
+        "principal_repaid_usd": "3"
+      },
+      "terminal_growth": "0.03"
+    },
+    "terminal": {
+      "cash_debt_issued_usd": "3.54334666687",
+      "closing_debt_usd": "35.82156889587",
+      "equity_tax_usd": "5.5529228158970000",
+      "fcfe_usd": "13.7026195582260000",
+      "fcff_usd": "14.3286275583480000",
+      "interest_expense_usd": "2.08669333374",
+      "interest_tax_shield_usd": "0.4173386667480000",
+      "net_borrowing_usd": "1.04334666687",
+      "net_income_usd": "22.2116912635880000",
+      "new_finance_asset_funding_usd": "0.5",
+      "opening_debt_usd": "34.778222229",
+      "principal_repaid_usd": "3"
+    },
+    "terminal_equity_value_usd": "152.25132842473333333333333333333333333333333333333",
+    "value_per_share": null,
+    "years": [
+      {
+        "cash_debt_issued_usd": "3.4",
+        "closing_debt_usd": "30.9",
+        "discount_factor": "0.89285714285714285714285714285714285714285714285714",
+        "equity_tax_usd": "4.790000",
+        "fcfe_usd": "11.820000",
+        "fcff_usd": "12.360000",
+        "fiscal_year_label": "Synthetic period 1",
+        "interest_expense_usd": "1.8",
+        "interest_tax_shield_usd": "0.360000",
+        "net_borrowing_usd": "0.9",
+        "net_income_usd": "19.160000",
+        "new_finance_asset_funding_usd": "0.5",
+        "opening_debt_usd": "30",
+        "period_index": 1,
+        "principal_repaid_usd": "3",
+        "pv_fcfe_usd": "10.553571428571428571428571428571428571428571428571"
+      },
+      {
+        "cash_debt_issued_usd": "3.427",
+        "closing_debt_usd": "31.827",
+        "discount_factor": "0.79719387755102040816326530612244897959183673469388",
+        "equity_tax_usd": "4.93370000",
+        "fcfe_usd": "12.17460000",
+        "fcff_usd": "12.73080000",
+        "fiscal_year_label": "Synthetic period 2",
+        "interest_expense_usd": "1.854",
+        "interest_tax_shield_usd": "0.37080000",
+        "net_borrowing_usd": "0.927",
+        "net_income_usd": "19.73480000",
+        "new_finance_asset_funding_usd": "0.5",
+        "opening_debt_usd": "30.9",
+        "period_index": 2,
+        "principal_repaid_usd": "3",
+        "pv_fcfe_usd": "9.7055165816326530612244897959183673469387755102041"
+      },
+      {
+        "cash_debt_issued_usd": "3.45481",
+        "closing_debt_usd": "32.78181",
+        "discount_factor": "0.71178024781341107871720116618075801749271137026239",
+        "equity_tax_usd": "5.0817110000",
+        "fcfe_usd": "12.5398380000",
+        "fcff_usd": "13.1127240000",
+        "fiscal_year_label": "Synthetic period 3",
+        "interest_expense_usd": "1.90962",
+        "interest_tax_shield_usd": "0.3819240000",
+        "net_borrowing_usd": "0.95481",
+        "net_income_usd": "20.3268440000",
+        "new_finance_asset_funding_usd": "0.5",
+        "opening_debt_usd": "31.827",
+        "period_index": 3,
+        "principal_repaid_usd": "3",
+        "pv_fcfe_usd": "8.9256089991800291545189504373177842565597667638484"
+      },
+      {
+        "cash_debt_issued_usd": "3.4834543",
+        "closing_debt_usd": "33.7652643",
+        "discount_factor": "0.63551807840483132028321532694710537276134943773428",
+        "equity_tax_usd": "5.234162330000",
+        "fcfe_usd": "12.916033140000",
+        "fcff_usd": "13.506105720000",
+        "fiscal_year_label": "Synthetic period 4",
+        "interest_expense_usd": "1.9669086",
+        "interest_tax_shield_usd": "0.393381720000",
+        "net_borrowing_usd": "0.9834543",
+        "net_income_usd": "20.936649320000",
+        "new_finance_asset_funding_usd": "0.5",
+        "opening_debt_usd": "32.78181",
+        "period_index": 4,
+        "principal_repaid_usd": "3",
+        "pv_fcfe_usd": "8.2083725617459196688879633486047480216576426488963"
+      },
+      {
+        "cash_debt_issued_usd": "3.512957929",
+        "closing_debt_usd": "34.778222229",
+        "discount_factor": "0.56742685571859939311001368477420122567977628369132",
+        "equity_tax_usd": "5.39118719990000",
+        "fcfe_usd": "13.30351413420000",
+        "fcff_usd": "13.91128889160000",
+        "fiscal_year_label": "Synthetic period 5",
+        "interest_expense_usd": "2.025915858",
+        "interest_tax_shield_usd": "0.40518317160000",
+        "net_borrowing_usd": "1.012957929",
+        "net_income_usd": "21.56474879960000",
+        "new_finance_asset_funding_usd": "0.5",
+        "opening_debt_usd": "33.7652643",
+        "period_index": 5,
+        "principal_repaid_usd": "3",
+        "pv_fcfe_usd": "7.5487711951770511240666091509490093413458677931814"
+      }
+    ]
+  },
+  "cases/run": {
+    "case_name": "Synthetic editable Base example",
+    "input_basis": "SYNTHETIC_FIXTURE",
+    "limitations": [
+      "SYNTHETIC example only; anchor revenue 100 and every rate are synthetic, not SEC or META data.",
+      "No economic completeness or sustainable terminal economics certified; no equity/share bridge.",
+      "Analyst identity, rationale and scope are submitted declarations, not authenticated approval.",
+      "No economic consistency, evidence completeness or actual META execution approval is inferred.",
+      "Enterprise value only; no bridge/share inputs or automatic historical forecasts."
+    ],
+    "schema_version": "analyst-case-enterprise-value-v1",
+    "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
+    "stage_b": {
+      "convention_version": "fiscal-end-annual-gordon-v1",
+      "enterprise_value": "161.33333333333333333333333333333333333333333333333",
+      "numeric_policy": {
+        "intermediate_quantization": false,
+        "precision": 50,
+        "rounding": "ROUND_HALF_EVEN",
+        "unit": "USD"
+      },
+      "pv_explicit_fcff": "48.630665387497205710853692366944704047746658299511",
+      "pv_terminal_value": "112.70266794583612762247964096638862928558667503382",
+      "schema": "stage-b-enterprise-value-v1",
+      "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
+      "stage_a": {
+        "anchor": {
+          "accession": "0000000123-26-000001",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "approval_details": {
+            "basis": "synthetic fixture; no actual-case approval"
+          },
+          "approval_reference": "synthetic:declaration",
+          "cik": 123,
+          "effective_reference": "synthetic:effective",
+          "form": "10-K",
+          "precision": "INF",
+          "raw_value": "100",
+          "revenue": "100",
+          "scale": 1,
+          "sign_multiplier": 1,
+          "source_details": {
+            "basis": "SYNTHETIC_FIXTURE; not a SEC observation"
+          },
+          "source_reference": "synthetic:revenue",
+          "unit": "USD"
+        },
+        "assumptions": {
+          "anchor_accession_number": "0000000123-26-000001",
+          "anchor_fiscal_end": "2025-12-31",
+          "company_cik": 123,
+          "forecast_years": [
+            {
+              "capex_percent_revenue": "0.09",
+              "change_in_operating_nwc_percent_revenue": "0.03",
+              "d_and_a_percent_revenue": "0.04",
+              "fiscal_year_label": "Synthetic period 1",
+              "forecast_tax_rate": "0.20",
+              "operating_margin": "0.25",
+              "period_index": 1,
+              "revenue_growth": "0.03"
+            },
+            {
+              "capex_percent_revenue": "0.09",
+              "change_in_operating_nwc_percent_revenue": "0.03",
+              "d_and_a_percent_revenue": "0.04",
+              "fiscal_year_label": "Synthetic period 2",
+              "forecast_tax_rate": "0.20",
+              "operating_margin": "0.25",
+              "period_index": 2,
+              "revenue_growth": "0.03"
+            },
+            {
+              "capex_percent_revenue": "0.09",
+              "change_in_operating_nwc_percent_revenue": "0.03",
+              "d_and_a_percent_revenue": "0.04",
+              "fiscal_year_label": "Synthetic period 3",
+              "forecast_tax_rate": "0.20",
+              "operating_margin": "0.25",
+              "period_index": 3,
+              "revenue_growth": "0.03"
+            },
+            {
+              "capex_percent_revenue": "0.09",
+              "change_in_operating_nwc_percent_revenue": "0.03",
+              "d_and_a_percent_revenue": "0.04",
+              "fiscal_year_label": "Synthetic period 4",
+              "forecast_tax_rate": "0.20",
+              "operating_margin": "0.25",
+              "period_index": 4,
+              "revenue_growth": "0.03"
+            },
+            {
+              "capex_percent_revenue": "0.09",
+              "change_in_operating_nwc_percent_revenue": "0.03",
+              "d_and_a_percent_revenue": "0.04",
+              "fiscal_year_label": "Synthetic period 5",
+              "forecast_tax_rate": "0.20",
+              "operating_margin": "0.25",
+              "period_index": 5,
+              "revenue_growth": "0.03"
+            }
+          ],
+          "schema_version": "1",
+          "terminal_growth": "0.03",
+          "wacc": "0.10661157024793388429752066115702479338842975206612"
+        },
+        "convention_version": "meta-base-fcff-v1",
+        "numeric_policy": {
+          "intermediate_quantization": false,
+          "precision": 50,
+          "rounding": "ROUND_HALF_EVEN",
+          "unit": "USD"
+        },
+        "schema": "stage-a-forecast-v1",
+        "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR",
+        "years": [
+          {
+            "d_and_a": "4.1200",
+            "ebit": "25.7500",
+            "fcff": "12.360000",
+            "fiscal_year_label": "Synthetic period 1",
+            "investment": "9.2700",
+            "nopat": "20.600000",
+            "period_index": 1,
+            "revenue": "103.00",
+            "tax": "5.150000",
+            "working_capital_cash_requirement": "3.0900"
+          },
+          {
+            "d_and_a": "4.243600",
+            "ebit": "26.522500",
+            "fcff": "12.73080000",
+            "fiscal_year_label": "Synthetic period 2",
+            "investment": "9.548100",
+            "nopat": "21.21800000",
+            "period_index": 2,
+            "revenue": "106.0900",
+            "tax": "5.30450000",
+            "working_capital_cash_requirement": "3.182700"
+          },
+          {
+            "d_and_a": "4.37090800",
+            "ebit": "27.31817500",
+            "fcff": "13.1127240000",
+            "fiscal_year_label": "Synthetic period 3",
+            "investment": "9.83454300",
+            "nopat": "21.8545400000",
+            "period_index": 3,
+            "revenue": "109.272700",
+            "tax": "5.4636350000",
+            "working_capital_cash_requirement": "3.27818100"
+          },
+          {
+            "d_and_a": "4.5020352400",
+            "ebit": "28.1377202500",
+            "fcff": "13.506105720000",
+            "fiscal_year_label": "Synthetic period 4",
+            "investment": "10.1295792900",
+            "nopat": "22.510176200000",
+            "period_index": 4,
+            "revenue": "112.55088100",
+            "tax": "5.627544050000",
+            "working_capital_cash_requirement": "3.3765264300"
+          },
+          {
+            "d_and_a": "4.637096297200",
+            "ebit": "28.981851857500",
+            "fcff": "13.91128889160000",
+            "fiscal_year_label": "Synthetic period 5",
+            "investment": "10.433466668700",
+            "nopat": "23.18548148600000",
+            "period_index": 5,
+            "revenue": "115.9274074300",
+            "tax": "5.79637037150000",
+            "working_capital_cash_requirement": "3.477822222900"
+          }
+        ]
+      },
+      "terminal": {
+        "d_and_a": "4.77620918611600",
+        "ebit": "29.85130741322500",
+        "fcff": "14.3286275583480000",
+        "fiscal_year_label": "Terminal year",
+        "investment": "10.74647066876100",
+        "nopat": "23.8810459305800000",
+        "period_index": 6,
+        "revenue": "119.405229652900",
+        "tax": "5.9702614826450000",
+        "working_capital_cash_requirement": "3.58215688958700"
+      },
+      "terminal_assumptions": {
+        "convention_version": "meta-base-fcff-v1",
+        "d_and_a_percent_revenue": "0.04",
+        "investment_percent_revenue": "0.09",
+        "operating_margin": "0.25",
+        "operating_tax_rate": "0.20",
+        "working_capital_cash_requirement_percent_revenue": "0.03"
+      },
+      "terminal_value": "187.02955065373333333333333333333333333333333333332",
+      "timing": {
+        "analytical_t0": "2025-12-31",
+        "annual_discount_exponents": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "basis": "anchor_fiscal_end_analytical",
+        "information_cutoff": "NOT_ESTABLISHED_BY_CALCULATOR",
+        "notice": "Analytical t=0 at the anchor fiscal end using later-filed information; not a contemporaneous historical-information backtest or a current market-date valuation.",
+        "terminal_value_discount_exponent": 5
+      },
+      "years": [
+        {
+          "discount_factor": "0.90365944734876773711725168035847647498132935026140",
+          "fcff": "12.360000",
+          "fiscal_year_label": "Synthetic period 1",
+          "period_index": 1,
+          "pv_fcff": "11.169230769230769230769230769230769230769230769231"
+        },
+        {
+          "discount_factor": "0.81660039678268033003127298971901160173816916640498",
+          "fcff": "12.73080000",
+          "fiscal_year_label": "Synthetic period 2",
+          "period_index": 2,
+          "pv_fcff": "10.395976331360946745562130177514792899408284023669"
+        },
+        {
+          "discount_factor": "0.73792866326142135872878291079910682457295346628084",
+          "fcff": "13.1127240000",
+          "fiscal_year_label": "Synthetic period 3",
+          "period_index": 3,
+          "pv_fcff": "9.6762548930359581247155211652253072371415566681840"
+        },
+        {
+          "discount_factor": "0.66683620802563095150248493059516001324366967453313",
+          "fcff": "13.506105720000",
+          "fiscal_year_label": "Synthetic period 4",
+          "period_index": 4,
+          "pv_fcff": "9.0063603235180841006967543153250936591856027450024"
+        },
+        {
+          "discount_factor": "0.60259283921658958276176756237501390293117274547057",
+          "fcff": "13.91128889160000",
+          "fiscal_year_label": "Synthetic period 5",
+          "period_index": 5,
+          "pv_fcff": "8.3828430703514475091100559396487410212419840934254"
+        }
+      ]
+    },
+    "submitted_inputs": {
+      "analyst": {
+        "author": "Synthetic example author",
+        "rationale": "Independent synthetic rates illustrate the editable interface; no historical averages or actual-case approval.",
+        "timestamp_utc": "2000-01-01T00:00:00+00:00"
+      },
+      "anchor": {
+        "accession": "0000000123-26-000001",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 123,
+        "form": "10-K",
+        "kind": "synthetic-fixture-v1"
+      },
+      "case_name": "Synthetic editable Base example",
+      "conventions": {
+        "discounting": "fiscal-end-annual-gordon-v1",
+        "forecast": "meta-base-fcff-v1"
+      },
+      "forecast_years": [
+        {
+          "capex_percent_revenue": "0.09",
+          "change_in_operating_nwc_percent_revenue": "0.03",
+          "d_and_a_percent_revenue": "0.04",
+          "fiscal_year_label": "Synthetic period 1",
+          "forecast_tax_rate": "0.20",
+          "operating_margin": "0.25",
+          "period_index": 1,
+          "revenue_growth": "0.03"
+        },
+        {
+          "capex_percent_revenue": "0.09",
+          "change_in_operating_nwc_percent_revenue": "0.03",
+          "d_and_a_percent_revenue": "0.04",
+          "fiscal_year_label": "Synthetic period 2",
+          "forecast_tax_rate": "0.20",
+          "operating_margin": "0.25",
+          "period_index": 2,
+          "revenue_growth": "0.03"
+        },
+        {
+          "capex_percent_revenue": "0.09",
+          "change_in_operating_nwc_percent_revenue": "0.03",
+          "d_and_a_percent_revenue": "0.04",
+          "fiscal_year_label": "Synthetic period 3",
+          "forecast_tax_rate": "0.20",
+          "operating_margin": "0.25",
+          "period_index": 3,
+          "revenue_growth": "0.03"
+        },
+        {
+          "capex_percent_revenue": "0.09",
+          "change_in_operating_nwc_percent_revenue": "0.03",
+          "d_and_a_percent_revenue": "0.04",
+          "fiscal_year_label": "Synthetic period 4",
+          "forecast_tax_rate": "0.20",
+          "operating_margin": "0.25",
+          "period_index": 4,
+          "revenue_growth": "0.03"
+        },
+        {
+          "capex_percent_revenue": "0.09",
+          "change_in_operating_nwc_percent_revenue": "0.03",
+          "d_and_a_percent_revenue": "0.04",
+          "fiscal_year_label": "Synthetic period 5",
+          "forecast_tax_rate": "0.20",
+          "operating_margin": "0.25",
+          "period_index": 5,
+          "revenue_growth": "0.03"
+        }
+      ],
+      "input_basis": "SYNTHETIC_FIXTURE",
+      "limitations": [
+        "SYNTHETIC example only; anchor revenue 100 and every rate are synthetic, not SEC or META data.",
+        "No economic completeness or sustainable terminal economics certified; no equity/share bridge."
+      ],
+      "schema_version": "analyst-case-v1",
+      "scope": "Synthetic consolidated operating case; margins include synthetic SBC/service leases and aligned depreciation; cash investment includes non-overlapping financed assets.",
+      "terminal": {
+        "d_and_a_percent_revenue": "0.04",
+        "investment_percent_revenue": "0.09",
+        "operating_margin": "0.25",
+        "operating_tax_rate": "0.20",
+        "working_capital_cash_requirement_percent_revenue": "0.03"
+      },
+      "terminal_growth": "0.03",
+      "wacc": "0.10661157024793388429752066115702479338842975206612"
+    }
+  },
+  "verdict": "PASS_SOFTWARE_CONTRACT_ONLY",
+  "actual_proxy": "http://127.0.0.1:5182",
+  "financial_scope_verdict": "FAIL_OPEN"
+}

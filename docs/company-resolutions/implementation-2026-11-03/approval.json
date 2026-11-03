@@ -1,0 +1,14 @@
+{
+  "schema_version": "pilot-cashflow-treatment-approval-v1",
+  "date": "2026-11-03",
+  "companies": ["AAPL", "META", "GOOGL"],
+  "fiscal_years": [2021, 2022, 2023, 2024, 2025],
+  "authorization_quote": "ok I agree with these preferred treatments. I want you to implement them and log them as you go in the appropriate file. after you implement these treatments, I want you to perform a full independent review of whether FCFE and FCFF are available for the 3 companies across all 5 periods on our platform. without passing this review do not stop implementation and work through any road blocker before you come back to me saying done.",
+  "approved_treatment_register": "docs/company-resolutions/OPEN-ROADBLOCKS.md",
+  "approved_ids": ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "M1", "M2", "M3", "G1", "G2", "G3", "S1", "S2", "S3", "S4"],
+  "required_review": "Independent source, calculation, ownership/basis and actual API/UI review of all 30 company-year-metric cells. Scoped consolidated amounts and partial-financing calculations do not establish parent-common availability.",
+  "missing_input_policy": "No fabrication, zero-filling, undisclosed materiality waiver, stock-to-cash inference without a complete roll-forward, or scope relabeling to force a pass.",
+  "outgoing_issuer_messages_authorized": false,
+  "production_deployment_authorized": false,
+  "completion_rule": "Keep the issuer and development scope OPEN while any roadblock remains. Record failed review results honestly and continue feasible work."
+}

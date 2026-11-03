@@ -1,0 +1,26 @@
+{
+  "policies": [
+    {
+      "ticker": "AAPL",
+      "path": "data/preload/aapl-v1/policy.json",
+      "source_git_commit": "6ee47e1e7d0ea73e265ad24f04ea46d7d4978696",
+      "source_git_blob_sha256": "73ff24e6aa4283cdb6807ab22e18a96f67bcd9162c796a80f238b3675f87a766",
+      "configuration": {
+        "tax_start": "0.18",
+        "tax_endpoint": "0.20",
+        "terminal_tax": "0.20"
+      }
+    },
+    {
+      "ticker": "META",
+      "path": "data/preload/meta-v1/policy.json",
+      "source_git_commit": "6ee47e1e7d0ea73e265ad24f04ea46d7d4978696",
+      "source_git_blob_sha256": "db7693ea471a5f48526b34a3b5c25070f0b598b8c9aa322bb4c5bb79ac0071c1",
+      "configuration": {
+        "tax_start": "0.16",
+        "tax_endpoint": "0.20",
+        "terminal_tax": "0.20"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+test_dated_class_counts_reconcile_without_economic_equivalence (test_share_bridge.ShareBridgeSourceTests.test_dated_class_counts_reconcile_without_economic_equivalence) ... ok
+test_existing_award_counts_are_not_automatically_added (test_share_bridge.ShareBridgeSourceTests.test_existing_award_counts_are_not_automatically_added) ... ok
+test_later_cover_counts_do_not_replace_anchor_shares (test_share_bridge.ShareBridgeSourceTests.test_later_cover_counts_do_not_replace_anchor_shares) ... ok
+test_missing_and_competing_claims_preserve_null (test_share_bridge.ShareBridgeSourceTests.test_missing_and_competing_claims_preserve_null) ... ok
+test_named_cash_and_debt_subtotals_are_not_approved_operands (test_share_bridge.ShareBridgeSourceTests.test_named_cash_and_debt_subtotals_are_not_approved_operands) ... ok
+test_nci_book_and_explicit_preferred_zero_are_not_whole_claims_clearance (test_share_bridge.ShareBridgeSourceTests.test_nci_book_and_explicit_preferred_zero_are_not_whole_claims_clearance) ... ok
+test_primary_and_instance_class_scope_cannot_be_switched (test_share_bridge.ShareBridgeSourceTests.test_primary_and_instance_class_scope_cannot_be_switched) ... ok
+test_primary_instance_amount_mismatch_is_rejected (test_share_bridge.ShareBridgeSourceTests.test_primary_instance_amount_mismatch_is_rejected) ... ok
+test_replay_and_source_hashes_match_retained_evidence (test_share_bridge.ShareBridgeSourceTests.test_replay_and_source_hashes_match_retained_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.181s
+
+OK
