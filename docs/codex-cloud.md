@@ -25,7 +25,11 @@ credentials, OpenAI API key or live SEC retrieval. Python can be selected with
 
 Verification runs valuation/preload tests, company-resolution/source checks, cloud
 checks, original Apple and Meta/Alphabet ledger replays, registered preload replay,
-frontend tests and production build. It makes no new financial approvals or live
+frontend tests and production build. The cloud runner uses two frontend workers
+and a 15-second integration-test budget: a pre-existing multi-screen scenario/
+sensitivity test exceeded Vitest's 5-second default on a fresh checkout. All
+assertions remain enabled; no financial test or schema check is relaxed.
+It makes no new financial approvals or live
 filing requests. Existing historical gaps and basis labels remain unchanged.
 
 Startup builds a fresh private read-only API bundle outside the repository, checks
@@ -92,3 +96,17 @@ retrieval, supply your identifying `SEC_USER_AGENT` through the cloud environmen
 personal configuration and allow the required SEC domains. Do not put personal
 configuration, tokens, `.env` files or desktop auth state into Git or the research
 archive. Existing broader-universe pause and manual treatment approvals remain.
+
+## Verification checkpoint — November3
+
+[Validation record](codex-cloud-validation.json): fresh local checkout installation,
+267 Python tests,278 frontend tests, all named financial replays and production
+build pass. Real workspace/proxied-catalog HTTP checks pass and the supervised
+processes stop cleanly. Original52-file research bytes/hashes match. The15-second
+cloud UI-test budget is recorded; all original assertions remain active.
+
+Cloud account provisioning is **not complete**: the signed-in setup form reports
+GitHub connections could not load, with no repository available to select. The
+same error appears in Code Review. An authenticated cloud environment and remote
+preview URL have not been created. A successful account-side GitHub connection
+and actual cloud/Linux setup verification are the remaining steps.

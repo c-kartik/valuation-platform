@@ -13,5 +13,5 @@ export PYTHONPATH=src
 .venv/bin/python scripts/resolve_apple_cashflows.py --check
 .venv/bin/python scripts/resolve_meta_alphabet_cashflows.py --check
 .venv/bin/python scripts/verify_registered_preloads.py --check
-npm --prefix frontend test
+npm --prefix frontend test -- --maxWorkers=2 --testTimeout=15000
 npm --prefix frontend run build

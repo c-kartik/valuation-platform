@@ -6,9 +6,11 @@ The user selects laptop-independent phone development. Portable setup, verificat
 and startup commands are in [Codex Cloud setup](codex-cloud.md);
 [handoff](cloud-work-handoff.md) carries the financial review context. The original
 42-company audit is retained as a52-member byte-preserving snapshot with per-file
-hashes. This does not refresh facts or clear financial blockers. Cloud account
-publication and any provider-authenticated preview require their own observed
-completion; local preparation is not cloud deployment certification.
+hashes. This does not refresh facts or clear financial blockers. [Fresh-checkout validation](codex-cloud-validation.json):545 tests pass, as do
+installation, financial replays, frontend build and actual workspace/API startup.
+Codex Cloud account setup is blocked by GitHub connection loading errors; no
+cloud environment or private preview URL is published. Local macOS preparation
+is not Linux/cloud deployment certification.
 
 ## Current milestone — Meta and Alphabet manual resolutions
 

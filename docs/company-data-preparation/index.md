@@ -1,5 +1,14 @@
 # Company data preparation register
 
+## Cloud research portability — November3
+
+[Cloud setup](../codex-cloud.md) and the [portable original42-company audit](../../research/historical-cashflows-42-2026-11-02/README.md)
+make retained sources and decision context available to remote work. The52-member
+archive is byte-preserving and verified before extraction. This is storage/setup
+only: no issuer fact, source binding, classification, approval, preparation status,
+financial sufficiency or wider-universe scope is changed. Current company
+resolutions retain precedence over their named issues in the old snapshot.
+
 ## Meta/Alphabet manual treatment execution — November 3
 
 [Meta](../company-resolutions/META/README.md) and
