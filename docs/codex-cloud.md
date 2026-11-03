@@ -112,15 +112,27 @@ build pass. Real workspace/proxied-catalog HTTP checks pass and the supervised
 processes stop cleanly. Original52-file research bytes/hashes match. The15-second
 cloud UI-test budget is recorded; all original assertions remain active.
 
-GitHub authorization now works. The `valuation-platform` environment draft selects
-only `c-kartik/valuation-platform`; its configuration visibly states **Only me**.
-Cloud installation, 267 Python tests, financial replays, research hashes, build,
-workspace and proxied-catalog checks passed at `d5d4183`. The initial required run
-failed solely on the scenario/sensitivity UI integration timeout (277 frontend
-tests passed); a selected diagnostic passed, while a full single-worker/30-second
-run still timed out. The scoped-query/per-test-budget fix requires fresh cloud
-verification before publication. At `c7ed102`, the required run again passed all
-financial checks but timed out on scenario/sensitivity and Cancel editing-session
-tests (276 frontend tests passed). The subsequent direct label-binding change
-and second bounded timeout still require cloud revalidation. No remote
-authenticated preview URL exists yet.
+GitHub authorization now works. The `valuation-platform` environment selects only
+`c-kartik/valuation-platform`; its configuration visibly states **Only me**.
+Cloud installation, 267 Python tests, financial replays, all 52 research hashes,
+production build and actual workspace/proxied-catalog startup checks passed.
+
+The first cloud attempts timed out on long UI integration tests. The test changes
+scope repeated queries, resolve editor inputs through the actual label for/id
+binding (the existing `Workspace.test.tsx` pattern), and allow 60 seconds for the
+two long integration workflows. No financial/application code, values, assertions
+or test counts changed. The final cloud frontend run at `ca8e5ae` passed all
+**278 tests in 24 files, none skipped**, in 146.10 seconds, followed by a passing
+build. The 267 Python and financial checks were retained from `c7ed102`, whose
+non-test application/data files are identical. This is a combined validation
+record, not a claim that the earlier failing full-script invocation passed.
+
+Timing samples during the successful run arrived every 5.006–6.289 seconds;
+they showed no long environment suspension, but did not establish the cause of
+prior stalls. Earlier failures remain in the validation record for traceability.
+Publication completed on November 3, 2026. The setup chat confirmed publication,
+and Settings → Codex Cloud lists `valuation-platform` as **Private**, with no
+Unpublished badge. The published checkout is `ca8e5ae`; install/start instructions
+and the retained research bank are saved. On your phone, open ChatGPT → Codex and
+select `valuation-platform` for laptop-independent work. A separate authenticated
+remote platform-preview URL has not been created.

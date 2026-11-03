@@ -1,6 +1,6 @@
 # Project Status
 
-## Current milestone — Codex Cloud preparation
+## Current milestone — private Codex Cloud environment published
 
 The user selects laptop-independent phone development. Portable setup, verification
 and startup commands are in [Codex Cloud setup](codex-cloud.md);
@@ -8,15 +8,17 @@ and startup commands are in [Codex Cloud setup](codex-cloud.md);
 42-company audit is retained as a52-member byte-preserving snapshot with per-file
 hashes. This does not refresh facts or clear financial blockers. [Fresh-checkout validation](codex-cloud-validation.json):545 tests pass, as do
 installation, financial replays, frontend build and actual workspace/API startup.
-GitHub connection now works, and an owner-private `valuation-platform` environment
-draft exists. Cloud installation, Python tests, financial replays, research hashes,
-build and workspace/API checks pass. Publication waits on a UI-test runner fix:
-the multi-screen integration test timed out in full cloud runs, despite passing
-an isolated diagnostic. Its queries are now scoped, large-form inputs use the
-existing direct label-binding pattern, and this test plus the repeated Cancel
-editing test have individual 60-second budgets. All assertions and other test
-limits remain. Cloud revalidation is pending; no authenticated remote preview
-URL exists yet.
+GitHub connection now works. The owner-private `valuation-platform` environment
+has passed cloud installation, 267 Python tests, financial replays, all 52 research
+hashes, 278 frontend tests (none skipped), build and workspace/API startup checks.
+Financial/application inputs were unchanged between the Python/replay check at
+`c7ed102` and the frontend fix verified at `ca8e5ae`. The two previously timed-out
+integration tests now pass: queries are scoped, large-form inputs use the existing
+direct label-binding pattern, and those two tests have individual 60-second
+budgets. Every action/assertion and other test limit remains. The environment was published
+on November 3 and appears as **Private** in Settings → Codex Cloud. Select
+`valuation-platform` from Codex on mobile; the laptop can be off. A separate
+authenticated remote platform-preview URL does not exist yet.
 
 ## Current milestone — Meta and Alphabet manual resolutions
 

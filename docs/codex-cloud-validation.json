@@ -2,9 +2,9 @@
   "schema_version": "codex-cloud-preparation-validation-v1",
   "date": "2026-11-03",
   "preparation_status": "READY_AND_VERIFIED_FROM_FRESH_LOCAL_CHECKOUT",
-  "cloud_environment_status": "DRAFT_PENDING_UI_TEST_REVALIDATION",
+  "cloud_environment_status": "PUBLISHED_ONLY_ME",
   "private_preview_url": null,
-  "platform": "Local macOS arm64 preparation verified; Codex Cloud installation and financial checks verified; final UI revalidation pending",
+  "platform": "Fresh local macOS checkout and actual Codex Cloud runtime verified; combined financial and frontend validation recorded separately",
   "python_tests": {
     "valuation": 206,
     "preload": 31,
@@ -40,7 +40,7 @@
     "meta_alphabet": "PASS",
     "registered_preloads": "PASS"
   },
-  "runner_adjustment": "Runner retains2workers/15s default. Scenario/sensitivity and repeated Cancel UI integration tests use individual60s budgets. Scenario queries are scoped and editor inputs resolve actual for/id bindings without jsdom label.control traversal. All actions/assertions retained; cloud revalidation pending.",
+  "runner_adjustment": "Runner retains2workers/15s default; two long UI integration tests use individual60s budgets. Scoped queries/direct for-id label binding retain every action/assertion. Final cloud frontend278/278 passed; prior attempts preserved.",
   "inputs_sha256": {
     "scripts/cloud/setup.sh": "e5820aa0f75dfdb46cf65c9b6decd9361ce5c73d6b3aeb26088f2149a914e615",
     "scripts/cloud/verify.sh": "307139d2bf6bb4a3e0f54bd51300fd5e277818e845c1361d8c069a5707283a28",
@@ -48,7 +48,9 @@
     "scripts/cloud/workspace.py": "d09ea7a40d3df76d05c0050f92b5dff96d1f8212b2ad49a0416b2a5970aa463c",
     "requirements-api-dev.lock": "8b2654f90eff8642893cd275cfec3d1e76b85d322eed74566e2de1489cec35b3",
     "frontend/package-lock.json": "32e3c9764dd0f73c1ba68f7443426d74e206a9b7e5c93ccbd24e72b7a36ed980",
-    "research/historical-cashflows-42-2026-11-02/manifest.json": "fa2cf451cbbdd5393c36678fceaec835578d6eaa96a7902ac048f852fa07baf9"
+    "research/historical-cashflows-42-2026-11-02/manifest.json": "fa2cf451cbbdd5393c36678fceaec835578d6eaa96a7902ac048f852fa07baf9",
+    "frontend/src/workspace/preload.test.tsx": "052b0cfb7412a53cb5e72185f95cd76a2a4fe7cf5785fd2a6e459479124a895d",
+    "frontend/src/workspace/Workspace.test.tsx": "0ebd8529f96d8c700f4c487a2595b29e9136bbb58f563625647c835d32be5164"
   },
   "financial_changes": 0,
   "source_binding_changes": 0,
@@ -59,7 +61,7 @@
     "environment_name": "valuation-platform",
     "repository": "c-kartik/valuation-platform",
     "privacy_observed": "Only me",
-    "checked_commit": "d5d4183e8f8e3b883cf7f3ba6e0b6aef2e0d172e",
+    "checked_commit": "ca8e5aeb24eb5caf83eb711c0d01f75dd4b9c32a",
     "python": "3.12.14",
     "node": "24.19.0",
     "setup": "PASS",
@@ -96,8 +98,8 @@
       "sampled_cpu_steal_percent": "7\u201321",
       "causality": "Samples after failing test do not establish its cause"
     },
-    "revalidation": "PENDING_DIRECT_LABEL_BINDING_AND_TWO_PER_TEST_60_SECOND_BUDGETS",
-    "published": false,
+    "revalidation": "PASS_COMBINED_FINANCIAL_AND_FRONTEND_CHECKS",
+    "published": true,
     "revalidation_c7ed102": {
       "checked_commit": "c7ed102c145cd681cc6db93ca36f924b94d39fc7",
       "required_script_exit_code": 1,
@@ -107,11 +109,40 @@
       "frontend_failed": 2,
       "failures": [
         "scenario/sensitivity integration timeout at60s; reported142.674s",
-        "Cancel editing-session timeout at15s"
+        "Cancel editing-session timeout at15s; reported135.071s"
       ],
       "workspace_http": "200",
       "proxied_catalog_http": "200",
       "repository": "CLEAN"
+    },
+    "final_frontend": {
+      "checked_commit": "ca8e5aeb24eb5caf83eb711c0d01f75dd4b9c32a",
+      "command": "npm --prefix frontend test -- --maxWorkers=2 --testTimeout=15000",
+      "passed": 278,
+      "failed": 0,
+      "skipped": 0,
+      "files_passed": 24,
+      "exit_code": 0,
+      "vitest_seconds": 146.1,
+      "command_elapsed_seconds": 147.292,
+      "build_exit_code": 0,
+      "sample_intervals_seconds": [
+        5.006,
+        6.289
+      ],
+      "suspension": "No long environment suspension observed; JavaScript event-loop stalls and earlier failure cause not established"
+    },
+    "validation_basis": "267 Python tests, 52 hashes, financial replays and HTTP checks passed at c7ed102. Only tests/docs changed to ca8e5ae; all278 frontend tests and build then passed with no skips. Earlier full-script exit1 remains recorded and is not relabeled as a pass.",
+    "publication_status": "CONFIRMED",
+    "publication_verified_at_utc": "2026-11-03T16:22:34Z",
+    "publication_evidence": {
+      "setup_chat": "The environment was published. A new draft based on the latest published version is now loaded in this chat.",
+      "settings_url": "https://chatgpt.com/settings/codex-cloud",
+      "environment_name": "valuation-platform",
+      "sharing": "Private",
+      "privacy_setting": "Only me",
+      "unpublished_badge": false,
+      "published_checkout": "ca8e5aeb24eb5caf83eb711c0d01f75dd4b9c32a"
     }
   }
 }
