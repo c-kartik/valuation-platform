@@ -1,5 +1,10 @@
 # Automated Equity Valuation Platform
 
+[Manual company cash-flow resolutions](docs/company-resolutions/README.md) now
+record each approved treatment, source, before/after amount and remaining gap.
+The first [Apple record](docs/company-resolutions/AAPL/README.md) reproduces its
+financing and operating-method review without silently changing chart values.
+
 [Registered starting profiles](docs/registered-preloads.md) now cover Alphabet, Meta
 and Apple through one reproducible pipeline. Company selection loads its own
 source-backed estimates and editable forecast policy. Alphabet inputs are unchanged.

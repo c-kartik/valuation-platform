@@ -1,5 +1,21 @@
 # Architecture
 
+## Manual company-resolution replay — November 3
+
+`scripts/resolve_apple_cashflows.py` reuses the retained SEC primary/instance
+verifier, accepted Apple package, statement parser and exact operating-method
+arithmetic. Reviewed caption/cell/period/sign mappings and explicit user decisions
+live in `docs/company-resolutions/AAPL/`. The offline replay checks every mapped
+financing source cell, full financing sums and original/later equity presentation,
+then emits a separate result ledger/CSV with before/after chart values and gaps.
+
+`--check` is read-only and requires deterministic equality; `--write` only updates
+the resolution ledger. Neither imports a resolution into the catalog, changes
+an accepted package, chooses tax assumptions or adopts a candidate FCFF. There is
+no runtime/API/bundle dependency on these review artifacts. The common folder and
+template support later manual issuer reviews; source-specific mappings stay
+issuer-specific rather than becoming an implicit arbitrary-ticker resolver.
+
 ## Registered issuer preload engine — November 2
 
 `preload/issuers.py` separates listing, dataset and retained-anchor identity from

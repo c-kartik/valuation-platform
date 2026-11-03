@@ -1,5 +1,24 @@
 # AAPL — company data preparation
 
+## Manual cash-flow resolution — November 3
+
+The user approves the preferred Apple-only treatments and requires a durable
+issue/treatment record. [Company resolution folder](../company-resolutions/AAPL/README.md)
+contains the approval, reviewed source mappings, source-replayed results and
+before/after schedule. Five financing statements and operating-method bridges
+reconcile; the FY2021 stock-proceeds/Other presentation is resolved with zero
+FCFE effect. The original Other amounts and actual finance-lease principal cash
+remain unclassified/undisclosed, so all five FCFE calculations remain provisional.
+
+The separately reconciled EBIT route removes the missing-interest dependency,
+but its mixed operating cash/tax/noncash/investment alignment is not certified.
+The existing chart stays 95.25/113.90/102.94B/unavailable/unavailable. Reported taxes
+are preserved; no recurring rate, forecast recalibration or unsupported number
+has been selected. Approval of the treatment is distinct from evidence clearance
+and publication. Original source packages, accepted origins, frozen history and
+both preparation/sufficiency statuses remain unchanged. Later numerical adoption
+requires justified inputs under the approved basis, not a status-only override.
+
 ## Registered forward profile — November 2
 
 The user authorizes the [shared preload pipeline](../registered-preloads.md) for AAPL.

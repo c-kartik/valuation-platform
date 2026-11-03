@@ -1,5 +1,26 @@
 # Project Status
 
+## Current milestone — Apple manual cash-flow resolution
+
+November 3, 2026: the user approves Apple's preferred treatments and requests
+traceable records for each company. [New register](company-resolutions/README.md)
+and [Apple record](company-resolutions/AAPL/README.md) preserve original issues,
+approval scope, exact filing mappings, calculations, before/after values and
+remaining limitations. The offline replay resolves the FY2021 equity-presentation
+conflict with no numerical change, reconciles five complete financing statements,
+and reproduces five provisional FCFEs plus five operating FCFF diagnostic bridges.
+
+Other financing/actual finance-lease cash remains unresolved. The operating route
+needs further input-alignment and recurring-tax review before replacing chart
+history. Original facts, approved packages, the two missing Apple CFO FCFF values,
+forecasts, EV and all other companies remain unchanged. This is execution of the
+approved reconciliation and documentation scope, not a claim Apple is fully cleared.
+
+Validation: 47 relevant tests pass (eight new resolution tests and 39 existing
+FCFF/source tests), including source/sign/caption
+changes, omitted/duplicate cells, ownership misclassification, exact financing
+arithmetic, approval scope, preserved chart gaps and deterministic output replay.
+
 ## Current fix — recover missing starting forecasts
 
 November 2, 2026: an already-open Meta tab retained the pre-registration catalog,

@@ -1,5 +1,26 @@
 # Financial Methodology
 
+## Manually approved Apple resolution — November 3
+
+The [resolution register](company-resolutions/README.md) separates treatment
+approval, evidence reconciliation and numerical publication. The user approves
+Apple FY2021–25 financing classification/reconciliation, preservation of known
+FY2021 equity issuance in later Other, a separately reconciled EBIT FCFF route,
+and separation of reported historical taxes from recurring forecast tax choices.
+
+The [Apple replay](company-resolutions/AAPL/README.md) exactly reproduces five
+financing totals, five provisional identified-funding FCFEs and five operating
+method/cash-flow bridges. FY2021 Other −129m + equity issuance 1,105m equals later
+Other 976m, with no borrowing or FCFE change. Unidentified Other is not assumed
+zero or entirely debt; finance-lease principal is not inferred from stocks or
+maturities. No numerical materiality threshold or normalized tax rate is selected.
+
+Existing adopted CFO FCFF and forecast policies remain in effect until a justified
+operating series is ready. The EBIT diagnostic resolves the interest dependency
+but not mixed cash/tax/noncash/investment scope; it cannot automatically fill the
+two missing Apple chart points. No change to other companies is authorized by
+this company-specific approval. Source facts and original approvals are preserved.
+
 ## Registered META/AAPL forecast policies
 
 The user authorizes Meta and Apple forward profiles alongside unchanged Alphabet.

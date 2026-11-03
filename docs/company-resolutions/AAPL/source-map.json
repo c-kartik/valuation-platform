@@ -1,0 +1,881 @@
+{
+  "equity_presentation_bridge": {
+    "difference_usd": "0",
+    "fiscal_year": 2021,
+    "interpretation": "Earlier common-stock proceeds are no longer separately displayed in the later financing presentation. Positive Other cash is not automatically borrowing.",
+    "left_terms": [
+      {
+        "row": {
+          "annual_end": "2021-09-25",
+          "caption": "Other",
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "fiscal_year": 2021,
+          "included_in_net_borrowing": false,
+          "instance_observations": [
+            {
+              "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+              "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+              "dimensions": [],
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "ordinal": 619,
+              "precision": "-6",
+              "value_usd": "-129000000"
+            }
+          ],
+          "instance_source": {
+            "locator": "/artifacts/2",
+            "retained_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+            "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml"
+          },
+          "primary_fact": {
+            "cell": 1,
+            "concept": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+            "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+            "dimensions": [],
+            "displayed_value_usd": "-129000000",
+            "inline_sign": "-",
+            "raw_display": "(129)",
+            "scale": "6",
+            "xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzctMS0xLTEtMA_1e58476a-b89d-4ee2-8e53-12272fa429c9"
+          },
+          "row": 38,
+          "source": {
+            "locator": "/artifacts/1",
+            "retained_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+            "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+          },
+          "table": 26,
+          "ticker": "AAPL",
+          "value_usd": "-129000000"
+        },
+        "source_filing_identity": {
+          "accession": "0000320193-21-000105",
+          "annual_end": "2021-09-25",
+          "annual_start": "2020-09-27",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "target_identity": {
+          "accession": "0000320193-21-000105",
+          "annual_end": "2021-09-25",
+          "annual_start": "2020-09-27",
+          "cik": 320193,
+          "form": "10-K"
+        }
+      },
+      {
+        "row": {
+          "annual_end": "2021-09-25",
+          "caption": "Proceeds from issuance of common stock",
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "fiscal_year": 2021,
+          "included_in_net_borrowing": false,
+          "instance_observations": [
+            {
+              "concept": "ProceedsFromIssuanceOfCommonStock",
+              "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+              "dimensions": [],
+              "namespace": "http://fasb.org/us-gaap/2021-01-31",
+              "ordinal": 598,
+              "precision": "-6",
+              "value_usd": "1105000000"
+            }
+          ],
+          "instance_source": {
+            "locator": "/artifacts/2",
+            "retained_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+            "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml"
+          },
+          "primary_fact": {
+            "cell": 1,
+            "concept": "us-gaap:ProceedsFromIssuanceOfCommonStock",
+            "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+            "dimensions": [],
+            "displayed_value_usd": "1105000000",
+            "inline_sign": null,
+            "raw_display": "1,105",
+            "scale": "6",
+            "xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzAtMS0xLTEtMA_f2fbe8fd-ee68-4e2a-831a-456b7284ace1"
+          },
+          "row": 31,
+          "source": {
+            "locator": "/artifacts/1",
+            "retained_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+            "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+          },
+          "table": 26,
+          "ticker": "AAPL",
+          "value_usd": "1105000000"
+        },
+        "source_filing_identity": {
+          "accession": "0000320193-21-000105",
+          "annual_end": "2021-09-25",
+          "annual_start": "2020-09-27",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "target_identity": {
+          "accession": "0000320193-21-000105",
+          "annual_end": "2021-09-25",
+          "annual_start": "2020-09-27",
+          "cik": 320193,
+          "form": "10-K"
+        }
+      }
+    ],
+    "left_total_usd": "976000000",
+    "limit": "An exact component reconciliation supports presentation review; it does not certify the content of any remaining mixed Other cash or replace a source-vintage approval.",
+    "right_terms": [
+      {
+        "row": {
+          "annual_end": "2021-09-25",
+          "caption": "Other",
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "fiscal_year": 2021,
+          "included_in_net_borrowing": false,
+          "instance_observations": [
+            {
+              "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+              "context_id": "c-21",
+              "dimensions": [],
+              "namespace": "http://fasb.org/us-gaap/2023",
+              "ordinal": 579,
+              "precision": "-6",
+              "value_usd": "976000000"
+            }
+          ],
+          "instance_source": {
+            "locator": "/artifacts/6",
+            "retained_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+            "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml"
+          },
+          "primary_fact": {
+            "cell": 7,
+            "concept": "us-gaap:ProceedsFromPaymentsForOtherFinancingActivities",
+            "context_id": "c-21",
+            "dimensions": [],
+            "displayed_value_usd": "976000000",
+            "inline_sign": null,
+            "raw_display": "976",
+            "scale": "6",
+            "xml_id": "f-339"
+          },
+          "row": 37,
+          "source": {
+            "locator": "/artifacts/5",
+            "retained_path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+            "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+          },
+          "table": 26,
+          "ticker": "AAPL",
+          "value_usd": "976000000"
+        },
+        "source_filing_identity": {
+          "accession": "0000320193-23-000106",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-09-25",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "target_identity": {
+          "accession": "0000320193-21-000105",
+          "annual_end": "2021-09-25",
+          "annual_start": "2020-09-27",
+          "cik": 320193,
+          "form": "10-K"
+        }
+      }
+    ],
+    "right_total_usd": "976000000",
+    "ticker": "AAPL"
+  },
+  "mapping_origin": {
+    "calculations_sha256": "276b0ce803ba5ccf9565566ea14f16a13e622ada45ab64a447156654e57b9a84",
+    "label": "sealed 42-company historical audit"
+  },
+  "mapping_scope": "Five original annuals FY2021\u201325 and exact FY2021 equity-presentation bridge; no automatic future-period selection",
+  "periods": [
+    {
+      "financing_rows": [
+        {
+          "caption": "Proceeds from issuance of common stock",
+          "cash_sign": 1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "ProceedsFromIssuanceOfCommonStock",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzAtMS0xLTEtMA_f2fbe8fd-ee68-4e2a-831a-456b7284ace1",
+          "raw_value_usd": "1105000000",
+          "row": 31,
+          "signed_cash_usd": "1105000000",
+          "table": 26
+        },
+        {
+          "caption": "Payments for taxes related to net share settlement of equity awards",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzEtMS0xLTEtMA_1bd868e2-26f8-43d4-9c2d-685b203fe9f7",
+          "raw_value_usd": "6556000000",
+          "row": 32,
+          "signed_cash_usd": "-6556000000",
+          "table": 26
+        },
+        {
+          "caption": "Payments for dividends and dividend equivalents",
+          "cash_sign": -1,
+          "classification": "DIVIDENDS_NOT_NET_BORROWING",
+          "column": 1,
+          "concept": "PaymentsOfDividends",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzItMS0xLTEtMA_98f9f417-2247-4806-9ce4-ed3abede5efb",
+          "raw_value_usd": "14467000000",
+          "row": 33,
+          "signed_cash_usd": "-14467000000",
+          "table": 26
+        },
+        {
+          "caption": "Repurchases of common stock",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzMtMS0xLTEtMA_ea5e224e-8f20-448f-b0fd-365bd7d9086a",
+          "raw_value_usd": "85971000000",
+          "row": 34,
+          "signed_cash_usd": "-85971000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from issuance of term debt, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromIssuanceOfLongTermDebt",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzQtMS0xLTEtMA_ad633648-ef99-4a5d-9398-de2a06efb7cc",
+          "raw_value_usd": "20393000000",
+          "row": 35,
+          "signed_cash_usd": "20393000000",
+          "table": 26
+        },
+        {
+          "caption": "Repayments of term debt",
+          "cash_sign": -1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "RepaymentsOfLongTermDebt",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzUtMS0xLTEtMA_fe867860-7b75-43c4-991c-eff0e2c5c94c",
+          "raw_value_usd": "8750000000",
+          "row": 36,
+          "signed_cash_usd": "-8750000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from/(Repayments of) commercial paper, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzYtMS0xLTEtMA_58f02e11-8011-4c12-a248-3f40096cad3f",
+          "raw_value_usd": "1022000000",
+          "row": 37,
+          "signed_cash_usd": "1022000000",
+          "table": 26
+        },
+        {
+          "caption": "Other",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "column": 1,
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzctMS0xLTEtMA_1e58476a-b89d-4ee2-8e53-12272fa429c9",
+          "raw_value_usd": "-129000000",
+          "row": 38,
+          "signed_cash_usd": "-129000000",
+          "table": 26
+        },
+        {
+          "caption": "Cash used in financing activities",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "column": 1,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2021-01-31",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMzgtMS0xLTEtMA_6f4f112d-805e-4326-aa7a-73d94d4ced0c",
+          "raw_value_usd": "-93353000000",
+          "row": 39,
+          "signed_cash_usd": "-93353000000",
+          "table": 26
+        }
+      ],
+      "fiscal_year": 2021,
+      "identity": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      }
+    },
+    {
+      "financing_rows": [
+        {
+          "caption": "Payments for taxes related to net share settlement of equity awards",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMzEtMS0xLTEtNjc1MDU_3de2b7b3-6a32-47b6-9706-718ce84725d7",
+          "raw_value_usd": "6223000000",
+          "row": 29,
+          "signed_cash_usd": "-6223000000",
+          "table": 26
+        },
+        {
+          "caption": "Payments for dividends and dividend equivalents",
+          "cash_sign": -1,
+          "classification": "DIVIDENDS_NOT_NET_BORROWING",
+          "column": 1,
+          "concept": "PaymentsOfDividends",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMzItMS0xLTEtNjc1MDU_3e796713-1a98-40b0-a3f8-0bb9ab874fc0",
+          "raw_value_usd": "14841000000",
+          "row": 30,
+          "signed_cash_usd": "-14841000000",
+          "table": 26
+        },
+        {
+          "caption": "Repurchases of common stock",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMzMtMS0xLTEtNjc1MDU_f512a382-9f42-4c05-bab1-affb98c69c7b",
+          "raw_value_usd": "89402000000",
+          "row": 31,
+          "signed_cash_usd": "-89402000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from issuance of term debt, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromIssuanceOfLongTermDebt",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMzQtMS0xLTEtNjc1MDU_40bf40ac-365f-432c-8765-86922147fc05",
+          "raw_value_usd": "5465000000",
+          "row": 32,
+          "signed_cash_usd": "5465000000",
+          "table": 26
+        },
+        {
+          "caption": "Repayments of term debt",
+          "cash_sign": -1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "RepaymentsOfLongTermDebt",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMzUtMS0xLTEtNjc1MDU_74c94365-9f6a-4b73-baaa-bad2621753db",
+          "raw_value_usd": "9543000000",
+          "row": 33,
+          "signed_cash_usd": "-9543000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from/(Repayments of) commercial paper, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMzYtMS0xLTEtNjc1MDU_9c465103-ef6d-4459-bf6e-2a39f4cfa123",
+          "raw_value_usd": "3955000000",
+          "row": 34,
+          "signed_cash_usd": "3955000000",
+          "table": 26
+        },
+        {
+          "caption": "Other",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "column": 1,
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMzctMS0xLTEtNjc1MDU_9eb1c122-3bd8-4b35-b51d-b3b8e38c5758",
+          "raw_value_usd": "-160000000",
+          "row": 35,
+          "signed_cash_usd": "-160000000",
+          "table": 26
+        },
+        {
+          "caption": "Cash used in financing activities",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "column": 1,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2022",
+          "primary_xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMzgtMS0xLTEtNjc1MDU_8ccf92d2-24ce-4cf7-8cbc-54620ec76d7b",
+          "raw_value_usd": "-110749000000",
+          "row": 36,
+          "signed_cash_usd": "-110749000000",
+          "table": 26
+        }
+      ],
+      "fiscal_year": 2022,
+      "identity": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      }
+    },
+    {
+      "financing_rows": [
+        {
+          "caption": "Payments for taxes related to net share settlement of equity awards",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-319",
+          "raw_value_usd": "5431000000",
+          "row": 31,
+          "signed_cash_usd": "-5431000000",
+          "table": 26
+        },
+        {
+          "caption": "Payments for dividends and dividend equivalents",
+          "cash_sign": -1,
+          "classification": "DIVIDENDS_NOT_NET_BORROWING",
+          "column": 1,
+          "concept": "PaymentsOfDividends",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-322",
+          "raw_value_usd": "15025000000",
+          "row": 32,
+          "signed_cash_usd": "-15025000000",
+          "table": 26
+        },
+        {
+          "caption": "Repurchases of common stock",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-325",
+          "raw_value_usd": "77550000000",
+          "row": 33,
+          "signed_cash_usd": "-77550000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from issuance of term debt, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromIssuanceOfLongTermDebt",
+          "context_id": "c-1",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-328",
+          "raw_value_usd": "5228000000",
+          "row": 34,
+          "signed_cash_usd": "5228000000",
+          "table": 26
+        },
+        {
+          "caption": "Repayments of term debt",
+          "cash_sign": -1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "RepaymentsOfLongTermDebt",
+          "context_id": "c-1",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-331",
+          "raw_value_usd": "11151000000",
+          "row": 35,
+          "signed_cash_usd": "-11151000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from/(Repayments of) commercial paper, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+          "context_id": "c-1",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-334",
+          "raw_value_usd": "-3978000000",
+          "row": 36,
+          "signed_cash_usd": "-3978000000",
+          "table": 26
+        },
+        {
+          "caption": "Other",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "column": 1,
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-337",
+          "raw_value_usd": "-581000000",
+          "row": 37,
+          "signed_cash_usd": "-581000000",
+          "table": 26
+        },
+        {
+          "caption": "Cash used in financing activities",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "column": 1,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2023",
+          "primary_xml_id": "f-340",
+          "raw_value_usd": "-108488000000",
+          "row": 38,
+          "signed_cash_usd": "-108488000000",
+          "table": 26
+        }
+      ],
+      "fiscal_year": 2023,
+      "identity": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      }
+    },
+    {
+      "financing_rows": [
+        {
+          "caption": "Payments for taxes related to net share settlement of equity awards",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "primary_xml_id": "f-316",
+          "raw_value_usd": "5441000000",
+          "row": 31,
+          "signed_cash_usd": "-5441000000",
+          "table": 26
+        },
+        {
+          "caption": "Payments for dividends and dividend equivalents",
+          "cash_sign": -1,
+          "classification": "DIVIDENDS_NOT_NET_BORROWING",
+          "column": 1,
+          "concept": "PaymentsOfDividends",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "primary_xml_id": "f-319",
+          "raw_value_usd": "15234000000",
+          "row": 32,
+          "signed_cash_usd": "-15234000000",
+          "table": 26
+        },
+        {
+          "caption": "Repurchases of common stock",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "primary_xml_id": "f-322",
+          "raw_value_usd": "94949000000",
+          "row": 33,
+          "signed_cash_usd": "-94949000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from issuance of term debt, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromIssuanceOfLongTermDebt",
+          "context_id": "c-1",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "primary_xml_id": "f-325",
+          "raw_value_usd": "0",
+          "row": 34,
+          "signed_cash_usd": "0",
+          "table": 26
+        },
+        {
+          "caption": "Repayments of term debt",
+          "cash_sign": -1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "RepaymentsOfLongTermDebt",
+          "context_id": "c-1",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "primary_xml_id": "f-328",
+          "raw_value_usd": "9958000000",
+          "row": 35,
+          "signed_cash_usd": "-9958000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from/(Repayments of) commercial paper, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+          "context_id": "c-1",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "primary_xml_id": "f-331",
+          "raw_value_usd": "3960000000",
+          "row": 36,
+          "signed_cash_usd": "3960000000",
+          "table": 26
+        },
+        {
+          "caption": "Other",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "column": 1,
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "primary_xml_id": "f-334",
+          "raw_value_usd": "-361000000",
+          "row": 37,
+          "signed_cash_usd": "-361000000",
+          "table": 26
+        },
+        {
+          "caption": "Cash used in financing activities",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "column": 1,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "primary_xml_id": "f-337",
+          "raw_value_usd": "-121983000000",
+          "row": 38,
+          "signed_cash_usd": "-121983000000",
+          "table": 26
+        }
+      ],
+      "fiscal_year": 2024,
+      "identity": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      }
+    },
+    {
+      "financing_rows": [
+        {
+          "caption": "Payments for taxes related to net share settlement of equity awards",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "primary_xml_id": "f-328",
+          "raw_value_usd": "5960000000",
+          "row": 30,
+          "signed_cash_usd": "-5960000000",
+          "table": 26
+        },
+        {
+          "caption": "Payments for dividends and dividend equivalents",
+          "cash_sign": -1,
+          "classification": "DIVIDENDS_NOT_NET_BORROWING",
+          "column": 1,
+          "concept": "PaymentsOfDividends",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "primary_xml_id": "f-331",
+          "raw_value_usd": "15421000000",
+          "row": 31,
+          "signed_cash_usd": "-15421000000",
+          "table": 26
+        },
+        {
+          "caption": "Repurchases of common stock",
+          "cash_sign": -1,
+          "classification": "COMMON_EQUITY_OR_OTHER_OWNER_CASH",
+          "column": 1,
+          "concept": "PaymentsForRepurchaseOfCommonStock",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "primary_xml_id": "f-334",
+          "raw_value_usd": "90711000000",
+          "row": 32,
+          "signed_cash_usd": "-90711000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from issuance of term debt, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromIssuanceOfLongTermDebt",
+          "context_id": "c-1",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "primary_xml_id": "f-337",
+          "raw_value_usd": "4481000000",
+          "row": 33,
+          "signed_cash_usd": "4481000000",
+          "table": 26
+        },
+        {
+          "caption": "Repayments of term debt",
+          "cash_sign": -1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "RepaymentsOfLongTermDebt",
+          "context_id": "c-1",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "primary_xml_id": "f-340",
+          "raw_value_usd": "10932000000",
+          "row": 34,
+          "signed_cash_usd": "-10932000000",
+          "table": 26
+        },
+        {
+          "caption": "Proceeds from/(Repayments of) commercial paper, net",
+          "cash_sign": 1,
+          "classification": "DEBT_FUNDING_OR_PRINCIPAL",
+          "column": 1,
+          "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+          "context_id": "c-1",
+          "included_in_net_borrowing": true,
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "primary_xml_id": "f-343",
+          "raw_value_usd": "-2032000000",
+          "row": 35,
+          "signed_cash_usd": "-2032000000",
+          "table": 26
+        },
+        {
+          "caption": "Other",
+          "cash_sign": 1,
+          "classification": "OTHER_FINANCING_EXCLUDED",
+          "column": 1,
+          "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "primary_xml_id": "f-346",
+          "raw_value_usd": "-111000000",
+          "row": 36,
+          "signed_cash_usd": "-111000000",
+          "table": 26
+        },
+        {
+          "caption": "Cash used in financing activities",
+          "cash_sign": 1,
+          "classification": "FINANCING_TOTAL",
+          "column": 1,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "context_id": "c-1",
+          "included_in_net_borrowing": false,
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "primary_xml_id": "f-349",
+          "raw_value_usd": "-120686000000",
+          "row": 37,
+          "signed_cash_usd": "-120686000000",
+          "table": 26
+        }
+      ],
+      "fiscal_year": 2025,
+      "identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      }
+    }
+  ],
+  "schema_version": "aapl-cashflow-resolution-source-map-v1"
+}

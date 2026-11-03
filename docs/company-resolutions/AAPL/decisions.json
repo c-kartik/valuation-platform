@@ -1,0 +1,48 @@
+{
+  "schema_version": "company-cashflow-manual-decisions-v1",
+  "ticker": "AAPL",
+  "fiscal_years": [2021, 2022, 2023, 2024, 2025],
+  "review_date": "2026-11-03",
+  "authorization_source": "User's Apple-only manual review in the Valuation Platform chat; followed by explicit acceptance and instruction to apply preferred treatments and document each issue with its treatment.",
+  "authorization_quote": "ok I agree with the preferred treatments, you can go ahead and do them.",
+  "automatic_publication": false,
+  "estimates_permitted": false,
+  "decisions": [
+    {
+      "id": "AAPL-FCFE-001",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "Unclassified Other financing in FY2021–25 prevents treating selected-debt FCFE as fully verified common-equity cash flow; actual finance-lease principal cannot be inferred from liability stocks.",
+      "treatment": "Reconcile the full financing statement, include identified term-debt and commercial-paper cash once, exclude common-owner distributions/issuance from borrowing, investigate Other and finance-lease cash. Keep unresolved amounts visible.",
+      "not_authorized": "Assume Other contains no debt, deduct all Other as debt, infer principal from liability changes/maturities, select an undisclosed materiality threshold, or certify provisional FCFE.",
+      "evidence": ["source-map.json#/periods", "results.json#/periods"],
+      "status": "RECONCILED_UNRESOLVED_COMPONENTS_REMAIN"
+    },
+    {
+      "id": "AAPL-FCFE-002",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "Later FY2021 Other of +976M combines original Other of -129M and common-stock issuance proceeds of +1105M. Treating the later subtotal as borrowing would misclassify owner cash.",
+      "treatment": "Preserve common-stock issuance as equity funding outside net borrowing and verify the exact original-to-later cash bridge. Keep the original unclassified -129M separate.",
+      "not_authorized": "Clear the original Other financing amount merely because the later presentation reconciles.",
+      "evidence": ["source-map.json#/equity_presentation_bridge", "results.json#/presentation_bridge"],
+      "status": "RESOLVED_NO_NUMERIC_CHANGE"
+    },
+    {
+      "id": "AAPL-FCFF-001",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "Missing separate gross interest in FY2024–25 prevents the adopted reported-CFO-plus-interest FCFF calculation, but does not prevent all operating-income arithmetic.",
+      "treatment": "Reconcile a separate EBIT-based FCFF route across all five Apple periods, retain SBC as an expense, and bridge its operands to reported CFO. Preserve the old historical series and missing values until the operating inputs are justified on their chosen basis.",
+      "not_authorized": "Replace chart gaps with an unaligned operating-method test; invent interest, complete D&A, a finance-lease asset split or pure-operating allocations for mixed cash movements. No other company's adoption is authorized by this Apple review.",
+      "evidence": ["../../company-data-preparation/historical-fcff-operating-test.json", "results.json#/periods"],
+      "status": "OPERATING_ROUTE_REPLAYED_INPUT_ALIGNMENT_UNRESOLVED"
+    },
+    {
+      "id": "AAPL-TAX-001",
+      "authorization": "USER_APPROVED_TREATMENT",
+      "original_issue": "Reported tax provision and cash payments contain different timing and scope; FY2024 includes a one-time State Aid charge. Neither is automatically a recurring operating-tax forecast.",
+      "treatment": "Preserve actual reported historical tax. Keep the reported-ETR operating calculation explicitly diagnostic and document a separate future decision for recurring operating taxes.",
+      "not_authorized": "Remove the accounting charge from cash taxes, substitute provision for cash, allocate a residual to working capital, select a normalized rate or change forward assumptions without the separate review described to the user.",
+      "evidence": ["../../company-data-preparation/historical-fcff-adjustment-schedules.json", "results.json#/periods"],
+      "status": "REPORTED_TAX_PRESERVED_NO_RECURRING_RATE_SELECTED"
+    }
+  ]
+}

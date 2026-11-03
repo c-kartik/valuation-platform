@@ -1,5 +1,17 @@
 # Company data preparation register
 
+## Manual company resolution records — November 3
+
+[Company cash-flow resolutions](../company-resolutions/README.md) track user-reviewed
+issues, approved treatments, exact sources, replay commands and before/after
+numbers separately from immutable accepted histories. [Apple](../company-resolutions/AAPL/README.md)
+is the first bounded record: one FY2021 equity-presentation conflict resolved;
+five FCFE amounts reproduced but provisional; operating FCFF alignment still
+unresolved. No source, normalization, historical chart or forward-input value
+changes follow from the approval alone. Existing two preparation/sufficiency
+statuses and wider-universe pause remain unchanged; future companies need their
+own review. This index entry links the new record without replacing past decisions.
+
 Client recovery update (November 2): legacy preload-capability metadata is refreshed
 once per selected company, with an explicit reload and candidate-review path. This
 changes loading only; no issuer source mapping, prepared value, policy or approval

@@ -1,0 +1,35 @@
+{
+  "review_date": "2026-11-03",
+  "base_commit": "4555c7d7c894b3af6f50cce506229c2fd2a515d1",
+  "scope": "Apple FY2021\u201325 manually approved source reconciliation; no live numerical adoption",
+  "checks": [
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests/review -p 'test_apple_resolution.py' -v",
+      "passed": 8
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests/review -p 'test_*fcff*.py' -v",
+      "passed": 39
+    }
+  ],
+  "total_distinct_tests_passed": 47,
+  "offline_replay_command": "PYTHONPATH=src .venv/bin/python scripts/resolve_apple_cashflows.py --check",
+  "source_reconciliations": {
+    "financing_statements": 5,
+    "cfo_statements": 5,
+    "operating_to_cash_bridges": 5,
+    "equity_presentation_bridges": 1
+  },
+  "review": "Independent read-only review found no actionable source, sign, scope or documentation defects.",
+  "publication": {
+    "verified_new_fcff_periods": 0,
+    "verified_new_fcfe_periods": 0,
+    "platform_numeric_changes": 0
+  },
+  "preservation": "Original source/evidence files, accepted packages, historical FCFF ledger, forecast/preload values, API/frontend and other-company records are unchanged.",
+  "limitations": [
+    "Other financing and actual finance-lease principal unresolved",
+    "Operating FCFF input alignment unresolved",
+    "No normalized tax rate approved or selected"
+  ]
+}
