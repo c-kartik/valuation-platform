@@ -1,5 +1,9 @@
 # AAPL — company data preparation
 
+## Named analyst consumer sufficiency — November4,2026
+
+[Apple analyst contract](../company-resolutions/AAPL/analyst-ready-2026-11-04/README.md) establishes sufficiency **with disclosed analyst assumptions** for five historical FCFF/FCFE periods, FCFF and FCFE forecasts/valuations and fair value per share. API/UI outputs and adjustable reserve/financing/RSU/claim assumptions are implemented and validated. Historical FCFE is an identified-funding estimate, not exact reconstruction. Frozen-v1, prior preparation/evidence statuses, reported facts and source unknowns are unchanged. All five named outputs are analyst-ready with qualifications; previous blanket OPEN language below belongs to the earlier stricter consumer.
+
 ## Ordered remaining-issue review — November4,2026
 
 The [four-stage implementation](../company-resolutions/AAPL/remaining-issues-2026-11-04/report.html) records the newly approved tax-inclusive historical NWC convention and unchanged forward-tax assumptions; no second approval of that convention is pending. Financing/D&A/source-share schedules replay, and the platform exposes the decisions. Date-matched common shares are selected as support, not a fully award-adjusted denominator. Exact FCFE financing, D&A expense alignment and cash/claim/award coverage remain OPEN. No historical amount, accepted source package, forecast policy or preparation/sufficiency status changes.

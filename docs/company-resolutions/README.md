@@ -1,5 +1,9 @@
 # Company cash-flow resolutions
 
+## Current Apple analyst-ready outputs — November4,2026
+
+[Apple five-output acceptance](AAPL/analyst-ready-2026-11-04/report.html) implements the user's revised reasonable-assumption standard. All five Apple outputs are analyst-ready with qualifications, including generated FCFE financing and both share values. Sources/legacy unknowns remain immutable; exact historical FCFE is not claimed. META/Alphabet are unchanged and remain separately open. Earlier blanket Apple OPEN claims below are preserved dated evidence assessments and are superseded for this named analyst contract.
+
 ## Apple ordered remaining-issue run — November4
 
 [New Apple report](AAPL/remaining-issues-2026-11-04/report.html) distinguishes four executed treatments from unresolved financial evidence. Tax/NWC policy adoption and a coherent dated share-source population are recorded; financing/expense/claim/award completeness remains OPEN. Source, test, fresh-runtime and UI checks do not turn provisional FCFE into verified cash. Existing three-company amounts and forward policies are unchanged.

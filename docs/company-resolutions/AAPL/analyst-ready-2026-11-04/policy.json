@@ -1,0 +1,1712 @@
+{
+  "anchor_date": "2025-09-27",
+  "approval": "User: work on Apple to make all five outputs analyst ready, following approval of reasonable disclosed analyst assumptions.",
+  "cik": 320193,
+  "defaults": {
+    "additional_claims_usd": "0",
+    "cost_of_equity": "0.08935",
+    "historical_other_financing_fraction": "0",
+    "operating_cash_reserve_ratio": "0.02",
+    "pre_tax_cost_of_debt": "0.0565",
+    "rsu_vesting_fraction": "1"
+  },
+  "discount_basis": {
+    "beta": "1.05",
+    "classification": "DATED_MACRO_OBSERVATIONS_AND_CONFIGURED_ANALYST_ASSUMPTIONS",
+    "debt_tax_shield": "0.20",
+    "equity_risk_premium": "0.037",
+    "macro_observations": {
+      "implied_erp": {
+        "available_at": "2026-10-08",
+        "cik": null,
+        "classification": "EXTERNAL_OBSERVATION",
+        "definition": "implied-erp-over-treasury",
+        "dimensions": [],
+        "end": "2026-10-01",
+        "id": "implied_erp-original",
+        "key": "implied_erp",
+        "locator": "October8authorpost; startOctober2026 implied ERP3.70%overTreasury; adjusted-RF3.92%notselected",
+        "mapping_version": "alphabet-reviewed-release-extraction-v1",
+        "precision": "0.01 percent",
+        "published_at": "2026-10-08",
+        "scope": "macro",
+        "source": "damodaran-2026-10-08",
+        "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+        "start": null,
+        "supersedes": null,
+        "unit": "fraction",
+        "value": "0.037"
+      },
+      "treasury_10y": {
+        "available_at": "2026-10-30",
+        "cik": null,
+        "classification": "EXTERNAL_OBSERVATION",
+        "definition": "treasury-par-yield",
+        "dimensions": [],
+        "end": "2026-10-28",
+        "id": "treasury_10y-original",
+        "key": "treasury_10y",
+        "locator": "Daily Treasury par yield curve,10/28/2026 row,10-year5.05%; publication time not separately retained",
+        "mapping_version": "alphabet-reviewed-release-extraction-v1",
+        "precision": "0.01 percent",
+        "published_at": null,
+        "scope": "macro",
+        "source": "treasury-2026-10",
+        "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+        "start": null,
+        "supersedes": null,
+        "unit": "fraction",
+        "value": "0.0505"
+      }
+    },
+    "macro_sources": [
+      {
+        "accession": null,
+        "bytes": 246533,
+        "content_type": "text/html; charset=UTF-8",
+        "extraction_version": "raw-body-v1",
+        "file": "treasury-2026-10.html",
+        "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "http_status": 200,
+        "id": "treasury-2026-10",
+        "observation_date": "2026-10-28",
+        "published_at": null,
+        "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+        "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+        "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+        "title": "US Treasury October 2026 daily par yield curve",
+        "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+      },
+      {
+        "accession": null,
+        "bytes": 169880,
+        "content_type": "text/html; charset=UTF-8",
+        "extraction_version": "raw-body-v1",
+        "file": "damodaran-2026-10-08.html",
+        "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+        "http_status": 200,
+        "id": "damodaran-2026-10-08",
+        "observation_date": "2026-10-01",
+        "published_at": "2026-10-08",
+        "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+        "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+        "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+        "title": "Aswath Damodaran October 8 2026 market update",
+        "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+      }
+    ],
+    "risk_free": "0.0505",
+    "saved_base_wacc": "0.08272750",
+    "target_debt_weight": "0.15",
+    "target_equity_weight": "0.85"
+  },
+  "facts": {
+    "CashAndCashEquivalentsAtCarryingValue": {
+      "category": "cash_investment_support",
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "instance_context_id": "c-20",
+      "instance_ordinal": 366,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-6",
+      "primary_display": "35,934",
+      "primary_format": "ixt:num-dot-decimal",
+      "primary_locator": "inline#f-159",
+      "primary_scale": "6",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "USD",
+      "used_as_valuation_operand": false,
+      "value": "35934000000"
+    },
+    "CommercialPaper": {
+      "category": "debt_lease_support",
+      "concept": "CommercialPaper",
+      "instance_context_id": "c-20",
+      "instance_ordinal": 396,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-6",
+      "primary_display": "7,979",
+      "primary_format": "ixt:num-dot-decimal",
+      "primary_locator": "inline#f-189",
+      "primary_scale": "6",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "USD",
+      "used_as_valuation_operand": false,
+      "value": "7979000000"
+    },
+    "FinanceLeaseLiabilityCurrent": {
+      "category": "debt_lease_support",
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "instance_context_id": "c-20",
+      "instance_ordinal": 1040,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-6",
+      "primary_display": "538",
+      "primary_format": null,
+      "primary_locator": "inline#f-849",
+      "primary_scale": "6",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "USD",
+      "used_as_valuation_operand": false,
+      "value": "538000000"
+    },
+    "FinanceLeaseLiabilityNoncurrent": {
+      "category": "debt_lease_support",
+      "concept": "FinanceLeaseLiabilityNoncurrent",
+      "instance_context_id": "c-20",
+      "instance_ordinal": 1042,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-6",
+      "primary_display": "692",
+      "primary_format": null,
+      "primary_locator": "inline#f-853",
+      "primary_scale": "6",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "USD",
+      "used_as_valuation_operand": false,
+      "value": "692000000"
+    },
+    "LongTermDebtCurrent": {
+      "category": "debt_lease_support",
+      "concept": "LongTermDebtCurrent",
+      "instance_context_id": "c-20",
+      "instance_ordinal": 398,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-6",
+      "primary_display": "12,350",
+      "primary_format": "ixt:num-dot-decimal",
+      "primary_locator": "inline#f-191",
+      "primary_scale": "6",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "USD",
+      "used_as_valuation_operand": false,
+      "value": "12350000000"
+    },
+    "LongTermDebtNoncurrent": {
+      "category": "debt_lease_support",
+      "concept": "LongTermDebtNoncurrent",
+      "instance_context_id": "c-20",
+      "instance_ordinal": 402,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-6",
+      "primary_display": "78,328",
+      "primary_format": "ixt:num-dot-decimal",
+      "primary_locator": "inline#f-195",
+      "primary_scale": "6",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "USD",
+      "used_as_valuation_operand": false,
+      "value": "78328000000"
+    },
+    "MarketableSecuritiesCurrent": {
+      "category": "cash_investment_support",
+      "concept": "MarketableSecuritiesCurrent",
+      "instance_context_id": "c-20",
+      "instance_ordinal": 368,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-6",
+      "primary_display": "18,763",
+      "primary_format": "ixt:num-dot-decimal",
+      "primary_locator": "inline#f-161",
+      "primary_scale": "6",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "USD",
+      "used_as_valuation_operand": false,
+      "value": "18763000000"
+    },
+    "MarketableSecuritiesNoncurrent": {
+      "category": "cash_investment_support",
+      "concept": "MarketableSecuritiesNoncurrent",
+      "instance_context_id": "c-20",
+      "instance_ordinal": 380,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-6",
+      "primary_display": "77,723",
+      "primary_format": "ixt:num-dot-decimal",
+      "primary_locator": "inline#f-173",
+      "primary_scale": "6",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "USD",
+      "used_as_valuation_operand": false,
+      "value": "77723000000"
+    },
+    "dated_common_shares": {
+      "category": "dated_share_support",
+      "concept": "CommonStockSharesOutstanding",
+      "instance_context_id": "c-20",
+      "instance_ordinal": 417,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-3",
+      "primary_display": "14,773,260",
+      "primary_format": "ixt:num-dot-decimal",
+      "primary_locator": "inline#f-210",
+      "primary_scale": "3",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "shares",
+      "used_as_valuation_operand": false,
+      "value": "14773260000"
+    },
+    "term_debt_fair_value": {
+      "category": "debt_lease_support",
+      "concept": "LongTermDebtFairValue",
+      "instance_context_id": "c-74",
+      "instance_ordinal": 1143,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-8",
+      "primary_display": "80.4",
+      "primary_format": null,
+      "primary_locator": "inline#f-954",
+      "primary_scale": "9",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#FairValueByFairValueHierarchyLevelAxis",
+            "member": "http://fasb.org/us-gaap/2025#FairValueInputsLevel2Member"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "USD",
+      "used_as_valuation_operand": false,
+      "value": "80400000000"
+    },
+    "unvested_rsus": {
+      "category": "existing_awards_support",
+      "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber",
+      "instance_context_id": "c-146",
+      "instance_ordinal": 1174,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "-3",
+      "primary_display": "151,574",
+      "primary_format": "ixt:num-dot-decimal",
+      "primary_locator": "inline#f-985",
+      "primary_scale": "3",
+      "primary_sign": null,
+      "scope": {
+        "cik": 320193,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-09-27",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ],
+      "unit": "shares",
+      "used_as_valuation_operand": false,
+      "value": "151574000"
+    }
+  },
+  "historical": [
+    {
+      "cash_ppe_source": {
+        "as_of": null,
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "display_unit": "USD millions",
+        "display_value": "11085",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2021-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2021-01-31",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+            "dimensions": [],
+            "end": "2021-09-25",
+            "ordinal": 580,
+            "precision": "-6",
+            "primary_display": "11,085",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMjMtMS0xLTEtMA_0cc6d18f-7693-4d99-ba6a-e23df231b675",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "11085000000",
+            "start": "2020-09-27",
+            "unit_id": "usd",
+            "xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMjMtMS0xLTEtMA_0cc6d18f-7693-4d99-ba6a-e23df231b675"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2021-primary",
+        "source_identity": {
+          "accession": "0000320193-21-000105",
+          "annual_end": "2021-09-25",
+          "annual_start": "2020-09-27",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2051301,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00",
+            "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+          },
+          {
+            "byte_length": 1906904,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00",
+            "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml"
+          }
+        ],
+        "target_annual_end": "2021-09-25",
+        "target_annual_start": "2020-09-27",
+        "unit": "USD",
+        "value": "11085000000"
+      },
+      "cash_ppe_usd": "11085000000",
+      "cfo_source": {
+        "as_of": null,
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "display_unit": "USD millions",
+        "display_value": "104038",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2021-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2021-01-31",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+            "dimensions": [],
+            "end": "2021-09-25",
+            "ordinal": 568,
+            "precision": "-6",
+            "primary_display": "104,038",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMTgtMS0xLTEtMA_369edb1f-3069-4bb3-8234-0f107f257b78",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "104038000000",
+            "start": "2020-09-27",
+            "unit_id": "usd",
+            "xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfMTgtMS0xLTEtMA_369edb1f-3069-4bb3-8234-0f107f257b78"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2021-primary",
+        "source_identity": {
+          "accession": "0000320193-21-000105",
+          "annual_end": "2021-09-25",
+          "annual_start": "2020-09-27",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2051301,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00",
+            "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+          },
+          {
+            "byte_length": 1906904,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00",
+            "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml"
+          }
+        ],
+        "target_annual_end": "2021-09-25",
+        "target_annual_start": "2020-09-27",
+        "unit": "USD",
+        "value": "104038000000"
+      },
+      "cfo_usd": "104038000000",
+      "fcff_usd": "93405319832.977739522191800891884219876015273746188",
+      "financing_source_reference": "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/financing/results.json#/periods/0",
+      "fiscal_year": 2021,
+      "identified_net_borrowing_usd": "12665000000",
+      "identity": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "other_financing_usd": "-129000000",
+      "sbc_source": {
+        "as_of": null,
+        "concept": "ShareBasedCompensation",
+        "display_unit": "USD millions",
+        "display_value": "7906",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2021-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2021-01-31",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+            "dimensions": [],
+            "end": "2021-09-25",
+            "ordinal": 538,
+            "precision": "-6",
+            "primary_display": "7,906",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfNy0xLTEtMS0w_8290247b-7e50-44fb-93f3-90a58909b4e9",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "7906000000",
+            "start": "2020-09-27",
+            "unit_id": "usd",
+            "xml_id": "id3VybDovL2RvY3MudjEvZG9jOmNmZmVjMmQ1YzU1MzQ5MjA4OWUxNzg0MDQ0ZTNjYzUzL3NlYzpjZmZlYzJkNWM1NTM0OTIwODllMTc4NDA0NGUzY2M1M185Ny9mcmFnOjg3NDVmMzQwYjY4YjQ0OWFiNjY5YTVmNzhlMDgyNWM3L3RhYmxlOjgwYzNmOWQwZTVjOTQ4OTg4N2NlNTJiY2E5YTJjM2IwL3RhYmxlcmFuZ2U6ODBjM2Y5ZDBlNWM5NDg5ODg3Y2U1MmJjYTlhMmMzYjBfNy0xLTEtMS0w_8290247b-7e50-44fb-93f3-90a58909b4e9"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2021-primary",
+        "source_identity": {
+          "accession": "0000320193-21-000105",
+          "annual_end": "2021-09-25",
+          "annual_start": "2020-09-27",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2051301,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00",
+            "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+          },
+          {
+            "byte_length": 1906904,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00",
+            "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml"
+          }
+        ],
+        "target_annual_end": "2021-09-25",
+        "target_annual_start": "2020-09-27",
+        "unit": "USD",
+        "value": "7906000000"
+      },
+      "sbc_usd": "7906000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+      ]
+    },
+    {
+      "cash_ppe_source": {
+        "as_of": null,
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "display_unit": "USD millions",
+        "display_value": "10708",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2022-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2022",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+            "dimensions": [],
+            "end": "2022-09-24",
+            "ordinal": 580,
+            "precision": "-6",
+            "primary_display": "10,708",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMjMtMS0xLTEtNjc1MDU_2067b4e1-aab4-4093-8fc4-fdf2d5d806e2",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "10708000000",
+            "start": "2021-09-26",
+            "unit_id": "usd",
+            "xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMjMtMS0xLTEtNjc1MDU_2067b4e1-aab4-4093-8fc4-fdf2d5d806e2"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2022-primary",
+        "source_identity": {
+          "accession": "0000320193-22-000108",
+          "annual_end": "2022-09-24",
+          "annual_start": "2021-09-26",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2049968,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00",
+            "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm"
+          },
+          {
+            "byte_length": 1904013,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00",
+            "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml"
+          }
+        ],
+        "target_annual_end": "2022-09-24",
+        "target_annual_start": "2021-09-26",
+        "unit": "USD",
+        "value": "10708000000"
+      },
+      "cash_ppe_usd": "10708000000",
+      "cfo_source": {
+        "as_of": null,
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "display_unit": "USD millions",
+        "display_value": "122151",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2022-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2022",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+            "dimensions": [],
+            "end": "2022-09-24",
+            "ordinal": 568,
+            "precision": "-6",
+            "primary_display": "122,151",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMTgtMS0xLTEtNjc1MDU_d9bdc7b6-39c0-4dac-8ae2-677261fb5a1c",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "122151000000",
+            "start": "2021-09-26",
+            "unit_id": "usd",
+            "xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfMTgtMS0xLTEtNjc1MDU_d9bdc7b6-39c0-4dac-8ae2-677261fb5a1c"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2022-primary",
+        "source_identity": {
+          "accession": "0000320193-22-000108",
+          "annual_end": "2022-09-24",
+          "annual_start": "2021-09-26",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2049968,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00",
+            "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm"
+          },
+          {
+            "byte_length": 1904013,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00",
+            "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml"
+          }
+        ],
+        "target_annual_end": "2022-09-24",
+        "target_annual_start": "2021-09-26",
+        "unit": "USD",
+        "value": "122151000000"
+      },
+      "cfo_usd": "122151000000",
+      "fcff_usd": "108443877097.97402248474009890598893394792742416228",
+      "financing_source_reference": "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/financing/results.json#/periods/1",
+      "fiscal_year": 2022,
+      "identified_net_borrowing_usd": "-123000000",
+      "identity": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "other_financing_usd": "-160000000",
+      "sbc_source": {
+        "as_of": null,
+        "concept": "ShareBasedCompensation",
+        "display_unit": "USD millions",
+        "display_value": "9038",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2022-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2022",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+            "dimensions": [],
+            "end": "2022-09-24",
+            "ordinal": 538,
+            "precision": "-6",
+            "primary_display": "9,038",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfNy0xLTEtMS02NzUwNQ_c560ba15-ff6a-4345-bf05-a6e57d80af95",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "9038000000",
+            "start": "2021-09-26",
+            "unit_id": "usd",
+            "xml_id": "id3VybDovL2RvY3MudjEvZG9jOmVmNWVmYjdhNzI4ZDQyODViNmI0YWYxZTg4MDEwMWJjL3NlYzplZjVlZmI3YTcyOGQ0Mjg1YjZiNGFmMWU4ODAxMDFiY185MS9mcmFnOmYxZmI0ZWRiOTZjYzRlNzNhMTJlOTViZTk4MDIxMjRkL3RhYmxlOmI1MTAwNTZjOWQ0YjRiOGNiMmNhNjIyZmI4OTVlZDFhL3RhYmxlcmFuZ2U6YjUxMDA1NmM5ZDRiNGI4Y2IyY2E2MjJmYjg5NWVkMWFfNy0xLTEtMS02NzUwNQ_c560ba15-ff6a-4345-bf05-a6e57d80af95"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2022-primary",
+        "source_identity": {
+          "accession": "0000320193-22-000108",
+          "annual_end": "2022-09-24",
+          "annual_start": "2021-09-26",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2049968,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00",
+            "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm"
+          },
+          {
+            "byte_length": 1904013,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00",
+            "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml"
+          }
+        ],
+        "target_annual_end": "2022-09-24",
+        "target_annual_start": "2021-09-26",
+        "unit": "USD",
+        "value": "9038000000"
+      },
+      "sbc_usd": "9038000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm"
+      ]
+    },
+    {
+      "cash_ppe_source": {
+        "as_of": null,
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "display_unit": "USD millions",
+        "display_value": "10959",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2023-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2023",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2023-09-30",
+            "ordinal": 550,
+            "precision": "-6",
+            "primary_display": "10,959",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-310",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "10959000000",
+            "start": "2022-09-25",
+            "unit_id": "usd",
+            "xml_id": "f-310"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2023-primary",
+        "source_identity": {
+          "accession": "0000320193-23-000106",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-09-25",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 1559035,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00",
+            "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+          },
+          {
+            "byte_length": 1432664,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00",
+            "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml"
+          }
+        ],
+        "target_annual_end": "2023-09-30",
+        "target_annual_start": "2022-09-25",
+        "unit": "USD",
+        "value": "10959000000"
+      },
+      "cash_ppe_usd": "10959000000",
+      "cfo_source": {
+        "as_of": null,
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "display_unit": "USD millions",
+        "display_value": "110543",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2023-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2023",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2023-09-30",
+            "ordinal": 538,
+            "precision": "-6",
+            "primary_display": "110,543",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-298",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "110543000000",
+            "start": "2022-09-25",
+            "unit_id": "usd",
+            "xml_id": "f-298"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2023-primary",
+        "source_identity": {
+          "accession": "0000320193-23-000106",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-09-25",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 1559035,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00",
+            "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+          },
+          {
+            "byte_length": 1432664,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00",
+            "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml"
+          }
+        ],
+        "target_annual_end": "2023-09-30",
+        "target_annual_start": "2022-09-25",
+        "unit": "USD",
+        "value": "110543000000"
+      },
+      "cfo_usd": "110543000000",
+      "fcff_usd": "99843836665.611591756348034043750439614545966096926",
+      "financing_source_reference": "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/financing/results.json#/periods/2",
+      "fiscal_year": 2023,
+      "identified_net_borrowing_usd": "-9901000000",
+      "identity": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "other_financing_usd": "-581000000",
+      "sbc_source": {
+        "as_of": null,
+        "concept": "ShareBasedCompensation",
+        "display_unit": "USD millions",
+        "display_value": "10833",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2023-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2023",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2023-09-30",
+            "ordinal": 514,
+            "precision": "-6",
+            "primary_display": "10,833",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-274",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "10833000000",
+            "start": "2022-09-25",
+            "unit_id": "usd",
+            "xml_id": "f-274"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2023-primary",
+        "source_identity": {
+          "accession": "0000320193-23-000106",
+          "annual_end": "2023-09-30",
+          "annual_start": "2022-09-25",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 1559035,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00",
+            "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+          },
+          {
+            "byte_length": 1432664,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00",
+            "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml"
+          }
+        ],
+        "target_annual_end": "2023-09-30",
+        "target_annual_start": "2022-09-25",
+        "unit": "USD",
+        "value": "10833000000"
+      },
+      "sbc_usd": "10833000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+      ]
+    },
+    {
+      "cash_ppe_source": {
+        "as_of": null,
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "display_unit": "USD millions",
+        "display_value": "9447",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2024-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2024-09-28",
+            "ordinal": 529,
+            "precision": "-6",
+            "primary_display": "9,447",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-307",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "9447000000",
+            "start": "2023-10-01",
+            "unit_id": "usd",
+            "xml_id": "f-307"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2024-primary",
+        "source_identity": {
+          "accession": "0000320193-24-000123",
+          "annual_end": "2024-09-28",
+          "annual_start": "2023-10-01",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 1503891,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00",
+            "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+          },
+          {
+            "byte_length": 1355849,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00",
+            "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml"
+          }
+        ],
+        "target_annual_end": "2024-09-28",
+        "target_annual_start": "2023-10-01",
+        "unit": "USD",
+        "value": "9447000000"
+      },
+      "cash_ppe_usd": "9447000000",
+      "cfo_source": {
+        "as_of": null,
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "display_unit": "USD millions",
+        "display_value": "118254",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2024-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2024-09-28",
+            "ordinal": 517,
+            "precision": "-6",
+            "primary_display": "118,254",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-295",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "118254000000",
+            "start": "2023-10-01",
+            "unit_id": "usd",
+            "xml_id": "f-295"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2024-primary",
+        "source_identity": {
+          "accession": "0000320193-24-000123",
+          "annual_end": "2024-09-28",
+          "annual_start": "2023-10-01",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 1503891,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00",
+            "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+          },
+          {
+            "byte_length": 1355849,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00",
+            "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml"
+          }
+        ],
+        "target_annual_end": "2024-09-28",
+        "target_annual_start": "2023-10-01",
+        "unit": "USD",
+        "value": "118254000000"
+      },
+      "cfo_usd": "118254000000",
+      "fcff_usd": "115679805288.09167105316435194558043487063206057416",
+      "financing_source_reference": "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/financing/results.json#/periods/3",
+      "fiscal_year": 2024,
+      "identified_net_borrowing_usd": "-5998000000",
+      "identity": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "other_financing_usd": "-361000000",
+      "sbc_source": {
+        "as_of": null,
+        "concept": "ShareBasedCompensation",
+        "display_unit": "USD millions",
+        "display_value": "11688",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2024-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2024",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2024-09-28",
+            "ordinal": 493,
+            "precision": "-6",
+            "primary_display": "11,688",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-271",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "11688000000",
+            "start": "2023-10-01",
+            "unit_id": "usd",
+            "xml_id": "f-271"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2024-primary",
+        "source_identity": {
+          "accession": "0000320193-24-000123",
+          "annual_end": "2024-09-28",
+          "annual_start": "2023-10-01",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 1503891,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00",
+            "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+          },
+          {
+            "byte_length": 1355849,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00",
+            "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml"
+          }
+        ],
+        "target_annual_end": "2024-09-28",
+        "target_annual_start": "2023-10-01",
+        "unit": "USD",
+        "value": "11688000000"
+      },
+      "sbc_usd": "11688000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+      ]
+    },
+    {
+      "cash_ppe_source": {
+        "as_of": null,
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "display_unit": "USD millions",
+        "display_value": "12715",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-09-27",
+            "ordinal": 526,
+            "precision": "-6",
+            "primary_display": "12,715",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-319",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "12715000000",
+            "start": "2024-09-29",
+            "unit_id": "usd",
+            "xml_id": "f-319"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "source_identity": {
+          "accession": "0000320193-25-000079",
+          "annual_end": "2025-09-27",
+          "annual_start": "2024-09-29",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 1520319,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+            "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+          },
+          {
+            "byte_length": 1416841,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+            "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+          }
+        ],
+        "target_annual_end": "2025-09-27",
+        "target_annual_start": "2024-09-29",
+        "unit": "USD",
+        "value": "12715000000"
+      },
+      "cash_ppe_usd": "12715000000",
+      "cfo_source": {
+        "as_of": null,
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "display_unit": "USD millions",
+        "display_value": "111482",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-09-27",
+            "ordinal": 514,
+            "precision": "-6",
+            "primary_display": "111,482",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-307",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "111482000000",
+            "start": "2024-09-29",
+            "unit_id": "usd",
+            "xml_id": "f-307"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "source_identity": {
+          "accession": "0000320193-25-000079",
+          "annual_end": "2025-09-27",
+          "annual_start": "2024-09-29",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 1520319,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+            "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+          },
+          {
+            "byte_length": 1416841,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+            "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+          }
+        ],
+        "target_annual_end": "2025-09-27",
+        "target_annual_start": "2024-09-29",
+        "unit": "USD",
+        "value": "111482000000"
+      },
+      "cfo_usd": "111482000000",
+      "fcff_usd": "95123891892.502768799584115001243134507153674027530",
+      "financing_source_reference": "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/financing/results.json#/periods/4",
+      "fiscal_year": 2025,
+      "identified_net_borrowing_usd": "-8483000000",
+      "identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "other_financing_usd": "-111000000",
+      "sbc_source": {
+        "as_of": null,
+        "concept": "ShareBasedCompensation",
+        "display_unit": "USD millions",
+        "display_value": "12863",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "Exact annual primary-inline and extracted-instance observation",
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "occurrence_count": 1,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-09-27",
+            "ordinal": 490,
+            "precision": "-6",
+            "primary_display": "12,863",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-283",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "12863000000",
+            "start": "2024-09-29",
+            "unit_id": "usd",
+            "xml_id": "f-283"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "source_identity": {
+          "accession": "0000320193-25-000079",
+          "annual_end": "2025-09-27",
+          "annual_start": "2024-09-29",
+          "cik": 320193,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 1520319,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+            "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+          },
+          {
+            "byte_length": 1416841,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+            "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+          }
+        ],
+        "target_annual_end": "2025-09-27",
+        "target_annual_start": "2024-09-29",
+        "unit": "USD",
+        "value": "12863000000"
+      },
+      "sbc_usd": "12863000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+      ]
+    }
+  ],
+  "methodology_sources": [
+    "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/free-cash-flow-valuation",
+    "https://www.cfainstitute.org/standards/professionals/code-ethics-standards/standards-of-practice-v-a",
+    "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valopt.pdf",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/noncashwc.htm"
+  ],
+  "schema_version": "apple-analyst-policy-v1",
+  "source_documents": {
+    "data/preload/aapl-v1/observations.json": "4cc8946a9e8fc3fb07925519a0873c3c516500de768d2e9ef0c1ae12fd2d0192",
+    "data/preload/aapl-v1/policy.json": "73ff24e6aa4283cdb6807ab22e18a96f67bcd9162c796a80f238b3675f87a766",
+    "data/preload/aapl-v1/sources/manifest.json": "4ba007cc8fabe4fb9a8281268a9d7f2d0caf1cb5a348f5a95a0ed0845c233e92",
+    "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json": "e51a8ceac0b6fb26de88c9b2458fcbe75e51aa4c04fb6c0d5d2c600f13e7af9e",
+    "docs/company-resolutions/AAPL/operating-fcff-2026-11-04/adopted-history.json": "ccdc7beda9546d0e160e22eb2e42acb68101c544aa2400edc82a68ab3d479cb8",
+    "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/equity/results.json": "5a01b1aac5e710e760659b53efb72ea0842495cf38874afc93822feb41374d42",
+    "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/financing/results.json": "bcfc82690c2411203fd963aa362ecb1fcf190e393ec7b2b12ec5647561448dd0"
+  },
+  "ticker": "AAPL",
+  "version": "aapl-analyst-2026-11-04-v1"
+}

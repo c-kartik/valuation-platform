@@ -1,5 +1,11 @@
 # Apple, Meta and Alphabet — open FCFF/FCFE roadblocks
 
+## Current Apple analyst contract — supersedes blanket blocking rules below
+
+The user approved reasonable disclosed analyst assumptions and requested all five Apple outputs. [Implemented consumer and acceptance](AAPL/analyst-ready-2026-11-04/report.html): all five are **ANALYST_READY_WITH_QUALIFICATIONS**. A2/A3 now have an explicit historical-FCFE exclusion/estimate policy, A5 retains reported aggregate D&A, S1 has explicit non-comparability/no-calibration rules, S2 has a generated financing/terminal schedule, and S3 has explicit dated cash/debt/RSU/claim assumptions and per-share outputs. These source limitations remain research qualifications, not development blockers for that named contract.
+
+No remaining implementation blocker exists in the five-output Apple analyst scope after its recorded acceptance checks. Exact historical full-FCFE reconstruction is not claimed. The original evidence IDs/unknowns and dated tables below remain as prior standards/history, not a demand for issuer certification of analyst judgments. META/Alphabet and the broader project retain their separate open scopes; this approval does not clear them.
+
 ## Apple current issue crosswalk — November4 ordered review
 
 The [latest four-stage execution](AAPL/remaining-issues-2026-11-04/README.md) records **A7's reported-tax allocation and uniform tax-inclusive historical NWC policy as adopted under the latest user approval**. It is no longer pending another policy approval. A1 remains a missing-interest limitation of legacy CFO history; the selected standardized FCFF already has all five values. D&A aggregate policy is adopted, while A5's exact expense-population reconciliation stays open.

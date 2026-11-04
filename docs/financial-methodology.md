@@ -1,5 +1,13 @@
 # Financial Methodology
 
+## Apple analyst consumer — reasonable-assumption contract
+
+The user explicitly approved [Apple's five-output analyst methodology](company-resolutions/AAPL/analyst-ready-2026-11-04/README.md). Verified reported facts stay separate from derived cash flows and analyst assumptions. All five outputs are analyst-ready with qualifications when source arithmetic, explicit policy, sensitivities and live consumers pass. Missing source decomposition need not block a labeled standardized estimate.
+
+Historical FCFE=CFO−cash PP&E+identified net borrowing, with net Other excluded by base convention and no duplicate guessed lease deduction; economic companion subtracts reported SBC. Forward FCFE uses fixed99.887B explicit net debt, assumed interest, matched new financed assets/principal once, terminal debt growth and cost of equity. FCFF uses submitted WACC. Different capital structures imply different values; no forced parity.
+
+Equity bridge uses dated132.420B gross liquidity less2% anchor-revenue reserve,89.609B fair-value/proxy financing debt for FCFF only,14.773260B common shares+expected vesting of0.151574B RSUs, and explicit additional claims (basezero, stressshown). Future margins proxy future-grant SBC; no second settlement/award-value charge. Ordinary settlements/liquidity costs are assumed reflected in forecast taxes/expenses/WC. These are editable analyst choices, not issuer-certified economic populations. See the linked log for source dates, route qualifications and update steps. No automatic cross-basis historical calibration/CAGR or current-market upside claim.
+
 ## Apple ordered policy and source review — November4
 
 The [approved remaining-issue run](company-resolutions/AAPL/remaining-issues-2026-11-04/README.md) records the all-year tax-inclusive standardized historical NWC policy and retains separate explicit forward18%→20%/terminal20% tax assumptions. Three source-to-first-forecast component bridges explain arithmetic, not full economic equivalence. Base uses5% incremental-sales WC; Bear/Bull retain Base WC/revenue ratios under the existing scenario convention. No cross-basis CAGR/calibration is enabled.

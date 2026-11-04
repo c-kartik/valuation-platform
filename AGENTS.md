@@ -102,6 +102,21 @@ not all forty records. Required missing values stay unresolved despite acceptanc
 
 ## Financial Methodology
 
+### Apple analyst-readiness contract
+
+The user approved reasonable, disclosed analyst assumptions and explicitly
+requested all five Apple outputs. The current named consumer and acceptance
+record is `docs/company-resolutions/AAPL/analyst-ready-2026-11-04/README.md`.
+It supersedes blanket exact-reconstruction blocking rules for this Apple scope:
+five-year historical FCFF/standardized FCFE estimates, FCFF/FCFE valuations and
+both share estimates are analyst-ready with qualifications after their tests.
+Keep reported facts, derived estimates and assumptions distinct. Preserve old
+source unknowns/strict review records; do not describe an estimate as exact
+historical cash. No automatic extension to META/Alphabet or the wider universe.
+The standing no-premature-completion rule still applies to actual implementation,
+arithmetic, source contradiction and undisclosed-assumption blockers. Explicitly
+accepted research qualifications are not themselves unfinished development.
+
 Historical standardized output should eventually support:
 
 - Revenue

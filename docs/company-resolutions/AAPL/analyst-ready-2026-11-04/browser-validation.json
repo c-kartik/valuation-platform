@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "default_values": true,
+  "edited_reserve_recalculates_both": true,
+  "stale_state_verified": true,
+  "five_outputs_visible": true,
+  "five_histories_visible": true,
+  "mobile": {
+    "width": 390,
+    "documentWidth": 390
+  },
+  "report_mobile": {
+    "width": 390,
+    "documentWidth": 390
+  },
+  "javascript_errors": []
+}

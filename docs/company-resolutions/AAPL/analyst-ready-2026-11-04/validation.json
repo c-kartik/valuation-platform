@@ -1,0 +1,51 @@
+{
+  "artifact_sha256": {
+    "docs/company-resolutions/AAPL/analyst-ready-2026-11-04/policy.json": "10d68a552bf1e6a6ec2e381dd0cece81b376bfbf34ff6ce98bfc343ce75b4757",
+    "frontend/src/api.ts": "2690e2b9411693fc28dbc49d20e30e15a1f4ea30cf12e05f0ffac243f9e5c296",
+    "frontend/src/workspace/AppleAnalyst.tsx": "326c638d5e23b8c5c8cd0301aeb45c8a3324a35925b5fdec142ea13e718c0f43",
+    "frontend/src/workspace/Workspace.tsx": "45a31ed98673f2f75d40a78b3634850c76030198730ca08e5e8ad58367c81cf6",
+    "src/valuation_platform/api/app.py": "d9210692ace1b6b7fb685c60a6e6b157d6fab05159c8d5b52995f8e309eaf457",
+    "src/valuation_platform/api/budget.py": "f0248f770167177d7bb4e699ebf8dd027dcbdc7c67d299eb4717a81abe6cf833",
+    "src/valuation_platform/api/bundle-files.json": "bc34fc19edde4edb546c1b35c471b9ade8e5e72ac17d09234e45e7765d124c51",
+    "src/valuation_platform/api/worker.py": "01933b7a65771e5a2aad98220114f99e418be737c6a5ee6e646830482a42f3d0",
+    "src/valuation_platform/review/apple_analyst.py": "d519cdaed4ed3158b657169db58ade45511405df513428cb877dfac9bbb09074"
+  },
+  "checked_at_utc": "2026-11-04T19:40:38.356025+00:00",
+  "checks": {
+    "desktop_mobile_live_browser": "browser-validation.json",
+    "focused_financial_regression": {
+      "failed": 0,
+      "log": "logs/financial.log",
+      "overlaps_other_counts": true,
+      "passed": 22
+    },
+    "full_api_tests": {
+      "failed": 0,
+      "log": "logs/api.log",
+      "passed": 75
+    },
+    "full_frontend_tests": {
+      "failed": 0,
+      "log": "logs/frontend.log",
+      "passed": 301
+    },
+    "git_diff_whitespace": "PASS",
+    "independent_assertions": 337,
+    "independent_review": "independent-review.md",
+    "production_build": "PASS",
+    "source_projection_replay": "PASS",
+    "three_scenario_report_replay": "PASS",
+    "visual_inspection": "PASS"
+  },
+  "five_output_scope_pass": true,
+  "qualifications": "Exact unknowns remain source limitations; historical FCFE is an estimate. Both valuation routes use different disclosed financing assumptions; no equivalent-route or current-price claim.",
+  "schema_version": "apple-analyst-validation-v1",
+  "scope_exclusions": [
+    "Exact full historical financing reconstruction",
+    "Current-date market price/upside recommendation",
+    "Exit-multiple FCFE",
+    "Other issuer approval"
+  ],
+  "unresolved_development_blockers_in_named_scope": [],
+  "verdict": "ANALYST_READY_WITH_QUALIFICATIONS"
+}

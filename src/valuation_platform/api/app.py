@@ -11,7 +11,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, Response
 from starlette.requests import ClientDisconnect
 
-from .budget import DEFAULT_POLICY, BudgetError, error_body, read_http_case, read_http_scenarios, read_http_sensitivity, read_http_reverse, read_http_fcfe
+from .budget import DEFAULT_POLICY, BudgetError, error_body, read_http_case, read_http_scenarios, read_http_sensitivity, read_http_reverse, read_http_fcfe, read_http_apple_analyst
 from .bundle import verify_bundle
 from .process import Calculator, ExecutionError
 from .worker import calculate
@@ -227,6 +227,20 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
         if app.state.ready and app.state.calculator.job is not None:
             raise ExecutionError(503, 'busy', 'One calculation is already running; retry later.')
         body, _, failure = await intake(request, read_http_fcfe)
+        if failure is not None:
+            return failure
+        async def disconnected():
+            while True:
+                if (await request.receive())['type'] == 'http.disconnect':
+                    return
+        status, payload = await app.state.calculator.run(body, disconnected)
+        return Response(payload, status_code=status, media_type='application/json', headers={'Cache-Control': 'no-store'})
+
+    @app.post('/api/v1/apple/analyst/run')
+    async def apple_analyst_run(request: Request):
+        if app.state.ready and app.state.calculator.job is not None:
+            raise ExecutionError(503, 'busy', 'One calculation is already running; retry later.')
+        body, _, failure = await intake(request, read_http_apple_analyst)
         if failure is not None:
             return failure
         async def disconnected():

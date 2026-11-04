@@ -1,0 +1,67 @@
+{
+  "review": "Independent analyst-contract acceptance",
+  "verdict": "PASS_WITH_DISCLOSED_QUALIFICATIONS",
+  "policy_sha256": "10d68a552bf1e6a6ec2e381dd0cece81b376bfbf34ff6ce98bfc343ce75b4757",
+  "independent_assertions": 337,
+  "scenarios": [
+    {
+      "scenario": "Bear",
+      "horizon": 5,
+      "fcff_ev_usd": "1995113824800.1896765891467413657199240491509550971",
+      "fcff_per_share_usd": "135.98821968808428131188237948681505764480535965071",
+      "fcfe_equity_usd": "2186767824366.1091322352835659924061748602848107859",
+      "fcfe_per_share_usd": "146.51873678233936352225314974976647478024109419146",
+      "independent_fraction_replay": "PASS"
+    },
+    {
+      "scenario": "Bear",
+      "horizon": 10,
+      "fcff_ev_usd": "2028061530381.6488895026259949337003459226957856759",
+      "fcff_per_share_usd": "138.19579570410289920160090188833593364741582959488",
+      "fcfe_equity_usd": "2217786000708.3000705972643987965505992270624302491",
+      "fcfe_per_share_usd": "148.59702966936182141772996596119934059079400348768",
+      "independent_fraction_replay": "PASS"
+    },
+    {
+      "scenario": "Base",
+      "horizon": 5,
+      "fcff_ev_usd": "2584235110965.6244937163319612325719931531954903306",
+      "fcff_per_share_usd": "175.46077168869178000347152680107343191577175935964",
+      "fcfe_equity_usd": "2402880846117.1885265871186025671364358478818823376",
+      "fcfe_per_share_usd": "160.99883228967159879882875766438249402625730258290",
+      "independent_fraction_replay": "PASS"
+    },
+    {
+      "scenario": "Base",
+      "horizon": 10,
+      "fcff_ev_usd": "2845714141946.4552010529979402349109015432923347319",
+      "fcff_per_share_usd": "192.98049961201948383834607073250602998621574851231",
+      "fcfe_equity_usd": "2626641628476.1634594144067720187712121824216601731",
+      "fcfe_per_share_usd": "175.99134626731281965443681129175515199582264433716",
+      "independent_fraction_replay": "PASS"
+    },
+    {
+      "scenario": "Bull",
+      "horizon": 5,
+      "fcff_ev_usd": "3438185102330.4572667741917791251108938458948148610",
+      "fcff_per_share_usd": "232.67748789235828463982860909039999331623352158295",
+      "fcfe_equity_usd": "2635713645060.9050485498910048281834476989631003552",
+      "fcfe_per_share_usd": "176.59919333514229026265156482331283870219012823561",
+      "independent_fraction_replay": "PASS"
+    },
+    {
+      "scenario": "Bull",
+      "horizon": 10,
+      "fcff_ev_usd": "4120831355594.2411545393535492969966563157282378444",
+      "fcff_per_share_usd": "278.41643904342528396224397197965462505752011967734",
+      "fcfe_equity_usd": "3104838848597.8708063894287497250134552410952092756",
+      "fcfe_per_share_usd": "208.03171737775246320256752937587201675014242766624",
+      "independent_fraction_replay": "PASS"
+    }
+  ],
+  "focused_python_tests": 11,
+  "focused_frontend_tests": 10,
+  "source_projection_check": "PASS",
+  "scope": "Apple FY2025 origin, 5/10-year Bear/Base/Bull perpetual-growth analyst outputs. Not an exact-cash reconstruction or current-date trading valuation.",
+  "unresolved_blocking_findings": []
+}

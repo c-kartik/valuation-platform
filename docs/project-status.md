@@ -1,5 +1,11 @@
 # Project Status
 
+## Apple five-output analyst acceptance — November4,2026
+
+[Implementation, assumptions and acceptance](company-resolutions/AAPL/analyst-ready-2026-11-04/report.html): all five Apple outputs are analyst-ready with qualifications under the user-approved reasonable-assumption contract. Historical FCFF is unchanged; identified-funding historical FCFE estimates and an SBC-expensed companion are explicit. Dynamic default financing, equity bridge, both share estimates, editable assumptions, sensitivities and export run in the isolated API and live DCF panel. Base175.46/share FCFF and161.00/share FCFE reflect different disclosed financing assumptions, not equivalent-route parity.
+
+Original exact-reconstruction gaps are preserved as source qualifications, not blanket development blocks. This completes the named Apple analyst-readiness implementation after its acceptance checks; exact full historical FCFE, current-date valuation and other-issuer clearance are not claimed. No wider-universe work or public deployment. Dated OPEN statements below describe earlier contracts.
+
 ## Apple remaining-issue implementation — November4,2026
 
 [Detailed run and independent review](company-resolutions/AAPL/remaining-issues-2026-11-04/report.html): four ordered treatment stages replayed; tax/NWC convention adoption recorded, dated share/debt source support bound and API/UI decision panel integrated. Current FCFF, provisional FCFE and all forecast policies are unchanged. Source/arithmetic/software checks pass within their recorded scope; full Apple financial review remains OPEN because financing, exact expense alignment and complete cash/claims/award treatment are unresolved. An exact issuer evidence request is prepared and unsent. No wider-universe expansion or public deployment.

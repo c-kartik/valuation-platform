@@ -1,5 +1,9 @@
 # Apple — manually approved cash-flow treatments
 
+## Current Apple analyst acceptance — November4,2026
+
+[Five-output implementation and acceptance](analyst-ready-2026-11-04/report.html) supersedes the earlier blanket OPEN valuation-use assessment **for the approved analyst consumer**. Historical FCFF, historical standardized FCFE estimates, both forward valuation routes and both per-share estimates are analyst-ready with qualifications. Default Base share values175.46 FCFF /161.00 FCFE use disclosed different financing assumptions; sources and old exact-reconstruction unknowns remain preserved. This is not an exact-FCFE certification. See the new policy, issue/treatment log and independent acceptance before interpreting the dated records below.
+
 ## Current remaining-issue review — November4
 
 The [four-stage implementation](remaining-issues-2026-11-04/report.html) executes the latest approved plan in order. Historical tax-inclusive NWC and existing forward-tax policy are now recorded under that approval; the date-matched common-share population is bound. Exact Other/lease financing, FY2024 D&A reconciliation and cash/claims/awards remain unresolved. FCFF and provisional FCFE are numerically unchanged. Current API/UI shows these decisions and preserves original review scope separately. **Apple remains OPEN; full financial review has not passed.**

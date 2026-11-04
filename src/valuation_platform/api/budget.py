@@ -143,6 +143,12 @@ def read_http_fcfe(body):
     return read_fcfe(text)
 
 
+def read_http_apple_analyst(body):
+    from valuation_platform.review.apple_analyst import read_apple_analyst
+    text, _ = read_http_document(body)
+    return read_apple_analyst(text)
+
+
 def error_body(code, message, errors=()):
     # Bounded public errors; internal exceptions must never be passed here.
     return {'error': {'code': code, 'message': message,

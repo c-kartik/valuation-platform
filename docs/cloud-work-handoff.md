@@ -1,5 +1,9 @@
 # Valuation Platform — cloud work handoff
 
+## Current Apple analyst consumer — November4
+
+[Five-output implementation and acceptance](company-resolutions/AAPL/analyst-ready-2026-11-04/README.md) supersedes older blanket Apple valuation-use blocking language below. All five outputs are analyst-ready with qualifications under the user-approved reasonable-assumption contract. Apple → DCF now shows dynamic paired share values, editable financing/equity assumptions, history and sensitivities via `/api/v1/apple/analyst/run`. Exact source unknowns/legacy records remain intact; do not silently transfer approval to other issuers. Base FCFF175.46/share and FCFE161.00/share reflect different disclosed financing assumptions. Reproduce policy/report and run the linked tests before financial updates.
+
 Read `AGENTS.md`, `docs/project-status.md`, `docs/financial-methodology.md`, then
 `docs/company-resolutions/README.md`. The GitHub checkout is the source of truth;
 a new cloud task does not inherit the full local chat automatically.

@@ -1,5 +1,9 @@
 # Company data preparation register
 
+## Apple analyst-use extension — November4,2026
+
+A separate [Apple five-output consumer](../company-resolutions/AAPL/analyst-ready-2026-11-04/report.html) now passes analyst-use sufficiency with explicit modeling qualifications. This does not recategorize frozen facts/gaps, certify exact historical FCFE or change the other41 issuer records. Two statuses remain distinct: original evidence preparation and readiness of the named assumption-based consumer.
+
 ## Apple remaining-issue treatments — November4
 
 [Ordered Apple execution](../company-resolutions/AAPL/remaining-issues-2026-11-04/README.md) records approved tax/NWC policy, source-bound dated share/debt support and explicit financing/D&A/per-share evidence gaps. New API/UI details preserve provisional amounts and separate policy adoption from source clearance. Existing source packages, preparation/sufficiency statuses and all other issuers are unchanged; company status remains OPEN.

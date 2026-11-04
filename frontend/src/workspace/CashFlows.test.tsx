@@ -94,12 +94,12 @@ it('exposes source-bound Apple decisions without clearing FCFE or per-share outp
  const d={...structuredClone(appleOperating),current_resolution:structuredClone(resolution)} as CashFlowReview;
  const load=vi.fn(async()=>d) as unknown as typeof request;
  render(<HistoricalCashFlows ticker="AAPL" active load={load}/>);
- await screen.findByText('Apple review decisions and remaining evidence');
- fireEvent.click(screen.getByText('Apple review decisions and remaining evidence'));
+ await screen.findByText('Earlier Apple evidence review and unresolved disclosures');
+ fireEvent.click(screen.getByText('Earlier Apple evidence review and unresolved disclosures'));
  expect(screen.getByText(/Gross cash and marketable securities: 132.42B/)).toBeTruthy();
  expect(screen.getByText(/Term-debt disclosed fair value: 80.40B/)).toBeTruthy();
  expect(screen.getAllByText('Provisional · financing classification open')).toHaveLength(5);
- expect(screen.getByText(/Company review remains open. The decisions below/)).toBeTruthy();
+ expect(screen.getByText(/This record preserves the earlier exact-reconstruction standard/)).toBeTruthy();
  expect(checkCashFlows(d,'AAPL')).toBe(d);
  const bad=structuredClone(d);(bad.current_resolution as unknown as {company_complete:boolean}).company_complete=true;
  expect(()=>checkCashFlows(bad,'AAPL')).toThrow('Incompatible Apple resolution');
