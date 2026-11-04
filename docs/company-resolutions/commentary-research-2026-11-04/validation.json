@@ -1,0 +1,14 @@
+{
+  "status": "PASS_SOURCE_PACKET_CHECKS_ONLY",
+  "successful_retained_sources": 52,
+  "correspondence_documents": 22,
+  "pdf_correspondence_documents": 10,
+  "apple_target_quarterlies": 15,
+  "later_quarterlies": 9,
+  "proxy_documents": 1,
+  "baseline_unchanged_sha256": "9b2a9d775745e9d4bd08efe60d49619c24f632b16a28fce5fcba014fe1f55d86",
+  "new_verified_cashflow_cells": 0,
+  "financial_clearance": "OPEN",
+  "new_method_adopted": false,
+  "limitation": "Text/tag screening and targeted note review do not prove universal disclosure absence or zero amounts."
+}

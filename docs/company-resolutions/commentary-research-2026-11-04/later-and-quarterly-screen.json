@@ -1,0 +1,2227 @@
+[
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "source_sha256": "f0f5c584bf71d3bc1956cb40f357ecf91b977445c913c9cc0cb24f34d295349a",
+    "text_sha256": "5c4d54d25e1e831982883ea93bce089538c8970d3e43badc9e598415cf67815c",
+    "text_file": "sources/AAPL-aapl-20260627.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "source_sha256": "c3a9f40cf884ca350743c2793a173c5752c809a6f3a28e63c714a9ff37b353ab",
+    "text_sha256": "635b547fc150596fe42a6dc885c41f1344fe2df4c3048b5b90515cd6de375046",
+    "text_file": "sources/AAPL-aapl-20260328.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "source_sha256": "a89dd56307dd10c9f9d3fd6507426db6d66b13ce212639e265d80b031735d1f3",
+    "text_sha256": "25840adb0ee5cce9e0a5a40da0a9cd4f3d1faade7b231a5b6d71bbfa157c6820",
+    "text_file": "sources/AAPL-aapl-20251227.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "source_sha256": "b6ddf8c1e1073b762d5907ebea2a73ab5c28e6f711671cea323dcc3914e73d20",
+    "text_sha256": "edcbdd8ce76d82ca5c271f396c79bb72b8030e1a1b49e599387df111e3e183c5",
+    "text_file": "sources/META-meta-20260930.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 5,
+        "excerpts": [
+          {
+            "start": 68650,
+            "end": 68666,
+            "text": " the Notes at any time, in whole or in part, at specified redemption prices. We are not subject to any financial covenants under the Notes. Interest expense, net of capitalized interest, recognized on the Notes was $ 882 million and $ 205 million for the three months ended September 30, 2026 and 2025, respectively, and $ 2.17 billion and $ 668 million for the nine months ended September 30, 2026 and 2025, respectively. 20 Table of Contents The total estimated fair value of our outstanding Notes was $ 73.31 billion and $ 57.22 billion as of September 30, 2026 and December 31, 2025, respectively. The fair value was determined based on the quoted prices at the end of the reporting periods and categor"
+          },
+          {
+            "start": 163270,
+            "end": 163286,
+            "text": "eptember 30, 2026 2025 % change 2026 2025 % change (in millions, except percentages) Interest income $ 934 $ 359 160 % $ 2,538 $ 1,498 69 % Interest expense (977) (227) (330) % (2,322) (709) (228) % Foreign currency exchange gain (loss), net (114) 42 (371) % (463) 470 (199) % Gain (loss) on equity investments and other, net 170 954 (82) % (879) 788 (212) % Interest and other income (expense), net $ 13 $ 1,128 (99) % $ (1,126) $ 2,047 (155) % \u2022 Interest income in the three and nine months ended September 30, 2026, increased $575 million, or 160%, and $1.04 billion, or 69%, respectively, compared to the same periods in 2025, mostly due to higher investment balances. \u2022 Interest expense in the three a"
+          },
+          {
+            "start": 163805,
+            "end": 163821,
+            "text": "illion, or 160%, and $1.04 billion, or 69%, respectively, compared to the same periods in 2025, mostly due to higher investment balances. \u2022 Interest expense in the three and nine months ended September 30, 2026, increased $750 million, or 330%, and $1.61 billion, or 228%, respectively, compared to the same periods in 2025, due to higher long-term debt balances. \u2022 Gain (loss) on equity investments and other, net in the three and nine months ended September 30, 2026, decreased $784 million, or 82%, and $1.67 billion, or 212%, respectively, compared to the same periods in 2025, primarily due to increases in unrealized losses on our marketable equity investments, partially offset by our share of net e"
+          },
+          {
+            "start": 299341,
+            "end": 299357,
+            "text": "idity and capital and could increase our borrowing costs. The incurrence of additional debt also results in increased fixed obligations and interest expense, while the issuance of additional equity securities results in dilution to our stockholders. We recently announced that our board of directors has determined that it is advisable and in the best interest of the company and our stockholders to adjust our capital structure by amending our certificate of incorporation (as amended, the Restated Charter) to, among other things, establish a new class of non-voting Class C common stock (the Recapitalization), with an effective 75 Table of Contents date in January 2027, and declare a dividend of one s"
+          },
+          {
+            "start": 338247,
+            "end": 338263,
+            "text": "the past and could adversely affect our liquidity. The incurrence of indebtedness also results in increased fixed obligations and increased interest expense, and could also include covenants or other restrictions that would impede our ability to manage our operations. From time to time we may also issue equity securities to pay for acquisitions or other strategic transactions and we regularly grant restricted stock units to retain the employees of acquired companies, which could increase our expenses, adversely affect our financial results, and result in dilution to our stockholders. In addition, any acquisitions or other strategic transactions we announce could be viewed negatively by users, mark"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 45541,
+            "end": 45563,
+            "text": "tricted cash, and restricted cash equivalents $ 24,354 $ 11,941 Supplemental cash flow data Cash paid for income taxes, net $ 2,926 $ 6,293 Cash paid for interest, net of amounts capitalized $ 1,368 $ 603 Non-cash investing and financing activities: Property and equipment in accounts payable and accrued expenses and other current liabilities $ 21,109 $ 9,136 Acquisition of businesses and intangible assets in accounts payable, accrued expenses and other current liabilities, and other liabilities $ 1,593 $ 1,931 See Accompanying Notes to Condensed Consolidated Financial Statements. 11 Table of Contents META PLATFORMS, INC. NOTES TO CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (Unaudited) Note 1. Summary of"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 7,
+        "excerpts": [
+          {
+            "start": 44165,
+            "end": 44179,
+            "text": "nts for dividends and dividend equivalents ( 4,060 ) ( 3,986 ) Proceeds from issuance of long-term debt, net 24,910 \u2014 Principal payments on finance leases ( 2,769 ) ( 1,770 ) Other financing activities ( 2,631 ) 613 Net cash provided by (used in) financing activities 2,682 ( 45,519 ) Effect of exchange rate changes on cash, cash equivalents, restricted cash, and restricted cash equivalents 8 252 Net decrease in cash, cash equivalents, restricted cash, and restricted cash equivalents ( 14,746 ) ( 33,497 ) Cash, cash equivalents, restricted cash, and restricted cash equivalents at beginning of the period 39,100 45,438 Cash, cash equivalents, restricted cash, and restricted cash equivalents at end "
+          },
+          {
+            "start": 63727,
+            "end": 63740,
+            "text": "3,687 Servers and network assets 133,626 98,040 Buildings 68,223 55,568 Leasehold improvements 8,855 8,346 Equipment and other 10,818 9,377 Finance lease right-of-use assets 11,704 8,187 Construction in progress (1) 89,499 50,521 Property and equipment, gross 326,489 233,726 Less: Accumulated depreciation ( 73,267 ) ( 57,326 ) Property and equipment, net $ 253,222 $ 176,400 ____________________________________ (1) Construction in progress includes costs mostly related to construction of data centers, servers and network infrastructure. Depreciation expense on property and equipment was $ 6.81 billion and $ 4.76 billion for the three months ended September 30, 2026 and 2025, respectively, and $ "
+          },
+          {
+            "start": 69639,
+            "end": 69653,
+            "text": "ncies Leases and Contractual Commitments In addition to the lease liabilities that are included on our balance sheet, we have operating and finance leases that have not yet commenced as of September 30, 2026. These lease obligations were approximately $ 355.73 billion, consisting of data centers, energy-related infrastructure, colocations, and certain network infrastructure, which will commence during the remainder of 2026 through 2036 with lease terms ranging from greater than one year to 30 years. As of September 30, 2026, we had $ 454.52 billion of non-cancelable contractual commitments, comprising both short-term and long-term arrangements. These commitments mostly relate to third-party clou"
+          },
+          {
+            "start": 130892,
+            "end": 130906,
+            "text": "ed earnings per share (EPS) of $3.83 for the three months ended September 30, 2026. \u2022 Capital expenditures, including principal payments on finance leases, were $34.91 billion for the three months ended September 30, 2026. \u2022 Costs and expenses were $51.61 billion, including the $9.89 billion charge related to the August 2026 multistate attorneys general agreement. \u2022 Dividend and dividend equivalent payments were $1.36 billion for the three months ended September 30, 2026. \u2022 Cash, cash equivalents, and marketable securities were $82.45 billion as of September 30, 2026. \u2022 Effective tax rate was 24% for the three months ended September 30, 2026. \u2022 Headcount was 66,775 as of September 30, 2026, a de"
+          },
+          {
+            "start": 168998,
+            "end": 169012,
+            "text": "re partially offset by $85.82 billion of capital expenditures, which includes purchases of property and equipment and principal payments on finance leases; $12.77 billion of taxes paid related to net share settlement of employee restricted stock unit (RSU) awards; $4.06 billion of payments of dividends and dividend equivalents; and $2.63 billion of cash used in other financing activities. In addition, during the nine months ended September 30, 2026, $10.80 billion of unrestricted money market funds was reclassified as restricted cash equivalents in connection with escrow requirements under certain multi-year infrastructure purchase agreements. These funds are restricted from general corporate us"
+          },
+          {
+            "start": 172003,
+            "end": 172017,
+            "text": "ed to net share settlement of RSUs, $4.06 billion of payments of dividends and dividend equivalents, $2.77 billion of principal payments on finance leases, and $2.63 billion of cash used in other financing activities. The increase in cash provided by financing activities during the nine months ended September 30, 2026, compared to the same period in 2025, was mostly due to net proceeds from the May 2026 Notes and the absence of share repurchases in the current period. Material Cash Requirements We currently anticipate that our available funds and cash flow from operations and financing activities will be sufficient to meet our operational cash needs and fund our cash commitments for investing an"
+          },
+          {
+            "start": 173297,
+            "end": 173311,
+            "text": "d Contractual Commitments In addition to the lease liabilities included on our condensed consolidated balance sheets, we have operating and finance leases that have not yet commenced as of September 30, 2026. These lease obligations were approximately $355.73 billion, consisting of data centers, energy-related infrastructure, colocations, and certain network infrastructure, which will commence during the remainder of 2026 through 2036 with lease terms ranging from greater than one year to 30 years. As of September 30, 2026, we had $454.52 billion of non-cancelable contractual commitments, comprising both short-term and long-term arrangements. These commitments mostly relate to third-party cloud "
+          }
+        ]
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 5,
+        "excerpts": [
+          {
+            "start": 44143,
+            "end": 44161,
+            "text": "ock \u2014 ( 26,248 ) Payments for dividends and dividend equivalents ( 4,060 ) ( 3,986 ) Proceeds from issuance of long-term debt, net 24,910 \u2014 Principal payments on finance leases ( 2,769 ) ( 1,770 ) Other financing activities ( 2,631 ) 613 Net cash provided by (used in) financing activities 2,682 ( 45,519 ) Effect of exchange rate changes on cash, cash equivalents, restricted cash, and restricted cash equivalents 8 252 Net decrease in cash, cash equivalents, restricted cash, and restricted cash equivalents ( 14,746 ) ( 33,497 ) Cash, cash equivalents, restricted cash, and restricted cash equivalents at beginning of the period 39,100 45,438 Cash, cash equivalents, restricted cash, and restricted cash e"
+          },
+          {
+            "start": 69294,
+            "end": 69312,
+            "text": " quoted prices at the end of the reporting periods and categorized as Level 2 in the fair value hierarchy. As of September 30, 2026, future principal payments for the Notes, by year, are as follows (in millions): Remainder of 2026 $ \u2014 2027 2,750 2028 1,500 2029 1,000 2030 5,000 Thereafter 73,750 Total $ 84,000 Note 10. Commitments and Contingencies Leases and Contractual Commitments In addition to the lease liabilities that are included on our balance sheet, we have operating and finance leases that have not yet commenced as of September 30, 2026. These lease obligations were approximately $ 355.73 billion, consisting of data centers, energy-related infrastructure, colocations, and certain network i"
+          },
+          {
+            "start": 130870,
+            "end": 130888,
+            "text": "86 billion, with diluted earnings per share (EPS) of $3.83 for the three months ended September 30, 2026. \u2022 Capital expenditures, including principal payments on finance leases, were $34.91 billion for the three months ended September 30, 2026. \u2022 Costs and expenses were $51.61 billion, including the $9.89 billion charge related to the August 2026 multistate attorneys general agreement. \u2022 Dividend and dividend equivalent payments were $1.36 billion for the three months ended September 30, 2026. \u2022 Cash, cash equivalents, and marketable securities were $82.45 billion as of September 30, 2026. \u2022 Effective tax rate was 24% for the three months ended September 30, 2026. \u2022 Headcount was 66,775 as of Septem"
+          },
+          {
+            "start": 168976,
+            "end": 168994,
+            "text": "26. These increases were partially offset by $85.82 billion of capital expenditures, which includes purchases of property and equipment and principal payments on finance leases; $12.77 billion of taxes paid related to net share settlement of employee restricted stock unit (RSU) awards; $4.06 billion of payments of dividends and dividend equivalents; and $2.63 billion of cash used in other financing activities. In addition, during the nine months ended September 30, 2026, $10.80 billion of unrestricted money market funds was reclassified as restricted cash equivalents in connection with escrow requirements under certain multi-year infrastructure purchase agreements. These funds are restricted from ge"
+          },
+          {
+            "start": 171981,
+            "end": 171999,
+            "text": "on of taxes paid related to net share settlement of RSUs, $4.06 billion of payments of dividends and dividend equivalents, $2.77 billion of principal payments on finance leases, and $2.63 billion of cash used in other financing activities. The increase in cash provided by financing activities during the nine months ended September 30, 2026, compared to the same period in 2025, was mostly due to net proceeds from the May 2026 Notes and the absence of share repurchases in the current period. Material Cash Requirements We currently anticipate that our available funds and cash flow from operations and financing activities will be sufficient to meet our operational cash needs and fund our cash commitment"
+          }
+        ]
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 3,
+        "excerpts": [
+          {
+            "start": 44200,
+            "end": 44226,
+            "text": "valents ( 4,060 ) ( 3,986 ) Proceeds from issuance of long-term debt, net 24,910 \u2014 Principal payments on finance leases ( 2,769 ) ( 1,770 ) Other financing activities ( 2,631 ) 613 Net cash provided by (used in) financing activities 2,682 ( 45,519 ) Effect of exchange rate changes on cash, cash equivalents, restricted cash, and restricted cash equivalents 8 252 Net decrease in cash, cash equivalents, restricted cash, and restricted cash equivalents ( 14,746 ) ( 33,497 ) Cash, cash equivalents, restricted cash, and restricted cash equivalents at beginning of the period 39,100 45,438 Cash, cash equivalents, restricted cash, and restricted cash equivalents at end of the period $ 24,354 $ 11,941 See Accompanyin"
+          },
+          {
+            "start": 169222,
+            "end": 169248,
+            "text": "oyee restricted stock unit (RSU) awards; $4.06 billion of payments of dividends and dividend equivalents; and $2.63 billion of cash used in other financing activities. In addition, during the nine months ended September 30, 2026, $10.80 billion of unrestricted money market funds was reclassified as restricted cash equivalents in connection with escrow requirements under certain multi-year infrastructure purchase agreements. These funds are restricted from general corporate use and are expected to be released between 2028 and 2030 upon satisfying the underlying purchase obligations. See Note 4 \u2014 Financial Instruments in the notes to the condensed consolidated financial statements included in Part I, Item 1, "
+          },
+          {
+            "start": 172053,
+            "end": 172079,
+            "text": "of payments of dividends and dividend equivalents, $2.77 billion of principal payments on finance leases, and $2.63 billion of cash used in other financing activities. The increase in cash provided by financing activities during the nine months ended September 30, 2026, compared to the same period in 2025, was mostly due to net proceeds from the May 2026 Notes and the absence of share repurchases in the current period. Material Cash Requirements We currently anticipate that our available funds and cash flow from operations and financing activities will be sufficient to meet our operational cash needs and fund our cash commitments for investing and financing activities, including investments in infrastructur"
+          }
+        ]
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 2
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "source_sha256": "420b42ece44cebfb2e0a83f3eba44ca079933a1227e674df0b01311c5efbd904",
+    "text_sha256": "15768153f849c107ceeb748c010ac7b8f5754098a57135686723a97ae4ed5372",
+    "text_file": "sources/META-meta-20260630.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 5,
+        "excerpts": [
+          {
+            "start": 66185,
+            "end": 66201,
+            "text": " the Notes at any time, in whole or in part, at specified redemption prices. We are not subject to any financial covenants under the Notes. Interest expense, net of capitalized interest, recognized on the Notes was $ 754 million and $ 1.29 billion for the three and six months ended June 30, 2026, respectively, and $ 232 million and $ 463 million for the three and six months ended June 30, 2025, respectively. The total estimated fair value of our outstanding Notes was $ 79.75 billion and $ 57.22 billion as of June 30, 2026 and December 31, 2025, respectively. The fair value was determined based on the quoted prices at the end of the reporting periods and categorized as Level 2 in the fair value hie"
+          },
+          {
+            "start": 156384,
+            "end": 156400,
+            "text": "nded June 30, 2026 2025 % change 2026 2025 % change (in millions, except percentages) Interest income $ 859 $ 481 79 % $ 1,603 $ 1,139 41 % Interest expense (783) (241) (225) % (1,345) (481) (180) % Foreign currency exchange gain (loss), net (123) 196 (163) % (349) 427 (182) % Gain (loss) on equity investments and other, net 28 (343) 108 % (1,048) (166) NM Interest and other income (expense), net $ (19) $ 93 (120) % $ (1,139) $ 919 (224) % ____________________________________ NM \u2014 not meaningful \u2022 Interest expense in the three and six months ended June 30, 2026, increased $542 million, or 225%, and $864 million, or 180%, respectively, compared to the same periods in 2025, due to higher long-term d"
+          },
+          {
+            "start": 156747,
+            "end": 156763,
+            "text": "rest and other income (expense), net $ (19) $ 93 (120) % $ (1,139) $ 919 (224) % ____________________________________ NM \u2014 not meaningful \u2022 Interest expense in the three and six months ended June 30, 2026, increased $542 million, or 225%, and $864 million, or 180%, respectively, compared to the same periods in 2025, due to higher long-term debt balances. \u2022 Loss on equity investments, net recognized in the six months ended June 30, 2026 was driven by unrealized losses on our marketable equity investments, partially offset by unrealized gains on our non-marketable equity investments. See Note 4 \u2014 Financial Instruments and Note 5 \u2014 Non-Marketable Equity Investments in the notes to the condensed conso"
+          },
+          {
+            "start": 286992,
+            "end": 287008,
+            "text": "ncings may not be available on favorable terms or at all. The incurrence of additional debt also results in increased fixed obligations and interest expense, while the issuance of additional equity securities results in dilution to our stockholders. If we are unable to obtain adequate financing when needed, our ability to finance our business operations and initiatives could be adversely affected. Our business is dependent on our ability to maintain and scale our technical infrastructure. Any significant disruption in our products and services or other adverse developments relating to our technical infrastructure could damage our reputation, result in a potential loss of users and engagement, and "
+          },
+          {
+            "start": 322549,
+            "end": 322565,
+            "text": "the past and could adversely affect our liquidity. The incurrence of indebtedness also results in increased fixed obligations and increased interest expense, and could also include covenants or other restrictions that would impede our ability to manage our operations. From time to time we may also issue equity securities to pay for acquisitions or other strategic transactions and we regularly grant restricted stock units to retain the employees of acquired companies, which could increase our expenses, adversely affect our financial results, and result in dilution to our stockholders. In addition, any acquisitions or other strategic transactions we announce could be viewed negatively by users, mark"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 45442,
+            "end": 45464,
+            "text": "tricted cash, and restricted cash equivalents $ 29,271 $ 13,828 Supplemental cash flow data Cash paid for income taxes, net $ 1,999 $ 5,544 Cash paid for interest, net of amounts capitalized $ 1,097 $ 478 Non-cash investing and financing activities: Property and equipment in accounts payable and accrued expenses and other current liabilities $ 19,502 $ 10,618 Acquisition of businesses and intangible assets in accounts payable, accrued expenses and other current liabilities, and other liabilities $ 2,172 $ 132 Non-marketable equity investments in accrued expenses and other current liabilities $ \u2014 $ 651 Repurchases of Class A common stock in accrued expenses and other current liabilities $ \u2014 $ 131 See Acc"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 6,
+        "excerpts": [
+          {
+            "start": 44073,
+            "end": 44087,
+            "text": "nts for dividends and dividend equivalents ( 2,699 ) ( 2,656 ) Proceeds from issuance of long-term debt, net 24,910 \u2014 Principal payments on finance leases ( 1,805 ) ( 1,225 ) Other financing activities ( 2,288 ) 323 Net cash provided by (used in) financing activities 9,414 ( 35,472 ) Effect of exchange rate changes on cash, cash equivalents, restricted cash, and restricted cash equivalents \u2014 243 Net decrease in cash, cash equivalents, restricted cash, and restricted cash equivalents ( 9,829 ) ( 31,610 ) Cash, cash equivalents, restricted cash, and restricted cash equivalents at beginning of the period 39,100 45,438 Cash, cash equivalents, restricted cash, and restricted cash equivalents at end o"
+          },
+          {
+            "start": 62820,
+            "end": 62833,
+            "text": "3,687 Servers and network assets 119,683 98,040 Buildings 61,037 55,568 Leasehold improvements 8,464 8,346 Equipment and other 10,209 9,377 Finance lease right-of-use assets 9,467 8,187 Construction in progress (1) 80,345 50,521 Property and equipment, gross 292,872 233,726 Less: Accumulated depreciation ( 67,148 ) ( 57,326 ) Property and equipment, net $ 225,724 $ 176,400 ____________________________________ (1) Construction in progress includes costs mostly related to construction of data centers, servers and network infrastructure. Depreciation expense on property and equipment was $ 6.00 billion and $ 4.28 billion for the three months ended June 30, 2026 and 2025, respectively, and $ 11.67 "
+          },
+          {
+            "start": 67152,
+            "end": 67166,
+            "text": "ncies Leases and Contractual Commitments In addition to the lease liabilities that are included on our balance sheet, we have operating and finance leases that have not yet commenced as of June 30, 2026. These lease obligations were approximately $ 278.99 billion, consisting of data centers, colocations, and certain network infrastructure, which will commence during the remainder of 2026 through 2036 with lease terms ranging from greater than one year to 30 years. In July 2026, we entered into additional data center leases with lease obligations of approximately $ 68 billion, which are expected to commence in 2027 and 2028, with lease terms of 18 to 20 years. As of June 30, 2026, we had $ 349.31"
+          },
+          {
+            "start": 124801,
+            "end": 124815,
+            "text": "diluted earnings per share (EPS) of $6.18 for the three months ended June 30, 2026. \u2022 Capital expenditures, including principal payments on finance leases, were $31.08 billion for the three months ended June 30, 2026. \u2022 Dividend and dividend equivalent payments were $1.35 billion for the three months ended June 30, 2026. \u2022 Cash, cash equivalents, and marketable securities were $90.26 billion as of June 30, 2026. \u2022 Long-term debt was $83.66 billion as of June 30, 2026. \u2022 Effective tax rate was 16% for the three months ended June 30, 2026. \u2022 Headcount was 75,472 as of June 30, 2026, a decrease of 1% year-over-year. Our reported headcount includes approximately 8,000 employees impacted by the May 2"
+          },
+          {
+            "start": 161615,
+            "end": 161629,
+            "text": "re partially offset by $50.92 billion of capital expenditures, which includes purchases of property and equipment and principal payments on finance leases; $8.70 billion of taxes paid related to net share settlement of employee restricted stock unit (RSU) awards; $2.70 billion of payments of dividends and dividend equivalents; and $2.29 billion of cash used in other financing activities. In addition, during the six months ended June 30, 2026, $10.80 billion of unrestricted money market funds was reclassified as restricted cash equivalents in connection with escrow requirements under certain multi-year infrastructure purchase agreements. These funds are restricted from general corporate use and a"
+          },
+          {
+            "start": 165760,
+            "end": 165774,
+            "text": "d Contractual Commitments In addition to the lease liabilities included in our condensed consolidated balance sheets, we have operating and finance leases that have not yet commenced as of June 30, 2026. These lease obligations were approximately $278.99 billion, consisting of data centers, colocations, and certain network infrastructure, which will commence during the remainder of 2026 through 2036 with lease terms ranging from greater than one year to 30 years. In July 2026, we entered into additional data center leases with lease obligations of approximately $68 billion, which are expected to commence in 2027 and 2028, with lease terms of 18 to 20 years. As of June 30, 2026, we had $349.31 bi"
+          }
+        ]
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 4,
+        "excerpts": [
+          {
+            "start": 44051,
+            "end": 44069,
+            "text": "ock \u2014 ( 22,921 ) Payments for dividends and dividend equivalents ( 2,699 ) ( 2,656 ) Proceeds from issuance of long-term debt, net 24,910 \u2014 Principal payments on finance leases ( 1,805 ) ( 1,225 ) Other financing activities ( 2,288 ) 323 Net cash provided by (used in) financing activities 9,414 ( 35,472 ) Effect of exchange rate changes on cash, cash equivalents, restricted cash, and restricted cash equivalents \u2014 243 Net decrease in cash, cash equivalents, restricted cash, and restricted cash equivalents ( 9,829 ) ( 31,610 ) Cash, cash equivalents, restricted cash, and restricted cash equivalents at beginning of the period 39,100 45,438 Cash, cash equivalents, restricted cash, and restricted cash eq"
+          },
+          {
+            "start": 66808,
+            "end": 66826,
+            "text": "t the end of the reporting periods and categorized as Level 2 in the fair value hierarchy. 19 Table of Contents As of June 30, 2026, future principal payments for the Notes, by year, are as follows (in millions): Remainder of 2026 $ \u2014 2027 2,750 2028 1,500 2029 1,000 2030 5,000 Thereafter 73,750 Total $ 84,000 Note 9. Commitments and Contingencies Leases and Contractual Commitments In addition to the lease liabilities that are included on our balance sheet, we have operating and finance leases that have not yet commenced as of June 30, 2026. These lease obligations were approximately $ 278.99 billion, consisting of data centers, colocations, and certain network infrastructure, which will commence du"
+          },
+          {
+            "start": 124779,
+            "end": 124797,
+            "text": " $15.85 billion, with diluted earnings per share (EPS) of $6.18 for the three months ended June 30, 2026. \u2022 Capital expenditures, including principal payments on finance leases, were $31.08 billion for the three months ended June 30, 2026. \u2022 Dividend and dividend equivalent payments were $1.35 billion for the three months ended June 30, 2026. \u2022 Cash, cash equivalents, and marketable securities were $90.26 billion as of June 30, 2026. \u2022 Long-term debt was $83.66 billion as of June 30, 2026. \u2022 Effective tax rate was 16% for the three months ended June 30, 2026. \u2022 Headcount was 75,472 as of June 30, 2026, a decrease of 1% year-over-year. Our reported headcount includes approximately 8,000 employees imp"
+          },
+          {
+            "start": 161593,
+            "end": 161611,
+            "text": "26. These increases were partially offset by $50.92 billion of capital expenditures, which includes purchases of property and equipment and principal payments on finance leases; $8.70 billion of taxes paid related to net share settlement of employee restricted stock unit (RSU) awards; $2.70 billion of payments of dividends and dividend equivalents; and $2.29 billion of cash used in other financing activities. In addition, during the six months ended June 30, 2026, $10.80 billion of unrestricted money market funds was reclassified as restricted cash equivalents in connection with escrow requirements under certain multi-year infrastructure purchase agreements. These funds are restricted from general c"
+          }
+        ]
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 2,
+        "excerpts": [
+          {
+            "start": 44108,
+            "end": 44134,
+            "text": "valents ( 2,699 ) ( 2,656 ) Proceeds from issuance of long-term debt, net 24,910 \u2014 Principal payments on finance leases ( 1,805 ) ( 1,225 ) Other financing activities ( 2,288 ) 323 Net cash provided by (used in) financing activities 9,414 ( 35,472 ) Effect of exchange rate changes on cash, cash equivalents, restricted cash, and restricted cash equivalents \u2014 243 Net decrease in cash, cash equivalents, restricted cash, and restricted cash equivalents ( 9,829 ) ( 31,610 ) Cash, cash equivalents, restricted cash, and restricted cash equivalents at beginning of the period 39,100 45,438 Cash, cash equivalents, restricted cash, and restricted cash equivalents at end of the period $ 29,271 $ 13,828 See Accompanying"
+          },
+          {
+            "start": 161838,
+            "end": 161864,
+            "text": "oyee restricted stock unit (RSU) awards; $2.70 billion of payments of dividends and dividend equivalents; and $2.29 billion of cash used in other financing activities. In addition, during the six months ended June 30, 2026, $10.80 billion of unrestricted money market funds was reclassified as restricted cash equivalents in connection with escrow requirements under certain multi-year infrastructure purchase agreements. These funds are restricted from general corporate use and are expected to be released between 2028 and 2030 upon satisfying the underlying purchase obligations. See Note 4 \u2014 Financial Instruments in the notes to the condensed consolidated financial statements included in Part I, Item 1, of thi"
+          }
+        ]
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 2
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/meta-20260331.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "source_sha256": "db103549162c764f85600b594971c536cb6960a66c4af0a79a14164426b75bc9",
+    "text_sha256": "9fe0860c605534159fbcfbde5fb82e378d6e151c8c91363d443503928420080c",
+    "text_file": "sources/META-meta-20260331.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 4,
+        "excerpts": [
+          {
+            "start": 140362,
+            "end": 140378,
+            "text": "er income (expense), net Three Months Ended March 31, 2026 2025 % change (in millions, except percentages) Interest income $ 744 $ 658 13 % Interest expense (562) (240) (134) % Foreign currency exchange gain (loss), net (226) 232 (197) % Gain (loss) on equity investments and other, net (1,076) 177 NM Interest and other income (expense), net $ (1,120) $ 827 (235) % ____________________________________ NM \u2014 not meaningful Total interest and other income (expense), net in the three months ended March 31, 2026 decreased $1.95 billion, or 235%, compared to the same period in 2025, due to an increase in unrealized losses on our marketable equity investments. Foreign currency exchange losses, net from fo"
+          },
+          {
+            "start": 141008,
+            "end": 141024,
+            "text": "y investments. Foreign currency exchange losses, net from foreign currency transactions and remeasurement also contributed to the decrease. Interest expense increased in the three months ended March 31, 2026, compared to the same period in 2025, due to higher long-term debt balances. 44 Table of Contents Provision for income taxes Three Months Ended March 31, 2026 2025 % change (in millions, except percentages) Provision (benefit) for income taxes $ (5,021) $ 1,738 NM Effective tax rate (23) % 9 % ____________________________________ NM \u2014 not meaningful On February 18, 2026, the U.S. Treasury issued Notice 2026-7, providing relief from the Corporate Alternative Minimum Tax (CAMT) related to the ex"
+          },
+          {
+            "start": 269914,
+            "end": 269930,
+            "text": "ncings may not be available on favorable terms or at all. The incurrence of additional debt also results in increased fixed obligations and interest expense, while the issuance of additional equity securities results in dilution to our stockholders. If we are unable to obtain adequate financing when needed, our ability to finance our business operations and initiatives could be adversely affected. Our business is dependent on our ability to maintain and scale our technical infrastructure. Any significant disruption in our products and services or other adverse developments relating to our technical infrastructure could damage our reputation, result in a potential loss of users and engagement, and "
+          },
+          {
+            "start": 305240,
+            "end": 305256,
+            "text": "the past and could adversely affect our liquidity. The incurrence of indebtedness also results in increased fixed obligations and increased interest expense, and could also include covenants or other restrictions that would impede our ability to manage our operations. From time to time we may also issue equity securities to pay for acquisitions or other strategic transactions and we regularly grant restricted stock units to retain the employees of acquired companies, which could increase our expenses, adversely affect our financial results, and result in dilution to our stockholders. In addition, any acquisitions or other strategic transactions we announce could be viewed negatively by users, mark"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 38389,
+            "end": 38411,
+            "text": " restricted cash, and restricted cash equivalents $ 31,102 $ 30,071 Supplemental cash flow data Cash paid for income taxes, net $ 541 $ 448 Cash paid for interest, net of amounts capitalized $ 284 $ 352 Non-cash investing and financing activities: Property and equipment in accounts payable and accrued expenses and other current liabilities $ 16,040 $ 9,338 Acquisition of businesses and intangible assets in accounts payable, accrued expenses and other current liabilities, and other liabilities $ 2,169 $ 159 Repurchases of Class A common stock in accrued expenses and other current liabilities $ \u2014 $ 577 See Accompanying Notes to Condensed Consolidated Financial Statements. 11 Table of Contents META PLATFOR"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 6,
+        "excerpts": [
+          {
+            "start": 37044,
+            "end": 37058,
+            "text": " Repurchases of Class A common stock \u2014 ( 12,754 ) Payments for dividends and dividend equivalents ( 1,346 ) ( 1,329 ) Principal payments on finance leases ( 843 ) ( 751 ) Other financing activities 59 222 Net cash used in financing activities ( 6,553 ) ( 19,495 ) Effect of exchange rate changes on cash, cash equivalents, restricted cash, and restricted cash equivalents 7 112 Net decrease in cash, cash equivalents, restricted cash, and restricted cash equivalents ( 7,998 ) ( 15,367 ) Cash, cash equivalents, restricted cash, and restricted cash equivalents at beginning of the period 39,100 45,438 Cash, cash equivalents, restricted cash, and restricted cash equivalents at end of the period $ 31,102"
+          },
+          {
+            "start": 54060,
+            "end": 54073,
+            "text": " 3,687 Servers and network assets 105,987 98,040 Buildings 58,836 55,568 Leasehold improvements 8,209 8,346 Equipment and other 9,699 9,377 Finance lease right-of-use assets 8,842 8,187 Construction in progress (1) 61,017 50,521 Property and equipment, gross 256,267 233,726 Less: Accumulated depreciation ( 61,491 ) ( 57,326 ) Property and equipment, net $ 194,776 $ 176,400 ____________________________________ (1) Construction in progress includes costs mostly related to construction of data centers, network infrastructure and servers. 18 Table of Contents Depreciation expense on property and equipment was $ 5.68 billion and $ 3.84 billion for the three months ended March 31, 2026 and 2025, resp"
+          },
+          {
+            "start": 56029,
+            "end": 56043,
+            "text": "ncies Leases and Contractual Commitments In addition to the lease liabilities that are included on our balance sheet, we have operating and finance leases that have not yet commenced as of March 31, 2026. These lease obligations were approximately $ 182.88 billion, consisting of data centers, colocations, and certain network infrastructure, which will commence during the remainder of 2026 and 2036 with lease terms ranging from greater than one year to 30 years. As of March 31, 2026, we had $ 237.67 billion of non-cancelable contractual commitments, comprising both short-term and long-term arrangements. These commitments are mostly related to third-party cloud capacity arrangements and continued "
+          },
+          {
+            "start": 111557,
+            "end": 111571,
+            "text": "luted earnings per share (EPS) of $10.44 for the three months ended March 31, 2026. \u2022 Capital expenditures, including principal payments on finance leases, were $19.84 billion for the three months ended March 31, 2026. \u2022 Dividend and dividend equivalent payments were $1.35 billion for the three months ended March 31, 2026. \u2022 Cash, cash equivalents, and marketable securities were $81.18 billion as of March 31, 2026. \u2022 Effective tax rate was (23)% for the three months ended March 31, 2026. This rate reflects an income tax benefit of $8.03 billion related to the U.S. Corporate Alternative Minimum Tax transitional relief under Treasury Notice 2026-7. Excluding this tax benefit, the effective tax rat"
+          },
+          {
+            "start": 144982,
+            "end": 144996,
+            "text": "e was primarily due to $19.84 billion of capital expenditures, which includes purchases of property and equipment and principal payments on finance leases; $4.42 billion of taxes paid related to net share settlement of employee restricted stock unit (RSU) awards; $1.57 billion of net unrealized losses on marketable equity securities; $1.35 billion of payments of dividends and dividend equivalents; and $372 million of acquired intangible assets. These decreases were offset by $32.23 billion of cash generated from operations. 45 Table of Contents In addition, during the quarter ended March 31, 2026, we reclassified $5.00 billion of unrestricted money market funds to restricted cash equivalents rel"
+          },
+          {
+            "start": 148858,
+            "end": 148872,
+            "text": "d Contractual Commitments In addition to the lease liabilities included in our condensed consolidated balance sheets, we have operating and finance leases that have not yet commenced as of March 31, 2026. These lease obligations were approximately $182.88 billion, consisting of data centers, colocations, and certain network infrastructure, which will commence during the remainder of 2026 and 2036 with lease terms ranging from greater than one year to 30 years. 46 Table of Contents As of March 31, 2026, we had $237.67 billion of non-cancelable contractual commitments, comprising both short-term and long-term arrangements. These commitments are mostly related to third-party cloud capacity arrangem"
+          }
+        ]
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 3,
+        "excerpts": [
+          {
+            "start": 37022,
+            "end": 37040,
+            "text": "ds ( 4,423 ) ( 4,883 ) Repurchases of Class A common stock \u2014 ( 12,754 ) Payments for dividends and dividend equivalents ( 1,346 ) ( 1,329 ) Principal payments on finance leases ( 843 ) ( 751 ) Other financing activities 59 222 Net cash used in financing activities ( 6,553 ) ( 19,495 ) Effect of exchange rate changes on cash, cash equivalents, restricted cash, and restricted cash equivalents 7 112 Net decrease in cash, cash equivalents, restricted cash, and restricted cash equivalents ( 7,998 ) ( 15,367 ) Cash, cash equivalents, restricted cash, and restricted cash equivalents at beginning of the period 39,100 45,438 Cash, cash equivalents, restricted cash, and restricted cash equivalents at end of t"
+          },
+          {
+            "start": 111535,
+            "end": 111553,
+            "text": "26.77 billion, with diluted earnings per share (EPS) of $10.44 for the three months ended March 31, 2026. \u2022 Capital expenditures, including principal payments on finance leases, were $19.84 billion for the three months ended March 31, 2026. \u2022 Dividend and dividend equivalent payments were $1.35 billion for the three months ended March 31, 2026. \u2022 Cash, cash equivalents, and marketable securities were $81.18 billion as of March 31, 2026. \u2022 Effective tax rate was (23)% for the three months ended March 31, 2026. This rate reflects an income tax benefit of $8.03 billion related to the U.S. Corporate Alternative Minimum Tax transitional relief under Treasury Notice 2026-7. Excluding this tax benefit, the"
+          },
+          {
+            "start": 144960,
+            "end": 144978,
+            "text": " 31, 2025. The decrease was primarily due to $19.84 billion of capital expenditures, which includes purchases of property and equipment and principal payments on finance leases; $4.42 billion of taxes paid related to net share settlement of employee restricted stock unit (RSU) awards; $1.57 billion of net unrealized losses on marketable equity securities; $1.35 billion of payments of dividends and dividend equivalents; and $372 million of acquired intangible assets. These decreases were offset by $32.23 billion of cash generated from operations. 45 Table of Contents In addition, during the quarter ended March 31, 2026, we reclassified $5.00 billion of unrestricted money market funds to restricted ca"
+          }
+        ]
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 37075,
+            "end": 37101,
+            "text": "stock \u2014 ( 12,754 ) Payments for dividends and dividend equivalents ( 1,346 ) ( 1,329 ) Principal payments on finance leases ( 843 ) ( 751 ) Other financing activities 59 222 Net cash used in financing activities ( 6,553 ) ( 19,495 ) Effect of exchange rate changes on cash, cash equivalents, restricted cash, and restricted cash equivalents 7 112 Net decrease in cash, cash equivalents, restricted cash, and restricted cash equivalents ( 7,998 ) ( 15,367 ) Cash, cash equivalents, restricted cash, and restricted cash equivalents at beginning of the period 39,100 45,438 Cash, cash equivalents, restricted cash, and restricted cash equivalents at end of the period $ 31,102 $ 30,071 See Accompanying Notes to Condens"
+          }
+        ]
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 2
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "source_sha256": "0a60075645d6d7626ef0c6a2649452909c799f79af2a15cd8de4962ac573d6f3",
+    "text_sha256": "5bee513f3279cd2ef201e8eb44c6ba43482c0f2db2af5cd51e45a5b92627a908",
+    "text_file": "sources/GOOGL-goog-20260930.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 3,
+        "excerpts": [
+          {
+            "start": 134840,
+            "end": 134856,
+            "text": "ions): Three Months Ended Nine Months Ended September 30, September 30, 2025 2026 2025 2026 Interest income $ 1,076 $ 1,768 $ 3,128 $ 4,579 Interest expense (1) ( 143 ) ( 967 ) ( 438 ) ( 2,778 ) Foreign currency exchange gain (loss), net ( 143 ) 22 ( 318 ) 7 Gain (loss) on debt securities, net 122 ( 383 ) 489 ( 526 ) Gain (loss) on equity securities, net 10,734 ( 8,664 ) 21,778 127,282 Income (loss) and impairment from equity method investments, net ( 30 ) ( 143 ) 367 ( 118 ) Other 1,143 146 1,598 ( 968 ) Other income (expense), net $ 12,759 $ ( 8,221 ) $ 26,604 $ 127,478 (1) Interest expense is net of interest capitalized of $ 130 million and $ 405 million for the three months ended September 30,"
+          },
+          {
+            "start": 135283,
+            "end": 135299,
+            "text": "ments, net ( 30 ) ( 143 ) 367 ( 118 ) Other 1,143 146 1,598 ( 968 ) Other income (expense), net $ 12,759 $ ( 8,221 ) $ 26,604 $ 127,478 (1) Interest expense is net of interest capitalized of $ 130 million and $ 405 million for the three months ended September 30, 2025 and 2026, respectively, and $ 301 million and $ 1.0 billion for the nine months ended September 30, 2025 and 2026, respectively. Note 8. Acquisitions and Divestitures Wiz Acquisition On March 11, 2026, we completed our acquisition of Wiz for $ 29.5 billion, after purchase price adjustments and excluding post combination compensation arrangements. This acquisition represents an investment by Google Cloud to accelerate our capabilities"
+          },
+          {
+            "start": 211773,
+            "end": 211789,
+            "text": "ions): Three Months Ended Nine Months Ended September 30, September 30, 2025 2026 2025 2026 Interest income $ 1,076 $ 1,768 $ 3,128 $ 4,579 Interest expense (143) (967) (438) (2,778) Foreign currency exchange gain (loss), net (143) 22 (318) 7 Gain (loss) on debt securities, net 122 (383) 489 (526) Gain (loss) on equity securities, net 10,734 (8,664) 21,778 127,282 Income (loss) and impairment from equity method investments, net (30) (143) 367 (118) Other 1,143 146 1,598 (968) Other income (expense), net $ 12,759 $ (8,221) $ 26,604 $ 127,478 OI&E, net decreased $21.0 billion from the three months ended September 30, 2025 to the three months ended September 30, 2026, primarily related to net unreali"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 15,
+        "excerpts": [
+          {
+            "start": 119566,
+            "end": 119579,
+            "text": "o derivatives allowed to be net settled in accordance with our master netting agreements. Note 4. Leases We have entered into operating and finance lease agreements primarily for data centers, land, and offices throughout the world with varying lease terms. Components of lease costs were as follows (in millions): Three Months Ended Nine Months Ended September 30, September 30, 2025 2026 2025 2026 Operating lease cost $ 851 $ 998 $ 2,434 $ 2,797 Finance lease cost: Amortization of lease assets 152 422 360 907 Interest on lease liabilities 17 25 48 60 Finance lease cost 169 447 408 967 Short-term lease cost (1) 11 109 36 144 Variable lease cost 483 494 1,215 1,357 Total lease cost $ 1,514 $ 2,048"
+          },
+          {
+            "start": 119875,
+            "end": 119888,
+            "text": "ons): Three Months Ended Nine Months Ended September 30, September 30, 2025 2026 2025 2026 Operating lease cost $ 851 $ 998 $ 2,434 $ 2,797 Finance lease cost: Amortization of lease assets 152 422 360 907 Interest on lease liabilities 17 25 48 60 Finance lease cost 169 447 408 967 Short-term lease cost (1) 11 109 36 144 Variable lease cost 483 494 1,215 1,357 Total lease cost $ 1,514 $ 2,048 $ 4,093 $ 5,265 (1) Includes a short-term lease agreement entered into in June 2026, and amended in September 2026, with a remaining non-cancelable commitment of approximately $ 6.0 billion as of September 30, 2026. We do not recognize right of use assets or lease liabilities on leases with a term of 12 mon"
+          },
+          {
+            "start": 119982,
+            "end": 119995,
+            "text": "cost $ 851 $ 998 $ 2,434 $ 2,797 Finance lease cost: Amortization of lease assets 152 422 360 907 Interest on lease liabilities 17 25 48 60 Finance lease cost 169 447 408 967 Short-term lease cost (1) 11 109 36 144 Variable lease cost 483 494 1,215 1,357 Total lease cost $ 1,514 $ 2,048 $ 4,093 $ 5,265 (1) Includes a short-term lease agreement entered into in June 2026, and amended in September 2026, with a remaining non-cancelable commitment of approximately $ 6.0 billion as of September 30, 2026. We do not recognize right of use assets or lease liabilities on leases with a term of 12 months or less. Short term lease costs are recognized on a straight-line basis over the lease term. Supplement"
+          },
+          {
+            "start": 120733,
+            "end": 120747,
+            "text": "(in millions): As of December 31, 2025 As of September 30, 2026 Weighted-average remaining lease term: Operating leases 7.6 years 8.5 years Finance leases 8.3 years 7.9 years Weighted-average discount rate: Operating leases 3.6 % 4.0 % Finance leases 3.1 % 4.0 % 24 As of December 31, 2025 As of September 30, 2026 Operating leases: Operating lease assets $ 15,221 $ 20,273 Accrued expenses and other liabilities $ 3,209 $ 3,693 Operating lease liabilities 12,744 16,815 Total operating lease liabilities $ 15,954 $ 20,508 Finance leases: Property and equipment, at cost $ 6,822 $ 10,619 Accumulated depreciation ( 2,025 ) ( 2,914 ) Property and equipment, net $ 4,797 $ 7,705 Accrued expenses and other "
+          },
+          {
+            "start": 120829,
+            "end": 120843,
+            "text": " term: Operating leases 7.6 years 8.5 years Finance leases 8.3 years 7.9 years Weighted-average discount rate: Operating leases 3.6 % 4.0 % Finance leases 3.1 % 4.0 % 24 As of December 31, 2025 As of September 30, 2026 Operating leases: Operating lease assets $ 15,221 $ 20,273 Accrued expenses and other liabilities $ 3,209 $ 3,693 Operating lease liabilities 12,744 16,815 Total operating lease liabilities $ 15,954 $ 20,508 Finance leases: Property and equipment, at cost $ 6,822 $ 10,619 Accumulated depreciation ( 2,025 ) ( 2,914 ) Property and equipment, net $ 4,797 $ 7,705 Accrued expenses and other liabilities $ 441 $ 1,053 Other long-term liabilities 2,059 2,652 Total finance lease liabilitie"
+          },
+          {
+            "start": 121116,
+            "end": 121130,
+            "text": "xpenses and other liabilities $ 3,209 $ 3,693 Operating lease liabilities 12,744 16,815 Total operating lease liabilities $ 15,954 $ 20,508 Finance leases: Property and equipment, at cost $ 6,822 $ 10,619 Accumulated depreciation ( 2,025 ) ( 2,914 ) Property and equipment, net $ 4,797 $ 7,705 Accrued expenses and other liabilities $ 441 $ 1,053 Other long-term liabilities 2,059 2,652 Total finance lease liabilities $ 2,500 $ 3,705 Three Months Ended Nine Months Ended September 30, September 30, 2025 2026 2025 2026 Cash payments for lease liabilities: Operating cash flows used for operating leases $ 850 $ 998 $ 2,511 $ 2,815 Operating cash flows used for finance leases $ 17 $ 25 $ 48 $ 60 Financi"
+          },
+          {
+            "start": 121369,
+            "end": 121382,
+            "text": "perty and equipment, net $ 4,797 $ 7,705 Accrued expenses and other liabilities $ 441 $ 1,053 Other long-term liabilities 2,059 2,652 Total finance lease liabilities $ 2,500 $ 3,705 Three Months Ended Nine Months Ended September 30, September 30, 2025 2026 2025 2026 Cash payments for lease liabilities: Operating cash flows used for operating leases $ 850 $ 998 $ 2,511 $ 2,815 Operating cash flows used for finance leases $ 17 $ 25 $ 48 $ 60 Financing cash flows used for finance leases (1) $ 92 $ 1,110 $ 394 $ 1,950 Assets obtained in exchange for lease liabilities: Operating leases $ 1,061 $ 3,263 $ 2,589 $ 7,002 Finance leases $ 383 $ 2,085 $ 989 $ 2,987 (1) Additionally, during the three and n"
+          },
+          {
+            "start": 121638,
+            "end": 121652,
+            "text": "sh payments for lease liabilities: Operating cash flows used for operating leases $ 850 $ 998 $ 2,511 $ 2,815 Operating cash flows used for finance leases $ 17 $ 25 $ 48 $ 60 Financing cash flows used for finance leases (1) $ 92 $ 1,110 $ 394 $ 1,950 Assets obtained in exchange for lease liabilities: Operating leases $ 1,061 $ 3,263 $ 2,589 $ 7,002 Finance leases $ 383 $ 2,085 $ 989 $ 2,987 (1) Additionally, during the three and nine months ended September 30, 2026, we made $ 159 million and $ 994 million of lease prepayments for leases not yet commenced, respectively, which are expected to be accounted for as finance leases. Future lease payments as of September 30, 2026 were as follows (in mil"
+          },
+          {
+            "start": 121703,
+            "end": 121717,
+            "text": "operating leases $ 850 $ 998 $ 2,511 $ 2,815 Operating cash flows used for finance leases $ 17 $ 25 $ 48 $ 60 Financing cash flows used for finance leases (1) $ 92 $ 1,110 $ 394 $ 1,950 Assets obtained in exchange for lease liabilities: Operating leases $ 1,061 $ 3,263 $ 2,589 $ 7,002 Finance leases $ 383 $ 2,085 $ 989 $ 2,987 (1) Additionally, during the three and nine months ended September 30, 2026, we made $ 159 million and $ 994 million of lease prepayments for leases not yet commenced, respectively, which are expected to be accounted for as finance leases. Future lease payments as of September 30, 2026 were as follows (in millions): Operating Leases Finance Leases Remainder of 2026 $ 901 $"
+          },
+          {
+            "start": 121849,
+            "end": 121863,
+            "text": "e leases (1) $ 92 $ 1,110 $ 394 $ 1,950 Assets obtained in exchange for lease liabilities: Operating leases $ 1,061 $ 3,263 $ 2,589 $ 7,002 Finance leases $ 383 $ 2,085 $ 989 $ 2,987 (1) Additionally, during the three and nine months ended September 30, 2026, we made $ 159 million and $ 994 million of lease prepayments for leases not yet commenced, respectively, which are expected to be accounted for as finance leases. Future lease payments as of September 30, 2026 were as follows (in millions): Operating Leases Finance Leases Remainder of 2026 $ 901 $ 771 2027 3,947 499 2028 3,451 487 2029 3,082 466 2030 2,543 395 Thereafter 10,515 1,712 Total undiscounted lease payments 24,439 4,330 Less: impu"
+          }
+        ]
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 75504,
+            "end": 75530,
+            "text": ", net of costs 38,002 85,222 Repayments of debt ( 26,094 ) ( 8,879 ) Proceeds from sale of interest in consolidated entities, net 400 3,758 Other financing activities ( 400 ) ( 686 ) Net cash provided by (used in) financing activities ( 44,416 ) 115,757 Effect of exchange rate changes on cash and cash equivalents 244 ( 109 ) Net increase (decrease) in cash and cash equivalents ( 376 ) 25,626 Cash and cash equivalents at beginning of period 23,466 30,708 Cash and cash equivalents at end of period $ 23,090 $ 56,334 Supplemental disclosures of non-cash investing activities: Property and equipment included in accrued liabilities and accounts payable $ 14,574 $ 35,921 See accompanying notes. 9 Table of Contents "
+          }
+        ]
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 4,
+        "excerpts": [
+          {
+            "start": 132006,
+            "end": 132020,
+            "text": "ies 24,584 28,195 Accrued expenses and other current liabilities $ 55,557 $ 74,317 (1) See Legal Matters in Note 10 for further details. 28 Noncontrolling Interests Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.4 billion and $ 6.9 billion as of December 31, 2025 and September 30, 2026, respectively, of which $ 841 million and $ 825 million were redeemable noncontrolling interests (RNCI) as of December 31, 2025 and September 30, 2026, respectively. NCI and RNCI are included within common stock and additional paid-in capital (APIC). Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" compone"
+          },
+          {
+            "start": 132037,
+            "end": 132051,
+            "text": "ses and other current liabilities $ 55,557 $ 74,317 (1) See Legal Matters in Note 10 for further details. 28 Noncontrolling Interests Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.4 billion and $ 6.9 billion as of December 31, 2025 and September 30, 2026, respectively, of which $ 841 million and $ 825 million were redeemable noncontrolling interests (RNCI) as of December 31, 2025 and September 30, 2026, respectively. NCI and RNCI are included within common stock and additional paid-in capital (APIC). Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other C"
+          },
+          {
+            "start": 132257,
+            "end": 132271,
+            "text": "on and $ 6.9 billion as of December 31, 2025 and September 30, 2026, respectively, of which $ 841 million and $ 825 million were redeemable noncontrolling interests (RNCI) as of December 31, 2025 and September 30, 2026, respectively. NCI and RNCI are included within common stock and additional paid-in capital (APIC). Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other Comprehensive Income (Loss) Components of AOCI, net of income tax, were as follows (in millions): Foreign Currency Translation Adjustments Unrealized Gains (Losses) on Available-for-Sale Investments Unrealized Gains (Loss"
+          },
+          {
+            "start": 132461,
+            "end": 132475,
+            "text": "ember 30, 2026, respectively. NCI and RNCI are included within common stock and additional paid-in capital (APIC). Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other Comprehensive Income (Loss) Components of AOCI, net of income tax, were as follows (in millions): Foreign Currency Translation Adjustments Unrealized Gains (Losses) on Available-for-Sale Investments Unrealized Gains (Losses) on Cash Flow Hedges Total Balance as of December 31, 2024 $ ( 5,080 ) $ ( 299 ) $ 579 $ ( 4,800 ) Other comprehensive income (loss) before reclassifications 2,631 1,066 ( 854 ) 2,843 Amounts excluded "
+          }
+        ]
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 4
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "source_sha256": "c28fb2bd2d7a408a952a4110f2b8005b0914f3252af997a3dbd8b1150bfb9d63",
+    "text_sha256": "5d8e8a8a4f46100ad36d78e4826fe0c1917a1361ef38e9cd89eed47ddee69dd5",
+    "text_file": "sources/GOOGL-goog-20260630.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 3,
+        "excerpts": [
+          {
+            "start": 124511,
+            "end": 124527,
+            "text": "ws (in millions): Three Months Ended Six Months Ended June 30, June 30, 2025 2026 2025 2026 Interest income $ 1,050 $ 1,430 $ 2,051 $ 2,811 Interest expense (1) ( 261 ) ( 1,278 ) ( 295 ) ( 1,811 ) Foreign currency exchange gain (loss), net ( 69 ) ( 160 ) ( 175 ) ( 14 ) Gain (loss) on debt securities, net 165 ( 32 ) 367 ( 143 ) Gain (loss) on equity securities, net 1,286 99,031 11,044 135,946 Income (loss) and impairment from equity method investments, net 419 ( 35 ) 397 25 Other 72 ( 973 ) 456 ( 1,115 ) Other income (expense), net $ 2,662 $ 97,983 $ 13,845 $ 135,699 (1) Interest expense is net of interest capitalized of $ 92 million and $ 363 million for the three months ended June 30, 2025 and 20"
+          },
+          {
+            "start": 124948,
+            "end": 124964,
+            "text": "ethod investments, net 419 ( 35 ) 397 25 Other 72 ( 973 ) 456 ( 1,115 ) Other income (expense), net $ 2,662 $ 97,983 $ 13,845 $ 135,699 (1) Interest expense is net of interest capitalized of $ 92 million and $ 363 million for the three months ended June 30, 2025 and 2026, respectively, and $ 171 million and $ 628 million for the six months ended June 30, 2025 and 2026, respectively. Note 8. Acquisitions and Divestitures Wiz Acquisition 28 On March 11, 2026, we completed our acquisition of Wiz for $ 29.5 billion, after purchase price adjustments and excluding post combination compensation arrangements. This acquisition represents an investment by Google Cloud to accelerate our capabilities in multi"
+          },
+          {
+            "start": 198429,
+            "end": 198445,
+            "text": "&E (in millions): Three Months Ended Six Months Ended June 30, June 30, 2025 2026 2025 2026 Interest income $ 1,050 $ 1,430 $ 2,051 $ 2,811 Interest expense (261) (1,278) (295) (1,811) Foreign currency exchange gain (loss), net (69) (160) (175) (14) Gain (loss) on debt securities, net 165 (32) 367 (143) Gain (loss) on equity securities, net 1,286 99,031 11,044 135,946 Income (loss) and impairment from equity method investments, net 419 (35) 397 25 Other 72 (973) 456 (1,115) Other income (expense), net $ 2,662 $ 97,983 $ 13,845 $ 135,699 50 OI&E, net increased $95.3 billion and $121.9 billion from the three and six months ended June 30, 2025 to the three and six months ended June 30, 2026, respecti"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 15,
+        "excerpts": [
+          {
+            "start": 110063,
+            "end": 110076,
+            "text": "o derivatives allowed to be net settled in accordance with our master netting agreements. Note 4. Leases We have entered into operating and finance lease agreements primarily for data centers, land, and offices throughout the world with varying lease terms. 22 Components of lease costs were as follows (in millions): Three Months Ended Six Months Ended June 30, June 30, 2025 2026 2025 2026 Operating lease cost $ 818 $ 942 $ 1,608 $ 1,834 Finance lease cost: Amortization of lease assets 112 259 208 485 Interest on lease liabilities 16 18 31 35 Finance lease cost 128 277 239 520 Variable lease cost 372 460 732 863 Total lease cost $ 1,318 $ 1,679 $ 2,579 $ 3,217 Supplemental information related to"
+          },
+          {
+            "start": 110364,
+            "end": 110377,
+            "text": "s (in millions): Three Months Ended Six Months Ended June 30, June 30, 2025 2026 2025 2026 Operating lease cost $ 818 $ 942 $ 1,608 $ 1,834 Finance lease cost: Amortization of lease assets 112 259 208 485 Interest on lease liabilities 16 18 31 35 Finance lease cost 128 277 239 520 Variable lease cost 372 460 732 863 Total lease cost $ 1,318 $ 1,679 $ 2,579 $ 3,217 Supplemental information related to leases was as follows (in millions): As of December 31, 2025 As of June 30, 2026 Weighted-average remaining lease term: Operating leases 7.6 years 8.4 years Finance leases 8.3 years 8.6 years Weighted-average discount rate: Operating leases 3.6 % 3.8 % Finance leases 3.1 % 3.3 % As of December 31, 2"
+          },
+          {
+            "start": 110471,
+            "end": 110484,
+            "text": "cost $ 818 $ 942 $ 1,608 $ 1,834 Finance lease cost: Amortization of lease assets 112 259 208 485 Interest on lease liabilities 16 18 31 35 Finance lease cost 128 277 239 520 Variable lease cost 372 460 732 863 Total lease cost $ 1,318 $ 1,679 $ 2,579 $ 3,217 Supplemental information related to leases was as follows (in millions): As of December 31, 2025 As of June 30, 2026 Weighted-average remaining lease term: Operating leases 7.6 years 8.4 years Finance leases 8.3 years 8.6 years Weighted-average discount rate: Operating leases 3.6 % 3.8 % Finance leases 3.1 % 3.3 % As of December 31, 2025 As of June 30, 2026 Operating leases: Operating lease assets $ 15,221 $ 17,694 Accrued expenses and oth"
+          },
+          {
+            "start": 110784,
+            "end": 110798,
+            "text": "lows (in millions): As of December 31, 2025 As of June 30, 2026 Weighted-average remaining lease term: Operating leases 7.6 years 8.4 years Finance leases 8.3 years 8.6 years Weighted-average discount rate: Operating leases 3.6 % 3.8 % Finance leases 3.1 % 3.3 % As of December 31, 2025 As of June 30, 2026 Operating leases: Operating lease assets $ 15,221 $ 17,694 Accrued expenses and other liabilities $ 3,209 $ 3,446 Operating lease liabilities 12,744 14,591 Total operating lease liabilities $ 15,954 $ 18,037 Finance leases: Property and equipment, at cost $ 6,822 $ 7,915 Accumulated depreciation ( 2,025 ) ( 2,441 ) Property and equipment, net $ 4,797 $ 5,474 Accrued expenses and other liabiliti"
+          },
+          {
+            "start": 110880,
+            "end": 110894,
+            "text": " term: Operating leases 7.6 years 8.4 years Finance leases 8.3 years 8.6 years Weighted-average discount rate: Operating leases 3.6 % 3.8 % Finance leases 3.1 % 3.3 % As of December 31, 2025 As of June 30, 2026 Operating leases: Operating lease assets $ 15,221 $ 17,694 Accrued expenses and other liabilities $ 3,209 $ 3,446 Operating lease liabilities 12,744 14,591 Total operating lease liabilities $ 15,954 $ 18,037 Finance leases: Property and equipment, at cost $ 6,822 $ 7,915 Accumulated depreciation ( 2,025 ) ( 2,441 ) Property and equipment, net $ 4,797 $ 5,474 Accrued expenses and other liabilities $ 441 $ 449 Other long-term liabilities 2,059 2,141 Total finance lease liabilities $ 2,500 $"
+          },
+          {
+            "start": 111159,
+            "end": 111173,
+            "text": "xpenses and other liabilities $ 3,209 $ 3,446 Operating lease liabilities 12,744 14,591 Total operating lease liabilities $ 15,954 $ 18,037 Finance leases: Property and equipment, at cost $ 6,822 $ 7,915 Accumulated depreciation ( 2,025 ) ( 2,441 ) Property and equipment, net $ 4,797 $ 5,474 Accrued expenses and other liabilities $ 441 $ 449 Other long-term liabilities 2,059 2,141 Total finance lease liabilities $ 2,500 $ 2,590 23 Three Months Ended Six Months Ended June 30, June 30, 2025 2026 2025 2026 Cash payments for lease liabilities: Operating cash flows used for operating leases $ 783 $ 899 $ 1,661 $ 1,817 Operating cash flows used for finance leases $ 16 $ 18 $ 31 $ 35 Financing cash flo"
+          },
+          {
+            "start": 111409,
+            "end": 111422,
+            "text": "roperty and equipment, net $ 4,797 $ 5,474 Accrued expenses and other liabilities $ 441 $ 449 Other long-term liabilities 2,059 2,141 Total finance lease liabilities $ 2,500 $ 2,590 23 Three Months Ended Six Months Ended June 30, June 30, 2025 2026 2025 2026 Cash payments for lease liabilities: Operating cash flows used for operating leases $ 783 $ 899 $ 1,661 $ 1,817 Operating cash flows used for finance leases $ 16 $ 18 $ 31 $ 35 Financing cash flows used for finance leases (1) $ 110 $ 318 $ 302 $ 840 Assets obtained in exchange for lease liabilities: Operating leases $ 831 $ 2,664 $ 1,528 $ 3,739 Finance leases $ 83 $ 691 $ 606 $ 902 (1) Additionally, during the three and six months ended Ju"
+          },
+          {
+            "start": 111670,
+            "end": 111684,
+            "text": "sh payments for lease liabilities: Operating cash flows used for operating leases $ 783 $ 899 $ 1,661 $ 1,817 Operating cash flows used for finance leases $ 16 $ 18 $ 31 $ 35 Financing cash flows used for finance leases (1) $ 110 $ 318 $ 302 $ 840 Assets obtained in exchange for lease liabilities: Operating leases $ 831 $ 2,664 $ 1,528 $ 3,739 Finance leases $ 83 $ 691 $ 606 $ 902 (1) Additionally, during the three and six months ended June 30, 2026, we made $ 201 million and $ 835 million of lease prepayments for leases not yet commenced, respectively, which are expected to be accounted for as finance leases. Future lease payments as of June 30, 2026 were as follows (in millions): Operating Lea"
+          },
+          {
+            "start": 111735,
+            "end": 111749,
+            "text": "operating leases $ 783 $ 899 $ 1,661 $ 1,817 Operating cash flows used for finance leases $ 16 $ 18 $ 31 $ 35 Financing cash flows used for finance leases (1) $ 110 $ 318 $ 302 $ 840 Assets obtained in exchange for lease liabilities: Operating leases $ 831 $ 2,664 $ 1,528 $ 3,739 Finance leases $ 83 $ 691 $ 606 $ 902 (1) Additionally, during the three and six months ended June 30, 2026, we made $ 201 million and $ 835 million of lease prepayments for leases not yet commenced, respectively, which are expected to be accounted for as finance leases. Future lease payments as of June 30, 2026 were as follows (in millions): Operating Leases Finance Leases Remainder of 2026 $ 1,836 $ 206 2027 3,498 387"
+          },
+          {
+            "start": 111876,
+            "end": 111890,
+            "text": "inance leases (1) $ 110 $ 318 $ 302 $ 840 Assets obtained in exchange for lease liabilities: Operating leases $ 831 $ 2,664 $ 1,528 $ 3,739 Finance leases $ 83 $ 691 $ 606 $ 902 (1) Additionally, during the three and six months ended June 30, 2026, we made $ 201 million and $ 835 million of lease prepayments for leases not yet commenced, respectively, which are expected to be accounted for as finance leases. Future lease payments as of June 30, 2026 were as follows (in millions): Operating Leases Finance Leases Remainder of 2026 $ 1,836 $ 206 2027 3,498 387 2028 2,979 377 2029 2,576 356 2030 2,046 285 Thereafter 8,398 1,309 Total undiscounted lease payments 21,333 2,920 Less: imputed interest ( "
+          }
+        ]
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 69430,
+            "end": 69456,
+            "text": ", net of costs 31,378 56,226 Repayments of debt ( 18,397 ) ( 5,253 ) Proceeds from sale of interest in consolidated entities, net 400 3,758 Other financing activities ( 400 ) ( 686 ) Net cash provided by (used in) financing activities ( 26,033 ) 86,320 Effect of exchange rate changes on cash and cash equivalents 444 ( 154 ) Net increase (decrease) in cash and cash equivalents ( 2,430 ) 25,203 Cash and cash equivalents at beginning of period 23,466 30,708 Cash and cash equivalents at end of period $ 21,036 $ 55,911 Supplemental disclosures of non-cash investing activities: Property and equipment included in accrued liabilities and accounts payable $ 10,635 $ 29,113 See accompanying notes. 9 Table of Contents"
+          }
+        ]
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 4,
+        "excerpts": [
+          {
+            "start": 121727,
+            "end": 121741,
+            "text": "lities 24,584 28,169 Accrued expenses and other current liabilities $ 55,557 $ 73,014 (1) See Legal Matters in Note 10 for further details. Noncontrolling Interests Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.4 billion and $ 7.1 billion as of December 31, 2025 and June 30, 2026, respectively, of which $ 841 million and $ 824 million were redeemable noncontrolling interests (RNCI) as of December 31, 2025 and June 30, 2026, respectively. NCI and RNCI are included within common stock and additional paid-in capital (APIC). Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E"
+          },
+          {
+            "start": 121758,
+            "end": 121772,
+            "text": "penses and other current liabilities $ 55,557 $ 73,014 (1) See Legal Matters in Note 10 for further details. Noncontrolling Interests Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.4 billion and $ 7.1 billion as of December 31, 2025 and June 30, 2026, respectively, of which $ 841 million and $ 824 million were redeemable noncontrolling interests (RNCI) as of December 31, 2025 and June 30, 2026, respectively. NCI and RNCI are included within common stock and additional paid-in capital (APIC). Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other Comprehensi"
+          },
+          {
+            "start": 121973,
+            "end": 121987,
+            "text": "billion and $ 7.1 billion as of December 31, 2025 and June 30, 2026, respectively, of which $ 841 million and $ 824 million were redeemable noncontrolling interests (RNCI) as of December 31, 2025 and June 30, 2026, respectively. NCI and RNCI are included within common stock and additional paid-in capital (APIC). Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other Comprehensive Income (Loss) Components of AOCI, net of income tax, were as follows (in millions): Foreign Currency Translation Adjustments Unrealized Gains (Losses) on Available-for-Sale Investments Unrealized Gains (Losses) o"
+          },
+          {
+            "start": 122172,
+            "end": 122186,
+            "text": " June 30, 2026, respectively. NCI and RNCI are included within common stock and additional paid-in capital (APIC). Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other Comprehensive Income (Loss) Components of AOCI, net of income tax, were as follows (in millions): Foreign Currency Translation Adjustments Unrealized Gains (Losses) on Available-for-Sale Investments Unrealized Gains (Losses) on Cash Flow Hedges Total Balance as of December 31, 2024 $ ( 5,080 ) $ ( 299 ) $ 579 $ ( 4,800 ) Other comprehensive income (loss) before reclassifications 3,273 836 ( 1,064 ) 3,045 Amounts excluded "
+          }
+        ]
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 4
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "source_sha256": "a40eccd972475d5c4db7412f6aebc450b4afa9a26b1889dfb9f517bec04321b1",
+    "text_sha256": "5bd1f3eb727a432ea694b04f386b72321894928c7c37edeed262c981a2db6e23",
+    "text_file": "sources/GOOGL-goog-20260331.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 3,
+        "excerpts": [
+          {
+            "start": 92049,
+            "end": 92065,
+            "text": "ome (Expense), Net Components of OI&E were as follows (in millions): Three Months Ended March 31, 2025 2026 Interest income $ 1,001 $ 1,381 Interest expense (1) ( 34 ) ( 533 ) Foreign currency exchange gain (loss), net ( 106 ) 146 Gain (loss) on debt securities, net 202 ( 111 ) Gain (loss) on equity securities, net 9,758 36,915 Income (loss) and impairment from equity method investments, net ( 22 ) 60 Other 384 ( 142 ) Other income (expense), net $ 11,183 $ 37,716 (1) Interest expense is net of interest capitalized of $ 79 million and $ 265 million for the three months ended March 31, 2025 and 2026, respectively. Note 8. Acquisitions and Divestitures Wiz Acquisition 24 On March 11, 2026, we comple"
+          },
+          {
+            "start": 92382,
+            "end": 92398,
+            "text": "ome (loss) and impairment from equity method investments, net ( 22 ) 60 Other 384 ( 142 ) Other income (expense), net $ 11,183 $ 37,716 (1) Interest expense is net of interest capitalized of $ 79 million and $ 265 million for the three months ended March 31, 2025 and 2026, respectively. Note 8. Acquisitions and Divestitures Wiz Acquisition 24 On March 11, 2026, we completed our acquisition of Wiz for $ 29.5 billion, after purchase price adjustments and excluding post combination compensation arrangements. This acquisition represents an investment by Google Cloud to accelerate our capabilities in multicloud and artificial intelligence (AI)-driven security. Following the close of the acquisition, th"
+          },
+          {
+            "start": 151054,
+            "end": 151070,
+            "text": "come (Expense), Net The following table presents OI&E (in millions): Three Months Ended March 31, 2025 2026 Interest income $ 1,001 $ 1,381 Interest expense (34) (533) Foreign currency exchange gain (loss), net (106) 146 Gain (loss) on debt securities, net 202 (111) Gain (loss) on equity securities, net 9,758 36,915 Income (loss) and impairment from equity method investments, net (22) 60 Other 384 (142) Other income (expense), net $ 11,183 $ 37,716 OI&E, net increased $26.5 billion from the three months ended March 31, 2025 to the three months ended March 31, 2026, primarily due to increases in net unrealized gains on equity securities resulting from fair value adjustments on non-marketable equity"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 15,
+        "excerpts": [
+          {
+            "start": 79209,
+            "end": 79222,
+            "text": "o derivatives allowed to be net settled in accordance with our master netting agreements. Note 4. Leases We have entered into operating and finance lease agreements primarily for data centers, land, and offices throughout the world with varying lease terms. Components of lease costs were as follows (in millions): Three Months Ended March 31, 2025 2026 Operating lease cost $ 790 $ 892 Finance lease cost: Amortization of lease assets 96 226 Interest on lease liabilities 15 17 Finance lease cost 111 243 Variable lease cost 360 403 Total lease cost $ 1,261 $ 1,538 Supplemental information related to leases was as follows (in millions): As of December 31, 2025 As of March 31, 2026 Weighted-average r"
+          },
+          {
+            "start": 79456,
+            "end": 79469,
+            "text": "ase terms. Components of lease costs were as follows (in millions): Three Months Ended March 31, 2025 2026 Operating lease cost $ 790 $ 892 Finance lease cost: Amortization of lease assets 96 226 Interest on lease liabilities 15 17 Finance lease cost 111 243 Variable lease cost 360 403 Total lease cost $ 1,261 $ 1,538 Supplemental information related to leases was as follows (in millions): As of December 31, 2025 As of March 31, 2026 Weighted-average remaining lease term: Operating leases 7.6 years 7.8 years Finance leases 8.3 years 9.0 years Weighted-average discount rate: Operating leases 3.6 % 3.7 % Finance leases 3.1 % 3.0 % 19 As of December 31, 2025 As of March 31, 2026 Operating leases: "
+          },
+          {
+            "start": 79548,
+            "end": 79561,
+            "text": " 31, 2025 2026 Operating lease cost $ 790 $ 892 Finance lease cost: Amortization of lease assets 96 226 Interest on lease liabilities 15 17 Finance lease cost 111 243 Variable lease cost 360 403 Total lease cost $ 1,261 $ 1,538 Supplemental information related to leases was as follows (in millions): As of December 31, 2025 As of March 31, 2026 Weighted-average remaining lease term: Operating leases 7.6 years 7.8 years Finance leases 8.3 years 9.0 years Weighted-average discount rate: Operating leases 3.6 % 3.7 % Finance leases 3.1 % 3.0 % 19 As of December 31, 2025 As of March 31, 2026 Operating leases: Operating lease assets $ 15,221 $ 15,509 Accrued expenses and other liabilities $ 3,209 $ 3,"
+          },
+          {
+            "start": 79830,
+            "end": 79844,
+            "text": "ows (in millions): As of December 31, 2025 As of March 31, 2026 Weighted-average remaining lease term: Operating leases 7.6 years 7.8 years Finance leases 8.3 years 9.0 years Weighted-average discount rate: Operating leases 3.6 % 3.7 % Finance leases 3.1 % 3.0 % 19 As of December 31, 2025 As of March 31, 2026 Operating leases: Operating lease assets $ 15,221 $ 15,509 Accrued expenses and other liabilities $ 3,209 $ 3,178 Operating lease liabilities 12,744 12,983 Total operating lease liabilities $ 15,954 $ 16,161 Finance leases: Property and equipment, at cost $ 6,822 $ 7,036 Accumulated depreciation ( 2,025 ) ( 2,203 ) Property and equipment, net $ 4,797 $ 4,833 Accrued expenses and other liabi"
+          },
+          {
+            "start": 79926,
+            "end": 79940,
+            "text": " term: Operating leases 7.6 years 7.8 years Finance leases 8.3 years 9.0 years Weighted-average discount rate: Operating leases 3.6 % 3.7 % Finance leases 3.1 % 3.0 % 19 As of December 31, 2025 As of March 31, 2026 Operating leases: Operating lease assets $ 15,221 $ 15,509 Accrued expenses and other liabilities $ 3,209 $ 3,178 Operating lease liabilities 12,744 12,983 Total operating lease liabilities $ 15,954 $ 16,161 Finance leases: Property and equipment, at cost $ 6,822 $ 7,036 Accumulated depreciation ( 2,025 ) ( 2,203 ) Property and equipment, net $ 4,797 $ 4,833 Accrued expenses and other liabilities $ 441 $ 177 Other long-term liabilities 2,059 2,037 Total finance lease liabilities $ 2,5"
+          },
+          {
+            "start": 80209,
+            "end": 80223,
+            "text": "xpenses and other liabilities $ 3,209 $ 3,178 Operating lease liabilities 12,744 12,983 Total operating lease liabilities $ 15,954 $ 16,161 Finance leases: Property and equipment, at cost $ 6,822 $ 7,036 Accumulated depreciation ( 2,025 ) ( 2,203 ) Property and equipment, net $ 4,797 $ 4,833 Accrued expenses and other liabilities $ 441 $ 177 Other long-term liabilities 2,059 2,037 Total finance lease liabilities $ 2,500 $ 2,214 Three Months Ended March 31, 2025 2026 Cash payments for lease liabilities: Operating cash flows used for operating leases $ 878 $ 918 Operating cash flows used for finance leases $ 15 $ 17 Financing cash flows used for finance leases (1) $ 192 $ 522 Assets obtained in ex"
+          },
+          {
+            "start": 80459,
+            "end": 80472,
+            "text": "roperty and equipment, net $ 4,797 $ 4,833 Accrued expenses and other liabilities $ 441 $ 177 Other long-term liabilities 2,059 2,037 Total finance lease liabilities $ 2,500 $ 2,214 Three Months Ended March 31, 2025 2026 Cash payments for lease liabilities: Operating cash flows used for operating leases $ 878 $ 918 Operating cash flows used for finance leases $ 15 $ 17 Financing cash flows used for finance leases (1) $ 192 $ 522 Assets obtained in exchange for lease liabilities: Operating leases $ 697 $ 1,075 Finance leases $ 523 $ 211 (1) Additionally, in the three month period ended March 31, 2026, we made $ 634 million of lease prepayments for leases not yet commenced, which are expected to "
+          },
+          {
+            "start": 80666,
+            "end": 80680,
+            "text": "31, 2025 2026 Cash payments for lease liabilities: Operating cash flows used for operating leases $ 878 $ 918 Operating cash flows used for finance leases $ 15 $ 17 Financing cash flows used for finance leases (1) $ 192 $ 522 Assets obtained in exchange for lease liabilities: Operating leases $ 697 $ 1,075 Finance leases $ 523 $ 211 (1) Additionally, in the three month period ended March 31, 2026, we made $ 634 million of lease prepayments for leases not yet commenced, which are expected to be accounted for as finance leases. Future lease payments as of March 31, 2026 were as follows (in millions): Operating Leases Finance Leases Remainder of 2026 $ 2,485 $ 144 2027 3,229 349 2028 2,643 339 2029"
+          },
+          {
+            "start": 80721,
+            "end": 80735,
+            "text": "ating cash flows used for operating leases $ 878 $ 918 Operating cash flows used for finance leases $ 15 $ 17 Financing cash flows used for finance leases (1) $ 192 $ 522 Assets obtained in exchange for lease liabilities: Operating leases $ 697 $ 1,075 Finance leases $ 523 $ 211 (1) Additionally, in the three month period ended March 31, 2026, we made $ 634 million of lease prepayments for leases not yet commenced, which are expected to be accounted for as finance leases. Future lease payments as of March 31, 2026 were as follows (in millions): Operating Leases Finance Leases Remainder of 2026 $ 2,485 $ 144 2027 3,229 349 2028 2,643 339 2029 2,186 319 2030 1,797 247 Thereafter 6,467 1,237 Total "
+          },
+          {
+            "start": 80834,
+            "end": 80848,
+            "text": "ancing cash flows used for finance leases (1) $ 192 $ 522 Assets obtained in exchange for lease liabilities: Operating leases $ 697 $ 1,075 Finance leases $ 523 $ 211 (1) Additionally, in the three month period ended March 31, 2026, we made $ 634 million of lease prepayments for leases not yet commenced, which are expected to be accounted for as finance leases. Future lease payments as of March 31, 2026 were as follows (in millions): Operating Leases Finance Leases Remainder of 2026 $ 2,485 $ 144 2027 3,229 349 2028 2,643 339 2029 2,186 319 2030 1,797 247 Thereafter 6,467 1,237 Total undiscounted lease payments 18,807 2,635 Less: imputed interest ( 2,646 ) ( 421 ) Total lease liability balance $"
+          }
+        ]
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 4,
+        "excerpts": [
+          {
+            "start": 89469,
+            "end": 89483,
+            "text": "lities 24,584 25,094 Accrued expenses and other current liabilities $ 55,557 $ 63,019 (1) See Legal Matters in Note 10 for further details. Noncontrolling Interests Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.4 billion and $ 7.2 billion as of December 31, 2025 and March 31, 2026, respectively, of which $ 841 million and $ 1.8 billion were redeemable noncontrolling interests (RNCI) as of December 31, 2025 and March 31, 2026, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other Co"
+          },
+          {
+            "start": 89500,
+            "end": 89514,
+            "text": "penses and other current liabilities $ 55,557 $ 63,019 (1) See Legal Matters in Note 10 for further details. Noncontrolling Interests Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.4 billion and $ 7.2 billion as of December 31, 2025 and March 31, 2026, respectively, of which $ 841 million and $ 1.8 billion were redeemable noncontrolling interests (RNCI) as of December 31, 2025 and March 31, 2026, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other Comprehensive Income (Loss) Compo"
+          },
+          {
+            "start": 89716,
+            "end": 89730,
+            "text": "illion and $ 7.2 billion as of December 31, 2025 and March 31, 2026, respectively, of which $ 841 million and $ 1.8 billion were redeemable noncontrolling interests (RNCI) as of December 31, 2025 and March 31, 2026, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other Comprehensive Income (Loss) Components of AOCI, net of income tax, were as follows (in millions): Foreign Currency Translation Adjustments Unrealized Gains (Losses) on Available-for-Sale Investments Unrealized Gains (Losses) on Cash Flow Hedges Tota"
+          },
+          {
+            "start": 89892,
+            "end": 89906,
+            "text": "f December 31, 2025 and March 31, 2026, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. Accumulated Other Comprehensive Income (Loss) Components of AOCI, net of income tax, were as follows (in millions): Foreign Currency Translation Adjustments Unrealized Gains (Losses) on Available-for-Sale Investments Unrealized Gains (Losses) on Cash Flow Hedges Total Balance as of December 31, 2024 $ ( 5,080 ) $ ( 299 ) $ 579 $ ( 4,800 ) Other comprehensive income (loss) before reclassifications 663 645 ( 252 ) 1,056 Amounts excluded from"
+          }
+        ]
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 2
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000130817926000342/goog-20260424.htm",
+    "role": "Related-party Waymo financing and subsidiary ownership; no assumed cap table",
+    "source_sha256": "98359b97535035b3406efd42116cdc3247126ab5658d94abd376da4a584c225c",
+    "text_sha256": "5c17e9ab8c06a87633bfae8db3ebc9202b0f7ef129bdc2ddf550dfac5cb63f78",
+    "text_file": "sources/GOOGL-2026-proxy.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 6,
+        "excerpts": [
+          {
+            "start": 116662,
+            "end": 116671,
+            "text": "tly invested, or committed to invest, an aggregate of approximately $42,430,000 in certain private companies (including their investment in Waymo LLC described below) from the beginning of 2025 through March 31, 2026, in which funds affiliated with Kleiner Perkins Caufield & Byers, LLC (KPCB) were co-investors or existing investors. These KPCB funds hold more than 10% of the outstanding shares of these private companies (other than Waymo LLC). From time to time, we sell to and purchase products and services from these companies (other than Waymo LLC) in the ordinary course of our business. GV and CapitalG also participated in the recent funding round for Waymo LLC in which KPCB funds invest"
+          },
+          {
+            "start": 116958,
+            "end": 116967,
+            "text": "re co-investors or existing investors. These KPCB funds hold more than 10% of the outstanding shares of these private companies (other than Waymo LLC). From time to time, we sell to and purchase products and services from these companies (other than Waymo LLC) in the ordinary course of our business. GV and CapitalG also participated in the recent funding round for Waymo LLC in which KPCB funds invested approximately $120,000,000. KPCB funds hold less than 0.10% of the outstanding shares of Waymo LLC. L. John Doerr is the Chair of KPCB and a managing member of certain KPCB funds, and he does not have a material interest in any of the transactions described herein. Certain Relationships From "
+          },
+          {
+            "start": 117068,
+            "end": 117077,
+            "text": "private companies (other than Waymo LLC). From time to time, we sell to and purchase products and services from these companies (other than Waymo LLC) in the ordinary course of our business. GV and CapitalG also participated in the recent funding round for Waymo LLC in which KPCB funds invested approximately $120,000,000. KPCB funds hold less than 0.10% of the outstanding shares of Waymo LLC. L. John Doerr is the Chair of KPCB and a managing member of certain KPCB funds, and he does not have a material interest in any of the transactions described herein. Certain Relationships From time to time, we engage in certain transactions with other companies affiliated with our directors, executive "
+          },
+          {
+            "start": 117185,
+            "end": 117194,
+            "text": " companies (other than Waymo LLC) in the ordinary course of our business. GV and CapitalG also participated in the recent funding round for Waymo LLC in which KPCB funds invested approximately $120,000,000. KPCB funds hold less than 0.10% of the outstanding shares of Waymo LLC. L. John Doerr is the Chair of KPCB and a managing member of certain KPCB funds, and he does not have a material interest in any of the transactions described herein. Certain Relationships From time to time, we engage in certain transactions with other companies affiliated with our directors, executive officers, and significant shareholders or their immediate family members. We believe that all such arrangements have "
+          },
+          {
+            "start": 117313,
+            "end": 117322,
+            "text": "g round for Waymo LLC in which KPCB funds invested approximately $120,000,000. KPCB funds hold less than 0.10% of the outstanding shares of Waymo LLC. L. John Doerr is the Chair of KPCB and a managing member of certain KPCB funds, and he does not have a material interest in any of the transactions described herein. Certain Relationships From time to time, we engage in certain transactions with other companies affiliated with our directors, executive officers, and significant shareholders or their immediate family members. We believe that all such arrangements have been entered into in the ordinary course of business and have been conducted on an arm\u2019s-length basis and do not represent a mat"
+          },
+          {
+            "start": 137749,
+            "end": 137758,
+            "text": "Us) with a target value of approximately $130,000,000 and $45,000,000, respectively. The Waymo and Wing BPUs will vest, if at all, based on Waymo LLC's and Wing Aviation LLC\u2019s increase in per unit value over a target three-year period, as established by the Compensation Committee. This change to include an element of Bet performance in Sundar\u2019s compensation supports Alphabet\u2019s long-standing goal of investing in new technologies and reflects Sundar\u2019s critical role as Alphabet CEO in overseeing its Other Bets. 2026 Equity Awards On April 7, 2026, the Com pensation Committee approved equity awards for Anat, Ruth, Philipp, and Kent. These awards, as well as the annualized target total compensat"
+          }
+        ]
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "7d5b2efdce4feb1514aec6658005115dafdf587bd1c910ab784ad1d234367848",
+    "text_sha256": "1ca190c739b0c11f14814318bef3342a28b1b29573482ead1e690ad7ce3730f2",
+    "text_file": "sources/AAPL-aapl-20250628.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000057/aapl-20250329.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "e14ae23f4801cf9cf4904a2b5f741b81900bdba0c617441cd4a57595d0615afb",
+    "text_sha256": "aab311db589d42197d4bbe2d17ff7a39ca89e84131171d0f68fadbb4f14730ed",
+    "text_file": "sources/AAPL-aapl-20250329.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000008/aapl-20241228.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "ca0b1d01fdcd36e298d43b08abbd459aa4c7c41df5b2fca8cffa0dc5ba83fc83",
+    "text_sha256": "888581461a1fbe1cfa234d6526c30be56dc9af3570d209459f60377dc69326b2",
+    "text_file": "sources/AAPL-aapl-20241228.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000081/aapl-20240629.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "7cac3e1634a5fc8bf81dae695c33254329254ba4880e1b2fce70555cd7c9830a",
+    "text_sha256": "d8468ba359b9179aad1e1948c315e6cc24722e33bf08faa1aa0794ae5d8d7ca5",
+    "text_file": "sources/AAPL-aapl-20240629.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000069/aapl-20240330.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "9ea1b7e25a52d65af7d58a64966746dee77591aff7ff54a635d907c05f2e8aa9",
+    "text_sha256": "ba4744b99791ae717cf9db45c2847c47f5cd5e1d254bd9dad2f397e65cff5bf6",
+    "text_file": "sources/AAPL-aapl-20240330.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000006/aapl-20231230.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "b8d4c0a7d6b84dc9a6c51f60f3439d8bab12f05c21fad81f7447a3dcacd8841a",
+    "text_sha256": "65f03106039e41e6cf748c0fb020e3705463f6098fbd2daf5b2f4875e1fdb349",
+    "text_file": "sources/AAPL-aapl-20231230.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 0,
+      "us-gaap:InterestPaidNet": 0,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000077/aapl-20230701.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "7d7aefc39b0fc9d9e2b5c82632b99819cc587c5763ec5a5800002ccb5d11d06e",
+    "text_sha256": "ee4faaec73b276387208879296dc037f3b4747eeb1eeb6ed18bf08b408b99f58",
+    "text_file": "sources/AAPL-aapl-20230701.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 40395,
+            "end": 40411,
+            "text": "nths Ended Nine Months Ended July 1, 2023 June 25, 2022 July 1, 2023 June 25, 2022 Interest and dividend income $ 980 $ 722 $ 2,766 $ 2,072 Interest expense ( 998 ) ( 719 ) ( 2,931 ) ( 2,104 ) Other expense, net ( 247 ) ( 13 ) ( 429 ) ( 65 ) Total other income/(expense), net $ ( 265 ) $ ( 10 ) $ ( 594 ) $ ( 97 ) Apple Inc. | Q3 2023 Form 10-Q | 10 Note 5 \u2013 Income Taxes European Commission State Aid Decision On August 30, 2016, the European Commission announced its decision that Ireland granted state aid to the Company by providing tax opinions in 1991 and 2007 concerning the tax allocation of profits of the Irish branches of two subsidiaries of the Company (the \u201cState Aid Decision\u201d). The State Aid"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 24760,
+            "end": 24782,
+            "text": " and restricted cash, ending balances $ 29,898 $ 28,861 Supplemental cash flow disclosure: Cash paid for income taxes, net $ 7,020 $ 12,251 Cash paid for interest $ 2,590 $ 1,910 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q3 2023 Form 10-Q | 5 Apple Inc. Notes to Condensed Consolidated Financial Statements (Unaudited) Note 1 \u2013 Summary of Significant Accounting Policies Basis of Presentation and Preparation The condensed consolidated financial statements include the accounts of Apple Inc. and its wholly owned subsidiaries (collectively \u201cApple\u201d or the \u201cCompany\u201d). Intercompany accounts and transactions have been eliminated. In the opinion of the Company\u2019s management"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 4,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000064/aapl-20230401.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "81b7ec0a5dcb3ea1a934276bd0ac220c4d0b7bcc72e1a2449e31eec773ac87e6",
+    "text_sha256": "476cf650e5a94cbcc7c2eb25ec90edeec32ae4595dc06053d6b7a426e1745ba9",
+    "text_file": "sources/AAPL-aapl-20230401.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 40798,
+            "end": 40814,
+            "text": "s Ended Six Months Ended April 1, 2023 March 26, 2022 April 1, 2023 March 26, 2022 Interest and dividend income $ 918 $ 700 $ 1,786 $ 1,350 Interest expense ( 930 ) ( 691 ) ( 1,933 ) ( 1,385 ) Other income/(expense), net 76 151 ( 182 ) ( 52 ) Total other income/(expense), net $ 64 $ 160 $ ( 329 ) $ ( 87 ) Apple Inc. | Q2 2023 Form 10-Q | 10 Note 5 \u2013 Income Taxes European Commission State Aid Decision On August 30, 2016, the European Commission announced its decision that Ireland granted state aid to the Company by providing tax opinions in 1991 and 2007 concerning the tax allocation of profits of the Irish branches of two subsidiaries of the Company (the \u201cState Aid Decision\u201d). The State Aid Decisi"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 25053,
+            "end": 25075,
+            "text": "s and restricted cash, ending balances $ 27,129 $ 29,180 Supplemental cash flow disclosure: Cash paid for income taxes, net $ 4,894 $ 9,301 Cash paid for interest $ 1,873 $ 1,406 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q2 2023 Form 10-Q | 5 Apple Inc. Notes to Condensed Consolidated Financial Statements (Unaudited) Note 1 \u2013 Summary of Significant Accounting Policies Basis of Presentation and Preparation The condensed consolidated financial statements include the accounts of Apple Inc. and its wholly owned subsidiaries (collectively \u201cApple\u201d or the \u201cCompany\u201d). Intercompany accounts and transactions have been eliminated. In the opinion of the Company\u2019s management"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 4,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000006/aapl-20221231.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "e94e0d743fc7878b6fe5a41df87a60278d7c007cc3e46de315f0f1ebfa21b4b1",
+    "text_sha256": "8a5b67a63997b3e3fbebddea74db93a01d2f9ea13bbae4d3d3934323f480238c",
+    "text_file": "sources/AAPL-aapl-20221231.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 37015,
+            "end": 37031,
+            "text": ", 2022 and December 25, 2021 (in millions): Three Months Ended December 31, 2022 December 25, 2021 Interest and dividend income $ 868 $ 650 Interest expense ( 1,003 ) ( 694 ) Other expense, net ( 258 ) ( 203 ) Total other income/(expense), net $ ( 393 ) $ ( 247 ) Note 5 \u2013 Debt Commercial Paper The Company issues unsecured short-term promissory notes (\u201cCommercial Paper\u201d) pursuant to a commercial paper program. The Company uses net proceeds from the commercial paper program for general corporate purposes, including dividends and share repurchases. As of December 31, 2022 and September 24, 2022, the Company had $ 1.7 billion and $ 10.0 billion of Commercial Paper outstanding, respectively. The follow"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 21161,
+            "end": 21183,
+            "text": "nts and restricted cash, ending balances $ 21,974 $ 38,630 Supplemental cash flow disclosure: Cash paid for income taxes, net $ 828 $ 5,235 Cash paid for interest $ 703 $ 531 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q1 2023 Form 10-Q | 5 Apple Inc. Notes to Condensed Consolidated Financial Statements (Unaudited) Note 1 \u2013 Summary of Significant Accounting Policies Basis of Presentation and Preparation The condensed consolidated financial statements include the accounts of Apple Inc. and its wholly owned subsidiaries (collectively \u201cApple\u201d or the \u201cCompany\u201d). Intercompany accounts and transactions have been eliminated. In the opinion of the Company\u2019s management, th"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 2,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000070/aapl-20220625.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "80fd3f8d2f811db50c17f38741e073831cb662c4c75fd1e00583b0be08c1ccc6",
+    "text_sha256": "a7e8a6572fbc006beab747e2141b9266a6403a7b157c99f18eb6a939df28baef",
+    "text_file": "sources/AAPL-aapl-20220625.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 3,
+        "excerpts": [
+          {
+            "start": 38307,
+            "end": 38323,
+            "text": "hs Ended Nine Months Ended June 25, 2022 June 26, 2021 June 25, 2022 June 26, 2021 Interest and dividend income $ 722 $ 719 $ 2,072 $ 2,184 Interest expense ( 719 ) ( 665 ) ( 2,104 ) ( 1,973 ) Other income/(expense), net ( 13 ) 189 ( 65 ) 585 Total other income/(expense), net $ ( 10 ) $ 243 $ ( 97 ) $ 796 Note 5 \u2013 Debt Commercial Paper The Company issues unsecured short-term promissory notes (\u201cCommercial Paper\u201d) pursuant to a commercial paper program. The Company uses net proceeds from the commercial paper program for general corporate purposes, including dividends and share repurchases. As of June 25, 2022 and September 25, 2021, the Company had $ 11.0 billion and $ 6.0 billion of Commercial Pape"
+          },
+          {
+            "start": 61298,
+            "end": 61314,
+            "text": "Months Ended June 25, 2022 June 26, 2021 Change June 25, 2022 June 26, 2021 Change Interest and dividend income $ 722 $ 719 $ 2,072 $ 2,184 Interest expense (719) (665) (2,104) (1,973) Other income/(expense), net (13) 189 (65) 585 Total other income/(expense), net $ (10) $ 243 (104) % $ (97) $ 796 (112) % OI&E decreased during the third quarter and first nine months of 2022 compared to the same periods in 2021 due primarily to fair value adjustments and realized losses on marketable securities and higher interest expense, partially offset by foreign exchange gains. Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for the three- and nin"
+          },
+          {
+            "start": 61668,
+            "end": 61684,
+            "text": "f 2022 compared to the same periods in 2021 due primarily to fair value adjustments and realized losses on marketable securities and higher interest expense, partially offset by foreign exchange gains. Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (dollars in millions): Three Months Ended Nine Months Ended June 25, 2022 June 26, 2021 June 25, 2022 June 26, 2021 Provision for income taxes $ 3,624 $ 2,625 $ 15,364 $ 11,830 Effective tax rate 15.7 % 10.8 % 16.3 % 13.8 % Statutory federal income tax rate 21 % 21 % 21 % 21 % The Company\u2019s effectiv"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 23370,
+            "end": 23392,
+            "text": "and restricted cash, ending balances $ 28,861 $ 35,276 Supplemental cash flow disclosure: Cash paid for income taxes, net $ 12,251 $ 18,536 Cash paid for interest $ 1,910 $ 1,870 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q3 2022 Form 10-Q | 5 Apple Inc. Notes to Condensed Consolidated Financial Statements (Unaudited) Note 1 \u2013 Summary of Significant Accounting Policies Basis of Presentation and Preparation The condensed consolidated financial statements include the accounts of Apple Inc. and its wholly owned subsidiaries (collectively \u201cApple\u201d or the \u201cCompany\u201d). Intercompany accounts and transactions have been eliminated. In the opinion of the Company\u2019s management"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 4,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000059/aapl-20220326.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "ef626826d48d69bffe3d19e701122f71e3fca637f4d56601b409f85248f451bc",
+    "text_sha256": "bbc2d0d48b9f5b2b2f3d414d4afd79e332b63d37936b2b610521104b2cde8b30",
+    "text_file": "sources/AAPL-aapl-20220326.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 2,
+        "excerpts": [
+          {
+            "start": 38525,
+            "end": 38541,
+            "text": "Ended Six Months Ended March 26, 2022 March 27, 2021 March 26, 2022 March 27, 2021 Interest and dividend income $ 700 $ 718 $ 1,350 $ 1,465 Interest expense ( 691 ) ( 670 ) ( 1,385 ) ( 1,308 ) Other income/(expense), net 151 460 ( 52 ) 396 Total other income/(expense), net $ 160 $ 508 $ ( 87 ) $ 553 Note 5 \u2013 Debt Commercial Paper The Company issues unsecured short-term promissory notes (\u201cCommercial Paper\u201d) pursuant to a commercial paper program. The Company uses net proceeds from the commercial paper program for general corporate purposes, including dividends and share repurchases. As of March 26, 2022 and September 25, 2021, the Company had $ 7.0 billion and $ 6.0 billion of Commercial Paper outs"
+          },
+          {
+            "start": 61739,
+            "end": 61755,
+            "text": "hs Ended March 26, 2022 March 27, 2021 Change March 26, 2022 March 27, 2021 Change Interest and dividend income $ 700 $ 718 $ 1,350 $ 1,465 Interest expense (691) (670) (1,385) (1,308) Other income/(expense), net 151 460 (52) 396 Total other income/(expense), net $ 160 $ 508 (69) % $ (87) $ 553 (116) % OI&E decreased during the second quarter and first six months of 2022 compared to the same periods in 2021 due primarily to fair value adjustments on marketable securities, partially offset by foreign exchange gains. Apple Inc. | Q2 2022 Form 10-Q | 18 Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for the three- and six-month periods "
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 23476,
+            "end": 23498,
+            "text": " and restricted cash, ending balances $ 29,180 $ 40,006 Supplemental cash flow disclosure: Cash paid for income taxes, net $ 9,301 $ 10,276 Cash paid for interest $ 1,406 $ 1,327 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q2 2022 Form 10-Q | 5 Apple Inc. Notes to Condensed Consolidated Financial Statements (Unaudited) Note 1 \u2013 Summary of Significant Accounting Policies Basis of Presentation and Preparation The condensed consolidated financial statements include the accounts of Apple Inc. and its wholly owned subsidiaries (collectively \u201cApple\u201d or the \u201cCompany\u201d). Intercompany accounts and transactions have been eliminated. In the opinion of the Company\u2019s management"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 4,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000007/aapl-20211225.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "4662e4f6744737fcf873a455e21b14dabd551fca3999929b980f2d60f4d80f4d",
+    "text_sha256": "d86dd596b695c441a90ba178aacd89ef20161b2ee437acc40c60f13ec392bf8c",
+    "text_file": "sources/AAPL-aapl-20211225.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 2,
+        "excerpts": [
+          {
+            "start": 34292,
+            "end": 34308,
+            "text": ", 2021 and December 26, 2020 (in millions): Three Months Ended December 25, 2021 December 26, 2020 Interest and dividend income $ 650 $ 747 Interest expense ( 694 ) ( 638 ) Other expense, net ( 203 ) ( 64 ) Total other income/(expense), net $ ( 247 ) $ 45 Note 5 \u2013 Debt Commercial Paper The Company issues unsecured short-term promissory notes (\u201cCommercial Paper\u201d) pursuant to a commercial paper program. The Company uses net proceeds from the commercial paper program for general corporate purposes, including dividends and share repurchases. As of December 25, 2021 and September 25, 2021, the Company had $ 5.0 billion and $ 6.0 billion of Commercial Paper outstanding, respectively. The following table"
+          },
+          {
+            "start": 55347,
+            "end": 55363,
+            "text": "as as follows (dollars in millions): Three Months Ended December 25, 2021 December 26, 2020 Change Interest and dividend income $ 650 $ 747 Interest expense (694) (638) Other expense, net (203) (64) Total other income/(expense), net $ (247) $ 45 (649) % OI&E decreased during the first quarter of 2022 compared to the same quarter in 2021 due primarily to higher net losses on marketable and non-marketable securities and lower interest income. Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for the three months ended December 25, 2021 and December 26, 2020 were as follows (dollars in millions): Three Months Ended December 25, 2021 Decemb"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 19833,
+            "end": 19855,
+            "text": "s and restricted cash, ending balances $ 38,630 $ 37,719 Supplemental cash flow disclosure: Cash paid for income taxes, net $ 5,235 $ 1,787 Cash paid for interest $ 531 $ 619 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q1 2022 Form 10-Q | 5 Apple Inc. Notes to Condensed Consolidated Financial Statements (Unaudited) Note 1 \u2013 Summary of Significant Accounting Policies Basis of Presentation and Preparation The condensed consolidated financial statements include the accounts of Apple Inc. and its wholly owned subsidiaries (collectively \u201cApple\u201d or the \u201cCompany\u201d). Intercompany accounts and transactions have been eliminated. In the opinion of the Company\u2019s management, th"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 2,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000065/aapl-20210626.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "938440ca514dfb70d91450c688dc80eff94072ca08970d4e7679af1187f10c61",
+    "text_sha256": "43dc0bc27e134053e960f34e3610817826b11301cf2d130f4eb0efa6e5f1954c",
+    "text_file": "sources/AAPL-aapl-20210626.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 3,
+        "excerpts": [
+          {
+            "start": 70335,
+            "end": 70351,
+            "text": "hs Ended Nine Months Ended June 26, 2021 June 27, 2020 June 26, 2021 June 27, 2020 Interest and dividend income $ 719 $ 901 $ 2,184 $ 2,995 Interest expense ( 665 ) ( 697 ) ( 1,973 ) ( 2,239 ) Other income/(expense), net 189 ( 158 ) 585 ( 79 ) Total other income/(expense), net $ 243 $ 46 $ 796 $ 677 Note 5 \u2013 Income Taxes Uncertain Tax Positions As of June 26, 2021, the total amount of gross unrecognized tax benefits was $ 16.8 billion, of which $ 7.6 billion, if recognized, would impact the Company\u2019s effective tax rate. The Company had accrued $ 1.6 billion of gross interest and penalties related to income tax matters as of June 26, 2021. The Company is subject to taxation and files income tax ret"
+          },
+          {
+            "start": 112541,
+            "end": 112557,
+            "text": "Months Ended June 26, 2021 June 27, 2020 Change June 26, 2021 June 27, 2020 Change Interest and dividend income $ 719 $ 901 $ 2,184 $ 2,995 Interest expense (665) (697) (1,973) (2,239) Other income/(expense), net 189 (158) 585 (79) Total other income/(expense), net $ 243 $ 46 428 % $ 796 $ 677 18 % OI&E increased during the third quarter of 2021 compared to the third quarter of 2020 due primarily to a favorable carrying value adjustment of non-marketable securities and smaller impairments of securities, partially offset by lower interest income. Year-over-year OI&E increased during the first nine months of 2021 due primarily to smaller impairments of securities, lower interest expense and favorabl"
+          },
+          {
+            "start": 113078,
+            "end": 113094,
+            "text": "terest income. Year-over-year OI&E increased during the first nine months of 2021 due primarily to smaller impairments of securities, lower interest expense and favorable carrying value adjustments of non-marketable securities, partially offset by lower interest income. The weighted-average interest rate earned by the Company on its cash, cash equivalents and marketable securities was 1.32% and 1.74% in the third quarter of 2021 and 2020, respectively, and 1.40% and 1.95% in the first nine months of 2021 and 2020, respectively. Apple Inc. | Q3 2021 Form 10-Q | 27 Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for the three- and nine-"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 36245,
+            "end": 36267,
+            "text": " and restricted cash, ending balances $ 35,276 $ 35,039 Supplemental cash flow disclosure: Cash paid for income taxes, net $ 18,536 $ 8,410 Cash paid for interest $ 1,870 $ 2,275 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q3 2021 Form 10-Q | 5 Apple Inc. Notes to Condensed Consolidated Financial Statements (Unaudited) Note 1 \u2013 Summary of Significant Accounting Policies Basis of Presentation and Preparation The condensed consolidated financial statements include the accounts of Apple Inc. and its wholly owned subsidiaries (collectively \u201cApple\u201d or the \u201cCompany\u201d). Intercompany accounts and transactions have been eliminated. In the opinion of the Company\u2019s management"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 4,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000056/aapl-20210327.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "7f4043dda8a4e66ed8b9d31e31171b496d8133dae5494f8f48602b19522d8f56",
+    "text_sha256": "6688b564290931a71110898a03081a0d2aa8b89741eb92285fd68e68c8941e0a",
+    "text_file": "sources/AAPL-aapl-20210327.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 3,
+        "excerpts": [
+          {
+            "start": 70563,
+            "end": 70579,
+            "text": "ded Six Months Ended March 27, 2021 March 28, 2020 March 27, 2021 March 28, 2020 Interest and dividend income $ 718 $ 1,049 $ 1,465 $ 2,094 Interest expense ( 670 ) ( 757 ) ( 1,308 ) ( 1,542 ) Other income/(expense), net 460 ( 10 ) 396 79 Total other income/(expense), net $ 508 $ 282 $ 553 $ 631 Note 5 \u2013 Income Taxes Uncertain Tax Positions As of March 27, 2021, the total amount of gross unrecognized tax benefits was $ 16.9 billion, of which $ 8.3 billion, if recognized, would impact the Company\u2019s effective tax rate. The Company had accrued $ 1.6 billion of gross interest and penalties related to income tax matters as of March 27, 2021. The Company is subject to taxation and files income tax retur"
+          },
+          {
+            "start": 110635,
+            "end": 110651,
+            "text": " Ended March 27, 2021 March 28, 2020 Change March 27, 2021 March 28, 2020 Change Interest and dividend income $ 718 $ 1,049 $ 1,465 $ 2,094 Interest expense (670) (757) (1,308) (1,542) Other income/(expense), net 460 (10) 396 79 Total other income/(expense), net $ 508 $ 282 80 % $ 553 $ 631 (12) % OI&E increased during the second quarter of 2021 compared to the second quarter of 2020 due primarily to impairments of marketable and non-marketable securities in 2020 and a favorable carrying value adjustment of non-marketable securities in 2021, partially offset by lower interest income in 2021. OI&E decreased during the first six months of 2021 compared to the same period in 2020 due primarily to low"
+          },
+          {
+            "start": 111323,
+            "end": 111339,
+            "text": "e primarily to lower interest income in 2021, partially offset by impairments of marketable and non-marketable securities in 2020 and lower interest expense in 2021. The weighted-average interest rate earned by the Company on its cash, cash equivalents and marketable securities was 1.37% and 2.01% in the second quarter of 2021 and 2020, respectively, and 1.43% and 2.05% in the first six months of 2021 and 2020, respectively. Apple Inc. | Q2 2021 Form 10-Q | 27 Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for the three- and six-month periods ended March 27, 2021 and March 28, 2020 were as follows (dollars in millions): Three Months "
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 36274,
+            "end": 36296,
+            "text": " and restricted cash, ending balances $ 40,006 $ 43,049 Supplemental cash flow disclosure: Cash paid for income taxes, net $ 10,276 $ 7,505 Cash paid for interest $ 1,327 $ 1,689 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q2 2021 Form 10-Q | 5 Apple Inc. Notes to Condensed Consolidated Financial Statements (Unaudited) Note 1 \u2013 Summary of Significant Accounting Policies Basis of Presentation and Preparation The condensed consolidated financial statements include the accounts of Apple Inc. and its wholly owned subsidiaries (collectively \u201cApple\u201d or the \u201cCompany\u201d). Intercompany accounts and transactions have been eliminated. In the opinion of the Company\u2019s management"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 4,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000010/aapl-20201226.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "source_sha256": "0c78a9ea8cd9fbd0140abc1659729ff455b752e5d7c7c015fd1cf0d95b4f7acd",
+    "text_sha256": "1fb3b9e85f36db0b4738a8ea400237bea7a1446e78c3a490480248d5f17b67aa",
+    "text_file": "sources/AAPL-aapl-20201226.htm.txt",
+    "findings": [
+      {
+        "pattern": "interest expense",
+        "occurrences": 3,
+        "excerpts": [
+          {
+            "start": 62072,
+            "end": 62088,
+            "text": "2020 and December 28, 2019 (in millions): Three Months Ended December 26, 2020 December 28, 2019 Interest and dividend income $ 747 $ 1,045 Interest expense ( 638 ) ( 785 ) Other income/(expense), net ( 64 ) 89 Total other income/(expense), net $ 45 $ 349 Note 5 \u2013 Income Taxes Uncertain Tax Positions As of December 26, 2020, the total amount of gross unrecognized tax benefits was $ 17.1 billion, of which $ 9.0 billion, if recognized, would impact the Company\u2019s effective tax rate. The Company had accrued $ 1.6 billion of gross interest and penalties related to income tax matters as of December 26, 2020. The Company is subject to taxation and files income tax returns in the U.S. federal jurisdiction"
+          },
+          {
+            "start": 100105,
+            "end": 100121,
+            "text": " as follows (dollars in millions): Three Months Ended December 26, 2020 December 28, 2019 Change Interest and dividend income $ 747 $ 1,045 Interest expense (638) (785) Other income/(expense), net (64) 89 Total other income/(expense), net $ 45 $ 349 (87) % OI&E decreased during the first quarter of 2021 compared to the same quarter in 2020 due primarily to lower interest income and an adjustment to the carrying value of a non-marketable security, partially offset by lower interest expense. The weighted-average interest rate earned by the Company on its cash, cash equivalents and marketable securities was 1.49% and 2.08% in the first quarter of 2021 and 2020, respectively. Provision for Income Taxe"
+          },
+          {
+            "start": 100442,
+            "end": 100458,
+            "text": "2020 due primarily to lower interest income and an adjustment to the carrying value of a non-marketable security, partially offset by lower interest expense. The weighted-average interest rate earned by the Company on its cash, cash equivalents and marketable securities was 1.49% and 2.08% in the first quarter of 2021 and 2020, respectively. Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for the three months ended December 26, 2020 and December 28, 2019 were as follows (dollars in millions): Three Months Ended December 26, 2020 December 28, 2019 Provision for income taxes $ 4,824 $ 3,682 Effective tax rate 14.4 % 14.2 % Statutory fed"
+          }
+        ]
+      },
+      {
+        "pattern": "interest paid",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash paid for interest",
+        "occurrences": 1,
+        "excerpts": [
+          {
+            "start": 29164,
+            "end": 29186,
+            "text": "s and restricted cash, ending balances $ 37,719 $ 41,665 Supplemental cash flow disclosure: Cash paid for income taxes, net $ 1,787 $ 4,393 Cash paid for interest $ 619 $ 771 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q1 2021 Form 10-Q | 5 Apple Inc. Notes to Condensed Consolidated Financial Statements (Unaudited) Note 1 \u2013 Summary of Significant Accounting Policies Basis of Presentation and Preparation The condensed consolidated financial statements include the accounts of Apple Inc. and its wholly owned subsidiaries (collectively \u201cApple\u201d or the \u201cCompany\u201d). Intercompany accounts and transactions have been eliminated. In the opinion of the Company\u2019s management, th"
+          }
+        ]
+      },
+      {
+        "pattern": "finance leases?",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "principal payments",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "other financing activities",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "cash pool",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "non[ -]?controlling",
+        "occurrences": 0,
+        "excerpts": []
+      },
+      {
+        "pattern": "Waymo LLC",
+        "occurrences": 0,
+        "excerpts": []
+      }
+    ],
+    "exact_inline_tag_presence": {
+      "us-gaap:InterestExpense": 2,
+      "us-gaap:InterestPaidNet": 2,
+      "us-gaap:FinanceLeasePrincipalPayments": 0
+    }
+  }
+]

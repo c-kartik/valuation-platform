@@ -1,5 +1,14 @@
 # AAPL — company data preparation
 
+## Notes/commentary research — November 4
+
+The [research packet](../company-resolutions/commentary-research-2026-11-04/README.md)
+adds all fifteen FY2021–25 quarterlies, later comparative quarterlies and public
+SEC correspondence. All six FY2024/25 quarterlies lack the separate interest
+expense/paid facts found in the earlier quarters. No complete Other financing or
+lease-principal allocation was recovered. Continue the operating-method bridge;
+no historical amount, adopted method, preparation or sufficiency status changes.
+
 ## Manual cash-flow resolution — November 3
 
 The user approves the preferred Apple-only treatments and requires a durable

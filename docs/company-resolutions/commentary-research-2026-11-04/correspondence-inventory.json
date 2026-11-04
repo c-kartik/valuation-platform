@@ -1,0 +1,134 @@
+[
+  {
+    "ticker": "AAPL",
+    "form": "UPLOAD",
+    "date": "2024-05-16",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000000000024005673/filename1.pdf"
+  },
+  {
+    "ticker": "AAPL",
+    "form": "CORRESP",
+    "date": "2024-04-29",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000061/filename1.htm"
+  },
+  {
+    "ticker": "AAPL",
+    "form": "CORRESP",
+    "date": "2024-04-05",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036124018378/filename1.htm"
+  },
+  {
+    "ticker": "AAPL",
+    "form": "UPLOAD",
+    "date": "2024-04-02",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000000000024003505/filename1.pdf"
+  },
+  {
+    "ticker": "AAPL",
+    "form": "CORRESP",
+    "date": "2024-03-20",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000042/filename1.htm"
+  },
+  {
+    "ticker": "AAPL",
+    "form": "UPLOAD",
+    "date": "2024-03-06",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000000000024002512/filename1.pdf"
+  },
+  {
+    "ticker": "META",
+    "form": "UPLOAD",
+    "date": "2023-06-28",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000023006892/filename1.pdf"
+  },
+  {
+    "ticker": "META",
+    "form": "CORRESP",
+    "date": "2022-12-21",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322021265/filename1.htm"
+  },
+  {
+    "ticker": "META",
+    "form": "CORRESP",
+    "date": "2022-11-23",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322020073/filename1.htm"
+  },
+  {
+    "ticker": "META",
+    "form": "CORRESP",
+    "date": "2022-11-21",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322019968/filename1.htm"
+  },
+  {
+    "ticker": "META",
+    "form": "UPLOAD",
+    "date": "2022-11-21",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022012585/filename1.pdf"
+  },
+  {
+    "ticker": "META",
+    "form": "UPLOAD",
+    "date": "2022-11-21",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022012584/filename1.pdf"
+  },
+  {
+    "ticker": "META",
+    "form": "CORRESP",
+    "date": "2022-10-26",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322018399/filename1.htm"
+  },
+  {
+    "ticker": "META",
+    "form": "CORRESP",
+    "date": "2022-10-04",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322017167/filename1.htm"
+  },
+  {
+    "ticker": "META",
+    "form": "UPLOAD",
+    "date": "2022-09-29",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022010750/filename1.pdf"
+  },
+  {
+    "ticker": "META",
+    "form": "UPLOAD",
+    "date": "2022-01-27",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022001139/filename1.pdf"
+  },
+  {
+    "ticker": "META",
+    "form": "CORRESP",
+    "date": "2021-12-29",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321020492/filename1.htm"
+  },
+  {
+    "ticker": "META",
+    "form": "CORRESP",
+    "date": "2021-11-22",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321018190/filename1.htm"
+  },
+  {
+    "ticker": "META",
+    "form": "UPLOAD",
+    "date": "2021-11-12",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000021013758/filename1.pdf"
+  },
+  {
+    "ticker": "META",
+    "form": "CORRESP",
+    "date": "2021-11-04",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321017392/filename1.htm"
+  },
+  {
+    "ticker": "META",
+    "form": "CORRESP",
+    "date": "2021-09-28",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321014795/filename1.htm"
+  },
+  {
+    "ticker": "META",
+    "form": "UPLOAD",
+    "date": "2021-09-21",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000021011466/filename1.pdf"
+  }
+]

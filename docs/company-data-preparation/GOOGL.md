@@ -1,5 +1,14 @@
 # GOOGL — company data preparation
 
+## Notes/commentary research — November 4
+
+The [research packet](../company-resolutions/commentary-research-2026-11-04/README.md)
+adds later quarterly notes and the 2026 proxy's Waymo related-party disclosures.
+One outside investor's disclosed stake does not establish the full cap table,
+FY2021–25 parent cash attribution or all NCI fair value. Consolidated cash-flow
+amounts and ownership labels are preserved. No method, preparation or sufficiency
+status changes; a consolidated-valuation/claims route remains a separate proposal.
+
 ## Approved cash-flow scope treatments — November 3
 
 [Alphabet resolution](../company-resolutions/GOOGL/README.md) documents both

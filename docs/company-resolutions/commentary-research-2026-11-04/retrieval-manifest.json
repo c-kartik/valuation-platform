@@ -1,0 +1,522 @@
+[
+  {
+    "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+    "final_url": "https://data.sec.gov/submissions/CIK0000320193.json",
+    "role": "SEC filing inventory; locate correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:45.877136+00:00",
+    "status": 200,
+    "bytes": 163919,
+    "sha256": "ffcd46214e4547e94dee763cc9545ab3d5ecc9adce0892e451aa6ff3c248bc8a",
+    "body": "sources/AAPL-submissions.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000000000024005673/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000000000024005673/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:46.732758+00:00",
+    "status": 200,
+    "bytes": 27492,
+    "sha256": "2bc31b462b3a31415da23294a42c2db773f238c86a637d4278767a2661dc91d8",
+    "body": "sources/AAPL-0000000000-24-005673.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000061/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000061/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:47.474215+00:00",
+    "status": 200,
+    "bytes": 48118,
+    "sha256": "27b48a98d5cee4a7772f6365ff020bedbedff16fe9f698b0b541e2ad93f3e7ce",
+    "body": "sources/AAPL-0000320193-24-000061.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036124018378/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036124018378/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:48.056534+00:00",
+    "status": 200,
+    "bytes": 16490,
+    "sha256": "56c8cf48e75bc377b16454149cdf8762ebaaf366bc941c6d9d60e8354e1bfd60",
+    "body": "sources/AAPL-0001140361-24-018378.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000000000024003505/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000000000024003505/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:51.760468+00:00",
+    "status": 200,
+    "bytes": 29688,
+    "sha256": "b111698040e9a3a46805348095fab8a572b3f509682c20db2d172e0d5560ad8c",
+    "body": "sources/AAPL-0000000000-24-003505.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000042/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000042/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:52.349208+00:00",
+    "status": 200,
+    "bytes": 41777,
+    "sha256": "bc2bec067499a3c69dd22aab3d2b3ca28f71959ea4b2236ffdc1cc5b0390e90b",
+    "body": "sources/AAPL-0000320193-24-000042.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000000000024002512/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000000000024002512/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:53.033676+00:00",
+    "status": 200,
+    "bytes": 29588,
+    "sha256": "cc9f0b86a715053f5a348e809da9baddb19f5948cd005b8c659549b2e225b5bd",
+    "body": "sources/AAPL-0000000000-24-002512.gz"
+  },
+  {
+    "url": "https://data.sec.gov/submissions/CIK0001326801.json",
+    "final_url": "https://data.sec.gov/submissions/CIK0001326801.json",
+    "role": "SEC filing inventory; locate correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:53.797142+00:00",
+    "status": 200,
+    "bytes": 157546,
+    "sha256": "2c2f82a00d7f4322e8d81a9ce805c632d0d61a998c4671646b8b6463c83311c9",
+    "body": "sources/META-submissions.gz"
+  },
+  {
+    "url": "https://data.sec.gov/submissions/CIK0001326801-submissions-001.json",
+    "final_url": "https://data.sec.gov/submissions/CIK0001326801-submissions-001.json",
+    "role": "SEC older filing inventory",
+    "retrieved_at_utc": "2026-11-04T17:43:54.765137+00:00",
+    "status": 200,
+    "bytes": 314642,
+    "sha256": "8f868eae21eb8690a9dc71be79b3dff344a57aa6ffb618c90796c6f140dbd64a",
+    "body": "sources/META-CIK0001326801-submissions-001.json.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000023006892/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000023006892/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:55.438526+00:00",
+    "status": 200,
+    "bytes": 27530,
+    "sha256": "a3a45d717075db273f9218d8efbcb2eb6c4fbcedbf08a33ccc7f67dae4183b1c",
+    "body": "sources/META-0000000000-23-006892.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322021265/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322021265/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:56.183737+00:00",
+    "status": 200,
+    "bytes": 34704,
+    "sha256": "11c2dce2f420cd1e7e8a4d7361e0e24b7ad2e731934566d46ba06ef5a8c46de7",
+    "body": "sources/META-0000950103-22-021265.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322020073/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322020073/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:56.886210+00:00",
+    "status": 200,
+    "bytes": 7723,
+    "sha256": "7c6e57cc9c2fbfcde168844b8eef92bd73de42777b2f6b6542aaf01029ca3619",
+    "body": "sources/META-0000950103-22-020073.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322019968/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322019968/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:57.541286+00:00",
+    "status": 200,
+    "bytes": 4586,
+    "sha256": "3411495ce3de403674d25623b2931965679e455e515ce249c09046fba09ac731",
+    "body": "sources/META-0000950103-22-019968.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022012585/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022012585/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:58.229599+00:00",
+    "status": 200,
+    "bytes": 27696,
+    "sha256": "a02cf242422d971e478ee17b34ae2b935da4eeead4581df0dcdd336f9f27ad41",
+    "body": "sources/META-0000000000-22-012585.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022012584/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022012584/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:58.975337+00:00",
+    "status": 200,
+    "bytes": 29578,
+    "sha256": "a400aa68a6b46b49593ee1a64488cd19c614ca67cabdbf27e23825abf0093f98",
+    "body": "sources/META-0000000000-22-012584.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322018399/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322018399/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:43:59.569931+00:00",
+    "status": 200,
+    "bytes": 92940,
+    "sha256": "8a55e6519f33dfac2f4aeb836a0ca8c3082cae829460f88c5bc8225192d855fd",
+    "body": "sources/META-0000950103-22-018399.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322017167/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010322017167/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:00.173410+00:00",
+    "status": 200,
+    "bytes": 6640,
+    "sha256": "c5a114218e1052005d9f5ccc2105f90832774f31a031bbb1a80778425a7f2374",
+    "body": "sources/META-0000950103-22-017167.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022010750/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022010750/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:00.877109+00:00",
+    "status": 200,
+    "bytes": 29680,
+    "sha256": "5e6670956fd5e497f57e4528793b24164a825e68bf9d3336522b0607286cb7b3",
+    "body": "sources/META-0000000000-22-010750.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022001139/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000022001139/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:01.609928+00:00",
+    "status": 200,
+    "bytes": 27513,
+    "sha256": "11f3cb5caa9a06c00ee618de6fe0d630f14c2f5935b839c0a6464427085aca7d",
+    "body": "sources/META-0000000000-22-001139.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321020492/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321020492/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:02.334741+00:00",
+    "status": 200,
+    "bytes": 49230,
+    "sha256": "45c808bd92741f3a1b1240ea079519d491cff5cf6e3a9d7c9df07bc27c95bf5e",
+    "body": "sources/META-0000950103-21-020492.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321018190/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321018190/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:02.974390+00:00",
+    "status": 200,
+    "bytes": 6206,
+    "sha256": "22bc5e0753ff640517f439238efab65f049937f19b5754b0d71c46cf9a06b0c1",
+    "body": "sources/META-0000950103-21-018190.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000021013758/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000021013758/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:03.562536+00:00",
+    "status": 200,
+    "bytes": 29891,
+    "sha256": "19e29bbfcd38554544e974df1eb52a50afdf4539f32e7bfb22c4db5aff9dd648",
+    "body": "sources/META-0000000000-21-013758.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321017392/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321017392/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:04.177796+00:00",
+    "status": 200,
+    "bytes": 42632,
+    "sha256": "23e591ae2809c35530f21e06a418870c661536e8c499b1627fa5120c8f9919a3",
+    "body": "sources/META-0000950103-21-017392.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321014795/filename1.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010321014795/filename1.htm",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:04.901386+00:00",
+    "status": 200,
+    "bytes": 6653,
+    "sha256": "75e41c2c8ca4bd2f07b00c7dcddbddc449ece3f7d30dbb5fbb5f5a0e9f4281a7",
+    "body": "sources/META-0000950103-21-014795.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000021011466/filename1.pdf",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000000000021011466/filename1.pdf",
+    "role": "Public SEC staff/issuer correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:05.475079+00:00",
+    "status": 200,
+    "bytes": 30781,
+    "sha256": "5da0cd2515d6b6c83fbbad6975ecc7b6a28df5748547fc5ea5df78782623c3e2",
+    "body": "sources/META-0000000000-21-011466.gz"
+  },
+  {
+    "url": "https://data.sec.gov/submissions/CIK0001652044.json",
+    "final_url": "https://data.sec.gov/submissions/CIK0001652044.json",
+    "role": "SEC filing inventory; locate correspondence",
+    "retrieved_at_utc": "2026-11-04T17:44:05.991785+00:00",
+    "status": 200,
+    "bytes": 152246,
+    "sha256": "1c5158635d2e23826239e9680f15288dc42d4cd95ff3ed4a224a4c9875363659",
+    "body": "sources/GOOGL-submissions.gz"
+  },
+  {
+    "url": "https://data.sec.gov/submissions/CIK0001652044-submissions-001.json",
+    "final_url": "https://data.sec.gov/submissions/CIK0001652044-submissions-001.json",
+    "role": "SEC older filing inventory",
+    "retrieved_at_utc": "2026-11-04T17:44:06.890869+00:00",
+    "status": 200,
+    "bytes": 270314,
+    "sha256": "caa8aa4043f5f755bdc421820cef0172f7216081faadf070be252e9137dc1547",
+    "body": "sources/GOOGL-CIK0001652044-submissions-001.json.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "retrieved_at_utc": "2026-11-04T17:45:37.265488+00:00",
+    "status": 200,
+    "bytes": 1018325,
+    "sha256": "f0f5c584bf71d3bc1956cb40f357ecf91b977445c913c9cc0cb24f34d295349a",
+    "body": "sources/AAPL-aapl-20260627.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "retrieved_at_utc": "2026-11-04T17:45:37.982241+00:00",
+    "status": 200,
+    "bytes": 999925,
+    "sha256": "c3a9f40cf884ca350743c2793a173c5752c809a6f3a28e63c714a9ff37b353ab",
+    "body": "sources/AAPL-aapl-20260328.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "retrieved_at_utc": "2026-11-04T17:45:38.589049+00:00",
+    "status": 200,
+    "bytes": 766088,
+    "sha256": "a89dd56307dd10c9f9d3fd6507426db6d66b13ce212639e265d80b031735d1f3",
+    "body": "sources/AAPL-aapl-20251227.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "retrieved_at_utc": "2026-11-04T17:45:39.176498+00:00",
+    "status": 200,
+    "bytes": 1826165,
+    "sha256": "b6ddf8c1e1073b762d5907ebea2a73ab5c28e6f711671cea323dcc3914e73d20",
+    "body": "sources/META-meta-20260930.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "retrieved_at_utc": "2026-11-04T17:45:39.995488+00:00",
+    "status": 200,
+    "bytes": 1784009,
+    "sha256": "420b42ece44cebfb2e0a83f3eba44ca079933a1227e674df0b01311c5efbd904",
+    "body": "sources/META-meta-20260630.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/meta-20260331.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/meta-20260331.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "retrieved_at_utc": "2026-11-04T17:45:40.640474+00:00",
+    "status": 200,
+    "bytes": 1486021,
+    "sha256": "db103549162c764f85600b594971c536cb6960a66c4af0a79a14164426b75bc9",
+    "body": "sources/META-meta-20260331.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "retrieved_at_utc": "2026-11-04T17:45:41.147106+00:00",
+    "status": 200,
+    "bytes": 2530719,
+    "sha256": "0a60075645d6d7626ef0c6a2649452909c799f79af2a15cd8de4962ac573d6f3",
+    "body": "sources/GOOGL-goog-20260930.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "retrieved_at_utc": "2026-11-04T17:45:41.649002+00:00",
+    "status": 200,
+    "bytes": 2464248,
+    "sha256": "c28fb2bd2d7a408a952a4110f2b8005b0914f3252af997a3dbd8b1150bfb9d63",
+    "body": "sources/GOOGL-goog-20260630.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+    "role": "Later 2026 quarterly notes and MD&A; comparative evidence only for FY2021-25 gaps",
+    "retrieved_at_utc": "2026-11-04T17:45:42.121804+00:00",
+    "status": 200,
+    "bytes": 1714828,
+    "sha256": "a40eccd972475d5c4db7412f6aebc450b4afa9a26b1889dfb9f517bec04321b1",
+    "body": "sources/GOOGL-goog-20260331.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000130817926000342/goog-20260424.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/1652044/000130817926000342/goog-20260424.htm",
+    "role": "Related-party Waymo financing and subsidiary ownership; no assumed cap table",
+    "retrieved_at_utc": "2026-11-04T17:45:42.589645+00:00",
+    "status": 200,
+    "bytes": 2175852,
+    "sha256": "98359b97535035b3406efd42116cdc3247126ab5658d94abd376da4a584c225c",
+    "body": "sources/GOOGL-2026-proxy.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:46.471274+00:00",
+    "status": 200,
+    "bytes": 888163,
+    "sha256": "7d5b2efdce4feb1514aec6658005115dafdf587bd1c910ab784ad1d234367848",
+    "body": "sources/AAPL-aapl-20250628.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000057/aapl-20250329.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000057/aapl-20250329.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:47.138128+00:00",
+    "status": 200,
+    "bytes": 890092,
+    "sha256": "e14ae23f4801cf9cf4904a2b5f741b81900bdba0c617441cd4a57595d0615afb",
+    "body": "sources/AAPL-aapl-20250329.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000008/aapl-20241228.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000008/aapl-20241228.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:47.803510+00:00",
+    "status": 200,
+    "bytes": 732704,
+    "sha256": "ca0b1d01fdcd36e298d43b08abbd459aa4c7c41df5b2fca8cffa0dc5ba83fc83",
+    "body": "sources/AAPL-aapl-20241228.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000081/aapl-20240629.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000081/aapl-20240629.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:48.482066+00:00",
+    "status": 200,
+    "bytes": 889251,
+    "sha256": "7cac3e1634a5fc8bf81dae695c33254329254ba4880e1b2fce70555cd7c9830a",
+    "body": "sources/AAPL-aapl-20240629.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000069/aapl-20240330.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000069/aapl-20240330.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:49.117739+00:00",
+    "status": 200,
+    "bytes": 884961,
+    "sha256": "9ea1b7e25a52d65af7d58a64966746dee77591aff7ff54a635d907c05f2e8aa9",
+    "body": "sources/AAPL-aapl-20240330.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000006/aapl-20231230.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000006/aapl-20231230.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:49.949739+00:00",
+    "status": 200,
+    "bytes": 732288,
+    "sha256": "b8d4c0a7d6b84dc9a6c51f60f3439d8bab12f05c21fad81f7447a3dcacd8841a",
+    "body": "sources/AAPL-aapl-20231230.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000077/aapl-20230701.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000077/aapl-20230701.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:50.653423+00:00",
+    "status": 200,
+    "bytes": 963324,
+    "sha256": "7d7aefc39b0fc9d9e2b5c82632b99819cc587c5763ec5a5800002ccb5d11d06e",
+    "body": "sources/AAPL-aapl-20230701.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000064/aapl-20230401.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000064/aapl-20230401.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:51.465360+00:00",
+    "status": 200,
+    "bytes": 1279605,
+    "sha256": "81b7ec0a5dcb3ea1a934276bd0ac220c4d0b7bcc72e1a2449e31eec773ac87e6",
+    "body": "sources/AAPL-aapl-20230401.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000006/aapl-20221231.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000006/aapl-20221231.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:52.399100+00:00",
+    "status": 200,
+    "bytes": 1059047,
+    "sha256": "e94e0d743fc7878b6fe5a41df87a60278d7c007cc3e46de315f0f1ebfa21b4b1",
+    "body": "sources/AAPL-aapl-20221231.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000070/aapl-20220625.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000070/aapl-20220625.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:53.684828+00:00",
+    "status": 200,
+    "bytes": 1295775,
+    "sha256": "80fd3f8d2f811db50c17f38741e073831cb662c4c75fd1e00583b0be08c1ccc6",
+    "body": "sources/AAPL-aapl-20220625.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000059/aapl-20220326.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000059/aapl-20220326.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:54.702514+00:00",
+    "status": 200,
+    "bytes": 1310520,
+    "sha256": "ef626826d48d69bffe3d19e701122f71e3fca637f4d56601b409f85248f451bc",
+    "body": "sources/AAPL-aapl-20220326.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000007/aapl-20211225.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000007/aapl-20211225.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:55.104755+00:00",
+    "status": 200,
+    "bytes": 1064693,
+    "sha256": "4662e4f6744737fcf873a455e21b14dabd551fca3999929b980f2d60f4d80f4d",
+    "body": "sources/AAPL-aapl-20211225.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000065/aapl-20210626.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000065/aapl-20210626.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:55.673604+00:00",
+    "status": 200,
+    "bytes": 1705908,
+    "sha256": "938440ca514dfb70d91450c688dc80eff94072ca08970d4e7679af1187f10c61",
+    "body": "sources/AAPL-aapl-20210626.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000056/aapl-20210327.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000056/aapl-20210327.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:56.100305+00:00",
+    "status": 200,
+    "bytes": 1698505,
+    "sha256": "7f4043dda8a4e66ed8b9d31e31171b496d8133dae5494f8f48602b19522d8f56",
+    "body": "sources/AAPL-aapl-20210327.htm.gz"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000010/aapl-20201226.htm",
+    "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000010/aapl-20201226.htm",
+    "role": "Apple FY2021-25 quarterly notes and MD&A; interest/financing/lease research",
+    "retrieved_at_utc": "2026-11-04T17:46:56.529192+00:00",
+    "status": 200,
+    "bytes": 1368363,
+    "sha256": "0c78a9ea8cd9fbd0140abc1659729ff455b752e5d7c7c015fd1cf0d95b4f7acd",
+    "body": "sources/AAPL-aapl-20201226.htm.gz"
+  }
+]

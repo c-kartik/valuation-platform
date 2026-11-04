@@ -1,5 +1,13 @@
 # Company data preparation register
 
+## Three-company notes/commentary research — November 4
+
+[Research findings](../company-resolutions/commentary-research-2026-11-04/README.md)
+and affected AAPL/META/GOOGL records document additional primary-source searches
+and preferred next treatments. No historical value, method, acceptance contract,
+preparation/sufficiency status or wider-universe scope changes. The remaining
+interest, financing and ownership gaps stay explicit; all three reviews stay OPEN.
+
 ## Approved three-company implementation — November3
 
 The [execution log](../company-resolutions/implementation-2026-11-03/implementation-log.json) links18 approved treatments, new source schedules, partial basis/share bridges and versioned runtime review data. Five annual periods reach API/UI for each issuer with status/ownership labels. Source/arithmetic/software checks are separate from financial clearance: all three company reviews stayOPEN. Existing preparation-accounting scopes and paused42/50company expansion are unchanged.

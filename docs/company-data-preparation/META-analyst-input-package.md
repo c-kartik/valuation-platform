@@ -1,5 +1,14 @@
 # META — consolidated five-year analyst-input review
 
+## Notes/commentary research — November 4
+
+The [research packet](../company-resolutions/commentary-research-2026-11-04/README.md)
+adds three later comparative quarterlies and sixteen public SEC correspondence
+documents to the existing annual/quarterly and official-call review. No complete
+annual debt allocation of Other financing was recovered. Existing expensed-interest
+FCFF and provisional identified-component FCFE are unchanged; no capitalized cash
+interest is invented. Preparation, sufficiency and parent OPEN statuses remain.
+
 ## Approved cash-flow resolution overlay — November 3
 
 [Meta resolution](../company-resolutions/META/README.md) records five approved

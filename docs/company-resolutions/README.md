@@ -1,5 +1,13 @@
 # Company cash-flow resolutions
 
+## Latest research — November 4
+
+The [online notes/commentary follow-up](commentary-research-2026-11-04/README.md)
+adds fifteen Apple target-history quarterlies, nine later comparative quarterlies,
+Alphabet's proxy and twenty-two public SEC correspondence documents. It records
+the evidence limits and preferred next treatments. No cash-flow amount, numerical
+method or completion status is changed; issuer and combined reviews remain OPEN.
+
 ## Latest approved execution — November3
 
 All18preferred treatments are approved. See the [execution log](implementation-2026-11-03/implementation-log.json), [current platform projection](implementation-2026-11-03/platform-cashflows.json), and [independent review](implementation-2026-11-03/independent-review/findings.md). The platform exposes qualified five-year FCFF/FCFE history plus a separate manual financing/FCFE forecast. New research does not overwrite prior ledgers or fabricate missing data. Full financial clearance remainsOPEN; earlier per-milestone integration statements retain their original date/scope.
