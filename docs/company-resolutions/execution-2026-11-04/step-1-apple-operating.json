@@ -1,0 +1,695 @@
+{
+  "arithmetic_verdict": "PASS_FIVE_EXACT_RECONCILIATIONS",
+  "bridge_formula": "cash FCF = tax-timing diagnostic + SBC + net nonoperating after allocated tax + provision minus cash taxes",
+  "financial_verdict": "NOT_CLEARED_AS_OPERATING_FCFF",
+  "interpretation": "Provision minus cash taxes is an observable consolidated conversion. Removing it from the entire aggregate is an algebraic decomposition, not proof of which mixed caption contains tax or that the remaining amount is operating WC. D&A and cash PP&E keep their reported populations. No alternative is spliced into history.",
+  "numerical_adoption": false,
+  "periods": [
+    {
+      "aggregate_after_tax_conversion_UNCLASSIFIED": {
+        "amount_usd": "3694000000",
+        "display_billions": "3.69",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "3694000000"
+        }
+      },
+      "aggregate_before_tax_conversion": {
+        "amount_usd": "-7164000000",
+        "display_billions": "-7.16",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-7164000000"
+        }
+      },
+      "aggregate_unclassified_population": [
+        {
+          "concept": "DeferredIncomeTaxExpenseBenefit",
+          "contribution_usd": "-4774000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/0/operating_bridge/statement_terms/3"
+        },
+        {
+          "concept": "OtherNoncashIncomeExpense",
+          "contribution_usd": "-147000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/0/operating_bridge/statement_terms/4"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingAssets",
+          "contribution_usd": "-8042000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/0/operating_bridge/statement_terms/8"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+          "contribution_usd": "5799000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/0/operating_bridge/statement_terms/11"
+        }
+      ],
+      "balancing_plug_used": false,
+      "bridge_difference_usd": "0",
+      "broad_statement_movement_diagnostic_NOT_FCFF": {
+        "amount_usd": "89744319832.977739522191800891884219876015273746188",
+        "display_billions": "89.74",
+        "exact_fraction_usd": {
+          "denominator": "109207",
+          "numerator": "9800707936000000"
+        }
+      },
+      "da_comparative_check": null,
+      "eligible_for_forecast_calibration": false,
+      "filing_operands_usd": {
+        "cash_ppe": "11085000000",
+        "cash_statement_da": "11284000000",
+        "cash_tax_paid_net": "25385000000",
+        "cfo_control": "104038000000",
+        "ebit": "108949000000",
+        "net_income": "94680000000",
+        "pretax_income": "109207000000",
+        "sbc": "7906000000",
+        "tax_provision": "14527000000"
+      },
+      "fiscal_year": 2021,
+      "identity": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "mixed_cash_contribution": {
+        "amount_usd": "-2243000000",
+        "display_billions": "-2.24",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-2243000000"
+        }
+      },
+      "net_nonoperating_after_allocated_tax": {
+        "amount_usd": "223680167.02226047780819910811578012398472625381157",
+        "display_billions": "0.22",
+        "exact_fraction_usd": {
+          "denominator": "109207",
+          "numerator": "24427440000000"
+        }
+      },
+      "nopat_reported_etr_convention": {
+        "amount_usd": "94456319832.977739522191800891884219876015273746188",
+        "display_billions": "94.46",
+        "exact_fraction_usd": {
+          "denominator": "109207",
+          "numerator": "10315291320000000"
+        }
+      },
+      "provision_minus_cash_tax": {
+        "amount_usd": "-10858000000",
+        "display_billions": "-10.86",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-10858000000"
+        }
+      },
+      "remaining_issues": [
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "reported_cfo_less_cash_ppe": {
+        "amount_usd": "92953000000",
+        "display_billions": "92.95",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "92953000000"
+        }
+      },
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml"
+      ],
+      "tax_timing_diagnostic_NOT_FCFF": {
+        "amount_usd": "95681319832.977739522191800891884219876015273746188",
+        "display_billions": "95.68",
+        "exact_fraction_usd": {
+          "denominator": "109207",
+          "numerator": "10449069895000000"
+        }
+      },
+      "trade_cash_contribution": {
+        "amount_usd": "-2668000000",
+        "display_billions": "-2.67",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-2668000000"
+        }
+      },
+      "verified_operating_fcff_usd": null
+    },
+    {
+      "aggregate_after_tax_conversion_UNCLASSIFIED": {
+        "amount_usd": "412000000",
+        "display_billions": "0.41",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "412000000"
+        }
+      },
+      "aggregate_before_tax_conversion": {
+        "amount_usd": "139000000",
+        "display_billions": "0.14",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "139000000"
+        }
+      },
+      "aggregate_unclassified_population": [
+        {
+          "concept": "DeferredIncomeTaxExpenseBenefit",
+          "contribution_usd": "895000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/1/operating_bridge/statement_terms/3"
+        },
+        {
+          "concept": "OtherNoncashIncomeExpense",
+          "contribution_usd": "111000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/1/operating_bridge/statement_terms/4"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingAssets",
+          "contribution_usd": "-6499000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/1/operating_bridge/statement_terms/8"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+          "contribution_usd": "5632000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/1/operating_bridge/statement_terms/11"
+        }
+      ],
+      "balancing_plug_used": false,
+      "bridge_difference_usd": "0",
+      "broad_statement_movement_diagnostic_NOT_FCFF": {
+        "amount_usd": "101678877097.97402248474009890598893394792742416228",
+        "display_billions": "101.68",
+        "exact_fraction_usd": {
+          "denominator": "119103",
+          "numerator": "12110259299000000"
+        }
+      },
+      "da_comparative_check": null,
+      "eligible_for_forecast_calibration": false,
+      "filing_operands_usd": {
+        "cash_ppe": "10708000000",
+        "cash_statement_da": "11104000000",
+        "cash_tax_paid_net": "19573000000",
+        "cfo_control": "122151000000",
+        "ebit": "119437000000",
+        "net_income": "99803000000",
+        "pretax_income": "119103000000",
+        "sbc": "9038000000",
+        "tax_provision": "19300000000"
+      },
+      "fiscal_year": 2022,
+      "identity": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "mixed_cash_contribution": {
+        "amount_usd": "-867000000",
+        "display_billions": "-0.87",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-867000000"
+        }
+      },
+      "net_nonoperating_after_allocated_tax": {
+        "amount_usd": "-279877097.97402248474009890598893394792742416227971",
+        "display_billions": "-0.28",
+        "exact_fraction_usd": {
+          "denominator": "119103",
+          "numerator": "-33334202000000"
+        }
+      },
+      "nopat_reported_etr_convention": {
+        "amount_usd": "100082877097.97402248474009890598893394792742416228",
+        "display_billions": "100.08",
+        "exact_fraction_usd": {
+          "denominator": "119103",
+          "numerator": "11920170911000000"
+        }
+      },
+      "provision_minus_cash_tax": {
+        "amount_usd": "-273000000",
+        "display_billions": "-0.27",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-273000000"
+        }
+      },
+      "remaining_issues": [
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "reported_cfo_less_cash_ppe": {
+        "amount_usd": "111443000000",
+        "display_billions": "111.44",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "111443000000"
+        }
+      },
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml"
+      ],
+      "tax_timing_diagnostic_NOT_FCFF": {
+        "amount_usd": "102957877097.97402248474009890598893394792742416228",
+        "display_billions": "102.96",
+        "exact_fraction_usd": {
+          "denominator": "119103",
+          "numerator": "12262592036000000"
+        }
+      },
+      "trade_cash_contribution": {
+        "amount_usd": "2067000000",
+        "display_billions": "2.07",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "2067000000"
+        }
+      },
+      "verified_operating_fcff_usd": null
+    },
+    {
+      "aggregate_after_tax_conversion_UNCLASSIFIED": {
+        "amount_usd": "-2942000000",
+        "display_billions": "-2.94",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-2942000000"
+        }
+      },
+      "aggregate_before_tax_conversion": {
+        "amount_usd": "-4880000000",
+        "display_billions": "-4.88",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-4880000000"
+        }
+      },
+      "aggregate_unclassified_population": [
+        {
+          "concept": "OtherNoncashIncomeExpense",
+          "contribution_usd": "-2227000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/2/operating_bridge/statement_terms/3"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingAssets",
+          "contribution_usd": "-5684000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/2/operating_bridge/statement_terms/7"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+          "contribution_usd": "3031000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/2/operating_bridge/statement_terms/9"
+        }
+      ],
+      "balancing_plug_used": false,
+      "bridge_difference_usd": "0",
+      "broad_statement_movement_diagnostic_NOT_FCFF": {
+        "amount_usd": "91459836665.611591756348034043750439614545966096926",
+        "display_billions": "91.46",
+        "exact_fraction_usd": {
+          "denominator": "14217",
+          "numerator": "1300284497875000"
+        }
+      },
+      "da_comparative_check": null,
+      "eligible_for_forecast_calibration": false,
+      "filing_operands_usd": {
+        "cash_ppe": "10959000000",
+        "cash_statement_da": "11519000000",
+        "cash_tax_paid_net": "18679000000",
+        "cfo_control": "110543000000",
+        "ebit": "114301000000",
+        "net_income": "96995000000",
+        "pretax_income": "113736000000",
+        "sbc": "10833000000",
+        "tax_provision": "16741000000"
+      },
+      "fiscal_year": 2023,
+      "identity": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "mixed_cash_contribution": {
+        "amount_usd": "-2653000000",
+        "display_billions": "-2.65",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-2653000000"
+        }
+      },
+      "net_nonoperating_after_allocated_tax": {
+        "amount_usd": "-481836665.61159175634803404375043961454596609692622",
+        "display_billions": "-0.48",
+        "exact_fraction_usd": {
+          "denominator": "14217",
+          "numerator": "-6850271875000"
+        }
+      },
+      "nopat_reported_etr_convention": {
+        "amount_usd": "97476836665.611591756348034043750439614545966096926",
+        "display_billions": "97.48",
+        "exact_fraction_usd": {
+          "denominator": "14217",
+          "numerator": "1385828186875000"
+        }
+      },
+      "provision_minus_cash_tax": {
+        "amount_usd": "-1938000000",
+        "display_billions": "-1.94",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-1938000000"
+        }
+      },
+      "remaining_issues": [
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "reported_cfo_less_cash_ppe": {
+        "amount_usd": "99584000000",
+        "display_billions": "99.58",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "99584000000"
+        }
+      },
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml"
+      ],
+      "tax_timing_diagnostic_NOT_FCFF": {
+        "amount_usd": "91170836665.611591756348034043750439614545966096926",
+        "display_billions": "91.17",
+        "exact_fraction_usd": {
+          "denominator": "14217",
+          "numerator": "1296175784875000"
+        }
+      },
+      "trade_cash_contribution": {
+        "amount_usd": "-3924000000",
+        "display_billions": "-3.92",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-3924000000"
+        }
+      },
+      "verified_operating_fcff_usd": null
+    },
+    {
+      "aggregate_after_tax_conversion_UNCLASSIFIED": {
+        "amount_usd": "-2092000000",
+        "display_billions": "-2.09",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-2092000000"
+        }
+      },
+      "aggregate_before_tax_conversion": {
+        "amount_usd": "1555000000",
+        "display_billions": "1.56",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "1555000000"
+        }
+      },
+      "aggregate_unclassified_population": [
+        {
+          "concept": "OtherNoncashIncomeExpense",
+          "contribution_usd": "-2266000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/3/operating_bridge/statement_terms/3"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingAssets",
+          "contribution_usd": "-11731000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/3/operating_bridge/statement_terms/7"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+          "contribution_usd": "15552000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/3/operating_bridge/statement_terms/9"
+        }
+      ],
+      "balancing_plug_used": false,
+      "bridge_difference_usd": "0",
+      "broad_statement_movement_diagnostic_NOT_FCFF": {
+        "amount_usd": "99180805288.091671053164351945580434870632060574159",
+        "display_billions": "99.18",
+        "exact_fraction_usd": {
+          "denominator": "24697",
+          "numerator": "2449468348200000"
+        }
+      },
+      "da_comparative_check": {
+        "amount_usd": "355000000",
+        "display_billions": "0.36",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "355000000"
+        }
+      },
+      "eligible_for_forecast_calibration": false,
+      "filing_operands_usd": {
+        "cash_ppe": "9447000000",
+        "cash_statement_da": "11445000000",
+        "cash_tax_paid_net": "26102000000",
+        "cfo_control": "118254000000",
+        "ebit": "123216000000",
+        "net_income": "93736000000",
+        "pretax_income": "123485000000",
+        "sbc": "11688000000",
+        "tax_provision": "29749000000"
+      },
+      "fiscal_year": 2024,
+      "identity": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "mixed_cash_contribution": {
+        "amount_usd": "3821000000",
+        "display_billions": "3.82",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "3821000000"
+        }
+      },
+      "net_nonoperating_after_allocated_tax": {
+        "amount_usd": "204194711.90832894683564805441956512936793942584120",
+        "display_billions": "0.20",
+        "exact_fraction_usd": {
+          "denominator": "24697",
+          "numerator": "5042996800000"
+        }
+      },
+      "nopat_reported_etr_convention": {
+        "amount_usd": "93531805288.091671053164351945580434870632060574159",
+        "display_billions": "93.53",
+        "exact_fraction_usd": {
+          "denominator": "24697",
+          "numerator": "2309954995200000"
+        }
+      },
+      "provision_minus_cash_tax": {
+        "amount_usd": "3647000000",
+        "display_billions": "3.65",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "3647000000"
+        }
+      },
+      "remaining_issues": [
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "reported_cfo_less_cash_ppe": {
+        "amount_usd": "108807000000",
+        "display_billions": "108.81",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "108807000000"
+        }
+      },
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml"
+      ],
+      "tax_timing_diagnostic_NOT_FCFF": {
+        "amount_usd": "93267805288.091671053164351945580434870632060574159",
+        "display_billions": "93.27",
+        "exact_fraction_usd": {
+          "denominator": "24697",
+          "numerator": "2303434987200000"
+        }
+      },
+      "trade_cash_contribution": {
+        "amount_usd": "-170000000",
+        "display_billions": "-0.17",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-170000000"
+        }
+      },
+      "verified_operating_fcff_usd": null
+    },
+    {
+      "aggregate_after_tax_conversion_UNCLASSIFIED": {
+        "amount_usd": "2288000000",
+        "display_billions": "2.29",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "2288000000"
+        }
+      },
+      "aggregate_before_tax_conversion": {
+        "amount_usd": "-20362000000",
+        "display_billions": "-20.36",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-20362000000"
+        }
+      },
+      "aggregate_unclassified_population": [
+        {
+          "concept": "OtherNoncashIncomeExpense",
+          "contribution_usd": "-89000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/4/operating_bridge/statement_terms/3"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingAssets",
+          "contribution_usd": "-9197000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/4/operating_bridge/statement_terms/7"
+        },
+        {
+          "concept": "IncreaseDecreaseInOtherOperatingLiabilities",
+          "contribution_usd": "-11076000000",
+          "source_pointer": "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json#/periods/4/operating_bridge/statement_terms/9"
+        }
+      ],
+      "balancing_plug_used": false,
+      "bridge_difference_usd": "0",
+      "broad_statement_movement_diagnostic_NOT_FCFF": {
+        "amount_usd": "86263891892.502768799584115001243134507153674027530",
+        "display_billions": "86.26",
+        "exact_fraction_usd": {
+          "denominator": "44243",
+          "numerator": "3816573369000000"
+        }
+      },
+      "da_comparative_check": {
+        "amount_usd": "2000000",
+        "display_billions": "0.00",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "2000000"
+        }
+      },
+      "eligible_for_forecast_calibration": false,
+      "filing_operands_usd": {
+        "cash_ppe": "12715000000",
+        "cash_statement_da": "11698000000",
+        "cash_tax_paid_net": "43369000000",
+        "cfo_control": "111482000000",
+        "ebit": "133050000000",
+        "net_income": "112010000000",
+        "pretax_income": "132729000000",
+        "sbc": "12863000000",
+        "tax_provision": "20719000000"
+      },
+      "fiscal_year": 2025,
+      "identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "mixed_cash_contribution": {
+        "amount_usd": "-20273000000",
+        "display_billions": "-20.27",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-20273000000"
+        }
+      },
+      "net_nonoperating_after_allocated_tax": {
+        "amount_usd": "-270891892.50276879958411500124313450715367402752978",
+        "display_billions": "-0.27",
+        "exact_fraction_usd": {
+          "denominator": "44243",
+          "numerator": "-11985070000000"
+        }
+      },
+      "nopat_reported_etr_convention": {
+        "amount_usd": "112280891892.50276879958411500124313450715367402753",
+        "display_billions": "112.28",
+        "exact_fraction_usd": {
+          "denominator": "44243",
+          "numerator": "4967643500000000"
+        }
+      },
+      "provision_minus_cash_tax": {
+        "amount_usd": "-22650000000",
+        "display_billions": "-22.65",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-22650000000"
+        }
+      },
+      "remaining_issues": [
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "reported_cfo_less_cash_ppe": {
+        "amount_usd": "98767000000",
+        "display_billions": "98.77",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "98767000000"
+        }
+      },
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+      ],
+      "tax_timing_diagnostic_NOT_FCFF": {
+        "amount_usd": "108824891892.50276879958411500124313450715367402753",
+        "display_billions": "108.82",
+        "exact_fraction_usd": {
+          "denominator": "44243",
+          "numerator": "4814739692000000"
+        }
+      },
+      "trade_cash_contribution": {
+        "amount_usd": "-4727000000",
+        "display_billions": "-4.73",
+        "exact_fraction_usd": {
+          "denominator": "1",
+          "numerator": "-4727000000"
+        }
+      },
+      "verified_operating_fcff_usd": null
+    }
+  ],
+  "schema_version": "apple-operating-reconciliation-v1",
+  "ticker": "AAPL"
+}

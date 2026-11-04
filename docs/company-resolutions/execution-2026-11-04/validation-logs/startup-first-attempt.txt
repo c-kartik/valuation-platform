@@ -1,0 +1,31 @@
+INFO:     Started server process [97996]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8132 (Press CTRL+C to quit)
+file:///Users/kc/Projects/valuation-platform/frontend/node_modules/rolldown/dist/shared/create-bundler-option-DH74Qvg7.mjs:8
+import { formatWithOptions, styleText } from "node:util";
+                            ^^^^^^^^^
+SyntaxError: The requested module 'node:util' does not provide an export named 'styleText'
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:123:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:191:5)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:336:24)
+
+Node.js v18.19.0
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [97996]
+Traceback (most recent call last):
+  File "/Users/kc/Projects/valuation-platform/scripts/cloud/workspace.py", line 90, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/kc/Projects/valuation-platform/scripts/cloud/workspace.py", line 88, in main
+    else:serve(api_port=args.api_port,frontend_port=args.frontend_port)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kc/Projects/valuation-platform/scripts/cloud/workspace.py", line 69, in serve
+    processes.append(vite);wait_ready(f'http://127.0.0.1:{frontend_port}/workspace/',vite)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kc/Projects/valuation-platform/scripts/cloud/workspace.py", line 49, in wait_ready
+    if process.poll() is not None:raise ValueError('Development service stopped before readiness')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Development service stopped before readiness

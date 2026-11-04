@@ -1,5 +1,17 @@
 # GOOGL — company data preparation
 
+## November 4 ordered execution
+
+[Ownership separation and implementation report](../company-resolutions/execution-2026-11-04/report.html)
+reproduce all five consolidated FCFE observations and recognize their stated
+historical scope separately from exact parent-common cash attribution. No amount,
+original clearance flag or frozen preparation status changes. Parent-common
+cash, NCI fair value and unpopulated parent-value templates remain null. Book NCI
+is context only, redeemable NCI is already included, outside capital is not debt,
+and lease cash is contained once. The separate historical-availability contract
+is now adopted under the user's four-step instruction; parent and shared
+valuation reviews remain OPEN.
+
 ## Notes/commentary research — November 4
 
 The [research packet](../company-resolutions/commentary-research-2026-11-04/README.md)

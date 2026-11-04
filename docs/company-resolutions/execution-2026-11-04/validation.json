@@ -1,0 +1,79 @@
+{
+  "recorded_at_utc": "2026-11-04T18:03:56.533026+00:00",
+  "python_api_tests": {
+    "passed": 12
+  },
+  "frontend_tests": {
+    "passed": 289,
+    "files": 26
+  },
+  "frontend_build": "PASS",
+  "apple_source_replay": {
+    "cfo_exact": 5,
+    "financing_exact": 5,
+    "tax_components_exact": 5,
+    "later_da_checks": 2
+  },
+  "meta_alphabet_source_replay": {
+    "financing_exact": 10,
+    "source_mismatches": 0,
+    "estimated_operands": 0
+  },
+  "existing_aapl_meta_valuation_parity": "PASS_ALL_SIX_SCENARIOS_UNCHANGED",
+  "live_browser": "PASS: 30 served metric records; all three history views; blank manual rates and explicit saved-rate choice",
+  "independent_review": "PASS arithmetic/source/consumer checks: 191 source observations, 30 source body hashes, 73 formula operands; financial status OPEN",
+  "financial_coverage": "OPEN",
+  "source_log_receipts": [
+    {
+      "check": "python-api-tests",
+      "log": "validation-logs/python-api-tests.txt",
+      "sha256": "7d15bab7104550a4fdd7d03c5e7f006240e9d32e26cab5d378c16c3a8cabd5b8"
+    },
+    {
+      "check": "meta-alphabet-source-replay",
+      "log": "validation-logs/meta-alphabet-source-replay.txt",
+      "sha256": "cdb42bb2bf88e0a858f7636a265e31b6e927c4a84bb974f726262f24eb4563b7"
+    },
+    {
+      "check": "frontend-full",
+      "log": "validation-logs/frontend-full.txt",
+      "sha256": "d847815790098a85cb554730704e597bde2b517cadd1d20563680a55019a0bda",
+      "log_normalization": "Trailing empty lines removed from terminal log only; test text unchanged."
+    },
+    {
+      "check": "frontend-build",
+      "log": "validation-logs/frontend-build.txt",
+      "sha256": "25bc5518fc473d19238eeca1ba5b56a976564bffa87e8151ca6480ed670f62c7"
+    },
+    {
+      "check": "valuation-parity",
+      "log": "validation-logs/valuation-parity.txt",
+      "sha256": "d9649f5cf1384276d4cc0b7086d4b04b2abe476eef39e90e4ea75375ee475bcd"
+    },
+    {
+      "check": "startup-first-attempt",
+      "log": "validation-logs/startup-first-attempt.txt",
+      "sha256": "6fb1253f1da74f77ff6f9bca7111ab41fbdc12525013d291e1791667077f55e9"
+    },
+    {
+      "check": "live-browser",
+      "log": "browser-validation.json",
+      "sha256": "e9b759e486c1b3ce6a885063e317726bae5a4f8c08855619371b8aa91f0cc317"
+    }
+  ],
+  "resolved_verification_obstacles": [
+    {
+      "issue": "Development startup used system Node18, incompatible with the frontend runtime.",
+      "treatment": "Restarted using the already-installed bundled Node24. No package or financial input changed."
+    },
+    {
+      "issue": "Default Playwright headless binary was absent.",
+      "treatment": "Used installed Chrome for headless visual/live checks."
+    },
+    {
+      "issue": "First browser harness used ticker codes instead of company-selector anchor values.",
+      "treatment": "Corrected the harness to select the existing issuer anchor identifiers; final live checks pass."
+    }
+  ],
+  "report_visual_qa": "PASS: desktop opening, Apple detail and mobile layout inspected; no horizontal document overflow"
+}

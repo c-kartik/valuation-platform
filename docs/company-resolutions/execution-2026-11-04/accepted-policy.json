@@ -1,0 +1,13 @@
+{
+  "schema_version": "cashflow-consumer-separation-approval-v1",
+  "adopted": true,
+  "authorization": "ok do all 4 steps in succession, one after the other. report back to me once you're done with all of them. then give me a detailed report of your implementation run",
+  "adopted_scope": "Display and gate consolidated historical calculations separately from exact parent cash, comparison, forward valuation, parent equity and per-share readiness.",
+  "numerical_method_changed": false,
+  "source_values_changed": false,
+  "prior_parent_common_gate_changed": false,
+  "newly_recognized_consolidated_fcfe_cells": 5,
+  "new_historical_measurements": 0,
+  "company_status": "OPEN",
+  "supersedes_only": "Adoption flag for the separate-availability proposal; does not supersede financial blockers or prior decisions."
+}

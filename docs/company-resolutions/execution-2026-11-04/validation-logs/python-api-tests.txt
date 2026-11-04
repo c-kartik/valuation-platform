@@ -1,0 +1,17 @@
+test_financing_and_ownership_qualification_survives_review (tests.review.test_cashflow_readiness.ReadinessTests.test_financing_and_ownership_qualification_survives_review) ... ok
+test_thirty_cells_keep_old_amounts_and_distinct_ownership_gates (tests.review.test_cashflow_readiness.ReadinessTests.test_thirty_cells_keep_old_amounts_and_distinct_ownership_gates) ... ok
+test_workpapers_have_exact_tax_bridges_and_do_not_publish_diagnostics (tests.review.test_cashflow_readiness.ReadinessTests.test_workpapers_have_exact_tax_bridges_and_do_not_publish_diagnostics) ... ok
+test_actual_fcfe_worker_and_failure_diagnostics (tests.api.test_cashflows_fcfe.CashFlowApiTests.test_actual_fcfe_worker_and_failure_diagnostics) ... ok
+test_all_thirty_records_reach_runtime_without_clearing_gaps (tests.api.test_cashflows_fcfe.CashFlowApiTests.test_all_thirty_records_reach_runtime_without_clearing_gaps) ... ok
+test_reader_rejects_ownership_and_clearance_tampering (tests.api.test_cashflows_fcfe.CashFlowApiTests.test_reader_rejects_ownership_and_clearance_tampering) ... ok
+test_context_isolation (tests.review.test_discount_inputs.SavedDiscountTests.test_context_isolation) ... ok
+test_cross_issuer_rejected (tests.review.test_discount_inputs.SavedDiscountTests.test_cross_issuer_rejected) ... ok
+test_inconsistent_operands_source_or_hash_rejected (tests.review.test_discount_inputs.SavedDiscountTests.test_inconsistent_operands_source_or_hash_rejected) ... ok
+test_independent_capm_wacc_and_retained_sources (tests.review.test_discount_inputs.SavedDiscountTests.test_independent_capm_wacc_and_retained_sources) ... ok
+test_stale_or_missing_never_supplies_cost_equity (tests.review.test_discount_inputs.SavedDiscountTests.test_stale_or_missing_never_supplies_cost_equity) ... ok
+test_all_saved_rates_sources_and_inputs_unchanged_no_calculation (tests.api.test_discount_inputs.DiscountApiTests.test_all_saved_rates_sources_and_inputs_unchanged_no_calculation) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 6.108s
+
+OK

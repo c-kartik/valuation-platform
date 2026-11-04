@@ -1,0 +1,509 @@
+{
+  "companies": {
+    "AAPL": {
+      "arithmetic": "PASS_FIVE_STATEMENT_AND_FCFE_SUMS",
+      "clarification_request": {
+        "public_or_disclosable_information_only": true,
+        "questions": [
+          "Provide annual USGAAP gross expensed interest for FY2024 and FY2025, or a public reconciliation to those exact amounts.",
+          "For each FY2021\u201325, split Other financing into actual debt proceeds, debt/finance-lease principal, equity, derivatives and other cash. Identify the filing caption and any netting.",
+          "Identify actual annual finance-lease principal and whether it is contained in term-debt repayments, Other financing, or another caption. Reconcile any additions, interest, FX and modifications separately from cash.",
+          "Explain which amortization/expense populations are inside cash-statement D&A versus the later depreciation/intangible notes; identify tax and noncurrent cash components within mixed operating movements."
+        ],
+        "requested_response_columns": [
+          "fiscal_year",
+          "transaction_component",
+          "cash_amount_usd",
+          "cash_statement_caption",
+          "gross_or_net",
+          "included_in_existing_debt_parent",
+          "public_source_url"
+        ],
+        "requested_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "status": "DRAFT_NOT_SENT"
+      },
+      "financial_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "periods": [
+        {
+          "cash_fcf_usd": "92953000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2021,
+          "identified_debt_rows": [
+            {
+              "caption": "Proceeds from issuance of term debt, net",
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+              "signed_cash_usd": "20393000000"
+            },
+            {
+              "caption": "Repayments of term debt",
+              "concept": "RepaymentsOfLongTermDebt",
+              "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+              "signed_cash_usd": "-8750000000"
+            },
+            {
+              "caption": "Proceeds from/(Repayments of) commercial paper, net",
+              "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+              "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+              "signed_cash_usd": "1022000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "12665000000",
+          "identity": {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "-129000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "NOT_ESTABLISHED",
+          "provisional_fcfe_usd": "105618000000",
+          "remaining_blockers": [
+            "A2",
+            "A3"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+          ],
+          "unknown_assumed_zero": false
+        },
+        {
+          "cash_fcf_usd": "111443000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2022,
+          "identified_debt_rows": [
+            {
+              "caption": "Proceeds from issuance of term debt, net",
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+              "signed_cash_usd": "5465000000"
+            },
+            {
+              "caption": "Repayments of term debt",
+              "concept": "RepaymentsOfLongTermDebt",
+              "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+              "signed_cash_usd": "-9543000000"
+            },
+            {
+              "caption": "Proceeds from/(Repayments of) commercial paper, net",
+              "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+              "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+              "signed_cash_usd": "3955000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "-123000000",
+          "identity": {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "-160000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "NOT_ESTABLISHED",
+          "provisional_fcfe_usd": "111320000000",
+          "remaining_blockers": [
+            "A2",
+            "A3"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm"
+          ],
+          "unknown_assumed_zero": false
+        },
+        {
+          "cash_fcf_usd": "99584000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2023,
+          "identified_debt_rows": [
+            {
+              "caption": "Proceeds from issuance of term debt, net",
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "context_id": "c-1",
+              "signed_cash_usd": "5228000000"
+            },
+            {
+              "caption": "Repayments of term debt",
+              "concept": "RepaymentsOfLongTermDebt",
+              "context_id": "c-1",
+              "signed_cash_usd": "-11151000000"
+            },
+            {
+              "caption": "Proceeds from/(Repayments of) commercial paper, net",
+              "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+              "context_id": "c-1",
+              "signed_cash_usd": "-3978000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "-9901000000",
+          "identity": {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "-581000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "NOT_ESTABLISHED",
+          "provisional_fcfe_usd": "89683000000",
+          "remaining_blockers": [
+            "A2",
+            "A3"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+          ],
+          "unknown_assumed_zero": false
+        },
+        {
+          "cash_fcf_usd": "108807000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2024,
+          "identified_debt_rows": [
+            {
+              "caption": "Proceeds from issuance of term debt, net",
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "context_id": "c-1",
+              "signed_cash_usd": "0"
+            },
+            {
+              "caption": "Repayments of term debt",
+              "concept": "RepaymentsOfLongTermDebt",
+              "context_id": "c-1",
+              "signed_cash_usd": "-9958000000"
+            },
+            {
+              "caption": "Proceeds from/(Repayments of) commercial paper, net",
+              "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+              "context_id": "c-1",
+              "signed_cash_usd": "3960000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "-5998000000",
+          "identity": {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "-361000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "NOT_ESTABLISHED",
+          "provisional_fcfe_usd": "102809000000",
+          "remaining_blockers": [
+            "A2",
+            "A3"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+          ],
+          "unknown_assumed_zero": false
+        },
+        {
+          "cash_fcf_usd": "98767000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2025,
+          "identified_debt_rows": [
+            {
+              "caption": "Proceeds from issuance of term debt, net",
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "context_id": "c-1",
+              "signed_cash_usd": "4481000000"
+            },
+            {
+              "caption": "Repayments of term debt",
+              "concept": "RepaymentsOfLongTermDebt",
+              "context_id": "c-1",
+              "signed_cash_usd": "-10932000000"
+            },
+            {
+              "caption": "Proceeds from/(Repayments of) commercial paper, net",
+              "concept": "ProceedsFromRepaymentsOfCommercialPaper",
+              "context_id": "c-1",
+              "signed_cash_usd": "-2032000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "-8483000000",
+          "identity": {
+            "accession": "0000320193-25-000079",
+            "annual_end": "2025-09-27",
+            "annual_start": "2024-09-29",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "-111000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "NOT_ESTABLISHED",
+          "provisional_fcfe_usd": "90284000000",
+          "remaining_blockers": [
+            "A2",
+            "A3"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+          ],
+          "unknown_assumed_zero": false
+        }
+      ]
+    },
+    "META": {
+      "arithmetic": "PASS_FIVE_STATEMENT_AND_FCFE_SUMS",
+      "clarification_request": {
+        "public_or_disclosable_information_only": true,
+        "questions": [
+          "For each FY2021\u201325, split Other financing into actual debt/overdraft/cash-pool cash, equity and other components, including the cash-pool termination in FY2022.",
+          "Reconcile FY2025 Other financing +2.220B into its full annual cash components; the Q4 net increment alone does not classify debt.",
+          "Identify actual paid capitalized interest and cash PP&E containment for FY2024/25, separately from incurred capitalization and interest paid net of capitalized amounts."
+        ],
+        "requested_response_columns": [
+          "fiscal_year",
+          "transaction_component",
+          "cash_amount_usd",
+          "cash_statement_caption",
+          "gross_or_net",
+          "included_in_existing_debt_parent",
+          "public_source_url"
+        ],
+        "requested_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "status": "DRAFT_NOT_SENT"
+      },
+      "financial_status": "PROVISIONAL_FINANCING_SCOPE_UNRESOLVED",
+      "periods": [
+        {
+          "cash_fcf_usd": "39116000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2021,
+          "identified_debt_rows": [
+            {
+              "caption": "Principal payments on finance leases",
+              "concept": "FinanceLeasePrincipalPayments",
+              "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+              "signed_cash_usd": "-677000000"
+            },
+            {
+              "caption": "Net change in overdraft in cash pooling entities",
+              "concept": "ProceedsFromRepaymentsOfBankOverdrafts",
+              "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+              "signed_cash_usd": "14000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "-663000000",
+          "identity": {
+            "accession": "0001326801-22-000018",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 1326801,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "-13000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "IDENTIFIED_FINANCE_LEASE_PRINCIPAL_DEDUCTED_ONCE",
+          "provisional_fcfe_usd": "38453000000",
+          "remaining_blockers": [
+            "M1"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+          ],
+          "unknown_assumed_zero": false
+        },
+        {
+          "cash_fcf_usd": "19289000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2022,
+          "identified_debt_rows": [
+            {
+              "caption": "Proceeds from issuance of long-term debt, net",
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+              "signed_cash_usd": "9921000000"
+            },
+            {
+              "caption": "Principal payments on finance leases",
+              "concept": "FinanceLeasePrincipalPayments",
+              "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+              "signed_cash_usd": "-850000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "9071000000",
+          "identity": {
+            "accession": "0001326801-23-000013",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 1326801,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "344000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "IDENTIFIED_FINANCE_LEASE_PRINCIPAL_DEDUCTED_ONCE",
+          "provisional_fcfe_usd": "28360000000",
+          "remaining_blockers": [
+            "M1"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+          ],
+          "unknown_assumed_zero": false
+        },
+        {
+          "cash_fcf_usd": "44068000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2023,
+          "identified_debt_rows": [
+            {
+              "caption": "Proceeds from issuance of long-term debt, net",
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "context_id": "c-1",
+              "signed_cash_usd": "8455000000"
+            },
+            {
+              "caption": "Principal payments on finance leases",
+              "concept": "FinanceLeasePrincipalPayments",
+              "context_id": "c-1",
+              "signed_cash_usd": "-1058000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "7397000000",
+          "identity": {
+            "accession": "0001326801-24-000012",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 1326801,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "-111000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "IDENTIFIED_FINANCE_LEASE_PRINCIPAL_DEDUCTED_ONCE",
+          "provisional_fcfe_usd": "51465000000",
+          "remaining_blockers": [
+            "M1"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+          ],
+          "unknown_assumed_zero": false
+        },
+        {
+          "cash_fcf_usd": "54072000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2024,
+          "identified_debt_rows": [
+            {
+              "caption": "Proceeds from issuance of long-term debt, net",
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "context_id": "c-1",
+              "signed_cash_usd": "10432000000"
+            },
+            {
+              "caption": "Principal payments on finance leases",
+              "concept": "FinanceLeasePrincipalPayments",
+              "context_id": "c-1",
+              "signed_cash_usd": "-1969000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "8463000000",
+          "identity": {
+            "accession": "0001326801-25-000017",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 1326801,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "-277000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "IDENTIFIED_FINANCE_LEASE_PRINCIPAL_DEDUCTED_ONCE",
+          "provisional_fcfe_usd": "62535000000",
+          "remaining_blockers": [
+            "M1"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+          ],
+          "unknown_assumed_zero": false
+        },
+        {
+          "cash_fcf_usd": "46109000000",
+          "complete_fcfe_usd": null,
+          "debt_content_of_other_usd": null,
+          "fiscal_year": 2025,
+          "identified_debt_rows": [
+            {
+              "caption": "Proceeds from issuance of long-term debt, net",
+              "concept": "ProceedsFromIssuanceOfLongTermDebt",
+              "context_id": "c-1",
+              "signed_cash_usd": "29906000000"
+            },
+            {
+              "caption": "Principal payments on finance leases",
+              "concept": "FinanceLeasePrincipalPayments",
+              "context_id": "c-1",
+              "signed_cash_usd": "-2524000000"
+            }
+          ],
+          "identified_net_borrowing_usd": "27382000000",
+          "identity": {
+            "accession": "0001628280-26-003942",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 1326801,
+            "form": "10-K"
+          },
+          "other_financing_net_usd": "2220000000",
+          "other_net_is_uncertainty_bound": false,
+          "principal_containment": "IDENTIFIED_FINANCE_LEASE_PRINCIPAL_DEDUCTED_ONCE",
+          "provisional_fcfe_usd": "73491000000",
+          "remaining_blockers": [
+            "M1"
+          ],
+          "source_row_sum_difference_usd": "0",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+          ],
+          "unknown_assumed_zero": false
+        }
+      ]
+    }
+  },
+  "company_reviews": "OPEN",
+  "interpretation": "The full financing statements tie, but a net Other row can conceal offsetting debt and non-debt flows. Its magnitude is not a bound on the omitted borrowing component. No default-zero or materiality waiver is applied.",
+  "new_verified_fcfe_cells": 0,
+  "outgoing_messages_sent": 0,
+  "schema_version": "pilot-financing-review-v1"
+}

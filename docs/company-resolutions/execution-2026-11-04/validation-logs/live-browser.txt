@@ -1,0 +1,1 @@
+PASS: 30 served metric records, three history views, blank manual rates and explicit saved-rate opt-in; report rendered on desktop/mobile.

@@ -1,0 +1,13 @@
+{
+  "verdict": "PASS_RECOMPUTATION_WITH_OPEN_FINANCIAL_GAPS",
+  "counts": {
+    "fcff_available": 13,
+    "provisional_fcfe": 10,
+    "missing_required_input": 2,
+    "consolidated_fcfe_available": 5
+  },
+  "strict_failure_count": 17,
+  "source_observations_rechecked": 191,
+  "retained_source_body_hashes_rechecked": 30,
+  "financial_completion": "OPEN"
+}

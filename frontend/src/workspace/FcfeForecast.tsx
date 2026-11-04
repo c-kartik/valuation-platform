@@ -4,6 +4,7 @@ import {failureMessage,request,Revisions,ApiError} from '../api';
 import type {Result} from '../model';
 import {readableMoney,fixedUnit} from '../presentation';
 import {ExportData} from './ExportData';
+import {SavedDiscountInputs} from './SavedDiscountInputs';
 const D=Decimal.clone({precision:80});
 const fields=['interest_expense_usd','cash_debt_issued_usd','new_finance_asset_funding_usd','principal_repaid_usd'] as const;
 const labels=['Interest expense','Cash debt issued','New financed assets','Principal repaid'];
@@ -18,7 +19,8 @@ export function operatingCase(input:Result['submitted_inputs']){
  if(doc.schema_version==='investor-case-v3'||doc.schema_version==='investor-case-v4')doc.calculation_scope='ENTERPRISE_VALUE';
  return doc;
 }
-export function FcfeForecast({result,stale,busy,load=request}:{result:Result;stale:boolean;busy:boolean;load?:typeof request}){
+export function FcfeForecast({result,stale,busy,ticker='',profileHash,load=request}:{result:Result;stale:boolean;busy:boolean;ticker?:string;profileHash?:string;load?:typeof request}){
+ const [expanded,setExpanded]=useState(false);
  const [rate,setRate]=useState(''),[debt,setDebt]=useState(''),[growth,setGrowth]=useState('');
  const [scope,setScope]=useState('CONSOLIDATED_BEFORE_NCI_ATTRIBUTION');
  const [rows,setRows]=useState<Funding[]>(()=>result.stage_b.stage_a.years.map(blank)),[terminal,setTerminal]=useState<Funding>(blank);
@@ -39,10 +41,11 @@ export function FcfeForecast({result,stale,busy,load=request}:{result:Result;sta
   finally{if(revisions.current.current(token))setPending(false);}
  }
  const fundingInputs=(r:Funding,set:(next:Funding)=>void,prefix:string)=>fields.map((k,j)=><td key={k}><input aria-label={prefix+' '+labels[j]} inputMode="decimal" value={r[k]} onChange={e=>edit(()=>set({...r,[k]:e.target.value}))}/></td>);
- return <details className="cv-secondary"><summary>FCFE forecast · explicit financing and cost of equity</summary>
+ return <details className="cv-secondary" onToggle={e=>setExpanded(e.currentTarget.open)}><summary>FCFE forecast · explicit financing and cost of equity</summary>
   <p>Uses this submitted operating forecast. All financing entries are manual assumptions. No missing historical financing or minority allocation is filled automatically.</p>
   {stale&&<p role="status">Operating forecast is stale. Update valuation before calculating FCFE.</p>}
   {unsupported&&<p role="status">Choose Perpetual growth in the operating model first. This FCFE route requires independent terminal operating inputs.</p>}
+  <SavedDiscountInputs key={ticker+profileHash} ticker={ticker} profileHash={profileHash} active={expanded} choose={v=>edit(()=>setRate(v))} load={load}/>
   <label>Ownership scope <select value={scope} onChange={e=>edit(()=>setScope(e.target.value))}><option value="CONSOLIDATED_BEFORE_NCI_ATTRIBUTION">Consolidated · before minority allocation</option><option value="DECLARED_PARENT_COMMON">Parent common · user-declared assumption</option></select></label>
   <div className="fcfe-rates">{[['Cost of equity (%)',rate,setRate],['Opening debt (USD millions)',debt,setDebt],['FCFE terminal growth (%)',growth,setGrowth]].map(([label,v,set])=><label key={label as string}>{label as string}<input inputMode="decimal" value={v as string} onChange={e=>edit(()=>(set as (s:string)=>void)(e.target.value))}/></label>)}</div>
   <p>Financing amounts below: USD millions. Principal includes cash debt and finance-lease repayments once. New financed assets must be contained in operating investment. Terminal net borrowing must equal final-year debt × terminal growth for the stable capital structure assumption.</p>

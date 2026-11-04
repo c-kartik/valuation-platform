@@ -1,5 +1,16 @@
 # META — consolidated five-year analyst-input review
 
+## November 4 ordered execution
+
+[Financing workpapers and implementation report](../company-resolutions/execution-2026-11-04/report.html)
+reproduce all five financing statements and provisional FCFE sums. Annual Other
+remains unclassified, including FY2025 +2.220B; its net magnitude is not an
+uncertainty bound. Known debt and finance-lease principal remain counted once.
+Evidence questions are drafted, not sent. Expense-based historical FCFF stays
+available; a broader capitalized-interest/cash-investment bridge remains open.
+No amount or preload policy changes. The platform separates historical and
+valuation consumers; Meta and financial sufficiency remain OPEN.
+
 ## Notes/commentary research — November 4
 
 The [research packet](../company-resolutions/commentary-research-2026-11-04/README.md)

@@ -113,3 +113,15 @@ When an item is resolved, retain its original issue, approval, evidence, exact
 before/after effect, implementation and validation; keep the parent OPEN while
 any other roadblock remains. Do not silently close an item through a materiality
 assumption, scope relabeling or moving it to a different file.
+
+## November 4 ordered implementation progress
+
+The [four-step execution](execution-2026-11-04/report.html) adds actual numerical
+reconciliations and a separate historical-availability contract. A4–A6 have five
+exact diagnostic bridges but no newly certified operating FCFF; A2/A3/M1 retain
+ten provisional financing calculations plus unsent evidence requests. G1's five
+consolidated FCFE observations are now explicitly available under that narrower
+consumer, while parent attribution and G2 value remain null. S4 consumer separation
+and issuer-switch regression checks pass within this scope; full financial
+clearance does not. The original 17 strict failed cells remain unchanged. No
+roadblock is silently closed by moving it to a different consumer.

@@ -1,0 +1,43 @@
+{
+  "companies": [
+    {
+      "classification_matches_independent_oracle": true,
+      "counts": {
+        "available_stated_convention": 3,
+        "missing_required_input": 2,
+        "parent_common_fcfe_available": 0,
+        "provisional_financing": 5
+      },
+      "manual_forecast_not_disabled_by_history_gap": true,
+      "original_record_unchanged": true,
+      "ticker": "AAPL"
+    },
+    {
+      "classification_matches_independent_oracle": true,
+      "counts": {
+        "available_stated_convention": 5,
+        "missing_required_input": 0,
+        "parent_common_fcfe_available": 0,
+        "provisional_financing": 5
+      },
+      "manual_forecast_not_disabled_by_history_gap": true,
+      "original_record_unchanged": true,
+      "ticker": "META"
+    },
+    {
+      "classification_matches_independent_oracle": true,
+      "counts": {
+        "available_stated_convention": 10,
+        "missing_required_input": 0,
+        "parent_common_fcfe_available": 0,
+        "provisional_financing": 0
+      },
+      "manual_forecast_not_disabled_by_history_gap": true,
+      "original_record_unchanged": true,
+      "ticker": "GOOGL"
+    }
+  ],
+  "financial_completion": "OPEN",
+  "parent_common_review_passed": false,
+  "verdict": "PASS_ADDITIVE_CONSUMER_CLASSIFICATION"
+}

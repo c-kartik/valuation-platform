@@ -7,7 +7,29 @@ import {request} from '../api';
 import type {Result} from '../model';
 import fixture from '../test-fixtures/fcfe-result.json';
 import projection from '../../../docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json';
+import readiness from '../test-fixtures/cashflow-readiness.json';
 afterEach(()=>vi.unstubAllGlobals());
+it('shows consolidated history separately from parent equity and per-share readiness',async()=>{
+ const data={...structuredClone(projection.companies.GOOGL),readiness:structuredClone(readiness.GOOGL)};
+ const load=vi.fn(async()=>data) as unknown as typeof request;
+ render(<HistoricalCashFlows ticker="GOOGL" active load={load}/>);
+ await screen.findByRole('region',{name:'Separate availability and valuation checks'});
+ expect(screen.getByText(/10 historical calculations available under stated conventions/)).toBeTruthy();
+ expect(screen.getByText(/Consolidated FCFE is available under the stated cash convention/)).toBeTruthy();
+ expect(screen.getAllByText('Unavailable')).toHaveLength(5);
+ expect(screen.getByText('Fair value per share')).toBeTruthy();
+ expect(screen.getByText(/Manual forecasting remains available/)).toBeTruthy();
+ expect(screen.queryByText('Verified')).toBeNull();
+});
+it('rejects overstated readiness counts and parent-common or financing relabeling',()=>{
+ const data={...structuredClone(projection.companies.AAPL),readiness:structuredClone(readiness.AAPL)} as CashFlowReview;
+ expect(checkCashFlows(data,'AAPL')).toBe(data);
+ data.readiness!.counts.available_stated_convention=10;
+ expect(()=>checkCashFlows(data,'AAPL')).toThrow('Incompatible consumer readiness');
+ data.readiness=structuredClone(readiness.AAPL) as CashFlowReview['readiness'];
+ data.periods[0].fcfe.status='CONSOLIDATED_BEFORE_NCI_ATTRIBUTION';
+ expect(()=>checkCashFlows(data,'AAPL')).toThrow('Incompatible financing or ownership scope');
+});
 it('loads only the selected history view and preserves ownership, missing values and negative amounts',async()=>{
  const load=vi.fn(async()=>structuredClone(projection.companies.AAPL)) as unknown as typeof request;
  const v=render(<HistoricalCashFlows ticker="AAPL" active={false} load={load}/>);expect(load).not.toHaveBeenCalled();
@@ -22,6 +44,16 @@ it('does not display a late response for another issuer',async()=>{
  v.rerender(<HistoricalCashFlows key="GOOGL" ticker="GOOGL" active load={load}/>);await screen.findAllByText('Consolidated · before minority allocation');
  await act(async()=>complete(structuredClone(projection.companies.AAPL)));
  expect(screen.getByText('Historical cash flows · GOOGL')).toBeTruthy();expect(screen.queryByText('Provisional · financing classification open')).toBeNull();
+});
+it('hides the prior issuer immediately while the next issuer response is delayed without a remount',async()=>{
+ let complete!:(d:unknown)=>void;
+ const load=vi.fn((path:string)=>path.endsWith('AAPL')?Promise.resolve(structuredClone(projection.companies.AAPL)):new Promise(r=>complete=r)) as unknown as typeof request;
+ const v=render(<HistoricalCashFlows ticker="AAPL" active load={load}/>);
+ await screen.findAllByText('105.62B');
+ v.rerender(<HistoricalCashFlows ticker="GOOGL" active load={load}/>);
+ expect(screen.queryByText('105.62B')).toBeNull();expect(screen.getByRole('status').textContent).toMatch(/Loading/);
+ await act(async()=>complete(structuredClone(projection.companies.GOOGL)));
+ expect(screen.queryByText('105.62B')).toBeNull();expect(screen.getAllByText('Consolidated · before minority allocation')).toHaveLength(5);
 });
 function result():Result{return {submitted_inputs:fixture.submitted_inputs.base_case,stage_b:{stage_a:{years:fixture.years.map(y=>({fiscal_year_label:y.fiscal_year_label}))}}} as unknown as Result;}
 it('requires explicit financing, keeps cost equity separate, and discards late FCFE on edits',async()=>{

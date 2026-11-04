@@ -1,0 +1,2131 @@
+{
+  "apple_exact_bridges": [
+    {
+      "bridge_difference_usd": "0",
+      "certified_operating_fcff_usd": null,
+      "diagnostic_exact_fraction_usd": "10449069895000000/109207",
+      "fiscal_year": 2021,
+      "provision_minus_cash_tax_usd": "-10858000000",
+      "unclassified_after_conversion_usd": "3694000000"
+    },
+    {
+      "bridge_difference_usd": "0",
+      "certified_operating_fcff_usd": null,
+      "diagnostic_exact_fraction_usd": "12262592036000000/119103",
+      "fiscal_year": 2022,
+      "provision_minus_cash_tax_usd": "-273000000",
+      "unclassified_after_conversion_usd": "412000000"
+    },
+    {
+      "bridge_difference_usd": "0",
+      "certified_operating_fcff_usd": null,
+      "diagnostic_exact_fraction_usd": "1296175784875000/14217",
+      "fiscal_year": 2023,
+      "provision_minus_cash_tax_usd": "-1938000000",
+      "unclassified_after_conversion_usd": "-2942000000"
+    },
+    {
+      "bridge_difference_usd": "0",
+      "certified_operating_fcff_usd": null,
+      "diagnostic_exact_fraction_usd": "2303434987200000/24697",
+      "fiscal_year": 2024,
+      "provision_minus_cash_tax_usd": "3647000000",
+      "unclassified_after_conversion_usd": "-2092000000"
+    },
+    {
+      "bridge_difference_usd": "0",
+      "certified_operating_fcff_usd": null,
+      "diagnostic_exact_fraction_usd": "4814739692000000/44243",
+      "fiscal_year": 2025,
+      "provision_minus_cash_tax_usd": "-22650000000",
+      "unclassified_after_conversion_usd": "2288000000"
+    }
+  ],
+  "arithmetic": "fractions.Fraction",
+  "availability_30_cells": [
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "AAPL",
+      "year": 2021
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "AAPL",
+      "year": 2021
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "AAPL",
+      "year": 2022
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "AAPL",
+      "year": 2022
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "AAPL",
+      "year": 2023
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "AAPL",
+      "year": 2023
+    },
+    {
+      "classification": "MISSING_REQUIRED_INPUT",
+      "metric": "FCFF",
+      "ticker": "AAPL",
+      "year": 2024
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "AAPL",
+      "year": 2024
+    },
+    {
+      "classification": "MISSING_REQUIRED_INPUT",
+      "metric": "FCFF",
+      "ticker": "AAPL",
+      "year": 2025
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "AAPL",
+      "year": 2025
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "META",
+      "year": 2021
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "META",
+      "year": 2021
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "META",
+      "year": 2022
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "META",
+      "year": 2022
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "META",
+      "year": 2023
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "META",
+      "year": 2023
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "META",
+      "year": 2024
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "META",
+      "year": 2024
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "META",
+      "year": 2025
+    },
+    {
+      "classification": "PROVISIONAL_INCOMPLETE_FINANCING",
+      "metric": "FCFE",
+      "ticker": "META",
+      "year": 2025
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "GOOGL",
+      "year": 2021
+    },
+    {
+      "classification": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+      "metric": "FCFE",
+      "ticker": "GOOGL",
+      "year": 2021
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "GOOGL",
+      "year": 2022
+    },
+    {
+      "classification": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+      "metric": "FCFE",
+      "ticker": "GOOGL",
+      "year": 2022
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "GOOGL",
+      "year": 2023
+    },
+    {
+      "classification": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+      "metric": "FCFE",
+      "ticker": "GOOGL",
+      "year": 2023
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "GOOGL",
+      "year": 2024
+    },
+    {
+      "classification": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+      "metric": "FCFE",
+      "ticker": "GOOGL",
+      "year": 2024
+    },
+    {
+      "classification": "AVAILABLE_STATED_CONVENTION",
+      "metric": "FCFF",
+      "ticker": "GOOGL",
+      "year": 2025
+    },
+    {
+      "classification": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+      "metric": "FCFE",
+      "ticker": "GOOGL",
+      "year": 2025
+    }
+  ],
+  "cash_formula_operand_source_checks": [
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "11085000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "source_instance_sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "i31bf5094819a46b79a45ba71ba807c86_D20200927-20210925",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-21",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "104038000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "source_instance_sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "i31bf5094819a46b79a45ba71ba807c86_D20200927-20210925",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-21",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "2645000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}InterestExpense",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "source_instance_sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}InterestExpense",
+          "context_id": "i31bf5094819a46b79a45ba71ba807c86_D20200927-20210925",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}InterestExpense",
+          "context_id": "c-21",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "109207000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "source_instance_sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i31bf5094819a46b79a45ba71ba807c86_D20200927-20210925",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-21",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "14527000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeTaxExpenseBenefit",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "source_instance_sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeTaxExpenseBenefit",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "source_instance_sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeTaxExpenseBenefit",
+          "context_id": "i55e5364a9af5491886caee077afe8d44_D20200927-20210925",
+          "source_instance_sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i31bf5094819a46b79a45ba71ba807c86_D20200927-20210925",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i31bf5094819a46b79a45ba71ba807c86_D20200927-20210925",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i31bf5094819a46b79a45ba71ba807c86_D20200927-20210925",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-21",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-21",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-21",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "10708000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-20",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-20",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "122151000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-20",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-20",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "2931000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}InterestExpense",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}InterestExpense",
+          "context_id": "c-20",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "119103000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-20",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-20",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "19300000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i4a4fb50fc2db4070adb20304175890ef_D20210926-20220924",
+          "source_instance_sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-20",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-20",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-20",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-20",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-20",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-20",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "10959000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-19",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-19",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "110543000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-1",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-19",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-19",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "3933000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}InterestExpense",
+          "context_id": "c-1",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "113736000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-19",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-19",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "16741000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-19",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-19",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-19",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-19",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-19",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-19",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "9447000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-18",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "118254000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-1",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-18",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "123485000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-18",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "29749000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-18",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-18",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-18",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "12715000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "111482000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-1",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "132729000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "20719000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b"
+        }
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "18567000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "source_instance_sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "57683000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "source_instance_sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "i200b191ad76944bd8349bcd33dd299b0_D20210101-20211231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-12",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "23000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}InterestExpense",
+          "context_id": "c-12",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "47284000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "source_instance_sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "source_instance_sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i200b191ad76944bd8349bcd33dd299b0_D20210101-20211231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i200b191ad76944bd8349bcd33dd299b0_D20210101-20211231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-12",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-12",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "7914000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeTaxExpenseBenefit",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "source_instance_sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeTaxExpenseBenefit",
+          "context_id": "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231",
+          "source_instance_sha256": "abf5f3960b9fc7f481558a4488a82139b9b7d169711de23aebd43237f5ca62d3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i200b191ad76944bd8349bcd33dd299b0_D20210101-20211231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i200b191ad76944bd8349bcd33dd299b0_D20210101-20211231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-12",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-12",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "31431000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-11",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "50475000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-11",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-12",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "185000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}InterestExpense",
+          "context_id": "c-11",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}InterestExpenseNonoperating",
+          "context_id": "c-12",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "28819000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-11",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-11",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-12",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-12",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "5619000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "source_instance_sha256": "a8d228c4c2bab1b18653abf86991c91e37627e6add4c2e1a29489d5734c5fbbd"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-11",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-11",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-12",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-12",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "27266000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "71113000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-1",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-11",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-12",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "446000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}InterestExpense",
+          "context_id": "c-1",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}InterestExpenseNonoperating",
+          "context_id": "c-11",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}InterestExpenseNonoperating",
+          "context_id": "c-12",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "47428000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-11",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-11",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-12",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-12",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "8330000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "04a8761b073c771d11294aa7608a8c17dbc71e537cbfac4c303901075977ed86"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-11",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-11",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-12",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-12",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "37256000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-11",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "91328000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-1",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-11",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "715000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}InterestExpenseNonoperating",
+          "context_id": "c-1",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}InterestExpenseNonoperating",
+          "context_id": "c-11",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "70663000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-11",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-11",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "8303000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "ca45f4ccdc53c40392cb594fb82929c6b5b0601140a453fb4b48c2a4ab941abb"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-11",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-11",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "69691000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "115800000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-1",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "1165000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}InterestExpenseNonoperating",
+          "context_id": "c-1",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "85932000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "25474000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe"
+        }
+      ],
+      "ticker": "META"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "24640000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+          "source_instance_sha256": "fd710b11b15169f6ab3a10d457c95f71f9f2434176b27ccb04cde25d13109918"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "i3cafc4ebcaa342079feaeedba916d36f_D20210101-20211231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-16",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "91652000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+          "source_instance_sha256": "fd710b11b15169f6ab3a10d457c95f71f9f2434176b27ccb04cde25d13109918"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "i3cafc4ebcaa342079feaeedba916d36f_D20210101-20211231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-16",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "346000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}InterestExpense",
+          "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+          "source_instance_sha256": "fd710b11b15169f6ab3a10d457c95f71f9f2434176b27ccb04cde25d13109918"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}InterestExpense",
+          "context_id": "i3cafc4ebcaa342079feaeedba916d36f_D20210101-20211231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}InterestExpense",
+          "context_id": "c-16",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "90734000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+          "source_instance_sha256": "fd710b11b15169f6ab3a10d457c95f71f9f2434176b27ccb04cde25d13109918"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+          "source_instance_sha256": "fd710b11b15169f6ab3a10d457c95f71f9f2434176b27ccb04cde25d13109918"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i3cafc4ebcaa342079feaeedba916d36f_D20210101-20211231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i3cafc4ebcaa342079feaeedba916d36f_D20210101-20211231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-16",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-16",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2021,
+      "gross_reported_value_usd": "14701000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeTaxExpenseBenefit",
+          "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+          "source_instance_sha256": "fd710b11b15169f6ab3a10d457c95f71f9f2434176b27ccb04cde25d13109918"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}IncomeTaxExpenseBenefit",
+          "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+          "source_instance_sha256": "fd710b11b15169f6ab3a10d457c95f71f9f2434176b27ccb04cde25d13109918"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i3cafc4ebcaa342079feaeedba916d36f_D20210101-20211231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i3cafc4ebcaa342079feaeedba916d36f_D20210101-20211231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-16",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-16",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "31485000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-17",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-16",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "91495000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-17",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-16",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "357000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}InterestExpense",
+          "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}InterestExpense",
+          "context_id": "c-17",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}InterestExpenseNonoperating",
+          "context_id": "c-16",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "71328000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-17",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-17",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-16",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-16",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2022,
+      "gross_reported_value_usd": "11356000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2022}IncomeTaxExpenseBenefit",
+          "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+          "source_instance_sha256": "e93235b80ae21c7281a8e845e94addb31d756b903d163d5917053393cc2445ff"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-17",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-17",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-16",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-16",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "32251000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-17",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-27",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "101746000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-1",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-17",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-27",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "308000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}InterestExpense",
+          "context_id": "c-1",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}InterestExpenseNonoperating",
+          "context_id": "c-17",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}InterestExpenseNonoperating",
+          "context_id": "c-27",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "85717000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-17",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-17",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-27",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-27",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2023,
+      "gross_reported_value_usd": "11922000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2023}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "c4d075d235fbae1754d1d624386d7fcd5400cfadc1c9851ced689066613e5876"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-17",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-17",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-27",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-27",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-27",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "52535000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-28",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "125299000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-1",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-28",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "268000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}InterestExpenseNonoperating",
+          "context_id": "c-1",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}InterestExpenseNonoperating",
+          "context_id": "c-28",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "119815000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-28",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-28",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2024,
+      "gross_reported_value_usd": "19697000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2024}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "3847c7f5416ff6055de7bb2370934f9d6f3cafec50c310631ef9f96bd8d764a3"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-28",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-28",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-28",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "91447000000",
+      "operand": "cash_ppe",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_id": "c-1",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "164713000000",
+      "operand": "cfo",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}NetCashProvidedByUsedInOperatingActivities",
+          "context_id": "c-1",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "736000000",
+      "operand": "interest_expense",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}InterestExpenseNonoperating",
+          "context_id": "c-1",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "158826000000",
+      "operand": "pretax_income",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "context_id": "c-1",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    },
+    {
+      "fiscal_year": 2025,
+      "gross_reported_value_usd": "26656000000",
+      "operand": "tax_provision",
+      "retained_source_matches": [
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        },
+        {
+          "concept": "{http://fasb.org/us-gaap/2025}IncomeTaxExpenseBenefit",
+          "context_id": "c-1",
+          "source_instance_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2"
+        }
+      ],
+      "ticker": "GOOGL"
+    }
+  ],
+  "counts": {
+    "consolidated_fcfe_available": 5,
+    "fcff_available": 13,
+    "missing_required_input": 2,
+    "provisional_fcfe": 10
+  },
+  "financial_completion": "OPEN",
+  "implementation_scope": "Three companies, FY2021\u2013FY2025",
+  "no_implementation_calculation_imports": true,
+  "parent_common_amounts_created": 0,
+  "retained_source_body_hashes_rechecked": 30,
+  "scope_limitations": [
+    "Source facts verified against retained extracted XBRL instances and receipt hashes; no new public filing acquisition.",
+    "Approved economic classifications were audited, not independently re-adopted.",
+    "Exact cash identities do not establish pure operating working capital or expense-aligned D&A.",
+    "No browser interaction, market-input certification, parent valuation or per-share certification in this arithmetic audit."
+  ],
+  "source_observations_rechecked": 191,
+  "source_values_unchanged": true,
+  "strict_failure_count": 17,
+  "strict_parent_common_failed_cells": [
+    [
+      "AAPL",
+      2021,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "AAPL",
+      2022,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "AAPL",
+      2023,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "AAPL",
+      2024,
+      "FCFF"
+    ],
+    [
+      "AAPL",
+      2024,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "AAPL",
+      2025,
+      "FCFF"
+    ],
+    [
+      "AAPL",
+      2025,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "META",
+      2021,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "META",
+      2022,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "META",
+      2023,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "META",
+      2024,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "META",
+      2025,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "GOOGL",
+      2021,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "GOOGL",
+      2022,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "GOOGL",
+      2023,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "GOOGL",
+      2024,
+      "PARENT_COMMON_FCFE"
+    ],
+    [
+      "GOOGL",
+      2025,
+      "PARENT_COMMON_FCFE"
+    ]
+  ],
+  "verdict": "PASS_RECOMPUTATION_WITH_OPEN_FINANCIAL_GAPS"
+}

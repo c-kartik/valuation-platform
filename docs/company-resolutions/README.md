@@ -1,5 +1,15 @@
 # Company cash-flow resolutions
 
+## Four-step execution — November 4
+
+The [implementation report](execution-2026-11-04/report.html) records five exact
+Apple operating/cash reconciliations, ten provisional Apple/Meta financing
+workpapers, Alphabet ownership/value separation and an additive API/UI readiness
+contract. The user approved running these four steps in succession. No financial
+amount changes: 18 stated-convention calculations are available, 10 remain
+provisional and 2 lack required FCFF inputs. All three financial reviews remain
+OPEN; the original 17 strict failed cells remain unchanged.
+
 ## Latest research — November 4
 
 The [online notes/commentary follow-up](commentary-research-2026-11-04/README.md)

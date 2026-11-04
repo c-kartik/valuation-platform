@@ -1,0 +1,36 @@
+{
+  "verdict": "PASS",
+  "checks": [
+    {
+      "ticker": "AAPL",
+      "history_rows": 5,
+      "metric_records": 10,
+      "history_ownership_and_readiness": "PASS",
+      "manual_forecast_visible": true,
+      "cost_equity_initially_blank": true,
+      "saved_rate_explicit_opt_in": "PASS"
+    },
+    {
+      "ticker": "META",
+      "history_rows": 5,
+      "metric_records": 10,
+      "history_ownership_and_readiness": "PASS",
+      "manual_forecast_visible": true,
+      "cost_equity_initially_blank": true,
+      "saved_rate_explicit_opt_in": "PASS"
+    },
+    {
+      "ticker": "GOOGL",
+      "history_rows": 5,
+      "metric_records": 10,
+      "history_ownership_and_readiness": "PASS",
+      "manual_forecast_visible": true,
+      "cost_equity_initially_blank": true,
+      "saved_rate_explicit_opt_in": "PASS"
+    }
+  ],
+  "metric_records": 30,
+  "report_desktop_and_mobile_rendered": true,
+  "page_errors": [],
+  "financial_review": "OPEN"
+}

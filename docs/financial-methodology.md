@@ -1,5 +1,19 @@
 # Financial Methodology
 
+## Pilot historical availability versus valuation — November 4, 2026
+
+The three-company FY2021–FY2025 consumer now carries separate checks for
+historical calculation, exact parent-common cash attribution, history/forecast
+comparability, forward assumptions, parent equity bridge and per-share output.
+See the [implementation report](company-resolutions/execution-2026-11-04/report.html).
+This distinction changes no financial amount or source convention. Consolidated
+Alphabet FCFE can be displayed before minority allocation without asserting
+parent-common cash; Apple/Meta identified-funding FCFE remains provisional.
+A reported-CFO history is not automatically interchangeable with SBC-expensed
+EBIT forecasts. No cross-basis FCFF CAGR or automatic calibration is approved.
+Manual forecasts validate their own inputs and are not disabled merely by a
+historical data gap. No issuer is financially complete under this change.
+
 ## Approved Meta and Alphabet treatments — November 3
 
 [Meta](company-resolutions/META/README.md) now uses cash PP&E **net of identified

@@ -1,0 +1,2 @@
+META {"estimated_operands": 0, "financing_statements": 5, "forecast_changes": 0, "source_mismatches": 0}
+GOOGL {"estimated_operands": 0, "financing_statements": 5, "forecast_changes": 0, "source_mismatches": 0}

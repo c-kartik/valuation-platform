@@ -6,6 +6,7 @@ inferred here; a provisional number cannot become a cleared parent cash flow.
 from decimal import Decimal
 import json
 from urllib.parse import urlparse
+from .cashflow_readiness import readiness
 
 RESOURCE = 'docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json'
 TICKERS = ('AAPL', 'META', 'GOOGL')
@@ -56,4 +57,5 @@ def read_cashflows(root, ticker):
             raise ValueError('Missing FCFF cannot be cleared')
         if not company['review_passed'] and company['status'] != 'OPEN':
             raise ValueError('Failed review must retain an open company status')
+    company['readiness'] = readiness(company)
     return company

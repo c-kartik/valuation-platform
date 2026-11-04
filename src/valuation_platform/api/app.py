@@ -104,8 +104,12 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
             from valuation_platform.preload.generate import generate
             from valuation_platform.preload.issuers import ISSUERS
             from .budget import encode_bounded
-            app.state.preloads = {ticker.lower(): encode_bounded(generate(root, ticker=ticker), 192 * 1024)
-                                  for ticker in ISSUERS}
+            profiles = {ticker: generate(root, ticker=ticker) for ticker in ISSUERS}
+            app.state.preloads = {ticker.lower(): encode_bounded(profile, 192 * 1024)
+                                  for ticker, profile in profiles.items()}
+            from valuation_platform.review.discount_inputs import discount_inputs
+            app.state.discount_inputs = {ticker: encode_bounded(discount_inputs(profile, ticker), 24 * 1024)
+                                         for ticker, profile in profiles.items()}
             from valuation_platform.review.pilot_cashflows import read_cashflows, TICKERS
             app.state.cashflows = {ticker: encode_bounded(read_cashflows(root, ticker), 96 * 1024)
                                    for ticker in TICKERS}
@@ -160,6 +164,16 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
         if ticker.upper() not in app.state.cashflows:
             raise ExecutionError(404, 'unsupported_preparation', 'No reviewed cash-flow record exists for this issuer.')
         return Response(app.state.cashflows[ticker.upper()], media_type='application/json')
+
+    @app.get('/api/v1/discount-inputs/{ticker}')
+    async def saved_discount_inputs(ticker: str, request: Request):
+        if request.query_params:
+            raise ExecutionError(422, 'invalid_case', 'Query parameters are not accepted.')
+        if not app.state.ready:
+            raise ExecutionError(503, 'not_ready', 'Service is not ready.')
+        if ticker.upper() not in app.state.discount_inputs:
+            raise ExecutionError(404, 'unsupported_preparation', 'No saved discount-rate preparation exists for this issuer.')
+        return Response(app.state.discount_inputs[ticker.upper()], media_type='application/json')
 
     async def intake(request, reader=None):
         if request.query_params:

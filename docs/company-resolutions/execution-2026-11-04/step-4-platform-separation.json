@@ -1,0 +1,291 @@
+{
+  "changed_amounts": 0,
+  "companies": {
+    "AAPL": {
+      "adoption_record": "docs/company-resolutions/execution-2026-11-04/accepted-policy.json",
+      "amounts_changed": false,
+      "contract": "Consolidated historical availability is separate from exact parent cash attribution, forecast alignment, equity-value and per-share review.",
+      "counts": {
+        "available_stated_convention": 3,
+        "missing_required_input": 2,
+        "parent_common_fcfe_available": 0,
+        "provisional_financing": 5
+      },
+      "financial_review_status": "OPEN",
+      "gates": [
+        {
+          "detail": "3 available under stated conventions; 5 provisional; 2 missing required inputs.",
+          "id": "history",
+          "label": "Historical calculations",
+          "status": "SCOPED_AVAILABILITY"
+        },
+        {
+          "detail": "Complete financing classification is unresolved.",
+          "id": "parent_cash",
+          "label": "Parent-common cash attribution",
+          "status": "UNAVAILABLE"
+        },
+        {
+          "detail": "A reviewed SBC, tax and investment bridge is required. No cross-basis FCFF CAGR or automatic calibration.",
+          "id": "comparison",
+          "label": "History-to-forecast comparison",
+          "status": "NOT_CLEARED"
+        },
+        {
+          "detail": "Manual forecasting remains available. Financing, discount rate, taxes and terminal inputs require their own validation.",
+          "id": "forecast",
+          "label": "Forward valuation assumptions",
+          "status": "REVIEW_SEPARATELY"
+        },
+        {
+          "detail": "Use matching cash, claims and outside-interest values; never deduct debt twice in the FCFE route.",
+          "id": "parent_value",
+          "label": "Parent equity-value bridge",
+          "status": "REVIEW_SEPARATELY"
+        },
+        {
+          "detail": "Requires a supported parent equity numerator and dated shares, classes and award treatment.",
+          "id": "per_share",
+          "label": "Fair value per share",
+          "status": "REVIEW_SEPARATELY"
+        }
+      ],
+      "history_gap_disables_manual_forecast": false,
+      "periods": [
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2021,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        },
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2022,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        },
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2023,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        },
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "UNAVAILABLE_REQUIRED_INPUT",
+          "fiscal_year": 2024,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        },
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "UNAVAILABLE_REQUIRED_INPUT",
+          "fiscal_year": 2025,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        }
+      ],
+      "prior_clearance_flags_changed": false,
+      "prior_parent_common_review_passed": false,
+      "schema_version": "cashflow-consumer-readiness-v1"
+    },
+    "GOOGL": {
+      "adoption_record": "docs/company-resolutions/execution-2026-11-04/accepted-policy.json",
+      "amounts_changed": false,
+      "contract": "Consolidated historical availability is separate from exact parent cash attribution, forecast alignment, equity-value and per-share review.",
+      "counts": {
+        "available_stated_convention": 10,
+        "missing_required_input": 0,
+        "parent_common_fcfe_available": 0,
+        "provisional_financing": 0
+      },
+      "financial_review_status": "OPEN",
+      "gates": [
+        {
+          "detail": "10 available under stated conventions; 0 provisional; 0 missing required inputs.",
+          "id": "history",
+          "label": "Historical calculations",
+          "status": "SCOPED_AVAILABILITY"
+        },
+        {
+          "detail": "Consolidated FCFE needs minority cash attribution.",
+          "id": "parent_cash",
+          "label": "Parent-common cash attribution",
+          "status": "UNAVAILABLE"
+        },
+        {
+          "detail": "A reviewed SBC, tax and investment bridge is required. No cross-basis FCFF CAGR or automatic calibration.",
+          "id": "comparison",
+          "label": "History-to-forecast comparison",
+          "status": "NOT_CLEARED"
+        },
+        {
+          "detail": "Manual forecasting remains available. Financing, discount rate, taxes and terminal inputs require their own validation.",
+          "id": "forecast",
+          "label": "Forward valuation assumptions",
+          "status": "REVIEW_SEPARATELY"
+        },
+        {
+          "detail": "Use matching cash, claims and outside-interest values; never deduct debt twice in the FCFE route.",
+          "id": "parent_value",
+          "label": "Parent equity-value bridge",
+          "status": "REVIEW_SEPARATELY"
+        },
+        {
+          "detail": "Requires a supported parent equity numerator and dated shares, classes and award treatment.",
+          "id": "per_share",
+          "label": "Fair value per share",
+          "status": "REVIEW_SEPARATELY"
+        }
+      ],
+      "history_gap_disables_manual_forecast": false,
+      "periods": [
+        {
+          "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2021,
+          "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+        },
+        {
+          "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2022,
+          "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+        },
+        {
+          "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2023,
+          "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+        },
+        {
+          "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2024,
+          "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+        },
+        {
+          "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2025,
+          "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+        }
+      ],
+      "prior_clearance_flags_changed": false,
+      "prior_parent_common_review_passed": false,
+      "schema_version": "cashflow-consumer-readiness-v1"
+    },
+    "META": {
+      "adoption_record": "docs/company-resolutions/execution-2026-11-04/accepted-policy.json",
+      "amounts_changed": false,
+      "contract": "Consolidated historical availability is separate from exact parent cash attribution, forecast alignment, equity-value and per-share review.",
+      "counts": {
+        "available_stated_convention": 5,
+        "missing_required_input": 0,
+        "parent_common_fcfe_available": 0,
+        "provisional_financing": 5
+      },
+      "financial_review_status": "OPEN",
+      "gates": [
+        {
+          "detail": "5 available under stated conventions; 5 provisional; 0 missing required inputs.",
+          "id": "history",
+          "label": "Historical calculations",
+          "status": "SCOPED_AVAILABILITY"
+        },
+        {
+          "detail": "Complete financing classification is unresolved.",
+          "id": "parent_cash",
+          "label": "Parent-common cash attribution",
+          "status": "UNAVAILABLE"
+        },
+        {
+          "detail": "A reviewed SBC, tax and investment bridge is required. No cross-basis FCFF CAGR or automatic calibration.",
+          "id": "comparison",
+          "label": "History-to-forecast comparison",
+          "status": "NOT_CLEARED"
+        },
+        {
+          "detail": "Manual forecasting remains available. Financing, discount rate, taxes and terminal inputs require their own validation.",
+          "id": "forecast",
+          "label": "Forward valuation assumptions",
+          "status": "REVIEW_SEPARATELY"
+        },
+        {
+          "detail": "Use matching cash, claims and outside-interest values; never deduct debt twice in the FCFE route.",
+          "id": "parent_value",
+          "label": "Parent equity-value bridge",
+          "status": "REVIEW_SEPARATELY"
+        },
+        {
+          "detail": "Requires a supported parent equity numerator and dated shares, classes and award treatment.",
+          "id": "per_share",
+          "label": "Fair value per share",
+          "status": "REVIEW_SEPARATELY"
+        }
+      ],
+      "history_gap_disables_manual_forecast": false,
+      "periods": [
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2021,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        },
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2022,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        },
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2023,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        },
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2024,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        },
+        {
+          "fcfe_historical_calculation": "PROVISIONAL_INCOMPLETE_FINANCING",
+          "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+          "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+          "fiscal_year": 2025,
+          "parent_common_fcfe": "UNAVAILABLE_FINANCING_SCOPE"
+        }
+      ],
+      "prior_clearance_flags_changed": false,
+      "prior_parent_common_review_passed": false,
+      "schema_version": "cashflow-consumer-readiness-v1"
+    }
+  },
+  "company_financial_reviews": "OPEN",
+  "counts": {
+    "available_stated_convention": 18,
+    "missing_required_input": 2,
+    "parent_common_fcfe_available": 0,
+    "provisional_financing": 10
+  },
+  "manual_forecast_disabled_by_historical_gaps": false,
+  "new_measurements": 0,
+  "prior_projection_sha256": "9b2a9d775745e9d4bd08efe60d49619c24f632b16a28fce5fcba014fe1f55d86",
+  "prior_strict_parent_common_failed_cells": 17,
+  "schema_version": "cashflow-platform-separation-v1",
+  "validation_scope": "Additive runtime contract; full source, API, frontend and independent checks logged separately."
+}

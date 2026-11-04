@@ -1,0 +1,27 @@
+{
+  "authorization": "ok do all 4 steps in succession, one after the other. report back to me once you're done with all of them. then give me a detailed report of your implementation run",
+  "started_at_utc": "2026-11-04T17:58:55.765356+00:00",
+  "scope": [
+    "Apple five-year operating-income reconciliation",
+    "Apple/Meta provisional FCFE and precise evidence requests",
+    "Alphabet consolidated history versus parent value/ownership bridge",
+    "Separate history, forecast, ownership and per-share readiness in platform"
+  ],
+  "source_pins": {
+    "docs/company-resolutions/AAPL/results.json": "d264921afb059b882c882cb1dacc71649122c8b1fdae9f605ef2690ec8cc7dd9",
+    "docs/company-resolutions/AAPL/implementation-2026-11-03/evidence-ledger.json": "e51a8ceac0b6fb26de88c9b2458fcbe75e51aa4c04fb6c0d5d2c600f13e7af9e",
+    "docs/company-resolutions/META/results.json": "06c4cbff6584d0ae1abea74864ac70bd851d4471dff2503335c3d7565a1382d4",
+    "docs/company-resolutions/GOOGL/results.json": "0bd3eb8a0cc67a37657da681000eb5d17e31c2e2d1c648878d04e43fe046080f",
+    "docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json": "9b2a9d775745e9d4bd08efe60d49619c24f632b16a28fce5fcba014fe1f55d86",
+    "docs/company-resolutions/commentary-research-2026-11-04/validation.json": "fd172f448afba6e5de721c7c8d8eaa522a3914fc6915528e880297c38df17a8a",
+    "docs/company-resolutions/GOOGL/implementation-2026-11-03/schedules.json": "288242fbf7b76fd7dd10638afe53376fbf13b89568e7f593fcfb3a6683b87ea2"
+  },
+  "source_values_changed": false,
+  "financial_completion": "OPEN",
+  "supplemental_pin_provenance": {
+    "path": "docs/company-resolutions/GOOGL/implementation-2026-11-03/schedules.json",
+    "added_at_utc": "2026-11-04T18:02:05.304502+00:00",
+    "reason": "Independent audit requested pre-existing stage-3 schedule pin. Current bytes verified identical to initial HEAD; step-3 output also retained this hash at first execution.",
+    "git_head": "fc35fbd1ee20ced52a1bb3622b615b39023645f4"
+  }
+}

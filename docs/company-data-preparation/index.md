@@ -1,5 +1,14 @@
 # Company data preparation register
 
+## Four-step consumer separation — November 4
+
+The [new execution report](../company-resolutions/execution-2026-11-04/report.html)
+adds source-pinned reconciliations and separates historical availability from
+ownership, forecast comparison, forward valuation, equity bridging and per-share
+readiness. User authorization covers this consumer separation; no frozen input,
+preparation-accounting or financial-sufficiency status changes. All three reviews
+remain OPEN; no wider-universe expansion is resumed.
+
 ## Three-company notes/commentary research — November 4
 
 [Research findings](../company-resolutions/commentary-research-2026-11-04/README.md)

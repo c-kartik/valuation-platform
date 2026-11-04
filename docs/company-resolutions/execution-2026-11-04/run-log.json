@@ -1,0 +1,30 @@
+[
+  {
+    "outcome": "Five exact numeric bridges; no certified replacement or new historical value",
+    "output": "step-1-apple-operating.json",
+    "parent_financial_status": "OPEN",
+    "recorded_at_utc": "2026-11-04T17:58:56.015994+00:00",
+    "stage": 1
+  },
+  {
+    "outcome": "Ten provisional calculations reconciled; precise issuer requests prepared, not sent",
+    "output": "step-2-financing.json",
+    "parent_financial_status": "OPEN",
+    "recorded_at_utc": "2026-11-04T17:59:44.862760+00:00",
+    "stage": 2
+  },
+  {
+    "outcome": "Five consolidated FCFE observations kept available; parent cash/value remain separately gated",
+    "output": "step-3-alphabet-ownership.json",
+    "parent_financial_status": "OPEN",
+    "recorded_at_utc": "2026-11-04T18:00:05.748106+00:00",
+    "stage": 3
+  },
+  {
+    "outcome": "Runtime/UI readiness separated; old 17 strict failures preserved, no financial amount changed",
+    "output": "step-4-platform-separation.json",
+    "parent_financial_status": "OPEN",
+    "recorded_at_utc": "2026-11-04T18:02:32.046593+00:00",
+    "stage": 4
+  }
+]

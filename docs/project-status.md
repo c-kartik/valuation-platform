@@ -1,5 +1,16 @@
 # Project Status
 
+## Four-step three-company execution — November 4, 2026
+
+[Detailed report](company-resolutions/execution-2026-11-04/report.html): numerical
+Apple operating reconciliation, Apple/Meta financing requests, Alphabet ownership
+separation and additive API/UI readiness checks executed in order. Historical
+amounts and preload policy values remain unchanged. Available under stated
+conventions: 13 FCFF + 5 consolidated FCFE; provisional FCFE: 10; missing FCFF: 2.
+Independent arithmetic/source/consumer checks are separate from financial
+clearance. All three financial reviews remain OPEN; prior strict failed cells: 17.
+No wider-universe expansion or public deployment is authorized by this milestone.
+
 ## Approved implementation and independent review — November3
 
 The [execution log](company-resolutions/implementation-2026-11-03/implementation-log.json) records the user-approved18treatments. New issuer evidence,15 partial SBC bridges,171 share/claims source observations, unchanged-tax valuation parity, current30-record historical API/UI and an explicit manual FCFE engine/API/UI are implemented with scoped checks. **Overall status remains OPEN: full financial availability review has not passed.** Apple still lacks two adopted FCFF inputs;10Apple/Meta FCFE calculations retain unresolved financing and5Alphabet FCFE calculations remain consolidated without annual parent attribution. Source/arithmetic/runtime correctness does not clear those17strict parent-common metric cells. Prior cloud test counts below describe their earlier code snapshot, not this change.

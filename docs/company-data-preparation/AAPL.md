@@ -1,5 +1,16 @@
 # AAPL — company data preparation
 
+## November 4 ordered execution
+
+[Apple workpaper and implementation report](../company-resolutions/execution-2026-11-04/report.html)
+adds five exact EBIT-to-reported-cash reconciliations, including observable
+provision/cash-tax differences and an explicitly unclassified remainder. Neither
+diagnostic is certified FCFF or adopted for forecast calibration. Five financing
+sums tie; FCFE remains provisional because Other and lease-principal containment
+are unresolved. Historical values and existing forecast policy are unchanged.
+The platform now distinguishes history from valuation readiness; Apple remains
+OPEN with A1–A6 evidence/alignment gaps and separate shared valuation issues.
+
 ## Notes/commentary research — November 4
 
 The [research packet](../company-resolutions/commentary-research-2026-11-04/README.md)

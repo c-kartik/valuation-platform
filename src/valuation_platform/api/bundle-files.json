@@ -89,8 +89,10 @@
     "src/valuation_platform/preload/issuers.py",
     "src/valuation_platform/preload/extract.py",
     "src/valuation_platform/review/resolved_history.py",
+    "src/valuation_platform/review/cashflow_readiness.py",
     "src/valuation_platform/review/pilot_cashflows.py",
-    "src/valuation_platform/valuation/fcfe.py"
+    "src/valuation_platform/valuation/fcfe.py",
+    "src/valuation_platform/review/discount_inputs.py"
   ],
   "resources": {
     "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",

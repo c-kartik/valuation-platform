@@ -1,0 +1,157 @@
+{
+  "consolidated_history_available": 5,
+  "input_schedule": "docs/company-resolutions/GOOGL/implementation-2026-11-03/schedules.json",
+  "input_sha256": "288242fbf7b76fd7dd10638afe53376fbf13b89568e7f593fcfb3a6683b87ea2",
+  "new_parent_common_amounts": 0,
+  "parent_status": "OPEN",
+  "periods": [
+    {
+      "annual_end": "2021-12-31",
+      "available_under_declared_consolidated_convention": true,
+      "book_nci_context_only_usd": "4300000000",
+      "consolidated_fcfe_usd": "65776000000",
+      "economic_investment_timing_bridge_open": true,
+      "exact_parent_cash_attribution_available": false,
+      "fiscal_year": 2021,
+      "lease_cash_counted_once": true,
+      "nci_fair_value_usd": null,
+      "numerical_change_usd": "0",
+      "outside_equity_cash_NOT_DEBT_usd": "310000000",
+      "parent_common_fcfe_usd": null,
+      "parent_value_bridge": {
+        "consolidated_value_usd": null,
+        "eligible_nonoperating_assets_usd": null,
+        "financing_claims_usd": null,
+        "nci_fair_value_usd": null,
+        "other_claims_usd": null,
+        "parent_common_value_usd": null,
+        "scope_rule": "FCFF route deducts matching debt/claims. FCFE route does not deduct debt already captured in financing. Add only eligible assets whose returns are excluded from cash flows; deduct outside interests only once.",
+        "status": "NOT_POPULATED_NO_VALUE_INFERRED",
+        "valuation_date": "2021-12-31"
+      },
+      "redeemable_nci_ALREADY_INCLUDED_usd": "1100000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+      ]
+    },
+    {
+      "annual_end": "2022-12-31",
+      "available_under_declared_consolidated_convention": true,
+      "book_nci_context_only_usd": "3800000000",
+      "consolidated_fcfe_usd": "58814000000",
+      "economic_investment_timing_bridge_open": true,
+      "exact_parent_cash_attribution_available": false,
+      "fiscal_year": 2022,
+      "lease_cash_counted_once": true,
+      "nci_fair_value_usd": null,
+      "numerical_change_usd": "0",
+      "outside_equity_cash_NOT_DEBT_usd": "35000000",
+      "parent_common_fcfe_usd": null,
+      "parent_value_bridge": {
+        "consolidated_value_usd": null,
+        "eligible_nonoperating_assets_usd": null,
+        "financing_claims_usd": null,
+        "nci_fair_value_usd": null,
+        "other_claims_usd": null,
+        "parent_common_value_usd": null,
+        "scope_rule": "FCFF route deducts matching debt/claims. FCFE route does not deduct debt already captured in financing. Add only eligible assets whose returns are excluded from cash flows; deduct outside interests only once.",
+        "status": "NOT_POPULATED_NO_VALUE_INFERRED",
+        "valuation_date": "2022-12-31"
+      },
+      "redeemable_nci_ALREADY_INCLUDED_usd": "1100000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+      ]
+    },
+    {
+      "annual_end": "2023-12-31",
+      "available_under_declared_consolidated_convention": true,
+      "book_nci_context_only_usd": "3400000000",
+      "consolidated_fcfe_usd": "68735000000",
+      "economic_investment_timing_bridge_open": true,
+      "exact_parent_cash_attribution_available": false,
+      "fiscal_year": 2023,
+      "lease_cash_counted_once": true,
+      "nci_fair_value_usd": null,
+      "numerical_change_usd": "0",
+      "outside_equity_cash_NOT_DEBT_usd": "8000000",
+      "parent_common_fcfe_usd": null,
+      "parent_value_bridge": {
+        "consolidated_value_usd": null,
+        "eligible_nonoperating_assets_usd": null,
+        "financing_claims_usd": null,
+        "nci_fair_value_usd": null,
+        "other_claims_usd": null,
+        "parent_common_value_usd": null,
+        "scope_rule": "FCFF route deducts matching debt/claims. FCFE route does not deduct debt already captured in financing. Add only eligible assets whose returns are excluded from cash flows; deduct outside interests only once.",
+        "status": "NOT_POPULATED_NO_VALUE_INFERRED",
+        "valuation_date": "2023-12-31"
+      },
+      "redeemable_nci_ALREADY_INCLUDED_usd": "1100000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+      ]
+    },
+    {
+      "annual_end": "2024-12-31",
+      "available_under_declared_consolidated_convention": true,
+      "book_nci_context_only_usd": "4200000000",
+      "consolidated_fcfe_usd": "73652000000",
+      "economic_investment_timing_bridge_open": true,
+      "exact_parent_cash_attribution_available": false,
+      "fiscal_year": 2024,
+      "lease_cash_counted_once": true,
+      "nci_fair_value_usd": null,
+      "numerical_change_usd": "0",
+      "outside_equity_cash_NOT_DEBT_usd": "1154000000",
+      "parent_common_fcfe_usd": null,
+      "parent_value_bridge": {
+        "consolidated_value_usd": null,
+        "eligible_nonoperating_assets_usd": null,
+        "financing_claims_usd": null,
+        "nci_fair_value_usd": null,
+        "other_claims_usd": null,
+        "parent_common_value_usd": null,
+        "scope_rule": "FCFF route deducts matching debt/claims. FCFE route does not deduct debt already captured in financing. Add only eligible assets whose returns are excluded from cash flows; deduct outside interests only once.",
+        "status": "NOT_POPULATED_NO_VALUE_INFERRED",
+        "valuation_date": "2024-12-31"
+      },
+      "redeemable_nci_ALREADY_INCLUDED_usd": "1100000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+      ]
+    },
+    {
+      "annual_end": "2025-12-31",
+      "available_under_declared_consolidated_convention": true,
+      "book_nci_context_only_usd": "3400000000",
+      "consolidated_fcfe_usd": "105403000000",
+      "economic_investment_timing_bridge_open": true,
+      "exact_parent_cash_attribution_available": false,
+      "fiscal_year": 2025,
+      "lease_cash_counted_once": true,
+      "nci_fair_value_usd": null,
+      "numerical_change_usd": "0",
+      "outside_equity_cash_NOT_DEBT_usd": "400000000",
+      "parent_common_fcfe_usd": null,
+      "parent_value_bridge": {
+        "consolidated_value_usd": null,
+        "eligible_nonoperating_assets_usd": null,
+        "financing_claims_usd": null,
+        "nci_fair_value_usd": null,
+        "other_claims_usd": null,
+        "parent_common_value_usd": null,
+        "scope_rule": "FCFF route deducts matching debt/claims. FCFE route does not deduct debt already captured in financing. Add only eligible assets whose returns are excluded from cash flows; deduct outside interests only once.",
+        "status": "NOT_POPULATED_NO_VALUE_INFERRED",
+        "valuation_date": "2025-12-31"
+      },
+      "redeemable_nci_ALREADY_INCLUDED_usd": "841000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+      ]
+    }
+  ],
+  "schema_version": "alphabet-ownership-separation-v1",
+  "ticker": "GOOGL",
+  "treatment": "Display consolidated cash history with ownership label while separately requiring a dated NCI/claims bridge for parent value. A value bridge does not manufacture annual parent cash attribution. No 2026 round is backdated; no book NCI is treated as fair value."
+}
