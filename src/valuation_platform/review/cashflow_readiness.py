@@ -41,4 +41,4 @@ def readiness(company):
             {'id': 'per_share', 'label': 'Fair value per share', 'status': 'REVIEW_SEPARATELY',
              'detail': 'Requires a supported parent equity numerator and dated shares, classes and award treatment.'}],
         'financial_review_status': 'OPEN', 'history_gap_disables_manual_forecast': False,
-        'amounts_changed': False, 'prior_clearance_flags_changed': False}
+        'amounts_changed': company.get('active_fcff_method_adoption') == 'AAPL_OPERATING_2026_11_04', 'prior_clearance_flags_changed': False}

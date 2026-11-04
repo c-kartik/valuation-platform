@@ -1,0 +1,83 @@
+{
+  "status": "PASS_QUALIFIED_STANDARDIZED_HISTORY",
+  "date": "2026-11-04",
+  "scope": "Apple FY2021\u201325 selected historical FCFF consumer; not full financial review",
+  "source_review": {
+    "independent_primary_and_instance_points": 105,
+    "supplemental_tax_diagnostics": 4,
+    "original_body_hashes": 10,
+    "consecutive_balance_dates": 6,
+    "result": "PASS"
+  },
+  "arithmetic": {
+    "five_fcff_calculations": "PASS independent exact rational oracle",
+    "five_legacy_cash_fcf_bridges": "PASS zero differences; no residual plug",
+    "original_sources_changed": false
+  },
+  "tests": {
+    "focused_python_api_and_review": {
+      "passed": 17,
+      "overlaps_full_api": true
+    },
+    "full_api": {
+      "passed": 71
+    },
+    "full_frontend": {
+      "passed": 290,
+      "files": 26
+    },
+    "final_focused_frontend": {
+      "passed": 8,
+      "included_in_full_suite": true
+    },
+    "production_frontend_build": "PASS"
+  },
+  "runtime": "PASS fresh sealed interpreter, FastAPI lifespan/health,5API and catalog amounts;83,442 bytes below96KiB catalog ceiling",
+  "browser": {
+    "status": "PASS",
+    "dcf_historical_bars": 5,
+    "scenario_historical_bars": 5,
+    "FY2024_readout": "115.68B",
+    "FY2025_readout": "95.12B",
+    "history_table_standardized_rows": 5,
+    "legacy_nulls_preserved": true,
+    "cross_basis_fcff_trend": false,
+    "javascript_errors": 0
+  },
+  "valuation_parity": {
+    "cases": [
+      "AAPL Bear",
+      "AAPL Base",
+      "AAPL Bull",
+      "META Bear",
+      "META Base",
+      "META Bull"
+    ],
+    "before_after_executions": 12,
+    "all_ev_differences": "0"
+  },
+  "implementation_repairs": [
+    "Packaged runtime now includes operating_fcff dependency; genuine fresh startup passes",
+    "Catalog ceiling explicitly raised80to96KiB for retained opening/closing/legacy metadata",
+    "Browser assertion corrected to match cell containing its method label; no platform data patch needed"
+  ],
+  "material_qualifications": [
+    "Current tax accruals/mixed Other included by consistent aggregate convention; refinement from separate-tax preference",
+    "FY2024+17.782B/FY2025\u221213.585B current-tax timing effects disclosed",
+    "355M FY2024 later-note D&A mismatch qualified, not plugged",
+    "Cash PP&E and reported tax allocation are stated modeling populations, not exact unlevered cash"
+  ],
+  "financial_company_status": "OPEN",
+  "fcfe_changed": false,
+  "forecasts_changed": false,
+  "public_deployment": false,
+  "report_visual_review": {
+    "status": "PASS",
+    "viewports": [
+      "1440x1100 desktop",
+      "390x844 mobile"
+    ],
+    "horizontal_page_overflow": false,
+    "screenshots_inspected": true
+  }
+}

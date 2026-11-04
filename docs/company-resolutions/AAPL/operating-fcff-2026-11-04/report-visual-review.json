@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "viewports": [
+    {
+      "name": "desktop",
+      "title": "Apple historical FCFF remediation",
+      "bodyWidth": 1440,
+      "viewportWidth": 1440,
+      "validation": true
+    },
+    {
+      "name": "mobile",
+      "title": "Apple historical FCFF remediation",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "validation": true
+    }
+  ]
+}

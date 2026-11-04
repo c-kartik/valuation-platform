@@ -1,0 +1,330 @@
+{
+  "formula": "new FCFF - cash FCF = - after-tax net nonoperating - SBC - other CFO adjustments - defined current NWC increase",
+  "periods": [
+    {
+      "fiscal_year": 2021,
+      "new_standardized_fcff": {
+        "amount_usd": "93405319832.977739522191800891884219876015273746188",
+        "exact_fraction_usd": {
+          "numerator": "10200514763000000",
+          "denominator": "109207"
+        },
+        "display_billions": "93.41"
+      },
+      "old_cash_fcf": {
+        "amount_usd": "92953000000",
+        "exact_fraction_usd": {
+          "numerator": "92953000000",
+          "denominator": "1"
+        },
+        "display_billions": "92.95"
+      },
+      "legacy_cfo_fcff_usd": "95246155200.673949472103436592892397007517833105936",
+      "new_minus_cash_fcf": {
+        "amount_usd": "452319832.97773952219180089188421987601527374618843",
+        "exact_fraction_usd": {
+          "numerator": "49396492000000",
+          "denominator": "109207"
+        },
+        "display_billions": "0.45"
+      },
+      "bridge_terms": {
+        "remove_allocated_after_tax_net_nonoperating": {
+          "amount_usd": "-223680167.02226047780819910811578012398472625381157",
+          "exact_fraction_usd": {
+            "numerator": "-24427440000000",
+            "denominator": "109207"
+          },
+          "display_billions": "-0.22"
+        },
+        "retain_sbc_as_expense": {
+          "amount_usd": "-7906000000",
+          "exact_fraction_usd": {
+            "numerator": "-7906000000",
+            "denominator": "1"
+          },
+          "display_billions": "-7.91"
+        },
+        "remove_all_other_reported_cfo_adjustments": {
+          "amount_usd": "9832000000",
+          "exact_fraction_usd": {
+            "numerator": "9832000000",
+            "denominator": "1"
+          },
+          "display_billions": "9.83"
+        },
+        "apply_defined_current_nwc_investment": {
+          "amount_usd": "-1250000000",
+          "exact_fraction_usd": {
+            "numerator": "-1250000000",
+            "denominator": "1"
+          },
+          "display_billions": "-1.25"
+        }
+      },
+      "bridge_difference_usd": "0",
+      "balancing_plug_used": false,
+      "other_cfo_terms_are_not_claimed_pure_wc": true
+    },
+    {
+      "fiscal_year": 2022,
+      "new_standardized_fcff": {
+        "amount_usd": "108443877097.97402248474009890598893394792742416228",
+        "exact_fraction_usd": {
+          "numerator": "12915991094000000",
+          "denominator": "119103"
+        },
+        "display_billions": "108.44"
+      },
+      "old_cash_fcf": {
+        "amount_usd": "111443000000",
+        "exact_fraction_usd": {
+          "numerator": "111443000000",
+          "denominator": "1"
+        },
+        "display_billions": "111.44"
+      },
+      "legacy_cfo_fcff_usd": "113899047228.02952066698571824387295030351880305282",
+      "new_minus_cash_fcf": {
+        "amount_usd": "-2999122902.0259775152599010940110660520725758377203",
+        "exact_fraction_usd": {
+          "numerator": "-357204535000000",
+          "denominator": "119103"
+        },
+        "display_billions": "-3.00"
+      },
+      "bridge_terms": {
+        "remove_allocated_after_tax_net_nonoperating": {
+          "amount_usd": "279877097.97402248474009890598893394792742416227971",
+          "exact_fraction_usd": {
+            "numerator": "33334202000000",
+            "denominator": "119103"
+          },
+          "display_billions": "0.28"
+        },
+        "retain_sbc_as_expense": {
+          "amount_usd": "-9038000000",
+          "exact_fraction_usd": {
+            "numerator": "-9038000000",
+            "denominator": "1"
+          },
+          "display_billions": "-9.04"
+        },
+        "remove_all_other_reported_cfo_adjustments": {
+          "amount_usd": "-2206000000",
+          "exact_fraction_usd": {
+            "numerator": "-2206000000",
+            "denominator": "1"
+          },
+          "display_billions": "-2.21"
+        },
+        "apply_defined_current_nwc_investment": {
+          "amount_usd": "7965000000",
+          "exact_fraction_usd": {
+            "numerator": "7965000000",
+            "denominator": "1"
+          },
+          "display_billions": "7.96"
+        }
+      },
+      "bridge_difference_usd": "0",
+      "balancing_plug_used": false,
+      "other_cfo_terms_are_not_claimed_pure_wc": true
+    },
+    {
+      "fiscal_year": 2023,
+      "new_standardized_fcff": {
+        "amount_usd": "99843836665.611591756348034043750439614545966096926",
+        "exact_fraction_usd": {
+          "numerator": "1419479825875000",
+          "denominator": "14217"
+        },
+        "display_billions": "99.84"
+      },
+      "old_cash_fcf": {
+        "amount_usd": "99584000000",
+        "exact_fraction_usd": {
+          "numerator": "99584000000",
+          "denominator": "1"
+        },
+        "display_billions": "99.58"
+      },
+      "legacy_cfo_fcff_usd": "102938094877.61131040303861574171766195399873391011",
+      "new_minus_cash_fcf": {
+        "amount_usd": "259836665.61159175634803404375043961454596609692622",
+        "exact_fraction_usd": {
+          "numerator": "3694097875000",
+          "denominator": "14217"
+        },
+        "display_billions": "0.26"
+      },
+      "bridge_terms": {
+        "remove_allocated_after_tax_net_nonoperating": {
+          "amount_usd": "481836665.61159175634803404375043961454596609692622",
+          "exact_fraction_usd": {
+            "numerator": "6850271875000",
+            "denominator": "14217"
+          },
+          "display_billions": "0.48"
+        },
+        "retain_sbc_as_expense": {
+          "amount_usd": "-10833000000",
+          "exact_fraction_usd": {
+            "numerator": "-10833000000",
+            "denominator": "1"
+          },
+          "display_billions": "-10.83"
+        },
+        "remove_all_other_reported_cfo_adjustments": {
+          "amount_usd": "8804000000",
+          "exact_fraction_usd": {
+            "numerator": "8804000000",
+            "denominator": "1"
+          },
+          "display_billions": "8.80"
+        },
+        "apply_defined_current_nwc_investment": {
+          "amount_usd": "1807000000",
+          "exact_fraction_usd": {
+            "numerator": "1807000000",
+            "denominator": "1"
+          },
+          "display_billions": "1.81"
+        }
+      },
+      "bridge_difference_usd": "0",
+      "balancing_plug_used": false,
+      "other_cfo_terms_are_not_claimed_pure_wc": true
+    },
+    {
+      "fiscal_year": 2024,
+      "new_standardized_fcff": {
+        "amount_usd": "115679805288.09167105316435194558043487063206057416",
+        "exact_fraction_usd": {
+          "numerator": "2856944151200000",
+          "denominator": "24697"
+        },
+        "display_billions": "115.68"
+      },
+      "old_cash_fcf": {
+        "amount_usd": "108807000000",
+        "exact_fraction_usd": {
+          "numerator": "108807000000",
+          "denominator": "1"
+        },
+        "display_billions": "108.81"
+      },
+      "legacy_cfo_fcff_usd": null,
+      "new_minus_cash_fcf": {
+        "amount_usd": "6872805288.0916710531643519455804348706320605741588",
+        "exact_fraction_usd": {
+          "numerator": "169737672200000",
+          "denominator": "24697"
+        },
+        "display_billions": "6.87"
+      },
+      "bridge_terms": {
+        "remove_allocated_after_tax_net_nonoperating": {
+          "amount_usd": "-204194711.90832894683564805441956512936793942584120",
+          "exact_fraction_usd": {
+            "numerator": "-5042996800000",
+            "denominator": "24697"
+          },
+          "display_billions": "-0.20"
+        },
+        "retain_sbc_as_expense": {
+          "amount_usd": "-11688000000",
+          "exact_fraction_usd": {
+            "numerator": "-11688000000",
+            "denominator": "1"
+          },
+          "display_billions": "-11.69"
+        },
+        "remove_all_other_reported_cfo_adjustments": {
+          "amount_usd": "-1385000000",
+          "exact_fraction_usd": {
+            "numerator": "-1385000000",
+            "denominator": "1"
+          },
+          "display_billions": "-1.38"
+        },
+        "apply_defined_current_nwc_investment": {
+          "amount_usd": "20150000000",
+          "exact_fraction_usd": {
+            "numerator": "20150000000",
+            "denominator": "1"
+          },
+          "display_billions": "20.15"
+        }
+      },
+      "bridge_difference_usd": "0",
+      "balancing_plug_used": false,
+      "other_cfo_terms_are_not_claimed_pure_wc": true
+    },
+    {
+      "fiscal_year": 2025,
+      "new_standardized_fcff": {
+        "amount_usd": "95123891892.502768799584115001243134507153674027530",
+        "exact_fraction_usd": {
+          "numerator": "4208566349000000",
+          "denominator": "44243"
+        },
+        "display_billions": "95.12"
+      },
+      "old_cash_fcf": {
+        "amount_usd": "98767000000",
+        "exact_fraction_usd": {
+          "numerator": "98767000000",
+          "denominator": "1"
+        },
+        "display_billions": "98.77"
+      },
+      "legacy_cfo_fcff_usd": null,
+      "new_minus_cash_fcf": {
+        "amount_usd": "-3643108107.4972312004158849987568654928463259724702",
+        "exact_fraction_usd": {
+          "numerator": "-161182032000000",
+          "denominator": "44243"
+        },
+        "display_billions": "-3.64"
+      },
+      "bridge_terms": {
+        "remove_allocated_after_tax_net_nonoperating": {
+          "amount_usd": "270891892.50276879958411500124313450715367402752978",
+          "exact_fraction_usd": {
+            "numerator": "11985070000000",
+            "denominator": "44243"
+          },
+          "display_billions": "0.27"
+        },
+        "retain_sbc_as_expense": {
+          "amount_usd": "-12863000000",
+          "exact_fraction_usd": {
+            "numerator": "-12863000000",
+            "denominator": "1"
+          },
+          "display_billions": "-12.86"
+        },
+        "remove_all_other_reported_cfo_adjustments": {
+          "amount_usd": "25089000000",
+          "exact_fraction_usd": {
+            "numerator": "25089000000",
+            "denominator": "1"
+          },
+          "display_billions": "25.09"
+        },
+        "apply_defined_current_nwc_investment": {
+          "amount_usd": "-16140000000",
+          "exact_fraction_usd": {
+            "numerator": "-16140000000",
+            "denominator": "1"
+          },
+          "display_billions": "-16.14"
+        }
+      },
+      "bridge_difference_usd": "0",
+      "balancing_plug_used": false,
+      "other_cfo_terms_are_not_claimed_pure_wc": true
+    }
+  ]
+}

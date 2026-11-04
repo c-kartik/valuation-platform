@@ -1,0 +1,266 @@
+{
+  "authorization": "User: ok follow this plan step by step and implement this solution to resolve the issue. report back to me once it is successful.",
+  "basis": "STANDARDIZED_EBIT_CURRENT_NWC_CASH_PPE",
+  "exact_unlevered_cash_flow_claim": false,
+  "forecast_calibration": false,
+  "methodology": "aapl-ebit-reported-etr-current-nwc-cash-ppe-v1",
+  "periods": [
+    {
+      "closing_balances": {
+        "cash": "34940000000",
+        "commercial_paper": "6000000000",
+        "current_assets": "134836000000",
+        "current_finance_lease": "79000000",
+        "current_liabilities": "125481000000",
+        "current_operating_lease": "1449000000",
+        "current_securities": "27699000000",
+        "current_term_debt": "9613000000"
+      },
+      "fcff": {
+        "amount_usd": "93405319832.977739522191800891884219876015273746188",
+        "display_billions": "93.41",
+        "exact_fraction_usd": {
+          "denominator": "109207",
+          "numerator": "10200514763000000"
+        }
+      },
+      "fiscal_year": 2021,
+      "identity": {
+        "accession": "0000320193-21-000105",
+        "annual_end": "2021-09-25",
+        "annual_start": "2020-09-27",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "11085000000",
+        "closing_nwc": "-36143000000",
+        "da": "11284000000",
+        "ebit": "108949000000",
+        "opening_nwc": "-37393000000",
+        "pretax_income": "109207000000",
+        "tax_provision": "14527000000"
+      },
+      "opening_balances": {
+        "cash": "38016000000",
+        "commercial_paper": "4996000000",
+        "current_assets": "143713000000",
+        "current_finance_lease": "24000000",
+        "current_liabilities": "105392000000",
+        "current_operating_lease": "1436000000",
+        "current_securities": "52927000000",
+        "current_term_debt": "8773000000"
+      },
+      "qualification": "Standardized current-balance model including current tax accruals; mixed Other balances retained by convention, not separately verified pure operating cash.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm"
+      ]
+    },
+    {
+      "closing_balances": {
+        "cash": "23646000000",
+        "commercial_paper": "9982000000",
+        "current_assets": "135405000000",
+        "current_finance_lease": "129000000",
+        "current_liabilities": "153982000000",
+        "current_operating_lease": "1534000000",
+        "current_securities": "24658000000",
+        "current_term_debt": "11128000000"
+      },
+      "fcff": {
+        "amount_usd": "108443877097.97402248474009890598893394792742416228",
+        "display_billions": "108.44",
+        "exact_fraction_usd": {
+          "denominator": "119103",
+          "numerator": "12915991094000000"
+        }
+      },
+      "fiscal_year": 2022,
+      "identity": {
+        "accession": "0000320193-22-000108",
+        "annual_end": "2022-09-24",
+        "annual_start": "2021-09-26",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "10708000000",
+        "closing_nwc": "-44108000000",
+        "da": "11104000000",
+        "ebit": "119437000000",
+        "opening_nwc": "-36143000000",
+        "pretax_income": "119103000000",
+        "tax_provision": "19300000000"
+      },
+      "opening_balances": {
+        "cash": "34940000000",
+        "commercial_paper": "6000000000",
+        "current_assets": "134836000000",
+        "current_finance_lease": "79000000",
+        "current_liabilities": "125481000000",
+        "current_operating_lease": "1449000000",
+        "current_securities": "27699000000",
+        "current_term_debt": "9613000000"
+      },
+      "qualification": "Standardized current-balance model including current tax accruals; mixed Other balances retained by convention, not separately verified pure operating cash.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm"
+      ]
+    },
+    {
+      "closing_balances": {
+        "cash": "29965000000",
+        "commercial_paper": "5985000000",
+        "current_assets": "143566000000",
+        "current_finance_lease": "165000000",
+        "current_liabilities": "145308000000",
+        "current_operating_lease": "1410000000",
+        "current_securities": "31590000000",
+        "current_term_debt": "9822000000"
+      },
+      "fcff": {
+        "amount_usd": "99843836665.611591756348034043750439614545966096926",
+        "display_billions": "99.84",
+        "exact_fraction_usd": {
+          "denominator": "14217",
+          "numerator": "1419479825875000"
+        }
+      },
+      "fiscal_year": 2023,
+      "identity": {
+        "accession": "0000320193-23-000106",
+        "annual_end": "2023-09-30",
+        "annual_start": "2022-09-25",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "10959000000",
+        "closing_nwc": "-45915000000",
+        "da": "11519000000",
+        "ebit": "114301000000",
+        "opening_nwc": "-44108000000",
+        "pretax_income": "113736000000",
+        "tax_provision": "16741000000"
+      },
+      "opening_balances": {
+        "cash": "23646000000",
+        "commercial_paper": "9982000000",
+        "current_assets": "135405000000",
+        "current_finance_lease": "129000000",
+        "current_liabilities": "153982000000",
+        "current_operating_lease": "1534000000",
+        "current_securities": "24658000000",
+        "current_term_debt": "11128000000"
+      },
+      "qualification": "Standardized current-balance model including current tax accruals; mixed Other balances retained by convention, not separately verified pure operating cash.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+      ]
+    },
+    {
+      "closing_balances": {
+        "cash": "29943000000",
+        "commercial_paper": "9967000000",
+        "current_assets": "152987000000",
+        "current_finance_lease": "144000000",
+        "current_liabilities": "176392000000",
+        "current_operating_lease": "1488000000",
+        "current_securities": "35228000000",
+        "current_term_debt": "10912000000"
+      },
+      "fcff": {
+        "amount_usd": "115679805288.09167105316435194558043487063206057416",
+        "display_billions": "115.68",
+        "exact_fraction_usd": {
+          "denominator": "24697",
+          "numerator": "2856944151200000"
+        }
+      },
+      "fiscal_year": 2024,
+      "identity": {
+        "accession": "0000320193-24-000123",
+        "annual_end": "2024-09-28",
+        "annual_start": "2023-10-01",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "9447000000",
+        "closing_nwc": "-66065000000",
+        "da": "11445000000",
+        "ebit": "123216000000",
+        "opening_nwc": "-45915000000",
+        "pretax_income": "123485000000",
+        "tax_provision": "29749000000"
+      },
+      "opening_balances": {
+        "cash": "29965000000",
+        "commercial_paper": "5985000000",
+        "current_assets": "143566000000",
+        "current_finance_lease": "165000000",
+        "current_liabilities": "145308000000",
+        "current_operating_lease": "1410000000",
+        "current_securities": "31590000000",
+        "current_term_debt": "9822000000"
+      },
+      "qualification": "Standardized current-balance model including current tax accruals; mixed Other balances retained by convention, not separately verified pure operating cash.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+      ]
+    },
+    {
+      "closing_balances": {
+        "cash": "35934000000",
+        "commercial_paper": "7979000000",
+        "current_assets": "147957000000",
+        "current_finance_lease": "538000000",
+        "current_liabilities": "165631000000",
+        "current_operating_lease": "1579000000",
+        "current_securities": "18763000000",
+        "current_term_debt": "12350000000"
+      },
+      "fcff": {
+        "amount_usd": "95123891892.502768799584115001243134507153674027530",
+        "display_billions": "95.12",
+        "exact_fraction_usd": {
+          "denominator": "44243",
+          "numerator": "4208566349000000"
+        }
+      },
+      "fiscal_year": 2025,
+      "identity": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K"
+      },
+      "inputs": {
+        "cash_ppe": "12715000000",
+        "closing_nwc": "-49925000000",
+        "da": "11698000000",
+        "ebit": "133050000000",
+        "opening_nwc": "-66065000000",
+        "pretax_income": "132729000000",
+        "tax_provision": "20719000000"
+      },
+      "opening_balances": {
+        "cash": "29943000000",
+        "commercial_paper": "9967000000",
+        "current_assets": "152987000000",
+        "current_finance_lease": "144000000",
+        "current_liabilities": "176392000000",
+        "current_operating_lease": "1488000000",
+        "current_securities": "35228000000",
+        "current_term_debt": "10912000000"
+      },
+      "qualification": "Standardized current-balance model including current tax accruals; mixed Other balances retained by convention, not separately verified pure operating cash.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+      ]
+    }
+  ],
+  "schema_version": "apple-operating-history-v1",
+  "ticker": "AAPL"
+}

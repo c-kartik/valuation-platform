@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-04",
+  "ticker": "AAPL",
+  "scope": "FY2021\u2013FY2025 historical standardized FCFF display only",
+  "authorization": {
+    "user_request": "ok follow this plan step by step and implement this solution to resolve the issue. report back to me once it's successful.",
+    "scope": "Implement previously proposed eight-step operating-income replacement; no claim that the user separately reviewed the later tax-population refinement."
+  },
+  "original_issue": {
+    "id": "A1",
+    "description": "Selected FY2024/25 filings do not separately disclose gross expensed interest required by the previous CFO-plus-after-tax-interest definition. Repeated evidence investigations had not changed the current historical consumer."
+  },
+  "treatment": {
+    "methodology": "aapl-ebit-reported-etr-current-nwc-cash-ppe-v1",
+    "basis": "STANDARDIZED_EBIT_CURRENT_NWC_CASH_PPE",
+    "formula": "EBIT*(1-tax provision/pretax)+reported combined D&A-cash PP&E-(closing NWC-opening NWC)",
+    "replace_all_five_years": true,
+    "interest_estimated": false,
+    "missing_inputs_zero_filled": false
+  },
+  "classifications": [
+    {
+      "item": "Tax allocation",
+      "treatment": "Use each reported consolidated provision/pretax ratio on EBIT. Historical allocation convention, not observed operating cash tax or normalized forecast rate."
+    },
+    {
+      "item": "Current NWC",
+      "treatment": "Current assets less cash/current securities, less current liabilities excluding commercial paper/current term debt/current operating and finance lease liabilities. Mixed Other and current tax balances remain included uniformly."
+    },
+    {
+      "item": "Material refinement from original plan",
+      "treatment": "Original preference to separate current income taxes cannot be applied uniformly because FY2020/21 splits are unavailable. Adopt a clearly qualified all-year aggregate convention instead of subtracting taxes selectively. This is a disclosed implementation choice, not a newly discovered pure-operating classification.",
+      "effect_usd": {
+        "FY2024_current_tax_increase": "17782000000",
+        "FY2025_current_tax_decrease": "-13585000000"
+      },
+      "tax_excluded_diagnostics_not_adopted": {
+        "FY2024": "97897805288.09167105316435194558043487063206057416",
+        "FY2025": "108708891892.502768799584115001243134507153674027530"
+      }
+    },
+    {
+      "item": "D&A",
+      "treatment": "Use reported combined cash-statement D&A consistently. Retain later FY2024 355M note-population difference as a qualification; do not create a plug or claim exact expense alignment."
+    },
+    {
+      "item": "SBC",
+      "treatment": "Keep expensed in EBIT; no add-back."
+    },
+    {
+      "item": "Investment and leases",
+      "treatment": "Cash PP&E perimeter; exclude current lease liabilities from NWC. No invented noncash additions or second principal cash deduction. Not a comprehensive economic-investment claim."
+    }
+  ],
+  "implementation_steps": [
+    "Defined a full five-year replacement and separate legacy preservation",
+    "Bound 25 annual and80 instant observations against primary and XBRL sources",
+    "Applied reported tax allocation; documented current-tax refinement",
+    "Bound combined D&A and recorded355M qualification",
+    "Bound cash PP&E; no principal double count",
+    "Computed six-date NWC continuity and five changes",
+    "Reconciled five exact new-versus-cash-FCF bridges",
+    "Integrated sealed runtime, API, DCF/scenario chart and Cash flows UI; independently audited"
+  ],
+  "outcome": "Five historical standardized calculations available; original exact-cash/FCFE/full-company financial gaps remain separately open.",
+  "preserved": [
+    "Original accepted source bank and projection",
+    "Old CFO series including FY2024/25 nulls",
+    "All FCFE values and qualifications",
+    "Meta and Alphabet cash flows",
+    "Forward assumptions and enterprise values"
+  ],
+  "limits": [
+    "Not a directly reported or exact unlevered-cash-flow measure",
+    "Current-tax timing and mixed Other remain inside declared aggregate NWC",
+    "355M FY2024 D&A scope difference unresolved for stricter expense-aligned alternative",
+    "No cross-basis FCFF CAGR or automatic historical forecast calibration",
+    "Company overall OPEN; no per-share certification"
+  ],
+  "evidence": [
+    "source-ledger.json",
+    "adopted-history.json",
+    "legacy-comparison.json",
+    "policy-review/README.md",
+    "independent-review/README.md",
+    "validation.json"
+  ]
+}

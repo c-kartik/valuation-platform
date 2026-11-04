@@ -29,7 +29,9 @@ class CashFlowApiTests(unittest.TestCase):
                 for p in d['periods']:
                     if p['fcff']['amount_usd'] is None:missing.append((ticker,p['fiscal_year']))
                     self.assertIsNotNone(p['fcfe']['amount_usd']);self.assertFalse(p['fcfe']['cleared']);self.assertIsNone(p['fcfe']['parent_common_amount_usd'])
-            self.assertEqual(missing,[('AAPL',2024),('AAPL',2025)])
+            self.assertEqual(missing,[])
+            a=client.get('/api/v1/cashflows/AAPL').json()
+            self.assertEqual([p['legacy_cfo_fcff']['amount_usd'] is None for p in a['periods']],[False,False,False,True,True])
             self.assertEqual(client.get('/api/v1/cashflows/MSFT').status_code,404)
             self.assertEqual(client.get('/api/v1/cashflows/AAPL?year=2025').status_code,422)
             self.assertEqual(client.get('/api/v1/cashflows/aapl').status_code,200)

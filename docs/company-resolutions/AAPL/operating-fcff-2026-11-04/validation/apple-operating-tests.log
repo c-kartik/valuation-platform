@@ -1,0 +1,22 @@
+test_current_tax_changes_not_silently_removed_or_double_counted (tests.review.test_apple_operating_history.AppleOperatingTests.test_current_tax_changes_not_silently_removed_or_double_counted) ... ok
+test_legacy_series_and_other_issuers_unchanged (tests.review.test_apple_operating_history.AppleOperatingTests.test_legacy_series_and_other_issuers_unchanged) ... ok
+test_no_interest_input_no_debt_double_count_and_missing_not_zero (tests.review.test_apple_operating_history.AppleOperatingTests.test_no_interest_input_no_debt_double_count_and_missing_not_zero) ... ok
+test_pin_and_recomputed_arithmetic_fail_closed (tests.review.test_apple_operating_history.AppleOperatingTests.test_pin_and_recomputed_arithmetic_fail_closed) ... ok
+test_source_replay_and_all_five_api_chart_values_agree (tests.review.test_apple_operating_history.AppleOperatingTests.test_source_replay_and_all_five_api_chart_values_agree) ... ok
+test_financing_and_ownership_qualification_survives_review (tests.review.test_cashflow_readiness.ReadinessTests.test_financing_and_ownership_qualification_survives_review) ... ok
+test_thirty_cells_keep_old_amounts_and_distinct_ownership_gates (tests.review.test_cashflow_readiness.ReadinessTests.test_thirty_cells_keep_old_amounts_and_distinct_ownership_gates) ... ok
+test_workpapers_have_exact_tax_bridges_and_do_not_publish_diagnostics (tests.review.test_cashflow_readiness.ReadinessTests.test_workpapers_have_exact_tax_bridges_and_do_not_publish_diagnostics) ... ok
+test_adoption_never_mutates_forecast_templates_or_acceptance (tests.review.test_cfo_history.AdoptedCFOHistoryTests.test_adoption_never_mutates_forecast_templates_or_acceptance) ... ok
+test_catalog_uses_apple_standardized_overlay_and_preserves_other_issuers (tests.review.test_cfo_history.AdoptedCFOHistoryTests.test_catalog_uses_apple_standardized_overlay_and_preserves_other_issuers) ... ok
+test_corrupted_ledger_or_changed_accepted_package_is_rejected (tests.review.test_cfo_history.AdoptedCFOHistoryTests.test_corrupted_ledger_or_changed_accepted_package_is_rejected) ... ok
+test_period_dates_and_later_meta_interest_source_are_preserved (tests.review.test_cfo_history.AdoptedCFOHistoryTests.test_period_dates_and_later_meta_interest_source_are_preserved) ... ok
+test_recomputed_results_reject_internal_arithmetic_or_period_mismatches (tests.review.test_cfo_history.AdoptedCFOHistoryTests.test_recomputed_results_reject_internal_arithmetic_or_period_mismatches) ... ok
+test_source_evidence_replay_and_no_estimate_or_detailed_reconstruction_dependency (tests.review.test_cfo_history.AdoptedCFOHistoryTests.test_source_evidence_replay_and_no_estimate_or_detailed_reconstruction_dependency) ... ok
+test_actual_fcfe_worker_and_failure_diagnostics (tests.api.test_cashflows_fcfe.CashFlowApiTests.test_actual_fcfe_worker_and_failure_diagnostics) ... ok
+test_all_thirty_records_reach_runtime_without_clearing_gaps (tests.api.test_cashflows_fcfe.CashFlowApiTests.test_all_thirty_records_reach_runtime_without_clearing_gaps) ... ok
+test_reader_rejects_ownership_and_clearance_tampering (tests.api.test_cashflows_fcfe.CashFlowApiTests.test_reader_rejects_ownership_and_clearance_tampering) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 6.073s
+
+OK

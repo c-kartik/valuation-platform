@@ -1,5 +1,11 @@
 # Financial Methodology
 
+## Apple standardized historical FCFF — November 4, 2026
+
+The [versioned adoption](company-resolutions/AAPL/operating-fcff-2026-11-04/README.md) uses EBIT×(1−reported provision/pretax)+reported combined D&A−cash PP&E−Δdefined current NWC for every FY2021–25 period. NWC removes cash/current securities, interest-bearing current debt and both current lease liabilities from aggregate current assets/liabilities; current income-tax accruals and mixed Other stay included consistently. This materially refines the original separate-tax preference because early-year tax splits are undisclosed. FY2024+17.782B/FY2025−13.585B current-tax movements affect results. No missing tax split is zero-filled.
+
+This is a reproducible standardized balance-sheet model with source-verifiable operands, not exact observed unlevered cash or a claim of pure-operating Other captions. The combined D&A choice retains a355M FY2024 later-note mismatch without a plug. Cash PP&E is the investment perimeter; SBC stays expensed and principal is not deducted twice. All five historical values replace the current Apple consumer uniformly; old CFO amounts/gaps remain legacy. Forecast assumptions and EV are unchanged; cross-basis FCFF CAGR and automatic calibration stay disabled. FCFE and broader company clearance remain separate and OPEN.
+
 ## Pilot historical availability versus valuation — November 4, 2026
 
 The three-company FY2021–FY2025 consumer now carries separate checks for

@@ -1,0 +1,14 @@
+{
+  "verdict": "PASS_FIVE_LIVE_API_AND_CHART_CATALOG_VALUES",
+  "endpoint": "http://127.0.0.1:8133",
+  "five_values_match_independent_source_oracle": true,
+  "legacy_gaps_preserved": true,
+  "notice_contains_material_tax_effects_and_da_qualification": true,
+  "readiness": {
+    "available_stated_convention": 5,
+    "missing_required_input": 0,
+    "parent_common_fcfe_available": 0,
+    "provisional_financing": 5
+  },
+  "financial_status": "OPEN"
+}

@@ -19,7 +19,11 @@ class ReadinessTests(unittest.TestCase):
             before = original['companies'][ticker]
             # The full old record, including amounts, methods, flags and gaps,
             # must survive unchanged; only the additive contract is new.
-            self.assertEqual({k: v for k, v in current.items() if k != 'readiness'}, before)
+            if ticker=='AAPL':
+                for p,old in zip(current['periods'],before['periods'],strict=True):
+                    self.assertEqual(p['legacy_cfo_fcff'],old['fcff'])
+                    self.assertEqual(p['fcfe'],old['fcfe'])
+            else:self.assertEqual({k: v for k, v in current.items() if k != 'readiness'}, before)
             r = current['readiness']
             for key in totals:
                 totals[key] += r['counts'][key]
@@ -27,15 +31,15 @@ class ReadinessTests(unittest.TestCase):
             self.assertFalse(r['prior_parent_common_review_passed'])
             self.assertEqual(r['financial_review_status'], 'OPEN')
             for p in r['periods']:
-                if ticker == 'AAPL' and p['fiscal_year'] in (2024, 2025):
-                    self.assertEqual(p['fcff_historical_calculation'], 'UNAVAILABLE_REQUIRED_INPUT')
+                if ticker == 'AAPL':
+                    self.assertEqual(p['fcff_historical_calculation'], 'AVAILABLE_STATED_CONVENTION')
                 if ticker == 'GOOGL':
                     self.assertEqual(p['fcfe_historical_calculation'], 'AVAILABLE_CONSOLIDATED_STATED_CONVENTION')
                     self.assertEqual(p['parent_common_fcfe'], 'UNAVAILABLE_OWNERSHIP_ATTRIBUTION')
                 else:
                     self.assertEqual(p['fcfe_historical_calculation'], 'PROVISIONAL_INCOMPLETE_FINANCING')
-        self.assertEqual(totals, dict(available_stated_convention=18, provisional_financing=10,
-                                     missing_required_input=2, parent_common_fcfe_available=0))
+        self.assertEqual(totals, dict(available_stated_convention=20, provisional_financing=10,
+                                     missing_required_input=0, parent_common_fcfe_available=0))
 
     def test_workpapers_have_exact_tax_bridges_and_do_not_publish_diagnostics(self):
         data = json.loads((OUT / 'step-1-apple-operating.json').read_text())

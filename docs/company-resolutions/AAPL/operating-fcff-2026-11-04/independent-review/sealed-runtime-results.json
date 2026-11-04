@@ -1,0 +1,20 @@
+{
+  "all_material_qualifications_in_notice": true,
+  "bundle_path_at_verification": "/private/var/folders/xr/lsv4vk2979nbt46kx6sjxryh0000gn/T/valuation-cloud-dev-pzcbvtm7/runtime",
+  "catalog_bytes": 83442,
+  "company_review_status": "OPEN",
+  "five_source_oracle_amounts_match": true,
+  "health": "ready",
+  "imports_from_sealed_bundle_only": true,
+  "legacy_gaps_preserved": true,
+  "parent_common_fcfe_available": false,
+  "source_module_hashes": {
+    "src/valuation_platform/api/catalog.py": "4d9b6ad82c8ee8d5e4c108bd7d1e492a5b83a3521fc384e9beec6d2bdcd311bb",
+    "src/valuation_platform/review/apple_operating_history.py": "6f7d382bc15832744f04c1380502d18e77794a0775299fbbc96ebf711ee7ca05",
+    "src/valuation_platform/review/cashflow_readiness.py": "9c050cacd4ead13dfb326c2eee638598e0e079cac21eb579baa5f80ecb0ddbb6",
+    "src/valuation_platform/review/operating_fcff.py": "29c173b9b0414d40a6e3daec2bc21d28a10e4a638f2964a50c0e2d5414d036eb",
+    "src/valuation_platform/review/pilot_cashflows.py": "49dd8942d6f76fd48782e899dd2266eeb58317e2a498008ece04bb8d4ea35233",
+    "src/valuation_platform/review/resolved_history.py": "39b0bad6ec2d4db83815fcb2aff2805a40d95c483a8c1cc8b63305c127469dc9"
+  },
+  "verdict": "PASS_FRESH_SEALED_INTERPRETER"
+}

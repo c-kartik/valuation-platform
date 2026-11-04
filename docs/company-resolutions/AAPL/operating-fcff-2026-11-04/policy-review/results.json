@@ -1,0 +1,3257 @@
+{
+  "purpose": "Policy comparison only; root must adopt one specifically named methodology before consumer changes.",
+  "source_diagnostic_sha256": "90576b069c8d9d3d9bde3d40f6f0cb8740a666641f8d4d984fc4e55d6fcf4426",
+  "periods": [
+    {
+      "fiscal_year": 2021,
+      "snapshots": [
+        {
+          "instant": "2020-09-26",
+          "core_nwc_usd": "-7433000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-37393000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2020-09-26",
+              "observations": [
+                {
+                  "value_usd": "16120000000",
+                  "context_id": "i6d507af9a8294eb39264b0e7c0c0b226_I20200926",
+                  "instance_ordinal": 413,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "16120000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2020-09-26",
+              "observations": [
+                {
+                  "value_usd": "21325000000",
+                  "context_id": "i6d507af9a8294eb39264b0e7c0c0b226_I20200926",
+                  "instance_ordinal": 417,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "21325000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2020-09-26",
+              "observations": [
+                {
+                  "value_usd": "4061000000",
+                  "context_id": "i6d507af9a8294eb39264b0e7c0c0b226_I20200926",
+                  "instance_ordinal": 415,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "4061000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2020-09-26",
+              "observations": [
+                {
+                  "value_usd": "42296000000",
+                  "context_id": "i6d507af9a8294eb39264b0e7c0c0b226_I20200926",
+                  "instance_ordinal": 433,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "42296000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2020-09-26",
+              "observations": [
+                {
+                  "value_usd": "6643000000",
+                  "context_id": "i6d507af9a8294eb39264b0e7c0c0b226_I20200926",
+                  "instance_ordinal": 437,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "6643000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2020-09-26",
+              "observations": [
+                {
+                  "value_usd": "11264000000",
+                  "context_id": "i6d507af9a8294eb39264b0e7c0c0b226_I20200926",
+                  "instance_ordinal": 419,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "11264000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2020-09-26",
+              "observations": [
+                {
+                  "value_usd": "42684000000",
+                  "context_id": "i6d507af9a8294eb39264b0e7c0c0b226_I20200926",
+                  "instance_ordinal": 435,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "42684000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": null,
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2020-09-26",
+              "observations": [
+                {
+                  "value_usd": "24000000",
+                  "context_id": "i6d507af9a8294eb39264b0e7c0c0b226_I20200926",
+                  "instance_ordinal": 1125,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "24000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2020-09-26",
+              "observations": [
+                {
+                  "value_usd": "1436000000",
+                  "context_id": "i6d507af9a8294eb39264b0e7c0c0b226_I20200926",
+                  "instance_ordinal": 1121,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1436000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "instant": "2021-09-25",
+          "core_nwc_usd": "-4289000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-36143000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "26278000000",
+                  "context_id": "i0dc4fee6389a45cfaf1b2c28d7258d49_I20210925",
+                  "instance_ordinal": 412,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "26278000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "25228000000",
+                  "context_id": "i0dc4fee6389a45cfaf1b2c28d7258d49_I20210925",
+                  "instance_ordinal": 416,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "25228000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "6580000000",
+                  "context_id": "i0dc4fee6389a45cfaf1b2c28d7258d49_I20210925",
+                  "instance_ordinal": 414,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "6580000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "54763000000",
+                  "context_id": "i0dc4fee6389a45cfaf1b2c28d7258d49_I20210925",
+                  "instance_ordinal": 432,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "54763000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "7612000000",
+                  "context_id": "i0dc4fee6389a45cfaf1b2c28d7258d49_I20210925",
+                  "instance_ordinal": 436,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "7612000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "14111000000",
+                  "context_id": "i0dc4fee6389a45cfaf1b2c28d7258d49_I20210925",
+                  "instance_ordinal": 418,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "14111000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "47493000000",
+                  "context_id": "i0dc4fee6389a45cfaf1b2c28d7258d49_I20210925",
+                  "instance_ordinal": 434,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "47493000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": null,
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "79000000",
+                  "context_id": "i0dc4fee6389a45cfaf1b2c28d7258d49_I20210925",
+                  "instance_ordinal": 1124,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "79000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "1449000000",
+                  "context_id": "i0dc4fee6389a45cfaf1b2c28d7258d49_I20210925",
+                  "instance_ordinal": 1120,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1449000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/1",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+                  "sha256": "3311362e3e82361b5c92c6b3bf4f50e9e0d10e707f125822150a3422e2f1b5e0",
+                  "byte_length": 2051301,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.398338+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/2",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925_htm.xml",
+                  "sha256": "80b1307f72e709b4f23961f38d3f3a950b65a8feaa4499241f55962d2a2a70a9",
+                  "byte_length": 1906904,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:43.789467+00:00"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "core_delta_nwc_usd": "3144000000",
+      "standardized_core_trade_fcff_exact_usd": {
+        "numerator": "9993676705000000",
+        "denominator": "109207"
+      },
+      "standardized_core_trade_fcff_display_billions": "91.51",
+      "broad_delta_nwc_usd": "1250000000",
+      "standardized_broad_current_fcff_exact_usd": {
+        "numerator": "10200514763000000",
+        "denominator": "109207"
+      },
+      "standardized_broad_current_fcff_display_billions": "93.41",
+      "eligible_as_exact_historical_cash_flow": false,
+      "policy_not_numerical_fact": "Core trade NWC intentionally excludes entire mixed Other buckets; change is a balance-sheet model, not an observed cash movement."
+    },
+    {
+      "fiscal_year": 2022,
+      "snapshots": [
+        {
+          "instant": "2021-09-25",
+          "core_nwc_usd": "-4289000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-36143000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "26278000000",
+                  "context_id": "i4e82d58a300a4a309eacd18ec8c3e8c7_I20210925",
+                  "instance_ordinal": 413,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "26278000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "25228000000",
+                  "context_id": "i4e82d58a300a4a309eacd18ec8c3e8c7_I20210925",
+                  "instance_ordinal": 417,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "25228000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "6580000000",
+                  "context_id": "i4e82d58a300a4a309eacd18ec8c3e8c7_I20210925",
+                  "instance_ordinal": 415,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "6580000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "54763000000",
+                  "context_id": "i4e82d58a300a4a309eacd18ec8c3e8c7_I20210925",
+                  "instance_ordinal": 433,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "54763000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "7612000000",
+                  "context_id": "i4e82d58a300a4a309eacd18ec8c3e8c7_I20210925",
+                  "instance_ordinal": 437,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "7612000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "14111000000",
+                  "context_id": "i4e82d58a300a4a309eacd18ec8c3e8c7_I20210925",
+                  "instance_ordinal": 419,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "14111000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "47493000000",
+                  "context_id": "i4e82d58a300a4a309eacd18ec8c3e8c7_I20210925",
+                  "instance_ordinal": 435,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "47493000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": null,
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "79000000",
+                  "context_id": "i4e82d58a300a4a309eacd18ec8c3e8c7_I20210925",
+                  "instance_ordinal": 1142,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "79000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2021-09-25",
+              "observations": [
+                {
+                  "value_usd": "1449000000",
+                  "context_id": "i4e82d58a300a4a309eacd18ec8c3e8c7_I20210925",
+                  "instance_ordinal": 1138,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1449000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "instant": "2022-09-24",
+          "core_nwc_usd": "-6149000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-44108000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "28184000000",
+                  "context_id": "if3ba800b42a9406abf364f6d45d67e23_I20220924",
+                  "instance_ordinal": 412,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "28184000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "32748000000",
+                  "context_id": "if3ba800b42a9406abf364f6d45d67e23_I20220924",
+                  "instance_ordinal": 416,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "32748000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "4946000000",
+                  "context_id": "if3ba800b42a9406abf364f6d45d67e23_I20220924",
+                  "instance_ordinal": 414,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "4946000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "64115000000",
+                  "context_id": "if3ba800b42a9406abf364f6d45d67e23_I20220924",
+                  "instance_ordinal": 432,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "64115000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "7912000000",
+                  "context_id": "if3ba800b42a9406abf364f6d45d67e23_I20220924",
+                  "instance_ordinal": 436,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "7912000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "21223000000",
+                  "context_id": "if3ba800b42a9406abf364f6d45d67e23_I20220924",
+                  "instance_ordinal": 418,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "21223000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "60845000000",
+                  "context_id": "if3ba800b42a9406abf364f6d45d67e23_I20220924",
+                  "instance_ordinal": 434,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "60845000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": null,
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "129000000",
+                  "context_id": "if3ba800b42a9406abf364f6d45d67e23_I20220924",
+                  "instance_ordinal": 1141,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "129000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "1534000000",
+                  "context_id": "if3ba800b42a9406abf364f6d45d67e23_I20220924",
+                  "instance_ordinal": 1137,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1534000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/3",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+                  "sha256": "677604ddd5bddc7afc0f1fae212f974c4226a5a4e031186d4f99269fe55f2ad7",
+                  "byte_length": 2049968,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.187365+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/4",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924_htm.xml",
+                  "sha256": "7f9a394635aeedb431c1be3da022e469d5116eac3c621b14b65bdf01d9d9bd8c",
+                  "byte_length": 1904013,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.604935+00:00"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "core_delta_nwc_usd": "-1860000000",
+      "standardized_core_trade_fcff_exact_usd": {
+        "numerator": "12188867279000000",
+        "denominator": "119103"
+      },
+      "standardized_core_trade_fcff_display_billions": "102.34",
+      "broad_delta_nwc_usd": "-7965000000",
+      "standardized_broad_current_fcff_exact_usd": {
+        "numerator": "12915991094000000",
+        "denominator": "119103"
+      },
+      "standardized_broad_current_fcff_display_billions": "108.44",
+      "eligible_as_exact_historical_cash_flow": false,
+      "policy_not_numerical_fact": "Core trade NWC intentionally excludes entire mixed Other buckets; change is a balance-sheet model, not an observed cash movement."
+    },
+    {
+      "fiscal_year": 2023,
+      "snapshots": [
+        {
+          "instant": "2022-09-24",
+          "core_nwc_usd": "-6149000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-44108000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "28184000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 395,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "28184000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "32748000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 397,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "32748000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "4946000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 399,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "4946000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "64115000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 415,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "64115000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "7912000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 419,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "7912000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "21223000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 401,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "21223000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "60845000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 417,
+                  "decimals": "-6"
+                },
+                {
+                  "value_usd": "60845000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 929,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "60845000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": {
+              "concept": "AccruedIncomeTaxesCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "6552000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 925,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "6552000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            },
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "129000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 1111,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "129000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2022-09-24",
+              "observations": [
+                {
+                  "value_usd": "1534000000",
+                  "context_id": "c-23",
+                  "instance_ordinal": 1107,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1534000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "instant": "2023-09-30",
+          "core_nwc_usd": "-3356000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-45915000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "29508000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 394,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "29508000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "31477000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 396,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "31477000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "6331000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 398,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "6331000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "62611000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 414,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "62611000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "8061000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 418,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "8061000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "14695000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 400,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "14695000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "58829000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 416,
+                  "decimals": "-6"
+                },
+                {
+                  "value_usd": "58829000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 928,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "58829000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": {
+              "concept": "AccruedIncomeTaxesCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "8819000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 924,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "8819000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            },
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "165000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 1110,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "165000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "1410000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 1106,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1410000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/5",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+                  "sha256": "fe94f3168156fcabe007f4b5e2b1b080b3804a7d36dc876a6b087eb4ad25bd8e",
+                  "byte_length": 1559035,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:44.973354+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/6",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930_htm.xml",
+                  "sha256": "9ba479d9d5d674416fe64f2a7d3e306f5b5c30ecb0aa9d87737b80ad740f76d9",
+                  "byte_length": 1432664,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:45.347458+00:00"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "core_delta_nwc_usd": "2793000000",
+      "standardized_core_trade_fcff_exact_usd": {
+        "numerator": "1354081625875000",
+        "denominator": "14217"
+      },
+      "standardized_core_trade_fcff_display_billions": "95.24",
+      "broad_delta_nwc_usd": "-1807000000",
+      "standardized_broad_current_fcff_exact_usd": {
+        "numerator": "1419479825875000",
+        "denominator": "14217"
+      },
+      "standardized_broad_current_fcff_display_billions": "99.84",
+      "eligible_as_exact_historical_cash_flow": false,
+      "policy_not_numerical_fact": "Core trade NWC intentionally excludes entire mixed Other buckets; change is a balance-sheet model, not an observed cash movement."
+    },
+    {
+      "fiscal_year": 2024,
+      "snapshots": [
+        {
+          "instant": "2023-09-30",
+          "core_nwc_usd": "-3356000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-45915000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "29508000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 374,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "29508000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "31477000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 376,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "31477000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "6331000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 378,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "6331000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "62611000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 394,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "62611000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "8061000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 398,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "8061000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "14695000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 380,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "14695000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "58829000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 396,
+                  "decimals": "-6"
+                },
+                {
+                  "value_usd": "58829000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 890,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "58829000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": {
+              "concept": "AccruedIncomeTaxesCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "8819000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 886,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "8819000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            },
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "165000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 1069,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "165000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2023-09-30",
+              "observations": [
+                {
+                  "value_usd": "1410000000",
+                  "context_id": "c-22",
+                  "instance_ordinal": 1065,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1410000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "instant": "2024-09-28",
+          "core_nwc_usd": "-3680000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-66065000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "33410000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 373,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "33410000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "32833000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 375,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "32833000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "7286000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 377,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "7286000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "68960000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 393,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "68960000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "8249000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 397,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "8249000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "14287000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 379,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "14287000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "78304000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 395,
+                  "decimals": "-6"
+                },
+                {
+                  "value_usd": "78304000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 889,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "78304000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": {
+              "concept": "AccruedIncomeTaxesCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "26601000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 885,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "26601000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            },
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "144000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 1068,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "144000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "1488000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 1064,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1488000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/7",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+                  "sha256": "ad50b095baff0923b847f7ad859e97e0b863a9fbd8e27b868556c817ebd83361",
+                  "byte_length": 1503891,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.095118+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/8",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928_htm.xml",
+                  "sha256": "1bf6615f47d53f87b10fd036b647fbb4e9ad59db51667761b42ee6666bb2241c",
+                  "byte_length": 1355849,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:46.491235+00:00"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "core_delta_nwc_usd": "-324000000",
+      "standardized_core_trade_fcff_exact_usd": {
+        "numerator": "2367301429200000",
+        "denominator": "24697"
+      },
+      "standardized_core_trade_fcff_display_billions": "95.85",
+      "broad_delta_nwc_usd": "-20150000000",
+      "standardized_broad_current_fcff_exact_usd": {
+        "numerator": "2856944151200000",
+        "denominator": "24697"
+      },
+      "standardized_broad_current_fcff_display_billions": "115.68",
+      "eligible_as_exact_historical_cash_flow": false,
+      "policy_not_numerical_fact": "Core trade NWC intentionally excludes entire mixed Other buckets; change is a balance-sheet model, not an observed cash movement."
+    },
+    {
+      "fiscal_year": 2025,
+      "snapshots": [
+        {
+          "instant": "2024-09-28",
+          "core_nwc_usd": "-3680000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-66065000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "33410000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 371,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "33410000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "32833000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 373,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "32833000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "7286000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 375,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "7286000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "68960000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 391,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "68960000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "8249000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 395,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "8249000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "14287000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 377,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "14287000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "78304000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 393,
+                  "decimals": "-6"
+                },
+                {
+                  "value_usd": "78304000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 885,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "78304000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": {
+              "concept": "AccruedIncomeTaxesCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "26601000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 879,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "26601000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            },
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "144000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 1041,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "144000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2024-09-28",
+              "observations": [
+                {
+                  "value_usd": "1488000000",
+                  "context_id": "c-21",
+                  "instance_ordinal": 1037,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1488000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "instant": "2025-09-27",
+          "core_nwc_usd": "-240000000",
+          "broad_current_nwc_both_lease_liabilities_excluded_usd": "-49925000000",
+          "items": [
+            {
+              "concept": "AccountsReceivableNetCurrent",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "39777000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 370,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "39777000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "NontradeReceivablesCurrent",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "33180000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 372,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "33180000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "InventoryNet",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "5718000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 374,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "5718000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": 1
+            },
+            {
+              "concept": "AccountsPayableCurrent",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "69860000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 390,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "69860000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": -1
+            },
+            {
+              "concept": "ContractWithCustomerLiabilityCurrent",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "9055000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 394,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "9055000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ],
+              "coefficient": -1
+            }
+          ],
+          "excluded_or_diagnostic": {
+            "OtherAssetsCurrent": {
+              "concept": "OtherAssetsCurrent",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "14585000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 376,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "14585000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            },
+            "OtherLiabilitiesCurrent": {
+              "concept": "OtherLiabilitiesCurrent",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "66387000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 392,
+                  "decimals": "-6"
+                },
+                {
+                  "value_usd": "66387000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 884,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "66387000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            },
+            "AccruedIncomeTaxesCurrent": {
+              "concept": "AccruedIncomeTaxesCurrent",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "13016000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 878,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "13016000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            },
+            "FinanceLeaseLiabilityCurrent": {
+              "concept": "FinanceLeaseLiabilityCurrent",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "538000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 1040,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "538000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            },
+            "OperatingLeaseLiabilityCurrent": {
+              "concept": "OperatingLeaseLiabilityCurrent",
+              "instant": "2025-09-27",
+              "observations": [
+                {
+                  "value_usd": "1579000000",
+                  "context_id": "c-20",
+                  "instance_ordinal": 1036,
+                  "decimals": "-6"
+                }
+              ],
+              "value_usd": "1579000000",
+              "sources": [
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/9",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+                  "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+                  "byte_length": 1520319,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00"
+                },
+                {
+                  "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/10",
+                  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+                  "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+                  "byte_length": 1416841,
+                  "http_status": 200,
+                  "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "core_delta_nwc_usd": "3440000000",
+      "standardized_core_trade_fcff_exact_usd": {
+        "numerator": "4770452449000000",
+        "denominator": "44243"
+      },
+      "standardized_core_trade_fcff_display_billions": "107.82",
+      "broad_delta_nwc_usd": "16140000000",
+      "standardized_broad_current_fcff_exact_usd": {
+        "numerator": "4208566349000000",
+        "denominator": "44243"
+      },
+      "standardized_broad_current_fcff_display_billions": "95.12",
+      "eligible_as_exact_historical_cash_flow": false,
+      "policy_not_numerical_fact": "Core trade NWC intentionally excludes entire mixed Other buckets; change is a balance-sheet model, not an observed cash movement."
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 # Project Status
 
+## Apple historical FCFF display resolved under standardized method — November 4, 2026
+
+[Implementation and independent review](company-resolutions/AAPL/operating-fcff-2026-11-04/report.html) publishes93.41/108.44/99.84/115.68/95.12B for FY2021–25 to the catalog, DCF/scenario bars and Cash flows view. No interest estimate: one EBIT/reported-ETR/defined-current-NWC/cash-PP&E method across all five years. Current taxes/mixed Other are uniformly included by disclosed convention;355M FY2024 D&A mismatch remains qualified. The selected historical availability issue passes source/arithmetic/API/UI audit. Legacy CFO gaps, provisional FCFE, forecasts and source packages remain unchanged. Counts now20stated-convention calculations,10provisional FCFE,0selected-method FCFF gaps. Overall Apple/Meta/Alphabet and project financial review remain OPEN. Prior17strict failed cells are the preserved original-basis snapshot, not today's selected FCFF missing count. See the linked validation for exact test/browser results.
+
 ## Four-step three-company execution — November 4, 2026
 
 [Detailed report](company-resolutions/execution-2026-11-04/report.html): numerical

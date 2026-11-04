@@ -1,5 +1,9 @@
 # AAPL — company data preparation
 
+## Current selected historical FCFF — November 4 operating-method adoption
+
+The user authorizes implementing the five-year operating-income solution. [Versioned Apple resolution](../company-resolutions/AAPL/operating-fcff-2026-11-04/README.md) replaces the current historical consumer with93.41/108.44/99.84/115.68/95.12B, FY2021–25. Source-bound inputs, exact NWC continuity, method bridges, API/chart integration and independent audit are retained there. Current tax accruals and mixed Other are included uniformly by a material disclosed aggregate convention; combined D&A retains the355M FY2024 qualification. This is standardized derived FCFF, not exact unlevered cash. The two old CFO-method nulls remain in legacy data. FCFE, forecasts, original sources and preparation/sufficiency status are unchanged; overall Apple remains OPEN. Earlier sections below describe their dated prior methods.
+
 ## November 4 ordered execution
 
 [Apple workpaper and implementation report](../company-resolutions/execution-2026-11-04/report.html)

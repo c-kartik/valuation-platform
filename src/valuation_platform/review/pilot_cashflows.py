@@ -57,5 +57,21 @@ def read_cashflows(root, ticker):
             raise ValueError('Missing FCFF cannot be cleared')
         if not company['review_passed'] and company['status'] != 'OPEN':
             raise ValueError('Failed review must retain an open company status')
+    if ticker == 'AAPL':
+        from .apple_operating_history import read_overlay, BASIS, METHOD, NOTICE
+        overlay = read_overlay(root)
+        for period, adopted in zip(company['periods'],overlay['periods'],strict=True):
+            if (period['annual_start'],period['annual_end'],period['accession']) != tuple(adopted['identity'][k] for k in ('annual_start','annual_end','accession')):
+                raise ValueError('Apple cash-flow overlay identity mismatch')
+            period['legacy_cfo_fcff'] = period['fcff']
+            period['fcff'] = {'amount_usd':adopted['fcff']['amount_usd'],'basis':BASIS,
+                'status':'AVAILABLE_STANDARDIZED_OPERATING_CONVENTION','scope':'CONSOLIDATED',
+                'methodology':METHOD,'cleared':True,'source_urls':adopted['source_urls'],
+                'operands':adopted['inputs'],'open_items':[],'valuation_basis_aligned':False,
+                'exact_unlevered_cash_flow_claim':False,'qualifications':[adopted['qualification'],
+                    'Combined reported D&A used; FY2024 later note total differs by $355m. No plug is made.',
+                    'Current tax accruals included uniformly; tax-excluded historical cash flow is not established.']}
+        company['active_fcff_method_adoption'] = 'AAPL_OPERATING_2026_11_04'
+        company['notice'] = NOTICE
     company['readiness'] = readiness(company)
     return company

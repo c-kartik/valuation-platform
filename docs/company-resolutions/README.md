@@ -1,5 +1,9 @@
 # Company cash-flow resolutions
 
+## Current Apple historical consumer — November 4
+
+The [five-year operating-method adoption](AAPL/operating-fcff-2026-11-04/report.html) resolves the current Apple FY2024/25 FCFF display gaps under an explicitly qualified standardized methodology, consistently replacing all five years. Current three-company selected-method counts:15FCFF+5consolidated FCFE available under stated conventions;10provisional FCFE;0selected-method FCFF gaps. The old18/10/2 counts and17strict failed cells below describe earlier scopes/bases and remain preserved. Tax/Other conventions,355M D&A qualification and legacy CFO nulls are explicit. Overall company reviews remain OPEN.
+
 ## Four-step execution — November 4
 
 The [implementation report](execution-2026-11-04/report.html) records five exact
@@ -38,7 +42,7 @@ individually rather than represented as overall completion.
 
 | Company | Review scope | Current outcome | Record |
 | --- | --- | --- | --- |
-| Apple (AAPL) | FY2021–FY2025; Other financing, FY2021 stock-proceeds presentation, alternative FCFF route and tax separation | One presentation conflict resolved; five FCFE values reconciled but provisional; operating FCFF input alignment remains unresolved; no platform number changed | [Apple decisions and results](AAPL/README.md) |
+| Apple (AAPL) | FY2021–FY2025; Other financing, FY2021 stock-proceeds presentation, alternative FCFF route and tax separation | Five standardized operating FCFF values available after November4 adoption; old CFO gaps preserved; five FCFE values remain provisional; broader financial review OPEN | [Apple decisions and results](AAPL/README.md) |
 | Meta (META) | FY2021–FY2025; five approved financing/investment/interest/tax treatments | Net investment changes chart FCFF+245m/+221m in2022/23; FCFE provisional; Other unresolved | [Meta decisions and results](META/README.md) |
 | Alphabet (GOOGL) | FY2021–FY2025; NCI scope and lease containment | Consolidated FCFE labeled before NCI; parent-common cash missing; FCFF unchanged; leases counted once | [Alphabet decisions and results](GOOGL/README.md) |
 

@@ -8,7 +8,19 @@ import type {Result} from '../model';
 import fixture from '../test-fixtures/fcfe-result.json';
 import projection from '../../../docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json';
 import readiness from '../test-fixtures/cashflow-readiness.json';
+import appleOperating from '../test-fixtures/apple-operating-cashflows.json';
 afterEach(()=>vi.unstubAllGlobals());
+it('shows all five standardized Apple FCFF values with explicit method and preserves FCFE qualification',async()=>{
+ const load=vi.fn(async()=>structuredClone(appleOperating)) as unknown as typeof request;
+ render(<HistoricalCashFlows ticker="AAPL" active load={load}/>);
+ await screen.findByText('115.68B');expect(screen.getByText('95.12B')).toBeTruthy();
+ expect(screen.getAllByText('Standardized operating-income method')).toHaveLength(5);
+ expect(screen.queryByText('Missing interest disclosure')).toBeNull();
+ expect(screen.getAllByText('Provisional · financing classification open')).toHaveLength(5);
+ expect(screen.getByText(/All five Apple FCFF observations use the same standardized method/)).toBeTruthy();
+ expect(screen.getByText(/Current tax accruals and mixed Other current balances are included by convention/)).toBeTruthy();
+ expect(checkCashFlows(structuredClone(appleOperating) as CashFlowReview,'AAPL')).toBeTruthy();
+});
 it('shows consolidated history separately from parent equity and per-share readiness',async()=>{
  const data={...structuredClone(projection.companies.GOOGL),readiness:structuredClone(readiness.GOOGL)};
  const load=vi.fn(async()=>data) as unknown as typeof request;

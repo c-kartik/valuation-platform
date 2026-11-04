@@ -25,6 +25,9 @@ def amount(value):
 
 def adopted_window(root,kind):
     rows=cfo_history.adopted_window(root,kind)
+    if kind=='aapl-fy2025':
+        from .apple_operating_history import apply_window
+        return apply_window(root,rows)
     if kind!='meta-fy2025':return rows
     payload=(root/OVERLAY).read_bytes()
     if hashlib.sha256(payload).hexdigest()!=OVERLAY_SHA256:
@@ -55,6 +58,9 @@ def adopted_window(root,kind):
 
 
 def policy(kind):
+    if kind=='aapl-fy2025':
+        from .apple_operating_history import policy as apple_policy
+        return apple_policy()
     result=cfo_history.policy()
     if kind=='meta-fy2025':
         result['basis']=BASIS

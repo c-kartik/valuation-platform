@@ -7,7 +7,9 @@ from urllib.parse import urlsplit
 from .budget import encode_bounded
 
 # Five source-bound annual observations per issuer; still a bounded fixed catalog.
-CATALOG_MAX_BYTES = 80 * 1024
+# The Apple operating overlay carries opening/closing NWC operands and retains
+# the legacy CFO values. Keep a fixed ceiling for the bounded three-issuer set.
+CATALOG_MAX_BYTES = 96 * 1024
 TEMPLATE_NAMES = ('meta-fy2025', 'googl-fy2025', 'aapl-fy2025')
 
 

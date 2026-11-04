@@ -1,0 +1,994 @@
+{
+  "additional_current_tax_diagnostics_checked": 4,
+  "amounts": [
+    {
+      "both_current_leases_excluded": true,
+      "closing_nwc_usd": "-36143000000",
+      "delta_nwc_usd": "1250000000",
+      "fcff_exact_fraction_usd": "10200514763000000/109207",
+      "fcff_serialized_usd": "93405319832.977739522191800891884219876015273746188",
+      "fiscal_year": 2021,
+      "opening_nwc_usd": "-37393000000",
+      "sbc_added_back": false,
+      "tax_population": "INCLUDED_IN_AGGREGATE_ALL_YEARS"
+    },
+    {
+      "both_current_leases_excluded": true,
+      "closing_nwc_usd": "-44108000000",
+      "delta_nwc_usd": "-7965000000",
+      "fcff_exact_fraction_usd": "12915991094000000/119103",
+      "fcff_serialized_usd": "108443877097.97402248474009890598893394792742416228",
+      "fiscal_year": 2022,
+      "opening_nwc_usd": "-36143000000",
+      "sbc_added_back": false,
+      "tax_population": "INCLUDED_IN_AGGREGATE_ALL_YEARS"
+    },
+    {
+      "both_current_leases_excluded": true,
+      "closing_nwc_usd": "-45915000000",
+      "delta_nwc_usd": "-1807000000",
+      "fcff_exact_fraction_usd": "1419479825875000/14217",
+      "fcff_serialized_usd": "99843836665.611591756348034043750439614545966096926",
+      "fiscal_year": 2023,
+      "opening_nwc_usd": "-44108000000",
+      "sbc_added_back": false,
+      "tax_population": "INCLUDED_IN_AGGREGATE_ALL_YEARS"
+    },
+    {
+      "both_current_leases_excluded": true,
+      "closing_nwc_usd": "-66065000000",
+      "delta_nwc_usd": "-20150000000",
+      "fcff_exact_fraction_usd": "2856944151200000/24697",
+      "fcff_serialized_usd": "115679805288.09167105316435194558043487063206057416",
+      "fiscal_year": 2024,
+      "opening_nwc_usd": "-45915000000",
+      "sbc_added_back": false,
+      "tax_population": "INCLUDED_IN_AGGREGATE_ALL_YEARS"
+    },
+    {
+      "both_current_leases_excluded": true,
+      "closing_nwc_usd": "-49925000000",
+      "delta_nwc_usd": "16140000000",
+      "fcff_exact_fraction_usd": "4208566349000000/44243",
+      "fcff_serialized_usd": "95123891892.502768799584115001243134507153674027530",
+      "fiscal_year": 2025,
+      "opening_nwc_usd": "-66065000000",
+      "sbc_added_back": false,
+      "tax_population": "INCLUDED_IN_AGGREGATE_ALL_YEARS"
+    }
+  ],
+  "annual_points": 25,
+  "distinct_balance_dates": [
+    "2020-09-26",
+    "2021-09-25",
+    "2022-09-24",
+    "2023-09-30",
+    "2024-09-28",
+    "2025-09-27"
+  ],
+  "exact_cash_fcff_claim": false,
+  "fcfe_changed": false,
+  "financial_company_status": "OPEN",
+  "five_scoped_history_values_available": true,
+  "forecast_calibration_or_cross_basis_cagr_enabled": false,
+  "history_reader_matches": true,
+  "instant_points": 80,
+  "integration_scope_limits": [
+    "No browser visual interaction performed by this independent source audit.",
+    "Readiness metadata and actual exports checked; no independent end-to-end live DCF engine parity claim."
+  ],
+  "legacy_cfo_gaps_preserved": true,
+  "meta_googl_changed": false,
+  "primary_chart_catalog_matches": true,
+  "qualification_requirements": [
+    "Broad Other current balances classified by model convention, not individual pure operating facts.",
+    "Current-tax accruals remain included uniformly; no missing split treated as zero.",
+    "Reported ETR allocation is not exact unlevered cash taxation.",
+    "Cash-statement combined D&A is adopted without a 355M reconciliation plug; precise note populations remain different.",
+    "Cash PP&E model omits a comprehensive economic-investment/finance-lease asset bridge.",
+    "No automatic forecast calibration; existing forecast inputs and EV are a separate validation scope."
+  ],
+  "retained_body_hashes_checked": 10,
+  "source_observations": [
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "11085000000"
+    },
+    {
+      "concept": "DepreciationDepletionAndAmortization",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "11284000000"
+    },
+    {
+      "concept": "OperatingIncomeLoss",
+      "contexts_checked": 2,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "108949000000"
+    },
+    {
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "109207000000"
+    },
+    {
+      "concept": "IncomeTaxExpenseBenefit",
+      "contexts_checked": 3,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "14527000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "38016000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "4996000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "143713000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "24000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "105392000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "1436000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "52927000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "8773000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "34940000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "6000000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "134836000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "79000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "125481000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "1449000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "27699000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2021,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "9613000000"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "10708000000"
+    },
+    {
+      "concept": "DepreciationDepletionAndAmortization",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "11104000000"
+    },
+    {
+      "concept": "OperatingIncomeLoss",
+      "contexts_checked": 2,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "119437000000"
+    },
+    {
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "119103000000"
+    },
+    {
+      "concept": "IncomeTaxExpenseBenefit",
+      "contexts_checked": 3,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "19300000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "34940000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "6000000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "134836000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "79000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "125481000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "1449000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "27699000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "9613000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "23646000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "9982000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "135405000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "129000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "153982000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "1534000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "24658000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2022,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "11128000000"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "10959000000"
+    },
+    {
+      "concept": "DepreciationDepletionAndAmortization",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "11519000000"
+    },
+    {
+      "concept": "OperatingIncomeLoss",
+      "contexts_checked": 2,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "114301000000"
+    },
+    {
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "113736000000"
+    },
+    {
+      "concept": "IncomeTaxExpenseBenefit",
+      "contexts_checked": 3,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "16741000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "23646000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "9982000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "135405000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "129000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "153982000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "1534000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "24658000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "11128000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "29965000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "5985000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "143566000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "165000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "145308000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "1410000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "31590000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "9822000000"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "9447000000"
+    },
+    {
+      "concept": "DepreciationDepletionAndAmortization",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "11445000000"
+    },
+    {
+      "concept": "OperatingIncomeLoss",
+      "contexts_checked": 2,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "123216000000"
+    },
+    {
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "123485000000"
+    },
+    {
+      "concept": "IncomeTaxExpenseBenefit",
+      "contexts_checked": 3,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "29749000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "29965000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "5985000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "143566000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "165000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "145308000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "1410000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "31590000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "9822000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "29943000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "9967000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "152987000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "144000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "176392000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "1488000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "35228000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "10912000000"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "12715000000"
+    },
+    {
+      "concept": "DepreciationDepletionAndAmortization",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "11698000000"
+    },
+    {
+      "concept": "OperatingIncomeLoss",
+      "contexts_checked": 2,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "133050000000"
+    },
+    {
+      "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "132729000000"
+    },
+    {
+      "concept": "IncomeTaxExpenseBenefit",
+      "contexts_checked": 3,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "annual",
+      "value_usd": "20719000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "29943000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "9967000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "152987000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "144000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "176392000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "1488000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "35228000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "opening",
+      "value_usd": "10912000000"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "contexts_checked": 2,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "35934000000"
+    },
+    {
+      "concept": "CommercialPaper",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "7979000000"
+    },
+    {
+      "concept": "AssetsCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "147957000000"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "538000000"
+    },
+    {
+      "concept": "LiabilitiesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "165631000000"
+    },
+    {
+      "concept": "OperatingLeaseLiabilityCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "1579000000"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "18763000000"
+    },
+    {
+      "concept": "LongTermDebtCurrent",
+      "contexts_checked": 2,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "closing",
+      "value_usd": "12350000000"
+    },
+    {
+      "concept": "AccruedIncomeTaxesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "diagnostic",
+      "value_usd": "6552000000"
+    },
+    {
+      "concept": "AccruedIncomeTaxesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2023,
+      "primary_and_instance_match": true,
+      "side": "diagnostic",
+      "value_usd": "8819000000"
+    },
+    {
+      "concept": "AccruedIncomeTaxesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2024,
+      "primary_and_instance_match": true,
+      "side": "diagnostic",
+      "value_usd": "26601000000"
+    },
+    {
+      "concept": "AccruedIncomeTaxesCurrent",
+      "contexts_checked": 1,
+      "fiscal_year": 2025,
+      "primary_and_instance_match": true,
+      "side": "diagnostic",
+      "value_usd": "13016000000"
+    }
+  ],
+  "source_points_checked": 105,
+  "tax_diagnostics": [
+    {
+      "current_tax_usd": "6552000000",
+      "source_filing_year": 2023,
+      "target_fiscal_year": 2022,
+      "used_as_formula_subtraction": false
+    },
+    {
+      "current_tax_usd": "8819000000",
+      "source_filing_year": 2023,
+      "target_fiscal_year": 2023,
+      "used_as_formula_subtraction": false
+    },
+    {
+      "current_tax_usd": "26601000000",
+      "source_filing_year": 2024,
+      "target_fiscal_year": 2024,
+      "used_as_formula_subtraction": false
+    },
+    {
+      "current_tax_usd": "13016000000",
+      "source_filing_year": 2025,
+      "target_fiscal_year": 2025,
+      "used_as_formula_subtraction": false
+    }
+  ],
+  "verdict": "PASS_QUALIFIED_STANDARDIZED_APPLE_HISTORY"
+}

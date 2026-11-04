@@ -18,12 +18,12 @@ import adopt_historical_cfo_fcff as adoption
 
 
 class AdoptedCFOHistoryTests(unittest.TestCase):
-    def test_catalog_uses_thirteen_calculations_and_two_explicit_apple_gaps(self):
+    def test_catalog_uses_apple_standardized_overlay_and_preserves_other_issuers(self):
         raw = build_catalog(ROOT)
         self.assertLess(len(raw), CATALOG_MAX_BYTES)
         entries = json.loads(raw)["entries"]
         expected = {"GOOGL": ["67.30", "60.31", "69.76", "72.99", "73.88"],
-                    "AAPL": ["95.25", "113.90", "102.94", None, None],
+                    "AAPL": ["93.41", "108.44", "99.84", "115.68", "95.12"],
                     "META": ["39.14", "19.44", "44.44", "54.70", "46.93"]}
         from decimal import Decimal, Context, localcontext
         for entry in entries:
@@ -36,8 +36,8 @@ class AdoptedCFOHistoryTests(unittest.TestCase):
                 else:
                     with localcontext(Context(prec=60)):
                         self.assertEqual(f'{Decimal(period["fcff"])/1000000000:.2f}', wanted)
-                    self.assertEqual(period["fcff_calculation"]["status"], "CALCULATED")
-                self.assertEqual(period["fcff_basis"], "REPORTED_CFO_NET_IDENTIFIED_PPE" if entry["company"]=="META" else "REPORTED_CFO_CASH_PPE")
+                    self.assertEqual(period["fcff_calculation"]["status"], "CALCULATED_STANDARDIZED_CONVENTION" if entry['company']=='AAPL' else "CALCULATED")
+                self.assertEqual(period["fcff_basis"], "REPORTED_CFO_NET_IDENTIFIED_PPE" if entry["company"]=="META" else "STANDARDIZED_EBIT_CURRENT_NWC_CASH_PPE" if entry['company']=='AAPL' else "REPORTED_CFO_CASH_PPE")
                 self.assertTrue(period["fcff_calculation"]["sources"])
         self.assertNotIn("/Users/", raw.decode())
 
