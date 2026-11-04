@@ -1,5 +1,9 @@
 # GOOGL — company data preparation
 
+## Named analyst-consumer sufficiency — November4,2026
+
+[Alphabet five-output contract](../company-resolutions/GOOGL/analyst-ready-2026-11-04/README.md) supports all five outputs with qualifications under explicit user authorization. Dated cash/debt, all share classes, RSUs, private holdings and NCI are source-bound. Default historical cash is an unallocated consolidated proxy, not verified parent cash. Forward share values deduct an editable3.4B book-NCI valuation proxy once. Original preparation/frozen-v1 statuses and exact ownership/lease limitations remain preserved; this is named analyst sufficiency.
+
 ## November 4 ordered execution
 
 [Ownership separation and implementation report](../company-resolutions/execution-2026-11-04/report.html)

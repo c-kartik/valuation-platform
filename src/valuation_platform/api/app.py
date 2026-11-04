@@ -11,7 +11,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, Response
 from starlette.requests import ClientDisconnect
 
-from .budget import DEFAULT_POLICY, BudgetError, error_body, read_http_case, read_http_scenarios, read_http_sensitivity, read_http_reverse, read_http_fcfe, read_http_apple_analyst
+from .budget import DEFAULT_POLICY, BudgetError, error_body, read_http_case, read_http_scenarios, read_http_sensitivity, read_http_reverse, read_http_fcfe, read_http_apple_analyst, read_http_company_analyst
 from .bundle import verify_bundle
 from .process import Calculator, ExecutionError
 from .worker import calculate
@@ -113,6 +113,8 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
             from valuation_platform.review.pilot_cashflows import read_cashflows, TICKERS
             app.state.cashflows = {ticker: encode_bounded(read_cashflows(root, ticker), 96 * 1024)
                                    for ticker in TICKERS}
+            from valuation_platform.review.company_analyst import analyst_profile, SPECS
+            app.state.analyst_profiles = {ticker: encode_bounded(analyst_profile(root, ticker), 16 * 1024) for ticker in SPECS}
         except Exception:
             raise RuntimeError('Private runtime bundle failed readiness checks') from None
         app.state.calculator = Calculator(root, policy, worker_target, worker_args)
@@ -174,6 +176,16 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
         if ticker.upper() not in app.state.discount_inputs:
             raise ExecutionError(404, 'unsupported_preparation', 'No saved discount-rate preparation exists for this issuer.')
         return Response(app.state.discount_inputs[ticker.upper()], media_type='application/json')
+
+    @app.get('/api/v1/analyst/{ticker}')
+    async def company_analyst_profile(ticker: str, request: Request):
+        if request.query_params:
+            raise ExecutionError(422, 'invalid_case', 'Query parameters are not accepted.')
+        if not app.state.ready:
+            raise ExecutionError(503, 'not_ready', 'Service is not ready.')
+        if ticker.upper() not in app.state.analyst_profiles:
+            raise ExecutionError(404, 'unsupported_preparation', 'No reviewed analyst profile exists for this issuer.')
+        return Response(app.state.analyst_profiles[ticker.upper()], media_type='application/json')
 
     async def intake(request, reader=None):
         if request.query_params:
@@ -249,6 +261,20 @@ def create_app(root=None, *, policy=DEFAULT_POLICY, worker_target=calculate, wor
                     return
         status, payload = await app.state.calculator.run(body, disconnected)
         return Response(payload, status_code=status, media_type='application/json', headers={'Cache-Control': 'no-store'})
+
+    @app.post('/api/v1/analyst/run')
+    async def company_analyst_run(request: Request):
+        if app.state.ready and app.state.calculator.job is not None:
+            raise ExecutionError(503, 'busy', 'One calculation is already running; retry later.')
+        body, _, failure = await intake(request, read_http_company_analyst)
+        if failure is not None:
+            return failure
+        async def disconnected():
+            while True:
+                if (await request.receive())['type'] == 'http.disconnect':
+                    return
+        status, payload = await app.state.calculator.run(body, disconnected)
+        return Response(payload, status_code=status, media_type='application/json', headers={'Cache-Control':'no-store'})
 
     @app.post('/api/v1/review/run')
     async def review_run(request: Request):

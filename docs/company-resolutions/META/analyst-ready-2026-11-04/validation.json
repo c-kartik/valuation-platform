@@ -1,0 +1,91 @@
+{
+  "ticker": "META",
+  "acceptance_date": "2026-11-04",
+  "status": "ANALYST_READY_WITH_QUALIFICATIONS",
+  "contract": "Five named analyst outputs under approved practical analyst conventions; FY2025 valuation origin with later information",
+  "outputs": {
+    "five_year_historical_fcff": "PASS",
+    "fcff_forecast_and_enterprise_value": "PASS",
+    "five_year_standardized_historical_fcfe": "PASS",
+    "fcfe_forecast_and_equity_value": "PASS",
+    "fair_value_per_share_both_routes": "PASS"
+  },
+  "implementation_blockers_remaining": [],
+  "final_checks": {
+    "full_api_suite": {
+      "status": "PASS",
+      "tests": 80,
+      "log": "logs/api-tests.log"
+    },
+    "full_frontend_suite": {
+      "status": "PASS",
+      "tests": 309,
+      "files": 28,
+      "log": "logs/frontend-tests.log"
+    },
+    "focused_financial_suite": {
+      "status": "PASS",
+      "tests": 22,
+      "log": "logs/financial-tests.log"
+    },
+    "production_build": {
+      "status": "PASS",
+      "log": "logs/production-build.log"
+    },
+    "source_policy_replay": "PASS",
+    "both_issuer_report_replay": "PASS",
+    "apple_report_preservation": "PASS",
+    "browser": {
+      "status": "PASS",
+      "ticker": "META",
+      "default_values_verified": true,
+      "live_assumption_recalculation": true,
+      "stale_state_verified": true,
+      "five_outputs_visible": true,
+      "five_histories_visible": true,
+      "minority_scope_visible": false,
+      "mobile": {
+        "width": 390,
+        "documentWidth": 390
+      },
+      "report_mobile": {
+        "width": 390,
+        "documentWidth": 390
+      },
+      "javascript_errors": []
+    },
+    "independent_review": {
+      "status": "PASS_WITH_DISCLOSED_ANALYST_QUALIFICATIONS",
+      "arithmetic_assertions_per_issuer": 320,
+      "arithmetic_assertions_both_issuers": 640,
+      "current_policy_primary_facts_this_issuer": 68,
+      "note": "68 Meta +30 Alphabet current-policy facts; additional historical fact checks overlap. Test counts overlap and are not a unique aggregate.",
+      "scenario_horizon_combinations_both_issuers": 12,
+      "record": "independent-review.json"
+    }
+  },
+  "reviewed_code_sha256": {
+    "src/valuation_platform/review/company_analyst.py": "f9e6ac783a84e5b85cbed29be5c7cecf105a2783ace2a578570158c8f9cb02ac",
+    "src/valuation_platform/valuation/fcfe.py": "58d80fab138a0aa4bf7b7bf5e96aaa1889502f49d5f2e7d19adbf0ffa7180052",
+    "frontend/src/workspace/CompanyAnalyst.tsx": "92198a1b3c61d39e6e78bbb074eae50dd25bd0118b20e806817eb0ae34c7754d"
+  },
+  "policy_sha256": "dd4c7b4fbf60a42ac41f02ceae6486fba656069e171d1187ae7cc4a7e917c5df",
+  "development_findings_resolved": [
+    "GOOGL Bear ten-year last-place Decimal associativity discrepancy: representation-only bounded envelope; calculated cash unchanged; real component error still rejected.",
+    "Alphabet zero-NCI sensitivity added alongside book/5x/10x.",
+    "Initial full API run crossed an in-progress source change and failed one cached-versus-worker equality check; final fresh full run passed all80. Initial log retained."
+  ],
+  "accepted_qualifications": [
+    "Historical standardized estimates are not exact cash reconstruction.",
+    "Cash reserve, award vesting, investment carrying proxies and financing are disclosed analyst assumptions.",
+    "FCFF and FCFE financing cases differ; no forced parity.",
+    "Unclassified Other financing default allocation0 is an analyst approximation, not proof of no funding."
+  ],
+  "not_certified": [
+    "exact historical cash or ownership reconstruction",
+    "current-date target prices or contemporaneous backtests",
+    "exit-multiple FCFE consumer",
+    "other issuers or wider universe",
+    "public deployment"
+  ]
+}

@@ -1,5 +1,9 @@
 # Meta — manually approved cash-flow treatments
 
+## Current five-output analyst acceptance — November4,2026
+
+[Implementation, decision log and independent acceptance](analyst-ready-2026-11-04/report.html) supersede blanket valuation-use blocking below for the approved analyst consumer. All five outputs are analyst-ready with qualifications: default historical FCFE uses identified financing, new forward financing/discounting is explicit, and both per-share bridges use dated source facts plus disclosed assumptions. Base374.70/share FCFF /370.36/share FCFE use different financing cases. Net-PP&E corrections remain; private investments27.524B include equity-method7.448B once. Original sources, unknown Other and exact interest/investment limitations remain traceable.
+
 November 3, 2026. CIK 0001326801; FY2021–FY2025. The user approved all five
 preferred treatments and requested implementation with company-level documentation.
 [Approval](decisions.json), [exact source map](source-map.json), [results](results.json),

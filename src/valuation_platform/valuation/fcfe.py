@@ -85,12 +85,31 @@ def _financing_bridge(operating, tax_rate, financing, opening_debt):
     net_income = ebit - interest - equity_tax
     borrowing = cash_issue + financed_assets - repayment
     fcfe = net_income + da - investment - wc + borrowing
-    if fcfe != base_fcff - interest + tax_shield + borrowing:
+    bridge_fcfe = base_fcff - interest + tax_shield + borrowing
+    rounding = fcfe - bridge_fcfe
+    # These independently ordered identities use 50 significant decimal digits.
+    # Cancellation can expose a last-place difference even with identical source
+    # operands. Bound only the arithmetic error: fewer than16 rounded operations,
+    # each <= half one ULP at the largest intermediate magnitude. Do not use a
+    # financial materiality threshold or alter either cash-flow calculation.
+    intermediates = (ebit, da, investment, wc, base_fcff, interest, borrowing,
+                     unlevered_tax, equity_tax, tax_shield, net_income, fcfe, bridge_fcfe)
+    # The sum bounds every addition/subtraction intermediate, including values
+    # whose order of magnitude can exceed that of any individual operand.
+    magnitude = sum((v.copy_abs() for v in intermediates), Decimal(0))
+    scale = magnitude.adjusted() if magnitude else 0
+    envelope = Decimal(8).scaleb(scale - 49)
+    if abs(rounding) > envelope:
         raise ValueError('Independent income/FCFF financing bridges disagree')
-    return {**{k: str(financing[k]) for k in FIELDS}, 'opening_debt_usd': str(opening_debt),
+    result = {**{k: str(financing[k]) for k in FIELDS}, 'opening_debt_usd': str(opening_debt),
         'closing_debt_usd': str(closing), 'net_borrowing_usd': str(borrowing),
         'interest_tax_shield_usd': str(tax_shield), 'equity_tax_usd': str(equity_tax),
         'net_income_usd': str(net_income), 'fcff_usd': str(base_fcff), 'fcfe_usd': str(fcfe)}
+    if rounding:
+        result['income_bridge_rounding_difference_usd'] = str(rounding)
+        result['income_bridge_rounding_envelope_usd'] = str(envelope)
+        result['rounding_difference_is_cash_adjustment'] = False
+    return result
 
 
 def run_fcfe(doc, root):

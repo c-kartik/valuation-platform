@@ -1,5 +1,11 @@
 # Project Status
 
+## Meta and Alphabet five-output analyst acceptance — November4,2026
+
+[Meta report](company-resolutions/META/analyst-ready-2026-11-04/report.html) and [Alphabet report](company-resolutions/GOOGL/analyst-ready-2026-11-04/report.html): all ten named outputs are analyst-ready with qualifications. Both histories, explicit default FCFE financing, both share valuations, editable assumptions, sensitivities and exports run in the isolated API and live DCF panels at5/10-year horizons and Bear/Base/Bull. Base META374.70/370.36 and GOOGL125.91/124.04 USD/share (FCFF/FCFE) are FY2025-origin estimates using later information, not current-price targets.
+
+Source projections and company decisions are versioned. Private holdings and NCI use disclosed valuation proxies; historical parent-cash limitations remain explicit. No duplicate investments/debt/leases/awards. A ten-year precision rejection was repaired with a bounded roundoff check; Apple's results reproduce unchanged. No remaining implementation blocker in these named scopes after acceptance. Exact historical reconstruction, other companies and public deployment are not claimed; dated OPEN sections retain earlier contracts.
+
 ## Apple five-output analyst acceptance — November4,2026
 
 [Implementation, assumptions and acceptance](company-resolutions/AAPL/analyst-ready-2026-11-04/report.html): all five Apple outputs are analyst-ready with qualifications under the user-approved reasonable-assumption contract. Historical FCFF is unchanged; identified-funding historical FCFE estimates and an SBC-expensed companion are explicit. Dynamic default financing, equity bridge, both share estimates, editable assumptions, sensitivities and export run in the isolated API and live DCF panel. Base175.46/share FCFF and161.00/share FCFE reflect different disclosed financing assumptions, not equivalent-route parity.

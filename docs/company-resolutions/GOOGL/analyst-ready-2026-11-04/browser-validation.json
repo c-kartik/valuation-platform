@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "ticker": "GOOGL",
+  "default_values_verified": true,
+  "live_assumption_recalculation": true,
+  "stale_state_verified": true,
+  "five_outputs_visible": true,
+  "five_histories_visible": true,
+  "minority_scope_visible": true,
+  "mobile": {
+    "width": 390,
+    "documentWidth": 390
+  },
+  "report_mobile": {
+    "width": 390,
+    "documentWidth": 390
+  },
+  "javascript_errors": []
+}

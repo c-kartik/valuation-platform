@@ -1,0 +1,18 @@
+
+> valuation-local-ui@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 74 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                        0.50 kB │ gzip:  0.32 kB
+dist/workspace/index.html              0.51 kB │ gzip:  0.31 kB
+dist/assets/calculator-CJkQVHWF.css    7.47 kB │ gzip:  2.34 kB
+dist/assets/workspace-D_10JDdL.css    98.61 kB │ gzip: 18.57 kB
+dist/assets/calculator-DDBRMcO1.js    31.37 kB │ gzip:  9.48 kB
+dist/assets/workspace-Dq3Kbiu2.js    185.01 kB │ gzip: 49.69 kB
+dist/assets/diagnostics-5N8TU15k.js  297.88 kB │ gzip: 95.96 kB
+
+✓ built in 113ms

@@ -1,5 +1,9 @@
 # Company cash-flow resolutions
 
+## Meta and Alphabet five-output analyst acceptance — November4,2026
+
+[Meta](META/analyst-ready-2026-11-04/report.html) and [Alphabet](GOOGL/analyst-ready-2026-11-04/report.html) now meet the same qualified analyst-use contract as Apple, under the user's explicit extension. Both have five historical annuals and both forward valuation/share routes, editable assumptions, scenarios/sensitivities, sealed API and live DCF consumers. Exact source unknowns are preserved. Alphabet's historical parent proxy is not verified parent cash; its separate NCI valuation uses a labeled book-value proxy. No other issuer or wider-universe acceptance is implied. Dated OPEN statements below retain their earlier scope.
+
 ## Current Apple analyst-ready outputs — November4,2026
 
 [Apple five-output acceptance](AAPL/analyst-ready-2026-11-04/report.html) implements the user's revised reasonable-assumption standard. All five Apple outputs are analyst-ready with qualifications, including generated FCFE financing and both share values. Sources/legacy unknowns remain immutable; exact historical FCFE is not claimed. META/Alphabet are unchanged and remain separately open. Earlier blanket Apple OPEN claims below are preserved dated evidence assessments and are superseded for this named analyst contract.

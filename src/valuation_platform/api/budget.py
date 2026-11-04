@@ -149,6 +149,12 @@ def read_http_apple_analyst(body):
     return read_apple_analyst(text)
 
 
+def read_http_company_analyst(body):
+    from valuation_platform.review.company_analyst import read_company_analyst
+    text, _ = read_http_document(body)
+    return read_company_analyst(text)
+
+
 def error_body(code, message, errors=()):
     # Bounded public errors; internal exceptions must never be passed here.
     return {'error': {'code': code, 'message': message,

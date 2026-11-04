@@ -1,0 +1,15 @@
+
+> valuation-local-ui@0.1.0 test
+> vitest run --maxWorkers=2 --testTimeout=15000
+
+
+ RUN  v5.0.5 /Users/kc/Projects/valuation-platform/frontend
+
+
+ Test Files  28 passed (28)
+      Tests  309 passed (309)
+   Start at  23:52:26
+   Duration  37.50s (tests 89%, environment 8%, setup 2%, import 1%)
+
+    Isolate  28 workers spawned · ~286ms startup each (spawn + environment, per file)
+             at least ~3.72s faster with isolate: false — reuses workers across files instead of one per file

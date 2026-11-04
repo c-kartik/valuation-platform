@@ -1,0 +1,2504 @@
+{
+  "analyst_scope_status": "ANALYST_READY_WITH_QUALIFICATIONS",
+  "cases": {
+    "Base": {
+      "assumptions": {
+        "additional_assets_usd": "68687000000",
+        "additional_claims_usd": "0",
+        "cost_of_equity": "0.09120",
+        "historical_minority_cash_share": "0",
+        "historical_other_financing_fraction": "0",
+        "nci_claim_usd": "3400000000",
+        "operating_cash_reserve_ratio": "0.02",
+        "pre_tax_cost_of_debt": "0.0580",
+        "rsu_vesting_fraction": "1"
+      },
+      "automatic_history_calibration": false,
+      "bridge": {
+        "additional_assets_usd": "68687000000",
+        "additional_claims_usd": "0",
+        "debt_basis": "DISCLOSED_TERM_FAIR_VALUE_PLUS_FINANCE_LEASE_CARRYING_PROXY",
+        "debt_claims_usd": "48100000000",
+        "debt_subtracted_after_fcfe_discounting": false,
+        "eligible_cash_usd": "118786280000.00",
+        "fcfe_equity_value_usd": "1534335269840.0598144614707956067165044046104874102",
+        "fcfe_value_per_share_usd": "124.03680435247047812946409018647667780150448564351",
+        "fcff_equity_value_usd": "1557537401025.2409787628263166077237849572626227555",
+        "fcff_value_per_share_usd": "125.91248189371390289109347749456134074027992099883",
+        "gross_cash_usd": "126843000000",
+        "nci_claim_usd": "3400000000",
+        "operating_lease_debt_deduction_usd": "0",
+        "operating_reserve_usd": "8056720000.00",
+        "separate_existing_rsu_claim_deduction_usd": "0",
+        "valuation_shares": "12370000000"
+      },
+      "discount_basis": {
+        "beta": "1.10",
+        "classification": "DATED_MACRO_OBSERVATIONS_AND_CONFIGURED_ANALYST_ASSUMPTIONS",
+        "debt_tax_shield": "0.20",
+        "equity_risk_premium": "0.037",
+        "macro_observations": {
+          "implied_erp": {
+            "available_at": "2026-10-08",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "implied-erp-over-treasury",
+            "dimensions": [],
+            "end": "2026-10-01",
+            "id": "implied_erp-original",
+            "key": "implied_erp",
+            "locator": "October8authorpost; startOctober2026 implied ERP3.70%overTreasury; adjusted-RF3.92%notselected",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": "2026-10-08",
+            "scope": "macro",
+            "source": "damodaran-2026-10-08",
+            "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.037"
+          },
+          "treasury_10y": {
+            "available_at": "2026-10-30",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "treasury-par-yield",
+            "dimensions": [],
+            "end": "2026-10-28",
+            "id": "treasury_10y-original",
+            "key": "treasury_10y",
+            "locator": "Daily Treasury par yield curve,10/28/2026 row,10-year5.05%; publication time not separately retained",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": null,
+            "scope": "macro",
+            "source": "treasury-2026-10",
+            "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.0505"
+          }
+        },
+        "macro_sources": [
+          {
+            "accession": null,
+            "bytes": 246533,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "treasury-2026-10.html",
+            "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+            "http_status": 200,
+            "id": "treasury-2026-10",
+            "observation_date": "2026-10-28",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+            "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+            "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "title": "US Treasury October 2026 daily par yield curve",
+            "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+          },
+          {
+            "accession": null,
+            "bytes": 169880,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "damodaran-2026-10-08.html",
+            "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+            "http_status": 200,
+            "id": "damodaran-2026-10-08",
+            "observation_date": "2026-10-01",
+            "published_at": "2026-10-08",
+            "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+            "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+            "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "title": "Aswath Damodaran October 8 2026 market update",
+            "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+          }
+        ],
+        "risk_free": "0.0505",
+        "saved_base_wacc": "0.08940800",
+        "target_debt_weight": "0.04",
+        "target_equity_weight": "0.96"
+      },
+      "exact_full_historical_fcfe_claim": false,
+      "fcfe": {
+        "cost_of_equity": "0.09120",
+        "debt_subtracted_after_fcfe_discounting": false,
+        "equity_value_usd": "1534335269840.0598144614707956067165044046104874102",
+        "financing_inputs": {
+          "base_case": {
+            "analyst": {
+              "author": "AI-assisted versioned preload policy; not a verified human identity",
+              "rationale": "Proposed estimates generated by googl-preload-v1.0.0; economic hash 1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe; explicit configuration is analyst judgment, not user-supplied or approved facts.",
+              "timestamp_utc": "2026-11-04T00:00:00+00:00"
+            },
+            "anchor": {
+              "accession": "0001652044-26-000018",
+              "annual_end": "2025-12-31",
+              "annual_start": "2025-01-01",
+              "cik": 1652044,
+              "form": "10-K",
+              "kind": "googl-fy2025"
+            },
+            "calculation_scope": "ENTERPRISE_VALUE",
+            "case_name": "GOOGL proposed starting estimate \u00b7 Base",
+            "comparison_terminal_valuation": null,
+            "conventions": {
+              "discounting": "fiscal-end-annual-gordon-v1",
+              "forecast": "manual-fcff-v1"
+            },
+            "forecast_years": [
+              {
+                "capex_percent_revenue": "0.41069109689784757436456273558835028373659300279204",
+                "change_in_operating_nwc_percent_revenue": "0.038593991502496267837343420338079341561644703538798",
+                "d_and_a_percent_revenue": "0.066111249744531560751368635484953948113695458986035",
+                "fiscal_year_label": "FY2026",
+                "forecast_tax_rate": "0.18",
+                "operating_margin": "0.31805105936022950845371814668788261206957366923505",
+                "period_index": 1,
+                "revenue_growth": "0.2391112441337222805161035988218552447397458594300"
+              },
+              {
+                "capex_percent_revenue": "0.42893510234961061026443162626802497976562463236421",
+                "change_in_operating_nwc_percent_revenue": "0.032892368755176235251673857127522384131307923654666",
+                "d_and_a_percent_revenue": "0.096416241542780765468219557748441907646829185655331",
+                "fiscal_year_label": "FY2027",
+                "forecast_tax_rate": "0.1875",
+                "operating_margin": "0.31103829452017213134028861001591195905218025192629",
+                "period_index": 2,
+                "revenue_growth": "0.1968334331002917103870776991163914335548093945725"
+              },
+              {
+                "capex_percent_revenue": "0.35665470799793121218607705464164797755091412081136",
+                "change_in_operating_nwc_percent_revenue": "0.026773179067835453986297315922504962517675510307509",
+                "d_and_a_percent_revenue": "0.12809123354315944144975572267312845047407830314506",
+                "fiscal_year_label": "FY2028",
+                "forecast_tax_rate": "0.195",
+                "operating_margin": "0.30402552968011475422685907334394130603478683461752",
+                "period_index": 3,
+                "revenue_growth": "0.1545556220668611402580517994109276223698729297150"
+              },
+              {
+                "capex_percent_revenue": "0.29500033903691232197828225501560793604245511317675",
+                "change_in_operating_nwc_percent_revenue": "0.020188807134273750870574062821947023311816789216859",
+                "d_and_a_percent_revenue": "0.15363949258696030130602743636748721907619381490873",
+                "fiscal_year_label": "FY2029",
+                "forecast_tax_rate": "0.2025",
+                "operating_margin": "0.29701276484005737711342953667197065301739341730876",
+                "period_index": 4,
+                "revenue_growth": "0.1122778110334305701290258997054638111849364648575"
+              },
+              {
+                "capex_percent_revenue": "0.24813112629272999044902245748976368452169121669072",
+                "change_in_operating_nwc_percent_revenue": "0.013084112149532710280373831775700934579439252336449",
+                "d_and_a_percent_revenue": "0.17667246100129885976020682894332726299185834438312",
+                "fiscal_year_label": "FY2030",
+                "forecast_tax_rate": "0.21",
+                "operating_margin": "0.29000000000000000000000000000000000000000000000000",
+                "period_index": 5,
+                "revenue_growth": "0.0700000000000000000000000000000000000000000000000"
+              }
+            ],
+            "input_basis": "MANUAL_INPUT",
+            "limitations": [
+              "Revenue-only retained historical binding; no forecast, WACC, terminal, asset/claim, class-equivalence or award inputs approved.",
+              "Manual margins include SBC and operating-lease service costs. Expense D&A, financed investment and WC scope require issuer-specific semantic review; historical proxies remain incomplete.",
+              "Historical cash movements are not automatic forecast WC inputs. Gross financial assets are not automatically eligible assets; historical omissions do not approve valuation omissions.",
+              "Alphabet Class A/B/C economic equivalence, share denominator and awards remain unresolved; the GOOGL label selects consolidated revenue only.",
+              "Five-year forecast revenue CAGR = 0.1530049835460475204657802187204333090824391350822; not any individual annual rate",
+              "Terminal net reinvestment/revenue = 0.075825242718446601941747572815533980582524271844660",
+              "Implied incremental return diagnostic g*NOPAT/net reinvestment = 0.090642637644046094750320102432778489116517285531370; NOT observed ROIC",
+              "Reported FY2025 YTD plus Q4 revenue differs from the annual anchor by1m; no residual correction or precision improvement.",
+              "Acquisition cash/perimeter not reconciled: operating PV conditional; exclusions are not zero claims or assets.",
+              "Expense D&A and commissioning are estimates; source PP&E/CFO proxies remain incomplete.",
+              "Terminal expense D&A16% is independent of the commissioning path; transition/retirement economics are not modeled. Review the discontinuity, not a proven vintage reconciliation.",
+              "Terminal dependence must be reviewed after explicit engine execution; no financial approval."
+            ],
+            "schema_version": "analyst-case-v3",
+            "scope": "Fiscal-end analytical origin using later-filed information; not a contemporaneous backtest or current-date fair value; information reviewed through 2026-10-30; consolidated operating EV only.",
+            "terminal_valuation": {
+              "method": "perpetual_growth",
+              "terminal": {
+                "d_and_a_percent_revenue": "0.16",
+                "investment_percent_revenue": "0.23",
+                "operating_margin": "0.29",
+                "operating_tax_rate": "0.21",
+                "working_capital_cash_requirement_percent_revenue": "0.0058252427184466019417475728155339805825242718446602"
+              },
+              "terminal_growth": "0.03"
+            },
+            "wacc": "0.08940800"
+          },
+          "cost_of_equity": "0.09120",
+          "financing_years": [
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "5000000000.0000000000000000000000000000000000000",
+              "period_index": 1,
+              "principal_repaid_usd": "5000000000.0000000000000000000000000000000000000"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "6250000000.0000000000000000000000000000000000000",
+              "period_index": 2,
+              "principal_repaid_usd": "6250000000.0000000000000000000000000000000000000"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "6000000000.0000000000000000000000000000000000000",
+              "period_index": 3,
+              "principal_repaid_usd": "6000000000.0000000000000000000000000000000000000"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "5520000000.0000000000000000000000000000000000000",
+              "period_index": 4,
+              "principal_repaid_usd": "5520000000.0000000000000000000000000000000000000"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "4968000000.0000000000000000000000000000000000000",
+              "period_index": 5,
+              "principal_repaid_usd": "4968000000.0000000000000000000000000000000000000"
+            }
+          ],
+          "opening_debt_usd": "51043000000",
+          "schema_version": "fcfe-forecast-request-v1",
+          "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+          "terminal_financing": {
+            "cash_debt_issued_usd": "1531290000.00",
+            "interest_expense_usd": "2960494000.0000",
+            "new_finance_asset_funding_usd": "4743134074.2456567409750759219531104022929001364027",
+            "principal_repaid_usd": "4743134074.2456567409750759219531104022929001364027"
+          },
+          "terminal_growth": "0.03"
+        },
+        "operating_equity_value_usd": "1350261989840.0598144614707956067165044046104874102",
+        "pv_explicit_fcfe_usd": "-9942925589.911783422155721124966311449547354379119",
+        "pv_terminal_equity_usd": "1360204915429.9715978836265167316828158541578417893",
+        "terminal": {
+          "cash_debt_issued_usd": "1531290000.00",
+          "closing_debt_usd": "52574290000.000000000000000000000000000000000000000",
+          "equity_tax_usd": "50870172216.452088332785508997933571145587575437321",
+          "fcfe_usd": "128788637493.64612593240305868335432393494583348505",
+          "fcff_usd": "129596137753.64612593240305868335432393494583348505",
+          "interest_expense_usd": "2960494000.0000",
+          "interest_tax_shield_usd": "621703740.000000000000000000000000000000000000000",
+          "net_borrowing_usd": "1531290000.0000000000000000000000000000000000000000",
+          "net_income_usd": "191368743099.98642753762167670651200573816278378802",
+          "new_finance_asset_funding_usd": "4743134074.2456567409750759219531104022929001364027",
+          "opening_debt_usd": "51043000000.0000000000000000000000000000000000000",
+          "principal_repaid_usd": "4743134074.2456567409750759219531104022929001364027"
+        },
+        "value_per_share_usd": "124.03680435247047812946409018647667780150448564351",
+        "years": [
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.0000000000000000000000000000000000000",
+            "discount_factor": "0.91642228739002932551319648093841642228739002932551",
+            "equity_tax_usd": "28043537934.735592627534094416296505033328401259491",
+            "fcfe_usd": "-63510628392.352729971141702859427208499944446868188",
+            "fcff_usd": "-61083023312.352729971141702859427208499944446868188",
+            "fiscal_year_label": "FY2026",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "532888920.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-37",
+            "net_income_usd": "127753895036.01769974765531900757296737405160573768",
+            "new_finance_asset_funding_usd": "5000000000.0000000000000000000000000000000000000",
+            "opening_debt_usd": "51043000000",
+            "period_index": 1,
+            "principal_repaid_usd": "5000000000.0000000000000000000000000000000000000",
+            "pv_fcfe_usd": "-58202555344.898029665635724761205286381913899256037"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.0000000000000000000000000000000000000",
+            "discount_factor": "0.83982980882517350211986481024414994711087795942587",
+            "equity_tax_usd": "34285651289.782711420238260142442289401453484094738",
+            "fcfe_usd": "-69729065265.666559416391215207085007081134614404256",
+            "fcff_usd": "-67323663890.666559416391215207085007081134614404256",
+            "fiscal_year_label": "FY2027",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "555092625.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-37",
+            "net_income_usd": "148571155589.05841615436579395058325407296509774386",
+            "new_finance_asset_funding_usd": "6250000000.0000000000000000000000000000000000000",
+            "opening_debt_usd": "51043000000.0000000000000000000000000000000000000",
+            "period_index": 2,
+            "principal_repaid_usd": "6250000000.0000000000000000000000000000000000000",
+            "pv_fcfe_usd": "-58560547551.622792571503122694738566255596805909096"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.0000000000000000000000000000000000000",
+            "discount_factor": "0.76963875442189653786644502405072392513826792469380",
+            "equity_tax_usd": "40314087778.238661908817410811020449938829760328969",
+            "fcfe_usd": "-9691782319.395326117716574316638776903879242231248",
+            "fcff_usd": "-7308584649.395326117716574316638776903879242231248",
+            "fiscal_year_label": "FY2028",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "577296330.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-37",
+            "net_income_usd": "166424823905.03652736716931129677672923465619007600",
+            "new_finance_asset_funding_usd": "6000000000.0000000000000000000000000000000000000",
+            "opening_debt_usd": "51043000000.0000000000000000000000000000000000000",
+            "period_index": 3,
+            "principal_repaid_usd": "6000000000.0000000000000000000000000000000000000",
+            "pv_fcfe_usd": "-7459171272.4275782329711541700794110204568004671944"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.0000000000000000000000000000000000000",
+            "discount_factor": "0.70531410779132747238493862174736430089650652922819",
+            "equity_tax_usd": "45542940527.970461395669568330047297958632837437668",
+            "fcfe_usd": "55421908200.478685438166751117473144403736995237925",
+            "fcff_usd": "57782902165.478685438166751117473144403736995237925",
+            "fiscal_year_label": "FY2029",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "599500035.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-37",
+            "net_income_usd": "179360469486.69848376813076910228503763955401410637",
+            "new_finance_asset_funding_usd": "5520000000.0000000000000000000000000000000000000",
+            "opening_debt_usd": "51043000000.0000000000000000000000000000000000000",
+            "period_index": 4,
+            "principal_repaid_usd": "5520000000.0000000000000000000000000000000000000",
+            "pv_fcfe_usd": "39089853734.513479523389386076480742806908809562641"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.0000000000000000000000000000000000000",
+            "discount_factor": "0.64636556799058602674572820907932945463389527971791",
+            "equity_tax_usd": "49370408839.079697410471367959158806937463665473127",
+            "fcfe_usd": "116326578283.35656768970306118466137469276336642668",
+            "fcff_usd": "118665368543.35656768970306118466137469276336642668",
+            "fiscal_year_label": "FY2030",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "621703740.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-37",
+            "net_income_usd": "185726776108.91886168701133660826408324093474154176",
+            "new_finance_asset_funding_usd": "4968000000.0000000000000000000000000000000000000",
+            "opening_debt_usd": "51043000000.0000000000000000000000000000000000000",
+            "period_index": 5,
+            "principal_repaid_usd": "4968000000.0000000000000000000000000000000000000",
+            "pv_fcfe_usd": "75189494844.523137524564894424576209401511341690560"
+          }
+        ]
+      },
+      "fcff": {
+        "enterprise_value_usd": "1421564121025.2409787628263166077237849572626227555",
+        "equity_value_usd": "1557537401025.2409787628263166077237849572626227555",
+        "value_per_share_usd": "125.91248189371390289109347749456134074027992099883",
+        "wacc": "0.08940800"
+      },
+      "historical": [
+        {
+          "cash_ppe_usd": "24640000000",
+          "cfo_usd": "91652000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "65776000000",
+          "economic_fcfe_usd": "50400000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "65776000000",
+          "fcff_usd": "67301940022.483302841272290431370820199704631119536",
+          "fiscal_year": 2021,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "-1236000000",
+          "identity": {
+            "accession": "0001652044-22-000019",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "65776000000",
+          "sbc_usd": "15376000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "31485000000",
+          "cfo_usd": "91495000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "58814000000",
+          "economic_fcfe_usd": "39452000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "58814000000",
+          "fcff_usd": "60310162685.060565275908479138627187079407806191117",
+          "fiscal_year": 2022,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "-1196000000",
+          "identity": {
+            "accession": "0001652044-23-000016",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "58814000000",
+          "sbc_usd": "19362000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "32251000000",
+          "cfo_usd": "101746000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "68735000000",
+          "economic_fcfe_usd": "46275000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "68735000000",
+          "fcff_usd": "69760161636.548175974427476463245330564532123149434",
+          "fiscal_year": 2023,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "-760000000",
+          "identity": {
+            "accession": "0001652044-24-000022",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "68735000000",
+          "sbc_usd": "22460000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "52535000000",
+          "cfo_usd": "125299000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "73652000000",
+          "economic_fcfe_usd": "50867000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "73652000000",
+          "fcff_usd": "72987942110.754079205441722655760964820765346575971",
+          "fiscal_year": 2024,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "888000000",
+          "identity": {
+            "accession": "0001652044-25-000014",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "73652000000",
+          "sbc_usd": "22785000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "91447000000",
+          "cfo_usd": "164713000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "105403000000",
+          "economic_fcfe_usd": "80450000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "105403000000",
+          "fcff_usd": "73878476042.965257577474720763602936546912973946331",
+          "fiscal_year": 2025,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "32137000000",
+          "identity": {
+            "accession": "0001652044-26-000018",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "105403000000",
+          "sbc_usd": "24953000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          ]
+        }
+      ],
+      "historical_minorities_stress": [
+        {
+          "consolidated_fcfe_usd": "65776000000",
+          "fiscal_year": 2021,
+          "five_percent_minority_parent_proxy_usd": "62487200000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "65118240000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "58814000000",
+          "fiscal_year": 2022,
+          "five_percent_minority_parent_proxy_usd": "55873300000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "58225860000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "68735000000",
+          "fiscal_year": 2023,
+          "five_percent_minority_parent_proxy_usd": "65298250000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "68047650000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "73652000000",
+          "fiscal_year": 2024,
+          "five_percent_minority_parent_proxy_usd": "69969400000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "72915480000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "105403000000",
+          "fiscal_year": 2025,
+          "five_percent_minority_parent_proxy_usd": "100132850000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "104348970000.00"
+        }
+      ],
+      "model_origin": "2025-12-31",
+      "name": "Alphabet",
+      "policy_version": "googl-analyst-2026-11-04-v1",
+      "qualifications": [
+        "Analyst-ready means usable under these explicit conventions, not exact historical cash reconstruction, issuer-certified assumptions or an investment recommendation.",
+        "Analytical origin 2025-12-31 uses later-filed information; no current-date fair value, historical backtest or current-price upside is asserted.",
+        "Historical FCFF preserves the adopted reported-CFO/expensed-interest/reported-tax/cash-investment convention. It retains SBC addbacks, unlike forward EBIT cash flows. No automatic cross-basis CAGR or forecast calibration.",
+        "Historical FCFE includes identified financing once. Net Other allocation is a selected assumption and not a bound on unidentified offsetting gross financing. The economic companion subtracts reported SBC once; it does not normalize all accounting differences.",
+        "Flat explicit carrying debt is maintained by net rollover; interest is debt cost times opening debt. Matched financed-asset investment and aggregate principal enter once; gross maturity/refinancing schedules are not predicted. Terminal debt grows at the terminal growth rate.",
+        "FCFF uses the submitted target-weight WACC; FCFE uses CAPM/configured cost of equity and flat explicit debt. These financing assumptions differ, so valuation differences are shown rather than forced to zero.",
+        "Liquid cash and securities exclude restricted balances and separately shown nonmarketable holdings. The selected operating reserve is an analyst haircut; ongoing liquidity costs are assumed included in forward margins/WC.",
+        "Separate non-operating financial investments use an editable carrying-value proxy, not an observed market value. Operating EBIT forecasts exclude their investment returns; the same holdings are not added twice. Exclusion and haircut sensitivities show this valuation judgment.",
+        "Term debt uses disclosed fair value and finance leases carrying proxies. Operating leases remain service expenses; no second operating-lease debt deduction. FCFE does not subtract debt again.",
+        "Dated common shares across all economic classes plus expected existing RSU vesting form the denominator. Equal per-share economic participation is an explicit analyst assumption; voting/control rights are not claimed identical. Future SBC in margins proxies future grants; no separate settlement/award-value deduction for the same existing RSUs.",
+        "Zero additional non-operating claims is an explicit base assumption, not proof of no tax/legal exposure. Ordinary settlements are assumed within forecast tax/expenses; stresses are illustrative, not bounds.",
+        "FCFE financing identities are checked at 50-digit arithmetic precision. A last-place associativity residual, when present, is exported with its calculated rounding envelope and is not a cash adjustment; financial component mismatches still fail validation.",
+        "Alphabet historical FCFE is consolidated before minority attribution. With zero selected minority cash share, the displayed parent proxy is explicitly unallocated consolidated cash, not verified parent cash. Alternative historical allocations are scenarios, not issuer disclosures.",
+        "Forward valuation discounts consolidated operating FCFE and deducts one selected minority-interest claim in the equity bridge. The historical cash-allocation assumption does not change forward cash flows, preventing a second minority deduction.",
+        "The default minority claim uses disclosed book NCI as a valuation proxy; redeemable NCI is already included. It is not observed fair value. 5\u00d7/10\u00d7 proxy stresses are not bounds; later Waymo financing valuations are not backdated.",
+        "Finance-lease cash, including prepayments, remains within debt repayments once. Historical cash capex and new noncash assets are separate populations; no rounded prepayment subtraction invents exact principal.",
+        "Class A/B/C economic-per-share equivalence is assumed for valuation only. Different voting/control rights and possible market price premiums are not modeled."
+      ],
+      "readiness": [
+        {
+          "detail": "Five adopted reported-cash-convention calculations with explicit interest/tax/investment qualifications.",
+          "id": "historical_fcff",
+          "label": "Historical FCFF \u00b7 five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Current selected operating forecast, WACC and independent terminal calculate.",
+          "id": "fcff_valuation",
+          "label": "FCFF forecast and enterprise value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Standardized identified-financing estimates; consolidated scope and any historical minority allocation are explicit.",
+          "id": "historical_fcfe",
+          "label": "Historical FCFE \u00b7 five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Explicit financing, cost of equity and terminal debt growth; minority value deducted once when applicable.",
+          "id": "fcfe_valuation",
+          "label": "FCFE forecast and equity value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Dated cash/debt/shares plus editable investment, reserve, awards and claim assumptions.",
+          "id": "per_share",
+          "label": "Fair value per share \u00b7 both methods",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        }
+      ],
+      "schema_version": "company-analyst-result-v1",
+      "sensitivities": [
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "124.68811558933385727255220659714765597450367723607",
+          "fcff_value_per_share_usd": "126.56379313057728203418159390523231891327911259139",
+          "label": "No operating cash reserve"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "123.05983749717540941483191557047021054200569825466",
+          "fcff_value_per_share_usd": "124.93551503841883417646130287855487348078113360998",
+          "label": "Operating cash reserve 5% of anchor revenue"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "124.03680435247047812946409018647667780150448564351",
+          "fcff_value_per_share_usd": "125.67456758490226182399566019464218148401476335938",
+          "label": "Debt bridge at carrying value; FCFE financing held fixed"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "126.93044919259263852262332855780249043717823357133",
+          "fcff_value_per_share_usd": "128.84988426747526296846677007012936672379737117435",
+          "label": "No existing RSU vesting"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "118.48409618755536091038567466505388071177126009783",
+          "fcff_value_per_share_usd": "120.35977372879878567201506197313854365054669545315",
+          "label": "Exclude non-operating investment value"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "121.26045027001291951992488242576527925663787287067",
+          "fcff_value_per_share_usd": "123.13612781125634428155426973384994219541330822599",
+          "label": "Non-operating investments at half the selected value"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "123.22839691512205452396691961250739728412372574052",
+          "fcff_value_per_share_usd": "125.10407445636547928559630692059206022289916109584",
+          "label": "Additional 10B claim; illustrative only"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "124.31166288116894215533312818162623317741394401053",
+          "fcff_value_per_share_usd": "126.18734042241236691696251548971089611618937936584",
+          "label": "No separate minority-interest equity claim"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "122.93737023767662202598793820587845629786665217544",
+          "fcff_value_per_share_usd": "124.81304777892004678761732551396311923664208753076",
+          "label": "Minority claim at 5\u00d7 reported book proxy; not a bound"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "121.56307759418430189664274823013067941831936034036",
+          "fcff_value_per_share_usd": "123.43875513542772665827213553821534235709479569568",
+          "label": "Minority claim at 10\u00d7 reported book proxy; not a bound"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "104.13906080807529773901397277106406489509532013954",
+          "fcff_value_per_share_usd": "125.91248189371390289109347749456134074027992099883",
+          "label": "Cost of equity +1 percentage point; FCFF held fixed"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "124.03680435247047812946409018647667780150448564351",
+          "fcff_value_per_share_usd": "104.69951669302647303211489934745710174586956301355",
+          "label": "FCFF WACC +1 percentage point; FCFE held fixed"
+        }
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/free-cash-flow-valuation",
+        "https://www.cfainstitute.org/standards/professionals/code-ethics-standards/standards-of-practice-v-a",
+        "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valopt.pdf",
+        "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/noncashwc.htm"
+      ],
+      "submitted_inputs": {
+        "assumptions": {
+          "additional_assets_usd": "68687000000",
+          "additional_claims_usd": "0",
+          "cost_of_equity": "0.09120",
+          "historical_minority_cash_share": "0",
+          "historical_other_financing_fraction": "0",
+          "nci_claim_usd": "3400000000",
+          "operating_cash_reserve_ratio": "0.02",
+          "pre_tax_cost_of_debt": "0.0580",
+          "rsu_vesting_fraction": "1"
+        },
+        "base_case": {
+          "analyst": {
+            "author": "AI-assisted versioned preload policy; not a verified human identity",
+            "rationale": "Proposed estimates generated by googl-preload-v1.0.0; economic hash 1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe; explicit configuration is analyst judgment, not user-supplied or approved facts.",
+            "timestamp_utc": "2026-11-04T00:00:00+00:00"
+          },
+          "anchor": {
+            "accession": "0001652044-26-000018",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 1652044,
+            "form": "10-K",
+            "kind": "googl-fy2025"
+          },
+          "calculation_scope": "ENTERPRISE_VALUE",
+          "case_name": "GOOGL proposed starting estimate \u00b7 Base",
+          "comparison_terminal_valuation": null,
+          "conventions": {
+            "discounting": "fiscal-end-annual-gordon-v1",
+            "forecast": "manual-fcff-v1"
+          },
+          "forecast_years": [
+            {
+              "capex_percent_revenue": "0.41069109689784757436456273558835028373659300279204",
+              "change_in_operating_nwc_percent_revenue": "0.038593991502496267837343420338079341561644703538798",
+              "d_and_a_percent_revenue": "0.066111249744531560751368635484953948113695458986035",
+              "fiscal_year_label": "FY2026",
+              "forecast_tax_rate": "0.18",
+              "operating_margin": "0.31805105936022950845371814668788261206957366923505",
+              "period_index": 1,
+              "revenue_growth": "0.2391112441337222805161035988218552447397458594300"
+            },
+            {
+              "capex_percent_revenue": "0.42893510234961061026443162626802497976562463236421",
+              "change_in_operating_nwc_percent_revenue": "0.032892368755176235251673857127522384131307923654666",
+              "d_and_a_percent_revenue": "0.096416241542780765468219557748441907646829185655331",
+              "fiscal_year_label": "FY2027",
+              "forecast_tax_rate": "0.1875",
+              "operating_margin": "0.31103829452017213134028861001591195905218025192629",
+              "period_index": 2,
+              "revenue_growth": "0.1968334331002917103870776991163914335548093945725"
+            },
+            {
+              "capex_percent_revenue": "0.35665470799793121218607705464164797755091412081136",
+              "change_in_operating_nwc_percent_revenue": "0.026773179067835453986297315922504962517675510307509",
+              "d_and_a_percent_revenue": "0.12809123354315944144975572267312845047407830314506",
+              "fiscal_year_label": "FY2028",
+              "forecast_tax_rate": "0.195",
+              "operating_margin": "0.30402552968011475422685907334394130603478683461752",
+              "period_index": 3,
+              "revenue_growth": "0.1545556220668611402580517994109276223698729297150"
+            },
+            {
+              "capex_percent_revenue": "0.29500033903691232197828225501560793604245511317675",
+              "change_in_operating_nwc_percent_revenue": "0.020188807134273750870574062821947023311816789216859",
+              "d_and_a_percent_revenue": "0.15363949258696030130602743636748721907619381490873",
+              "fiscal_year_label": "FY2029",
+              "forecast_tax_rate": "0.2025",
+              "operating_margin": "0.29701276484005737711342953667197065301739341730876",
+              "period_index": 4,
+              "revenue_growth": "0.1122778110334305701290258997054638111849364648575"
+            },
+            {
+              "capex_percent_revenue": "0.24813112629272999044902245748976368452169121669072",
+              "change_in_operating_nwc_percent_revenue": "0.013084112149532710280373831775700934579439252336449",
+              "d_and_a_percent_revenue": "0.17667246100129885976020682894332726299185834438312",
+              "fiscal_year_label": "FY2030",
+              "forecast_tax_rate": "0.21",
+              "operating_margin": "0.29000000000000000000000000000000000000000000000000",
+              "period_index": 5,
+              "revenue_growth": "0.0700000000000000000000000000000000000000000000000"
+            }
+          ],
+          "input_basis": "MANUAL_INPUT",
+          "limitations": [
+            "Revenue-only retained historical binding; no forecast, WACC, terminal, asset/claim, class-equivalence or award inputs approved.",
+            "Manual margins include SBC and operating-lease service costs. Expense D&A, financed investment and WC scope require issuer-specific semantic review; historical proxies remain incomplete.",
+            "Historical cash movements are not automatic forecast WC inputs. Gross financial assets are not automatically eligible assets; historical omissions do not approve valuation omissions.",
+            "Alphabet Class A/B/C economic equivalence, share denominator and awards remain unresolved; the GOOGL label selects consolidated revenue only.",
+            "Five-year forecast revenue CAGR = 0.1530049835460475204657802187204333090824391350822; not any individual annual rate",
+            "Terminal net reinvestment/revenue = 0.075825242718446601941747572815533980582524271844660",
+            "Implied incremental return diagnostic g*NOPAT/net reinvestment = 0.090642637644046094750320102432778489116517285531370; NOT observed ROIC",
+            "Reported FY2025 YTD plus Q4 revenue differs from the annual anchor by1m; no residual correction or precision improvement.",
+            "Acquisition cash/perimeter not reconciled: operating PV conditional; exclusions are not zero claims or assets.",
+            "Expense D&A and commissioning are estimates; source PP&E/CFO proxies remain incomplete.",
+            "Terminal expense D&A16% is independent of the commissioning path; transition/retirement economics are not modeled. Review the discontinuity, not a proven vintage reconciliation.",
+            "Terminal dependence must be reviewed after explicit engine execution; no financial approval."
+          ],
+          "schema_version": "analyst-case-v3",
+          "scope": "Fiscal-end analytical origin using later-filed information; not a contemporaneous backtest or current-date fair value; information reviewed through 2026-10-30; consolidated operating EV only.",
+          "terminal_valuation": {
+            "method": "perpetual_growth",
+            "terminal": {
+              "d_and_a_percent_revenue": "0.16",
+              "investment_percent_revenue": "0.23",
+              "operating_margin": "0.29",
+              "operating_tax_rate": "0.21",
+              "working_capital_cash_requirement_percent_revenue": "0.0058252427184466019417475728155339805825242718446602"
+            },
+            "terminal_growth": "0.03"
+          },
+          "wacc": "0.08940800"
+        },
+        "schema_version": "company-analyst-request-v1",
+        "ticker": "GOOGL"
+      },
+      "ticker": "GOOGL",
+      "valuation_difference_fcfe_minus_fcff_usd": "-23202131185.1811643013555210010072805526521353453"
+    },
+    "Bear": {
+      "assumptions": {
+        "additional_assets_usd": "68687000000",
+        "additional_claims_usd": "0",
+        "cost_of_equity": "0.09120",
+        "historical_minority_cash_share": "0",
+        "historical_other_financing_fraction": "0",
+        "nci_claim_usd": "3400000000",
+        "operating_cash_reserve_ratio": "0.02",
+        "pre_tax_cost_of_debt": "0.0580",
+        "rsu_vesting_fraction": "1"
+      },
+      "automatic_history_calibration": false,
+      "bridge": {
+        "additional_assets_usd": "68687000000",
+        "additional_claims_usd": "0",
+        "debt_basis": "DISCLOSED_TERM_FAIR_VALUE_PLUS_FINANCE_LEASE_CARRYING_PROXY",
+        "debt_claims_usd": "48100000000",
+        "debt_subtracted_after_fcfe_discounting": false,
+        "eligible_cash_usd": "118786280000.00",
+        "fcfe_equity_value_usd": "1374271838549.1488185235009777694150864254896930435",
+        "fcfe_value_per_share_usd": "111.09715752216239438346814694983145403601371811184",
+        "fcff_equity_value_usd": "1153519998244.5734160750558495417444119637824019552",
+        "fcff_value_per_share_usd": "93.251414571105369124903463988823315437654195792660",
+        "gross_cash_usd": "126843000000",
+        "nci_claim_usd": "3400000000",
+        "operating_lease_debt_deduction_usd": "0",
+        "operating_reserve_usd": "8056720000.00",
+        "separate_existing_rsu_claim_deduction_usd": "0",
+        "valuation_shares": "12370000000"
+      },
+      "discount_basis": {
+        "beta": "1.10",
+        "classification": "DATED_MACRO_OBSERVATIONS_AND_CONFIGURED_ANALYST_ASSUMPTIONS",
+        "debt_tax_shield": "0.20",
+        "equity_risk_premium": "0.037",
+        "macro_observations": {
+          "implied_erp": {
+            "available_at": "2026-10-08",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "implied-erp-over-treasury",
+            "dimensions": [],
+            "end": "2026-10-01",
+            "id": "implied_erp-original",
+            "key": "implied_erp",
+            "locator": "October8authorpost; startOctober2026 implied ERP3.70%overTreasury; adjusted-RF3.92%notselected",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": "2026-10-08",
+            "scope": "macro",
+            "source": "damodaran-2026-10-08",
+            "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.037"
+          },
+          "treasury_10y": {
+            "available_at": "2026-10-30",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "treasury-par-yield",
+            "dimensions": [],
+            "end": "2026-10-28",
+            "id": "treasury_10y-original",
+            "key": "treasury_10y",
+            "locator": "Daily Treasury par yield curve,10/28/2026 row,10-year5.05%; publication time not separately retained",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": null,
+            "scope": "macro",
+            "source": "treasury-2026-10",
+            "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.0505"
+          }
+        },
+        "macro_sources": [
+          {
+            "accession": null,
+            "bytes": 246533,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "treasury-2026-10.html",
+            "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+            "http_status": 200,
+            "id": "treasury-2026-10",
+            "observation_date": "2026-10-28",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+            "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+            "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "title": "US Treasury October 2026 daily par yield curve",
+            "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+          },
+          {
+            "accession": null,
+            "bytes": 169880,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "damodaran-2026-10-08.html",
+            "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+            "http_status": 200,
+            "id": "damodaran-2026-10-08",
+            "observation_date": "2026-10-01",
+            "published_at": "2026-10-08",
+            "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+            "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+            "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "title": "Aswath Damodaran October 8 2026 market update",
+            "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+          }
+        ],
+        "risk_free": "0.0505",
+        "saved_base_wacc": "0.08940800",
+        "target_debt_weight": "0.04",
+        "target_equity_weight": "0.96"
+      },
+      "exact_full_historical_fcfe_claim": false,
+      "fcfe": {
+        "cost_of_equity": "0.09120",
+        "debt_subtracted_after_fcfe_discounting": false,
+        "equity_value_usd": "1374271838549.1488185235009777694150864254896930435",
+        "financing_inputs": {
+          "base_case": {
+            "analyst": {
+              "author": "AI-assisted versioned preload policy; not a verified human identity",
+              "rationale": "Proposed estimates generated by googl-preload-v1.0.0; economic hash 1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe; explicit configuration is analyst judgment, not user-supplied or approved facts.",
+              "timestamp_utc": "2026-11-04T00:00:00+00:00"
+            },
+            "anchor": {
+              "accession": "0001652044-26-000018",
+              "annual_end": "2025-12-31",
+              "annual_start": "2025-01-01",
+              "cik": 1652044,
+              "form": "10-K",
+              "kind": "googl-fy2025"
+            },
+            "calculation_scope": "ENTERPRISE_VALUE",
+            "case_name": "GOOGL proposed starting estimate \u00b7 Bear",
+            "comparison_terminal_valuation": null,
+            "conventions": {
+              "discounting": "fiscal-end-annual-gordon-v1",
+              "forecast": "manual-fcff-v1"
+            },
+            "forecast_years": [
+              {
+                "capex_percent_revenue": "0.41069109689784757436456273558835028373659300279204",
+                "change_in_operating_nwc_percent_revenue": "0.038593991502496267837343420338079341561644703538798",
+                "d_and_a_percent_revenue": "0.066111249744531560751368635484953948113695458986035",
+                "fiscal_year_label": "FY2026",
+                "forecast_tax_rate": "0.18",
+                "operating_margin": "0.29805105936022950845371814668788261206957366923505",
+                "period_index": 1,
+                "revenue_growth": "0.2191112441337222805161035988218552447397458594300"
+              },
+              {
+                "capex_percent_revenue": "0.42893510234961061026443162626802497976562463236421",
+                "change_in_operating_nwc_percent_revenue": "0.032892368755176235251673857127522384131307923654666",
+                "d_and_a_percent_revenue": "0.096416241542780765468219557748441907646829185655331",
+                "fiscal_year_label": "FY2027",
+                "forecast_tax_rate": "0.1875",
+                "operating_margin": "0.29103829452017213134028861001591195905218025192629",
+                "period_index": 2,
+                "revenue_growth": "0.1768334331002917103870776991163914335548093945725"
+              },
+              {
+                "capex_percent_revenue": "0.35665470799793121218607705464164797755091412081136",
+                "change_in_operating_nwc_percent_revenue": "0.026773179067835453986297315922504962517675510307509",
+                "d_and_a_percent_revenue": "0.12809123354315944144975572267312845047407830314506",
+                "fiscal_year_label": "FY2028",
+                "forecast_tax_rate": "0.195",
+                "operating_margin": "0.28402552968011475422685907334394130603478683461752",
+                "period_index": 3,
+                "revenue_growth": "0.1345556220668611402580517994109276223698729297150"
+              },
+              {
+                "capex_percent_revenue": "0.29500033903691232197828225501560793604245511317675",
+                "change_in_operating_nwc_percent_revenue": "0.020188807134273750870574062821947023311816789216859",
+                "d_and_a_percent_revenue": "0.15363949258696030130602743636748721907619381490873",
+                "fiscal_year_label": "FY2029",
+                "forecast_tax_rate": "0.2025",
+                "operating_margin": "0.27701276484005737711342953667197065301739341730876",
+                "period_index": 4,
+                "revenue_growth": "0.0922778110334305701290258997054638111849364648575"
+              },
+              {
+                "capex_percent_revenue": "0.24813112629272999044902245748976368452169121669072",
+                "change_in_operating_nwc_percent_revenue": "0.013084112149532710280373831775700934579439252336449",
+                "d_and_a_percent_revenue": "0.17667246100129885976020682894332726299185834438312",
+                "fiscal_year_label": "FY2030",
+                "forecast_tax_rate": "0.21",
+                "operating_margin": "0.27000000000000000000000000000000000000000000000000",
+                "period_index": 5,
+                "revenue_growth": "0.0500000000000000000000000000000000000000000000000"
+              }
+            ],
+            "input_basis": "MANUAL_INPUT",
+            "limitations": [
+              "Revenue-only retained historical binding; no forecast, WACC, terminal, asset/claim, class-equivalence or award inputs approved.",
+              "Manual margins include SBC and operating-lease service costs. Expense D&A, financed investment and WC scope require issuer-specific semantic review; historical proxies remain incomplete.",
+              "Historical cash movements are not automatic forecast WC inputs. Gross financial assets are not automatically eligible assets; historical omissions do not approve valuation omissions.",
+              "Alphabet Class A/B/C economic equivalence, share denominator and awards remain unresolved; the GOOGL label selects consolidated revenue only.",
+              "Five-year forecast revenue CAGR = 0.1530049835460475204657802187204333090824391350822; not any individual annual rate",
+              "Terminal net reinvestment/revenue = 0.075825242718446601941747572815533980582524271844660",
+              "Implied incremental return diagnostic g*NOPAT/net reinvestment = 0.090642637644046094750320102432778489116517285531370; NOT observed ROIC",
+              "Reported FY2025 YTD plus Q4 revenue differs from the annual anchor by1m; no residual correction or precision improvement.",
+              "Acquisition cash/perimeter not reconciled: operating PV conditional; exclusions are not zero claims or assets.",
+              "Expense D&A and commissioning are estimates; source PP&E/CFO proxies remain incomplete.",
+              "Terminal expense D&A16% is independent of the commissioning path; transition/retirement economics are not modeled. Review the discontinuity, not a proven vintage reconciliation.",
+              "Terminal dependence must be reviewed after explicit engine execution; no financial approval."
+            ],
+            "schema_version": "analyst-case-v3",
+            "scope": "Fiscal-end analytical origin using later-filed information; not a contemporaneous backtest or current-date fair value; information reviewed through 2026-10-30; consolidated operating EV only.",
+            "terminal_valuation": {
+              "method": "perpetual_growth",
+              "terminal": {
+                "d_and_a_percent_revenue": "0.16",
+                "investment_percent_revenue": "0.23",
+                "operating_margin": "0.29",
+                "operating_tax_rate": "0.21",
+                "working_capital_cash_requirement_percent_revenue": "0.0058252427184466019417475728155339805825242718446602"
+              },
+              "terminal_growth": "0.03"
+            },
+            "wacc": "0.09940800"
+          },
+          "cost_of_equity": "0.09120",
+          "financing_years": [
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "4919296995.7512481339186717101690396707808223517696",
+              "period_index": 1,
+              "principal_repaid_usd": "4919296995.7512481339186717101690396707808223517696"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "6046364736.1453390484774307504023357723214989545756",
+              "period_index": 2,
+              "principal_repaid_usd": "6046364736.1453390484774307504023357723214989545756"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "5703960462.7214004004111252937687236732026935648808",
+              "period_index": 3,
+              "principal_repaid_usd": "5703960462.7214004004111252937687236732026935648808"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "5153285119.6964878806619331801014910214190748672995",
+              "period_index": 4,
+              "principal_repaid_usd": "5153285119.6964878806619331801014910214190748672995"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "4551265830.0123187357247914534541205749916128500915",
+              "period_index": 5,
+              "principal_repaid_usd": "4551265830.0123187357247914534541205749916128500915"
+            }
+          ],
+          "opening_debt_usd": "51043000000",
+          "schema_version": "fcfe-forecast-request-v1",
+          "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+          "terminal_financing": {
+            "cash_debt_issued_usd": "1531290000.00",
+            "interest_expense_usd": "2960494000.0000",
+            "new_finance_asset_funding_usd": "4345262487.7780535358850462027242850320752757568617",
+            "principal_repaid_usd": "4345262487.7780535358850462027242850320752757568617"
+          },
+          "terminal_growth": "0.03"
+        },
+        "operating_equity_value_usd": "1190198558549.1488185235009777694150864254896930435",
+        "pv_explicit_fcfe_usd": "-55191953158.150256144293418494560406354237691237453",
+        "pv_terminal_equity_usd": "1245390511707.2990746677943962639754927797273842810",
+        "terminal": {
+          "cash_debt_issued_usd": "1531290000.00",
+          "closing_debt_usd": "52574290000.000000000000000000000000000000000000000",
+          "equity_tax_usd": "46550843676.230529885875529841662031724298939292643",
+          "fcfe_usd": "117917635299.52879054749673223161812193170797970487",
+          "fcff_usd": "118725135559.52879054749673223161812193170797970487",
+          "interest_expense_usd": "2960494000.0000",
+          "interest_tax_shield_usd": "621703740.000000000000000000000000000000000000000",
+          "net_borrowing_usd": "1531290000.0000000000000000000000000000000000000000",
+          "net_income_usd": "175119840496.29580290400794559482383362950553352947",
+          "new_finance_asset_funding_usd": "4345262487.7780535358850462027242850320752757568617",
+          "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+          "principal_repaid_usd": "4345262487.7780535358850462027242850320752757568617"
+        },
+        "value_per_share_usd": "111.09715752216239438346814694983145403601371811184",
+        "years": [
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.91642228739002932551319648093841642228739002932551",
+            "equity_tax_usd": "25814330405.450550201232884810669526299900100709554",
+            "fcfe_usd": "-70578782807.498422877861260855592199034342681936203",
+            "fcff_usd": "-68151177727.498422877861260855592199034342681936203",
+            "fiscal_year_label": "FY2026",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "532888920.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "117598616291.49695091672758635971673092176712545464",
+            "new_finance_asset_funding_usd": "4919296995.7512481339186717101690396707808223517696",
+            "opening_debt_usd": "51043000000",
+            "period_index": 1,
+            "principal_repaid_usd": "4919296995.7512481339186717101690396707808223517696",
+            "pv_fcfe_usd": "-64679969581.651780496573736121327161871648352214262"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.83982980882517350211986481024414994711087795942587",
+            "equity_tax_usd": "30983188393.427828605741974105446705803291135918236",
+            "fcfe_usd": "-76927158124.812489532599504023496033678790311442582",
+            "fcff_usd": "-74521756749.812489532599504023496033678790311442582",
+            "fiscal_year_label": "FY2027",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "555092625.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "134260483038.18725729154855445693572514759492231235",
+            "new_finance_asset_funding_usd": "6046364736.1453390484774307504023357723214989545756",
+            "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "period_index": 2,
+            "principal_repaid_usd": "6046364736.1453390484774307504023357723214989545756",
+            "pv_fcfe_usd": "-64605720501.425165598145185497153744282766456702424"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.76963875442189653786644502405072392513826792469380",
+            "equity_tax_usd": "35739237536.441102424175777599385051098236952076594",
+            "fcfe_usd": "-19888122779.394791944130189193539966296878645264753",
+            "fcff_usd": "-17504925109.394791944130189193539966296878645264753",
+            "fiscal_year_label": "FY2028",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "577296330.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "147538903676.07737154595641521797418530297818677774",
+            "new_finance_asset_funding_usd": "5703960462.7214004004111252937687236732026935648808",
+            "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "period_index": 3,
+            "principal_repaid_usd": "5703960462.7214004004111252937687236732026935648808",
+            "pv_fcfe_usd": "-15306670043.723154691259039121680859670350600052171"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.70531410779132747238493862174736430089650652922819",
+            "equity_tax_usd": "39576835534.395446933984826416308854243759182337777",
+            "fcfe_usd": "40159482737.394819096382739282059235621607570846894",
+            "fcff_usd": "42520476702.394819096382739282059235621607570846894",
+            "fiscal_year_label": "FY2029",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "599500035.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "155864327598.42157496223653860250030251554542179939",
+            "new_finance_asset_funding_usd": "5153285119.6964878806619331801014910214190748672995",
+            "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "period_index": 4,
+            "principal_repaid_usd": "5153285119.6964878806619331801014910214190748672995",
+            "pv_fcfe_usd": "28325049736.286844304260956683397138849968202644550"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.64636556799058602674572820907932945463389527971791",
+            "equity_tax_usd": "42018362555.220097319003659381482251642319094774066",
+            "fcfe_usd": "94490425011.705652413818795574452712661778919674213",
+            "fcff_usd": "96829215271.705652413818795574452712661778919674213",
+            "fiscal_year_label": "FY2030",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "621703740.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "158069078183.92322324768043291129037522586707081672",
+            "new_finance_asset_funding_usd": "4551265830.0123187357247914534541205749916128500915",
+            "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "period_index": 5,
+            "principal_repaid_usd": "4551265830.0123187357247914534541205749916128500915",
+            "pv_fcfe_usd": "61075357232.363000337423585562204220620559515086857"
+          }
+        ]
+      },
+      "fcff": {
+        "enterprise_value_usd": "1017546718244.5734160750558495417444119637824019552",
+        "equity_value_usd": "1153519998244.5734160750558495417444119637824019552",
+        "value_per_share_usd": "93.251414571105369124903463988823315437654195792660",
+        "wacc": "0.09940800"
+      },
+      "historical": [
+        {
+          "cash_ppe_usd": "24640000000",
+          "cfo_usd": "91652000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "65776000000",
+          "economic_fcfe_usd": "50400000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "65776000000",
+          "fcff_usd": "67301940022.483302841272290431370820199704631119536",
+          "fiscal_year": 2021,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "-1236000000",
+          "identity": {
+            "accession": "0001652044-22-000019",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "65776000000",
+          "sbc_usd": "15376000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "31485000000",
+          "cfo_usd": "91495000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "58814000000",
+          "economic_fcfe_usd": "39452000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "58814000000",
+          "fcff_usd": "60310162685.060565275908479138627187079407806191117",
+          "fiscal_year": 2022,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "-1196000000",
+          "identity": {
+            "accession": "0001652044-23-000016",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "58814000000",
+          "sbc_usd": "19362000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "32251000000",
+          "cfo_usd": "101746000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "68735000000",
+          "economic_fcfe_usd": "46275000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "68735000000",
+          "fcff_usd": "69760161636.548175974427476463245330564532123149434",
+          "fiscal_year": 2023,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "-760000000",
+          "identity": {
+            "accession": "0001652044-24-000022",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "68735000000",
+          "sbc_usd": "22460000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "52535000000",
+          "cfo_usd": "125299000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "73652000000",
+          "economic_fcfe_usd": "50867000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "73652000000",
+          "fcff_usd": "72987942110.754079205441722655760964820765346575971",
+          "fiscal_year": 2024,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "888000000",
+          "identity": {
+            "accession": "0001652044-25-000014",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "73652000000",
+          "sbc_usd": "22785000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "91447000000",
+          "cfo_usd": "164713000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "105403000000",
+          "economic_fcfe_usd": "80450000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "105403000000",
+          "fcff_usd": "73878476042.965257577474720763602936546912973946331",
+          "fiscal_year": 2025,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "32137000000",
+          "identity": {
+            "accession": "0001652044-26-000018",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "105403000000",
+          "sbc_usd": "24953000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          ]
+        }
+      ],
+      "historical_minorities_stress": [
+        {
+          "consolidated_fcfe_usd": "65776000000",
+          "fiscal_year": 2021,
+          "five_percent_minority_parent_proxy_usd": "62487200000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "65118240000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "58814000000",
+          "fiscal_year": 2022,
+          "five_percent_minority_parent_proxy_usd": "55873300000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "58225860000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "68735000000",
+          "fiscal_year": 2023,
+          "five_percent_minority_parent_proxy_usd": "65298250000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "68047650000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "73652000000",
+          "fiscal_year": 2024,
+          "five_percent_minority_parent_proxy_usd": "69969400000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "72915480000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "105403000000",
+          "fiscal_year": 2025,
+          "five_percent_minority_parent_proxy_usd": "100132850000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "104348970000.00"
+        }
+      ],
+      "model_origin": "2025-12-31",
+      "name": "Alphabet",
+      "policy_version": "googl-analyst-2026-11-04-v1",
+      "qualifications": [
+        "Analyst-ready means usable under these explicit conventions, not exact historical cash reconstruction, issuer-certified assumptions or an investment recommendation.",
+        "Analytical origin 2025-12-31 uses later-filed information; no current-date fair value, historical backtest or current-price upside is asserted.",
+        "Historical FCFF preserves the adopted reported-CFO/expensed-interest/reported-tax/cash-investment convention. It retains SBC addbacks, unlike forward EBIT cash flows. No automatic cross-basis CAGR or forecast calibration.",
+        "Historical FCFE includes identified financing once. Net Other allocation is a selected assumption and not a bound on unidentified offsetting gross financing. The economic companion subtracts reported SBC once; it does not normalize all accounting differences.",
+        "Flat explicit carrying debt is maintained by net rollover; interest is debt cost times opening debt. Matched financed-asset investment and aggregate principal enter once; gross maturity/refinancing schedules are not predicted. Terminal debt grows at the terminal growth rate.",
+        "FCFF uses the submitted target-weight WACC; FCFE uses CAPM/configured cost of equity and flat explicit debt. These financing assumptions differ, so valuation differences are shown rather than forced to zero.",
+        "Liquid cash and securities exclude restricted balances and separately shown nonmarketable holdings. The selected operating reserve is an analyst haircut; ongoing liquidity costs are assumed included in forward margins/WC.",
+        "Separate non-operating financial investments use an editable carrying-value proxy, not an observed market value. Operating EBIT forecasts exclude their investment returns; the same holdings are not added twice. Exclusion and haircut sensitivities show this valuation judgment.",
+        "Term debt uses disclosed fair value and finance leases carrying proxies. Operating leases remain service expenses; no second operating-lease debt deduction. FCFE does not subtract debt again.",
+        "Dated common shares across all economic classes plus expected existing RSU vesting form the denominator. Equal per-share economic participation is an explicit analyst assumption; voting/control rights are not claimed identical. Future SBC in margins proxies future grants; no separate settlement/award-value deduction for the same existing RSUs.",
+        "Zero additional non-operating claims is an explicit base assumption, not proof of no tax/legal exposure. Ordinary settlements are assumed within forecast tax/expenses; stresses are illustrative, not bounds.",
+        "FCFE financing identities are checked at 50-digit arithmetic precision. A last-place associativity residual, when present, is exported with its calculated rounding envelope and is not a cash adjustment; financial component mismatches still fail validation.",
+        "Alphabet historical FCFE is consolidated before minority attribution. With zero selected minority cash share, the displayed parent proxy is explicitly unallocated consolidated cash, not verified parent cash. Alternative historical allocations are scenarios, not issuer disclosures.",
+        "Forward valuation discounts consolidated operating FCFE and deducts one selected minority-interest claim in the equity bridge. The historical cash-allocation assumption does not change forward cash flows, preventing a second minority deduction.",
+        "The default minority claim uses disclosed book NCI as a valuation proxy; redeemable NCI is already included. It is not observed fair value. 5\u00d7/10\u00d7 proxy stresses are not bounds; later Waymo financing valuations are not backdated.",
+        "Finance-lease cash, including prepayments, remains within debt repayments once. Historical cash capex and new noncash assets are separate populations; no rounded prepayment subtraction invents exact principal.",
+        "Class A/B/C economic-per-share equivalence is assumed for valuation only. Different voting/control rights and possible market price premiums are not modeled."
+      ],
+      "readiness": [
+        {
+          "detail": "Five adopted reported-cash-convention calculations with explicit interest/tax/investment qualifications.",
+          "id": "historical_fcff",
+          "label": "Historical FCFF \u00b7 five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Current selected operating forecast, WACC and independent terminal calculate.",
+          "id": "fcff_valuation",
+          "label": "FCFF forecast and enterprise value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Standardized identified-financing estimates; consolidated scope and any historical minority allocation are explicit.",
+          "id": "historical_fcfe",
+          "label": "Historical FCFE \u00b7 five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Explicit financing, cost of equity and terminal debt growth; minority value deducted once when applicable.",
+          "id": "fcfe_valuation",
+          "label": "FCFE forecast and equity value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Dated cash/debt/shares plus editable investment, reserve, awards and claim assumptions.",
+          "id": "per_share",
+          "label": "Fair value per share \u00b7 both methods",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        }
+      ],
+      "schema_version": "company-analyst-result-v1",
+      "sensitivities": [
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "111.74846875902577352655626336050243220901290970441",
+          "fcff_value_per_share_usd": "93.902725807968748267991580399494293610653387385222",
+          "label": "No operating cash reserve"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "110.12019066686732566883597233382498677651493072300",
+          "fcff_value_per_share_usd": "92.274447715810300410271289372816848178155408403816",
+          "label": "Operating cash reserve 5% of anchor revenue"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "111.09715752216239438346814694983145403601371811184",
+          "fcff_value_per_share_usd": "93.013500262293728057805646688904156181389038153209",
+          "label": "Debt bridge at carrying value; FCFE financing held fixed"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "113.68893436045241715118307228403500053155937235635",
+          "fcff_value_per_share_usd": "95.426869477545782269610841292334911644919126568101",
+          "label": "No existing RSU vesting"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "105.54444935724727716438973142840865694628049256617",
+          "fcff_value_per_share_usd": "87.698706406190251905825048467400518347920970246985",
+          "label": "Exclude non-operating investment value"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "108.32080343970483577392893918912005549114710533901",
+          "fcff_value_per_share_usd": "90.475060488647810515364256228111916892787583019822",
+          "label": "Non-operating investments at half the selected value"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "110.28875008481397077797097637586217351863295820885",
+          "fcff_value_per_share_usd": "92.443007133756945519406293414854034920273435889669",
+          "label": "Additional 10B claim; illustrative only"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "111.37201605086085840933718494498100941192317647886",
+          "fcff_value_per_share_usd": "93.526273099803833150772501983972870813563654159677",
+          "label": "No separate minority-interest equity claim"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "109.99772340736853827999199496923323253237588464378",
+          "fcff_value_per_share_usd": "92.151980456311513021427312008225093934016362324592",
+          "label": "Minority claim at 5\u00d7 reported book proxy; not a bound"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "108.62343076387621815064680499348545565282859280869",
+          "fcff_value_per_share_usd": "90.777687812819192892082122032477317054469070489507",
+          "label": "Minority claim at 10\u00d7 reported book proxy; not a bound"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "92.971519966822546101860587820656709794190261615715",
+          "fcff_value_per_share_usd": "93.251414571105369124903463988823315437654195792660",
+          "label": "Cost of equity +1 percentage point; FCFF held fixed"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "111.09715752216239438346814694983145403601371811184",
+          "fcff_value_per_share_usd": "78.942358569922748680437032656901552341676284171156",
+          "label": "FCFF WACC +1 percentage point; FCFE held fixed"
+        }
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/free-cash-flow-valuation",
+        "https://www.cfainstitute.org/standards/professionals/code-ethics-standards/standards-of-practice-v-a",
+        "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valopt.pdf",
+        "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/noncashwc.htm"
+      ],
+      "submitted_inputs": {
+        "assumptions": {
+          "additional_assets_usd": "68687000000",
+          "additional_claims_usd": "0",
+          "cost_of_equity": "0.09120",
+          "historical_minority_cash_share": "0",
+          "historical_other_financing_fraction": "0",
+          "nci_claim_usd": "3400000000",
+          "operating_cash_reserve_ratio": "0.02",
+          "pre_tax_cost_of_debt": "0.0580",
+          "rsu_vesting_fraction": "1"
+        },
+        "base_case": {
+          "analyst": {
+            "author": "AI-assisted versioned preload policy; not a verified human identity",
+            "rationale": "Proposed estimates generated by googl-preload-v1.0.0; economic hash 1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe; explicit configuration is analyst judgment, not user-supplied or approved facts.",
+            "timestamp_utc": "2026-11-04T00:00:00+00:00"
+          },
+          "anchor": {
+            "accession": "0001652044-26-000018",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 1652044,
+            "form": "10-K",
+            "kind": "googl-fy2025"
+          },
+          "calculation_scope": "ENTERPRISE_VALUE",
+          "case_name": "GOOGL proposed starting estimate \u00b7 Bear",
+          "comparison_terminal_valuation": null,
+          "conventions": {
+            "discounting": "fiscal-end-annual-gordon-v1",
+            "forecast": "manual-fcff-v1"
+          },
+          "forecast_years": [
+            {
+              "capex_percent_revenue": "0.41069109689784757436456273558835028373659300279204",
+              "change_in_operating_nwc_percent_revenue": "0.038593991502496267837343420338079341561644703538798",
+              "d_and_a_percent_revenue": "0.066111249744531560751368635484953948113695458986035",
+              "fiscal_year_label": "FY2026",
+              "forecast_tax_rate": "0.18",
+              "operating_margin": "0.29805105936022950845371814668788261206957366923505",
+              "period_index": 1,
+              "revenue_growth": "0.2191112441337222805161035988218552447397458594300"
+            },
+            {
+              "capex_percent_revenue": "0.42893510234961061026443162626802497976562463236421",
+              "change_in_operating_nwc_percent_revenue": "0.032892368755176235251673857127522384131307923654666",
+              "d_and_a_percent_revenue": "0.096416241542780765468219557748441907646829185655331",
+              "fiscal_year_label": "FY2027",
+              "forecast_tax_rate": "0.1875",
+              "operating_margin": "0.29103829452017213134028861001591195905218025192629",
+              "period_index": 2,
+              "revenue_growth": "0.1768334331002917103870776991163914335548093945725"
+            },
+            {
+              "capex_percent_revenue": "0.35665470799793121218607705464164797755091412081136",
+              "change_in_operating_nwc_percent_revenue": "0.026773179067835453986297315922504962517675510307509",
+              "d_and_a_percent_revenue": "0.12809123354315944144975572267312845047407830314506",
+              "fiscal_year_label": "FY2028",
+              "forecast_tax_rate": "0.195",
+              "operating_margin": "0.28402552968011475422685907334394130603478683461752",
+              "period_index": 3,
+              "revenue_growth": "0.1345556220668611402580517994109276223698729297150"
+            },
+            {
+              "capex_percent_revenue": "0.29500033903691232197828225501560793604245511317675",
+              "change_in_operating_nwc_percent_revenue": "0.020188807134273750870574062821947023311816789216859",
+              "d_and_a_percent_revenue": "0.15363949258696030130602743636748721907619381490873",
+              "fiscal_year_label": "FY2029",
+              "forecast_tax_rate": "0.2025",
+              "operating_margin": "0.27701276484005737711342953667197065301739341730876",
+              "period_index": 4,
+              "revenue_growth": "0.0922778110334305701290258997054638111849364648575"
+            },
+            {
+              "capex_percent_revenue": "0.24813112629272999044902245748976368452169121669072",
+              "change_in_operating_nwc_percent_revenue": "0.013084112149532710280373831775700934579439252336449",
+              "d_and_a_percent_revenue": "0.17667246100129885976020682894332726299185834438312",
+              "fiscal_year_label": "FY2030",
+              "forecast_tax_rate": "0.21",
+              "operating_margin": "0.27000000000000000000000000000000000000000000000000",
+              "period_index": 5,
+              "revenue_growth": "0.0500000000000000000000000000000000000000000000000"
+            }
+          ],
+          "input_basis": "MANUAL_INPUT",
+          "limitations": [
+            "Revenue-only retained historical binding; no forecast, WACC, terminal, asset/claim, class-equivalence or award inputs approved.",
+            "Manual margins include SBC and operating-lease service costs. Expense D&A, financed investment and WC scope require issuer-specific semantic review; historical proxies remain incomplete.",
+            "Historical cash movements are not automatic forecast WC inputs. Gross financial assets are not automatically eligible assets; historical omissions do not approve valuation omissions.",
+            "Alphabet Class A/B/C economic equivalence, share denominator and awards remain unresolved; the GOOGL label selects consolidated revenue only.",
+            "Five-year forecast revenue CAGR = 0.1530049835460475204657802187204333090824391350822; not any individual annual rate",
+            "Terminal net reinvestment/revenue = 0.075825242718446601941747572815533980582524271844660",
+            "Implied incremental return diagnostic g*NOPAT/net reinvestment = 0.090642637644046094750320102432778489116517285531370; NOT observed ROIC",
+            "Reported FY2025 YTD plus Q4 revenue differs from the annual anchor by1m; no residual correction or precision improvement.",
+            "Acquisition cash/perimeter not reconciled: operating PV conditional; exclusions are not zero claims or assets.",
+            "Expense D&A and commissioning are estimates; source PP&E/CFO proxies remain incomplete.",
+            "Terminal expense D&A16% is independent of the commissioning path; transition/retirement economics are not modeled. Review the discontinuity, not a proven vintage reconciliation.",
+            "Terminal dependence must be reviewed after explicit engine execution; no financial approval."
+          ],
+          "schema_version": "analyst-case-v3",
+          "scope": "Fiscal-end analytical origin using later-filed information; not a contemporaneous backtest or current-date fair value; information reviewed through 2026-10-30; consolidated operating EV only.",
+          "terminal_valuation": {
+            "method": "perpetual_growth",
+            "terminal": {
+              "d_and_a_percent_revenue": "0.16",
+              "investment_percent_revenue": "0.23",
+              "operating_margin": "0.29",
+              "operating_tax_rate": "0.21",
+              "working_capital_cash_requirement_percent_revenue": "0.0058252427184466019417475728155339805825242718446602"
+            },
+            "terminal_growth": "0.03"
+          },
+          "wacc": "0.09940800"
+        },
+        "schema_version": "company-analyst-request-v1",
+        "ticker": "GOOGL"
+      },
+      "ticker": "GOOGL",
+      "valuation_difference_fcfe_minus_fcff_usd": "220751840304.5754024484451282276706744617072910883"
+    },
+    "Bull": {
+      "assumptions": {
+        "additional_assets_usd": "68687000000",
+        "additional_claims_usd": "0",
+        "cost_of_equity": "0.09120",
+        "historical_minority_cash_share": "0",
+        "historical_other_financing_fraction": "0",
+        "nci_claim_usd": "3400000000",
+        "operating_cash_reserve_ratio": "0.02",
+        "pre_tax_cost_of_debt": "0.0580",
+        "rsu_vesting_fraction": "1"
+      },
+      "automatic_history_calibration": false,
+      "bridge": {
+        "additional_assets_usd": "68687000000",
+        "additional_claims_usd": "0",
+        "debt_basis": "DISCLOSED_TERM_FAIR_VALUE_PLUS_FINANCE_LEASE_CARRYING_PROXY",
+        "debt_claims_usd": "48100000000",
+        "debt_subtracted_after_fcfe_discounting": false,
+        "eligible_cash_usd": "118786280000.00",
+        "fcfe_equity_value_usd": "1707487078129.0680307111280477634173231145047466832",
+        "fcfe_value_per_share_usd": "138.03452531358674460073791817004182078532778873753",
+        "fcff_equity_value_usd": "2142366942659.2077997143255649066036317041591754347",
+        "fcff_value_per_share_usd": "173.19053699751073562767385326649988938594657845066",
+        "gross_cash_usd": "126843000000",
+        "nci_claim_usd": "3400000000",
+        "operating_lease_debt_deduction_usd": "0",
+        "operating_reserve_usd": "8056720000.00",
+        "separate_existing_rsu_claim_deduction_usd": "0",
+        "valuation_shares": "12370000000"
+      },
+      "discount_basis": {
+        "beta": "1.10",
+        "classification": "DATED_MACRO_OBSERVATIONS_AND_CONFIGURED_ANALYST_ASSUMPTIONS",
+        "debt_tax_shield": "0.20",
+        "equity_risk_premium": "0.037",
+        "macro_observations": {
+          "implied_erp": {
+            "available_at": "2026-10-08",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "implied-erp-over-treasury",
+            "dimensions": [],
+            "end": "2026-10-01",
+            "id": "implied_erp-original",
+            "key": "implied_erp",
+            "locator": "October8authorpost; startOctober2026 implied ERP3.70%overTreasury; adjusted-RF3.92%notselected",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": "2026-10-08",
+            "scope": "macro",
+            "source": "damodaran-2026-10-08",
+            "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.037"
+          },
+          "treasury_10y": {
+            "available_at": "2026-10-30",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "treasury-par-yield",
+            "dimensions": [],
+            "end": "2026-10-28",
+            "id": "treasury_10y-original",
+            "key": "treasury_10y",
+            "locator": "Daily Treasury par yield curve,10/28/2026 row,10-year5.05%; publication time not separately retained",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": null,
+            "scope": "macro",
+            "source": "treasury-2026-10",
+            "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.0505"
+          }
+        },
+        "macro_sources": [
+          {
+            "accession": null,
+            "bytes": 246533,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "treasury-2026-10.html",
+            "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+            "http_status": 200,
+            "id": "treasury-2026-10",
+            "observation_date": "2026-10-28",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+            "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+            "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "title": "US Treasury October 2026 daily par yield curve",
+            "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+          },
+          {
+            "accession": null,
+            "bytes": 169880,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "damodaran-2026-10-08.html",
+            "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+            "http_status": 200,
+            "id": "damodaran-2026-10-08",
+            "observation_date": "2026-10-01",
+            "published_at": "2026-10-08",
+            "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+            "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+            "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "title": "Aswath Damodaran October 8 2026 market update",
+            "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+          }
+        ],
+        "risk_free": "0.0505",
+        "saved_base_wacc": "0.08940800",
+        "target_debt_weight": "0.04",
+        "target_equity_weight": "0.96"
+      },
+      "exact_full_historical_fcfe_claim": false,
+      "fcfe": {
+        "cost_of_equity": "0.09120",
+        "debt_subtracted_after_fcfe_discounting": false,
+        "equity_value_usd": "1707487078129.0680307111280477634173231145047466832",
+        "financing_inputs": {
+          "base_case": {
+            "analyst": {
+              "author": "AI-assisted versioned preload policy; not a verified human identity",
+              "rationale": "Proposed estimates generated by googl-preload-v1.0.0; economic hash 1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe; explicit configuration is analyst judgment, not user-supplied or approved facts.",
+              "timestamp_utc": "2026-11-04T00:00:00+00:00"
+            },
+            "anchor": {
+              "accession": "0001652044-26-000018",
+              "annual_end": "2025-12-31",
+              "annual_start": "2025-01-01",
+              "cik": 1652044,
+              "form": "10-K",
+              "kind": "googl-fy2025"
+            },
+            "calculation_scope": "ENTERPRISE_VALUE",
+            "case_name": "GOOGL proposed starting estimate \u00b7 Bull",
+            "comparison_terminal_valuation": null,
+            "conventions": {
+              "discounting": "fiscal-end-annual-gordon-v1",
+              "forecast": "manual-fcff-v1"
+            },
+            "forecast_years": [
+              {
+                "capex_percent_revenue": "0.41069109689784757436456273558835028373659300279204",
+                "change_in_operating_nwc_percent_revenue": "0.038593991502496267837343420338079341561644703538798",
+                "d_and_a_percent_revenue": "0.066111249744531560751368635484953948113695458986035",
+                "fiscal_year_label": "FY2026",
+                "forecast_tax_rate": "0.18",
+                "operating_margin": "0.33805105936022950845371814668788261206957366923505",
+                "period_index": 1,
+                "revenue_growth": "0.2591112441337222805161035988218552447397458594300"
+              },
+              {
+                "capex_percent_revenue": "0.42893510234961061026443162626802497976562463236421",
+                "change_in_operating_nwc_percent_revenue": "0.032892368755176235251673857127522384131307923654666",
+                "d_and_a_percent_revenue": "0.096416241542780765468219557748441907646829185655331",
+                "fiscal_year_label": "FY2027",
+                "forecast_tax_rate": "0.1875",
+                "operating_margin": "0.33103829452017213134028861001591195905218025192629",
+                "period_index": 2,
+                "revenue_growth": "0.2168334331002917103870776991163914335548093945725"
+              },
+              {
+                "capex_percent_revenue": "0.35665470799793121218607705464164797755091412081136",
+                "change_in_operating_nwc_percent_revenue": "0.026773179067835453986297315922504962517675510307509",
+                "d_and_a_percent_revenue": "0.12809123354315944144975572267312845047407830314506",
+                "fiscal_year_label": "FY2028",
+                "forecast_tax_rate": "0.195",
+                "operating_margin": "0.32402552968011475422685907334394130603478683461752",
+                "period_index": 3,
+                "revenue_growth": "0.1745556220668611402580517994109276223698729297150"
+              },
+              {
+                "capex_percent_revenue": "0.29500033903691232197828225501560793604245511317675",
+                "change_in_operating_nwc_percent_revenue": "0.020188807134273750870574062821947023311816789216859",
+                "d_and_a_percent_revenue": "0.15363949258696030130602743636748721907619381490873",
+                "fiscal_year_label": "FY2029",
+                "forecast_tax_rate": "0.2025",
+                "operating_margin": "0.31701276484005737711342953667197065301739341730876",
+                "period_index": 4,
+                "revenue_growth": "0.1322778110334305701290258997054638111849364648575"
+              },
+              {
+                "capex_percent_revenue": "0.24813112629272999044902245748976368452169121669072",
+                "change_in_operating_nwc_percent_revenue": "0.013084112149532710280373831775700934579439252336449",
+                "d_and_a_percent_revenue": "0.17667246100129885976020682894332726299185834438312",
+                "fiscal_year_label": "FY2030",
+                "forecast_tax_rate": "0.21",
+                "operating_margin": "0.31000000000000000000000000000000000000000000000000",
+                "period_index": 5,
+                "revenue_growth": "0.0900000000000000000000000000000000000000000000000"
+              }
+            ],
+            "input_basis": "MANUAL_INPUT",
+            "limitations": [
+              "Revenue-only retained historical binding; no forecast, WACC, terminal, asset/claim, class-equivalence or award inputs approved.",
+              "Manual margins include SBC and operating-lease service costs. Expense D&A, financed investment and WC scope require issuer-specific semantic review; historical proxies remain incomplete.",
+              "Historical cash movements are not automatic forecast WC inputs. Gross financial assets are not automatically eligible assets; historical omissions do not approve valuation omissions.",
+              "Alphabet Class A/B/C economic equivalence, share denominator and awards remain unresolved; the GOOGL label selects consolidated revenue only.",
+              "Five-year forecast revenue CAGR = 0.1530049835460475204657802187204333090824391350822; not any individual annual rate",
+              "Terminal net reinvestment/revenue = 0.075825242718446601941747572815533980582524271844660",
+              "Implied incremental return diagnostic g*NOPAT/net reinvestment = 0.090642637644046094750320102432778489116517285531370; NOT observed ROIC",
+              "Reported FY2025 YTD plus Q4 revenue differs from the annual anchor by1m; no residual correction or precision improvement.",
+              "Acquisition cash/perimeter not reconciled: operating PV conditional; exclusions are not zero claims or assets.",
+              "Expense D&A and commissioning are estimates; source PP&E/CFO proxies remain incomplete.",
+              "Terminal expense D&A16% is independent of the commissioning path; transition/retirement economics are not modeled. Review the discontinuity, not a proven vintage reconciliation.",
+              "Terminal dependence must be reviewed after explicit engine execution; no financial approval."
+            ],
+            "schema_version": "analyst-case-v3",
+            "scope": "Fiscal-end analytical origin using later-filed information; not a contemporaneous backtest or current-date fair value; information reviewed through 2026-10-30; consolidated operating EV only.",
+            "terminal_valuation": {
+              "method": "perpetual_growth",
+              "terminal": {
+                "d_and_a_percent_revenue": "0.16",
+                "investment_percent_revenue": "0.23",
+                "operating_margin": "0.29",
+                "operating_tax_rate": "0.21",
+                "working_capital_cash_requirement_percent_revenue": "0.0058252427184466019417475728155339805825242718446602"
+              },
+              "terminal_growth": "0.03"
+            },
+            "wacc": "0.07940800"
+          },
+          "cost_of_equity": "0.09120",
+          "financing_years": [
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "5080703004.2487518660813282898309603292191776482307",
+              "period_index": 1,
+              "principal_repaid_usd": "5080703004.2487518660813282898309603292191776482307"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "6457006785.8232484196161591535703336152053081705836",
+              "period_index": 2,
+              "principal_repaid_usd": "6457006785.8232484196161591535703336152053081705836"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "6306105083.1818937025033008316684136465322557803832",
+              "period_index": 3,
+              "principal_repaid_usd": "6306105083.1818937025033008316684136465322557803832"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "5905936238.0429493729994368595017627716125503953595",
+              "period_index": 4,
+              "principal_repaid_usd": "5905936238.0429493729994368595017627716125503953595"
+            },
+            {
+              "cash_debt_issued_usd": "0",
+              "interest_expense_usd": "2960494000.0000",
+              "new_finance_asset_funding_usd": "5414694812.6356386307592967842721768962167401288295",
+              "period_index": 5,
+              "principal_repaid_usd": "5414694812.6356386307592967842721768962167401288295"
+            }
+          ],
+          "opening_debt_usd": "51043000000",
+          "schema_version": "fcfe-forecast-request-v1",
+          "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+          "terminal_financing": {
+            "cash_debt_issued_usd": "1531290000.00",
+            "interest_expense_usd": "2960494000.0000",
+            "new_finance_asset_funding_usd": "5169610198.7627414688711444042141308022933175017329",
+            "principal_repaid_usd": "5169610198.7627414688711444042141308022933175017329"
+          },
+          "terminal_growth": "0.03"
+        },
+        "operating_equity_value_usd": "1523413798129.0680307111280477634173231145047466832",
+        "pv_explicit_fcfe_usd": "40140024294.018140323120684353955927548998174610794",
+        "pv_terminal_equity_usd": "1483273773835.0498903880073634094613955655065720724",
+        "terminal": {
+          "cash_debt_issued_usd": "1531290000.00",
+          "closing_debt_usd": "52574290000.000000000000000000000000000000000000000",
+          "equity_tax_usd": "55500034109.089952928801567229922883479331236826422",
+          "fcfe_usd": "140441198377.73778657880481807339128897496230254113",
+          "fcff_usd": "141248698637.73778657880481807339128897496230254113",
+          "interest_expense_usd": "2960494000.0000",
+          "interest_tax_shield_usd": "621703740.000000000000000000000000000000000000000",
+          "net_borrowing_usd": "1531290000.0000000000000000000000000000000000000000",
+          "net_income_usd": "208785842600.86220387501541957923370451748417663273",
+          "new_finance_asset_funding_usd": "5169610198.7627414688711444042141308022933175017329",
+          "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+          "principal_repaid_usd": "5169610198.7627414688711444042141308022933175017329"
+        },
+        "value_per_share_usd": "138.03452531358674460073791817004182078532778873753",
+        "years": [
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.91642228739002932551319648093841642228739002932551",
+            "equity_tax_usd": "30330753848.020635053835304021923483766756701809429",
+            "fcfe_usd": "-56178213561.207037064422144863262217965546211800174",
+            "fcff_usd": "-53750608481.207037064422144863262217965546211800174",
+            "fiscal_year_label": "FY2026",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "532888920.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "138173434196.53844857858305165542920382633608602073",
+            "new_finance_asset_funding_usd": "5080703004.2487518660813282898309603292191776482307",
+            "opening_debt_usd": "51043000000",
+            "period_index": 1,
+            "principal_repaid_usd": "5080703004.2487518660813282898309603292191776482307",
+            "pv_fcfe_usd": "-51482966973.246918130885396685540888898044548937109"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.83982980882517350211986481024414994711087795942587",
+            "equity_tax_usd": "37754101730.999029632845556746013966216940963702881",
+            "fcfe_usd": "-61929453683.911881466711616741972758440595854475197",
+            "fcff_usd": "-59524052308.911881466711616741972758440595854475197",
+            "fiscal_year_label": "FY2027",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "555092625.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "163601107500.99579507566407923272718694007750937915",
+            "new_finance_asset_funding_usd": "6457006785.8232484196161591535703336152053081705836",
+            "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "period_index": 2,
+            "principal_repaid_usd": "6457006785.8232484196161591535703336152053081705836",
+            "pv_fcfe_usd": "-52010201248.007152281830705983421859043734048671696"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.76963875442189653786644502405072392513826792469380",
+            "equity_tax_usd": "45227498214.497070725048008562784270941818711038140",
+            "fcfe_usd": "1606752440.8694782348627642972847780048113684936690",
+            "fcff_usd": "3989950110.869478234862764297284778004811368493669",
+            "fiscal_year_label": "FY2028",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "577296330.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "186708390064.97508683930075329764788773417467890104",
+            "new_finance_asset_funding_usd": "6306105083.1818937025033008316684136465322557803832",
+            "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "period_index": 3,
+            "principal_repaid_usd": "6306105083.1818937025033008316684136465322557803832",
+            "pv_fcfe_usd": "1236618947.2551271973211900683161294946608521180832"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.70531410779132747238493862174736430089650652922819",
+            "equity_tax_usd": "52093372294.412636112633590269052203058617432522537",
+            "fcfe_usd": "72554001015.608185181857244386808061986091310228550",
+            "fcff_usd": "74914994980.608185181857244386808061986091310228550",
+            "fiscal_year_label": "FY2029",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "599500035.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "205157848912.56334469049525056577349105801186388505",
+            "new_finance_asset_funding_usd": "5905936238.0429493729994368595017627716125503953595",
+            "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "period_index": 4,
+            "principal_repaid_usd": "5905936238.0429493729994368595017627716125503953595",
+            "pv_fcfe_usd": "51173360493.014754428527769801834328812110850632931"
+          },
+          {
+            "cash_debt_issued_usd": "0",
+            "closing_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "discount_factor": "0.64636556799058602674572820907932945463389527971791",
+            "equity_tax_usd": "57623153083.628675620785021229581834210219897610279",
+            "fcfe_usd": "141132537982.48570543884918889528734346802911130557",
+            "fcff_usd": "143471328242.48570543884918889528734346802911130557",
+            "fiscal_year_label": "FY2030",
+            "interest_expense_usd": "2960494000.0000",
+            "interest_tax_shield_usd": "621703740.000000000000000000000000000000000000000",
+            "net_borrowing_usd": "0E-40",
+            "net_income_usd": "216772813981.26977971628650843509356679082723386724",
+            "new_finance_asset_funding_usd": "5414694812.6356386307592967842721768962167401288295",
+            "opening_debt_usd": "51043000000.000000000000000000000000000000000000000",
+            "period_index": 5,
+            "principal_repaid_usd": "5414694812.6356386307592967842721768962167401288295",
+            "pv_fcfe_usd": "91223213075.002329109987827152768217184005069468583"
+          }
+        ]
+      },
+      "fcff": {
+        "enterprise_value_usd": "2006393662659.2077997143255649066036317041591754347",
+        "equity_value_usd": "2142366942659.2077997143255649066036317041591754347",
+        "value_per_share_usd": "173.19053699751073562767385326649988938594657845066",
+        "wacc": "0.07940800"
+      },
+      "historical": [
+        {
+          "cash_ppe_usd": "24640000000",
+          "cfo_usd": "91652000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "65776000000",
+          "economic_fcfe_usd": "50400000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "65776000000",
+          "fcff_usd": "67301940022.483302841272290431370820199704631119536",
+          "fiscal_year": 2021,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "-1236000000",
+          "identity": {
+            "accession": "0001652044-22-000019",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "65776000000",
+          "sbc_usd": "15376000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "31485000000",
+          "cfo_usd": "91495000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "58814000000",
+          "economic_fcfe_usd": "39452000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "58814000000",
+          "fcff_usd": "60310162685.060565275908479138627187079407806191117",
+          "fiscal_year": 2022,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "-1196000000",
+          "identity": {
+            "accession": "0001652044-23-000016",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "58814000000",
+          "sbc_usd": "19362000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "32251000000",
+          "cfo_usd": "101746000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "68735000000",
+          "economic_fcfe_usd": "46275000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "68735000000",
+          "fcff_usd": "69760161636.548175974427476463245330564532123149434",
+          "fiscal_year": 2023,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "-760000000",
+          "identity": {
+            "accession": "0001652044-24-000022",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "68735000000",
+          "sbc_usd": "22460000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "52535000000",
+          "cfo_usd": "125299000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "73652000000",
+          "economic_fcfe_usd": "50867000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "73652000000",
+          "fcff_usd": "72987942110.754079205441722655760964820765346575971",
+          "fiscal_year": 2024,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "888000000",
+          "identity": {
+            "accession": "0001652044-25-000014",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "73652000000",
+          "sbc_usd": "22785000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          ]
+        },
+        {
+          "cash_ppe_usd": "91447000000",
+          "cfo_usd": "164713000000",
+          "classification": "STANDARDIZED_DERIVED_ESTIMATE_WITH_DECLARED_ASSUMPTIONS",
+          "consolidated_fcfe_usd": "105403000000",
+          "economic_fcfe_usd": "80450000000",
+          "exact_parent_cash_verified": false,
+          "fcfe_usd": "105403000000",
+          "fcff_usd": "73878476042.965257577474720763602936546912973946331",
+          "fiscal_year": 2025,
+          "historical_minority_cash_share": "0",
+          "identified_net_borrowing_usd": "32137000000",
+          "identity": {
+            "accession": "0001652044-26-000018",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          "other_financing_usd": "0",
+          "parent_common_fcfe_estimate_usd": "105403000000",
+          "sbc_usd": "24953000000",
+          "scope": "UNALLOCATED_CONSOLIDATED_PROXY",
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          ]
+        }
+      ],
+      "historical_minorities_stress": [
+        {
+          "consolidated_fcfe_usd": "65776000000",
+          "fiscal_year": 2021,
+          "five_percent_minority_parent_proxy_usd": "62487200000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "65118240000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "58814000000",
+          "fiscal_year": 2022,
+          "five_percent_minority_parent_proxy_usd": "55873300000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "58225860000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "68735000000",
+          "fiscal_year": 2023,
+          "five_percent_minority_parent_proxy_usd": "65298250000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "68047650000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "73652000000",
+          "fiscal_year": 2024,
+          "five_percent_minority_parent_proxy_usd": "69969400000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "72915480000.00"
+        },
+        {
+          "consolidated_fcfe_usd": "105403000000",
+          "fiscal_year": 2025,
+          "five_percent_minority_parent_proxy_usd": "100132850000.00",
+          "is_bound": false,
+          "one_percent_minority_parent_proxy_usd": "104348970000.00"
+        }
+      ],
+      "model_origin": "2025-12-31",
+      "name": "Alphabet",
+      "policy_version": "googl-analyst-2026-11-04-v1",
+      "qualifications": [
+        "Analyst-ready means usable under these explicit conventions, not exact historical cash reconstruction, issuer-certified assumptions or an investment recommendation.",
+        "Analytical origin 2025-12-31 uses later-filed information; no current-date fair value, historical backtest or current-price upside is asserted.",
+        "Historical FCFF preserves the adopted reported-CFO/expensed-interest/reported-tax/cash-investment convention. It retains SBC addbacks, unlike forward EBIT cash flows. No automatic cross-basis CAGR or forecast calibration.",
+        "Historical FCFE includes identified financing once. Net Other allocation is a selected assumption and not a bound on unidentified offsetting gross financing. The economic companion subtracts reported SBC once; it does not normalize all accounting differences.",
+        "Flat explicit carrying debt is maintained by net rollover; interest is debt cost times opening debt. Matched financed-asset investment and aggregate principal enter once; gross maturity/refinancing schedules are not predicted. Terminal debt grows at the terminal growth rate.",
+        "FCFF uses the submitted target-weight WACC; FCFE uses CAPM/configured cost of equity and flat explicit debt. These financing assumptions differ, so valuation differences are shown rather than forced to zero.",
+        "Liquid cash and securities exclude restricted balances and separately shown nonmarketable holdings. The selected operating reserve is an analyst haircut; ongoing liquidity costs are assumed included in forward margins/WC.",
+        "Separate non-operating financial investments use an editable carrying-value proxy, not an observed market value. Operating EBIT forecasts exclude their investment returns; the same holdings are not added twice. Exclusion and haircut sensitivities show this valuation judgment.",
+        "Term debt uses disclosed fair value and finance leases carrying proxies. Operating leases remain service expenses; no second operating-lease debt deduction. FCFE does not subtract debt again.",
+        "Dated common shares across all economic classes plus expected existing RSU vesting form the denominator. Equal per-share economic participation is an explicit analyst assumption; voting/control rights are not claimed identical. Future SBC in margins proxies future grants; no separate settlement/award-value deduction for the same existing RSUs.",
+        "Zero additional non-operating claims is an explicit base assumption, not proof of no tax/legal exposure. Ordinary settlements are assumed within forecast tax/expenses; stresses are illustrative, not bounds.",
+        "FCFE financing identities are checked at 50-digit arithmetic precision. A last-place associativity residual, when present, is exported with its calculated rounding envelope and is not a cash adjustment; financial component mismatches still fail validation.",
+        "Alphabet historical FCFE is consolidated before minority attribution. With zero selected minority cash share, the displayed parent proxy is explicitly unallocated consolidated cash, not verified parent cash. Alternative historical allocations are scenarios, not issuer disclosures.",
+        "Forward valuation discounts consolidated operating FCFE and deducts one selected minority-interest claim in the equity bridge. The historical cash-allocation assumption does not change forward cash flows, preventing a second minority deduction.",
+        "The default minority claim uses disclosed book NCI as a valuation proxy; redeemable NCI is already included. It is not observed fair value. 5\u00d7/10\u00d7 proxy stresses are not bounds; later Waymo financing valuations are not backdated.",
+        "Finance-lease cash, including prepayments, remains within debt repayments once. Historical cash capex and new noncash assets are separate populations; no rounded prepayment subtraction invents exact principal.",
+        "Class A/B/C economic-per-share equivalence is assumed for valuation only. Different voting/control rights and possible market price premiums are not modeled."
+      ],
+      "readiness": [
+        {
+          "detail": "Five adopted reported-cash-convention calculations with explicit interest/tax/investment qualifications.",
+          "id": "historical_fcff",
+          "label": "Historical FCFF \u00b7 five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Current selected operating forecast, WACC and independent terminal calculate.",
+          "id": "fcff_valuation",
+          "label": "FCFF forecast and enterprise value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Standardized identified-financing estimates; consolidated scope and any historical minority allocation are explicit.",
+          "id": "historical_fcfe",
+          "label": "Historical FCFE \u00b7 five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Explicit financing, cost of equity and terminal debt growth; minority value deducted once when applicable.",
+          "id": "fcfe_valuation",
+          "label": "FCFE forecast and equity value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Dated cash/debt/shares plus editable investment, reserve, awards and claim assumptions.",
+          "id": "per_share",
+          "label": "Fair value per share \u00b7 both methods",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        }
+      ],
+      "schema_version": "company-analyst-result-v1",
+      "sensitivities": [
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "138.68583655045012374382603458071279895832698033009",
+          "fcff_value_per_share_usd": "173.84184823437411477076196967717086755894577004323",
+          "label": "No operating cash reserve"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "137.05755845829167588610574355403535352582900134868",
+          "fcff_value_per_share_usd": "172.21357014221566691304167865049342212644779106182",
+          "label": "Operating cash reserve 5% of anchor revenue"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "138.03452531358674460073791817004182078532778873753",
+          "fcff_value_per_share_usd": "172.95262268869909456057603596658073012968142081121",
+          "label": "Debt bridge at carrying value; FCFE financing held fixed"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "141.25472188360920174645334610882009622059106110880",
+          "fcff_value_per_share_usd": "177.23088539536795166399119497903736198743871404986",
+          "label": "No existing RSU vesting"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "132.48181714867162738165950264861902369559456319185",
+          "fcff_value_per_share_usd": "167.63782883259561840859543774507709229621335290499",
+          "label": "Exclude non-operating investment value"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "135.25817123112918599119871040933042224046117596469",
+          "fcff_value_per_share_usd": "170.41418291505317701813464550578849084107996567783",
+          "label": "Non-operating investments at half the selected value"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "137.22611787623832099524074759607254026794702883454",
+          "fcff_value_per_share_usd": "172.38212956016231202217668269253060886856581854767",
+          "label": "Additional 10B claim; illustrative only"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "138.30938384228520862660695616519137616123724710454",
+          "fcff_value_per_share_usd": "173.46539552620919965354289126164944476185603681768",
+          "label": "No separate minority-interest equity claim"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "136.93509119879288849726176618944359928168995526946",
+          "fcff_value_per_share_usd": "172.09110288271687952419770128590166788230874498259",
+          "label": "Minority claim at 5\u00d7 reported book proxy; not a bound"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "135.56079855530056836791657621369582240214266343437",
+          "fcff_value_per_share_usd": "170.71681023922455939485251131015389100276145314751",
+          "label": "Minority claim at 10\u00d7 reported book proxy; not a bound"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "116.23187345674998220182747943339627001326841430986",
+          "fcff_value_per_share_usd": "173.19053699751073562767385326649988938594657845066",
+          "label": "Cost of equity +1 percentage point; FCFF held fixed"
+        },
+        {
+          "classification": "ILLUSTRATIVE_ANALYST_SENSITIVITY_NOT_A_BOUND",
+          "fcfe_value_per_share_usd": "138.03452531358674460073791817004182078532778873753",
+          "fcff_value_per_share_usd": "140.31813034924691647431238973185406553021204390236",
+          "label": "FCFF WACC +1 percentage point; FCFE held fixed"
+        }
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/free-cash-flow-valuation",
+        "https://www.cfainstitute.org/standards/professionals/code-ethics-standards/standards-of-practice-v-a",
+        "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valopt.pdf",
+        "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/noncashwc.htm"
+      ],
+      "submitted_inputs": {
+        "assumptions": {
+          "additional_assets_usd": "68687000000",
+          "additional_claims_usd": "0",
+          "cost_of_equity": "0.09120",
+          "historical_minority_cash_share": "0",
+          "historical_other_financing_fraction": "0",
+          "nci_claim_usd": "3400000000",
+          "operating_cash_reserve_ratio": "0.02",
+          "pre_tax_cost_of_debt": "0.0580",
+          "rsu_vesting_fraction": "1"
+        },
+        "base_case": {
+          "analyst": {
+            "author": "AI-assisted versioned preload policy; not a verified human identity",
+            "rationale": "Proposed estimates generated by googl-preload-v1.0.0; economic hash 1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe; explicit configuration is analyst judgment, not user-supplied or approved facts.",
+            "timestamp_utc": "2026-11-04T00:00:00+00:00"
+          },
+          "anchor": {
+            "accession": "0001652044-26-000018",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 1652044,
+            "form": "10-K",
+            "kind": "googl-fy2025"
+          },
+          "calculation_scope": "ENTERPRISE_VALUE",
+          "case_name": "GOOGL proposed starting estimate \u00b7 Bull",
+          "comparison_terminal_valuation": null,
+          "conventions": {
+            "discounting": "fiscal-end-annual-gordon-v1",
+            "forecast": "manual-fcff-v1"
+          },
+          "forecast_years": [
+            {
+              "capex_percent_revenue": "0.41069109689784757436456273558835028373659300279204",
+              "change_in_operating_nwc_percent_revenue": "0.038593991502496267837343420338079341561644703538798",
+              "d_and_a_percent_revenue": "0.066111249744531560751368635484953948113695458986035",
+              "fiscal_year_label": "FY2026",
+              "forecast_tax_rate": "0.18",
+              "operating_margin": "0.33805105936022950845371814668788261206957366923505",
+              "period_index": 1,
+              "revenue_growth": "0.2591112441337222805161035988218552447397458594300"
+            },
+            {
+              "capex_percent_revenue": "0.42893510234961061026443162626802497976562463236421",
+              "change_in_operating_nwc_percent_revenue": "0.032892368755176235251673857127522384131307923654666",
+              "d_and_a_percent_revenue": "0.096416241542780765468219557748441907646829185655331",
+              "fiscal_year_label": "FY2027",
+              "forecast_tax_rate": "0.1875",
+              "operating_margin": "0.33103829452017213134028861001591195905218025192629",
+              "period_index": 2,
+              "revenue_growth": "0.2168334331002917103870776991163914335548093945725"
+            },
+            {
+              "capex_percent_revenue": "0.35665470799793121218607705464164797755091412081136",
+              "change_in_operating_nwc_percent_revenue": "0.026773179067835453986297315922504962517675510307509",
+              "d_and_a_percent_revenue": "0.12809123354315944144975572267312845047407830314506",
+              "fiscal_year_label": "FY2028",
+              "forecast_tax_rate": "0.195",
+              "operating_margin": "0.32402552968011475422685907334394130603478683461752",
+              "period_index": 3,
+              "revenue_growth": "0.1745556220668611402580517994109276223698729297150"
+            },
+            {
+              "capex_percent_revenue": "0.29500033903691232197828225501560793604245511317675",
+              "change_in_operating_nwc_percent_revenue": "0.020188807134273750870574062821947023311816789216859",
+              "d_and_a_percent_revenue": "0.15363949258696030130602743636748721907619381490873",
+              "fiscal_year_label": "FY2029",
+              "forecast_tax_rate": "0.2025",
+              "operating_margin": "0.31701276484005737711342953667197065301739341730876",
+              "period_index": 4,
+              "revenue_growth": "0.1322778110334305701290258997054638111849364648575"
+            },
+            {
+              "capex_percent_revenue": "0.24813112629272999044902245748976368452169121669072",
+              "change_in_operating_nwc_percent_revenue": "0.013084112149532710280373831775700934579439252336449",
+              "d_and_a_percent_revenue": "0.17667246100129885976020682894332726299185834438312",
+              "fiscal_year_label": "FY2030",
+              "forecast_tax_rate": "0.21",
+              "operating_margin": "0.31000000000000000000000000000000000000000000000000",
+              "period_index": 5,
+              "revenue_growth": "0.0900000000000000000000000000000000000000000000000"
+            }
+          ],
+          "input_basis": "MANUAL_INPUT",
+          "limitations": [
+            "Revenue-only retained historical binding; no forecast, WACC, terminal, asset/claim, class-equivalence or award inputs approved.",
+            "Manual margins include SBC and operating-lease service costs. Expense D&A, financed investment and WC scope require issuer-specific semantic review; historical proxies remain incomplete.",
+            "Historical cash movements are not automatic forecast WC inputs. Gross financial assets are not automatically eligible assets; historical omissions do not approve valuation omissions.",
+            "Alphabet Class A/B/C economic equivalence, share denominator and awards remain unresolved; the GOOGL label selects consolidated revenue only.",
+            "Five-year forecast revenue CAGR = 0.1530049835460475204657802187204333090824391350822; not any individual annual rate",
+            "Terminal net reinvestment/revenue = 0.075825242718446601941747572815533980582524271844660",
+            "Implied incremental return diagnostic g*NOPAT/net reinvestment = 0.090642637644046094750320102432778489116517285531370; NOT observed ROIC",
+            "Reported FY2025 YTD plus Q4 revenue differs from the annual anchor by1m; no residual correction or precision improvement.",
+            "Acquisition cash/perimeter not reconciled: operating PV conditional; exclusions are not zero claims or assets.",
+            "Expense D&A and commissioning are estimates; source PP&E/CFO proxies remain incomplete.",
+            "Terminal expense D&A16% is independent of the commissioning path; transition/retirement economics are not modeled. Review the discontinuity, not a proven vintage reconciliation.",
+            "Terminal dependence must be reviewed after explicit engine execution; no financial approval."
+          ],
+          "schema_version": "analyst-case-v3",
+          "scope": "Fiscal-end analytical origin using later-filed information; not a contemporaneous backtest or current-date fair value; information reviewed through 2026-10-30; consolidated operating EV only.",
+          "terminal_valuation": {
+            "method": "perpetual_growth",
+            "terminal": {
+              "d_and_a_percent_revenue": "0.16",
+              "investment_percent_revenue": "0.23",
+              "operating_margin": "0.29",
+              "operating_tax_rate": "0.21",
+              "working_capital_cash_requirement_percent_revenue": "0.0058252427184466019417475728155339805825242718446602"
+            },
+            "terminal_growth": "0.03"
+          },
+          "wacc": "0.07940800"
+        },
+        "schema_version": "company-analyst-request-v1",
+        "ticker": "GOOGL"
+      },
+      "ticker": "GOOGL",
+      "valuation_difference_fcfe_minus_fcff_usd": "-434879864530.1397690031975171431863085896544287515"
+    }
+  },
+  "date": "2026-11-04",
+  "exact_historical_parent_cash_claim": false,
+  "policy_sha256": "426e8ff761793420dac6e9bc2368aff940978235c30f2b2617b98f62fd0a6a3d",
+  "schema_version": "company-analyst-acceptance-results-v1",
+  "scope": "Five historical annuals FY2021\u201325 and two assumption-based valuation/share routes at FY2025 analytical origin",
+  "ticker": "GOOGL"
+}

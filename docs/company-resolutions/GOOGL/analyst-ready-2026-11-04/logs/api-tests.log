@@ -1,0 +1,100 @@
+test_invalid_inputs_rejected_without_paths_or_number_invention (test_apple_analyst.AppleAnalystApiTests.test_invalid_inputs_rejected_without_paths_or_number_invention) ... ok
+test_original_issuer_evidence_records_and_other_companies_are_unchanged (test_apple_analyst.AppleAnalystApiTests.test_original_issuer_evidence_records_and_other_companies_are_unchanged) ... ok
+test_recalculation_follows_input_changes_and_ten_year_horizon (test_apple_analyst.AppleAnalystApiTests.test_recalculation_follows_input_changes_and_ten_year_horizon) ... ok
+test_sealed_worker_publishes_all_five_current_outputs (test_apple_analyst.AppleAnalystApiTests.test_sealed_worker_publishes_all_five_current_outputs) ... ok
+test_body_representation_size_and_no_assumed_content_length (test_cases.ApiTests.test_body_representation_size_and_no_assumed_content_length) ... ok
+test_both_scopes_equal_engine_and_cli_with_full_trace (test_cases.ApiTests.test_both_scopes_equal_engine_and_cli_with_full_trace) ... ok
+test_budgets_deep_malformed_text_arrays_numeric_work_and_bounded_errors (test_cases.ApiTests.test_budgets_deep_malformed_text_arrays_numeric_work_and_bounded_errors) ... ok
+test_decimal_context_and_inputs_unchanged (test_cases.ApiTests.test_decimal_context_and_inputs_unchanged) ... ok
+test_investor_equity_validation_run_and_unresolved_no_downgrade (test_cases.ApiTests.test_investor_equity_validation_run_and_unresolved_no_downgrade) ... ok
+test_investor_no_notes_same_finances_validation_and_budgets (test_cases.ApiTests.test_investor_no_notes_same_finances_validation_and_budgets) ... ok
+test_isolated_bundle_without_git_corpus_network_or_resource_writes (test_cases.ApiTests.test_isolated_bundle_without_git_corpus_network_or_resource_writes) ... ok
+test_packaging_deterministic_pins_missing_and_tampered (test_cases.ApiTests.test_packaging_deterministic_pins_missing_and_tampered) ... ok
+test_response_budget_and_sanitized_worker_internal_errors (test_cases.ApiTests.test_response_budget_and_sanitized_worker_internal_errors) ... ok
+test_retained_anchors_in_both_scopes_synthetic_only (test_cases.ApiTests.test_retained_anchors_in_both_scopes_synthetic_only) ... ok
+test_strict_parser_field_paths_and_no_scope_downgrade (test_cases.ApiTests.test_strict_parser_field_paths_and_no_scope_downgrade) ... ok
+test_validation_calls_no_financial_loaders_or_calculators (test_cases.ApiTests.test_validation_calls_no_financial_loaders_or_calculators) ... ok
+test_asgi_disconnect_reaps_real_child (test_cases.LifecycleTests.test_asgi_disconnect_reaps_real_child) ... Executing <Task pending name='Task-162' coro=<LifecycleTests.test_asgi_disconnect_reaps_real_child() running at /Users/kc/Projects/valuation-platform/tests/api/test_cases.py:381> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/futures.py:387, Task.task_wakeup()] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:449> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:182] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:100> took 0.740 seconds
+ok
+test_body_timeout_without_calculation (test_cases.LifecycleTests.test_body_timeout_without_calculation) ... Executing <Task pending name='Task-172' coro=<LifecycleTests.test_body_timeout_without_calculation() running at /Users/kc/Projects/valuation-platform/tests/api/test_cases.py:392> wait_for=<Future pending cb=[Task.task_wakeup()] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:449> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:182] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:100> took 0.738 seconds
+ok
+test_busy_health_validation_and_capacity_recovery (test_cases.LifecycleTests.test_busy_health_validation_and_capacity_recovery) ... Executing <Task pending name='Task-177' coro=<LifecycleTests.test_busy_health_validation_and_capacity_recovery() running at /Users/kc/Projects/valuation-platform/tests/api/test_cases.py:335> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/futures.py:387, Task.task_wakeup()] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:449> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:182] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:100> took 0.923 seconds
+ok
+test_coroutine_cancellation_reaps_real_child (test_cases.LifecycleTests.test_coroutine_cancellation_reaps_real_child) ... Executing <Task pending name='Task-191' coro=<LifecycleTests.test_coroutine_cancellation_reaps_real_child() running at /Users/kc/Projects/valuation-platform/tests/api/test_cases.py:369> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/futures.py:387, Task.task_wakeup()] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:449> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:182] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:100> took 0.747 seconds
+ok
+test_real_cpu_limit_kills_child (test_cases.LifecycleTests.test_real_cpu_limit_kills_child) ... Executing <Task pending name='Task-201' coro=<LifecycleTests.test_real_cpu_limit_kills_child() running at /Users/kc/Projects/valuation-platform/tests/api/test_cases.py:363> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/futures.py:387, Task.task_wakeup()] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:449> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:182] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:100> took 0.742 seconds
+ok
+test_real_deadline_terminate_kill_reap_and_release (test_cases.LifecycleTests.test_real_deadline_terminate_kill_reap_and_release) ... Executing <Task pending name='Task-213' coro=<LifecycleTests.test_real_deadline_terminate_kill_reap_and_release() running at /Users/kc/Projects/valuation-platform/tests/api/test_cases.py:347> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/futures.py:387, Task.task_wakeup()] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:449> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:182] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:100> took 0.788 seconds
+ok
+test_shutdown_stops_child_and_fails_inflight_with_no_result (test_cases.LifecycleTests.test_shutdown_stops_child_and_fails_inflight_with_no_result) ... Executing <Task pending name='Task-223' coro=<LifecycleTests.test_shutdown_stops_child_and_fails_inflight_with_no_result() running at /Users/kc/Projects/valuation-platform/tests/api/test_cases.py:354> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/futures.py:387, Task.task_wakeup()] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:449> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:182] created at /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:100> took 0.712 seconds
+ok
+test_actual_fcfe_worker_and_failure_diagnostics (test_cashflows_fcfe.CashFlowApiTests.test_actual_fcfe_worker_and_failure_diagnostics) ... ok
+test_all_thirty_records_reach_runtime_without_clearing_gaps (test_cashflows_fcfe.CashFlowApiTests.test_all_thirty_records_reach_runtime_without_clearing_gaps) ... ok
+test_reader_rejects_ownership_and_clearance_tampering (test_cashflows_fcfe.CashFlowApiTests.test_reader_rejects_ownership_and_clearance_tampering) ... ok
+test_catalog_budget_is_enforced_before_response (test_catalog.CatalogTests.test_catalog_budget_is_enforced_before_response) ... ok
+test_identity_templates_precision_and_narrow_projection (test_catalog.CatalogTests.test_identity_templates_precision_and_narrow_projection) ... ok
+test_assembly_copies_committed_bytes_and_records_sources (test_combined_preview.PublicationTests.test_assembly_copies_committed_bytes_and_records_sources) ... ok
+test_clean_explicit_checkpoint_and_external_exclusive_output (test_combined_preview.PublicationTests.test_clean_explicit_checkpoint_and_external_exclusive_output) ... ok
+test_exact_files_references_and_deterministic_hashes (test_combined_preview.PublicationTests.test_exact_files_references_and_deterministic_hashes) ... ok
+test_unexpected_files_secrets_symlinks_and_wrong_base_reject (test_combined_preview.PublicationTests.test_unexpected_files_secrets_symlinks_and_wrong_base_reject) ... ok
+test_api_errors_json_no_fallback_and_loopback_guard (test_combined_preview.RoutingTests.test_api_errors_json_no_fallback_and_loopback_guard) ... ok
+test_configuration_has_no_global_fallback_and_retains_api_first (test_combined_preview.RoutingTests.test_configuration_has_no_global_fallback_and_retains_api_first) ... ok
+test_portfolio_exact_files_aliases_and_real_404 (test_combined_preview.RoutingTests.test_portfolio_exact_files_aliases_and_real_404) ... ok
+test_subpath_redirect_assets_and_scoped_refresh (test_combined_preview.RoutingTests.test_subpath_redirect_assets_and_scoped_refresh) ... ok
+test_apple_and_original_three_issuer_evidence_records_are_preserved (test_company_analyst.CompanyAnalystApiTests.test_apple_and_original_three_issuer_evidence_records_are_preserved) ... ok
+test_both_sealed_workers_return_five_outputs_and_match_direct_execution (test_company_analyst.CompanyAnalystApiTests.test_both_sealed_workers_return_five_outputs_and_match_direct_execution) ... ok
+test_editable_claims_and_ten_year_requests_reach_current_consumer (test_company_analyst.CompanyAnalystApiTests.test_editable_claims_and_ten_year_requests_reach_current_consumer) ... ok
+test_metadata_is_pinned_issuer_specific_and_does_not_execute_valuation (test_company_analyst.CompanyAnalystApiTests.test_metadata_is_pinned_issuer_specific_and_does_not_execute_valuation) ... ok
+test_mismatched_sources_ownership_and_failed_calculations_do_not_leak_paths (test_company_analyst.CompanyAnalystApiTests.test_mismatched_sources_ownership_and_failed_calculations_do_not_leak_paths) ... ok
+test_all_saved_rates_sources_and_inputs_unchanged_no_calculation (test_discount_inputs.DiscountApiTests.test_all_saved_rates_sources_and_inputs_unchanged_no_calculation) ... ok
+test_api_rewrite_precedes_spa_and_pins_only_future_service (test_firebase_preview.FirebasePreviewTests.test_api_rewrite_precedes_spa_and_pins_only_future_service) ... ok
+test_artifact_and_resolved_site_pass_but_unresolved_site_fails_closed (test_firebase_preview.FirebasePreviewTests.test_artifact_and_resolved_site_pass_but_unresolved_site_fails_closed) ... ok
+test_external_or_missing_static_reference_rejects (test_firebase_preview.FirebasePreviewTests.test_external_or_missing_static_reference_rejects) ... ok
+test_private_files_symlinks_markers_and_wrong_root_reject (test_firebase_preview.FirebasePreviewTests.test_private_files_symlinks_markers_and_wrong_root_reject) ... ok
+test_body_budget_type_and_framing (test_frontend_preview.FrontendPreviewTests.test_body_budget_type_and_framing) ... ok
+test_bounded_upstream_failure_and_large_response (test_frontend_preview.FrontendPreviewTests.test_bounded_upstream_failure_and_large_response) ... ok
+test_forward_preserves_status_body_content_type_without_credentials (test_frontend_preview.FrontendPreviewTests.test_forward_preserves_status_body_content_type_without_credentials) ... ok
+test_host_and_origin_are_loopback_only (test_frontend_preview.FrontendPreviewTests.test_host_and_origin_are_loopback_only) ... ok
+test_known_routes_only (test_frontend_preview.FrontendPreviewTests.test_known_routes_only) ... ok
+test_only_built_assets_no_traversal_directory_or_symlink (test_frontend_preview.FrontendPreviewTests.test_only_built_assets_no_traversal_directory_or_symlink) ... ok
+test_workspace_routes_use_only_configured_loopback_proxy (test_frontend_preview.FrontendPreviewTests.test_workspace_routes_use_only_configured_loopback_proxy) ... ok
+test_configurable_port_and_single_process_limits (test_image_launcher.ImageLauncherTests.test_configurable_port_and_single_process_limits) ... ok
+test_invalid_port_is_rejected_without_execution (test_image_launcher.ImageLauncherTests.test_invalid_port_is_rejected_without_execution) ... ok
+test_each_registered_profile_matches_its_own_catalog_anchor_and_has_no_calculation (test_preload.PreloadApiTests.test_each_registered_profile_matches_its_own_catalog_anchor_and_has_no_calculation) ... ok
+test_generated_base_bear_bull_complete_api_cli_json_agreement (test_preload.PreloadApiTests.test_generated_base_bear_bull_complete_api_cli_json_agreement) ... ok
+test_profile_read_is_bounded_calculation_free_and_no_arbitrary_resource_route (test_preload.PreloadApiTests.test_profile_read_is_bounded_calculation_free_and_no_arbitrary_resource_route) ... ok
+test_cross_site_rejected_before_body_or_parser (test_public_boundary.PublicBoundaryTests.test_cross_site_rejected_before_body_or_parser) ... ok
+test_same_origin_and_headerless_clients_still_use_existing_contract (test_public_boundary.PublicBoundaryTests.test_same_origin_and_headerless_clients_still_use_existing_contract) ... ok
+test_uniform_no_store_on_validation_errors_unknown_routes_and_failures (test_public_boundary.PublicBoundaryTests.test_uniform_no_store_on_validation_errors_unknown_routes_and_failures) ... ok
+test_bad_intake_stops_before_worker_and_retains_existing_budgets (test_reverse.ReverseApiTests.test_bad_intake_stops_before_worker_and_retains_existing_budgets) ... ok
+test_demanding_rational_work_extreme_permitted_inputs_and_fixed_iteration_ceiling (test_reverse.ReverseApiTests.test_demanding_rational_work_extreme_permitted_inputs_and_fixed_iteration_ceiling) ...
+DEMANDING_REVERSE_MEASUREMENTS [{"anchor": "meta-fy2025", "seconds": 0.55, "response_bytes": 90086, "status": "ITERATION_LIMIT"}, {"anchor": "googl-fy2025", "seconds": 0.543, "response_bytes": 140554, "status": "ITERATION_LIMIT"}, {"anchor": "aapl-fy2025", "seconds": 0.532, "response_bytes": 140982, "status": "ITERATION_LIMIT"}]
+ok
+test_shared_gate_timeout_cleanup_and_response_budget (test_reverse.ReverseApiTests.test_shared_gate_timeout_cleanup_and_response_budget) ... ok
+test_statuses_endpoint_inconclusive_flat_and_legacy_compatibility (test_reverse.ReverseApiTests.test_statuses_endpoint_inconclusive_flat_and_legacy_compatibility) ... ok
+test_validation_is_calculation_free_and_both_scopes_match_cli_all_anchors (test_reverse.ReverseApiTests.test_validation_is_calculation_free_and_both_scopes_match_cli_all_anchors) ...
+REVERSE_MEASUREMENTS [{"anchor": "meta-fy2025", "equity": false, "seconds": 0.345, "response_bytes": 52717, "evaluations": 43}, {"anchor": "meta-fy2025", "equity": true, "seconds": 0.365, "response_bytes": 146834, "evaluations": 43}, {"anchor": "googl-fy2025", "equity": false, "seconds": 0.34, "response_bytes": 103171, "evaluations": 43}, {"anchor": "googl-fy2025", "equity": true, "seconds": 0.39, "response_bytes": 249458, "evaluations": 43}, {"anchor": "aapl-fy2025", "equity": false, "seconds": 0.347, "response_bytes": 103629, "evaluations": 43}, {"anchor": "aapl-fy2025", "equity": true, "seconds": 0.388, "response_bytes": 250385, "evaluations": 43}] INDEPENDENT_COMPARISONS 336
+ok
+test_comparability_missing_cases_scope_and_strict_numeric_limits (test_scenarios.ScenarioApiTests.test_comparability_missing_cases_scope_and_strict_numeric_limits) ... ok
+test_legacy_scenario_contract_cli_summary_and_individual_compatibility (test_scenarios.ScenarioApiTests.test_legacy_scenario_contract_cli_summary_and_individual_compatibility) ... ok
+test_validation_no_calculation_or_anchor_access_and_anonymous_trace (test_scenarios.ScenarioApiTests.test_validation_no_calculation_or_anchor_access_and_anonymous_trace) ... ok
+test_worker_failure_timeout_result_budget_and_shared_gate_recover (test_scenarios.ScenarioApiTests.test_worker_failure_timeout_result_budget_and_shared_gate_recover) ... ok
+test_all_retained_grids_cli_selected_cells_and_independent_arithmetic (test_sensitivity.SensitivityApiTests.test_all_retained_grids_cli_selected_cells_and_independent_arithmetic) ...
+GRID_CLI_COMPARISONS 4 INDIVIDUAL_CELLS 8 INDEPENDENT_COMPARISONS 444
+ok
+test_invalid_pairs_all_invalid_grid_and_resource_rejection_before_spawn (test_sensitivity.SensitivityApiTests.test_invalid_pairs_all_invalid_grid_and_resource_rejection_before_spawn) ... ok
+test_maximum_supported_dimensions_within_unchanged_http_bounds (test_sensitivity.SensitivityApiTests.test_maximum_supported_dimensions_within_unchanged_http_bounds) ...
+MAX_GRID_MEASUREMENTS [{"anchor": "meta-fy2025", "equity": false, "seconds": 0.369, "response_bytes": 180645}, {"anchor": "googl-fy2025", "equity": false, "seconds": 0.379, "response_bytes": 205329}, {"anchor": "aapl-fy2025", "equity": false, "seconds": 0.373, "response_bytes": 205825}, {"anchor": "aapl-fy2025", "equity": true, "seconds": 0.509, "response_bytes": 368566}]
+ok
+test_signed_and_zero_metrics_preserve_undefined_ratios (test_sensitivity.SensitivityApiTests.test_signed_and_zero_metrics_preserve_undefined_ratios) ... ok
+test_validation_never_calculates_or_loads_history_and_run_matches_cli (test_sensitivity.SensitivityApiTests.test_validation_never_calculates_or_loads_history_and_run_matches_cli) ... ok
+test_worker_timeout_failure_budget_and_cross_action_gate_recovery (test_sensitivity.SensitivityApiTests.test_worker_timeout_failure_budget_and_cross_action_gate_recovery) ... ok
+test_both_methods_both_scopes_exact_cli_api_and_review_comparison (test_terminal_methods.TerminalApiTests.test_both_methods_both_scopes_exact_cli_api_and_review_comparison) ... ok
+test_exit_grid_and_scenarios_through_bounded_worker (test_terminal_methods.TerminalApiTests.test_exit_grid_and_scenarios_through_bounded_worker) ... ok
+test_maximum_exit_grid_within_unchanged_budget_and_reverse_rejection (test_terminal_methods.TerminalApiTests.test_maximum_exit_grid_within_unchanged_budget_and_reverse_rejection) ... ok
+test_validation_has_no_execution_and_useful_errors (test_terminal_methods.TerminalApiTests.test_validation_has_no_execution_and_useful_errors) ... ok
+
+----------------------------------------------------------------------
+Ran 80 tests in 120.559s
+
+OK

@@ -1,0 +1,1579 @@
+{
+  "anchor_date": "2025-12-31",
+  "anchor_support": {
+    "dated_common_shares": "12088000000",
+    "financing_debt_carrying_usd": "51043000000",
+    "financing_debt_fair_proxy_usd": "48100000000",
+    "gross_cash_usd": "126843000000",
+    "nci_book_proxy_usd": "3400000000",
+    "nonoperating_investments_carrying_usd": "68687000000",
+    "unvested_rsus": "282000000"
+  },
+  "approval": "User requested all five outputs analyst-ready for Meta and Alphabet under the approved Apple practical analyst conditions.",
+  "assumption_rationales": {
+    "additional_claims_usd": "0 is no additional adjustment beyond modeled recurring expenses/taxes and separately deducted debt/NCI. It is not proof no contingencies or commitments exist. Pending acquisitions, tax/litigation/guarantee exposure and nonmarketable investments need scenario review, not automatic gross liability deduction.",
+    "historical_minority_cash_share": "Default 0 is an explicitly unallocated consolidated cash-flow proxy, not a filing assertion of zero NCI cash. Display consolidated series and parent-proxy qualification together; show editable 1%/5% illustrative allocation stresses, not bounds. Immaterial reported NCI loss alone cannot establish immaterial NCI cash.",
+    "lease_investment": "Historical financelease financing cash stays in reported debt repayments once; noncash additions are not added to historical cashPPE. Forecast2.5% cashPPE financed additions are an analyst overlay, not historical liability movements; financelease2.5B is included in opening financing debt once, operating leases remain service expense.",
+    "nci_claim_usd": "Use reported total NCI carrying amount as editable valuation proxy where exact subsidiary stakes and full dated market values are not disclosed. Redeemable841M is already inside3.4B, never additive. Deduct once from consolidated operating equity; do not also allocate forward annual FCFE and subtract this claim. Show0/3.4/17/34B stress, not proven fair-value bounds. Do not backdate February2026 Waymo126B postmoney.",
+    "nonmarketable_investments": "68.687B total non-marketable securities (64.094B measurement-alternative equity plus4.593B equity-method investments and other) are added separately at editable carrying-value proxy, not presented as known fair value. They are financial investments, not PP&E; related gains are in OI&E outside modeled operating EBIT. Use0/50%/100% carrying-value stress, not confidence bounds. These are not consolidated subsidiaries, so do not subtract the consolidated3.4BNCI against them again.",
+    "operating_cash_reserve_ratio": "2% of annual revenue is a transparent analyst operating-liquidity proxy, not filing-disclosed required cash; expose0%/5% stresses.",
+    "sbc": "Historical CFO includes reported SBC addback; economic cash-flow diagnostic subtracts it. Forecast operating margins retain compensation expense; existing282MRSUs are dilutive at selected vesting fraction and future SBC interpreted as future-grant expense proxy, no extra award fair-value/cost deduction.",
+    "share_classes": "Identical liquidation/dividend rights support equal economic per-share estimates for all A/B/C under the stated assumption; voting/control/liquidity premiums are not valued. Sum all dated classes, not only listedGOOGL or EPS weighted averages."
+  },
+  "cik": 1652044,
+  "defaults": {
+    "additional_assets_usd": "68687000000",
+    "additional_claims_usd": "0",
+    "cost_of_equity": "0.09120",
+    "historical_minority_cash_share": "0",
+    "historical_other_financing_fraction": "0",
+    "nci_claim_usd": "3400000000",
+    "operating_cash_reserve_ratio": "0.02",
+    "pre_tax_cost_of_debt": "0.0580",
+    "rsu_vesting_fraction": "1"
+  },
+  "discount_basis": {
+    "beta": "1.10",
+    "classification": "DATED_MACRO_OBSERVATIONS_AND_CONFIGURED_ANALYST_ASSUMPTIONS",
+    "debt_tax_shield": "0.20",
+    "equity_risk_premium": "0.037",
+    "macro_observations": {
+      "implied_erp": {
+        "available_at": "2026-10-08",
+        "cik": null,
+        "classification": "EXTERNAL_OBSERVATION",
+        "definition": "implied-erp-over-treasury",
+        "dimensions": [],
+        "end": "2026-10-01",
+        "id": "implied_erp-original",
+        "key": "implied_erp",
+        "locator": "October8authorpost; startOctober2026 implied ERP3.70%overTreasury; adjusted-RF3.92%notselected",
+        "mapping_version": "alphabet-reviewed-release-extraction-v1",
+        "precision": "0.01 percent",
+        "published_at": "2026-10-08",
+        "scope": "macro",
+        "source": "damodaran-2026-10-08",
+        "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+        "start": null,
+        "supersedes": null,
+        "unit": "fraction",
+        "value": "0.037"
+      },
+      "treasury_10y": {
+        "available_at": "2026-10-30",
+        "cik": null,
+        "classification": "EXTERNAL_OBSERVATION",
+        "definition": "treasury-par-yield",
+        "dimensions": [],
+        "end": "2026-10-28",
+        "id": "treasury_10y-original",
+        "key": "treasury_10y",
+        "locator": "Daily Treasury par yield curve,10/28/2026 row,10-year5.05%; publication time not separately retained",
+        "mapping_version": "alphabet-reviewed-release-extraction-v1",
+        "precision": "0.01 percent",
+        "published_at": null,
+        "scope": "macro",
+        "source": "treasury-2026-10",
+        "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+        "start": null,
+        "supersedes": null,
+        "unit": "fraction",
+        "value": "0.0505"
+      }
+    },
+    "macro_sources": [
+      {
+        "accession": null,
+        "bytes": 246533,
+        "content_type": "text/html; charset=UTF-8",
+        "extraction_version": "raw-body-v1",
+        "file": "treasury-2026-10.html",
+        "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "http_status": 200,
+        "id": "treasury-2026-10",
+        "observation_date": "2026-10-28",
+        "published_at": null,
+        "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+        "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+        "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+        "title": "US Treasury October 2026 daily par yield curve",
+        "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+      },
+      {
+        "accession": null,
+        "bytes": 169880,
+        "content_type": "text/html; charset=UTF-8",
+        "extraction_version": "raw-body-v1",
+        "file": "damodaran-2026-10-08.html",
+        "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+        "http_status": 200,
+        "id": "damodaran-2026-10-08",
+        "observation_date": "2026-10-01",
+        "published_at": "2026-10-08",
+        "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+        "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+        "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+        "title": "Aswath Damodaran October 8 2026 market update",
+        "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+      }
+    ],
+    "risk_free": "0.0505",
+    "saved_base_wacc": "0.08940800",
+    "target_debt_weight": "0.04",
+    "target_equity_weight": "0.96"
+  },
+  "facts": {
+    "dated_class_shares": {
+      "Class A": {
+        "category": "dated_share_support",
+        "concept": "CommonStockSharesOutstanding",
+        "instance_context_id": "c-22",
+        "instance_ordinal": 648,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-6",
+        "primary_display": "5,822",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-173",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [
+            {
+              "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+              "member": "http://fasb.org/us-gaap/2025#CommonClassAMember"
+            }
+          ],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "shares",
+        "used_as_valuation_operand": false,
+        "value": "5822000000"
+      },
+      "Class B": {
+        "category": "dated_share_support",
+        "concept": "CommonStockSharesOutstanding",
+        "instance_context_id": "c-23",
+        "instance_ordinal": 649,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-6",
+        "primary_display": "837",
+        "primary_format": null,
+        "primary_locator": "inline#f-174",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [
+            {
+              "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+              "member": "http://fasb.org/us-gaap/2025#CommonClassBMember"
+            }
+          ],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "shares",
+        "used_as_valuation_operand": false,
+        "value": "837000000"
+      },
+      "Class C": {
+        "category": "dated_share_support",
+        "concept": "CommonStockSharesOutstanding",
+        "instance_context_id": "c-26",
+        "instance_ordinal": 652,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-6",
+        "primary_display": "5,429",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-177",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [
+            {
+              "axis": "http://fasb.org/us-gaap/2025#StatementClassOfStockAxis",
+              "member": "http://www.google.com/20251231#CapitalClassCMember"
+            }
+          ],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "shares",
+        "used_as_valuation_operand": false,
+        "value": "5429000000"
+      }
+    },
+    "rights_and_nci_excerpts": {
+      "debt_fair_value": {
+        "normalization": "collapse whitespace over retained visible parser text",
+        "normalized_character_offset": 311289,
+        "source": {
+          "fiscal_year": 2025,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "text": "The total estimated fair value of the outstanding notes was approximately $ 9.0 billion and $ 45.6 billion as of December 31, 2024 and December 31, 2025, respectively. The fair value was determined based on observable market prices of identical instruments in less active markets and is categorized accordingly as Level 2 in the fair value hierarchy. As of December 31, 2025, the future principal payments for long-term debt were as follows (in millions): 2026 $ 2,000 2027 1,000 2028 2,676 2029 1,764 2030 5,500 Thereafter 36,145 Total $ 49,085 Credit Facility As of December 31, 2025, we had $ 10.0 billion of revolving credit facilities, of which "
+      },
+      "financial_class_rights": {
+        "normalization": "collapse whitespace over retained visible parser text",
+        "normalized_character_offset": 337811,
+        "source": {
+          "fiscal_year": 2025,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "text": "In accordance with our certificate of incorporation, the rights, including the liquidation and dividend rights, of the holders of our Class A, Class B, and Class C stock are identical, except with respect to voting."
+      },
+      "nci_scope": {
+        "normalization": "collapse whitespace over retained visible parser text",
+        "normalized_character_offset": 305251,
+        "source": {
+          "fiscal_year": 2025,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "text": "Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 4.2 billion and $ 3.4 billion as of December 31, 2024 and 2025, respectively, of which $ 1.1 billion and $ 841 million were redeemable noncontrolling interests (RNCI) as of December 31, 2024 and 2025, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. See Note 7 for further details on OI&E. Unconsolidated VIEs We hold various forms of interests in Variable Interest Entities (VIEs), including certain "
+      }
+    },
+    "selected_anchor_points": {
+      "CashAndCashEquivalentsAtCarryingValue": {
+        "category": "cash_investment_support",
+        "concept": "CashAndCashEquivalentsAtCarryingValue",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 568,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-6",
+        "primary_display": "30,708",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-93",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "30708000000"
+      },
+      "EquityMethodInvestmentsAndOther": {
+        "category": "cash_investment_support",
+        "concept": "EquityMethodInvestmentsAndOther",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 1229,
+        "namespace": "http://www.google.com/20251231",
+        "precision": "-6",
+        "primary_display": "4,593",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-757",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "4593000000"
+      },
+      "EquitySecuritiesWithoutReadilyDeterminableFairValueAmount": {
+        "concept": "EquitySecuritiesWithoutReadilyDeterminableFairValueAmount",
+        "context_id": "c-20",
+        "end": "2025-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-755",
+        "source": {
+          "fiscal_year": 2025,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "unit": "USD",
+        "value": "64094000000"
+      },
+      "FinanceLeaseLiability": {
+        "category": "debt_lease_support",
+        "concept": "FinanceLeaseLiability",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 1446,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-6",
+        "primary_display": "2,500",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-990",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "2500000000"
+      },
+      "LongTermDebtCurrent": {
+        "category": "debt_lease_support",
+        "concept": "LongTermDebtCurrent",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 1550,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-6",
+        "primary_display": "1,996",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-1096",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "1996000000"
+      },
+      "LongTermDebtFairValue": {
+        "category": "debt_lease_support",
+        "concept": "LongTermDebtFairValue",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 1556,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-8",
+        "primary_display": "45.6",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-1102",
+        "primary_scale": "9",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "45600000000"
+      },
+      "LongTermDebtNoncurrent": {
+        "category": "debt_lease_support",
+        "concept": "LongTermDebtNoncurrent",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 606,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-6",
+        "primary_display": "46,547",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-131",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "46547000000"
+      },
+      "MarketableSecuritiesCurrent": {
+        "category": "cash_investment_support",
+        "concept": "MarketableSecuritiesCurrent",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 570,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-6",
+        "primary_display": "96,135",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-95",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "96135000000"
+      },
+      "NoncontrollingInterestInVariableInterestEntity": {
+        "category": "claims_support",
+        "concept": "NoncontrollingInterestInVariableInterestEntity",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 1497,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-8",
+        "primary_display": "3.4",
+        "primary_format": null,
+        "primary_locator": "inline#f-1043",
+        "primary_scale": "9",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "3400000000"
+      },
+      "OtherLongTermInvestments": {
+        "category": "cash_investment_support",
+        "concept": "OtherLongTermInvestments",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 580,
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "precision": "-6",
+        "primary_display": "68,687",
+        "primary_format": "ixt:num-dot-decimal",
+        "primary_locator": "inline#f-105",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "68687000000"
+      },
+      "RedeemableNoncontrollingInterestInVariableInterestEntity": {
+        "category": "claims_support",
+        "concept": "RedeemableNoncontrollingInterestInVariableInterestEntity",
+        "instance_context_id": "c-20",
+        "instance_ordinal": 1499,
+        "namespace": "http://www.google.com/20251231",
+        "precision": "-6",
+        "primary_display": "841",
+        "primary_format": null,
+        "primary_locator": "inline#f-1045",
+        "primary_scale": "6",
+        "primary_sign": null,
+        "scope": {
+          "cik": 1652044,
+          "dimensions": [],
+          "end": "2025-12-31",
+          "start": null
+        },
+        "source_identity": {
+          "accession": "0001652044-26-000018",
+          "annual_end": "2025-12-31",
+          "annual_start": "2025-01-01",
+          "cik": 1652044,
+          "form": "10-K"
+        },
+        "sources": [
+          {
+            "byte_length": 2616610,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          {
+            "byte_length": 2880903,
+            "http_status": 200,
+            "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+            "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+            "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+          }
+        ],
+        "unit": "USD",
+        "used_as_valuation_operand": false,
+        "value": "841000000"
+      }
+    },
+    "unvested_rsus": {
+      "category": "existing_awards_support",
+      "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber",
+      "instance_context_id": "c-397",
+      "instance_ordinal": 1990,
+      "namespace": "http://fasb.org/us-gaap/2025",
+      "precision": "INF",
+      "primary_display": "282",
+      "primary_format": null,
+      "primary_locator": "inline#f-1536",
+      "primary_scale": "6",
+      "primary_sign": null,
+      "scope": {
+        "cik": 1652044,
+        "dimensions": [
+          {
+            "axis": "http://fasb.org/us-gaap/2025#AwardTypeAxis",
+            "member": "http://fasb.org/us-gaap/2025#RestrictedStockUnitsRSUMember"
+          }
+        ],
+        "end": "2025-12-31",
+        "start": null
+      },
+      "source_identity": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "sources": [
+        {
+          "byte_length": 2616610,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "source_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        {
+          "byte_length": 2880903,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+          "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+          "source_reference": "docs/evidence/income-sweep-backlog-acquisition.json#/artifacts/3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+        }
+      ],
+      "unit": "shares",
+      "used_as_valuation_operand": false,
+      "value": "282000000"
+    }
+  },
+  "financed_fraction_cash_ppe": "0.025",
+  "historical": [
+    {
+      "cash_ppe_source": {
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+        "end": "2021-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlZjkzYzgyMGRhMDQyMDRhOWM1YTQ5ZjQ5YTNiMmViL3NlYzowZWY5M2M4MjBkYTA0MjA0YTljNWE0OWY0OWEzYjJlYl8xNTcvZnJhZzphYTcxMzFiYTA3MWU0NTU2ODc1MzdhMTMyMDMyOTNlNy90YWJsZTpiN2I0ODZhNTAxMzM0ZTQzYTFhOTFmN2EyZGMzMjdiZi90YWJsZXJhbmdlOmI3YjQ4NmE1MDEzMzRlNDNhMWE5MWY3YTJkYzMyN2JmXzIxLTUtMS0xLTkzNTI0_b9651e41-f0d8-4b2f-b1f0-5d79b1d77947",
+        "source": {
+          "fiscal_year": 2021,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+          "sha256": "8deeae27cc3391670fd8fc3fec78f8b73d8ecec049f9baa23d509de60f7ec782",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+        },
+        "start": "2021-01-01",
+        "unit": "USD",
+        "value": "24640000000"
+      },
+      "cash_ppe_usd": "24640000000",
+      "cfo_source": {
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+        "end": "2021-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlZjkzYzgyMGRhMDQyMDRhOWM1YTQ5ZjQ5YTNiMmViL3NlYzowZWY5M2M4MjBkYTA0MjA0YTljNWE0OWY0OWEzYjJlYl8xNTcvZnJhZzphYTcxMzFiYTA3MWU0NTU2ODc1MzdhMTMyMDMyOTNlNy90YWJsZTpiN2I0ODZhNTAxMzM0ZTQzYTFhOTFmN2EyZGMzMjdiZi90YWJsZXJhbmdlOmI3YjQ4NmE1MDEzMzRlNDNhMWE5MWY3YTJkYzMyN2JmXzE5LTUtMS0xLTkzNTI0_02175ebc-53ed-4f39-a83a-c0b956b949d8",
+        "source": {
+          "fiscal_year": 2021,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+          "sha256": "8deeae27cc3391670fd8fc3fec78f8b73d8ecec049f9baa23d509de60f7ec782",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+        },
+        "start": "2021-01-01",
+        "unit": "USD",
+        "value": "91652000000"
+      },
+      "cfo_usd": "91652000000",
+      "consolidated_fcfe_usd": "65776000000",
+      "fcff_usd": "67301940022.483302841272290431370820199704631119536",
+      "financing_source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/0/financing",
+      "fiscal_year": 2021,
+      "identified_net_borrowing_usd": "-1236000000",
+      "identity": {
+        "accession": "0001652044-22-000019",
+        "annual_end": "2021-12-31",
+        "annual_start": "2021-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": null,
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": null,
+        "prepayments": {
+          "amount_usd_rounded": null,
+          "included_in_financing_cash": null,
+          "source": null,
+          "source_precision": null,
+          "status": "NOT_SEPARATELY_BOUND_NOT_ZERO"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "other_financing_status": "NO_SEPARATELY_CAPTIONED_UNCLASSIFIED_FINANCING_ROW",
+      "other_financing_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "4300000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "1100000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "310000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+          "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+          "sha256": "8deeae27cc3391670fd8fc3fec78f8b73d8ecec049f9baa23d509de60f7ec782",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+        },
+        "source_excerpt": "Total noncontrolling interests (NCI), including redeemable noncontrolling interests (RNCI), in our consolidated subsidiaries was $ 3.9 billion and $ 4.3 billion as of December 31, 2020 and 2021, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of other income (expense), net. See Note 7"
+      },
+      "sbc_source": {
+        "concept": "ShareBasedCompensation",
+        "context_id": "i573244b1e31c4d29a5dfeb863b84c57f_D20210101-20211231",
+        "end": "2021-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlZjkzYzgyMGRhMDQyMDRhOWM1YTQ5ZjQ5YTNiMmViL3NlYzowZWY5M2M4MjBkYTA0MjA0YTljNWE0OWY0OWEzYjJlYl8xNTcvZnJhZzphYTcxMzFiYTA3MWU0NTU2ODc1MzdhMTMyMDMyOTNlNy90YWJsZTpiN2I0ODZhNTAxMzM0ZTQzYTFhOTFmN2EyZGMzMjdiZi90YWJsZXJhbmdlOmI3YjQ4NmE1MDEzMzRlNDNhMWE5MWY3YTJkYzMyN2JmXzctNS0xLTEtOTM1MjQ_97e7bd5c-0bb6-47e9-a5fe-e6f9d128d5bf",
+        "source": {
+          "fiscal_year": 2021,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+          "sha256": "8deeae27cc3391670fd8fc3fec78f8b73d8ecec049f9baa23d509de60f7ec782",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+        },
+        "start": "2021-01-01",
+        "unit": "USD",
+        "value": "15376000000"
+      },
+      "sbc_usd": "15376000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+      ]
+    },
+    {
+      "cash_ppe_source": {
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+        "end": "2022-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOmE5NmU0ZmIwNDc2NTQ5Yzk5ZGMzYTJiMjM2OGY2NDNmL3NlYzphOTZlNGZiMDQ3NjU0OWM5OWRjM2EyYjIzNjhmNjQzZl8yMDgvZnJhZzo3YmM5YTc5Y2U1NWI0MGMwYjBiYWEyNDIxZDY1ZjdiZS90YWJsZTo1Yjk5YzMwZWU0MzE0YTA0OGY5ZjcyNTUzYTFhN2JmMC90YWJsZXJhbmdlOjViOTljMzBlZTQzMTRhMDQ4ZjlmNzI1NTNhMWE3YmYwXzIxLTUtMS0xLTIxOTI0NQ_1b80613c-dd9f-4efa-804e-090da82437ee",
+        "source": {
+          "fiscal_year": 2022,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+          "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        },
+        "start": "2022-01-01",
+        "unit": "USD",
+        "value": "31485000000"
+      },
+      "cash_ppe_usd": "31485000000",
+      "cfo_source": {
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+        "end": "2022-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOmE5NmU0ZmIwNDc2NTQ5Yzk5ZGMzYTJiMjM2OGY2NDNmL3NlYzphOTZlNGZiMDQ3NjU0OWM5OWRjM2EyYjIzNjhmNjQzZl8yMDgvZnJhZzo3YmM5YTc5Y2U1NWI0MGMwYjBiYWEyNDIxZDY1ZjdiZS90YWJsZTo1Yjk5YzMwZWU0MzE0YTA0OGY5ZjcyNTUzYTFhN2JmMC90YWJsZXJhbmdlOjViOTljMzBlZTQzMTRhMDQ4ZjlmNzI1NTNhMWE3YmYwXzE5LTUtMS0xLTIxOTI0NQ_93f0c1f2-02df-4238-8f36-47101ebf023a",
+        "source": {
+          "fiscal_year": 2022,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+          "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        },
+        "start": "2022-01-01",
+        "unit": "USD",
+        "value": "91495000000"
+      },
+      "cfo_usd": "91495000000",
+      "consolidated_fcfe_usd": "58814000000",
+      "fcff_usd": "60310162685.060565275908479138627187079407806191117",
+      "financing_source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/1/financing",
+      "fiscal_year": 2022,
+      "identified_net_borrowing_usd": "-1196000000",
+      "identity": {
+        "accession": "0001652044-23-000016",
+        "annual_end": "2022-12-31",
+        "annual_start": "2022-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": {
+          "amount_usd": "586000000",
+          "caption": "Financing cash flows used for finance leases",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:FinanceLeasePrincipalPayments",
+          "context_id": "c-16",
+          "inline_id": "f-977",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2022
+        },
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": {
+          "amount_usd": "577000000",
+          "caption": "Assets obtained in exchange for finance lease liabilities",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "context_id": "c-16",
+          "inline_id": "f-983",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2022
+        },
+        "prepayments": {
+          "amount_usd_rounded": null,
+          "included_in_financing_cash": null,
+          "source": null,
+          "source_precision": null,
+          "status": "NOT_SEPARATELY_BOUND_NOT_ZERO"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "other_financing_status": "NO_SEPARATELY_CAPTIONED_UNCLASSIFIED_FINANCING_ROW",
+      "other_financing_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "3800000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "1100000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "35000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+          "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+          "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        },
+        "source_excerpt": "Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 4.3 billion and $ 3.8 billion as of December 31, 2021 and 2022, respectively, of which $ 1.1 billion is redeemable noncontrolling interest (RNCI) for both periods. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for an y period presented and is included within the \"other\" component of OI&E. See Note 7"
+      },
+      "sbc_source": {
+        "concept": "ShareBasedCompensation",
+        "context_id": "i460134f8252348bba054a6bb814c5a7a_D20220101-20221231",
+        "end": "2022-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOmE5NmU0ZmIwNDc2NTQ5Yzk5ZGMzYTJiMjM2OGY2NDNmL3NlYzphOTZlNGZiMDQ3NjU0OWM5OWRjM2EyYjIzNjhmNjQzZl8yMDgvZnJhZzo3YmM5YTc5Y2U1NWI0MGMwYjBiYWEyNDIxZDY1ZjdiZS90YWJsZTo1Yjk5YzMwZWU0MzE0YTA0OGY5ZjcyNTUzYTFhN2JmMC90YWJsZXJhbmdlOjViOTljMzBlZTQzMTRhMDQ4ZjlmNzI1NTNhMWE3YmYwXzctNS0xLTEtMjE5MjQ1_cd93a0fb-2381-44c9-aee0-a2bd5d80dc77",
+        "source": {
+          "fiscal_year": 2022,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+          "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        },
+        "start": "2022-01-01",
+        "unit": "USD",
+        "value": "19362000000"
+      },
+      "sbc_usd": "19362000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+      ]
+    },
+    {
+      "cash_ppe_source": {
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "context_id": "c-1",
+        "end": "2023-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-332",
+        "source": {
+          "fiscal_year": 2023,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+          "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+        },
+        "start": "2023-01-01",
+        "unit": "USD",
+        "value": "32251000000"
+      },
+      "cash_ppe_usd": "32251000000",
+      "cfo_source": {
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "context_id": "c-1",
+        "end": "2023-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-329",
+        "source": {
+          "fiscal_year": 2023,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+          "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+        },
+        "start": "2023-01-01",
+        "unit": "USD",
+        "value": "101746000000"
+      },
+      "cfo_usd": "101746000000",
+      "consolidated_fcfe_usd": "68735000000",
+      "fcff_usd": "69760161636.548175974427476463245330564532123149434",
+      "financing_source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/2/financing",
+      "fiscal_year": 2023,
+      "identified_net_borrowing_usd": "-760000000",
+      "identity": {
+        "accession": "0001652044-24-000022",
+        "annual_end": "2023-12-31",
+        "annual_start": "2023-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": {
+          "amount_usd": "705000000",
+          "caption": "Financing cash flows used for finance leases",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:FinanceLeasePrincipalPayments",
+          "context_id": "c-17",
+          "inline_id": "f-978",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2023
+        },
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": {
+          "amount_usd": "564000000",
+          "caption": "Assets obtained in exchange for finance lease liabilities",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "context_id": "c-17",
+          "inline_id": "f-984",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2023
+        },
+        "prepayments": {
+          "amount_usd_rounded": null,
+          "included_in_financing_cash": null,
+          "source": null,
+          "source_precision": null,
+          "status": "NOT_SEPARATELY_BOUND_NOT_ZERO"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "other_financing_status": "NO_SEPARATELY_CAPTIONED_UNCLASSIFIED_FINANCING_ROW",
+      "other_financing_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "3400000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "1100000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "8000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+          "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+          "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+        },
+        "source_excerpt": "Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.8 billion and $ 3.4 billion as of December 31, 2022 and 2023, respectively, of which $ 1.1 billion is redeemable noncontrolling interest (RNCI) for both periods. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for an y period presented and is included within the \"other\" component of OI&E. See Note 7"
+      },
+      "sbc_source": {
+        "concept": "ShareBasedCompensation",
+        "context_id": "c-1",
+        "end": "2023-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-296",
+        "source": {
+          "fiscal_year": 2023,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+          "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+        },
+        "start": "2023-01-01",
+        "unit": "USD",
+        "value": "22460000000"
+      },
+      "sbc_usd": "22460000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+      ]
+    },
+    {
+      "cash_ppe_source": {
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "context_id": "c-1",
+        "end": "2024-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-350",
+        "source": {
+          "fiscal_year": 2024,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+          "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+        },
+        "start": "2024-01-01",
+        "unit": "USD",
+        "value": "52535000000"
+      },
+      "cash_ppe_usd": "52535000000",
+      "cfo_source": {
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "context_id": "c-1",
+        "end": "2024-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-347",
+        "source": {
+          "fiscal_year": 2024,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+          "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+        },
+        "start": "2024-01-01",
+        "unit": "USD",
+        "value": "125299000000"
+      },
+      "cfo_usd": "125299000000",
+      "consolidated_fcfe_usd": "73652000000",
+      "fcff_usd": "72987942110.754079205441722655760964820765346575971",
+      "financing_source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/3/financing",
+      "fiscal_year": 2024,
+      "identified_net_borrowing_usd": "888000000",
+      "identity": {
+        "accession": "0001652044-25-000014",
+        "annual_end": "2024-12-31",
+        "annual_start": "2024-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": {
+          "amount_usd": "405000000",
+          "caption": "Financing cash flows used for finance leases",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:FinanceLeasePrincipalPayments",
+          "context_id": "c-1",
+          "inline_id": "f-979",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2024
+        },
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": {
+          "amount_usd": "313000000",
+          "caption": "Assets obtained in exchange for finance lease liabilities",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "context_id": "c-1",
+          "inline_id": "f-985",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+            "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+          },
+          "target_fiscal_year": 2024
+        },
+        "prepayments": {
+          "amount_usd_rounded": null,
+          "included_in_financing_cash": null,
+          "source": null,
+          "source_precision": null,
+          "status": "NOT_SEPARATELY_BOUND_NOT_ZERO"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "other_financing_status": "NO_SEPARATELY_CAPTIONED_UNCLASSIFIED_FINANCING_ROW",
+      "other_financing_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "4200000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "1100000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "1154000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+          "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+          "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+        },
+        "source_excerpt": "As of December 31, 2023 and 2024, total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 3.4 billion and $ 4.2 billion, respectively, of which $ 1.1 billion was redeemable noncontrolling interests (RNCI) for both periods. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. See Note 7"
+      },
+      "sbc_source": {
+        "concept": "ShareBasedCompensation",
+        "context_id": "c-1",
+        "end": "2024-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-314",
+        "source": {
+          "fiscal_year": 2024,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+          "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+        },
+        "start": "2024-01-01",
+        "unit": "USD",
+        "value": "22785000000"
+      },
+      "sbc_usd": "22785000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+      ]
+    },
+    {
+      "cash_ppe_source": {
+        "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "context_id": "c-1",
+        "end": "2025-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-384",
+        "source": {
+          "fiscal_year": 2025,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "start": "2025-01-01",
+        "unit": "USD",
+        "value": "91447000000"
+      },
+      "cash_ppe_usd": "91447000000",
+      "cfo_source": {
+        "concept": "NetCashProvidedByUsedInOperatingActivities",
+        "context_id": "c-1",
+        "end": "2025-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-381",
+        "source": {
+          "fiscal_year": 2025,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "start": "2025-01-01",
+        "unit": "USD",
+        "value": "164713000000"
+      },
+      "cfo_usd": "164713000000",
+      "consolidated_fcfe_usd": "105403000000",
+      "fcff_usd": "73878476042.965257577474720763602936546912973946331",
+      "financing_source_reference": "docs/company-resolutions/GOOGL/results.json#/periods/4/financing",
+      "fiscal_year": 2025,
+      "identified_net_borrowing_usd": "32137000000",
+      "identity": {
+        "accession": "0001652044-26-000018",
+        "annual_end": "2025-12-31",
+        "annual_start": "2025-01-01",
+        "cik": 1652044,
+        "form": "10-K"
+      },
+      "lease_schedule": {
+        "additional_cash_deduction_usd": "0",
+        "cash_noncash_timing_alignment_status": "OPEN_G3",
+        "commenced_lease_principal_usd": null,
+        "financing_cash": {
+          "amount_usd": "1988000000",
+          "caption": "Financing cash flows used for finance leases",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:FinanceLeasePrincipalPayments",
+          "context_id": "c-1",
+          "inline_id": "f-1000",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          "target_fiscal_year": 2025
+        },
+        "financing_cash_contained_in_debt_repayments": true,
+        "noncash_assets_added_to_cash_capex_usd": "0",
+        "noncash_assets_obtained": {
+          "amount_usd": "1606000000",
+          "caption": "Assets obtained in exchange for finance lease liabilities",
+          "classification": "SEC_REPORTED_FACT",
+          "concept": "us-gaap:RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+          "context_id": "c-1",
+          "inline_id": "f-1006",
+          "precision": "-6",
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          "target_fiscal_year": 2025
+        },
+        "prepayments": {
+          "amount_usd_rounded": "1100000000",
+          "included_in_financing_cash": true,
+          "source": {
+            "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+            "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+            "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+          },
+          "source_precision": "$1.1 billion",
+          "status": "ROUNDED_DISCLOSED_AMOUNT"
+        },
+        "reason": "No complete exact prepayment/addition/commencement/FX/modification/principal roll-forward has been established; no residual inferred from rounded footnote."
+      },
+      "other_financing_status": "NO_SEPARATELY_CAPTIONED_UNCLASSIFIED_FINANCING_ROW",
+      "other_financing_usd": "0",
+      "ownership_schedule": {
+        "book_nci_usd_rounded": "3400000000",
+        "book_nci_used_as_fair_value": false,
+        "book_rnci_usd_rounded_included_in_nci": "841000000",
+        "nci_cash_allocation_usd": null,
+        "nci_fair_value_status": "UNRESOLVED_VALUATION_INPUT_G2",
+        "nci_fair_value_usd": null,
+        "note": "Note 5, Variable Interest Entities",
+        "outside_capital_cash_usd": "400000000",
+        "outside_capital_included_in_borrowing": false,
+        "precision_notice": "Book NCI displayed in billions, not an exact fair value; RNCI is included, not additive.",
+        "rnci_source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "source": {
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "source_excerpt": "Total noncontrolling interests (NCI) in our consolidated subsidiaries were $ 4.2 billion and $ 3.4 billion as of December 31, 2024 and 2025, respectively, of which $ 1.1 billion and $ 841 million were redeemable noncontrolling interests (RNCI) as of December 31, 2024 and 2025, respectively. NCI and RNCI are included within additional paid-in capital. Net loss attributable to noncontrolling interests was not material for any period presented and is included within the \"other\" component of OI&E. See Note 7"
+      },
+      "sbc_source": {
+        "concept": "ShareBasedCompensation",
+        "context_id": "c-1",
+        "end": "2025-12-31",
+        "precision": "-6",
+        "primary_locator": "inline#f-348",
+        "source": {
+          "fiscal_year": 2025,
+          "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        "start": "2025-01-01",
+        "unit": "USD",
+        "value": "24953000000"
+      },
+      "sbc_usd": "24953000000",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+      ]
+    }
+  ],
+  "methodology_sources": [
+    "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/free-cash-flow-valuation",
+    "https://www.cfainstitute.org/standards/professionals/code-ethics-standards/standards-of-practice-v-a",
+    "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valopt.pdf",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/noncashwc.htm"
+  ],
+  "name": "Alphabet",
+  "retained_primary_documents": [
+    {
+      "fiscal_year": 2021,
+      "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/24",
+      "sha256": "8deeae27cc3391670fd8fc3fec78f8b73d8ecec049f9baa23d509de60f7ec782",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+    },
+    {
+      "fiscal_year": 2022,
+      "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/26",
+      "sha256": "91cc1ffe658af97f1ab8cbc777986110d8f850acc08f25538f74819bed4ac05a",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+    },
+    {
+      "fiscal_year": 2023,
+      "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/28",
+      "sha256": "87865eede56c2a1ba11e9dff34eee9576d2441e32ab356d756ca202ac0dfa8f3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+    },
+    {
+      "fiscal_year": 2024,
+      "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/30",
+      "sha256": "88bba3d95ca801192f0c9bf10e4b9baefc56d4567d24156b809a28fb8424746f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+    },
+    {
+      "fiscal_year": 2025,
+      "retained_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+      "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+    }
+  ],
+  "schema_version": "company-analyst-policy-v1",
+  "source_documents": {
+    "data/preload/googl-v1/observations.json": "d2bb11c0f5cf4fd515eb5ef2a679b59e30458e70b822dcd290430e0a1e4bddf1",
+    "data/preload/googl-v1/policy.json": "cd6be7420a942bad8eb34bd5667b2fb4caa66acb7c5b77774e919ad08cf1a8ab",
+    "data/preload/googl-v1/sources/manifest.json": "84c4b1a46e1e11a166c0c8d03689b31000371eabaf7066eaa179dfbc20772aed",
+    "docs/company-resolutions/GOOGL/implementation-2026-11-03/schedules.json": "288242fbf7b76fd7dd10638afe53376fbf13b89568e7f593fcfb3a6683b87ea2",
+    "docs/company-resolutions/GOOGL/results.json": "0bd3eb8a0cc67a37657da681000eb5d17e31c2e2d1c648878d04e43fe046080f",
+    "docs/company-resolutions/implementation-2026-11-03/share-bridge/source-schedules.json": "1514567b9916fbf2b5057f58787d858b418e309def33e72990b7a3ffa9284c42",
+    "docs/evidence/analyst-operating-nwc-response-bodies.json": "8b7dd48e6408fb84af1493acfba3136d4a7671fc8bb1147c339015da80990542"
+  },
+  "ticker": "GOOGL",
+  "version": "googl-analyst-2026-11-04-v1"
+}

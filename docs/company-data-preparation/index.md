@@ -1,5 +1,9 @@
 # Company data preparation register
 
+## Meta/Alphabet analyst-use extension — November4,2026
+
+The user explicitly extends Apple's reasonable-assumption consumer to [META](../company-resolutions/META/analyst-ready-2026-11-04/report.html) and [GOOGL](../company-resolutions/GOOGL/analyst-ready-2026-11-04/report.html). Both pass all five named outputs with qualifications and source-to-runtime checks. Frozen normalization values, original preparation statuses and the paused wider universe remain unchanged. Analyst sufficiency is separate from forensic source completeness and exact minority cash attribution.
+
 ## Apple analyst-use extension — November4,2026
 
 A separate [Apple five-output consumer](../company-resolutions/AAPL/analyst-ready-2026-11-04/report.html) now passes analyst-use sufficiency with explicit modeling qualifications. This does not recategorize frozen facts/gaps, certify exact historical FCFE or change the other41 issuer records. Two statuses remain distinct: original evidence preparation and readiness of the named assumption-based consumer.

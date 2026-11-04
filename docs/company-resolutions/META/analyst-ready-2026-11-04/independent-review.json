@@ -1,0 +1,932 @@
+{
+  "reviewer": "independent acceptance subagent",
+  "verdict": "PASS_WITH_DISCLOSED_ANALYST_QUALIFICATIONS",
+  "ticker": "META",
+  "checks_passed": 320,
+  "checks_by_type": {
+    "adopted FCFF unchanged": 30,
+    "five statuses": 6,
+    "flat aggregate explicit debt": 45,
+    "independent CAPM": 6,
+    "independent FCFE from net income": 45,
+    "independent FCFE per-share bridge": 6,
+    "independent FCFF per-share bridge": 6,
+    "independent SBC economic companion": 30,
+    "independent full FCFE discounting": 6,
+    "independent historical FCFE": 30,
+    "independent terminal net income FCFE": 6,
+    "interest carrying debt cost": 45,
+    "negative growth no negative issuance": 1,
+    "negative terminal growth repays debt": 1,
+    "new financed assets matched repayment once": 45,
+    "no duplicate bridge charges": 6,
+    "terminal debt growth financing": 6
+  },
+  "cases": [
+    {
+      "scenario": "Bear",
+      "horizon": 5,
+      "fcff_per_share": "272.06799353061856896635823450571679100255791015493",
+      "fcfe_per_share": "332.10747362221153819764430972199606056958057461954"
+    },
+    {
+      "scenario": "Bear",
+      "horizon": 10,
+      "fcff_per_share": "251.06393345983888536906479118192424802314378067468",
+      "fcfe_per_share": "313.33836837738436144066465084730815299230752625839"
+    },
+    {
+      "scenario": "Base",
+      "horizon": 5,
+      "fcff_per_share": "374.70030227086832213718951727604891892423356429724",
+      "fcfe_per_share": "370.36012078275497612721219418814792129784969970538"
+    },
+    {
+      "scenario": "Base",
+      "horizon": 10,
+      "fcff_per_share": "400.63811065376931217642613484462665187622886336965",
+      "fcfe_per_share": "391.50941905614109738538492823571821232177723586276"
+    },
+    {
+      "scenario": "Bull",
+      "horizon": 5,
+      "fcff_per_share": "522.64438788592401301886856925370178113124950878652",
+      "fcfe_per_share": "411.66888809948970758874509255663287359875754196909"
+    },
+    {
+      "scenario": "Bull",
+      "horizon": 10,
+      "fcff_per_share": "636.62943807982323524267042390426459213639179460377",
+      "fcfe_per_share": "483.67944674707584038941426106466301365671184330200"
+    }
+  ],
+  "source_facts_verified": 68,
+  "source_facts": [
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "value": "35873000000",
+      "primary_locator": "inline#f-57",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "CommonStockSharesOutstanding",
+      "value": "2187000000",
+      "primary_locator": "inline#f-105",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "CommonStockSharesOutstanding",
+      "value": "343000000",
+      "primary_locator": "inline#f-112",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "CommonStockSharesOutstanding",
+      "value": "2530000000",
+      "primary_locator": "inline#f-254",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "EquityMethodInvestments",
+      "value": "7448000000",
+      "primary_locator": "inline#f-687",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "FinanceLeaseLiability",
+      "value": "1184000000",
+      "primary_locator": "inline#f-786",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityCurrent",
+      "value": "308000000",
+      "primary_locator": "inline#f-789",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "FinanceLeaseLiabilityNoncurrent",
+      "value": "876000000",
+      "primary_locator": "inline#f-792",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "LegalRelatedAccruedLiabilitiesCurrent",
+      "value": "6867000000",
+      "primary_locator": "inline#f-899",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "MarketableSecuritiesCurrent",
+      "value": "45719000000",
+      "primary_locator": "inline#f-59",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "NonmarketableEquitySecuritiesCarryingValue",
+      "value": "27524000000",
+      "primary_locator": "inline#f-67",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "RestrictedCashAndCashEquivalentsAtCarryingValue",
+      "value": "837000000",
+      "primary_locator": "inline#f-367",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "RestrictedCashAndCashEquivalentsNoncurrent",
+      "value": "2390000000",
+      "primary_locator": "inline#f-370",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "LongTermDebtNoncurrent",
+      "value": "58744000000",
+      "primary_locator": "inline#f-89",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "DebtInstrumentCarryingAmount",
+      "value": "59000000000",
+      "primary_locator": "inline#f-939",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "LongTermDebtFairValue",
+      "value": "57220000000",
+      "primary_locator": "inline#f-948",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+      "value": "54810000000",
+      "primary_locator": "inline#f-1085",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "UnrecognizedTaxBenefits",
+      "value": "16450000000",
+      "primary_locator": "inline#f-1252",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber",
+      "value": "115552000",
+      "primary_locator": "inline#f-1077",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "value": "57683000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMTgtMS0xLTEtMA_95e13d3e-9ff6-4630-ba4f-6ff2d285935a",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "5515000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMjktMS0xLTEtMA_c874d0c2-3147-4ffb-97bc-e10e9be4ad6b",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "44537000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzAtMS0xLTEtMA_613d8225-73ba-4887-8448-802ffe43f1e1",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "677000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzEtMS0xLTEtMA_169aa789-dbde-4591-a5da-256732369b50",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "ProceedsFromRepaymentsOfBankOverdrafts",
+      "value": "14000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzItMS0xLTEtMA_069b1280-c4f0-44f7-ac6e-02b773c91f15",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "-13000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzMtMS0xLTEtMA_99c4d152-423b-4e59-8bd7-f58d34562700",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-50728000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzQtMS0xLTEtMA_4b366f0e-0377-45c1-b417-417f6bd393dd",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "value": "18567000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMjAtMS0xLTEtMA_87fc34a7-827d-43fc-b011-a117fd6531a1",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "ShareBasedCompensation",
+      "value": "9164000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfNi0xLTEtMS0w_03d443b9-9c29-4173-8467-087fa0ddf4e2",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "value": "50475000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMTgtMS0xLTEtMTc4ODE5_fe5b2c9a-8c7c-4810-840d-4edba7ba52e1",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "3595000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjktMS0xLTEtMTc4ODE5_65917193-80c6-4db4-8bb9-d564e75297d4",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "27956000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzAtMS0xLTEtMTc4ODE5_eaab7a0c-e8eb-4461-ba04-0203d29fc725",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "value": "9921000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzItMS0xLTEtMTgxNDIx_297a106c-5519-4a93-ae8b-218aa71a6d51",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "850000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzEtMS0xLTEtMTc4ODE5_ecfe34ae-69f0-4177-8e4d-5175fceda557",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "344000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzMtMS0xLTEtMTc4ODE5_f4b20e16-1a7d-4dd0-bf7a-f79481f18f2c",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-22136000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzQtMS0xLTEtMTc4ODE5_fd2d3888-229b-4165-96a6-d022b2d2018a",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "value": "31431000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjAtMS0xLTEtMTc4ODE5_a72b4b6e-0ecf-46b0-b469-b95afbd2981d",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+      "value": "245000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjItMS0xLTEtMTgxNjU4_394f791d-d151-439f-ba19-d9602dfa9cf0",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "ShareBasedCompensation",
+      "value": "11992000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfNi0xLTEtMS0xNzg4MTk_b47479d5-4a45-4b99-ae15-4807f47d09d4",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "value": "71113000000",
+      "primary_locator": "inline#f-277",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "7012000000",
+      "primary_locator": "inline#f-301",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "19774000000",
+      "primary_locator": "inline#f-304",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "value": "8455000000",
+      "primary_locator": "inline#f-307",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "1058000000",
+      "primary_locator": "inline#f-310",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "-111000000",
+      "primary_locator": "inline#f-313",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-19500000000",
+      "primary_locator": "inline#f-316",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "value": "27266000000",
+      "primary_locator": "inline#f-280",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+      "value": "221000000",
+      "primary_locator": "inline#f-283",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "ShareBasedCompensation",
+      "value": "14027000000",
+      "primary_locator": "inline#f-241",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "value": "91328000000",
+      "primary_locator": "inline#f-292",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "13770000000",
+      "primary_locator": "inline#f-313",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "30125000000",
+      "primary_locator": "inline#f-316",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "PaymentsOfDividends",
+      "value": "5072000000",
+      "primary_locator": "inline#f-319",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "value": "10432000000",
+      "primary_locator": "inline#f-322",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "1969000000",
+      "primary_locator": "inline#f-325",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "-277000000",
+      "primary_locator": "inline#f-328",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-40781000000",
+      "primary_locator": "inline#f-331",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "value": "37256000000",
+      "primary_locator": "inline#f-295",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "ShareBasedCompensation",
+      "value": "16690000000",
+      "primary_locator": "inline#f-259",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "value": "115800000000",
+      "primary_locator": "inline#f-301",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "18400000000",
+      "primary_locator": "inline#f-331",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "26248000000",
+      "primary_locator": "inline#f-334",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "PaymentsOfDividends",
+      "value": "5324000000",
+      "primary_locator": "inline#f-337",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "value": "29906000000",
+      "primary_locator": "inline#f-340",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "2524000000",
+      "primary_locator": "inline#f-343",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "2220000000",
+      "primary_locator": "inline#f-346",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-20370000000",
+      "primary_locator": "inline#f-349",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "value": "69691000000",
+      "primary_locator": "inline#f-304",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "ShareBasedCompensation",
+      "value": "20427000000",
+      "primary_locator": "inline#f-268",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    }
+  ],
+  "source_review": "PASS: independent HTMLParser over hash-verified retained original primary bytes, concept/value/unit/entity/date checked",
+  "additional_historical_fact_checks": [
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "value": "18690000000",
+      "primary_locator": "inline#f-282",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+      "value": "123000000",
+      "primary_locator": "inline#f-285",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "value": "31186000000",
+      "primary_locator": "inline#f-297",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "value": "27045000000",
+      "primary_locator": "inline#f-306",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "1000000",
+      "primary_locator": "inline#f-315",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "ProceedsFromRepaymentsOfBankOverdrafts",
+      "value": "14000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzItMS0xLTEtMA_069b1280-c4f0-44f7-ac6e-02b773c91f15",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "-13000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzMtMS0xLTEtMA_99c4d152-423b-4e59-8bd7-f58d34562700",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "5515000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMjktMS0xLTEtMA_c874d0c2-3147-4ffb-97bc-e10e9be4ad6b",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "44537000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzAtMS0xLTEtMA_613d8225-73ba-4887-8448-802ffe43f1e1",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "677000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzEtMS0xLTEtMA_169aa789-dbde-4591-a5da-256732369b50",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-50728000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjBlMmYzNWM0ZTJmMjQwNzQ5M2UzMzFiNmNjODVhMDQ3L3NlYzowZTJmMzVjNGUyZjI0MDc0OTNlMzMxYjZjYzg1YTA0N185Ny9mcmFnOmM2MWI4NmU5MGQ1OTQyYmM4ZWQxYTg3MzYzMDNiOGVhL3RhYmxlOmFiYjVmNWMwOWVmZTQ4Y2E5YjY1ZmU2YjA1ODcxMTYzL3RhYmxlcmFuZ2U6YWJiNWY1YzA5ZWZlNDhjYTliNjVmZTZiMDU4NzExNjNfMzQtMS0xLTEtMA_4b366f0e-0377-45c1-b417-417f6bd393dd",
+      "receipt_sha256": "af4b024abb6d879fa7b7db8a49c236356f03ca79070e4a60b679b1e4c082583f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "3595000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjktMS0xLTEtMTc4ODE5_65917193-80c6-4db4-8bb9-d564e75297d4",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "27956000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzAtMS0xLTEtMTc4ODE5_eaab7a0c-e8eb-4461-ba04-0203d29fc725",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "value": "9921000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzItMS0xLTEtMTgxNDIx_297a106c-5519-4a93-ae8b-218aa71a6d51",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "850000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzEtMS0xLTEtMTc4ODE5_ecfe34ae-69f0-4177-8e4d-5175fceda557",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "344000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzMtMS0xLTEtMTc4ODE5_f4b20e16-1a7d-4dd0-bf7a-f79481f18f2c",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-22136000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMzQtMS0xLTEtMTc4ODE5_fd2d3888-229b-4165-96a6-d022b2d2018a",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+      "value": "245000000",
+      "primary_locator": "inline#id3VybDovL2RvY3MudjEvZG9jOjZkZjIyOWRhZDE4NjQyMTBhYjc2MjAwMDgzZTI2ODE5L3NlYzo2ZGYyMjlkYWQxODY0MjEwYWI3NjIwMDA4M2UyNjgxOV85Ny9mcmFnOjQ0MzIyZTVjMGRiYzQ4YmI4N2Q3Njg2ZmI4ZDRlZDg5L3RhYmxlOjI1ZmVmMWFkNDA2NDRjNWViYTYzOTEzMjc5MTEyZDQ4L3RhYmxlcmFuZ2U6MjVmZWYxYWQ0MDY0NGM1ZWJhNjM5MTMyNzkxMTJkNDhfMjItMS0xLTEtMTgxNjU4_394f791d-d151-439f-ba19-d9602dfa9cf0",
+      "receipt_sha256": "b85ac6e1016edfcbe77e82062bc7606b60dd83e25b2ca0893ea6b7eabe128c35",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "7012000000",
+      "primary_locator": "inline#f-301",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "19774000000",
+      "primary_locator": "inline#f-304",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "value": "8455000000",
+      "primary_locator": "inline#f-307",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "1058000000",
+      "primary_locator": "inline#f-310",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "-111000000",
+      "primary_locator": "inline#f-313",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-19500000000",
+      "primary_locator": "inline#f-316",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "ProceedsFromSaleOfPropertyPlantAndEquipment",
+      "value": "221000000",
+      "primary_locator": "inline#f-283",
+      "receipt_sha256": "af6468c101d87306fe27746d8fe303d4329526feca8ded261b4382da927fe05f",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "13770000000",
+      "primary_locator": "inline#f-313",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "30125000000",
+      "primary_locator": "inline#f-316",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "PaymentsOfDividends",
+      "value": "5072000000",
+      "primary_locator": "inline#f-319",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "value": "10432000000",
+      "primary_locator": "inline#f-322",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "1969000000",
+      "primary_locator": "inline#f-325",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "-277000000",
+      "primary_locator": "inline#f-328",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-40781000000",
+      "primary_locator": "inline#f-331",
+      "receipt_sha256": "0678f94739cd495ee9240870599a479a1f9f89ecf738db2cbe601392000632d2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm"
+    },
+    {
+      "concept": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "value": "18400000000",
+      "primary_locator": "inline#f-331",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "PaymentsForRepurchaseOfCommonStock",
+      "value": "26248000000",
+      "primary_locator": "inline#f-334",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "PaymentsOfDividends",
+      "value": "5324000000",
+      "primary_locator": "inline#f-337",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "ProceedsFromIssuanceOfLongTermDebt",
+      "value": "29906000000",
+      "primary_locator": "inline#f-340",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "FinanceLeasePrincipalPayments",
+      "value": "2524000000",
+      "primary_locator": "inline#f-343",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "ProceedsFromPaymentsForOtherFinancingActivities",
+      "value": "2220000000",
+      "primary_locator": "inline#f-346",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInFinancingActivities",
+      "value": "-20370000000",
+      "primary_locator": "inline#f-349",
+      "receipt_sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    }
+  ],
+  "historical_recomputation": [
+    {
+      "fiscal_year": 2021,
+      "fcff_fraction_numerator": "462616613500000",
+      "fcff_fraction_denominator": "11821",
+      "net_borrowing_usd": "-663000000",
+      "financing_statement_reconciles": true
+    },
+    {
+      "fiscal_year": 2022,
+      "fcff_fraction_numerator": "560181691000000",
+      "fcff_fraction_denominator": "28819",
+      "net_borrowing_usd": "9071000000",
+      "financing_statement_reconciles": true
+    },
+    {
+      "fiscal_year": 2023,
+      "fcff_fraction_numerator": "526873703000000",
+      "fcff_fraction_denominator": "11857",
+      "net_borrowing_usd": "7397000000",
+      "financing_statement_reconciles": true
+    },
+    {
+      "fiscal_year": 2024,
+      "fcff_fraction_numerator": "3865477136000000",
+      "fcff_fraction_denominator": "70663",
+      "net_borrowing_usd": "8463000000",
+      "financing_statement_reconciles": true
+    },
+    {
+      "fiscal_year": 2025,
+      "fcff_fraction_numerator": "1008168039500000",
+      "fcff_fraction_denominator": "21483",
+      "net_borrowing_usd": "27382000000",
+      "financing_statement_reconciles": true
+    }
+  ],
+  "sealed_api_checks": [
+    {
+      "ticker": "META",
+      "scenario": "Bear",
+      "horizon": 5,
+      "status_code": 200,
+      "matches_independently_reviewed_local": true,
+      "response_bytes": 43962
+    },
+    {
+      "ticker": "META",
+      "scenario": "Bear",
+      "horizon": 10,
+      "status_code": 200,
+      "matches_independently_reviewed_local": true,
+      "response_bytes": 57288
+    },
+    {
+      "ticker": "META",
+      "scenario": "Base",
+      "horizon": 5,
+      "status_code": 200,
+      "matches_independently_reviewed_local": true,
+      "response_bytes": 43908
+    },
+    {
+      "ticker": "META",
+      "scenario": "Base",
+      "horizon": 10,
+      "status_code": 200,
+      "matches_independently_reviewed_local": true,
+      "response_bytes": 57184
+    },
+    {
+      "ticker": "META",
+      "scenario": "Bull",
+      "horizon": 5,
+      "status_code": 200,
+      "matches_independently_reviewed_local": true,
+      "response_bytes": 43959
+    },
+    {
+      "ticker": "META",
+      "scenario": "Bull",
+      "horizon": 10,
+      "status_code": 200,
+      "matches_independently_reviewed_local": true,
+      "response_bytes": 57284
+    }
+  ],
+  "api_review": "PASS: real isolated worker on fresh sealed source bundle; all scenarios/horizons equal reviewed local result",
+  "scope": "All five named outputs, FY2021\u20132025 history and FY2025-origin Bear/Base/Bull forecasts at5/10years; no wider-universe or exact-reconstruction certification",
+  "frontend_review": "PASS: CompanyAnalyst.test.tsx 8 tests, independent read of issuer binding, stale-result and NCI disclosure/bridge controls; full live desktop/mobile acceptance remains parent review",
+  "material_findings_remaining": [],
+  "fixed_findings": [
+    {
+      "issue": "GOOGL Bear10-year request failed exact Decimal identity check due last-place association rounding",
+      "resolution": "Engine now bounds representation error by an8ULP arithmetic envelope, retains original calculated cash, records noncash rounding metadata only on nonzero difference; rerun all12API cases succeeded."
+    },
+    {
+      "issue": "Alphabet policy promised zero-NCI sensitivity absent from first runtime draft",
+      "resolution": "Explicit zero-NCI sensitivity added alongside book/5x/10x proxies."
+    }
+  ],
+  "reviewed_code_sha256": {
+    "src/valuation_platform/review/company_analyst.py": "f9e6ac783a84e5b85cbed29be5c7cecf105a2783ace2a578570158c8f9cb02ac",
+    "src/valuation_platform/valuation/fcfe.py": "58d80fab138a0aa4bf7b7bf5e96aaa1889502f49d5f2e7d19adbf0ffa7180052",
+    "frontend/src/workspace/CompanyAnalyst.tsx": "92198a1b3c61d39e6e78bbb074eae50dd25bd0118b20e806817eb0ae34c7754d"
+  },
+  "final_code_regression": {
+    "command": "PYTHONPATH=src .venv/bin/python -m unittest tests.review.test_company_analyst -v",
+    "tests": 9,
+    "verdict": "PASS",
+    "includes": "12 scenarios, Decimal isolation, source containment, independent financial identities, old Apple preservation, ownership separation, rounding regression and rejection of real cash-component errors"
+  },
+  "final_rounding_envelope_review": "PASS: magnitude=sum(abs participating intermediates) bounds hidden addition/subtraction intermediates,8ULP at50significant digits; calculatedFCFE unchanged, noncash rounding metadata only.",
+  "parent_browser_review": "Parent reports desktop and mobile passes for both issuers: five histories/readiness, edits, claims/assets recalculation and stale state; mobile horizontal overflow0. Not represented as an independently repeated browser check."
+}

@@ -1,5 +1,13 @@
 # Financial Methodology
 
+## Meta/Alphabet analyst contracts — November4,2026
+
+The user authorized the same five-output reasonable-assumption standard for [Meta](company-resolutions/META/analyst-ready-2026-11-04/README.md) and [Alphabet](company-resolutions/GOOGL/analyst-ready-2026-11-04/README.md). Historical FCFF preserves the adopted CFO/expensed-interest/reported-tax/cash-investment convention; FCFE uses identified borrowing with explicit net-Other assumptions, plus a separate SBC-expensed diagnostic. History is not automatically calibrated into operating forecasts.
+
+Forward FCFE declares flat explicit carrying financing debt, own debt/equity costs, matched financed assets/principal once, and terminal debt growth. FCFF retains submitted WACC; differing capital structures produce different values without parity plugs. Shared50-digit financing arithmetic permits only a derived last-place rounding envelope between independently ordered identities; any residual is exported as numerical roundoff, not cash, while component-input mismatches still fail. Apple's prior financial results reproduce unchanged.
+
+Both bridges use dated liquid assets less2% revenue reserve, separate nonconsolidated financial-investment carrying proxies (META27.524B **including**7.448B equity-method; GOOGL68.687B), notes fair value plus finance-lease carrying proxies, equal economic-per-share class assumptions and existing RSU vesting. Future SBC proxies future grants; no duplicate award, lease or FCFE debt charge. Additional claims are explicit assumptions. Alphabet's3.4B book NCI already includes redeemable NCI; it is an editable valuation proxy, not observed fair value. Historical0% minority allocation remains unallocated consolidated cash and does not reduce forward cash flows again. Sources, rights, caveats and update controls are in the issuer logs.
+
 ## Apple analyst consumer — reasonable-assumption contract
 
 The user explicitly approved [Apple's five-output analyst methodology](company-resolutions/AAPL/analyst-ready-2026-11-04/README.md). Verified reported facts stay separate from derived cash flows and analyst assumptions. All five outputs are analyst-ready with qualifications when source arithmetic, explicit policy, sensitivities and live consumers pass. Missing source decomposition need not block a labeled standardized estimate.

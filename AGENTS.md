@@ -117,6 +117,19 @@ The standing no-premature-completion rule still applies to actual implementation
 arithmetic, source contradiction and undisclosed-assumption blockers. Explicitly
 accepted research qualifications are not themselves unfinished development.
 
+### Meta and Alphabet analyst consumers
+
+The subsequent explicit user request extends the same five-output analyst-ready
+standard to META and GOOGL only. Current decisions, source projections and
+acceptance are in each `docs/company-resolutions/<ticker>/analyst-ready-2026-11-04/`.
+Use `review/company_analyst.py` and the selected-case live consumer. Qualified
+FCFE estimates, carrying-value investment/NCI proxies, dated economic share-class
+assumptions and financing differences must remain explicit. Alphabet's default
+historical cash remains an unallocated consolidated proxy, not verified parent
+cash; its forward minority claim is separate and deducted once. Reported facts,
+legacy unknowns and Apple's accepted financial outputs remain preserved. This
+extension does not authorize other issuers or public deployment.
+
 Historical standardized output should eventually support:
 
 - Revenue

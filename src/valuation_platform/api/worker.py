@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import sys
 
-from .budget import BudgetError, encode_bounded, error_body, read_http_case, read_http_document, read_http_scenarios, read_http_sensitivity, read_http_reverse, read_http_fcfe, read_http_apple_analyst
+from .budget import BudgetError, encode_bounded, error_body, read_http_case, read_http_document, read_http_scenarios, read_http_sensitivity, read_http_reverse, read_http_fcfe, read_http_apple_analyst, read_http_company_analyst
 from .bundle import verify_bundle
 
 
@@ -43,8 +43,12 @@ def calculate(connection, body, root, policy):
         _, doc = read_http_document(body)
         fcfe_request = type(doc) is dict and doc.get('schema_version') == 'fcfe-forecast-request-v1'
         apple_request = type(doc) is dict and doc.get('schema_version') == 'apple-analyst-request-v1'
-        fcfe_request = fcfe_request or apple_request
-        if apple_request:
+        company_request = type(doc) is dict and doc.get('schema_version') == 'company-analyst-request-v1'
+        fcfe_request = fcfe_request or apple_request or company_request
+        if company_request:
+            from valuation_platform.review.company_analyst import run_company_analyst
+            result = run_company_analyst(read_http_company_analyst(body), Path(root))
+        elif apple_request:
             from valuation_platform.review.apple_analyst import run_apple_analyst
             result = run_apple_analyst(read_http_apple_analyst(body), Path(root))
         elif fcfe_request:

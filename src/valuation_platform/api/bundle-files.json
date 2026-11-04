@@ -96,7 +96,8 @@
     "src/valuation_platform/review/apple_operating_history.py",
     "src/valuation_platform/review/operating_fcff.py",
     "src/valuation_platform/review/apple_resolution.py",
-    "src/valuation_platform/review/apple_analyst.py"
+    "src/valuation_platform/review/apple_analyst.py",
+    "src/valuation_platform/review/company_analyst.py"
   ],
   "resources": {
     "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",
@@ -145,6 +146,8 @@
     "docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json": "9b2a9d775745e9d4bd08efe60d49619c24f632b16a28fce5fcba014fe1f55d86",
     "docs/company-resolutions/AAPL/operating-fcff-2026-11-04/adopted-history.json": "ccdc7beda9546d0e160e22eb2e42acb68101c544aa2400edc82a68ab3d479cb8",
     "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/platform-resolution.json": "cc4d491bbc9dc569780f7b08a0fec26e5cade0ce4c2dc0ee4fb65e9e68e24539",
-    "docs/company-resolutions/AAPL/analyst-ready-2026-11-04/policy.json": "10d68a552bf1e6a6ec2e381dd0cece81b376bfbf34ff6ce98bfc343ce75b4757"
+    "docs/company-resolutions/AAPL/analyst-ready-2026-11-04/policy.json": "10d68a552bf1e6a6ec2e381dd0cece81b376bfbf34ff6ce98bfc343ce75b4757",
+    "docs/company-resolutions/META/analyst-ready-2026-11-04/policy.json": "dd4c7b4fbf60a42ac41f02ceae6486fba656069e171d1187ae7cc4a7e917c5df",
+    "docs/company-resolutions/GOOGL/analyst-ready-2026-11-04/policy.json": "426e8ff761793420dac6e9bc2368aff940978235c30f2b2617b98f62fd0a6a3d"
   }
 }

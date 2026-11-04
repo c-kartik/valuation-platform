@@ -1,5 +1,9 @@
 # META — consolidated five-year analyst-input review
 
+## Named analyst-use extension — November4,2026
+
+The [Meta five-output consumer](../company-resolutions/META/analyst-ready-2026-11-04/report.html) adds qualified historical FCFE estimates and tested financing/equity/share assumptions without rewriting this original analyst-input package. Source unknowns remain preserved. All five outputs pass the named reasonable-assumption contract; this is separate from exact-reconstruction completeness.
+
 ## November 4 ordered execution
 
 [Financing workpapers and implementation report](../company-resolutions/execution-2026-11-04/report.html)

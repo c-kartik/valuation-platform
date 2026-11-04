@@ -1,5 +1,9 @@
 # META — supplemental supported-seed preparation note
 
+## Named analyst-consumer sufficiency — November4,2026
+
+[Meta five-output contract](../../company-resolutions/META/analyst-ready-2026-11-04/README.md) supports all five outputs with qualifications under the user's explicit reasonable-assumption approval. Dated source facts feed a separate pinned projection and dynamic FCFE/equity/share consumer. Nonmarketables27.524B include7.448B equity-method investments once. Original preparation/frozen-v1 statuses and unknown Other/interest detail remain unchanged; this is sufficiency for a separately named analyst consumer.
+
 ## Approved historical display revision — November 3
 
 [Company-resolution record](../../company-resolutions/META/README.md) documents

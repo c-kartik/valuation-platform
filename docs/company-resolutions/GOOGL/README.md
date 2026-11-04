@@ -1,5 +1,9 @@
 # Alphabet — manually approved cash-flow treatments
 
+## Current five-output analyst acceptance — November4,2026
+
+[Implementation, decision log and independent acceptance](analyst-ready-2026-11-04/report.html) supersede blanket valuation-use blocking below for this approved analyst consumer. All five outputs are analyst-ready with qualifications. Historical FCFE remains consolidated; default0% minority allocation is explicitly an unallocated proxy, not verified parent-common cash. Forward valuations deduct an editable3.4B book-NCI valuation proxy once and add68.687B nonconsolidated financial-investment carrying proxy. Base125.91/share FCFF /124.04/share FCFE use different financing assumptions. Lease containment, three-class economic-rights assumption and RSU treatment are explicit. Source unknowns/legacy ownership records are preserved.
+
 November 3, 2026. CIK0001652044; FY2021–FY2025. The user approved both preferred
 treatments. [Approval](decisions.json), [source map](source-map.json),
 [exact results](results.json), [CSV](results.csv), [validation](validation.json).

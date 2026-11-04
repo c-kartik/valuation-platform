@@ -1,5 +1,9 @@
 # Valuation Platform — cloud work handoff
 
+## Current Meta/Alphabet analyst consumers — November4
+
+The user explicitly authorized all five outputs for META/GOOGL. Their `docs/company-resolutions/<ticker>/analyst-ready-2026-11-04/` reports, policies and independent acceptance control the current analyst-ready-with-qualifications scope. Shared `/api/v1/analyst/{ticker}` supplies pinned editable defaults; `/api/v1/analyst/run` executes selected operating cases with explicit financing/equity assumptions. Both DCF panels show share values, histories, sensitivities and export. Preserve Alphabet consolidated-proxy labeling, separate NCI claim, investment containment and original unknowns. Apple and frozen/wider-universe preparation are unchanged.
+
 ## Current Apple analyst consumer — November4
 
 [Five-output implementation and acceptance](company-resolutions/AAPL/analyst-ready-2026-11-04/README.md) supersedes older blanket Apple valuation-use blocking language below. All five outputs are analyst-ready with qualifications under the user-approved reasonable-assumption contract. Apple → DCF now shows dynamic paired share values, editable financing/equity assumptions, history and sensitivities via `/api/v1/apple/analyst/run`. Exact source unknowns/legacy records remain intact; do not silently transfer approval to other issuers. Base FCFF175.46/share and FCFE161.00/share reflect different disclosed financing assumptions. Reproduce policy/report and run the linked tests before financial updates.

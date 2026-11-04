@@ -1,5 +1,13 @@
 # Apple, Meta and Alphabet — open FCFF/FCFE roadblocks
 
+## Current Meta/Alphabet analyst contract — November4,2026
+
+The user explicitly authorized all five outputs at Apple's practical analyst level. [Meta acceptance](META/analyst-ready-2026-11-04/report.html) and [Alphabet acceptance](GOOGL/analyst-ready-2026-11-04/report.html) implement both histories, forecasts, equity/share bridges, sensitivities and live consumers. All ten named outputs are **ANALYST_READY_WITH_QUALIFICATIONS** after recorded independent checks. No remaining implementation blocker exists in these named scopes; original exact-reconstruction gaps below remain source qualifications.
+
+M1 is covered by an explicit identified-financing estimate/exclusion policy; M2 retains the expense-based convention without mechanically adding capitalized interest; M3 keeps separate normalized forward taxes. G1 retains consolidated historical FCFE and labels any parent allocation as an assumption (default unallocated proxy); G2 uses an editable3.4B book-NCI valuation proxy with0/5×/10× stresses, not factual fair value; G3 preserves lease-parent containment. S2/S3/S4 now have issuer-specific financing, costs, dated cash/debt/investments/shares/RSUs, claims and API/UI integration. S1's different history/forecast bases remain explicit, with calibration/CAGR disabled.
+
+Meta27.524B private investments include7.448B equity-method holdings once; Alphabet68.687B financial investments enter separately from operating EBIT. Carrying-value and ownership assumptions are qualified, not newly reported cash. No wider-universe or exact historical parent-cash certification. Earlier blanket OPEN statements are dated prior-consumer findings, not the current analyst acceptance.
+
 ## Current Apple analyst contract — supersedes blanket blocking rules below
 
 The user approved reasonable disclosed analyst assumptions and requested all five Apple outputs. [Implemented consumer and acceptance](AAPL/analyst-ready-2026-11-04/report.html): all five are **ANALYST_READY_WITH_QUALIFICATIONS**. A2/A3 now have an explicit historical-FCFE exclusion/estimate policy, A5 retains reported aggregate D&A, S1 has explicit non-comparability/no-calibration rules, S2 has a generated financing/terminal schedule, and S3 has explicit dated cash/debt/RSU/claim assumptions and per-share outputs. These source limitations remain research qualifications, not development blockers for that named contract.
